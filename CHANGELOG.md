@@ -6,6 +6,29 @@ Version numbering restarts at **0.1 Alpha**. Every feature, test, screenshot and
 document is being re-checked from the beginning; earlier prototype results are
 history, not current guarantees.
 
+### Redesign (LAFA Desktop, Virtual Assistant, Eduka-Settings)
+- **LAFA Desktop redesigned**: new theme, icon navigation, Home dashboard
+  (greeting, quick ask, Virtual Assistant toggle, feature cards, tip of the
+  day, system check), chat suggestion chips. Settings left the sidebar list.
+- **Edukasaun OS help** page and chat answers: 16 offline guides in EN/ID/PT/TET,
+  allowlisted tool launcher without a shell, read-only system check, `/os`.
+- **Virtual Assistant behaviour**: snaps onto the Eduka-Panel; idle cycle is
+  walk to a random spot → activity → walk; activity duration configurable.
+- **Hover questions**: touching LAFA with the cursor stops it and shows a
+  changing "Can I help?" balloon that reacts to the current activity; clicking
+  the balloon opens chat.
+- **Personality**: innocent, curious, clever and funny. Each activity is an
+  assistant duty; LAFA comments on activities, tells jokes (`/joke`, 😄 button,
+  between cards). New preferences: hover questions, self-talk, jokes.
+- **All settings in Eduka-Settings**: the native page now holds every
+  non-secret preference, saves atomically and live-reloads LAFA with the new
+  `--reload` role. LAFA's own settings window uses Eduka-Settings-style
+  categories, including Personality & activities and About.
+- Screenshot script rewritten: 23 captures including hover, panel walking and
+  the Eduka-Settings page.
+- Fixed: tool lookup now resolves `shutil.which` at call time; `&` in host
+  group titles is no longer shown as a shortcut marker.
+
 ### Added
 - **Open-source AI without a main server**: Ollama on this computer (free, no
   key, HTTP allowed only for loopback addresses) and any OpenAI-compatible
@@ -30,8 +53,8 @@ history, not current guarantees.
   is selected.
 
 ### Validation
-- 105 automated tests passed (88 carried over, 17 new) in a headless Linux
-  environment; 17 screenshots regenerated. See `docs/VALIDATION.md`.
+- 131 automated tests passed in a headless Linux environment; 23 screenshots
+  regenerated. See `docs/VALIDATION.md`.
 
 ## Prototype history (before the restart)
 

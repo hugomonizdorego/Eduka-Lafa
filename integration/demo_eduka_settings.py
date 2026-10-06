@@ -14,7 +14,7 @@ from eduka_lafa_settings import create_lafa_page
 
 
 def build_host(review=False):
-    window=QWidget();window.setWindowTitle('LAFA · native settings integration test host');window.resize(920,580)
+    window=QWidget();window.setWindowTitle('LAFA · native settings integration test host');window.resize(1000,860)
     root=QVBoxLayout(window);notice=QLabel('INTEGRATION TEST HOST · native Qt widgets · not the current Eduka-Settings application');notice.setWordWrap(True);root.addWidget(notice)
     row=QHBoxLayout();menu=QListWidget();menu.addItems(['General','LAFA']);menu.setFixedWidth(180);row.addWidget(menu)
     stack=QStackedWidget();general=QLabel('Register the LAFA factory as a dedicated page in the target settings menu.');general.setWordWrap(True);stack.addWidget(general)

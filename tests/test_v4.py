@@ -104,7 +104,7 @@ class V4UI(unittest.TestCase):
         self.assertEqual(self.window.code_lesson.currentIndex(),2);self.assertEqual(self.window.code_editor.toPlainText(),'print("my lesson")');self.assertEqual(self.window.code_output.toPlainText(),'my lesson');self.assertEqual(self.window.input.text(),'unsent message')
     def test_disabling_all_cards_does_not_starve_minute_activity_changes(self):
         companion=self.window.companion;companion.settings.companion=True;companion.set_online(True);companion.collapse();now=[0];companion.clock=lambda:now[0];companion.mark_activity();companion.last_card=0
-        companion.settings.card_minutes=1;companion.settings.cultural_cards=False;companion.settings.positive_messages=False;companion.set_state('idle');now[0]=60
+        companion.settings.card_minutes=1;companion.settings.cultural_cards=False;companion.settings.positive_messages=False;companion.settings.fun_messages=False;companion.set_state('idle');now[0]=60
         with patch('lafa.mascot.random.choice',return_value='sleeping'):companion.choose_idle()
         self.assertEqual(companion.state,'sleeping');now[0]=120
         with patch('lafa.mascot.random.choice',return_value='walking'):companion.choose_idle()

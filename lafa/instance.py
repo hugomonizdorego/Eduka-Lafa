@@ -3,7 +3,7 @@ import hashlib
 from PySide6.QtCore import QObject,Signal,QTimer
 from PySide6.QtNetwork import QLocalServer,QLocalSocket
 
-MODES={'desktop','settings','virtual','enable','disable'}
+MODES={'desktop','settings','virtual','enable','disable','reload'}
 def server_name(config_directory):
     return 'lafa-'+hashlib.sha256(str(config_directory.resolve()).encode()).hexdigest()[:20]
 

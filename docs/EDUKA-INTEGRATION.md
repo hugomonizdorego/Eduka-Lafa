@@ -29,7 +29,33 @@ entry through that implementation; do not replace its entire menu definition.
 The custom settings metadata `X-Eduka-Settings-Page=LAFA` is descriptive. It
 becomes a host registration only when the host consumes it.
 
-## Native LAFA settings group
+## All LAFA settings in Eduka-Settings
+
+`create_lafa_page()` returns the complete **Eduka-Settings → LAFA** page:
+
+1. the activation group (below), and
+2. `add_lafa_preferences()`: grouped controls for every non-secret preference —
+   Virtual Assistant (outfit, roaming, panel edge/height, greeting),
+   Personality & activities (hover questions, self-talk, jokes, bath/toilet
+   poses, cards, activity duration, intervals), AI & language (language,
+   provider, model, Ollama/open-source server addresses, read aloud) and Files
+   & weather (city, coordinates, time zone, searchable folders).
+
+**Save** merges the values into `~/.config/lafa/settings.json` with an atomic
+0600 write, then starts the fixed role `--reload`; a running LAFA re-reads the
+file and applies it live while keeping chat, lesson code and drafts. When LAFA
+is not running, `--reload` exits immediately and the values load at the next
+start. LAFA re-validates every field on load. **API keys…** opens LAFA's own
+settings (`--settings`) because keys are kept only in session memory or the
+secure system keyring.
+
+```python
+from eduka_lafa_settings import create_lafa_page
+page = create_lafa_page(parent, binding="PyQt5")
+host.register_page("LAFA", page)   # use the host's real page API
+```
+
+## Native LAFA activation group
 
 `integration/eduka_lafa_settings.py` embeds into **PyQt5, PyQt6 or PySide6**
 without importing another binding. Call it from the host after creating its

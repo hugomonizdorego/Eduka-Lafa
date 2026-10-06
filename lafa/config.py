@@ -86,6 +86,9 @@ class Settings:
     ollama_url: str = DEFAULT_OLLAMA_URL
     compatible_url: str = ""
     greet_by_time: bool = True
+    hover_questions: bool = True
+    chatter: bool = True
+    fun_messages: bool = True
 
     @property
     def locale(self):return default_language() if self.language=="system" else self.language
@@ -108,10 +111,10 @@ class Settings:
         for name,choices in enums.items():
             value=data.get(name,getattr(defaults,name))
             values[name]=value if isinstance(value,str) and value in choices else getattr(defaults,name)
-        for name in ['companion','roam','speak_answers','personal_activities','cultural_cards','positive_messages','local_news_updates','panel_roam','greet_by_time']:
+        for name in ['companion','roam','speak_answers','personal_activities','cultural_cards','positive_messages','local_news_updates','panel_roam','greet_by_time','hover_questions','chatter','fun_messages']:
             value=data.get(name,getattr(defaults,name));values[name]=value if isinstance(value,bool) else getattr(defaults,name)
         import math
-        for name,lower,upper in [('panel_height',0,160),('card_minutes',1,120),('news_minutes',10,240)]:
+        for name,lower,upper in [('panel_height',0,160),('card_minutes',1,120),('news_minutes',10,240),('idle_seconds',20,600)]:
             try:
                 value=data.get(name,getattr(defaults,name))
                 if isinstance(value,bool) or not isinstance(value,(int,float,str)) or not math.isfinite(float(value)):raise ValueError()
@@ -134,7 +137,6 @@ class Settings:
         except (TypeError,ValueError,OverflowError):
             values['weather_latitude'],values['weather_longitude']=defaults.weather_latitude,defaults.weather_longitude
             values['weather_city'],values['weather_timezone']=defaults.weather_city,defaults.weather_timezone
-        values['idle_seconds']=60
         return cls(**values)
 
     def save(self, path=None):

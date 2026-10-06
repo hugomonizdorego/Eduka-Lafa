@@ -5,7 +5,7 @@ import time
 import threading
 import unittest
 from PySide6.QtWidgets import QApplication
-from lafa.app import Window,STYLE
+from lafa.app import Window,STYLE,PAGES,PAGE_INDEX
 from lafa.config import Settings,STATES
 from lafa.mascot import Companion
 from lafa.live_info import Location,LocationChoices
@@ -25,8 +25,8 @@ class UITests(unittest.TestCase):
         if self.window.settings_dialog:self.window.settings_dialog.accept()
         self.window.companion.close();self.window.close();self.window.deleteLater();self.app.processEvents()
     def test_navigation_and_rendering(self):
-        self.assertEqual(self.window.stack.count(),9)
-        for i in range(9):
+        self.assertEqual(self.window.stack.count(),len(PAGES))
+        for i in range(len(PAGES)):
             self.window.navigate(i);self.app.processEvents()
             self.assertFalse(self.window.grab().isNull())
         for state in STATES:self.assertFalse(self.window.atlas.pixmap(state).isNull())
@@ -57,7 +57,7 @@ class UITests(unittest.TestCase):
     def test_all_locales_small_screen(self):
         for lang in ['en','id','pt','tet']:
             self.window.settings.language=lang;self.window.build_ui();self.window.resize(880,640);self.app.processEvents()
-            self.assertEqual(self.window.stack.count(),9)
+            self.assertEqual(self.window.stack.count(),len(PAGES))
             self.assertGreater(self.window.send_button.width(),40)
     def test_review_never_calls_provider(self):
         self.window.agent.run=lambda *a:(_ for _ in ()).throw(AssertionError('should not call'))
@@ -92,7 +92,7 @@ class UITests(unittest.TestCase):
         c.collapse();self.assertFalse(c.bubblebox.isVisible());QTest.mouseClick(c.pet,Qt.LeftButton);self.app.processEvents();self.assertTrue(c.bubblebox.isVisible())
     def test_ambiguous_city_ui_requires_explicit_selection(self):
         self.window.show_weather(LocationChoices('Springfield',[Location('Springfield',1,2),Location('Springfield',3,4)]))
-        self.assertEqual(self.window.stack.currentIndex(),5);self.assertEqual(self.window.city_choices.currentIndex(),-1)
+        self.assertEqual(self.window.stack.currentIndex(),PAGE_INDEX['live']);self.assertEqual(self.window.city_choices.currentIndex(),-1)
         self.assertEqual(self.window.city_choices.count(),2)
     def test_focus_session_does_not_contact_ai(self):
         self.window.agent.run=lambda *a:(_ for _ in ()).throw(AssertionError('must not call'))

@@ -7,11 +7,11 @@ beginning is still in progress.
 
 | Check | Result |
 |---|---|
-| Automated tests | **105 passed** (88 carried over + 17 new for 0.1 Alpha), 0 skipped; see `test-results.txt` |
-| New coverage | Open-source endpoint validation, loopback-only HTTP, Ollama/compatible chat, model listing, message merging, `/calc` safety, `/help`, Wikipedia English fallback, time-of-day greeting, Settings save/reject for open-source providers, version label |
-| Package build | `lafa_assistant-0.1.0a1-py3-none-any.whl` built; `lafa/calculator.py` included |
-| Screenshots | 17 captures regenerated with `scripts/capture-screenshots.py` (offscreen); greeting text depends on the capture time |
-| Not yet re-checked | Real Ollama/open-source server, real provider accounts, microphone, espeak, X11/Wayland walking, Eduka-Settings host, Edukasaun menu; `system-check.json` is still the prototype 0.4 report |
+| Automated tests | **131 passed**, 0 skipped (88 prototype + 17 open-source/commands + 26 redesign); see `test-results.txt` |
+| Redesign coverage | Personality data in 4 languages, hover question + balloon click, walk→activity cycle on the panel (X11 simulated), self-talk, jokes, activity duration, OS guide matching in 4 languages, allowlisted tool launch (no shell), system check fixture, Home toggle, review-mode local tools, settings categories, `--reload` live apply, Eduka-Settings page schema ↔ `Settings` and save (0600, keeps other models, requests reload) |
+| Earlier 0.1 Alpha coverage | Open-source endpoint validation, loopback-only HTTP, Ollama/compatible chat, model listing, `/calc`, Wikipedia English fallback |
+| Screenshots | 23 captures regenerated with `scripts/capture-screenshots.py` (offscreen) and visually inspected |
+| Not yet re-checked | Real panel walking/hover on X11 and Wayland, real desktop tools launched from OS help, the actual Eduka-Settings host, real Ollama/providers, microphone, espeak, Edukasaun menu; `system-check.json` is still the prototype 0.4 report |
 
 ## Prototype 0.4 results (history, to be re-checked)
 

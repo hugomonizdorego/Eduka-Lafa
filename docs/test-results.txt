@@ -54,6 +54,70 @@ test_reminder_clock_cancel_and_offline_delivery (test_live.LiveTests.test_remind
 test_reminder_validation (test_live.LiveTests.test_reminder_validation) ... ok
 test_rss_host_date_query_and_title (test_live.LiveTests.test_rss_host_date_query_and_title) ... ok
 test_weather_units_times_and_attribution (test_live.LiveTests.test_weather_units_times_and_attribution) ... ok
+test_joke_command (test_redesign.AgentRedesignTests.test_joke_command) ... ok
+test_os_guide_preferred_over_model (test_redesign.AgentRedesignTests.test_os_guide_preferred_over_model) ... ok
+test_os_questions_use_offline_guides (test_redesign.AgentRedesignTests.test_os_questions_use_offline_guides) ... ok
+test_activity_chatter_shows_thought (test_redesign.CompanionBehaviour.test_activity_chatter_shows_thought) ... This plugin does not support raise()
+This plugin does not support propagateSizeHints()
+This plugin does not support raise()
+This plugin does not support propagateSizeHints()
+This plugin does not support raise()
+This plugin does not support raise()
+ok
+test_duration_setting_controls_activity_changes (test_redesign.CompanionBehaviour.test_duration_setting_controls_activity_changes) ... This plugin does not support raise()
+This plugin does not support propagateSizeHints()
+This plugin does not support raise()
+This plugin does not support propagateSizeHints()
+This plugin does not support raise()
+This plugin does not support raise()
+ok
+test_hover_asks_and_click_on_balloon_opens_chat (test_redesign.CompanionBehaviour.test_hover_asks_and_click_on_balloon_opens_chat) ... This plugin does not support raise()
+This plugin does not support propagateSizeHints()
+This plugin does not support raise()
+This plugin does not support propagateSizeHints()
+This plugin does not support raise()
+This plugin does not support raise()
+This plugin does not support propagateSizeHints()
+This plugin does not support raise()
+ok
+test_hover_respects_setting_and_pauses_cycle (test_redesign.CompanionBehaviour.test_hover_respects_setting_and_pauses_cycle) ... This plugin does not support raise()
+This plugin does not support propagateSizeHints()
+This plugin does not support raise()
+This plugin does not support propagateSizeHints()
+ok
+test_joke_and_offline_hides_balloon (test_redesign.CompanionBehaviour.test_joke_and_offline_hides_balloon) ... This plugin does not support raise()
+This plugin does not support propagateSizeHints()
+This plugin does not support raise()
+This plugin does not support propagateSizeHints()
+This plugin does not support raise()
+This plugin does not support raise()
+ok
+test_walk_then_activity_cycle_on_panel (test_redesign.CompanionBehaviour.test_walk_then_activity_cycle_on_panel) ... This plugin does not support raise()
+This plugin does not support propagateSizeHints()
+This plugin does not support raise()
+This plugin does not support propagateSizeHints()
+ok
+test_home_dashboard_and_virtual_toggle (test_redesign.DesktopRedesign.test_home_dashboard_and_virtual_toggle) ... This plugin does not support raise()
+This plugin does not support propagateSizeHints()
+This plugin does not support raise()
+ok
+test_home_question_goes_to_chat (test_redesign.DesktopRedesign.test_home_question_goes_to_chat) ... ok
+test_os_page_and_tool_launch_is_allowlisted (test_redesign.DesktopRedesign.test_os_page_and_tool_launch_is_allowlisted) ... ok
+test_reload_role_applies_preferences_from_eduka_settings (test_redesign.DesktopRedesign.test_reload_role_applies_preferences_from_eduka_settings) ... ok
+test_review_chat_runs_local_tools (test_redesign.DesktopRedesign.test_review_chat_runs_local_tools) ... ok
+test_settings_window_categories_and_personality_save (test_redesign.DesktopRedesign.test_settings_window_categories_and_personality_save) ... This plugin does not support propagateSizeHints()
+ok
+test_full_page_saves_and_requests_reload (test_redesign.EdukaSettingsPage.test_full_page_saves_and_requests_reload) ... ok
+test_schema_matches_lafa_settings (test_redesign.EdukaSettingsPage.test_schema_matches_lafa_settings) ... ok
+test_available_tool_uses_allowlist_order (test_redesign.OSGuideTests.test_available_tool_uses_allowlist_order) ... ok
+test_find_in_four_languages (test_redesign.OSGuideTests.test_find_in_four_languages) ... ok
+test_guides_complete_and_tools_are_plain_names (test_redesign.OSGuideTests.test_guides_complete_and_tools_are_plain_names) ... ok
+test_system_report_reads_only_fixture (test_redesign.OSGuideTests.test_system_report_reads_only_fixture) ... ok
+test_tip_rotates_daily (test_redesign.OSGuideTests.test_tip_rotates_daily) ... ok
+test_every_language_covers_every_activity (test_redesign.PersonalityTests.test_every_language_covers_every_activity) ... ok
+test_hover_reacts_to_activity_or_offers_help (test_redesign.PersonalityTests.test_hover_reacts_to_activity_or_offers_help) ... ok
+test_thoughts_and_jokes (test_redesign.PersonalityTests.test_thoughts_and_jokes) ... ok
+test_new_preferences_load_and_bound (test_redesign.SettingsTests.test_new_preferences_load_and_bound) ... ok
 test_bad_config_types_and_limits (test_revision.RevisionTests.test_bad_config_types_and_limits) ... ok
 test_cards_citations_locale_and_no_consecutive_repeat (test_revision.RevisionTests.test_cards_citations_locale_and_no_consecutive_repeat) ... ok
 test_fifo_rejected_without_blocking (test_revision.RevisionTests.test_fifo_rejected_without_blocking) ... ok
@@ -100,6 +164,8 @@ test_busy_activity_and_personal_pose_filter (test_ui.UITests.test_busy_activity_
 This plugin does not support propagateSizeHints()
 This plugin does not support raise()
 This plugin does not support propagateSizeHints()
+This plugin does not support raise()
+This plugin does not support raise()
 ok
 test_file_table_and_readonly (test_ui.UITests.test_file_table_and_readonly) ... This plugin does not support raise()
 This plugin does not support propagateSizeHints()
@@ -117,11 +183,12 @@ test_idle_at_sixty_seconds_not_restarted_by_network_probe (test_ui.UITests.test_
 This plugin does not support propagateSizeHints()
 This plugin does not support raise()
 This plugin does not support propagateSizeHints()
+This plugin does not support raise()
+This plugin does not support raise()
 ok
 test_navigation_and_rendering (test_ui.UITests.test_navigation_and_rendering) ... This plugin does not support raise()
 This plugin does not support propagateSizeHints()
 This plugin does not support raise()
-This plugin does not support propagateSizeHints()
 This plugin does not support propagateSizeHints()
 ok
 test_offline_pauses_character_and_actions (test_ui.UITests.test_offline_pauses_character_and_actions) ... This plugin does not support raise()
@@ -143,7 +210,7 @@ test_same_user_launcher_activation (test_ui.UITests.test_same_user_launcher_acti
 This plugin does not support propagateSizeHints()
 This plugin does not support raise()
 This plugin does not support propagateSizeHints()
-libpyside: addMetaMethod: Cannot add dynamic method "abort()" (2) to QLocalSocket/0x5508c780: No Wrapper found.
+libpyside: addMetaMethod: Cannot add dynamic method "abort()" (2) to QLocalSocket/0x7c530e60: No Wrapper found.
 ok
 test_virtual_role_offline_opens_settings (test_ui.UITests.test_virtual_role_offline_opens_settings) ... This plugin does not support raise()
 This plugin does not support propagateSizeHints()
@@ -188,6 +255,8 @@ test_disabling_all_cards_does_not_starve_minute_activity_changes (test_v4.V4UI.t
 This plugin does not support propagateSizeHints()
 This plugin does not support raise()
 This plugin does not support propagateSizeHints()
+This plugin does not support raise()
+This plugin does not support raise()
 ok
 test_failed_preference_write_preserves_live_configuration (test_v4.V4UI.test_failed_preference_write_preserves_live_configuration) ... This plugin does not support propagateSizeHints()
 ok
@@ -201,6 +270,6 @@ test_settings_save_keeps_code_output_and_draft_chat (test_v4.V4UI.test_settings_
 ok
 
 ----------------------------------------------------------------------
-Ran 105 tests in 69.766s
+Ran 131 tests in 139.059s
 
 OK

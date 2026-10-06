@@ -8,49 +8,72 @@ beginning (see [CHANGELOG](CHANGELOG.md)). Source, build scripts and developer
 documentation are in English. The interface follows the user's system language,
 with English, Indonesian, Portuguese and Tetun overrides. No `.deb` is produced.
 
-![LAFA Virtual Assistant review](docs/screenshots/05-lafa-desktop-concept.png)
+![LAFA Home](docs/screenshots/01-home.png)
 
-This image uses actual LAFA widget pixels on an **illustrated desktop**. It does
-not show installation on Edukasaun OS. Other captures are offscreen Qt renders.
-[View all seventeen captures](docs/SCREENSHOTS.md).
+![LAFA on the Eduka-Panel asking how it can help](docs/screenshots/17-virtual-hover-question.png)
 
-## Two separate experiences
+The second image uses actual LAFA widget pixels on an **illustrated desktop**;
+it does not show installation on Edukasaun OS. Other captures are offscreen Qt
+renders. [View all 23 captures](docs/SCREENSHOTS.md) — regenerate them after
+every UI change with `scripts/capture-screenshots.py`.
 
-| Surface | Purpose | Entry point |
+## Three surfaces
+
+| Surface | What it does | Entry point |
 |---|---|---|
-| **LAFA Desktop** | Typed conversation, research, files, documents, AI service links, coding lessons, weather/news and reminders | Edukasaun menu launcher; `lafa --window` or simply `lafa` |
-| **LAFA Settings** | Dedicated settings surface, activation, language, outfit, panel movement, public information and API preferences | Settings launcher; `lafa --settings`; native Eduka-Settings group supplied |
-| **LAFA Virtual Assistant** | Floating character and speech bubble, quick help, encouragement and Timor-Leste facts | Enable **Activate LAFA Virtual Assistant in Eduka-Desktop** in Settings; `lafa --virtual` shows it only when enabled |
+| **LAFA Desktop** | Home dashboard, chat, **Edukasaun OS help**, files, learning, coding, weather/news, reminders, Timor-Leste, AI services | Edukasaun menu; `lafa` or `lafa --window` |
+| **LAFA Virtual Assistant** | The character on the Eduka-Panel: walks, does activities, asks “Can I help?” on hover, chats on click, tells jokes | Turn on from Home or Eduka-Settings → LAFA; `lafa --virtual` |
+| **Eduka-Settings → LAFA** | Every LAFA preference: activation, outfit, panel, personality, activity timing, AI provider/model, language, folders, weather | Native page `integration/eduka_lafa_settings.py`; LAFA's own window `lafa --settings` |
 
-The virtual assistant is **off by default**. First activation introduces LAFA:
-“I am LAFA, from Timor-Leste, a virtual assistant ready to help you.” The text is
-translated to the selected UI language. The initial outfit uses the supplied male
-traditional-clothing reference: striped red tais wrap, white sash, patterned
-head wrap and plume, bead necklaces and crescent chest ornament.
+## What LAFA does
 
-The package includes the native settings group and an explicit source integration
-helper. The latest Eduka-Settings source was not available, so the installer
-creates a working standalone Settings entry and supplies the host integration
-module, a dedicated page factory and a runnable integration test host. The
-activation control waits for LAFA to confirm the saved state, and reports a
-failure or timeout. It does not claim to have modified or tested the current OS
-settings app.
-See [integration instructions](docs/EDUKA-INTEGRATION.md).
+**LAFA Desktop** (Edukasaun menu)
+- **Home**: time-of-day greeting, quick question box, Virtual Assistant on/off,
+  cards for everything LAFA can do, tip of the day and a read-only system check
+  (OS, desktop session, free disk, memory, battery).
+- **Edukasaun OS help**: 16 offline step-by-step guides in four languages —
+  Wi-Fi, sound, screen/projector, files, installing apps, updates, printer, USB,
+  screenshots, shortcuts, password, language/keyboard, accessibility, battery,
+  LibreOffice and Eduka-Settings. **Open tool** starts the matching desktop tool
+  from a fixed allowlist (for example `nm-connection-editor`, `pavucontrol-qt`,
+  `pcmanfm-qt`, `system-config-printer`) without a shell; LAFA never changes
+  system settings by itself. Questions such as “how do I connect wifi?”,
+  “cara pasang aplikasi”, “oinsá liga Wi-Fi?” are answered from these guides,
+  even without an AI key.
+- **Chat** with suggestion chips, `/help`, `/os`, `/calc`, `/joke`, public
+  sources, files, weather, news and reminders.
 
-## Features
+**LAFA Virtual Assistant** (off by default; activate it on Home or in
+Eduka-Settings)
+- Stands on the Eduka-Panel. When nobody needs help, it **walks to a new spot on
+  the panel, then does an activity** — studying, reading, gaming, eating,
+  bathing, sleeping, stretching, dancing Tebe-tebe or Bidu… — and walks again.
+  Activity duration is configurable (20–600 s, default 60 s).
+- Every activity is part of an assistant's working day ("Reading the Edukasaun
+  OS guide", "Studying new lessons for you", "Power nap · recharging").
+- **Cursor touches LAFA → it stops and asks how it can help.** The question
+  changes every time and reacts to what LAFA was doing ("Eek! I'm in the bath!
+  …But I can still help you."). Clicking the balloon or LAFA opens the chat.
+- Personality: innocent, curious and funny, but clever and useful. LAFA
+  sometimes comments on its activity, tells jokes, shows positive messages and
+  Timor-Leste knowledge cards. Each behaviour can be switched off.
+- On X11 it walks above the configured top/bottom panel edge. On Wayland the
+  compositor controls placement; activities still change and LAFA can be dragged.
 
-- Seventeen selectable activities: idle, reading, thinking, walking, sitting,
-  gaming, serious, mildly angry, talking, sleeping, bathing, toilet, studying,
-  eating, stretching, **Tebe-tebe** and **Bidu**. Nine have traditional-costume
-  illustrations; other states use the existing activity artwork.
-- Idle activity changes after 60 seconds without LAFA input, with no immediate
-  repeat. Busy work, open chat, dragging, pause and offline status suppress it.
-  Bath/toilet poses can be disabled. Animation uses procedural bob/sway and
-  X11 window movement; the dance poses are artistic mascot interpretations.
-- On X11, the walking state moves back and forth above the configured
-  top/bottom Eduka-Panel edge. Configure panel height to match the actual panel.
-  Wayland allows compositor-managed placement and manual dragging; automatic
-  cross-screen walking is disabled there.
+The first activation introduces LAFA with a time-of-day greeting: “Good
+morning! I am LAFA, from Timor-Leste, a virtual assistant ready to help you.”
+The outfit is the male traditional clothing: striped red tais wrap, white sash,
+patterned head wrap and plume, bead necklaces and crescent chest ornament.
+
+The latest Eduka-Settings source was not available, so the installer also
+creates a standalone LAFA Settings entry, supplies the native page module and a
+runnable integration test host. See [integration instructions](docs/EDUKA-INTEGRATION.md).
+
+## More features
+
+- Seventeen poses: idle, reading, thinking, walking, sitting, gaming, serious,
+  mildly angry, talking, sleeping, bathing, toilet, studying, eating, stretching,
+  **Tebe-tebe** and **Bidu**. Nine have traditional-costume illustrations.
 - Positive notes and source-linked Timor-Leste cards above the character's head,
   default every five minutes while idle. Cards include Dili, tais, coffee, food,
   tourism and Tebe, with source URLs and an explicit source-check date.
@@ -117,7 +140,7 @@ Optional Debian runtime dependencies:
 
 ```bash
 sudo apt install python3-venv libegl1 libopengl0 libxcb-cursor0 \
-  libxkbcommon-x11-0 libxcb-xinerama0 fonts-noto-core \
+  libxkbcommon-x11-0 libxcb-xinerama0 fonts-noto-core fonts-noto-color-emoji \
   alsa-utils espeak-ng poppler-utils gnome-keyring
 ```
 
@@ -150,8 +173,9 @@ address ending in `/v1` and an optional key.
 
 **Commercial APIs (optional):** select a provider, enter an API key, press
 **Fetch available models** (or type an official model ID), then Save. Perplexity uses its `fast` preset.
-Settings has separate **Virtual Assistant**, **AI & language**, and **Files &
-weather** tabs. Closing without saving leaves provider/model preferences
+Settings has five categories: **Virtual Assistant**, **AI & language**,
+**Personality & activities**, **Files & weather** and **About**; the same
+preferences (except API keys) are on the Eduka-Settings → LAFA page. Closing without saving leaves provider/model preferences
 unchanged. Saving preserves the coding editor, output and unsent chat draft.
 No model ID is guessed from a changing model catalogue. Keys stay in session
 memory unless secure keyring is selected. Secret Service/KWallet are accepted;
@@ -175,6 +199,9 @@ is no universal sign-in, credential scraping or reuse of browser cookies.
 
 ```text
 /help
+/os
+/os wifi
+/joke
 /calc (3+4)*2
 /weather
 /weather Dili
