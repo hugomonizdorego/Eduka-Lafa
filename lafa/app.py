@@ -441,7 +441,9 @@ class Window(QMainWindow):
         if kind:self.exam_kind.setCurrentIndex(self.exam_kind.findData(kind))
         if subject:self.exam_subject.setCurrentIndex(self.exam_subject.findData(subject))
         self.exam=classroom.ExamSession(self.exam_kind.currentData(),self.exam_subject.currentData(),self.settings.locale)
-        self.exam_result.hide();self.exam_feedback.clear();self.show_exam_question()
+        self.exam_result.hide();self.exam_feedback.clear()
+        for b in self.exam_buttons:b.show()
+        self.show_exam_question()
         if self.exam.limit:self.exam_timer.start(1000)
         self.tick_exam()
     def show_exam_question(self):
@@ -469,7 +471,7 @@ class Window(QMainWindow):
         exam=self.exam;self.exam_timer.stop()
         if exam is None or getattr(exam,"saved",False):return
         exam.saved=True;lang=self.settings.locale
-        for b in self.exam_buttons:b.setEnabled(False)
+        for b in self.exam_buttons:b.setEnabled(False);b.hide()
         self.report.add(exam);grade=classroom.grade(exam.percent,lang)
         summary=self.t("exam_done").replace("{score}",str(exam.score)).replace("{total}",str(exam.total)).replace("{percent}",str(exam.percent)).replace("{grade}",grade)
         self.exam_question.setText(summary);self.exam_feedback.setText(self.t("saved_report"));self.exam_progress.setText(self.t("result"))

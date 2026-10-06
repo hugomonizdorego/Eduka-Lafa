@@ -26,7 +26,8 @@ from lafa.tools import FileSearch, Source
 from lafa.live_info import Location, WeatherReport, ForecastDay, NewsReport
 from lafa.learning import LessonPython
 from lafa.i18n import tr
-from lafa import personality, osguide, outfits
+from lafa import personality, osguide, outfits, classroom, roles
+import random
 
 out = ROOT / 'docs/screenshots'; out.mkdir(parents=True, exist_ok=True)
 for old in out.glob('*.png'): old.unlink()
@@ -63,13 +64,31 @@ weather = WeatherReport(Location('Dili', -8.5586, 125.5736, 'Asia/Dili', 'Timor-
 w.show_weather(weather); w.show_news(NewsReport([Source('Sample headline to review the news layout', 'https://www.bbc.com/news/world', '', 'BBC World · SAMPLE', 'REVIEW SAMPLE'), Source('Open a headline on the publisher website', 'https://www.theguardian.com/world', '', 'The Guardian · SAMPLE', 'REVIEW SAMPLE')], 'REVIEW SAMPLE · not current news'))
 w.navigate('live'); save(w, '11-notice-board.png')
 w.show_timor_news(NewsReport([Source('SAMPLE · Learning and education in Timor-Leste', 'https://tatoli.tl/', '', 'Tatoli · SAMPLE', 'REVIEW SAMPLE'), Source('SAMPLE · Arts, culture and community life', 'https://timorpost.com/', '', 'Timor Post · SAMPLE', 'REVIEW SAMPLE')], 'REVIEW SAMPLE · not live headlines'))
-w.navigate('culture'); save(w, '12-timor-leste.png')
+w.navigate('culture'); w.timor_tabs.setCurrentIndex(2); save(w, '12-timor-leste.png')
 with tempfile.TemporaryDirectory(prefix='lafa-review-') as files:
     root = Path(files) / 'Documents'; root.mkdir()
     for name in ['Lesson_Photosynthesis.txt', 'Lesson_Mathematics.txt', 'Timor_Leste_Notes.md', 'Lesson_Schedule.csv']: (root / name).write_text('REVIEW SAMPLE', encoding='utf-8')
     w.settings.roots = [str(root)]; w.show_files(FileSearch(w.settings.roots).search('', 'documents')); w.navigate('files'); pump(); w.file_table.selectRow(0); save(w, '13-my-files.png')
 w.navigate('hub'); save(w, '14-ai-services.png')
 w.set_online(False); w.navigate('home'); morning(w); save(w, '15-offline.png'); w.set_online(True)
+# School: classroom, exam hall, report card, Timor-Leste, roles.
+w.navigate('classroom'); w.class_subject.setCurrentIndex(w.class_subject.findData('science')); w.lesson_list.setCurrentRow(1); save(w, '32-classroom.png')
+def exam(kind, subject, seed, right):
+    w.navigate('exams'); w.start_exam(kind, subject); w.exam = classroom.ExamSession(kind, subject, w.settings.locale, random.Random(seed)); w.show_exam_question()
+    for i in range(right[0]):
+        q = w.exam.current; w.answer_exam(next(j for j, b in enumerate(w.exam_buttons) if b.property('option') == (q.correct if i % right[1] else q.options[0] if q.options[0] != q.correct else q.options[1]))); w.show_exam_question()
+exam('quiz', 'math', 3, (5, 5)); w.finish_exam()
+exam('exam', 'all', 11, (4, 3)); w.exam.started -= 260; w.tick_exam(); save(w, '33-exam-hall.png')
+while w.exam.current: exam_q = w.exam.current; w.answer_exam(next(j for j, b in enumerate(w.exam_buttons) if b.property('option') == exam_q.correct)); w.show_exam_question()
+exam('test', 'history', 5, (10, 4)); save(w, '34-exam-result.png')
+w.navigate('report'); save(w, '35-report-card.png')
+w.navigate('culture'); w.timor_tabs.setCurrentIndex(0); w.timeline.setCurrentRow(next(i for i, e in enumerate(w.timeline_events) if e and e.year == 1999)); save(w, '36-timor-leste-history.png')
+w.timor_tabs.setCurrentIndex(1); save(w, '37-timor-leste-nation.png')
+w.navigate('home'); morning(w); w.play_role('magician'); w.role_pet.animate(False)
+w.findChildren(__import__(BINDING + '.QtWidgets', fromlist=['QScrollArea']).QScrollArea)[0].verticalScrollBar().setValue(330); save(w, '38-home-roles.png')
+w.open_mind_reader(); pump(); save(w.mind_dialog, '39-mind-reader.png')
+for i in range(6): w.mind_dialog.mind_answer(i in (0, 2, 4))
+save(w.mind_dialog, '40-mind-reader-result.png'); w.mind_dialog.close()
 w.open_settings(); pump()
 for row, name in [(0, '16-lafa-settings-virtual-assistant.png'), (3, '17-lafa-settings-desktop.png')]:
     w.settings_categories.setCurrentRow(row); save(w.settings_dialog, name)
@@ -146,6 +165,10 @@ sheet('25-outfits.png', 'LAFA · three outfits', 'Tais Mane (default), Tuxedo an
       [(s, o, tr('en', o), tr('en', s)) for o in outfits.OUTFITS for s in ['idle', 'talking', 'walking']], columns=3, size=210)
 sheet('26-formal-activities.png', 'Tuxedo · formal activities', 'Each activity is a pose of the outfit plus a small scene.', [(a, 'tuxedo', tr('en', a), personality.duty('en', a)) for a in outfits.FORMAL])
 sheet('27-casual-activities.png', 'Casual · summer activities', 'Beach, town, café and shopping.', [(a, 'casual', tr('en', a), personality.duty('en', a)) for a in outfits.CASUAL])
+sheet('41-lafa-roles.png', "LAFA's roles · every outfit", 'Teacher, professor, motivator, magician, master and comedian.',
+      [(a, o, tr('en', a), tr('en', o)) for o in outfits.OUTFITS for a in outfits.ROLES], columns=6, size=170)
+for o, title in [('tuxedo', 'Tuxedo on every pose'), ('casual', 'Casual on every pose: shirt, shorts, socks and sneakers')]:
+    sheet(f'42-{o}-all-poses.png' if o == 'tuxedo' else '43-casual-all-poses.png', title, 'Only bathing and the toilet are undressed.', [(s, o, tr('en', s), '') for s in STATES if s not in ('tebe', 'bidu')], columns=5, size=170)
 sheet('28-tais-mane-activities.png', 'Tais Mane · school and daily life', 'The default outfit, including Tebe-tebe and Bidu dances.', [(a, 'traditional', tr('en', a), personality.duty('en', a)) for a in outfits.TRADITIONAL], columns=5, size=170)
 
 with patch.dict(os.environ, {'LC_ALL': 'tet_TL.UTF-8'}):

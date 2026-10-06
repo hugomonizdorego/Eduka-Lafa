@@ -1,4 +1,4 @@
-# Screenshot review — LAFA 0.1.1 Alpha
+# Screenshot review — LAFA 0.1.2 Alpha
 
 Regenerate after every UI change so developers can review and keep improving:
 
@@ -26,7 +26,7 @@ homework go to a temporary folder. Weather, headlines and sources are labelled
 | 09 | `09-library.png` | Library (public sources, learning sites) |
 | 10 | `10-computer-lab.png` | Computer lab (bounded Python lessons) |
 | 11 | `11-notice-board.png` | Notice board: weather and world headlines (sample) |
-| 12 | `12-timor-leste.png` | Timor-Leste news and culture (sample) |
+| 12 | `12-timor-leste.png` | Timor-Leste · news and culture tab (sample) |
 | 13 | `13-my-files.png` | File search in temporary sample folders |
 | 14 | `14-ai-services.png` | AI services opened in the browser |
 | 15 | `15-offline.png` | Offline state |
@@ -46,6 +46,18 @@ homework go to a temporary folder. Weather, headlines and sources are labelled
 | 29 | `29-home-tetun.png` | Home in Tetun |
 | 30 | `30-teachers-tetun.png` | Arts & Culture teacher in Tetun |
 | 31 | `31-home-eduka-dark-theme.png` | LAFA following the Edukasaun-Dark theme and accent colour |
+| 32 | `32-classroom.png` | Classroom: lesson notes and a task (Science · coral reefs of Timor-Leste) |
+| 33 | `33-exam-hall.png` | Exam hall: 20-question exam with the timer |
+| 34 | `34-exam-result.png` | Test result with grade and review of mistakes |
+| 35 | `35-report-card.png` | Report card: averages, best scores, grades and history |
+| 36 | `36-timor-leste-history.png` | Timor-Leste history timeline (1999 referendum) |
+| 37 | `37-timor-leste-nation.png` | Nation and symbols, municipalities and public holidays |
+| 38 | `38-home-roles.png` | Lobby: word of the day, LAFA says, today in Timor-Leste, LAFA's roles (magician) |
+| 39 | `39-mind-reader.png` | Magician's mind reader: binary card |
+| 40 | `40-mind-reader-result.png` | Mind reader result and the maths behind it |
+| 41 | `41-lafa-roles.png` | LAFA's roles in every outfit |
+| 42 | `42-tuxedo-all-poses.png` | Tuxedo on every pose |
+| 43 | `43-casual-all-poses.png` | Casual on every pose: shirt, shorts, socks and sneakers |
 
 Captures 20–24 are **compositions of actual LAFA widget pixels on a painted
 desktop and panel**, not screenshots of Edukasaun OS. Captures 18–19 run the
@@ -58,4 +70,7 @@ art by `tools/make-outfits.py`; hand-drawn sheets can replace them.
 ![Home](screenshots/01-home.png)
 ![Lafa-Configuration in Eduka-Settings](screenshots/18-eduka-settings-lafa-configuration.png)
 ![Outfits](screenshots/25-outfits.png)
+![Exam hall](screenshots/33-exam-hall.png)
+![Timor-Leste](screenshots/36-timor-leste-history.png)
+![Casual on every pose](screenshots/43-casual-all-poses.png)
 ![Teachers](screenshots/02-teachers-mathematics.png)

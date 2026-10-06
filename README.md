@@ -1,6 +1,6 @@
 # LAFA
 
-**LAFA 0.1.1 Alpha** is an open-source learning assistant and animated
+**LAFA 0.1.2 Alpha** is an open-source learning assistant and animated
 crocodile companion from Timor-Leste for **Edukasaun OS** (Debian 13 Trixie,
 LXQt) and the **Eduka-Desktop Suite** (Eduka-Desktop, Eduka-Panel,
 Eduka-Settings). LAFA has **no main server**: it relies on the internet, public
@@ -15,14 +15,18 @@ and [how to keep developing LAFA](docs/DEVELOPMENT.md).
 
 ![The three outfits](docs/screenshots/25-outfits.png)
 
-[View all 31 captures](docs/SCREENSHOTS.md). Captures of LAFA on the desktop
+![Exam hall](docs/screenshots/33-exam-hall.png)
+
+![Timor-Leste history](docs/screenshots/36-timor-leste-history.png)
+
+[View all 43 captures](docs/SCREENSHOTS.md). Captures of LAFA on the desktop
 are actual LAFA pixels on an **illustrated desktop**, not Edukasaun OS.
 
 ## Install on Edukasaun OS
 
 ```bash
-sh tools/build-deb.sh                       # -> dist/lafa_0.1.1_all.deb
-sudo apt install ./dist/lafa_0.1.1_all.deb  # dependencies come from Debian
+sh tools/build-deb.sh                       # -> dist/lafa_0.1.2_all.deb
+sudo apt install ./dist/lafa_0.1.2_all.deb  # dependencies come from Debian
 ```
 
 `apt` installs every dependency automatically: `python3-pyqt5` (the same Qt
@@ -38,7 +42,7 @@ Inside Cubic it starts no GUI. Updating later is the same `apt install` command.
 
 | Surface | What it does | Entry point |
 |---|---|---|
-| **LAFA Desktop** | A complete school room: teachers, homework & timetable, library, computer lab, notice board, IT help desk, files, Timor-Leste, AI services | Edukasaun menu; `lafa` |
+| **LAFA Desktop** | A complete school: classroom lessons, teachers, exam hall (quiz, test, exam), report card, homework & timetable, Timor-Leste history and symbols, library, computer lab, notice board, IT help desk, files, AI services | Edukasaun menu; `lafa` |
 | **LAFA Virtual Assistant** | The character on the Eduka-Panel: walks, does activities that suit its outfit, asks “Can I help?” on hover, chats on click | Activate on Home or in Lafa-Configuration; `lafa --virtual` |
 | **Eduka-Settings → Lafa-Configuration** | Every LAFA preference: activation, outfit, size, speeds, personality, LAFA Desktop, language, AI, folders, weather | `lafa --configure` (falls back to LAFA's own window `lafa --settings`) |
 
@@ -61,6 +65,28 @@ Inside Cubic it starts no GUI. Updating later is the same `apt install` command.
 ## What LAFA does
 
 **LAFA Desktop — a complete school**
+
+The sidebar is organised like a school building: **School** (lobby,
+classroom, teachers' room, exam hall, report card, homework), **Timor-Leste**,
+**Library & labs** and **Help & tools**.
+
+- **Classroom**: lessons with study notes and a task to try for every
+  subject, including Timor-Leste history lessons built from the timeline.
+- **Exam hall**: **quiz** (5 questions, instant feedback), **test / ulangan**
+  (10 questions on one subject) and **exam / ujian** (20 questions from all
+  subjects, 20-minute timer), with a review of every mistake. Works offline.
+- **Report card**: results saved privately on the computer, averages, best
+  scores and grades, export to a text file.
+- **Timor-Leste**: history from the first people of Jerimalai (c. 42,000
+  years ago) through Portuguese Timor, the occupation and resistance, the 1999
+  referendum, the restoration of independence on 20 May 2002 and ASEAN
+  membership in 2025; national facts and symbols, municipalities and main
+  towns, public holidays, "today in Timor-Leste", and the news and culture
+  feed.
+- **Lobby**: word of the day in four languages, LAFA's daily motivation, today
+  in Timor-Leste or the next holiday, and **LAFA's roles**: teacher,
+  professor, motivator, magician (a binary mind-reading trick), master,
+  comedian and helper.
 - **Teachers**: Mathematics, Science, Languages, History & Geography, ICT &
   Coding, Arts & Culture and a Counsellor. Each has free learning resources,
   **offline practice** (maths exercises in three levels, vocabulary cards
@@ -79,12 +105,17 @@ Inside Cubic it starts no GUI. Updating later is the same `apt install` command.
   from its open-source repository, and announces new LAFA releases.
 
 **LAFA Virtual Assistant**
-- **Three outfits**: **Tais Mane** (default), **Tuxedo** and **Casual**. The
+- **Three outfits**: **Tais Mane** (default), **Tuxedo** (jacket, shirt, bow
+  tie, trousers, shoes) and **Casual** (shirt, shorts, socks and sneakers),
+  worn in every activity except bathing and the toilet. The
   outfit decides the activities: Tais Mane — school and daily life, Tebe-tebe
   and Bidu; Tuxedo — parties, meetings, presentations, graduation ceremonies,
   gala dinners, speeches; Casual — beach, sunbathing, beach ball, sightseeing,
   café, shopping, snacks. Change it in Lafa-Configuration or by right-clicking
   LAFA → Outfit.
+- **Roles** in every outfit (right-click → LAFA's roles): teacher at a
+  chalkboard, professor with a mortarboard, motivator with a trophy, magician
+  with a top hat and wand, calm master, comedian at the microphone.
 - Walks to a new spot on the Eduka-Panel, then does an activity, then walks
   again. **Cursor touches LAFA → it stops and asks how it can help**, in
   character and reacting to what it is doing. Innocent, curious, clever and

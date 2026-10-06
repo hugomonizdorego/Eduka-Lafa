@@ -5,7 +5,7 @@ roles inside one same-user process. They can be visible independently. Opening
 Desktop does not enable the character. Disabling the character keeps Desktop
 available. Settings is a dedicated top-level dialog.
 
-## LAFA 0.1.1 on Edukasaun OS (Eduka-Desktop Suite 0.9.24)
+## LAFA 0.1.2 on Edukasaun OS (Eduka-Desktop Suite 0.9.24)
 
 ### What the `lafa` Debian package installs
 

@@ -4,6 +4,48 @@
 
 _Nothing yet._
 
+## 0.1.2 — 2026-10-06
+
+### Outfits fixed
+- Clothes are rebuilt with garment shapes per pose that end on the drawn
+  outlines; no more cut, broken or straight-band clothes.
+- **Casual**: sky-blue shirt, khaki **shorts**, white **socks** and red
+  sneakers. **Tuxedo**: one piece with a V shirt front, collar, bow tie,
+  black trousers and polished shoes. **Tais Mane**: wrap, sash, beads and
+  belak on every pose without hand-drawn art.
+- Every activity is dressed (sleeping too) except bathing and the toilet.
+- `python3 tools/make-outfits.py --preview` shows every pose in every outfit.
+
+### LAFA's roles
+- One character, many hats: **teacher, professor, motivator, magician,
+  master, comedian and helper**. Each role has an activity with its own scene
+  (chalkboard, mortarboard and books, trophy and stars, top hat and wand,
+  calm scroll and chess, microphone and spotlight) in every outfit, lines in
+  four languages, and a "LAFA's roles" menu on the Virtual Assistant.
+- Magician's **mind reader**: six binary cards guess any number from 1 to 63
+  and explain the maths.
+
+### LAFA Desktop is a school
+- Sidebar organised like a school building: **School** (lobby, classroom,
+  teachers' room, exam hall, report card, homework), **Timor-Leste**,
+  **Library & labs** and **Help & tools**.
+- **Classroom**: lessons with study notes and a task for every subject; Timor-
+  Leste history lessons come from the timeline.
+- **Exam hall**: quiz (5 questions, instant feedback), test/ulangan (10 on
+  one subject) and exam/ujian (20 from all subjects, 20-minute timer), with a
+  review of mistakes. Questions: school banks, generated maths, vocabulary
+  between Tetun, Portuguese, English and Indonesian, and Timor-Leste history,
+  municipalities and holidays.
+- **Report card**: every result saved privately (`~/.local/share/lafa/report.json`,
+  mode 0600), averages, best scores, grades, and export to a text file.
+- **Timor-Leste**: history from the first people of Jerimalai (c. 42,000 years
+  ago) through Portuguese Timor, occupation and resistance, the 1999
+  referendum, the restoration of independence (20 May 2002) and ASEAN
+  membership (2025); national facts and symbols, the 14 municipalities and
+  RAEOA with main towns, public holidays, and the news and culture feed.
+- Lobby: word of the day in four languages, LAFA's daily motivation, "today
+  in Timor-Leste" or the next public holiday, and the roles panel.
+
 ## 0.1.1 — 2026-10-06 · patch release (0.1.1 Alpha)
 
 ### Edukasaun OS and Eduka-Desktop Suite

@@ -23,12 +23,15 @@ of API access and belongs to the user's browser.
 
 | Module | Responsibility |
 |---|---|
-| app | Desktop pages (Home, Chat, Edukasaun OS help, Files, Learn, Coding, Weather & news, Reminders, Timor-Leste, AI services), Eduka-Settings-style settings window, live reload, worker delivery, tray |
+| app | Desktop pages grouped like a school (lobby, classroom, teachers, exam hall, report card, homework; Timor-Leste; library, lab, notice board, AI services; chat, IT help desk, files, reminders), Eduka-Settings-style settings window, live reload, worker delivery, tray |
 | mascot | Atlases, costumes, chat bubble, hover/thought balloon, walk-then-activity cycle on the Eduka-Panel (X11), popup clock |
 | qt | Single Qt import point: PyQt5 (Edukasaun OS) or PySide6 (developers) |
 | eduka | Eduka-Desktop suite compatibility: language, panel geometry, theme/accent, notifications, agenda, XWayland, Lafa-Configuration launcher |
-| outfits | Tais Mane / Tuxedo / Casual, outfit activities and their vector scenes, Timor-Leste flag icon |
+| outfits | Tais Mane / Tuxedo / Casual, outfit and role activities, their vector scenes and hats, Timor-Leste flag icon |
 | school | Teachers, offline practice (maths, vocabulary, quizzes, tips), homework and timetable storage |
+| classroom | Lessons, question generation, quiz/test/exam sessions with time limits, grades and the private report card |
+| timorleste | Timor-Leste history timeline, national facts, municipalities, public holidays, today in history, generated history questions |
+| roles | LAFA's roles (teacher, professor, motivator, magician, master, comedian, helper), daily items and the binary mind reader |
 | updates | Validated online source catalog, cache, merge, release check |
 | personality | LAFA's character: assistant duty per activity, hover questions, activity reactions, self-talk and jokes in EN/ID/PT/TET |
 | osguide | Offline Edukasaun OS guides, fixed tool allowlist launched without a shell, read-only system check, tips |
