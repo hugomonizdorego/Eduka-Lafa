@@ -1,329 +1,196 @@
-QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-root'
-test_save_open_source_provider_and_reject_bad_endpoint (test_alpha.AlphaUI.test_save_open_source_provider_and_reject_bad_endpoint) ... This plugin does not support propagateSizeHints()
-ok
-test_version_label_and_greeting_in_introduction (test_alpha.AlphaUI.test_version_label_and_greeting_in_introduction) ... ok
-test_calculator (test_alpha.CommandTests.test_calculator) ... ok
-test_help_and_calc_commands (test_alpha.CommandTests.test_help_and_calc_commands) ... ok
-test_translations_complete_for_new_keys (test_alpha.CommandTests.test_translations_complete_for_new_keys) ... ok
-test_english_search_has_no_second_call (test_alpha.FallbackAndGreetingTests.test_english_search_has_no_second_call) ... ok
-test_greeting_by_hour (test_alpha.FallbackAndGreetingTests.test_greeting_by_hour) ... ok
-test_tetun_search_falls_back_to_english (test_alpha.FallbackAndGreetingTests.test_tetun_search_falls_back_to_english) ... ok
-test_compatible_chat_uses_https_and_optional_key (test_alpha.OpenSourceProviderTests.test_compatible_chat_uses_https_and_optional_key) ... ok
-test_endpoint_validation (test_alpha.OpenSourceProviderTests.test_endpoint_validation) ... ok
-test_list_models (test_alpha.OpenSourceProviderTests.test_list_models) ... ok
-test_loopback_http_only_when_requested (test_alpha.OpenSourceProviderTests.test_loopback_http_only_when_requested) ... ok
-test_merged_messages_alternate (test_alpha.OpenSourceProviderTests.test_merged_messages_alternate) ... ok
-test_ollama_chat_uses_local_endpoint (test_alpha.OpenSourceProviderTests.test_ollama_chat_uses_local_endpoint) ... ok
-test_open_source_ready_without_key (test_alpha.OpenSourceProviderTests.test_open_source_ready_without_key) ... ok
-test_settings_load_rejects_unsafe_endpoints (test_alpha.OpenSourceProviderTests.test_settings_load_rejects_unsafe_endpoints) ... ok
-test_version_is_consistent_everywhere (test_alpha.VersionTests.test_version_is_consistent_everywhere) ... ok
-test_anthropic (test_core.AdapterTests.test_anthropic) ... ok
-test_deepseek (test_core.AdapterTests.test_deepseek) ... ok
-test_gemini (test_core.AdapterTests.test_gemini) ... ok
-test_missing_model_rejected (test_core.AdapterTests.test_missing_model_rejected) ... ok
-test_openai (test_core.AdapterTests.test_openai) ... ok
-test_perplexity_agent_api (test_core.AdapterTests.test_perplexity_agent_api) ... ok
-test_all_languages_complete (test_core.CoreTests.test_all_languages_complete) ... ok
-test_config_roundtrip_no_secrets (test_core.CoreTests.test_config_roundtrip_no_secrets) ... ok
-test_envelope_plaintext_and_mood (test_core.CoreTests.test_envelope_plaintext_and_mood) ... ok
-test_html_scripts_removed (test_core.CoreTests.test_html_scripts_removed) ... ok
-test_https_and_redirect_guard (test_core.CoreTests.test_https_and_redirect_guard) ... ok
-test_local_search_categories_and_hidden_files (test_core.CoreTests.test_local_search_categories_and_hidden_files) ... ok
-test_local_search_overlapping_roots_deduplicates (test_core.CoreTests.test_local_search_overlapping_roots_deduplicates) ... ok
-test_local_tool_results_never_sent_to_ai (test_core.CoreTests.test_local_tool_results_never_sent_to_ai) ... ok
-test_model_action_allowlist (test_core.CoreTests.test_model_action_allowlist) ... ok
-test_natural_language_and_commands (test_core.CoreTests.test_natural_language_and_commands) ... ok
-test_no_api_key_does_not_invent_answer (test_core.CoreTests.test_no_api_key_does_not_invent_answer) ... ok
-test_offline_never_searches_or_calls_api (test_core.CoreTests.test_offline_never_searches_or_calls_api) ... ok
-test_read_docx_and_odt_and_truncation (test_core.CoreTests.test_read_docx_and_odt_and_truncation) ... ok
-test_search_limits_are_reported (test_core.CoreTests.test_search_limits_are_reported) ... ok
-test_secure_keyring_no_plaintext (test_core.CoreTests.test_secure_keyring_no_plaintext) ... ok
-test_symlinks_and_outside_read_blocked (test_core.CoreTests.test_symlinks_and_outside_read_blocked) ... ok
-test_web_query_encoded (test_core.CoreTests.test_web_query_encoded) ... ok
-test_wikipedia_sources (test_core.CoreTests.test_wikipedia_sources) ... ok
-test_xml_entities_rejected (test_core.CoreTests.test_xml_entities_rejected) ... ok
-test_agenda_matches_eduka_format (test_eduka.AgendaNotifyTests.test_agenda_matches_eduka_format) ... ok
-test_notify_uses_fixed_dbus_arguments (test_eduka.AgendaNotifyTests.test_notify_uses_fixed_dbus_arguments) ... ok
-test_prefer_xwayland_like_eduka (test_eduka.AgendaNotifyTests.test_prefer_xwayland_like_eduka) ... ok
-test_lafa_stands_on_floating_eduka_panel (test_eduka.CompanionOnEdukaPanel.test_lafa_stands_on_floating_eduka_panel) ... ok
-test_lafa_system_language_follows_eduka_when_installed (test_eduka.LanguageTests.test_lafa_system_language_follows_eduka_when_installed) ... ok
-test_system_language_maps_to_lafa_locales (test_eduka.LanguageTests.test_system_language_maps_to_lafa_locales) ... ok
-test_tetun_chosen_in_eduka_settings (test_eduka.LanguageTests.test_tetun_chosen_in_eduka_settings) ... ok
-test_lafa_style_follows_eduka_theme (test_eduka.PanelThemeTests.test_lafa_style_follows_eduka_theme) ... ok
-test_panel_defaults_and_bounds (test_eduka.PanelThemeTests.test_panel_defaults_and_bounds) ... ok
-test_panel_span (test_eduka.PanelThemeTests.test_panel_span) ... ok
-test_theme_and_accent (test_eduka.PanelThemeTests.test_theme_and_accent) ... ok
-test_all_library_domains_and_added_sources (test_live.LiveTests.test_all_library_domains_and_added_sources) ... ok
-test_all_news_failures_do_not_invent_headlines (test_live.LiveTests.test_all_news_failures_do_not_invent_headlines) ... ok
-test_ambiguous_city_needs_selection (test_live.LiveTests.test_ambiguous_city_needs_selection) ... ok
-test_home_location_does_not_geocode (test_live.LiveTests.test_home_location_does_not_geocode) ... ok
-test_incomplete_weather_is_error (test_live.LiveTests.test_incomplete_weather_is_error) ... ok
-test_invalid_coordinates_rejected (test_live.LiveTests.test_invalid_coordinates_rejected) ... ok
-test_new_direct_commands (test_live.LiveTests.test_new_direct_commands) ... ok
-test_offline_gates_live_tools_and_reminders (test_live.LiveTests.test_offline_gates_live_tools_and_reminders) ... ok
-test_partial_news_failure_preserves_source (test_live.LiveTests.test_partial_news_failure_preserves_source) ... ok
-test_reminder_clock_cancel_and_offline_delivery (test_live.LiveTests.test_reminder_clock_cancel_and_offline_delivery) ... ok
-test_reminder_validation (test_live.LiveTests.test_reminder_validation) ... ok
-test_rss_host_date_query_and_title (test_live.LiveTests.test_rss_host_date_query_and_title) ... ok
-test_weather_units_times_and_attribution (test_live.LiveTests.test_weather_units_times_and_attribution) ... ok
-test_joke_command (test_redesign.AgentRedesignTests.test_joke_command) ... ok
-test_os_guide_preferred_over_model (test_redesign.AgentRedesignTests.test_os_guide_preferred_over_model) ... ok
-test_os_questions_use_offline_guides (test_redesign.AgentRedesignTests.test_os_questions_use_offline_guides) ... ok
-test_activity_chatter_shows_thought (test_redesign.CompanionBehaviour.test_activity_chatter_shows_thought) ... This plugin does not support raise()
-This plugin does not support propagateSizeHints()
-This plugin does not support raise()
-This plugin does not support propagateSizeHints()
-This plugin does not support raise()
-This plugin does not support raise()
-ok
-test_duration_setting_controls_activity_changes (test_redesign.CompanionBehaviour.test_duration_setting_controls_activity_changes) ... This plugin does not support raise()
-This plugin does not support propagateSizeHints()
-This plugin does not support raise()
-This plugin does not support propagateSizeHints()
-This plugin does not support raise()
-This plugin does not support raise()
-ok
-test_hover_asks_and_click_on_balloon_opens_chat (test_redesign.CompanionBehaviour.test_hover_asks_and_click_on_balloon_opens_chat) ... This plugin does not support raise()
-This plugin does not support propagateSizeHints()
-This plugin does not support raise()
-This plugin does not support propagateSizeHints()
-This plugin does not support raise()
-This plugin does not support raise()
-This plugin does not support propagateSizeHints()
-This plugin does not support raise()
-ok
-test_hover_respects_setting_and_pauses_cycle (test_redesign.CompanionBehaviour.test_hover_respects_setting_and_pauses_cycle) ... This plugin does not support raise()
-This plugin does not support propagateSizeHints()
-This plugin does not support raise()
-This plugin does not support propagateSizeHints()
-ok
-test_joke_and_offline_hides_balloon (test_redesign.CompanionBehaviour.test_joke_and_offline_hides_balloon) ... This plugin does not support raise()
-This plugin does not support propagateSizeHints()
-This plugin does not support raise()
-This plugin does not support propagateSizeHints()
-This plugin does not support raise()
-This plugin does not support raise()
-ok
-test_walk_then_activity_cycle_on_panel (test_redesign.CompanionBehaviour.test_walk_then_activity_cycle_on_panel) ... This plugin does not support raise()
-This plugin does not support propagateSizeHints()
-This plugin does not support raise()
-This plugin does not support propagateSizeHints()
-ok
-test_home_dashboard_and_virtual_toggle (test_redesign.DesktopRedesign.test_home_dashboard_and_virtual_toggle) ... This plugin does not support raise()
-This plugin does not support propagateSizeHints()
-This plugin does not support raise()
-ok
-test_home_question_goes_to_chat (test_redesign.DesktopRedesign.test_home_question_goes_to_chat) ... ok
-test_os_page_and_tool_launch_is_allowlisted (test_redesign.DesktopRedesign.test_os_page_and_tool_launch_is_allowlisted) ... ok
-test_reload_role_applies_preferences_from_eduka_settings (test_redesign.DesktopRedesign.test_reload_role_applies_preferences_from_eduka_settings) ... ok
-test_review_chat_runs_local_tools (test_redesign.DesktopRedesign.test_review_chat_runs_local_tools) ... ok
-test_settings_window_categories_and_personality_save (test_redesign.DesktopRedesign.test_settings_window_categories_and_personality_save) ... This plugin does not support propagateSizeHints()
-ok
-test_full_page_saves_and_requests_reload (test_redesign.EdukaSettingsPage.test_full_page_saves_and_requests_reload) ... ok
-test_schema_matches_lafa_settings (test_redesign.EdukaSettingsPage.test_schema_matches_lafa_settings) ... ok
-test_available_tool_uses_allowlist_order (test_redesign.OSGuideTests.test_available_tool_uses_allowlist_order) ... ok
-test_find_in_four_languages (test_redesign.OSGuideTests.test_find_in_four_languages) ... ok
-test_guides_complete_and_tools_are_plain_names (test_redesign.OSGuideTests.test_guides_complete_and_tools_are_plain_names) ... ok
-test_system_report_reads_only_fixture (test_redesign.OSGuideTests.test_system_report_reads_only_fixture) ... ok
-test_tip_rotates_daily (test_redesign.OSGuideTests.test_tip_rotates_daily) ... ok
-test_every_language_covers_every_activity (test_redesign.PersonalityTests.test_every_language_covers_every_activity) ... ok
-test_hover_reacts_to_activity_or_offers_help (test_redesign.PersonalityTests.test_hover_reacts_to_activity_or_offers_help) ... ok
-test_thoughts_and_jokes (test_redesign.PersonalityTests.test_thoughts_and_jokes) ... ok
-test_new_preferences_load_and_bound (test_redesign.SettingsTests.test_new_preferences_load_and_bound) ... ok
-test_bad_config_types_and_limits (test_revision.RevisionTests.test_bad_config_types_and_limits) ... ok
-test_cards_citations_locale_and_no_consecutive_repeat (test_revision.RevisionTests.test_cards_citations_locale_and_no_consecutive_repeat) ... ok
-test_fifo_rejected_without_blocking (test_revision.RevisionTests.test_fifo_rejected_without_blocking) ... ok
-test_host_settings_patch_preserves_original_and_compiles (test_revision.RevisionTests.test_host_settings_patch_preserves_original_and_compiles) ... ok
-test_internal_and_directory_symlinks_blocked (test_revision.RevisionTests.test_internal_and_directory_symlinks_blocked) ... ok
-test_key_free_public_extract_is_cited (test_revision.RevisionTests.test_key_free_public_extract_is_cited) ... ok
-test_news_topic_matching_uses_categories_and_word_boundaries (test_revision.RevisionTests.test_news_topic_matching_uses_categories_and_word_boundaries) ... ok
-test_personal_support_is_not_sent_to_public_search (test_revision.RevisionTests.test_personal_support_is_not_sent_to_public_search) ... ok
-test_python_conditions_and_loop_output (test_revision.RevisionTests.test_python_conditions_and_loop_output) ... ok
-test_python_rejects_host_access_and_memory_attacks (test_revision.RevisionTests.test_python_rejects_host_access_and_memory_attacks) ... ok
-test_system_locale_and_explicit_choice (test_revision.RevisionTests.test_system_locale_and_explicit_choice) ... ok
-test_temporary_failure_never_creates_news (test_revision.RevisionTests.test_temporary_failure_never_creates_news) ... ok
-test_timor_command (test_revision.RevisionTests.test_timor_command) ... ok
-test_virtual_off_until_explicitly_enabled (test_revision.RevisionTests.test_virtual_off_until_explicitly_enabled) ... ok
-test_default_desktop_and_explicit_settings_toggle (test_revision.RevisionUI.test_default_desktop_and_explicit_settings_toggle) ... This plugin does not support raise()
-This plugin does not support propagateSizeHints()
-This plugin does not support raise()
-This plugin does not support propagateSizeHints()
-This plugin does not support raise()
-ok
-test_settings_group_keeps_host_qt_binding (test_revision.RevisionUI.test_settings_group_keeps_host_qt_binding) ... ok
-test_language_follows_eduka_tetun (test_school_outfits.LafaConfiguration.test_language_follows_eduka_tetun) ... ok
-test_page_uses_eduka_structure_and_resets_to_recommended (test_school_outfits.LafaConfiguration.test_page_uses_eduka_structure_and_resets_to_recommended) ... ok
-test_plugin_patch_targets_eduka_settings (test_school_outfits.LafaConfiguration.test_plugin_patch_targets_eduka_settings) ... ok
-test_generated_sheets_match_manifests (test_school_outfits.OutfitData.test_generated_sheets_match_manifests) ... ok
-test_three_outfits_and_their_activities (test_school_outfits.OutfitData.test_three_outfits_and_their_activities) ... ok
-test_companion_uses_outfit_activities_and_wardrobe (test_school_outfits.OutfitRendering.test_companion_uses_outfit_activities_and_wardrobe) ... ok
-test_every_outfit_has_every_activity_pose (test_school_outfits.OutfitRendering.test_every_outfit_has_every_activity_pose) ... ok
-test_flag_icon (test_school_outfits.OutfitRendering.test_flag_icon) ... ok
-test_outfit_pixels_differ_from_base (test_school_outfits.OutfitRendering.test_outfit_pixels_differ_from_base) ... ok
-test_scenes_render_for_all_activities (test_school_outfits.OutfitRendering.test_scenes_render_for_all_activities) ... ok
-test_bump_and_check (test_school_outfits.ReleaseTool.test_bump_and_check) ... ✓ LAFA 0.1.1
-✓ LAFA 0.1.2
-ok
-test_math_practice (test_school_outfits.SchoolData.test_math_practice) ... ok
-test_planner_persists_and_validates (test_school_outfits.SchoolData.test_planner_persists_and_validates) ... ok
-test_teachers_complete (test_school_outfits.SchoolData.test_teachers_complete) ... ok
-test_vocab_and_quiz (test_school_outfits.SchoolData.test_vocab_and_quiz) ... ok
-test_agenda_written_when_requested (test_school_outfits.SchoolUI.test_agenda_written_when_requested) ... ok
-test_homework_page_and_home_summary (test_school_outfits.SchoolUI.test_homework_page_and_home_summary) ... Traceback (most recent call last):
-  File "/usr/bin/lafa", line 7, in <module>
-    from lafa.app import main
-  File "/usr/lib/lafa/lafa/app.py", line 13, in <module>
-    from .qt import (
-    ...<8 lines>...
-    )
-  File "/usr/lib/lafa/lafa/qt.py", line 35, in <module>
-    raise ImportError("LAFA needs PyQt5 (Debian: apt install python3-pyqt5) or PySide6 (pip install PySide6).")
-ImportError: LAFA needs PyQt5 (Debian: apt install python3-pyqt5) or PySide6 (pip install PySide6).
-ok
-test_lafa_settings_window_has_tuning (test_school_outfits.SchoolUI.test_lafa_settings_window_has_tuning) ... This plugin does not support propagateSizeHints()
-ok
-test_outfit_change_from_wardrobe (test_school_outfits.SchoolUI.test_outfit_change_from_wardrobe) ... ok
-test_school_navigation (test_school_outfits.SchoolUI.test_school_navigation) ... ok
-test_teacher_practice_flow (test_school_outfits.SchoolUI.test_teacher_practice_flow) ... ok
-test_teacher_uses_ai_with_subject_prompt (test_school_outfits.SchoolUI.test_teacher_uses_ai_with_subject_prompt) ... ok
-test_actual_overlay_submission_and_click (test_ui.UITests.test_actual_overlay_submission_and_click) ... This plugin does not support raise()
-This plugin does not support propagateSizeHints()
-This plugin does not support raise()
-This plugin does not support propagateSizeHints()
-This plugin does not support propagateSizeHints()
-This plugin does not support raise()
-This plugin does not support propagateSizeHints()
-This plugin does not support propagateSizeHints()
-This plugin does not support raise()
-ok
-test_all_locales_small_screen (test_ui.UITests.test_all_locales_small_screen) ... This plugin does not support raise()
-This plugin does not support propagateSizeHints()
-This plugin does not support raise()
-This plugin does not support propagateSizeHints()
-ok
-test_ambiguous_city_ui_requires_explicit_selection (test_ui.UITests.test_ambiguous_city_ui_requires_explicit_selection) ... This plugin does not support raise()
-This plugin does not support propagateSizeHints()
-This plugin does not support raise()
-This plugin does not support propagateSizeHints()
-This plugin does not support raise()
-ok
-test_busy_activity_and_personal_pose_filter (test_ui.UITests.test_busy_activity_and_personal_pose_filter) ... This plugin does not support raise()
-This plugin does not support propagateSizeHints()
-This plugin does not support raise()
-This plugin does not support propagateSizeHints()
-This plugin does not support raise()
-This plugin does not support raise()
-ok
-test_file_table_and_readonly (test_ui.UITests.test_file_table_and_readonly) ... This plugin does not support raise()
-This plugin does not support propagateSizeHints()
-This plugin does not support raise()
-This plugin does not support propagateSizeHints()
-ok
-test_focus_session_does_not_contact_ai (test_ui.UITests.test_focus_session_does_not_contact_ai) ... This plugin does not support raise()
-This plugin does not support propagateSizeHints()
-This plugin does not support raise()
-This plugin does not support propagateSizeHints()
-This plugin does not support propagateSizeHints()
-This plugin does not support raise()
-ok
-test_idle_at_sixty_seconds_not_restarted_by_network_probe (test_ui.UITests.test_idle_at_sixty_seconds_not_restarted_by_network_probe) ... This plugin does not support raise()
-This plugin does not support propagateSizeHints()
-This plugin does not support raise()
-This plugin does not support propagateSizeHints()
-This plugin does not support raise()
-This plugin does not support raise()
-This plugin does not support raise()
-ok
-test_navigation_and_rendering (test_ui.UITests.test_navigation_and_rendering) ... This plugin does not support raise()
-This plugin does not support propagateSizeHints()
-This plugin does not support raise()
-This plugin does not support propagateSizeHints()
-ok
-test_offline_pauses_character_and_actions (test_ui.UITests.test_offline_pauses_character_and_actions) ... This plugin does not support raise()
-This plugin does not support propagateSizeHints()
-This plugin does not support raise()
-This plugin does not support propagateSizeHints()
-ok
-test_pause_stops_idle_and_walk_timers (test_ui.UITests.test_pause_stops_idle_and_walk_timers) ... This plugin does not support raise()
-This plugin does not support propagateSizeHints()
-This plugin does not support raise()
-This plugin does not support propagateSizeHints()
-ok
-test_review_never_calls_provider (test_ui.UITests.test_review_never_calls_provider) ... This plugin does not support raise()
-This plugin does not support propagateSizeHints()
-This plugin does not support raise()
-This plugin does not support propagateSizeHints()
-ok
-test_same_user_launcher_activation (test_ui.UITests.test_same_user_launcher_activation) ... This plugin does not support raise()
-This plugin does not support propagateSizeHints()
-This plugin does not support raise()
-This plugin does not support propagateSizeHints()
-ok
-test_virtual_role_offline_opens_settings (test_ui.UITests.test_virtual_role_offline_opens_settings) ... This plugin does not support raise()
-This plugin does not support propagateSizeHints()
-This plugin does not support raise()
-This plugin does not support propagateSizeHints()
-This plugin does not support propagateSizeHints()
-ok
-test_virtual_role_online_opens_bubble (test_ui.UITests.test_virtual_role_online_opens_bubble) ... This plugin does not support raise()
-This plugin does not support propagateSizeHints()
-This plugin does not support raise()
-This plugin does not support propagateSizeHints()
-This plugin does not support raise()
-This plugin does not support propagateSizeHints()
-This plugin does not support raise()
-This plugin does not support raise()
-ok
-test_worker_callback_on_main_thread (test_ui.UITests.test_worker_callback_on_main_thread) ... This plugin does not support raise()
-This plugin does not support propagateSizeHints()
-This plugin does not support raise()
-This plugin does not support propagateSizeHints()
-ok
-test_apply_merges_without_duplicates (test_updates.CatalogTests.test_apply_merges_without_duplicates) ... ok
-test_cards_from_catalog_join_the_deck (test_updates.CatalogTests.test_cards_from_catalog_join_the_deck) ... ok
-test_check_caches_newer_revision_only (test_updates.CatalogTests.test_check_caches_newer_revision_only) ... ok
-test_shipped_catalog_is_valid (test_updates.CatalogTests.test_shipped_catalog_is_valid) ... ok
-test_validation_rejects_unsafe_content (test_updates.CatalogTests.test_validation_rejects_unsafe_content) ... ok
-test_newer_release (test_updates.ReleaseTests.test_newer_release) ... ok
-test_version_ordering (test_updates.ReleaseTests.test_version_ordering) ... ok
-test_auto_host_detection_rejects_ambiguous_or_early_return (test_v4.V4Core.test_auto_host_detection_rejects_ambiguous_or_early_return) ... ok
-test_exec_path_survives_both_desktop_escape_layers (test_v4.V4Core.test_exec_path_survives_both_desktop_escape_layers) ... ok
-test_invalid_config_fields_do_not_erase_valid_preferences (test_v4.V4Core.test_invalid_config_fields_do_not_erase_valid_preferences) ... ok
-test_ipc_fragmented_frames_and_injection_are_bounded (test_v4.V4Core.test_ipc_fragmented_frames_and_injection_are_bounded) ... ok
-test_locale_catalogues_have_the_same_keys (test_v4.V4Core.test_locale_catalogues_have_the_same_keys) ... ok
-test_ordinary_chat_is_never_sent_to_public_search (test_v4.V4Core.test_ordinary_chat_is_never_sent_to_public_search) ... ok
-test_preference_fifo_is_rejected_without_blocking (test_v4.V4Core.test_preference_fifo_is_rejected_without_blocking) ... ok
-test_readiness_report_does_not_contain_private_data_or_query_network (test_v4.V4Core.test_readiness_report_does_not_contain_private_data_or_query_network) ... ok
-test_tab_indentation_and_nested_return_remain_safe (test_v4.V4Core.test_tab_indentation_and_nested_return_remain_safe) ... ok
-test_automatic_popup_respects_pause_draft_and_open_chat (test_v4.V4UI.test_automatic_popup_respects_pause_draft_and_open_chat) ... This plugin does not support raise()
-This plugin does not support propagateSizeHints()
-This plugin does not support raise()
-This plugin does not support propagateSizeHints()
-This plugin does not support propagateSizeHints()
-This plugin does not support raise()
-ok
-test_cancel_provider_edits_does_not_modify_live_models (test_v4.V4UI.test_cancel_provider_edits_does_not_modify_live_models) ... This plugin does not support propagateSizeHints()
-This plugin does not support propagateSizeHints()
-ok
-test_disabling_all_cards_does_not_starve_minute_activity_changes (test_v4.V4UI.test_disabling_all_cards_does_not_starve_minute_activity_changes) ... This plugin does not support raise()
-This plugin does not support propagateSizeHints()
-This plugin does not support raise()
-This plugin does not support propagateSizeHints()
-This plugin does not support raise()
-This plugin does not support raise()
-ok
-test_failed_preference_write_preserves_live_configuration (test_v4.V4UI.test_failed_preference_write_preserves_live_configuration) ... This plugin does not support propagateSizeHints()
-ok
-test_native_activation_confirms_state_and_factory_uses_host_binding (test_v4.V4UI.test_native_activation_confirms_state_and_factory_uses_host_binding) ... ok
-test_native_activation_pending_state_and_timeout (test_v4.V4UI.test_native_activation_pending_state_and_timeout) ... ok
-test_native_locale_recovers_from_bad_config_and_simple_tetun_locale (test_v4.V4UI.test_native_locale_recovers_from_bad_config_and_simple_tetun_locale) ... ok
-test_offline_save_keeps_request_buttons_and_all_characters_paused (test_v4.V4UI.test_offline_save_keeps_request_buttons_and_all_characters_paused) ... This plugin does not support propagateSizeHints()
-ok
-test_public_search_button_uses_an_explicit_command (test_v4.V4UI.test_public_search_button_uses_an_explicit_command) ... ok
-test_settings_save_keeps_code_output_and_draft_chat (test_v4.V4UI.test_settings_save_keeps_code_output_and_draft_chat) ... This plugin does not support propagateSizeHints()
-ok
-
-----------------------------------------------------------------------
-Ran 171 tests in 134.220s
-
-OK
+============================= test session starts ==============================
+platform linux -- Python 3.13.16, pytest-9.1.1, pluggy-1.6.0 -- /tmp/claude-0/venv/bin/python
+rootdir: /home/user/Eduka-Lafa
+configfile: pyproject.toml
+collecting ... collected 189 items
+tests/test_alpha.py::VersionTests::test_version_is_consistent_everywhere PASSED [  0%]
+tests/test_alpha.py::OpenSourceProviderTests::test_compatible_chat_uses_https_and_optional_key PASSED [  1%]
+tests/test_alpha.py::OpenSourceProviderTests::test_endpoint_validation PASSED [  1%]
+tests/test_alpha.py::OpenSourceProviderTests::test_list_models PASSED    [  2%]
+tests/test_alpha.py::OpenSourceProviderTests::test_loopback_http_only_when_requested PASSED [  2%]
+tests/test_alpha.py::OpenSourceProviderTests::test_merged_messages_alternate PASSED [  3%]
+tests/test_alpha.py::OpenSourceProviderTests::test_ollama_chat_uses_local_endpoint PASSED [  3%]
+tests/test_alpha.py::OpenSourceProviderTests::test_open_source_ready_without_key PASSED [  4%]
+tests/test_alpha.py::OpenSourceProviderTests::test_settings_load_rejects_unsafe_endpoints PASSED [  4%]
+tests/test_alpha.py::CommandTests::test_calculator PASSED                [  5%]
+tests/test_alpha.py::CommandTests::test_help_and_calc_commands PASSED    [  5%]
+tests/test_alpha.py::CommandTests::test_translations_complete_for_new_keys PASSED [  6%]
+tests/test_alpha.py::FallbackAndGreetingTests::test_english_search_has_no_second_call PASSED [  6%]
+tests/test_alpha.py::FallbackAndGreetingTests::test_greeting_by_hour PASSED [  7%]
+tests/test_alpha.py::FallbackAndGreetingTests::test_tetun_search_falls_back_to_english PASSED [  7%]
+tests/test_alpha.py::AlphaUI::test_save_open_source_provider_and_reject_bad_endpoint PASSED [  8%]
+tests/test_alpha.py::AlphaUI::test_version_label_and_greeting_in_introduction PASSED [  8%]
+tests/test_classroom.py::TimorLesteData::test_generated_questions_have_one_correct_option PASSED [  9%]
+tests/test_classroom.py::TimorLesteData::test_history_is_complete_and_translated PASSED [ 10%]
+tests/test_classroom.py::TimorLesteData::test_today_and_next_holiday PASSED [ 10%]
+tests/test_classroom.py::ClassroomEngine::test_exam_session_scores_and_time_limit PASSED [ 11%]
+tests/test_classroom.py::ClassroomEngine::test_lessons_for_every_subject PASSED [ 11%]
+tests/test_classroom.py::ClassroomEngine::test_questions_are_valid PASSED [ 12%]
+tests/test_classroom.py::ClassroomEngine::test_report_card_is_private_and_exportable PASSED [ 12%]
+tests/test_classroom.py::Roles::test_daily_items_are_stable PASSED       [ 13%]
+tests/test_classroom.py::Roles::test_every_role_speaks_every_language PASSED [ 13%]
+tests/test_classroom.py::Roles::test_mind_reader_finds_every_number PASSED [ 14%]
+tests/test_classroom.py::Roles::test_role_activities_everywhere PASSED   [ 14%]
+tests/test_classroom.py::Translations::test_new_keys_in_all_languages PASSED [ 15%]
+tests/test_classroom.py::OutfitArt::test_generator_dresses_every_activity_but_bathing_and_toilet PASSED [ 15%]
+tests/test_classroom.py::SchoolPages::test_exam_timer_ends_exam PASSED   [ 16%]
+tests/test_classroom.py::SchoolPages::test_lesson_to_quiz_to_report PASSED [ 16%]
+tests/test_classroom.py::SchoolPages::test_roles_and_mind_reader PASSED  [ 17%]
+tests/test_classroom.py::SchoolPages::test_sidebar_sections PASSED       [ 17%]
+tests/test_classroom.py::SchoolPages::test_timor_page PASSED             [ 18%]
+tests/test_core.py::CoreTests::test_all_languages_complete PASSED        [ 19%]
+tests/test_core.py::CoreTests::test_config_roundtrip_no_secrets PASSED   [ 19%]
+tests/test_core.py::CoreTests::test_envelope_plaintext_and_mood PASSED   [ 20%]
+tests/test_core.py::CoreTests::test_html_scripts_removed PASSED          [ 20%]
+tests/test_core.py::CoreTests::test_https_and_redirect_guard PASSED      [ 21%]
+tests/test_core.py::CoreTests::test_local_search_categories_and_hidden_files PASSED [ 21%]
+tests/test_core.py::CoreTests::test_local_search_overlapping_roots_deduplicates PASSED [ 22%]
+tests/test_core.py::CoreTests::test_local_tool_results_never_sent_to_ai PASSED [ 22%]
+tests/test_core.py::CoreTests::test_model_action_allowlist PASSED        [ 23%]
+tests/test_core.py::CoreTests::test_natural_language_and_commands PASSED [ 23%]
+tests/test_core.py::CoreTests::test_no_api_key_does_not_invent_answer PASSED [ 24%]
+tests/test_core.py::CoreTests::test_offline_never_searches_or_calls_api PASSED [ 24%]
+tests/test_core.py::CoreTests::test_read_docx_and_odt_and_truncation PASSED [ 25%]
+tests/test_core.py::CoreTests::test_search_limits_are_reported PASSED    [ 25%]
+tests/test_core.py::CoreTests::test_secure_keyring_no_plaintext PASSED   [ 26%]
+tests/test_core.py::CoreTests::test_symlinks_and_outside_read_blocked PASSED [ 26%]
+tests/test_core.py::CoreTests::test_web_query_encoded PASSED             [ 27%]
+tests/test_core.py::CoreTests::test_wikipedia_sources PASSED             [ 28%]
+tests/test_core.py::CoreTests::test_xml_entities_rejected PASSED         [ 28%]
+tests/test_core.py::AdapterTests::test_anthropic PASSED                  [ 29%]
+tests/test_core.py::AdapterTests::test_deepseek PASSED                   [ 29%]
+tests/test_core.py::AdapterTests::test_gemini PASSED                     [ 30%]
+tests/test_core.py::AdapterTests::test_missing_model_rejected PASSED     [ 30%]
+tests/test_core.py::AdapterTests::test_openai PASSED                     [ 31%]
+tests/test_core.py::AdapterTests::test_perplexity_agent_api PASSED       [ 31%]
+tests/test_eduka.py::LanguageTests::test_lafa_system_language_follows_eduka_when_installed PASSED [ 32%]
+tests/test_eduka.py::LanguageTests::test_system_language_maps_to_lafa_locales PASSED [ 32%]
+tests/test_eduka.py::LanguageTests::test_tetun_chosen_in_eduka_settings PASSED [ 33%]
+tests/test_eduka.py::PanelThemeTests::test_lafa_style_follows_eduka_theme PASSED [ 33%]
+tests/test_eduka.py::PanelThemeTests::test_panel_defaults_and_bounds PASSED [ 34%]
+tests/test_eduka.py::PanelThemeTests::test_panel_span PASSED             [ 34%]
+tests/test_eduka.py::PanelThemeTests::test_theme_and_accent PASSED       [ 35%]
+tests/test_eduka.py::AgendaNotifyTests::test_agenda_matches_eduka_format PASSED [ 35%]
+tests/test_eduka.py::AgendaNotifyTests::test_notify_uses_fixed_dbus_arguments PASSED [ 36%]
+tests/test_eduka.py::AgendaNotifyTests::test_prefer_xwayland_like_eduka PASSED [ 37%]
+tests/test_eduka.py::CompanionOnEdukaPanel::test_lafa_stands_on_floating_eduka_panel PASSED [ 37%]
+tests/test_live.py::LiveTests::test_all_library_domains_and_added_sources PASSED [ 38%]
+tests/test_live.py::LiveTests::test_all_news_failures_do_not_invent_headlines PASSED [ 38%]
+tests/test_live.py::LiveTests::test_ambiguous_city_needs_selection PASSED [ 39%]
+tests/test_live.py::LiveTests::test_home_location_does_not_geocode PASSED [ 39%]
+tests/test_live.py::LiveTests::test_incomplete_weather_is_error PASSED   [ 40%]
+tests/test_live.py::LiveTests::test_invalid_coordinates_rejected PASSED  [ 40%]
+tests/test_live.py::LiveTests::test_new_direct_commands PASSED           [ 41%]
+tests/test_live.py::LiveTests::test_offline_gates_live_tools_and_reminders PASSED [ 41%]
+tests/test_live.py::LiveTests::test_partial_news_failure_preserves_source PASSED [ 42%]
+tests/test_live.py::LiveTests::test_reminder_clock_cancel_and_offline_delivery PASSED [ 42%]
+tests/test_live.py::LiveTests::test_reminder_validation PASSED           [ 43%]
+tests/test_live.py::LiveTests::test_rss_host_date_query_and_title PASSED [ 43%]
+tests/test_live.py::LiveTests::test_weather_units_times_and_attribution PASSED [ 44%]
+tests/test_redesign.py::PersonalityTests::test_every_language_covers_every_activity PASSED [ 44%]
+tests/test_redesign.py::PersonalityTests::test_hover_reacts_to_activity_or_offers_help PASSED [ 45%]
+tests/test_redesign.py::PersonalityTests::test_thoughts_and_jokes PASSED [ 46%]
+tests/test_redesign.py::OSGuideTests::test_available_tool_uses_allowlist_order PASSED [ 46%]
+tests/test_redesign.py::OSGuideTests::test_find_in_four_languages PASSED [ 47%]
+tests/test_redesign.py::OSGuideTests::test_guides_complete_and_tools_are_plain_names PASSED [ 47%]
+tests/test_redesign.py::OSGuideTests::test_system_report_reads_only_fixture PASSED [ 48%]
+tests/test_redesign.py::OSGuideTests::test_tip_rotates_daily PASSED      [ 48%]
+tests/test_redesign.py::AgentRedesignTests::test_joke_command PASSED     [ 49%]
+tests/test_redesign.py::AgentRedesignTests::test_os_guide_preferred_over_model PASSED [ 49%]
+tests/test_redesign.py::AgentRedesignTests::test_os_questions_use_offline_guides PASSED [ 50%]
+tests/test_redesign.py::SettingsTests::test_new_preferences_load_and_bound PASSED [ 50%]
+tests/test_redesign.py::CompanionBehaviour::test_activity_chatter_shows_thought PASSED [ 51%]
+tests/test_redesign.py::CompanionBehaviour::test_duration_setting_controls_activity_changes PASSED [ 51%]
+tests/test_redesign.py::CompanionBehaviour::test_hover_asks_and_click_on_balloon_opens_chat PASSED [ 52%]
+tests/test_redesign.py::CompanionBehaviour::test_hover_respects_setting_and_pauses_cycle PASSED [ 52%]
+tests/test_redesign.py::CompanionBehaviour::test_joke_and_offline_hides_balloon PASSED [ 53%]
+tests/test_redesign.py::CompanionBehaviour::test_walk_then_activity_cycle_on_panel PASSED [ 53%]
+tests/test_redesign.py::DesktopRedesign::test_home_dashboard_and_virtual_toggle PASSED [ 54%]
+tests/test_redesign.py::DesktopRedesign::test_home_question_goes_to_chat PASSED [ 55%]
+tests/test_redesign.py::DesktopRedesign::test_os_page_and_tool_launch_is_allowlisted PASSED [ 55%]
+tests/test_redesign.py::DesktopRedesign::test_reload_role_applies_preferences_from_eduka_settings PASSED [ 56%]
+tests/test_redesign.py::DesktopRedesign::test_review_chat_runs_local_tools PASSED [ 56%]
+tests/test_redesign.py::DesktopRedesign::test_settings_window_categories_and_personality_save PASSED [ 57%]
+tests/test_redesign.py::EdukaSettingsPage::test_full_page_saves_and_requests_reload PASSED [ 57%]
+tests/test_redesign.py::EdukaSettingsPage::test_schema_matches_lafa_settings PASSED [ 58%]
+tests/test_revision.py::RevisionTests::test_bad_config_types_and_limits PASSED [ 58%]
+tests/test_revision.py::RevisionTests::test_cards_citations_locale_and_no_consecutive_repeat PASSED [ 59%]
+tests/test_revision.py::RevisionTests::test_fifo_rejected_without_blocking PASSED [ 59%]
+tests/test_revision.py::RevisionTests::test_host_settings_patch_preserves_original_and_compiles PASSED [ 60%]
+tests/test_revision.py::RevisionTests::test_internal_and_directory_symlinks_blocked PASSED [ 60%]
+tests/test_revision.py::RevisionTests::test_key_free_public_extract_is_cited PASSED [ 61%]
+tests/test_revision.py::RevisionTests::test_news_topic_matching_uses_categories_and_word_boundaries PASSED [ 61%]
+tests/test_revision.py::RevisionTests::test_personal_support_is_not_sent_to_public_search PASSED [ 62%]
+tests/test_revision.py::RevisionTests::test_python_conditions_and_loop_output PASSED [ 62%]
+tests/test_revision.py::RevisionTests::test_python_rejects_host_access_and_memory_attacks 
+tests/test_revision.py::RevisionTests::test_python_rejects_host_access_and_memory_attacks PASSED [ 63%]
+tests/test_revision.py::RevisionTests::test_system_locale_and_explicit_choice PASSED [ 64%]
+tests/test_revision.py::RevisionTests::test_temporary_failure_never_creates_news PASSED [ 64%]
+tests/test_revision.py::RevisionTests::test_timor_command PASSED         [ 65%]
+tests/test_revision.py::RevisionTests::test_virtual_off_until_explicitly_enabled PASSED [ 65%]
+tests/test_revision.py::RevisionUI::test_default_desktop_and_explicit_settings_toggle PASSED [ 66%]
+tests/test_revision.py::RevisionUI::test_settings_group_keeps_host_qt_binding PASSED [ 66%]
+tests/test_school_outfits.py::OutfitData::test_generated_sheets_match_manifests PASSED [ 67%]
+tests/test_school_outfits.py::OutfitData::test_three_outfits_and_their_activities PASSED [ 67%]
+tests/test_school_outfits.py::OutfitRendering::test_companion_uses_outfit_activities_and_wardrobe PASSED [ 68%]
+tests/test_school_outfits.py::OutfitRendering::test_every_outfit_has_every_activity_pose PASSED [ 68%]
+tests/test_school_outfits.py::OutfitRendering::test_flag_icon PASSED     [ 69%]
+tests/test_school_outfits.py::OutfitRendering::test_outfit_pixels_differ_from_base PASSED [ 69%]
+tests/test_school_outfits.py::OutfitRendering::test_scenes_render_for_all_activities PASSED [ 70%]
+tests/test_school_outfits.py::SchoolData::test_math_practice PASSED      [ 70%]
+tests/test_school_outfits.py::SchoolData::test_planner_persists_and_validates PASSED [ 71%]
+tests/test_school_outfits.py::SchoolData::test_teachers_complete PASSED  [ 71%]
+tests/test_school_outfits.py::SchoolData::test_vocab_and_quiz PASSED     [ 72%]
+tests/test_school_outfits.py::SchoolUI::test_agenda_written_when_requested PASSED [ 73%]
+tests/test_school_outfits.py::SchoolUI::test_homework_page_and_home_summary PASSED [ 73%]
+tests/test_school_outfits.py::SchoolUI::test_lafa_settings_window_has_tuning PASSED [ 74%]
+tests/test_school_outfits.py::SchoolUI::test_outfit_change_from_wardrobe PASSED [ 74%]
+tests/test_school_outfits.py::SchoolUI::test_school_navigation PASSED    [ 75%]
+tests/test_school_outfits.py::SchoolUI::test_teacher_practice_flow PASSED [ 75%]
+tests/test_school_outfits.py::SchoolUI::test_teacher_uses_ai_with_subject_prompt PASSED [ 76%]
+tests/test_school_outfits.py::LafaConfiguration::test_language_follows_eduka_tetun PASSED [ 76%]
+tests/test_school_outfits.py::LafaConfiguration::test_page_uses_eduka_structure_and_resets_to_recommended PASSED [ 77%]
+tests/test_school_outfits.py::LafaConfiguration::test_plugin_patch_targets_eduka_settings PASSED [ 77%]
+tests/test_school_outfits.py::ReleaseTool::test_bump_and_check PASSED    [ 78%]
+tests/test_ui.py::UITests::test_actual_overlay_submission_and_click PASSED [ 78%]
+tests/test_ui.py::UITests::test_all_locales_small_screen PASSED          [ 79%]
+tests/test_ui.py::UITests::test_ambiguous_city_ui_requires_explicit_selection PASSED [ 79%]
+tests/test_ui.py::UITests::test_busy_activity_and_personal_pose_filter PASSED [ 80%]
+tests/test_ui.py::UITests::test_file_table_and_readonly PASSED           [ 80%]
+tests/test_ui.py::UITests::test_focus_session_does_not_contact_ai PASSED [ 81%]
+tests/test_ui.py::UITests::test_idle_at_sixty_seconds_not_restarted_by_network_probe PASSED [ 82%]
+tests/test_ui.py::UITests::test_navigation_and_rendering PASSED          [ 82%]
+tests/test_ui.py::UITests::test_offline_pauses_character_and_actions PASSED [ 83%]
+tests/test_ui.py::UITests::test_pause_stops_idle_and_walk_timers PASSED  [ 83%]
+tests/test_ui.py::UITests::test_review_never_calls_provider PASSED       [ 84%]
+tests/test_ui.py::UITests::test_same_user_launcher_activation PASSED     [ 84%]
+tests/test_ui.py::UITests::test_virtual_role_offline_opens_settings PASSED [ 85%]
+tests/test_ui.py::UITests::test_virtual_role_online_opens_bubble PASSED  [ 85%]
+tests/test_ui.py::UITests::test_worker_callback_on_main_thread PASSED    [ 86%]
+tests/test_updates.py::CatalogTests::test_apply_merges_without_duplicates PASSED [ 86%]
+tests/test_updates.py::CatalogTests::test_cards_from_catalog_join_the_deck PASSED [ 87%]
+tests/test_updates.py::CatalogTests::test_check_caches_newer_revision_only PASSED [ 87%]
+tests/test_updates.py::CatalogTests::test_shipped_catalog_is_valid PASSED [ 88%]
+tests/test_updates.py::CatalogTests::test_validation_rejects_unsafe_content PASSED [ 88%]
+tests/test_updates.py::ReleaseTests::test_newer_release PASSED           [ 89%]
+tests/test_updates.py::ReleaseTests::test_version_ordering PASSED        [ 89%]
+tests/test_v4.py::V4Core::test_auto_host_detection_rejects_ambiguous_or_early_return PASSED [ 90%]
+tests/test_v4.py::V4Core::test_exec_path_survives_both_desktop_escape_layers PASSED [ 91%]
+tests/test_v4.py::V4Core::test_invalid_config_fields_do_not_erase_valid_preferences PASSED [ 91%]
+tests/test_v4.py::V4Core::test_ipc_fragmented_frames_and_injection_are_bounded PASSED [ 92%]
+tests/test_v4.py::V4Core::test_locale_catalogues_have_the_same_keys PASSED [ 92%]
+tests/test_v4.py::V4Core::test_ordinary_chat_is_never_sent_to_public_search PASSED [ 93%]
+tests/test_v4.py::V4Core::test_preference_fifo_is_rejected_without_blocking PASSED [ 93%]
+tests/test_v4.py::V4Core::test_readiness_report_does_not_contain_private_data_or_query_network PASSED [ 94%]
+tests/test_v4.py::V4Core::test_tab_indentation_and_nested_return_remain_safe PASSED [ 94%]
+tests/test_v4.py::V4UI::test_automatic_popup_respects_pause_draft_and_open_chat PASSED [ 95%]
+tests/test_v4.py::V4UI::test_cancel_provider_edits_does_not_modify_live_models PASSED [ 95%]
+tests/test_v4.py::V4UI::test_disabling_all_cards_does_not_starve_minute_activity_changes PASSED [ 96%]
+tests/test_v4.py::V4UI::test_failed_preference_write_preserves_live_configuration PASSED [ 96%]
+tests/test_v4.py::V4UI::test_native_activation_confirms_state_and_factory_uses_host_binding PASSED [ 97%]
+tests/test_v4.py::V4UI::test_native_activation_pending_state_and_timeout PASSED [ 97%]
+tests/test_v4.py::V4UI::test_native_locale_recovers_from_bad_config_and_simple_tetun_locale PASSED [ 98%]
+tests/test_v4.py::V4UI::test_offline_save_keeps_request_buttons_and_all_characters_paused PASSED [ 98%]
+tests/test_v4.py::V4UI::test_public_search_button_uses_an_explicit_command PASSED [ 99%]
+tests/test_v4.py::V4UI::test_settings_save_keeps_code_output_and_draft_chat PASSED [100%]
+============= 189 passed, 10 subtests passed in 263.79s (0:04:23) ==============
