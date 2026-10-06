@@ -58,7 +58,7 @@ screenshots (downloadable as workflow artifacts).
 
 The Tuxedo, Casual and extra Tais Mane sheets are generated from the original
 illustrations (`python3 tools/make-outfits.py`, needs numpy and Pillow). Body
-regions per pose are in `REGIONS` in that script. Hand-drawn art can replace
+garment shapes per pose (shirt, sleeves, trousers or shorts, shoes, and skin that stays bare) are in `POSES` in that script; `--preview` writes `build/outfits-preview.png` with every pose in every outfit. Hand-drawn art can replace
 any sheet: keep the file name and the JSON format (`canvas`, `states`,
 `rects`), and LAFA uses it without code changes.
 
