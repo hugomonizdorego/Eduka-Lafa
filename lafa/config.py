@@ -123,7 +123,7 @@ class Settings:
             if not isinstance(data,dict):return cls()
         except (OSError,ValueError,UnicodeError):return cls()
         defaults=cls();values={}
-        enums={'language':{'system','en','id','pt','tet'},'provider':set(PROVIDERS),'costume':{'traditional','tuxedo','casual'},'walk_speed':{'slow','normal','fast'},'animation_speed':{'slow','normal','fast'},'character_size':{'small','normal','large'},'start_page':{'home','chat','os_help','teachers','homework','learn','coding','live','culture'},'panel_edge':{'bottom','top'},'preset':{'fast'}}
+        enums={'language':{'system','en','id','pt','tet'},'provider':set(PROVIDERS),'costume':{'traditional','tuxedo','casual'},'walk_speed':{'slow','normal','fast'},'animation_speed':{'slow','normal','fast'},'character_size':{'small','normal','large'},'start_page':{'home','classroom','exams','chat','os_help','teachers','homework','learn','coding','live','culture'},'panel_edge':{'bottom','top'},'preset':{'fast'}}
         for name,choices in enums.items():
             value=data.get(name,getattr(defaults,name))
             values[name]=value if isinstance(value,str) and value in choices else getattr(defaults,name)

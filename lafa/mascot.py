@@ -18,7 +18,7 @@ from .qt import Qt,QTimer,QPointF,QRectF,QRect,QEvent,Signal,QPixmap,QPainter,QG
 from .qt import QWidget,QMenu,QFrame,QVBoxLayout,QHBoxLayout,QLabel,QLineEdit,QPushButton,QPlainTextEdit,QApplication,global_point,run
 from .config import STATES,IDLE_ACTIVITIES
 from .i18n import tr
-from . import personality, eduka, outfits
+from . import personality, eduka, outfits, roles
 
 ASSET=Path(__file__).parent/'assets'/'lafa-atlas.png'
 COMPACT=(192,208)
@@ -26,6 +26,8 @@ EXPANDED=(440,544)
 PET_SIZES={'small':132,'normal':176,'large':220}
 WALK_STEPS={'slow':2,'normal':3,'fast':5}
 ANIMATION_RATES={'slow':0.6,'normal':1.0,'fast':1.6}
+
+ROLE_OF={activity:role for role,(activity,*_) in roles.ROLES.items() if activity in outfits.ROLES}
 
 def greeting_key(hour):
     """Local time-of-day greeting used by the Virtual Assistant."""
@@ -61,6 +63,20 @@ class Atlas:
         self.poses=self.outfits['base'];self.traditional=self.outfits['traditional']
         for state in ['tebe','bidu']:self.poses[state]=self.traditional[state]
         if set(STATES)-self.poses.keys():raise RuntimeError('A LAFA pose is missing.')
+    def head(self,pose):
+        """(x, y) of the top of LAFA's head as fractions of the pose canvas."""
+        cache=self.__dict__.setdefault('_heads',{})
+        if pose not in cache:
+            image=self.poses.get(pose,self.poses['idle']).toImage().scaled(96,96,Qt.KeepAspectRatio,Qt.SmoothTransformation)
+            top=None;xs=[]
+            for y in range(image.height()):
+                row=[x for x in range(image.width()) if QColor(image.pixel(x,y)).alpha()>120] if image.hasAlphaChannel() else []
+                if top is None and len(row)>=3:top=y
+                if top is not None:
+                    xs+=row
+                    if y>top+8:break
+            cache[pose]=(sum(xs)/len(xs)/image.width(),top/image.height()) if xs else (0.5,0.1)
+        return cache[pose]
     def pixmap(self,state='idle',size=180,costume='casual'):
         pose=outfits.pose_of(state)
         poses=self.outfits.get(costume) or self.poses
@@ -100,7 +116,11 @@ class Character(QWidget):
         painter.save();painter.translate(self.width()/2,self.height()/2+bob);painter.rotate(angle)
         if pose=='walking' and self.direction<0:painter.scale(-1,1)
         pix=self.atlas.pixmap(self.state,self.width()-10,self.costume)
-        painter.drawPixmap(-pix.width()//2,-pix.height()//2,pix);painter.restore()
+        painter.drawPixmap(-pix.width()//2,-pix.height()//2,pix)
+        hat=outfits.hat_of(self.state)
+        if hat:
+            hx,hy=self.atlas.head(pose);outfits.paint_hat(painter,hat,-pix.width()/2+hx*pix.width(),-pix.height()/2+(hy+0.15)*pix.height(),pix.width())
+        painter.restore()
         if scene:outfits.paint_foreground(painter,scene,self.width(),self.height(),self.phase)
     def mouseReleaseEvent(self,event):
         if event.button()==Qt.LeftButton:self.clicked.emit()
@@ -319,11 +339,17 @@ class Companion(QWidget):
     def activity_choices(self):
         excluded={self.state}|({'walking'} if self.can_roam() else set())|(set() if self.settings.personal_activities else {'bathing','toilet'})
         return [s for s in outfits.activities_for(self.settings.costume) if s not in excluded]
+    def play_role(self,role):
+        """Switch into one of LAFA's roles and say something in that role."""
+        activity=roles.ROLES[role][0];self.walk_target=None;self.set_state(activity);self.last_idle_change=self.clock()
+        self.show_bubble(roles.line(role,self.lang));self.popup_deadline=self.clock()+20
     def start_activity(self):
         """Pick a new job for the assistant; sometimes LAFA comments on it."""
         self.walk_target=None;self.set_state(random.choice(self.activity_choices()));self.last_idle_change=self.clock()
         if self.settings.chatter and self.can_auto_popup() and random.random()<0.35:
-            self.show_balloon(personality.thought(self.lang,self.state),personality.duty(self.lang,self.state),'thought',self.settings.balloon_seconds)
+            role=ROLE_OF.get(self.state)
+            line=roles.line(role,self.lang) if role and random.random()<0.5 else personality.thought(self.lang,self.state)
+            self.show_balloon(line,personality.duty(self.lang,self.state),'thought',self.settings.balloon_seconds)
     def start_walk(self):
         self.snap_to_panel();rect=self.panel_rect();left,right=rect.left(),rect.right()-self.width()
         if right-left<60:self.start_activity();return
@@ -405,6 +431,8 @@ class Companion(QWidget):
         menu.addAction(tr(lang,'virtual'),self.show_bubble);menu.addAction(tr(lang,'fullwindow'),self.open_requested.emit)
         menu.addAction(tr(lang,'tell_joke'),self.tell_joke)
         for key in ['os','weather','news','focus']:menu.addAction(tr(lang,{'news':'timor_news','os':'os_help'}.get(key,key)),lambda checked=False,k=key:self.action_requested.emit(k))
+        hats=menu.addMenu(tr(lang,'roles'))
+        for role in roles.ORDER:hats.addAction(roles.text(roles.ROLES[role][2],lang),lambda checked=False,r=role:self.play_role(r))
         moods=menu.addMenu(tr(lang,'mood'))
         for state in outfits.activities_for(self.settings.costume):moods.addAction(tr(lang,state)+' · '+personality.duty(lang,state),lambda checked=False,s=state:self.set_state(s))
         wardrobe=menu.addMenu(tr(lang,'costume'))

@@ -341,6 +341,42 @@ OUTFIT_TEXT = {
     "game_break": ("Deskansa joga", "Deskansa uitoan ho jogu", "Nivel ida tan… diak, para! Ha'u bele ajuda?", ["Deskansa badak ajuda ulun aprende.", "Jogu remata? Tempu estuda fali!"]),
 },
 }
+# LAFA's roles (all outfits): same format as OUTFIT_TEXT.
+ROLE_TEXT = {
+"en": {
+    "lecture": ("Teaching", "Teaching a lesson", "Class is open! Do you have a question for teacher LAFA?", ["Today's lesson: never stop being curious.", "Who can tell me 7 × 8? …56! Great!"]),
+    "professor": ("Professor", "Professor LAFA researching", "Ahem! Professor LAFA at your service. What shall we discover?", ["According to my research… learning is fun!", "Hypothesis: you are going to learn something new today."]),
+    "motivator": ("Motivator", "Cheering for every student", "You came at the right time — you can do it! How can I help?", ["Never give up — our heroes never did!", "One more page, one more step, one more win!"]),
+    "magic_show": ("Magic show", "Practising magic tricks", "Abracadabra! You found the magician. Want a trick or some help?", ["The real magic is called mathematics.", "Pick a card… any card… oops, it's homework!"]),
+    "master": ("Master", "Meditating like a master of learning", "Young student, the master is listening. What do you seek?", ["A wise student asks; a foolish one stays silent.", "Patience, practice, progress."]),
+    "comedy": ("Comedy", "Rehearsing jokes", "Is this mic on? Hehe. Need a laugh or some help?", ["Why did the crocodile go to school? To become a smart-odile!", "Laughing is good exercise for the brain."]),
+},
+"id": {
+    "lecture": ("Mengajar", "Sedang mengajar", "Kelas dimulai! Ada pertanyaan untuk guru LAFA?", ["Pelajaran hari ini: jangan berhenti ingin tahu.", "Siapa tahu 7 × 8? …56! Hebat!"]),
+    "professor": ("Profesor", "Profesor LAFA sedang meneliti", "Ehem! Profesor LAFA siap membantu. Apa yang kita temukan hari ini?", ["Menurut penelitian saya… belajar itu seru!", "Hipotesis: kamu akan belajar hal baru hari ini."]),
+    "motivator": ("Motivator", "Menyemangati setiap siswa", "Kamu datang tepat waktu — kamu pasti bisa! Bisa saya bantu?", ["Jangan menyerah — pahlawan kita tidak pernah menyerah!", "Satu halaman lagi, satu langkah lagi, satu kemenangan lagi!"]),
+    "magic_show": ("Pertunjukan sulap", "Berlatih sulap", "Simsalabim! Kamu menemukan pesulap. Mau trik atau bantuan?", ["Sulap yang sebenarnya bernama matematika.", "Pilih satu kartu… ups, ternyata PR!"]),
+    "master": ("Master", "Bermeditasi seperti master pembelajaran", "Murid muda, sang master mendengarkan. Apa yang kamu cari?", ["Murid bijak bertanya; yang lain diam saja.", "Sabar, latihan, kemajuan."]),
+    "comedy": ("Komedi", "Berlatih lawakan", "Mikrofonnya nyala? Hehe. Mau tertawa atau perlu bantuan?", ["Kenapa buaya pergi ke sekolah? Supaya jadi buaya pintar!", "Tertawa itu olahraga untuk otak."]),
+},
+"pt": {
+    "lecture": ("A dar aula", "A dar uma aula", "A aula começou! Tens uma pergunta para o professor LAFA?", ["Lição de hoje: nunca deixes de ser curioso.", "Quem sabe 7 × 8? …56! Muito bem!"]),
+    "professor": ("Professor", "O professor LAFA a investigar", "Ahem! O professor LAFA ao teu dispor. O que vamos descobrir?", ["Segundo a minha investigação… aprender é divertido!", "Hipótese: hoje vais aprender algo novo."]),
+    "motivator": ("Motivador", "A animar cada aluno", "Chegaste na hora certa — tu consegues! Como posso ajudar?", ["Nunca desistas — os nossos heróis nunca desistiram!", "Mais uma página, mais um passo, mais uma vitória!"]),
+    "magic_show": ("Espetáculo de magia", "A ensaiar truques de magia", "Abracadabra! Encontraste o mágico. Queres um truque ou ajuda?", ["A verdadeira magia chama-se matemática.", "Escolhe uma carta… ups, são os trabalhos de casa!"]),
+    "master": ("Mestre", "A meditar como um mestre da aprendizagem", "Jovem aluno, o mestre escuta. O que procuras?", ["O aluno sábio pergunta.", "Paciência, prática, progresso."]),
+    "comedy": ("Comédia", "A ensaiar piadas", "Este microfone está ligado? Hehe. Queres rir ou precisas de ajuda?", ["Porque foi o crocodilo à escola? Para ser um croco-sábio!", "Rir é ginástica para o cérebro."]),
+},
+"tet": {
+    "lecture": ("Hanorin", "Hanorin lisaun", "Klase loke ona! Iha pergunta ba mestre LAFA?", ["Lisaun ohin: keta para hakarak hatene.", "Se mak hatene 7 × 8? …56! Di'ak loos!"]),
+    "professor": ("Profesór", "Profesór LAFA halo peskiza", "Ehem! Profesór LAFA prontu ajuda. Ita deskobre saida?", ["Tuir ha'u-nia peskiza… aprende mak furak!", "Ipóteze: ohin ita sei aprende buat foun."]),
+    "motivator": ("Motivadór", "Fó korajen ba estudante hotu", "Ita mai iha tempu loos — ita bele! Ha'u bele ajuda saida?", ["Keta hakruuk — ita-nia eroi sira nunka hakruuk!", "Pájina ida tan, pasu ida tan, manán ida tan!"]),
+    "magic_show": ("Espetákulu majia", "Pratika majia", "Abrakadabra! Ita hetan majiku. Hakarak majia ka ajuda?", ["Majia loloos naran matemátika.", "Hili karta ida… ups, TPC!"]),
+    "master": ("Mestre", "Medita hanesan mestre aprendizajen", "Estudante foin-sa'e, mestre rona hela. Ita buka saida?", ["Estudante matenek husu pergunta.", "Pasiénsia, pratika, progresu."]),
+    "comedy": ("Komédia", "Pratika anedota", "Mikrofone moris ka? Hehe. Hakarak hamnasa ka presiza ajuda?", ["Tanba sa lafaek ba eskola? Atu sai lafaek matenek!", "Hamnasa mak ezersísiu ba kakutak."]),
+},
+}
+for _lang, _items in ROLE_TEXT.items(): OUTFIT_TEXT[_lang].update(_items)
 OUTFIT_NAMES = {
 "en": {"traditional": "Tais Mane (default)", "tuxedo": "Tuxedo (formal)", "casual": "Casual (summer)"},
 "id": {"traditional": "Tais Mane (bawaan)", "tuxedo": "Tuksedo (resmi)", "casual": "Kasual (musim panas)"},

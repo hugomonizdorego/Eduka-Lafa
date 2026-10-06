@@ -60,7 +60,7 @@ class OutfitRendering(unittest.TestCase):
         from lafa.mascot import Companion
         c = Companion(self.atlas, Settings(companion=True, costume='casual'))
         try:
-            self.assertTrue(set(c.activity_choices()) <= set(outfits.CASUAL))
+            self.assertTrue(set(c.activity_choices()) <= set(outfits.CASUAL + outfits.ROLES))
             calls = []; c.outfit_requested.connect(calls.append); c.outfit_requested.emit('tuxedo'); self.assertEqual(calls, ['tuxedo'])
             c.set_state('beach'); c.settings.costume = 'tuxedo'; c.apply_preferences()
             self.assertIn(c.state, outfits.FORMAL); self.assertEqual(c.pet.costume, 'tuxedo')
@@ -122,7 +122,7 @@ class SchoolUI(unittest.TestCase):
     def test_school_navigation(self):
         from lafa.app import PAGES
         keys = [key for key, _ in PAGES]
-        self.assertEqual(keys[:3], ['home', 'teachers', 'homework']); self.assertIn('os_help', keys)
+        self.assertEqual(keys[:6], ['home', 'classroom', 'teachers', 'exams', 'report', 'homework']); self.assertIn('os_help', keys)
         self.assertEqual(self.w.page_title('learn'), 'Library'); self.assertEqual(self.w.page_title('os_help'), 'IT help desk')
     def test_teacher_practice_flow(self):
         self.w.navigate('teachers'); self.w.teacher_list.setCurrentRow(0)

@@ -24,13 +24,25 @@ ACTIVITIES = {
     "sightseeing": ("walking", "city"), "hangout": ("talking", "cafe"), "shopping": ("walking", "shopping"),
     "snack": ("eating", "cafe"), "game_break": ("gaming", "cafe"),
 }
+# LAFA's roles (every outfit): teacher, professor, motivator, magician, master, comedian.
+ROLE_ACTIVITIES = {
+    "lecture": ("talking", "chalkboard"), "professor": ("reading", "professor"), "motivator": ("stretching", "cheer"),
+    "magic_show": ("talking", "magic"), "master": ("thinking", "master"), "comedy": ("talking", "comedy"),
+}
+ACTIVITIES.update(ROLE_ACTIVITIES)
+ROLES = list(ROLE_ACTIVITIES)
+# Hats drawn on LAFA's head for some scenes.
+HATS = {"magic": "top_hat", "professor": "mortarboard"}
 FORMAL = ["party", "meeting", "presentation", "ceremony", "gala_dinner", "report", "speech_prep", "formal_walk"]
 CASUAL = ["beach", "sunbathing", "beach_ball", "sightseeing", "hangout", "shopping", "snack", "game_break"]
 TRADITIONAL = ["idle", "reading", "thinking", "walking", "sitting", "gaming", "sleeping", "bathing", "toilet",
                "studying", "eating", "stretching", "tebe", "bidu"]
 
-def activities_for(outfit):
-    return {"tuxedo": FORMAL, "casual": CASUAL}.get(outfit, TRADITIONAL)
+def activities_for(outfit, roles=True):
+    return {"tuxedo": FORMAL, "casual": CASUAL}.get(outfit, TRADITIONAL) + (ROLES if roles else [])
+
+def hat_of(activity):
+    return HATS.get(scene_of(activity))
 
 def pose_of(activity):
     return ACTIVITIES.get(activity, (activity, ""))[0]
@@ -86,6 +98,53 @@ def paint_background(p, scene, w, h, phase=0.0):
             p.setBrush(QColor(*[(239, 83, 80), (255, 255, 255)][i % 2], 200)); p.drawRect(QRectF(w * (0.05 + i * 0.15), h * 0.08, w * 0.15, h * 0.06))
     elif scene == "shopping":
         _ground(p, w, h, "#cfd8dc")
+    elif scene == "chalkboard":
+        p.setPen(QPen(QColor(121, 85, 72), max(2, w // 50))); p.setBrush(QColor(38, 70, 52, 235)); p.drawRect(QRectF(w * 0.56, h * 0.06, w * 0.42, h * 0.34))
+        p.setPen(QPen(QColor(245, 245, 235), max(1, w // 110))); font = p.font(); font.setPixelSize(max(7, int(w * 0.055))); p.setFont(font)
+        p.drawText(QRectF(w * 0.58, h * 0.08, w * 0.38, h * 0.30), Qt.AlignCenter, "a² + b² = c²\n2 + 2 = 4\nABC")
+    elif scene == "professor":
+        p.setPen(Qt.NoPen)
+        for row in range(3):
+            p.setBrush(QColor(141, 110, 99, 210)); p.drawRect(QRectF(w * 0.62, h * (0.10 + row * 0.13), w * 0.36, h * 0.015))
+            for i in range(6):
+                p.setBrush(QColor(*[(66, 165, 245), (239, 83, 80), (255, 193, 7), (102, 187, 106), (171, 71, 188), (255, 112, 67)][(i + row) % 6], 220))
+                p.drawRect(QRectF(w * (0.63 + i * 0.055), h * (0.10 + row * 0.13) - h * 0.09, w * 0.045, h * 0.09))
+    elif scene == "cheer":
+        for i in range(7):
+            angle = phase * 0.6 + i * 0.9; x = w * (0.5 + 0.42 * math.cos(angle)); y = h * (0.35 + 0.28 * math.sin(angle))
+            _star(p, x, y, w * 0.035, QColor(255, 202, 40, 230))
+    elif scene == "magic":
+        for i in range(9):
+            x = w * ((i * 29 % 100) / 100); y = h * (((i * 47 + int(phase * 8)) % 60) / 100)
+            _star(p, x, y, w * (0.018 + 0.01 * (i % 3)), QColor(*[(186, 104, 200), (255, 213, 79), (129, 212, 250)][i % 3], 220))
+    elif scene == "master":
+        p.setPen(Qt.NoPen); p.setBrush(QColor(255, 236, 179, 120)); p.drawEllipse(QPointF(w * 0.5, h * 0.42), w * 0.46, w * 0.46)  # calm aura
+        p.setPen(QPen(QColor(141, 110, 99), 2)); p.setBrush(QColor(255, 248, 225, 235)); p.drawRect(QRectF(w * 0.80, h * 0.08, w * 0.14, h * 0.40))  # scroll
+        p.setPen(QPen(QColor(93, 64, 55), max(1, w // 120)))
+        for i in range(5): p.drawLine(QPointF(w * 0.83, h * (0.13 + i * 0.07)), QPointF(w * 0.91, h * (0.13 + i * 0.07)))
+    elif scene == "comedy":
+        p.setPen(Qt.NoPen); p.setBrush(QColor(255, 241, 118, 70))
+        p.drawPolygon(QPolygonF([QPointF(w * 0.45, 0), QPointF(w * 0.55, 0), QPointF(w * 0.9, h * 0.95), QPointF(w * 0.1, h * 0.95)]))
+        _ground(p, w, h, "#8d6e63")
+    p.restore()
+
+def _star(p, x, y, r, colour):
+    p.setPen(Qt.NoPen); p.setBrush(colour)
+    p.drawPolygon(QPolygonF([QPointF(x + (r if i % 2 == 0 else r * 0.42) * math.cos(math.pi / 2 + i * math.pi / 5), y - (r if i % 2 == 0 else r * 0.42) * math.sin(math.pi / 2 + i * math.pi / 5)) for i in range(10)]))
+
+def paint_hat(p, hat, x, y, size):
+    """A hat whose brim is centred at (x, y) on LAFA's head; size = character width."""
+    p.save(); p.setRenderHint(QPainter.Antialiasing); s = size
+    if hat == "top_hat":
+        p.setPen(QPen(QColor(10, 10, 14), max(1, s / 120))); p.setBrush(QColor(28, 28, 34))
+        p.drawRoundedRect(QRectF(x - s * 0.15, y - s * 0.035, s * 0.30, s * 0.05), s * 0.02, s * 0.02)  # brim
+        p.drawRect(QRectF(x - s * 0.10, y - s * 0.20, s * 0.20, s * 0.17))
+        p.setPen(Qt.NoPen); p.setBrush(QColor(176, 28, 40)); p.drawRect(QRectF(x - s * 0.10, y - s * 0.075, s * 0.20, s * 0.035))  # band
+    elif hat == "mortarboard":
+        p.setPen(QPen(QColor(10, 10, 14), max(1, s / 120))); p.setBrush(QColor(30, 34, 48))
+        p.drawRect(QRectF(x - s * 0.08, y - s * 0.07, s * 0.16, s * 0.07))
+        p.drawPolygon(QPolygonF([QPointF(x - s * 0.20, y - s * 0.08), QPointF(x, y - s * 0.14), QPointF(x + s * 0.20, y - s * 0.08), QPointF(x, y - s * 0.02)]))
+        p.setPen(QPen(QColor(255, 193, 7), max(1.5, s / 90))); p.drawLine(QPointF(x, y - s * 0.08), QPointF(x + s * 0.17, y - s * 0.05)); p.drawLine(QPointF(x + s * 0.17, y - s * 0.05), QPointF(x + s * 0.17, y + s * 0.04))
     p.restore()
 
 def paint_foreground(p, scene, w, h, phase=0.0):
@@ -121,6 +180,26 @@ def paint_foreground(p, scene, w, h, phase=0.0):
     elif scene == "stage":
         p.setPen(Qt.NoPen); p.setBrush(QColor(255, 255, 255)); p.drawRect(QRectF(w * 0.70, h * 0.66, w * 0.16, h * 0.05))  # diploma
         p.setBrush(QColor(176, 28, 40)); p.drawRect(QRectF(w * 0.77, h * 0.66, w * 0.02, h * 0.05))
+    elif scene == "magic":
+        angle = math.sin(phase * 2) * 0.25; x0, y0 = w * 0.16, h * 0.62
+        x1, y1 = x0 + w * 0.16 * math.cos(-0.9 + angle), y0 + w * 0.16 * math.sin(-0.9 + angle)
+        p.setPen(QPen(QColor(20, 20, 24), max(3, w // 40), Qt.SolidLine, Qt.RoundCap)); p.drawLine(QPointF(x0, y0), QPointF(x1, y1))  # wand
+        p.setPen(QPen(QColor(250, 250, 250), max(3, w // 40), Qt.SolidLine, Qt.RoundCap)); p.drawPoint(QPointF(x1, y1))
+        _star(p, x1, y1, w * 0.04, QColor(255, 213, 79, 240))
+    elif scene == "chalkboard":
+        p.setPen(QPen(QColor(141, 110, 99), max(2, w // 60), Qt.SolidLine, Qt.RoundCap)); p.drawLine(QPointF(w * 0.18, h * 0.62), QPointF(w * 0.02, h * 0.42))  # pointer
+    elif scene == "cheer":
+        p.setPen(QPen(QColor(191, 144, 0), 2)); p.setBrush(QColor(255, 202, 40)); p.drawRect(QRectF(w * 0.80, h * 0.80, w * 0.12, h * 0.04))
+        cup = QPainterPath(); cup.moveTo(w * 0.78, h * 0.64); cup.lineTo(w * 0.94, h * 0.64); cup.quadTo(w * 0.93, h * 0.78, w * 0.86, h * 0.78); cup.quadTo(w * 0.79, h * 0.78, w * 0.78, h * 0.64)
+        p.drawPath(cup); p.drawRect(QRectF(w * 0.85, h * 0.78, w * 0.02, h * 0.02))
+    elif scene == "master":
+        p.setPen(QPen(QColor(62, 39, 35), 2)); p.setBrush(QColor(121, 85, 72)); p.drawRoundedRect(QRectF(w * 0.06, h * 0.84, w * 0.30, h * 0.07), 4, 4)  # low table
+        for i in range(4):
+            for j in range(2):
+                p.setPen(Qt.NoPen); p.setBrush(QColor(250, 250, 250) if (i + j) % 2 else QColor(40, 40, 40)); p.drawRect(QRectF(w * (0.10 + i * 0.055), h * (0.80 + j * 0.02), w * 0.055, h * 0.02))
+    elif scene == "comedy":
+        p.setPen(QPen(QColor(60, 60, 66), max(2, w // 70))); p.drawLine(QPointF(w * 0.84, h * 0.98), QPointF(w * 0.84, h * 0.60))  # mic stand
+        p.setPen(Qt.NoPen); p.setBrush(QColor(90, 90, 98)); p.drawEllipse(QPointF(w * 0.84, h * 0.57), w * 0.035, w * 0.045)
     p.restore()
 
 def flag_pixmap(size):
