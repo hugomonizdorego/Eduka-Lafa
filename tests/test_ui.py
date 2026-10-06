@@ -4,14 +4,14 @@ os.environ.setdefault('QT_QPA_PLATFORM','offscreen')
 import time
 import threading
 import unittest
-from PySide6.QtWidgets import QApplication
+from lafa.qt import QApplication
 from lafa.app import Window,STYLE,PAGES,PAGE_INDEX
 from lafa.config import Settings,STATES
 from lafa.mascot import Companion
 from lafa.live_info import Location,LocationChoices
 from unittest.mock import patch
-from PySide6.QtCore import Qt
-from PySide6.QtTest import QTest
+from lafa.qt import Qt
+from lafa.qt import BINDING as _B; import importlib; QTest=importlib.import_module(_B+'.QtTest').QTest
 from lafa.tools import FileResults,FileHit
 
 class UITests(unittest.TestCase):

@@ -10,13 +10,15 @@ import json
 import sys
 import tempfile
 import time
-from PySide6.QtCore import Qt, QObject, Signal, QRunnable, QThreadPool, QTimer, QUrl, QLockFile, Slot, QProcess
-from PySide6.QtGui import QIcon, QDesktopServices, QFont, QGuiApplication
-from PySide6.QtWidgets import (
+from .qt import (
+    QT_MAJOR,QSize,QDate,QDateEdit,QTabWidget,QAbstractItemView,
+    Qt,QObject,Signal,QRunnable,QThreadPool,QTimer,QUrl,QLockFile,Slot,QProcess,
+    QIcon,QDesktopServices,QFont,QGuiApplication,
     QApplication,QMainWindow,QWidget,QVBoxLayout,QHBoxLayout,QGridLayout,
     QLabel,QPushButton,QLineEdit,QComboBox,QCheckBox,QStackedWidget,QFrame,
     QScrollArea,QTableWidget,QTableWidgetItem,QHeaderView,QFormLayout,QListWidget,
     QFileDialog,QMessageBox,QDialog,QPlainTextEdit,QMenu,QSystemTrayIcon,QSpinBox,QListWidgetItem,QSizePolicy,
+    BINDING,run,started,prepare_application,
 )
 from . import VERSION_LABEL
 from .config import Settings, Secrets, PROVIDERS, HUB, STATES, OPEN_SOURCE, config_path, valid_endpoint
@@ -32,7 +34,7 @@ from .timor import CardDeck,Card,timor_news,NEWS_LINKS
 from .learning import LessonPython,LESSONS,REFERENCES,LESSON_KEYS
 from .reminders import Reminders
 from .instance import server_name,activate_existing,ActivationServer
-from . import osguide, personality
+from . import osguide, personality, eduka, outfits, school, updates
 import random
 from .agent import direct_intent
 
@@ -129,12 +131,50 @@ def page_layout():
     w=QWidget(); layout=QVBoxLayout(w); layout.setContentsMargins(0,0,0,0); layout.setSpacing(14)
     return w,layout
 
-PAGES=[("home","🏠"),("chat","💬"),("os_help","🧭"),("files","📁"),("learn","📚"),("coding","💻"),("live","🌦️"),("reminders","⏰"),("culture","🇹🇱"),("hub","✨")]
+# LAFA Desktop is a school: lobby, classroom (teachers), homework office,
+# library, computer lab, notice board, IT help desk and more.
+PAGES=[("home","🏠"),("teachers","👩‍🏫"),("homework","📅"),("chat","💬"),("learn","📚"),("coding","💻"),("live","📰"),("os_help","🧭"),("files","📁"),("reminders","⏰"),("culture","🇹🇱"),("hub","✨")]
+PAGE_LABELS={"learn":"library","coding":"lab","live":"noticeboard","os_help":"helpdesk","reminders":"reminders_short"}
+# Theme icons (Papirus on Edukasaun OS); emoji are only a fallback for Qt 6.
+NAV_ICONS={"home":["user-home","go-home"],"teachers":["system-users","user-identity"],"homework":["x-office-calendar","office-calendar","view-calendar"],
+           "chat":["internet-chat","im-user","mail-message-new"],"learn":["accessories-dictionary","bookcase","document-open"],"coding":["applications-development","utilities-terminal"],
+           "live":["weather-few-clouds","applications-internet"],"os_help":["help-browser","system-help","help-contents"],"files":["folder","system-file-manager"],
+           "reminders":["alarm-clock","appointment-soon","chronometer"],"hub":["applications-internet","web-browser"]}
 PAGE_INDEX={key:i for i,(key,_) in enumerate(PAGES)}
 # Home dashboard cards: page key, icon, description key.
-CARDS=[("os_help","🧭","card_os_d"),("chat","💬","card_chat_d"),("files","📁","card_files_d"),("learn","📚","card_learn_d"),("coding","💻","card_coding_d"),("live","🌦️","card_live_d"),("reminders","⏰","card_reminders_d"),("culture","🇹🇱","card_culture_d"),("hub","✨","card_hub_d")]
+CARDS=[("teachers","👩‍🏫","card_teachers_d"),("homework","📅","card_homework_d"),("os_help","🧭","card_os_d"),("chat","💬","card_chat_d"),("files","📁","card_files_d"),("learn","📚","card_learn_d"),("coding","💻","card_coding_d"),("live","🌦️","card_live_d"),("reminders","⏰","card_reminders_d"),("culture","🇹🇱","card_culture_d"),("hub","✨","card_hub_d")]
 # Commands that run entirely on this computer, even in review mode.
 LOCAL_TOOLS={"help","calc","joke","os_help"}
+
+DARK_QSS = """
+QWidget { color:#e8eeeb; }
+QMainWindow, QDialog {background:#1f2523;}
+QPushButton {background:#2b3330; border-color:#3c4743; color:#e8eeeb;}
+QPushButton:hover {background:#33403b;}
+QLineEdit,QComboBox,QSpinBox,QPlainTextEdit,QListWidget,QTableWidget {background:#2b3330;border-color:#3c4743;color:#e8eeeb;}
+QFrame#panel, QFrame#bubble, QFrame#card {background:#29312e;border-color:#3a4541;}
+QFrame#hero {background:qlineargradient(x1:0,y1:0,x2:1,y2:1,stop:0 #23342d,stop:1 #3a3320);border-color:#34443d;}
+QFrame#userbubble {background:#24392f;border-color:#2f4a3c;}
+QLabel#muted {color:#a7b6af;}
+QHeaderView::section {background:#29312e;color:#b9c8c1;}
+QMenu {background:#2b3330;border-color:#3c4743;}
+QScrollArea, QScrollArea > QWidget > QWidget, QWidget#chatbody, QStackedWidget > QWidget {background:#1f2523;}
+QTabWidget::pane {background:#1f2523;border-color:#3c4743;}
+QTabBar::tab {background:#2b3330;color:#e8eeeb;padding:6px 12px;}
+QTabBar::tab:selected {background:#33403b;}
+"""
+
+def shade(color,factor):
+    """Lighter (>1) or darker (<1) #rrggbb colour."""
+    r,g,b=(int(color[i:i+2],16) for i in (1,3,5))
+    return '#'+''.join(f'{max(0,min(255,int(v*factor))):02x}' for v in (r,g,b))
+
+def style_sheet(settings):
+    """LAFA style that follows the Eduka-Desktop theme and accent colour."""
+    if not settings.follow_eduka_theme or not eduka.installed():return STYLE
+    info=eduka.theme();accent=info['accent']
+    qss=STYLE.replace('#13795b',accent).replace('#0e6249',shade(accent,0.82))
+    return qss+(DARK_QSS if info['dark'] else '')
 
 class ClickCard(QFrame):
     """Word-wrapping clickable card for the Home dashboard."""
@@ -145,6 +185,17 @@ class ClickCard(QFrame):
         self.setSizePolicy(QSizePolicy.Expanding,QSizePolicy.Preferred);self.setMinimumHeight(84)
     def mouseReleaseEvent(self,event):
         if event.button()==Qt.LeftButton:self.callback()
+
+def ensure_icon_theme():
+    """Use the desktop's icon theme; outside LXQt fall back to an installed one
+    (Papirus is recommended by Edukasaun OS)."""
+    paths=QIcon.themeSearchPaths()
+    for folder in (str(Path.home()/'.local/share/icons'),'/usr/local/share/icons','/usr/share/icons'):
+        if folder not in paths and Path(folder).is_dir():paths.append(folder)
+    QIcon.setThemeSearchPaths(paths)
+    if QIcon.themeName() and QIcon.themeName()!='hicolor':return
+    for name in ('Papirus','Papirus-Light','breeze','Adwaita'):
+        if Path('/usr/share/icons',name).is_dir():QIcon.setThemeName(name);return
 
 def safe_web(url):
     parts=urlsplit(url)
@@ -161,7 +212,12 @@ class Window(QMainWindow):
         self.settings_dialog=None;self.card_deck=CardDeck();self.news_inflight=False;self.last_local_news=time.monotonic();self.pending_mode=""
         self.reminders=Reminders(); self.news_items=[]; self.locations=[]
         self.last_answer=""; self.current_files=[]; self.current_sources=[]; self.generation=0; self.active_provider=self.settings.provider
+        updates.apply()  # sources downloaded earlier (validated cache)
         self.agent=Agent(self.settings,self.secrets)
+        ensure_icon_theme()
+        # Review mode keeps homework in a temporary folder, never the user's data.
+        self.planner=school.Planner(tempfile.mkdtemp(prefix='lafa-review-') if review else None)
+        self.teacher_history={};self.scores={}
         self.setWindowTitle("LAFA Desktop"); self.resize(1120,760); self.setMinimumSize(880,640)
         self.setWindowIcon(QIcon(self.atlas.pixmap("idle",128)))
         self.companion=Companion(self.atlas,self.settings)
@@ -175,10 +231,13 @@ class Window(QMainWindow):
         self.companion.source_requested.connect(self.open_web)
         self.companion.card_requested.connect(self.show_cultural_card)
         self.companion.activity_changed.connect(lambda state:self.hero_character.set_state(state))
+        self.companion.outfit_requested.connect(self.change_outfit)
         self.tray=None
         self.build_ui()
         self.reminder_timer=QTimer(self); self.reminder_timer.timeout.connect(self.poll_reminders); self.reminder_timer.start(1000)
         self.culture_timer=QTimer(self);self.culture_timer.timeout.connect(self.check_local_updates);self.culture_timer.start(60_000)
+        # Automatic source updates (catalog, notice board, LAFA releases).
+        self.update_timer=QTimer(self);self.update_timer.timeout.connect(self.check_updates);self.update_timer.start(10*60_000);self.updating=False
         if not review:
             self.setup_tray()
             self.probe_timer=QTimer(self); self.probe_timer.timeout.connect(self.probe); self.probe_timer.start(30_000)
@@ -186,20 +245,30 @@ class Window(QMainWindow):
         else:
             self.set_online(True)
     def t(self,key): return tr(self.settings.locale,key)
-    def page_title(self,key):return "Timor-Leste" if key=="culture" else self.t(key)
+    def page_title(self,key):return "Timor-Leste" if key=="culture" else self.t(PAGE_LABELS.get(key,key))
+    def nav_icon(self,key):
+        if key=="culture":return QIcon(outfits.flag_pixmap(30))
+        for name in NAV_ICONS.get(key,[]):
+            icon=QIcon.fromTheme(name)
+            if not icon.isNull():return icon
+        return QIcon()
     def build_ui(self):
         root=QWidget(); root_layout=QHBoxLayout(root); root_layout.setContentsMargins(0,0,0,0); root_layout.setSpacing(0)
-        sidebar=QFrame(); sidebar.setObjectName("sidebar"); sidebar.setFixedWidth(232)
+        sidebar=QFrame(); sidebar.setObjectName("sidebar"); sidebar.setFixedWidth(248)
         side=QVBoxLayout(sidebar); side.setContentsMargins(16,22,16,18); side.setSpacing(3)
         brand=QHBoxLayout(); icon=QLabel(); icon.setPixmap(self.atlas.pixmap("idle",46,self.settings.costume)); brand.addWidget(icon)
         names=QVBoxLayout();names.setSpacing(0);names.addWidget(label("LAFA",22,True));names.addWidget(label(self.t("desktop"),9,muted=True));brand.addLayout(names,1);side.addLayout(brand)
         side.addSpacing(18)
         self.nav=[]
         for index,(key,glyph) in enumerate(PAGES):
-            b=button(glyph+"   "+self.page_title(key),lambda checked=False,i=index:self.navigate(i)); b.setCheckable(True);b.setToolTip(self.page_title(key))
+            icon=self.nav_icon(key)
+            # Qt 5 cannot draw colour emoji, so it shows text only without a theme icon.
+            prefix="" if not icon.isNull() or QT_MAJOR==5 else glyph+"   "
+            b=button(("  " if not icon.isNull() else "")+prefix+self.page_title(key),lambda checked=False,i=index:self.navigate(i)); b.setCheckable(True);b.setToolTip(self.page_title(key))
+            if not icon.isNull():b.setIcon(icon);b.setIconSize(QSize(20,20))
             side.addWidget(b); self.nav.append(b)
         side.addStretch()
-        settings_button=button("⚙   "+self.t("settings"),self.open_settings);settings_button.setToolTip(self.t("settings_in_eduka"));settings_button.setObjectName("sidesettings");side.addWidget(settings_button)
+        settings_button=button("⚙   "+self.t("settings"),self.open_configuration);settings_button.setToolTip(self.t("settings_in_eduka"));settings_button.setObjectName("sidesettings");side.addWidget(settings_button)
         side.addSpacing(10);side.addWidget(label("Husi Timor oan ba Timor oan",9))
         side.addWidget(label("LAFA  "+VERSION_LABEL,9))
         root_layout.addWidget(sidebar)
@@ -213,14 +282,14 @@ class Window(QMainWindow):
             reviewlabel=label(self.t("review_banner"))
             reviewlabel.setObjectName("review"); col.addWidget(reviewlabel)
         self.stack=QStackedWidget()
-        builders={"home":self.build_home,"chat":self.build_chat,"os_help":self.build_os,"files":self.build_files,"learn":self.build_learn,"coding":self.build_coding,"live":self.build_live,"reminders":self.build_reminders,"culture":self.build_culture,"hub":self.build_hub}
+        builders={"home":self.build_home,"teachers":self.build_teachers,"homework":self.build_homework,"chat":self.build_chat,"os_help":self.build_os,"files":self.build_files,"learn":self.build_learn,"coding":self.build_coding,"live":self.build_live,"reminders":self.build_reminders,"culture":self.build_culture,"hub":self.build_hub}
         for key,_ in PAGES:self.stack.addWidget(builders[key]())
         col.addWidget(self.stack,1); root_layout.addWidget(content,1)
-        self.setCentralWidget(root); self.navigate(0)
+        self.setCentralWidget(root); self.navigate(PAGE_INDEX.get(self.settings.start_page,0) if not hasattr(self,'_built') else 0);self._built=True
     def navigate(self,page):
         index=PAGE_INDEX[page] if isinstance(page,str) else page
         self.stack.setCurrentIndex(index);key=PAGES[index][0]
-        self.title.setText(self.page_title(key));self.subtitle.setText(self.t("home_sub") if key=="home" else self.t("card_"+{"os_help":"os","culture":"culture"}.get(key,key)+"_d") if key!="chat" else self.t("tagline"))
+        self.title.setText(self.page_title(key));self.subtitle.setText(self.t("home_sub") if key=="home" else self.t("card_"+{"os_help":"os"}.get(key,key)+"_d") if key!="chat" else self.t("tagline"))
         for i,b in enumerate(self.nav): b.setChecked(i==index)
         if key=="home":self.refresh_home()
     def build_home(self):
@@ -235,11 +304,13 @@ class Window(QMainWindow):
         col.addWidget(hero)
         col.addWidget(label(self.t("can_do"),13,True));grid=QGridLayout();grid.setSpacing(12)
         for i,(key,glyph,description) in enumerate(CARDS):
-            grid.addWidget(ClickCard(glyph+"  "+self.page_title(key),self.t(description),lambda k=key:self.navigate(k)),i//3,i%3)
+            grid.addWidget(ClickCard((glyph+"  " if QT_MAJOR==6 else "")+self.page_title(key),self.t(description),lambda k=key:self.navigate(k)),i//3,i%3)
         col.addLayout(grid)
         row=QHBoxLayout();row.setSpacing(12)
-        tip=QFrame();tip.setObjectName("panel");t=QVBoxLayout(tip);t.addWidget(label("💡 "+self.t("tip_title"),11,True));self.tip_label=label(osguide.tip_of_day(self.settings.locale),11);t.addWidget(self.tip_label);t.addStretch();row.addWidget(tip,1)
-        check=QFrame();check.setObjectName("panel");c=QVBoxLayout(check);c.addWidget(label("🩺 "+self.t("syscheck"),11,True));self.home_system=label("",10,muted=True);c.addWidget(self.home_system)
+        today=QFrame();today.setObjectName("panel");td=QVBoxLayout(today);td.addWidget(label(self.t("today_school"),11,True));self.home_today=label("",10);td.addWidget(self.home_today)
+        td.addWidget(label(self.t("homework_due"),11,True));self.home_homework=label("",10);td.addWidget(self.home_homework);td.addStretch();td.addWidget(button(self.t("homework"),lambda:self.navigate("homework")));row.addWidget(today,1)
+        tip=QFrame();tip.setObjectName("panel");t=QVBoxLayout(tip);t.addWidget(label(self.t("tip_title"),11,True));self.tip_label=label(osguide.tip_of_day(self.settings.locale),11);t.addWidget(self.tip_label);t.addStretch();row.addWidget(tip,1)
+        check=QFrame();check.setObjectName("panel");c=QVBoxLayout(check);c.addWidget(label(self.t("syscheck"),11,True));self.home_system=label("",10,muted=True);c.addWidget(self.home_system)
         c.addWidget(button(self.t("os_help"),lambda:self.navigate("os_help")));row.addWidget(check,1)
         col.addLayout(row);col.addStretch();scroll.setWidget(body);layout.addWidget(scroll,1);return w
     def refresh_home(self):
@@ -249,6 +320,8 @@ class Window(QMainWindow):
         self.virtual_status.setText(("🟢 "+self.t("virtual_on")) if self.settings.companion else ("⚪ "+self.t("virtual_off")))
         self.virtual_toggle.setText(self.t("turn_off") if self.settings.companion else self.t("turn_on"))
         self.home_system.setText("\n".join(f'{self.t(k)}: {v}'+(" ⚠" if state=="warn" else "") for k,v,state in osguide.system_report().items[:4]))
+        classes=self.planner.today();self.home_today.setText(" · ".join(classes) if classes else self.t("no_classes"))
+        due=self.planner.due_soon(3);self.home_homework.setText("\n".join(f"{h.due} · {self.subject_name(h.subject)} · {h.title}" for h in due[:4]) if due else self.t("no_homework"))
     def toggle_virtual(self):self.activate_mode('disable' if self.settings.companion else 'enable');self.refresh_home()
     def ask_from_home(self):
         text=self.home_input.text().strip()
@@ -285,12 +358,158 @@ class Window(QMainWindow):
         if not tool:self.error(self.t("tool_missing"));return
         if self.review:self.error(self.t("preview_only"));return
         # Fixed allowlisted executable, no arguments and no shell.
-        result=QProcess.startDetached(tool,[]);started=result[0] if isinstance(result,tuple) else result
-        if not started:self.error(self.t("tool_missing"))
+        result=QProcess.startDetached(tool,[])
+        if not started(result):self.error(self.t("tool_missing"))
         else:self.set_mood("talking");self.companion.show_answer(guide.title.get(self.settings.locale,guide.title["en"]))
     def refresh_system(self):
         text="\n".join(f'{self.t(k)}: {v}'+(" ⚠" if state=="warn" else "") for k,v,state in osguide.system_report().items)
         if hasattr(self,"os_system"):self.os_system.setText(text)
+    # ------------------------------------------------------------- school
+    def subject_name(self,key):
+        teacher=school.BY_KEY.get(key);return teacher.text('name',self.settings.locale) if teacher else self.t('other')
+    def build_teachers(self):
+        w,layout=page_layout();row=QHBoxLayout();row.setSpacing(14)
+        self.teacher_list=QListWidget();self.teacher_list.setObjectName("guides");self.teacher_list.setFixedWidth(260);self.teacher_list.setIconSize(QSize(44,44))
+        for teacher in school.TEACHERS:
+            item=QListWidgetItem(QIcon(self.atlas.pixmap(teacher.pose,88,self.settings.costume)),teacher.text('name',self.settings.locale));item.setData(Qt.UserRole,teacher.key);self.teacher_list.addItem(item)
+        row.addWidget(self.teacher_list)
+        scroll=QScrollArea();scroll.setWidgetResizable(True);scroll.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        panel=QFrame();panel.setObjectName("panel");v=QVBoxLayout(panel);v.setContentsMargins(20,16,20,16);v.setSpacing(10)
+        head=QHBoxLayout();self.teacher_face=QLabel();head.addWidget(self.teacher_face);names=QVBoxLayout();self.teacher_name=label("",16,True);self.teacher_intro=label("",10,muted=True)
+        names.addWidget(self.teacher_name);names.addWidget(self.teacher_intro);head.addLayout(names,1);v.addLayout(head)
+        v.addWidget(label(self.t("practice"),12,True))
+        self.practice_stack=QStackedWidget();self.practice_stack.setMinimumHeight(250);v.addWidget(self.practice_stack)
+        # Maths
+        math=QWidget();m=QVBoxLayout(math);top=QHBoxLayout();self.math_level=QComboBox()
+        for level in (1,2,3):self.math_level.addItem(f'{self.t("level")} {level}',level)
+        top.addWidget(self.math_level);top.addStretch();self.math_score=label("",10,muted=True);top.addWidget(self.math_score);m.addLayout(top)
+        self.math_question=label("",20,True);m.addWidget(self.math_question);answer=QHBoxLayout();self.math_answer=QLineEdit();self.math_answer.returnPressed.connect(self.check_math)
+        answer.addWidget(self.math_answer,1);answer.addWidget(button(self.t("check"),self.check_math,True));answer.addWidget(button(self.t("new_question"),self.new_math));m.addLayout(answer)
+        self.math_feedback=label("",11);m.addWidget(self.math_feedback);self.math=school.MathPractice();self.practice_stack.addWidget(math)
+        # Vocabulary
+        vocab=QWidget();vv=QVBoxLayout(vocab);top=QHBoxLayout();self.vocab_from=QComboBox();self.vocab_to=QComboBox()
+        for code,name in [('en','English'),('tet','Tetun'),('pt','Português'),('id','Bahasa Indonesia')]:self.vocab_from.addItem(name,code);self.vocab_to.addItem(name,code)
+        self.vocab_from.setCurrentIndex(self.vocab_from.findData('en'));self.vocab_to.setCurrentIndex(self.vocab_to.findData('tet' if self.settings.locale!='tet' else 'pt'))
+        top.addWidget(label(self.t("translate_from"),10,muted=True));top.addWidget(self.vocab_from);top.addWidget(label(self.t("translate_to"),10,muted=True));top.addWidget(self.vocab_to);top.addStretch()
+        self.vocab_score=label("",10,muted=True);top.addWidget(self.vocab_score);vv.addLayout(top)
+        self.vocab_word=label("",20,True);vv.addWidget(self.vocab_word);grid=QGridLayout();self.vocab_buttons=[]
+        for i in range(4):
+            b=button("",lambda checked=False,i=i:self.answer_vocab(i));b.setMinimumHeight(42);grid.addWidget(b,i//2,i%2);self.vocab_buttons.append(b)
+        vv.addLayout(grid);self.vocab_feedback=label("",11);vv.addWidget(self.vocab_feedback);vv.addWidget(button(self.t("new_question"),self.new_vocab))
+        self.vocab=school.VocabPractice();self.vocab_from.currentIndexChanged.connect(self.new_vocab);self.vocab_to.currentIndexChanged.connect(self.new_vocab);self.practice_stack.addWidget(vocab)
+        # Quiz
+        quiz=QWidget();q=QVBoxLayout(quiz);self.quiz_score=label("",10,muted=True);q.addWidget(self.quiz_score);self.quiz_question=label("",14,True);q.addWidget(self.quiz_question)
+        grid=QGridLayout();self.quiz_buttons=[]
+        for i in range(4):
+            b=button("",lambda checked=False,i=i:self.answer_quiz(i));b.setMinimumHeight(42);grid.addWidget(b,i//2,i%2);self.quiz_buttons.append(b)
+        q.addLayout(grid);self.quiz_feedback=label("",11);q.addWidget(self.quiz_feedback);q.addWidget(button(self.t("new_question"),self.new_quiz));self.quiz=None;self.practice_stack.addWidget(quiz)
+        # Counsellor tips
+        tips=QWidget();tv=QVBoxLayout(tips);tv.addWidget(label(self.t("counsellor_tip"),11,True,muted=True));self.tip_text=label("",14);tv.addWidget(self.tip_text);tv.addWidget(button(self.t("next_tip"),self.next_tip));self.tip_index=0;self.practice_stack.addWidget(tips)
+        v.addWidget(label(self.t("ask_teacher"),12,True))
+        ask=QHBoxLayout();self.teacher_input=QLineEdit();self.teacher_input.setPlaceholderText(self.t("ask"));self.teacher_input.returnPressed.connect(self.ask_teacher)
+        self.teacher_send=button(self.t("ask_teacher"),self.ask_teacher,True);self.teacher_public=button(self.t("public_search"),self.teacher_public_search)
+        ask.addWidget(self.teacher_input,1);ask.addWidget(self.teacher_send);ask.addWidget(self.teacher_public);v.addLayout(ask)
+        self.teacher_answer=QPlainTextEdit();self.teacher_answer.setReadOnly(True);self.teacher_answer.setMinimumHeight(120);v.addWidget(self.teacher_answer)
+        v.addWidget(label(self.t("resources"),12,True));self.teacher_links=QGridLayout();v.addLayout(self.teacher_links);v.addStretch()
+        scroll.setWidget(panel);row.addWidget(scroll,1);layout.addLayout(row,1)
+        self.teacher_list.currentRowChanged.connect(self.show_teacher);self.teacher_list.setCurrentRow(0);return w
+    def current_teacher(self):
+        row=self.teacher_list.currentRow();return school.TEACHERS[row] if 0<=row<len(school.TEACHERS) else school.TEACHERS[0]
+    def show_teacher(self,row):
+        if not 0<=row<len(school.TEACHERS):return
+        teacher=school.TEACHERS[row];lang=self.settings.locale
+        self.teacher_face.setPixmap(self.atlas.pixmap(teacher.pose,110,self.settings.costume));self.teacher_name.setText(teacher.text('name',lang));self.teacher_intro.setText(teacher.text('intro',lang))
+        self.teacher_answer.setPlainText(self.t('teacher_needs_ai') if not self.agent.client.ready() else '')
+        while self.teacher_links.count():
+            item=self.teacher_links.takeAt(0)
+            if item.widget():item.widget().deleteLater()
+        for i,(title,url) in enumerate(teacher.resources):self.teacher_links.addWidget(button(title,lambda checked=False,u=url:self.open_web(u)),i//2,i%2)
+        kind={'math':0,'vocab':1,'quiz':2,'tips':3}[teacher.practice];self.practice_stack.setCurrentIndex(kind)
+        if kind==0:self.new_math()
+        elif kind==1:self.new_vocab()
+        elif kind==2:self.quiz=school.QuizPractice(school.TEACHER_QUIZ[teacher.key]);self.new_quiz()
+        else:self.next_tip()
+    def score(self,key,correct):
+        right,total=self.scores.get(key,(0,0));self.scores[key]=(right+int(correct),total+1)
+        return f'{self.t("score")}: {self.scores[key][0]}/{self.scores[key][1]}'
+    def new_math(self,*_):self.math_question.setText(self.math.new(self.math_level.currentData()));self.math_answer.clear();self.math_feedback.clear()
+    def check_math(self):
+        if not self.math_answer.text().strip():return
+        correct=self.math.check(self.math_answer.text());self.math_score.setText(self.score('math',correct))
+        self.math_feedback.setText(self.t('correct') if correct else f'{self.t("try_again")} {self.math.answer}')
+        self.set_mood('talking' if correct else 'thinking')
+        if correct:self.hero_character.hop();QTimer.singleShot(900,self.new_math)
+    def new_vocab(self,*_):
+        word,options=self.vocab.new(self.vocab_from.currentData(),self.vocab_to.currentData());self.vocab_word.setText(word);self.vocab_feedback.clear()
+        for b,option in zip(self.vocab_buttons,options):b.setText(option.replace('&','&&'));b.setProperty('option',option)
+    def answer_vocab(self,i):
+        choice=self.vocab_buttons[i].property('option');correct=self.vocab.check(choice);self.vocab_score.setText(self.score('vocab',correct))
+        self.vocab_feedback.setText(self.t('correct') if correct else f'{self.t("try_again")} {self.vocab.correct}')
+        if correct:QTimer.singleShot(900,self.new_vocab)
+    def new_quiz(self,*_):
+        if not self.quiz:return
+        question,options=self.quiz.new(self.settings.locale);self.quiz_question.setText(question);self.quiz_feedback.clear()
+        for b,option in zip(self.quiz_buttons,options):b.setText(option.replace('&','&&'));b.setProperty('option',option)
+    def answer_quiz(self,i):
+        if not self.quiz:return
+        choice=self.quiz_buttons[i].property('option');correct=self.quiz.check(choice);self.quiz_score.setText(self.score(self.current_teacher().key,correct))
+        self.quiz_feedback.setText(self.t('correct') if correct else f'{self.t("try_again")} {self.quiz.correct}')
+        if correct:QTimer.singleShot(1100,self.new_quiz)
+    def next_tip(self):
+        tip=school.TIPS[self.tip_index%len(school.TIPS)];self.tip_index+=1;self.tip_text.setText(tip.get(self.settings.locale,tip['en']))
+    def ask_teacher(self):
+        text=self.teacher_input.text().strip()
+        if not text or self.busy or not self.require_online():return
+        teacher=self.current_teacher()
+        if not self.agent.client.ready() or self.review:self.teacher_answer.setPlainText(self.t('teacher_needs_ai'));return
+        history=self.teacher_history.setdefault(teacher.key,[]);old=list(history);history.append({'role':'user','content':text})
+        self.teacher_input.clear();self.teacher_answer.setPlainText(self.t('working'));self.set_busy(True,'thinking')
+        def finished(result):
+            self.set_busy(False);history.append({'role':'assistant','content':result.text});self.teacher_answer.setPlainText(result.text);self.set_mood('talking');self.last_answer=result.text
+        self.work(lambda:self.agent.teacher(teacher,text,old),finished,busy=True)
+    def teacher_public_search(self):
+        text=self.teacher_input.text().strip()
+        if text:self.navigate('chat');self.search_public_message(text)
+    def build_homework(self):
+        w,layout=page_layout();tabs=QTabWidget();layout.addWidget(tabs,1)
+        work=QWidget();v=QVBoxLayout(work);row=QHBoxLayout();self.hw_subject=QComboBox()
+        for teacher in school.TEACHERS:
+            if teacher.key!='counsellor':self.hw_subject.addItem(teacher.text('name',self.settings.locale),teacher.key)
+        self.hw_subject.addItem(self.t('other'),'other');self.hw_title=QLineEdit();self.hw_title.setMaxLength(200);self.hw_title.setPlaceholderText(self.t('homework_title'))
+        self.hw_due=QDateEdit(QDate.currentDate().addDays(1));self.hw_due.setCalendarPopup(True);self.hw_due.setDisplayFormat('yyyy-MM-dd')
+        self.hw_add=button(self.t('add_homework'),self.add_homework,True);row.addWidget(self.hw_subject);row.addWidget(self.hw_title,1);row.addWidget(self.hw_due);row.addWidget(self.hw_add);v.addLayout(row)
+        self.hw_agenda=QCheckBox(self.t('to_agenda'));self.hw_agenda.setChecked(eduka.installed());v.addWidget(self.hw_agenda)
+        self.hw_table=QTableWidget(0,4);self.hw_table.setHorizontalHeaderLabels([self.t('subject'),self.t('homework_title'),self.t('due'),self.t('done')])
+        self.hw_table.horizontalHeader().setSectionResizeMode(1,QHeaderView.Stretch);self.hw_table.verticalHeader().hide();self.hw_table.setSelectionBehavior(QTableWidget.SelectRows);self.hw_table.setEditTriggers(QTableWidget.NoEditTriggers)
+        v.addWidget(self.hw_table,1);actions=QHBoxLayout();actions.addWidget(button(self.t('done'),self.toggle_homework));actions.addWidget(button(self.t('delete'),self.delete_homework));actions.addStretch()
+        self.hw_status=label("",9,muted=True);actions.addWidget(self.hw_status);v.addLayout(actions);tabs.addTab(work,self.t('homework').split(' & ')[0])
+        table=QWidget();tv=QVBoxLayout(table);days=self.t('days').split(',')
+        self.timetable=QTableWidget(school.Planner.PERIODS,school.Planner.DAYS);self.timetable.setHorizontalHeaderLabels(days[:school.Planner.DAYS])
+        self.timetable.setVerticalHeaderLabels([f'{self.t("period")} {i+1}' for i in range(school.Planner.PERIODS)]);self.timetable.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
+        for day in range(school.Planner.DAYS):
+            for period in range(school.Planner.PERIODS):self.timetable.setItem(period,day,QTableWidgetItem(self.planner.timetable[day][period]))
+        self.timetable.itemChanged.connect(lambda item:self.planner.set_cell(item.column(),item.row(),item.text()))
+        tv.addWidget(self.timetable,1);tabs.addTab(table,self.t('timetable'));self.render_homework();return w
+    def render_homework(self):
+        items=sorted(self.planner.homework,key=lambda h:(h.done,h.due));self.hw_items=items;self.hw_table.setRowCount(len(items))
+        for r,h in enumerate(items):
+            for c,value in enumerate([self.subject_name(h.subject),h.title,h.due,'✔' if h.done else '']):self.hw_table.setItem(r,c,QTableWidgetItem(value))
+    def add_homework(self):
+        try:item=self.planner.add(self.hw_subject.currentData(),self.hw_title.text(),self.hw_due.date().toString('yyyy-MM-dd'))
+        except ValueError as error:self.error(str(error));return
+        self.hw_title.clear();self.render_homework();self.hw_status.setText('')
+        if self.hw_agenda.isChecked() and not self.review:
+            try:eduka.add_agenda(item.due,'07:00',f'{self.subject_name(item.subject)}: {item.title}');self.hw_status.setText(self.t('saved_agenda'))
+            except (OSError,ValueError) as error:self.hw_status.setText(str(error))
+        self.refresh_home()
+    def selected_homework(self):
+        row=self.hw_table.currentRow();return self.hw_items[row] if 0<=row<len(getattr(self,'hw_items',[])) else None
+    def toggle_homework(self):
+        item=self.selected_homework()
+        if item:self.planner.toggle(item.id);self.render_homework();self.refresh_home()
+    def delete_homework(self):
+        item=self.selected_homework()
+        if item:self.planner.remove(item.id);self.render_homework();self.refresh_home()
     def build_chat(self):
         w,layout=page_layout()
         toolbar=QHBoxLayout(); self.read_button=button(self.t("speak"),self.speak_last)
@@ -436,7 +655,7 @@ class Window(QMainWindow):
         editor=QPlainTextEdit(); editor.setPlainText(text); editor.setReadOnly(True); layout.addWidget(editor,1)
         row=QHBoxLayout(); row.addWidget(button(self.t("speak"),lambda:self.speak_text(editor.textCursor().selectedText() or text)))
         row.addWidget(button(self.t("summarize"),lambda:self.summarize_document(title,editor.textCursor().selectedText() or text,dialog),True)); row.addStretch()
-        row.addWidget(button(self.t("open"),dialog.accept)); layout.addLayout(row); dialog.exec()
+        row.addWidget(button(self.t("open"),dialog.accept)); layout.addLayout(row); run(dialog)
     def summarize_document(self,title,text,dialog):
         if self.busy or not self.require_online(): return
         if not self.agent.client.ready(): self.error(self.t("needkey")); return
@@ -576,6 +795,8 @@ class Window(QMainWindow):
         due=self.reminders.due(self.online)
         if due:
             text='\n'.join(item.text for item in due); self.companion.show_bubble(self.t('reminders')+'\n'+text); self.set_mood('serious')
+            # Eduka-Panel is the notification service of Eduka-Desktop.
+            if self.settings.notifications and not self.review:eduka.notify('LAFA · '+self.t('reminders'),text)
             if self.tray:self.tray.showMessage('LAFA',text,QSystemTrayIcon.Information,10_000)
         if self.stack.currentIndex()==6 or due:self.render_reminders()
     def desktop_action(self,key):
@@ -661,6 +882,35 @@ class Window(QMainWindow):
             for column,value in enumerate([item.title,item.publisher,item.published]):self.timor_table.setItem(row,column,QTableWidgetItem(value))
             self.timor_table.setRowHeight(row,58)
         self.timor_status.setText(f'{len(report.sources)} {self.t("headlines")} · {self.t("retrieved")}: {report.retrieved_at}'+(' · '+self.t('unavailable')+': '+', '.join(report.failures) if report.failures else '')+(' · '+self.t('no_topic_news') if not report.sources else ''))
+    def check_updates(self,force=False):
+        """Every update_hours: refresh the source catalog, notice board and release check."""
+        if self.review or self.updating or not self.online or not self.settings.auto_update:return
+        if not force and not updates.due(self.settings.update_hours):return
+        self.updating=True
+        def run():
+            changed,revision=updates.check()
+            try:release=updates.newer_release()
+            except Exception:release=None
+            return changed,release
+        def finished(value):
+            self.updating=False;changed,release=value
+            if changed and updates.apply():
+                self.chat_status.setText(self.t('sources_updated'))
+                if not self.busy and self.settings_dialog is None:self.apply_settings(copy.deepcopy(self.settings))
+            if release:
+                text=self.t('release_available').replace('{version}',release);self.companion.show_answer(text)
+                if self.settings.notifications:eduka.notify('LAFA',text)
+            self.refresh_noticeboard()
+        job=Job(run);self.jobs.add(job);delivery=Delivery(self,job,finished,False);job.signals.done.connect(delivery.done)
+        def failed(message):self.updating=False;self.jobs.discard(job);delivery.deleteLater()
+        delivery.failed_handler=failed;job.signals.error.connect(delivery.report_error);self.pool.start(job)
+    def refresh_noticeboard(self):
+        """Keep the notice board current: world and Timor-Leste headlines."""
+        if self.review or not self.online:return
+        self.refresh_timor_news(True)
+        job=Job(lambda:world_news(''));self.jobs.add(job);delivery=Delivery(self,job,lambda report:self.show_news(report) if self.online else None,False);job.signals.done.connect(delivery.done)
+        def failed(message):self.jobs.discard(job);delivery.deleteLater()
+        delivery.failed_handler=failed;job.signals.error.connect(delivery.report_error);self.pool.start(job)
     def check_local_updates(self):
         if self.review or not self.online or not self.settings.companion or not self.settings.local_news_updates or self.companion.paused:return
         if time.monotonic()-self.last_local_news>=self.settings.news_minutes*60:
@@ -674,10 +924,12 @@ class Window(QMainWindow):
         if not self.require_online():return
         card=self.card_deck.next(self.settings.locale,self.settings.cultural_cards,self.settings.positive_messages)
         if card:
-            dialog=QDialog(self);dialog.setWindowTitle('LAFA · Timor-Leste');layout=QVBoxLayout(dialog);text=label(card.text,13);text.setTextFormat(Qt.PlainText);layout.addWidget(text);layout.addWidget(button(self.t('source'),lambda:self.open_web(card.source)) if card.source else label('LAFA'));dialog.resize(480,270);dialog.exec()
+            dialog=QDialog(self);dialog.setWindowTitle('LAFA · Timor-Leste');layout=QVBoxLayout(dialog);text=label(card.text,13);text.setTextFormat(Qt.PlainText);layout.addWidget(text);layout.addWidget(button(self.t('source'),lambda:self.open_web(card.source)) if card.source else label('LAFA'));dialog.resize(480,270);run(dialog)
     def activate_mode(self,mode):
+        if mode=='virtual-start':return  # login: show only the character, no window
         if mode=='desktop':self.reveal()
         elif mode=='settings':self.open_settings()
+        elif mode=='configure':self.open_configuration()
         elif mode=='virtual':
             if self.online:self.activate_desktop()
             else:self.pending_mode=mode;self.open_settings()
@@ -690,6 +942,10 @@ class Window(QMainWindow):
             if self.settings_dialog:self.companion_check.setChecked(self.settings.companion)
             self.refresh_home()
             if mode=='disable' and not self.isVisible() and not self.settings_dialog and not self.tray and not self.review:self.exit_app()
+    def open_configuration(self):
+        """Lafa-Configuration lives in Eduka-Settings; LAFA's window is the fallback."""
+        if not self.review and eduka.settings_page_available() and eduka.open_settings_page():return
+        self.open_settings()
     def open_settings(self):
         if self.settings_dialog is not None:
             self.settings_dialog.show();self.settings_dialog.raise_();return
@@ -719,9 +975,18 @@ class Window(QMainWindow):
         self.companion_check=QCheckBox(self.t('activate_virtual'));self.companion_check.setChecked(self.settings.companion);virtual.addRow('',self.companion_check)
         virtual.addRow('',label(self.t('welcome_virtual'),10,muted=True))
         self.costume_select=QComboBox()
-        for name in ['traditional','casual']:self.costume_select.addItem(self.t(name),name)
+        for name in outfits.OUTFITS:self.costume_select.addItem(self.t(name),name)
         self.costume_select.setCurrentIndex(self.costume_select.findData(self.settings.costume));virtual.addRow(self.t('costume'),self.costume_select)
-        checks(virtual,[('roam_check','roam',self.settings.roam),('panel_check','panel_walk',self.settings.panel_roam),('greet_check','greet_by_time',self.settings.greet_by_time)])
+        def choice(form,attr,key,values,current):
+            box=QComboBox()
+            for value in values:box.addItem(self.t(value) if not isinstance(value,tuple) else value[1],value if not isinstance(value,tuple) else value[0])
+            box.setCurrentIndex(max(0,box.findData(current)));setattr(self,attr,box);form.addRow(self.t(key),box)
+        def number(form,attr,key,low,high,current,step=1):
+            box=QSpinBox();box.setRange(low,high);box.setSingleStep(step);box.setValue(current);setattr(self,attr,box);form.addRow(self.t(key),box)
+        choice(virtual,'size_select','character_size',['small','normal','large'],self.settings.character_size)
+        choice(virtual,'walk_select','walk_speed',['slow','normal','fast'],self.settings.walk_speed)
+        choice(virtual,'animation_select','animation_speed',['slow','normal','fast'],self.settings.animation_speed)
+        checks(virtual,[('roam_check','roam',self.settings.roam),('eduka_panel_check','follow_eduka_panel',self.settings.follow_eduka_panel),('panel_check','panel_walk',self.settings.panel_roam),('greet_check','greet_by_time',self.settings.greet_by_time),('session_check','start_with_session',self.settings.start_with_session)])
         self.panel_select=QComboBox()
         for edge in ['bottom','top']:self.panel_select.addItem(self.t(edge),edge)
         self.panel_select.setCurrentIndex(self.panel_select.findData(self.settings.panel_edge));virtual.addRow(self.t('panel_edge'),self.panel_select)
@@ -749,8 +1014,14 @@ class Window(QMainWindow):
         persona=section('personality_settings','😄')
         checks(persona,[('hover_check','hover_questions',self.settings.hover_questions),('chatter_check','chatter',self.settings.chatter),('fun_check','fun_messages',self.settings.fun_messages),('personal_check','personal',self.settings.personal_activities),('positive_check','positive',self.settings.positive_messages),('culture_check','culture_cards',self.settings.cultural_cards),('local_news_check','local_updates',self.settings.local_news_updates)])
         self.activity_interval=QSpinBox();self.activity_interval.setRange(20,600);self.activity_interval.setSingleStep(10);self.activity_interval.setValue(self.settings.idle_seconds);persona.addRow(self.t('activity_seconds'),self.activity_interval)
+        number(persona,'balloon_interval','balloon_seconds',3,20,self.settings.balloon_seconds)
         self.card_interval=QSpinBox();self.card_interval.setRange(1,120);self.card_interval.setValue(self.settings.card_minutes);persona.addRow(self.t('card_interval'),self.card_interval)
         self.news_interval=QSpinBox();self.news_interval.setRange(10,240);self.news_interval.setValue(self.settings.news_minutes);persona.addRow(self.t('news_interval'),self.news_interval)
+        desk=section('desktop_settings','🏫')
+        choice(desk,'start_select','start_page',[(key,self.page_title(key)) for key in ['home','teachers','homework','chat','os_help','learn','coding','live','culture']],self.settings.start_page)
+        checks(desk,[('eduka_theme_check','follow_eduka_theme',self.settings.follow_eduka_theme),('notify_check','notifications',self.settings.notifications),('update_check','auto_update',self.settings.auto_update)])
+        number(desk,'update_interval','update_hours',1,168,self.settings.update_hours)
+        number(desk,'speech_interval','speech_rate',80,260,self.settings.speech_rate,5)
         folders=section('files_weather','📁');self.home_city=QLineEdit(self.settings.weather_city);self.home_city.setMaxLength(120);folders.addRow(self.t('city'),self.home_city)
         self.home_coords=QLineEdit(f'{self.settings.weather_latitude}, {self.settings.weather_longitude}');folders.addRow(self.t('coords'),self.home_coords)
         self.home_timezone=QLineEdit(self.settings.weather_timezone);self.home_timezone.setMaxLength(100);folders.addRow(self.t('timezone'),self.home_timezone)
@@ -816,6 +1087,10 @@ class Window(QMainWindow):
             draft.card_minutes=self.card_interval.value();draft.news_minutes=self.news_interval.value();draft.panel_roam=self.panel_check.isChecked();draft.panel_edge=self.panel_select.currentData();draft.panel_height=self.panel_height.value()
             draft.personal_activities=self.personal_check.isChecked(); draft.idle_seconds=self.activity_interval.value()
             draft.hover_questions=self.hover_check.isChecked();draft.chatter=self.chatter_check.isChecked();draft.fun_messages=self.fun_check.isChecked()
+            draft.character_size=self.size_select.currentData();draft.walk_speed=self.walk_select.currentData();draft.animation_speed=self.animation_select.currentData()
+            draft.follow_eduka_panel=self.eduka_panel_check.isChecked();draft.start_with_session=self.session_check.isChecked();draft.balloon_seconds=self.balloon_interval.value()
+            draft.start_page=self.start_select.currentData();draft.follow_eduka_theme=self.eduka_theme_check.isChecked();draft.notifications=self.notify_check.isChecked()
+            draft.auto_update=self.update_check.isChecked();draft.update_hours=self.update_interval.value();draft.speech_rate=self.speech_interval.value()
             draft.weather_city=location.name; draft.weather_latitude=latitude; draft.weather_longitude=longitude; draft.weather_timezone=location.timezone
             if not self.review:draft.save()
             self.apply_settings(draft)
@@ -833,8 +1108,18 @@ class Window(QMainWindow):
             self.history=old_history
             for message in old_history:self.bubble(message['role'],message['content'])
             self.last_answer=next((message['content'] for message in reversed(old_history) if message['role']=='assistant'),'')
-        self.navigate(previous_page);self.companion.retranslate();self.set_online(self.online)
+        app=QApplication.instance()
+        if app:app.setStyleSheet(style_sheet(self.settings))
+        self.navigate(previous_page);self.companion.apply_preferences();self.companion.retranslate();self.set_online(self.online)
         if not was_enabled and self.settings.companion:self.last_local_news=time.monotonic()
+    def change_outfit(self,outfit):
+        """Wardrobe menu on the character: change outfit and remember it."""
+        if outfit not in outfits.OUTFITS or outfit==self.settings.costume:return
+        new=copy.deepcopy(self.settings);new.costume=outfit
+        if not self.review:
+            try:new.save()
+            except OSError as error:self.error(str(error));return
+        self.apply_settings(new)
     def reload_settings(self):
         """Eduka-Settings wrote new preferences; re-read them (never secrets)."""
         if self.busy or self.settings_dialog is not None:return
@@ -859,6 +1144,7 @@ class Window(QMainWindow):
     def set_online(self,value):
         changed=self.online!=bool(value); self.online=bool(value)
         self.badge.setText(self.t("online") if value else self.t("offline"))
+        if changed and value and not self.review:QTimer.singleShot(8000,self.check_updates)
         if not value:
             self.voice.stop()
             for pet in self.findChildren(Character):pet.animate(False)
@@ -889,7 +1175,7 @@ class Window(QMainWindow):
         if self.busy:return
         self.set_busy(True,"talking"); self.companion.show_answer(text); lang=self.settings.locale
         def finished(_):self.set_busy(False); self.set_mood("idle")
-        self.work(lambda:self.voice.speak(text,lang),finished,busy=True)
+        rate=self.settings.speech_rate;self.work(lambda:self.voice.speak(text,lang,rate),finished,busy=True)
     def listen(self):
         if self.busy or not self.require_online(): return
         if self.review: self.error("Microphone is disabled in review mode."); return
@@ -941,15 +1227,23 @@ def main():
     roles.add_argument('--virtual',action='store_true',help='Show the enabled virtual assistant, or open Settings')
     roles.add_argument('--virtual-enable',action='store_true',help='Enable the virtual assistant; used by Eduka-Settings')
     roles.add_argument('--virtual-disable',action='store_true',help='Disable the virtual assistant; used by Eduka-Settings')
+    roles.add_argument('--configure',action='store_true',help='Open Lafa-Configuration in Eduka-Settings (or LAFA settings)')
     roles.add_argument('--reload',action='store_true',help='Re-read preferences saved by Eduka-Settings')
+    roles.add_argument('--autostart',action='store_true',help='Session start: run only when the Virtual Assistant is enabled')
     args=parser.parse_args()
-    mode='settings' if args.settings else 'virtual' if args.virtual else 'enable' if args.virtual_enable else 'disable' if args.virtual_disable else 'reload' if args.reload else 'desktop'
-    app=QApplication(sys.argv);app.setApplicationName('LAFA');app.setOrganizationName('Edukasaun');app.setStyle('Fusion');app.setStyleSheet(STYLE)
+    eduka.prefer_xwayland()
+    if args.autostart:
+        startup=Settings.load()
+        if not (startup.companion and startup.start_with_session):return 0
+    mode='virtual-start' if args.autostart else 'configure' if args.configure else 'settings' if args.settings else 'virtual' if args.virtual else 'enable' if args.virtual_enable else 'disable' if args.virtual_disable else 'reload' if args.reload else 'desktop'
+    prepare_application()
+    app=QApplication(sys.argv);app.setApplicationName('LAFA');app.setOrganizationName('Edukasaun');app.setStyle('Fusion');app.setStyleSheet(style_sheet(Settings.load()) if not args.review else STYLE)
     lock=None;activation=None
     if not args.review:
         config_path().parent.mkdir(parents=True,exist_ok=True,mode=0o700)
         lock=QLockFile(str(config_path().parent/'instance.lock'));lock.setStaleLockTime(0)
         if not lock.tryLock(100):
+            if mode=='virtual-start':return 0  # already running
             if not activate_existing(server_name(config_path().parent),mode):QMessageBox.information(None,'LAFA','LAFA is starting. Try the app icon again in a few seconds.')
             return 0
     if mode=='reload' and lock:
@@ -963,8 +1257,12 @@ def main():
             activation=ActivationServer(server_name(config_path().parent),window);activation.activated.connect(window.activate_mode);app.aboutToQuit.connect(activation.close)
         except RuntimeError:window.chat_status.setText('Local launcher activation unavailable; use LAFA Settings or the tray.')
     app.aboutToQuit.connect(window.voice.stop)
-    code=app.exec()
+    code=run(app)
     if lock:lock.unlock()
+    if BINDING=='PyQt5':
+        # PyQt5 may crash while Python destroys Qt objects in arbitrary order
+        # at shutdown (Eduka-Desktop does the same); state is already saved.
+        sys.stdout.flush();sys.stderr.flush();os._exit(int(code or 0))
     return code
 
 if __name__=='__main__':raise SystemExit(main())

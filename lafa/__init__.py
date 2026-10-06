@@ -1,5 +1,5 @@
 """LAFA desktop assistant for Edukasaun OS."""
-__version__ = "0.1.0a1"
-# Human-readable build label shown in the interface. Development restarted at
-# 0.1 Alpha; every feature is being re-checked from the beginning.
-VERSION_LABEL = "0.1 Alpha"
+# Single source of the version: pyproject.toml, DEBIAN/control and the
+# interface read it from here. Change it only with tools/release.py.
+__version__ = "0.1.1"
+VERSION_LABEL = "0.1.1 Alpha"

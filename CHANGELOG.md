@@ -1,5 +1,58 @@
 # Changelog
 
+## Unreleased
+
+_Nothing yet._
+
+## 0.1.1 — 2026-10-06 · patch release (0.1.1 Alpha)
+
+### Edukasaun OS and Eduka-Desktop Suite
+- **Debian package** `lafa_0.1.1_all.deb` (`sh tools/build-deb.sh`). `apt install
+  ./lafa_0.1.1_all.deb` installs every dependency from the Debian archive
+  (python3-pyqt5, libqt5svg5, python3-keyring, fonts-noto-color-emoji, …).
+  Menu entry in the Edukasaun category, autostart that runs only when the
+  Virtual Assistant is activated, icons, Eduka-Settings plugin descriptor.
+- **PyQt5 like the Eduka-Desktop suite** (Qt 5.15 on Debian 13), with PySide6
+  still supported for developers (`lafa/qt.py`, `LAFA_QT=pyqt5|pyside6`).
+- **Lafa-Configuration in Eduka-Settings**: a native page (Eduka cards, rows
+  and live apply) for activation, outfit, size, walking and animation speed,
+  personality, balloon time, LAFA Desktop start page, theme, notifications,
+  automatic updates, reading speed, language, AI provider, files and weather.
+  `integration/eduka-settings-plugin-pages.patch` adds generic plugin pages to
+  Eduka-Settings (APPS group); verified with the real eduka-settings 0.9.24.
+- LAFA follows Eduka-Desktop: language chosen in Eduka-Settings (Tetun),
+  Eduka-Panel edge/height/style (LAFA stands on the real panel), theme and
+  accent colour, reminders as Eduka-Panel notifications, homework in the
+  Eduka-Panel calendar agenda, XWayland like the Eduka components.
+
+### LAFA Virtual Assistant
+- **Three outfits**: Tais Mane (default), Tuxedo and Casual, drawn on every
+  pose (`tools/make-outfits.py` builds the sprite sheets). Wardrobe menu on the
+  character.
+- Outfit activities with small scenes: formal (party, meeting, presentation,
+  graduation ceremony, gala dinner, report, speech, red carpet) and casual
+  (beach, sunbathing, beach ball, sightseeing, café, shopping, snack, game
+  break), each with lines in four languages.
+- Tuning: character size, walking speed, animation speed, balloon time.
+
+### LAFA Desktop — a complete school
+- **Teachers**: Mathematics, Science, Languages, History & Geography, ICT &
+  Coding, Arts & Culture and a Counsellor, each with free resources, offline
+  practice (maths exercises, vocabulary cards in 4 languages, quizzes, study
+  tips) and “Ask the teacher” with an AI provider.
+- **Homework & timetable** stored on the computer; due dates can go to the
+  Eduka-Panel calendar. Home shows today's classes and homework due soon.
+- School navigation: Library, Computer lab, Notice board, IT help desk; theme
+  icons (Papirus) and a drawn Timor-Leste flag.
+- **Automatic updates**: validated source catalog from the LAFA repository
+  (links, teacher resources, cards, tips, tool names), notice-board refresh,
+  new-release notification. No LAFA server.
+
+### Development
+- `tools/release.py` (patch/minor/major, check), CI on PyQt5 and PySide6,
+  .deb build + apt install test + screenshots as artifacts, release workflow
+  that publishes the .deb for `v*` tags. See `docs/DEVELOPMENT.md`.
+
 ## 0.1 Alpha (0.1.0a1) — 6 October 2026 · development restart
 
 Version numbering restarts at **0.1 Alpha**. Every feature, test, screenshot and

@@ -14,54 +14,75 @@ import math
 import random
 import time
 from datetime import datetime
-from PySide6.QtCore import Qt,QTimer,QPointF,QRectF,QEvent,Signal
-from PySide6.QtGui import QPixmap,QPainter,QGuiApplication,QPolygonF,QColor,QPainterPath,QPen
-from PySide6.QtWidgets import QWidget,QMenu,QFrame,QVBoxLayout,QHBoxLayout,QLabel,QLineEdit,QPushButton,QPlainTextEdit,QApplication
+from .qt import Qt,QTimer,QPointF,QRectF,QRect,QEvent,Signal,QPixmap,QPainter,QGuiApplication,QPolygonF,QColor,QPainterPath,QPen
+from .qt import QWidget,QMenu,QFrame,QVBoxLayout,QHBoxLayout,QLabel,QLineEdit,QPushButton,QPlainTextEdit,QApplication,global_point,run
 from .config import STATES,IDLE_ACTIVITIES
 from .i18n import tr
-from . import personality
+from . import personality, eduka, outfits
 
 ASSET=Path(__file__).parent/'assets'/'lafa-atlas.png'
 COMPACT=(192,208)
 EXPANDED=(440,544)
+PET_SIZES={'small':132,'normal':176,'large':220}
+WALK_STEPS={'slow':2,'normal':3,'fast':5}
+ANIMATION_RATES={'slow':0.6,'normal':1.0,'fast':1.6}
 
 def greeting_key(hour):
     """Local time-of-day greeting used by the Virtual Assistant."""
     return 'greet_morning' if 4<=hour<11 else 'greet_afternoon' if 11<=hour<18 else 'greet_evening'
 
 class Atlas:
+    """Character poses for every outfit.
+
+    base         original atlas + activity sheet (no clothes)
+    traditional  Tais Mane drawings + generated Tais wrap for the other poses
+    tuxedo/casual generated outfit sheets (tools/make-outfits.py)
+    A sheet's json may give one canvas size or a size per pose.
+    """
+    SHEETS=[('lafa-atlas.png','atlas.json','base'),('lafa-activities.png','activities.json','base'),
+            ('lafa-traditional.png','traditional.json','traditional'),('lafa-tais.png','tais.json','traditional'),
+            ('lafa-tuxedo.png','tuxedo.json','tuxedo'),('lafa-casual.png','casual.json','casual')]
     def __init__(self):
-        self.poses={};self.traditional={}
+        self.outfits={'base':{},'traditional':{},'tuxedo':{},'casual':{}}
         self.sheet=QPixmap(str(ASSET))
-        for image,manifest in [(ASSET,'atlas.json'),(ASSET.with_name('lafa-activities.png'),'activities.json'),(ASSET.with_name('lafa-traditional.png'),'traditional.json')]:
-            sheet=QPixmap(str(image))
+        for image,manifest,outfit in self.SHEETS:
+            path=ASSET.with_name(image)
+            if outfit!='base' and image!='lafa-traditional.png' and not path.is_file():continue
+            sheet=QPixmap(str(path))
             if sheet.isNull():raise RuntimeError('LAFA character atlas is missing.')
-            metadata=json.loads(image.with_name(manifest).read_text());size=metadata['canvas']
+            metadata=json.loads(path.with_name(manifest).read_text())
             for state in metadata['states']:
+                canvas=metadata['canvas'];size=canvas[state] if isinstance(canvas,dict) else canvas
                 crop=sheet.copy(*metadata['rects'][state]);pose=QPixmap(size,size);pose.fill(Qt.transparent)
                 painter=QPainter(pose);painter.drawPixmap((size-crop.width())//2,(size-crop.height())//2,crop);painter.end()
-                if manifest=='traditional.json':self.traditional[state]=pose
-                else:self.poses[state]=pose
+                # Hand-drawn traditional art wins over the generated Tais wrap.
+                if outfit=='traditional' and state in self.outfits['traditional'] and manifest=='tais.json':continue
+                self.outfits[outfit][state]=pose
+        self.poses=self.outfits['base'];self.traditional=self.outfits['traditional']
         for state in ['tebe','bidu']:self.poses[state]=self.traditional[state]
         if set(STATES)-self.poses.keys():raise RuntimeError('A LAFA pose is missing.')
     def pixmap(self,state='idle',size=180,costume='casual'):
-        poses=self.traditional if costume=='traditional' and state in self.traditional else self.poses
-        return poses.get(state,poses.get('idle',self.poses['idle'])).scaled(size,size,Qt.KeepAspectRatio,Qt.SmoothTransformation)
+        pose=outfits.pose_of(state)
+        poses=self.outfits.get(costume) or self.poses
+        if pose not in poses:poses=self.traditional if pose in self.traditional else self.poses
+        return poses.get(pose,self.poses.get(pose,self.poses['idle'])).scaled(size,size,Qt.KeepAspectRatio,Qt.SmoothTransformation)
 
 class Character(QWidget):
     clicked=Signal()
     def __init__(self,atlas,parent=None,size=190):
-        super().__init__(parent);self.atlas=atlas;self.state='idle';self.costume='casual';self.phase=0;self.animated=True;self.hop_phase=0.0;self.direction=1
+        super().__init__(parent);self.atlas=atlas;self.state='idle';self.costume='casual';self.phase=0;self.animated=True;self.hop_phase=0.0;self.direction=1;self.rate=1.0
         self.setFixedSize(size,size+16)
         self.timer=QTimer(self);self.timer.timeout.connect(self.tick);self.timer.start(90)
-    def set_state(self,state):self.state=state if state in STATES else 'idle';self.update()
+    def set_state(self,state):self.state=state if state in STATES or state in outfits.ACTIVITIES else 'idle';self.update()
+    @property
+    def pose(self):return outfits.pose_of(self.state)
     def animate(self,enabled):
         self.animated=enabled
         if enabled:self.timer.start(90)
         else:self.timer.stop()
         self.update()
     def tick(self):
-        self.phase+=0.14
+        self.phase+=0.14*self.rate
         if self.hop_phase>0:self.hop_phase=max(0.0,self.hop_phase-0.12)
         self.update()
     def hop(self):
@@ -69,15 +90,18 @@ class Character(QWidget):
         if self.animated:self.hop_phase=1.0
     def paintEvent(self,event):
         painter=QPainter(self);painter.setRenderHint(QPainter.SmoothPixmapTransform)
-        amplitude=1 if self.state=='sleeping' else 6 if self.state in {'tebe','bidu'} else 3.4 if self.state=='walking' else 2.6
-        speed=2.2 if self.state=='walking' else 1
+        pose=self.pose;scene=outfits.scene_of(self.state)
+        if scene:outfits.paint_background(painter,scene,self.width(),self.height(),self.phase)
+        amplitude=1 if pose=='sleeping' else 6 if pose in {'tebe','bidu'} or self.state=='party' else 3.4 if pose=='walking' else 2.6
+        speed=2.2 if pose=='walking' else 1
         bob=math.sin(self.phase*speed)*amplitude if self.animated else 0
         if self.animated and self.hop_phase>0:bob-=math.sin(self.hop_phase*math.pi)*14
-        angle=math.sin(self.phase*speed)*(5 if self.state in {'tebe','bidu'} else 2.4 if self.state=='walking' else 1.7) if self.animated and self.state in {'walking','gaming','talking','stretching','tebe','bidu'} else 0
-        painter.translate(self.width()/2,self.height()/2+bob);painter.rotate(angle)
-        if self.state=='walking' and self.direction<0:painter.scale(-1,1)
+        angle=math.sin(self.phase*speed)*(5 if pose in {'tebe','bidu'} else 2.4 if pose=='walking' else 1.7) if self.animated and pose in {'walking','gaming','talking','stretching','tebe','bidu'} else 0
+        painter.save();painter.translate(self.width()/2,self.height()/2+bob);painter.rotate(angle)
+        if pose=='walking' and self.direction<0:painter.scale(-1,1)
         pix=self.atlas.pixmap(self.state,self.width()-10,self.costume)
-        painter.drawPixmap(-pix.width()//2,-pix.height()//2,pix)
+        painter.drawPixmap(-pix.width()//2,-pix.height()//2,pix);painter.restore()
+        if scene:outfits.paint_foreground(painter,scene,self.width(),self.height(),self.phase)
     def mouseReleaseEvent(self,event):
         if event.button()==Qt.LeftButton:self.clicked.emit()
 
@@ -117,6 +141,7 @@ class Companion(QWidget):
     settings_requested=Signal()
     source_requested=Signal(str)
     card_requested=Signal()
+    outfit_requested=Signal(str)
     def __init__(self,atlas,settings,clock=time.monotonic):
         super().__init__();self.settings=settings;self.clock=clock
         self.online=False;self.paused=False;self._busy=False;self.drag=None;self.moved=False;self.direction=1;self.hovered=False;self.walk_target=None
@@ -146,16 +171,31 @@ class Companion(QWidget):
         self.joke_button=QPushButton('😄');self.joke_button.setStyleSheet('padding:5px 8px;font-size:11px;');self.joke_button.clicked.connect(self.tell_joke);footer.addWidget(self.joke_button)
         self.source_button=QPushButton();self.source_button.setStyleSheet('padding:5px 8px;font-size:10px;');self.source_button.clicked.connect(lambda:self.source_requested.emit(self.current_source));self.source_button.hide();footer.addWidget(self.source_button);footer.addStretch();col.addLayout(footer)
         layout.addWidget(self.bubblebox)
-        self.pet=Character(atlas,self,size=176);self.pet.costume=settings.costume;self.pet.clicked.connect(self.toggle_bubble);layout.addWidget(self.pet,0,Qt.AlignRight)
+        self.pet=Character(atlas,self,size=PET_SIZES.get(settings.character_size,176));self.pet.costume=settings.costume;self.pet.clicked.connect(self.toggle_bubble);layout.addWidget(self.pet,0,Qt.AlignRight)
         self.balloon=Balloon();self.balloon.clicked.connect(self.accept_balloon)
         self.balloon_timer=QTimer(self);self.balloon_timer.setSingleShot(True);self.balloon_timer.timeout.connect(self.hide_balloon)
         self.idle_timer=QTimer(self);self.idle_timer.setInterval(1000);self.idle_timer.timeout.connect(self.choose_idle)
         self.walk_timer=QTimer(self);self.walk_timer.setInterval(120);self.walk_timer.timeout.connect(self.walk)
-        self.bubblebox.hide();self.setFixedSize(*COMPACT);self.animate(False)
+        self.bubblebox.hide();self.setFixedSize(*self.compact_size());self.animate(False);self.apply_preferences()
         self.retranslate();self.message.setPlainText(tr(settings.locale,'welcome_desktop'))
         rect=QGuiApplication.primaryScreen().availableGeometry();self.move(rect.right()-self.width()-20,rect.bottom()-self.height()-30)
         QApplication.instance().installEventFilter(self)
         self.pet.installEventFilter(self)
+    def compact_size(self):
+        size=self.pet.width();return (size+16,self.pet.height()+16)
+    def expanded_size(self):
+        return (max(EXPANDED[0],self.pet.width()+16),324+12+self.pet.height()+16)
+    def apply_preferences(self):
+        """Lafa-Configuration: size, animation speed and outfit, applied live."""
+        size=PET_SIZES.get(self.settings.character_size,176)
+        if self.pet.width()!=size:self.pet.setFixedSize(size,size+16)
+        self.pet.rate=ANIMATION_RATES.get(self.settings.animation_speed,1.0)
+        if self.pet.costume!=self.settings.costume:
+            self.pet.costume=self.settings.costume
+            # A new outfit starts with one of its own activities.
+            if self.state not in outfits.activities_for(self.settings.costume)+['walking','talking','idle']:self.set_state(outfits.activities_for(self.settings.costume)[0])
+        self.setFixedSize(*(self.expanded_size() if self.bubblebox.isVisible() else self.compact_size()))
+        if self.isVisible() and not self.bubblebox.isVisible():self.snap_to_panel()
     @property
     def timer(self):return self.pet.timer
     @property
@@ -182,18 +222,19 @@ class Companion(QWidget):
     # ----- input -------------------------------------------------------------
     def eventFilter(self,obj,event):
         # Observe only this application's input events, never other desktop apps.
+        if not hasattr(self,'pet'):return False  # being destroyed
         if event.type() in {QEvent.MouseButtonPress,QEvent.KeyPress,QEvent.TouchBegin}:
             self.mark_activity()
         if obj is self.pet:
             if event.type()==QEvent.Enter:self.on_hover(True)
             elif event.type()==QEvent.Leave:self.on_hover(False)
             if event.type()==QEvent.MouseButtonPress and event.button()==Qt.LeftButton:
-                self.drag=event.globalPosition().toPoint()-self.pos();self.moved=False;return True
+                self.drag=global_point(event)-self.pos();self.moved=False;return True
             if event.type()==QEvent.MouseMove and self.drag is not None and event.buttons()&Qt.LeftButton:
                 self.moved=True;self.hide_balloon()
                 if QGuiApplication.platformName().startswith('wayland'):
                     if self.windowHandle():self.windowHandle().startSystemMove()
-                else:self.move(event.globalPosition().toPoint()-self.drag)
+                else:self.move(global_point(event)-self.drag)
                 return True
             if event.type()==QEvent.MouseButtonRelease and event.button()==Qt.LeftButton:
                 if not self.moved:self.toggle_bubble()
@@ -226,11 +267,24 @@ class Companion(QWidget):
     # ----- state -------------------------------------------------------------
     def can_roam(self):
         return QGuiApplication.platformName()=='xcb' and self.settings.roam and self.settings.companion
+    def eduka_panel(self):
+        return eduka.panel() if self.settings.follow_eduka_panel else None
     def panel_rect(self):
+        """Where LAFA may walk: along the Eduka-Panel (its real width), or the screen."""
         screen=QGuiApplication.screenAt(self.geometry().center()) or QGuiApplication.primaryScreen()
-        return screen.geometry() if self.settings.panel_roam else screen.availableGeometry()
+        info=self.eduka_panel();geometry=screen.geometry()
+        if info and info['edge'] in {'bottom','top'}:
+            x0,x1=eduka.panel_span(geometry.left(),geometry.width(),info)
+            return QRect(x0,geometry.top(),max(self.width(),x1-x0),geometry.height())
+        return geometry if self.settings.panel_roam else screen.availableGeometry()
     def panel_y(self,rect=None):
-        rect=rect or self.panel_rect()
+        """Top edge for LAFA's feet to stand on the Eduka-Panel."""
+        rect=rect or self.panel_rect();info=self.eduka_panel()
+        if info:
+            if info['edge']=='bottom':return rect.bottom()+1-info['gap']-info['height']-self.height()
+            if info['edge']=='top':return rect.top()+info['gap']+info['height']
+            available=(QGuiApplication.screenAt(self.geometry().center()) or QGuiApplication.primaryScreen()).availableGeometry()
+            return available.bottom()+1-self.height()
         if self.settings.panel_edge=='bottom':return rect.bottom()-self.settings.panel_height-self.height()+1
         return rect.top()+self.settings.panel_height
     def snap_to_panel(self):
@@ -264,12 +318,12 @@ class Companion(QWidget):
         for _,b in self.quick_buttons:b.setEnabled(enabled)
     def activity_choices(self):
         excluded={self.state}|({'walking'} if self.can_roam() else set())|(set() if self.settings.personal_activities else {'bathing','toilet'})
-        return [s for s in IDLE_ACTIVITIES if s not in excluded]
+        return [s for s in outfits.activities_for(self.settings.costume) if s not in excluded]
     def start_activity(self):
         """Pick a new job for the assistant; sometimes LAFA comments on it."""
         self.walk_target=None;self.set_state(random.choice(self.activity_choices()));self.last_idle_change=self.clock()
         if self.settings.chatter and self.can_auto_popup() and random.random()<0.35:
-            self.show_balloon(personality.thought(self.lang,self.state),personality.duty(self.lang,self.state),'thought',6)
+            self.show_balloon(personality.thought(self.lang,self.state),personality.duty(self.lang,self.state),'thought',self.settings.balloon_seconds)
     def start_walk(self):
         self.snap_to_panel();rect=self.panel_rect();left,right=rect.left(),rect.right()-self.width()
         if right-left<60:self.start_activity();return
@@ -293,7 +347,7 @@ class Companion(QWidget):
     def walk(self):
         if not self.online or self.paused or not self.settings.companion or self.state!='walking' or self.busy or not self.settings.roam or self.drag or self.hovered or self.bubblebox.isVisible():return
         if QGuiApplication.platformName()!='xcb':return
-        rect=self.panel_rect();step=3
+        rect=self.panel_rect();step=WALK_STEPS.get(self.settings.walk_speed,3)
         if self.walk_target is None:
             nx=self.x()+self.direction*step
             if nx<rect.left() or nx+self.width()>rect.right()+1:self.direction*=-1;nx=self.x()+self.direction*step
@@ -307,7 +361,7 @@ class Companion(QWidget):
     # ----- chat bubble -------------------------------------------------------
     def resize_overlay(self,expanded):
         anchor=self.geometry().bottomRight()
-        self.bubblebox.setVisible(expanded);self.setFixedSize(*(EXPANDED if expanded else COMPACT))
+        self.bubblebox.setVisible(expanded);self.setFixedSize(*(self.expanded_size() if expanded else self.compact_size()))
         if expanded:self.hide_balloon()
         if QGuiApplication.platformName()=='xcb':
             rect=(QGuiApplication.screenAt(anchor) or QGuiApplication.primaryScreen()).availableGeometry()
@@ -352,9 +406,16 @@ class Companion(QWidget):
         menu.addAction(tr(lang,'tell_joke'),self.tell_joke)
         for key in ['os','weather','news','focus']:menu.addAction(tr(lang,{'news':'timor_news','os':'os_help'}.get(key,key)),lambda checked=False,k=key:self.action_requested.emit(k))
         moods=menu.addMenu(tr(lang,'mood'))
-        for state in STATES:moods.addAction(tr(lang,state)+' · '+personality.duty(lang,state),lambda checked=False,s=state:self.set_state(s))
+        for state in outfits.activities_for(self.settings.costume):moods.addAction(tr(lang,state)+' · '+personality.duty(lang,state),lambda checked=False,s=state:self.set_state(s))
+        wardrobe=menu.addMenu(tr(lang,'costume'))
+        for outfit in outfits.OUTFITS:
+            action=wardrobe.addAction(tr(lang,outfit));action.setCheckable(True);action.setChecked(self.settings.costume==outfit)
+            action.triggered.connect(lambda checked=False,o=outfit:self.outfit_requested.emit(o))
         pause=menu.addAction(tr(lang,'pause'));pause.setCheckable(True);pause.setChecked(self.paused);pause.triggered.connect(self.toggle_pause)
-        menu.addSeparator();menu.addAction(tr(lang,'open_settings'),self.settings_requested.emit);menu.addAction(tr(lang,'quit'),self.quit_requested.emit);menu.exec(event.globalPos())
+        menu.addSeparator();menu.addAction(tr(lang,'open_settings'),self.settings_requested.emit);menu.addAction(tr(lang,'quit'),self.quit_requested.emit);menu.exec_(event.globalPos()) if hasattr(menu,"exec_") else menu.exec(event.globalPos())
     def toggle_pause(self,paused):self.paused=paused;self.set_online(self.online)
     def hideEvent(self,event):self.hide_balloon();super().hideEvent(event)
-    def closeEvent(self,event):self.hide_balloon();self.balloon.close();super().closeEvent(event)
+    def closeEvent(self,event):
+        app=QApplication.instance()
+        if app:app.removeEventFilter(self)
+        self.hide_balloon();self.balloon.close();super().closeEvent(event)

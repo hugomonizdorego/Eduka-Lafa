@@ -5,7 +5,57 @@ roles inside one same-user process. They can be visible independently. Opening
 Desktop does not enable the character. Disabling the character keeps Desktop
 available. Settings is a dedicated top-level dialog.
 
-## Menu installation
+## LAFA 0.1.1 on Edukasaun OS (Eduka-Desktop Suite 0.9.24)
+
+### What the `lafa` Debian package installs
+
+| Path | Purpose |
+|---|---|
+| `/usr/bin/lafa` | Launcher (PyQt5, like the Eduka components) |
+| `/usr/lib/lafa/lafa/` | LAFA |
+| `/usr/lib/lafa/eduka_lafa_settings.py` | Lafa-Configuration page (PyQt5 for Eduka-Settings) |
+| `/usr/share/eduka-settings/plugins/lafa.json` | Page descriptor: id `lafa`, group `APPS` |
+| `/usr/share/applications/lafa-desktop.desktop` | LAFA Desktop, category `Education` → Eduka-Desktop's **Edukasaun** category |
+| `/usr/share/applications/lafa-settings.desktop` | `lafa --configure` (hidden; opened from LAFA) |
+| `/etc/xdg/autostart/lafa-virtual.desktop` | `lafa --autostart`: exits at once unless the Virtual Assistant is activated |
+| `/usr/share/doc/lafa/eduka-settings-plugin-pages.patch` | Patch for Eduka-Desktop (below) |
+
+### Lafa-Configuration inside Eduka-Settings
+
+Eduka-Settings 0.9.24 builds its page list in code, so external programs
+cannot add pages. `integration/eduka-settings-plugin-pages.patch` adds a small,
+generic loader to `usr/bin/eduka-settings` (apply in the Eduka-Desktop
+repository with `patch -p1 < eduka-settings-plugin-pages.patch`):
+
+- reads descriptors from `/usr/share/eduka-settings/plugins/*.json`;
+- loads only **root-owned, not group/world-writable** descriptors and modules
+  under `/usr/lib/` or `/usr/share/`;
+- shows the pages in an **APPS** group; `eduka-settings --page lafa` opens it;
+- a broken plugin shows an explanation instead of breaking Eduka-Settings;
+- Apply and Save & Close also call the page's optional `eduka_apply()`;
+  plugin pages are excluded from Eduka's own live-apply hook.
+
+The page uses Eduka-Settings' own object names (`pageTitle`, `card`,
+`cardTitle`, `settingRow`, `rowTitle`, `rowLine`, `fieldHint`), so every Eduka
+theme styles it. Changes apply live: the page writes
+`~/.config/lafa/settings.json` (0600) and runs `lafa --reload`; API keys never
+pass through it. Verified by rendering the real eduka-settings 0.9.24 with the
+patch (`tools/eduka-settings-preview.py`, screenshots 18–19).
+
+Without the patch, `lafa --configure` opens LAFA's own settings window with
+the same options.
+
+### Eduka files LAFA reads (never writes, except the agenda)
+
+| File | Used for |
+|---|---|
+| `~/.config/eduka-desktop/menu/settings.json` | `language` (`tet` or `system`) |
+| `~/.config/eduka-desktop/panel/settings.json` | `position`, `height`, `panel_style`, `width_percent` → where LAFA walks |
+| `~/.config/eduka-desktop/desktop/settings.json` | `theme_style`, `accent_color` → LAFA Desktop colours |
+| `~/.config/eduka-desktop/agenda.json` | LAFA **adds** homework entries in Eduka's agenda format (opt-in) |
+| D-Bus `org.freedesktop.Notifications` | Reminders shown by Eduka-Panel (via `gdbus`) |
+
+## Menu installation (source checkout)
 
 `install-user.sh` creates these user entries:
 
@@ -55,7 +105,7 @@ page = create_lafa_page(parent, binding="PyQt5")
 host.register_page("LAFA", page)   # use the host's real page API
 ```
 
-## Native LAFA activation group
+## LAFA activation card
 
 `integration/eduka_lafa_settings.py` embeds into **PyQt5, PyQt6 or PySide6**
 without importing another binding. Call it from the host after creating its

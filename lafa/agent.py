@@ -147,6 +147,14 @@ class Agent:
         if len(message)>500 or '\n' in message or re.search(r'\b(def |import |console\.log|api[_ -]?key|password|kata sandi)\b',message,re.I):
             return Result(tr(lang,'needkey')+'\n'+tr(lang,'source_mode'),'serious')
         return Result(tr(lang,'source_help'),'idle')
+    def teacher(self,teacher,message,history):
+        """Ask a LAFA School teacher (needs an AI provider)."""
+        from .school import teacher_prompt
+        lang=self.settings.locale
+        if not self.client.ready():return Result(tr(lang,'teacher_needs_ai'),'thinking')
+        messages=[m for m in history[-10:] if m.get('role') in {'user','assistant'}]
+        answer=self.client.chat([*messages,{'role':'user','content':message[:8000]}],teacher_prompt(teacher,lang))
+        return Result(answer.text,'talking',sources=answer.sources)
     def guide_result(self,guide):
         return Result(guide.text(self.settings.locale),'reading',guide=guide)
     def public_answer(self,query):

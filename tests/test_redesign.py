@@ -1,5 +1,6 @@
 """0.1 Alpha redesign: personality, Edukasaun OS help, panel walking, hover
 questions, Home dashboard and the full Eduka-Settings preferences page."""
+from lafa.qt import BINDING
 import os
 os.environ.setdefault('QT_QPA_PLATFORM', 'offscreen')
 import dataclasses
@@ -21,7 +22,8 @@ def module(name, path):
 class PersonalityTests(unittest.TestCase):
     def test_every_language_covers_every_activity(self):
         for lang in personality.LANGUAGES:
-            self.assertEqual(set(personality.DUTIES[lang]), set(STATES), lang)
+            from lafa import outfits
+            self.assertEqual(set(personality.DUTIES[lang]), set(STATES) | set(outfits.ACTIVITIES), lang)
             self.assertEqual(set(personality.CAUGHT[lang]), set(personality.CAUGHT['en']), lang)
             self.assertEqual(set(personality.THOUGHTS[lang]), set(personality.THOUGHTS['en']), lang)
             self.assertGreaterEqual(len(personality.HOVER[lang]), 6); self.assertGreaterEqual(len(personality.JOKES[lang]), 5)
@@ -90,7 +92,7 @@ class SettingsTests(unittest.TestCase):
 class CompanionBehaviour(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        from PySide6.QtWidgets import QApplication
+        from lafa.qt import QApplication
         cls.app = QApplication.instance() or QApplication([])
     def setUp(self):
         from lafa.mascot import Atlas, Companion
@@ -132,7 +134,7 @@ class CompanionBehaviour(unittest.TestCase):
 class DesktopRedesign(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        from PySide6.QtWidgets import QApplication
+        from lafa.qt import QApplication
         cls.app = QApplication.instance() or QApplication([])
     def setUp(self):
         from lafa.app import Window
@@ -148,7 +150,7 @@ class DesktopRedesign(unittest.TestCase):
         self.assertNotIn('lafa_settings', [key for key, _ in PAGES])
     def test_home_question_goes_to_chat(self):
         self.w.home_input.setText('/os wifi'); self.w.ask_from_home(); self.app.processEvents()
-        self.assertEqual(self.w.stack.currentIndex(), 1); self.assertEqual(self.w.current_guide.key, 'wifi')
+        from lafa.app import PAGE_INDEX; self.assertEqual(self.w.stack.currentIndex(), PAGE_INDEX['chat']); self.assertEqual(self.w.current_guide.key, 'wifi')
     def test_review_chat_runs_local_tools(self):
         self.w.send_message('/calc 6*7'); self.assertIn('42', self.w.last_answer)
         self.w.send_message('how do I take a screenshot?'); self.assertEqual(self.w.current_guide.key, 'screenshot')
@@ -161,7 +163,7 @@ class DesktopRedesign(unittest.TestCase):
         start.assert_called_once_with('/usr/bin/pavucontrol', [])
         self.w.review = True
     def test_settings_window_categories_and_personality_save(self):
-        self.w.open_settings(); self.assertEqual(self.w.settings_categories.count(), 5)
+        self.w.open_settings(); self.assertEqual(self.w.settings_categories.count(), 6)
         self.w.activity_interval.setValue(150); self.w.hover_check.setChecked(False); self.w.save_settings()
         self.assertEqual(self.w.settings.idle_seconds, 150); self.assertFalse(self.w.settings.hover_questions)
     def test_reload_role_applies_preferences_from_eduka_settings(self):
@@ -174,7 +176,7 @@ class DesktopRedesign(unittest.TestCase):
 class EdukaSettingsPage(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        from PySide6.QtWidgets import QApplication
+        from lafa.qt import QApplication
         cls.app = QApplication.instance() or QApplication([])
     def test_schema_matches_lafa_settings(self):
         helper = module('redesign_schema', ROOT / 'integration/eduka_lafa_settings.py')
@@ -192,8 +194,8 @@ class EdukaSettingsPage(unittest.TestCase):
         with tempfile.TemporaryDirectory() as folder, patch.dict(os.environ, {'XDG_CONFIG_HOME': folder, 'LC_ALL': 'en_US.UTF-8'}):
             Settings(models={'openai': 'keep-me'}, roots=[]).save(Path(folder) / 'lafa/settings.json')
             helper = module('redesign_page', ROOT / 'integration/eduka_lafa_settings.py')
-            with patch('PySide6.QtCore.QProcess.startDetached', return_value=(True, 1)) as start:
-                page = helper.create_lafa_page(binding='PySide6', command=['/opt/lafa'])
+            with patch(BINDING+'.QtCore.QProcess.startDetached', return_value=(True, 1)) as start:
+                page = helper.create_lafa_page(binding=BINDING, command=['/opt/lafa'])
                 controls = page.lafa_preferences.lafa_controls
                 controls['chatter'][1].setChecked(False); controls['idle_seconds'][1].setValue(240)
                 controls['provider'][1].setCurrentIndex(controls['provider'][1].findData('ollama')); controls['model'][1].setText('llama3.2')

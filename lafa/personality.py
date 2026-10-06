@@ -263,3 +263,94 @@ def thought(language, state, rng=random):
 
 def joke(language, rng=random):
     return rng.choice(JOKES[lang_of(language)])
+
+# ---------------------------------------------------------------------------
+# Outfit activities (tuxedo = formal, casual = summer). Each entry:
+# activity: (name, duty, caught-on-hover line, [thoughts])
+OUTFIT_TEXT = {
+"en": {
+    "party": ("Party", "At a school celebration", "Oh! You came to the party too? Want me to help with something first?", ["Everyone is dancing! I'll dance after I help you.", "Party rule: be kind, have fun, drink water!"]),
+    "meeting": ("Meeting", "In a teachers' meeting", "Shh… I'm in a meeting. Just kidding — I always have time for you!", ["Point one: help students. Point two: help students more!", "Taking notes so I don't forget anything."]),
+    "presentation": ("Presentation", "Giving a presentation", "Next slide: YOU! How can I help?", ["The chart goes up — just like your learning!", "Speak slowly, smile, breathe. Good presentation tips!"]),
+    "ceremony": ("Ceremony", "At a graduation ceremony", "Congratulations to everyone! Need my help today?", ["One day this diploma will be yours!", "Proud moment for Timor-Leste's students."]),
+    "gala_dinner": ("Gala dinner", "At a formal dinner", "Excuse me, I have food in my mouth… ahem. How can I help?", ["Fork on the left, knife on the right. I remembered!", "Good manners make every dinner nicer."]),
+    "report": ("Report", "Reading an important report", "This report is long… you are more interesting! Ask me anything.", ["Summary: learning is the best investment.", "Checking the facts twice. Accuracy matters!"]),
+    "speech_prep": ("Speech", "Preparing a speech", "I'm practising my speech. Want to hear it? Or shall I help you first?", ["“Ladies and gentlemen…” hmm, too formal?", "A good speech starts with a smile."]),
+    "formal_walk": ("Formal walk", "Walking to an event", "Oh, I'm on my way to an event. But you come first!", ["Shoes polished, bow tie straight. Ready!", "Walking tall on the red carpet."]),
+    "beach": ("Beach", "Reading at the beach", "Ahh, the sea breeze! Even at the beach I can help you.", ["Timor-Leste has beautiful beaches — Cristo Rei is my favourite.", "Sunscreen first, then fun!"]),
+    "sunbathing": ("Sunbathing", "Relaxing on the sand", "Zzz… oh! I was enjoying the sun. How can I help?", ["The waves sound like a lullaby… zzz", "Rest is important for a sharp brain."]),
+    "beach_ball": ("Beach ball", "Playing beach ball", "Catch! …Oops. Hehe. What do you need?", ["Up, up, up! Don't let it fall!", "Playing outside keeps the body happy."]),
+    "sightseeing": ("Sightseeing", "Exploring the town", "I'm exploring! Do you want to explore something with me?", ["So many places to discover!", "Every street has a story."]),
+    "hangout": ("Hanging out", "Hanging out at a café", "Come sit with me! What shall we talk about?", ["Good friends make every day brighter.", "Chatting is great — learning together is even better!"]),
+    "shopping": ("Shopping", "Shopping at the market", "I bought snacks for studying! Need help with anything?", ["A list helps me shop smart: bread, fruit, notebooks!", "Saving money is a smart habit too."]),
+    "snack": ("Snack", "Having a snack", "Mmm, crunchy! Sorry, mouth full. Can I help?", ["Fruit is the best study snack.", "A little snack, a lot of energy!"]),
+    "game_break": ("Game break", "Taking a short game break", "Just one level… okay, paused! How can I help?", ["Short breaks help the brain learn.", "Game over? Time to study again!"]),
+},
+"id": {
+    "party": ("Pesta", "Di perayaan sekolah", "Wah! Kamu juga datang ke pesta? Mau saya bantu sesuatu dulu?", ["Semua menari! Saya menari setelah membantumu.", "Aturan pesta: baik hati, senang, minum air!"]),
+    "meeting": ("Rapat", "Di rapat guru", "Ssst… saya sedang rapat. Bercanda — saya selalu ada waktu untukmu!", ["Poin satu: bantu siswa. Poin dua: bantu siswa lebih banyak!", "Mencatat supaya tidak lupa."]),
+    "presentation": ("Presentasi", "Sedang presentasi", "Slide berikutnya: KAMU! Bisa saya bantu?", ["Grafiknya naik — seperti belajarmu!", "Bicara pelan, senyum, tarik napas. Tips presentasi!"]),
+    "ceremony": ("Upacara", "Di upacara wisuda", "Selamat untuk semua! Perlu bantuan saya hari ini?", ["Suatu hari ijazah ini milikmu!", "Momen bangga untuk siswa Timor-Leste."]),
+    "gala_dinner": ("Makan malam resmi", "Di makan malam resmi", "Maaf, mulut saya penuh… ehem. Bisa saya bantu?", ["Garpu di kiri, pisau di kanan. Saya ingat!", "Sopan santun membuat makan malam lebih menyenangkan."]),
+    "report": ("Laporan", "Membaca laporan penting", "Laporan ini panjang… kamu lebih menarik! Tanya apa saja.", ["Ringkasan: belajar adalah investasi terbaik.", "Cek fakta dua kali. Ketelitian itu penting!"]),
+    "speech_prep": ("Pidato", "Menyiapkan pidato", "Saya latihan pidato. Mau dengar? Atau saya bantu kamu dulu?", ["“Bapak dan Ibu sekalian…” hmm, terlalu resmi?", "Pidato yang baik dimulai dengan senyum."]),
+    "formal_walk": ("Jalan resmi", "Berjalan ke acara", "Oh, saya mau ke acara. Tapi kamu lebih dulu!", ["Sepatu mengkilap, dasi kupu-kupu rapi. Siap!", "Berjalan tegak di karpet merah."]),
+    "beach": ("Pantai", "Membaca di pantai", "Ahh, angin laut! Di pantai pun saya bisa membantu.", ["Timor-Leste punya pantai indah — Cristo Rei favorit saya.", "Tabir surya dulu, baru bersenang-senang!"]),
+    "sunbathing": ("Berjemur", "Bersantai di pasir", "Zzz… oh! Saya sedang menikmati matahari. Bisa saya bantu?", ["Suara ombak seperti lagu tidur… zzz", "Istirahat penting untuk otak yang tajam."]),
+    "beach_ball": ("Bola pantai", "Main bola pantai", "Tangkap! …Ups. Hehe. Perlu apa?", ["Ke atas, ke atas! Jangan sampai jatuh!", "Bermain di luar membuat badan senang."]),
+    "sightseeing": ("Jalan-jalan", "Menjelajahi kota", "Saya sedang menjelajah! Mau menjelajah sesuatu bersama?", ["Banyak tempat untuk ditemukan!", "Setiap jalan punya cerita."]),
+    "hangout": ("Nongkrong", "Nongkrong di kafe", "Ayo duduk bersama! Kita mau ngobrol apa?", ["Teman baik membuat hari lebih cerah.", "Ngobrol itu seru — belajar bersama lebih seru!"]),
+    "shopping": ("Belanja", "Belanja di pasar", "Saya beli camilan untuk belajar! Perlu bantuan?", ["Daftar belanja: roti, buah, buku tulis!", "Menabung juga kebiasaan pintar."]),
+    "snack": ("Camilan", "Makan camilan", "Nyam, renyah! Maaf, mulut penuh. Bisa saya bantu?", ["Buah adalah camilan belajar terbaik.", "Camilan kecil, energi besar!"]),
+    "game_break": ("Istirahat main", "Istirahat main game sebentar", "Satu level lagi… oke, dijeda! Bisa saya bantu?", ["Istirahat singkat membantu otak belajar.", "Game selesai? Waktunya belajar lagi!"]),
+},
+"pt": {
+    "party": ("Festa", "Numa festa da escola", "Oh! Também vieste à festa? Queres que te ajude primeiro?", ["Todos a dançar! Danço depois de te ajudar.", "Regra da festa: sê simpático, diverte-te, bebe água!"]),
+    "meeting": ("Reunião", "Numa reunião de professores", "Shh… estou numa reunião. Brincadeira — tenho sempre tempo para ti!", ["Ponto um: ajudar alunos. Ponto dois: ajudar mais!", "A tirar notas para não esquecer."]),
+    "presentation": ("Apresentação", "A fazer uma apresentação", "Próximo diapositivo: TU! Como posso ajudar?", ["O gráfico sobe — como a tua aprendizagem!", "Fala devagar, sorri, respira. Boas dicas!"]),
+    "ceremony": ("Cerimónia", "Numa cerimónia de graduação", "Parabéns a todos! Precisas de ajuda hoje?", ["Um dia este diploma será teu!", "Momento de orgulho para os alunos de Timor-Leste."]),
+    "gala_dinner": ("Jantar de gala", "Num jantar formal", "Desculpa, tenho a boca cheia… ahem. Posso ajudar?", ["Garfo à esquerda, faca à direita. Lembrei-me!", "Boas maneiras tornam o jantar melhor."]),
+    "report": ("Relatório", "A ler um relatório importante", "Este relatório é longo… tu és mais interessante! Pergunta.", ["Resumo: aprender é o melhor investimento.", "Verifico os factos duas vezes."]),
+    "speech_prep": ("Discurso", "A preparar um discurso", "Estou a ensaiar o discurso. Queres ouvir? Ou ajudo-te primeiro?", ["“Senhoras e senhores…” hmm, demasiado formal?", "Um bom discurso começa com um sorriso."]),
+    "formal_walk": ("Passeio formal", "A caminho de um evento", "Vou para um evento. Mas tu primeiro!", ["Sapatos brilhantes, laço direito. Pronto!", "Passo firme na passadeira vermelha."]),
+    "beach": ("Praia", "A ler na praia", "Ahh, a brisa do mar! Mesmo na praia posso ajudar.", ["Timor-Leste tem praias lindas — o Cristo Rei é a minha favorita.", "Protetor solar primeiro!"]),
+    "sunbathing": ("Banho de sol", "A relaxar na areia", "Zzz… oh! Estava a apanhar sol. Posso ajudar?", ["As ondas parecem uma canção de embalar… zzz", "Descansar é importante."]),
+    "beach_ball": ("Bola de praia", "A jogar à bola na praia", "Apanha! …Ups. Hehe. O que precisas?", ["Para cima! Não deixes cair!", "Brincar lá fora faz bem ao corpo."]),
+    "sightseeing": ("Passeio", "A explorar a cidade", "Estou a explorar! Queres explorar algo comigo?", ["Tantos lugares para descobrir!", "Cada rua tem uma história."]),
+    "hangout": ("Convívio", "Num café com amigos", "Senta-te comigo! Sobre o que falamos?", ["Bons amigos tornam o dia melhor.", "Conversar é bom — aprender juntos é melhor!"]),
+    "shopping": ("Compras", "Às compras no mercado", "Comprei lanches para estudar! Precisas de ajuda?", ["Lista: pão, fruta, cadernos!", "Poupar também é inteligente."]),
+    "snack": ("Lanche", "A lanchar", "Mmm, crocante! Desculpa, boca cheia. Posso ajudar?", ["Fruta é o melhor lanche de estudo.", "Pequeno lanche, muita energia!"]),
+    "game_break": ("Pausa de jogo", "Uma pequena pausa para jogar", "Só mais um nível… pronto, pausa! Posso ajudar?", ["Pausas curtas ajudam o cérebro.", "Fim do jogo? Hora de estudar!"]),
+},
+"tet": {
+    "party": ("Festa", "Iha festa eskola nian", "Ah! Ita mós mai festa? Hakarak ha'u ajuda uluk?", ["Ema hotu dansa! Ha'u dansa depois ajuda ita.", "Regra festa: di'ak, kontente, hemu bee!"]),
+    "meeting": ("Enkontru", "Iha enkontru mestre sira", "Shh… ha'u iha enkontru. Halimar de'it — ha'u iha tempu ba ita!", ["Pontu ida: ajuda estudante. Pontu rua: ajuda liu tan!", "Hakerek nota atu labele haluha."]),
+    "presentation": ("Aprezentasaun", "Halo aprezentasaun", "Slide tuir mai: ITA! Ha'u bele ajuda saida?", ["Gráfiku sa'e — hanesan ita-nia aprendizajen!", "Koalia neineik, hamnasa, dada iis."]),
+    "ceremony": ("Serimónia", "Iha serimónia graduasaun", "Parabéns ba ema hotu! Presiza ajuda ohin?", ["Loron ida diploma ne'e sei sai ita-nian!", "Momentu orgullu ba estudante Timor-Leste."]),
+    "gala_dinner": ("Jantar formál", "Iha jantar formál", "Deskulpa, ibun nakonu… ehem. Ha'u bele ajuda?", ["Garfu iha karuk, tudik iha loos. Ha'u hanoin!", "Edukasaun di'ak halo jantar furak liu."]),
+    "report": ("Relatóriu", "Lee relatóriu importante", "Relatóriu ne'e naruk… ita interesante liu! Husu saida de'it.", ["Rezumu: aprende mak investimentu di'ak liu.", "Verifika faktu dala rua."]),
+    "speech_prep": ("Diskursu", "Prepara diskursu", "Ha'u pratika diskursu. Hakarak rona? Ka ha'u ajuda ita uluk?", ["“Senhoras no senhores…” hmm, formál liu?", "Diskursu di'ak hahú ho hamnasa."]),
+    "formal_walk": ("La'o formál", "La'o ba eventu", "Ha'u la'o ba eventu. Maibé ita uluk!", ["Sapatu kroat, laço loos. Prontu!", "La'o ho orgullu iha tapete mean."]),
+    "beach": ("Tasi-ibun", "Lee iha tasi-ibun", "Ahh, anin tasi! Iha tasi-ibun mós ha'u bele ajuda.", ["Timor-Leste iha tasi-ibun furak — Cristo Rei ha'u-nia favoritu.", "Krema loro-matan uluk!"]),
+    "sunbathing": ("Toba iha loro", "Deskansa iha rai-henek", "Zzz… oh! Ha'u gosta loro-matan. Ha'u bele ajuda?", ["Lian tasi-ben hanesan kanta toba… zzz", "Deskansa importante ba ulun matenek."]),
+    "beach_ball": ("Bola tasi-ibun", "Halimar bola iha tasi-ibun", "Kaer! …Ups. Hehe. Presiza saida?", ["Ba leten! Keta husik monu!", "Halimar iha li'ur halo isin kontente."]),
+    "sightseeing": ("Pasiar", "Esplora sidade", "Ha'u esplora hela! Hakarak esplora hamutuk?", ["Fatin barak atu deskobre!", "Dalan ida-idak iha istória."]),
+    "hangout": ("Tuur hamutuk", "Tuur iha kafé ho belun", "Mai tuur ho ha'u! Ita koalia kona-ba saida?", ["Belun di'ak halo loron naroman.", "Koalia di'ak — aprende hamutuk di'ak liu!"]),
+    "shopping": ("Sosa sasán", "Sosa iha merkadu", "Ha'u sosa ai-han ki'ik ba estuda! Presiza ajuda?", ["Lista: paun, ai-fuan, kadernu!", "Rai osan mós hahalok matenek."]),
+    "snack": ("Han ki'ik", "Han ai-han ki'ik", "Mmm, krokante! Deskulpa, ibun nakonu. Ha'u bele ajuda?", ["Ai-fuan mak ai-han estuda di'ak liu.", "Ai-han ki'ik, enerjia boot!"]),
+    "game_break": ("Deskansa joga", "Deskansa uitoan ho jogu", "Nivel ida tan… diak, para! Ha'u bele ajuda?", ["Deskansa badak ajuda ulun aprende.", "Jogu remata? Tempu estuda fali!"]),
+},
+}
+OUTFIT_NAMES = {
+"en": {"traditional": "Tais Mane (default)", "tuxedo": "Tuxedo (formal)", "casual": "Casual (summer)"},
+"id": {"traditional": "Tais Mane (bawaan)", "tuxedo": "Tuksedo (resmi)", "casual": "Kasual (musim panas)"},
+"pt": {"traditional": "Tais Mane (predefinido)", "tuxedo": "Smoking (formal)", "casual": "Informal (verão)"},
+"tet": {"traditional": "Tais Mane (padraun)", "tuxedo": "Tuxedo (formál)", "casual": "Kazuál (tempu bai-loron)"},
+}
+for _lang, _items in OUTFIT_TEXT.items():
+    for _key, (_name, _duty, _caught, _thoughts) in _items.items():
+        DUTIES[_lang][_key] = _duty; CAUGHT[_lang][_key] = _caught; THOUGHTS[_lang][_key] = _thoughts
+
+def activity_name(language, activity):
+    entry = OUTFIT_TEXT[lang_of(language)].get(activity)
+    return entry[0] if entry else None

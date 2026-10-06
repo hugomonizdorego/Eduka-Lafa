@@ -174,6 +174,66 @@ REDESIGN={
  'chip_1':'Oinsá liga Wi-Fi?','chip_2':'/weather','chip_3':'/calc 12*7','chip_4':'Konta anedota ida','chat_welcome':'Husu saida de’it, ka hili sujestaun iha okos.','eduka_settings_note':'Konfigurasaun LAFA hotu mós iha Eduka-Settings → LAFA.'},
 }
 
-CATALOG={code:{**dict(zip(KEYS,strings)),**EXTRA[code],**NEW[code],**RELEASE[code],**ALPHA[code],**REDESIGN[code]} for code,strings in STRINGS.items()}
+# 0.1.1: LAFA School (teachers, homework, timetable) and school navigation.
+SCHOOL={
+'en':{'teachers':'Teachers','homework':'Homework & timetable','library':'Library','lab':'Computer lab','noticeboard':'Notice board','helpdesk':'IT help desk',
+ 'ask_teacher':'Ask the teacher','practice':'Practice','new_question':'New question','check':'Check','correct':'Correct! Great job! 🎉','try_again':'Not quite — try again! Answer:','resources':'Free learning resources','level':'Level',
+ 'teacher_needs_ai':'Teachers explain step by step with an AI provider (free open-source Ollama works). Without AI, use the practice, the resources and “Search public sources”.',
+ 'homework_title':'What is the homework?','subject':'Subject','due':'Due date','add_homework':'Add homework','done':'Done','delete':'Delete','to_agenda':'Also add to the Eduka-Panel calendar','timetable':'Timetable',
+ 'days':'Monday,Tuesday,Wednesday,Thursday,Friday,Saturday','period':'Period','today_school':'Today at school','no_classes':'No classes in the timetable for today.','homework_due':'Homework due soon','no_homework':'No homework pending. Well done!',
+ 'other':'Other','translate_from':'From','translate_to':'To','card_teachers_d':'A teacher for every subject, free resources and practice','card_homework_d':'Homework planner, timetable and calendar','school_sub':'LAFA School',
+ 'counsellor_tip':'Tip from the counsellor','next_tip':'Another tip','score':'Score','saved_agenda':'Added to the Eduka-Panel calendar.','reminders_short':'Reminders & focus','sources_updated':'LAFA updated its learning sources.','release_available':'A new LAFA version is available: {version}. Update it with the Eduka Update System or your software centre.'},
+'id':{'teachers':'Guru','homework':'PR & jadwal','library':'Perpustakaan','lab':'Lab komputer','noticeboard':'Papan pengumuman','helpdesk':'Meja bantuan TI',
+ 'ask_teacher':'Tanya guru','practice':'Latihan','new_question':'Soal baru','check':'Periksa','correct':'Benar! Hebat! 🎉','try_again':'Belum tepat — coba lagi! Jawaban:','resources':'Sumber belajar gratis','level':'Tingkat',
+ 'teacher_needs_ai':'Guru menjelaskan langkah demi langkah dengan penyedia AI (Ollama open-source gratis bisa). Tanpa AI, pakai latihan, sumber belajar dan “Cari sumber publik”.',
+ 'homework_title':'Apa PR-nya?','subject':'Mata pelajaran','due':'Batas waktu','add_homework':'Tambah PR','done':'Selesai','delete':'Hapus','to_agenda':'Tambahkan juga ke kalender Eduka-Panel','timetable':'Jadwal pelajaran',
+ 'days':'Senin,Selasa,Rabu,Kamis,Jumat,Sabtu','period':'Jam ke','today_school':'Hari ini di sekolah','no_classes':'Tidak ada pelajaran di jadwal hari ini.','homework_due':'PR yang segera dikumpulkan','no_homework':'Tidak ada PR. Hebat!',
+ 'other':'Lainnya','translate_from':'Dari','translate_to':'Ke','card_teachers_d':'Guru untuk setiap pelajaran, sumber gratis dan latihan','card_homework_d':'Perencana PR, jadwal dan kalender','school_sub':'Sekolah LAFA',
+ 'counsellor_tip':'Tips dari guru BK','next_tip':'Tips lain','score':'Skor','saved_agenda':'Ditambahkan ke kalender Eduka-Panel.','reminders_short':'Pengingat & fokus','sources_updated':'LAFA memperbarui sumber belajarnya.','release_available':'Versi LAFA baru tersedia: {version}. Perbarui lewat Eduka Update System atau pusat perangkat lunak.'},
+'pt':{'teachers':'Professores','homework':'Trabalhos e horário','library':'Biblioteca','lab':'Sala de informática','noticeboard':'Quadro de avisos','helpdesk':'Apoio informático',
+ 'ask_teacher':'Perguntar ao professor','practice':'Prática','new_question':'Nova pergunta','check':'Verificar','correct':'Certo! Muito bem! 🎉','try_again':'Ainda não — tenta outra vez! Resposta:','resources':'Recursos gratuitos','level':'Nível',
+ 'teacher_needs_ai':'Os professores explicam passo a passo com um fornecedor de IA (o Ollama open-source gratuito serve). Sem IA, usa a prática, os recursos e “Pesquisar fontes públicas”.',
+ 'homework_title':'Qual é o trabalho de casa?','subject':'Disciplina','due':'Data de entrega','add_homework':'Adicionar trabalho','done':'Feito','delete':'Apagar','to_agenda':'Adicionar também ao calendário do Eduka-Panel','timetable':'Horário',
+ 'days':'Segunda,Terça,Quarta,Quinta,Sexta,Sábado','period':'Tempo','today_school':'Hoje na escola','no_classes':'Sem aulas no horário de hoje.','homework_due':'Trabalhos para breve','no_homework':'Sem trabalhos pendentes. Muito bem!',
+ 'other':'Outro','translate_from':'De','translate_to':'Para','card_teachers_d':'Um professor para cada disciplina, recursos e prática','card_homework_d':'Planeador de trabalhos, horário e calendário','school_sub':'Escola LAFA',
+ 'counsellor_tip':'Dica do orientador','next_tip':'Outra dica','score':'Pontos','saved_agenda':'Adicionado ao calendário do Eduka-Panel.','reminders_short':'Lembretes e foco','sources_updated':'O LAFA atualizou as fontes de aprendizagem.','release_available':'Nova versão do LAFA disponível: {version}. Atualize com o Eduka Update System ou o centro de software.'},
+'tet':{'teachers':'Mestre sira','homework':'TPC no orariu','library':'Biblioteka','lab':'Lab komputadór','noticeboard':'Kuadru avizu','helpdesk':'Ajuda TI',
+ 'ask_teacher':'Husu mestre','practice':'Pratika','new_question':'Pergunta foun','check':'Verifika','correct':'Loos! Di’ak tebes! 🎉','try_again':'Seidauk loos — koko fali! Resposta:','resources':'Fonte aprende grátis','level':'Nivel',
+ 'teacher_needs_ai':'Mestre esplika pasu ba pasu ho provedor IA (Ollama open-source grátis bele). Sein IA, uza pratika, fonte sira no “Buka fonte públika”.',
+ 'homework_title':'TPC mak saida?','subject':'Matéria','due':'Data entrega','add_homework':'Aumenta TPC','done':'Remata','delete':'Hamoos','to_agenda':'Aumenta mós ba kalendáriu Eduka-Panel','timetable':'Orariu',
+ 'days':'Segunda,Tersa,Kuarta,Kinta,Sesta,Sábadu','period':'Oras','today_school':'Ohin iha eskola','no_classes':'La iha lisaun iha orariu ohin.','homework_due':'TPC atu entrega lalais','no_homework':'La iha TPC. Di’ak tebes!',
+ 'other':'Seluk','translate_from':'Husi','translate_to':'Ba','card_teachers_d':'Mestre ba matéria ida-idak, fonte grátis no pratika','card_homework_d':'Planeadór TPC, orariu no kalendáriu','school_sub':'Eskola LAFA',
+ 'counsellor_tip':'Dika husi konselleiru','next_tip':'Dika seluk','score':'Pontu','saved_agenda':'Aumenta ona ba kalendáriu Eduka-Panel.','reminders_short':'Lembransa no foku','sources_updated':'LAFA atualiza ona ninia fonte aprende.','release_available':'Versaun LAFA foun iha: {version}. Atualiza ho Eduka Update System ka sentru software.'},
+}
+
+# Lafa-Configuration options shared by LAFA's own settings window.
+CONFIG={
+'en':{'character_size':'Character size','walk_speed':'Walking speed','animation_speed':'Animation speed','follow_eduka_panel':'Follow Eduka-Panel position and size','start_with_session':'Start with Eduka-Desktop when activated',
+ 'balloon_seconds':'Speech balloon time (seconds)','start_page':'Start page','follow_eduka_theme':'Use the Eduka-Desktop theme and accent colour','notifications':'Reminders as Eduka-Panel notifications',
+ 'auto_update':'Keep learning sources up to date automatically','update_hours':'Check for updates every (hours)','speech_rate':'Reading speed (words/min)','desktop_settings':'LAFA Desktop',
+ 'slow':'Slow','normal':'Normal','fast':'Fast','small':'Small','large':'Large'},
+'id':{'character_size':'Ukuran karakter','walk_speed':'Kecepatan berjalan','animation_speed':'Kecepatan animasi','follow_eduka_panel':'Ikuti posisi dan ukuran Eduka-Panel','start_with_session':'Mulai bersama Eduka-Desktop saat aktif',
+ 'balloon_seconds':'Lama balon bicara (detik)','start_page':'Halaman awal','follow_eduka_theme':'Pakai tema dan warna aksen Eduka-Desktop','notifications':'Pengingat sebagai notifikasi Eduka-Panel',
+ 'auto_update':'Perbarui sumber belajar otomatis','update_hours':'Periksa pembaruan setiap (jam)','speech_rate':'Kecepatan membaca (kata/menit)','desktop_settings':'LAFA Desktop',
+ 'slow':'Pelan','normal':'Normal','fast':'Cepat','small':'Kecil','large':'Besar'},
+'pt':{'character_size':'Tamanho da personagem','walk_speed':'Velocidade a caminhar','animation_speed':'Velocidade da animação','follow_eduka_panel':'Seguir a posição do Eduka-Panel','start_with_session':'Iniciar com o Eduka-Desktop',
+ 'balloon_seconds':'Tempo do balão (segundos)','start_page':'Página inicial','follow_eduka_theme':'Usar o tema e a cor do Eduka-Desktop','notifications':'Lembretes como notificações do Eduka-Panel',
+ 'auto_update':'Atualizar as fontes automaticamente','update_hours':'Verificar atualizações a cada (horas)','speech_rate':'Velocidade de leitura','desktop_settings':'LAFA Desktop',
+ 'slow':'Lento','normal':'Normal','fast':'Rápido','small':'Pequeno','large':'Grande'},
+'tet':{'character_size':'Tamañu karakter','walk_speed':'Velosidade la’o','animation_speed':'Velosidade animasaun','follow_eduka_panel':'Tuir pozisaun Eduka-Panel','start_with_session':'Hahú ho Eduka-Desktop',
+ 'balloon_seconds':'Tempu balaun (segundu)','start_page':'Pájina inisiál','follow_eduka_theme':'Uza tema no kór Eduka-Desktop','notifications':'Lembransa hanesan notifikasaun Eduka-Panel',
+ 'auto_update':'Atualiza fonte aprende automátiku','update_hours':'Verifika atualizasaun kada (oras)','speech_rate':'Velosidade lee','desktop_settings':'LAFA Desktop',
+ 'slow':'Neineik','normal':'Normál','fast':'Lalais','small':'Ki’ik','large':'Boot'},
+}
+
+CATALOG={code:{**dict(zip(KEYS,strings)),**EXTRA[code],**NEW[code],**RELEASE[code],**ALPHA[code],**REDESIGN[code],**SCHOOL[code],**CONFIG[code]} for code,strings in STRINGS.items()}
+
+def _outfit_terms():
+    """Activity and outfit names live with LAFA's personality data."""
+    from .personality import OUTFIT_TEXT, OUTFIT_NAMES
+    for code in CATALOG:
+        CATALOG[code].update({key:entry[0] for key,entry in OUTFIT_TEXT[code].items()})
+        CATALOG[code].update(OUTFIT_NAMES[code])
+_outfit_terms()
 
 def tr(lang,key):return CATALOG.get(lang,CATALOG['en']).get(key,key)

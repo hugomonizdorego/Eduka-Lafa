@@ -15,11 +15,14 @@ from lafa.tools import encyclopedia_search
 from lafa.mascot import greeting_key
 
 class VersionTests(unittest.TestCase):
-    def test_version_restarted_at_alpha(self):
-        self.assertEqual(__version__, "0.1.0a1"); self.assertEqual(VERSION_LABEL, "0.1 Alpha")
+    def test_version_is_consistent_everywhere(self):
+        import re
+        root = Path(__file__).resolve().parents[1]
+        self.assertRegex(__version__, r"^0\.1\.\d+$"); self.assertEqual(VERSION_LABEL, __version__ + " Alpha")
         self.assertIn(__version__, USER_AGENT)
-        pyproject = (Path(__file__).resolve().parents[1] / "pyproject.toml").read_text()
-        self.assertIn('version = "0.1.0a1"', pyproject)
+        self.assertIn('{attr = "lafa.__version__"}', (root / "pyproject.toml").read_text())
+        self.assertIn(f"Version: {__version__}", (root / "packaging/DEBIAN/control").read_text())
+        self.assertIn(f"## {__version__}", (root / "CHANGELOG.md").read_text())
 
 class OpenSourceProviderTests(unittest.TestCase):
     def test_endpoint_validation(self):
@@ -118,7 +121,7 @@ class FallbackAndGreetingTests(unittest.TestCase):
 class AlphaUI(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        from PySide6.QtWidgets import QApplication
+        from lafa.qt import QApplication
         cls.app = QApplication.instance() or QApplication([])
     def setUp(self):
         from lafa.app import Window
@@ -136,8 +139,8 @@ class AlphaUI(unittest.TestCase):
         self.assertEqual(w.settings.provider, "ollama"); self.assertEqual(w.settings.models["ollama"], "llama3.2")
         self.assertFalse(w.settings.greet_by_time); self.assertTrue(w.agent.client.ready())
     def test_version_label_and_greeting_in_introduction(self):
-        from PySide6.QtWidgets import QLabel
-        self.assertTrue(any(l.text() == "LAFA  0.1 Alpha" for l in self.window.findChildren(QLabel)))
+        from lafa.qt import QLabel
+        self.assertTrue(any(l.text() == "LAFA  " + VERSION_LABEL for l in self.window.findChildren(QLabel)))
         self.assertTrue(self.window.companion.introduction(8).startswith("Good morning!"))
         self.window.settings.greet_by_time = False
         self.assertFalse(self.window.companion.introduction(8).startswith("Good morning!"))

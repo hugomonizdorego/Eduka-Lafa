@@ -1,73 +1,99 @@
 # LAFA
 
-**LAFA 0.1 Alpha** (`0.1.0a1`) is an open-source native desktop learning assistant and
-animated crocodile companion from Timor-Leste. LAFA has **no main server**: it
-relies only on the internet, public open sources and open-source software.
-Development restarted at 0.1 Alpha; every feature is being re-checked from the
-beginning (see [CHANGELOG](CHANGELOG.md)). Source, build scripts and developer
-documentation are in English. The interface follows the user's system language,
-with English, Indonesian, Portuguese and Tetun overrides. No `.deb` is produced.
+**LAFA 0.1.1 Alpha** is an open-source learning assistant and animated
+crocodile companion from Timor-Leste for **Edukasaun OS** (Debian 13 Trixie,
+LXQt) and the **Eduka-Desktop Suite** (Eduka-Desktop, Eduka-Panel,
+Eduka-Settings). LAFA has **no main server**: it relies on the internet, public
+open sources and open-source software. Source, scripts and developer
+documentation are in English; the interface follows Eduka-Desktop's language
+(English, Indonesian, Portuguese, Tetun). See the [CHANGELOG](CHANGELOG.md)
+and [how to keep developing LAFA](docs/DEVELOPMENT.md).
 
 ![LAFA Home](docs/screenshots/01-home.png)
 
-![LAFA on the Eduka-Panel asking how it can help](docs/screenshots/17-virtual-hover-question.png)
+![Lafa-Configuration in Eduka-Settings](docs/screenshots/18-eduka-settings-lafa-configuration.png)
 
-The second image uses actual LAFA widget pixels on an **illustrated desktop**;
-it does not show installation on Edukasaun OS. Other captures are offscreen Qt
-renders. [View all 23 captures](docs/SCREENSHOTS.md) — regenerate them after
-every UI change with `scripts/capture-screenshots.py`.
+![The three outfits](docs/screenshots/25-outfits.png)
+
+[View all 31 captures](docs/SCREENSHOTS.md). Captures of LAFA on the desktop
+are actual LAFA pixels on an **illustrated desktop**, not Edukasaun OS.
+
+## Install on Edukasaun OS
+
+```bash
+sh tools/build-deb.sh                       # -> dist/lafa_0.1.1_all.deb
+sudo apt install ./dist/lafa_0.1.1_all.deb  # dependencies come from Debian
+```
+
+`apt` installs every dependency automatically: `python3-pyqt5` (the same Qt
+binding as the Eduka-Desktop suite), `libqt5svg5`, `python3-keyring`,
+`fonts-noto-color-emoji` and more; recommended packages add read-aloud
+(`espeak-ng`), PDF reading (`poppler-utils`), Papirus icons and the desktop
+tools the IT help desk can open. The package installs LAFA Desktop in the
+**Edukasaun** menu category, an autostart entry that runs only when the Virtual
+Assistant is activated, and the **Lafa-Configuration** page for Eduka-Settings.
+Inside Cubic it starts no GUI. Updating later is the same `apt install` command.
 
 ## Three surfaces
 
 | Surface | What it does | Entry point |
 |---|---|---|
-| **LAFA Desktop** | Home dashboard, chat, **Edukasaun OS help**, files, learning, coding, weather/news, reminders, Timor-Leste, AI services | Edukasaun menu; `lafa` or `lafa --window` |
-| **LAFA Virtual Assistant** | The character on the Eduka-Panel: walks, does activities, asks “Can I help?” on hover, chats on click, tells jokes | Turn on from Home or Eduka-Settings → LAFA; `lafa --virtual` |
-| **Eduka-Settings → LAFA** | Every LAFA preference: activation, outfit, panel, personality, activity timing, AI provider/model, language, folders, weather | Native page `integration/eduka_lafa_settings.py`; LAFA's own window `lafa --settings` |
+| **LAFA Desktop** | A complete school room: teachers, homework & timetable, library, computer lab, notice board, IT help desk, files, Timor-Leste, AI services | Edukasaun menu; `lafa` |
+| **LAFA Virtual Assistant** | The character on the Eduka-Panel: walks, does activities that suit its outfit, asks “Can I help?” on hover, chats on click | Activate on Home or in Lafa-Configuration; `lafa --virtual` |
+| **Eduka-Settings → Lafa-Configuration** | Every LAFA preference: activation, outfit, size, speeds, personality, LAFA Desktop, language, AI, folders, weather | `lafa --configure` (falls back to LAFA's own window `lafa --settings`) |
+
+## Compatible with the Eduka-Desktop Suite
+
+- **Language**: LAFA's default "Follow Eduka-Desktop" uses the language chosen
+  in Eduka-Settings (Tetun) or the session language.
+- **Eduka-Panel**: LAFA reads the panel's edge, height and style (full,
+  floating, short, dock) and stands exactly on top of it.
+- **Theme**: LAFA Desktop follows the Eduka theme (including Edukasaun-Dark)
+  and the accent colour.
+- **Notifications**: reminders appear as Eduka-Panel notifications; homework
+  due dates can go to the Eduka-Panel calendar agenda.
+- **Eduka-Settings**: Lafa-Configuration is a native page (Eduka cards, rows,
+  live apply). Eduka-Settings needs the generic plugin-pages patch
+  ([integration](docs/EDUKA-INTEGRATION.md)); it was verified with the real
+  eduka-settings 0.9.24.
+- **Qt**: PyQt5 like the suite; on Wayland LAFA uses XWayland like Eduka.
 
 ## What LAFA does
 
-**LAFA Desktop** (Edukasaun menu)
-- **Home**: time-of-day greeting, quick question box, Virtual Assistant on/off,
-  cards for everything LAFA can do, tip of the day and a read-only system check
-  (OS, desktop session, free disk, memory, battery).
-- **Edukasaun OS help**: 16 offline step-by-step guides in four languages —
-  Wi-Fi, sound, screen/projector, files, installing apps, updates, printer, USB,
-  screenshots, shortcuts, password, language/keyboard, accessibility, battery,
-  LibreOffice and Eduka-Settings. **Open tool** starts the matching desktop tool
-  from a fixed allowlist (for example `nm-connection-editor`, `pavucontrol-qt`,
-  `pcmanfm-qt`, `system-config-printer`) without a shell; LAFA never changes
-  system settings by itself. Questions such as “how do I connect wifi?”,
-  “cara pasang aplikasi”, “oinsá liga Wi-Fi?” are answered from these guides,
-  even without an AI key.
-- **Chat** with suggestion chips, `/help`, `/os`, `/calc`, `/joke`, public
-  sources, files, weather, news and reminders.
+**LAFA Desktop — a complete school**
+- **Teachers**: Mathematics, Science, Languages, History & Geography, ICT &
+  Coding, Arts & Culture and a Counsellor. Each has free learning resources,
+  **offline practice** (maths exercises in three levels, vocabulary cards
+  between Tetun, Portuguese, English and Indonesian, quizzes about science,
+  Timor-Leste, digital safety and culture, study tips) and **Ask the teacher**
+  with an AI provider (the free open-source Ollama works).
+- **Homework & timetable**, stored on the computer; due dates can be added to
+  the Eduka-Panel calendar. Home shows today's classes and homework due soon.
+- **Library**, **Computer lab** (bounded Python lessons), **Notice board**
+  (weather and headlines), **IT help desk** (16 Edukasaun OS guides with an
+  allowlisted tool launcher), **My files**, **Reminders & focus**,
+  **Timor-Leste**, **AI services**, and chat with `/help`, `/os`, `/calc`,
+  `/joke`.
+- **Always up to date**: LAFA refreshes the notice board and downloads the
+  validated source catalog (links, teacher resources, Timor-Leste cards, tips)
+  from its open-source repository, and announces new LAFA releases.
 
-**LAFA Virtual Assistant** (off by default; activate it on Home or in
-Eduka-Settings)
-- Stands on the Eduka-Panel. When nobody needs help, it **walks to a new spot on
-  the panel, then does an activity** — studying, reading, gaming, eating,
-  bathing, sleeping, stretching, dancing Tebe-tebe or Bidu… — and walks again.
-  Activity duration is configurable (20–600 s, default 60 s).
-- Every activity is part of an assistant's working day ("Reading the Edukasaun
-  OS guide", "Studying new lessons for you", "Power nap · recharging").
-- **Cursor touches LAFA → it stops and asks how it can help.** The question
-  changes every time and reacts to what LAFA was doing ("Eek! I'm in the bath!
-  …But I can still help you."). Clicking the balloon or LAFA opens the chat.
-- Personality: innocent, curious and funny, but clever and useful. LAFA
-  sometimes comments on its activity, tells jokes, shows positive messages and
-  Timor-Leste knowledge cards. Each behaviour can be switched off.
-- On X11 it walks above the configured top/bottom panel edge. On Wayland the
-  compositor controls placement; activities still change and LAFA can be dragged.
+**LAFA Virtual Assistant**
+- **Three outfits**: **Tais Mane** (default), **Tuxedo** and **Casual**. The
+  outfit decides the activities: Tais Mane — school and daily life, Tebe-tebe
+  and Bidu; Tuxedo — parties, meetings, presentations, graduation ceremonies,
+  gala dinners, speeches; Casual — beach, sunbathing, beach ball, sightseeing,
+  café, shopping, snacks. Change it in Lafa-Configuration or by right-clicking
+  LAFA → Outfit.
+- Walks to a new spot on the Eduka-Panel, then does an activity, then walks
+  again. **Cursor touches LAFA → it stops and asks how it can help**, in
+  character and reacting to what it is doing. Innocent, curious, clever and
+  funny: it comments on its activities and tells jokes.
+- Tunable in Lafa-Configuration: size, walking speed, animation speed,
+  activity duration, balloon time, hover questions, self-talk, jokes.
 
 The first activation introduces LAFA with a time-of-day greeting: “Good
 morning! I am LAFA, from Timor-Leste, a virtual assistant ready to help you.”
-The outfit is the male traditional clothing: striped red tais wrap, white sash,
-patterned head wrap and plume, bead necklaces and crescent chest ornament.
-
-The latest Eduka-Settings source was not available, so the installer also
-creates a standalone LAFA Settings entry, supplies the native page module and a
-runnable integration test host. See [integration instructions](docs/EDUKA-INTEGRATION.md).
 
 ## More features
 
@@ -123,43 +149,18 @@ LAFA is not all-knowing. It distinguishes source extracts, browser links, live
 metadata and AI responses. Network access alone does not create an AI model,
 API key or paid credits. General browser searches are links, not fetched results.
 
-## Run from source
+## Run from source (developers)
 
-Target: Linux, Python 3.11+, Qt 6, Edukasaun OS / Debian with X11 or Wayland.
-
-```bash
-cd lafa
-python3 -m venv .venv
-.venv/bin/python -m pip install -e .
-./run-lafa.sh                 # LAFA Desktop
-./run-lafa.sh --settings      # separate settings surface
-./run-lafa.sh --virtual       # enabled companion, or Settings if disabled
-```
-
-Optional Debian runtime dependencies:
+See [docs/DEVELOPMENT.md](docs/DEVELOPMENT.md). In short:
 
 ```bash
-sudo apt install python3-venv libegl1 libopengl0 libxcb-cursor0 \
-  libxkbcommon-x11-0 libxcb-xinerama0 fonts-noto-core fonts-noto-color-emoji \
-  alsa-utils espeak-ng poppler-utils gnome-keyring
+sudo apt install python3-pyqt5 libqt5svg5 python3-keyring papirus-icon-theme fonts-noto-color-emoji
+LAFA_QT=pyqt5 python3 -m lafa.app --review     # Edukasaun OS stack (PyQt5)
+python3 -m venv .venv && .venv/bin/pip install -e . && LAFA_QT=pyside6 .venv/bin/lafa --review   # PySide6
 ```
 
-For user menu entries without a system package:
-
-```bash
-./scripts/install-user.sh
-```
-
-Keep the source folder at a stable location: the launcher uses its installed
-virtual environment. The script creates LAFA Desktop (education / custom
-Edukasaun category), LAFA Settings, and a hidden virtual-role desktop entry.
-It installs the native settings helper under user data. There is no root
-service or automatic startup. `scripts/uninstall-user.sh` removes these user
-launchers and the environment; preferences and secure keyring are retained.
-
-For a dedicated **Edukasaun** menu, the OS menu definition must route
-`X-Edukasaun` to that menu. The category is supplied; the current OS menu was
-not edited. Full host wiring is documented separately.
+`scripts/install-user.sh` still creates per-user launchers from a source
+checkout; the `.deb` is the recommended way on Edukasaun OS.
 
 ## AI setup
 

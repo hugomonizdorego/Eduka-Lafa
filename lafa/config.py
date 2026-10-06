@@ -39,6 +39,9 @@ STATES = ["idle", "reading", "thinking", "walking", "sitting", "gaming", "seriou
 IDLE_ACTIVITIES = ["idle", "reading", "thinking", "walking", "sitting", "gaming", "sleeping", "bathing", "toilet", "studying", "eating", "stretching", "tebe", "bidu"]
 
 def default_language():
+    # On Edukasaun OS LAFA follows the language chosen in Eduka-Settings.
+    from . import eduka
+    if eduka.installed():return eduka.language()
     raw = os.environ.get("LC_ALL") or os.environ.get("LC_MESSAGES") or os.environ.get("LANGUAGE") or os.environ.get("LANG") or locale.getlocale()[0] or "en"
     raw = raw.split(":")[0].replace("-","_").split("_")[0].split(".")[0].lower()
     return raw if raw in {"en", "id", "pt", "tet"} else "en"
@@ -89,6 +92,19 @@ class Settings:
     hover_questions: bool = True
     chatter: bool = True
     fun_messages: bool = True
+    # Lafa-Configuration (Eduka-Settings): Eduka-Desktop compatibility and tuning.
+    follow_eduka_panel: bool = True
+    follow_eduka_theme: bool = True
+    notifications: bool = True
+    walk_speed: str = "normal"
+    animation_speed: str = "normal"
+    character_size: str = "normal"
+    balloon_seconds: int = 6
+    speech_rate: int = 155
+    auto_update: bool = True
+    update_hours: int = 24
+    start_with_session: bool = True
+    start_page: str = "home"
 
     @property
     def locale(self):return default_language() if self.language=="system" else self.language
@@ -107,14 +123,14 @@ class Settings:
             if not isinstance(data,dict):return cls()
         except (OSError,ValueError,UnicodeError):return cls()
         defaults=cls();values={}
-        enums={'language':{'system','en','id','pt','tet'},'provider':set(PROVIDERS),'costume':{'traditional','casual'},'panel_edge':{'bottom','top'},'preset':{'fast'}}
+        enums={'language':{'system','en','id','pt','tet'},'provider':set(PROVIDERS),'costume':{'traditional','tuxedo','casual'},'walk_speed':{'slow','normal','fast'},'animation_speed':{'slow','normal','fast'},'character_size':{'small','normal','large'},'start_page':{'home','chat','os_help','teachers','homework','learn','coding','live','culture'},'panel_edge':{'bottom','top'},'preset':{'fast'}}
         for name,choices in enums.items():
             value=data.get(name,getattr(defaults,name))
             values[name]=value if isinstance(value,str) and value in choices else getattr(defaults,name)
-        for name in ['companion','roam','speak_answers','personal_activities','cultural_cards','positive_messages','local_news_updates','panel_roam','greet_by_time','hover_questions','chatter','fun_messages']:
+        for name in ['companion','roam','speak_answers','personal_activities','cultural_cards','positive_messages','local_news_updates','panel_roam','greet_by_time','hover_questions','chatter','fun_messages','follow_eduka_panel','follow_eduka_theme','notifications','auto_update','start_with_session']:
             value=data.get(name,getattr(defaults,name));values[name]=value if isinstance(value,bool) else getattr(defaults,name)
         import math
-        for name,lower,upper in [('panel_height',0,160),('card_minutes',1,120),('news_minutes',10,240),('idle_seconds',20,600)]:
+        for name,lower,upper in [('panel_height',0,160),('card_minutes',1,120),('news_minutes',10,240),('idle_seconds',20,600),('balloon_seconds',3,20),('speech_rate',80,260),('update_hours',1,168)]:
             try:
                 value=data.get(name,getattr(defaults,name))
                 if isinstance(value,bool) or not isinstance(value,(int,float,str)) or not math.isfinite(float(value)):raise ValueError()

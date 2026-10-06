@@ -1,0 +1,8 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: LAFA
+Source: https://github.com/hugomonizdorego/Eduka-Lafa
+
+Files: *
+Copyright: 2026 Hugo Moniz do Rego, STI Digitalização & Mídia – MCAS, Grupo IDEA
+License: MIT
+ See /usr/share/common-licenses or the LICENSE file in the source repository.

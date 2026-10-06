@@ -1,0 +1,18 @@
+Package: lafa
+Version: 0.1.1
+Section: education
+Priority: optional
+Architecture: all
+Installed-Size: 0
+Maintainer: Edukasaun OS <dev@edukasaun.org>
+Depends: python3 (>= 3.11), python3-pyqt5, libqt5svg5, python3-keyring, python3-secretstorage, xdg-utils, libglib2.0-bin, fonts-noto-color-emoji, hicolor-icon-theme
+Recommends: edukasaun-desktop-menu (>= 0.9.24), espeak-ng, alsa-utils, poppler-utils, papirus-icon-theme, gnome-keyring, network-manager-gnome, pavucontrol-qt, pcmanfm-qt, system-config-printer, screengrab, libreoffice
+Homepage: https://github.com/hugomonizdorego/Eduka-Lafa
+Description: LAFA - learning assistant and virtual companion for Edukasaun OS
+ LAFA Desktop is a complete school room: teachers for every subject with free
+ resources and offline practice, homework and timetable, library, computer
+ lab, notice board and Edukasaun OS help. The LAFA Virtual Assistant is an
+ animated crocodile from Timor-Leste that walks on the Eduka-Panel, changes
+ activities and outfits (Tais Mane, Tuxedo, Casual) and asks how it can help.
+ Settings are in Eduka-Settings -> Lafa-Configuration. No LAFA server: it uses
+ the internet, public open sources and optional AI providers (free Ollama).

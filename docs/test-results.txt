@@ -1,3 +1,4 @@
+QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-root'
 test_save_open_source_provider_and_reject_bad_endpoint (test_alpha.AlphaUI.test_save_open_source_provider_and_reject_bad_endpoint) ... This plugin does not support propagateSizeHints()
 ok
 test_version_label_and_greeting_in_introduction (test_alpha.AlphaUI.test_version_label_and_greeting_in_introduction) ... ok
@@ -15,7 +16,7 @@ test_merged_messages_alternate (test_alpha.OpenSourceProviderTests.test_merged_m
 test_ollama_chat_uses_local_endpoint (test_alpha.OpenSourceProviderTests.test_ollama_chat_uses_local_endpoint) ... ok
 test_open_source_ready_without_key (test_alpha.OpenSourceProviderTests.test_open_source_ready_without_key) ... ok
 test_settings_load_rejects_unsafe_endpoints (test_alpha.OpenSourceProviderTests.test_settings_load_rejects_unsafe_endpoints) ... ok
-test_version_restarted_at_alpha (test_alpha.VersionTests.test_version_restarted_at_alpha) ... ok
+test_version_is_consistent_everywhere (test_alpha.VersionTests.test_version_is_consistent_everywhere) ... ok
 test_anthropic (test_core.AdapterTests.test_anthropic) ... ok
 test_deepseek (test_core.AdapterTests.test_deepseek) ... ok
 test_gemini (test_core.AdapterTests.test_gemini) ... ok
@@ -41,6 +42,17 @@ test_symlinks_and_outside_read_blocked (test_core.CoreTests.test_symlinks_and_ou
 test_web_query_encoded (test_core.CoreTests.test_web_query_encoded) ... ok
 test_wikipedia_sources (test_core.CoreTests.test_wikipedia_sources) ... ok
 test_xml_entities_rejected (test_core.CoreTests.test_xml_entities_rejected) ... ok
+test_agenda_matches_eduka_format (test_eduka.AgendaNotifyTests.test_agenda_matches_eduka_format) ... ok
+test_notify_uses_fixed_dbus_arguments (test_eduka.AgendaNotifyTests.test_notify_uses_fixed_dbus_arguments) ... ok
+test_prefer_xwayland_like_eduka (test_eduka.AgendaNotifyTests.test_prefer_xwayland_like_eduka) ... ok
+test_lafa_stands_on_floating_eduka_panel (test_eduka.CompanionOnEdukaPanel.test_lafa_stands_on_floating_eduka_panel) ... ok
+test_lafa_system_language_follows_eduka_when_installed (test_eduka.LanguageTests.test_lafa_system_language_follows_eduka_when_installed) ... ok
+test_system_language_maps_to_lafa_locales (test_eduka.LanguageTests.test_system_language_maps_to_lafa_locales) ... ok
+test_tetun_chosen_in_eduka_settings (test_eduka.LanguageTests.test_tetun_chosen_in_eduka_settings) ... ok
+test_lafa_style_follows_eduka_theme (test_eduka.PanelThemeTests.test_lafa_style_follows_eduka_theme) ... ok
+test_panel_defaults_and_bounds (test_eduka.PanelThemeTests.test_panel_defaults_and_bounds) ... ok
+test_panel_span (test_eduka.PanelThemeTests.test_panel_span) ... ok
+test_theme_and_accent (test_eduka.PanelThemeTests.test_theme_and_accent) ... ok
 test_all_library_domains_and_added_sources (test_live.LiveTests.test_all_library_domains_and_added_sources) ... ok
 test_all_news_failures_do_not_invent_headlines (test_live.LiveTests.test_all_news_failures_do_not_invent_headlines) ... ok
 test_ambiguous_city_needs_selection (test_live.LiveTests.test_ambiguous_city_needs_selection) ... ok
@@ -139,6 +151,41 @@ This plugin does not support propagateSizeHints()
 This plugin does not support raise()
 ok
 test_settings_group_keeps_host_qt_binding (test_revision.RevisionUI.test_settings_group_keeps_host_qt_binding) ... ok
+test_language_follows_eduka_tetun (test_school_outfits.LafaConfiguration.test_language_follows_eduka_tetun) ... ok
+test_page_uses_eduka_structure_and_resets_to_recommended (test_school_outfits.LafaConfiguration.test_page_uses_eduka_structure_and_resets_to_recommended) ... ok
+test_plugin_patch_targets_eduka_settings (test_school_outfits.LafaConfiguration.test_plugin_patch_targets_eduka_settings) ... ok
+test_generated_sheets_match_manifests (test_school_outfits.OutfitData.test_generated_sheets_match_manifests) ... ok
+test_three_outfits_and_their_activities (test_school_outfits.OutfitData.test_three_outfits_and_their_activities) ... ok
+test_companion_uses_outfit_activities_and_wardrobe (test_school_outfits.OutfitRendering.test_companion_uses_outfit_activities_and_wardrobe) ... ok
+test_every_outfit_has_every_activity_pose (test_school_outfits.OutfitRendering.test_every_outfit_has_every_activity_pose) ... ok
+test_flag_icon (test_school_outfits.OutfitRendering.test_flag_icon) ... ok
+test_outfit_pixels_differ_from_base (test_school_outfits.OutfitRendering.test_outfit_pixels_differ_from_base) ... ok
+test_scenes_render_for_all_activities (test_school_outfits.OutfitRendering.test_scenes_render_for_all_activities) ... ok
+test_bump_and_check (test_school_outfits.ReleaseTool.test_bump_and_check) ... ✓ LAFA 0.1.1
+✓ LAFA 0.1.2
+ok
+test_math_practice (test_school_outfits.SchoolData.test_math_practice) ... ok
+test_planner_persists_and_validates (test_school_outfits.SchoolData.test_planner_persists_and_validates) ... ok
+test_teachers_complete (test_school_outfits.SchoolData.test_teachers_complete) ... ok
+test_vocab_and_quiz (test_school_outfits.SchoolData.test_vocab_and_quiz) ... ok
+test_agenda_written_when_requested (test_school_outfits.SchoolUI.test_agenda_written_when_requested) ... ok
+test_homework_page_and_home_summary (test_school_outfits.SchoolUI.test_homework_page_and_home_summary) ... Traceback (most recent call last):
+  File "/usr/bin/lafa", line 7, in <module>
+    from lafa.app import main
+  File "/usr/lib/lafa/lafa/app.py", line 13, in <module>
+    from .qt import (
+    ...<8 lines>...
+    )
+  File "/usr/lib/lafa/lafa/qt.py", line 35, in <module>
+    raise ImportError("LAFA needs PyQt5 (Debian: apt install python3-pyqt5) or PySide6 (pip install PySide6).")
+ImportError: LAFA needs PyQt5 (Debian: apt install python3-pyqt5) or PySide6 (pip install PySide6).
+ok
+test_lafa_settings_window_has_tuning (test_school_outfits.SchoolUI.test_lafa_settings_window_has_tuning) ... This plugin does not support propagateSizeHints()
+ok
+test_outfit_change_from_wardrobe (test_school_outfits.SchoolUI.test_outfit_change_from_wardrobe) ... ok
+test_school_navigation (test_school_outfits.SchoolUI.test_school_navigation) ... ok
+test_teacher_practice_flow (test_school_outfits.SchoolUI.test_teacher_practice_flow) ... ok
+test_teacher_uses_ai_with_subject_prompt (test_school_outfits.SchoolUI.test_teacher_uses_ai_with_subject_prompt) ... ok
 test_actual_overlay_submission_and_click (test_ui.UITests.test_actual_overlay_submission_and_click) ... This plugin does not support raise()
 This plugin does not support propagateSizeHints()
 This plugin does not support raise()
@@ -185,6 +232,7 @@ This plugin does not support raise()
 This plugin does not support propagateSizeHints()
 This plugin does not support raise()
 This plugin does not support raise()
+This plugin does not support raise()
 ok
 test_navigation_and_rendering (test_ui.UITests.test_navigation_and_rendering) ... This plugin does not support raise()
 This plugin does not support propagateSizeHints()
@@ -210,7 +258,6 @@ test_same_user_launcher_activation (test_ui.UITests.test_same_user_launcher_acti
 This plugin does not support propagateSizeHints()
 This plugin does not support raise()
 This plugin does not support propagateSizeHints()
-libpyside: addMetaMethod: Cannot add dynamic method "abort()" (2) to QLocalSocket/0x7c530e60: No Wrapper found.
 ok
 test_virtual_role_offline_opens_settings (test_ui.UITests.test_virtual_role_offline_opens_settings) ... This plugin does not support raise()
 This plugin does not support propagateSizeHints()
@@ -232,6 +279,13 @@ This plugin does not support propagateSizeHints()
 This plugin does not support raise()
 This plugin does not support propagateSizeHints()
 ok
+test_apply_merges_without_duplicates (test_updates.CatalogTests.test_apply_merges_without_duplicates) ... ok
+test_cards_from_catalog_join_the_deck (test_updates.CatalogTests.test_cards_from_catalog_join_the_deck) ... ok
+test_check_caches_newer_revision_only (test_updates.CatalogTests.test_check_caches_newer_revision_only) ... ok
+test_shipped_catalog_is_valid (test_updates.CatalogTests.test_shipped_catalog_is_valid) ... ok
+test_validation_rejects_unsafe_content (test_updates.CatalogTests.test_validation_rejects_unsafe_content) ... ok
+test_newer_release (test_updates.ReleaseTests.test_newer_release) ... ok
+test_version_ordering (test_updates.ReleaseTests.test_version_ordering) ... ok
 test_auto_host_detection_rejects_ambiguous_or_early_return (test_v4.V4Core.test_auto_host_detection_rejects_ambiguous_or_early_return) ... ok
 test_exec_path_survives_both_desktop_escape_layers (test_v4.V4Core.test_exec_path_survives_both_desktop_escape_layers) ... ok
 test_invalid_config_fields_do_not_erase_valid_preferences (test_v4.V4Core.test_invalid_config_fields_do_not_erase_valid_preferences) ... ok
@@ -270,6 +324,6 @@ test_settings_save_keeps_code_output_and_draft_chat (test_v4.V4UI.test_settings_
 ok
 
 ----------------------------------------------------------------------
-Ran 131 tests in 139.059s
+Ran 171 tests in 134.220s
 
 OK
