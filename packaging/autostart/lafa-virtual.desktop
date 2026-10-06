@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=LAFA Virtual Assistant
+Comment=Starts only when the LAFA Virtual Assistant is activated in Lafa-Configuration
+Exec=lafa --autostart
+Icon=lafa
+Terminal=false
+NoDisplay=true
+X-GNOME-Autostart-Delay=8

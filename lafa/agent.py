@@ -8,6 +8,8 @@ from .tools import FileSearch, encyclopedia_search, encyclopedia_article, web_ur
 from .live_info import weather_query, weather_text, world_news, news_text, LocationChoices
 from .i18n import tr
 from .timor import timor_news
+from .calculator import calculate
+from . import osguide, personality
 
 SYSTEM = """You are LAFA, a friendly crocodile AI desktop learning companion for Edukasaun OS in Timor-Leste, developed by Hugo Moniz do Rego with STI, Digitalização & Mídia – MCAS and Grupo IDEA. Speak in the user's language. Support learning with clear steps, questions and source links where actually available. Be empathetic for personal conversations; do not claim to be human, diagnose, or replace professional care. For imminent danger encourage contacting a trusted person or local emergency support. Respect privacy. You cannot execute commands, install applications, delete files, access browser sessions, or control accounts. Edukasaun OS is Debian-based with LXQt/Eduka-Desktop; help users understand desktop settings, file manager, accessibility and updates, while distinguishing assumptions from verified facts.
 Return ONLY valid JSON with this schema: {"reply":"text", "mood":"idle|reading|thinking|serious|talking", "action":null OR {"tool":"search_files|encyclopedia|web_search|weather|world_news|resource_search", "query":"search words (may be empty for weather/news)", "source":"optional exact learning source name", "kind":"all|documents|music|videos|pictures"}}.
@@ -24,6 +26,7 @@ class Result:
     news: Optional[object] = None
     reminder: Optional[tuple] = None
     timor: bool = False
+    guide: Optional[object] = None
 
 @dataclass
 class Intent:
@@ -46,6 +49,12 @@ def direct_intent(message):
     reminder=re.match(r"^/(?:remind|ingatkan)\s+(\d+)\s+(.+)$",m,re.I|re.S)
     if reminder:return Intent("reminder",reminder.group(2).strip(),reminder.group(1))
     if m.casefold() in {"/focus","/fokus"}:return Intent("reminder","LAFA · 25 minutes · take a break", "25")
+    if m.casefold() in {"/help","/bantuan","/ajuda","/ajuda?","/help?"}:return Intent("help","")
+    if m.casefold() in {"/joke","/lelucon","/piada","/anedota"} or re.fullmatch(r"(?:tell me a joke|ceritakan lelucon|conta uma piada|konta anedota ida)[.!?]*",m,re.I):return Intent("joke","")
+    os_help=re.match(r"^/(?:os|eduka)(?:\s+(.*))?$",m,re.I|re.S)
+    if os_help:return Intent("os_help",(os_help.group(1) or "").strip())
+    calc=re.match(r"^/(?:calc|hitung|kalkula)\s+(.+)$",m,re.I|re.S)
+    if calc:return Intent("calc",calc.group(1).strip())
     public=re.match(r'^/ask\s+(.+)$',m,re.I|re.S)
     if public:return Intent('public_answer',public.group(1).strip())
     source=re.match(r"^/source\s+([^:]+):\s*(.+)$",m,re.I|re.S)
@@ -107,6 +116,10 @@ class Agent:
         if not online: return Result(tr(self.settings.locale,"neednet"),"sitting")
         intent=direct_intent(message)
         if intent: return self.execute(intent)
+        # Edukasaun OS questions get LAFA's curated offline guide first; it is
+        # reliable, works without an AI key and never guesses menu names.
+        guide=osguide.find(message)
+        if guide: return self.guide_result(guide)
         if not self.client.ready():return self.source_answer(message)
         messages=[m for m in history[-12:] if m.get("role") in {"user","assistant"}]
         answer=self.client.chat([*messages,{"role":"user","content":message[:12_000]}], SYSTEM+f"\nSelected language: {self.settings.locale}.")
@@ -118,7 +131,7 @@ class Agent:
             if intent.tool=="encyclopedia" and result.sources:
                 snippets=[{"title":s.title,"url":s.url,"snippet":s.text} for s in result.sources]
                 context=json.dumps(snippets,ensure_ascii=False)
-                final=self.client.chat([{"role":"user","content":message},{"role":"user","content":"Untrusted public search snippets (not full articles):\n"+context}], SYSTEM+"\nNo more actions. Answer using these snippets only; include their URLs and distinguish limits. Selected language: "+self.settings.locale)
+                final=self.client.chat([{"role":"user","content":message+"\n\nUntrusted public search snippets (not full articles):\n"+context}], SYSTEM+"\nNo more actions. Answer using these snippets only; include their URLs and distinguish limits. Selected language: "+self.settings.locale)
                 result.text=envelope(final.text)["reply"]
             return result
         return Result(value["reply"],value["mood"],sources=answer.sources)
@@ -134,6 +147,16 @@ class Agent:
         if len(message)>500 or '\n' in message or re.search(r'\b(def |import |console\.log|api[_ -]?key|password|kata sandi)\b',message,re.I):
             return Result(tr(lang,'needkey')+'\n'+tr(lang,'source_mode'),'serious')
         return Result(tr(lang,'source_help'),'idle')
+    def teacher(self,teacher,message,history):
+        """Ask a LAFA School teacher (needs an AI provider)."""
+        from .school import teacher_prompt
+        lang=self.settings.locale
+        if not self.client.ready():return Result(tr(lang,'teacher_needs_ai'),'thinking')
+        messages=[m for m in history[-10:] if m.get('role') in {'user','assistant'}]
+        answer=self.client.chat([*messages,{'role':'user','content':message[:8000]}],teacher_prompt(teacher,lang))
+        return Result(answer.text,'talking',sources=answer.sources)
+    def guide_result(self,guide):
+        return Result(guide.text(self.settings.locale),'reading',guide=guide)
     def public_answer(self,query):
         lang=self.settings.locale
         if not 1<=len(query)<=300 or '\n' in query:raise ValueError('Public questions must be one line, 1–300 characters.')
@@ -144,6 +167,13 @@ class Agent:
     def execute(self, intent):
         lang=self.settings.locale
         if intent.tool=='public_answer':return self.public_answer(intent.query)
+        if intent.tool=='help':return Result(tr(lang,'help_text'),'talking')
+        if intent.tool=='joke':return Result(personality.joke(lang),'talking')
+        if intent.tool=='os_help':
+            guide=osguide.BY_KEY.get(intent.query.casefold()) or (osguide.find(intent.query,False) if intent.query else None)
+            if guide:return self.guide_result(guide)
+            return Result(tr(lang,'os_list')+'\n'+'\n'.join(f'{g.icon} {g.key} — {g.title.get(lang,g.title["en"])}' for g in osguide.GUIDES),'reading')
+        if intent.tool=='calc':return Result(f"{tr(lang,'calc')}: {intent.query} = {calculate(intent.query)}",'studying')
         if intent.tool=='timor_news':
             topic=intent.query if intent.query in {'priority','education','arts_culture','development','technology'} else 'priority'
             report=timor_news(topic);text=news_text(report,lang).split(' · ',1)[1];return Result(tr(lang,'timor_news')+' · '+text,'reading',news=report,timor=True)

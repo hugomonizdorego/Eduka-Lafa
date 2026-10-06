@@ -1,0 +1,26 @@
+name: Release
+
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Tag matches the version
+        run: |
+          python3 tools/release.py check
+          test "v$(sed -n 's/^__version__ = "\(.*\)"/\1/p' lafa/__init__.py)" = "${GITHUB_REF_NAME}"
+      - name: Build .deb
+        run: sh tools/build-deb.sh
+      - name: Publish GitHub release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: dist/*.deb
+          generate_release_notes: true
+          prerelease: true

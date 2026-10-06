@@ -26,8 +26,9 @@ def checks(network=False):
     def add(name,status,detail):results.append({'check':name,'status':status,'detail':detail})
     add('Python','pass' if sys.version_info>=(3,11) else 'fail',platform.python_version())
     add('Platform','pass' if sys.platform.startswith('linux') else 'warning',platform.system())
-    qt_available=importlib.util.find_spec('PySide6') is not None
-    add('Qt dependency','pass' if qt_available else 'fail','PySide6 available' if qt_available else 'Install project dependencies')
+    bindings=[name for name in ('PyQt5','PySide6') if importlib.util.find_spec(name) is not None]
+    qt_available=bool(bindings)
+    add('Qt dependency','pass' if qt_available else 'fail',' + '.join(bindings)+' available' if qt_available else 'Install python3-pyqt5 (Debian) or PySide6')
     if qt_available:
         try:
             result=subprocess.run([sys.executable,str(Path(__file__).resolve()),'--qt-probe'],capture_output=True,text=True,timeout=12,check=False)
@@ -59,8 +60,8 @@ def checks(network=False):
 
 def qt_probe():
     if not os.environ.get('DISPLAY') and not os.environ.get('WAYLAND_DISPLAY'):os.environ.setdefault('QT_QPA_PLATFORM','offscreen')
-    from PySide6.QtWidgets import QApplication
-    from PySide6.QtGui import QGuiApplication
+    from lafa.qt import QApplication
+    from lafa.qt import QGuiApplication
     from lafa.mascot import Atlas
     app=QApplication([]);atlas=Atlas()
     print(json.dumps({'activities':len(atlas.poses),'traditional':len(atlas.traditional),'backend':QGuiApplication.platformName()}));return 0

@@ -4,7 +4,7 @@ import re
 import uuid
 from pathlib import Path
 from urllib.parse import quote
-from .config import PROVIDERS
+from .config import PROVIDERS, OPEN_SOURCE
 from .net import json_request, request, NetworkError
 
 @dataclass
@@ -25,15 +25,33 @@ def responses_answer(data):
                     sources.append((a.get("title", a["url"]), a["url"]))
     return Answer("\n".join(pieces).strip(), list(dict.fromkeys(sources)))
 
+def merged(messages):
+    """Join consecutive same-role turns; several APIs require alternating roles."""
+    result = []
+    for m in messages:
+        if result and result[-1]["role"] == m["role"]:
+            result[-1] = {"role": m["role"], "content": result[-1]["content"] + "\n\n" + m["content"]}
+        else: result.append({"role": m["role"], "content": m["content"]})
+    return result
+
+def base_url(settings, provider):
+    """Endpoint root for open-source servers, without a trailing slash."""
+    if provider == "ollama": return settings.ollama_url.rstrip("/")
+    if provider == "compatible": return settings.compatible_url.rstrip("/")
+    return ""
+
 class ProviderClient:
     def __init__(self, settings, secrets):
         self.settings, self.secrets = settings, secrets
     def ready(self, provider=None):
         p = provider or self.settings.provider
+        if p in OPEN_SOURCE: return bool(base_url(self.settings, p) and self.settings.model(p))
         return bool(self.secrets.get(p) and (p == "perplexity" or self.settings.model(p)))
     def chat(self, messages, system):
         p = self.settings.provider
         key, model = self.secrets.get(p), self.settings.model(p)
+        messages = merged(messages)
+        if p in OPEN_SOURCE: return self.open_source_chat(p, key, model, messages, system)
         if not key: raise NetworkError("Set your API key in Settings first.")
         if p != "perplexity" and not model: raise NetworkError("Enter a model ID supported by your account in Settings.")
         endpoint = PROVIDERS[p][1]
@@ -61,6 +79,52 @@ class ProviderClient:
             answer = Answer(data.get("choices", [{}])[0].get("message", {}).get("content", "") or "")
         if not answer.text: raise NetworkError("No text answer returned. The model may have refused or used an unsupported output type.")
         return answer
+
+    def open_source_chat(self, p, key, model, messages, system):
+        root = base_url(self.settings, p)
+        if not root: raise NetworkError("Enter the open-source server address in Settings first.")
+        if not model: raise NetworkError("Enter or fetch a model name in Settings first.")
+        headers = {"Authorization": f"Bearer {key}"} if key else {}
+        body = {"model": model, "messages": [{"role":"system","content":system}, *messages], "stream": False}
+        # Ollama is restricted to this computer, so plain HTTP is acceptable there.
+        data = json_request(root + PROVIDERS[p][1], body, headers, timeout=180, loopback_http=p == "ollama")
+        if p == "ollama": text = (data.get("message") or {}).get("content", "")
+        else: text = (data.get("choices") or [{}])[0].get("message", {}).get("content", "")
+        if not isinstance(text, str) or not text.strip(): raise NetworkError("No text answer returned by the open-source model.")
+        return Answer(text.strip())
+
+    def list_models(self, provider=None, key=None):
+        """Model IDs the account or server offers, so users need not guess names."""
+        p = provider or self.settings.provider
+        key = key or self.secrets.get(p)
+        if p in OPEN_SOURCE:
+            root = base_url(self.settings, p)
+            if not root: raise NetworkError("Enter the open-source server address first.")
+            headers = {"Authorization": f"Bearer {key}"} if key else {}
+            if p == "ollama":
+                data = json_request(root + "/api/tags", headers=headers, timeout=10, loopback_http=True)
+                names = [m.get("name") for m in data.get("models", []) if isinstance(m, dict)]
+            else:
+                data = json_request(root + "/models", headers=headers, timeout=15)
+                names = [m.get("id") for m in data.get("data", []) if isinstance(m, dict)]
+        else:
+            if not key: raise NetworkError("Enter your API key first to list models.")
+            if p == "openai":
+                data = json_request("https://api.openai.com/v1/models", headers={"Authorization":f"Bearer {key}"}, timeout=15)
+                names = [m.get("id") for m in data.get("data", []) if isinstance(m, dict)]
+            elif p == "anthropic":
+                data = json_request("https://api.anthropic.com/v1/models?limit=100", headers={"x-api-key":key,"anthropic-version":"2023-06-01"}, timeout=15)
+                names = [m.get("id") for m in data.get("data", []) if isinstance(m, dict)]
+            elif p == "gemini":
+                data = json_request("https://generativelanguage.googleapis.com/v1beta/models?pageSize=200", headers={"x-goog-api-key":key}, timeout=15)
+                names = [str(m.get("name", "")).removeprefix("models/") for m in data.get("models", []) if isinstance(m, dict) and "generateContent" in m.get("supportedGenerationMethods", [])]
+            elif p == "deepseek":
+                data = json_request("https://api.deepseek.com/models", headers={"Authorization":f"Bearer {key}"}, timeout=15)
+                names = [m.get("id") for m in data.get("data", []) if isinstance(m, dict)]
+            else: raise NetworkError("Perplexity uses presets; a model ID is not required.")
+        names = sorted({n for n in names if isinstance(n, str) and 0 < len(n) <= 120 and not any(ord(c) < 32 for c in n)})
+        if not names: raise NetworkError("No models were found. Install or enable a model first.")
+        return names[:200]
 
     def transcribe(self, path):
         key = self.secrets.get("openai")

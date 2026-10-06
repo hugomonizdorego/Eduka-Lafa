@@ -55,6 +55,10 @@ class Card:
 class CardDeck:
     def __init__(self):
         self.cards=json.loads((Path(__file__).parent/'assets'/'timor-cards.json').read_text());self.previous=None;self.count=0
+        # Cards published later in the online source catalog (validated data).
+        from .updates import extra_cards
+        known={card['id'] for card in self.cards}
+        self.cards.extend(card for card in extra_cards() if card['id'] not in known)
     def next(self,language='en',cultural=True,positive=True):
         candidates=[c for c in self.cards if (c['category']=='positive' and positive) or (c['category']!='positive' and cultural)]
         if not candidates:return None

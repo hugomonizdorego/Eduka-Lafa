@@ -6,13 +6,13 @@ from pathlib import Path
 
 class Voice:
     def __init__(self): self.speaker=None; self.recorder=None
-    def speak(self, text, language="en"):
+    def speak(self, text, language="en", rate=155):
         self.stop_speaking()
         executable=shutil.which("espeak-ng") or shutil.which("espeak")
         if not executable: raise RuntimeError("Read aloud needs espeak-ng. Install it with your package manager.")
         # Tetum voice is not bundled; use Portuguese pronunciation as an explicit fallback.
         voice={"en":"en", "id":"id", "pt":"pt", "tet":"pt"}.get(language,"en")
-        proc=subprocess.Popen([executable,"-v",voice,"-s","155","--stdin"],stdin=subprocess.PIPE,stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL)
+        proc=subprocess.Popen([executable,"-v",voice,"-s",str(max(80,min(260,int(rate)))),"--stdin"],stdin=subprocess.PIPE,stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL)
         self.speaker=proc
         try:
             proc.communicate(text[:20_000].encode(),timeout=240)

@@ -1,4 +1,5 @@
 """Role separation, bounded code learning, Timor metadata and hardened access."""
+from lafa.qt import BINDING
 import importlib.util
 import json
 import os
@@ -79,7 +80,7 @@ class RevisionTests(unittest.TestCase):
 class RevisionUI(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        from PySide6.QtWidgets import QApplication
+        from lafa.qt import QApplication
         cls.app=QApplication.instance() or QApplication([])
     def test_default_desktop_and_explicit_settings_toggle(self):
         from lafa.app import Window
@@ -93,8 +94,8 @@ class RevisionUI(unittest.TestCase):
             if window.settings_dialog:window.settings_dialog.accept()
             window.companion.close();window.close();window.deleteLater();self.app.processEvents()
     def test_settings_group_keeps_host_qt_binding(self):
-        from PySide6.QtWidgets import QWidget,QVBoxLayout
+        from lafa.qt import QWidget,QVBoxLayout
         path=Path(__file__).resolve().parents[1]/'integration/eduka_lafa_settings.py';spec=importlib.util.spec_from_file_location('native_hook',path);module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
-        host=QWidget();layout=QVBoxLayout(host);group=module.add_lafa_group(layout,'PySide6',['/bin/false']);self.assertEqual(group.title(),'LAFA');self.assertEqual(layout.count(),1);host.deleteLater();self.app.processEvents()
+        host=QWidget();layout=QVBoxLayout(host);group=module.add_lafa_group(layout,BINDING,['/bin/false']);self.assertEqual(group.title(),'LAFA');self.assertEqual(layout.count(),1);host.deleteLater();self.app.processEvents()
 
 if __name__=='__main__':unittest.main()

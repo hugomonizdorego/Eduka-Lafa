@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=LAFA Virtual Assistant
+Comment=Show the LAFA character on the Eduka-Panel
+Exec=lafa --virtual
+Icon=lafa
+Terminal=false
+Categories=Education;
+NoDisplay=true

@@ -1,0 +1,10 @@
+#!/bin/sh
+# No GUI is started here (safe inside a Cubic chroot). LAFA starts from the
+# Edukasaun menu, or at login when the Virtual Assistant is activated.
+set -e
+if [ "$1" = "configure" ]; then
+    python3 -m compileall -q /usr/lib/lafa >/dev/null 2>&1 || true
+    command -v gtk-update-icon-cache >/dev/null 2>&1 && gtk-update-icon-cache -q -t /usr/share/icons/hicolor >/dev/null 2>&1 || true
+    command -v update-desktop-database >/dev/null 2>&1 && update-desktop-database -q /usr/share/applications >/dev/null 2>&1 || true
+fi
+exit 0
