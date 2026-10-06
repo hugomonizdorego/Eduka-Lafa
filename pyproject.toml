@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "lafa-assistant"
-version = "0.4.0"
+version = "0.1.0a1"
 description = "LAFA: an animated desktop learning companion for Edukasaun OS"
 readme = "README.md"
 requires-python = ">=3.11"

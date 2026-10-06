@@ -1,3 +1,21 @@
+test_save_open_source_provider_and_reject_bad_endpoint (test_alpha.AlphaUI.test_save_open_source_provider_and_reject_bad_endpoint) ... This plugin does not support propagateSizeHints()
+ok
+test_version_label_and_greeting_in_introduction (test_alpha.AlphaUI.test_version_label_and_greeting_in_introduction) ... ok
+test_calculator (test_alpha.CommandTests.test_calculator) ... ok
+test_help_and_calc_commands (test_alpha.CommandTests.test_help_and_calc_commands) ... ok
+test_translations_complete_for_new_keys (test_alpha.CommandTests.test_translations_complete_for_new_keys) ... ok
+test_english_search_has_no_second_call (test_alpha.FallbackAndGreetingTests.test_english_search_has_no_second_call) ... ok
+test_greeting_by_hour (test_alpha.FallbackAndGreetingTests.test_greeting_by_hour) ... ok
+test_tetun_search_falls_back_to_english (test_alpha.FallbackAndGreetingTests.test_tetun_search_falls_back_to_english) ... ok
+test_compatible_chat_uses_https_and_optional_key (test_alpha.OpenSourceProviderTests.test_compatible_chat_uses_https_and_optional_key) ... ok
+test_endpoint_validation (test_alpha.OpenSourceProviderTests.test_endpoint_validation) ... ok
+test_list_models (test_alpha.OpenSourceProviderTests.test_list_models) ... ok
+test_loopback_http_only_when_requested (test_alpha.OpenSourceProviderTests.test_loopback_http_only_when_requested) ... ok
+test_merged_messages_alternate (test_alpha.OpenSourceProviderTests.test_merged_messages_alternate) ... ok
+test_ollama_chat_uses_local_endpoint (test_alpha.OpenSourceProviderTests.test_ollama_chat_uses_local_endpoint) ... ok
+test_open_source_ready_without_key (test_alpha.OpenSourceProviderTests.test_open_source_ready_without_key) ... ok
+test_settings_load_rejects_unsafe_endpoints (test_alpha.OpenSourceProviderTests.test_settings_load_rejects_unsafe_endpoints) ... ok
+test_version_restarted_at_alpha (test_alpha.VersionTests.test_version_restarted_at_alpha) ... ok
 test_anthropic (test_core.AdapterTests.test_anthropic) ... ok
 test_deepseek (test_core.AdapterTests.test_deepseek) ... ok
 test_gemini (test_core.AdapterTests.test_gemini) ... ok
@@ -125,7 +143,8 @@ test_same_user_launcher_activation (test_ui.UITests.test_same_user_launcher_acti
 This plugin does not support propagateSizeHints()
 This plugin does not support raise()
 This plugin does not support propagateSizeHints()
-skipped 'This execution environment blocks AF_UNIX socket creation; test on Edukasaun OS.'
+libpyside: addMetaMethod: Cannot add dynamic method "abort()" (2) to QLocalSocket/0x5508c780: No Wrapper found.
+ok
 test_virtual_role_offline_opens_settings (test_ui.UITests.test_virtual_role_offline_opens_settings) ... This plugin does not support raise()
 This plugin does not support propagateSizeHints()
 This plugin does not support raise()
@@ -182,6 +201,6 @@ test_settings_save_keeps_code_output_and_draft_chat (test_v4.V4UI.test_settings_
 ok
 
 ----------------------------------------------------------------------
-Ran 88 tests in 76.014s
+Ran 105 tests in 69.766s
 
-OK (skipped=1)
+OK

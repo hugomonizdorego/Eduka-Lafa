@@ -1,3 +1,16 @@
+Metadata-Version: 2.4
+Name: lafa-assistant
+Version: 0.1.0a1
+Summary: LAFA: an animated desktop learning companion for Edukasaun OS
+Author: Hugo Moniz do Rego
+License: MIT
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: PySide6<7,>=6.6
+Requires-Dist: keyring<26,>=24
+Dynamic: license-file
+
 # LAFA
 
 **LAFA 0.1 Alpha** (`0.1.0a1`) is an open-source native desktop learning assistant and

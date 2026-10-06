@@ -1,4 +1,19 @@
-# Validation — LAFA 0.4.0 alpha
+# Validation — LAFA 0.1 Alpha (0.1.0a1)
+
+Development restarted at 0.1 Alpha. The checks below were run on 6 October 2026
+in a headless Linux container (Python 3.13, PySide6 6.11, Qt offscreen). They
+are **not** a test on Edukasaun OS hardware; the full re-check from the
+beginning is still in progress.
+
+| Check | Result |
+|---|---|
+| Automated tests | **105 passed** (88 carried over + 17 new for 0.1 Alpha), 0 skipped; see `test-results.txt` |
+| New coverage | Open-source endpoint validation, loopback-only HTTP, Ollama/compatible chat, model listing, message merging, `/calc` safety, `/help`, Wikipedia English fallback, time-of-day greeting, Settings save/reject for open-source providers, version label |
+| Package build | `lafa_assistant-0.1.0a1-py3-none-any.whl` built; `lafa/calculator.py` included |
+| Screenshots | 17 captures regenerated with `scripts/capture-screenshots.py` (offscreen); greeting text depends on the capture time |
+| Not yet re-checked | Real Ollama/open-source server, real provider accounts, microphone, espeak, X11/Wayland walking, Eduka-Settings host, Edukasaun menu; `system-check.json` is still the prototype 0.4 report |
+
+## Prototype 0.4 results (history, to be re-checked)
 
 Completed on 6 October 2026 in a Linux headless environment.
 

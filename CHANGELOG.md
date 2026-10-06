@@ -1,6 +1,41 @@
 # Changelog
 
-## 0.4.0 — 6 October 2026
+## 0.1 Alpha (0.1.0a1) — 6 October 2026 · development restart
+
+Version numbering restarts at **0.1 Alpha**. Every feature, test, screenshot and
+document is being re-checked from the beginning; earlier prototype results are
+history, not current guarantees.
+
+### Added
+- **Open-source AI without a main server**: Ollama on this computer (free, no
+  key, HTTP allowed only for loopback addresses) and any OpenAI-compatible
+  open-source server over HTTPS (llama.cpp, vLLM, LocalAI, a school or
+  community host). Key is optional for these servers.
+- **Fetch available models** button in Settings for every provider except
+  Perplexity, so users choose from real model IDs instead of guessing.
+- `/calc` (also `/hitung`, `/kalkula`): bounded calculator parsed with `ast`,
+  never `eval`; accepts `×`, `÷`, `^` and decimal commas.
+- `/help` (also `/bantuan`, `/ajuda`): translated list of LAFA commands.
+- LAFA Virtual Assistant greets by local time of day (morning, afternoon,
+  evening) on first activation; can be turned off in Settings.
+- LAFA Virtual and the Desktop character give a short hop when an answer arrives.
+
+### Fixed
+- Tetun, Indonesian and Portuguese Wikipedia searches with no result now fall
+  back to English Wikipedia; the source URL shows which edition answered.
+- Consecutive same-role messages are merged before provider calls, so
+  providers requiring alternating roles accept the source-synthesis step.
+- HTTP User-Agent now reports the real package version instead of a fixed value.
+- Chat footer no longer warns about paid API credits when an open-source model
+  is selected.
+
+### Validation
+- 105 automated tests passed (88 carried over, 17 new) in a headless Linux
+  environment; 17 screenshots regenerated. See `docs/VALIDATION.md`.
+
+## Prototype history (before the restart)
+
+### Prototype 0.4
 
 - Explicit Search public sources action and `/ask`; ordinary source-mode chat
   is no longer sent automatically to Wikipedia.
@@ -17,7 +52,7 @@
   system readiness checker with optional live public-source checks.
 - 88 tests (87 passed, one environment skip) and 17 review screenshots.
 
-## 0.3.0 — 6 October 2026
+### Prototype 0.3
 
 - Separate Desktop, Settings and Virtual Assistant surfaces and launch roles.
 - Virtual assistant off by default, translated activation and introduction.
@@ -32,12 +67,12 @@
   settings validation, lesson resource bounds and worker error recovery.
 - Fourteen reproducible screenshots and expanded security/validation notes.
 
-## 0.2.0
+### Prototype 0.2
 
 Desktop bubble input, fifteen activities, weather, world RSS headlines,
 additional learning links, session reminders and same-user launcher activation.
 
-## 0.1.0
+### Prototype 0.1
 
 Initial native assistant, official provider adapters, local file/document tools,
 public encyclopedia, browser service links and nine character poses.

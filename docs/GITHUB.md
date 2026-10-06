@@ -6,7 +6,7 @@ extracted `lafa/` folder. Replace YOUR-ACCOUNT with your actual account.
 ```bash
 git init
 git add .
-git commit -m "LAFA 0.4.0 Desktop and Virtual Assistant"
+git commit -m "LAFA 0.1 Alpha Desktop and Virtual Assistant"
 git branch -M main
 git remote add origin https://github.com/YOUR-ACCOUNT/lafa.git
 git push -u origin main
