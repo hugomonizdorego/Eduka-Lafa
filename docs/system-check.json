@@ -1,0 +1,82 @@
+{
+  "lafa_version": "0.4.0",
+  "network_requested": true,
+  "checks": [
+    {
+      "check": "Python",
+      "status": "pass",
+      "detail": "3.12.14"
+    },
+    {
+      "check": "Platform",
+      "status": "pass",
+      "detail": "Linux"
+    },
+    {
+      "check": "Qt dependency",
+      "status": "pass",
+      "detail": "PySide6 available"
+    },
+    {
+      "check": "Character assets",
+      "status": "pass",
+      "detail": "17 activity poses; 9 traditional poses"
+    },
+    {
+      "check": "Panel movement",
+      "status": "warning",
+      "detail": "Offscreen/Wayland needs target placement testing"
+    },
+    {
+      "check": "PDF reading",
+      "status": "pass",
+      "detail": "pdftotext available"
+    },
+    {
+      "check": "Read aloud",
+      "status": "warning",
+      "detail": "Optional command missing: espeak-ng"
+    },
+    {
+      "check": "Microphone recording",
+      "status": "warning",
+      "detail": "Optional command missing: arecord"
+    },
+    {
+      "check": "Local activation",
+      "status": "warning",
+      "detail": "Local sockets unavailable in this environment; test on Edukasaun OS"
+    },
+    {
+      "check": "Preferences",
+      "status": "pass",
+      "detail": "Language: en; virtual enabled: False; selected folders: 0"
+    },
+    {
+      "check": "Desktop launcher",
+      "status": "warning",
+      "detail": "Run scripts/install-user.sh from a stable source location"
+    },
+    {
+      "check": "Settings launcher",
+      "status": "warning",
+      "detail": "Run scripts/install-user.sh from a stable source location"
+    },
+    {
+      "check": "Wikipedia",
+      "status": "pass",
+      "detail": "Public request completed; no AI credentials used"
+    },
+    {
+      "check": "Dili weather",
+      "status": "pass",
+      "detail": "Public request completed; no AI credentials used"
+    },
+    {
+      "check": "Timor-Leste feeds",
+      "status": "pass",
+      "detail": "Public request completed; no AI credentials used"
+    }
+  ],
+  "private_data_included": false
+}

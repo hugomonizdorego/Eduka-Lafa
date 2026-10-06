@@ -1,0 +1,187 @@
+test_anthropic (test_core.AdapterTests.test_anthropic) ... ok
+test_deepseek (test_core.AdapterTests.test_deepseek) ... ok
+test_gemini (test_core.AdapterTests.test_gemini) ... ok
+test_missing_model_rejected (test_core.AdapterTests.test_missing_model_rejected) ... ok
+test_openai (test_core.AdapterTests.test_openai) ... ok
+test_perplexity_agent_api (test_core.AdapterTests.test_perplexity_agent_api) ... ok
+test_all_languages_complete (test_core.CoreTests.test_all_languages_complete) ... ok
+test_config_roundtrip_no_secrets (test_core.CoreTests.test_config_roundtrip_no_secrets) ... ok
+test_envelope_plaintext_and_mood (test_core.CoreTests.test_envelope_plaintext_and_mood) ... ok
+test_html_scripts_removed (test_core.CoreTests.test_html_scripts_removed) ... ok
+test_https_and_redirect_guard (test_core.CoreTests.test_https_and_redirect_guard) ... ok
+test_local_search_categories_and_hidden_files (test_core.CoreTests.test_local_search_categories_and_hidden_files) ... ok
+test_local_search_overlapping_roots_deduplicates (test_core.CoreTests.test_local_search_overlapping_roots_deduplicates) ... ok
+test_local_tool_results_never_sent_to_ai (test_core.CoreTests.test_local_tool_results_never_sent_to_ai) ... ok
+test_model_action_allowlist (test_core.CoreTests.test_model_action_allowlist) ... ok
+test_natural_language_and_commands (test_core.CoreTests.test_natural_language_and_commands) ... ok
+test_no_api_key_does_not_invent_answer (test_core.CoreTests.test_no_api_key_does_not_invent_answer) ... ok
+test_offline_never_searches_or_calls_api (test_core.CoreTests.test_offline_never_searches_or_calls_api) ... ok
+test_read_docx_and_odt_and_truncation (test_core.CoreTests.test_read_docx_and_odt_and_truncation) ... ok
+test_search_limits_are_reported (test_core.CoreTests.test_search_limits_are_reported) ... ok
+test_secure_keyring_no_plaintext (test_core.CoreTests.test_secure_keyring_no_plaintext) ... ok
+test_symlinks_and_outside_read_blocked (test_core.CoreTests.test_symlinks_and_outside_read_blocked) ... ok
+test_web_query_encoded (test_core.CoreTests.test_web_query_encoded) ... ok
+test_wikipedia_sources (test_core.CoreTests.test_wikipedia_sources) ... ok
+test_xml_entities_rejected (test_core.CoreTests.test_xml_entities_rejected) ... ok
+test_all_library_domains_and_added_sources (test_live.LiveTests.test_all_library_domains_and_added_sources) ... ok
+test_all_news_failures_do_not_invent_headlines (test_live.LiveTests.test_all_news_failures_do_not_invent_headlines) ... ok
+test_ambiguous_city_needs_selection (test_live.LiveTests.test_ambiguous_city_needs_selection) ... ok
+test_home_location_does_not_geocode (test_live.LiveTests.test_home_location_does_not_geocode) ... ok
+test_incomplete_weather_is_error (test_live.LiveTests.test_incomplete_weather_is_error) ... ok
+test_invalid_coordinates_rejected (test_live.LiveTests.test_invalid_coordinates_rejected) ... ok
+test_new_direct_commands (test_live.LiveTests.test_new_direct_commands) ... ok
+test_offline_gates_live_tools_and_reminders (test_live.LiveTests.test_offline_gates_live_tools_and_reminders) ... ok
+test_partial_news_failure_preserves_source (test_live.LiveTests.test_partial_news_failure_preserves_source) ... ok
+test_reminder_clock_cancel_and_offline_delivery (test_live.LiveTests.test_reminder_clock_cancel_and_offline_delivery) ... ok
+test_reminder_validation (test_live.LiveTests.test_reminder_validation) ... ok
+test_rss_host_date_query_and_title (test_live.LiveTests.test_rss_host_date_query_and_title) ... ok
+test_weather_units_times_and_attribution (test_live.LiveTests.test_weather_units_times_and_attribution) ... ok
+test_bad_config_types_and_limits (test_revision.RevisionTests.test_bad_config_types_and_limits) ... ok
+test_cards_citations_locale_and_no_consecutive_repeat (test_revision.RevisionTests.test_cards_citations_locale_and_no_consecutive_repeat) ... ok
+test_fifo_rejected_without_blocking (test_revision.RevisionTests.test_fifo_rejected_without_blocking) ... ok
+test_host_settings_patch_preserves_original_and_compiles (test_revision.RevisionTests.test_host_settings_patch_preserves_original_and_compiles) ... ok
+test_internal_and_directory_symlinks_blocked (test_revision.RevisionTests.test_internal_and_directory_symlinks_blocked) ... ok
+test_key_free_public_extract_is_cited (test_revision.RevisionTests.test_key_free_public_extract_is_cited) ... ok
+test_news_topic_matching_uses_categories_and_word_boundaries (test_revision.RevisionTests.test_news_topic_matching_uses_categories_and_word_boundaries) ... ok
+test_personal_support_is_not_sent_to_public_search (test_revision.RevisionTests.test_personal_support_is_not_sent_to_public_search) ... ok
+test_python_conditions_and_loop_output (test_revision.RevisionTests.test_python_conditions_and_loop_output) ... ok
+test_python_rejects_host_access_and_memory_attacks (test_revision.RevisionTests.test_python_rejects_host_access_and_memory_attacks) ... ok
+test_system_locale_and_explicit_choice (test_revision.RevisionTests.test_system_locale_and_explicit_choice) ... ok
+test_temporary_failure_never_creates_news (test_revision.RevisionTests.test_temporary_failure_never_creates_news) ... ok
+test_timor_command (test_revision.RevisionTests.test_timor_command) ... ok
+test_virtual_off_until_explicitly_enabled (test_revision.RevisionTests.test_virtual_off_until_explicitly_enabled) ... ok
+test_default_desktop_and_explicit_settings_toggle (test_revision.RevisionUI.test_default_desktop_and_explicit_settings_toggle) ... This plugin does not support raise()
+This plugin does not support propagateSizeHints()
+This plugin does not support raise()
+This plugin does not support propagateSizeHints()
+This plugin does not support raise()
+ok
+test_settings_group_keeps_host_qt_binding (test_revision.RevisionUI.test_settings_group_keeps_host_qt_binding) ... ok
+test_actual_overlay_submission_and_click (test_ui.UITests.test_actual_overlay_submission_and_click) ... This plugin does not support raise()
+This plugin does not support propagateSizeHints()
+This plugin does not support raise()
+This plugin does not support propagateSizeHints()
+This plugin does not support propagateSizeHints()
+This plugin does not support raise()
+This plugin does not support propagateSizeHints()
+This plugin does not support propagateSizeHints()
+This plugin does not support raise()
+ok
+test_all_locales_small_screen (test_ui.UITests.test_all_locales_small_screen) ... This plugin does not support raise()
+This plugin does not support propagateSizeHints()
+This plugin does not support raise()
+This plugin does not support propagateSizeHints()
+ok
+test_ambiguous_city_ui_requires_explicit_selection (test_ui.UITests.test_ambiguous_city_ui_requires_explicit_selection) ... This plugin does not support raise()
+This plugin does not support propagateSizeHints()
+This plugin does not support raise()
+This plugin does not support propagateSizeHints()
+This plugin does not support raise()
+ok
+test_busy_activity_and_personal_pose_filter (test_ui.UITests.test_busy_activity_and_personal_pose_filter) ... This plugin does not support raise()
+This plugin does not support propagateSizeHints()
+This plugin does not support raise()
+This plugin does not support propagateSizeHints()
+ok
+test_file_table_and_readonly (test_ui.UITests.test_file_table_and_readonly) ... This plugin does not support raise()
+This plugin does not support propagateSizeHints()
+This plugin does not support raise()
+This plugin does not support propagateSizeHints()
+ok
+test_focus_session_does_not_contact_ai (test_ui.UITests.test_focus_session_does_not_contact_ai) ... This plugin does not support raise()
+This plugin does not support propagateSizeHints()
+This plugin does not support raise()
+This plugin does not support propagateSizeHints()
+This plugin does not support propagateSizeHints()
+This plugin does not support raise()
+ok
+test_idle_at_sixty_seconds_not_restarted_by_network_probe (test_ui.UITests.test_idle_at_sixty_seconds_not_restarted_by_network_probe) ... This plugin does not support raise()
+This plugin does not support propagateSizeHints()
+This plugin does not support raise()
+This plugin does not support propagateSizeHints()
+ok
+test_navigation_and_rendering (test_ui.UITests.test_navigation_and_rendering) ... This plugin does not support raise()
+This plugin does not support propagateSizeHints()
+This plugin does not support raise()
+This plugin does not support propagateSizeHints()
+This plugin does not support propagateSizeHints()
+ok
+test_offline_pauses_character_and_actions (test_ui.UITests.test_offline_pauses_character_and_actions) ... This plugin does not support raise()
+This plugin does not support propagateSizeHints()
+This plugin does not support raise()
+This plugin does not support propagateSizeHints()
+ok
+test_pause_stops_idle_and_walk_timers (test_ui.UITests.test_pause_stops_idle_and_walk_timers) ... This plugin does not support raise()
+This plugin does not support propagateSizeHints()
+This plugin does not support raise()
+This plugin does not support propagateSizeHints()
+ok
+test_review_never_calls_provider (test_ui.UITests.test_review_never_calls_provider) ... This plugin does not support raise()
+This plugin does not support propagateSizeHints()
+This plugin does not support raise()
+This plugin does not support propagateSizeHints()
+ok
+test_same_user_launcher_activation (test_ui.UITests.test_same_user_launcher_activation) ... This plugin does not support raise()
+This plugin does not support propagateSizeHints()
+This plugin does not support raise()
+This plugin does not support propagateSizeHints()
+skipped 'This execution environment blocks AF_UNIX socket creation; test on Edukasaun OS.'
+test_virtual_role_offline_opens_settings (test_ui.UITests.test_virtual_role_offline_opens_settings) ... This plugin does not support raise()
+This plugin does not support propagateSizeHints()
+This plugin does not support raise()
+This plugin does not support propagateSizeHints()
+This plugin does not support propagateSizeHints()
+ok
+test_virtual_role_online_opens_bubble (test_ui.UITests.test_virtual_role_online_opens_bubble) ... This plugin does not support raise()
+This plugin does not support propagateSizeHints()
+This plugin does not support raise()
+This plugin does not support propagateSizeHints()
+This plugin does not support raise()
+This plugin does not support propagateSizeHints()
+This plugin does not support raise()
+This plugin does not support raise()
+ok
+test_worker_callback_on_main_thread (test_ui.UITests.test_worker_callback_on_main_thread) ... This plugin does not support raise()
+This plugin does not support propagateSizeHints()
+This plugin does not support raise()
+This plugin does not support propagateSizeHints()
+ok
+test_auto_host_detection_rejects_ambiguous_or_early_return (test_v4.V4Core.test_auto_host_detection_rejects_ambiguous_or_early_return) ... ok
+test_exec_path_survives_both_desktop_escape_layers (test_v4.V4Core.test_exec_path_survives_both_desktop_escape_layers) ... ok
+test_invalid_config_fields_do_not_erase_valid_preferences (test_v4.V4Core.test_invalid_config_fields_do_not_erase_valid_preferences) ... ok
+test_ipc_fragmented_frames_and_injection_are_bounded (test_v4.V4Core.test_ipc_fragmented_frames_and_injection_are_bounded) ... ok
+test_locale_catalogues_have_the_same_keys (test_v4.V4Core.test_locale_catalogues_have_the_same_keys) ... ok
+test_ordinary_chat_is_never_sent_to_public_search (test_v4.V4Core.test_ordinary_chat_is_never_sent_to_public_search) ... ok
+test_preference_fifo_is_rejected_without_blocking (test_v4.V4Core.test_preference_fifo_is_rejected_without_blocking) ... ok
+test_readiness_report_does_not_contain_private_data_or_query_network (test_v4.V4Core.test_readiness_report_does_not_contain_private_data_or_query_network) ... ok
+test_tab_indentation_and_nested_return_remain_safe (test_v4.V4Core.test_tab_indentation_and_nested_return_remain_safe) ... ok
+test_automatic_popup_respects_pause_draft_and_open_chat (test_v4.V4UI.test_automatic_popup_respects_pause_draft_and_open_chat) ... This plugin does not support raise()
+This plugin does not support propagateSizeHints()
+This plugin does not support raise()
+This plugin does not support propagateSizeHints()
+This plugin does not support propagateSizeHints()
+This plugin does not support raise()
+ok
+test_cancel_provider_edits_does_not_modify_live_models (test_v4.V4UI.test_cancel_provider_edits_does_not_modify_live_models) ... This plugin does not support propagateSizeHints()
+This plugin does not support propagateSizeHints()
+ok
+test_disabling_all_cards_does_not_starve_minute_activity_changes (test_v4.V4UI.test_disabling_all_cards_does_not_starve_minute_activity_changes) ... This plugin does not support raise()
+This plugin does not support propagateSizeHints()
+This plugin does not support raise()
+This plugin does not support propagateSizeHints()
+ok
+test_failed_preference_write_preserves_live_configuration (test_v4.V4UI.test_failed_preference_write_preserves_live_configuration) ... This plugin does not support propagateSizeHints()
+ok
+test_native_activation_confirms_state_and_factory_uses_host_binding (test_v4.V4UI.test_native_activation_confirms_state_and_factory_uses_host_binding) ... ok
+test_native_activation_pending_state_and_timeout (test_v4.V4UI.test_native_activation_pending_state_and_timeout) ... ok
+test_native_locale_recovers_from_bad_config_and_simple_tetun_locale (test_v4.V4UI.test_native_locale_recovers_from_bad_config_and_simple_tetun_locale) ... ok
+test_offline_save_keeps_request_buttons_and_all_characters_paused (test_v4.V4UI.test_offline_save_keeps_request_buttons_and_all_characters_paused) ... This plugin does not support propagateSizeHints()
+ok
+test_public_search_button_uses_an_explicit_command (test_v4.V4UI.test_public_search_button_uses_an_explicit_command) ... ok
+test_settings_save_keeps_code_output_and_draft_chat (test_v4.V4UI.test_settings_save_keeps_code_output_and_draft_chat) ... This plugin does not support propagateSizeHints()
+ok
+
+----------------------------------------------------------------------
+Ran 88 tests in 76.014s
+
+OK (skipped=1)

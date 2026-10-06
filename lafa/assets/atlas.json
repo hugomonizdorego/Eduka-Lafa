@@ -1,0 +1,74 @@
+{
+  "columns": 3,
+  "rows": 3,
+  "states": [
+    "idle",
+    "reading",
+    "thinking",
+    "walking",
+    "sitting",
+    "gaming",
+    "serious",
+    "angry",
+    "talking"
+  ],
+  "animation": "Procedural bob, sway, walking and state transitions around nine illustrated poses",
+  "reference": "User supplied Edukasaun Logo.png; text and logo border removed; character derived with ImageGen",
+  "rects": {
+    "idle": [
+      76,
+      10,
+      334,
+      397
+    ],
+    "reading": [
+      455,
+      17,
+      366,
+      395
+    ],
+    "thinking": [
+      892,
+      10,
+      334,
+      403
+    ],
+    "walking": [
+      37,
+      426,
+      385,
+      389
+    ],
+    "sitting": [
+      464,
+      449,
+      378,
+      358
+    ],
+    "gaming": [
+      896,
+      442,
+      348,
+      360
+    ],
+    "serious": [
+      31,
+      823,
+      360,
+      406
+    ],
+    "angry": [
+      472,
+      819,
+      347,
+      407
+    ],
+    "talking": [
+      853,
+      819,
+      383,
+      409
+    ]
+  },
+  "canvas": 418
+}

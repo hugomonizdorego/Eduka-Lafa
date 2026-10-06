@@ -1,0 +1,9 @@
+This plugin does not support propagateSizeHints()
+This plugin does not support propagateSizeHints()
+This plugin does not support propagateSizeHints()
+This plugin does not support propagateSizeHints()
+en: desktop, settings, translations and public search passed
+id: desktop, settings, translations and public search passed
+pt: desktop, settings, translations and public search passed
+tet: desktop, settings, translations and public search passed
+Isolated installed package 0.4.0 passed: 17 activities, 9 traditional poses, 9 pages, 3 settings tabs, 4 locales and system-language selection.

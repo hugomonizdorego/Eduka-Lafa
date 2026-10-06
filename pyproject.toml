@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lafa-assistant"
+version = "0.4.0"
+description = "LAFA: an animated desktop learning companion for Edukasaun OS"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+authors = [{name = "Hugo Moniz do Rego"}]
+dependencies = ["PySide6>=6.6,<7", "keyring>=24,<26"]
+
+[project.scripts]
+lafa = "lafa.app:main"
+
+[tool.setuptools.packages.find]
+include = ["lafa*"]
+
+[tool.setuptools.package-data]
+lafa = ["assets/*.png", "assets/*.json"]

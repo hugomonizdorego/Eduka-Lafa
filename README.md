@@ -1,0 +1,207 @@
+# LAFA
+
+**LAFA 0.4.0 alpha** is an open-source native desktop learning assistant and
+animated crocodile companion from Timor-Leste. Source, build scripts and developer
+documentation are in English. The interface follows the user's system language,
+with English, Indonesian, Portuguese and Tetun overrides. No `.deb` is produced.
+
+![LAFA Virtual Assistant review](docs/screenshots/05-lafa-desktop-concept.png)
+
+This image uses actual LAFA widget pixels on an **illustrated desktop**. It does
+not show installation on Edukasaun OS. Other captures are offscreen Qt renders.
+[View all seventeen captures](docs/SCREENSHOTS.md).
+
+## Two separate experiences
+
+| Surface | Purpose | Entry point |
+|---|---|---|
+| **LAFA Desktop** | Typed conversation, research, files, documents, AI service links, coding lessons, weather/news and reminders | Edukasaun menu launcher; `lafa --window` or simply `lafa` |
+| **LAFA Settings** | Dedicated settings surface, activation, language, outfit, panel movement, public information and API preferences | Settings launcher; `lafa --settings`; native Eduka-Settings group supplied |
+| **LAFA Virtual Assistant** | Floating character and speech bubble, quick help, encouragement and Timor-Leste facts | Enable **Activate LAFA Virtual Assistant in Eduka-Desktop** in Settings; `lafa --virtual` shows it only when enabled |
+
+The virtual assistant is **off by default**. First activation introduces LAFA:
+“I am LAFA, from Timor-Leste, a virtual assistant ready to help you.” The text is
+translated to the selected UI language. The initial outfit uses the supplied male
+traditional-clothing reference: striped red tais wrap, white sash, patterned
+head wrap and plume, bead necklaces and crescent chest ornament.
+
+The package includes the native settings group and an explicit source integration
+helper. The latest Eduka-Settings source was not available, so the installer
+creates a working standalone Settings entry and supplies the host integration
+module, a dedicated page factory and a runnable integration test host. The
+activation control waits for LAFA to confirm the saved state, and reports a
+failure or timeout. It does not claim to have modified or tested the current OS
+settings app.
+See [integration instructions](docs/EDUKA-INTEGRATION.md).
+
+## Features
+
+- Seventeen selectable activities: idle, reading, thinking, walking, sitting,
+  gaming, serious, mildly angry, talking, sleeping, bathing, toilet, studying,
+  eating, stretching, **Tebe-tebe** and **Bidu**. Nine have traditional-costume
+  illustrations; other states use the existing activity artwork.
+- Idle activity changes after 60 seconds without LAFA input, with no immediate
+  repeat. Busy work, open chat, dragging, pause and offline status suppress it.
+  Bath/toilet poses can be disabled. Animation uses procedural bob/sway and
+  X11 window movement; the dance poses are artistic mascot interpretations.
+- On X11, the walking state moves back and forth above the configured
+  top/bottom Eduka-Panel edge. Configure panel height to match the actual panel.
+  Wayland allows compositor-managed placement and manual dragging; automatic
+  cross-screen walking is disabled there.
+- Positive notes and source-linked Timor-Leste cards above the character's head,
+  default every five minutes while idle. Cards include Dili, tais, coffee, food,
+  tourism and Tebe, with source URLs and an explicit source-check date.
+  They are curated shipped facts, not continuously scraped assertions.
+- Timor-Leste headline metadata from **Tatoli, Timor Post and the Government of
+  Timor-Leste**, locally filtered for education, arts/culture, development and
+  technology. Manual refresh and optional idle updates every 30 minutes show
+  publisher and dates. Each publisher represents its own perspective.
+- Key-free **public source mode**: explicit Wikipedia queries and article introductions,
+  source links, weather, news, local filename search and supported reading.
+  Greetings and supportive notes have prepared responses. Full conversational
+  reasoning, personalized explanations and AI summaries use an optional API.
+  Choose **Search public sources** or type `/ask topic` to send a public question.
+  Ordinary chat text is never automatically sent to Wikipedia.
+- Five official API adapters: OpenAI, Gemini, Claude, DeepSeek and Perplexity.
+  The twelve service cards also link to Copilot, NotebookLM, Midjourney, Firefly,
+  ElevenLabs, Cursor and Lovable. Account login happens in the system browser;
+  a website subscription does not automatically give LAFA API access.
+- Learning links and scoped browser searches for Ruangguru, wikiHow, Fandom,
+  Everything2, Conservapedia, Miraheze and Baidu Baike, plus encyclopedias,
+  Wikibooks, Wikiversity, Khan Academy, OpenStax and Internet Archive.
+- **Virtual Coding**: editable beginner Python examples with a bounded AST
+  interpreter supporting variables, arithmetic, lists, loops, conditions and
+  print. Imports, file/network access, attributes, system commands and Python
+  `eval`/`exec` are unavailable. JavaScript, HTML and CSS have read/export lessons;
+  they are not executed. Explain with AI requires explicit code-transfer consent.
+- Filename-based search within selected local folders; documents, music, video
+  and pictures. TXT, MD, CSV, HTML, DOCX, ODT and text PDFs can be read locally.
+  AI summaries ask before sending document text. No permanent file index.
+- Current weather and three-day forecasts from Open-Meteo, default Dili, with
+  explicit city selection for ambiguous names. World headlines from BBC/Guardian.
+- In-memory session reminders, cancellation and a 25-minute focus timer.
+- Explicit eight-second microphone recording and OpenAI transcription; the
+  transcript is placed in the input for review. Local espeak read-aloud. Tetun
+  speech uses Portuguese pronunciation because a native Tetun voice is not bundled.
+- Internet check every 30 seconds. Offline hides the character, stops animation
+  and voice, disables requests and defers reminders. Settings stay accessible.
+
+LAFA is not all-knowing. It distinguishes source extracts, browser links, live
+metadata and AI responses. Network access alone does not create an AI model,
+API key or paid credits. General browser searches are links, not fetched results.
+
+## Run from source
+
+Target: Linux, Python 3.11+, Qt 6, Edukasaun OS / Debian with X11 or Wayland.
+
+```bash
+cd lafa
+python3 -m venv .venv
+.venv/bin/python -m pip install -e .
+./run-lafa.sh                 # LAFA Desktop
+./run-lafa.sh --settings      # separate settings surface
+./run-lafa.sh --virtual       # enabled companion, or Settings if disabled
+```
+
+Optional Debian runtime dependencies:
+
+```bash
+sudo apt install python3-venv libegl1 libopengl0 libxcb-cursor0 \
+  libxkbcommon-x11-0 libxcb-xinerama0 fonts-noto-core \
+  alsa-utils espeak-ng poppler-utils gnome-keyring
+```
+
+For user menu entries without a system package:
+
+```bash
+./scripts/install-user.sh
+```
+
+Keep the source folder at a stable location: the launcher uses its installed
+virtual environment. The script creates LAFA Desktop (education / custom
+Edukasaun category), LAFA Settings, and a hidden virtual-role desktop entry.
+It installs the native settings helper under user data. There is no root
+service or automatic startup. `scripts/uninstall-user.sh` removes these user
+launchers and the environment; preferences and secure keyring are retained.
+
+For a dedicated **Edukasaun** menu, the OS menu definition must route
+`X-Edukasaun` to that menu. The category is supplied; the current OS menu was
+not edited. Full host wiring is documented separately.
+
+## API setup
+
+Open LAFA Settings, select a provider, enter an official model ID available to
+your account and an API key, then Save. Perplexity uses its `fast` preset.
+Settings has separate **Virtual Assistant**, **AI & language**, and **Files &
+weather** tabs. Closing without saving leaves provider/model preferences
+unchanged. Saving preserves the coding editor, output and unsent chat draft.
+No model ID is guessed from a changing model catalogue. Keys stay in session
+memory unless secure keyring is selected. Secret Service/KWallet are accepted;
+plaintext fallbacks are rejected. Environment variables in `.env.example` are
+also supported; LAFA does not automatically load that file.
+
+| Provider | Native connection | Browser login |
+|---|---|---|
+| OpenAI | Responses API | [ChatGPT](https://chatgpt.com/) |
+| Google | Gemini GenerateContent | [Gemini](https://gemini.google.com/) |
+| Anthropic | Claude Messages | [Claude](https://claude.ai/) |
+| DeepSeek | Chat completions | [DeepSeek](https://chat.deepseek.com/) |
+| Perplexity | Agent API, fast preset | [Perplexity](https://www.perplexity.ai/) |
+
+Models, quotas, account permissions and pricing belong to each provider. There
+is no universal sign-in, credential scraping or reuse of browser cookies.
+
+## Commands
+
+```text
+/weather
+/weather Dili
+/news
+/timor education
+/timor arts_culture
+/timor technology
+/remind 5 Drink water
+/focus
+/source Ruangguru: fractions
+/ask Dili
+/learn photosynthesis
+/files lesson
+/music Timor
+/videos tutorial
+/web videos Python lesson
+/web documents mathematics
+```
+
+Direct commands work without an AI key. `/ask` sends one public topic of at most
+300 characters to Wikipedia and returns a cited introduction. `/learn` searches
+public source snippets. Ordinary chat stays local in source mode; prepared
+greetings and supportive messages are available. The optional API can
+interpret additional natural-language requests. Model actions are read-only
+and validated: files, encyclopedia, browser search, weather, world news and
+known learning-source links. `/timor` explicitly fetches local headlines.
+
+## Validation and limits
+
+[Validation results](docs/VALIDATION.md) and [security review](docs/SECURITY.md)
+record checks and remaining limits. No software can be guaranteed unhackable.
+This is a tested alpha implementation, not a certification of the current OS,
+provider accounts, desktop compositor or all dependency vulnerabilities.
+
+```bash
+QT_QPA_PLATFORM=offscreen .venv/bin/python -m unittest discover -s tests -v
+QT_QPA_PLATFORM=offscreen .venv/bin/python scripts/capture-screenshots.py
+.venv/bin/python scripts/check-system.py             # read-only readiness report
+.venv/bin/python scripts/check-system.py --network --json
+```
+
+The readiness check inspects runtime dependencies, assets, local activation and
+launcher availability. `--network` explicitly requests Wikipedia, Dili weather
+and Timor-Leste feed checks. It does not print keys, chat, model IDs or selected
+folder paths. An isolated Qt probe reports initialization failures without
+crashing the diagnostic parent process.
+
+[Upload to GitHub](docs/GITHUB.md) · [Privacy](docs/PRIVACY.md) ·
+[Architecture](docs/ARCHITECTURE.md) · [Asset provenance](docs/ASSETS.md)
+
+Code license: MIT. The supplied character identity remains subject to its
+owner's rights. New illustrations are included for this LAFA project.
