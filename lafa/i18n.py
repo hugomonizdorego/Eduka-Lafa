@@ -266,7 +266,31 @@ CLASS={
  'exam_done':'Remata! {score}/{total} loos ({percent}%) · {grade}','saved_report':'Rai ona iha boletin.','event':'Akontesimentu','era':'Era','timor_sub':'Husi ema dahuluk to\'o ohin: istória, símbolu, fatin no notísia Timor-Leste.'},
 }
 
-CATALOG={code:{**dict(zip(KEYS,strings)),**EXTRA[code],**NEW[code],**RELEASE[code],**ALPHA[code],**REDESIGN[code],**SCHOOL[code],**CONFIG[code],**CLASS[code]} for code,strings in STRINGS.items()}
+# LAFA 0.1.3: new design and the Timor-Leste atlas.
+DESIGN={
+'en':{'search_lafa':'Search LAFA…','learning_progress':'Learning progress','progress_note':'{results} results · {due} homework due','seg_school':'School','seg_timor':'Timor-Leste','seg_library':'Library & labs','seg_help':'Help & tools','ask_lafa':'Ask LAFA',
+ 'this_week':'This week','this_week_caption':'average · homework','ready_title':'Your school day is ready. Look what LAFA found:','start_learning':'Start','tile_lessons':'lessons ready in the classroom','tile_due':'homework due soon','tile_last':'your last result','tile_try':'try a 5-question quiz',
+ 'tile_system_ok':'Edukasaun OS looks healthy','tile_system_warn':'things to check on this computer','atlas':'Atlas','all_topics':'All topics','at_a_glance':'Timor-Leste at a glance','capital':'Capital','population_short':'Population','independence':'Independence',
+ 'online_sources':'Online sources','refresh_online':'Refresh from the internet','live_from':'🌐 Up to date from Wikipedia ({lang}) · {date}','live_pending':'🌐 The latest text from Wikipedia appears here after LAFA refreshes online.','built_in_text':'📘 LAFA built-in lesson text.',
+ 'live_status':'{n} topics refreshed · last update {date}','live_done':'{n} topics updated, {failed} not available','presidents':'Presidents of the Republic','prime_ministers':'Prime Ministers'},
+'id':{'search_lafa':'Cari di LAFA…','learning_progress':'Kemajuan belajar','progress_note':'{results} hasil · {due} PR segera','seg_school':'Sekolah','seg_timor':'Timor-Leste','seg_library':'Perpustakaan & lab','seg_help':'Bantuan & alat','ask_lafa':'Tanya LAFA',
+ 'this_week':'Minggu ini','this_week_caption':'rata-rata · PR','ready_title':'Hari sekolahmu siap. Lihat yang ditemukan LAFA:','start_learning':'Mulai','tile_lessons':'pelajaran siap di ruang kelas','tile_due':'PR yang segera dikumpulkan','tile_last':'hasil terakhirmu','tile_try':'coba kuis 5 soal',
+ 'tile_system_ok':'Edukasaun OS dalam keadaan baik','tile_system_warn':'hal yang perlu dicek di komputer ini','atlas':'Atlas','all_topics':'Semua topik','at_a_glance':'Timor-Leste sekilas','capital':'Ibu kota','population_short':'Penduduk','independence':'Kemerdekaan',
+ 'online_sources':'Sumber online','refresh_online':'Perbarui dari internet','live_from':'🌐 Terbaru dari Wikipedia ({lang}) · {date}','live_pending':'🌐 Teks terbaru dari Wikipedia muncul di sini setelah LAFA memperbarui secara online.','built_in_text':'📘 Teks pelajaran bawaan LAFA.',
+ 'live_status':'{n} topik diperbarui · terakhir {date}','live_done':'{n} topik diperbarui, {failed} tidak tersedia','presidents':'Presiden Republik','prime_ministers':'Perdana Menteri'},
+'pt':{'search_lafa':'Pesquisar no LAFA…','learning_progress':'Progresso','progress_note':'{results} resultados · {due} trabalhos para breve','seg_school':'Escola','seg_timor':'Timor-Leste','seg_library':'Biblioteca e laboratórios','seg_help':'Ajuda e ferramentas','ask_lafa':'Perguntar ao LAFA',
+ 'this_week':'Esta semana','this_week_caption':'média · trabalhos','ready_title':'O teu dia de escola está pronto. Vê o que o LAFA encontrou:','start_learning':'Começar','tile_lessons':'aulas prontas na sala de aula','tile_due':'trabalhos para breve','tile_last':'o teu último resultado','tile_try':'experimenta um quiz de 5 perguntas',
+ 'tile_system_ok':'O Edukasaun OS está bem','tile_system_warn':'coisas a verificar neste computador','atlas':'Atlas','all_topics':'Todos os temas','at_a_glance':'Timor-Leste em resumo','capital':'Capital','population_short':'População','independence':'Independência',
+ 'online_sources':'Fontes online','refresh_online':'Atualizar da internet','live_from':'🌐 Atualizado da Wikipédia ({lang}) · {date}','live_pending':'🌐 O texto mais recente da Wikipédia aparece aqui depois de o LAFA atualizar online.','built_in_text':'📘 Texto da aula do LAFA.',
+ 'live_status':'{n} temas atualizados · última atualização {date}','live_done':'{n} temas atualizados, {failed} indisponíveis','presidents':'Presidentes da República','prime_ministers':'Primeiros-Ministros'},
+'tet':{'search_lafa':'Buka iha LAFA…','learning_progress':'Progresu aprende','progress_note':'{results} rezultadu · {due} TPC atu entrega','seg_school':'Eskola','seg_timor':'Timor-Leste','seg_library':'Biblioteka no laboratóriu','seg_help':'Ajuda no ferramenta','ask_lafa':'Husu LAFA',
+ 'this_week':'Semana ne\'e','this_week_caption':'média · TPC','ready_title':'Ita-nia loron eskola prontu. Haree saida mak LAFA hetan:','start_learning':'Hahú','tile_lessons':'lisaun prontu iha sala aula','tile_due':'TPC atu entrega lalais','tile_last':'ita-nia rezultadu ikus','tile_try':'koko kuis ho pergunta 5',
+ 'tile_system_ok':'Edukasaun OS di\'ak','tile_system_warn':'buat atu haree iha komputadór ne\'e','atlas':'Atlas','all_topics':'Tópiku hotu','at_a_glance':'Timor-Leste iha badak','capital':'Kapitál','population_short':'Populasaun','independence':'Independénsia',
+ 'online_sources':'Fonte online','refresh_online':'Atualiza husi internet','live_from':'🌐 Atualizadu husi Wikipédia ({lang}) · {date}','live_pending':'🌐 Testu foun husi Wikipédia sei mosu iha ne\'e depois LAFA atualiza online.','built_in_text':'📘 Testu lisaun LAFA nian.',
+ 'live_status':'{n} tópiku atualizadu · ikus {date}','live_done':'{n} tópiku atualizadu, {failed} la iha','presidents':'Prezidente Repúblika','prime_ministers':'Primeiru-Ministru'},
+}
+
+CATALOG={code:{**dict(zip(KEYS,strings)),**EXTRA[code],**NEW[code],**RELEASE[code],**ALPHA[code],**REDESIGN[code],**SCHOOL[code],**CONFIG[code],**CLASS[code],**DESIGN[code]} for code,strings in STRINGS.items()}
 
 def _outfit_terms():
     """Activity and outfit names live with LAFA's personality data."""

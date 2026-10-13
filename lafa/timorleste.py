@@ -197,10 +197,10 @@ HOLIDAYS = [
 ]
 
 SOURCES = [
-    ("History of Timor-Leste · Wikipedia", "https://en.wikipedia.org/wiki/History_of_East_Timor"),
-    ("CAVR report Chega!", "https://chega.tl/"),
-    ("Arquivo & Museu da Resistência Timorense", "https://amrtimor.org/"),
-    ("Government of Timor-Leste", "https://timor-leste.gov.tl/?lang=en"),
+    ("Wikipedia · History of Timor-Leste", "https://en.wikipedia.org/wiki/History_of_East_Timor"),
+    ("Chega! (CAVR report)", "https://chega.tl/"),
+    ("AMRT · Arquivo & Museu da Resistência Timorense", "https://amrtimor.org/"),
+    ("Government · Timor-Leste", "https://timor-leste.gov.tl/?lang=en"),
     ("Tatoli · Agência Noticiosa de Timor-Leste", "https://tatoli.tl/"),
 ]
 

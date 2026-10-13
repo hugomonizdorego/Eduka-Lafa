@@ -4,6 +4,42 @@
 
 _Nothing yet._
 
+## 0.1.3 — 2026-10-13
+
+### New look (Eduka theme, not black)
+- LAFA Desktop combines a "smart care" overview with a dashboard layout:
+  a floating sidebar with **search** (pages, lessons, Timor-Leste topics),
+  school sections and a **learning progress** card; a top bar with section
+  tabs and **Ask LAFA**; and colourful lobby tiles with LAFA in them
+  (classroom, homework, exam hall, Timor-Leste, report card, system check),
+  a weekly progress ring and one round **Start** button.
+- Colours follow the Eduka-Desktop theme and accent: mint and cream in light
+  themes, deep teal in Eduka's dark themes. The design is deliberately
+  different from Eduka-Konekta (no top header bar or icon rail).
+
+### Timor-Leste atlas
+- New atlas with 84 topics in 14 categories: formation of the Earth and the
+  island, history from the first people to 2025, national symbols (flag,
+  coat of arms, anthem, languages, national days), map and its history,
+  all 14 municipalities, Ataúro, Jaco and Oé-Cusse, natural wealth, economy,
+  exports and imports, population, fertile regions, tourism, every President
+  and Prime Minister, the system of government and political history.
+- Category chips, a map of tiles sized by importance and an inspector panel;
+  "Timor-Leste at a glance" and the open sources.
+- **Always up to date**: when online, LAFA downloads the current Wikipedia
+  introduction of each topic in the reader's language (Tetun, Portuguese,
+  Indonesian, else English), caches it with its date and shows it next to
+  the built-in text. It refreshes when the connection comes back.
+
+### School
+- New subjects: **Civics & Citizenship**, **Geography**, **Health & PE**,
+  with lessons and quiz banks; exams also ask about Presidents and Prime
+  Ministers.
+
+### Fixes
+- An exam timer no longer keeps running twice after the page is rebuilt
+  (language or theme change).
+
 ## 0.1.2 — 2026-10-06
 
 ### Outfits fixed

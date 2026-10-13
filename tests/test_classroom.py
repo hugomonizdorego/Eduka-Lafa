@@ -143,9 +143,8 @@ class SchoolPages(unittest.TestCase):
         self.app.processEvents(); self.assertIn("10", "".join(l.text() for l in self.w.mind_dialog.findChildren(type(self.w.role_text))))
         self.w.companion.play_role("motivator"); self.assertEqual(self.w.companion.state, "motivator")
     def test_timor_page(self):
-        self.w.navigate("culture"); self.assertEqual(self.w.timor_tabs.count(), 3)
-        row = next(i for i, e in enumerate(self.w.timeline_events) if e and e.year == 2002)
-        self.w.timeline.setCurrentRow(row); self.assertEqual(self.w.event_title.text(), "Restoration of independence")
+        self.w.navigate("culture"); self.assertEqual(self.w.timor_tabs.count(), 2)
+        self.w.select_atlas("history_17"); self.assertEqual(self.w.inspect_title.text(), "Restoration of independence")
         self.assertTrue(self.w.home_word.text() and self.w.home_motivation.text() and self.w.home_history.text())
 
 if __name__ == "__main__": unittest.main()

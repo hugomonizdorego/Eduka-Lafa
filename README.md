@@ -1,6 +1,6 @@
 # LAFA
 
-**LAFA 0.1.2 Alpha** is an open-source learning assistant and animated
+**LAFA 0.1.3 Alpha** is an open-source learning assistant and animated
 crocodile companion from Timor-Leste for **Edukasaun OS** (Debian 13 Trixie,
 LXQt) and the **Eduka-Desktop Suite** (Eduka-Desktop, Eduka-Panel,
 Eduka-Settings). LAFA has **no main server**: it relies on the internet, public
@@ -17,16 +17,16 @@ and [how to keep developing LAFA](docs/DEVELOPMENT.md).
 
 ![Exam hall](docs/screenshots/33-exam-hall.png)
 
-![Timor-Leste history](docs/screenshots/36-timor-leste-history.png)
+![Timor-Leste atlas](docs/screenshots/36-timor-leste-atlas.png)
 
-[View all 43 captures](docs/SCREENSHOTS.md). Captures of LAFA on the desktop
+[View all 49 captures](docs/SCREENSHOTS.md). Captures of LAFA on the desktop
 are actual LAFA pixels on an **illustrated desktop**, not Edukasaun OS.
 
 ## Install on Edukasaun OS
 
 ```bash
-sh tools/build-deb.sh                       # -> dist/lafa_0.1.2_all.deb
-sudo apt install ./dist/lafa_0.1.2_all.deb  # dependencies come from Debian
+sh tools/build-deb.sh                       # -> dist/lafa_0.1.3_all.deb
+sudo apt install ./dist/lafa_0.1.3_all.deb  # dependencies come from Debian
 ```
 
 `apt` installs every dependency automatically: `python3-pyqt5` (the same Qt
@@ -66,6 +66,11 @@ Inside Cubic it starts no GUI. Updating later is the same `apt install` command.
 
 **LAFA Desktop — a complete school**
 
+The window follows the Eduka-Desktop theme (mint and cream, or deep teal
+in Eduka's dark themes): a floating sidebar with **search** and a
+**learning progress** card, section tabs and **Ask LAFA** at the top, and a
+lobby of colourful tiles with one round **Start** button.
+
 The sidebar is organised like a school building: **School** (lobby,
 classroom, teachers' room, exam hall, report card, homework), **Timor-Leste**,
 **Library & labs** and **Help & tools**.
@@ -77,12 +82,16 @@ classroom, teachers' room, exam hall, report card, homework), **Timor-Leste**,
   subjects, 20-minute timer), with a review of every mistake. Works offline.
 - **Report card**: results saved privately on the computer, averages, best
   scores and grades, export to a text file.
-- **Timor-Leste**: history from the first people of Jerimalai (c. 42,000
-  years ago) through Portuguese Timor, the occupation and resistance, the 1999
-  referendum, the restoration of independence on 20 May 2002 and ASEAN
-  membership in 2025; national facts and symbols, municipalities and main
-  towns, public holidays, "today in Timor-Leste", and the news and culture
-  feed.
+- **Timor-Leste atlas** (84 topics): from the formation of the Earth and of
+  the island to today — history, flag, coat of arms and anthem, the map and
+  its history, the 14 municipalities, Ataúro, Jaco and Oé-Cusse, natural
+  wealth, economy, exports and imports, population, fertile regions,
+  tourism, every President and Prime Minister, the system of government and
+  political history — plus the news and culture feed. When online, each
+  topic is refreshed from Wikipedia in the reader's language (with its date)
+  and kept for offline use.
+- Subjects: Mathematics, Science, Languages, History & Geography, Civics &
+  Citizenship, Geography, Health & PE, ICT & Coding, Arts & Culture.
 - **Lobby**: word of the day in four languages, LAFA's daily motivation, today
   in Timor-Leste or the next holiday, and **LAFA's roles**: teacher,
   professor, motivator, magician (a binary mind-reading trick), master,

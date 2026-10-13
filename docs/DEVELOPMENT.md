@@ -48,7 +48,8 @@ screenshots (downloadable as workflow artifacts).
 | Virtual Assistant | `lafa/mascot.py`, `lafa/personality.py`, `lafa/outfits.py` |
 | Outfit art | `tools/make-outfits.py` → `lafa/assets/lafa-{tuxedo,casual,tais}.png` |
 | LAFA Desktop (school) | `lafa/app.py`, `lafa/school.py`, `lafa/classroom.py` (lessons, exams, report card), `lafa/osguide.py`, `lafa/learning.py` |
-| Timor-Leste content | `lafa/timorleste.py` (history, symbols, municipalities, holidays) |
+| Timor-Leste content | `lafa/timorleste.py` (timeline, holidays), `lafa/timor_atlas.py` (atlas topics, leaders, municipalities), `lafa/livefacts.py` (online refresh) |
+| Look and feel | `lafa/ui_kit.py` (palette, tiles, ring) and `STYLE_TEMPLATE` in `lafa/app.py` — colours come from the Eduka theme |
 | LAFA's roles | `lafa/roles.py`, role texts in `lafa/personality.py`, scenes in `lafa/outfits.py` |
 | Lafa-Configuration (Eduka-Settings) | `integration/eduka_lafa_settings.py`, `integration/lafa-page.json` |
 | Eduka-Settings plugin pages | `integration/eduka-settings-plugin-pages.patch` (apply to Eduka-Desktop) |

@@ -82,6 +82,84 @@ LESSONS = [
            L("Clap the rhythm of a song you know and teach it to a friend.", "Tepuk irama lagu yang kamu tahu dan ajarkan ke teman.", "Bate palmas ao ritmo de uma canção e ensina-a a um amigo.", "Baku liman tuir ritmu kanta ida no hanorin ba belun.")),
 ]
 
+# ------------------------------------------------- more subjects (0.1.3)
+# Subjects taught in the classroom and exam hall without a separate teacher.
+EXTRA_SUBJECTS = {
+    "civics": L("Civics & Citizenship", "Kewarganegaraan", "Educação Cívica", "Edukasaun Sívika"),
+    "geography": L("Geography", "Geografi", "Geografia", "Jeografia"),
+    "health": L("Health & PE", "Kesehatan & Olahraga", "Saúde e Educação Física", "Saúde no Desportu"),
+}
+LESSONS += [
+    Lesson("civics", L("Our Constitution", "Konstitusi kita", "A nossa Constituição", "Ita-nia Konstituisaun"),
+           (L("The Constitution was adopted on 22 March 2002 and came into force on 20 May 2002.", "Konstitusi disahkan 22 Maret 2002 dan berlaku sejak 20 Mei 2002.", "A Constituição foi aprovada a 22 de março de 2002 e entrou em vigor a 20 de maio de 2002.", "Konstituisaun aprova iha 22 Marsu 2002 no tama vigór iha 20 Maiu 2002."),
+            L("It protects rights for everyone: life, equality, free speech, faith, education and health.", "Konstitusi melindungi hak semua orang: hidup, kesetaraan, kebebasan berpendapat, beragama, pendidikan dan kesehatan.", "Protege os direitos de todos: vida, igualdade, liberdade de expressão, religião, educação e saúde.", "Proteje direitu ema hotu: moris, igualdade, liberdade espresaun, fiar, edukasaun no saúde."),
+            L("Citizens also have duties: respect the law, protect the environment and take part in the community.", "Warga negara juga punya kewajiban: menaati hukum, menjaga lingkungan dan ikut serta dalam masyarakat.", "Os cidadãos também têm deveres: respeitar a lei, proteger o ambiente e participar na comunidade.", "Sidadaun mós iha devér: respeita lei, proteje ambiente no partisipa iha komunidade.")),
+           L("Choose one right and explain how it helps students in your school.", "Pilih satu hak dan jelaskan bagaimana hak itu membantu siswa di sekolahmu.", "Escolhe um direito e explica como ajuda os alunos da tua escola.", "Hili direitu ida no esplika oinsá nia ajuda estudante iha ita-nia eskola.")),
+    Lesson("civics", L("How the State works", "Cara negara bekerja", "Como funciona o Estado", "Oinsá Estadu servisu"),
+           (L("The President is head of State and is elected by the people for five years.", "Presiden adalah kepala negara dan dipilih rakyat untuk lima tahun.", "O Presidente é o chefe de Estado, eleito pelo povo por cinco anos.", "Prezidente mak xefe Estadu, povu mak hili ba tinan lima."),
+            L("The National Parliament (65 members) makes laws; the Government, led by the Prime Minister, carries them out.", "Parlemen Nasional (65 anggota) membuat undang-undang; Pemerintah yang dipimpin Perdana Menteri melaksanakannya.", "O Parlamento Nacional (65 deputados) faz as leis; o Governo, liderado pelo Primeiro-Ministro, executa-as.", "Parlamentu Nasionál (membru 65) halo lei; Governu, ho Primeiru-Ministru nu'udar xefe, implementa."),
+            L("Courts are independent; sucos elect their own chiefs and councils.", "Pengadilan bersifat independen; suco memilih kepala dan dewannya sendiri.", "Os tribunais são independentes; os sucos elegem os seus chefes e conselhos.", "Tribunál independente; suku hili sira-nia xefe no konsellu rasik.")),
+           L("Draw the four organs of sovereignty and connect them with arrows.", "Gambarlah empat organ kedaulatan dan hubungkan dengan panah.", "Desenha os quatro órgãos de soberania e liga-os com setas.", "Dezeña órgaun soberania haat no liga ho seta.")),
+    Lesson("geography", L("Reading a map", "Membaca peta", "Ler um mapa", "Lee mapa"),
+           (L("Maps have a title, a legend, a scale and a north arrow.", "Peta memiliki judul, legenda, skala dan arah utara.", "Os mapas têm título, legenda, escala e a seta do norte.", "Mapa iha títulu, lejenda, eskala no seta norte."),
+            L("Latitude tells how far north or south, longitude how far east or west; Dili is about 8.5° S, 125.6° E.", "Lintang menunjukkan jarak ke utara atau selatan, bujur ke timur atau barat; Dili sekitar 8,5° LS, 125,6° BT.", "A latitude diz a distância a norte ou sul, a longitude a leste ou oeste; Díli fica a cerca de 8,5° S, 125,6° E.", "Latitude hatudu dook ba norte ka sul, longitude ba leste ka oeste; Dili iha 8,5° S, 125,6° L."),
+            L("A scale of 1:100,000 means 1 cm on the map is 1 km on the ground.", "Skala 1:100.000 berarti 1 cm di peta sama dengan 1 km di lapangan.", "Uma escala de 1:100 000 quer dizer que 1 cm no mapa é 1 km no terreno.", "Eskala 1:100.000 signifika 1 cm iha mapa hanesan 1 km iha rai.")),
+           L("Draw a map of your way from home to school with a legend.", "Gambarlah peta jalan dari rumah ke sekolah lengkap dengan legenda.", "Desenha o mapa do caminho de casa à escola com uma legenda.", "Dezeña mapa dalan husi uma ba eskola ho lejenda.")),
+    Lesson("geography", L("Our planet", "Planet kita", "O nosso planeta", "Ita-nia planeta"),
+           (L("Earth has seven continents and five oceans; Timor lies between the Indian and Pacific Oceans.", "Bumi memiliki tujuh benua dan lima samudra; Timor terletak di antara Samudra Hindia dan Pasifik.", "A Terra tem sete continentes e cinco oceanos; Timor fica entre o Índico e o Pacífico.", "Rai iha kontinente hitu no oseanu lima; Timor iha entre Oseanu Índiku no Pasífiku."),
+            L("The Earth turns once a day (day and night) and goes round the Sun once a year.", "Bumi berputar sekali sehari (siang dan malam) dan mengelilingi Matahari sekali setahun.", "A Terra roda uma vez por dia (dia e noite) e dá a volta ao Sol uma vez por ano.", "Rai fila dala ida kada loron (loron no kalan) no haleu loro-matan dala ida kada tinan."),
+            L("Climate change brings stronger storms and higher seas; planting trees and saving water help.", "Perubahan iklim membawa badai lebih kuat dan laut lebih tinggi; menanam pohon dan menghemat air membantu.", "As alterações climáticas trazem tempestades mais fortes e mares mais altos; plantar árvores e poupar água ajuda.", "Mudansa klimátika lori anin-boot no tasi sa'e; kuda ai no poupa bee ajuda."),),
+           L("Find Timor-Leste, Indonesia and Australia on a world map.", "Temukan Timor-Leste, Indonesia dan Australia di peta dunia.", "Encontra Timor-Leste, a Indonésia e a Austrália no mapa-múndi.", "Buka Timor-Leste, Indonézia no Austrália iha mapa mundu.")),
+    Lesson("health", L("Clean hands, healthy body", "Tangan bersih, badan sehat", "Mãos limpas, corpo saudável", "Liman moos, isin saudável"),
+           (L("Wash hands with soap before eating and after the toilet: it stops many diseases.", "Cuci tangan dengan sabun sebelum makan dan setelah ke toilet: ini mencegah banyak penyakit.", "Lava as mãos com sabão antes de comer e depois da casa de banho: evita muitas doenças.", "Fase liman ho sabaun molok han no depois toalete: prevene moras barak."),
+            L("Drink clean or boiled water and cover food from flies.", "Minum air bersih atau air matang dan tutup makanan dari lalat.", "Bebe água limpa ou fervida e tapa a comida das moscas.", "Hemu bee moos ka bee nakali no taka ai-han husi lalar."),
+            L("Sleep under a mosquito net and remove standing water to prevent malaria and dengue.", "Tidur di bawah kelambu dan buang genangan air untuk mencegah malaria dan demam berdarah.", "Dorme com mosquiteiro e elimina água parada para prevenir a malária e o dengue.", "Toba iha moskiteiru okos no hasai bee ne'ebé para atu prevene malária no dengue.")),
+           L("Make a hand-washing poster for your classroom.", "Buat poster cuci tangan untuk kelasmu.", "Faz um cartaz sobre lavar as mãos para a sala.", "Halo póster fase liman ba ita-nia sala.")),
+    Lesson("health", L("Food and exercise", "Makanan dan olahraga", "Alimentação e exercício", "Ai-han no ezersísiu"),
+           (L("Eat many colours: vegetables, fruit, beans, fish, eggs, rice or maize.", "Makan beragam warna: sayur, buah, kacang, ikan, telur, nasi atau jagung.", "Come muitas cores: legumes, fruta, feijão, peixe, ovos, arroz ou milho.", "Han kór oioin: modo, ai-fuan, fore, ikan, manu-tolun, etu ka batar."),
+            L("Move at least 60 minutes a day: football, dance, walking to school.", "Bergerak paling sedikit 60 menit sehari: sepak bola, menari, berjalan ke sekolah.", "Mexe-te pelo menos 60 minutos por dia: futebol, dança, ir a pé para a escola.", "Book-an minutu 60 kada loron: futebol, dansa, la'o ba eskola."),
+            L("Sugary drinks harm teeth; water is the best drink.", "Minuman manis merusak gigi; air putih adalah minuman terbaik.", "As bebidas açucaradas estragam os dentes; a água é a melhor bebida.", "Hemu-tasak midar estraga nehan; bee mak hemu di'ak liu.")),
+           L("Write a healthy menu for one day using local food.", "Tulis menu sehat satu hari dengan makanan lokal.", "Escreve uma ementa saudável de um dia com comida local.", "Hakerek menu saudável ba loron ida ho ai-han lokál.")),
+]
+EXTRA_QUIZ = {
+"civics": [
+    (L("When did the Constitution come into force?", "Kapan Konstitusi mulai berlaku?", "Quando entrou em vigor a Constituição?", "Bainhira mak Konstituisaun tama vigór?"),
+     [L("20 May 2002", "20 Mei 2002", "20 de maio de 2002", "20 Maiu 2002"), L("28 November 1975", "28 November 1975", "28 de novembro de 1975", "28 Novembru 1975"), L("30 August 1999", "30 Agustus 1999", "30 de agosto de 1999", "30 Agostu 1999"), L("1 January 2000", "1 Januari 2000", "1 de janeiro de 2000", "1 Janeiru 2000")]),
+    (L("How many members does the National Parliament have?", "Berapa anggota Parlemen Nasional?", "Quantos deputados tem o Parlamento Nacional?", "Parlamentu Nasionál iha membru hira?"),
+     [L("65", "65", "65", "65"), L("13", "13", "13", "13"), L("100", "100", "100", "100"), L("25", "25", "25", "25")]),
+    (L("Who is the head of State?", "Siapa kepala negara?", "Quem é o chefe de Estado?", "Se mak xefe Estadu?"),
+     [L("The President of the Republic", "Presiden Republik", "O Presidente da República", "Prezidente Repúblika"), L("The Prime Minister", "Perdana Menteri", "O Primeiro-Ministro", "Primeiru-Ministru"), L("The suco chief", "Kepala suco", "O chefe de suco", "Xefe suku"), L("The judge", "Hakim", "O juiz", "Juís")]),
+    (L("For how many years is the President elected?", "Presiden dipilih untuk berapa tahun?", "Por quantos anos é eleito o Presidente?", "Prezidente hili ba tinan hira?"),
+     [L("5", "5", "5", "5"), L("2", "2", "2", "2"), L("10", "10", "10", "10"), L("For life", "Seumur hidup", "Para toda a vida", "Ba moris tomak")]),
+    (L("What is the national motto?", "Apa semboyan nasional?", "Qual é o lema nacional?", "Lema nasionál mak saida?"),
+     [L("Unidade, Acção, Progresso", "Unidade, Acção, Progresso", "Unidade, Acção, Progresso", "Unidade, Acção, Progresso"), L("Ordem e Progresso", "Ordem e Progresso", "Ordem e Progresso", "Ordem e Progresso"), L("Bhinneka Tunggal Ika", "Bhinneka Tunggal Ika", "Bhinneka Tunggal Ika", "Bhinneka Tunggal Ika"), L("Liberty, Equality, Fraternity", "Kebebasan, Kesetaraan, Persaudaraan", "Liberdade, Igualdade, Fraternidade", "Liberdade, Igualdade, Fraternidade")]),
+],
+"geography": [
+    (L("Which island lies about 25 km north of Dili?", "Pulau apa yang terletak sekitar 25 km di utara Dili?", "Que ilha fica a cerca de 25 km a norte de Díli?", "Illa saida mak iha 25 km norte Dili?"),
+     [L("Ataúro", "Ataúro", "Ataúro", "Ataúro"), L("Jaco", "Jaco", "Jaco", "Jaco"), L("Bali", "Bali", "Bali", "Bali"), L("Flores", "Flores", "Flores", "Flores")]),
+    (L("Which ocean lies south of Timor-Leste?", "Laut apa di selatan Timor-Leste?", "Que mar fica a sul de Timor-Leste?", "Tasi saida iha Timor-Leste nia sul?"),
+     [L("Timor Sea", "Laut Timor", "Mar de Timor", "Tasi Timor"), L("Mediterranean Sea", "Laut Tengah", "Mar Mediterrâneo", "Tasi Mediterráneu"), L("Caribbean Sea", "Laut Karibia", "Mar das Caraíbas", "Tasi Karaíba"), L("Arctic Ocean", "Samudra Arktik", "Oceano Ártico", "Oseanu Árctiku")]),
+    (L("How many continents are there?", "Ada berapa benua?", "Quantos continentes há?", "Kontinente iha hira?"),
+     [L("7", "7", "7", "7"), L("3", "3", "3", "3"), L("5", "5", "5", "5"), L("12", "12", "12", "12")]),
+    (L("Where does the exclave Oé-Cusse lie?", "Di mana letak eksklave Oé-Cusse?", "Onde fica o exclave de Oé-Cusse?", "Eksklave Oé-Cusse iha ne'ebé?"),
+     [L("On the north coast of West Timor", "Di pantai utara Timor Barat", "Na costa norte de Timor Ocidental", "Iha Timor Oeste nia kosta norte"), L("On Ataúro", "Di Ataúro", "Em Ataúro", "Iha Ataúro"), L("Near Lospalos", "Dekat Lospalos", "Perto de Lospalos", "Besik Lospalos"), L("In Australia", "Di Australia", "Na Austrália", "Iha Austrália")]),
+    (L("Which plain in Bobonaro is famous for rice?", "Dataran mana di Bobonaro terkenal dengan padi?", "Que planície de Bobonaro é famosa pelo arroz?", "Rai-tetuk saida iha Bobonaro famozu ho hare?"),
+     [L("Maliana", "Maliana", "Maliana", "Maliana"), L("Maubisse", "Maubisse", "Maubisse", "Maubisse"), L("Tutuala", "Tutuala", "Tutuala", "Tutuala"), L("Aileu", "Aileu", "Aileu", "Aileu")]),
+],
+"health": [
+    (L("When should you wash your hands?", "Kapan kamu harus mencuci tangan?", "Quando deves lavar as mãos?", "Bainhira mak ita tenke fase liman?"),
+     [L("Before eating and after the toilet", "Sebelum makan dan setelah ke toilet", "Antes de comer e depois da casa de banho", "Molok han no depois toalete"), L("Only on Sundays", "Hanya hari Minggu", "Só ao domingo", "Domingu de'it"), L("Never", "Tidak pernah", "Nunca", "Nunka"), L("Only when they look dirty", "Hanya saat terlihat kotor", "Só quando parecem sujas", "Bainhira haree foer de'it")]),
+    (L("Which insect spreads malaria and dengue?", "Serangga apa yang menyebarkan malaria dan demam berdarah?", "Que inseto transmite a malária e o dengue?", "Insetu saida mak hada'et malária no dengue?"),
+     [L("Mosquito", "Nyamuk", "Mosquito", "Susuk"), L("Butterfly", "Kupu-kupu", "Borboleta", "Bibi-bulu"), L("Bee", "Lebah", "Abelha", "Bani"), L("Ant", "Semut", "Formiga", "Nehek")]),
+    (L("What is the best drink for your body?", "Minuman apa yang terbaik untuk tubuh?", "Qual é a melhor bebida para o corpo?", "Hemu saida mak di'ak liu ba isin?"),
+     [L("Clean water", "Air bersih", "Água limpa", "Bee moos"), L("Soft drinks", "Minuman bersoda", "Refrigerantes", "Refrijerante"), L("Coffee only", "Kopi saja", "Só café", "Kafé de'it"), L("Energy drinks", "Minuman energi", "Bebidas energéticas", "Hemu enerjia")]),
+    (L("How many minutes should children move each day?", "Berapa menit anak-anak harus bergerak setiap hari?", "Quantos minutos devem as crianças mexer-se por dia?", "Labarik tenke book-an minutu hira kada loron?"),
+     [L("At least 60", "Paling sedikit 60", "Pelo menos 60", "Minimu 60"), L("5", "5", "5", "5"), L("None", "Tidak perlu", "Nenhum", "La presiza"), L("Only on holidays", "Hanya saat libur", "Só nas férias", "Feriadu de'it")]),
+    (L("Sleeping under what protects you from mosquitoes?", "Tidur di bawah apa yang melindungi dari nyamuk?", "Dormir debaixo de quê protege dos mosquitos?", "Toba iha saida okos mak proteje husi susuk?"),
+     [L("A mosquito net", "Kelambu", "Um mosquiteiro", "Moskiteiru"), L("A table", "Meja", "Uma mesa", "Meza"), L("A tree", "Pohon", "Uma árvore", "Ai-hun"), L("An umbrella", "Payung", "Um guarda-chuva", "Sombreiru")]),
+],
+}
+
 def lessons(subject=None):
     out = [l for l in LESSONS if subject in (None, l.subject)]
     if subject in (None, "history"):
@@ -100,7 +178,7 @@ class Question:
     correct: str
     subject: str
 
-SUBJECTS = ["math", "science", "languages", "history", "ict", "arts"]
+SUBJECTS = ["math", "science", "languages", "history", "civics", "geography", "health", "ict", "arts"]
 VOCAB_Q = L("How do you say “{word}” in {target}?", "Apa bahasa {target} dari “{word}”?", "Como se diz “{word}” em {target}?", "Oinsá atu dehan “{word}” iha {target}?")
 LANG_NAMES = {"en": L("English", "Inggris", "inglês", "Inglés"), "id": L("Indonesian", "Indonesia", "indonésio", "Indonézia"),
               "pt": L("Portuguese", "Portugis", "português", "Portugés"), "tet": L("Tetun", "Tetun", "tétum", "Tetun")}
@@ -128,11 +206,13 @@ def _vocab(lang, rng, n):
 
 def _bank(subject, lang, rng):
     out = []
-    for question, options in school.QUIZ.get(subject, []):
+    for question, options in school.QUIZ.get(subject, []) + EXTRA_QUIZ.get(subject, []):
         texts = [text(o, lang) for o in options]; correct = texts[0]; rng.shuffle(texts)
         out.append(Question(text(question, lang), texts, correct, subject))
     if subject == "history":
         out += [Question(q, o, c, "history") for q, o, c in timorleste.history_questions(lang, rng)]
+        from . import timor_atlas
+        out += [Question(q, o, c, "history") for q, o, c in timor_atlas.leader_questions(lang, rng)]
     return out
 
 def questions(subject, lang="en", count=10, rng=None):
@@ -226,4 +306,5 @@ def subject_name(subject, lang):
         from .i18n import tr
         return tr(lang, "all_subjects")
     teacher = school.BY_KEY.get(subject)
-    return teacher.text("name", lang) if teacher else subject
+    if teacher: return teacher.text("name", lang)
+    return text(EXTRA_SUBJECTS[subject], lang) if subject in EXTRA_SUBJECTS else subject

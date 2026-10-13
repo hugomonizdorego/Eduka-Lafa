@@ -140,7 +140,7 @@ class AlphaUI(unittest.TestCase):
         self.assertFalse(w.settings.greet_by_time); self.assertTrue(w.agent.client.ready())
     def test_version_label_and_greeting_in_introduction(self):
         from lafa.qt import QLabel
-        self.assertTrue(any(l.text() == "LAFA  " + VERSION_LABEL for l in self.window.findChildren(QLabel)))
+        self.assertTrue(any(l.text().endswith(" · " + VERSION_LABEL) for l in self.window.findChildren(QLabel)))
         self.assertTrue(self.window.companion.introduction(8).startswith("Good morning!"))
         self.window.settings.greet_by_time = False
         self.assertFalse(self.window.companion.introduction(8).startswith("Good morning!"))

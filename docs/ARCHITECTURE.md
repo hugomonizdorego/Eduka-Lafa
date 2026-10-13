@@ -31,6 +31,9 @@ of API access and belongs to the user's browser.
 | school | Teachers, offline practice (maths, vocabulary, quizzes, tips), homework and timetable storage |
 | classroom | Lessons, question generation, quiz/test/exam sessions with time limits, grades and the private report card |
 | timorleste | Timor-Leste history timeline, national facts, municipalities, public holidays, today in history, generated history questions |
+| timor_atlas | Timor-Leste atlas: 14 categories of topics, municipalities, Presidents and Prime Ministers, leader questions |
+| livefacts | Online refresh of atlas topics from Wikipedia (reader's language, HTTPS, no redirects), dated cache in ~/.cache/lafa (0600) |
+| ui_kit | Theme palette from the Eduka accent (light or deep teal), gradient lobby tiles, round action button, progress ring, atlas tiles, chips |
 | roles | LAFA's roles (teacher, professor, motivator, magician, master, comedian, helper), daily items and the binary mind reader |
 | updates | Validated online source catalog, cache, merge, release check |
 | personality | LAFA's character: assistant duty per activity, hover questions, activity reactions, self-talk and jokes in EN/ID/PT/TET |

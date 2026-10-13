@@ -1,4 +1,4 @@
-# Screenshot review — LAFA 0.1.2 Alpha
+# Screenshot review — LAFA 0.1.3 Alpha
 
 Regenerate after every UI change so developers can review and keep improving:
 
@@ -50,14 +50,20 @@ homework go to a temporary folder. Weather, headlines and sources are labelled
 | 33 | `33-exam-hall.png` | Exam hall: 20-question exam with the timer |
 | 34 | `34-exam-result.png` | Test result with grade and review of mistakes |
 | 35 | `35-report-card.png` | Report card: averages, best scores, grades and history |
-| 36 | `36-timor-leste-history.png` | Timor-Leste history timeline (1999 referendum) |
-| 37 | `37-timor-leste-nation.png` | Nation and symbols, municipalities and public holidays |
+| 36 | `36-timor-leste-atlas.png` | Timor-Leste atlas: category chips, tile map, inspector (Earth & island formation) |
+| 37 | `37-timor-leste-presidents.png` | Presidents and Prime Ministers |
 | 38 | `38-home-roles.png` | Lobby: word of the day, LAFA says, today in Timor-Leste, LAFA's roles (magician) |
 | 39 | `39-mind-reader.png` | Magician's mind reader: binary card |
 | 40 | `40-mind-reader-result.png` | Mind reader result and the maths behind it |
 | 41 | `41-lafa-roles.png` | LAFA's roles in every outfit |
 | 42 | `42-tuxedo-all-poses.png` | Tuxedo on every pose |
 | 43 | `43-casual-all-poses.png` | Casual on every pose: shirt, shorts, socks and sneakers |
+| 44 | `44-timor-leste-atauro.png` | Ataúro, Jaco and Oé-Cusse |
+| 45 | `45-timor-leste-history.png` | History: restoration of independence (2002) |
+| 46 | `46-timor-leste-municipalities.png` | The 14 municipalities with their main towns and history |
+| 47 | `47-timor-leste-economy.png` | Economy, exports and imports |
+| 48 | `48-classroom-civics.png` | New subject: Civics & Citizenship |
+| 49 | `49-timor-atlas-dark-theme.png` | The atlas in Eduka's dark theme (deep teal, never black) |
 
 Captures 20–24 are **compositions of actual LAFA widget pixels on a painted
 desktop and panel**, not screenshots of Edukasaun OS. Captures 18–19 run the
@@ -71,6 +77,6 @@ art by `tools/make-outfits.py`; hand-drawn sheets can replace them.
 ![Lafa-Configuration in Eduka-Settings](screenshots/18-eduka-settings-lafa-configuration.png)
 ![Outfits](screenshots/25-outfits.png)
 ![Exam hall](screenshots/33-exam-hall.png)
-![Timor-Leste](screenshots/36-timor-leste-history.png)
+![Timor-Leste atlas](screenshots/36-timor-leste-atlas.png)
 ![Casual on every pose](screenshots/43-casual-all-poses.png)
 ![Teachers](screenshots/02-teachers-mathematics.png)
