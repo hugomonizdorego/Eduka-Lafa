@@ -1,0 +1,1009 @@
+{
+ "subject": "it",
+ "icon": "🌐",
+ "name": {
+  "en": "IT and the internet",
+  "id": "TI dan internet",
+  "pt": "TI e internet",
+  "tet": "TI no internet"
+ },
+ "lessons": [
+  {
+   "level": "early",
+   "title": {
+    "en": "Computers can talk to each other",
+    "id": "Komputer bisa saling berbicara",
+    "pt": "Os computadores falam uns com os outros",
+    "tet": "Komputadór sira bele ko'alia malu"
+   },
+   "points": [
+    {
+     "en": "Computers can send messages and pictures to each other.",
+     "id": "Komputer bisa saling mengirim pesan dan gambar.",
+     "pt": "Os computadores podem enviar mensagens e imagens uns aos outros.",
+     "tet": "Komputadór sira bele haruka mensajen no imajen ba malu."
+    },
+    {
+     "en": "The internet joins computers all over the world.",
+     "id": "Internet menghubungkan komputer di seluruh dunia.",
+     "pt": "A internet liga computadores do mundo inteiro.",
+     "tet": "Internet liga komputadór sira iha mundu tomak."
+    },
+    {
+     "en": "Always ask a grown-up before you go online.",
+     "id": "Selalu minta izin orang dewasa sebelum masuk internet.",
+     "pt": "Pede sempre a um adulto antes de ires à internet.",
+     "tet": "Husu beibeik ba ema boot molok uza internet."
+    }
+   ],
+   "task": {
+    "en": "With a grown-up, send a short hello message to someone in your family.",
+    "id": "Bersama orang dewasa, kirim pesan salam singkat kepada anggota keluargamu.",
+    "pt": "Com um adulto, envia uma pequena mensagem de olá a alguém da tua família.",
+    "tet": "Hamutuk ho ema boot ida, haruka mensajen badak ida hodi hato'o bondia ba ita-nia família."
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "What joins computers all over the world?",
+      "id": "Apa yang menghubungkan komputer di seluruh dunia?",
+      "pt": "O que liga os computadores do mundo inteiro?",
+      "tet": "Saida mak liga komputadór sira iha mundu tomak?"
+     },
+     "answer": {
+      "en": "The internet",
+      "id": "Internet",
+      "pt": "A internet",
+      "tet": "Internet"
+     },
+     "wrong": [
+      {
+       "en": "A rope",
+       "id": "Tali",
+       "pt": "Uma corda",
+       "tet": "Tali"
+      },
+      {
+       "en": "A river",
+       "id": "Sungai",
+       "pt": "Um rio",
+       "tet": "Mota"
+      },
+      {
+       "en": "A bicycle",
+       "id": "Sepeda",
+       "pt": "Uma bicicleta",
+       "tet": "Bisikleta"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "What do you do before you go online?",
+      "id": "Apa yang kamu lakukan sebelum masuk internet?",
+      "pt": "O que fazes antes de ires à internet?",
+      "tet": "Ita halo saida molok uza internet?"
+     },
+     "answer": {
+      "en": "Ask a grown-up",
+      "id": "Minta izin orang dewasa",
+      "pt": "Peço a um adulto",
+      "tet": "Husu ba ema boot"
+     },
+     "wrong": [
+      {
+       "en": "Go alone and tell nobody",
+       "id": "Pergi sendiri tanpa bilang siapa pun",
+       "pt": "Vou sozinho sem dizer a ninguém",
+       "tet": "Ba mesak no la fó-hatene ema"
+      },
+      {
+       "en": "Tell strangers my name",
+       "id": "Memberi tahu namaku kepada orang asing",
+       "pt": "Digo o meu nome a estranhos",
+       "tet": "Fó-hatene ha'u-nia naran ba ema la koñesidu"
+      },
+      {
+       "en": "Turn off the light",
+       "id": "Mematikan lampu",
+       "pt": "Apago a luz",
+       "tet": "Hamate lampu"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "What can computers send to each other?",
+      "id": "Apa yang bisa dikirim komputer satu sama lain?",
+      "pt": "O que podem os computadores enviar uns aos outros?",
+      "tet": "Komputadór sira bele haruka saida ba malu?"
+     },
+     "answer": {
+      "en": "Messages and pictures",
+      "id": "Pesan dan gambar",
+      "pt": "Mensagens e imagens",
+      "tet": "Mensajen no imajen"
+     },
+     "wrong": [
+      {
+       "en": "Real mangoes",
+       "id": "Mangga sungguhan",
+       "pt": "Mangas verdadeiras",
+       "tet": "Haas loloos"
+      },
+      {
+       "en": "Water",
+       "id": "Air",
+       "pt": "Água",
+       "tet": "Bee"
+      },
+      {
+       "en": "Chairs",
+       "id": "Kursi",
+       "pt": "Cadeiras",
+       "tet": "Kadeira"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "level": "primary",
+   "title": {
+    "en": "The internet and the web",
+    "id": "Internet dan web",
+    "pt": "A internet e a web",
+    "tet": "Internet no web"
+   },
+   "points": [
+    {
+     "en": "The internet is a huge network of computers joined by cables, radio waves and satellites.",
+     "id": "Internet adalah jaringan raksasa komputer yang terhubung lewat kabel, gelombang radio, dan satelit.",
+     "pt": "A internet é uma enorme rede de computadores ligados por cabos, ondas de rádio e satélites.",
+     "tet": "Internet mak rede boot tebes husi komputadór sira ne'ebé liga ho kabu, onda rádiu no satélite."
+    },
+    {
+     "en": "The web is the pages on the internet. You open them with a browser, like Firefox, by typing an address.",
+     "id": "Web adalah halaman-halaman di internet. Kamu membukanya dengan peramban, seperti Firefox, dengan mengetik alamat.",
+     "pt": "A web são as páginas da internet. Abrimo-las com um navegador, como o Firefox, escrevendo um endereço.",
+     "tet": "Web mak pájina sira iha internet. Ita loke sira ho navegadór, hanesan Firefox, hodi hakerek enderesu ida."
+    },
+    {
+     "en": "Never share your password, home address or photos with people you do not know online.",
+     "id": "Jangan pernah membagikan kata sandi, alamat rumah, atau foto kepada orang yang tidak kamu kenal di internet.",
+     "pt": "Nunca partilhes a tua palavra-passe, a tua morada ou fotografias com pessoas que não conheces na internet.",
+     "tet": "Labele fahe ita-nia liafuan-pase, enderesu uma nian ka foto ho ema ne'ebé ita la koñese iha internet."
+    }
+   ],
+   "task": {
+    "en": "List three things you could look up on the web for school, and name the browser you use.",
+    "id": "Tulis tiga hal yang bisa kamu cari di web untuk sekolah, dan sebutkan peramban yang kamu pakai.",
+    "pt": "Faz uma lista de três coisas que podes procurar na web para a escola e diz que navegador usas.",
+    "tet": "Hakerek buat tolu ne'ebé ita bele buka iha web ba eskola, no temi navegadór ne'ebé ita uza."
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "Which program opens web pages?",
+      "id": "Program apa yang membuka halaman web?",
+      "pt": "Que programa abre páginas web?",
+      "tet": "Programa saida mak loke pájina web?"
+     },
+     "answer": {
+      "en": "A browser",
+      "id": "Peramban",
+      "pt": "Um navegador",
+      "tet": "Navegadór"
+     },
+     "wrong": [
+      {
+       "en": "A calculator",
+       "id": "Kalkulator",
+       "pt": "Uma calculadora",
+       "tet": "Kalkuladora"
+      },
+      {
+       "en": "A printer",
+       "id": "Pencetak",
+       "pt": "Uma impressora",
+       "tet": "Impresora"
+      },
+      {
+       "en": "A keyboard",
+       "id": "Papan ketik",
+       "pt": "Um teclado",
+       "tet": "Teklada"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "What should you keep secret online?",
+      "id": "Apa yang harus kamu rahasiakan di internet?",
+      "pt": "O que deves manter em segredo na internet?",
+      "tet": "Saida mak ita tenke rai segredu iha internet?"
+     },
+     "answer": {
+      "en": "Your password",
+      "id": "Kata sandimu",
+      "pt": "A tua palavra-passe",
+      "tet": "Ita-nia liafuan-pase"
+     },
+     "wrong": [
+      {
+       "en": "The name of your country",
+       "id": "Nama negaramu",
+       "pt": "O nome do teu país",
+       "tet": "Ita-nia nasaun nia naran"
+      },
+      {
+       "en": "The colour of the sky",
+       "id": "Warna langit",
+       "pt": "A cor do céu",
+       "tet": "Lalehan nia kór"
+      },
+      {
+       "en": "The day of the week",
+       "id": "Nama hari",
+       "pt": "O dia da semana",
+       "tet": "Loron saida iha semana"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "How are the computers of the internet joined?",
+      "id": "Bagaimana komputer di internet terhubung?",
+      "pt": "Como estão ligados os computadores da internet?",
+      "tet": "Komputadór sira iha internet liga oinsá?"
+     },
+     "answer": {
+      "en": "By cables, radio waves and satellites",
+      "id": "Lewat kabel, gelombang radio, dan satelit",
+      "pt": "Por cabos, ondas de rádio e satélites",
+      "tet": "Ho kabu, onda rádiu no satélite"
+     },
+     "wrong": [
+      {
+       "en": "Only by string",
+       "id": "Hanya dengan benang",
+       "pt": "Só por fios de lã",
+       "tet": "Ho kadeli deit"
+      },
+      {
+       "en": "Only by post",
+       "id": "Hanya lewat pos",
+       "pt": "Só pelo correio",
+       "tet": "Ho korreiu deit"
+      },
+      {
+       "en": "By rivers",
+       "id": "Lewat sungai",
+       "pt": "Pelos rios",
+       "tet": "Ho mota sira"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "level": "middle",
+   "title": {
+    "en": "First steps in coding with Python",
+    "id": "Langkah pertama coding dengan Python",
+    "pt": "Primeiros passos em programação com Python",
+    "tet": "Pasu dahuluk programasaun ho Python"
+   },
+   "points": [
+    {
+     "en": "A program is a list of exact instructions. Python is a popular programming language that is easy to read.",
+     "id": "Program adalah daftar perintah yang tepat. Python adalah bahasa pemrograman populer yang mudah dibaca.",
+     "pt": "Um programa é uma lista de instruções exatas. O Python é uma linguagem de programação popular e fácil de ler.",
+     "tet": "Programa mak lista instrusaun ne'ebé loos no klaru. Python mak lian programasaun ne'ebé ema barak uza no fasil atu lee."
+    },
+    {
+     "en": "print(\"Bondia Timor!\") shows text on the screen. A variable stores a value, like age = 13.",
+     "id": "print(\"Bondia Timor!\") menampilkan teks di layar. Variabel menyimpan nilai, misalnya age = 13.",
+     "pt": "print(\"Bondia Timor!\") mostra texto no ecrã. Uma variável guarda um valor, por exemplo age = 13.",
+     "tet": "print(\"Bondia Timor!\") hatudu testu iha ekrã. Variavel rai valór ida, ezemplu age = 13."
+    },
+    {
+     "en": "A loop repeats work: for i in range(3): print(i) shows 0, 1 and 2.",
+     "id": "Perulangan mengulang pekerjaan: for i in range(3): print(i) menampilkan 0, 1, dan 2.",
+     "pt": "Um ciclo repete tarefas: for i in range(3): print(i) mostra 0, 1 e 2.",
+     "tet": "Loop halo servisu beibeik: for i in range(3): print(i) hatudu 0, 1 no 2."
+    },
+    {
+     "en": "An if statement makes choices: if rain: print(\"Take an umbrella\").",
+     "id": "Pernyataan if membuat pilihan: if rain: print(\"Bawa payung\").",
+     "pt": "A instrução if faz escolhas: if rain: print(\"Leva o guarda-chuva\").",
+     "tet": "Instrusaun if halo hili: if rain: print(\"Lori sombreiru\")."
+    }
+   ],
+   "task": {
+    "en": "Write a Python program that prints the numbers 1 to 10 with a for loop.",
+    "id": "Tulis program Python yang menampilkan angka 1 sampai 10 dengan perulangan for.",
+    "pt": "Escreve um programa em Python que mostre os números de 1 a 10 com um ciclo for.",
+    "tet": "Hakerek programa Python ida ne'ebé hatudu númeru 1 to'o 10 ho loop for."
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "What does print(\"Bondia\") do?",
+      "id": "Apa yang dilakukan print(\"Bondia\")?",
+      "pt": "O que faz print(\"Bondia\")?",
+      "tet": "print(\"Bondia\") halo saida?"
+     },
+     "answer": {
+      "en": "Shows Bondia on the screen",
+      "id": "Menampilkan Bondia di layar",
+      "pt": "Mostra Bondia no ecrã",
+      "tet": "Hatudu Bondia iha ekrã"
+     },
+     "wrong": [
+      {
+       "en": "Deletes the word Bondia",
+       "id": "Menghapus kata Bondia",
+       "pt": "Apaga a palavra Bondia",
+       "tet": "Hamoos liafuan Bondia"
+      },
+      {
+       "en": "Saves Bondia as a picture",
+       "id": "Menyimpan Bondia sebagai gambar",
+       "pt": "Guarda Bondia como imagem",
+       "tet": "Rai Bondia hanesan imajen"
+      },
+      {
+       "en": "Turns off the computer",
+       "id": "Mematikan komputer",
+       "pt": "Desliga o computador",
+       "tet": "Hamate komputadór"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "What does for i in range(3): print(i) show?",
+      "id": "Apa yang ditampilkan for i in range(3): print(i)?",
+      "pt": "O que mostra for i in range(3): print(i)?",
+      "tet": "for i in range(3): print(i) hatudu saida?"
+     },
+     "answer": {
+      "en": "0, 1, 2",
+      "id": "0, 1, 2",
+      "pt": "0, 1, 2",
+      "tet": "0, 1, 2"
+     },
+     "wrong": [
+      {
+       "en": "1, 2, 3",
+       "id": "1, 2, 3",
+       "pt": "1, 2, 3",
+       "tet": "1, 2, 3"
+      },
+      {
+       "en": "3, 3, 3",
+       "id": "3, 3, 3",
+       "pt": "3, 3, 3",
+       "tet": "3, 3, 3"
+      },
+      {
+       "en": "0, 1, 2, 3",
+       "id": "0, 1, 2, 3",
+       "pt": "0, 1, 2, 3",
+       "tet": "0, 1, 2, 3"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "What is a variable?",
+      "id": "Apa itu variabel?",
+      "pt": "O que é uma variável?",
+      "tet": "Variavel mak saida?"
+     },
+     "answer": {
+      "en": "A name that stores a value",
+      "id": "Nama yang menyimpan nilai",
+      "pt": "Um nome que guarda um valor",
+      "tet": "Naran ida ne'ebé rai valór"
+     },
+     "wrong": [
+      {
+       "en": "A kind of cable",
+       "id": "Sejenis kabel",
+       "pt": "Um tipo de cabo",
+       "tet": "Kabu tipu ida"
+      },
+      {
+       "en": "A broken program",
+       "id": "Program yang rusak",
+       "pt": "Um programa avariado",
+       "tet": "Programa ne'ebé aat"
+      },
+      {
+       "en": "A website address",
+       "id": "Alamat situs web",
+       "pt": "Um endereço de site",
+       "tet": "Enderesu website"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "level": "secondary",
+   "title": {
+    "en": "Networks, data and cybersecurity",
+    "id": "Jaringan, data, dan keamanan siber",
+    "pt": "Redes, dados e cibersegurança",
+    "tet": "Rede, dadus no siberseguransa"
+   },
+   "points": [
+    {
+     "en": "Every device on a network has an IP address. DNS turns names like example.org into IP addresses.",
+     "id": "Setiap perangkat di jaringan punya alamat IP. DNS mengubah nama seperti example.org menjadi alamat IP.",
+     "pt": "Cada dispositivo numa rede tem um endereço IP. O DNS converte nomes como example.org em endereços IP.",
+     "tet": "Aparellu ida-idak iha rede iha enderesu IP. DNS troka naran hanesan example.org ba enderesu IP."
+    },
+    {
+     "en": "HTTPS encrypts data between your browser and a website, so others cannot read it. Look for the padlock.",
+     "id": "HTTPS mengenkripsi data antara peramban dan situs web, sehingga orang lain tidak bisa membacanya. Perhatikan ikon gembok.",
+     "pt": "O HTTPS cifra os dados entre o navegador e o site, para que outros não os possam ler. Procura o cadeado.",
+     "tet": "HTTPS enkripta dadus entre ita-nia navegadór no website, nune'e ema seluk labele lee. Buka sinál xave-kadeadu."
+    },
+    {
+     "en": "Phishing is a fake message that tricks you into giving passwords. Check the sender and the links before you click.",
+     "id": "Phishing adalah pesan palsu yang menipu agar kamu memberikan kata sandi. Periksa pengirim dan tautan sebelum mengklik.",
+     "pt": "O phishing é uma mensagem falsa que te engana para dares palavras-passe. Verifica o remetente e as ligações antes de clicar.",
+     "tet": "Phishing mak mensajen falsu ne'ebé bosok ita atu fó liafuan-pase. Haree uluk ema ne'ebé haruka no link sira molok klik."
+    },
+    {
+     "en": "Two-factor authentication adds a second check, like a code on your phone, so a stolen password is not enough.",
+     "id": "Autentikasi dua faktor menambah pemeriksaan kedua, seperti kode di ponsel, sehingga kata sandi curian saja tidak cukup.",
+     "pt": "A autenticação de dois fatores acrescenta uma segunda verificação, como um código no telemóvel, e assim uma palavra-passe roubada não chega.",
+     "tet": "Autentikasaun ho fatór rua aumenta verifikasaun daruak, hanesan kódigu iha telemovel, nune'e liafuan-pase ne'ebé na'ok ona la to'o."
+    }
+   ],
+   "task": {
+    "en": "Make a list of five warning signs of a phishing message and share it with your class.",
+    "id": "Buat daftar lima tanda bahaya pesan phishing dan bagikan kepada teman sekelas.",
+    "pt": "Faz uma lista de cinco sinais de alerta de uma mensagem de phishing e partilha-a com a turma.",
+    "tet": "Halo lista ida ho sinál alerta lima husi mensajen phishing no fahe ho ita-nia klase."
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "What does DNS do?",
+      "id": "Apa fungsi DNS?",
+      "pt": "O que faz o DNS?",
+      "tet": "DNS halo saida?"
+     },
+     "answer": {
+      "en": "Turns names into IP addresses",
+      "id": "Mengubah nama menjadi alamat IP",
+      "pt": "Converte nomes em endereços IP",
+      "tet": "Troka naran ba enderesu IP"
+     },
+     "wrong": [
+      {
+       "en": "Charges the battery",
+       "id": "Mengisi baterai",
+       "pt": "Carrega a bateria",
+       "tet": "Karga bateria"
+      },
+      {
+       "en": "Removes viruses",
+       "id": "Menghapus virus",
+       "pt": "Remove vírus",
+       "tet": "Hasai vírus"
+      },
+      {
+       "en": "Prints web pages",
+       "id": "Mencetak halaman web",
+       "pt": "Imprime páginas web",
+       "tet": "Imprime pájina web"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "What does HTTPS do?",
+      "id": "Apa fungsi HTTPS?",
+      "pt": "O que faz o HTTPS?",
+      "tet": "HTTPS halo saida?"
+     },
+     "answer": {
+      "en": "Encrypts data between browser and website",
+      "id": "Mengenkripsi data antara peramban dan situs",
+      "pt": "Cifra os dados entre navegador e site",
+      "tet": "Enkripta dadus entre navegadór no website"
+     },
+     "wrong": [
+      {
+       "en": "Makes pages more colourful",
+       "id": "Membuat halaman lebih berwarna",
+       "pt": "Torna as páginas mais coloridas",
+       "tet": "Halo pájina kór barak liu"
+      },
+      {
+       "en": "Blocks all adverts",
+       "id": "Memblokir semua iklan",
+       "pt": "Bloqueia toda a publicidade",
+       "tet": "Blokeia anúnsiu hotu"
+      },
+      {
+       "en": "Turns off the internet",
+       "id": "Mematikan internet",
+       "pt": "Desliga a internet",
+       "tet": "Hamate internet"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "What is phishing?",
+      "id": "Apa itu phishing?",
+      "pt": "O que é phishing?",
+      "tet": "Phishing mak saida?"
+     },
+     "answer": {
+      "en": "A fake message that tries to steal passwords",
+      "id": "Pesan palsu yang mencoba mencuri kata sandi",
+      "pt": "Uma mensagem falsa que tenta roubar palavras-passe",
+      "tet": "Mensajen falsu ne'ebé koko na'ok liafuan-pase"
+     },
+     "wrong": [
+      {
+       "en": "A way to catch fish online",
+       "id": "Cara menangkap ikan secara daring",
+       "pt": "Uma forma de pescar pela internet",
+       "tet": "Dalan atu kaer ikan liuhusi internet"
+      },
+      {
+       "en": "A fast network cable",
+       "id": "Kabel jaringan yang cepat",
+       "pt": "Um cabo de rede rápido",
+       "tet": "Kabu rede ne'ebé lalais"
+      },
+      {
+       "en": "A Python loop",
+       "id": "Perulangan Python",
+       "pt": "Um ciclo em Python",
+       "tet": "Loop Python nian"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "level": "university",
+   "title": {
+    "en": "Data, algorithms and AI basics",
+    "id": "Data, algoritma, dan dasar AI",
+    "pt": "Dados, algoritmos e bases de IA",
+    "tet": "Dadus, algoritmu no baze IA nian"
+   },
+   "points": [
+    {
+     "en": "Big-O notation describes how an algorithm grows: linear search is O(n), while binary search on sorted data is O(log n).",
+     "id": "Notasi Big-O menggambarkan pertumbuhan algoritma: pencarian linear O(n), sedangkan pencarian biner pada data terurut O(log n).",
+     "pt": "A notação Big-O descreve como cresce um algoritmo: a pesquisa linear é O(n) e a pesquisa binária em dados ordenados é O(log n).",
+     "tet": "Notasaun Big-O deskreve oinsá algoritmu ida boot: buska linear mak O(n), maibé buska binári iha dadus ne'ebé tuir orden mak O(log n)."
+    },
+    {
+     "en": "Databases keep data in tables. An SQL query like SELECT name FROM students WHERE age > 18; retrieves it.",
+     "id": "Basis data menyimpan data dalam tabel. Kueri SQL seperti SELECT name FROM students WHERE age > 18; mengambilnya.",
+     "pt": "As bases de dados guardam dados em tabelas. Uma consulta SQL como SELECT name FROM students WHERE age > 18; obtém-nos.",
+     "tet": "Baze dadus rai dadus iha tabela. Konsulta SQL hanesan SELECT name FROM students WHERE age > 18; foti dadus sira-ne'e."
+    },
+    {
+     "en": "Machine learning finds patterns in training data to make predictions, and is then tested on new data it has not seen.",
+     "id": "Pembelajaran mesin menemukan pola dalam data latih untuk membuat prediksi, lalu diuji dengan data baru yang belum pernah dilihat.",
+     "pt": "A aprendizagem automática encontra padrões nos dados de treino para fazer previsões e depois é testada com dados novos.",
+     "tet": "Aprendizajen automátika buka padraun iha dadus treinu nian atu halo previzaun, depois ema teste nia ho dadus foun."
+    },
+    {
+     "en": "AI can be wrong or biased if its data is incomplete or unfair, so people must check its results.",
+     "id": "AI bisa salah atau bias jika datanya tidak lengkap atau tidak adil, jadi manusia harus memeriksa hasilnya.",
+     "pt": "A IA pode errar ou ser enviesada se os dados forem incompletos ou injustos, por isso as pessoas devem verificar os resultados.",
+     "tet": "IA bele sala ka la neutru se nia dadus la kompletu ka la justu, tan ne'e ema tenke verifika nia rezultadu."
+    }
+   ],
+   "task": {
+    "en": "In Python, sort a list of 10 numbers, then write a binary search that finds one number in it.",
+    "id": "Dengan Python, urutkan daftar 10 angka, lalu tulis pencarian biner untuk menemukan satu angka di dalamnya.",
+    "pt": "Em Python, ordena uma lista de 10 números e depois escreve uma pesquisa binária que encontre um número nela.",
+    "tet": "Iha Python, tau lista númeru 10 tuir orden, depois hakerek buska binári ida atu hetan númeru ida iha laran."
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "What is the Big-O of binary search on sorted data?",
+      "id": "Berapa Big-O pencarian biner pada data terurut?",
+      "pt": "Qual é a ordem Big-O da pesquisa binária em dados ordenados?",
+      "tet": "Buska binári iha dadus ne'ebé tuir orden nia Big-O mak saida?"
+     },
+     "answer": {
+      "en": "O(log n)",
+      "id": "O(log n)",
+      "pt": "O(log n)",
+      "tet": "O(log n)"
+     },
+     "wrong": [
+      {
+       "en": "O(n²)",
+       "id": "O(n²)",
+       "pt": "O(n²)",
+       "tet": "O(n²)"
+      },
+      {
+       "en": "O(n)",
+       "id": "O(n)",
+       "pt": "O(n)",
+       "tet": "O(n)"
+      },
+      {
+       "en": "O(n log n)",
+       "id": "O(n log n)",
+       "pt": "O(n log n)",
+       "tet": "O(n log n)"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "What does SELECT name FROM students WHERE age > 18; return?",
+      "id": "Apa hasil SELECT name FROM students WHERE age > 18;?",
+      "pt": "O que devolve SELECT name FROM students WHERE age > 18;?",
+      "tet": "SELECT name FROM students WHERE age > 18; fó fila saida?"
+     },
+     "answer": {
+      "en": "Names of students older than 18",
+      "id": "Nama siswa yang berusia di atas 18",
+      "pt": "Os nomes dos estudantes com mais de 18 anos",
+      "tet": "Naran estudante sira ne'ebé idade liu 18"
+     },
+     "wrong": [
+      {
+       "en": "All students",
+       "id": "Semua siswa",
+       "pt": "Todos os estudantes",
+       "tet": "Estudante hotu"
+      },
+      {
+       "en": "It deletes students older than 18",
+       "id": "Menghapus siswa di atas 18 tahun",
+       "pt": "Apaga os estudantes com mais de 18 anos",
+       "tet": "Hamoos estudante sira ne'ebé idade liu 18"
+      },
+      {
+       "en": "Only students who are exactly 18",
+       "id": "Hanya siswa yang tepat 18 tahun",
+       "pt": "Só os estudantes com exatamente 18 anos",
+       "tet": "Estudante sira ne'ebé idade 18 loos deit"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "Why can an AI system be biased?",
+      "id": "Mengapa sistem AI bisa bias?",
+      "pt": "Porque pode um sistema de IA ser enviesado?",
+      "tet": "Tanba saida mak sistema IA bele la neutru?"
+     },
+     "answer": {
+      "en": "Its training data can be incomplete or unfair",
+      "id": "Data latihnya bisa tidak lengkap atau tidak adil",
+      "pt": "Os dados de treino podem ser incompletos ou injustos",
+      "tet": "Nia dadus treinu bele la kompletu ka la justu"
+     },
+     "wrong": [
+      {
+       "en": "Computers get tired",
+       "id": "Komputer bisa lelah",
+       "pt": "Os computadores ficam cansados",
+       "tet": "Komputadór kole"
+      },
+      {
+       "en": "The electricity is too strong",
+       "id": "Listriknya terlalu kuat",
+       "pt": "A eletricidade é demasiado forte",
+       "tet": "Eletrisidade forte liu"
+      },
+      {
+       "en": "The screen is too small",
+       "id": "Layarnya terlalu kecil",
+       "pt": "O ecrã é demasiado pequeno",
+       "tet": "Ekrã ki'ik liu"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "level": "adult",
+   "title": {
+    "en": "Internet and data skills for work",
+    "id": "Keterampilan internet dan data untuk kerja",
+    "pt": "Competências de internet e dados para o trabalho",
+    "tet": "Abilidade internet no dadus ba servisu"
+   },
+   "points": [
+    {
+     "en": "Write emails with a clear subject and a short message, check the address before sending, and do not open unexpected attachments.",
+     "id": "Tulis surel dengan subjek jelas dan pesan singkat, periksa alamat sebelum mengirim, dan jangan buka lampiran yang tidak terduga.",
+     "pt": "Escreve e-mails com um assunto claro e uma mensagem curta, verifica o endereço antes de enviar e não abras anexos inesperados.",
+     "tet": "Hakerek email ho asuntu klaru no mensajen badak, haree uluk enderesu molok haruka, no labele loke anexu ne'ebé ita la hein."
+    },
+    {
+     "en": "Cloud storage and shared documents let a team edit the same file from Dili, Baucau or abroad.",
+     "id": "Penyimpanan awan dan dokumen bersama memungkinkan tim menyunting berkas yang sama dari Dili, Baucau, atau luar negeri.",
+     "pt": "O armazenamento na nuvem e os documentos partilhados permitem a uma equipa editar o mesmo ficheiro em Díli, Baucau ou no estrangeiro.",
+     "tet": "Armazenamentu iha nuvem no dokumentu fahe-malu halo ekipa ida bele edita fixeiru hanesan husi Dili, Baucau ka rai li'ur."
+    },
+    {
+     "en": "Protect work accounts with long passphrases, a password manager and two-factor authentication.",
+     "id": "Lindungi akun kerja dengan frasa sandi panjang, pengelola kata sandi, dan autentikasi dua faktor.",
+     "pt": "Protege as contas de trabalho com frases-passe longas, um gestor de palavras-passe e autenticação de dois fatores.",
+     "tet": "Proteje konta servisu nian ho fraze-pase naruk, jestór liafuan-pase no autentikasaun ho fatór rua."
+    },
+    {
+     "en": "AI chat tools can help draft texts, but check the facts and never paste private customer data into them.",
+     "id": "Alat obrolan AI dapat membantu menyusun teks, tetapi periksa faktanya dan jangan pernah menempelkan data pribadi pelanggan.",
+     "pt": "As ferramentas de conversa com IA ajudam a redigir textos, mas verifica os factos e nunca coles dados privados de clientes.",
+     "tet": "Ferramenta konversa IA bele ajuda hakerek testu, maibé verifika faktu sira no labele tau dadus privadu klienti nian iha laran."
+    }
+   ],
+   "task": {
+    "en": "Turn on two-factor authentication for your email account, then send a colleague a short email with a clear subject.",
+    "id": "Aktifkan autentikasi dua faktor pada akun surelmu, lalu kirim surel singkat dengan subjek jelas kepada rekan kerja.",
+    "pt": "Ativa a autenticação de dois fatores na tua conta de e-mail e envia a um colega um e-mail curto com um assunto claro.",
+    "tet": "Ativa autentikasaun ho fatór rua iha ita-nia konta email, depois haruka email badak ida ho asuntu klaru ba kolega servisu."
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "What lets a team edit one file together from different places?",
+      "id": "Apa yang memungkinkan tim menyunting satu berkas bersama dari tempat berbeda?",
+      "pt": "O que permite a uma equipa editar o mesmo ficheiro a partir de sítios diferentes?",
+      "tet": "Saida mak halo ekipa ida bele edita fixeiru ida hamutuk husi fatin oioin?"
+     },
+     "answer": {
+      "en": "Shared documents in cloud storage",
+      "id": "Dokumen bersama di penyimpanan awan",
+      "pt": "Documentos partilhados na nuvem",
+      "tet": "Dokumentu fahe-malu iha nuvem"
+     },
+     "wrong": [
+      {
+       "en": "A printer",
+       "id": "Pencetak",
+       "pt": "Uma impressora",
+       "tet": "Impresora"
+      },
+      {
+       "en": "A paper notebook sent by post",
+       "id": "Buku catatan kertas yang dikirim lewat pos",
+       "pt": "Um caderno de papel enviado pelo correio",
+       "tet": "Kadernu surat-tahan ne'ebé haruka liuhusi korreiu"
+      },
+      {
+       "en": "A USB keyboard",
+       "id": "Papan ketik USB",
+       "pt": "Um teclado USB",
+       "tet": "Teklada USB"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "What is the best protection for a work account?",
+      "id": "Apa perlindungan terbaik untuk akun kerja?",
+      "pt": "Qual é a melhor proteção para uma conta de trabalho?",
+      "tet": "Saida mak protesaun di'ak liu ba konta servisu?"
+     },
+     "answer": {
+      "en": "A long passphrase plus two-factor authentication",
+      "id": "Frasa sandi panjang ditambah autentikasi dua faktor",
+      "pt": "Uma frase-passe longa e autenticação de dois fatores",
+      "tet": "Fraze-pase naruk ho autentikasaun fatór rua"
+     },
+     "wrong": [
+      {
+       "en": "The password 123456",
+       "id": "Kata sandi 123456",
+       "pt": "A palavra-passe 123456",
+       "tet": "Liafuan-pase 123456"
+      },
+      {
+       "en": "The same password everywhere",
+       "id": "Kata sandi yang sama di mana-mana",
+       "pt": "A mesma palavra-passe em todo o lado",
+       "tet": "Liafuan-pase hanesan iha fatin hotu"
+      },
+      {
+       "en": "The password on a note on the desk",
+       "id": "Kata sandi di kertas catatan di meja",
+       "pt": "A palavra-passe num papel na secretária",
+       "tet": "Liafuan-pase iha nota ida iha meza leten"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "When you use an AI chat tool at work, what should you do?",
+      "id": "Saat memakai alat obrolan AI di tempat kerja, apa yang harus dilakukan?",
+      "pt": "Quando usas uma ferramenta de conversa com IA no trabalho, o que deves fazer?",
+      "tet": "Bainhira uza ferramenta konversa IA iha servisu, ita tenke halo saida?"
+     },
+     "answer": {
+      "en": "Check the facts and keep private data out",
+      "id": "Periksa fakta dan jangan masukkan data pribadi",
+      "pt": "Verificar os factos e não pôr dados privados",
+      "tet": "Verifika faktu no la tau dadus privadu"
+     },
+     "wrong": [
+      {
+       "en": "Paste all customer data into it",
+       "id": "Menempelkan semua data pelanggan",
+       "pt": "Colar todos os dados dos clientes",
+       "tet": "Tau dadus klienti hotu iha laran"
+      },
+      {
+       "en": "Trust every answer without checking",
+       "id": "Memercayai semua jawaban tanpa memeriksa",
+       "pt": "Confiar em todas as respostas sem verificar",
+       "tet": "Fiar resposta hotu la ho verifika"
+      },
+      {
+       "en": "Give it your email password",
+       "id": "Memberikan kata sandi surelmu",
+       "pt": "Dar-lhe a palavra-passe do e-mail",
+       "tet": "Fó ita-nia liafuan-pase email ba nia"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "level": "senior",
+   "title": {
+    "en": "Staying safe and connected online",
+    "id": "Tetap aman dan terhubung di internet",
+    "pt": "Ligado e seguro na internet",
+    "tet": "Seguru no liga malu iha internet"
+   },
+   "points": [
+    {
+     "en": "Video calls let you see family in Dili or abroad at low cost, using Wi-Fi or mobile data.",
+     "id": "Panggilan video memungkinkan Anda melihat keluarga di Dili atau luar negeri dengan biaya murah, lewat Wi-Fi atau data seluler.",
+     "pt": "As videochamadas permitem ver a família em Díli ou no estrangeiro com pouco custo, por Wi-Fi ou dados móveis.",
+     "tet": "Xamada vídeu halo ita bele haree família iha Dili ka rai li'ur ho kustu ki'ik, uza Wi-Fi ka dadus telemovel."
+    },
+    {
+     "en": "Scammers may call or write saying you won a prize or a relative needs money urgently. Hang up and check with your family first.",
+     "id": "Penipu bisa menelepon atau mengirim pesan bahwa Anda menang hadiah atau kerabat butuh uang segera. Tutup dan tanyakan dulu kepada keluarga.",
+     "pt": "Os burlões podem ligar ou escrever a dizer que ganhou um prémio ou que um familiar precisa de dinheiro com urgência. Desligue e confirme primeiro com a família.",
+     "tet": "Ema bosok bele telefone ka haruka mensajen katak ita manán prémiu ka família ida presiza osan lalais. Taka telefone no husu uluk ba família."
+    },
+    {
+     "en": "Never give PIN codes or passwords by phone or message. Real banks and companies do not ask for them.",
+     "id": "Jangan pernah memberikan PIN atau kata sandi lewat telepon atau pesan. Bank dan perusahaan asli tidak memintanya.",
+     "pt": "Nunca dê códigos PIN nem palavras-passe por telefone ou mensagem. Os bancos e as empresas verdadeiras não os pedem.",
+     "tet": "Labele fó kódigu PIN ka liafuan-pase liuhusi telefone ka mensajen. Banku no kompañia loloos la husu buat sira-ne'e."
+    }
+   ],
+   "task": {
+    "en": "Make a video call with a relative, and agree on a family check word to use if anyone ever asks for money.",
+    "id": "Lakukan panggilan video dengan kerabat, dan sepakati kata sandi keluarga untuk dipakai jika ada yang meminta uang.",
+    "pt": "Faça uma videochamada com um familiar e combinem uma palavra-código da família para usar se alguém pedir dinheiro.",
+    "tet": "Halo xamada vídeu ho família ida, no konkorda liafuan segredu família nian ida atu uza se ema ruma husu osan."
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "A message says your grandchild needs money urgently. What do you do?",
+      "id": "Sebuah pesan mengatakan cucu Anda butuh uang segera. Apa yang Anda lakukan?",
+      "pt": "Uma mensagem diz que o seu neto precisa de dinheiro com urgência. O que faz?",
+      "tet": "Mensajen ida dehan ita-nia bei-oan presiza osan lalais. Ita halo saida?"
+     },
+     "answer": {
+      "en": "Stop and check with the family first",
+      "id": "Berhenti dan tanyakan dulu kepada keluarga",
+      "pt": "Parar e confirmar primeiro com a família",
+      "tet": "Para no husu uluk ba família"
+     },
+     "wrong": [
+      {
+       "en": "Send money right away",
+       "id": "Langsung mengirim uang",
+       "pt": "Enviar dinheiro logo",
+       "tet": "Haruka osan kedas"
+      },
+      {
+       "en": "Give your bank PIN",
+       "id": "Memberikan PIN bank",
+       "pt": "Dar o PIN do banco",
+       "tet": "Fó PIN banku nian"
+      },
+      {
+       "en": "Forward it to strangers",
+       "id": "Meneruskannya ke orang asing",
+       "pt": "Reencaminhá-la a estranhos",
+       "tet": "Haruka ba ema la koñesidu"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "Who may ask for your bank PIN?",
+      "id": "Siapa yang boleh meminta PIN bank Anda?",
+      "pt": "Quem pode pedir o seu PIN do banco?",
+      "tet": "Se mak bele husu ita-nia PIN banku?"
+     },
+     "answer": {
+      "en": "Nobody: keep it secret",
+      "id": "Tidak ada: rahasiakan",
+      "pt": "Ninguém: guarde-o em segredo",
+      "tet": "Ema ida la iha: rai segredu"
+     },
+     "wrong": [
+      {
+       "en": "The bank, by phone",
+       "id": "Bank, lewat telepon",
+       "pt": "O banco, por telefone",
+       "tet": "Banku, liuhusi telefone"
+      },
+      {
+       "en": "A friendly stranger",
+       "id": "Orang asing yang ramah",
+       "pt": "Um estranho simpático",
+       "tet": "Ema la koñesidu ne'ebé simpátiku"
+      },
+      {
+       "en": "Someone who says you won a prize",
+       "id": "Orang yang bilang Anda menang hadiah",
+       "pt": "Alguém que diz que ganhou um prémio",
+       "tet": "Ema ne'ebé dehan ita manán prémiu"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "What can you use to see family who live far away?",
+      "id": "Apa yang bisa Anda pakai untuk melihat keluarga yang tinggal jauh?",
+      "pt": "O que pode usar para ver a família que vive longe?",
+      "tet": "Ita bele uza saida atu haree família ne'ebé hela dook?"
+     },
+     "answer": {
+      "en": "A video call",
+      "id": "Panggilan video",
+      "pt": "Uma videochamada",
+      "tet": "Xamada vídeu"
+     },
+     "wrong": [
+      {
+       "en": "A radio",
+       "id": "Radio",
+       "pt": "Um rádio",
+       "tet": "Rádiu"
+      },
+      {
+       "en": "A calculator",
+       "id": "Kalkulator",
+       "pt": "Uma calculadora",
+       "tet": "Kalkuladora"
+      },
+      {
+       "en": "A printer",
+       "id": "Pencetak",
+       "pt": "Uma impressora",
+       "tet": "Impresora"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

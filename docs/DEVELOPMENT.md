@@ -50,6 +50,11 @@ screenshots (downloadable as workflow artifacts).
 | LAFA Desktop (school) | `lafa/app.py`, `lafa/school.py`, `lafa/classroom.py` (lessons, exams, report card), `lafa/osguide.py`, `lafa/learning.py` |
 | Timor-Leste content | `lafa/timorleste.py` (timeline, holidays), `lafa/timor_atlas.py` (atlas topics, leaders, municipalities), `lafa/livefacts.py` (online refresh) |
 | Learning sources | `lafa/sources.py` (from the Edukasaun OS directory; add sites here or in the online catalog) |
+| Lessons for ages 5–100 | `lafa/assets/curriculum/<subject>.json` (run `python3 tools/check-curriculum.py`), loader `lafa/curriculum.py` |
+| Core memory & LAFA Search | `lafa/memory.py` (index, crawler, cited answers); UI in `build_memory_search` in `lafa/app.py` |
+| AI Hub & sign-in | `lafa/aihub.py` (web tabs, add a service to `SITES`), `lafa/signin.py` (OpenRouter, Gemini, LAFA model) |
+| Agent actions | `lafa/actions.py` (apps allowlist `APPS`, page words `PAGES`) |
+| Character movement | `lafa/motion.py`, painting in `Character.paintEvent` (`lafa/mascot.py`) |
 | Offline mode & language school | `lafa/offline.py`, `lafa/recommendations.py`, `lafa/languages.py` |
 | Look and feel | `lafa/ui_kit.py` (palette, tiles, ring) and `STYLE_TEMPLATE` in `lafa/app.py` — colours come from the Eduka theme |
 | LAFA's roles | `lafa/roles.py`, role texts in `lafa/personality.py`, scenes in `lafa/outfits.py` |

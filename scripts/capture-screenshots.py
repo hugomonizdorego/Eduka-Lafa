@@ -94,9 +94,14 @@ w.findChildren(__import__(BINDING + '.QtWidgets', fromlist=['QScrollArea']).QScr
 w.open_mind_reader(); pump(); save(w.mind_dialog, '39-mind-reader.png')
 for i in range(6): w.mind_dialog.mind_answer(i in (0, 2, 4))
 save(w.mind_dialog, '40-mind-reader-result.png'); w.mind_dialog.close()
-w.navigate('learn'); w.library_tabs.setCurrentIndex(0); w.fill_sources(None); save(w, '50-library-learning-sources.png')
+w.navigate('learn'); w.library_tabs.setCurrentIndex(1); w.fill_sources(None); save(w, '50-library-learning-sources.png')
 w.fill_sources('languages'); save(w, '51-library-language-sites.png')
 w.fill_sources('tl_news'); save(w, '56-library-timor-leste-media.png'); w.fill_sources(None)
+w.library_tabs.setCurrentIndex(0); w.search_memory('coffee'); save(w, '57-lafa-search.png')
+w.navigate('hub'); save(w, '58-ai-hub.png')
+w.navigate('classroom'); w.age_level.setCurrentIndex(w.age_level.findData('secondary')); w.class_subject.setCurrentIndex(w.class_subject.findData('atoms')); save(w, '59-classroom-every-age.png')
+w.age_level.setCurrentIndex(w.age_level.findData('early')); w.class_subject.setCurrentIndex(w.class_subject.findData('astronomy')); save(w, '60-classroom-age-5.png')
+w.age_level.setCurrentIndex(0)
 w.navigate('languages'); w.course_list.setCurrentRow(list(__import__('lafa.languages', fromlist=['x']).COURSES).index('ja')); save(w, '52-language-school-japanese.png')
 w.course_list.setCurrentRow(0); save(w, '53-language-school-tetun.png')
 w.set_online(False); w.navigate('chat'); w.new_chat(); w.send_message('Ataúro island'); save(w, '54-offline-answer.png'); w.set_online(True)
@@ -153,6 +158,18 @@ pet('idle'); c.introduced = False; c.show_bubble(c.introduction(9)); pump(); cha
 c.collapse(); __import__('random').seed(4); c.recommend(); pump(); recommend = c.grab()
 compose('55-virtual-recommendation.png', 'Click LAFA for a recommendation', 'Free software (GPL) for learning and, online, a learning website.', [(recommend, QPoint(800, PANEL_TOP - recommend.height() + 12))])
 compose('24-virtual-chat-bubble.png', 'Click LAFA to chat', 'Quick help for Edukasaun OS, weather, Timor-Leste news and recommendations.', [(chat, QPoint(800, PANEL_TOP - chat.height() + 12))])
+c.collapse()
+# Human-like movement: frames of one walk cycle and a jump (motion.py).
+steps = []
+c.set_state('walking'); c.pet.animated = True
+for i in range(5):
+    c.pet.motion.t = i * 0.12; c.pet.motion.fade = 1.0; pump(); steps.append(c.grab())
+c.set_state('talking'); c.pet.motion.t = 0; c.pet.motion.gesture = ''; c.pet.motion.play('jump')
+for i in range(3):
+    c.pet.motion.advance(0.15 if i == 0 else 0.2); c.pet.motion.fade = 1.0; pump(); steps.append(c.grab())
+c.pet.animated = False; c.pet.motion.gesture = ''
+compose('61-virtual-human-movement.png', 'LAFA moves like a person', 'Steps with a bounce and weight shift, leans into the walk, breathes, waves, nods and jumps.',
+        [(img, QPoint(40 + i * 150, PANEL_TOP - img.height() + 12)) for i, img in enumerate(steps)])
 c.collapse()
 
 class Sheet(QWidget):

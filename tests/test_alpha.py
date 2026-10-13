@@ -18,7 +18,7 @@ class VersionTests(unittest.TestCase):
     def test_version_is_consistent_everywhere(self):
         import re
         root = Path(__file__).resolve().parents[1]
-        self.assertRegex(__version__, r"^0\.1\.\d+$"); self.assertEqual(VERSION_LABEL, __version__ + " Alpha")
+        self.assertRegex(__version__, r"^0\.\d+\.\d+$"); self.assertEqual(VERSION_LABEL, __version__ + " Alpha")
         self.assertIn(__version__, USER_AGENT)
         self.assertIn('{attr = "lafa.__version__"}', (root / "pyproject.toml").read_text())
         self.assertIn(f"Version: {__version__}", (root / "packaging/DEBIAN/control").read_text())

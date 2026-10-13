@@ -51,7 +51,7 @@ def online_probe(provider="openai"):
     # A TLS response from the official service proves reachability, even when
     # anonymous API probes return 401. It does not establish account readiness.
     # Local and self-hosted open-source servers do not prove internet access.
-    hosts = {"openai":"https://api.openai.com/v1/models", "gemini":"https://generativelanguage.googleapis.com/", "anthropic":"https://api.anthropic.com/", "deepseek":"https://api.deepseek.com/", "perplexity":"https://api.perplexity.ai/"}
+    hosts = {"openai":"https://api.openai.com/v1/models", "gemini":"https://generativelanguage.googleapis.com/", "anthropic":"https://api.anthropic.com/", "deepseek":"https://api.deepseek.com/", "perplexity":"https://api.perplexity.ai/", "openrouter":"https://openrouter.ai/api/v1/models"}
     first = hosts.get(provider, "https://www.wikipedia.org/" if provider in {"ollama","compatible"} else hosts["openai"])
     for url in dict.fromkeys((first, "https://www.wikipedia.org/")):
         expected = urllib.parse.urlsplit(url).hostname

@@ -71,6 +71,11 @@ homework go to a temporary folder. Weather, headlines and sources are labelled
 | 54 | `54-offline-answer.png` | Offline mode: LAFA answers from its own atlas |
 | 55 | `55-virtual-recommendation.png` | Click LAFA: free-software tip and a learning website |
 | 56 | `56-library-timor-leste-media.png` | Library: Timor-Leste news portals and agencies (one of six Timor-Leste media categories) |
+| 57 | `57-lafa-search.png` | LAFA Search: Google-like results from LAFA's memory, with the source of every result |
+| 58 | `58-ai-hub.png` | AI Hub: sign in to OpenRouter, Gemini or the LAFA model, and AI websites in signed-in tabs |
+| 59 | `59-classroom-every-age.png` | Classroom for every age: atoms and nuclear science, ages 15–18 |
+| 60 | `60-classroom-age-5.png` | Classroom for every age: the Sun, the Moon and the stars, ages 5–7 |
+| 61 | `61-virtual-human-movement.png` | LAFA's human-like movement: a walk cycle and a jump |
 
 Captures 20–24 are **compositions of actual LAFA widget pixels on a painted
 desktop and panel**, not screenshots of Edukasaun OS. Captures 18–19 run the

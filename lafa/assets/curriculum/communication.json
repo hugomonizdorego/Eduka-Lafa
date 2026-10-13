@@ -1,0 +1,1009 @@
+{
+ "subject": "communication",
+ "icon": "💬",
+ "name": {
+  "en": "Communication",
+  "id": "Komunikasi",
+  "pt": "Comunicação",
+  "tet": "Komunikasaun"
+ },
+ "lessons": [
+  {
+   "level": "early",
+   "title": {
+    "en": "Listening and talking",
+    "id": "Mendengar dan berbicara",
+    "pt": "Ouvir e falar",
+    "tet": "Rona no ko'alia"
+   },
+   "points": [
+    {
+     "en": "When someone talks, look at them and listen. Keep your mouth quiet.",
+     "id": "Saat seseorang berbicara, lihat dia dan dengarkan. Jangan menyela.",
+     "pt": "Quando alguém fala, olha para essa pessoa e ouve. Fica calado.",
+     "tet": "Bainhira ema ida ko'alia, haree nia no rona. Nonok uluk."
+    },
+    {
+     "en": "We take turns. First you talk, then I talk.",
+     "id": "Kita bergantian. Pertama kamu bicara, lalu aku bicara.",
+     "pt": "Falamos à vez. Primeiro falas tu, depois falo eu.",
+     "tet": "Ita ko'alia tuir vez. Uluk ó ko'alia, depois ha'u ko'alia."
+    },
+    {
+     "en": "Kind words help: 'please', 'thank you' and 'sorry'. In Tetun: 'favór ida', 'obrigadu' and 'deskulpa'.",
+     "id": "Kata-kata baik membantu: 'tolong', 'terima kasih', dan 'maaf'. Dalam bahasa Tetun: 'favór ida', 'obrigadu', dan 'deskulpa'.",
+     "pt": "As palavras simpáticas ajudam: 'por favor', 'obrigado' e 'desculpa'. Em tétum: 'favór ida', 'obrigadu' e 'deskulpa'.",
+     "tet": "Liafuan di'ak ajuda: 'favór ida', 'obrigadu' no 'deskulpa'. Ita uza sira loroloron."
+    }
+   ],
+   "task": {
+    "en": "Play a game with a friend: one person says three words, the other person repeats them.",
+    "id": "Bermain dengan teman: satu orang menyebut tiga kata, yang lain mengulanginya.",
+    "pt": "Joga com um amigo: uma pessoa diz três palavras e a outra repete-as.",
+    "tet": "Halimar ho kolega ida: ema ida temi liafuan tolu, ema seluk temi hikas."
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "What do you do when someone is talking?",
+      "id": "Apa yang kamu lakukan saat seseorang berbicara?",
+      "pt": "O que fazes quando alguém está a falar?",
+      "tet": "Ó halo saida bainhira ema ida ko'alia hela?"
+     },
+     "answer": {
+      "en": "Look and listen",
+      "id": "Melihat dan mendengarkan",
+      "pt": "Olho e ouço",
+      "tet": "Haree no rona"
+     },
+     "wrong": [
+      {
+       "en": "Shout loudly",
+       "id": "Berteriak keras",
+       "pt": "Grito alto",
+       "tet": "Hakilar makaas"
+      },
+      {
+       "en": "Run away",
+       "id": "Lari pergi",
+       "pt": "Fujo",
+       "tet": "Halai sai"
+      },
+      {
+       "en": "Close my ears",
+       "id": "Menutup telinga",
+       "pt": "Tapo os ouvidos",
+       "tet": "Taka ha'u-nia tilun"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "How do we talk with friends?",
+      "id": "Bagaimana kita berbicara dengan teman?",
+      "pt": "Como falamos com os amigos?",
+      "tet": "Oinsá ita ko'alia ho kolega sira?"
+     },
+     "answer": {
+      "en": "We take turns",
+      "id": "Kita bergantian",
+      "pt": "Falamos à vez",
+      "tet": "Ita ko'alia tuir vez"
+     },
+     "wrong": [
+      {
+       "en": "Everyone talks at once",
+       "id": "Semua bicara bersamaan",
+       "pt": "Todos falam ao mesmo tempo",
+       "tet": "Ema hotu ko'alia hamutuk dala ida"
+      },
+      {
+       "en": "Only one person ever talks",
+       "id": "Hanya satu orang yang selalu bicara",
+       "pt": "Só uma pessoa fala sempre",
+       "tet": "Ema ida de'it mak ko'alia nafatin"
+      },
+      {
+       "en": "Nobody talks",
+       "id": "Tidak ada yang bicara",
+       "pt": "Ninguém fala",
+       "tet": "Ema ida la ko'alia"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "What do we say when someone gives us something?",
+      "id": "Apa yang kita katakan saat seseorang memberi kita sesuatu?",
+      "pt": "O que dizemos quando alguém nos dá alguma coisa?",
+      "tet": "Ita dehan saida bainhira ema ida fó buat ida mai ita?"
+     },
+     "answer": {
+      "en": "Thank you",
+      "id": "Terima kasih",
+      "pt": "Obrigado",
+      "tet": "Obrigadu"
+     },
+     "wrong": [
+      {
+       "en": "Go away",
+       "id": "Pergi sana",
+       "pt": "Vai-te embora",
+       "tet": "Bá ona"
+      },
+      {
+       "en": "Goodbye",
+       "id": "Selamat tinggal",
+       "pt": "Adeus",
+       "tet": "Adeus"
+      },
+      {
+       "en": "No",
+       "id": "Tidak",
+       "pt": "Não",
+       "tet": "Lae"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "level": "primary",
+   "title": {
+    "en": "Writing a short message",
+    "id": "Menulis pesan singkat",
+    "pt": "Escrever uma mensagem curta",
+    "tet": "Hakerek mensajen badak ida"
+   },
+   "points": [
+    {
+     "en": "A good message has three parts: a greeting, the message and a closing with your name.",
+     "id": "Pesan yang baik punya tiga bagian: salam, isi pesan, dan penutup dengan namamu.",
+     "pt": "Uma boa mensagem tem três partes: uma saudação, a mensagem e uma despedida com o teu nome.",
+     "tet": "Mensajen di'ak iha parte tolu: kumprimentu, mensajen no remata ho ó-nia naran."
+    },
+    {
+     "en": "Start each sentence with a capital letter and end it with a full stop.",
+     "id": "Awali setiap kalimat dengan huruf kapital dan akhiri dengan titik.",
+     "pt": "Começa cada frase com letra maiúscula e termina-a com um ponto final.",
+     "tet": "Hahú fraze ida-idak ho letra maiúskula no remata ho pontu final."
+    },
+    {
+     "en": "Say who, what, where and when. For example: 'Maria, football at school, Saturday at 3.'",
+     "id": "Sebutkan siapa, apa, di mana, dan kapan. Contoh: 'Maria, sepak bola di sekolah, Sabtu jam 3.'",
+     "pt": "Diz quem, o quê, onde e quando. Por exemplo: 'Maria, futebol na escola, sábado às 3.'",
+     "tet": "Temi se, saida, iha ne'ebé no bainhira. Ezemplu: 'Maria, futeból iha eskola, sábadu tuku 3.'"
+    }
+   ],
+   "task": {
+    "en": "Write a short note to a friend inviting them to play. Use a greeting, the time and place, and your name.",
+    "id": "Tulis catatan singkat untuk teman, ajak dia bermain. Gunakan salam, waktu dan tempat, serta namamu.",
+    "pt": "Escreve um bilhete curto a um amigo a convidá-lo para brincar. Usa uma saudação, a hora e o lugar, e o teu nome.",
+    "tet": "Hakerek nota badak ida ba kolega atu konvida nia halimar. Uza kumprimentu, oras no fatin, no ó-nia naran."
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "What are the three parts of a good message?",
+      "id": "Apa tiga bagian pesan yang baik?",
+      "pt": "Quais são as três partes de uma boa mensagem?",
+      "tet": "Saida mak mensajen di'ak nia parte tolu?"
+     },
+     "answer": {
+      "en": "Greeting, message, closing",
+      "id": "Salam, isi, penutup",
+      "pt": "Saudação, mensagem, despedida",
+      "tet": "Kumprimentu, mensajen, remata"
+     },
+     "wrong": [
+      {
+       "en": "Picture, song, game",
+       "id": "Gambar, lagu, permainan",
+       "pt": "Desenho, canção, jogo",
+       "tet": "Dezeñu, kanta, jogu"
+      },
+      {
+       "en": "Only your name",
+       "id": "Hanya namamu",
+       "pt": "Só o teu nome",
+       "tet": "Ó-nia naran de'it"
+      },
+      {
+       "en": "Numbers, colours, shapes",
+       "id": "Angka, warna, bentuk",
+       "pt": "Números, cores, formas",
+       "tet": "Númeru, kór, forma"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "How do you end a sentence?",
+      "id": "Bagaimana mengakhiri sebuah kalimat?",
+      "pt": "Como terminas uma frase?",
+      "tet": "Oinsá ó remata fraze ida?"
+     },
+     "answer": {
+      "en": "With a full stop",
+      "id": "Dengan titik",
+      "pt": "Com um ponto final",
+      "tet": "Ho pontu final"
+     },
+     "wrong": [
+      {
+       "en": "With a capital letter",
+       "id": "Dengan huruf kapital",
+       "pt": "Com uma letra maiúscula",
+       "tet": "Ho letra maiúskula"
+      },
+      {
+       "en": "With a drawing",
+       "id": "Dengan gambar",
+       "pt": "Com um desenho",
+       "tet": "Ho dezeñu ida"
+      },
+      {
+       "en": "With nothing at all",
+       "id": "Tanpa apa-apa",
+       "pt": "Sem nada",
+       "tet": "La ho buat ida"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "Which message says when?",
+      "id": "Pesan mana yang menyebutkan kapan?",
+      "pt": "Que mensagem diz quando?",
+      "tet": "Mensajen ida ne'ebé mak temi bainhira?"
+     },
+     "answer": {
+      "en": "Football on Saturday at 3",
+      "id": "Sepak bola hari Sabtu jam 3",
+      "pt": "Futebol no sábado às 3",
+      "tet": "Futeból iha sábadu tuku 3"
+     },
+     "wrong": [
+      {
+       "en": "Football is fun",
+       "id": "Sepak bola itu seru",
+       "pt": "O futebol é divertido",
+       "tet": "Futeból di'ak tebes"
+      },
+      {
+       "en": "I like the ball",
+       "id": "Aku suka bolanya",
+       "pt": "Gosto da bola",
+       "tet": "Ha'u gosta bola"
+      },
+      {
+       "en": "Maria plays well",
+       "id": "Maria bermain dengan baik",
+       "pt": "A Maria joga bem",
+       "tet": "Maria halimar di'ak"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "level": "middle",
+   "title": {
+    "en": "How communication works",
+    "id": "Cara kerja komunikasi",
+    "pt": "Como funciona a comunicação",
+    "tet": "Oinsá komunikasaun la'o"
+   },
+   "points": [
+    {
+     "en": "Communication has a sender, a message, a channel (voice, letter, phone), a receiver and feedback.",
+     "id": "Komunikasi terdiri dari pengirim, pesan, saluran (suara, surat, telepon), penerima, dan umpan balik.",
+     "pt": "A comunicação tem um emissor, uma mensagem, um canal (voz, carta, telefone), um recetor e uma resposta (feedback).",
+     "tet": "Komunikasaun iha haruka-na'in, mensajen, kanál (lian, karta, telefone), simu-na'in no resposta (feedback)."
+    },
+    {
+     "en": "Verbal communication uses words. Non-verbal communication uses the face, hands, body and tone of voice.",
+     "id": "Komunikasi verbal menggunakan kata-kata. Komunikasi nonverbal menggunakan wajah, tangan, tubuh, dan nada suara.",
+     "pt": "A comunicação verbal usa palavras. A comunicação não verbal usa o rosto, as mãos, o corpo e o tom de voz.",
+     "tet": "Komunikasaun verbál uza liafuan. Komunikasaun la'ós verbál uza oin, liman, isin no lian nia tonu."
+    },
+    {
+     "en": "Noise is anything that blocks the message, like loud music, a bad phone signal or unclear words.",
+     "id": "Gangguan adalah apa saja yang menghalangi pesan, seperti musik keras, sinyal telepon buruk, atau kata yang tidak jelas.",
+     "pt": "Ruído é tudo o que bloqueia a mensagem, como música alta, mau sinal de telefone ou palavras pouco claras.",
+     "tet": "Barulhu mak buat hotu ne'ebé taka mensajen, hanesan múzika makaas, siñál telefone aat ka liafuan la moos."
+    }
+   ],
+   "task": {
+    "en": "Explain a simple game to a classmate without using your hands. Then explain it again using only gestures. Which was easier?",
+    "id": "Jelaskan permainan sederhana kepada teman sekelas tanpa menggunakan tangan. Lalu jelaskan lagi hanya dengan gerakan. Mana yang lebih mudah?",
+    "pt": "Explica um jogo simples a um colega sem usar as mãos. Depois explica-o outra vez só com gestos. O que foi mais fácil?",
+    "tet": "Esplika jogu simples ida ba kolega klase la uza liman. Depois esplika fali ho jestu de'it. Ida ne'ebé mak fasil liu?"
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "In a phone call, what is the phone?",
+      "id": "Dalam panggilan telepon, telepon itu disebut apa?",
+      "pt": "Numa chamada telefónica, o que é o telefone?",
+      "tet": "Iha telefone-bolu ida, telefone ne'e saida?"
+     },
+     "answer": {
+      "en": "The channel",
+      "id": "Saluran",
+      "pt": "O canal",
+      "tet": "Kanál"
+     },
+     "wrong": [
+      {
+       "en": "The sender",
+       "id": "Pengirim",
+       "pt": "O emissor",
+       "tet": "Haruka-na'in"
+      },
+      {
+       "en": "The feedback",
+       "id": "Umpan balik",
+       "pt": "A resposta",
+       "tet": "Resposta"
+      },
+      {
+       "en": "The noise",
+       "id": "Gangguan",
+       "pt": "O ruído",
+       "tet": "Barulhu"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "Which is non-verbal communication?",
+      "id": "Manakah komunikasi nonverbal?",
+      "pt": "Qual é comunicação não verbal?",
+      "tet": "Saida mak komunikasaun la'ós verbál?"
+     },
+     "answer": {
+      "en": "A smile",
+      "id": "Senyuman",
+      "pt": "Um sorriso",
+      "tet": "Hamnasa ida"
+     },
+     "wrong": [
+      {
+       "en": "A written letter",
+       "id": "Surat tertulis",
+       "pt": "Uma carta escrita",
+       "tet": "Karta hakerek ida"
+      },
+      {
+       "en": "A spoken sentence",
+       "id": "Kalimat yang diucapkan",
+       "pt": "Uma frase dita",
+       "tet": "Fraze ida ne'ebé ko'alia"
+      },
+      {
+       "en": "A text message",
+       "id": "Pesan teks",
+       "pt": "Uma mensagem de texto",
+       "tet": "Mensajen testu ida"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "Which is an example of noise?",
+      "id": "Manakah contoh gangguan?",
+      "pt": "Qual é um exemplo de ruído?",
+      "tet": "Saida mak ezemplu barulhu nian?"
+     },
+     "answer": {
+      "en": "A bad phone signal",
+      "id": "Sinyal telepon yang buruk",
+      "pt": "Mau sinal de telefone",
+      "tet": "Siñál telefone aat"
+     },
+     "wrong": [
+      {
+       "en": "A clear voice",
+       "id": "Suara yang jelas",
+       "pt": "Uma voz clara",
+       "tet": "Lian moos"
+      },
+      {
+       "en": "A friendly greeting",
+       "id": "Salam yang ramah",
+       "pt": "Uma saudação simpática",
+       "tet": "Kumprimentu di'ak ida"
+      },
+      {
+       "en": "A short answer",
+       "id": "Jawaban singkat",
+       "pt": "Uma resposta curta",
+       "tet": "Resposta badak ida"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "level": "secondary",
+   "title": {
+    "en": "Media literacy: checking what you read",
+    "id": "Literasi media: memeriksa yang kamu baca",
+    "pt": "Literacia mediática: verificar o que lês",
+    "tet": "Literasia média: verifika saida mak ó lee"
+   },
+   "points": [
+    {
+     "en": "A fact can be checked and proven. An opinion is what someone thinks or feels.",
+     "id": "Fakta dapat diperiksa dan dibuktikan. Opini adalah apa yang dipikirkan atau dirasakan seseorang.",
+     "pt": "Um facto pode ser verificado e provado. Uma opinião é o que alguém pensa ou sente.",
+     "tet": "Faktu bele verifika no prova. Opiniaun mak saida ne'ebé ema ida hanoin ka sente."
+    },
+    {
+     "en": "Before sharing a post, ask: who wrote it, when, and what is their source?",
+     "id": "Sebelum membagikan unggahan, tanyakan: siapa penulisnya, kapan, dan apa sumbernya?",
+     "pt": "Antes de partilhar uma publicação, pergunta: quem a escreveu, quando e qual é a fonte?",
+     "tet": "Molok fahe publikasaun ida, husu: se mak hakerek, bainhira, no ninia fonte mak saida?"
+    },
+    {
+     "en": "Fake news often uses shocking headlines and old photos. Check whether trusted media report the same story.",
+     "id": "Berita palsu sering memakai judul mengejutkan dan foto lama. Periksa apakah media tepercaya memberitakan hal yang sama.",
+     "pt": "As notícias falsas usam muitas vezes títulos chocantes e fotografias antigas. Verifica se meios de comunicação fiáveis noticiam o mesmo.",
+     "tet": "Notísia falsu dala barak uza títulu ne'ebé halo ema hakfodak no foto tuan. Verifika se média ne'ebé fiar-na'in fó notísia hanesan."
+    },
+    {
+     "en": "Sharing false news can cause fear and harm. If you are not sure, do not share it.",
+     "id": "Membagikan berita palsu dapat menimbulkan ketakutan dan kerugian. Jika tidak yakin, jangan bagikan.",
+     "pt": "Partilhar notícias falsas pode causar medo e prejuízo. Se não tens a certeza, não partilhes.",
+     "tet": "Fahe notísia falsu bele halo ema ta'uk no hetan estragu. Se ó la iha serteza, keta fahe."
+    }
+   ],
+   "task": {
+    "en": "Find one news post on social media. Write down its source and date, and check if another trusted source says the same.",
+    "id": "Cari satu unggahan berita di media sosial. Catat sumber dan tanggalnya, lalu periksa apakah sumber tepercaya lain menyatakan hal yang sama.",
+    "pt": "Encontra uma notícia nas redes sociais. Anota a fonte e a data e verifica se outra fonte fiável diz o mesmo.",
+    "tet": "Buka notísia ida iha média sosiál. Hakerek ninia fonte no data, no verifika se fonte fiar-na'in seluk dehan hanesan."
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "Which is a fact?",
+      "id": "Manakah yang merupakan fakta?",
+      "pt": "Qual é um facto?",
+      "tet": "Saida mak faktu?"
+     },
+     "answer": {
+      "en": "Dili is the capital of Timor-Leste",
+      "id": "Dili adalah ibu kota Timor-Leste",
+      "pt": "Díli é a capital de Timor-Leste",
+      "tet": "Dili mak kapitál Timor-Leste nian"
+     },
+     "wrong": [
+      {
+       "en": "Dili is the most beautiful city",
+       "id": "Dili adalah kota paling indah",
+       "pt": "Díli é a cidade mais bonita",
+       "tet": "Dili mak sidade furak liu"
+      },
+      {
+       "en": "Rice tastes better than corn",
+       "id": "Nasi lebih enak daripada jagung",
+       "pt": "O arroz sabe melhor do que o milho",
+       "tet": "Etu nia gostu di'ak liu batar"
+      },
+      {
+       "en": "Football is the best sport",
+       "id": "Sepak bola adalah olahraga terbaik",
+       "pt": "O futebol é o melhor desporto",
+       "tet": "Futeból mak desportu di'ak liu"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "What should you check before sharing a post?",
+      "id": "Apa yang harus diperiksa sebelum membagikan unggahan?",
+      "pt": "O que deves verificar antes de partilhar uma publicação?",
+      "tet": "Ó tenke verifika saida molok fahe publikasaun ida?"
+     },
+     "answer": {
+      "en": "Who wrote it, when, and the source",
+      "id": "Siapa penulisnya, kapan, dan sumbernya",
+      "pt": "Quem escreveu, quando e a fonte",
+      "tet": "Se mak hakerek, bainhira no fonte"
+     },
+     "wrong": [
+      {
+       "en": "Only the number of likes",
+       "id": "Hanya jumlah suka",
+       "pt": "Só o número de gostos",
+       "tet": "Númeru 'like' de'it"
+      },
+      {
+       "en": "Only the colour of the picture",
+       "id": "Hanya warna gambarnya",
+       "pt": "Só a cor da imagem",
+       "tet": "Imajen nia kór de'it"
+      },
+      {
+       "en": "Nothing, share it fast",
+       "id": "Tidak perlu, langsung bagikan",
+       "pt": "Nada, partilha logo",
+       "tet": "La iha, fahe lalais"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "What should you do if you are not sure a story is true?",
+      "id": "Apa yang harus dilakukan jika tidak yakin suatu berita benar?",
+      "pt": "O que deves fazer se não tens a certeza de que uma notícia é verdadeira?",
+      "tet": "Ó tenke halo saida se ó la iha serteza katak notísia ida loos?"
+     },
+     "answer": {
+      "en": "Not share it",
+      "id": "Tidak membagikannya",
+      "pt": "Não a partilhar",
+      "tet": "La fahe"
+     },
+     "wrong": [
+      {
+       "en": "Share it with everyone",
+       "id": "Membagikannya ke semua orang",
+       "pt": "Partilhá-la com todos",
+       "tet": "Fahe ba ema hotu"
+      },
+      {
+       "en": "Add a scarier headline",
+       "id": "Menambahkan judul yang lebih menakutkan",
+       "pt": "Pôr um título mais assustador",
+       "tet": "Aumenta títulu ida ne'ebé halo ta'uk liu"
+      },
+      {
+       "en": "Change the date",
+       "id": "Mengubah tanggalnya",
+       "pt": "Mudar a data",
+       "tet": "Troka data"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "level": "university",
+   "title": {
+    "en": "Journalism basics",
+    "id": "Dasar-dasar jurnalisme",
+    "pt": "Noções básicas de jornalismo",
+    "tet": "Baze jornalizmu nian"
+   },
+   "points": [
+    {
+     "en": "A news story answers six questions: who, what, when, where, why and how (the 5W1H).",
+     "id": "Berita menjawab enam pertanyaan: siapa, apa, kapan, di mana, mengapa, dan bagaimana (5W1H).",
+     "pt": "Uma notícia responde a seis perguntas: quem, o quê, quando, onde, porquê e como.",
+     "tet": "Notísia ida hatán pergunta neen: se, saida, bainhira, iha ne'ebé, tanba saida no oinsá."
+    },
+    {
+     "en": "The inverted pyramid puts the most important facts first and details later, so readers get the key point quickly.",
+     "id": "Piramida terbalik menempatkan fakta terpenting di awal dan rincian di akhir, agar pembaca cepat mendapat inti berita.",
+     "pt": "A pirâmide invertida põe os factos mais importantes primeiro e os pormenores depois, para o leitor perceber logo o essencial.",
+     "tet": "Pirámide invertida tau faktu importante liu iha oin no detalle sira iha kotuk, atu leitór sira kompriende lalais pontu prinsipál."
+    },
+    {
+     "en": "Journalists verify facts with more than one source and attribute quotes: they say who said what.",
+     "id": "Jurnalis memverifikasi fakta dengan lebih dari satu sumber dan mencantumkan atribusi: menyebut siapa mengatakan apa.",
+     "pt": "Os jornalistas verificam os factos com mais de uma fonte e atribuem as citações: dizem quem disse o quê.",
+     "tet": "Jornalista sira verifika faktu ho fonte liu ida no hatudu atribuisaun: sira temi se mak dehan saida."
+    },
+    {
+     "en": "Good journalism separates news from opinion and corrects mistakes openly.",
+     "id": "Jurnalisme yang baik memisahkan berita dari opini dan mengoreksi kesalahan secara terbuka.",
+     "pt": "O bom jornalismo separa as notícias da opinião e corrige os erros abertamente.",
+     "tet": "Jornalizmu di'ak fahe notísia husi opiniaun no hadi'a sala sira ho nakloke."
+    }
+   ],
+   "task": {
+    "en": "Write a 100-word news story about an event on your campus using the inverted pyramid and at least two named sources.",
+    "id": "Tulis berita 100 kata tentang suatu kegiatan di kampusmu dengan piramida terbalik dan minimal dua narasumber yang disebut namanya.",
+    "pt": "Escreve uma notícia de 100 palavras sobre um acontecimento no teu campus, com a pirâmide invertida e pelo menos duas fontes identificadas.",
+    "tet": "Hakerek notísia ho liafuan 100 kona-ba akontesimentu ida iha ó-nia kampus, uza pirámide invertida no fonte rua ka liu ho naran."
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "What does the inverted pyramid put first?",
+      "id": "Apa yang ditempatkan di awal dalam piramida terbalik?",
+      "pt": "O que põe primeiro a pirâmide invertida?",
+      "tet": "Pirámide invertida tau saida iha oin?"
+     },
+     "answer": {
+      "en": "The most important facts",
+      "id": "Fakta terpenting",
+      "pt": "Os factos mais importantes",
+      "tet": "Faktu importante liu sira"
+     },
+     "wrong": [
+      {
+       "en": "The journalist's opinion",
+       "id": "Opini jurnalis",
+       "pt": "A opinião do jornalista",
+       "tet": "Jornalista nia opiniaun"
+      },
+      {
+       "en": "Small background details",
+       "id": "Rincian latar belakang kecil",
+       "pt": "Pequenos pormenores de contexto",
+       "tet": "Detalle kiik kona-ba kontestu"
+      },
+      {
+       "en": "Advertisements",
+       "id": "Iklan",
+       "pt": "Publicidade",
+       "tet": "Anúnsiu sira"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "What does attribution mean?",
+      "id": "Apa arti atribusi?",
+      "pt": "O que significa atribuição?",
+      "tet": "Atribuisaun signifika saida?"
+     },
+     "answer": {
+      "en": "Saying who said what",
+      "id": "Menyebutkan siapa mengatakan apa",
+      "pt": "Dizer quem disse o quê",
+      "tet": "Temi se mak dehan saida"
+     },
+     "wrong": [
+      {
+       "en": "Hiding all sources",
+       "id": "Menyembunyikan semua sumber",
+       "pt": "Esconder todas as fontes",
+       "tet": "Subar fonte hotu"
+      },
+      {
+       "en": "Inventing quotes",
+       "id": "Mengarang kutipan",
+       "pt": "Inventar citações",
+       "tet": "Inventa sitasaun"
+      },
+      {
+       "en": "Adding photos",
+       "id": "Menambahkan foto",
+       "pt": "Juntar fotografias",
+       "tet": "Aumenta foto"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "How many questions does the 5W1H rule cover?",
+      "id": "Berapa pertanyaan yang dicakup aturan 5W1H?",
+      "pt": "Quantas perguntas abrange a regra das 5W1H?",
+      "tet": "Regra 5W1H iha pergunta hira?"
+     },
+     "answer": {
+      "en": "Six",
+      "id": "Enam",
+      "pt": "Seis",
+      "tet": "Neen"
+     },
+     "wrong": [
+      {
+       "en": "Five",
+       "id": "Lima",
+       "pt": "Cinco",
+       "tet": "Lima"
+      },
+      {
+       "en": "Three",
+       "id": "Tiga",
+       "pt": "Três",
+       "tet": "Tolu"
+      },
+      {
+       "en": "Ten",
+       "id": "Sepuluh",
+       "pt": "Dez",
+       "tet": "Sanulu"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "level": "adult",
+   "title": {
+    "en": "Speaking in public at work and in the community",
+    "id": "Berbicara di depan umum di tempat kerja dan masyarakat",
+    "pt": "Falar em público no trabalho e na comunidade",
+    "tet": "Ko'alia iha públiku iha servisu no komunidade"
+   },
+   "points": [
+    {
+     "en": "Prepare three main points and one clear message. Your audience will remember a short talk better.",
+     "id": "Siapkan tiga poin utama dan satu pesan yang jelas. Pendengar akan lebih mengingat pembicaraan yang singkat.",
+     "pt": "Prepare três ideias principais e uma mensagem clara. O público lembra-se melhor de uma intervenção curta.",
+     "tet": "Prepara pontu prinsipál tolu no mensajen moos ida. Audiénsia sei hanoin di'ak liu diskursu badak."
+    },
+    {
+     "en": "Practise out loud before the meeting. Speak slowly, look at people and pause between points.",
+     "id": "Berlatihlah dengan suara keras sebelum rapat. Bicaralah perlahan, tatap pendengar, dan beri jeda di antara poin.",
+     "pt": "Pratique em voz alta antes da reunião. Fale devagar, olhe para as pessoas e faça pausas entre as ideias.",
+     "tet": "Pratika ho lian makaas molok enkontru. Ko'alia neineik, haree ba ema sira no para uitoan entre pontu sira."
+    },
+    {
+     "en": "Use the language your audience understands best, such as Tetun in a village meeting.",
+     "id": "Gunakan bahasa yang paling dipahami pendengar, misalnya bahasa Tetun dalam rapat desa.",
+     "pt": "Use a língua que o público entende melhor, por exemplo o tétum numa reunião de suco.",
+     "tet": "Uza lian ne'ebé audiénsia komprende di'ak liu, hanesan Tetun iha enkontru suku nian."
+    },
+    {
+     "en": "End by repeating your main message and inviting questions.",
+     "id": "Akhiri dengan mengulang pesan utama dan mempersilakan pertanyaan.",
+     "pt": "Termine repetindo a mensagem principal e convidando a perguntas.",
+     "tet": "Remata ho temi fali ita-nia mensajen prinsipál no konvida ema atu husu pergunta."
+    }
+   ],
+   "task": {
+    "en": "Prepare a two-minute talk for your workplace or community group with three points. Practise it twice in front of a mirror or a friend.",
+    "id": "Siapkan pembicaraan dua menit untuk tempat kerja atau kelompok masyarakat dengan tiga poin. Latih dua kali di depan cermin atau teman.",
+    "pt": "Prepare uma intervenção de dois minutos para o seu trabalho ou grupo comunitário, com três ideias. Pratique-a duas vezes ao espelho ou com um amigo.",
+    "tet": "Prepara diskursu minutu rua ida ba ita-nia servisu ka grupu komunidade ho pontu tolu. Pratika dala rua iha espellu ka kolega ida nia oin."
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "How many main points are suggested for a short talk?",
+      "id": "Berapa poin utama yang disarankan untuk pembicaraan singkat?",
+      "pt": "Quantas ideias principais se sugerem para uma intervenção curta?",
+      "tet": "Pontu prinsipál hira mak sujere ba diskursu badak?"
+     },
+     "answer": {
+      "en": "Three",
+      "id": "Tiga",
+      "pt": "Três",
+      "tet": "Tolu"
+     },
+     "wrong": [
+      {
+       "en": "Twenty",
+       "id": "Dua puluh",
+       "pt": "Vinte",
+       "tet": "Ruanulu"
+      },
+      {
+       "en": "None",
+       "id": "Tidak ada",
+       "pt": "Nenhuma",
+       "tet": "La iha"
+      },
+      {
+       "en": "Fifty",
+       "id": "Lima puluh",
+       "pt": "Cinquenta",
+       "tet": "Limanulu"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "Which helps you speak well in public?",
+      "id": "Apa yang membantu berbicara dengan baik di depan umum?",
+      "pt": "O que ajuda a falar bem em público?",
+      "tet": "Saida mak ajuda ita ko'alia di'ak iha públiku?"
+     },
+     "answer": {
+      "en": "Speaking slowly and pausing",
+      "id": "Berbicara perlahan dan memberi jeda",
+      "pt": "Falar devagar e fazer pausas",
+      "tet": "Ko'alia neineik no para uitoan"
+     },
+     "wrong": [
+      {
+       "en": "Speaking very fast",
+       "id": "Berbicara sangat cepat",
+       "pt": "Falar muito depressa",
+       "tet": "Ko'alia lalais tebes"
+      },
+      {
+       "en": "Looking only at the floor",
+       "id": "Hanya melihat ke lantai",
+       "pt": "Olhar só para o chão",
+       "tet": "Haree ba rai de'it"
+      },
+      {
+       "en": "Reading without stopping",
+       "id": "Membaca tanpa berhenti",
+       "pt": "Ler sem parar",
+       "tet": "Lee la para"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "How should you end a talk?",
+      "id": "Bagaimana sebaiknya mengakhiri pembicaraan?",
+      "pt": "Como deve terminar uma intervenção?",
+      "tet": "Oinsá ita tenke remata diskursu ida?"
+     },
+     "answer": {
+      "en": "Repeat the main message and invite questions",
+      "id": "Ulangi pesan utama dan persilakan pertanyaan",
+      "pt": "Repetir a mensagem principal e convidar a perguntas",
+      "tet": "Temi fali mensajen prinsipál no konvida pergunta"
+     },
+     "wrong": [
+      {
+       "en": "Leave without a word",
+       "id": "Pergi tanpa berkata apa-apa",
+       "pt": "Sair sem dizer nada",
+       "tet": "Sai la ko'alia buat ida"
+      },
+      {
+       "en": "Start a new topic",
+       "id": "Memulai topik baru",
+       "pt": "Começar um tema novo",
+       "tet": "Hahú tópiku foun ida"
+      },
+      {
+       "en": "Tell people not to ask",
+       "id": "Melarang orang bertanya",
+       "pt": "Dizer às pessoas para não perguntarem",
+       "tet": "Bandu ema atu husu"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "level": "senior",
+   "title": {
+    "en": "Phones and messages, safely",
+    "id": "Telepon dan pesan dengan aman",
+    "pt": "Telemóveis e mensagens em segurança",
+    "tet": "Telemóvel no mensajen ho seguru"
+   },
+   "points": [
+    {
+     "en": "Voice messages and video calls let you talk with family far away, even in Australia or Portugal, at low cost with mobile data.",
+     "id": "Pesan suara dan panggilan video memungkinkan Anda berbicara dengan keluarga yang jauh, bahkan di Australia atau Portugal, dengan biaya rendah memakai data seluler.",
+     "pt": "As mensagens de voz e as videochamadas permitem falar com a família distante, mesmo na Austrália ou em Portugal, a baixo custo com dados móveis.",
+     "tet": "Mensajen lian no video-bolu ajuda ita ko'alia ho família ne'ebé dook, maski iha Austrália ka Portugál, ho kustu ki'ik uza dadus móvel."
+    },
+    {
+     "en": "Never tell anyone your PIN, password or the code sent by SMS. Banks and phone companies do not ask for them.",
+     "id": "Jangan pernah memberi tahu siapa pun PIN, kata sandi, atau kode yang dikirim lewat SMS. Bank dan perusahaan telepon tidak memintanya.",
+     "pt": "Nunca diga a ninguém o seu PIN, a palavra-passe ou o código enviado por SMS. Os bancos e as operadoras não os pedem.",
+     "tet": "Nunka fó-hatene ba ema ida ita-nia PIN, liafuan-pase ka kódigu ne'ebé haruka liuhusi SMS. Banku no kompañia telefone la husu buat sira-ne'e."
+    },
+    {
+     "en": "If a message says you won a prize or a relative needs money urgently, call the relative directly before you do anything.",
+     "id": "Jika pesan mengatakan Anda menang hadiah atau kerabat butuh uang segera, telepon kerabat itu langsung sebelum melakukan apa pun.",
+     "pt": "Se uma mensagem disser que ganhou um prémio ou que um familiar precisa de dinheiro com urgência, ligue diretamente ao familiar antes de fazer qualquer coisa.",
+     "tet": "Se mensajen ida dehan ita manán prémiu ka família ida presiza osan urjente, bolu direta ba família ne'e molok halo buat ruma."
+    },
+    {
+     "en": "You can make the letters on the screen bigger and turn up the volume in Settings. A grandchild can show you how.",
+     "id": "Anda dapat memperbesar huruf di layar dan menaikkan volume di Pengaturan. Cucu bisa menunjukkan caranya.",
+     "pt": "Pode aumentar o tamanho das letras no ecrã e o volume nas Definições. Um neto pode mostrar-lhe como.",
+     "tet": "Ita bele halo letra iha ekrán sai boot liu no hasa'e volume iha Konfigurasaun. Bei-oan ida bele hatudu oinsá."
+    }
+   ],
+   "task": {
+    "en": "With a grandchild, make the text bigger on your phone and send one voice message to a family member.",
+    "id": "Bersama cucu, perbesar tulisan di telepon Anda dan kirim satu pesan suara kepada anggota keluarga.",
+    "pt": "Com um neto, aumente o tamanho do texto no telemóvel e envie uma mensagem de voz a um familiar.",
+    "tet": "Ho bei-oan ida, halo letra iha ita-nia telemóvel sai boot no haruka mensajen lian ida ba família ida."
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "Someone calls and asks for your bank PIN. What do you do?",
+      "id": "Seseorang menelepon dan meminta PIN bank Anda. Apa yang Anda lakukan?",
+      "pt": "Alguém telefona e pede o PIN do seu banco. O que faz?",
+      "tet": "Ema ida bolu no husu ita-nia PIN banku nian. Ita halo saida?"
+     },
+     "answer": {
+      "en": "Never give it",
+      "id": "Tidak pernah memberikannya",
+      "pt": "Nunca o dou",
+      "tet": "Nunka fó"
+     },
+     "wrong": [
+      {
+       "en": "Give it if they sound kind",
+       "id": "Memberikannya jika suaranya ramah",
+       "pt": "Dou-o se a pessoa parecer simpática",
+       "tet": "Fó se sira-nia lian di'ak"
+      },
+      {
+       "en": "Write it in a text message",
+       "id": "Menuliskannya dalam pesan teks",
+       "pt": "Escrevo-o numa mensagem",
+       "tet": "Hakerek iha mensajen ida"
+      },
+      {
+       "en": "Tell it to the whole family group",
+       "id": "Memberitahukannya ke grup keluarga",
+       "pt": "Digo-o no grupo da família",
+       "tet": "Fó-hatene iha grupu família"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "A message says a relative needs money fast. What is the first step?",
+      "id": "Pesan mengatakan kerabat butuh uang segera. Apa langkah pertama?",
+      "pt": "Uma mensagem diz que um familiar precisa de dinheiro depressa. Qual é o primeiro passo?",
+      "tet": "Mensajen ida dehan família ida presiza osan lalais. Pasu dahuluk mak saida?"
+     },
+     "answer": {
+      "en": "Call the relative directly",
+      "id": "Telepon langsung kerabat itu",
+      "pt": "Ligar diretamente ao familiar",
+      "tet": "Bolu direta ba família ne'e"
+     },
+     "wrong": [
+      {
+       "en": "Send money at once",
+       "id": "Langsung kirim uang",
+       "pt": "Enviar logo o dinheiro",
+       "tet": "Haruka osan kedas"
+      },
+      {
+       "en": "Reply with your PIN",
+       "id": "Membalas dengan PIN Anda",
+       "pt": "Responder com o PIN",
+       "tet": "Hatán ho ita-nia PIN"
+      },
+      {
+       "en": "Forward it to everyone",
+       "id": "Meneruskannya ke semua orang",
+       "pt": "Reencaminhá-la a toda a gente",
+       "tet": "Haruka fali ba ema hotu"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "Where can you make the screen letters bigger?",
+      "id": "Di mana Anda dapat memperbesar huruf di layar?",
+      "pt": "Onde pode aumentar as letras do ecrã?",
+      "tet": "Iha ne'ebé mak ita bele halo letra iha ekrán sai boot?"
+     },
+     "answer": {
+      "en": "In Settings",
+      "id": "Di Pengaturan",
+      "pt": "Nas Definições",
+      "tet": "Iha Konfigurasaun"
+     },
+     "wrong": [
+      {
+       "en": "In the camera",
+       "id": "Di kamera",
+       "pt": "Na câmara",
+       "tet": "Iha kámara"
+      },
+      {
+       "en": "In the calculator",
+       "id": "Di kalkulator",
+       "pt": "Na calculadora",
+       "tet": "Iha kalkuladora"
+      },
+      {
+       "en": "In the battery",
+       "id": "Di baterai",
+       "pt": "Na bateria",
+       "tet": "Iha bateria"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,997 @@
+{
+ "subject": "technology",
+ "icon": "🔧",
+ "name": {
+  "en": "Technology and engineering",
+  "id": "Teknologi dan rekayasa",
+  "pt": "Tecnologia e engenharia",
+  "tet": "Teknolojia no enjeñaria"
+ },
+ "lessons": [
+  {
+   "level": "early",
+   "title": {
+    "en": "Tools help us",
+    "id": "Alat membantu kita",
+    "pt": "As ferramentas ajudam-nos",
+    "tet": "Ferramenta sira ajuda ita"
+   },
+   "points": [
+    {
+     "en": "A tool helps us do a job, like a spoon, a hammer or scissors.",
+     "id": "Alat membantu kita bekerja, seperti sendok, palu, atau gunting.",
+     "pt": "Uma ferramenta ajuda-nos a fazer um trabalho, como uma colher, um martelo ou uma tesoura.",
+     "tet": "Ferramenta ajuda ita halo servisu, hanesan kanuru, martelu ka tesoura."
+    },
+    {
+     "en": "A wheel helps things roll, like a bicycle or a cart.",
+     "id": "Roda membantu benda bergulir, seperti sepeda atau gerobak.",
+     "pt": "A roda ajuda as coisas a rolar, como uma bicicleta ou uma carroça.",
+     "tet": "Roda ajuda sasán ruma lao, hanesan bisikleta ka karosa."
+    },
+    {
+     "en": "Never touch plugs or wires. Electricity can hurt you.",
+     "id": "Jangan pernah menyentuh steker atau kabel. Listrik bisa melukaimu.",
+     "pt": "Nunca toques em fichas ou fios. A eletricidade pode magoar-te.",
+     "tet": "Labele kona tomada ka kabu. Eletrisidade bele halo ita moras."
+    }
+   ],
+   "task": {
+    "en": "Find three tools in your home and say what job each one does.",
+    "id": "Cari tiga alat di rumahmu dan sebutkan kegunaan masing-masing.",
+    "pt": "Encontra três ferramentas em casa e diz para que serve cada uma.",
+    "tet": "Buka ferramenta tolu iha ita-nia uma no temi servisu saida mak ida-idak halo."
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "What helps a cart roll?",
+      "id": "Apa yang membantu gerobak bergulir?",
+      "pt": "O que ajuda uma carroça a rolar?",
+      "tet": "Saida mak ajuda karosa lao?"
+     },
+     "answer": {
+      "en": "Wheels",
+      "id": "Roda",
+      "pt": "As rodas",
+      "tet": "Roda"
+     },
+     "wrong": [
+      {
+       "en": "Leaves",
+       "id": "Daun",
+       "pt": "As folhas",
+       "tet": "Tahan"
+      },
+      {
+       "en": "Stones",
+       "id": "Batu",
+       "pt": "As pedras",
+       "tet": "Fatuk"
+      },
+      {
+       "en": "Strings",
+       "id": "Tali",
+       "pt": "Os cordéis",
+       "tet": "Tali"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "Which tool cuts paper?",
+      "id": "Alat apa yang memotong kertas?",
+      "pt": "Que ferramenta corta papel?",
+      "tet": "Ferramenta saida mak tesi surat-tahan?"
+     },
+     "answer": {
+      "en": "Scissors",
+      "id": "Gunting",
+      "pt": "A tesoura",
+      "tet": "Tesoura"
+     },
+     "wrong": [
+      {
+       "en": "A cup",
+       "id": "Gelas",
+       "pt": "Um copo",
+       "tet": "Kopu"
+      },
+      {
+       "en": "A ball",
+       "id": "Bola",
+       "pt": "Uma bola",
+       "tet": "Bola"
+      },
+      {
+       "en": "A pillow",
+       "id": "Bantal",
+       "pt": "Uma almofada",
+       "tet": "Travaseiru"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "What should you never touch?",
+      "id": "Apa yang tidak boleh kamu sentuh?",
+      "pt": "Em que nunca deves tocar?",
+      "tet": "Saida mak ita labele kona?"
+     },
+     "answer": {
+      "en": "Plugs and wires",
+      "id": "Steker dan kabel",
+      "pt": "Fichas e fios",
+      "tet": "Tomada no kabu"
+     },
+     "wrong": [
+      {
+       "en": "Your book",
+       "id": "Bukumu",
+       "pt": "O teu livro",
+       "tet": "Ita-nia livru"
+      },
+      {
+       "en": "A pencil",
+       "id": "Pensil",
+       "pt": "Um lápis",
+       "tet": "Lapis"
+      },
+      {
+       "en": "A flower",
+       "id": "Bunga",
+       "pt": "Uma flor",
+       "tet": "Ai-funan"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "level": "primary",
+   "title": {
+    "en": "Simple machines",
+    "id": "Pesawat sederhana",
+    "pt": "Máquinas simples",
+    "tet": "Mákina simples"
+   },
+   "points": [
+    {
+     "en": "Simple machines make work easier: the lever, wheel and axle, pulley, ramp, wedge and screw.",
+     "id": "Pesawat sederhana memudahkan pekerjaan: tuas, roda dan poros, katrol, bidang miring, baji, dan sekrup.",
+     "pt": "As máquinas simples facilitam o trabalho: a alavanca, a roda e eixo, a roldana, a rampa, a cunha e o parafuso.",
+     "tet": "Mákina simples halo servisu sai fasil: alavanka, roda ho eixu, roldana, rampa, kuña no parafuzu."
+    },
+    {
+     "en": "A ramp lets you push a heavy load up slowly instead of lifting it straight up.",
+     "id": "Bidang miring memungkinkanmu mendorong beban berat ke atas perlahan, bukan mengangkatnya lurus ke atas.",
+     "pt": "Uma rampa permite empurrar uma carga pesada devagar para cima, em vez de a levantar a direito.",
+     "tet": "Rampa halo ita bele dudu sasán todan ba leten neineik, la presiza hi'it loos ba leten."
+    },
+    {
+     "en": "A pulley at a well lets you pull down on a rope to lift a bucket of water up.",
+     "id": "Katrol di sumur memungkinkanmu menarik tali ke bawah untuk mengangkat ember air ke atas.",
+     "pt": "Uma roldana num poço permite puxar a corda para baixo para levantar um balde de água.",
+     "tet": "Roldana iha bee-matan ida halo ita bele dada tali ba okos atu hi'it balde bee ba leten."
+    }
+   ],
+   "task": {
+    "en": "Make a ramp with a board and some books, and roll a bottle up it. Compare it with lifting the bottle.",
+    "id": "Buat bidang miring dari papan dan beberapa buku, lalu gulirkan botol ke atasnya. Bandingkan dengan mengangkat botol.",
+    "pt": "Faz uma rampa com uma tábua e alguns livros e faz rolar uma garrafa por ela acima. Compara com levantar a garrafa.",
+    "tet": "Halo rampa ida ho ai-riin tabua no livru balu, no halo botir lao sa'e. Kompara ho hi'it botir."
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "Which of these is a simple machine?",
+      "id": "Manakah yang merupakan pesawat sederhana?",
+      "pt": "Qual destes é uma máquina simples?",
+      "tet": "Ida ne'ebé mak mákina simples?"
+     },
+     "answer": {
+      "en": "A lever",
+      "id": "Tuas",
+      "pt": "Uma alavanca",
+      "tet": "Alavanka"
+     },
+     "wrong": [
+      {
+       "en": "A song",
+       "id": "Lagu",
+       "pt": "Uma canção",
+       "tet": "Kanta"
+      },
+      {
+       "en": "A leaf",
+       "id": "Daun",
+       "pt": "Uma folha",
+       "tet": "Ai-tahan"
+      },
+      {
+       "en": "A cloud",
+       "id": "Awan",
+       "pt": "Uma nuvem",
+       "tet": "Kalohan"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "Why do people use a ramp?",
+      "id": "Mengapa orang memakai bidang miring?",
+      "pt": "Porque se usa uma rampa?",
+      "tet": "Tanba saida mak ema uza rampa?"
+     },
+     "answer": {
+      "en": "It makes moving a heavy load up easier",
+      "id": "Memudahkan memindahkan beban berat ke atas",
+      "pt": "Torna mais fácil subir uma carga pesada",
+      "tet": "Halo fasil liu atu lori sasán todan sa'e"
+     },
+     "wrong": [
+      {
+       "en": "It makes the load disappear",
+       "id": "Membuat beban menghilang",
+       "pt": "Faz a carga desaparecer",
+       "tet": "Halo sasán lakon"
+      },
+      {
+       "en": "It makes things wet",
+       "id": "Membuat benda basah",
+       "pt": "Molha as coisas",
+       "tet": "Halo sasán bokon"
+      },
+      {
+       "en": "It makes a loud noise",
+       "id": "Membuat suara keras",
+       "pt": "Faz muito barulho",
+       "tet": "Halo lian boot"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "What can a pulley at a well lift?",
+      "id": "Apa yang dapat diangkat katrol di sumur?",
+      "pt": "O que pode levantar uma roldana num poço?",
+      "tet": "Roldana iha bee-matan bele hi'it saida?"
+     },
+     "answer": {
+      "en": "A bucket of water",
+      "id": "Ember berisi air",
+      "pt": "Um balde de água",
+      "tet": "Balde bee ida"
+     },
+     "wrong": [
+      {
+       "en": "The whole well",
+       "id": "Seluruh sumur",
+       "pt": "O poço inteiro",
+       "tet": "Bee-matan tomak"
+      },
+      {
+       "en": "The sun",
+       "id": "Matahari",
+       "pt": "O Sol",
+       "tet": "Loron"
+      },
+      {
+       "en": "The road",
+       "id": "Jalan",
+       "pt": "A estrada",
+       "tet": "Estrada"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "level": "middle",
+   "title": {
+    "en": "Electricity and circuits",
+    "id": "Listrik dan rangkaian",
+    "pt": "Eletricidade e circuitos",
+    "tet": "Eletrisidade no sirkuitu"
+   },
+   "points": [
+    {
+     "en": "Electric current flows only around a closed circuit: a battery, wires and a bulb joined in a loop.",
+     "id": "Arus listrik hanya mengalir dalam rangkaian tertutup: baterai, kabel, dan bola lampu yang tersambung melingkar.",
+     "pt": "A corrente elétrica só passa num circuito fechado: uma pilha, fios e uma lâmpada ligados em anel.",
+     "tet": "Korrente elétrika suli de'it iha sirkuitu taka: bateria, kabu no lampada ne'ebé liga hanesan lasu."
+    },
+    {
+     "en": "Ohm's law: V = I × R (volts = amperes × ohms). A 9 V battery across 3 Ω gives a current of 3 A.",
+     "id": "Hukum Ohm: V = I × R (volt = ampere × ohm). Baterai 9 V pada hambatan 3 Ω menghasilkan arus 3 A.",
+     "pt": "Lei de Ohm: V = I × R (volts = amperes × ohms). Uma pilha de 9 V numa resistência de 3 Ω dá uma corrente de 3 A.",
+     "tet": "Lei Ohm: V = I × R (volt = ampere × ohm). Bateria 9 V ho resisténsia 3 Ω fó korrente 3 A."
+    },
+    {
+     "en": "Conductors such as copper let current flow; insulators such as plastic and rubber do not.",
+     "id": "Konduktor seperti tembaga mengalirkan arus; isolator seperti plastik dan karet tidak.",
+     "pt": "Os condutores, como o cobre, deixam passar a corrente; os isoladores, como o plástico e a borracha, não.",
+     "tet": "Kondutór hanesan kobre husik korrente suli; izoladór hanesan plástiku no borraxa la husik."
+    },
+    {
+     "en": "Water and electricity are dangerous together. Never touch switches with wet hands.",
+     "id": "Air dan listrik berbahaya jika bertemu. Jangan pernah menyentuh sakelar dengan tangan basah.",
+     "pt": "Água e eletricidade juntas são perigosas. Nunca toques em interruptores com as mãos molhadas.",
+     "tet": "Bee no eletrisidade hamutuk perigozu. Labele kona interruptór ho liman bokon."
+    }
+   ],
+   "task": {
+    "en": "Build a circuit with a battery, wires and a small bulb, then add a switch and turn the bulb on and off.",
+    "id": "Rakit rangkaian dengan baterai, kabel, dan lampu kecil, lalu tambahkan sakelar untuk menyalakan dan mematikan lampu.",
+    "pt": "Monta um circuito com uma pilha, fios e uma lâmpada pequena e depois junta um interruptor para a acender e apagar.",
+    "tet": "Monta sirkuitu ida ho bateria, kabu no lampada ki'ik, depois aumenta interruptór atu hakat no hamate lampada."
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "A 6 V battery is connected to 2 Ω. What is the current?",
+      "id": "Baterai 6 V dihubungkan ke hambatan 2 Ω. Berapa arusnya?",
+      "pt": "Uma pilha de 6 V está ligada a 2 Ω. Qual é a corrente?",
+      "tet": "Bateria 6 V liga ho 2 Ω. Korrente hira?"
+     },
+     "answer": {
+      "en": "3 A",
+      "id": "3 A",
+      "pt": "3 A",
+      "tet": "3 A"
+     },
+     "wrong": [
+      {
+       "en": "12 A",
+       "id": "12 A",
+       "pt": "12 A",
+       "tet": "12 A"
+      },
+      {
+       "en": "4 A",
+       "id": "4 A",
+       "pt": "4 A",
+       "tet": "4 A"
+      },
+      {
+       "en": "8 A",
+       "id": "8 A",
+       "pt": "8 A",
+       "tet": "8 A"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "Which material is an insulator?",
+      "id": "Bahan mana yang merupakan isolator?",
+      "pt": "Que material é um isolador?",
+      "tet": "Materiál ida ne'ebé mak izoladór?"
+     },
+     "answer": {
+      "en": "Rubber",
+      "id": "Karet",
+      "pt": "A borracha",
+      "tet": "Borraxa"
+     },
+     "wrong": [
+      {
+       "en": "Copper",
+       "id": "Tembaga",
+       "pt": "O cobre",
+       "tet": "Kobre"
+      },
+      {
+       "en": "Iron",
+       "id": "Besi",
+       "pt": "O ferro",
+       "tet": "Besi"
+      },
+      {
+       "en": "Aluminium",
+       "id": "Aluminium",
+       "pt": "O alumínio",
+       "tet": "Aluminiu"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "When does the bulb light up?",
+      "id": "Kapan bola lampu menyala?",
+      "pt": "Quando se acende a lâmpada?",
+      "tet": "Lampada naroman bainhira?"
+     },
+     "answer": {
+      "en": "When the circuit is closed",
+      "id": "Saat rangkaian tertutup",
+      "pt": "Quando o circuito está fechado",
+      "tet": "Bainhira sirkuitu taka"
+     },
+     "wrong": [
+      {
+       "en": "When the circuit is open",
+       "id": "Saat rangkaian terbuka",
+       "pt": "Quando o circuito está aberto",
+       "tet": "Bainhira sirkuitu loke"
+      },
+      {
+       "en": "When the battery is removed",
+       "id": "Saat baterai dilepas",
+       "pt": "Quando se tira a pilha",
+       "tet": "Bainhira hasai bateria"
+      },
+      {
+       "en": "When a wire is cut",
+       "id": "Saat kabel dipotong",
+       "pt": "Quando se corta um fio",
+       "tet": "Bainhira kabu ida tesi"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "level": "secondary",
+   "title": {
+    "en": "Energy and renewable power",
+    "id": "Energi dan daya terbarukan",
+    "pt": "Energia e energias renováveis",
+    "tet": "Enerjia no enerjia renovável"
+   },
+   "points": [
+    {
+     "en": "Power is P = V × I and energy is E = P × t. A 100 W lamp left on for 10 hours uses 1 kWh.",
+     "id": "Daya adalah P = V × I dan energi adalah E = P × t. Lampu 100 W yang menyala 10 jam memakai 1 kWh.",
+     "pt": "A potência é P = V × I e a energia é E = P × t. Uma lâmpada de 100 W acesa durante 10 horas gasta 1 kWh.",
+     "tet": "Poténsia mak P = V × I no enerjia mak E = P × t. Lampada 100 W ne'ebé moris oras 10 uza 1 kWh."
+    },
+    {
+     "en": "Fossil fuels such as diesel, coal and gas release CO₂ and will run out. Renewables such as solar, wind and hydro are renewed by nature.",
+     "id": "Bahan bakar fosil seperti solar, batu bara, dan gas melepaskan CO₂ dan akan habis. Energi terbarukan seperti surya, angin, dan air diperbarui oleh alam.",
+     "pt": "Os combustíveis fósseis, como o gasóleo, o carvão e o gás, libertam CO₂ e vão acabar. As renováveis, como a solar, a eólica e a hídrica, são renovadas pela natureza.",
+     "tet": "Kombustível fósil hanesan gazóleu, karvaun no gás hasai CO₂ no sei hotu. Enerjia renovável hanesan loron, anin no bee, natureza fó fali beibeik."
+    },
+    {
+     "en": "Solar panels turn sunlight into electricity. Timor-Leste has strong sunshine most of the year, which is good for solar power.",
+     "id": "Panel surya mengubah sinar matahari menjadi listrik. Timor-Leste punya sinar matahari kuat hampir sepanjang tahun, cocok untuk tenaga surya.",
+     "pt": "Os painéis solares transformam a luz do Sol em eletricidade. Timor-Leste tem sol forte quase todo o ano, o que é bom para a energia solar.",
+     "tet": "Painel solár troka loron nia naroman ba eletrisidade. Timor-Leste iha loron manas maizumenus tinan tomak, di'ak ba enerjia solár."
+    },
+    {
+     "en": "Batteries store solar energy for the night. Higher efficiency means less energy is wasted as heat.",
+     "id": "Baterai menyimpan energi surya untuk malam hari. Efisiensi lebih tinggi berarti lebih sedikit energi terbuang sebagai panas.",
+     "pt": "As baterias guardam a energia solar para a noite. Maior eficiência significa menos energia perdida em calor.",
+     "tet": "Bateria rai enerjia solár ba kalan. Efisiénsia aas liu signifika enerjia uitoan de'it mak lakon hanesan manas."
+    }
+   ],
+   "task": {
+    "en": "List the electric devices at home with their power in watts and hours of use, and calculate the energy used per day in kWh.",
+    "id": "Catat alat listrik di rumah beserta dayanya dalam watt dan jam pemakaian, lalu hitung energi per hari dalam kWh.",
+    "pt": "Faz uma lista dos aparelhos elétricos de casa, com a potência em watts e as horas de uso, e calcula a energia gasta por dia em kWh.",
+    "tet": "Halo lista aparellu elétriku sira iha uma ho sira-nia poténsia iha watt no oras uza, no sura enerjia ne'ebé uza loron ida iha kWh."
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "How much energy does a 100 W lamp use in 10 hours?",
+      "id": "Berapa energi yang dipakai lampu 100 W selama 10 jam?",
+      "pt": "Quanta energia gasta uma lâmpada de 100 W em 10 horas?",
+      "tet": "Lampada 100 W uza enerjia hira iha oras 10?"
+     },
+     "answer": {
+      "en": "1 kWh",
+      "id": "1 kWh",
+      "pt": "1 kWh",
+      "tet": "1 kWh"
+     },
+     "wrong": [
+      {
+       "en": "10 kWh",
+       "id": "10 kWh",
+       "pt": "10 kWh",
+       "tet": "10 kWh"
+      },
+      {
+       "en": "100 kWh",
+       "id": "100 kWh",
+       "pt": "100 kWh",
+       "tet": "100 kWh"
+      },
+      {
+       "en": "0.1 kWh",
+       "id": "0,1 kWh",
+       "pt": "0,1 kWh",
+       "tet": "0,1 kWh"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "Which energy source is renewable?",
+      "id": "Sumber energi mana yang terbarukan?",
+      "pt": "Que fonte de energia é renovável?",
+      "tet": "Fonte enerjia ida ne'ebé mak renovável?"
+     },
+     "answer": {
+      "en": "Solar",
+      "id": "Surya",
+      "pt": "Solar",
+      "tet": "Solár"
+     },
+     "wrong": [
+      {
+       "en": "Diesel",
+       "id": "Minyak diesel",
+       "pt": "Gasóleo",
+       "tet": "Gazóleu"
+      },
+      {
+       "en": "Coal",
+       "id": "Batu bara",
+       "pt": "Carvão",
+       "tet": "Karvaun"
+      },
+      {
+       "en": "Natural gas",
+       "id": "Gas alam",
+       "pt": "Gás natural",
+       "tet": "Gás naturál"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "What does a solar panel do?",
+      "id": "Apa fungsi panel surya?",
+      "pt": "O que faz um painel solar?",
+      "tet": "Painel solár halo saida?"
+     },
+     "answer": {
+      "en": "Turns sunlight into electricity",
+      "id": "Mengubah sinar matahari menjadi listrik",
+      "pt": "Transforma a luz do Sol em eletricidade",
+      "tet": "Troka loron nia naroman ba eletrisidade"
+     },
+     "wrong": [
+      {
+       "en": "Turns electricity into sunlight",
+       "id": "Mengubah listrik menjadi sinar matahari",
+       "pt": "Transforma eletricidade em luz do Sol",
+       "tet": "Troka eletrisidade ba loron nia naroman"
+      },
+      {
+       "en": "Stores rainwater",
+       "id": "Menyimpan air hujan",
+       "pt": "Guarda água da chuva",
+       "tet": "Rai bee-udan"
+      },
+      {
+       "en": "Burns fuel",
+       "id": "Membakar bahan bakar",
+       "pt": "Queima combustível",
+       "tet": "Sunu kombustível"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "level": "university",
+   "title": {
+    "en": "Engineering design and systems",
+    "id": "Desain rekayasa dan sistem",
+    "pt": "Projeto de engenharia e sistemas",
+    "tet": "Dezeñu enjeñaria nian no sistema"
+   },
+   "points": [
+    {
+     "en": "The engineering design process: define the problem, research, design, build a prototype, test it and improve it.",
+     "id": "Proses desain rekayasa: rumuskan masalah, teliti, rancang, buat prototipe, uji, lalu perbaiki.",
+     "pt": "O processo de projeto em engenharia: definir o problema, pesquisar, projetar, construir um protótipo, testar e melhorar.",
+     "tet": "Prosesu dezeñu enjeñaria nian: define problema, peskiza, dezeña, halo protótipu, teste no hadi'a."
+    },
+    {
+     "en": "Engineers balance constraints such as cost, safety, materials and the environment. A factor of safety makes a structure stronger than its expected load.",
+     "id": "Insinyur menyeimbangkan batasan seperti biaya, keselamatan, bahan, dan lingkungan. Faktor keamanan membuat struktur lebih kuat daripada beban yang diperkirakan.",
+     "pt": "Os engenheiros equilibram limitações como o custo, a segurança, os materiais e o ambiente. Um fator de segurança torna a estrutura mais forte do que a carga prevista.",
+     "tet": "Enjeñeiru sira balansa limitasaun hanesan kustu, seguransa, materiál no ambiente. Fatór seguransa halo estrutura forte liu duké karga ne'ebé sira hein."
+    },
+    {
+     "en": "Electric motors and generators use electromagnetic induction (Faraday's law): a changing magnetic field creates a voltage.",
+     "id": "Motor listrik dan generator memakai induksi elektromagnetik (hukum Faraday): medan magnet yang berubah menghasilkan tegangan.",
+     "pt": "Os motores elétricos e os geradores usam a indução eletromagnética (lei de Faraday): um campo magnético variável cria uma tensão.",
+     "tet": "Motór elétriku no jeradór uza indusaun eletromagnétika (lei Faraday): kampu magnétiku ne'ebé muda kria voltajen."
+    }
+   ],
+   "task": {
+    "en": "Design a low-cost water filter or solar phone charger for a village: sketch it, list materials and write a test plan.",
+    "id": "Rancang penyaring air murah atau pengisi daya ponsel tenaga surya untuk desa: buat sketsa, daftar bahan, dan rencana uji.",
+    "pt": "Projeta um filtro de água barato ou um carregador solar de telemóveis para uma aldeia: desenha-o, lista os materiais e escreve um plano de testes.",
+    "tet": "Dezeña filtru bee baratu ka karregadór telemovel solár ida ba suku ida: halo dezeñu, lista materiál no hakerek planu teste."
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "What comes after building a prototype?",
+      "id": "Apa yang dilakukan setelah membuat prototipe?",
+      "pt": "O que vem depois de construir um protótipo?",
+      "tet": "Depois halo protótipu, saida mak tuir mai?"
+     },
+     "answer": {
+      "en": "Testing and improving it",
+      "id": "Mengujinya dan memperbaikinya",
+      "pt": "Testá-lo e melhorá-lo",
+      "tet": "Teste no hadi'a nia"
+     },
+     "wrong": [
+      {
+       "en": "Selling it without tests",
+       "id": "Menjualnya tanpa uji",
+       "pt": "Vendê-lo sem testes",
+       "tet": "Fa'an nia la ho teste"
+      },
+      {
+       "en": "Throwing the design away",
+       "id": "Membuang desainnya",
+       "pt": "Deitar fora o projeto",
+       "tet": "Soe dezeñu"
+      },
+      {
+       "en": "Defining the problem for the first time",
+       "id": "Merumuskan masalah untuk pertama kali",
+       "pt": "Definir o problema pela primeira vez",
+       "tet": "Define problema ba dala uluk"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "Why do engineers use a factor of safety?",
+      "id": "Mengapa insinyur memakai faktor keamanan?",
+      "pt": "Porque usam os engenheiros um fator de segurança?",
+      "tet": "Tanba saida mak enjeñeiru uza fatór seguransa?"
+     },
+     "answer": {
+      "en": "To make structures stronger than the expected load",
+      "id": "Agar struktur lebih kuat dari beban yang diperkirakan",
+      "pt": "Para a estrutura ser mais forte do que a carga prevista",
+      "tet": "Atu estrutura forte liu duké karga ne'ebé hein"
+     },
+     "wrong": [
+      {
+       "en": "Only to make them cheaper",
+       "id": "Hanya agar lebih murah",
+       "pt": "Só para ficar mais barata",
+       "tet": "Atu sai baratu liu deit"
+      },
+      {
+       "en": "To make them heavier for beauty",
+       "id": "Agar lebih berat supaya indah",
+       "pt": "Para ficar mais pesada e bonita",
+       "tet": "Atu sai todan liu no furak"
+      },
+      {
+       "en": "So that no testing is needed",
+       "id": "Agar tidak perlu diuji",
+       "pt": "Para não ser preciso testar",
+       "tet": "Atu la presiza teste"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "Which principle do electric generators use?",
+      "id": "Prinsip apa yang digunakan generator listrik?",
+      "pt": "Que princípio usam os geradores elétricos?",
+      "tet": "Jeradór elétriku uza prinsípiu saida?"
+     },
+     "answer": {
+      "en": "Electromagnetic induction",
+      "id": "Induksi elektromagnetik",
+      "pt": "A indução eletromagnética",
+      "tet": "Indusaun eletromagnétika"
+     },
+     "wrong": [
+      {
+       "en": "Photosynthesis",
+       "id": "Fotosintesis",
+       "pt": "A fotossíntese",
+       "tet": "Fotosinteze"
+      },
+      {
+       "en": "Evaporation",
+       "id": "Penguapan",
+       "pt": "A evaporação",
+       "tet": "Evaporasaun"
+      },
+      {
+       "en": "Friction only",
+       "id": "Hanya gesekan",
+       "pt": "Só o atrito",
+       "tet": "Fritasaun deit"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "level": "adult",
+   "title": {
+    "en": "Technology at work and at home",
+    "id": "Teknologi di tempat kerja dan di rumah",
+    "pt": "Tecnologia no trabalho e em casa",
+    "tet": "Teknolojia iha servisu no iha uma"
+   },
+   "points": [
+    {
+     "en": "Look after tools and machines: clean them, oil the moving parts and check cables, so they last longer and work safely.",
+     "id": "Rawat alat dan mesin: bersihkan, beri pelumas pada bagian yang bergerak, dan periksa kabel agar awet dan aman dipakai.",
+     "pt": "Cuida das ferramentas e máquinas: limpa-as, lubrifica as peças móveis e verifica os cabos, para durarem mais e funcionarem em segurança.",
+     "tet": "Tau matan ba ferramenta no mákina: hamoos, tau mina ba parte ne'ebé book-an no haree kabu sira, atu naruk liu no seguru."
+    },
+    {
+     "en": "Wear safety gear such as gloves, goggles and boots, and switch off the power before repairing anything electric.",
+     "id": "Pakai alat pelindung seperti sarung tangan, kacamata pelindung, dan sepatu bot, dan matikan listrik sebelum memperbaiki alat listrik.",
+     "pt": "Usa equipamento de proteção, como luvas, óculos e botas, e desliga a corrente antes de reparar qualquer aparelho elétrico.",
+     "tet": "Uza ekipamentu protesaun hanesan luva, óculus no bota, no hamate eletrisidade molok hadi'a buat elétriku ruma."
+    },
+    {
+     "en": "A small solar system with a panel, a charge controller and a battery can power lights and phones in rural areas.",
+     "id": "Sistem surya kecil dengan panel, pengatur pengisian, dan baterai dapat menyalakan lampu dan mengisi ponsel di pedesaan.",
+     "pt": "Um pequeno sistema solar com painel, controlador de carga e bateria pode alimentar luzes e telemóveis nas zonas rurais.",
+     "tet": "Sistema solár ki'ik ida ho painel, kontroladór karga no bateria bele fó eletrisidade ba lampu no telemovel iha área rurál."
+    }
+   ],
+   "task": {
+    "en": "Make a monthly maintenance checklist for a machine you use, such as a motorbike, a generator or a sewing machine.",
+    "id": "Buat daftar periksa perawatan bulanan untuk mesin yang kamu pakai, seperti sepeda motor, generator, atau mesin jahit.",
+    "pt": "Faz uma lista mensal de manutenção para uma máquina que usas, como uma mota, um gerador ou uma máquina de costura.",
+    "tet": "Halo lista manutensaun fulan-fulan ba mákina ida ne'ebé ita uza, hanesan motór, jeradór ka mákina suku."
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "Before repairing an electric device, what should you do?",
+      "id": "Sebelum memperbaiki alat listrik, apa yang harus dilakukan?",
+      "pt": "Antes de reparar um aparelho elétrico, o que deves fazer?",
+      "tet": "Molok hadi'a aparellu elétriku, ita tenke halo saida?"
+     },
+     "answer": {
+      "en": "Switch off the power",
+      "id": "Mematikan listrik",
+      "pt": "Desligar a corrente",
+      "tet": "Hamate eletrisidade"
+     },
+     "wrong": [
+      {
+       "en": "Touch the wires to test them",
+       "id": "Menyentuh kabel untuk mengujinya",
+       "pt": "Tocar nos fios para testar",
+       "tet": "Kona kabu atu teste"
+      },
+      {
+       "en": "Work with wet hands",
+       "id": "Bekerja dengan tangan basah",
+       "pt": "Trabalhar com as mãos molhadas",
+       "tet": "Servisu ho liman bokon"
+      },
+      {
+       "en": "Take off your goggles",
+       "id": "Melepas kacamata pelindung",
+       "pt": "Tirar os óculos de proteção",
+       "tet": "Hasai óculus protesaun"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "What does a small solar system need to give light at night?",
+      "id": "Apa yang dibutuhkan sistem surya kecil agar menyala di malam hari?",
+      "pt": "De que precisa um pequeno sistema solar para dar luz à noite?",
+      "tet": "Sistema solár ki'ik presiza saida atu fó naroman iha kalan?"
+     },
+     "answer": {
+      "en": "A battery",
+      "id": "Baterai",
+      "pt": "Uma bateria",
+      "tet": "Bateria"
+     },
+     "wrong": [
+      {
+       "en": "A longer cable",
+       "id": "Kabel yang lebih panjang",
+       "pt": "Um cabo mais comprido",
+       "tet": "Kabu naruk liu"
+      },
+      {
+       "en": "A bigger roof",
+       "id": "Atap yang lebih besar",
+       "pt": "Um telhado maior",
+       "tet": "Kakuluk boot liu"
+      },
+      {
+       "en": "A louder speaker",
+       "id": "Pengeras suara yang lebih keras",
+       "pt": "Um altifalante mais forte",
+       "tet": "Altifalante ne'ebé lian boot liu"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "Why do we oil the moving parts of a machine?",
+      "id": "Mengapa bagian mesin yang bergerak diberi pelumas?",
+      "pt": "Porque lubrificamos as peças móveis de uma máquina?",
+      "tet": "Tanba saida mak ita tau mina ba mákina nia parte ne'ebé book-an?"
+     },
+     "answer": {
+      "en": "So it lasts longer and runs smoothly",
+      "id": "Agar awet dan berjalan lancar",
+      "pt": "Para durar mais e funcionar bem",
+      "tet": "Atu naruk liu no la'o di'ak"
+     },
+     "wrong": [
+      {
+       "en": "To make it rust",
+       "id": "Agar berkarat",
+       "pt": "Para enferrujar",
+       "tet": "Atu sai ferruzen"
+      },
+      {
+       "en": "To make it heavier",
+       "id": "Agar lebih berat",
+       "pt": "Para ficar mais pesada",
+       "tet": "Atu sai todan liu"
+      },
+      {
+       "en": "To change its colour",
+       "id": "Untuk mengubah warnanya",
+       "pt": "Para mudar a cor",
+       "tet": "Atu muda nia kór"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "level": "senior",
+   "title": {
+    "en": "Inventions across a lifetime",
+    "id": "Penemuan sepanjang hidup",
+    "pt": "Invenções ao longo da vida",
+    "tet": "Invensaun sira durante moris tomak"
+   },
+   "points": [
+    {
+     "en": "Many older people have seen great change: from oil lamps and letters to electric light, mobile phones and the internet.",
+     "id": "Banyak orang lanjut usia telah melihat perubahan besar: dari lampu minyak dan surat ke lampu listrik, ponsel, dan internet.",
+     "pt": "Muitas pessoas mais velhas viram grandes mudanças: dos candeeiros a petróleo e das cartas à luz elétrica, aos telemóveis e à internet.",
+     "tet": "Ema katuas no ferik barak haree ona mudansa boot: husi lampu mina-rai no karta to'o lampu eletrisidade, telemovel no internet."
+    },
+    {
+     "en": "Old skills like weaving tais on a loom or using a hand plough are technology too, and are worth teaching to grandchildren.",
+     "id": "Keterampilan lama seperti menenun tais dengan alat tenun atau memakai bajak tangan juga teknologi, dan layak diajarkan kepada cucu.",
+     "pt": "Saberes antigos, como tecer tais no tear ou usar um arado manual, também são tecnologia e vale a pena ensiná-los aos netos.",
+     "tet": "Abilidade tuan hanesan soru tais ho atis ka uza aradu liman mós teknolojia, no di'ak atu hanorin ba bei-oan sira."
+    },
+    {
+     "en": "For safety at home, do not overload sockets, replace damaged cables and keep a torch ready for power cuts.",
+     "id": "Demi keselamatan di rumah, jangan membebani stopkontak berlebihan, ganti kabel yang rusak, dan siapkan senter saat listrik padam.",
+     "pt": "Para a segurança em casa, não sobrecarregue as tomadas, substitua os cabos danificados e tenha uma lanterna pronta para os cortes de luz.",
+     "tet": "Ba seguransa iha uma, labele tau sasán barak liu iha tomada ida, troka kabu ne'ebé aat no rai lanterna prontu ba bainhira eletrisidade mate."
+    }
+   ],
+   "task": {
+    "en": "Tell a grandchild about a tool from your youth and how it worked, and ask them to show you one new device.",
+    "id": "Ceritakan kepada cucu tentang alat dari masa muda Anda dan cara kerjanya, lalu minta mereka menunjukkan satu alat baru.",
+    "pt": "Conte a um neto como era uma ferramenta da sua juventude e como funcionava, e peça-lhe que lhe mostre um aparelho novo.",
+    "tet": "Konta ba bei-oan ida kona-ba ferramenta ida husi ita-nia tempu klosan no oinsá nia servisu, no husu sira hatudu aparellu foun ida."
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "Which of these is also technology?",
+      "id": "Manakah yang juga termasuk teknologi?",
+      "pt": "Qual destes também é tecnologia?",
+      "tet": "Ida ne'ebé mós teknolojia?"
+     },
+     "answer": {
+      "en": "A loom for weaving tais",
+      "id": "Alat tenun untuk menenun tais",
+      "pt": "Um tear para tecer tais",
+      "tet": "Atis atu soru tais"
+     },
+     "wrong": [
+      {
+       "en": "Only smartphones",
+       "id": "Hanya ponsel pintar",
+       "pt": "Só os telemóveis inteligentes",
+       "tet": "Smartphone deit"
+      },
+      {
+       "en": "Only computers",
+       "id": "Hanya komputer",
+       "pt": "Só os computadores",
+       "tet": "Komputadór deit"
+      },
+      {
+       "en": "Only cars",
+       "id": "Hanya mobil",
+       "pt": "Só os carros",
+       "tet": "Karreta deit"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "What should you do with a damaged cable?",
+      "id": "Apa yang harus dilakukan dengan kabel yang rusak?",
+      "pt": "O que deve fazer com um cabo danificado?",
+      "tet": "Ita tenke halo saida ho kabu ne'ebé aat?"
+     },
+     "answer": {
+      "en": "Replace it",
+      "id": "Menggantinya",
+      "pt": "Substituí-lo",
+      "tet": "Troka nia"
+     },
+     "wrong": [
+      {
+       "en": "Keep using it",
+       "id": "Terus memakainya",
+       "pt": "Continuar a usá-lo",
+       "tet": "Kontinua uza nia"
+      },
+      {
+       "en": "Hide it under a mat",
+       "id": "Menyembunyikannya di bawah tikar",
+       "pt": "Escondê-lo debaixo de uma esteira",
+       "tet": "Subar nia iha biti okos"
+      },
+      {
+       "en": "Pour water on it",
+       "id": "Menyiramnya dengan air",
+       "pt": "Deitar-lhe água",
+       "tet": "Fakar bee ba nia"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "What is good to keep ready for power cuts?",
+      "id": "Apa yang baik disiapkan saat listrik padam?",
+      "pt": "O que é bom ter pronto para os cortes de luz?",
+      "tet": "Saida mak di'ak atu rai prontu ba bainhira eletrisidade mate?"
+     },
+     "answer": {
+      "en": "A torch",
+      "id": "Senter",
+      "pt": "Uma lanterna",
+      "tet": "Lanterna"
+     },
+     "wrong": [
+      {
+       "en": "An ice cream",
+       "id": "Es krim",
+       "pt": "Um gelado",
+       "tet": "Ais-krim"
+      },
+      {
+       "en": "A candle next to the curtains",
+       "id": "Lilin di dekat tirai",
+       "pt": "Uma vela junto às cortinas",
+       "tet": "Lilin ida besik kortina"
+      },
+      {
+       "en": "A wet towel",
+       "id": "Handuk basah",
+       "pt": "Uma toalha molhada",
+       "tet": "Toalla bokon"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

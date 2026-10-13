@@ -4,6 +4,85 @@
 
 _Nothing yet._
 
+## 0.2.0 — 2026-10-13
+
+### LAFA's core memory (LAFA Search)
+- LAFA now has its own small search engine on the computer. It indexes the
+  lessons for every age, the Timor-Leste atlas and history, the Edukasaun OS
+  guides, the 130 learning and Timor-Leste media sources and — when online —
+  the public pages it reads from those sites every hour (front page, a few
+  articles and news feeds; robots.txt respected, Facebook pages only linked).
+- **Library → LAFA Search** shows Google-like results: title, address and a
+  snippet with the words in bold, from lessons, atlas, websites and news.
+  Search works offline from what LAFA has already read.
+- Husu LAFA, the Virtual Assistant and the teachers answer from this memory
+  with numbered citations [1] [2] and the website addresses. Wikipedia
+  articles LAFA opens are remembered for offline use. With an AI signed in,
+  the best passages are given to the AI as references, so it cites the
+  learning and Timor-Leste sources too.
+- Searches understand the four languages together (buku = livro = livru =
+  book) and ignore accents (Ataúro = Atauro).
+
+### AI Hub: sign in and make LAFA smart
+- **Sign in with OpenRouter**: a real browser sign-in (Google, GitHub or
+  e-mail); LAFA receives a key on this computer and picks a free model.
+- **Google Gemini**: the AI Studio key page opens inside LAFA; paste the free
+  key and LAFA checks it and chooses a Gemini Flash model.
+- **LAFA model**: with Ollama installed, LAFA creates its own model ("lafa")
+  from an open model and LAFA's personality — it works offline afterwards.
+- **AI websites in signed-in tabs** (inspired by Noi): Gemini, ChatGPT,
+  Claude, Copilot, DeepSeek, Perplexity, Le Chat, Qwen, Kimi, HuggingChat,
+  Grok, Meta AI, NotebookLM. Sign in once; LAFA keeps a private profile.
+  "Ask the selected AIs" types one question into every ticked AI and sends it.
+  Needs python3-pyqt5.qtwebengine (recommended); otherwise the sites open in
+  the browser. LAFA never reads the pages' cookies, tokens or answers.
+- The Virtual Assistant has a **✨ AI** button and understands "tanya Gemini
+  …" / "ask ChatGPT …".
+
+### LAFA as a helping agent
+- Ordinary requests in English, Indonesian, Portuguese and Tetun now *do*
+  things, from a fixed safe list: open apps ("buka browser", "loke
+  kalkuladora", "abre o LibreOffice", "open the Wi-Fi settings"), open LAFA
+  pages ("buka kelas", "open exams"), search the memory ("cari tentang
+  kopi"), set reminders ("ingatkan saya 10 menit lagi minum air") and ask the
+  AI websites. Never a shell command.
+
+### Learning for every age, 5 to 100
+- New classroom levels: ages 5–7, 8–11, 12–14, 15–18, 19–25, 26–59 and
+  60–100, with lessons in 18 subjects: mathematics, physics, chemistry,
+  biology, health and medicine, environment, planets and the solar system,
+  atoms and nuclear science, geography, computers, IT and the internet,
+  technology, history, communication, economics, agriculture, civics and
+  arts — 126 lessons with study points, a task and questions, in all four
+  languages (Tetun Ofisiál).
+- Quizzes, tests and exams by subject and age; results go to the report card.
+- Lessons are JSON files (lafa/assets/curriculum), checked by
+  tools/check-curriculum.py, so teachers can improve them.
+
+### LAFA moves like a person
+- Walking with two small bounces per stride, weight shifting from foot to
+  foot, leaning into the walk and stepping legs; breathing when standing or
+  asleep; leaning towards the mouse pointer; waving when touched, nodding when
+  answering and jumping with a crouch, a stretch and a soft landing; new
+  activities fade in. Smoother animation (25 frames per second).
+
+### Menus that did not work
+- Offline, these menus wrongly asked for internet and did nothing: file
+  search, open and read document, reminders, focus, running Python in the
+  computer lab and the culture card. They work offline now.
+- Reminders did not fire while offline; now they do. The reminder countdown
+  was refreshed on the wrong page.
+- Buttons with nothing to work on (empty question, no item chosen, no news
+  loaded) now say what to do instead of doing nothing.
+- Teachers answer from LAFA's memory without an AI instead of refusing.
+
+### Layout
+- The menu has four groups: School (home, classroom, teachers, exams, report
+  card, homework, language school), Timor-Leste (atlas, notice board),
+  Search & AI (LAFA Search and library, AI Hub, Husu LAFA) and Tools
+  (computer lab, files, reminders, help desk). The home page shows LAFA
+  Search and the AI Hub first.
+
 ## 0.1.5 — 2026-10-13
 
 ### Timor-Leste media

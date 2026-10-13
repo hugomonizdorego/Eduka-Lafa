@@ -1,0 +1,1015 @@
+{
+ "subject": "chemistry",
+ "icon": "🧪",
+ "name": {
+  "en": "Chemistry",
+  "id": "Kimia",
+  "pt": "Química",
+  "tet": "Kímika"
+ },
+ "lessons": [
+  {
+   "level": "early",
+   "title": {
+    "en": "Ice, water and steam",
+    "id": "Es, air, dan uap",
+    "pt": "Gelo, água e vapor",
+    "tet": "Jelu, bee no bee-suar"
+   },
+   "points": [
+    {
+     "en": "Ice is solid. Water is liquid. Steam is a gas.",
+     "id": "Es itu padat. Air itu cair. Uap itu gas.",
+     "pt": "O gelo é sólido. A água é líquida. O vapor é um gás.",
+     "tet": "Jelu mak sólidu. Bee mak líkidu. Bee-suar mak gás."
+    },
+    {
+     "en": "Ice melts in the sun and becomes water.",
+     "id": "Es mencair di bawah matahari dan menjadi air.",
+     "pt": "O gelo derrete ao sol e fica água.",
+     "tet": "Jelu nabeen iha loron okos no sai bee."
+    },
+    {
+     "en": "Sugar in water seems to disappear. It dissolves.",
+     "id": "Gula di dalam air seperti hilang. Gula larut.",
+     "pt": "O açúcar na água parece desaparecer. Dissolve-se.",
+     "tet": "Masin-midar iha bee laran hanesan lakon. Nia dissolve."
+    }
+   ],
+   "task": {
+    "en": "Put a spoon of sugar in water and stir. Taste it. Where did the sugar go?",
+    "id": "Masukkan sesendok gula ke air dan aduk. Cicipi. Ke mana gulanya?",
+    "pt": "Põe uma colher de açúcar na água e mexe. Prova. Para onde foi o açúcar?",
+    "tet": "Tau masin-midar kanuru ida iha bee no kakur. Koko nia sabór. Masin-midar ba ne'ebé?"
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "Ice is a...",
+      "id": "Es adalah...",
+      "pt": "O gelo é um...",
+      "tet": "Jelu mak..."
+     },
+     "answer": {
+      "en": "solid",
+      "id": "padat",
+      "pt": "sólido",
+      "tet": "sólidu"
+     },
+     "wrong": [
+      {
+       "en": "gas",
+       "id": "gas",
+       "pt": "gás",
+       "tet": "gás"
+      },
+      {
+       "en": "liquid",
+       "id": "cair",
+       "pt": "líquido",
+       "tet": "líkidu"
+      },
+      {
+       "en": "sound",
+       "id": "bunyi",
+       "pt": "som",
+       "tet": "lian"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "What happens to ice in the sun?",
+      "id": "Apa yang terjadi pada es di bawah matahari?",
+      "pt": "O que acontece ao gelo ao sol?",
+      "tet": "Saida mak akontese ba jelu iha loron okos?"
+     },
+     "answer": {
+      "en": "It melts into water",
+      "id": "Mencair menjadi air",
+      "pt": "Derrete e fica água",
+      "tet": "Nabeen sai bee"
+     },
+     "wrong": [
+      {
+       "en": "It grows bigger",
+       "id": "Menjadi lebih besar",
+       "pt": "Fica maior",
+       "tet": "Sai boot liu"
+      },
+      {
+       "en": "It turns into stone",
+       "id": "Menjadi batu",
+       "pt": "Transforma-se em pedra",
+       "tet": "Sai fatuk"
+      },
+      {
+       "en": "It gets colder",
+       "id": "Menjadi lebih dingin",
+       "pt": "Fica mais frio",
+       "tet": "Sai malirin liu"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "What does sugar do in water?",
+      "id": "Apa yang terjadi pada gula di air?",
+      "pt": "O que faz o açúcar na água?",
+      "tet": "Masin-midar halo saida iha bee laran?"
+     },
+     "answer": {
+      "en": "It dissolves",
+      "id": "Larut",
+      "pt": "Dissolve-se",
+      "tet": "Nia dissolve"
+     },
+     "wrong": [
+      {
+       "en": "It turns into ice",
+       "id": "Menjadi es",
+       "pt": "Vira gelo",
+       "tet": "Sai jelu"
+      },
+      {
+       "en": "It floats like wood",
+       "id": "Mengapung seperti kayu",
+       "pt": "Flutua como madeira",
+       "tet": "Namlele hanesan ai"
+      },
+      {
+       "en": "It becomes sand",
+       "id": "Menjadi pasir",
+       "pt": "Fica areia",
+       "tet": "Sai rai-henek"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "level": "primary",
+   "title": {
+    "en": "Mixtures and clean water",
+    "id": "Campuran dan air bersih",
+    "pt": "Misturas e água limpa",
+    "tet": "Mistura no bee mos"
+   },
+   "points": [
+    {
+     "en": "A mixture is two or more things mixed together, like rice with sand, or salty seawater.",
+     "id": "Campuran adalah dua benda atau lebih yang dicampur, seperti beras dengan pasir, atau air laut yang asin.",
+     "pt": "Uma mistura são duas ou mais coisas juntas, como arroz com areia ou a água salgada do mar.",
+     "tet": "Mistura mak buat rua ka liu ne'ebé kahur hamutuk, hanesan fos ho rai-henek, ka tasi-been ne'ebé masin."
+    },
+    {
+     "en": "We can separate mixtures: a sieve separates big and small pieces, and a cloth filter removes dirt from water.",
+     "id": "Campuran bisa dipisahkan: ayakan memisahkan potongan besar dan kecil, dan saringan kain membersihkan kotoran dari air.",
+     "pt": "Podemos separar misturas: o crivo separa pedaços grandes e pequenos e um filtro de pano tira a sujidade da água.",
+     "tet": "Ita bele fahe mistura: peneira fahe pedasuk boot no ki'ik, no bitan filtru hasai foer husi bee."
+    },
+    {
+     "en": "When seawater dries in the sun, the salt is left behind, as salt makers do on the coast.",
+     "id": "Saat air laut mengering di bawah matahari, garamnya tertinggal, seperti yang dilakukan pembuat garam di pantai.",
+     "pt": "Quando a água do mar seca ao sol, fica o sal, como fazem as salineiras na costa.",
+     "tet": "Bainhira tasi-been maran iha loron okos, masin mak hela, hanesan ema halo masin iha tasi-ibun."
+    },
+    {
+     "en": "Boiling water kills germs and makes it safer to drink.",
+     "id": "Merebus air membunuh kuman dan membuatnya lebih aman diminum.",
+     "pt": "Ferver a água mata os micróbios e torna-a mais segura para beber.",
+     "tet": "Nasu bee to'o tasak oho mikróbiu no halo bee seguru liu atu hemu."
+    }
+   ],
+   "task": {
+    "en": "Mix sand and small stones, then separate them using a sieve or your fingers.",
+    "id": "Campurkan pasir dan batu kecil, lalu pisahkan dengan ayakan atau jari.",
+    "pt": "Mistura areia e pedrinhas e depois separa-as com um crivo ou com os dedos.",
+    "tet": "Kahur rai-henek ho fatuk ki'ik, depois fahe sira uza peneira ka liman-fuan."
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "How do salt makers get salt from seawater?",
+      "id": "Bagaimana pembuat garam mendapatkan garam dari air laut?",
+      "pt": "Como é que as salinas obtêm sal da água do mar?",
+      "tet": "Oinsá ema halo masin hetan masin husi tasi-been?"
+     },
+     "answer": {
+      "en": "They let the water dry in the sun",
+      "id": "Membiarkan air mengering di bawah matahari",
+      "pt": "Deixam a água secar ao sol",
+      "tet": "Sira husik bee maran iha loron okos"
+     },
+     "wrong": [
+      {
+       "en": "They freeze the water",
+       "id": "Membekukan air",
+       "pt": "Congelam a água",
+       "tet": "Sira halo bee sai jelu"
+      },
+      {
+       "en": "They add sugar to the water",
+       "id": "Menambahkan gula ke air",
+       "pt": "Juntam açúcar à água",
+       "tet": "Sira tau masin-midar ba bee"
+      },
+      {
+       "en": "They shake the water hard",
+       "id": "Mengocok air dengan keras",
+       "pt": "Agitam muito a água",
+       "tet": "Sira kakur bee ho forsa"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "A sieve separates things by their...",
+      "id": "Ayakan memisahkan benda berdasarkan...",
+      "pt": "Um crivo separa as coisas pelo seu...",
+      "tet": "Peneira fahe sasán tuir sira-nia..."
+     },
+     "answer": {
+      "en": "size",
+      "id": "ukuran",
+      "pt": "tamanho",
+      "tet": "medida"
+     },
+     "wrong": [
+      {
+       "en": "colour",
+       "id": "warna",
+       "pt": "cor",
+       "tet": "kór"
+      },
+      {
+       "en": "taste",
+       "id": "rasa",
+       "pt": "sabor",
+       "tet": "sabór"
+      },
+      {
+       "en": "temperature",
+       "id": "suhu",
+       "pt": "temperatura",
+       "tet": "temperatura"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "Why do we boil drinking water?",
+      "id": "Mengapa kita merebus air minum?",
+      "pt": "Porque fervemos a água para beber?",
+      "tet": "Tanba saida mak ita nasu bee atu hemu?"
+     },
+     "answer": {
+      "en": "To kill germs",
+      "id": "Untuk membunuh kuman",
+      "pt": "Para matar micróbios",
+      "tet": "Atu oho mikróbiu"
+     },
+     "wrong": [
+      {
+       "en": "To add vitamins",
+       "id": "Untuk menambah vitamin",
+       "pt": "Para lhe juntar vitaminas",
+       "tet": "Atu aumenta vitamina"
+      },
+      {
+       "en": "To make it salty",
+       "id": "Agar menjadi asin",
+       "pt": "Para a tornar salgada",
+       "tet": "Atu halo nia masin"
+      },
+      {
+       "en": "To make it cooler",
+       "id": "Agar lebih dingin",
+       "pt": "Para a tornar mais fria",
+       "tet": "Atu halo nia malirin liu"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "level": "middle",
+   "title": {
+    "en": "Atoms, elements and pH",
+    "id": "Atom, unsur, dan pH",
+    "pt": "Átomos, elementos e pH",
+    "tet": "Átomu, elementu no pH"
+   },
+   "points": [
+    {
+     "en": "All matter is made of tiny atoms, built from protons, neutrons and electrons.",
+     "id": "Semua materi tersusun dari atom kecil yang terdiri atas proton, neutron, dan elektron.",
+     "pt": "Toda a matéria é feita de átomos minúsculos, formados por protões, neutrões e eletrões.",
+     "tet": "Materia hotu-hotu halo husi átomu ki'ik-oan, ne'ebé iha protaun, neutraun no eletraun."
+    },
+    {
+     "en": "An element has only one kind of atom; the periodic table lists 118 known elements.",
+     "id": "Unsur hanya memiliki satu jenis atom; tabel periodik memuat 118 unsur yang diketahui.",
+     "pt": "Um elemento tem um só tipo de átomo; a tabela periódica tem 118 elementos conhecidos.",
+     "tet": "Elementu iha de'it átomu tipu ida; tabela periódika iha elementu 118 ne'ebé ema hatene."
+    },
+    {
+     "en": "A compound is atoms joined together: water, H₂O, has 2 hydrogen atoms and 1 oxygen atom.",
+     "id": "Senyawa adalah atom-atom yang bergabung: air, H₂O, memiliki 2 atom hidrogen dan 1 atom oksigen.",
+     "pt": "Um composto são átomos ligados: a água, H₂O, tem 2 átomos de hidrogénio e 1 de oxigénio.",
+     "tet": "Kompostu mak átomu sira ne'ebé liga hamutuk: bee, H₂O, iha átomu idrojéniu 2 no átomu oxijéniu 1."
+    },
+    {
+     "en": "Acids have a pH below 7 and bases above 7; pure water is neutral, pH 7.",
+     "id": "Asam memiliki pH di bawah 7 dan basa di atas 7; air murni netral, pH 7.",
+     "pt": "Os ácidos têm pH abaixo de 7 e as bases acima de 7; a água pura é neutra, pH 7.",
+     "tet": "Ásidu iha pH okos 7 no baze iha pH leten 7; bee puru neutru, pH 7."
+    }
+   ],
+   "task": {
+    "en": "Paint turmeric water on paper, let it dry, then touch it with soapy water: a base turns it red.",
+    "id": "Oleskan air kunyit di kertas, biarkan kering, lalu sentuh dengan air sabun: basa membuatnya merah.",
+    "pt": "Pinta papel com água de açafrão-da-terra, deixa secar e toca-lhe com água com sabão: uma base fica vermelha.",
+    "tet": "Pinta bee kinur iha surat-tahan, husik maran, depois kona ho bee sabaun: baze halo nia sai mean."
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "Which atoms make up one molecule of H₂O?",
+      "id": "Atom apa saja yang menyusun satu molekul H₂O?",
+      "pt": "Que átomos formam uma molécula de H₂O?",
+      "tet": "Átomu saida mak halo molékula H₂O ida?"
+     },
+     "answer": {
+      "en": "2 hydrogen and 1 oxygen",
+      "id": "2 hidrogen dan 1 oksigen",
+      "pt": "2 de hidrogénio e 1 de oxigénio",
+      "tet": "idrojéniu 2 no oxijéniu 1"
+     },
+     "wrong": [
+      {
+       "en": "1 hydrogen and 2 oxygen",
+       "id": "1 hidrogen dan 2 oksigen",
+       "pt": "1 de hidrogénio e 2 de oxigénio",
+       "tet": "idrojéniu 1 no oxijéniu 2"
+      },
+      {
+       "en": "2 hydrogen and 2 oxygen",
+       "id": "2 hidrogen dan 2 oksigen",
+       "pt": "2 de hidrogénio e 2 de oxigénio",
+       "tet": "idrojéniu 2 no oxijéniu 2"
+      },
+      {
+       "en": "3 hydrogen only",
+       "id": "Hanya 3 hidrogen",
+       "pt": "Só 3 de hidrogénio",
+       "tet": "idrojéniu 3 de'it"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "What is the pH of pure water?",
+      "id": "Berapa pH air murni?",
+      "pt": "Qual é o pH da água pura?",
+      "tet": "Bee puru nia pH mak hira?"
+     },
+     "answer": {
+      "en": "7",
+      "id": "7",
+      "pt": "7",
+      "tet": "7"
+     },
+     "wrong": [
+      {
+       "en": "0",
+       "id": "0",
+       "pt": "0",
+       "tet": "0"
+      },
+      {
+       "en": "14",
+       "id": "14",
+       "pt": "14",
+       "tet": "14"
+      },
+      {
+       "en": "1",
+       "id": "1",
+       "pt": "1",
+       "tet": "1"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "Which particle has a negative charge?",
+      "id": "Partikel mana yang bermuatan negatif?",
+      "pt": "Que partícula tem carga negativa?",
+      "tet": "Partíkula saida mak iha karga negativa?"
+     },
+     "answer": {
+      "en": "Electron",
+      "id": "Elektron",
+      "pt": "Eletrão",
+      "tet": "Eletraun"
+     },
+     "wrong": [
+      {
+       "en": "Proton",
+       "id": "Proton",
+       "pt": "Protão",
+       "tet": "Protaun"
+      },
+      {
+       "en": "Neutron",
+       "id": "Neutron",
+       "pt": "Neutrão",
+       "tet": "Neutraun"
+      },
+      {
+       "en": "Nucleus",
+       "id": "Inti atom",
+       "pt": "Núcleo",
+       "tet": "Núkleu"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "level": "secondary",
+   "title": {
+    "en": "Chemical reactions and the mole",
+    "id": "Reaksi kimia dan mol",
+    "pt": "Reações químicas e a mole",
+    "tet": "Reasaun kímika no mol"
+   },
+   "points": [
+    {
+     "en": "In a chemical reaction atoms rearrange but are not lost, so mass is conserved and equations must be balanced.",
+     "id": "Dalam reaksi kimia atom tersusun ulang tanpa hilang, sehingga massa kekal dan persamaan harus setara.",
+     "pt": "Numa reação química os átomos reorganizam-se sem se perderem, por isso a massa conserva-se e as equações têm de ser acertadas.",
+     "tet": "Iha reasaun kímika átomu sira organiza fali maibé la lakon, tan ne'e masa la muda no ekuasaun tenke balansu."
+    },
+    {
+     "en": "Example of a balanced equation: 2H₂ + O₂ → 2H₂O.",
+     "id": "Contoh persamaan setara: 2H₂ + O₂ → 2H₂O.",
+     "pt": "Exemplo de equação acertada: 2H₂ + O₂ → 2H₂O.",
+     "tet": "Ezemplu ekuasaun balansu: 2H₂ + O₂ → 2H₂O."
+    },
+    {
+     "en": "One mole contains 6.02 × 10²³ particles; the molar mass of water is 18 g/mol.",
+     "id": "Satu mol berisi 6,02 × 10²³ partikel; massa molar air adalah 18 g/mol.",
+     "pt": "Uma mole contém 6,02 × 10²³ partículas; a massa molar da água é 18 g/mol.",
+     "tet": "Mol ida iha partíkula 6.02 × 10²³; masa molár bee nian mak 18 g/mol."
+    },
+    {
+     "en": "Higher temperature, higher concentration, larger surface area and catalysts make reactions faster.",
+     "id": "Suhu lebih tinggi, konsentrasi lebih besar, luas permukaan lebih besar, dan katalis mempercepat reaksi.",
+     "pt": "Temperatura mais alta, maior concentração, maior superfície de contacto e catalisadores tornam as reações mais rápidas.",
+     "tet": "Temperatura aas liu, konsentrasaun aas liu, área superfísie boot liu no katalizadór halo reasaun lalais liu."
+    }
+   ],
+   "task": {
+    "en": "Put a whole piece and a crushed piece of chalk in vinegar and compare how fast they bubble.",
+    "id": "Masukkan kapur tulis utuh dan yang sudah dihancurkan ke dalam cuka, lalu bandingkan kecepatan gelembungnya.",
+    "pt": "Põe um pedaço inteiro e um pedaço esmagado de giz em vinagre e compara a rapidez das bolhas.",
+    "tet": "Tau jís ida ne'ebé inteiru no ida ne'ebé tuku rahun ona iha vinagre laran no kompara ida ne'ebé hamosu bolla lalais liu."
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "How many moles are in 36 g of water (18 g/mol)?",
+      "id": "Berapa mol dalam 36 g air (18 g/mol)?",
+      "pt": "Quantas moles há em 36 g de água (18 g/mol)?",
+      "tet": "Mol hira mak iha bee g 36 (18 g/mol)?"
+     },
+     "answer": {
+      "en": "2 mol",
+      "id": "2 mol",
+      "pt": "2 mol",
+      "tet": "2 mol"
+     },
+     "wrong": [
+      {
+       "en": "18 mol",
+       "id": "18 mol",
+       "pt": "18 mol",
+       "tet": "18 mol"
+      },
+      {
+       "en": "0.5 mol",
+       "id": "0.5 mol",
+       "pt": "0.5 mol",
+       "tet": "0.5 mol"
+      },
+      {
+       "en": "36 mol",
+       "id": "36 mol",
+       "pt": "36 mol",
+       "tet": "36 mol"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "Complete the balanced equation: 2H₂ + O₂ → ?",
+      "id": "Lengkapi persamaan setara: 2H₂ + O₂ → ?",
+      "pt": "Completa a equação acertada: 2H₂ + O₂ → ?",
+      "tet": "Kompleta ekuasaun balansu: 2H₂ + O₂ → ?"
+     },
+     "answer": {
+      "en": "2H₂O",
+      "id": "2H₂O",
+      "pt": "2H₂O",
+      "tet": "2H₂O"
+     },
+     "wrong": [
+      {
+       "en": "H₂O",
+       "id": "H₂O",
+       "pt": "H₂O",
+       "tet": "H₂O"
+      },
+      {
+       "en": "4H₂O",
+       "id": "4H₂O",
+       "pt": "4H₂O",
+       "tet": "4H₂O"
+      },
+      {
+       "en": "H₂O₂",
+       "id": "H₂O₂",
+       "pt": "H₂O₂",
+       "tet": "H₂O₂"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "What does a catalyst do?",
+      "id": "Apa fungsi katalis?",
+      "pt": "O que faz um catalisador?",
+      "tet": "Katalizadór halo saida?"
+     },
+     "answer": {
+      "en": "Speeds up a reaction without being used up",
+      "id": "Mempercepat reaksi tanpa ikut habis",
+      "pt": "Acelera a reação sem ser consumido",
+      "tet": "Halo reasaun lalais liu maibé nia rasik la lakon"
+     },
+     "wrong": [
+      {
+       "en": "Always slows a reaction down",
+       "id": "Selalu memperlambat reaksi",
+       "pt": "Torna sempre a reação mais lenta",
+       "tet": "Halo reasaun neineik nafatin"
+      },
+      {
+       "en": "Is used up completely",
+       "id": "Habis terpakai seluruhnya",
+       "pt": "É totalmente consumido",
+       "tet": "Lakon hotu iha reasaun"
+      },
+      {
+       "en": "Increases the total mass",
+       "id": "Menambah massa total",
+       "pt": "Aumenta a massa total",
+       "tet": "Aumenta masa totál"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "level": "university",
+   "title": {
+    "en": "Bonding, equilibrium and free energy",
+    "id": "Ikatan, kesetimbangan, dan energi bebas",
+    "pt": "Ligações, equilíbrio e energia livre",
+    "tet": "Ligasaun, ekilíbriu no enerjia livre"
+   },
+   "points": [
+    {
+     "en": "Covalent bonds share electron pairs; ionic bonds form when electrons transfer, as in NaCl.",
+     "id": "Ikatan kovalen berbagi pasangan elektron; ikatan ion terbentuk saat elektron berpindah, seperti pada NaCl.",
+     "pt": "As ligações covalentes partilham pares de eletrões; as iónicas formam-se por transferência de eletrões, como no NaCl.",
+     "tet": "Ligasaun kovalente fahe par eletraun sira; ligasaun iónika mosu bainhira eletraun muda, hanesan iha NaCl."
+    },
+    {
+     "en": "Le Chatelier's principle: a system at equilibrium shifts to oppose a change in concentration, pressure or temperature.",
+     "id": "Asas Le Chatelier: sistem setimbang bergeser untuk melawan perubahan konsentrasi, tekanan, atau suhu.",
+     "pt": "Princípio de Le Chatelier: um sistema em equilíbrio desloca-se para contrariar uma alteração de concentração, pressão ou temperatura.",
+     "tet": "Prinsípiu Le Chatelier: sistema iha ekilíbriu muda atu kontra mudansa konsentrasaun, presaun ka temperatura."
+    },
+    {
+     "en": "A process is spontaneous when the Gibbs free energy change ΔG = ΔH − TΔS is negative.",
+     "id": "Suatu proses spontan jika perubahan energi bebas Gibbs ΔG = ΔH − TΔS bernilai negatif.",
+     "pt": "Um processo é espontâneo quando a variação de energia livre de Gibbs ΔG = ΔH − TΔS é negativa.",
+     "tet": "Prosesu ida espontáneu bainhira mudansa enerjia livre Gibbs ΔG = ΔH − TΔS negativu."
+    },
+    {
+     "en": "Carbon forms four covalent bonds, which explains the huge variety of organic molecules.",
+     "id": "Karbon membentuk empat ikatan kovalen, yang menjelaskan keragaman besar molekul organik.",
+     "pt": "O carbono forma quatro ligações covalentes, o que explica a enorme variedade de moléculas orgânicas.",
+     "tet": "Karbonu halo ligasaun kovalente haat, ne'ebé esplika molékula orgánika barak tebes no oioin."
+    }
+   ],
+   "task": {
+    "en": "Draw the Lewis structures of CH₄ and CO₂ and count the shared electron pairs.",
+    "id": "Gambarlah struktur Lewis CH₄ dan CO₂ lalu hitung pasangan elektron bersama.",
+    "pt": "Desenha as estruturas de Lewis do CH₄ e do CO₂ e conta os pares de eletrões partilhados.",
+    "tet": "Dezeña estrutura Lewis husi CH₄ no CO₂ no sura par eletraun ne'ebé fahe."
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "What type of bond holds NaCl together?",
+      "id": "Jenis ikatan apa yang ada pada NaCl?",
+      "pt": "Que tipo de ligação mantém o NaCl unido?",
+      "tet": "Ligasaun tipu saida mak kaer NaCl hamutuk?"
+     },
+     "answer": {
+      "en": "Ionic",
+      "id": "Ion",
+      "pt": "Iónica",
+      "tet": "Iónika"
+     },
+     "wrong": [
+      {
+       "en": "Covalent",
+       "id": "Kovalen",
+       "pt": "Covalente",
+       "tet": "Kovalente"
+      },
+      {
+       "en": "Metallic",
+       "id": "Logam",
+       "pt": "Metálica",
+       "tet": "Metálika"
+      },
+      {
+       "en": "Hydrogen bond",
+       "id": "Ikatan hidrogen",
+       "pt": "Ponte de hidrogénio",
+       "tet": "Ligasaun idrojéniu"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "A process is spontaneous when ΔG is...",
+      "id": "Suatu proses spontan jika ΔG...",
+      "pt": "Um processo é espontâneo quando ΔG é...",
+      "tet": "Prosesu ida espontáneu bainhira ΔG..."
+     },
+     "answer": {
+      "en": "negative",
+      "id": "negatif",
+      "pt": "negativa",
+      "tet": "negativu"
+     },
+     "wrong": [
+      {
+       "en": "positive",
+       "id": "positif",
+       "pt": "positiva",
+       "tet": "pozitivu"
+      },
+      {
+       "en": "exactly zero",
+       "id": "tepat nol",
+       "pt": "exatamente zero",
+       "tet": "zero ezatu"
+      },
+      {
+       "en": "equal to TΔS",
+       "id": "sama dengan TΔS",
+       "pt": "igual a TΔS",
+       "tet": "hanesan ho TΔS"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "How many covalent bonds does a carbon atom usually form?",
+      "id": "Berapa ikatan kovalen yang biasanya dibentuk atom karbon?",
+      "pt": "Quantas ligações covalentes forma normalmente um átomo de carbono?",
+      "tet": "Átomu karbonu baibain halo ligasaun kovalente hira?"
+     },
+     "answer": {
+      "en": "4",
+      "id": "4",
+      "pt": "4",
+      "tet": "4"
+     },
+     "wrong": [
+      {
+       "en": "2",
+       "id": "2",
+       "pt": "2",
+       "tet": "2"
+      },
+      {
+       "en": "3",
+       "id": "3",
+       "pt": "3",
+       "tet": "3"
+      },
+      {
+       "en": "6",
+       "id": "6",
+       "pt": "6",
+       "tet": "6"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "level": "adult",
+   "title": {
+    "en": "Safe chemicals at home and on the farm",
+    "id": "Bahan kimia aman di rumah dan di kebun",
+    "pt": "Produtos químicos seguros em casa e no campo",
+    "tet": "Kímiku seguru iha uma no iha to'os"
+   },
+   "points": [
+    {
+     "en": "Never mix bleach with ammonia or acidic cleaners: together they release toxic gases.",
+     "id": "Jangan mencampur pemutih dengan amonia atau pembersih asam: campurannya melepaskan gas beracun.",
+     "pt": "Nunca mistures lixívia com amoníaco ou produtos ácidos: juntos libertam gases tóxicos.",
+     "tet": "Keta kahur lixívia ho amóniu ka produtu ásidu: sira hamutuk fó sai gás venenu."
+    },
+    {
+     "en": "Keep chemicals in their original labelled containers, never in drink bottles, and out of children's reach.",
+     "id": "Simpan bahan kimia di wadah asli berlabel, jangan di botol minuman, dan jauh dari jangkauan anak.",
+     "pt": "Guarda os produtos químicos nas embalagens originais com rótulo, nunca em garrafas de bebida, e longe das crianças.",
+     "tet": "Rai kímiku iha nia fatin orijinál ho etiketa, keta rai iha botir hemu nian, no dook husi labarik sira."
+    },
+    {
+     "en": "Wear gloves and a mask when spraying pesticides on crops, and wash your hands well afterwards.",
+     "id": "Pakai sarung tangan dan masker saat menyemprot pestisida, lalu cuci tangan dengan baik sesudahnya.",
+     "pt": "Usa luvas e máscara ao pulverizar pesticidas nas culturas e lava bem as mãos no fim.",
+     "tet": "Uza luva no máskara bainhira sprei pestisida ba hahán-fini, no fase liman di'ak depois."
+    },
+    {
+     "en": "Vinegar, a weak acid, removes limescale from kettles; baking soda, a weak base, neutralises acids.",
+     "id": "Cuka, asam lemah, menghilangkan kerak kapur di ketel; soda kue, basa lemah, menetralkan asam.",
+     "pt": "O vinagre, um ácido fraco, tira o calcário das chaleiras; o bicarbonato de sódio, uma base fraca, neutraliza ácidos.",
+     "tet": "Vinagre, ásidu fraku, hasai kalkáriu husi xaleira; bikarbonatu, baze fraku, neutraliza ásidu."
+    }
+   ],
+   "task": {
+    "en": "Check every cleaning product and pesticide at home: is it labelled and stored safely away from food and children?",
+    "id": "Periksa semua pembersih dan pestisida di rumah: apakah berlabel dan disimpan aman, jauh dari makanan dan anak?",
+    "pt": "Verifica todos os produtos de limpeza e pesticidas de casa: têm rótulo e estão guardados longe da comida e das crianças?",
+    "tet": "Haree produtu moos no pestisida hotu iha uma: iha etiketa ka lae, no rai seguru dook husi hahán no labarik sira ka lae?"
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "What happens if you mix bleach and ammonia?",
+      "id": "Apa yang terjadi jika pemutih dicampur amonia?",
+      "pt": "O que acontece se misturares lixívia e amoníaco?",
+      "tet": "Saida mak akontese se ita kahur lixívia no amóniu?"
+     },
+     "answer": {
+      "en": "Toxic gas is released",
+      "id": "Gas beracun terlepas",
+      "pt": "Liberta-se um gás tóxico",
+      "tet": "Gás venenu sai"
+     },
+     "wrong": [
+      {
+       "en": "It cleans twice as well",
+       "id": "Membersihkan dua kali lebih baik",
+       "pt": "Limpa duas vezes melhor",
+       "tet": "Hamoos di'ak liu dala rua"
+      },
+      {
+       "en": "Nothing happens",
+       "id": "Tidak terjadi apa-apa",
+       "pt": "Não acontece nada",
+       "tet": "La akontese buat ida"
+      },
+      {
+       "en": "It turns into clean water",
+       "id": "Berubah menjadi air bersih",
+       "pt": "Transforma-se em água limpa",
+       "tet": "Sai bee moos"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "Where should pesticides be stored?",
+      "id": "Di mana pestisida harus disimpan?",
+      "pt": "Onde devem ser guardados os pesticidas?",
+      "tet": "Pestisida tenke rai iha ne'ebé?"
+     },
+     "answer": {
+      "en": "In the labelled original container, out of reach",
+      "id": "Di wadah asli berlabel, jauh dari jangkauan",
+      "pt": "Na embalagem original com rótulo, fora do alcance",
+      "tet": "Iha fatin orijinál ho etiketa, dook husi liman"
+     },
+     "wrong": [
+      {
+       "en": "In an old water bottle",
+       "id": "Di botol air bekas",
+       "pt": "Numa garrafa de água velha",
+       "tet": "Iha botir bee tuan"
+      },
+      {
+       "en": "Next to the food in the kitchen",
+       "id": "Di samping makanan di dapur",
+       "pt": "Ao lado da comida na cozinha",
+       "tet": "Besik hahán iha dapur"
+      },
+      {
+       "en": "In an open bowl",
+       "id": "Di mangkuk terbuka",
+       "pt": "Numa tigela aberta",
+       "tet": "Iha bikan loke"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "What removes limescale from a kettle?",
+      "id": "Apa yang bisa menghilangkan kerak kapur di ketel?",
+      "pt": "O que tira o calcário de uma chaleira?",
+      "tet": "Saida mak hasai kalkáriu husi xaleira?"
+     },
+     "answer": {
+      "en": "Vinegar",
+      "id": "Cuka",
+      "pt": "Vinagre",
+      "tet": "Vinagre"
+     },
+     "wrong": [
+      {
+       "en": "Cooking oil",
+       "id": "Minyak goreng",
+       "pt": "Óleo de cozinha",
+       "tet": "Mina te'in"
+      },
+      {
+       "en": "Sugar",
+       "id": "Gula",
+       "pt": "Açúcar",
+       "tet": "Masin-midar"
+      },
+      {
+       "en": "Rice flour",
+       "id": "Tepung beras",
+       "pt": "Farinha de arroz",
+       "tet": "Fos-farinha"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "level": "senior",
+   "title": {
+    "en": "Kitchen chemistry and a healthy home",
+    "id": "Kimia dapur dan rumah yang sehat",
+    "pt": "Química da cozinha e casa saudável",
+    "tet": "Kímika dapur no uma saudável"
+   },
+   "points": [
+    {
+     "en": "Salt preserves fish because it draws water out of germs; too much salt in meals can raise blood pressure, so ask a health worker.",
+     "id": "Garam mengawetkan ikan karena menarik air dari kuman; terlalu banyak garam dapat menaikkan tekanan darah, jadi tanyakan petugas kesehatan.",
+     "pt": "O sal conserva o peixe porque retira água aos micróbios; sal a mais nas refeições pode subir a tensão, por isso consulta um profissional de saúde.",
+     "tet": "Masin rai ikan naruk tanba nia foti bee husi mikróbiu; masin barak liu iha hahán bele hasa'e tensaun, tan ne'e husu ba funsionáriu saúde."
+    },
+    {
+     "en": "Cooking smoke contains harmful gases and particles; cook where air flows well or use an improved stove.",
+     "id": "Asap masak mengandung gas dan partikel berbahaya; masaklah di tempat berventilasi baik atau pakai tungku hemat.",
+     "pt": "O fumo da cozinha tem gases e partículas nocivos; cozinha num sítio bem arejado ou usa um fogão melhorado.",
+     "tet": "Suar te'in nian iha gás no partíkula ne'ebé aat ba saúde; te'in iha fatin ne'ebé anin tama di'ak ka uza fogaun di'ak liu."
+    },
+    {
+     "en": "Burning charcoal in a closed room makes carbon monoxide, an invisible gas that can kill; always keep air moving.",
+     "id": "Membakar arang di ruang tertutup menghasilkan karbon monoksida, gas tak terlihat yang bisa mematikan; jaga udara tetap mengalir.",
+     "pt": "Queimar carvão numa sala fechada produz monóxido de carbono, um gás invisível que pode matar; mantém sempre o ar a circular.",
+     "tet": "Sunu ahi-klaak iha kuartu taka hamosu monóxidu karbonu, gás ne'ebé la haree no bele oho ema; tenke husik anin tama sai nafatin."
+    }
+   ],
+   "task": {
+    "en": "Explain to a grandchild why salted fish keeps longer, then open a window while you cook together.",
+    "id": "Jelaskan kepada cucu mengapa ikan asin tahan lama, lalu buka jendela saat memasak bersama.",
+    "pt": "Explica a um neto porque é que o peixe salgado dura mais e abre uma janela enquanto cozinham juntos.",
+    "tet": "Esplika ba bei-oan ida tanba saida ikan masin bele rai naruk, depois loke janela bainhira imi te'in hamutuk."
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "Why does salt help fish keep longer?",
+      "id": "Mengapa garam membuat ikan tahan lama?",
+      "pt": "Porque é que o sal ajuda o peixe a durar mais?",
+      "tet": "Tanba saida masin ajuda ikan bele rai naruk?"
+     },
+     "answer": {
+      "en": "It draws water out of germs",
+      "id": "Menarik air dari kuman",
+      "pt": "Retira água aos micróbios",
+      "tet": "Nia foti bee husi mikróbiu"
+     },
+     "wrong": [
+      {
+       "en": "It adds vitamins to the fish",
+       "id": "Menambah vitamin pada ikan",
+       "pt": "Junta vitaminas ao peixe",
+       "tet": "Nia aumenta vitamina ba ikan"
+      },
+      {
+       "en": "It keeps the fish cold",
+       "id": "Menjaga ikan tetap dingin",
+       "pt": "Mantém o peixe frio",
+       "tet": "Nia halo ikan malirin nafatin"
+      },
+      {
+       "en": "It makes the fish heavier",
+       "id": "Membuat ikan lebih berat",
+       "pt": "Torna o peixe mais pesado",
+       "tet": "Nia halo ikan todan liu"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "What is the danger of burning charcoal in a closed room?",
+      "id": "Apa bahaya membakar arang di ruang tertutup?",
+      "pt": "Qual é o perigo de queimar carvão numa sala fechada?",
+      "tet": "Perigu saida husi sunu ahi-klaak iha kuartu taka?"
+     },
+     "answer": {
+      "en": "Carbon monoxide, an invisible deadly gas",
+      "id": "Karbon monoksida, gas mematikan tak terlihat",
+      "pt": "Monóxido de carbono, um gás invisível e mortal",
+      "tet": "Monóxidu karbonu, gás la haree ne'ebé bele oho"
+     },
+     "wrong": [
+      {
+       "en": "Too much oxygen in the room",
+       "id": "Terlalu banyak oksigen di ruangan",
+       "pt": "Oxigénio a mais na sala",
+       "tet": "Oxijéniu barak liu iha kuartu"
+      },
+      {
+       "en": "Only harmless steam",
+       "id": "Hanya uap yang tidak berbahaya",
+       "pt": "Só vapor inofensivo",
+       "tet": "Bee-suar de'it ne'ebé la perigozu"
+      },
+      {
+       "en": "A pleasant sweet smell",
+       "id": "Bau manis yang menyenangkan",
+       "pt": "Um cheiro doce agradável",
+       "tet": "Morin midar ne'ebé di'ak"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "How can you reduce smoke when cooking?",
+      "id": "Bagaimana mengurangi asap saat memasak?",
+      "pt": "Como podes reduzir o fumo ao cozinhar?",
+      "tet": "Oinsá ita bele hamenus suar bainhira te'in?"
+     },
+     "answer": {
+      "en": "Cook where air flows or use an improved stove",
+      "id": "Memasak di tempat berventilasi atau pakai tungku hemat",
+      "pt": "Cozinhar num sítio arejado ou usar um fogão melhorado",
+      "tet": "Te'in iha fatin ne'ebé anin tama ka uza fogaun di'ak liu"
+     },
+     "wrong": [
+      {
+       "en": "Close all the windows",
+       "id": "Menutup semua jendela",
+       "pt": "Fechar todas as janelas",
+       "tet": "Taka janela hotu"
+      },
+      {
+       "en": "Burn wet wood",
+       "id": "Membakar kayu basah",
+       "pt": "Queimar lenha molhada",
+       "tet": "Sunu ai bokon"
+      },
+      {
+       "en": "Cook in a small closed room",
+       "id": "Memasak di ruang kecil tertutup",
+       "pt": "Cozinhar num quarto pequeno fechado",
+       "tet": "Te'in iha kuartu ki'ik taka"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

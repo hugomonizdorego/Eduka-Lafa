@@ -7,6 +7,7 @@ from pathlib import Path
 from urllib.parse import urlsplit
 import html
 import json
+import re
 import sys
 import tempfile
 import time
@@ -16,7 +17,7 @@ from .qt import (
     QIcon,QDesktopServices,QFont,QGuiApplication,
     QApplication,QMainWindow,QWidget,QVBoxLayout,QHBoxLayout,QGridLayout,
     QLabel,QPushButton,QLineEdit,QComboBox,QCheckBox,QStackedWidget,QFrame,
-    QScrollArea,QTableWidget,QTableWidgetItem,QHeaderView,QFormLayout,QListWidget,
+    QScrollArea,QTextBrowser,QTableWidget,QTableWidgetItem,QHeaderView,QFormLayout,QListWidget,
     QFileDialog,QMessageBox,QDialog,QPlainTextEdit,QMenu,QSystemTrayIcon,QSpinBox,QListWidgetItem,QSizePolicy,QCompleter,QProgressBar,QColor,
     BINDING,run,started,prepare_application,
 )
@@ -34,7 +35,8 @@ from .timor import CardDeck,Card,timor_news,NEWS_LINKS
 from .learning import LessonPython,LESSONS,REFERENCES,LESSON_KEYS
 from .reminders import Reminders
 from .instance import server_name,activate_existing,ActivationServer
-from . import osguide, personality, eduka, outfits, school, updates, classroom, roles, timorleste, timor_atlas, livefacts, ui_kit, sources, offline, recommendations, languages, platform_check
+from . import osguide, personality, eduka, outfits, school, updates, classroom, roles, timorleste, timor_atlas, livefacts, ui_kit, sources, offline, recommendations, languages, platform_check, signin, memory, curriculum, actions
+from .aihub import AIHub
 import random
 from .agent import direct_intent
 
@@ -43,6 +45,17 @@ from .agent import direct_intent
 class Signals(QObject):
     done=Signal(object)
     error=Signal(str)
+class Opener(QObject):
+    """Lets a worker thread open a web page or show progress on the GUI thread."""
+    url=Signal(str); text=Signal(str)
+    def __init__(self,window):
+        super().__init__(window); self.url.connect(self.open_url)
+    @Slot(str)
+    def open_url(self,url):
+        if url.startswith("https://"):QDesktopServices.openUrl(QUrl(url))
+    def request(self,url):self.url.emit(url)
+    def say(self,line):self.text.emit(line)
+
 class Delivery(QObject):
     """QObject receiver pins callback execution to the UI thread."""
     def __init__(self,window,job,callback,busy):
@@ -94,12 +107,14 @@ def page_layout():
 # TIMOR-LESTE  history, nation and symbols, news and culture
 # LIBRARY      library, computer lab, notice board, AI services
 # HELP         ask LAFA, IT help desk, my files, reminders
+# 0.2.0 layout: learning first, then Timor-Leste, then search and AI, then tools.
 PAGES=[("home","🏠"),("classroom","🏫"),("teachers","👩‍🏫"),("exams","📝"),("report","📊"),("homework","📅"),("languages","🗣"),
-       ("culture","🇹🇱"),("learn","📚"),("coding","💻"),("live","📰"),("hub","✨"),
-       ("chat","💬"),("os_help","🧭"),("files","📁"),("reminders","⏰")]
-SECTIONS={"home":"sec_school","culture":"sec_timor","learn":"sec_resources","chat":"sec_help"}
-TOP_SECTIONS=[("home","seg_school"),("culture","seg_timor"),("learn","seg_library"),("chat","seg_help")]
-PAGE_LABELS={"languages":"language_school","learn":"library","coding":"lab","live":"noticeboard","os_help":"helpdesk","reminders":"reminders_short","report":"report_card"}
+       ("culture","🇹🇱"),("live","📰"),
+       ("learn","🔎"),("hub","✨"),("chat","💬"),
+       ("coding","💻"),("files","📁"),("reminders","⏰"),("os_help","🧭")]
+SECTIONS={"home":"sec_school","culture":"sec_timor","learn":"sec_ai","coding":"sec_tools"}
+TOP_SECTIONS=[("home","seg_school"),("culture","seg_timor"),("learn","seg_ai"),("coding","seg_tools")]
+PAGE_LABELS={"languages":"language_school","learn":"library_search","hub":"ai_hub","coding":"lab","live":"noticeboard","os_help":"helpdesk","reminders":"reminders_short","report":"report_card"}
 # Theme icons (Papirus on Edukasaun OS); emoji are only a fallback for Qt 6.
 NAV_ICONS={"languages":["preferences-desktop-locale","applications-education-language","config-language"],"home":["user-home","go-home"],"classroom":["applications-education","x-office-presentation"],"teachers":["system-users","user-identity"],
            "exams":["accessories-text-editor","document-edit","x-office-document"],"report":["x-office-spreadsheet","office-chart-bar","view-statistics"],
@@ -109,10 +124,10 @@ NAV_ICONS={"languages":["preferences-desktop-locale","applications-education-lan
            "reminders":["alarm-clock","appointment-soon","chronometer"],"hub":["applications-internet","web-browser"]}
 PAGE_INDEX={key:i for i,(key,_) in enumerate(PAGES)}
 # Home dashboard cards: page key, icon, description key.
-CARDS=[("classroom","🏫","card_classroom_d"),("teachers","👩‍🏫","card_teachers_d"),("exams","📝","card_exams_d"),("report","📊","card_report_d"),("homework","📅","card_homework_d"),("culture","🇹🇱","card_culture_d"),
-       ("learn","📚","card_learn_d"),("coding","💻","card_coding_d"),("chat","💬","card_chat_d"),("os_help","🧭","card_os_d"),("files","📁","card_files_d"),("live","🌦️","card_live_d")]
+CARDS=[("classroom","🏫","card_classroom_d"),("exams","📝","card_exams_d"),("learn","🔎","card_learn_d"),("hub","✨","card_hub_d"),("culture","🇹🇱","card_culture_d"),("teachers","👩‍🏫","card_teachers_d"),
+       ("report","📊","card_report_d"),("homework","📅","card_homework_d"),("chat","💬","card_chat_d"),("coding","💻","card_coding_d"),("live","🌦️","card_live_d"),("os_help","🧭","card_os_d")]
 # Commands that run entirely on this computer, even in review mode.
-START_PAGES=['home','classroom','teachers','exams','homework','languages','culture','chat','os_help','learn','coding','live']
+START_PAGES=['home','classroom','teachers','exams','homework','languages','culture','chat','os_help','learn','hub','coding','live']
 from .agent import LOCAL_TOOLS
 
 STYLE_TEMPLATE = """
@@ -279,6 +294,7 @@ class Window(QMainWindow):
         self.companion.quit_requested.connect(self.exit_app)
         self.companion.user_request.connect(self.send_message)
         self.companion.public_search_requested.connect(self.search_public_message)
+        self.companion.ai_requested.connect(self.ask_ai_hub)
         self.companion.action_requested.connect(self.desktop_action)
         self.companion.voice_requested.connect(self.listen)
         self.companion.settings_requested.connect(self.open_settings)
@@ -478,7 +494,7 @@ class Window(QMainWindow):
     def toggle_virtual(self):self.activate_mode('disable' if self.settings.companion else 'enable');self.refresh_home()
     def ask_from_home(self):
         text=self.home_input.text().strip()
-        if not text:return
+        if not text:self.hint(self.home_input,self.t('type_first'));return
         self.home_input.clear();self.navigate("chat");self.send_message(text)
     # ------------------------------------------------------------ school lobby
     def build_roles_panel(self,col):
@@ -567,37 +583,79 @@ class Window(QMainWindow):
         self.speak_text(self.lang_question.text().replace("…",""),languages.COURSES[self.current_course()][1])
     # --------------------------------------------------------------- classroom
     def build_classroom(self):
-        w,layout=page_layout();row=QHBoxLayout();row.setSpacing(16)
-        left=QFrame();left.setObjectName("panel");left.setFixedWidth(300);lv=QVBoxLayout(left);lv.setContentsMargins(12,12,12,12)
-        self.class_subject=QComboBox();self.class_subject.addItem(self.t("all_subjects"),None)
-        for key in classroom.SUBJECTS:self.class_subject.addItem(classroom.subject_name(key,self.settings.locale),key)
-        lv.addWidget(self.class_subject);self.lesson_list=QListWidget();self.lesson_list.setObjectName("guides");self.lesson_list.setWordWrap(True);self.lesson_list.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff);lv.addWidget(self.lesson_list,1);row.addWidget(left)
+        """Classroom: Timor-Leste school lessons, or lessons for every age (5–100)."""
+        w,layout=page_layout();row=QHBoxLayout();row.setSpacing(16);lang=self.settings.locale
+        left=QFrame();left.setObjectName("panel");left.setFixedWidth(320);lv=QVBoxLayout(left);lv.setContentsMargins(12,12,12,12);lv.setSpacing(8)
+        lv.addWidget(label("🎂  "+self.t("learner_age"),10,True))
+        self.age_level=QComboBox();self.age_level.addItem("🇹🇱  "+self.t("school_lessons"),"school")
+        for key,_,name in curriculum.LEVELS:self.age_level.addItem(curriculum.text(name,lang),key)
+        self.age_level.setCurrentIndex(max(0,self.age_level.findData(self.settings.learner_level)));lv.addWidget(self.age_level)
+        self.class_subject=QComboBox();self.age_subject=self.class_subject;lv.addWidget(self.class_subject)
+        self.lesson_list=QListWidget();self.lesson_list.setObjectName("guides");self.lesson_list.setWordWrap(True);self.lesson_list.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff);lv.addWidget(self.lesson_list,1);row.addWidget(left)
         scroll=QScrollArea();scroll.setWidgetResizable(True);scroll.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff);panel=QFrame();panel.setObjectName("panel");v=QVBoxLayout(panel);v.setContentsMargins(22,18,22,18);v.setSpacing(10)
         head=QHBoxLayout();self.lesson_pet=QLabel();head.addWidget(self.lesson_pet);names=QVBoxLayout();self.lesson_subject=label("",10,muted=True);self.lesson_title=label("",18,True);names.addWidget(self.lesson_subject);names.addWidget(self.lesson_title);head.addLayout(names,1);v.addLayout(head)
         self.lesson_body=label("",12);self.lesson_body.setTextFormat(Qt.PlainText);v.addWidget(self.lesson_body)
         task=QFrame();task.setObjectName("hero");tl=QVBoxLayout(task);tl.addWidget(label(self.t("lesson_task"),11,True));self.lesson_task=label("",12);tl.addWidget(self.lesson_task);v.addWidget(task)
-        actions=QHBoxLayout();actions.addWidget(button(self.t("practice_subject"),self.quiz_current_lesson,True));actions.addWidget(button(self.t("open_teacher"),self.teacher_for_lesson));actions.addWidget(button(self.t("speak"),self.read_lesson));actions.addStretch();v.addLayout(actions);v.addStretch()
+        actions=QHBoxLayout();actions.addWidget(button(self.t("practice_subject"),self.quiz_current_lesson,True));actions.addWidget(button(self.t("open_teacher"),self.teacher_for_lesson));actions.addStretch();v.addLayout(actions)
+        more=QHBoxLayout();more.addWidget(button(self.t("speak"),self.read_lesson));more.addWidget(button("🔎 "+self.t("learn_more"),self.lesson_more));more.addStretch();v.addLayout(more);v.addStretch()
         scroll.setWidget(panel);row.addWidget(scroll,1);layout.addLayout(row,1)
-        self.class_subject.currentIndexChanged.connect(self.fill_lessons);self.lesson_list.currentRowChanged.connect(self.show_lesson);self.fill_lessons();return w
+        self.age_level.currentIndexChanged.connect(self.level_changed);self.class_subject.currentIndexChanged.connect(self.fill_lessons);self.lesson_list.currentRowChanged.connect(self.show_lesson)
+        self.fill_subjects();return w
+    def level(self):
+        return self.age_level.currentData() if hasattr(self,"age_level") else "school"
+    def level_changed(self,*_):
+        level=self.level()
+        if level!=self.settings.learner_level:
+            self.settings.learner_level=level
+            if not self.review:
+                try:self.settings.save()
+                except OSError:pass
+        self.fill_subjects()
+    def fill_subjects(self):
+        lang=self.settings.locale;current=self.class_subject.currentData();self.class_subject.blockSignals(True);self.class_subject.clear()
+        self.class_subject.addItem(self.t("all_subjects"),None)
+        if self.level()=="school":
+            for key in classroom.SUBJECTS:self.class_subject.addItem(classroom.subject_name(key,lang),key)
+        else:
+            for item in curriculum.subjects():self.class_subject.addItem(item.icon+"  "+curriculum.text(item.name,lang),item.key)
+        self.class_subject.setCurrentIndex(max(0,self.class_subject.findData(current)));self.class_subject.blockSignals(False);self.fill_lessons()
     def fill_lessons(self,*_):
-        self.class_lessons=classroom.lessons(self.class_subject.currentData());self.lesson_list.clear()
-        for lesson in self.class_lessons:self.lesson_list.addItem(classroom.subject_name(lesson.subject,self.settings.locale)+" · "+classroom.text(lesson.title,self.settings.locale))
+        lang=self.settings.locale;level=self.level();subject=self.class_subject.currentData();self.lesson_list.clear()
+        if level=="school":
+            self.class_lessons=classroom.lessons(subject)
+            for lesson in self.class_lessons:self.lesson_list.addItem(classroom.subject_name(lesson.subject,lang)+" · "+classroom.text(lesson.title,lang))
+        else:
+            self.class_lessons=curriculum.lessons(subject,level)
+            for lesson in self.class_lessons:
+                item=curriculum.subject(lesson.subject);self.lesson_list.addItem(f"{item.icon if item else '📘'}  {curriculum.subject_name(lesson.subject,lang)} · {curriculum.text(lesson.title,lang)}")
         self.lesson_list.setCurrentRow(0)
     def current_lesson(self):
         row=self.lesson_list.currentRow();return self.class_lessons[row] if 0<=row<len(getattr(self,"class_lessons",[])) else None
     def show_lesson(self,*_):
         lesson=self.current_lesson();lang=self.settings.locale
         if not lesson:return
-        teacher=school.BY_KEY.get(lesson.subject);self.lesson_pet.setPixmap(self.atlas.pixmap("lecture",84,self.settings.costume))
-        self.lesson_subject.setText(classroom.subject_name(lesson.subject,lang));self.lesson_title.setText(classroom.text(lesson.title,lang))
-        self.lesson_body.setText("\n\n".join("•  "+classroom.text(point,lang) for point in lesson.points));self.lesson_task.setText(classroom.text(lesson.task,lang))
+        self.lesson_pet.setPixmap(self.atlas.pixmap("lecture",84,self.settings.costume))
+        if isinstance(lesson,curriculum.AgeLesson):
+            self.lesson_subject.setText(curriculum.subject_name(lesson.subject,lang)+" · "+curriculum.level_name(lesson.level,lang));text=curriculum.text
+        else:
+            self.lesson_subject.setText(classroom.subject_name(lesson.subject,lang));text=classroom.text
+        self.lesson_title.setText(text(lesson.title,lang))
+        self.lesson_body.setText("\n\n".join("•  "+text(point,lang) for point in lesson.points));self.lesson_task.setText(text(lesson.task,lang))
+    def lesson_exam_subject(self,lesson):
+        return f"age:{lesson.subject}:{lesson.level}" if isinstance(lesson,curriculum.AgeLesson) else lesson.subject
     def quiz_current_lesson(self):
         lesson=self.current_lesson()
-        if lesson:self.navigate("exams");self.start_exam("quiz",lesson.subject)
+        if lesson:self.navigate("exams");self.start_exam("quiz",self.lesson_exam_subject(lesson))
     def teacher_for_lesson(self):
         lesson=self.current_lesson()
         if lesson:
-            self.navigate("teachers");self.teacher_list.setCurrentRow(next((i for i,t in enumerate(school.TEACHERS) if t.key==lesson.subject),0))
+            key={"physics":"science","chemistry":"science","biology":"science","astronomy":"science","atoms":"science","environment":"science","medicine":"health","computers":"ict","it":"ict","technology":"ict","communication":"languages","economics":"civics","agriculture":"science"}.get(lesson.subject,lesson.subject)
+            self.navigate("teachers");self.teacher_list.setCurrentRow(next((i for i,t in enumerate(school.TEACHERS) if t.key==key),0))
+            if hasattr(self,"teacher_input"):self.teacher_input.setText(self.lesson_title.text())
+    def lesson_more(self):
+        """Search LAFA's memory (and the sources it read) for the lesson topic."""
+        if not self.current_lesson():return
+        self.navigate("learn");self.library_tabs.setCurrentIndex(0);self.search_memory(self.lesson_title.text())
     def read_lesson(self):
         lesson=self.current_lesson()
         if lesson:self.last_answer=self.lesson_title.text()+". "+self.lesson_body.text().replace("•","");self.speak_last()
@@ -608,7 +666,10 @@ class Window(QMainWindow):
         for kind in classroom.KINDS:self.exam_kind.addItem(self.t(kind)+" — "+self.t(kind+"_d"),kind)
         self.exam_subject=QComboBox();self.exam_subject.addItem(self.t("all_subjects"),"all")
         for key in classroom.SUBJECTS:self.exam_subject.addItem(classroom.subject_name(key,self.settings.locale),key)
-        t.addWidget(self.exam_kind,2);t.addWidget(self.exam_subject,1);t.addWidget(button(self.t("start_exam"),lambda:self.start_exam(),True));layout.addWidget(top)
+        for item in curriculum.subjects():self.exam_subject.addItem(item.icon+"  "+curriculum.text(item.name,self.settings.locale)+" · "+self.t("every_age"),"age:"+item.key)
+        self.exam_level=QComboBox();self.exam_level.addItem(self.t("all_ages"),"")
+        for key,_,name in curriculum.LEVELS:self.exam_level.addItem(curriculum.text(name,self.settings.locale).split(" · ")[0],key)
+        t.addWidget(self.exam_kind,2);t.addWidget(self.exam_subject,1);t.addWidget(self.exam_level,1);t.addWidget(button(self.t("start_exam"),lambda:self.start_exam(),True));layout.addWidget(top)
         sheet=QFrame();sheet.setObjectName("panel");v=QVBoxLayout(sheet);v.setContentsMargins(22,16,22,16);v.setSpacing(12)
         status=QHBoxLayout();self.exam_progress=label(self.t("start_hint"),10,muted=True);status.addWidget(self.exam_progress,1);self.exam_timer_label=label("",11,True);status.addWidget(self.exam_timer_label);v.addLayout(status)
         self.exam_question=label("",16,True);v.addWidget(self.exam_question);grid=QGridLayout();grid.setSpacing(10);self.exam_buttons=[]
@@ -625,8 +686,17 @@ class Window(QMainWindow):
         return w
     def start_exam(self,kind=None,subject=None):
         if kind:self.exam_kind.setCurrentIndex(self.exam_kind.findData(kind))
+        level=""
+        if subject and str(subject).startswith("age:"):
+            parts=(subject.split(":")+["",""])[:3];subject="age:"+parts[1];level=parts[2]
+            self.exam_level.setCurrentIndex(max(0,self.exam_level.findData(level)))
         if subject:self.exam_subject.setCurrentIndex(self.exam_subject.findData(subject))
-        self.exam=classroom.ExamSession(self.exam_kind.currentData(),self.exam_subject.currentData(),self.settings.locale)
+        chosen=self.exam_subject.currentData();level=self.exam_level.currentData()
+        if level:
+            # An age level uses the lessons for that age (same subject when it exists).
+            key=chosen[4:] if str(chosen).startswith("age:") else chosen if curriculum.subject(chosen) else ""
+            chosen=f"age:{key}:{level}"
+        self.exam=classroom.ExamSession(self.exam_kind.currentData(),chosen,self.settings.locale)
         self.exam_result.hide();self.exam_feedback.clear()
         for b in self.exam_buttons:b.show()
         self.show_exam_question()
@@ -935,7 +1005,7 @@ class Window(QMainWindow):
         return f'{self.t("score")}: {self.scores[key][0]}/{self.scores[key][1]}'
     def new_math(self,*_):self.math_question.setText(self.math.new(self.math_level.currentData()));self.math_answer.clear();self.math_feedback.clear()
     def check_math(self):
-        if not self.math_answer.text().strip():return
+        if not self.math_answer.text().strip():self.hint(self.math_answer,self.t('type_first'));return
         correct=self.math.check(self.math_answer.text());self.math_score.setText(self.score('math',correct))
         self.math_feedback.setText(self.t('correct') if correct else f'{self.t("try_again")} {self.math.answer}')
         self.set_mood('talking' if correct else 'thinking')
@@ -960,9 +1030,10 @@ class Window(QMainWindow):
         tip=school.TIPS[self.tip_index%len(school.TIPS)];self.tip_index+=1;self.tip_text.setText(tip.get(self.settings.locale,tip['en']))
     def ask_teacher(self):
         text=self.teacher_input.text().strip()
-        if not text or self.busy or not self.require_online():return
+        if not text:self.hint(self.teacher_input,self.t('type_first'));return
+        if self.busy:return
         teacher=self.current_teacher()
-        if not self.agent.client.ready() or self.review:self.teacher_answer.setPlainText(self.t('teacher_needs_ai'));return
+        if self.review:self.teacher_answer.setPlainText(self.t('teacher_needs_ai'));return
         history=self.teacher_history.setdefault(teacher.key,[]);old=list(history);history.append({'role':'user','content':text})
         self.teacher_input.clear();self.teacher_answer.setPlainText(self.t('working'));self.set_busy(True,'thinking')
         def finished(result):
@@ -1007,9 +1078,11 @@ class Window(QMainWindow):
         row=self.hw_table.currentRow();return self.hw_items[row] if 0<=row<len(getattr(self,'hw_items',[])) else None
     def toggle_homework(self):
         item=self.selected_homework()
+        if not item:self.hint(self.hw_table,self.t('choose_first'));return
         if item:self.planner.toggle(item.id);self.render_homework();self.refresh_home()
     def delete_homework(self):
         item=self.selected_homework()
+        if not item:self.hint(self.hw_table,self.t('choose_first'));return
         if item:self.planner.remove(item.id);self.render_homework();self.refresh_home()
     def build_chat(self):
         w,layout=page_layout()
@@ -1057,7 +1130,7 @@ class Window(QMainWindow):
         self.companion.input.clear();self.send_message('/ask '+text)
     def send_chat(self):
         text=self.input.text().strip()
-        if not text: return
+        if not text:self.hint(self.input,self.t('type_first'));return
         self.send_message(text)
     def send_message(self,text):
         if self.busy: return
@@ -1066,6 +1139,9 @@ class Window(QMainWindow):
         self.input.clear(); self.bubble("user",text); old=list(self.history)
         self.history.append({"role":"user","content":text}); self.set_busy(True)
         generation=self.generation
+        # LAFA as an agent: open apps and pages, ask AI websites, search, remind.
+        action=None if direct_intent(text) else actions.parse(text)
+        if action:self.finish_result(self.perform_action(action),generation);return
         # Review mode never contacts a provider; command tools remain local.
         if self.review:
             intent=direct_intent(text)
@@ -1075,6 +1151,35 @@ class Window(QMainWindow):
             else:self.finish_result(Result(self.t("review_chat"),"idle"),generation)
             return
         self.work(lambda:self.agent.run(text,old,self.online),lambda r:self.finish_result(r,generation),busy=True)
+    def perform_action(self,action):
+        """Carry out an allowlisted action and say what LAFA did."""
+        if action.kind=="app":
+            app=actions.APP_BY_KEY[action.target];path=actions.which_app(app)
+            if not path:return Result(self.t("app_missing").replace("{name}",app.icon+" "+action.target),"thinking")
+            if self.review:return Result(app.icon+" "+self.t("opening").replace("{name}",Path(path).name),"talking")
+            args=["--writer"] if action.target=="writer" else []
+            ok=started(QProcess.startDetached(path,args))
+            return Result(app.icon+" "+self.t("opening" if ok else "open_failed").replace("{name}",Path(path).name),"talking" if ok else "serious")
+        if action.kind=="page":
+            self.navigate(action.target)
+            if self.isHidden():self.reveal()
+            return Result("📂 "+self.t("opening").replace("{name}",self.page_title(action.target)),"talking")
+        if action.kind=="ask_ai":
+            from .aihub import ASKABLE,BY_KEY
+            keys=ASKABLE if action.target=="all" else [action.target] if action.target in BY_KEY else ["gemini"]
+            if not self.online:return Result(self.t("neednet"),"sitting")
+            self.ask_ai_hub(action.text,keys)
+            if self.isHidden():self.reveal()
+            return Result("✨ "+self.t("aihub_sent").replace("{names}",", ".join(BY_KEY[k].name for k in keys)),"talking")
+        if action.kind=="search":
+            self.navigate("learn");self.library_tabs.setCurrentIndex(0);self.search_memory(action.text)
+            found=self.agent.memory_answer(action.text)
+            return Result(found[0] if found else self.t("no_public_results")+"\n"+self.t("memory_try_online"),"reading" if found else "thinking")
+        if action.kind=="remind":
+            try:self.reminders.add(action.minutes,action.text);self.render_reminders()
+            except ValueError as error:return Result(str(error),"serious")
+            return Result("⏰ "+self.t("reminder_set").replace("{minutes}",str(action.minutes)).replace("{text}",action.text),"talking")
+        return Result(self.t("try_topic"),"thinking")
     def finish_result(self,result,generation=None):
         self.set_busy(False)
         if generation is not None and generation!=self.generation: return
@@ -1117,13 +1222,12 @@ class Window(QMainWindow):
         actions.addWidget(self.file_web_button); layout.addLayout(actions)
         return w
     def search_files(self):
-        if self.busy or not self.require_online(): return
+        if self.busy: return
         query=self.file_query.text(); kind=self.kind.currentData(); roots=list(self.settings.roots)
         self.set_busy(True,"reading")
         self.work(lambda:FileSearch(roots).search(query,kind),self.finish_files,busy=True)
     def finish_files(self,results):
-        self.set_busy(False)
-        if self.online: self.show_files(results)
+        self.set_busy(False); self.show_files(results)
     def show_files(self,results):
         self.current_files=results.hits; self.file_table.setRowCount(len(results.hits))
         for r,hit in enumerate(results.hits):
@@ -1135,15 +1239,16 @@ class Window(QMainWindow):
         row=self.file_table.currentRow()
         return self.current_files[row] if 0<=row<len(self.current_files) else None
     def open_file(self):
-        if not self.require_online(): return
         hit=self.selected_file()
+        if not hit:self.hint(self.file_table,self.t('choose_first'));return
         if hit:
             search=FileSearch(self.settings.roots)
             if not search.allowed(hit.path): self.error("File is outside the selected folders."); return
             if not QDesktopServices.openUrl(QUrl.fromLocalFile(hit.path)): self.error("No application could open this file.")
     def read_file(self):
-        if self.busy or not self.require_online(): return
+        if self.busy: return
         hit=self.selected_file()
+        if not hit:self.hint(self.file_table,self.t('choose_first'));return
         if hit:
             self.set_busy(True,"reading")
             self.work(lambda:FileSearch(self.settings.roots).read(hit.path),lambda text:self.show_document(hit.name,text),busy=True)
@@ -1168,8 +1273,77 @@ class Window(QMainWindow):
     def build_library(self):
         """Library: the learning-source directory and the encyclopedia search."""
         page,outer=page_layout();tabs=QTabWidget();self.library_tabs=tabs;outer.addWidget(tabs,1)
+        tabs.addTab(self.build_memory_search(),"🔎  "+self.t("lafa_search"))
         tabs.addTab(self.build_sources(),self.t("learning_sources").replace("&","&&"));tabs.addTab(self.build_learn(),self.t("encyclopedia").replace("&","&&"))
         return page
+    def build_memory_search(self):
+        """LAFA Search: Google-like results from LAFA's core memory (offline too)."""
+        w=QWidget();v=QVBoxLayout(w);v.setContentsMargins(0,8,0,0);v.setSpacing(10)
+        top=QHBoxLayout();self.memory_query=QLineEdit();self.memory_query.setObjectName("searchbig");self.memory_query.setMaxLength(300)
+        self.memory_query.setPlaceholderText("🔎  "+self.t("lafa_search_hint"));self.memory_query.returnPressed.connect(self.search_memory)
+        top.addWidget(self.memory_query,1);top.addWidget(button(self.t("find"),self.search_memory,True))
+        self.memory_ask_button=button("💬 "+self.t("ask_lafa_this"),self.ask_about_search);top.addWidget(self.memory_ask_button);v.addLayout(top)
+        info=QHBoxLayout();self.memory_status=label("",9,muted=True);info.addWidget(self.memory_status,1)
+        self.memory_refresh_button=button("⟳  "+self.t("memory_read_now"),lambda:self.refresh_memory(True));info.addWidget(self.memory_refresh_button);v.addLayout(info)
+        self.memory_results=QTextBrowser();self.memory_results.setObjectName("results");self.memory_results.setOpenLinks(False);self.memory_results.anchorClicked.connect(self.open_result)
+        v.addWidget(self.memory_results,1);self.update_memory_status();self.memory_results.setHtml(self.memory_welcome());return w
+    def memory_welcome(self):
+        tips=" · ".join(html.escape(t) for t in self.t("lafa_search_examples").split("|"))
+        return f"<div style='padding:18px'><h2>🧠 {html.escape(self.t('lafa_search'))}</h2><p>{html.escape(self.t('lafa_search_intro'))}</p><p style='color:#5c7a70'>{tips}</p></div>"
+    def update_memory_status(self):
+        if not hasattr(self,"memory_status"):return
+        stats=memory.shared().stats();when=time.strftime("%d/%m %H:%M",time.localtime(stats["updated"])) if stats["updated"] else "—"
+        self.memory_status.setText(self.t("memory_stats").replace("{pages}",str(stats["pages"])).replace("{sites}",str(stats["sites"])).replace("{news}",str(stats["news"])).replace("{date}",when))
+    def search_memory(self,query=None):
+        query=(query if isinstance(query,str) else self.memory_query.text()).strip()
+        if not query:self.hint(self.memory_query,self.t("type_first"));return
+        self.memory_query.setText(query);hits=memory.shared().search(query,self.settings.locale,k=20)
+        self.memory_results.setHtml(self.results_html(query,hits))
+        self.set_mood("reading" if hits else "thinking")
+    def results_html(self,query,hits):
+        esc=html.escape
+        if not hits:
+            return f"<div style='padding:18px'><p>{esc(self.t('no_public_results'))}</p><p>{esc(self.t('memory_try_online'))}</p></div>"
+        kinds={"lesson":"📗","atlas":"🇹🇱","history":"🕰","guide":"🧭","source":"🌐","web":"📰","news":"🗞","wiki":"📖"}
+        rows=[f"<p style='color:#5c7a70'>{esc(self.t('results'))}: {len(hits)} · “{esc(query)}”</p>"]
+        for hit in hits:
+            words=sorted({t for t in hit.terms if len(t)>2},key=len,reverse=True);snip=esc(hit.snippet)
+            for word in words[:6]:snip=re.sub("(?i)(%s)"%re.escape(esc(word)),r"<b>\1</b>",snip)
+            shown=hit.doc.url.removeprefix("https://").split("?")[0].rstrip("/") if hit.doc.url.startswith("https://") else hit.doc.site
+            if "facebook.com/search" in hit.doc.url:shown="facebook.com · "+hit.doc.title
+            rows.append(f"<div style='margin:0 0 16px 0'><a href='{esc(hit.doc.url)}' style='font-size:16px;font-weight:600;color:#1a5fb4;text-decoration:none'>{kinds.get(hit.doc.kind,'•')} {esc(hit.doc.title)}</a>"
+                        f"<br><span style='color:#188038'>{esc(shown[:80])}</span>"+(f" <span style='color:#888'>· {esc(hit.doc.site)}</span>" if shown!=hit.doc.site else "")+f"<br><span>{snip}</span></div>")
+        return "<div style='padding:8px 14px'>"+"".join(rows)+"</div>"
+    def open_result(self,url):
+        value=url.toString()
+        if value.startswith("https://"):self.open_web(value);return
+        parts=value.removeprefix("lafa://").split("/")
+        if parts[0]=="classroom":
+            self.navigate("classroom")
+            if len(parts)>=3 and hasattr(self,"age_level"):
+                self.age_level.setCurrentIndex(max(0,self.age_level.findData(parts[2])));self.age_subject.setCurrentIndex(max(0,self.age_subject.findData(parts[1])))
+        elif parts[0]=="atlas":
+            self.navigate("culture")
+            if len(parts)>1 and timor_atlas.find(parts[1]):self.select_atlas(parts[1])
+        elif parts[0]=="os":
+            self.navigate("os_help")
+    def ask_about_search(self):
+        query=self.memory_query.text().strip()
+        if not query:self.hint(self.memory_query,self.t("type_first"));return
+        self.navigate("chat");self.send_message(query)
+    def refresh_memory(self,force=False):
+        """Read the learning and Timor-Leste websites into LAFA's memory (hourly)."""
+        if getattr(self,"memory_running",False):return
+        if self.review:self.memory_status.setText(self.t("preview_only"));return
+        if not self.online:self.memory_status.setText(self.t("offline"));return
+        self.memory_running=True;self.memory_refresh_button.setEnabled(False);self.memory_status.setText(self.t("memory_reading"))
+        def done(result):
+            self.memory_running=False;self.memory_refresh_button.setEnabled(True);self.update_memory_status()
+            read,pages,failed=result
+            if force:self.memory_status.setText(self.memory_status.text()+" · "+self.t("memory_done").replace("{sites}",str(read)).replace("{pages}",str(pages)).replace("{failed}",str(failed)))
+        job=Job(lambda:memory.refresh(budget=130 if force else 40));self.jobs.add(job);delivery=Delivery(self,job,done,False);job.signals.done.connect(delivery.done)
+        def failed(message):self.memory_running=False;self.memory_refresh_button.setEnabled(True);self.jobs.discard(job);self.memory_status.setText(message);delivery.deleteLater()
+        delivery.failed_handler=failed;job.signals.error.connect(delivery.report_error);self.pool.start(job)
     def build_sources(self):
         w=QWidget();v=QVBoxLayout(w);v.setContentsMargins(0,8,0,0);v.setSpacing(10);lang=self.settings.locale
         top=QHBoxLayout();self.source_query=QLineEdit();self.source_query.setPlaceholderText("🔍  "+self.t("search_sources"));self.source_query.textChanged.connect(lambda *_:self.fill_sources())
@@ -1213,6 +1387,7 @@ class Window(QMainWindow):
             self.sources_running=False;self.source_check_button.setEnabled(True);self.update_source_status()
             status=sources.load_status()
             for name,card in self.source_cards.items():card.set_state(status.get(card.url,{}).get("state"))
+            QTimer.singleShot(2000,self.refresh_memory)
         job=Job(sources.check_all);self.jobs.add(job);delivery=Delivery(self,job,done,False);job.signals.done.connect(delivery.done)
         def failed(message):self.sources_running=False;self.source_check_button.setEnabled(True);self.jobs.discard(job);self.update_source_status(message);delivery.deleteLater()
         delivery.failed_handler=failed;job.signals.error.connect(delivery.report_error);self.pool.start(job)
@@ -1253,14 +1428,80 @@ class Window(QMainWindow):
             self.set_busy(True,"reading")
             self.work(lambda:encyclopedia_article(s),lambda text:self.show_document(s.title,text,True),busy=True)
     def build_hub(self):
-        w,layout=page_layout(); layout.addWidget(label(self.t("cost"),11,muted=True))
-        layout.addWidget(label(self.t("browser_login_note"),10,muted=True))
-        scroll=QScrollArea(); scroll.setWidgetResizable(True); body=QWidget(); grid=QGridLayout(body); grid.setContentsMargins(0,0,0,0); grid.setSpacing(12)
-        for i,(name,url,category) in enumerate(HUB):
-            card=QFrame(); card.setObjectName("bubble"); c=QVBoxLayout(card); c.setContentsMargins(14,10,14,10); c.setSpacing(5)
-            c.addWidget(label(name,15,True)); c.addWidget(label(self.t(category),10,muted=True)); c.addWidget(button(self.t("login"),lambda checked=False,u=url:self.open_web(u)))
-            grid.addWidget(card,i//3,i%3)
-        scroll.setWidget(body); layout.addWidget(scroll,1); return w
+        """AI Hub: make LAFA smart by signing in to an AI, and use AI websites
+        in signed-in tabs (inspired by Noi)."""
+        w,layout=page_layout()
+        cards=QHBoxLayout();cards.setSpacing(12)
+        def card(icon,title,text,action,callback,colour):
+            frame=QFrame();frame.setObjectName("signincard");frame.setStyleSheet(f"QFrame#signincard{{border-radius:16px;border:1px solid {colour}55;background:qlineargradient(x1:0,y1:0,x2:1,y2:1,stop:0 {colour}22,stop:1 {colour}08);}}")
+            v=QVBoxLayout(frame);v.setContentsMargins(14,12,14,12);v.setSpacing(6)
+            v.addWidget(label(icon+"  "+title,13,True));v.addWidget(label(text,9,muted=True),1)
+            b=button(action,callback,True);v.addWidget(b);cards.addWidget(frame,1);return b
+        self.openrouter_button=card("🔓",self.t("signin_openrouter"),self.t("signin_openrouter_d"),self.t("signin"),self.signin_openrouter,"#7950f2")
+        gem=QFrame();gem.setObjectName("signincard");gem.setStyleSheet("QFrame#signincard{border-radius:16px;border:1px solid #4c6ef555;background:qlineargradient(x1:0,y1:0,x2:1,y2:1,stop:0 #4c6ef522,stop:1 #4c6ef508);}")
+        g=QVBoxLayout(gem);g.setContentsMargins(14,12,14,12);g.setSpacing(6);g.addWidget(label("✦  "+self.t("signin_gemini"),13,True));g.addWidget(label(self.t("signin_gemini_d"),9,muted=True))
+        row=QHBoxLayout();self.gemini_key=QLineEdit();self.gemini_key.setEchoMode(QLineEdit.Password);self.gemini_key.setMaxLength(200);self.gemini_key.setPlaceholderText("AIza…");row.addWidget(self.gemini_key,1)
+        row.addWidget(button("🔑",lambda:self.ai_hub.open_site("aistudio")));self.gemini_button=button(self.t("connect"),self.connect_gemini,True);row.addWidget(self.gemini_button);g.addLayout(row);cards.addWidget(gem,1)
+        self.lafa_model_button=card("🐊",self.t("lafa_model"),self.t("lafa_model_d"),self.t("create_model"),self.create_lafa_model,"#12b886")
+        layout.addLayout(cards)
+        self.brain_status=label("",10,muted=True);layout.addWidget(self.brain_status);self.update_brain_status()
+        texts={k:self.t(k) for k in ("aihub_pick","aihub_intro","aihub_no_webengine","aihub_ask_hint","aihub_ask","aihub_sent","aihub_choose","aihub_load_failed","aihub_opened_browser","back","reload","open_browser","type_first")}
+        self.ai_hub=AIHub(self.settings.locale,texts);layout.addWidget(self.ai_hub,1);return w
+    def update_brain_status(self):
+        if not hasattr(self,"brain_status"):return
+        p=self.settings.provider;ready=self.agent.client.ready(p)
+        text=self.t("brain_ready").replace("{name}",PROVIDERS[p][0]).replace("{model}",self.settings.model(p) or "auto") if ready else self.t("brain_memory")
+        self.brain_status.setText("🧠 "+text)
+    def connect_ai(self,provider,key,model):
+        """Save a signed-in AI as LAFA's brain (keyring when available)."""
+        try:self.secrets.set(provider,key,True)
+        except Exception:self.secrets.set(provider,key,False)
+        self.settings.provider=provider;self.settings.models[provider]=model
+        try:self.settings.save()
+        except OSError as error:self.error(str(error))
+        self.update_brain_status();self.chat_status.setText(self.status_note());self.set_mood("talking")
+        self.companion.show_answer(self.t("brain_ready").replace("{name}",PROVIDERS[provider][0]).replace("{model}",model))
+    def signin_openrouter(self):
+        if self.busy or not self.require_online():return
+        if self.review:self.error(self.t("preview_only"));return
+        self.openrouter_button.setEnabled(False);self.brain_status.setText("🔓 "+self.t("signin_waiting"))
+        opener=Opener(self)
+        def run():return signin.openrouter_signin(opener.request)
+        def done(result):
+            self.openrouter_button.setEnabled(True);self.connect_ai("openrouter",*result)
+        job=Job(run);self.jobs.add(job);delivery=Delivery(self,job,done,False);job.signals.done.connect(delivery.done)
+        def failed(message):self.openrouter_button.setEnabled(True);self.jobs.discard(job);self.brain_status.setText("⚠ "+message);delivery.deleteLater()
+        delivery.failed_handler=failed;job.signals.error.connect(delivery.report_error);self.pool.start(job)
+    def connect_gemini(self):
+        key=self.gemini_key.text().strip()
+        if not key:self.hint(self.gemini_key,self.t("signin_gemini_paste"));self.ai_hub.open_site("aistudio");return
+        if self.busy or not self.require_online():return
+        if self.review:self.error(self.t("preview_only"));return
+        self.gemini_button.setEnabled(False);self.brain_status.setText(self.t("working"))
+        def done(model):self.gemini_button.setEnabled(True);self.gemini_key.clear();self.connect_ai("gemini",key,model)
+        job=Job(lambda:signin.gemini_connect(key));self.jobs.add(job);delivery=Delivery(self,job,done,False);job.signals.done.connect(delivery.done)
+        def failed(message):self.gemini_button.setEnabled(True);self.jobs.discard(job);self.brain_status.setText("⚠ "+message);delivery.deleteLater()
+        delivery.failed_handler=failed;job.signals.error.connect(delivery.report_error);self.pool.start(job)
+    def create_lafa_model(self):
+        if self.review:self.error(self.t("preview_only"));return
+        if not signin.ollama_available():
+            self.brain_status.setText("ℹ "+self.t("ollama_missing"));self.open_web("https://ollama.com/download/linux");return
+        self.lafa_model_button.setEnabled(False);progress=Opener(self)
+        progress.text.connect(lambda line:self.brain_status.setText("⬇ "+line))
+        def done(model):
+            self.lafa_model_button.setEnabled(True)
+            self.settings.provider="ollama";self.settings.models["ollama"]=model
+            try:self.settings.save()
+            except OSError as error:self.error(str(error))
+            self.update_brain_status();self.chat_status.setText(self.status_note())
+        job=Job(lambda:signin.create_lafa_model(progress=progress.say));self.jobs.add(job);delivery=Delivery(self,job,done,False);job.signals.done.connect(delivery.done)
+        def failed(message):self.lafa_model_button.setEnabled(True);self.jobs.discard(job);self.brain_status.setText("⚠ "+message);delivery.deleteLater()
+        delivery.failed_handler=failed;job.signals.error.connect(delivery.report_error);self.pool.start(job)
+    def ask_ai_hub(self,text,keys=None):
+        """Send a question to the signed-in AI websites (from chat or LAFA Virtual)."""
+        self.navigate("hub")
+        if self.isHidden() or self.isMinimized():self.reveal()
+        return self.ai_hub.ask(text,keys)
     def build_live(self):
         w,layout=page_layout()
         row=QHBoxLayout(); self.city_query=QLineEdit(self.settings.weather_city); self.city_query.setPlaceholderText(self.t('city')); self.city_query.returnPressed.connect(self.fetch_weather)
@@ -1318,6 +1559,7 @@ class Window(QMainWindow):
         self.live_status.setText(self.t('retrieved')+': '+report.retrieved_at+((' · '+self.t('unavailable')+': '+', '.join(report.failures)) if report.failures else '')+(' · '+self.t('no_headlines') if not report.sources else ''))
     def open_news(self):
         index=self.news_table.currentRow()
+        if not 0<=index<len(self.news_items):self.hint(self.news_table,self.t('choose_first') if self.news_items else self.t('load_news_first'));return
         if 0<=index<len(self.news_items):self.open_web(self.news_items[index].url)
     def build_reminders(self):
         w,layout=page_layout(); layout.addWidget(label(self.t('sessionreminder'),11,muted=True))
@@ -1326,15 +1568,14 @@ class Window(QMainWindow):
         self.reminder_table=QTableWidget(0,3); self.reminder_table.setHorizontalHeaderLabels(['ID',self.t('remindertext'),self.t('minutes')]); self.reminder_table.horizontalHeader().setSectionResizeMode(0,QHeaderView.ResizeToContents); self.reminder_table.horizontalHeader().setSectionResizeMode(1,QHeaderView.Stretch); self.reminder_table.horizontalHeader().setSectionResizeMode(2,QHeaderView.ResizeToContents); self.reminder_table.verticalHeader().hide(); self.reminder_table.setSelectionBehavior(QTableWidget.SelectRows); self.reminder_table.setEditTriggers(QTableWidget.NoEditTriggers); layout.addWidget(self.reminder_table,1)
         row=QHBoxLayout(); self.focus_button=button(self.t('focus'),self.start_focus); row.addWidget(self.focus_button); row.addWidget(button(self.t('cancelreminder'),self.cancel_reminder)); row.addStretch(); layout.addLayout(row); self.render_reminders(); return w
     def add_reminder(self):
-        if not self.require_online():return
         try:self.reminders.add(self.reminder_minutes.value(),self.reminder_text.text()); self.reminder_text.clear(); self.render_reminders()
         except ValueError as error:self.error(str(error))
     def start_focus(self):
-        if not self.require_online():return
         text={'id':'Waktu istirahat — sesi belajar 25 menit selesai.','en':'Time for a break — 25 minute focus session finished.','pt':'Hora de descansar — terminou a sessão de 25 minutos.','tet':'Tempu atu deskansa — sesaun minutu 25 remata.'}.get(self.settings.locale,'Take a break.')
         self.reminders.add(25,text); self.render_reminders(); self.set_mood('studying'); self.companion.show_bubble(self.t('focus')+' · 25 min\n'+self.t('sessionreminder'))
     def cancel_reminder(self):
         row=self.reminder_table.currentRow()
+        if row<0:self.hint(self.reminder_table,self.t('choose_first'));return
         if row>=0 and self.reminder_table.item(row,0):self.reminders.cancel(int(self.reminder_table.item(row,0).text())); self.render_reminders()
     def render_reminders(self):
         if not hasattr(self,'reminder_table'):return
@@ -1350,7 +1591,7 @@ class Window(QMainWindow):
             # Eduka-Panel is the notification service of Eduka-Desktop.
             if self.settings.notifications and not self.review:eduka.notify('LAFA · '+self.t('reminders'),text)
             if self.tray:self.tray.showMessage('LAFA',text,QSystemTrayIcon.Information,10_000)
-        if self.stack.currentIndex()==6 or due:self.render_reminders()
+        if self.stack.currentIndex()==PAGE_INDEX["reminders"] or due:self.render_reminders()
     def desktop_action(self,key):
         if key=='os':self.navigate('os_help');self.reveal()
         elif key=='focus':self.start_focus()
@@ -1375,7 +1616,7 @@ class Window(QMainWindow):
         index=self.code_lesson.currentIndex()
         if index>=0:self.code_editor.setPlainText(LESSONS[self.code_language.currentText()][index][1]);self.code_output.clear()
     def run_lesson(self):
-        if self.busy or not self.require_online():return
+        if self.busy:return
         if self.code_language.currentText()!='Python':return
         code=self.code_editor.toPlainText();self.set_busy(True,'studying')
         def finished(result):
@@ -1474,7 +1715,6 @@ class Window(QMainWindow):
         if self.settings.fun_messages and (card is None or random.random()<0.3):card=Card(personality.joke(self.settings.locale),'','talking','fun')
         if card:self.companion.show_card(card,automatic=True)
     def preview_card(self):
-        if not self.require_online():return
         card=self.card_deck.next(self.settings.locale,self.settings.cultural_cards,self.settings.positive_messages)
         if card:
             dialog=QDialog(self);dialog.setWindowTitle('LAFA · Timor-Leste');layout=QVBoxLayout(dialog);text=label(card.text,13);text.setTextFormat(Qt.PlainText);layout.addWidget(text);layout.addWidget(button(self.t('source'),lambda:self.open_web(card.source)) if card.source else label('LAFA'));dialog.resize(480,270);run(dialog)
@@ -1725,6 +1965,7 @@ class Window(QMainWindow):
         self.hero_character.set_state(state); self.companion.set_state(state)
     def speak_last(self):
         if self.last_answer: self.speak_text(self.last_answer)
+        else:self.hint(self.input,self.t('nothing_to_read'))
     def speak_text(self,text,voice=None):
         # espeak-ng runs on this computer, so reading aloud also works offline.
         if self.busy:return
@@ -1750,6 +1991,14 @@ class Window(QMainWindow):
         if path:
             try: Path(path).write_text("\n\n".join(m["role"].upper()+":\n"+m["content"] for m in self.history),encoding="utf-8")
             except OSError as e: self.error(str(e))
+    def hint(self,widget,text):
+        """Gentle feedback for a button that has nothing to work on yet."""
+        self.chat_status.setText(text)
+        try:
+            from .qt import QToolTip
+            QToolTip.showText(widget.mapToGlobal(widget.rect().center()),text,widget)
+            widget.setFocus()
+        except RuntimeError:pass
     def error(self,text):
         self.chat_status.setText(text)
         self.chat_status.setToolTip(text)
