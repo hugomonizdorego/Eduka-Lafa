@@ -1,6 +1,5 @@
 """0.1.2: classroom lessons, quizzes/tests/exams, report card, Timor-Leste and LAFA's roles."""
 from datetime import date
-import importlib.util
 import json
 from pathlib import Path
 import random
@@ -89,15 +88,25 @@ class Translations(unittest.TestCase):
         for key in ("classroom", "exams", "report_card", "roles", "today_in_history"): self.assertNotEqual(CATALOG["tet"][key], key)
 
 class OutfitArt(unittest.TestCase):
-    def test_generator_dresses_every_activity_but_bathing_and_toilet(self):
-        spec = importlib.util.spec_from_file_location("make_outfits", ROOT / "tools" / "make-outfits.py")
-        module = importlib.util.module_from_spec(spec); spec.loader.exec_module(module)
-        self.assertEqual(module.UNDRESSED, {"bathing", "toilet"})
-        states = json.loads((ROOT / "lafa/assets/atlas.json").read_text())["states"] + json.loads((ROOT / "lafa/assets/activities.json").read_text())["states"]
-        self.assertEqual(set(states) - module.UNDRESSED, set(module.POSES))
+    """The committed sheets from tools/make-outfits.py (checked with Qt, so no numpy)."""
+    @classmethod
+    def setUpClass(cls):
+        from lafa.qt import QApplication
+        cls.app = QApplication.instance() or QApplication([])
+    @staticmethod
+    def crops(image, manifest):
+        from lafa.qt import QImage
+        sheet = QImage(str(ROOT / "lafa/assets" / image)); meta = json.loads((ROOT / "lafa/assets" / manifest).read_text())
+        return {state: sheet.copy(*meta["rects"][state]) for state in meta["states"]}
+    def test_every_activity_dressed_except_bathing_and_toilet(self):
+        base = {**self.crops("lafa-atlas.png", "atlas.json"), **self.crops("lafa-activities.png", "activities.json")}
         for name in ("tuxedo", "casual"):
-            self.assertEqual(json.loads((ROOT / f"lafa/assets/{name}.json").read_text())["states"], states)
-        self.assertIn("sleeping", json.loads((ROOT / "lafa/assets/tais.json").read_text())["states"])
+            dressed = self.crops(f"lafa-{name}.png", f"{name}.json"); self.assertEqual(set(dressed), set(base), name)
+            for state, image in dressed.items():
+                self.assertEqual(image.size(), base[state].size(), (name, state))
+                self.assertEqual(image == base[state], state in ("bathing", "toilet"), (name, state))
+        tais = self.crops("lafa-tais.png", "tais.json")
+        self.assertIn("sleeping", tais); self.assertFalse(tais["sleeping"] == base["sleeping"])
 
 class SchoolPages(unittest.TestCase):
     @classmethod
