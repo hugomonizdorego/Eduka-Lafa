@@ -170,6 +170,13 @@ def plain_html(value):
 
 def encyclopedia_search(query, language="en"):
     lang = {"tet":"tet", "pt":"pt", "id":"id", "en":"en"}.get(language, "en")
+    sources = wiki_search(query, lang)
+    # Tetun and other smaller editions often have no article; English Wikipedia
+    # is the explicit, labelled fallback (the URL shows which edition answered).
+    if not sources and lang != "en": sources = wiki_search(query, "en")
+    return sources
+
+def wiki_search(query, lang):
     endpoint = f"https://{lang}.wikipedia.org/w/api.php"
     params = {"action":"query", "list":"search", "srsearch":query[:300], "srlimit":"6", "format":"json", "utf8":"1"}
     data = json_request(endpoint+"?"+urlencode(params), timeout=15)

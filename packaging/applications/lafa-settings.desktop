@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=Lafa-Configuration
+Comment=LAFA settings in Eduka-Settings
+Exec=lafa --configure
+Icon=lafa
+Terminal=false
+Categories=Settings;DesktopSettings;X-Eduka-Settings;
+X-Eduka-Settings-Page=lafa
+NoDisplay=true

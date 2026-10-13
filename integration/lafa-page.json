@@ -1,9 +1,8 @@
 {
   "id": "lafa",
-  "title": "LAFA",
-  "module": "eduka_lafa_settings",
-  "factory": "create_lafa_page",
-  "qt_bindings": ["PyQt5", "PyQt6", "PySide6"],
-  "desktop_entry": "lafa-settings.desktop",
-  "registration": "Register this factory using the target Eduka-Settings page API. This is a descriptor, not an assumed native API."
+  "title": "Lafa-Configuration",
+  "icon": "lafa",
+  "group": "APPS",
+  "module": "/usr/lib/lafa/eduka_lafa_settings.py",
+  "factory": "create_lafa_page"
 }

@@ -1,4 +1,10 @@
-# Security review — 0.4.0 alpha
+# Security review — 0.1 Alpha (development restart)
+
+> Carried over from the prototype review. It will be re-verified from the
+> beginning for 0.1 Alpha. New in 0.1 Alpha: plain HTTP is accepted only for a
+> loopback Ollama address; other open-source servers must use HTTPS without
+> embedded credentials, query strings or fragments; `/calc` parses arithmetic
+> with `ast` under a node, power and magnitude limit and never uses `eval`.
 
 Review date: 6 October 2026. Scope: source logic, automated adversarial fixtures,
 Qt worker delivery and packaging. This is not a penetration test or a guarantee

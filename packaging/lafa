@@ -1,0 +1,8 @@
+#!/usr/bin/python3
+"""LAFA launcher installed by the lafa Debian package."""
+import os
+import sys
+sys.path.insert(0, "/usr/lib/lafa")
+os.environ.setdefault("LAFA_QT", "pyqt5")
+from lafa.app import main
+sys.exit(main())

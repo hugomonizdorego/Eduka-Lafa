@@ -4,7 +4,7 @@ import json
 import os
 import shutil
 import sys
-from PySide6.QtWidgets import QApplication
+from lafa.qt import QApplication
 from lafa.mascot import Atlas
 from lafa.desktop_entry import exec_path
 

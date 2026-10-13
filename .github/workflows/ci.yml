@@ -1,0 +1,58 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test-pyqt5:
+    name: Tests · PyQt5 (as on Edukasaun OS)
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Debian/Ubuntu packages
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends python3-pyqt5 libqt5svg5 python3-keyring python3-pytest fonts-noto-color-emoji papirus-icon-theme
+      - name: Run tests
+        env: { LAFA_QT: pyqt5, QT_QPA_PLATFORM: offscreen }
+        run: /usr/bin/python3 -m pytest -q
+
+  test-pyside6:
+    name: Tests · PySide6 (developers)
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - name: Install
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends libegl1 libgl1 libxkbcommon0 libfontconfig1 libdbus-1-3 fonts-noto-color-emoji
+          python -m pip install "PySide6>=6.6,<7" "keyring>=24,<26" pytest
+      - name: Run tests
+        env: { LAFA_QT: pyside6, QT_QPA_PLATFORM: offscreen }
+        run: python -m pytest -q
+
+  package:
+    name: Debian package and screenshots
+    runs-on: ubuntu-24.04
+    needs: [test-pyqt5]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Versions agree
+        run: python3 tools/release.py check
+      - name: Build .deb
+        run: sh tools/build-deb.sh
+      - name: Install with apt (dependencies from the archive)
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends ./dist/lafa_*_all.deb papirus-icon-theme fonts-noto-color-emoji
+          lafa --help
+      - name: Screenshots for review
+        env: { LAFA_QT: pyqt5, QT_QPA_PLATFORM: offscreen }
+        run: /usr/bin/python3 scripts/capture-screenshots.py
+      - uses: actions/upload-artifact@v4
+        with: { name: lafa-deb, path: dist/*.deb }
+      - uses: actions/upload-artifact@v4
+        with: { name: screenshots, path: docs/screenshots/*.png }

@@ -1,0 +1,112 @@
+--- a/usr/bin/eduka-settings
++++ b/usr/bin/eduka-settings
+@@ -9,6 +9,59 @@
+ from eduka_common import *
+ from eduka_common import _get_ini_value, _
+ 
++# Pages that installed programs add to Eduka-Settings (for example LAFA →
++# Lafa-Configuration). A package installs a descriptor
++#   /usr/share/eduka-settings/plugins/<id>.json
++#   {"id": "lafa", "title": "Lafa-Configuration", "icon": "lafa", "group": "APPS",
++#    "module": "/usr/lib/lafa/eduka_lafa_settings.py", "factory": "create_lafa_page"}
++# The factory gets (parent=None, binding='PyQt5') and returns a QWidget. An
++# optional page.eduka_apply() is called by Apply and Save & Close. Only
++# root-owned descriptors and modules under /usr are loaded.
++PLUGIN_DIRS = [Path('/usr/share/eduka-settings/plugins')]
++PLUGIN_ROOTS = ('/usr/lib/', '/usr/share/')
++
++def _plugin_file_ok(path, roots):
++    try:
++        st=path.stat()
++        return path.is_file() and not path.is_symlink() and str(path).startswith(roots) and st.st_uid == 0 and not st.st_mode & 0o022
++    except OSError:
++        return False
++
++def plugin_descriptors(dirs=None, roots=None):
++    roots=PLUGIN_ROOTS if roots is None else roots
++    found=[]; seen=set()
++    for folder in dirs if dirs is not None else PLUGIN_DIRS:
++        for path in sorted(Path(folder).glob('*.json')) if Path(folder).is_dir() else []:
++            try:
++                if roots and not _plugin_file_ok(path, roots): continue
++                data=json.loads(path.read_text(encoding='utf-8'))
++                key=str(data['id']); module=Path(str(data['module'])); factory=str(data.get('factory', 'create_page'))
++                if not re.fullmatch(r'[a-z][a-z0-9_-]{1,30}', key) or key in seen or not factory.isidentifier(): continue
++                if roots and not _plugin_file_ok(module, roots): continue
++                if not module.is_file(): continue
++                seen.add(key)
++                found.append({'id': key, 'title': str(data.get('title', key))[:40], 'icon': str(data.get('icon', 'preferences-system')),
++                              'group': str(data.get('group', 'APPS'))[:20].upper(), 'module': module, 'factory': factory})
++            except Exception:
++                continue
++    return found
++
++def load_plugin_page(descriptor):
++    """Import a plugin module from its fixed path and build its page; a broken
++    plugin shows an explanation instead of breaking Eduka-Settings."""
++    try:
++        import importlib.util
++        spec=importlib.util.spec_from_file_location('eduka_plugin_'+descriptor['id'].replace('-', '_'), str(descriptor['module']))
++        module=importlib.util.module_from_spec(spec); spec.loader.exec_module(module)
++        page=getattr(module, descriptor['factory'])(parent=None, binding='PyQt5')
++        if isinstance(page, QWidget): return page
++    except Exception as error:
++        message=str(error)
++    else:
++        message='The page factory did not return a widget.'
++    page=Page(descriptor['title'], 'This page could not be loaded: '+message[:200])
++    return page.finish()
++
+ SDDM_THEME_DIR = Path('/usr/share/sddm/themes/edukasaun')
+ SDDM_HELPER = '/usr/lib/edukasaun-desktop/eduka-sddm-apply'
+ PARENTAL_HELPER = '/usr/lib/edukasaun-desktop/eduka-parental-apply'
+@@ -516,6 +569,16 @@
+                         ('login','Login Screen','system-users',self.page_login),
+                         ('maintenance','Maintenance','applications-system',self.page_advanced)]),
+         ]
++        # Pages added by installed programs (e.g. LAFA → Lafa-Configuration).
++        self.plugin_keys=set(); self.plugin_pages=[]
++        plugin_groups={}
++        for descriptor in plugin_descriptors():
++            def builder(d=descriptor):
++                page=load_plugin_page(d); self.plugin_pages.append(page); return page
++            plugin_groups.setdefault(descriptor['group'], []).append((descriptor['id'], descriptor['title'], descriptor['icon'], builder))
++            self.plugin_keys.add(descriptor['id'])
++        for group_name, entries in plugin_groups.items():
++            groups.append((group_name, entries))
+         self.pages=[]; self.page_keys=[]; self.nav_rows={}
+         for gi, (group, entries) in enumerate(groups):
+             # Group heading and a line separate the sections.
+@@ -559,7 +622,7 @@
+         self._live_busy=False
+         kick=lambda *_a: (not self._live_busy) and self._live_timer.start(700)
+         for key, (_name, _icon, page) in zip(self.page_keys, self.pages):
+-            if key in self.LIVE_SKIP: continue
++            if key in self.LIVE_SKIP or key in self.plugin_keys: continue
+             for w in page.findChildren(QWidget):
+                 if isinstance(w, (QCheckBox, QRadioButton)) or (isinstance(w, QToolButton) and w.isCheckable()):
+                     w.toggled.connect(kick)
+@@ -1867,7 +1930,15 @@
+             QMessageBox.warning(self,'Orca unavailable',message)
+         return ok, message
+ 
++    def apply_plugins(self):
++        for page in getattr(self, 'plugin_pages', []):
++            apply=getattr(page, 'eduka_apply', None)
++            if callable(apply):
++                try: apply()
++                except Exception: pass
++
+     def apply_settings(self):
++        self.apply_plugins()
+         ok, message = self.save_all()
+         if ok:
+             # Inline confirmation instead of a dialog after every Apply.
+@@ -1877,6 +1948,7 @@
+             self.show_status('Settings applied, but Orca could not be enabled.', error=True)
+ 
+     def save_close(self):
++        self.apply_plugins()
+         ok, _message = self.save_all()
+         if ok:
+             self.accept()

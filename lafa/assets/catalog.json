@@ -1,0 +1,22 @@
+{
+ "about": "LAFA source catalog. Installed LAFA downloads this file from the main branch and merges it (data only). To publish new sources: edit, increase revision (YYYYMMDDNN), commit to main.",
+ "revision": 2026100601,
+ "resources": [
+  ["CK-12 · Free textbooks", "https://www.ck12.org/"],
+  ["Project Gutenberg · Free books", "https://www.gutenberg.org/"]
+ ],
+ "teachers": {
+  "math": [["Desmos · Graphing calculator", "https://www.desmos.com/calculator"]],
+  "ict": [["Hour of Code", "https://hourofcode.com/"]],
+  "languages": [["Wikipedia Português", "https://pt.wikipedia.org/"]]
+ },
+ "cards": [
+  {"id": "atauro", "category": "nature", "source": "https://en.wikipedia.org/wiki/Atauro_Island", "checked_on": "2026-10-06",
+   "text": {"en": "Atauro Island, north of Dili, has some of the most diverse coral reefs in the world.", "id": "Pulau Atauro, di utara Dili, memiliki terumbu karang paling beragam di dunia.", "pt": "A ilha de Ataúro, a norte de Díli, tem dos recifes de coral mais diversos do mundo.", "tet": "Illa Ataúru, iha Dili nia norte, iha ahu-ruin tasi ne'ebé barak liu iha mundu."}}
+ ],
+ "tips": {},
+ "tools": {
+  "apps": ["muon"],
+  "updates": ["eduka-update-system"]
+ }
+}

@@ -1,0 +1,5 @@
+#!/bin/sh
+set -e
+# Bytecode is created by postinst; remove it so dpkg can delete the folders.
+find /usr/lib/lafa -name '__pycache__' -type d -prune -exec rm -rf {} + 2>/dev/null || true
+exit 0

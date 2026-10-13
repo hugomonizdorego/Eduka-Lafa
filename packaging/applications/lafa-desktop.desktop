@@ -1,0 +1,20 @@
+[Desktop Entry]
+Type=Application
+Name=LAFA Desktop
+Name[id]=LAFA Desktop
+Name[pt]=LAFA Desktop
+Name[tet]=LAFA Desktop
+GenericName=School learning assistant
+GenericName[id]=Asisten belajar sekolah
+GenericName[pt]=Assistente escolar de aprendizagem
+GenericName[tet]=Asistente aprende eskola
+Comment=Teachers, homework, library, coding lab and Edukasaun OS help
+Comment[id]=Guru, PR, perpustakaan, lab coding dan bantuan Edukasaun OS
+Comment[pt]=Professores, trabalhos, biblioteca, laboratório e ajuda do Edukasaun OS
+Comment[tet]=Mestre, TPC, biblioteka, laboratóriu no ajuda Edukasaun OS
+Exec=lafa --window
+Icon=lafa
+Terminal=false
+Categories=Education;X-Edukasaun;
+Keywords=school;teacher;homework;learn;assistant;Timor;Tetun;
+StartupNotify=true

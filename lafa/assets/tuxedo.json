@@ -1,0 +1,129 @@
+{
+ "canvas": {
+  "idle": 418,
+  "reading": 418,
+  "thinking": 418,
+  "walking": 418,
+  "sitting": 418,
+  "gaming": 418,
+  "serious": 418,
+  "angry": 418,
+  "talking": 418,
+  "sleeping": 540,
+  "bathing": 540,
+  "toilet": 540,
+  "studying": 540,
+  "eating": 540,
+  "stretching": 540
+ },
+ "states": [
+  "idle",
+  "reading",
+  "thinking",
+  "walking",
+  "sitting",
+  "gaming",
+  "serious",
+  "angry",
+  "talking",
+  "sleeping",
+  "bathing",
+  "toilet",
+  "studying",
+  "eating",
+  "stretching"
+ ],
+ "rects": {
+  "idle": [
+   0,
+   0,
+   334,
+   397
+  ],
+  "reading": [
+   560,
+   0,
+   366,
+   395
+  ],
+  "thinking": [
+   1120,
+   0,
+   334,
+   403
+  ],
+  "walking": [
+   1680,
+   0,
+   385,
+   389
+  ],
+  "sitting": [
+   0,
+   560,
+   378,
+   358
+  ],
+  "gaming": [
+   560,
+   560,
+   348,
+   360
+  ],
+  "serious": [
+   1120,
+   560,
+   360,
+   406
+  ],
+  "angry": [
+   1680,
+   560,
+   347,
+   407
+  ],
+  "talking": [
+   0,
+   1120,
+   383,
+   409
+  ],
+  "sleeping": [
+   560,
+   1120,
+   512,
+   364
+  ],
+  "bathing": [
+   1120,
+   1120,
+   469,
+   429
+  ],
+  "toilet": [
+   1680,
+   1120,
+   383,
+   472
+  ],
+  "studying": [
+   0,
+   1680,
+   529,
+   509
+  ],
+  "eating": [
+   560,
+   1680,
+   447,
+   464
+  ],
+  "stretching": [
+   1120,
+   1680,
+   423,
+   501
+  ]
+ },
+ "generator": "tools/make-outfits.py"
+}

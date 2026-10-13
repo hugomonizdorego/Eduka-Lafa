@@ -1,4 +1,5 @@
 """Regression checks for explicit public queries and safer desktop integration."""
+from lafa.qt import BINDING
 import importlib.util
 import json
 import os
@@ -77,7 +78,7 @@ class V4Core(unittest.TestCase):
 class V4UI(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        from PySide6.QtWidgets import QApplication
+        from lafa.qt import QApplication
         cls.app=QApplication.instance() or QApplication([])
     def setUp(self):
         from lafa.app import Window
@@ -104,7 +105,7 @@ class V4UI(unittest.TestCase):
         self.assertEqual(self.window.code_lesson.currentIndex(),2);self.assertEqual(self.window.code_editor.toPlainText(),'print("my lesson")');self.assertEqual(self.window.code_output.toPlainText(),'my lesson');self.assertEqual(self.window.input.text(),'unsent message')
     def test_disabling_all_cards_does_not_starve_minute_activity_changes(self):
         companion=self.window.companion;companion.settings.companion=True;companion.set_online(True);companion.collapse();now=[0];companion.clock=lambda:now[0];companion.mark_activity();companion.last_card=0
-        companion.settings.card_minutes=1;companion.settings.cultural_cards=False;companion.settings.positive_messages=False;companion.set_state('idle');now[0]=60
+        companion.settings.card_minutes=1;companion.settings.cultural_cards=False;companion.settings.positive_messages=False;companion.settings.fun_messages=False;companion.set_state('idle');now[0]=60
         with patch('lafa.mascot.random.choice',return_value='sleeping'):companion.choose_idle()
         self.assertEqual(companion.state,'sleeping');now[0]=120
         with patch('lafa.mascot.random.choice',return_value='walking'):companion.choose_idle()
@@ -118,19 +119,19 @@ class V4UI(unittest.TestCase):
     def test_public_search_button_uses_an_explicit_command(self):
         calls=[];self.window.input.setText('Dili');self.window.send_message=lambda text:calls.append(text);self.window.search_public_chat();self.assertEqual(calls,['/ask Dili'])
     def test_native_activation_pending_state_and_timeout(self):
-        from PySide6.QtWidgets import QWidget,QVBoxLayout
+        from lafa.qt import QWidget,QVBoxLayout
         helper=module('v4_native_pending',ROOT/'integration/eduka_lafa_settings.py');host=QWidget();layout=QVBoxLayout(host);now=[0]
-        with patch.object(helper,'enabled',return_value=False),patch('PySide6.QtCore.QProcess.startDetached',return_value=(True,123)):
-            group=helper.add_lafa_group(layout,'PySide6',['/bin/true'],clock=lambda:now[0]);group.lafa_toggle.setChecked(True);self.assertFalse(group.lafa_toggle.isEnabled());self.assertIs(group.lafa_pending['target'],True)
+        with patch.object(helper,'enabled',return_value=False),patch(BINDING+'.QtCore.QProcess.startDetached',return_value=(True,123)):
+            group=helper.add_lafa_group(layout,BINDING,['/bin/true'],clock=lambda:now[0]);group.lafa_toggle.setChecked(True);self.assertFalse(group.lafa_toggle.isEnabled());self.assertIs(group.lafa_pending['target'],True)
             now[0]=11;group.lafa_refresh();self.assertTrue(group.lafa_toggle.isEnabled());self.assertFalse(group.lafa_toggle.isChecked());self.assertIn('not applied',group.lafa_status.text())
         host.deleteLater();self.app.processEvents()
     def test_native_activation_confirms_state_and_factory_uses_host_binding(self):
         helper=module('v4_native_factory',ROOT/'integration/eduka_lafa_settings.py')
-        with patch.object(helper,'enabled',return_value=False),patch('PySide6.QtCore.QProcess.startDetached',return_value=(True,123)):
+        with patch.object(helper,'enabled',return_value=False),patch(BINDING+'.QtCore.QProcess.startDetached',return_value=(True,123)):
             page=helper.create_lafa_page(command=['/bin/true']);group=page.lafa_group;group.lafa_toggle.setChecked(True)
         with patch.object(helper,'enabled',return_value=True):group.lafa_refresh()
         self.assertTrue(group.lafa_toggle.isEnabled());self.assertEqual(group.lafa_status.text(),'');page.deleteLater();self.app.processEvents()
-        with self.assertRaises(ValueError):helper.host_binding('PyQt5')
+        with self.assertRaises(ValueError):helper.host_binding('PySide6' if BINDING=='PyQt5' else 'PyQt5')
     def test_native_locale_recovers_from_bad_config_and_simple_tetun_locale(self):
         helper=module('v4_native_locale',ROOT/'integration/eduka_lafa_settings.py')
         with patch.object(helper,'preferences',return_value={'language':[]}),patch.dict(os.environ,{'LC_ALL':'tet.UTF-8'},clear=True):self.assertEqual(helper.language(),'tet')
