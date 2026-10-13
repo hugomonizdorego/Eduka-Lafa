@@ -26,10 +26,10 @@ import time
 
 BINDINGS={'PyQt5','PyQt6','PySide6'}
 TEXT={
-'en':('Activate LAFA Virtual Assistant in Eduka-Desktop','Open LAFA Desktop','LAFA settings','Activating LAFA…','Deactivating LAFA…','LAFA could not start. Check the installed executable.','The change was not applied. Open LAFA settings and try again.','The character appears when internet is available. Desktop and Virtual Assistant are separate.'),
-'id':('Aktifkan LAFA Virtual Assistant di Eduka-Desktop','Buka LAFA Desktop','Pengaturan LAFA','Mengaktifkan LAFA…','Menonaktifkan LAFA…','LAFA tidak dapat dibuka. Periksa executable terpasang.','Perubahan belum diterapkan. Buka pengaturan LAFA dan coba lagi.','Karakter muncul saat internet tersedia. Desktop dan Asisten Virtual terpisah.'),
-'pt':('Ativar o Assistente Virtual LAFA no Eduka-Desktop','Abrir LAFA Desktop','Definições LAFA','A ativar LAFA…','A desativar LAFA…','Não foi possível iniciar LAFA. Verifique o executável instalado.','A alteração não foi aplicada. Abra as definições LAFA e tente novamente.','A personagem aparece quando há internet. Desktop e Assistente Virtual são separados.'),
- 'tet':('Ativa Asistente Virtuál LAFA iha Eduka-Desktop','Loke LAFA Desktop','Konfigurasaun LAFA','Ativa LAFA hela…','Desativa LAFA hela…','La bele loke LAFA. Verifika executable instaladu.','Mudansa seidauk aplika. Loke konfigurasaun LAFA no koko fali.','Karakter mosu bainhira internet disponivel. Desktop no Asistente Virtuál ketak.'),
+'en':('Activate LAFA Virtual Assistant in Eduka-Desktop','Open LAFA Desktop','LAFA settings','Activating LAFA…','Deactivating LAFA…','LAFA could not start. Check the installed executable.','The change was not applied. Open LAFA settings and try again.','The character works offline too; online it also brings websites, news and AI. Desktop and Virtual Assistant are separate.'),
+'id':('Aktifkan LAFA Virtual Assistant di Eduka-Desktop','Buka LAFA Desktop','Pengaturan LAFA','Mengaktifkan LAFA…','Menonaktifkan LAFA…','LAFA tidak dapat dibuka. Periksa executable terpasang.','Perubahan belum diterapkan. Buka pengaturan LAFA dan coba lagi.','Karakter juga bekerja offline; saat online ada situs, berita dan AI. Desktop dan Asisten Virtual terpisah.'),
+'pt':('Ativar o Assistente Virtual LAFA no Eduka-Desktop','Abrir LAFA Desktop','Definições LAFA','A ativar LAFA…','A desativar LAFA…','Não foi possível iniciar LAFA. Verifique o executável instalado.','A alteração não foi aplicada. Abra as definições LAFA e tente novamente.','A personagem também funciona offline; online traz sites, notícias e IA. Desktop e Assistente Virtual são separados.'),
+ 'tet':('Ativa Asistente Virtuál LAFA iha Eduka-Desktop','Loke LAFA Desktop','Konfigurasaun LAFA','Ativa LAFA hela…','Desativa LAFA hela…','La bele loke LAFA. Verifika executable instaladu.','Mudansa seidauk aplika. Loke konfigurasaun LAFA no koko fali.','Karakter mós servisu offline; online iha sítiu, notísia no AI. Desktop no Asistente Virtuál ketak.'),
 }
 
 
@@ -154,6 +154,7 @@ SECTIONS=[
   ('panel_roam','bool',None,('Walk back and forth above the Eduka-Panel','Berjalan bolak-balik di atas Eduka-Panel','Caminhar junto ao Eduka-Panel','La’o ba-mai iha Eduka-Panel leten')),
   ('panel_edge','enum',{'bottom':('Bottom','Bawah','Inferior','Kraik'),'top':('Top','Atas','Superior','Leten')},('Panel edge (manual)','Sisi panel (manual)','Posição do painel (manual)','Pozisaun painel (manuál)')),
   ('panel_height','int',(0,160),('Panel height in px (manual)','Tinggi panel px (manual)','Altura do painel px (manual)','Altura painel px (manuál)')),
+  ('click_recommendations','bool',None,('Click LAFA for free-software tips and learning websites','Klik LAFA untuk tips perangkat lunak bebas dan situs belajar','Clicar no LAFA para dicas de software livre e sites de aprendizagem','Klik LAFA ba dika software livre no sítiu aprendizajen')),
   ('greet_by_time','bool',None,('Greet by time of day','Sapa sesuai waktu','Saudar conforme a hora','Kumprimenta tuir oras')),
   ('start_with_session','bool',None,('Start with Eduka-Desktop when activated','Mulai bersama Eduka-Desktop saat aktif','Iniciar com o Eduka-Desktop','Hahú ho Eduka-Desktop')),
  ]),
@@ -171,10 +172,12 @@ SECTIONS=[
   ('news_minutes','int',(10,240),('News every (minutes)','Berita setiap (menit)','Notícias a cada (minutos)','Notísia kada (minutu)')),
  ]),
  ('desktop',('LAFA Desktop','LAFA Desktop','LAFA Desktop','LAFA Desktop'),[
-  ('start_page','enum',{'home':('Home','Beranda','Início','Uma'),'classroom':('Classroom','Ruang kelas','Sala de aula','Sala aula'),'exams':('Exam hall','Ruang ujian','Sala de exames','Sala ezame'),'culture':('Timor-Leste','Timor-Leste','Timor-Leste','Timor-Leste'),'teachers':('Teachers','Guru','Professores','Mestre sira'),'homework':('Homework & timetable','PR & jadwal','Trabalhos e horário','TPC no orariu'),'chat':('Conversation','Percakapan','Conversa','Konversa'),'os_help':('Edukasaun OS help','Bantuan Edukasaun OS','Ajuda do Edukasaun OS','Ajuda Edukasaun OS')},('Start page','Halaman awal','Página inicial','Pájina inisiál')),
+  ('start_page','enum',{'home':('Home','Beranda','Início','Uma'),'classroom':('Classroom','Ruang kelas','Sala de aula','Sala aula'),'exams':('Exam hall','Ruang ujian','Sala de exames','Sala ezame'),'languages':('Language school','Sekolah bahasa','Escola de línguas','Eskola lian'),'culture':('Timor-Leste','Timor-Leste','Timor-Leste','Timor-Leste'),'teachers':('Teachers','Guru','Professores','Mestre sira'),'homework':('Homework & timetable','PR & jadwal','Trabalhos e horário','TPC no orariu'),'chat':('Conversation','Percakapan','Conversa','Konversa'),'os_help':('Edukasaun OS help','Bantuan Edukasaun OS','Ajuda do Edukasaun OS','Ajuda Edukasaun OS')},('Start page','Halaman awal','Página inicial','Pájina inisiál')),
+  ('depth_effects','bool',None,('Soft 3D shadows (aero look)','Bayangan 3D lembut (tampilan aero)','Sombras 3D suaves (aspeto aero)','Sombra 3D maman (aparénsia aero)')),
+  ('smooth_scrolling','bool',None,('Smooth scrolling','Gulir halus','Deslocação suave','Scroll maman')),
   ('follow_eduka_theme','bool',None,('Use the Eduka-Desktop theme and accent colour','Pakai tema dan warna aksen Eduka-Desktop','Usar o tema e a cor do Eduka-Desktop','Uza tema no kór Eduka-Desktop')),
   ('notifications','bool',None,('Reminders as Eduka-Panel notifications','Pengingat sebagai notifikasi Eduka-Panel','Lembretes como notificações do Eduka-Panel','Lembransa hanesan notifikasaun Eduka-Panel')),
-  ('auto_update','bool',None,('Keep learning sources up to date automatically','Perbarui sumber belajar otomatis','Atualizar as fontes automaticamente','Atualiza fonte aprende automátiku')),
+  ('auto_update','bool',None,('Keep learning sources up to date automatically (every hour)','Perbarui sumber belajar otomatis (setiap jam)','Atualizar as fontes automaticamente (a cada hora)','Atualiza fonte aprende automátiku (kada oras)')),
   ('update_hours','int',(1,168),('Check for updates every (hours)','Periksa pembaruan setiap (jam)','Verificar atualizações a cada (horas)','Verifika atualizasaun kada (oras)')),
   ('speak_answers','bool',None,('Read answers aloud','Bacakan jawaban','Ler respostas em voz alta','Lee resposta ho lian')),
   ('speech_rate','int',(80,260),('Reading speed (words/min)','Kecepatan membaca (kata/menit)','Velocidade de leitura','Velosidade lee')),
@@ -204,7 +207,7 @@ PAGE_TEXT={'title':('Lafa-Configuration','Lafa-Configuration','Lafa-Configuratio
 # Recommended values (also LAFA's defaults).
 DEFAULTS={'costume':'traditional','character_size':'normal','walk_speed':'normal','animation_speed':'normal','roam':True,'follow_eduka_panel':True,'panel_roam':True,'panel_edge':'bottom','panel_height':42,'greet_by_time':True,'start_with_session':True,
  'hover_questions':True,'chatter':True,'fun_messages':True,'personal_activities':True,'positive_messages':True,'cultural_cards':True,'local_news_updates':True,'idle_seconds':60,'balloon_seconds':6,'card_minutes':5,'news_minutes':30,
- 'start_page':'home','follow_eduka_theme':True,'notifications':True,'auto_update':True,'update_hours':24,'speak_answers':False,'speech_rate':155,
+ 'start_page':'home','follow_eduka_theme':True,'notifications':True,'auto_update':True,'update_hours':1,'click_recommendations':True,'smooth_scrolling':True,'depth_effects':True,'speak_answers':False,'speech_rate':155,
  'language':'system','provider':'openai','ollama_url':'http://127.0.0.1:11434','compatible_url':'','weather_city':'Dili','weather_latitude':-8.5586,'weather_longitude':125.5736,'weather_timezone':'Asia/Dili'}
 
 def pick(labels):return labels[LANG_INDEX.get(language(),0)] if len(labels)>1 else labels[0]

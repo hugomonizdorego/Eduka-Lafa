@@ -4,6 +4,52 @@
 
 _Nothing yet._
 
+## 0.1.4 — 2026-10-13
+
+### Learning sources (from the Edukasaun OS directory)
+- 79 learning websites in 8 categories (e-learning, free books and
+  encyclopedias, biology and medicine, maths and space, technology and
+  architecture, world languages, strategy and philosophy, economy, politics
+  and law) are now LAFA's Library, as cards with search and categories.
+- LAFA checks every hour (when online) that each site still answers and shows
+  a green or red dot; the atlas and notice board also refresh every hour.
+- Z-Library from the original list is not included (copyright infringement;
+  domains seized in 2022). Open Library, Project Gutenberg and the Internet
+  Archive provide free books legally.
+
+### Offline and online
+- Offline, LAFA keeps working: classroom, exams, report card, homework,
+  Timor-Leste atlas, language school, computer lab, Edukasaun OS help desk,
+  files, reminders, read aloud and the Virtual Assistant. Questions are
+  answered from LAFA's own lessons and atlas; `/calc` and `/os` work too.
+- Online only: AI chat and teachers, Wikipedia, weather and news, learning
+  websites and the hourly refresh. The status badge lists what works offline.
+- Clicking LAFA now recommends free software (GPL and other open-source
+  licences, e.g. GIMP, Kiwix, GCompris, Stellarium) and, when online, a
+  learning website. Can be switched off in Lafa-Configuration.
+
+### Language school
+- First courses in 14 languages: Tetun, Portuguese, Indonesian, English,
+  Spanish, French, German, Mandarin, Japanese, Korean, Arabic, Thai,
+  Vietnamese and Filipino — 25 everyday phrases in five units each, with
+  pronunciation for non-Latin scripts, a quiz and read-aloud (espeak-ng).
+
+### Look
+- Aero look: soft glass panels over a gentle colour glow, subtle 3D shadows,
+  a colourful badge for every menu entry, slim rounded scrollbars and smooth
+  animated scrolling. 3D shadows and smooth scrolling can be turned off in
+  Lafa-Configuration.
+
+### Edukasaun OS
+- LAFA is made exclusively for Edukasaun OS. On other systems it still runs
+  for developers, with a "developer preview" banner.
+- Lafa-Configuration has the new options; the Eduka-Settings plugin-pages
+  patch was checked against Eduka-Desktop `main` (0.9.24).
+
+### Fixes
+- Saving settings no longer re-styles the whole application when the theme
+  did not change.
+
 ## 0.1.3 — 2026-10-13
 
 ### New look (Eduka theme, not black)

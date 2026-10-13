@@ -5,7 +5,7 @@ roles inside one same-user process. They can be visible independently. Opening
 Desktop does not enable the character. Disabling the character keeps Desktop
 available. Settings is a dedicated top-level dialog.
 
-## LAFA 0.1.3 on Edukasaun OS (Eduka-Desktop Suite 0.9.24)
+## LAFA 0.1.4 on Edukasaun OS (Eduka-Desktop Suite 0.9.24)
 
 ### What the `lafa` Debian package installs
 
@@ -21,6 +21,9 @@ available. Settings is a dedicated top-level dialog.
 | `/usr/share/doc/lafa/eduka-settings-plugin-pages.patch` | Patch for Eduka-Desktop (below) |
 
 ### Lafa-Configuration inside Eduka-Settings
+
+Checked against Eduka-Desktop `main` (0.9.24): `integration/eduka-settings-plugin-pages.patch` applies cleanly and the real Eduka-Settings shows Lafa-Configuration in the APPS group (screenshots 18–19).
+
 
 Eduka-Settings 0.9.24 builds its page list in code, so external programs
 cannot add pages. `integration/eduka-settings-plugin-pages.patch` adds a small,

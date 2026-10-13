@@ -98,7 +98,7 @@ class DesignUI(unittest.TestCase):
     def tearDown(self):
         self.w.companion.close(); self.w.close(); self.w.deleteLater(); self.app.processEvents()
     def test_lobby_tiles_ring_and_start(self):
-        self.assertEqual(set(self.w.home_tiles), {"classroom", "homework", "exams", "timor", "report", "system"})
+        self.assertEqual(set(self.w.home_tiles), {"timor", "classroom", "languages", "homework", "exams", "report", "library", "system"})
         self.assertEqual(self.w.home_tiles["classroom"].value.text(), str(len(classroom.lessons())))
         self.w.home_tiles["report"].clicked.emit(); self.assertEqual(self.w.page_title("report"), self.w.title.text())
         self.w.navigate("home"); self.w.start_learning()   # no results yet -> a quiz starts

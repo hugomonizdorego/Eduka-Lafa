@@ -108,12 +108,15 @@ def validated_intent(action):
     if kind not in {"all","documents","music","videos","pictures"}: return None
     return Intent(action["tool"], q.strip(), kind)
 
+# Commands that run entirely on this computer (also offline and in review mode).
+LOCAL_TOOLS={"help","calc","joke","os_help"}
+
 class Agent:
     def __init__(self, settings, secrets):
         self.settings=settings
         self.client=ProviderClient(settings,secrets)
     def run(self, message, history, online):
-        if not online: return Result(tr(self.settings.locale,"neednet"),"sitting")
+        if not online: return self.offline_answer(message)
         intent=direct_intent(message)
         if intent: return self.execute(intent)
         # Edukasaun OS questions get LAFA's curated offline guide first; it is
@@ -135,6 +138,16 @@ class Agent:
                 result.text=envelope(final.text)["reply"]
             return result
         return Result(value["reply"],value["mood"],sources=answer.sources)
+    def offline_answer(self,message):
+        """Offline: local commands, Edukasaun OS guides and LAFA's own knowledge."""
+        from . import offline
+        lang=self.settings.locale;intent=direct_intent(message)
+        if intent and intent.tool in LOCAL_TOOLS:return self.execute(intent)
+        guide=osguide.find(message)
+        if guide:return self.guide_result(guide)
+        found=offline.answer(message,lang)
+        if found:return Result(found+"\n\n"+tr(lang,"offline_source"),"reading")
+        return Result(tr(lang,"offline_intro")+"\n• "+"\n• ".join(offline.offline_features(lang)),"sitting")
     def source_answer(self,message):
         lang=self.settings.locale;normalized=message.strip().casefold()
         if normalized in {'hi','hello','halo','hai','ola','olá','bondia','diak ka','who are you?','siapa kamu?'}:return Result(tr(lang,'welcome_virtual'))

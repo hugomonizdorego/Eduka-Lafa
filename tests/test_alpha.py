@@ -97,7 +97,7 @@ class CommandTests(unittest.TestCase):
         self.assertIn("/calc", agent.run("/help", [], True).text)
         self.assertIn("= 4", agent.run("/hitung 2+2", [], True).text)
         with self.assertRaises(CalcError): agent.run("/calc import os", [], True)
-        self.assertIn("internet", agent.run("/calc 1+1", [], False).text.casefold())
+        self.assertIn("= 2", agent.run("/calc 1+1", [], False).text)  # local tools also work offline
     def test_translations_complete_for_new_keys(self):
         keys = set(CATALOG["en"])
         for lang in ["id", "pt", "tet"]:

@@ -265,13 +265,13 @@ class Companion(QWidget):
         self.hovered=inside
         if inside:
             self.walk_target=None
-            if self.online and not self.paused and not self.bubblebox.isVisible() and self.drag is None and self.settings.hover_questions:
+            if not self.paused and not self.bubblebox.isVisible() and self.drag is None and self.settings.hover_questions:
                 self.show_balloon(personality.hover_line(self.lang,self.state),personality.duty(self.lang,self.state),'hover',0)
         elif self.balloon.isVisible() and self.balloon.kind=='hover':
             self.balloon_timer.start(1600)
     # ----- balloon -----------------------------------------------------------
     def show_balloon(self,text,caption='',kind='thought',seconds=6):
-        if not self.online or not self.settings.companion or not self.isVisible():return
+        if not self.settings.companion or not self.isVisible():return
         top=self.pet.mapToGlobal(self.pet.rect().topLeft());anchor=top+self.pet.rect().topRight()-self.pet.rect().topLeft()
         self.balloon.present(text,caption,anchor,kind)
         if seconds:self.balloon_timer.start(int(seconds*1000))
@@ -314,7 +314,8 @@ class Companion(QWidget):
     def set_online(self,online):
         changed=self.online!=bool(online);self.online=bool(online);self.pet.costume=self.settings.costume
         self.retranslate();self.update_controls()
-        if self.online and self.settings.companion:
+        # LAFA stays on the desktop offline too, with its offline features.
+        if self.settings.companion:
             was_visible=self.isVisible();self.show();self.animate(not self.paused)
             if not was_visible:self.snap_to_panel()
             if not self.paused:
@@ -333,9 +334,10 @@ class Companion(QWidget):
         return text
     def update_controls(self):
         if not hasattr(self,'send_button'):return
-        enabled=self.online and not self._busy
-        self.public_button.setEnabled(enabled);self.send_button.setEnabled(enabled);self.input.setEnabled(enabled);self.voice_button.setEnabled(enabled)
-        for _,b in self.quick_buttons:b.setEnabled(enabled)
+        free=not self._busy;net=self.online and free
+        self.send_button.setEnabled(free);self.input.setEnabled(free)
+        self.public_button.setEnabled(net);self.voice_button.setEnabled(net)
+        for key,b in self.quick_buttons:b.setEnabled(net if key in {'weather','news'} else free)
     def activity_choices(self):
         excluded={self.state}|({'walking'} if self.can_roam() else set())|(set() if self.settings.personal_activities else {'bathing','toilet'})
         return [s for s in outfits.activities_for(self.settings.costume) if s not in excluded]
@@ -359,7 +361,7 @@ class Companion(QWidget):
         self.set_state('walking');self.last_idle_change=self.clock()
     def choose_idle(self):
         now=self.clock()
-        if not self.online or self.paused or self.busy or self.drag:return
+        if self.paused or self.busy or self.drag:return
         if self.popup_deadline and now>=self.popup_deadline:
             self.popup_deadline=0
             if not self.input.text().strip():self.collapse()
@@ -371,7 +373,7 @@ class Companion(QWidget):
         if self.can_roam() and self.state!='walking':self.start_walk()
         else:self.start_activity()
     def walk(self):
-        if not self.online or self.paused or not self.settings.companion or self.state!='walking' or self.busy or not self.settings.roam or self.drag or self.hovered or self.bubblebox.isVisible():return
+        if self.paused or not self.settings.companion or self.state!='walking' or self.busy or not self.settings.roam or self.drag or self.hovered or self.bubblebox.isVisible():return
         if QGuiApplication.platformName()!='xcb':return
         rect=self.panel_rect();step=WALK_STEPS.get(self.settings.walk_speed,3)
         if self.walk_target is None:
@@ -395,20 +397,27 @@ class Companion(QWidget):
             if not expanded:self.snap_to_panel()
         self.update()
     def show_bubble(self,text=None):
-        if not self.online or not self.settings.companion:return
+        if not self.settings.companion:return
         if text is not None:self.message.setPlainText(text);self.current_source="";self.source_button.hide()
         self.walk_target=None
         if self.state=='walking':self.set_state('talking')
         self.resize_overlay(True);self.mark_activity();self.show();self.raise_()
     def can_auto_popup(self):
-        return self.online and self.settings.companion and not self.paused and not self.busy and self.drag is None and not self.hovered and not self.bubblebox.isVisible() and not self.input.text().strip() and self.clock()-self.last_activity>=60
+        return self.settings.companion and not self.paused and not self.busy and self.drag is None and not self.hovered and not self.bubblebox.isVisible() and not self.input.text().strip() and self.clock()-self.last_activity>=60
     def show_card(self,card,automatic=False):
-        if not self.online or not self.settings.companion or self.busy or (automatic and not self.can_auto_popup()):return
+        if not self.settings.companion or self.busy or (automatic and not self.can_auto_popup()):return
         self.set_state(card.mood);self.show_bubble(card.text);self.current_source=card.source
         self.source_button.setVisible(bool(card.source));self.popup_deadline=self.clock()+15
     def toggle_bubble(self):
         if self.bubblebox.isVisible():self.collapse()
-        else:self.show_bubble()
+        elif getattr(self.settings,'click_recommendations',True):self.recommend()
+        else:self.show_bubble(self.introduction())
+    def recommend(self):
+        """Click on LAFA: a free-software (GPL) tip and, online, a learning website."""
+        from . import recommendations
+        text,url=recommendations.pick(self.lang,self.online)
+        self.show_bubble(tr(self.lang,'recommend_title')+'\n\n'+text)
+        self.current_source=url;self.source_button.setVisible(bool(url))
     def collapse(self):self.resize_overlay(False);self.mark_activity()
     def show_answer(self,text):
         self.current_source="";self.source_button.hide();self.popup_deadline=0
@@ -419,7 +428,7 @@ class Companion(QWidget):
         if text and self.online and not self.busy:self.public_search_requested.emit(text)
     def submit(self):
         text=self.input.text().strip()
-        if text and self.online and not self.busy:
+        if text and not self.busy:
             self.input.clear();self.mark_activity();self.user_request.emit(text)
     def paintEvent(self,event):
         if not self.bubblebox.isVisible():return

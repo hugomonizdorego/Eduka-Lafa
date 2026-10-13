@@ -1,6 +1,6 @@
 # LAFA
 
-**LAFA 0.1.3 Alpha** is an open-source learning assistant and animated
+**LAFA 0.1.4 Alpha** is an open-source learning assistant and animated
 crocodile companion from Timor-Leste for **Edukasaun OS** (Debian 13 Trixie,
 LXQt) and the **Eduka-Desktop Suite** (Eduka-Desktop, Eduka-Panel,
 Eduka-Settings). LAFA has **no main server**: it relies on the internet, public
@@ -19,14 +19,16 @@ and [how to keep developing LAFA](docs/DEVELOPMENT.md).
 
 ![Timor-Leste atlas](docs/screenshots/36-timor-leste-atlas.png)
 
-[View all 49 captures](docs/SCREENSHOTS.md). Captures of LAFA on the desktop
+![Learning sources](docs/screenshots/50-library-learning-sources.png)
+
+[View all 55 captures](docs/SCREENSHOTS.md). Captures of LAFA on the desktop
 are actual LAFA pixels on an **illustrated desktop**, not Edukasaun OS.
 
 ## Install on Edukasaun OS
 
 ```bash
-sh tools/build-deb.sh                       # -> dist/lafa_0.1.3_all.deb
-sudo apt install ./dist/lafa_0.1.3_all.deb  # dependencies come from Debian
+sh tools/build-deb.sh                       # -> dist/lafa_0.1.4_all.deb
+sudo apt install ./dist/lafa_0.1.4_all.deb  # dependencies come from Debian
 ```
 
 `apt` installs every dependency automatically: `python3-pyqt5` (the same Qt
@@ -37,6 +39,22 @@ tools the IT help desk can open. The package installs LAFA Desktop in the
 **Edukasaun** menu category, an autostart entry that runs only when the Virtual
 Assistant is activated, and the **Lafa-Configuration** page for Eduka-Settings.
 Inside Cubic it starts no GUI. Updating later is the same `apt install` command.
+
+## Made for Edukasaun OS, from Timor-Leste
+
+LAFA is made exclusively for **Edukasaun OS**. On other systems it still
+runs, so developers can download the `.deb` and try it, but it shows a
+"developer preview" banner.
+
+## Offline and online
+
+| Works offline | Needs internet |
+|---|---|
+| Classroom, exams, report card, homework, Timor-Leste atlas (built-in text), language school, computer lab, Edukasaun OS help desk, files, reminders, read aloud, `/calc`, `/os`, answers from LAFA's lessons and atlas, the Virtual Assistant | AI chat and teachers, Wikipedia search, 79 learning websites, weather and news, hourly refresh of sources, atlas and notice board |
+
+Clicking LAFA recommends free software (GNU GPL and other open-source
+licences, such as GIMP, Kiwix, GCompris and Stellarium) and, when online, a
+learning website.
 
 ## Three surfaces
 
@@ -90,6 +108,12 @@ classroom, teachers' room, exam hall, report card, homework), **Timor-Leste**,
   political history — plus the news and culture feed. When online, each
   topic is refreshed from Wikipedia in the reader's language (with its date)
   and kept for offline use.
+- **Language school**: first courses in 14 languages (Tetun, Portuguese,
+  Indonesian, English, Spanish, French, German, Mandarin, Japanese, Korean,
+  Arabic, Thai, Vietnamese, Filipino) with pronunciation, quizzes and
+  read-aloud.
+- **Library**: 79 learning websites from the Edukasaun OS directory in 8
+  categories, checked every hour, plus Wikipedia search.
 - Subjects: Mathematics, Science, Languages, History & Geography, Civics &
   Citizenship, Geography, Health & PE, ICT & Coding, Arts & Culture.
 - **Lobby**: word of the day in four languages, LAFA's daily motivation, today

@@ -1,4 +1,4 @@
-# Screenshot review — LAFA 0.1.3 Alpha
+# Screenshot review — LAFA 0.1.4 Alpha
 
 Regenerate after every UI change so developers can review and keep improving:
 
@@ -64,6 +64,12 @@ homework go to a temporary folder. Weather, headlines and sources are labelled
 | 47 | `47-timor-leste-economy.png` | Economy, exports and imports |
 | 48 | `48-classroom-civics.png` | New subject: Civics & Citizenship |
 | 49 | `49-timor-atlas-dark-theme.png` | The atlas in Eduka's dark theme (deep teal, never black) |
+| 50 | `50-library-learning-sources.png` | Library: 79 learning websites as cards, with categories, search and hourly status |
+| 51 | `51-library-language-sites.png` | Learning websites for world languages |
+| 52 | `52-language-school-japanese.png` | Language school: Japanese with pronunciation and quiz |
+| 53 | `53-language-school-tetun.png` | Language school: Tetun |
+| 54 | `54-offline-answer.png` | Offline mode: LAFA answers from its own atlas |
+| 55 | `55-virtual-recommendation.png` | Click LAFA: free-software tip and a learning website |
 
 Captures 20–24 are **compositions of actual LAFA widget pixels on a painted
 desktop and panel**, not screenshots of Edukasaun OS. Captures 18–19 run the
@@ -75,6 +81,7 @@ art by `tools/make-outfits.py`; hand-drawn sheets can replace them.
 
 ![Home](screenshots/01-home.png)
 ![Lafa-Configuration in Eduka-Settings](screenshots/18-eduka-settings-lafa-configuration.png)
+![Learning sources](screenshots/50-library-learning-sources.png)
 ![Outfits](screenshots/25-outfits.png)
 ![Exam hall](screenshots/33-exam-hall.png)
 ![Timor-Leste atlas](screenshots/36-timor-leste-atlas.png)

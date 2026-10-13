@@ -127,9 +127,10 @@ class CompanionBehaviour(unittest.TestCase):
         self.c.settings.idle_seconds = 120; self.now[0] += 100; state = self.c.state; self.c.choose_idle(); self.assertEqual(self.c.state, state)
         with patch('lafa.mascot.random.choice', return_value='reading'): self.now[0] += 30; self.c.choose_idle()
         self.assertEqual(self.c.state, 'reading')
-    def test_joke_and_offline_hides_balloon(self):
+    def test_joke_and_offline_keeps_lafa(self):
         self.c.tell_joke(); self.assertTrue(self.c.balloon.isVisible()); self.assertIn(self.c.balloon.text.text(), personality.JOKES['en'])
-        self.c.set_online(False); self.assertFalse(self.c.balloon.isVisible())
+        # 0.1.4: LAFA stays on the desktop offline; only internet buttons are disabled.
+        self.c.set_online(False); self.assertTrue(self.c.isVisible()); self.assertTrue(self.c.send_button.isEnabled()); self.assertFalse(self.c.public_button.isEnabled())
 
 class DesktopRedesign(unittest.TestCase):
     @classmethod

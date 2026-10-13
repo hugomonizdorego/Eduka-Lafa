@@ -102,9 +102,12 @@ class Settings:
     balloon_seconds: int = 6
     speech_rate: int = 155
     auto_update: bool = True
-    update_hours: int = 24
+    update_hours: int = 1
     start_with_session: bool = True
     start_page: str = "home"
+    click_recommendations: bool = True
+    smooth_scrolling: bool = True
+    depth_effects: bool = True
 
     @property
     def locale(self):return default_language() if self.language=="system" else self.language
@@ -123,11 +126,11 @@ class Settings:
             if not isinstance(data,dict):return cls()
         except (OSError,ValueError,UnicodeError):return cls()
         defaults=cls();values={}
-        enums={'language':{'system','en','id','pt','tet'},'provider':set(PROVIDERS),'costume':{'traditional','tuxedo','casual'},'walk_speed':{'slow','normal','fast'},'animation_speed':{'slow','normal','fast'},'character_size':{'small','normal','large'},'start_page':{'home','classroom','exams','chat','os_help','teachers','homework','learn','coding','live','culture'},'panel_edge':{'bottom','top'},'preset':{'fast'}}
+        enums={'language':{'system','en','id','pt','tet'},'provider':set(PROVIDERS),'costume':{'traditional','tuxedo','casual'},'walk_speed':{'slow','normal','fast'},'animation_speed':{'slow','normal','fast'},'character_size':{'small','normal','large'},'start_page':{'home','classroom','exams','chat','os_help','teachers','homework','learn','coding','live','culture','languages'},'panel_edge':{'bottom','top'},'preset':{'fast'}}
         for name,choices in enums.items():
             value=data.get(name,getattr(defaults,name))
             values[name]=value if isinstance(value,str) and value in choices else getattr(defaults,name)
-        for name in ['companion','roam','speak_answers','personal_activities','cultural_cards','positive_messages','local_news_updates','panel_roam','greet_by_time','hover_questions','chatter','fun_messages','follow_eduka_panel','follow_eduka_theme','notifications','auto_update','start_with_session']:
+        for name in ['companion','roam','speak_answers','personal_activities','cultural_cards','positive_messages','local_news_updates','panel_roam','greet_by_time','hover_questions','chatter','fun_messages','follow_eduka_panel','follow_eduka_theme','notifications','auto_update','start_with_session','click_recommendations','smooth_scrolling','depth_effects']:
             value=data.get(name,getattr(defaults,name));values[name]=value if isinstance(value,bool) else getattr(defaults,name)
         import math
         for name,lower,upper in [('panel_height',0,160),('card_minutes',1,120),('news_minutes',10,240),('idle_seconds',20,600),('balloon_seconds',3,20),('speech_rate',80,260),('update_hours',1,168)]:

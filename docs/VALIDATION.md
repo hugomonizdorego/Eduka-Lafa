@@ -1,15 +1,15 @@
-# Validation — LAFA 0.1.3 Alpha
+# Validation — LAFA 0.1.4 Alpha
 
 Checks run on 6 October 2026 in a headless Linux container (Ubuntu 24.04 with
 Qt offscreen). Not yet tested on Edukasaun OS hardware.
 
 | Check | Result |
 |---|---|
-| Automated tests, **PyQt5** (Qt 5.15, Edukasaun OS stack) | **199 passed**, 0 skipped; see `test-results.txt` |
-| Automated tests, **PySide6** (Qt 6.11) | **199 passed**, 0 skipped |
-| Debian package | `sh tools/build-deb.sh` → `lafa_0.1.3_all.deb` (13.5 MB); `apt install ./lafa_0.1.3_all.deb` resolved python3-pyqt5, libqt5svg5, python3-keyring, python3-secretstorage, fonts-noto-color-emoji and libglib2.0-bin from the archive; postinst ran without starting a GUI |
+| Automated tests, **PyQt5** (Qt 5.15, Edukasaun OS stack) | **214 passed**, 0 skipped; see `test-results.txt` |
+| Automated tests, **PySide6** (Qt 6.11) | **214 passed**, 0 skipped |
+| Debian package | `sh tools/build-deb.sh` → `lafa_0.1.4_all.deb` (13.5 MB); `apt install ./lafa_0.1.4_all.deb` resolved python3-pyqt5, libqt5svg5, python3-keyring, python3-secretstorage, fonts-noto-color-emoji and libglib2.0-bin from the archive; postinst ran without starting a GUI |
 | Installed package smoke test | `/usr/bin/lafa --help`; LAFA Desktop built from `/usr/lib/lafa` with the system PyQt5 (15 pages, 3 outfits, exam hall, Timor-Leste atlas) |
-| Version | `tools/release.py check`: `lafa/__init__.py`, `packaging/DEBIAN/control` and `CHANGELOG.md` agree on 0.1.3 |
+| Version | `tools/release.py check`: `lafa/__init__.py`, `packaging/DEBIAN/control` and `CHANGELOG.md` agree on 0.1.4 |
 | Eduka-Settings integration | Plugin-pages patch applied to a copy of Eduka-Desktop 0.9.24; the real `eduka-settings` lists Lafa-Configuration under APPS, styles it with Eduka's QSS and live-applies (screenshots 18–19) |
 | Eduka compatibility (fixtures) | Language (Tetun from Eduka-Settings), panel geometry (floating/full/short), dark theme and accent, agenda format, notification arguments, XWayland preference |
 | Screenshots | 31 captures regenerated with PyQt5 and Papirus icons, visually inspected |
