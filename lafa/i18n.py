@@ -290,7 +290,31 @@ DESIGN={
  'live_status':'{n} tópiku atualizadu · ikus {date}','live_done':'{n} tópiku atualizadu, {failed} la iha','presidents':'Prezidente Repúblika','prime_ministers':'Primeiru-Ministru'},
 }
 
-CATALOG={code:{**dict(zip(KEYS,strings)),**EXTRA[code],**NEW[code],**RELEASE[code],**ALPHA[code],**REDESIGN[code],**SCHOOL[code],**CONFIG[code],**CLASS[code],**DESIGN[code]} for code,strings in STRINGS.items()}
+# LAFA 0.1.4: sources, offline mode, language school, Edukasaun OS.
+AERO={
+'en':{'learning_sources':'Learning sources','encyclopedia':'Encyclopedia search','search_sources':'Search 79 learning websites…','sources_checked':'{up}/{n} sites answered · checked {date} · every hour','check_now':'Check now',
+ 'offline_intro':'📴 Offline mode — these work without internet:','offline_source':'(From LAFA\'s own lessons and atlas — works offline.)','recommend_title':'✨ LAFA recommends',
+ 'language_school':'Language school','card_languages_d':'First courses in 14 world languages, with quizzes','choose_language':'Choose a language','continue_online':'Continue online','course_intro':'25 everyday phrases in five units. Double-click a phrase to hear it.',
+ 'meaning':'Meaning','phrase':'Phrase','pronunciation':'Pronunciation','language_quiz':'Quiz: what does it mean?','tile_languages':'world languages to learn','tile_library':'learning websites, checked hourly',
+ 'edukasaun_only':'Developer preview · LAFA is made exclusively for Edukasaun OS — from Timor-Leste, for Timor-Leste.','works_offline':'Works offline','needs_internet':'Needs internet','offline_title':'Offline & online','card_learn_d':'79 learning websites, Wikipedia and open libraries'},
+'id':{'learning_sources':'Sumber belajar','encyclopedia':'Cari ensiklopedia','search_sources':'Cari 79 situs belajar…','sources_checked':'{up}/{n} situs aktif · dicek {date} · setiap jam','check_now':'Cek sekarang',
+ 'offline_intro':'📴 Mode offline — fitur ini bisa tanpa internet:','offline_source':'(Dari pelajaran dan atlas LAFA sendiri — bisa offline.)','recommend_title':'✨ Rekomendasi LAFA',
+ 'language_school':'Sekolah bahasa','card_languages_d':'Kursus dasar 14 bahasa dunia, dengan kuis','choose_language':'Pilih bahasa','continue_online':'Lanjut online','course_intro':'25 frasa sehari-hari dalam lima unit. Klik dua kali untuk mendengar.',
+ 'meaning':'Arti','phrase':'Frasa','pronunciation':'Pelafalan','language_quiz':'Kuis: apa artinya?','tile_languages':'bahasa dunia untuk dipelajari','tile_library':'situs belajar, dicek tiap jam',
+ 'edukasaun_only':'Pratinjau pengembang · LAFA dibuat khusus untuk Edukasaun OS — dari Timor-Leste, untuk Timor-Leste.','works_offline':'Bisa offline','needs_internet':'Perlu internet','offline_title':'Offline & online','card_learn_d':'79 situs belajar, Wikipedia dan perpustakaan terbuka'},
+'pt':{'learning_sources':'Fontes de aprendizagem','encyclopedia':'Pesquisa na enciclopédia','search_sources':'Pesquisar 79 sites de aprendizagem…','sources_checked':'{up}/{n} sites ativos · verificado {date} · a cada hora','check_now':'Verificar agora',
+ 'offline_intro':'📴 Modo offline — isto funciona sem internet:','offline_source':'(Das aulas e do atlas do LAFA — funciona offline.)','recommend_title':'✨ O LAFA recomenda',
+ 'language_school':'Escola de línguas','card_languages_d':'Primeiros cursos de 14 línguas do mundo, com quizzes','choose_language':'Escolhe uma língua','continue_online':'Continuar online','course_intro':'25 frases do dia a dia em cinco unidades. Faz duplo clique para ouvir.',
+ 'meaning':'Significado','phrase':'Frase','pronunciation':'Pronúncia','language_quiz':'Quiz: o que significa?','tile_languages':'línguas do mundo para aprender','tile_library':'sites de aprendizagem, verificados a cada hora',
+ 'edukasaun_only':'Pré-visualização para programadores · O LAFA é feito exclusivamente para o Edukasaun OS — de Timor-Leste, para Timor-Leste.','works_offline':'Funciona offline','needs_internet':'Precisa de internet','offline_title':'Offline e online','card_learn_d':'79 sites de aprendizagem, Wikipédia e bibliotecas abertas'},
+'tet':{'learning_sources':'Fonte aprendizajen','encyclopedia':'Buka ensiklopédia','search_sources':'Buka sítiu aprendizajen 79…','sources_checked':'{up}/{n} sítiu ativu · verifika {date} · kada oras','check_now':'Verifika agora',
+ 'offline_intro':'📴 Modu offline — ida-ne\'e bele uza la ho internet:','offline_source':'(Husi LAFA nia lisaun no atlas rasik — bele offline.)','recommend_title':'✨ LAFA rekomenda',
+ 'language_school':'Eskola lian','card_languages_d':'Kursu dahuluk ba lian mundu 14, ho kuis','choose_language':'Hili lian ida','continue_online':'Kontinua online','course_intro':'Fraze loron-loron 25 iha unidade lima. Klik dala rua atu rona.',
+ 'meaning':'Signifikadu','phrase':'Fraze','pronunciation':'Pronúnsia','language_quiz':'Kuis: saida mak ida-ne\'e signifika?','tile_languages':'lian mundu atu aprende','tile_library':'sítiu aprendizajen, verifika kada oras',
+ 'edukasaun_only':'Previzaun dezenvolvedór · LAFA halo ba Edukasaun OS de\'it — husi Timor-Leste, ba Timor-Leste.','works_offline':'Bele offline','needs_internet':'Presiza internet','offline_title':'Offline no online','card_learn_d':'Sítiu aprendizajen 79, Wikipédia no biblioteka nakloke'},
+}
+
+CATALOG={code:{**dict(zip(KEYS,strings)),**EXTRA[code],**NEW[code],**RELEASE[code],**ALPHA[code],**REDESIGN[code],**SCHOOL[code],**CONFIG[code],**CLASS[code],**DESIGN[code],**AERO[code]} for code,strings in STRINGS.items()}
 
 def _outfit_terms():
     """Activity and outfit names live with LAFA's personality data."""
