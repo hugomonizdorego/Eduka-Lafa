@@ -12,12 +12,12 @@ from lafa.config import Settings, Secrets
 
 class Sources(unittest.TestCase):
     def test_directory_from_the_document(self):
-        self.assertEqual(len(sources.SOURCES), 79)
-        self.assertEqual([k for k, _, _ in sources.SOURCE_CATEGORIES], ["elearning", "books", "biomed", "mathspace", "tech", "languages", "thinking", "society"])
+        self.assertEqual(len(sources.SOURCES), 79 + len(sources.TIMOR_MEDIA)); self.assertEqual(len(sources.TIMOR_MEDIA), 51)
+        self.assertEqual([k for k, _, _ in sources.SOURCE_CATEGORIES][:8], ["elearning", "books", "biomed", "mathspace", "tech", "languages", "thinking", "society"])
         names = [s[1] for s in sources.SOURCES]
         self.assertEqual(len(names), len(set(names))); self.assertNotIn("Z-Library", names)
         for category, name, url, description in sources.SOURCES:
-            self.assertTrue(url.startswith("https://") and url.endswith("/"), url)
+            self.assertTrue(url.startswith("https://"), url)
             self.assertTrue(description["id"] and description["en"], name)
         self.assertEqual([s[1] for s in sources.search("portugis", "id")], ["Duolingo", "Portuguese Lab"])
         self.assertIn("NASA", [s[1] for s in sources.by_category("mathspace")])
@@ -96,7 +96,7 @@ class UI(unittest.TestCase):
         self.w.companion.close(); self.w.close(); self.w.deleteLater(); self.app.processEvents()
     def test_library_sources_page(self):
         self.w.navigate("learn"); self.assertEqual(self.w.library_tabs.count(), 2)
-        self.assertEqual(len(self.w.source_cards), 79)
+        self.assertEqual(len(self.w.source_cards), len(sources.SOURCES))
         self.w.fill_sources("languages"); self.assertEqual(len(self.w.source_cards), 10)
         self.w.source_query.setText("NASA"); self.w.fill_sources(None); self.assertEqual(list(self.w.source_cards), ["NASA"])
         self.w.check_sources(True); self.assertIn("Review mode", self.w.source_status.text())
@@ -111,6 +111,10 @@ class UI(unittest.TestCase):
         self.assertTrue(self.w.send_button.isEnabled()); self.assertTrue(self.w.home_send.isEnabled())
         self.assertFalse(self.w.learn_button.isEnabled()); self.assertIn("Offline mode", self.w.badge.toolTip())
         self.w.navigate("exams"); self.w.start_exam("quiz", "math"); self.assertEqual(self.w.exam.total, 5)
+    def test_bubble_buttons(self):
+        keys = [k for k, _ in self.w.companion.quick_buttons]; self.assertEqual(keys, ["os", "weather", "news", "recommend"])
+        c = self.w.companion; c.settings.companion = True; c.set_online(True)
+        c.quick_buttons[3][1].click(); self.assertIn("LAFA recommends", c.message.toPlainText())
     def test_click_lafa_recommends(self):
         c = self.w.companion; c.settings.companion = True; c.set_online(True); c.collapse()
         c.toggle_bubble(); self.assertIn("LAFA recommends", c.message.toPlainText()); self.assertIn("🐧", c.message.toPlainText())
@@ -122,3 +126,28 @@ class UI(unittest.TestCase):
         self.assertTrue(hasattr(self.w.source_scroll, "smooth_wheel"))
 
 if __name__ == "__main__": unittest.main()
+
+
+class ChatAndMedia(unittest.TestCase):
+    def test_timor_media_directory(self):
+        names = [s[1] for s in sources.TIMOR_MEDIA]
+        for name in ("Wikipédia Tetun", "TATOLI", "Timor Post", "RTTL", "La'o Hamutuk", "Radio Liberdade", "Lian Matebian"): self.assertIn(name, names)
+        self.assertEqual(sources.TIMOR_MEDIA[0][2], "https://tet.wikipedia.org/wiki/P%C3%A1jina_Mahuluk")
+        self.assertEqual(len([s for s in sources.TIMOR_MEDIA if s[0] == "tl_community"]), 13)
+    def test_chat_answers_the_written_topic(self):
+        from lafa.tools import Source
+        agent = Agent(Settings(language="tet"), Secrets())
+        self.assertIn("Illa iha Dili", agent.run("Ataúro", [], True).text)
+        with patch("lafa.agent.encyclopedia_search", return_value=[Source("Livru", "https://tet.wikipedia.org/wiki/Livru", "")]), patch("lafa.agent.encyclopedia_article", return_value="Livru mak koleksaun pájina."):
+            text = agent.run("livru", [], True).text
+        self.assertTrue(text.startswith("📖 Livru · Wikipedia (tet)")); self.assertNotIn("fonte públika", text)
+        from lafa.net import NetworkError
+        with patch("lafa.agent.encyclopedia_search", side_effect=NetworkError("x")):
+            text = agent.run("buku", [], True).text
+        self.assertIn("LibriVox", text)
+        self.assertIn("xave API", agent.run("my password is 1234", [], True).text)
+    def test_tetun_atlas_has_no_english_mixed_in(self):
+        from lafa import timor_atlas
+        self.assertTrue(all("tet" in t.summary for t in timor_atlas.TOPICS))
+        self.assertNotIn("Banda arc", offline.answer("Ataúro", "tet"))
+        self.assertIsNone(offline.answer("livru", "tet"))

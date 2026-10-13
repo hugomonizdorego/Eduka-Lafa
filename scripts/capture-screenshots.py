@@ -95,7 +95,8 @@ w.open_mind_reader(); pump(); save(w.mind_dialog, '39-mind-reader.png')
 for i in range(6): w.mind_dialog.mind_answer(i in (0, 2, 4))
 save(w.mind_dialog, '40-mind-reader-result.png'); w.mind_dialog.close()
 w.navigate('learn'); w.library_tabs.setCurrentIndex(0); w.fill_sources(None); save(w, '50-library-learning-sources.png')
-w.fill_sources('languages'); save(w, '51-library-language-sites.png'); w.fill_sources(None)
+w.fill_sources('languages'); save(w, '51-library-language-sites.png')
+w.fill_sources('tl_news'); save(w, '56-library-timor-leste-media.png'); w.fill_sources(None)
 w.navigate('languages'); w.course_list.setCurrentRow(list(__import__('lafa.languages', fromlist=['x']).COURSES).index('ja')); save(w, '52-language-school-japanese.png')
 w.course_list.setCurrentRow(0); save(w, '53-language-school-tetun.png')
 w.set_online(False); w.navigate('chat'); w.new_chat(); w.send_message('Ataúro island'); save(w, '54-offline-answer.png'); w.set_online(True)
@@ -151,7 +152,7 @@ compose('23-virtual-casual-beach.png', 'Casual: summer activities', 'Beach, sigh
 pet('idle'); c.introduced = False; c.show_bubble(c.introduction(9)); pump(); chat = c.grab()
 c.collapse(); __import__('random').seed(4); c.recommend(); pump(); recommend = c.grab()
 compose('55-virtual-recommendation.png', 'Click LAFA for a recommendation', 'Free software (GPL) for learning and, online, a learning website.', [(recommend, QPoint(800, PANEL_TOP - recommend.height() + 12))])
-compose('24-virtual-chat-bubble.png', 'Click LAFA to chat', 'Quick help for Edukasaun OS, weather, Timor-Leste news, focus and jokes.', [(chat, QPoint(800, PANEL_TOP - chat.height() + 12))])
+compose('24-virtual-chat-bubble.png', 'Click LAFA to chat', 'Quick help for Edukasaun OS, weather, Timor-Leste news and recommendations.', [(chat, QPoint(800, PANEL_TOP - chat.height() + 12))])
 c.collapse()
 
 class Sheet(QWidget):

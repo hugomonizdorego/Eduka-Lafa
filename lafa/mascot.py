@@ -27,6 +27,28 @@ PET_SIZES={'small':132,'normal':176,'large':220}
 WALK_STEPS={'slow':2,'normal':3,'fast':5}
 ANIMATION_RATES={'slow':0.6,'normal':1.0,'fast':1.6}
 
+BUBBLE_QSS='''
+QFrame#speech {background:qlineargradient(x1:0,y1:0,x2:0,y2:1,stop:0 rgba(255,255,255,250),stop:1 rgba(236,248,242,246)); border:1px solid rgba(0,168,121,0.28); border-radius:22px;}
+QLabel#bubblename {font-size:19px; font-weight:800; color:#0f5a46; background:transparent;}
+QLabel#bubbleduty {font-size:10px; color:#6b7f78; background:transparent; padding-left:4px;}
+QLabel#bubblestatus {font-size:10px; color:#0f5a46; background:rgba(0,168,121,0.12); border-radius:9px; padding:3px 8px;}
+QPushButton#bubbleclose {border:0; background:transparent; font-size:17px; padding:2px; color:#5b6f68;}
+QPushButton#bubbleclose:hover {color:#c92a2a;}
+QPlainTextEdit#bubbletext {border:0; background:rgba(255,255,255,0.75); border-radius:14px; font-size:13px; padding:8px 10px; color:#1d3b31;}
+QPushButton {border-radius:12px; padding:6px 8px; font-size:11px; font-weight:600; color:white; border:0;}
+QPushButton#chip_os {background:qlineargradient(x1:0,y1:0,x2:1,y2:1,stop:0 #5c7cfa,stop:1 #4263eb);}
+QPushButton#chip_weather {background:qlineargradient(x1:0,y1:0,x2:1,y2:1,stop:0 #22b8cf,stop:1 #1098ad);}
+QPushButton#chip_news {background:qlineargradient(x1:0,y1:0,x2:1,y2:1,stop:0 #fa5252,stop:1 #e03131);}
+QPushButton#chip_recommend {background:qlineargradient(x1:0,y1:0,x2:1,y2:1,stop:0 #fcc419,stop:1 #f59f00); color:#3b2a00;}
+QPushButton:hover {padding-top:5px; padding-bottom:7px;}
+QPushButton:disabled {background:#dfe7e3; color:#8a9a94;}
+QLineEdit#bubbleinput {background:white; border:1px solid #cfe3d9; border-radius:14px; padding:8px 10px; font-size:13px; color:#1d3b31;}
+QLineEdit#bubbleinput:focus {border-color:#00a879;}
+QPushButton#bubblesend {background:qlineargradient(x1:0,y1:0,x2:1,y2:1,stop:0 #20c997,stop:1 #00a879); border-radius:14px; font-size:15px;}
+QPushButton#footchip {background:white; color:#1d3b31; border:1px solid #d7e6de; font-weight:500; font-size:10px; padding:5px 9px;}
+QPushButton#footchip:hover {background:#eefaf4; border-color:#00a879;}
+'''
+
 ROLE_OF={activity:role for role,(activity,*_) in roles.ROLES.items() if activity in outfits.ROLES}
 
 def greeting_key(hour):
@@ -146,7 +168,7 @@ class Balloon(QWidget):
         p=QPainter(self);p.setRenderHint(QPainter.Antialiasing)
         body=QRectF(1,1,self.width()-2,self.height()-16);path=QPainterPath();path.addRoundedRect(body,14,14)
         tail=QPainterPath();x=self.width()-70;tail.moveTo(x-10,body.bottom()-1);tail.lineTo(x+10,body.bottom()-1);tail.lineTo(x+2,self.height()-2);tail.closeSubpath()
-        path=path.united(tail);p.setPen(QPen(QColor('#d9c48a'),1.2));p.setBrush(QColor('#fffaf0'));p.drawPath(path)
+        path=path.united(tail);p.setPen(QPen(QColor(0,168,121,90),1.2));p.setBrush(QColor(250,253,251,248));p.drawPath(path)
     def mouseReleaseEvent(self,event):
         if event.button()==Qt.LeftButton:self.clicked.emit()
 
@@ -171,25 +193,29 @@ class Companion(QWidget):
         self.setWindowTitle('LAFA Virtual Assistant')
         layout=QVBoxLayout(self);layout.setContentsMargins(8,8,8,8);layout.setSpacing(12)
         self.bubblebox=QFrame();self.bubblebox.setObjectName('speech')
-        self.bubblebox.setStyleSheet('QFrame#speech {background:#fffaf0;border:1px solid #e3d3a5;border-radius:18px;} QPushButton{background:#ffffff;border:1px solid #e6dcc0;border-radius:10px;color:#1d3b31;} QPushButton:hover{background:#fff1cf;} QLineEdit{background:white;border:1px solid #e3d3a5;border-radius:10px;padding:7px;}')
-        self.bubblebox.setFixedHeight(324)
-        col=QVBoxLayout(self.bubblebox);col.setContentsMargins(16,12,16,12);col.setSpacing(7)
-        header=QHBoxLayout();name=QLabel('LAFA');name.setStyleSheet('font-size:19px;font-weight:700;color:#0f5a46;');header.addWidget(name)
-        self.duty_label=QLabel();self.duty_label.setStyleSheet('font-size:10px;color:#8a6d2b;');header.addWidget(self.duty_label);header.addStretch()
-        self.status=QLabel();self.status.setStyleSheet('font-size:10px;color:#4f7a66;');header.addWidget(self.status)
-        close=QPushButton('×');close.setFixedWidth(28);close.setStyleSheet('border:0;background:transparent;font-size:17px;padding:2px;');close.clicked.connect(self.collapse);header.addWidget(close);col.addLayout(header)
-        self.message=QPlainTextEdit();self.message.setReadOnly(True);self.message.setFixedHeight(86);self.message.setStyleSheet('border:0;background:transparent;font-size:13px;padding:0;color:#1d3b31;');col.addWidget(self.message)
-        quick=QHBoxLayout();self.quick_buttons=[]
-        for key in ['os','weather','news','focus']:
-            b=QPushButton();b.setStyleSheet('font-size:11px;padding:6px 6px;');b.clicked.connect(lambda checked=False,k=key:self.action_requested.emit(k));quick.addWidget(b);self.quick_buttons.append((key,b))
+        # Aero glass bubble: soft white glass, Eduka green accents, colourful chips.
+        self.bubblebox.setStyleSheet(BUBBLE_QSS)
+        self.bubblebox.setFixedHeight(344)
+        col=QVBoxLayout(self.bubblebox);col.setContentsMargins(16,12,14,12);col.setSpacing(8)
+        header=QHBoxLayout();name=QLabel('LAFA');name.setObjectName('bubblename');header.addWidget(name)
+        self.duty_label=QLabel();self.duty_label.setObjectName('bubbleduty');header.addWidget(self.duty_label,1)
+        self.status=QLabel();self.status.setObjectName('bubblestatus');header.addWidget(self.status)
+        close=QPushButton('×');close.setObjectName('bubbleclose');close.setFixedWidth(28);close.clicked.connect(self.collapse);header.addWidget(close);col.addLayout(header)
+        self.message=QPlainTextEdit();self.message.setObjectName('bubbletext');self.message.setReadOnly(True);self.message.setFixedHeight(128);col.addWidget(self.message)
+        quick=QHBoxLayout();quick.setSpacing(6);self.quick_buttons=[]
+        for key in ['os','weather','news','recommend']:
+            b=QPushButton();b.setObjectName('chip_'+key);b.setCursor(Qt.PointingHandCursor)
+            b.clicked.connect(lambda checked=False,k=key:self.recommend() if k=='recommend' else self.action_requested.emit(k));quick.addWidget(b);self.quick_buttons.append((key,b))
         col.addLayout(quick)
-        row=QHBoxLayout();self.input=QLineEdit();self.input.returnPressed.connect(self.submit);self.send_button=QPushButton('➤');self.send_button.setFixedWidth(42);self.send_button.clicked.connect(self.submit)
+        row=QHBoxLayout();row.setSpacing(6);self.input=QLineEdit();self.input.setObjectName('bubbleinput');self.input.returnPressed.connect(self.submit)
+        self.send_button=QPushButton('➤');self.send_button.setObjectName('bubblesend');self.send_button.setFixedSize(40,38);self.send_button.clicked.connect(self.submit)
         row.addWidget(self.input,1);row.addWidget(self.send_button);col.addLayout(row)
-        self.public_button=QPushButton();self.public_button.setStyleSheet('font-size:10px;padding:4px 8px;');self.public_button.clicked.connect(self.submit_public);col.addWidget(self.public_button)
-        footer=QHBoxLayout();self.full_button=QPushButton();self.full_button.setStyleSheet('padding:5px 8px;font-size:10px;');self.full_button.clicked.connect(self.open_requested.emit);footer.addWidget(self.full_button)
-        self.voice_button=QPushButton();self.voice_button.setStyleSheet('padding:5px 8px;font-size:10px;');self.voice_button.clicked.connect(self.voice_requested.emit);footer.addWidget(self.voice_button)
-        self.joke_button=QPushButton('😄');self.joke_button.setStyleSheet('padding:5px 8px;font-size:11px;');self.joke_button.clicked.connect(self.tell_joke);footer.addWidget(self.joke_button)
-        self.source_button=QPushButton();self.source_button.setStyleSheet('padding:5px 8px;font-size:10px;');self.source_button.clicked.connect(lambda:self.source_requested.emit(self.current_source));self.source_button.hide();footer.addWidget(self.source_button);footer.addStretch();col.addLayout(footer)
+        footer=QHBoxLayout();footer.setSpacing(6)
+        self.full_button=QPushButton();self.full_button.setObjectName('footchip');self.full_button.clicked.connect(self.open_requested.emit);footer.addWidget(self.full_button)
+        self.public_button=QPushButton();self.public_button.setObjectName('footchip');self.public_button.clicked.connect(self.submit_public);footer.addWidget(self.public_button)
+        self.voice_button=QPushButton();self.voice_button.setObjectName('footchip');self.voice_button.clicked.connect(self.voice_requested.emit);footer.addWidget(self.voice_button)
+        self.joke_button=QPushButton('😄');self.joke_button.setObjectName('footchip');self.joke_button.clicked.connect(self.tell_joke);footer.addWidget(self.joke_button)
+        self.source_button=QPushButton();self.source_button.setObjectName('footchip');self.source_button.clicked.connect(lambda:self.source_requested.emit(self.current_source));self.source_button.hide();footer.addWidget(self.source_button);footer.addStretch();col.addLayout(footer)
         layout.addWidget(self.bubblebox)
         self.pet=Character(atlas,self,size=PET_SIZES.get(settings.character_size,176));self.pet.costume=settings.costume;self.pet.clicked.connect(self.toggle_bubble);layout.addWidget(self.pet,0,Qt.AlignRight)
         self.balloon=Balloon();self.balloon.clicked.connect(self.accept_balloon)
@@ -235,8 +261,8 @@ class Companion(QWidget):
         lang=self.lang
         self.setToolTip('')
         self.input.setPlaceholderText(tr(lang,'ask'));self.full_button.setText(tr(lang,'desktop'));self.voice_button.setText(tr(lang,'listen'));self.joke_button.setToolTip(tr(lang,'tell_joke'))
-        for key,b in self.quick_buttons:b.setText(tr(lang,{'news':'timor_news','os':'os_short'}.get(key,key)))
-        self.status.setText(tr(lang,'online') if self.online else tr(lang,'offline'));self.source_button.setText(tr(lang,'source'));self.public_button.setText(tr(lang,'public_search'))
+        for key,b in self.quick_buttons:b.setText(tr(lang,{'news':'timor_news','os':'os_short','recommend':'recommend_short'}.get(key,key)))
+        self.status.setText(tr(lang,'online') if self.online else tr(lang,'offline'));self.source_button.setText(tr(lang,'source'));self.public_button.setText('📖 Wikipedia');self.public_button.setToolTip(tr(lang,'public_search'))
         self.duty_label.setText('· '+personality.duty(lang,self.pet.state))
     def mark_activity(self):self.popup_deadline=0;self.last_activity=self.clock();self.last_idle_change=self.last_activity
     # ----- input -------------------------------------------------------------
@@ -432,7 +458,7 @@ class Companion(QWidget):
             self.input.clear();self.mark_activity();self.user_request.emit(text)
     def paintEvent(self,event):
         if not self.bubblebox.isVisible():return
-        p=QPainter(self);p.setRenderHint(QPainter.Antialiasing);p.setPen(Qt.NoPen);p.setBrush(QColor('#fffaf0'))
+        p=QPainter(self);p.setRenderHint(QPainter.Antialiasing);p.setPen(Qt.NoPen);p.setBrush(QColor(250,253,251,246))
         y=self.bubblebox.geometry().bottom()-1;x=self.width()-76
         p.drawPolygon(QPolygonF([QPointF(x-12,y),QPointF(x+12,y),QPointF(x,y+14)]))
     def contextMenuEvent(self,event):

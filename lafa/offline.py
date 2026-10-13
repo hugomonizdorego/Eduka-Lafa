@@ -24,7 +24,7 @@ FEATURES = [
     ("local_chat", "chat", L("Ask LAFA (offline answers, /calc, /os)", "Tanya LAFA (jawaban offline, /calc, /os)", "Perguntar ao LAFA (respostas offline, /calc, /os)", "Husu LAFA (resposta offline, /calc, /os)"), True),
     ("ai_chat", "chat", L("AI chat and teachers", "Chat AI dan guru", "Conversa com IA e professores", "Konversa AI no mestre"), False),
     ("wikipedia", "learn", L("Wikipedia search", "Pencarian Wikipedia", "Pesquisa na Wikipédia", "Buka Wikipédia"), False),
-    ("sources", "learn", L("Learning websites (79)", "Situs belajar (79)", "Sites de aprendizagem (79)", "Sítiu aprendizajen (79)"), False),
+    ("sources", "learn", L("Learning websites and Timor-Leste media", "Situs belajar dan media Timor-Leste", "Sites de aprendizagem e media de Timor-Leste", "Sítiu aprendizajen no média Timor-Leste"), False),
     ("weather_news", "live", L("Weather and news", "Cuaca dan berita", "Tempo e notícias", "Tempu no notísia"), False),
     ("live_refresh", "culture", L("Hourly refresh of sources and atlas", "Pembaruan sumber dan atlas tiap jam", "Atualização horária de fontes e atlas", "Atualizasaun kada oras ba fonte no atlas"), False),
 ]
@@ -40,18 +40,26 @@ def _score(words, *texts):
     return sum(1 for w in words if w in blob)
 
 def answer(question, lang="en"):
-    """Best match from LAFA's own knowledge (atlas, lessons, OS guides), or None."""
+    """Best match from LAFA's own knowledge (atlas, lessons), or None.
+
+    A topic counts only when the question names it: the title must match, or
+    (for longer questions) at least two words must. A single word that merely
+    appears inside some text is left to Wikipedia."""
     words = [w.strip("?!.,;:") for w in str(question).casefold().split()]
     words = [w for w in words if len(w) >= 4]
     if not words: return None
-    best = (0, None)
+    best = (0, 0, None)
     for t in timor_atlas.TOPICS:
-        score = 2 * _score(words, timor_atlas.text(t.title, lang), timor_atlas.text(t.title, "en")) + _score(words, timor_atlas.text(t.summary, lang), timor_atlas.text(t.summary, "en"))
+        titled = _score(words, timor_atlas.text(t.title, lang), timor_atlas.text(t.title, "en"))
+        score = 2 * titled + _score(words, timor_atlas.text(t.summary, lang), timor_atlas.text(t.summary, "en"))
         if score > best[0]:
-            body = timor_atlas.text(t.body, lang) if t.body else ""
-            best = (score, f"📘 {timor_atlas.text(t.title, lang)}\n{timor_atlas.text(t.summary, lang)}" + (f"\n\n{body}" if body else ""))
+            body = timor_atlas.text(t.body, lang) if t.body and (lang != "tet" or "tet" in t.body) else ""
+            best = (score, titled, f"📘 {timor_atlas.text(t.title, lang)}\n{timor_atlas.text(t.summary, lang)}" + (f"\n\n{body}" if body else ""))
     for lesson in classroom.lessons():
-        score = 2 * _score(words, classroom.text(lesson.title, lang), classroom.text(lesson.title, "en")) + _score(words, *[classroom.text(p, lang) for p in lesson.points])
+        titled = _score(words, classroom.text(lesson.title, lang), classroom.text(lesson.title, "en"))
+        score = 2 * titled + _score(words, *[classroom.text(p, lang) for p in lesson.points])
         if score > best[0]:
-            best = (score, f"📗 {classroom.subject_name(lesson.subject, lang)} · {classroom.text(lesson.title, lang)}\n" + "\n".join("• " + classroom.text(p, lang) for p in lesson.points))
-    return best[1] if best[0] >= max(1, min(2, len(words))) else None
+            best = (score, titled, f"📗 {classroom.subject_name(lesson.subject, lang)} · {classroom.text(lesson.title, lang)}\n" + "\n".join("• " + classroom.text(p, lang) for p in lesson.points))
+    score, titled, text = best
+    if titled or (len(words) >= 2 and score >= 3): return text
+    return None

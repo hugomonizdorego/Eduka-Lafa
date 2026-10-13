@@ -703,7 +703,9 @@ class Window(QMainWindow):
         items=[];T=timor_atlas.text
         def wiki_url(title):return "https://en.wikipedia.org/wiki/"+title.replace(" ","_") if title else ""
         for t in timor_atlas.TOPICS:
-            items.append(dict(key=t.key,category=t.category,title=T(t.title,lang),summary=T(t.summary,lang),body=T(t.body,lang) if t.body else "",
+            # Tetun pages never mix in English: the detail text shows only when written in Tetun.
+            body=T(t.body,lang) if t.body and (lang!="tet" or "tet" in t.body) else ""
+            items.append(dict(key=t.key,category=t.category,title=T(t.title,lang),summary=T(t.summary,lang),body=body,
                               facts=[(T(a,lang),T(b,lang)) for a,b in t.facts],wiki=t.wiki,url=wiki_url(t.wiki),when=t.when,size=t.size))
         major={1515,1975,1999,2002,2025}
         for i,e in enumerate(timorleste.HISTORY):

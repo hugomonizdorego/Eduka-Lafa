@@ -3,9 +3,12 @@
 - API conversation sends the input and up to twelve prior messages to the
   selected provider after Send. Provider retention policies apply. Chat stays
   in memory unless the user exports it; switching provider clears context.
-- Without a configured API, ordinary chat is never sent automatically to
-  Wikipedia. Search public sources and `/ask` explicitly send the selected
-  public topic; `/learn` explicitly searches public snippets. Search queries
+- Without a configured API, a short topic typed in Husu LAFA (up to eight
+  words, for example "buku" or "Ataúro") is first answered from LAFA's own
+  lessons and atlas and, when online, looked up on Wikipedia in the interface
+  language. Personal sentences (my/saya/ha'u, address, family, password,
+  problem…), long text, code and anything that looks private are never sent.
+  Search public sources and `/ask` explicitly send the selected public topic; `/learn` explicitly searches public snippets. Search queries
   belong to the receiving site, so do not include private information. Prepared
   greetings and supportive replies are local; general AI conversation requires
   an optional configured provider.
