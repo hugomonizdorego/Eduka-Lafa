@@ -1,0 +1,1003 @@
+{
+ "subject": "computers",
+ "icon": "💻",
+ "name": {
+  "en": "Computers",
+  "id": "Komputer",
+  "pt": "Computadores",
+  "tet": "Komputadór"
+ },
+ "lessons": [
+  {
+   "level": "early",
+   "title": {
+    "en": "Meet the computer",
+    "id": "Mengenal komputer",
+    "pt": "Conhecer o computador",
+    "tet": "Hatene komputadór"
+   },
+   "points": [
+    {
+     "en": "A computer has a screen, a keyboard and a mouse.",
+     "id": "Komputer punya layar, papan ketik, dan tetikus.",
+     "pt": "O computador tem um ecrã, um teclado e um rato.",
+     "tet": "Komputadór iha ekrã, teklada no rato."
+    },
+    {
+     "en": "We press keys to write letters and numbers.",
+     "id": "Kita menekan tombol untuk menulis huruf dan angka.",
+     "pt": "Carregamos nas teclas para escrever letras e números.",
+     "tet": "Ita hanehan tekla atu hakerek letra no númeru."
+    },
+    {
+     "en": "Wash and dry your hands before you use a computer. Keep water and food away from it.",
+     "id": "Cuci dan keringkan tanganmu sebelum memakai komputer. Jauhkan air dan makanan darinya.",
+     "pt": "Lava e seca as mãos antes de usar o computador. Mantém a água e a comida longe dele.",
+     "tet": "Fase no halo maran ita-nia liman molok uza komputadór. Tau bee no hahán dook husi nia."
+    }
+   ],
+   "task": {
+    "en": "Find the letters of your name on the keyboard and press them one by one.",
+    "id": "Cari huruf-huruf namamu di papan ketik dan tekan satu per satu.",
+    "pt": "Encontra as letras do teu nome no teclado e carrega nelas uma a uma.",
+    "tet": "Buka letra sira husi ita-nia naran iha teklada no hanehan ida-idak."
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "Where do we see pictures and words on a computer?",
+      "id": "Di mana kita melihat gambar dan tulisan di komputer?",
+      "pt": "Onde vemos imagens e palavras no computador?",
+      "tet": "Iha ne'ebé mak ita haree imajen no liafuan iha komputadór?"
+     },
+     "answer": {
+      "en": "On the screen",
+      "id": "Di layar",
+      "pt": "No ecrã",
+      "tet": "Iha ekrã"
+     },
+     "wrong": [
+      {
+       "en": "On the mouse",
+       "id": "Di tetikus",
+       "pt": "No rato",
+       "tet": "Iha rato"
+      },
+      {
+       "en": "On the chair",
+       "id": "Di kursi",
+       "pt": "Na cadeira",
+       "tet": "Iha kadeira"
+      },
+      {
+       "en": "On the cable",
+       "id": "Di kabel",
+       "pt": "No cabo",
+       "tet": "Iha kabu"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "What do we press to write letters?",
+      "id": "Apa yang kita tekan untuk menulis huruf?",
+      "pt": "Em que carregamos para escrever letras?",
+      "tet": "Ita hanehan saida atu hakerek letra?"
+     },
+     "answer": {
+      "en": "The keys on the keyboard",
+      "id": "Tombol di papan ketik",
+      "pt": "As teclas do teclado",
+      "tet": "Tekla sira iha teklada"
+     },
+     "wrong": [
+      {
+       "en": "The screen",
+       "id": "Layar",
+       "pt": "O ecrã",
+       "tet": "Ekrã"
+      },
+      {
+       "en": "The power cable",
+       "id": "Kabel listrik",
+       "pt": "O cabo de energia",
+       "tet": "Kabu eletrisidade"
+      },
+      {
+       "en": "The speaker",
+       "id": "Pengeras suara",
+       "pt": "O altifalante",
+       "tet": "Altifalante"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "What should you do before using a computer?",
+      "id": "Apa yang harus kamu lakukan sebelum memakai komputer?",
+      "pt": "O que deves fazer antes de usar o computador?",
+      "tet": "Ita tenke halo saida molok uza komputadór?"
+     },
+     "answer": {
+      "en": "Wash and dry your hands",
+      "id": "Cuci dan keringkan tangan",
+      "pt": "Lavar e secar as mãos",
+      "tet": "Fase no halo maran liman"
+     },
+     "wrong": [
+      {
+       "en": "Eat a mango over it",
+       "id": "Makan mangga di atasnya",
+       "pt": "Comer uma manga por cima dele",
+       "tet": "Han haas iha nia leten"
+      },
+      {
+       "en": "Pour water on it",
+       "id": "Menyiramnya dengan air",
+       "pt": "Deitar-lhe água",
+       "tet": "Fakar bee ba nia"
+      },
+      {
+       "en": "Shake it hard",
+       "id": "Mengguncangnya dengan keras",
+       "pt": "Abaná-lo com força",
+       "tet": "Halo nia nakdoko ho forsa"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "level": "primary",
+   "title": {
+    "en": "Parts of a computer",
+    "id": "Bagian-bagian komputer",
+    "pt": "As partes do computador",
+    "tet": "Parte sira husi komputadór"
+   },
+   "points": [
+    {
+     "en": "The CPU is the computer's brain. It follows instructions very fast.",
+     "id": "CPU adalah otak komputer. CPU menjalankan perintah dengan sangat cepat.",
+     "pt": "O processador (CPU) é o cérebro do computador. Segue instruções muito depressa.",
+     "tet": "CPU mak komputadór nia kakutak. Nia halo tuir instrusaun lalais tebes."
+    },
+    {
+     "en": "Input devices put information in (keyboard, mouse, microphone). Output devices give it out (screen, speakers, printer).",
+     "id": "Perangkat masukan memasukkan informasi (papan ketik, tetikus, mikrofon). Perangkat keluaran mengeluarkannya (layar, pengeras suara, pencetak).",
+     "pt": "Os dispositivos de entrada põem informação no computador (teclado, rato, microfone). Os de saída mostram-na (ecrã, altifalantes, impressora).",
+     "tet": "Aparellu tama nian hatama informasaun (teklada, rato, mikrofone). Aparellu sai nian hatudu informasaun (ekrã, altifalante, impresora)."
+    },
+    {
+     "en": "Memory (RAM) holds your work for now. Storage (the disk) keeps files even when the computer is off.",
+     "id": "Memori (RAM) menyimpan pekerjaanmu untuk sementara. Penyimpanan (disk) menyimpan berkas walaupun komputer mati.",
+     "pt": "A memória (RAM) guarda o teu trabalho por agora. O armazenamento (disco) guarda os ficheiros mesmo com o computador desligado.",
+     "tet": "Memória (RAM) rai ita-nia servisu ba agora deit. Disku rai fixeiru sira maske komputadór mate."
+    }
+   ],
+   "task": {
+    "en": "Look at a computer at school and name one input device and one output device.",
+    "id": "Amati komputer di sekolah dan sebutkan satu perangkat masukan dan satu perangkat keluaran.",
+    "pt": "Observa um computador da escola e diz o nome de um dispositivo de entrada e de um de saída.",
+    "tet": "Haree komputadór ida iha eskola no temi aparellu tama nian ida no aparellu sai nian ida."
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "Which part is called the computer's brain?",
+      "id": "Bagian mana yang disebut otak komputer?",
+      "pt": "Que parte é chamada o cérebro do computador?",
+      "tet": "Parte ida ne'ebé mak ema bolu komputadór nia kakutak?"
+     },
+     "answer": {
+      "en": "The CPU",
+      "id": "CPU",
+      "pt": "O processador (CPU)",
+      "tet": "CPU"
+     },
+     "wrong": [
+      {
+       "en": "The mouse",
+       "id": "Tetikus",
+       "pt": "O rato",
+       "tet": "Rato"
+      },
+      {
+       "en": "The speaker",
+       "id": "Pengeras suara",
+       "pt": "O altifalante",
+       "tet": "Altifalante"
+      },
+      {
+       "en": "The screen",
+       "id": "Layar",
+       "pt": "O ecrã",
+       "tet": "Ekrã"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "Which one is an output device?",
+      "id": "Manakah yang merupakan perangkat keluaran?",
+      "pt": "Qual destes é um dispositivo de saída?",
+      "tet": "Ida ne'ebé mak aparellu sai nian?"
+     },
+     "answer": {
+      "en": "A printer",
+      "id": "Pencetak",
+      "pt": "A impressora",
+      "tet": "Impresora"
+     },
+     "wrong": [
+      {
+       "en": "A keyboard",
+       "id": "Papan ketik",
+       "pt": "O teclado",
+       "tet": "Teklada"
+      },
+      {
+       "en": "A mouse",
+       "id": "Tetikus",
+       "pt": "O rato",
+       "tet": "Rato"
+      },
+      {
+       "en": "A microphone",
+       "id": "Mikrofon",
+       "pt": "O microfone",
+       "tet": "Mikrofone"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "Where are files kept when the computer is turned off?",
+      "id": "Di mana berkas disimpan ketika komputer dimatikan?",
+      "pt": "Onde ficam guardados os ficheiros quando o computador está desligado?",
+      "tet": "Fixeiru sira hela iha ne'ebé bainhira komputadór mate?"
+     },
+     "answer": {
+      "en": "On the storage disk",
+      "id": "Di disk penyimpanan",
+      "pt": "No disco de armazenamento",
+      "tet": "Iha disku"
+     },
+     "wrong": [
+      {
+       "en": "Only in the RAM",
+       "id": "Hanya di RAM",
+       "pt": "Só na RAM",
+       "tet": "Iha RAM deit"
+      },
+      {
+       "en": "In the mouse",
+       "id": "Di tetikus",
+       "pt": "No rato",
+       "tet": "Iha rato"
+      },
+      {
+       "en": "In the power cable",
+       "id": "Di kabel listrik",
+       "pt": "No cabo de energia",
+       "tet": "Iha kabu eletrisidade"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "level": "middle",
+   "title": {
+    "en": "Files, folders and the Linux desktop",
+    "id": "Berkas, folder, dan desktop Linux",
+    "pt": "Ficheiros, pastas e o ambiente de trabalho Linux",
+    "tet": "Fixeiru, pasta no desktop Linux"
+   },
+   "points": [
+    {
+     "en": "On a Linux desktop like Edukasaun OS, the file manager shows your files inside folders, like papers inside boxes.",
+     "id": "Di desktop Linux seperti Edukasaun OS, pengelola berkas menampilkan berkas di dalam folder, seperti kertas di dalam kotak.",
+     "pt": "Num ambiente de trabalho Linux como o Edukasaun OS, o gestor de ficheiros mostra os ficheiros dentro de pastas, como papéis dentro de caixas.",
+     "tet": "Iha desktop Linux hanesan Edukasaun OS, jestór fixeiru hatudu ita-nia fixeiru iha pasta laran, hanesan surat-tahan iha kaixa laran."
+    },
+    {
+     "en": "Each Linux user has a home folder, for example /home/maria, with folders such as Documents and Pictures.",
+     "id": "Setiap pengguna Linux punya folder rumah, misalnya /home/maria, dengan folder seperti Dokumen dan Gambar.",
+     "pt": "Cada utilizador do Linux tem uma pasta pessoal, por exemplo /home/maria, com pastas como Documentos e Imagens.",
+     "tet": "Utilizadór Linux ida-idak iha pasta pesoál, ezemplu /home/maria, ho pasta sira hanesan Dokumentu no Imajen."
+    },
+    {
+     "en": "A file name often ends with an extension that tells its type: .txt is text, .png is a picture, .odt is a document.",
+     "id": "Nama berkas sering diakhiri ekstensi yang menunjukkan jenisnya: .txt teks, .png gambar, .odt dokumen.",
+     "pt": "O nome de um ficheiro termina muitas vezes numa extensão que indica o tipo: .txt é texto, .png é imagem, .odt é documento.",
+     "tet": "Fixeiru nia naran dala barak remata ho estensaun ne'ebé hatudu nia tipu: .txt mak testu, .png mak imajen, .odt mak dokumentu."
+    },
+    {
+     "en": "Useful shortcuts: Ctrl+C copies, Ctrl+V pastes, Ctrl+Z undoes and Ctrl+S saves.",
+     "id": "Pintasan berguna: Ctrl+C menyalin, Ctrl+V menempel, Ctrl+Z membatalkan, dan Ctrl+S menyimpan.",
+     "pt": "Atalhos úteis: Ctrl+C copia, Ctrl+V cola, Ctrl+Z anula e Ctrl+S guarda.",
+     "tet": "Atallu útil sira: Ctrl+C kopia, Ctrl+V kola, Ctrl+Z kansela asaun ikus no Ctrl+S rai."
+    }
+   ],
+   "task": {
+    "en": "Create a folder called Escola in your home folder, save a text file named notas.txt in it, then copy it with Ctrl+C and Ctrl+V.",
+    "id": "Buat folder bernama Escola di folder rumahmu, simpan berkas teks bernama notas.txt di dalamnya, lalu salin dengan Ctrl+C dan Ctrl+V.",
+    "pt": "Cria uma pasta chamada Escola na tua pasta pessoal, guarda nela um ficheiro de texto chamado notas.txt e depois copia-o com Ctrl+C e Ctrl+V.",
+    "tet": "Kria pasta ida ho naran Escola iha ita-nia pasta pesoál, rai fixeiru testu ida ho naran notas.txt iha laran, depois kopia ho Ctrl+C no Ctrl+V."
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "What does Ctrl+S do?",
+      "id": "Apa fungsi Ctrl+S?",
+      "pt": "O que faz Ctrl+S?",
+      "tet": "Ctrl+S halo saida?"
+     },
+     "answer": {
+      "en": "Saves the file",
+      "id": "Menyimpan berkas",
+      "pt": "Guarda o ficheiro",
+      "tet": "Rai fixeiru"
+     },
+     "wrong": [
+      {
+       "en": "Deletes the file",
+       "id": "Menghapus berkas",
+       "pt": "Apaga o ficheiro",
+       "tet": "Hamoos fixeiru"
+      },
+      {
+       "en": "Prints the file",
+       "id": "Mencetak berkas",
+       "pt": "Imprime o ficheiro",
+       "tet": "Imprime fixeiru"
+      },
+      {
+       "en": "Turns off the computer",
+       "id": "Mematikan komputer",
+       "pt": "Desliga o computador",
+       "tet": "Hamate komputadór"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "What type of file is foto.png?",
+      "id": "Berkas foto.png termasuk jenis apa?",
+      "pt": "Que tipo de ficheiro é foto.png?",
+      "tet": "foto.png mak fixeiru tipu saida?"
+     },
+     "answer": {
+      "en": "A picture",
+      "id": "Gambar",
+      "pt": "Uma imagem",
+      "tet": "Imajen"
+     },
+     "wrong": [
+      {
+       "en": "A text document",
+       "id": "Dokumen teks",
+       "pt": "Um documento de texto",
+       "tet": "Dokumentu testu"
+      },
+      {
+       "en": "A sound",
+       "id": "Suara",
+       "pt": "Um som",
+       "tet": "Son"
+      },
+      {
+       "en": "A program folder",
+       "id": "Folder program",
+       "pt": "Uma pasta de programas",
+       "tet": "Pasta programa nian"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "Where are a user's personal folders in Linux?",
+      "id": "Di mana folder pribadi pengguna di Linux?",
+      "pt": "Onde ficam as pastas pessoais de um utilizador no Linux?",
+      "tet": "Iha Linux, utilizadór nia pasta pesoál sira iha ne'ebé?"
+     },
+     "answer": {
+      "en": "In the home folder, e.g. /home/maria",
+      "id": "Di folder rumah, mis. /home/maria",
+      "pt": "Na pasta pessoal, p. ex. /home/maria",
+      "tet": "Iha pasta pesoál, ezemplu /home/maria"
+     },
+     "wrong": [
+      {
+       "en": "Inside the CPU",
+       "id": "Di dalam CPU",
+       "pt": "Dentro do processador",
+       "tet": "Iha CPU laran"
+      },
+      {
+       "en": "Inside the keyboard",
+       "id": "Di dalam papan ketik",
+       "pt": "Dentro do teclado",
+       "tet": "Iha teklada laran"
+      },
+      {
+       "en": "On the printer",
+       "id": "Di pencetak",
+       "pt": "Na impressora",
+       "tet": "Iha impresora"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "level": "secondary",
+   "title": {
+    "en": "How computers work inside",
+    "id": "Cara kerja komputer di dalam",
+    "pt": "Como o computador funciona por dentro",
+    "tet": "Oinsá komputadór servisu iha laran"
+   },
+   "points": [
+    {
+     "en": "Computers store everything as bits, 0 or 1. Eight bits make one byte, which can hold 256 different values.",
+     "id": "Komputer menyimpan segalanya sebagai bit, 0 atau 1. Delapan bit membentuk satu bita, yang dapat menyimpan 256 nilai berbeda.",
+     "pt": "O computador guarda tudo em bits, 0 ou 1. Oito bits formam um byte, que pode ter 256 valores diferentes.",
+     "tet": "Komputadór rai buat hotu hanesan bit, 0 ka 1. Bit ualu halo byte ida, ne'ebé bele rai valór oioin 256."
+    },
+    {
+     "en": "Binary is base 2: the binary number 101 equals 1×4 + 0×2 + 1×1 = 5.",
+     "id": "Biner adalah basis 2: bilangan biner 101 sama dengan 1×4 + 0×2 + 1×1 = 5.",
+     "pt": "O sistema binário é de base 2: o número binário 101 vale 1×4 + 0×2 + 1×1 = 5.",
+     "tet": "Binári mak baze 2: númeru binári 101 hanesan 1×4 + 0×2 + 1×1 = 5."
+    },
+    {
+     "en": "The operating system, like the Linux kernel in Edukasaun OS, shares the CPU, memory and files between programs.",
+     "id": "Sistem operasi, seperti kernel Linux di Edukasaun OS, membagi CPU, memori, dan berkas di antara program.",
+     "pt": "O sistema operativo, como o núcleo Linux no Edukasaun OS, reparte o processador, a memória e os ficheiros entre os programas.",
+     "tet": "Sistema operativu, hanesan kernel Linux iha Edukasaun OS, fahe CPU, memória no fixeiru ba programa sira."
+    },
+    {
+     "en": "Units grow by about 1 000: 1 kilobyte ≈ 1 000 bytes, 1 megabyte ≈ 1 000 kB and 1 gigabyte ≈ 1 000 MB.",
+     "id": "Satuan naik sekitar 1 000 kali: 1 kilobita ≈ 1 000 bita, 1 megabita ≈ 1 000 kB, dan 1 gigabita ≈ 1 000 MB.",
+     "pt": "As unidades crescem cerca de 1 000 vezes: 1 kilobyte ≈ 1 000 bytes, 1 megabyte ≈ 1 000 kB e 1 gigabyte ≈ 1 000 MB.",
+     "tet": "Unidade sira sa'e kuaze dala 1 000: 1 kilobyte ≈ 1 000 bytes, 1 megabyte ≈ 1 000 kB no 1 gigabyte ≈ 1 000 MB."
+    }
+   ],
+   "task": {
+    "en": "Write the numbers 1 to 8 in binary and check that 8 is 1000.",
+    "id": "Tulis bilangan 1 sampai 8 dalam biner dan periksa bahwa 8 adalah 1000.",
+    "pt": "Escreve os números de 1 a 8 em binário e verifica que 8 é 1000.",
+    "tet": "Hakerek númeru 1 to'o 8 iha binári no haree katak 8 mak 1000."
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "How many different values can one byte hold?",
+      "id": "Berapa banyak nilai berbeda yang dapat disimpan satu bita?",
+      "pt": "Quantos valores diferentes pode ter um byte?",
+      "tet": "Byte ida bele rai valór oioin hira?"
+     },
+     "answer": {
+      "en": "256",
+      "id": "256",
+      "pt": "256",
+      "tet": "256"
+     },
+     "wrong": [
+      {
+       "en": "8",
+       "id": "8",
+       "pt": "8",
+       "tet": "8"
+      },
+      {
+       "en": "100",
+       "id": "100",
+       "pt": "100",
+       "tet": "100"
+      },
+      {
+       "en": "1 024",
+       "id": "1 024",
+       "pt": "1 024",
+       "tet": "1 024"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "What is the binary number 101 in decimal?",
+      "id": "Berapakah bilangan biner 101 dalam desimal?",
+      "pt": "Quanto vale o número binário 101 em decimal?",
+      "tet": "Númeru binári 101 iha desimál hanesan saida?"
+     },
+     "answer": {
+      "en": "5",
+      "id": "5",
+      "pt": "5",
+      "tet": "5"
+     },
+     "wrong": [
+      {
+       "en": "101",
+       "id": "101",
+       "pt": "101",
+       "tet": "101"
+      },
+      {
+       "en": "3",
+       "id": "3",
+       "pt": "3",
+       "tet": "3"
+      },
+      {
+       "en": "7",
+       "id": "7",
+       "pt": "7",
+       "tet": "7"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "What does the operating system do?",
+      "id": "Apa yang dilakukan sistem operasi?",
+      "pt": "O que faz o sistema operativo?",
+      "tet": "Sistema operativu halo saida?"
+     },
+     "answer": {
+      "en": "Shares the CPU, memory and files between programs",
+      "id": "Membagi CPU, memori, dan berkas di antara program",
+      "pt": "Reparte o processador, a memória e os ficheiros entre programas",
+      "tet": "Fahe CPU, memória no fixeiru ba programa sira"
+     },
+     "wrong": [
+      {
+       "en": "Only makes the screen brighter",
+       "id": "Hanya membuat layar lebih terang",
+       "pt": "Só torna o ecrã mais brilhante",
+       "tet": "Halo ekrã naroman liu deit"
+      },
+      {
+       "en": "Only plays music",
+       "id": "Hanya memutar musik",
+       "pt": "Só toca música",
+       "tet": "Toka múzika deit"
+      },
+      {
+       "en": "Builds the keyboard",
+       "id": "Membuat papan ketik",
+       "pt": "Fabrica o teclado",
+       "tet": "Halo teklada"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "level": "university",
+   "title": {
+    "en": "Computer architecture and the terminal",
+    "id": "Arsitektur komputer dan terminal",
+    "pt": "Arquitetura de computadores e o terminal",
+    "tet": "Arkitetura komputadór no terminál"
+   },
+   "points": [
+    {
+     "en": "In the von Neumann architecture, programs and data share one memory, and the CPU repeats a fetch–decode–execute cycle.",
+     "id": "Dalam arsitektur von Neumann, program dan data berbagi satu memori, dan CPU mengulang siklus ambil–dekode–eksekusi.",
+     "pt": "Na arquitetura de von Neumann, programas e dados partilham a mesma memória e o processador repete o ciclo buscar–descodificar–executar.",
+     "tet": "Iha arkitetura von Neumann, programa no dadus fahe memória ida, no CPU halo beibeik siklu foti–deskodifika–ezekuta."
+    },
+    {
+     "en": "The memory hierarchy trades speed for size: registers and cache are fastest and smallest, then RAM, then SSD or hard disk.",
+     "id": "Hierarki memori menukar kecepatan dengan ukuran: register dan cache paling cepat dan kecil, lalu RAM, lalu SSD atau cakram keras.",
+     "pt": "A hierarquia de memória troca velocidade por tamanho: registos e cache são os mais rápidos e pequenos, depois a RAM, depois o SSD ou disco rígido.",
+     "tet": "Ierarkia memória troka lalais ho tamañu: rejistu no cache mak lalais liu no ki'ik liu, depois RAM, depois SSD ka disku rijidu."
+    },
+    {
+     "en": "The Linux terminal runs commands such as ls (list files), cd (change folder) and mkdir (make a folder). Scripts automate repeated work.",
+     "id": "Terminal Linux menjalankan perintah seperti ls (daftar berkas), cd (pindah folder), dan mkdir (buat folder). Skrip mengotomatiskan pekerjaan berulang.",
+     "pt": "O terminal Linux executa comandos como ls (listar ficheiros), cd (mudar de pasta) e mkdir (criar pasta). Os scripts automatizam tarefas repetidas.",
+     "tet": "Terminál Linux ezekuta komandu hanesan ls (hatudu lista fixeiru), cd (muda pasta) no mkdir (kria pasta). Script halo servisu ne'ebé repete ho automátiku."
+    },
+    {
+     "en": "Linux permissions (read, write, execute for owner, group and others) protect files. The chmod command changes them.",
+     "id": "Izin Linux (baca, tulis, eksekusi untuk pemilik, grup, dan lainnya) melindungi berkas. Perintah chmod mengubahnya.",
+     "pt": "As permissões do Linux (ler, escrever, executar para dono, grupo e outros) protegem os ficheiros. O comando chmod altera-as.",
+     "tet": "Permisaun Linux (lee, hakerek, ezekuta ba na'in, grupu no ema seluk) proteje fixeiru. Komandu chmod muda permisaun sira-ne'e."
+    }
+   ],
+   "task": {
+    "en": "Open the Terminal in Edukasaun OS, type pwd, ls and mkdir test, and explain what each command did.",
+    "id": "Buka Terminal di Edukasaun OS, ketik pwd, ls, dan mkdir test, lalu jelaskan apa yang dilakukan setiap perintah.",
+    "pt": "Abre o Terminal no Edukasaun OS, escreve pwd, ls e mkdir test e explica o que fez cada comando.",
+    "tet": "Loke Terminál iha Edukasaun OS, hakerek pwd, ls no mkdir test, no esplika saida mak komandu ida-idak halo."
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "Which cycle does the CPU repeat?",
+      "id": "Siklus apa yang diulang oleh CPU?",
+      "pt": "Que ciclo repete o processador?",
+      "tet": "CPU halo beibeik siklu saida?"
+     },
+     "answer": {
+      "en": "Fetch–decode–execute",
+      "id": "Ambil–dekode–eksekusi",
+      "pt": "Buscar–descodificar–executar",
+      "tet": "Foti–deskodifika–ezekuta"
+     },
+     "wrong": [
+      {
+       "en": "Save–print–close",
+       "id": "Simpan–cetak–tutup",
+       "pt": "Guardar–imprimir–fechar",
+       "tet": "Rai–imprime–taka"
+      },
+      {
+       "en": "Input–sleep–output",
+       "id": "Masuk–tidur–keluar",
+       "pt": "Entrada–dormir–saída",
+       "tet": "Tama–toba–sai"
+      },
+      {
+       "en": "Copy–paste–undo",
+       "id": "Salin–tempel–batal",
+       "pt": "Copiar–colar–anular",
+       "tet": "Kopia–kola–kansela"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "Which memory is the fastest?",
+      "id": "Memori mana yang paling cepat?",
+      "pt": "Qual é a memória mais rápida?",
+      "tet": "Memória ida ne'ebé mak lalais liu?"
+     },
+     "answer": {
+      "en": "CPU cache",
+      "id": "Cache CPU",
+      "pt": "A cache do processador",
+      "tet": "Cache CPU nian"
+     },
+     "wrong": [
+      {
+       "en": "Hard disk",
+       "id": "Cakram keras",
+       "pt": "O disco rígido",
+       "tet": "Disku rijidu"
+      },
+      {
+       "en": "USB flash drive",
+       "id": "Diska lepas USB",
+       "pt": "A pen USB",
+       "tet": "Pen USB"
+      },
+      {
+       "en": "DVD disc",
+       "id": "Cakram DVD",
+       "pt": "O disco DVD",
+       "tet": "Disku DVD"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "What does the ls command do?",
+      "id": "Apa fungsi perintah ls?",
+      "pt": "O que faz o comando ls?",
+      "tet": "Komandu ls halo saida?"
+     },
+     "answer": {
+      "en": "Lists the files in a folder",
+      "id": "Menampilkan daftar berkas dalam folder",
+      "pt": "Lista os ficheiros de uma pasta",
+      "tet": "Hatudu lista fixeiru iha pasta ida"
+     },
+     "wrong": [
+      {
+       "en": "Deletes all files",
+       "id": "Menghapus semua berkas",
+       "pt": "Apaga todos os ficheiros",
+       "tet": "Hamoos fixeiru hotu"
+      },
+      {
+       "en": "Shuts down the computer",
+       "id": "Mematikan komputer",
+       "pt": "Desliga o computador",
+       "tet": "Hamate komputadór"
+      },
+      {
+       "en": "Changes the password",
+       "id": "Mengganti kata sandi",
+       "pt": "Muda a palavra-passe",
+       "tet": "Muda liafuan-pase"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "level": "adult",
+   "title": {
+    "en": "Computers for work and everyday tasks",
+    "id": "Komputer untuk kerja dan tugas sehari-hari",
+    "pt": "O computador no trabalho e no dia a dia",
+    "tet": "Komputadór ba servisu no moris loroloron"
+   },
+   "points": [
+    {
+     "en": "A word processor such as LibreOffice Writer makes letters and reports. A spreadsheet such as LibreOffice Calc adds up sales, stock and prices.",
+     "id": "Pengolah kata seperti LibreOffice Writer membuat surat dan laporan. Lembar kerja seperti LibreOffice Calc menjumlahkan penjualan, stok, dan harga.",
+     "pt": "Um processador de texto como o LibreOffice Writer faz cartas e relatórios. Uma folha de cálculo como o LibreOffice Calc soma vendas, stock e preços.",
+     "tet": "Prosesadór testu hanesan LibreOffice Writer halo karta no relatóriu. Folla kálkulu hanesan LibreOffice Calc soma fa'an, stok no folin."
+    },
+    {
+     "en": "Back up important files regularly to a USB drive or another computer, so a broken disk does not lose your work.",
+     "id": "Cadangkan berkas penting secara rutin ke diska USB atau komputer lain, agar pekerjaan tidak hilang jika disk rusak.",
+     "pt": "Faz cópias de segurança dos ficheiros importantes numa pen USB ou noutro computador, para não perder o trabalho se o disco avariar.",
+     "tet": "Halo kópia seguransa ba fixeiru importante sira iha pen USB ka komputadór seluk beibeik, atu ita-nia servisu la lakon se disku aat."
+    },
+    {
+     "en": "Use strong passwords, lock the screen when you leave your desk, and install updates when the system asks.",
+     "id": "Gunakan kata sandi yang kuat, kunci layar saat meninggalkan meja, dan pasang pembaruan ketika sistem meminta.",
+     "pt": "Usa palavras-passe fortes, bloqueia o ecrã quando sais da secretária e instala as atualizações quando o sistema pedir.",
+     "tet": "Uza liafuan-pase ne'ebé forte, xave ekrã bainhira ita sai husi meza, no instala atualizasaun bainhira sistema husu."
+    }
+   ],
+   "task": {
+    "en": "Make a spreadsheet of one week of market sales, use =SUM() for the total, and save a backup copy on a USB drive.",
+    "id": "Buat lembar kerja penjualan pasar selama satu minggu, gunakan =SUM() untuk total, dan simpan salinan cadangan di diska USB.",
+    "pt": "Faz uma folha de cálculo com as vendas de uma semana no mercado, usa =SUM() para o total e guarda uma cópia de segurança numa pen USB.",
+    "tet": "Halo folla kálkulu ida ba fa'an iha merkadu durante semana ida, uza =SUM() ba totál, no rai kópia seguransa iha pen USB."
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "Which program is best for adding up sales?",
+      "id": "Program apa yang paling cocok untuk menjumlahkan penjualan?",
+      "pt": "Que programa é melhor para somar vendas?",
+      "tet": "Programa ida ne'ebé mak di'ak liu atu soma fa'an?"
+     },
+     "answer": {
+      "en": "A spreadsheet",
+      "id": "Lembar kerja",
+      "pt": "Uma folha de cálculo",
+      "tet": "Folla kálkulu"
+     },
+     "wrong": [
+      {
+       "en": "A drawing program",
+       "id": "Program menggambar",
+       "pt": "Um programa de desenho",
+       "tet": "Programa dezeñu nian"
+      },
+      {
+       "en": "A music player",
+       "id": "Pemutar musik",
+       "pt": "Um leitor de música",
+       "tet": "Programa toka múzika"
+      },
+      {
+       "en": "A camera app",
+       "id": "Aplikasi kamera",
+       "pt": "Uma aplicação de câmara",
+       "tet": "Aplikasaun kámara"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "Why should you make backups?",
+      "id": "Mengapa kamu perlu membuat cadangan?",
+      "pt": "Porque deves fazer cópias de segurança?",
+      "tet": "Tanba saida mak ita tenke halo kópia seguransa?"
+     },
+     "answer": {
+      "en": "So you do not lose work if a disk breaks",
+      "id": "Agar pekerjaan tidak hilang jika disk rusak",
+      "pt": "Para não perder o trabalho se o disco avariar",
+      "tet": "Atu servisu la lakon se disku aat"
+     },
+     "wrong": [
+      {
+       "en": "To make the computer faster",
+       "id": "Agar komputer lebih cepat",
+       "pt": "Para o computador ficar mais rápido",
+       "tet": "Atu komputadór sai lalais liu"
+      },
+      {
+       "en": "To change the screen colour",
+       "id": "Untuk mengganti warna layar",
+       "pt": "Para mudar a cor do ecrã",
+       "tet": "Atu muda ekrã nia kór"
+      },
+      {
+       "en": "To delete old files automatically",
+       "id": "Untuk menghapus berkas lama otomatis",
+       "pt": "Para apagar ficheiros antigos automaticamente",
+       "tet": "Atu hamoos fixeiru tuan ho automátiku"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "What should you do when you leave your computer at work?",
+      "id": "Apa yang harus dilakukan saat meninggalkan komputer di kantor?",
+      "pt": "O que deves fazer quando deixas o computador no trabalho?",
+      "tet": "Ita tenke halo saida bainhira husik komputadór iha servisu?"
+     },
+     "answer": {
+      "en": "Lock the screen",
+      "id": "Mengunci layar",
+      "pt": "Bloquear o ecrã",
+      "tet": "Xave ekrã"
+     },
+     "wrong": [
+      {
+       "en": "Leave it unlocked",
+       "id": "Membiarkannya tidak terkunci",
+       "pt": "Deixá-lo desbloqueado",
+       "tet": "Husik nia la xave"
+      },
+      {
+       "en": "Stick your password on the screen",
+       "id": "Menempel kata sandi di layar",
+       "pt": "Colar a palavra-passe no ecrã",
+       "tet": "Tau liafuan-pase iha ekrã"
+      },
+      {
+       "en": "Unplug the keyboard",
+       "id": "Mencabut papan ketik",
+       "pt": "Desligar o teclado",
+       "tet": "Hasai teklada"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "level": "senior",
+   "title": {
+    "en": "Using a computer comfortably and safely",
+    "id": "Memakai komputer dengan nyaman dan aman",
+    "pt": "Usar o computador com conforto e segurança",
+    "tet": "Uza komputadór ho kmaan no seguru"
+   },
+   "points": [
+    {
+     "en": "Sit straight with the screen at eye level, about an arm's length away. Every 20 minutes, rest your eyes by looking far away.",
+     "id": "Duduk tegak dengan layar sejajar mata, kira-kira sejauh satu lengan. Setiap 20 menit, istirahatkan mata dengan melihat jauh.",
+     "pt": "Sente-se direito com o ecrã à altura dos olhos, a cerca de um braço de distância. A cada 20 minutos, descanse os olhos olhando para longe.",
+     "tet": "Tuur loos ho ekrã iha matan nia altura, dook kuaze liman ida. Kada minutu 20, halo deskansa ba matan hodi haree ba dook."
+    },
+    {
+     "en": "You can make letters and icons bigger in the settings, or zoom with Ctrl and +. This helps tired eyes.",
+     "id": "Anda dapat memperbesar huruf dan ikon di pengaturan, atau memperbesar dengan Ctrl dan +. Ini membantu mata yang lelah.",
+     "pt": "Pode aumentar as letras e os ícones nas definições, ou ampliar com Ctrl e +. Isto ajuda os olhos cansados.",
+     "tet": "Ita bele halo letra no íkone boot liu iha konfigurasaun, ka hamboot ho Ctrl no +. Ida-ne'e ajuda matan ne'ebé kole."
+    },
+    {
+     "en": "Grandchildren can teach you the computer, and you can teach them your stories and knowledge. Practise together, one step at a time.",
+     "id": "Cucu dapat mengajari Anda komputer, dan Anda dapat mengajarkan cerita serta pengetahuan Anda. Berlatihlah bersama, selangkah demi selangkah.",
+     "pt": "Os netos podem ensinar-lhe o computador, e o senhor ou a senhora pode ensinar-lhes as suas histórias e saberes. Pratiquem juntos, passo a passo.",
+     "tet": "Bei-oan sira bele hanorin ita kona-ba komputadór, no ita bele hanorin sira ita-nia istória no matenek. Pratika hamutuk, pasu ida-ida."
+    }
+   ],
+   "task": {
+    "en": "Ask a grandchild to show you how to make the text bigger, then type a short story from your life together.",
+    "id": "Minta cucu menunjukkan cara memperbesar tulisan, lalu ketik bersama sebuah cerita pendek dari hidup Anda.",
+    "pt": "Peça a um neto que lhe mostre como aumentar o texto e depois escrevam juntos uma pequena história da sua vida.",
+    "tet": "Husu bei-oan ida atu hatudu oinsá halo letra boot, depois hakerek hamutuk istória badak ida husi ita-nia moris."
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "How often should you rest your eyes at the computer?",
+      "id": "Seberapa sering Anda perlu mengistirahatkan mata di depan komputer?",
+      "pt": "Com que frequência deve descansar os olhos ao computador?",
+      "tet": "Dala hira mak ita tenke deskansa matan bainhira uza komputadór?"
+     },
+     "answer": {
+      "en": "About every 20 minutes",
+      "id": "Sekitar setiap 20 menit",
+      "pt": "Mais ou menos a cada 20 minutos",
+      "tet": "Kuaze kada minutu 20"
+     },
+     "wrong": [
+      {
+       "en": "Once a week",
+       "id": "Seminggu sekali",
+       "pt": "Uma vez por semana",
+       "tet": "Dala ida semana ida"
+      },
+      {
+       "en": "Never",
+       "id": "Tidak pernah",
+       "pt": "Nunca",
+       "tet": "Nunka"
+      },
+      {
+       "en": "Every 5 hours",
+       "id": "Setiap 5 jam",
+       "pt": "A cada 5 horas",
+       "tet": "Kada oras 5"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "How can you make text bigger on the screen?",
+      "id": "Bagaimana cara memperbesar tulisan di layar?",
+      "pt": "Como pode aumentar o texto no ecrã?",
+      "tet": "Oinsá mak ita bele halo letra iha ekrã boot liu?"
+     },
+     "answer": {
+      "en": "Use the settings or press Ctrl and +",
+      "id": "Gunakan pengaturan atau tekan Ctrl dan +",
+      "pt": "Usar as definições ou carregar em Ctrl e +",
+      "tet": "Uza konfigurasaun ka hanehan Ctrl no +"
+     },
+     "wrong": [
+      {
+       "en": "Turn off the computer",
+       "id": "Mematikan komputer",
+       "pt": "Desligar o computador",
+       "tet": "Hamate komputadór"
+      },
+      {
+       "en": "Unplug the mouse",
+       "id": "Mencabut tetikus",
+       "pt": "Desligar o rato",
+       "tet": "Hasai rato"
+      },
+      {
+       "en": "Close all windows",
+       "id": "Menutup semua jendela",
+       "pt": "Fechar todas as janelas",
+       "tet": "Taka janela hotu"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "Where should the screen be?",
+      "id": "Di mana posisi layar yang baik?",
+      "pt": "Onde deve ficar o ecrã?",
+      "tet": "Ekrã tenke iha ne'ebé?"
+     },
+     "answer": {
+      "en": "At eye level, about an arm's length away",
+      "id": "Sejajar mata, sekitar satu lengan jauhnya",
+      "pt": "À altura dos olhos, a um braço de distância",
+      "tet": "Iha matan nia altura, dook kuaze liman ida"
+     },
+     "wrong": [
+      {
+       "en": "Very close to your nose",
+       "id": "Sangat dekat dengan hidung",
+       "pt": "Muito perto do nariz",
+       "tet": "Besik liu ba inus"
+      },
+      {
+       "en": "On the floor",
+       "id": "Di lantai",
+       "pt": "No chão",
+       "tet": "Iha rai"
+      },
+      {
+       "en": "Behind you",
+       "id": "Di belakang Anda",
+       "pt": "Atrás de si",
+       "tet": "Iha ita-nia kotuk"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

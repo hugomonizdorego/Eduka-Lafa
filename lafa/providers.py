@@ -118,6 +118,9 @@ class ProviderClient:
             elif p == "gemini":
                 data = json_request("https://generativelanguage.googleapis.com/v1beta/models?pageSize=200", headers={"x-goog-api-key":key}, timeout=15)
                 names = [str(m.get("name", "")).removeprefix("models/") for m in data.get("models", []) if isinstance(m, dict) and "generateContent" in m.get("supportedGenerationMethods", [])]
+            elif p == "openrouter":
+                data = json_request("https://openrouter.ai/api/v1/models", headers={"Authorization":f"Bearer {key}"}, timeout=15)
+                names = [m.get("id") for m in data.get("data", []) if isinstance(m, dict)]
             elif p == "deepseek":
                 data = json_request("https://api.deepseek.com/models", headers={"Authorization":f"Bearer {key}"}, timeout=15)
                 names = [m.get("id") for m in data.get("data", []) if isinstance(m, dict)]

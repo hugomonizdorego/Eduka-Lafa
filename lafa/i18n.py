@@ -330,7 +330,8 @@ CHAT={
  'no_public_results':"Ha'u la hetan resposta ba ida-ne'e."},
 }
 
-CATALOG={code:{**dict(zip(KEYS,strings)),**EXTRA[code],**NEW[code],**RELEASE[code],**ALPHA[code],**REDESIGN[code],**SCHOOL[code],**CONFIG[code],**CLASS[code],**DESIGN[code],**AERO[code],**CHAT[code]} for code,strings in STRINGS.items()}
+from .i18n_v2 import V2
+CATALOG={code:{**dict(zip(KEYS,strings)),**EXTRA[code],**NEW[code],**RELEASE[code],**ALPHA[code],**REDESIGN[code],**SCHOOL[code],**CONFIG[code],**CLASS[code],**DESIGN[code],**AERO[code],**CHAT[code],**V2[code]} for code,strings in STRINGS.items()}
 
 def _outfit_terms():
     """Activity and outfit names live with LAFA's personality data."""

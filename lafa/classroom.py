@@ -218,6 +218,13 @@ def _bank(subject, lang, rng):
 def questions(subject, lang="en", count=10, rng=None):
     """`count` different questions about a subject ("all" mixes every subject)."""
     rng = rng or random.Random()
+    if str(subject).startswith("age:"):
+        # Learning for every age: "age:<subject>:<level>" (either part may be empty).
+        from . import curriculum
+        _, key, level = (subject.split(":") + ["", ""])[:3]
+        pool = curriculum.questions(key or None, level or None, lang, 1000, rng)
+        while len(pool) < count and pool: pool += pool[:count - len(pool)]
+        return pool[:count]
     if subject == "all":
         per = max(1, -(-count // len(SUBJECTS))); pool = []
         for s in SUBJECTS: pool += questions(s, lang, per, rng)
@@ -243,11 +250,17 @@ def grade(percent, lang="en"):
     for limit, name in GRADES:
         if percent >= limit: return text(name, lang)
 
+def valid_age_subject(subject):
+    from . import curriculum
+    parts = str(subject).split(":")
+    return (len(parts) in (2, 3) and parts[0] == "age" and (not parts[1] or curriculum.subject(parts[1]) is not None)
+            and (len(parts) == 2 or not parts[2] or parts[2] in curriculum.LEVEL_KEYS) and any(parts[1:]))
+
 class ExamSession:
     """One quiz, test or exam. Answers are checked on this computer."""
     def __init__(self, kind="quiz", subject="all", lang="en", rng=None, clock=time.monotonic):
         if kind not in KINDS: raise ValueError("Unknown exam kind.")
-        if subject != "all" and subject not in SUBJECTS: raise ValueError("Unknown subject.")
+        if subject != "all" and subject not in SUBJECTS and not valid_age_subject(subject): raise ValueError("Unknown subject.")
         self.kind, self.subject, self.lang, self.clock = kind, subject, lang, clock
         count, self.limit = KINDS[kind]
         self.items = questions(subject, lang, count, rng); self.index = 0; self.answers = []; self.started = clock()
@@ -302,6 +315,11 @@ class ReportCard:
         return "\n".join(lines) + "\n"
 
 def subject_name(subject, lang):
+    if str(subject).startswith("age:"):
+        from . import curriculum
+        _, key, level = (subject.split(":") + ["", ""])[:3]
+        names = [curriculum.subject_name(key, lang) if key else "", curriculum.level_name(level, lang).split(" · ")[0] if level else ""]
+        return " · ".join(n for n in names if n)
     if subject == "all":
         from .i18n import tr
         return tr(lang, "all_subjects")

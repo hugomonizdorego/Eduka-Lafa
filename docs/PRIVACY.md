@@ -12,6 +12,22 @@
   belong to the receiving site, so do not include private information. Prepared
   greetings and supportive replies are local; general AI conversation requires
   an optional configured provider.
+- LAFA's memory (`~/.cache/lafa/memory`, 0600) holds only public web pages
+  of the listed learning and Timor-Leste sources, read when online about once
+  an hour (robots.txt respected, HTTPS only, Facebook pages never read), and
+  Wikipedia articles LAFA showed. Searching the memory never leaves the
+  computer. With an AI signed in, the best public passages are sent with the
+  question so the AI can cite them.
+- AI Hub web tabs keep their sign-in cookies in a private LAFA profile
+  (`~/.local/share/lafa/aihub`, 0700). Passwords are typed on the AI
+  company's own page. LAFA never reads those cookies, tokens or the answers;
+  "Ask the selected AIs" only types the question into the pages. Camera,
+  microphone, location and notification requests are refused.
+- OpenRouter sign-in uses OAuth PKCE: openrouter.ai sends a one-time code to
+  a loopback address on this computer (localhost:3000) and LAFA exchanges it
+  for a key, which is kept in the system keyring (or only for the session).
+- Agent actions open installed programs from a fixed list (browser, files,
+  settings, calculator…) without a shell; nothing typed is executed.
 - Local filename results stay on the computer. Document reading is local;
   Summarize confirms provider and character count before sending selected text.
   Explain with AI likewise confirms before sending lesson code.
@@ -32,7 +48,7 @@
   a source is contacted when the user opens its link. Browser searches contact
   that site when opened. Reachability probes run every 30 seconds.
 - The mascot is disabled until enabled through Settings. It hides offline and
-  stops animation/voice. Reminders wait offline and are lost when LAFA exits.
+  stops animation/voice. Reminders also fire offline and are lost when LAFA exits.
 - Local IPC accepts five fixed same-user launch roles. It cannot submit a
   command, URL, message or filename. No network listener is included.
 - `scripts/check-system.py` makes no public requests unless `--network` is

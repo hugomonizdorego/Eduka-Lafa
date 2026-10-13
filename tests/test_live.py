@@ -68,7 +68,7 @@ class LiveTests(unittest.TestCase):
     def test_reminder_clock_cancel_and_offline_delivery(self):
         now=[0];reminders=Reminders(lambda:now[0]);first=reminders.add(1,'Water');second=reminders.add(2,'Stretch')
         reminders.cancel(second.id);now[0]=59;self.assertEqual(reminders.due(True),[])
-        now[0]=60;self.assertEqual(reminders.due(False),[]);self.assertEqual(reminders.due(True),[first]);self.assertEqual(reminders.due(True),[])
+        now[0]=60;self.assertEqual(reminders.due(False),[first]);self.assertEqual(reminders.due(True),[])
     def test_reminder_validation(self):
         reminders=Reminders()
         for minutes,text in [(0,'a'),(1441,'a'),(1,''),(1,'a'*241),(float('nan'),'a')]:

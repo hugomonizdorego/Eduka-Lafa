@@ -1,0 +1,1015 @@
+{
+ "subject": "math",
+ "icon": "🔢",
+ "name": {
+  "en": "Mathematics",
+  "id": "Matematika",
+  "pt": "Matemática",
+  "tet": "Matemátika"
+ },
+ "lessons": [
+  {
+   "level": "early",
+   "title": {
+    "en": "Let's count to 10",
+    "id": "Ayo berhitung sampai 10",
+    "pt": "Vamos contar até 10",
+    "tet": "Mai ita sura to'o 10"
+   },
+   "points": [
+    {
+     "en": "We count: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10.",
+     "id": "Kita berhitung: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10.",
+     "pt": "Contamos: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10.",
+     "tet": "Ita sura: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10."
+    },
+    {
+     "en": "Two hands have 10 fingers.",
+     "id": "Dua tangan punya 10 jari.",
+     "pt": "Duas mãos têm 10 dedos.",
+     "tet": "Liman rua iha liman-fuan 10."
+    },
+    {
+     "en": "Adding means putting things together. 2 mangoes and 1 mango make 3 mangoes.",
+     "id": "Menambah artinya menggabungkan. 2 mangga dan 1 mangga menjadi 3 mangga.",
+     "pt": "Somar é juntar. 2 mangas e 1 manga são 3 mangas.",
+     "tet": "Aumenta katak tau hamutuk. Haas 2 no haas 1 sai haas 3."
+    }
+   ],
+   "task": {
+    "en": "Count the chairs in your house. Then count the doors.",
+    "id": "Hitung kursi di rumahmu. Lalu hitung pintunya.",
+    "pt": "Conta as cadeiras da tua casa. Depois conta as portas.",
+    "tet": "Sura kadeira sira iha ita-nia uma. Depois sura odamatan sira."
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "How many fingers are on two hands?",
+      "id": "Berapa jari di dua tangan?",
+      "pt": "Quantos dedos há em duas mãos?",
+      "tet": "Liman rua iha liman-fuan hira?"
+     },
+     "answer": {
+      "en": "10",
+      "id": "10",
+      "pt": "10",
+      "tet": "10"
+     },
+     "wrong": [
+      {
+       "en": "5",
+       "id": "5",
+       "pt": "5",
+       "tet": "5"
+      },
+      {
+       "en": "8",
+       "id": "8",
+       "pt": "8",
+       "tet": "8"
+      },
+      {
+       "en": "12",
+       "id": "12",
+       "pt": "12",
+       "tet": "12"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "2 mangoes and 1 mango make how many mangoes?",
+      "id": "2 mangga dan 1 mangga menjadi berapa mangga?",
+      "pt": "2 mangas e 1 manga são quantas mangas?",
+      "tet": "Haas 2 no haas 1 sai haas hira?"
+     },
+     "answer": {
+      "en": "3",
+      "id": "3",
+      "pt": "3",
+      "tet": "3"
+     },
+     "wrong": [
+      {
+       "en": "2",
+       "id": "2",
+       "pt": "2",
+       "tet": "2"
+      },
+      {
+       "en": "4",
+       "id": "4",
+       "pt": "4",
+       "tet": "4"
+      },
+      {
+       "en": "1",
+       "id": "1",
+       "pt": "1",
+       "tet": "1"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "Which number comes after 5?",
+      "id": "Angka berapa yang datang sesudah 5?",
+      "pt": "Que número vem depois do 5?",
+      "tet": "Númeru saida mak mai depois 5?"
+     },
+     "answer": {
+      "en": "6",
+      "id": "6",
+      "pt": "6",
+      "tet": "6"
+     },
+     "wrong": [
+      {
+       "en": "4",
+       "id": "4",
+       "pt": "4",
+       "tet": "4"
+      },
+      {
+       "en": "7",
+       "id": "7",
+       "pt": "7",
+       "tet": "7"
+      },
+      {
+       "en": "5",
+       "id": "5",
+       "pt": "5",
+       "tet": "5"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "level": "primary",
+   "title": {
+    "en": "Multiplying and sharing at the market",
+    "id": "Mengalikan dan membagi di pasar",
+    "pt": "Multiplicar e dividir no mercado",
+    "tet": "Multiplika no fahe iha merkadu"
+   },
+   "points": [
+    {
+     "en": "Multiplication is quick adding: 3 × 4 means 4 + 4 + 4 = 12.",
+     "id": "Perkalian adalah penjumlahan cepat: 3 × 4 artinya 4 + 4 + 4 = 12.",
+     "pt": "Multiplicar é somar depressa: 3 × 4 quer dizer 4 + 4 + 4 = 12.",
+     "tet": "Multiplika mak aumenta lalais: 3 × 4 katak 4 + 4 + 4 = 12."
+    },
+    {
+     "en": "At the market, 5 bananas at 10 cents each cost 5 × 10 = 50 cents.",
+     "id": "Di pasar, 5 pisang seharga 10 sen per buah harganya 5 × 10 = 50 sen.",
+     "pt": "No mercado, 5 bananas a 10 cêntimos cada custam 5 × 10 = 50 cêntimos.",
+     "tet": "Iha merkadu, hudi 5 ho folin sentavu 10 ida-idak, folin hotu 5 × 10 = sentavu 50."
+    },
+    {
+     "en": "Order does not change the answer: 3 × 4 = 4 × 3.",
+     "id": "Urutan tidak mengubah hasil: 3 × 4 = 4 × 3.",
+     "pt": "A ordem não muda o resultado: 3 × 4 = 4 × 3.",
+     "tet": "Orden la muda resposta: 3 × 4 = 4 × 3."
+    },
+    {
+     "en": "Dividing shares equally: 12 eggs for 3 families is 12 ÷ 3 = 4 eggs each.",
+     "id": "Pembagian membagi rata: 12 telur untuk 3 keluarga adalah 12 ÷ 3 = 4 telur masing-masing.",
+     "pt": "Dividir é repartir igualmente: 12 ovos para 3 famílias são 12 ÷ 3 = 4 ovos cada.",
+     "tet": "Fahe katak fahe hanesan: manu-tolun 12 ba família 3 mak 12 ÷ 3 = manu-tolun 4 ida-idak."
+    }
+   ],
+   "task": {
+    "en": "Write the times tables up to 5 × 5 and stick them on the wall.",
+    "id": "Tulis tabel perkalian sampai 5 × 5 dan tempel di dinding.",
+    "pt": "Escreve a tabuada até 5 × 5 e cola-a na parede.",
+    "tet": "Hakerek tabela multiplikasaun to'o 5 × 5 no tara iha didin."
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "What is 3 × 4?",
+      "id": "Berapa 3 × 4?",
+      "pt": "Quanto é 3 × 4?",
+      "tet": "3 × 4 hamutuk hira?"
+     },
+     "answer": {
+      "en": "12",
+      "id": "12",
+      "pt": "12",
+      "tet": "12"
+     },
+     "wrong": [
+      {
+       "en": "7",
+       "id": "7",
+       "pt": "7",
+       "tet": "7"
+      },
+      {
+       "en": "10",
+       "id": "10",
+       "pt": "10",
+       "tet": "10"
+      },
+      {
+       "en": "34",
+       "id": "34",
+       "pt": "34",
+       "tet": "34"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "5 bananas cost 10 cents each. How much for all?",
+      "id": "5 pisang harganya 10 sen per buah. Berapa semuanya?",
+      "pt": "5 bananas custam 10 cêntimos cada. Quanto custam todas?",
+      "tet": "Hudi 5, folin sentavu 10 ida-idak. Folin hotu hira?"
+     },
+     "answer": {
+      "en": "50 cents",
+      "id": "50 sen",
+      "pt": "50 cêntimos",
+      "tet": "sentavu 50"
+     },
+     "wrong": [
+      {
+       "en": "15 cents",
+       "id": "15 sen",
+       "pt": "15 cêntimos",
+       "tet": "sentavu 15"
+      },
+      {
+       "en": "5 cents",
+       "id": "5 sen",
+       "pt": "5 cêntimos",
+       "tet": "sentavu 5"
+      },
+      {
+       "en": "500 cents",
+       "id": "500 sen",
+       "pt": "500 cêntimos",
+       "tet": "sentavu 500"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "12 eggs are shared by 3 families. How many eggs does each get?",
+      "id": "12 telur dibagi untuk 3 keluarga. Masing-masing dapat berapa?",
+      "pt": "12 ovos são divididos por 3 famílias. Quantos recebe cada uma?",
+      "tet": "Manu-tolun 12 fahe ba família 3. Ida-idak hetan hira?"
+     },
+     "answer": {
+      "en": "4",
+      "id": "4",
+      "pt": "4",
+      "tet": "4"
+     },
+     "wrong": [
+      {
+       "en": "3",
+       "id": "3",
+       "pt": "3",
+       "tet": "3"
+      },
+      {
+       "en": "6",
+       "id": "6",
+       "pt": "6",
+       "tet": "6"
+      },
+      {
+       "en": "9",
+       "id": "9",
+       "pt": "9",
+       "tet": "9"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "level": "middle",
+   "title": {
+    "en": "Percentages and simple equations",
+    "id": "Persentase dan persamaan sederhana",
+    "pt": "Percentagens e equações simples",
+    "tet": "Persentajen no ekuasaun simples"
+   },
+   "points": [
+    {
+     "en": "Percent means \"out of 100\": 25% = 25/100 = 1/4.",
+     "id": "Persen berarti \"per 100\": 25% = 25/100 = 1/4.",
+     "pt": "Percentagem quer dizer \"em cada 100\": 25% = 25/100 = 1/4.",
+     "tet": "Persentu katak \"husi 100\": 25% = 25/100 = 1/4."
+    },
+    {
+     "en": "To find 10% of a number, divide it by 10: 10% of $40 is $4.",
+     "id": "Untuk mencari 10% dari suatu bilangan, bagi dengan 10: 10% dari $40 adalah $4.",
+     "pt": "Para calcular 10% de um número, divide-o por 10: 10% de 40 dólares são 4 dólares.",
+     "tet": "Atu buka 10% husi númeru ida, fahe ho 10: 10% husi $40 mak $4."
+    },
+    {
+     "en": "An equation is like a balance: do the same to both sides. To solve x + 7 = 15, subtract 7 from both sides, so x = 8.",
+     "id": "Persamaan seperti timbangan: lakukan hal yang sama di kedua sisi. Untuk x + 7 = 15, kurangi 7 di kedua sisi, jadi x = 8.",
+     "pt": "Uma equação é como uma balança: faz o mesmo nos dois lados. Em x + 7 = 15, subtrai 7 dos dois lados, logo x = 8.",
+     "tet": "Ekuasaun hanesan balansa: halo buat hanesan iha sorin rua. Atu rezolve x + 7 = 15, hasai 7 husi sorin rua, entaun x = 8."
+    }
+   ],
+   "task": {
+    "en": "Pick something you want to buy and work out 10% and 25% of its price.",
+    "id": "Pilih barang yang ingin kamu beli dan hitung 10% dan 25% dari harganya.",
+    "pt": "Escolhe algo que queres comprar e calcula 10% e 25% do seu preço.",
+    "tet": "Hili sasán ida ne'ebé ita hakarak sosa no sura 10% no 25% husi ninia folin."
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "Which fraction is the same as 25%?",
+      "id": "Pecahan mana yang sama dengan 25%?",
+      "pt": "Que fração é igual a 25%?",
+      "tet": "Frasaun saida mak hanesan ho 25%?"
+     },
+     "answer": {
+      "en": "1/4",
+      "id": "1/4",
+      "pt": "1/4",
+      "tet": "1/4"
+     },
+     "wrong": [
+      {
+       "en": "1/2",
+       "id": "1/2",
+       "pt": "1/2",
+       "tet": "1/2"
+      },
+      {
+       "en": "1/25",
+       "id": "1/25",
+       "pt": "1/25",
+       "tet": "1/25"
+      },
+      {
+       "en": "2/5",
+       "id": "2/5",
+       "pt": "2/5",
+       "tet": "2/5"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "What is 10% of $40?",
+      "id": "Berapa 10% dari $40?",
+      "pt": "Quanto são 10% de 40 dólares?",
+      "tet": "10% husi $40 mak hira?"
+     },
+     "answer": {
+      "en": "$4",
+      "id": "$4",
+      "pt": "$4",
+      "tet": "$4"
+     },
+     "wrong": [
+      {
+       "en": "$10",
+       "id": "$10",
+       "pt": "$10",
+       "tet": "$10"
+      },
+      {
+       "en": "$0.40",
+       "id": "$0.40",
+       "pt": "$0.40",
+       "tet": "$0.40"
+      },
+      {
+       "en": "$40",
+       "id": "$40",
+       "pt": "$40",
+       "tet": "$40"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "Solve x + 7 = 15.",
+      "id": "Selesaikan x + 7 = 15.",
+      "pt": "Resolve x + 7 = 15.",
+      "tet": "Rezolve x + 7 = 15."
+     },
+     "answer": {
+      "en": "x = 8",
+      "id": "x = 8",
+      "pt": "x = 8",
+      "tet": "x = 8"
+     },
+     "wrong": [
+      {
+       "en": "x = 22",
+       "id": "x = 22",
+       "pt": "x = 22",
+       "tet": "x = 22"
+      },
+      {
+       "en": "x = 7",
+       "id": "x = 7",
+       "pt": "x = 7",
+       "tet": "x = 7"
+      },
+      {
+       "en": "x = 9",
+       "id": "x = 9",
+       "pt": "x = 9",
+       "tet": "x = 9"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "level": "secondary",
+   "title": {
+    "en": "Quadratic equations",
+    "id": "Persamaan kuadrat",
+    "pt": "Equações do segundo grau",
+    "tet": "Ekuasaun kuadrátika"
+   },
+   "points": [
+    {
+     "en": "A quadratic equation has the form ax² + bx + c = 0, where a ≠ 0.",
+     "id": "Persamaan kuadrat berbentuk ax² + bx + c = 0, dengan a ≠ 0.",
+     "pt": "Uma equação do segundo grau tem a forma ax² + bx + c = 0, com a ≠ 0.",
+     "tet": "Ekuasaun kuadrátika iha forma ax² + bx + c = 0, ho a ≠ 0."
+    },
+    {
+     "en": "Its solutions are given by the quadratic formula: x = (−b ± √(b² − 4ac)) / 2a.",
+     "id": "Akar-akarnya diberikan oleh rumus kuadrat: x = (−b ± √(b² − 4ac)) / 2a.",
+     "pt": "As soluções são dadas pela fórmula resolvente: x = (−b ± √(b² − 4ac)) / 2a.",
+     "tet": "Ninia solusaun mai husi fórmula kuadrátika: x = (−b ± √(b² − 4ac)) / 2a."
+    },
+    {
+     "en": "The discriminant Δ = b² − 4ac decides the number of real solutions: two if Δ > 0, one if Δ = 0, none if Δ < 0.",
+     "id": "Diskriminan D = b² − 4ac menentukan banyaknya akar real: dua jika D > 0, satu jika D = 0, tidak ada jika D < 0.",
+     "pt": "O binómio discriminante Δ = b² − 4ac decide o número de soluções reais: duas se Δ > 0, uma se Δ = 0, nenhuma se Δ < 0.",
+     "tet": "Diskriminante Δ = b² − 4ac hatudu solusaun reál hira: rua se Δ > 0, ida se Δ = 0, la iha se Δ < 0."
+    },
+    {
+     "en": "Some quadratics factorise easily: x² − 5x + 6 = (x − 2)(x − 3), so x = 2 or x = 3.",
+     "id": "Beberapa persamaan kuadrat mudah difaktorkan: x² − 5x + 6 = (x − 2)(x − 3), jadi x = 2 atau x = 3.",
+     "pt": "Algumas equações fatorizam-se facilmente: x² − 5x + 6 = (x − 2)(x − 3), logo x = 2 ou x = 3.",
+     "tet": "Ekuasaun balu fasil atu fatoriza: x² − 5x + 6 = (x − 2)(x − 3), entaun x = 2 ka x = 3."
+    }
+   ],
+   "task": {
+    "en": "Solve x² − 7x + 10 = 0 by factorising, then check your answer with the formula.",
+    "id": "Selesaikan x² − 7x + 10 = 0 dengan pemfaktoran, lalu periksa dengan rumus.",
+    "pt": "Resolve x² − 7x + 10 = 0 por fatorização e confirma com a fórmula resolvente.",
+    "tet": "Rezolve x² − 7x + 10 = 0 ho fatorizasaun, depois verifika ho fórmula."
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "What are the solutions of x² − 5x + 6 = 0?",
+      "id": "Apa akar-akar dari x² − 5x + 6 = 0?",
+      "pt": "Quais são as soluções de x² − 5x + 6 = 0?",
+      "tet": "Solusaun husi x² − 5x + 6 = 0 mak saida?"
+     },
+     "answer": {
+      "en": "x = 2 and x = 3",
+      "id": "x = 2 dan x = 3",
+      "pt": "x = 2 e x = 3",
+      "tet": "x = 2 no x = 3"
+     },
+     "wrong": [
+      {
+       "en": "x = −2 and x = −3",
+       "id": "x = −2 dan x = −3",
+       "pt": "x = −2 e x = −3",
+       "tet": "x = −2 no x = −3"
+      },
+      {
+       "en": "x = 1 and x = 6",
+       "id": "x = 1 dan x = 6",
+       "pt": "x = 1 e x = 6",
+       "tet": "x = 1 no x = 6"
+      },
+      {
+       "en": "x = 5 and x = 6",
+       "id": "x = 5 dan x = 6",
+       "pt": "x = 5 e x = 6",
+       "tet": "x = 5 no x = 6"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "If b² − 4ac is negative, how many real solutions are there?",
+      "id": "Jika b² − 4ac negatif, ada berapa akar real?",
+      "pt": "Se b² − 4ac for negativo, quantas soluções reais existem?",
+      "tet": "Se b² − 4ac negativu, iha solusaun reál hira?"
+     },
+     "answer": {
+      "en": "None",
+      "id": "Tidak ada",
+      "pt": "Nenhuma",
+      "tet": "La iha"
+     },
+     "wrong": [
+      {
+       "en": "Two",
+       "id": "Dua",
+       "pt": "Duas",
+       "tet": "Rua"
+      },
+      {
+       "en": "One",
+       "id": "Satu",
+       "pt": "Uma",
+       "tet": "Ida"
+      },
+      {
+       "en": "Infinitely many",
+       "id": "Tak terhingga",
+       "pt": "Infinitas",
+       "tet": "La iha rohan"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "In ax² + bx + c = 0, which number must not be zero?",
+      "id": "Dalam ax² + bx + c = 0, bilangan mana yang tidak boleh nol?",
+      "pt": "Em ax² + bx + c = 0, que número não pode ser zero?",
+      "tet": "Iha ax² + bx + c = 0, númeru saida mak labele zero?"
+     },
+     "answer": {
+      "en": "a",
+      "id": "a",
+      "pt": "a",
+      "tet": "a"
+     },
+     "wrong": [
+      {
+       "en": "b",
+       "id": "b",
+       "pt": "b",
+       "tet": "b"
+      },
+      {
+       "en": "c",
+       "id": "c",
+       "pt": "c",
+       "tet": "c"
+      },
+      {
+       "en": "x",
+       "id": "x",
+       "pt": "x",
+       "tet": "x"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "level": "university",
+   "title": {
+    "en": "Derivatives and rates of change",
+    "id": "Turunan dan laju perubahan",
+    "pt": "Derivadas e taxas de variação",
+    "tet": "Derivada no taxa mudansa"
+   },
+   "points": [
+    {
+     "en": "The derivative f′(x) is the instantaneous rate of change of f, the slope of the tangent line at x.",
+     "id": "Turunan f′(x) adalah laju perubahan sesaat dari f, yaitu kemiringan garis singgung di x.",
+     "pt": "A derivada f′(x) é a taxa de variação instantânea de f, o declive da reta tangente em x.",
+     "tet": "Derivada f′(x) mak taxa mudansa instantánea husi f, katak inklinasaun liña tanjente iha x."
+    },
+    {
+     "en": "Power rule: the derivative of xⁿ is n·xⁿ⁻¹; for example (x³)′ = 3x².",
+     "id": "Aturan pangkat: turunan xⁿ adalah n·xⁿ⁻¹; misalnya (x³)′ = 3x².",
+     "pt": "Regra da potência: a derivada de xⁿ é n·xⁿ⁻¹; por exemplo, (x³)′ = 3x².",
+     "tet": "Regra poténsia: derivada husi xⁿ mak n·xⁿ⁻¹; ezemplu (x³)′ = 3x²."
+    },
+    {
+     "en": "At a local maximum or minimum of a differentiable function, f′(x) = 0; this is how we optimise.",
+     "id": "Pada maksimum atau minimum lokal fungsi yang terdiferensialkan, f′(x) = 0; inilah dasar optimasi.",
+     "pt": "Num máximo ou mínimo local de uma função derivável, f′(x) = 0; é assim que se otimiza.",
+     "tet": "Iha máximu ka mínimu lokál husi funsaun ne'ebé bele deriva, f′(x) = 0; ne'e mak dalan atu otimiza."
+    },
+    {
+     "en": "Integration reverses differentiation, and the definite integral gives the area under a curve.",
+     "id": "Integral adalah kebalikan turunan, dan integral tentu memberikan luas di bawah kurva.",
+     "pt": "A integração é o inverso da derivação, e o integral definido dá a área sob uma curva.",
+     "tet": "Integrál mak kontráriu husi derivada, no integrál definidu fó área iha kurva nia okos."
+    }
+   ],
+   "task": {
+    "en": "Find the derivative of f(x) = 3x² + 2x and the value of x where it equals zero.",
+    "id": "Cari turunan f(x) = 3x² + 2x dan nilai x saat turunannya nol.",
+    "pt": "Calcula a derivada de f(x) = 3x² + 2x e o valor de x em que se anula.",
+    "tet": "Buka derivada husi f(x) = 3x² + 2x no valór x ne'ebé halo derivada sai zero."
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "What is the derivative of x³?",
+      "id": "Apa turunan dari x³?",
+      "pt": "Qual é a derivada de x³?",
+      "tet": "Derivada husi x³ mak saida?"
+     },
+     "answer": {
+      "en": "3x²",
+      "id": "3x²",
+      "pt": "3x²",
+      "tet": "3x²"
+     },
+     "wrong": [
+      {
+       "en": "x²",
+       "id": "x²",
+       "pt": "x²",
+       "tet": "x²"
+      },
+      {
+       "en": "3x³",
+       "id": "3x³",
+       "pt": "3x³",
+       "tet": "3x³"
+      },
+      {
+       "en": "x⁴/4",
+       "id": "x⁴/4",
+       "pt": "x⁴/4",
+       "tet": "x⁴/4"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "Geometrically, what does f′(a) represent?",
+      "id": "Secara geometris, f′(a) menyatakan apa?",
+      "pt": "Geometricamente, o que representa f′(a)?",
+      "tet": "Iha jeometria, f′(a) reprezenta saida?"
+     },
+     "answer": {
+      "en": "The slope of the tangent at x = a",
+      "id": "Kemiringan garis singgung di x = a",
+      "pt": "O declive da tangente em x = a",
+      "tet": "Inklinasaun tanjente iha x = a"
+     },
+     "wrong": [
+      {
+       "en": "The area under the curve",
+       "id": "Luas di bawah kurva",
+       "pt": "A área sob a curva",
+       "tet": "Área iha kurva nia okos"
+      },
+      {
+       "en": "The value of f at zero",
+       "id": "Nilai f di titik nol",
+       "pt": "O valor de f em zero",
+       "tet": "Valór f iha zero"
+      },
+      {
+       "en": "The average of f",
+       "id": "Rata-rata nilai f",
+       "pt": "A média de f",
+       "tet": "Média husi f"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "At a local maximum of a smooth function, what is f′(x)?",
+      "id": "Pada maksimum lokal fungsi mulus, berapa f′(x)?",
+      "pt": "Num máximo local de uma função suave, quanto vale f′(x)?",
+      "tet": "Iha máximu lokál husi funsaun suave, f′(x) mak hira?"
+     },
+     "answer": {
+      "en": "0",
+      "id": "0",
+      "pt": "0",
+      "tet": "0"
+     },
+     "wrong": [
+      {
+       "en": "1",
+       "id": "1",
+       "pt": "1",
+       "tet": "1"
+      },
+      {
+       "en": "Always negative",
+       "id": "Selalu negatif",
+       "pt": "Sempre negativa",
+       "tet": "Negativu nafatin"
+      },
+      {
+       "en": "Infinite",
+       "id": "Tak hingga",
+       "pt": "Infinita",
+       "tet": "La iha rohan"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "level": "adult",
+   "title": {
+    "en": "Budgets, prices and interest",
+    "id": "Anggaran, harga, dan bunga",
+    "pt": "Orçamento, preços e juros",
+    "tet": "Orsamentu, folin no juru"
+   },
+   "points": [
+    {
+     "en": "A monthly budget lists income and expenses; when you spend less than you earn, you can save.",
+     "id": "Anggaran bulanan mencatat pemasukan dan pengeluaran; jika pengeluaran lebih kecil dari pemasukan, kamu bisa menabung.",
+     "pt": "Um orçamento mensal lista receitas e despesas; se gastares menos do que ganhas, consegues poupar.",
+     "tet": "Orsamentu fulan-fulan hakerek osan tama no osan sai; se ita gasta menus duké ita hetan, ita bele rai osan."
+    },
+    {
+     "en": "Simple interest = principal × rate × time: $200 at 5% a year for 2 years earns $20.",
+     "id": "Bunga sederhana = pokok × suku bunga × waktu: $200 dengan 5% per tahun selama 2 tahun menghasilkan $20.",
+     "pt": "Juro simples = capital × taxa × tempo: 200 dólares a 5% ao ano durante 2 anos rendem 20 dólares.",
+     "tet": "Juru simples = kapitál × taxa × tempu: $200 ho 5% kada tinan durante tinan 2 hetan $20."
+    },
+    {
+     "en": "Compare unit prices by dividing price by quantity: 10 kg of rice for $7 is $0.70 per kg.",
+     "id": "Bandingkan harga satuan dengan membagi harga dengan jumlah: 10 kg beras seharga $7 berarti $0,70 per kg.",
+     "pt": "Compara o preço unitário dividindo o preço pela quantidade: 10 kg de arroz por 7 dólares dá 0,70 dólares por kg.",
+     "tet": "Kompara folin kada unidade ho fahe folin ho kuantidade: fos kg 10 ho folin $7 katak $0.70 kada kg."
+    },
+    {
+     "en": "Borrowing costs money: always check the interest rate and the total you will repay before signing.",
+     "id": "Meminjam itu ada biayanya: selalu periksa suku bunga dan total yang harus dibayar sebelum menandatangani.",
+     "pt": "Pedir emprestado custa dinheiro: verifica sempre a taxa de juro e o total a pagar antes de assinar.",
+     "tet": "Empresta osan iha kustu: tenke haree uluk taxa juru no osan hotu ne'ebé ita tenke selu fila fali molok asina."
+    }
+   ],
+   "task": {
+    "en": "Write down your income and expenses for one month and find one cost you can cut.",
+    "id": "Catat pemasukan dan pengeluaranmu selama sebulan dan cari satu biaya yang bisa dikurangi.",
+    "pt": "Regista as tuas receitas e despesas durante um mês e encontra um custo que possas cortar.",
+    "tet": "Hakerek ita-nia osan tama no osan sai durante fulan ida no buka gastu ida ne'ebé ita bele hamenus."
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "How much simple interest do $200 earn at 5% a year for 2 years?",
+      "id": "Berapa bunga sederhana dari $200 dengan 5% per tahun selama 2 tahun?",
+      "pt": "Quanto rendem 200 dólares a juro simples de 5% ao ano durante 2 anos?",
+      "tet": "$200 ho juru simples 5% kada tinan durante tinan 2 hetan juru hira?"
+     },
+     "answer": {
+      "en": "$20",
+      "id": "$20",
+      "pt": "$20",
+      "tet": "$20"
+     },
+     "wrong": [
+      {
+       "en": "$10",
+       "id": "$10",
+       "pt": "$10",
+       "tet": "$10"
+      },
+      {
+       "en": "$200",
+       "id": "$200",
+       "pt": "$200",
+       "tet": "$200"
+      },
+      {
+       "en": "$2",
+       "id": "$2",
+       "pt": "$2",
+       "tet": "$2"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "Which rice is cheaper per kilogram?",
+      "id": "Beras mana yang lebih murah per kilogram?",
+      "pt": "Que arroz é mais barato por quilograma?",
+      "tet": "Fos ida ne'ebé mak baratu liu kada kilograma?"
+     },
+     "answer": {
+      "en": "10 kg for $7",
+      "id": "10 kg seharga $7",
+      "pt": "10 kg por 7 dólares",
+      "tet": "kg 10 ho folin $7"
+     },
+     "wrong": [
+      {
+       "en": "5 kg for $4",
+       "id": "5 kg seharga $4",
+       "pt": "5 kg por 4 dólares",
+       "tet": "kg 5 ho folin $4"
+      },
+      {
+       "en": "Both cost the same per kg",
+       "id": "Keduanya sama per kg",
+       "pt": "Custam o mesmo por kg",
+       "tet": "Rua ne'e folin hanesan kada kg"
+      },
+      {
+       "en": "It cannot be worked out",
+       "id": "Tidak bisa dihitung",
+       "pt": "Não é possível calcular",
+       "tet": "Labele sura"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "When does a budget let you save money?",
+      "id": "Kapan anggaran memungkinkan kamu menabung?",
+      "pt": "Quando é que um orçamento te permite poupar?",
+      "tet": "Bainhira mak orsamentu fó dalan ba ita atu rai osan?"
+     },
+     "answer": {
+      "en": "When expenses are less than income",
+      "id": "Saat pengeluaran lebih kecil dari pemasukan",
+      "pt": "Quando as despesas são menores do que as receitas",
+      "tet": "Bainhira osan sai menus duké osan tama"
+     },
+     "wrong": [
+      {
+       "en": "When expenses are more than income",
+       "id": "Saat pengeluaran lebih besar dari pemasukan",
+       "pt": "Quando as despesas são maiores do que as receitas",
+       "tet": "Bainhira osan sai barak liu osan tama"
+      },
+      {
+       "en": "When you borrow more",
+       "id": "Saat kamu meminjam lebih banyak",
+       "pt": "Quando pedes mais empréstimos",
+       "tet": "Bainhira ita empresta osan barak liu"
+      },
+      {
+       "en": "When you stop writing it down",
+       "id": "Saat kamu berhenti mencatat",
+       "pt": "Quando deixas de registar",
+       "tet": "Bainhira ita para hakerek"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "level": "senior",
+   "title": {
+    "en": "Everyday numbers and sharing them",
+    "id": "Angka sehari-hari dan berbagi ilmu",
+    "pt": "Números do dia a dia e partilhá-los",
+    "tet": "Númeru loron-loron no fahe matenek"
+   },
+   "points": [
+    {
+     "en": "Rounding makes shopping quick: $1.95 + $3.10 is about $2 + $3 = $5.",
+     "id": "Pembulatan mempercepat belanja: $1,95 + $3,10 kira-kira $2 + $3 = $5.",
+     "pt": "Arredondar facilita as compras: 1,95 + 3,10 dólares são cerca de 2 + 3 = 5 dólares.",
+     "tet": "Arredonda halo fasil sosa sasán: $1.95 + $3.10 besik $2 + $3 = $5."
+    },
+    {
+     "en": "A calendar and counting days help you keep track of appointments and the medicine times a health worker gives you.",
+     "id": "Kalender dan menghitung hari membantu mengingat janji temu dan waktu minum obat dari petugas kesehatan.",
+     "pt": "Um calendário e contar os dias ajudam a acompanhar consultas e as horas dos medicamentos indicadas pelo profissional de saúde.",
+     "tet": "Kalendáriu no sura loron ajuda ita hanoin konsulta no oras atu hemu ai-moruk ne'ebé funsionáriu saúde fó."
+    },
+    {
+     "en": "Counting games with grandchildren, using corn seeds or small stones, build their number sense.",
+     "id": "Permainan berhitung bersama cucu, memakai biji jagung atau batu kecil, melatih kepekaan angka mereka.",
+     "pt": "Jogos de contar com os netos, com grãos de milho ou pedrinhas, desenvolvem o seu sentido dos números.",
+     "tet": "Halimar sura ho bei-oan sira, uza batar-musan ka fatuk ki'ik, ajuda sira komprende númeru."
+    },
+    {
+     "en": "Doing mental sums every day is a good way to keep the mind active.",
+     "id": "Berhitung di kepala setiap hari adalah cara baik untuk menjaga pikiran tetap aktif.",
+     "pt": "Fazer contas de cabeça todos os dias é uma boa forma de manter a mente ativa.",
+     "tet": "Sura iha ulun loron-loron mak dalan di'ak atu mantein hanoin ativu."
+    }
+   ],
+   "task": {
+    "en": "Teach a grandchild to count to 20 with corn seeds, then add two small piles together.",
+    "id": "Ajari cucu berhitung sampai 20 dengan biji jagung, lalu jumlahkan dua tumpukan kecil.",
+    "pt": "Ensina um neto a contar até 20 com grãos de milho e depois a somar dois montinhos.",
+    "tet": "Hanorin bei-oan ida atu sura to'o 20 ho batar-musan, depois aumenta lotuk ki'ik rua hamutuk."
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "About how much is $1.95 + $3.10?",
+      "id": "Kira-kira berapa $1,95 + $3,10?",
+      "pt": "Quanto são, aproximadamente, 1,95 + 3,10 dólares?",
+      "tet": "$1.95 + $3.10 besik hira?"
+     },
+     "answer": {
+      "en": "$5",
+      "id": "$5",
+      "pt": "$5",
+      "tet": "$5"
+     },
+     "wrong": [
+      {
+       "en": "$4",
+       "id": "$4",
+       "pt": "$4",
+       "tet": "$4"
+      },
+      {
+       "en": "$6",
+       "id": "$6",
+       "pt": "$6",
+       "tet": "$6"
+      },
+      {
+       "en": "$10",
+       "id": "$10",
+       "pt": "$10",
+       "tet": "$10"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "What is 4.8 rounded to the nearest whole number?",
+      "id": "Berapa 4,8 dibulatkan ke bilangan bulat terdekat?",
+      "pt": "Quanto é 4,8 arredondado às unidades?",
+      "tet": "4.8 arredonda ba númeru inteiru besik liu mak hira?"
+     },
+     "answer": {
+      "en": "5",
+      "id": "5",
+      "pt": "5",
+      "tet": "5"
+     },
+     "wrong": [
+      {
+       "en": "4",
+       "id": "4",
+       "pt": "4",
+       "tet": "4"
+      },
+      {
+       "en": "48",
+       "id": "48",
+       "pt": "48",
+       "tet": "48"
+      },
+      {
+       "en": "6",
+       "id": "6",
+       "pt": "6",
+       "tet": "6"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "Which is a good way to help a grandchild learn numbers?",
+      "id": "Mana cara yang baik untuk membantu cucu belajar angka?",
+      "pt": "Qual é uma boa forma de ajudar um neto a aprender números?",
+      "tet": "Dalan di'ak saida atu ajuda bei-oan aprende númeru?"
+     },
+     "answer": {
+      "en": "Counting seeds or stones together",
+      "id": "Menghitung biji atau batu bersama",
+      "pt": "Contar grãos ou pedras em conjunto",
+      "tet": "Sura musan ka fatuk hamutuk"
+     },
+     "wrong": [
+      {
+       "en": "Doing their homework for them",
+       "id": "Mengerjakan PR mereka",
+       "pt": "Fazer-lhes os trabalhos de casa",
+       "tet": "Halo sira-nia servisu uma ba sira"
+      },
+      {
+       "en": "Only letting them use a calculator",
+       "id": "Hanya membiarkan mereka memakai kalkulator",
+       "pt": "Deixá-los usar só a calculadora",
+       "tet": "Husik sira uza de'it kalkuladora"
+      },
+      {
+       "en": "Avoiding numbers at home",
+       "id": "Menghindari angka di rumah",
+       "pt": "Evitar números em casa",
+       "tet": "Hadook númeru iha uma"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

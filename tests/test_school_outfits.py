@@ -123,7 +123,7 @@ class SchoolUI(unittest.TestCase):
         from lafa.app import PAGES
         keys = [key for key, _ in PAGES]
         self.assertEqual(keys[:6], ['home', 'classroom', 'teachers', 'exams', 'report', 'homework']); self.assertIn('os_help', keys)
-        self.assertEqual(self.w.page_title('learn'), 'Library'); self.assertEqual(self.w.page_title('os_help'), 'IT help desk')
+        self.assertEqual(self.w.page_title('learn'), 'Search & library'); self.assertEqual(self.w.page_title('os_help'), 'IT help desk')
     def test_teacher_practice_flow(self):
         self.w.navigate('teachers'); self.w.teacher_list.setCurrentRow(0)
         self.w.math_answer.setText(str(self.w.math.answer)); self.w.check_math(); self.assertIn('Correct', self.w.math_feedback.text())
@@ -133,7 +133,7 @@ class SchoolUI(unittest.TestCase):
         self.w.teacher_list.setCurrentRow(2); right = next(i for i, b in enumerate(self.w.vocab_buttons) if b.property('option') == self.w.vocab.correct)
         self.w.answer_vocab(right); self.assertIn('Correct', self.w.vocab_feedback.text())
         self.w.teacher_list.setCurrentRow(6); self.assertTrue(self.w.tip_text.text())
-        self.w.teacher_input.setText('What is a fraction?'); self.w.ask_teacher(); self.assertIn('AI provider', self.w.teacher_answer.toPlainText())
+        self.w.teacher_input.setText('What is a fraction?'); self.w.ask_teacher(); self.assertIn('AI Hub', self.w.teacher_answer.toPlainText())
     def test_teacher_uses_ai_with_subject_prompt(self):
         from lafa.providers import Answer
         self.w.review = False; self.w.agent.client.ready = lambda *a: True

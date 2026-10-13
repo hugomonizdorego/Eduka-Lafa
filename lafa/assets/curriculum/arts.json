@@ -1,0 +1,1009 @@
+{
+ "subject": "arts",
+ "icon": "🎨",
+ "name": {
+  "en": "Arts, music and culture",
+  "id": "Seni, musik, dan budaya",
+  "pt": "Artes, música e cultura",
+  "tet": "Arte, múzika no kultura"
+ },
+ "lessons": [
+  {
+   "level": "early",
+   "title": {
+    "en": "Colours, songs and rhythm",
+    "id": "Warna, lagu, dan irama",
+    "pt": "Cores, canções e ritmo",
+    "tet": "Kór, kanta no ritmu"
+   },
+   "points": [
+    {
+     "en": "Red, yellow and blue are primary colours. Mix yellow and blue to make green.",
+     "id": "Merah, kuning, dan biru adalah warna primer. Campur kuning dan biru untuk membuat hijau.",
+     "pt": "O vermelho, o amarelo e o azul são cores primárias. Mistura amarelo e azul para fazer verde.",
+     "tet": "Mean, kinur no azúl mak kór primáriu. Kahur kinur no azúl atu halo matak."
+    },
+    {
+     "en": "Mix red and yellow to make orange.",
+     "id": "Campur merah dan kuning untuk membuat oranye.",
+     "pt": "Mistura vermelho e amarelo para fazer laranja.",
+     "tet": "Kahur mean no kinur atu halo laranja."
+    },
+    {
+     "en": "Clap your hands to the beat of a song: one, two, three, four.",
+     "id": "Tepuk tangan mengikuti ketukan lagu: satu, dua, tiga, empat.",
+     "pt": "Bate palmas ao ritmo de uma canção: um, dois, três, quatro.",
+     "tet": "Basa liman tuir kanta nia ritmu: ida, rua, tolu, haat."
+    },
+    {
+     "en": "You can draw your family, your house and the sea.",
+     "id": "Kamu bisa menggambar keluargamu, rumahmu, dan laut.",
+     "pt": "Podes desenhar a tua família, a tua casa e o mar.",
+     "tet": "Ó bele dezeña ó-nia família, ó-nia uma no tasi."
+    }
+   ],
+   "task": {
+    "en": "Paint with two colours and mix them. Then sing a song and clap four times.",
+    "id": "Lukis dengan dua warna lalu campurkan. Kemudian nyanyikan lagu dan tepuk tangan empat kali.",
+    "pt": "Pinta com duas cores e mistura-as. Depois canta uma canção e bate palmas quatro vezes.",
+    "tet": "Pinta ho kór rua no kahur sira. Depois hananu kanta ida no basa liman dala haat."
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "Yellow and blue make which colour?",
+      "id": "Kuning dan biru menjadi warna apa?",
+      "pt": "Amarelo e azul fazem que cor?",
+      "tet": "Kinur no azúl halo kór saida?"
+     },
+     "answer": {
+      "en": "Green",
+      "id": "Hijau",
+      "pt": "Verde",
+      "tet": "Matak"
+     },
+     "wrong": [
+      {
+       "en": "Red",
+       "id": "Merah",
+       "pt": "Vermelho",
+       "tet": "Mean"
+      },
+      {
+       "en": "Black",
+       "id": "Hitam",
+       "pt": "Preto",
+       "tet": "Metan"
+      },
+      {
+       "en": "White",
+       "id": "Putih",
+       "pt": "Branco",
+       "tet": "Mutin"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "Red and yellow make which colour?",
+      "id": "Merah dan kuning menjadi warna apa?",
+      "pt": "Vermelho e amarelo fazem que cor?",
+      "tet": "Mean no kinur halo kór saida?"
+     },
+     "answer": {
+      "en": "Orange",
+      "id": "Oranye",
+      "pt": "Laranja",
+      "tet": "Laranja"
+     },
+     "wrong": [
+      {
+       "en": "Blue",
+       "id": "Biru",
+       "pt": "Azul",
+       "tet": "Azúl"
+      },
+      {
+       "en": "Purple",
+       "id": "Ungu",
+       "pt": "Roxo",
+       "tet": "Roxu"
+      },
+      {
+       "en": "White",
+       "id": "Putih",
+       "pt": "Branco",
+       "tet": "Mutin"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "Which is a primary colour?",
+      "id": "Manakah warna primer?",
+      "pt": "Qual é uma cor primária?",
+      "tet": "Ida ne'ebé mak kór primáriu?"
+     },
+     "answer": {
+      "en": "Blue",
+      "id": "Biru",
+      "pt": "Azul",
+      "tet": "Azúl"
+     },
+     "wrong": [
+      {
+       "en": "Green",
+       "id": "Hijau",
+       "pt": "Verde",
+       "tet": "Matak"
+      },
+      {
+       "en": "Orange",
+       "id": "Oranye",
+       "pt": "Laranja",
+       "tet": "Laranja"
+      },
+      {
+       "en": "Purple",
+       "id": "Ungu",
+       "pt": "Roxo",
+       "tet": "Roxu"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "level": "primary",
+   "title": {
+    "en": "Tais and Timorese dance",
+    "id": "Tais dan tarian Timor",
+    "pt": "O tais e as danças timorenses",
+    "tet": "Tais no dansa Timor nian"
+   },
+   "points": [
+    {
+     "en": "Tais is cloth woven by hand, mostly by women, on a simple loom. Each region has its own colours and patterns.",
+     "id": "Tais adalah kain tenun tangan, sebagian besar dibuat oleh perempuan dengan alat tenun sederhana. Setiap daerah memiliki warna dan motifnya sendiri.",
+     "pt": "O tais é um tecido feito à mão, sobretudo por mulheres, num tear simples. Cada região tem as suas cores e padrões.",
+     "tet": "Tais mak hena ne'ebé ema soru ho liman, liuliu feto sira, ho ekipamentu soru simples. Rejiaun ida-idak iha nia kór no motivu rasik."
+    },
+    {
+     "en": "Tais is worn at ceremonies and given as a gift to welcome guests. In 2021 UNESCO listed tais as heritage that needs urgent protection.",
+     "id": "Tais dipakai dalam upacara dan diberikan sebagai hadiah untuk menyambut tamu. Pada tahun 2021 UNESCO memasukkan tais sebagai warisan yang perlu segera dilindungi.",
+     "pt": "O tais usa-se em cerimónias e oferece-se para dar as boas-vindas aos convidados. Em 2021 a UNESCO inscreveu o tais como património que precisa de proteção urgente.",
+     "tet": "Ema hatais tais iha serimónia no fó tais hanesan prezente atu simu bainaka. Iha tinan 2021 UNESCO tau tais iha lista patrimóniu ne'ebé presiza protesaun urjente."
+    },
+    {
+     "en": "Likurai is a welcoming dance in which women play small drums called babadok. In tebe-tebe, people hold hands in a circle, sing and stamp their feet together.",
+     "id": "Likurai adalah tarian penyambutan di mana perempuan memainkan gendang kecil bernama babadok. Dalam tebe-tebe, orang bergandengan tangan membentuk lingkaran, bernyanyi, dan menghentakkan kaki bersama.",
+     "pt": "O likurai é uma dança de boas-vindas em que as mulheres tocam pequenos tambores chamados babadok. No tebe-tebe, as pessoas dão as mãos em círculo, cantam e batem os pés juntas.",
+     "tet": "Likurai mak dansa atu simu bainaka, ne'ebé feto sira baku tambór ki'ik naran babadok. Iha tebe-tebe, ema kaer liman malu iha sírkulu, hananu no tebe hamutuk."
+    }
+   ],
+   "task": {
+    "en": "Draw a tais pattern on paper using lines, triangles and diamonds. Repeat the pattern at least 4 times.",
+    "id": "Gambar motif tais di kertas memakai garis, segitiga, dan belah ketupat. Ulangi motif itu minimal 4 kali.",
+    "pt": "Desenha um padrão de tais em papel com linhas, triângulos e losangos. Repete o padrão pelo menos 4 vezes.",
+    "tet": "Dezeña motivu tais ida iha papél, uza liña, triángulu no losangu. Repete motivu ne'e dala 4 ka liu."
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "How is tais made?",
+      "id": "Bagaimana tais dibuat?",
+      "pt": "Como se faz o tais?",
+      "tet": "Oinsá mak ema halo tais?"
+     },
+     "answer": {
+      "en": "Woven by hand",
+      "id": "Ditenun dengan tangan",
+      "pt": "Tecido à mão",
+      "tet": "Soru ho liman"
+     },
+     "wrong": [
+      {
+       "en": "Printed by a computer",
+       "id": "Dicetak oleh komputer",
+       "pt": "Impresso por um computador",
+       "tet": "Imprime husi komputadór"
+      },
+      {
+       "en": "Carved from wood",
+       "id": "Diukir dari kayu",
+       "pt": "Esculpido em madeira",
+       "tet": "Ko'a husi ai"
+      },
+      {
+       "en": "Folded from paper",
+       "id": "Dilipat dari kertas",
+       "pt": "Dobrado em papel",
+       "tet": "Dobra husi papél"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "What drum do women play in the likurai dance?",
+      "id": "Gendang apa yang dimainkan perempuan dalam tarian likurai?",
+      "pt": "Que tambor tocam as mulheres na dança likurai?",
+      "tet": "Feto sira baku tambór saida iha dansa likurai?"
+     },
+     "answer": {
+      "en": "Babadok",
+      "id": "Babadok",
+      "pt": "Babadok",
+      "tet": "Babadok"
+     },
+     "wrong": [
+      {
+       "en": "Piano",
+       "id": "Piano",
+       "pt": "Piano",
+       "tet": "Pianu"
+      },
+      {
+       "en": "Violin",
+       "id": "Biola",
+       "pt": "Violino",
+       "tet": "Violinu"
+      },
+      {
+       "en": "Trumpet",
+       "id": "Trompet",
+       "pt": "Trompete",
+       "tet": "Trompete"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "In which year did UNESCO list tais as heritage needing urgent protection?",
+      "id": "Pada tahun berapa UNESCO memasukkan tais sebagai warisan yang perlu segera dilindungi?",
+      "pt": "Em que ano a UNESCO inscreveu o tais como património que precisa de proteção urgente?",
+      "tet": "Iha tinan saida mak UNESCO tau tais iha lista patrimóniu ne'ebé presiza protesaun urjente?"
+     },
+     "answer": {
+      "en": "2021",
+      "id": "2021",
+      "pt": "2021",
+      "tet": "2021"
+     },
+     "wrong": [
+      {
+       "en": "1975",
+       "id": "1975",
+       "pt": "1975",
+       "tet": "1975"
+      },
+      {
+       "en": "2002",
+       "id": "2002",
+       "pt": "2002",
+       "tet": "2002"
+      },
+      {
+       "en": "1999",
+       "id": "1999",
+       "pt": "1999",
+       "tet": "1999"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "level": "middle",
+   "title": {
+    "en": "Elements of art and music",
+    "id": "Unsur seni rupa dan musik",
+    "pt": "Elementos da arte e da música",
+    "tet": "Elementu arte no múzika nian"
+   },
+   "points": [
+    {
+     "en": "Artists use seven elements: line, shape, form, colour, value (light and dark), texture and space.",
+     "id": "Seniman memakai tujuh unsur: garis, bidang, bentuk, warna, gelap-terang, tekstur, dan ruang.",
+     "pt": "Os artistas usam sete elementos: linha, forma, volume, cor, valor (claro e escuro), textura e espaço.",
+     "tet": "Artista sira uza elementu hitu: liña, forma, volume, kór, valór (naroman no nakukun), tekstura no espasu."
+    },
+    {
+     "en": "Complementary colours sit opposite each other on the colour wheel, such as red and green or blue and orange. Placed side by side, they make each other look brighter.",
+     "id": "Warna komplementer terletak berseberangan pada lingkaran warna, seperti merah dan hijau atau biru dan oranye. Jika diletakkan berdampingan, keduanya tampak lebih cerah.",
+     "pt": "As cores complementares ficam opostas no círculo cromático, como o vermelho e o verde ou o azul e o laranja. Lado a lado, fazem-se parecer mais vivas.",
+     "tet": "Kór komplementár hela kontra malu iha sírkulu kór nian, hanesan mean no matak ka azúl no laranja. Bainhira tau besik malu, sira halo malu haree naroman liu."
+    },
+    {
+     "en": "Rhythm is the pattern of long and short sounds; melody is a line of notes that goes up and down. In 4/4 time each bar has four beats.",
+     "id": "Irama adalah pola bunyi panjang dan pendek; melodi adalah rangkaian nada yang naik turun. Dalam birama 4/4, setiap birama memiliki empat ketukan.",
+     "pt": "O ritmo é o padrão de sons longos e curtos; a melodia é uma linha de notas que sobe e desce. Num compasso de 4/4 há quatro tempos.",
+     "tet": "Ritmu mak padraun husi son naruk no badak; melodia mak nota sira ne'ebé sa'e no tun. Iha kompasu 4/4, kompasu ida-idak iha batida haat."
+    }
+   ],
+   "task": {
+    "en": "Make a collage using at least four textures (leaves, cloth, sand, paper) and one pair of complementary colours.",
+    "id": "Buat kolase dengan sedikitnya empat tekstur (daun, kain, pasir, kertas) dan satu pasang warna komplementer.",
+    "pt": "Faz uma colagem com pelo menos quatro texturas (folhas, tecido, areia, papel) e um par de cores complementares.",
+    "tet": "Halo kolajen ida ho tekstura haat ka liu (ai-tahan, hena, rai-henek, papél) no kór komplementár par ida."
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "Which colour is complementary to red?",
+      "id": "Warna apa yang menjadi komplementer merah?",
+      "pt": "Qual é a cor complementar do vermelho?",
+      "tet": "Kór saida mak komplementár ba mean?"
+     },
+     "answer": {
+      "en": "Green",
+      "id": "Hijau",
+      "pt": "Verde",
+      "tet": "Matak"
+     },
+     "wrong": [
+      {
+       "en": "Orange",
+       "id": "Oranye",
+       "pt": "Laranja",
+       "tet": "Laranja"
+      },
+      {
+       "en": "Yellow",
+       "id": "Kuning",
+       "pt": "Amarelo",
+       "tet": "Kinur"
+      },
+      {
+       "en": "Purple",
+       "id": "Ungu",
+       "pt": "Roxo",
+       "tet": "Roxu"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "How many beats are in one bar of 4/4 time?",
+      "id": "Berapa ketukan dalam satu birama 4/4?",
+      "pt": "Quantos tempos tem um compasso de 4/4?",
+      "tet": "Batida hira iha kompasu ida 4/4 nian?"
+     },
+     "answer": {
+      "en": "4",
+      "id": "4",
+      "pt": "4",
+      "tet": "4"
+     },
+     "wrong": [
+      {
+       "en": "2",
+       "id": "2",
+       "pt": "2",
+       "tet": "2"
+      },
+      {
+       "en": "3",
+       "id": "3",
+       "pt": "3",
+       "tet": "3"
+      },
+      {
+       "en": "8",
+       "id": "8",
+       "pt": "8",
+       "tet": "8"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "What is melody?",
+      "id": "Apa itu melodi?",
+      "pt": "O que é a melodia?",
+      "tet": "Melodia mak saida?"
+     },
+     "answer": {
+      "en": "A line of notes that goes up and down",
+      "id": "Rangkaian nada yang naik turun",
+      "pt": "Uma linha de notas que sobe e desce",
+      "tet": "Nota sira ne'ebé sa'e no tun"
+     },
+     "wrong": [
+      {
+       "en": "The loudness of a drum",
+       "id": "Kerasnya bunyi gendang",
+       "pt": "A intensidade de um tambor",
+       "tet": "Tambór nia son makaas"
+      },
+      {
+       "en": "The texture of a painting",
+       "id": "Tekstur sebuah lukisan",
+       "pt": "A textura de uma pintura",
+       "tet": "Pintura ida nia tekstura"
+      },
+      {
+       "en": "The length of a dance",
+       "id": "Lamanya sebuah tarian",
+       "pt": "A duração de uma dança",
+       "tet": "Dansa ida nia durasaun"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "level": "secondary",
+   "title": {
+    "en": "Poetry, perspective and sound",
+    "id": "Puisi, perspektif, dan bunyi",
+    "pt": "Poesia, perspetiva e som",
+    "tet": "Poezia, perspetiva no son"
+   },
+   "points": [
+    {
+     "en": "A simile compares using 'like' or 'as' (her voice is like the sea); a metaphor says one thing is another (the mountain is a sleeping giant). Poets use them to create images and feelings.",
+     "id": "Simile membandingkan dengan kata 'seperti' (suaranya seperti laut); metafora menyebut sesuatu sebagai hal lain (gunung itu raksasa yang tidur). Penyair memakainya untuk menciptakan gambaran dan perasaan.",
+     "pt": "A comparação usa 'como' (a voz dela é como o mar); a metáfora diz que uma coisa é outra (a montanha é um gigante adormecido). Os poetas usam-nas para criar imagens e sentimentos.",
+     "tet": "Komparasaun uza liafuan 'hanesan' (nia lian hanesan tasi); metáfora dehan buat ida mak buat seluk (foho ne'e mak jigante ida ne'ebé toba hela). Poeta sira uza sira atu kria imajen no sentimentu."
+    },
+    {
+     "en": "The lyrics of Timor-Leste's national anthem, 'Pátria', were written by the poet Francisco Borja da Costa.",
+     "id": "Lirik lagu kebangsaan Timor-Leste, 'Pátria', ditulis oleh penyair Francisco Borja da Costa.",
+     "pt": "A letra do hino nacional de Timor-Leste, 'Pátria', foi escrita pelo poeta Francisco Borja da Costa.",
+     "tet": "Liafuan himne nasionál Timor-Leste nian, 'Pátria', hakerek husi poeta Francisco Borja da Costa."
+    },
+    {
+     "en": "In one-point perspective, parallel lines such as the edges of a road meet at a vanishing point on the horizon, making a flat drawing look deep.",
+     "id": "Dalam perspektif satu titik, garis sejajar seperti tepi jalan bertemu di titik hilang pada garis cakrawala sehingga gambar datar tampak dalam.",
+     "pt": "Na perspetiva de um ponto, as linhas paralelas, como as bermas de uma estrada, encontram-se num ponto de fuga no horizonte, dando profundidade a um desenho plano.",
+     "tet": "Iha perspetiva ho pontu ida, liña paralela sira, hanesan estrada nia ninin, hasoru malu iha pontu-fuga ida iha orizonte, no halo dezeñu ne'ebé rata haree kle'an."
+    },
+    {
+     "en": "Pitch depends on frequency: the note A above middle C is 440 Hz, and going up one octave doubles the frequency to 880 Hz.",
+     "id": "Tinggi nada bergantung pada frekuensi: nada A di atas C tengah adalah 440 Hz, dan naik satu oktaf melipatgandakan frekuensinya menjadi 880 Hz.",
+     "pt": "A altura de um som depende da frequência: o lá acima do dó central tem 440 Hz, e subir uma oitava duplica a frequência para 880 Hz.",
+     "tet": "Son nia aas depende ba frekuénsia: nota A iha leten C sentrál mak 440 Hz, no sa'e oitava ida halo frekuénsia dobru ba 880 Hz."
+    }
+   ],
+   "task": {
+    "en": "Write a short poem of 8 lines about Ramelau or the sea, using at least one simile and one metaphor.",
+    "id": "Tulis puisi pendek 8 baris tentang Ramelau atau laut, dengan sedikitnya satu simile dan satu metafora.",
+    "pt": "Escreve um poema curto de 8 versos sobre o Ramelau ou o mar, com pelo menos uma comparação e uma metáfora.",
+    "tet": "Hakerek poezia badak ida ho liña 8 kona-ba Ramelau ka tasi, uza komparasaun ida no metáfora ida ka liu."
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "Which sentence is a metaphor?",
+      "id": "Kalimat manakah yang merupakan metafora?",
+      "pt": "Qual destas frases é uma metáfora?",
+      "tet": "Fraze ida ne'ebé mak metáfora?"
+     },
+     "answer": {
+      "en": "The mountain is a sleeping giant",
+      "id": "Gunung itu raksasa yang tidur",
+      "pt": "A montanha é um gigante adormecido",
+      "tet": "Foho ne'e mak jigante ida ne'ebé toba hela"
+     },
+     "wrong": [
+      {
+       "en": "Her voice is like the sea",
+       "id": "Suaranya seperti laut",
+       "pt": "A voz dela é como o mar",
+       "tet": "Nia lian hanesan tasi"
+      },
+      {
+       "en": "The bus arrived at nine",
+       "id": "Bus tiba pukul sembilan",
+       "pt": "O autocarro chegou às nove",
+       "tet": "Bis to'o tuku sia"
+      },
+      {
+       "en": "Rice grows in Viqueque",
+       "id": "Padi tumbuh di Viqueque",
+       "pt": "O arroz cresce em Viqueque",
+       "tet": "Hare moris iha Viqueque"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "Who wrote the lyrics of the anthem 'Pátria'?",
+      "id": "Siapa penulis lirik lagu kebangsaan 'Pátria'?",
+      "pt": "Quem escreveu a letra do hino 'Pátria'?",
+      "tet": "Se mak hakerek liafuan himne 'Pátria'?"
+     },
+     "answer": {
+      "en": "Francisco Borja da Costa",
+      "id": "Francisco Borja da Costa",
+      "pt": "Francisco Borja da Costa",
+      "tet": "Francisco Borja da Costa"
+     },
+     "wrong": [
+      {
+       "en": "Luís de Camões",
+       "id": "Luís de Camões",
+       "pt": "Luís de Camões",
+       "tet": "Luís de Camões"
+      },
+      {
+       "en": "Fernando Pessoa",
+       "id": "Fernando Pessoa",
+       "pt": "Fernando Pessoa",
+       "tet": "Fernando Pessoa"
+      },
+      {
+       "en": "Chairil Anwar",
+       "id": "Chairil Anwar",
+       "pt": "Chairil Anwar",
+       "tet": "Chairil Anwar"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "A note is 440 Hz. What is the frequency one octave higher?",
+      "id": "Sebuah nada 440 Hz. Berapa frekuensinya satu oktaf lebih tinggi?",
+      "pt": "Uma nota tem 440 Hz. Qual é a frequência uma oitava acima?",
+      "tet": "Nota ida iha 440 Hz. Frekuénsia oitava ida aas liu mak hira?"
+     },
+     "answer": {
+      "en": "880 Hz",
+      "id": "880 Hz",
+      "pt": "880 Hz",
+      "tet": "880 Hz"
+     },
+     "wrong": [
+      {
+       "en": "220 Hz",
+       "id": "220 Hz",
+       "pt": "220 Hz",
+       "tet": "220 Hz"
+      },
+      {
+       "en": "540 Hz",
+       "id": "540 Hz",
+       "pt": "540 Hz",
+       "tet": "540 Hz"
+      },
+      {
+       "en": "1 320 Hz",
+       "id": "1 320 Hz",
+       "pt": "1 320 Hz",
+       "tet": "1 320 Hz"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "level": "university",
+   "title": {
+    "en": "Heritage, identity and creative rights",
+    "id": "Warisan, identitas, dan hak cipta",
+    "pt": "Património, identidade e direitos de autor",
+    "tet": "Patrimóniu, identidade no direitu autór"
+   },
+   "points": [
+    {
+     "en": "UNESCO distinguishes tangible heritage (buildings, objects, sites) from intangible heritage (oral traditions, music, dance, rituals and craft skills), which its 2003 Convention protects.",
+     "id": "UNESCO membedakan warisan benda (bangunan, objek, situs) dari warisan takbenda (tradisi lisan, musik, tari, ritual, dan keterampilan kriya), yang dilindungi oleh Konvensi 2003.",
+     "pt": "A UNESCO distingue o património material (edifícios, objetos, sítios) do património imaterial (tradições orais, música, dança, rituais e saberes artesanais), protegido pela Convenção de 2003.",
+     "tet": "UNESCO haketak patrimóniu materiál (edifísiu, objetu, fatin) husi patrimóniu imateriál (tradisaun orál, múzika, dansa, ritu no matenek artezanatu), ne'ebé Konvensaun 2003 proteje."
+    },
+    {
+     "en": "The uma lulik, the sacred house, is both a building and a centre of ancestry, ritual and identity, so it joins tangible and intangible heritage.",
+     "id": "Uma lulik, rumah sakral, adalah bangunan sekaligus pusat leluhur, ritual, dan identitas, sehingga menggabungkan warisan benda dan takbenda.",
+     "pt": "A uma lulik, a casa sagrada, é ao mesmo tempo um edifício e um centro de ancestralidade, ritual e identidade, unindo património material e imaterial.",
+     "tet": "Uma lulik mak edifísiu ida no mós sentru ba bei-ala, ritu no identidade, nune'e nia kombina patrimóniu materiál no imateriál."
+    },
+    {
+     "en": "Ethnomusicology studies music in its cultural context, asking who performs it, when and why, not only how it sounds.",
+     "id": "Etnomusikologi mempelajari musik dalam konteks budayanya, menanyakan siapa yang memainkannya, kapan, dan mengapa, bukan hanya bagaimana bunyinya.",
+     "pt": "A etnomusicologia estuda a música no seu contexto cultural, perguntando quem a toca, quando e porquê, e não apenas como soa.",
+     "tet": "Etnomuzikolojia estuda múzika iha nia kontestu kulturál, husu se mak toka, bainhira no tanba saida, la'ós de'it oinsá nia son."
+    },
+    {
+     "en": "Copyright protects original creative works such as songs, texts and designs. Commercial use of traditional designs should involve and benefit the communities that hold them.",
+     "id": "Hak cipta melindungi karya kreatif asli seperti lagu, teks, dan desain. Penggunaan motif tradisional secara komersial sebaiknya melibatkan dan menguntungkan komunitas pemiliknya.",
+     "pt": "Os direitos de autor protegem obras criativas originais, como canções, textos e desenhos. O uso comercial de padrões tradicionais deve envolver e beneficiar as comunidades que os detêm.",
+     "tet": "Direitu autór proteje obra kriativa orijinál hanesan kanta, testu no dezeñu. Uza motivu tradisionál ba negósiu tenke envolve no fó benefísiu ba komunidade ne'ebé na'in ba sira."
+    }
+   ],
+   "task": {
+    "en": "Interview an elder about one song, dance or tais pattern: with their permission, record when, by whom and why it is performed or made.",
+    "id": "Wawancarai seorang tetua tentang satu lagu, tarian, atau motif tais: dengan izinnya, catat kapan, oleh siapa, dan mengapa itu dibawakan atau dibuat.",
+    "pt": "Entrevista um ancião sobre uma canção, dança ou padrão de tais: com a sua autorização, regista quando, por quem e porque é executado ou feito.",
+    "tet": "Entrevista katuas ka ferik ida kona-ba kanta, dansa ka motivu tais ida: ho nia autorizasaun, rejista bainhira, se mak halo no tanba saida."
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "Which is an example of intangible heritage?",
+      "id": "Manakah contoh warisan takbenda?",
+      "pt": "Qual é um exemplo de património imaterial?",
+      "tet": "Ida ne'ebé mak ezemplu patrimóniu imateriál?"
+     },
+     "answer": {
+      "en": "The skill of weaving tais",
+      "id": "Keterampilan menenun tais",
+      "pt": "O saber tecer tais",
+      "tet": "Matenek atu soru tais"
+     },
+     "wrong": [
+      {
+       "en": "A stone bridge",
+       "id": "Jembatan batu",
+       "pt": "Uma ponte de pedra",
+       "tet": "Ponte fatuk ida"
+      },
+      {
+       "en": "An old church building",
+       "id": "Bangunan gereja tua",
+       "pt": "Um edifício de igreja antigo",
+       "tet": "Edifísiu igreja tuan ida"
+      },
+      {
+       "en": "A clay pot in a museum",
+       "id": "Kendi tanah liat di museum",
+       "pt": "Um pote de barro num museu",
+       "tet": "Sanan rai ida iha muzeu"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "What does ethnomusicology study?",
+      "id": "Apa yang dipelajari etnomusikologi?",
+      "pt": "O que estuda a etnomusicologia?",
+      "tet": "Etnomuzikolojia estuda saida?"
+     },
+     "answer": {
+      "en": "Music in its cultural context",
+      "id": "Musik dalam konteks budayanya",
+      "pt": "A música no seu contexto cultural",
+      "tet": "Múzika iha nia kontestu kulturál"
+     },
+     "wrong": [
+      {
+       "en": "Only the physics of sound waves",
+       "id": "Hanya fisika gelombang bunyi",
+       "pt": "Apenas a física das ondas sonoras",
+       "tet": "Fízika husi onda son de'it"
+      },
+      {
+       "en": "How to build pianos",
+       "id": "Cara membuat piano",
+       "pt": "Como construir pianos",
+       "tet": "Oinsá harii pianu"
+      },
+      {
+       "en": "Ancient insects",
+       "id": "Serangga purba",
+       "pt": "Insetos antigos",
+       "tet": "Insetu antigu"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "What does copyright protect?",
+      "id": "Apa yang dilindungi hak cipta?",
+      "pt": "O que protegem os direitos de autor?",
+      "tet": "Direitu autór proteje saida?"
+     },
+     "answer": {
+      "en": "Original creative works such as songs and texts",
+      "id": "Karya kreatif asli seperti lagu dan teks",
+      "pt": "Obras criativas originais, como canções e textos",
+      "tet": "Obra kriativa orijinál hanesan kanta no testu"
+     },
+     "wrong": [
+      {
+       "en": "Land boundaries",
+       "id": "Batas tanah",
+       "pt": "Limites de terrenos",
+       "tet": "Rai nia fronteira"
+      },
+      {
+       "en": "Weather forecasts",
+       "id": "Prakiraan cuaca",
+       "pt": "Previsões do tempo",
+       "tet": "Previzaun tempu"
+      },
+      {
+       "en": "Vehicle licences",
+       "id": "Izin kendaraan",
+       "pt": "Licenças de veículos",
+       "tet": "Lisensa karreta"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "level": "adult",
+   "title": {
+    "en": "Crafts, culture and livelihood",
+    "id": "Kerajinan, budaya, dan mata pencaharian",
+    "pt": "Artesanato, cultura e sustento",
+    "tet": "Artezanatu, kultura no rendimentu"
+   },
+   "points": [
+    {
+     "en": "Price a craft by adding materials, your working hours and a fair profit. A tais that takes weeks of work should not be sold below cost.",
+     "id": "Tentukan harga kerajinan dengan menjumlahkan bahan, jam kerja Anda, dan keuntungan yang wajar. Tais yang dibuat berminggu-minggu tidak boleh dijual di bawah biaya.",
+     "pt": "Calcule o preço de um artesanato somando os materiais, as suas horas de trabalho e um lucro justo. Um tais que leva semanas a fazer não deve ser vendido abaixo do custo.",
+     "tet": "Kalkula folin artezanatu ida ho soma materiál, ita-nia oras servisu no lukru justu. Tais ne'ebé ita soru semana barak labele fa'an ho folin kraik liu kustu."
+    },
+    {
+     "en": "Natural dyes from plants, such as indigo for blue and roots or bark for red and brown, give tais its traditional colours.",
+     "id": "Pewarna alami dari tumbuhan, seperti nila untuk biru serta akar atau kulit kayu untuk merah dan cokelat, memberi tais warna tradisionalnya.",
+     "pt": "Os corantes naturais de plantas, como o índigo para o azul e raízes ou cascas para o vermelho e o castanho, dão ao tais as suas cores tradicionais.",
+     "tet": "Kór naturál husi ai-horis, hanesan índigu ba azúl no ai-abut ka ai-kulit ba mean no kastañu, fó kór tradisionál ba tais."
+    },
+    {
+     "en": "Cultural groups can earn income by performing at events and festivals, but should first agree payment and conditions in writing.",
+     "id": "Kelompok budaya dapat memperoleh penghasilan dengan tampil di acara dan festival, tetapi sebaiknya menyepakati bayaran dan syarat secara tertulis terlebih dahulu.",
+     "pt": "Os grupos culturais podem ganhar dinheiro atuando em eventos e festivais, mas devem primeiro acordar por escrito o pagamento e as condições.",
+     "tet": "Grupu kulturál sira bele hetan osan liuhusi aprezenta iha eventu no festivál, maibé tenke akorda uluk pagamentu no kondisaun sira iha surat."
+    },
+    {
+     "en": "Good photos of products and the story of their maker help sell crafts online and at markets.",
+     "id": "Foto produk yang bagus dan kisah pembuatnya membantu menjual kerajinan secara daring dan di pasar.",
+     "pt": "Boas fotografias dos produtos e a história de quem os fez ajudam a vender artesanato online e nos mercados.",
+     "tet": "Foto di'ak husi produtu no istória husi ema ne'ebé halo ajuda fa'an artezanatu iha internet no iha merkadu."
+    }
+   ],
+   "task": {
+    "en": "Choose one craft you or a neighbour makes. List the materials and hours, then calculate a fair price including profit.",
+    "id": "Pilih satu kerajinan yang Anda atau tetangga buat. Daftar bahan dan jam kerjanya, lalu hitung harga yang wajar termasuk keuntungan.",
+    "pt": "Escolha um artesanato feito por si ou por um vizinho. Liste os materiais e as horas, e calcule um preço justo com lucro.",
+    "tet": "Hili artezanatu ida ne'ebé ita ka viziñu ida halo. Hakerek lista materiál no oras, depois kalkula folin justu ida inklui lukru."
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "Materials cost $20, labour is worth $40 and you add $10 profit. What is the price?",
+      "id": "Bahan seharga $20, tenaga kerja bernilai $40, dan Anda menambah keuntungan $10. Berapa harganya?",
+      "pt": "Os materiais custam $20, o trabalho vale $40 e acrescenta $10 de lucro. Qual é o preço?",
+      "tet": "Materiál kusta $20, servisu iha valór $40 no ita aumenta lukru $10. Folin hira?"
+     },
+     "answer": {
+      "en": "$70",
+      "id": "$70",
+      "pt": "$70",
+      "tet": "$70"
+     },
+     "wrong": [
+      {
+       "en": "$60",
+       "id": "$60",
+       "pt": "$60",
+       "tet": "$60"
+      },
+      {
+       "en": "$30",
+       "id": "$30",
+       "pt": "$30",
+       "tet": "$30"
+      },
+      {
+       "en": "$50",
+       "id": "$50",
+       "pt": "$50",
+       "tet": "$50"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "Where do natural dyes come from?",
+      "id": "Dari mana pewarna alami berasal?",
+      "pt": "De onde vêm os corantes naturais?",
+      "tet": "Kór naturál mai husi ne'ebé?"
+     },
+     "answer": {
+      "en": "Plants, such as roots, bark and leaves",
+      "id": "Tumbuhan, seperti akar, kulit kayu, dan daun",
+      "pt": "Plantas, como raízes, cascas e folhas",
+      "tet": "Ai-horis, hanesan ai-abut, ai-kulit no ai-tahan"
+     },
+     "wrong": [
+      {
+       "en": "Plastic bottles",
+       "id": "Botol plastik",
+       "pt": "Garrafas de plástico",
+       "tet": "Botir plástiku"
+      },
+      {
+       "en": "Car paint",
+       "id": "Cat mobil",
+       "pt": "Tinta de automóvel",
+       "tet": "Pintura karreta"
+      },
+      {
+       "en": "Sea water only",
+       "id": "Hanya air laut",
+       "pt": "Só água do mar",
+       "tet": "Tasi-been de'it"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "Before performing at a festival, what should a group do?",
+      "id": "Sebelum tampil di festival, apa yang harus dilakukan kelompok?",
+      "pt": "Antes de atuar num festival, o que deve um grupo fazer?",
+      "tet": "Molok aprezenta iha festivál, grupu ida tenke halo saida?"
+     },
+     "answer": {
+      "en": "Agree payment and conditions in writing",
+      "id": "Menyepakati bayaran dan syarat secara tertulis",
+      "pt": "Acordar por escrito o pagamento e as condições",
+      "tet": "Akorda pagamentu no kondisaun iha surat"
+     },
+     "wrong": [
+      {
+       "en": "Perform first and never ask about payment",
+       "id": "Tampil dulu dan tidak pernah menanyakan bayaran",
+       "pt": "Atuar primeiro e nunca perguntar pelo pagamento",
+       "tet": "Aprezenta uluk no nunka husu kona-ba pagamentu"
+      },
+      {
+       "en": "Sell their costumes to the audience",
+       "id": "Menjual kostum kepada penonton",
+       "pt": "Vender os trajes ao público",
+       "tet": "Fa'an sira-nia faru ba audiénsia"
+      },
+      {
+       "en": "Cancel without telling anyone",
+       "id": "Membatalkan tanpa memberi tahu siapa pun",
+       "pt": "Cancelar sem avisar ninguém",
+       "tet": "Kansela la fó-hatene ba ema ida"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "level": "senior",
+   "title": {
+    "en": "Keeping culture alive",
+    "id": "Menjaga budaya tetap hidup",
+    "pt": "Manter viva a cultura",
+    "tet": "Halo kultura moris nafatin"
+   },
+   "points": [
+    {
+     "en": "Singing, weaving and drawing keep the hands and memory active, and making art with others reduces loneliness.",
+     "id": "Bernyanyi, menenun, dan menggambar menjaga tangan dan ingatan tetap aktif, dan berkarya bersama orang lain mengurangi rasa kesepian.",
+     "pt": "Cantar, tecer e desenhar mantêm as mãos e a memória ativas, e fazer arte com outros reduz a solidão.",
+     "tet": "Hananu, soru no dezeña halo liman no memória ativu nafatin, no halo arte hamutuk ho ema seluk hamenus sentimentu mesak."
+    },
+    {
+     "en": "For weaving or sewing, sit in good light, rest your eyes about every half hour and keep your back straight. If your eyesight is getting worse, see a health worker for an eye check.",
+     "id": "Saat menenun atau menjahit, duduklah di tempat yang terang, istirahatkan mata sekitar setiap setengah jam, dan jaga punggung tetap tegak. Jika penglihatan memburuk, temui petugas kesehatan untuk memeriksa mata.",
+     "pt": "Para tecer ou costurar, sente-se com boa luz, descanse os olhos mais ou menos a cada meia hora e mantenha as costas direitas. Se a vista estiver a piorar, procure um profissional de saúde para examinar os olhos.",
+     "tet": "Atu soru ka suku, tur iha fatin naroman, halo deskansa ba matan besik kada oras-balun no tur ho kotuk los. Se ita-nia matan haree la di'ak ona, ba hasoru profisionál saúde atu haree matan."
+    },
+    {
+     "en": "Old songs, stories and dances are a living library. Teaching them to grandchildren, or recording them on a phone, keeps them for the future.",
+     "id": "Lagu, cerita, dan tarian lama adalah perpustakaan hidup. Mengajarkannya kepada cucu atau merekamnya di ponsel menjaganya untuk masa depan.",
+     "pt": "As canções, histórias e danças antigas são uma biblioteca viva. Ensiná-las aos netos ou gravá-las num telemóvel guarda-as para o futuro.",
+     "tet": "Kanta, istória no dansa tuan sira mak biblioteka moris ida. Hanorin sira ba bei-oan ka grava sira iha telemóvel rai sira ba futuru."
+    }
+   ],
+   "task": {
+    "en": "Teach a grandchild one traditional song or story, and let them record you telling it on a phone.",
+    "id": "Ajarkan satu lagu atau cerita tradisional kepada cucu, dan biarkan cucu merekam Anda saat menceritakannya dengan ponsel.",
+    "pt": "Ensine a um neto uma canção ou história tradicional e deixe-o gravá-lo a contá-la no telemóvel.",
+    "tet": "Hanorin kanta ka istória tradisionál ida ba bei-oan ida, no husik nia grava ita bainhira ita konta iha telemóvel."
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "How often should you rest your eyes while weaving?",
+      "id": "Seberapa sering Anda sebaiknya mengistirahatkan mata saat menenun?",
+      "pt": "Com que frequência deve descansar os olhos enquanto tece?",
+      "tet": "Bainhira soru, ita tenke halo deskansa ba matan dala hira?"
+     },
+     "answer": {
+      "en": "About every half hour",
+      "id": "Sekitar setiap setengah jam",
+      "pt": "Mais ou menos a cada meia hora",
+      "tet": "Besik kada oras-balun"
+     },
+     "wrong": [
+      {
+       "en": "Never",
+       "id": "Tidak pernah",
+       "pt": "Nunca",
+       "tet": "Nunka"
+      },
+      {
+       "en": "Once a month",
+       "id": "Sebulan sekali",
+       "pt": "Uma vez por mês",
+       "tet": "Fulan ida dala ida"
+      },
+      {
+       "en": "Only at night in the dark",
+       "id": "Hanya malam hari dalam gelap",
+       "pt": "Só à noite, às escuras",
+       "tet": "Kalan iha nakukun de'it"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "Why are old songs called a 'living library'?",
+      "id": "Mengapa lagu lama disebut 'perpustakaan hidup'?",
+      "pt": "Porque se chama às canções antigas uma 'biblioteca viva'?",
+      "tet": "Tanba saida mak kanta tuan sira naran 'biblioteka moris'?"
+     },
+     "answer": {
+      "en": "They carry the community's knowledge and history",
+      "id": "Lagu itu membawa pengetahuan dan sejarah komunitas",
+      "pt": "Guardam o conhecimento e a história da comunidade",
+      "tet": "Sira lori komunidade nia koñesimentu no istória"
+     },
+     "wrong": [
+      {
+       "en": "They are kept in a building with books",
+       "id": "Disimpan di gedung berisi buku",
+       "pt": "Estão guardadas num edifício com livros",
+       "tet": "Ema rai sira iha edifísiu ida ho livru"
+      },
+      {
+       "en": "They are only for children",
+       "id": "Hanya untuk anak-anak",
+       "pt": "São só para crianças",
+       "tet": "Ba labarik de'it"
+      },
+      {
+       "en": "They never change and do not matter",
+       "id": "Tidak pernah berubah dan tidak penting",
+       "pt": "Nunca mudam e não importam",
+       "tet": "Nunka muda no la importante"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "What should you do if your eyesight gets worse?",
+      "id": "Apa yang harus dilakukan jika penglihatan memburuk?",
+      "pt": "O que deve fazer se a sua vista piorar?",
+      "tet": "Ita tenke halo saida se ita-nia matan haree la di'ak ona?"
+     },
+     "answer": {
+      "en": "See a health worker for an eye check",
+      "id": "Menemui petugas kesehatan untuk memeriksa mata",
+      "pt": "Procurar um profissional de saúde para examinar os olhos",
+      "tet": "Ba hasoru profisionál saúde atu haree matan"
+     },
+     "wrong": [
+      {
+       "en": "Stop all activities forever",
+       "id": "Berhenti dari semua kegiatan selamanya",
+       "pt": "Parar todas as atividades para sempre",
+       "tet": "Para atividade hotu ba nafatin"
+      },
+      {
+       "en": "Work only in dim light",
+       "id": "Bekerja hanya di tempat redup",
+       "pt": "Trabalhar só com pouca luz",
+       "tet": "Servisu de'it iha fatin nakukun"
+      },
+      {
+       "en": "Borrow someone else's glasses",
+       "id": "Meminjam kacamata orang lain",
+       "pt": "Pedir emprestados os óculos de outra pessoa",
+       "tet": "Husu empresta ema seluk nia oklu"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

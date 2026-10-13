@@ -14,11 +14,12 @@ import math
 import random
 import time
 from datetime import datetime
-from .qt import Qt,QTimer,QPointF,QRectF,QRect,QEvent,Signal,QPixmap,QPainter,QGuiApplication,QPolygonF,QColor,QPainterPath,QPen
+from .qt import Qt,QTimer,QPointF,QRectF,QRect,QEvent,Signal,QPixmap,QPainter,QGuiApplication,QPolygonF,QColor,QPainterPath,QPen,QCursor
 from .qt import QWidget,QMenu,QFrame,QVBoxLayout,QHBoxLayout,QLabel,QLineEdit,QPushButton,QPlainTextEdit,QApplication,global_point,run
 from .config import STATES,IDLE_ACTIVITIES
 from .i18n import tr
 from . import personality, eduka, outfits, roles
+from .motion import Motion
 
 ASSET=Path(__file__).parent/'assets'/'lafa-atlas.png'
 COMPACT=(192,208)
@@ -106,43 +107,76 @@ class Atlas:
         return poses.get(pose,self.poses.get(pose,self.poses['idle'])).scaled(size,size,Qt.KeepAspectRatio,Qt.SmoothTransformation)
 
 class Character(QWidget):
+    """LAFA drawn with human-like movement (see motion.py)."""
     clicked=Signal()
+    FRAME_MS=40
     def __init__(self,atlas,parent=None,size=190):
-        super().__init__(parent);self.atlas=atlas;self.state='idle';self.costume='casual';self.phase=0;self.animated=True;self.hop_phase=0.0;self.direction=1;self.rate=1.0
-        self.setFixedSize(size,size+16)
-        self.timer=QTimer(self);self.timer.timeout.connect(self.tick);self.timer.start(90)
-    def set_state(self,state):self.state=state if state in STATES or state in outfits.ACTIVITIES else 'idle';self.update()
+        super().__init__(parent);self.atlas=atlas;self.state='idle';self.costume='casual';self.phase=0;self.animated=True;self.direction=1;self.rate=1.0
+        self.motion=Motion();self.previous=None
+        self.setFixedSize(size,size+16);self.setMouseTracking(True)
+        self.timer=QTimer(self);self.timer.timeout.connect(self.tick);self.timer.start(self.FRAME_MS)
+    @property
+    def hop_phase(self):return 1.0 if self.motion.gesture=="jump" else 0.0
+    def set_state(self,state):
+        state=state if state in STATES or state in outfits.ACTIVITIES else 'idle'
+        if state!=self.state and self.animated and self.timer.isActive():
+            self.previous=(self.state,self.costume);self.motion.changed()
+            if state in {'talking','greeting'} and self.state in {'idle','sitting'}:self.motion.play('wave')
+        self.state=state;self.update()
     @property
     def pose(self):return outfits.pose_of(self.state)
     def animate(self,enabled):
         self.animated=enabled
-        if enabled:self.timer.start(90)
+        if enabled:self.timer.start(self.FRAME_MS)
         else:self.timer.stop()
         self.update()
     def tick(self):
-        self.phase+=0.14*self.rate
-        if self.hop_phase>0:self.hop_phase=max(0.0,self.hop_phase-0.12)
+        seconds=self.FRAME_MS/1000*self.rate;self.phase+=0.14*self.rate*self.FRAME_MS/90
+        self.motion.advance(seconds)
+        # Look towards the pointer when it is near (attention, like a person).
+        try:
+            pos=self.mapFromGlobal(QCursor.pos());near=-120<pos.x()<self.width()+120 and -160<pos.y()<self.height()+60
+            self.motion.attend((pos.x()-self.width()/2)/(self.width()) if near else 0.0)
+        except RuntimeError:pass
         self.update()
     def hop(self):
-        """Short happy jump when LAFA answers; skipped while animation is paused."""
-        if self.animated:self.hop_phase=1.0
+        """Happy jump with anticipation when LAFA answers; skipped while paused."""
+        if self.animated:self.motion.play('jump')
+    def gesture(self,name):
+        if self.animated:self.motion.play(name)
     def paintEvent(self,event):
-        painter=QPainter(self);painter.setRenderHint(QPainter.SmoothPixmapTransform)
+        painter=QPainter(self);painter.setRenderHint(QPainter.SmoothPixmapTransform);painter.setRenderHint(QPainter.Antialiasing)
         pose=self.pose;scene=outfits.scene_of(self.state)
         if scene:outfits.paint_background(painter,scene,self.width(),self.height(),self.phase)
-        amplitude=1 if pose=='sleeping' else 6 if pose in {'tebe','bidu'} or self.state=='party' else 3.4 if pose=='walking' else 2.6
-        speed=2.2 if pose=='walking' else 1
-        bob=math.sin(self.phase*speed)*amplitude if self.animated else 0
-        if self.animated and self.hop_phase>0:bob-=math.sin(self.hop_phase*math.pi)*14
-        angle=math.sin(self.phase*speed)*(5 if pose in {'tebe','bidu'} else 2.4 if pose=='walking' else 1.7) if self.animated and pose in {'walking','gaming','talking','stretching','tebe','bidu'} else 0
-        painter.save();painter.translate(self.width()/2,self.height()/2+bob);painter.rotate(angle)
-        if pose=='walking' and self.direction<0:painter.scale(-1,1)
+        f=self.motion.frame(pose,self.animated)
         pix=self.atlas.pixmap(self.state,self.width()-10,self.costume)
-        painter.drawPixmap(-pix.width()//2,-pix.height()//2,pix)
+        ground=self.height()/2+pix.height()/2-4
+        if not scene and pose not in {'sleeping'}:
+            # Soft shadow under the feet keeps LAFA on the ground.
+            painter.setPen(Qt.NoPen);painter.setBrush(QColor(0,0,0,int(38*f.shadow)))
+            w=pix.width()*0.42*f.shadow;painter.drawEllipse(QPointF(self.width()/2+f.dx,ground),w/2,w/9)
+        if not self.timer.isActive():self.motion.fade=1.0;self.previous=None   # paused: no half-faded pictures
+        if self.previous and self.motion.fade<1.0:
+            painter.setOpacity(1.0-self.motion.fade);old=self.atlas.pixmap(self.previous[0],self.width()-10,self.previous[1])
+            painter.drawPixmap(int(self.width()/2-old.width()/2),int(self.height()/2-old.height()/2),old);painter.setOpacity(self.motion.fade)
+        flip=pose=='walking' and self.direction<0
+        painter.save();painter.translate(self.width()/2+f.dx,self.height()/2+pix.height()/2+f.dy)   # feet
+        painter.rotate(f.tilt);painter.scale(-f.sx if flip else f.sx,f.sy)
+        w,h=pix.width(),pix.height();hip=int(h*0.70)
+        if f.split:
+            painter.save();painter.translate(0,-(h-hip));painter.shear(f.step,0)
+            # The two parts overlap by a few pixels so no seam shows at the hips.
+            painter.drawPixmap(QRectF(-w/2,-6,w,h-hip+6),pix,QRectF(0,hip-6,w,h-hip+6));painter.restore()
+            painter.translate(0,-(h-hip));painter.rotate(f.lean)
+            painter.drawPixmap(QRectF(-w/2,-hip,w,hip+3),pix,QRectF(0,0,w,hip+3))
+            top=-hip
+        else:
+            painter.drawPixmap(QRectF(-w/2,-h,w,h),pix,QRectF(0,0,w,h));top=-h
         hat=outfits.hat_of(self.state)
         if hat:
-            hx,hy=self.atlas.head(pose);outfits.paint_hat(painter,hat,-pix.width()/2+hx*pix.width(),-pix.height()/2+(hy+0.15)*pix.height(),pix.width())
-        painter.restore()
+            hx,hy=self.atlas.head(pose);outfits.paint_hat(painter,hat,-w/2+hx*w,top+(hy+0.15)*h,w)
+        painter.restore();painter.setOpacity(1.0)
+        if self.motion.fade>=1.0:self.previous=None
         if scene:outfits.paint_foreground(painter,scene,self.width(),self.height(),self.phase)
     def mouseReleaseEvent(self,event):
         if event.button()==Qt.LeftButton:self.clicked.emit()
@@ -178,6 +212,7 @@ class Companion(QWidget):
     user_request=Signal(str)
     action_requested=Signal(str)
     public_search_requested=Signal(str)
+    ai_requested=Signal(str)
     activity_changed=Signal(str)
     voice_requested=Signal()
     settings_requested=Signal()
@@ -213,6 +248,7 @@ class Companion(QWidget):
         footer=QHBoxLayout();footer.setSpacing(6)
         self.full_button=QPushButton();self.full_button.setObjectName('footchip');self.full_button.clicked.connect(self.open_requested.emit);footer.addWidget(self.full_button)
         self.public_button=QPushButton();self.public_button.setObjectName('footchip');self.public_button.clicked.connect(self.submit_public);footer.addWidget(self.public_button)
+        self.ai_button=QPushButton();self.ai_button.setObjectName('footchip');self.ai_button.clicked.connect(self.submit_ai);footer.addWidget(self.ai_button)
         self.voice_button=QPushButton();self.voice_button.setObjectName('footchip');self.voice_button.clicked.connect(self.voice_requested.emit);footer.addWidget(self.voice_button)
         self.joke_button=QPushButton('😄');self.joke_button.setObjectName('footchip');self.joke_button.clicked.connect(self.tell_joke);footer.addWidget(self.joke_button)
         self.source_button=QPushButton();self.source_button.setObjectName('footchip');self.source_button.clicked.connect(lambda:self.source_requested.emit(self.current_source));self.source_button.hide();footer.addWidget(self.source_button);footer.addStretch();col.addLayout(footer)
@@ -262,7 +298,7 @@ class Companion(QWidget):
         self.setToolTip('')
         self.input.setPlaceholderText(tr(lang,'ask'));self.full_button.setText(tr(lang,'desktop'));self.voice_button.setText(tr(lang,'listen'));self.joke_button.setToolTip(tr(lang,'tell_joke'))
         for key,b in self.quick_buttons:b.setText(tr(lang,{'news':'timor_news','os':'os_short','recommend':'recommend_short'}.get(key,key)))
-        self.status.setText(tr(lang,'online') if self.online else tr(lang,'offline'));self.source_button.setText(tr(lang,'source'));self.public_button.setText('📖 Wikipedia');self.public_button.setToolTip(tr(lang,'public_search'))
+        self.status.setText(tr(lang,'online') if self.online else tr(lang,'offline'));self.source_button.setText(tr(lang,'source'));self.public_button.setText('📖 Wikipedia');self.public_button.setToolTip(tr(lang,'public_search'));self.ai_button.setText('✨ AI');self.ai_button.setToolTip(tr(lang,'ask_ai_websites'))
         self.duty_label.setText('· '+personality.duty(lang,self.pet.state))
     def mark_activity(self):self.popup_deadline=0;self.last_activity=self.clock();self.last_idle_change=self.last_activity
     # ----- input -------------------------------------------------------------
@@ -293,6 +329,7 @@ class Companion(QWidget):
             self.walk_target=None
             if not self.paused and not self.bubblebox.isVisible() and self.drag is None and self.settings.hover_questions:
                 self.show_balloon(personality.hover_line(self.lang,self.state),personality.duty(self.lang,self.state),'hover',0)
+                self.pet.gesture('wave')
         elif self.balloon.isVisible() and self.balloon.kind=='hover':
             self.balloon_timer.start(1600)
     # ----- balloon -----------------------------------------------------------
@@ -362,7 +399,7 @@ class Companion(QWidget):
         if not hasattr(self,'send_button'):return
         free=not self._busy;net=self.online and free
         self.send_button.setEnabled(free);self.input.setEnabled(free)
-        self.public_button.setEnabled(net);self.voice_button.setEnabled(net)
+        self.public_button.setEnabled(net);self.voice_button.setEnabled(net);self.ai_button.setEnabled(net)
         for key,b in self.quick_buttons:b.setEnabled(net if key in {'weather','news'} else free)
     def activity_choices(self):
         excluded={self.state}|({'walking'} if self.can_roam() else set())|(set() if self.settings.personal_activities else {'bathing','toilet'})
@@ -447,8 +484,14 @@ class Companion(QWidget):
     def collapse(self):self.resize_overlay(False);self.mark_activity()
     def show_answer(self,text):
         self.current_source="";self.source_button.hide();self.popup_deadline=0
+        self.pet.gesture('nod')
         self.message.setPlainText(text)
         if self.bubblebox.isVisible():self.message.verticalScrollBar().setValue(0)
+    def submit_ai(self):
+        """Ask the signed-in AI websites (AI Hub) the question typed in the bubble."""
+        text=self.input.text().strip()
+        if not text:self.show_answer(tr(self.lang,'type_first'));self.input.setFocus();return
+        if self.online:self.input.clear();self.ai_requested.emit(text)
     def submit_public(self):
         text=self.input.text().strip()
         if text and self.online and not self.busy:self.public_search_requested.emit(text)

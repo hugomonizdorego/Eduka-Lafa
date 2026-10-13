@@ -1,6 +1,6 @@
 # LAFA
 
-**LAFA 0.1.4 Alpha** is an open-source learning assistant and animated
+**LAFA 0.2.0 Alpha** is an open-source learning assistant and animated
 crocodile companion from Timor-Leste for **Edukasaun OS** (Debian 13 Trixie,
 LXQt) and the **Eduka-Desktop Suite** (Eduka-Desktop, Eduka-Panel,
 Eduka-Settings). LAFA has **no main server**: it relies on the internet, public
@@ -21,14 +21,22 @@ and [how to keep developing LAFA](docs/DEVELOPMENT.md).
 
 ![Learning sources](docs/screenshots/50-library-learning-sources.png)
 
-[View all 55 captures](docs/SCREENSHOTS.md). Captures of LAFA on the desktop
+![LAFA Search](docs/screenshots/57-lafa-search.png)
+
+![AI Hub](docs/screenshots/58-ai-hub.png)
+
+![Classroom for every age](docs/screenshots/59-classroom-every-age.png)
+
+![LAFA moves like a person](docs/screenshots/61-virtual-human-movement.png)
+
+[View all 61 captures](docs/SCREENSHOTS.md). Captures of LAFA on the desktop
 are actual LAFA pixels on an **illustrated desktop**, not Edukasaun OS.
 
 ## Install on Edukasaun OS
 
 ```bash
-sh tools/build-deb.sh                       # -> dist/lafa_0.1.4_all.deb
-sudo apt install ./dist/lafa_0.1.4_all.deb  # dependencies come from Debian
+sh tools/build-deb.sh                       # -> dist/lafa_0.2.0_all.deb
+sudo apt install ./dist/lafa_0.2.0_all.deb  # dependencies come from Debian
 ```
 
 `apt` installs every dependency automatically: `python3-pyqt5` (the same Qt
@@ -50,7 +58,7 @@ runs, so developers can download the `.deb` and try it, but it shows a
 
 | Works offline | Needs internet |
 |---|---|
-| Classroom, exams, report card, homework, Timor-Leste atlas (built-in text), language school, computer lab, Edukasaun OS help desk, files, reminders, read aloud, `/calc`, `/os`, answers from LAFA's lessons and atlas, the Virtual Assistant | AI chat and teachers, Wikipedia search, 130 learning and Timor-Leste media sources, weather and news, hourly refresh of sources, atlas and notice board |
+| Classroom for ages 5–100, exams, report card, homework, Timor-Leste atlas (built-in text), language school, computer lab, Edukasaun OS help desk, files, reminders, read aloud, `/calc`, `/os`, **LAFA Search** over everything LAFA has learned and read, answers with citations, opening apps and pages, the LAFA model (Ollama), the Virtual Assistant | AI Hub sign-in and AI websites, Wikipedia search, reading the 130 learning and Timor-Leste media sources into the memory (every hour), weather and news, atlas and notice board refresh |
 
 Clicking LAFA recommends free software (GNU GPL and other open-source
 licences, such as GIMP, Kiwix, GCompris and Stellarium) and, when online, a
@@ -80,6 +88,34 @@ learning website.
   eduka-settings 0.9.24.
 - **Qt**: PyQt5 like the suite; on Wayland LAFA uses XWayland like Eduka.
 
+## New in 0.2.0
+
+- **LAFA's core memory — LAFA Search.** A search engine on the computer, like
+  Google or Bing but for LAFA's own sources: lessons, the Timor-Leste atlas,
+  OS guides and the pages LAFA reads every hour from the 130 learning and
+  Timor-Leste media sites (robots.txt respected). Results show title, address
+  and snippet; answers cite their sources [1] [2]. It works offline.
+- **AI Hub.** Sign in with OpenRouter (browser login, free models), connect a
+  free Gemini key from AI Studio, or create LAFA's own model with Ollama — then
+  LAFA Desktop and the Virtual Assistant think with that AI and cite LAFA's
+  memory. AI websites (Gemini, ChatGPT, Claude, Copilot, DeepSeek, Perplexity,
+  Le Chat, Qwen, Kimi, HuggingChat, Grok, Meta AI, NotebookLM) open in
+  signed-in tabs, and one question can be sent to several at once (inspired by
+  [Noi](https://github.com/lencx/noi)).
+- **A helping agent.** "buka browser", "loke kalkuladora", "buka kelas",
+  "tanya Gemini apa itu atom", "ingatkan saya 10 menit lagi minum air" — LAFA
+  opens apps and pages, asks AIs, searches and reminds, from a fixed safe list
+  (ideas from [Voice-Command](https://github.com/ruapotato/Voice-Command) and
+  [Linubot](https://github.com/agent-sh/linubot)).
+- **Learning for every age, 5 to 100.** 18 subjects × 7 age levels: maths,
+  physics, chemistry, biology, health and medicine, environment, planets and
+  the solar system, atoms and nuclear science, geography, computers, IT,
+  technology, history, communication, economics, agriculture, civics, arts.
+- **LAFA moves like a person**: steps, weight shift, breathing, waving,
+  nodding and jumping.
+- **Menus fixed**: local features no longer ask for internet; reminders fire
+  offline; empty buttons explain what to do.
+
 ## What LAFA does
 
 **LAFA Desktop — a complete school**
@@ -89,12 +125,14 @@ in Eduka's dark themes): a floating sidebar with **search** and a
 **learning progress** card, section tabs and **Ask LAFA** at the top, and a
 lobby of colourful tiles with one round **Start** button.
 
-The sidebar is organised like a school building: **School** (lobby,
-classroom, teachers' room, exam hall, report card, homework), **Timor-Leste**,
-**Library & labs** and **Help & tools**.
+The sidebar has four groups: **School** (lobby, classroom, teachers' room,
+exam hall, report card, homework, language school), **Timor-Leste** (atlas,
+notice board), **Search & AI** (LAFA Search and library, AI Hub, Husu LAFA)
+and **Tools** (computer lab, files, reminders, help desk).
 
-- **Classroom**: lessons with study notes and a task to try for every
-  subject, including Timor-Leste history lessons built from the timeline.
+- **Classroom**: choose the learner's age (5–7, 8–11, 12–14, 15–18, 19–25,
+  26–59, 60–100) or the Timor-Leste school lessons; every lesson has study
+  notes, a task, a quiz and **Learn more** (LAFA Search).
 - **Exam hall**: **quiz** (5 questions, instant feedback), **test / ulangan**
   (10 questions on one subject) and **exam / ujian** (20 questions from all
   subjects, 20-minute timer), with a review of every mistake. Works offline.
@@ -231,6 +269,12 @@ checkout; the `.deb` is the recommended way on Edukasaun OS.
 
 ## AI setup
 
+**Easiest:** open **AI Hub** and press **Sign in** (OpenRouter: log in with
+Google, GitHub or e-mail in the browser; LAFA gets a key and a free model), or
+press 🔑 to open Google AI Studio, create a free Gemini key and paste it. With
+[Ollama](https://ollama.com/) installed, **Create LAFA model** downloads an
+open model (gemma3:4b, about 3 GB) and makes LAFA's own offline model.
+
 **Free and open-source (recommended to start):** install [Ollama](https://ollama.com/),
 pull an open model (for example `ollama pull llama3.2`), then in LAFA Settings
 choose **Ollama (open-source, local)**, press **Fetch available models**, pick
@@ -257,11 +301,14 @@ also supported; LAFA does not automatically load that file.
 | Anthropic | Claude Messages | [Claude](https://claude.ai/) |
 | DeepSeek | Chat completions | [DeepSeek](https://chat.deepseek.com/) |
 | Perplexity | Agent API, fast preset | [Perplexity](https://www.perplexity.ai/) |
-| Ollama | Local `/api/chat`, open-source models | Not needed |
+| OpenRouter | Chat completions, free models | Browser sign-in (OAuth PKCE) in AI Hub |
+| Ollama | Local `/api/chat`, open-source models; "lafa" model from AI Hub | Not needed |
 | Open-source server | OpenAI-compatible `/chat/completions` | Not needed |
 
-Models, quotas, account permissions and pricing belong to each provider. There
-is no universal sign-in, credential scraping or reuse of browser cookies.
+Models, quotas, account permissions and pricing belong to each provider. The
+AI Hub's web tabs keep their own sign-in cookies in a private LAFA profile
+(`~/.local/share/lafa/aihub`, 0700); LAFA never reads those cookies, tokens or
+answers — it only types the question you send into the page.
 
 ## Commands
 

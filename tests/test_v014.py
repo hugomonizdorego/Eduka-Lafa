@@ -95,7 +95,7 @@ class UI(unittest.TestCase):
     def tearDown(self):
         self.w.companion.close(); self.w.close(); self.w.deleteLater(); self.app.processEvents()
     def test_library_sources_page(self):
-        self.w.navigate("learn"); self.assertEqual(self.w.library_tabs.count(), 2)
+        self.w.navigate("learn"); self.assertEqual(self.w.library_tabs.count(), 3)
         self.assertEqual(len(self.w.source_cards), len(sources.SOURCES))
         self.w.fill_sources("languages"); self.assertEqual(len(self.w.source_cards), 10)
         self.w.source_query.setText("NASA"); self.w.fill_sources(None); self.assertEqual(list(self.w.source_cards), ["NASA"])
@@ -144,7 +144,12 @@ class ChatAndMedia(unittest.TestCase):
         from lafa.net import NetworkError
         with patch("lafa.agent.encyclopedia_search", side_effect=NetworkError("x")):
             text = agent.run("buku", [], True).text
-        self.assertIn("LibriVox", text)
+        # LAFA remembered the Wikipedia article it showed ("buku" = "livru").
+        self.assertIn("Livru mak koleksaun", text); self.assertIn("Internet Archive", text)
+        from lafa import memory
+        memory._shared = memory.Memory(); memory._shared.web = {}; memory._shared._indexes = {}
+        with patch("lafa.agent.encyclopedia_search", side_effect=NetworkError("x")):
+            self.assertIn("LibriVox", agent.run("audiobook", [], True).text)
         self.assertIn("xave API", agent.run("my password is 1234", [], True).text)
     def test_tetun_atlas_has_no_english_mixed_in(self):
         from lafa import timor_atlas

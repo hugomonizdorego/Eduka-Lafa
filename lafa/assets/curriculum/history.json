@@ -1,0 +1,1021 @@
+{
+ "subject": "history",
+ "icon": "📜",
+ "name": {
+  "en": "History",
+  "id": "Sejarah",
+  "pt": "História",
+  "tet": "Istória"
+ },
+ "lessons": [
+  {
+   "level": "early",
+   "title": {
+    "en": "Yesterday, today and tomorrow",
+    "id": "Kemarin, hari ini, dan besok",
+    "pt": "Ontem, hoje e amanhã",
+    "tet": "Horiseik, ohin no aban"
+   },
+   "points": [
+    {
+     "en": "History is the story of things that happened before. Yesterday is in the past.",
+     "id": "Sejarah adalah cerita tentang hal yang terjadi dulu. Kemarin adalah masa lalu.",
+     "pt": "A história é a narrativa das coisas que aconteceram antes. Ontem já é passado.",
+     "tet": "Istória mak istória kona-ba buat ne'ebé akontese uluk. Horiseik mak tempu pasadu."
+    },
+    {
+     "en": "Grandparents remember many old stories. Ask them how life was when they were small.",
+     "id": "Kakek dan nenek ingat banyak cerita lama. Tanyakan bagaimana hidup mereka saat masih kecil.",
+     "pt": "Os avós lembram-se de muitas histórias antigas. Pergunta-lhes como era a vida quando eram pequenos.",
+     "tet": "Avó sira hanoin istória tuan barak. Husu sira oinsá moris bainhira sira sei kiik."
+    },
+    {
+     "en": "Old photos, old tools and old houses help us see the past.",
+     "id": "Foto lama, alat lama, dan rumah lama membantu kita melihat masa lalu.",
+     "pt": "Fotografias antigas, ferramentas antigas e casas antigas ajudam-nos a ver o passado.",
+     "tet": "Foto tuan, ekipamentu tuan no uma tuan ajuda ita atu haree tempu pasadu."
+    }
+   ],
+   "task": {
+    "en": "Find one old thing at home, like a photo or a tais. Ask an adult how old it is.",
+    "id": "Cari satu benda lama di rumah, seperti foto atau tais. Tanyakan kepada orang dewasa berapa umurnya.",
+    "pt": "Procura uma coisa antiga em casa, como uma fotografia ou um tais. Pergunta a um adulto que idade tem.",
+    "tet": "Buka sasán tuan ida iha uma, hanesan foto ka tais ida. Husu ema boot ida sasán ne'e tinan hira ona."
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "Yesterday is in the…",
+      "id": "Kemarin ada di masa…",
+      "pt": "Ontem está no…",
+      "tet": "Horiseik iha tempu…"
+     },
+     "answer": {
+      "en": "past",
+      "id": "lalu",
+      "pt": "passado",
+      "tet": "pasadu"
+     },
+     "wrong": [
+      {
+       "en": "future",
+       "id": "depan",
+       "pt": "futuro",
+       "tet": "futuru"
+      },
+      {
+       "en": "night only",
+       "id": "malam saja",
+       "pt": "só na noite",
+       "tet": "kalan de'it"
+      },
+      {
+       "en": "next week",
+       "id": "minggu depan",
+       "pt": "na próxima semana",
+       "tet": "semana oin"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "Who can tell us old stories about our family?",
+      "id": "Siapa yang bisa menceritakan kisah lama keluarga kita?",
+      "pt": "Quem nos pode contar histórias antigas da família?",
+      "tet": "Se mak bele konta istória tuan kona-ba ita-nia família?"
+     },
+     "answer": {
+      "en": "Grandparents",
+      "id": "Kakek dan nenek",
+      "pt": "Os avós",
+      "tet": "Avó sira"
+     },
+     "wrong": [
+      {
+       "en": "A new baby",
+       "id": "Bayi yang baru lahir",
+       "pt": "Um bebé recém-nascido",
+       "tet": "Bebé foun ida"
+      },
+      {
+       "en": "A chicken",
+       "id": "Seekor ayam",
+       "pt": "Uma galinha",
+       "tet": "Manu ida"
+      },
+      {
+       "en": "A new toy",
+       "id": "Mainan baru",
+       "pt": "Um brinquedo novo",
+       "tet": "Brinkedu foun ida"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "What helps us see the past?",
+      "id": "Apa yang membantu kita melihat masa lalu?",
+      "pt": "O que nos ajuda a ver o passado?",
+      "tet": "Saida mak ajuda ita haree tempu pasadu?"
+     },
+     "answer": {
+      "en": "An old photo",
+      "id": "Foto lama",
+      "pt": "Uma fotografia antiga",
+      "tet": "Foto tuan ida"
+     },
+     "wrong": [
+      {
+       "en": "Tomorrow's rain",
+       "id": "Hujan besok",
+       "pt": "A chuva de amanhã",
+       "tet": "Udan aban nian"
+      },
+      {
+       "en": "A closed door",
+       "id": "Pintu yang tertutup",
+       "pt": "Uma porta fechada",
+       "tet": "Odamatan taka ida"
+      },
+      {
+       "en": "An empty box",
+       "id": "Kotak kosong",
+       "pt": "Uma caixa vazia",
+       "tet": "Kaixa mamuk ida"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "level": "primary",
+   "title": {
+    "en": "The story of Timor-Leste",
+    "id": "Kisah Timor-Leste",
+    "pt": "A história de Timor-Leste",
+    "tet": "Istória Timor-Leste nian"
+   },
+   "points": [
+    {
+     "en": "People have lived on the island of Timor for many thousands of years. They farmed, fished and made tais.",
+     "id": "Manusia sudah tinggal di Pulau Timor selama ribuan tahun. Mereka bertani, menangkap ikan, dan menenun tais.",
+     "pt": "Há muitos milhares de anos que vivem pessoas na ilha de Timor. Cultivavam a terra, pescavam e teciam tais.",
+     "tet": "Ema moris iha illa Timor durante tinan rihun barak ona. Sira halo to'os, kaer ikan no soru tais."
+    },
+    {
+     "en": "Portuguese traders arrived in the 1500s, looking for sandalwood. Timor was a Portuguese colony for more than 400 years.",
+     "id": "Pedagang Portugis datang pada tahun 1500-an untuk mencari kayu cendana. Timor menjadi koloni Portugis lebih dari 400 tahun.",
+     "pt": "Os comerciantes portugueses chegaram no século XVI à procura de sândalo. Timor foi colónia portuguesa durante mais de 400 anos.",
+     "tet": "Komersiante portugés sira mai iha sékulu 16 atu buka ai-kameli. Timor sai kolónia Portugál nian liu tinan 400."
+    },
+    {
+     "en": "Timor-Leste's independence was restored on 20 May 2002. That day is a national holiday.",
+     "id": "Kemerdekaan Timor-Leste dipulihkan pada 20 Mei 2002. Hari itu adalah hari libur nasional.",
+     "pt": "A independência de Timor-Leste foi restaurada a 20 de maio de 2002. Esse dia é feriado nacional.",
+     "tet": "Timor-Leste nia ukun-an restaura iha loron 20 Maiu 2002. Loron ne'e mak feriadu nasionál."
+    },
+    {
+     "en": "Dili is the capital. The national flag has red, yellow, black and a white star.",
+     "id": "Dili adalah ibu kota. Bendera nasional berwarna merah, kuning, hitam, dan ada bintang putih.",
+     "pt": "Díli é a capital. A bandeira nacional tem vermelho, amarelo, preto e uma estrela branca.",
+     "tet": "Dili mak kapitál. Bandeira nasionál iha kór mean, kinur, metan no fitun mutin ida."
+    }
+   ],
+   "task": {
+    "en": "Draw the flag of Timor-Leste and write the date 20 May 2002 under it.",
+    "id": "Gambarlah bendera Timor-Leste dan tulis tanggal 20 Mei 2002 di bawahnya.",
+    "pt": "Desenha a bandeira de Timor-Leste e escreve a data 20 de maio de 2002 por baixo.",
+    "tet": "Pinta bandeira Timor-Leste nian no hakerek data 20 Maiu 2002 iha okos."
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "When was Timor-Leste's independence restored?",
+      "id": "Kapan kemerdekaan Timor-Leste dipulihkan?",
+      "pt": "Quando foi restaurada a independência de Timor-Leste?",
+      "tet": "Bainhira mak Timor-Leste nia ukun-an restaura?"
+     },
+     "answer": {
+      "en": "20 May 2002",
+      "id": "20 Mei 2002",
+      "pt": "20 de maio de 2002",
+      "tet": "20 Maiu 2002"
+     },
+     "wrong": [
+      {
+       "en": "20 May 1952",
+       "id": "20 Mei 1952",
+       "pt": "20 de maio de 1952",
+       "tet": "20 Maiu 1952"
+      },
+      {
+       "en": "1 January 2010",
+       "id": "1 Januari 2010",
+       "pt": "1 de janeiro de 2010",
+       "tet": "1 Janeiru 2010"
+      },
+      {
+       "en": "25 December 1990",
+       "id": "25 Desember 1990",
+       "pt": "25 de dezembro de 1990",
+       "tet": "25 Dezembru 1990"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "What were Portuguese traders looking for in Timor?",
+      "id": "Apa yang dicari pedagang Portugis di Timor?",
+      "pt": "O que procuravam os comerciantes portugueses em Timor?",
+      "tet": "Komersiante portugés sira buka saida iha Timor?"
+     },
+     "answer": {
+      "en": "Sandalwood",
+      "id": "Kayu cendana",
+      "pt": "Sândalo",
+      "tet": "Ai-kameli"
+     },
+     "wrong": [
+      {
+       "en": "Snow",
+       "id": "Salju",
+       "pt": "Neve",
+       "tet": "Neve"
+      },
+      {
+       "en": "Oil from cars",
+       "id": "Oli mobil",
+       "pt": "Óleo de carros",
+       "tet": "Mina karreta nian"
+      },
+      {
+       "en": "Mobile phones",
+       "id": "Telepon genggam",
+       "pt": "Telemóveis",
+       "tet": "Telemóvel"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "What is the capital of Timor-Leste?",
+      "id": "Apa ibu kota Timor-Leste?",
+      "pt": "Qual é a capital de Timor-Leste?",
+      "tet": "Saida mak kapitál Timor-Leste nian?"
+     },
+     "answer": {
+      "en": "Dili",
+      "id": "Dili",
+      "pt": "Díli",
+      "tet": "Dili"
+     },
+     "wrong": [
+      {
+       "en": "Baucau",
+       "id": "Baucau",
+       "pt": "Baucau",
+       "tet": "Baucau"
+      },
+      {
+       "en": "Ataúro",
+       "id": "Ataúro",
+       "pt": "Ataúro",
+       "tet": "Ataúro"
+      },
+      {
+       "en": "Maliana",
+       "id": "Maliana",
+       "pt": "Maliana",
+       "tet": "Maliana"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "level": "middle",
+   "title": {
+    "en": "Ancient civilisations and timelines",
+    "id": "Peradaban kuno dan garis waktu",
+    "pt": "Civilizações antigas e linhas do tempo",
+    "tet": "Sivilizasaun antigu no liña tempu nian"
+   },
+   "points": [
+    {
+     "en": "Writing was invented in Mesopotamia (today's Iraq) about 5 000 years ago. Before writing, history was passed on by speaking.",
+     "id": "Tulisan ditemukan di Mesopotamia (Irak sekarang) sekitar 5.000 tahun lalu. Sebelum ada tulisan, sejarah diwariskan secara lisan.",
+     "pt": "A escrita foi inventada na Mesopotâmia (atual Iraque) há cerca de 5000 anos. Antes da escrita, a história passava-se oralmente.",
+     "tet": "Ema hahú hakerek iha Mezopotámia (Irake ohin loron) tinan 5 000 liubá. Molok iha hakerek, ema fó-hatene istória liuhusi ko'alia de'it."
+    },
+    {
+     "en": "Ancient Egyptians built the great pyramids at Giza about 4 500 years ago. They farmed along the river Nile.",
+     "id": "Bangsa Mesir kuno membangun piramida besar di Giza sekitar 4.500 tahun lalu. Mereka bertani di sepanjang Sungai Nil.",
+     "pt": "Os antigos egípcios construíram as grandes pirâmides de Gizé há cerca de 4500 anos. Cultivavam a terra ao longo do rio Nilo.",
+     "tet": "Ejípsiu antigu sira harii pirámide boot sira iha Giza tinan 4 500 liubá. Sira halo to'os iha mota Nilu nia ninin."
+    },
+    {
+     "en": "BCE means 'before the Common Era' and CE means 'Common Era'. The year 500 BCE is 1 000 years before 500 CE.",
+     "id": "SM berarti 'Sebelum Masehi' dan M berarti 'Masehi'. Tahun 500 SM adalah 1.000 tahun sebelum tahun 500 M.",
+     "pt": "a.C. significa 'antes de Cristo' e d.C. 'depois de Cristo'. O ano 500 a.C. fica 1000 anos antes do ano 500 d.C.",
+     "tet": "a.K. signifika 'antes Kristu' no d.K. 'depois Kristu'. Tinan 500 a.K. mak tinan 1 000 molok tinan 500 d.K."
+    },
+    {
+     "en": "A timeline puts events in order from oldest to newest. It helps us see how much time passed between them.",
+     "id": "Garis waktu menyusun peristiwa dari yang paling lama sampai yang paling baru. Ini membantu kita melihat jarak waktu antarperistiwa.",
+     "pt": "Uma linha do tempo põe os acontecimentos por ordem, do mais antigo ao mais recente. Ajuda-nos a ver quanto tempo passou entre eles.",
+     "tet": "Liña tempu nian tau akontesimentu sira tuir orden, husi ida tuan liu to'o ida foun liu. Ne'e ajuda ita haree tempu hira liu iha sira-nia klaran."
+    }
+   ],
+   "task": {
+    "en": "Make a timeline of your own life with five events, from your birth until today.",
+    "id": "Buat garis waktu hidupmu dengan lima peristiwa, dari lahir sampai hari ini.",
+    "pt": "Faz uma linha do tempo da tua vida com cinco acontecimentos, desde o teu nascimento até hoje.",
+    "tet": "Halo liña tempu ida kona-ba ó-nia moris ho akontesimentu lima, husi ó moris to'o ohin."
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "Where was writing first invented?",
+      "id": "Di mana tulisan pertama kali ditemukan?",
+      "pt": "Onde foi inventada a escrita pela primeira vez?",
+      "tet": "Iha ne'ebé mak ema hahú hakerek dahuluk?"
+     },
+     "answer": {
+      "en": "Mesopotamia",
+      "id": "Mesopotamia",
+      "pt": "Mesopotâmia",
+      "tet": "Mezopotámia"
+     },
+     "wrong": [
+      {
+       "en": "Australia",
+       "id": "Australia",
+       "pt": "Austrália",
+       "tet": "Austrália"
+      },
+      {
+       "en": "Brazil",
+       "id": "Brasil",
+       "pt": "Brasil",
+       "tet": "Brazil"
+      },
+      {
+       "en": "Antarctica",
+       "id": "Antartika",
+       "pt": "Antártida",
+       "tet": "Antártika"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "How many years are there between 500 BCE and 500 CE (ignoring the missing year 0)?",
+      "id": "Berapa tahun jarak antara 500 SM dan 500 M (tanpa menghitung tahun 0)?",
+      "pt": "Quantos anos há entre 500 a.C. e 500 d.C. (sem contar o ano 0)?",
+      "tet": "Tinan hira iha 500 a.K. no 500 d.K. nia klaran (la sura tinan 0)?"
+     },
+     "answer": {
+      "en": "1 000 years",
+      "id": "1.000 tahun",
+      "pt": "1000 anos",
+      "tet": "Tinan 1 000"
+     },
+     "wrong": [
+      {
+       "en": "0 years",
+       "id": "0 tahun",
+       "pt": "0 anos",
+       "tet": "Tinan 0"
+      },
+      {
+       "en": "500 years",
+       "id": "500 tahun",
+       "pt": "500 anos",
+       "tet": "Tinan 500"
+      },
+      {
+       "en": "2 500 years",
+       "id": "2.500 tahun",
+       "pt": "2500 anos",
+       "tet": "Tinan 2 500"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "What does a timeline show?",
+      "id": "Apa yang ditunjukkan garis waktu?",
+      "pt": "O que mostra uma linha do tempo?",
+      "tet": "Liña tempu nian hatudu saida?"
+     },
+     "answer": {
+      "en": "Events in order of time",
+      "id": "Peristiwa menurut urutan waktu",
+      "pt": "Acontecimentos por ordem cronológica",
+      "tet": "Akontesimentu sira tuir orden tempu"
+     },
+     "wrong": [
+      {
+       "en": "The height of mountains",
+       "id": "Tinggi gunung",
+       "pt": "A altura das montanhas",
+       "tet": "Foho sira-nia aas"
+      },
+      {
+       "en": "The price of rice",
+       "id": "Harga beras",
+       "pt": "O preço do arroz",
+       "tet": "Folin foos nian"
+      },
+      {
+       "en": "Only events of today",
+       "id": "Hanya peristiwa hari ini",
+       "pt": "Só os acontecimentos de hoje",
+       "tet": "Akontesimentu ohin nian de'it"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "level": "secondary",
+   "title": {
+    "en": "Cause and effect: the Industrial Revolution",
+    "id": "Sebab dan akibat: Revolusi Industri",
+    "pt": "Causa e efeito: a Revolução Industrial",
+    "tet": "Kauza no efeitu: Revolusaun Industriál"
+   },
+   "points": [
+    {
+     "en": "The Industrial Revolution began in Britain around 1760. Machines powered by coal and steam began to replace hand work.",
+     "id": "Revolusi Industri dimulai di Inggris sekitar tahun 1760. Mesin bertenaga batu bara dan uap mulai menggantikan pekerjaan tangan.",
+     "pt": "A Revolução Industrial começou na Grã-Bretanha por volta de 1760. Máquinas movidas a carvão e a vapor começaram a substituir o trabalho manual.",
+     "tet": "Revolusaun Industriál hahú iha Grã-Bretaña besik tinan 1760. Mákina sira ne'ebé la'o ho karvaun no vapór hahú troka servisu ho liman."
+    },
+    {
+     "en": "Causes included new inventions such as the improved steam engine, plenty of coal and growing trade.",
+     "id": "Penyebabnya antara lain penemuan baru seperti mesin uap yang lebih baik, banyaknya batu bara, dan perdagangan yang berkembang.",
+     "pt": "Entre as causas estão novas invenções, como a máquina a vapor melhorada, a abundância de carvão e o crescimento do comércio.",
+     "tet": "Kauza balu mak invensaun foun hanesan mákina vapór ne'ebé di'ak liu, karvaun barak no komérsiu ne'ebé aumenta."
+    },
+    {
+     "en": "Effects: factories grew, many people moved from farms to cities, and goods became cheaper. Working conditions were often hard, including for children.",
+     "id": "Akibatnya: pabrik berkembang, banyak orang pindah dari desa ke kota, dan barang menjadi lebih murah. Kondisi kerja sering berat, termasuk bagi anak-anak.",
+     "pt": "Efeitos: as fábricas cresceram, muitas pessoas mudaram-se do campo para as cidades e os bens ficaram mais baratos. As condições de trabalho eram muitas vezes duras, também para crianças.",
+     "tet": "Efeitu sira: fábrika sira aumenta, ema barak muda husi foho ba sidade, no sasán sai baratu liu. Kondisaun servisu dala barak todan, mós ba labarik sira."
+    },
+    {
+     "en": "Historians ask 'why?' and 'what happened next?'. One event can have several causes and several effects.",
+     "id": "Sejarawan bertanya 'mengapa?' dan 'apa yang terjadi kemudian?'. Satu peristiwa bisa punya beberapa sebab dan beberapa akibat.",
+     "pt": "Os historiadores perguntam 'porquê?' e 'o que aconteceu depois?'. Um acontecimento pode ter várias causas e vários efeitos.",
+     "tet": "Istoriadór sira husu 'tanba saida?' no 'saida mak akontese tuir mai?'. Akontesimentu ida bele iha kauza barak no efeitu barak."
+    }
+   ],
+   "task": {
+    "en": "Choose one machine you use (a motorbike, a phone, a rice mill). List one cause of its invention and two effects on daily life.",
+    "id": "Pilih satu mesin yang kamu gunakan (motor, telepon, penggilingan padi). Tulis satu sebab penemuannya dan dua akibatnya bagi kehidupan sehari-hari.",
+    "pt": "Escolhe uma máquina que usas (uma mota, um telemóvel, um moinho de arroz). Indica uma causa da sua invenção e dois efeitos na vida diária.",
+    "tet": "Hili mákina ida ne'ebé ó uza (motór, telemóvel, mákina dulas hare). Hakerek kauza ida ba ninia invensaun no efeitu rua ba moris loroloron."
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "Where did the Industrial Revolution begin?",
+      "id": "Di mana Revolusi Industri dimulai?",
+      "pt": "Onde começou a Revolução Industrial?",
+      "tet": "Revolusaun Industriál hahú iha ne'ebé?"
+     },
+     "answer": {
+      "en": "Britain",
+      "id": "Inggris",
+      "pt": "Grã-Bretanha",
+      "tet": "Grã-Bretaña"
+     },
+     "wrong": [
+      {
+       "en": "Japan",
+       "id": "Jepang",
+       "pt": "Japão",
+       "tet": "Japaun"
+      },
+      {
+       "en": "Timor-Leste",
+       "id": "Timor-Leste",
+       "pt": "Timor-Leste",
+       "tet": "Timor-Leste"
+      },
+      {
+       "en": "Peru",
+       "id": "Peru",
+       "pt": "Peru",
+       "tet": "Perú"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "Which was a cause of the Industrial Revolution?",
+      "id": "Manakah yang menjadi sebab Revolusi Industri?",
+      "pt": "Qual foi uma causa da Revolução Industrial?",
+      "tet": "Saida mak kauza ida ba Revolusaun Industriál?"
+     },
+     "answer": {
+      "en": "The improved steam engine",
+      "id": "Mesin uap yang lebih baik",
+      "pt": "A máquina a vapor melhorada",
+      "tet": "Mákina vapór ne'ebé di'ak liu"
+     },
+     "wrong": [
+      {
+       "en": "The internet",
+       "id": "Internet",
+       "pt": "A internet",
+       "tet": "Internet"
+      },
+      {
+       "en": "Electric cars",
+       "id": "Mobil listrik",
+       "pt": "Os carros elétricos",
+       "tet": "Karreta eletrisidade"
+      },
+      {
+       "en": "Mobile phones",
+       "id": "Telepon genggam",
+       "pt": "Os telemóveis",
+       "tet": "Telemóvel sira"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "Which was an effect of the Industrial Revolution?",
+      "id": "Manakah akibat Revolusi Industri?",
+      "pt": "Qual foi um efeito da Revolução Industrial?",
+      "tet": "Saida mak efeitu ida husi Revolusaun Industriál?"
+     },
+     "answer": {
+      "en": "Many people moved to cities",
+      "id": "Banyak orang pindah ke kota",
+      "pt": "Muitas pessoas mudaram-se para as cidades",
+      "tet": "Ema barak muda ba sidade"
+     },
+     "wrong": [
+      {
+       "en": "Cities became empty",
+       "id": "Kota menjadi kosong",
+       "pt": "As cidades ficaram vazias",
+       "tet": "Sidade sira sai mamuk"
+      },
+      {
+       "en": "Factories disappeared",
+       "id": "Pabrik menghilang",
+       "pt": "As fábricas desapareceram",
+       "tet": "Fábrika sira lakon"
+      },
+      {
+       "en": "Nobody used coal again",
+       "id": "Tidak ada lagi yang memakai batu bara",
+       "pt": "Ninguém voltou a usar carvão",
+       "tet": "Ema ida la uza tan karvaun"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "level": "university",
+   "title": {
+    "en": "Sources and historical method",
+    "id": "Sumber dan metode sejarah",
+    "pt": "Fontes e método histórico",
+    "tet": "Fonte no métodu istóriku"
+   },
+   "points": [
+    {
+     "en": "A primary source comes from the time studied, such as a letter, photo or eyewitness account. A secondary source, like a textbook, interprets primary sources later.",
+     "id": "Sumber primer berasal dari masa yang dipelajari, misalnya surat, foto, atau kesaksian. Sumber sekunder, seperti buku pelajaran, menafsirkan sumber primer di kemudian hari.",
+     "pt": "Uma fonte primária vem da época estudada, como uma carta, uma fotografia ou um testemunho. Uma fonte secundária, como um manual, interpreta mais tarde as fontes primárias.",
+     "tet": "Fonte primária mai husi tempu ne'ebé ita estuda, hanesan karta, foto ka testemuña ida. Fonte sekundária, hanesan livru eskola, interpreta fonte primária sira depois."
+    },
+    {
+     "en": "Every source has an author with a point of view. Historians ask who made it, when, why and for whom.",
+     "id": "Setiap sumber memiliki penulis dengan sudut pandang tertentu. Sejarawan bertanya siapa pembuatnya, kapan, mengapa, dan untuk siapa.",
+     "pt": "Cada fonte tem um autor com um ponto de vista. Os historiadores perguntam quem a fez, quando, porquê e para quem.",
+     "tet": "Fonte ida-idak iha autór ida ho ninia pontu de vista. Istoriadór sira husu se mak halo, bainhira, tanba saida no ba se."
+    },
+    {
+     "en": "Corroboration means checking a claim against several independent sources. Claims supported by many sources are more reliable.",
+     "id": "Korroborasi berarti memeriksa suatu klaim dengan beberapa sumber yang independen. Klaim yang didukung banyak sumber lebih dapat dipercaya.",
+     "pt": "Corroborar significa comparar uma afirmação com várias fontes independentes. As afirmações apoiadas por muitas fontes são mais fiáveis.",
+     "tet": "Korobora signifika kompara afirmasaun ida ho fonte independente oioin. Afirmasaun ne'ebé fonte barak apoia mak fiar-na'in liu."
+    },
+    {
+     "en": "Oral history records people's spoken memories. It is very important in Timor-Leste, where many traditions were passed on by speaking.",
+     "id": "Sejarah lisan merekam ingatan yang diceritakan orang. Ini sangat penting di Timor-Leste, tempat banyak tradisi diwariskan secara lisan.",
+     "pt": "A história oral regista as memórias contadas pelas pessoas. É muito importante em Timor-Leste, onde muitas tradições foram transmitidas oralmente.",
+     "tet": "Istória orál rejista ema nia memória ne'ebé sira konta. Ne'e importante tebes iha Timor-Leste, tanba tradisaun barak fó-tuir liuhusi ko'alia."
+    }
+   ],
+   "task": {
+    "en": "Pick one event from your town's past. Find one primary and one secondary source about it and compare what they say.",
+    "id": "Pilih satu peristiwa dari masa lalu kotamu. Cari satu sumber primer dan satu sumber sekunder tentangnya, lalu bandingkan isinya.",
+    "pt": "Escolhe um acontecimento do passado da tua terra. Procura uma fonte primária e uma secundária sobre ele e compara o que dizem.",
+    "tet": "Hili akontesimentu ida husi ó-nia rai nia pasadu. Buka fonte primária ida no fonte sekundária ida kona-ba ne'e, depois kompara saida mak sira dehan."
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "Which is a primary source?",
+      "id": "Manakah yang termasuk sumber primer?",
+      "pt": "Qual é uma fonte primária?",
+      "tet": "Saida mak fonte primária?"
+     },
+     "answer": {
+      "en": "A letter written at the time",
+      "id": "Surat yang ditulis pada masa itu",
+      "pt": "Uma carta escrita na época",
+      "tet": "Karta ida ne'ebé hakerek iha tempu ne'ebá"
+     },
+     "wrong": [
+      {
+       "en": "A modern textbook",
+       "id": "Buku pelajaran modern",
+       "pt": "Um manual escolar moderno",
+       "tet": "Livru eskola modernu ida"
+      },
+      {
+       "en": "A film made 100 years later",
+       "id": "Film yang dibuat 100 tahun kemudian",
+       "pt": "Um filme feito 100 anos depois",
+       "tet": "Filme ida ne'ebé halo tinan 100 depois"
+      },
+      {
+       "en": "An encyclopaedia summary",
+       "id": "Ringkasan ensiklopedia",
+       "pt": "Um resumo de enciclopédia",
+       "tet": "Rezumu ensiklopédia nian"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "What is corroboration?",
+      "id": "Apa itu korroborasi?",
+      "pt": "O que é corroborar?",
+      "tet": "Korobora mak saida?"
+     },
+     "answer": {
+      "en": "Checking a claim with several independent sources",
+      "id": "Memeriksa klaim dengan beberapa sumber independen",
+      "pt": "Comparar uma afirmação com várias fontes independentes",
+      "tet": "Kompara afirmasaun ida ho fonte independente oioin"
+     },
+     "wrong": [
+      {
+       "en": "Trusting the first source you find",
+       "id": "Memercayai sumber pertama yang ditemukan",
+       "pt": "Confiar na primeira fonte que se encontra",
+       "tet": "Fiar ba fonte dahuluk ne'ebé ita hetan"
+      },
+      {
+       "en": "Copying a source word by word",
+       "id": "Menyalin sumber kata demi kata",
+       "pt": "Copiar uma fonte palavra por palavra",
+       "tet": "Kopia fonte ida liafuan ba liafuan"
+      },
+      {
+       "en": "Deleting old documents",
+       "id": "Menghapus dokumen lama",
+       "pt": "Apagar documentos antigos",
+       "tet": "Hamoos dokumentu tuan sira"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "Why is oral history important in Timor-Leste?",
+      "id": "Mengapa sejarah lisan penting di Timor-Leste?",
+      "pt": "Porque é importante a história oral em Timor-Leste?",
+      "tet": "Tanba saida mak istória orál importante iha Timor-Leste?"
+     },
+     "answer": {
+      "en": "Many traditions were passed on by speaking",
+      "id": "Banyak tradisi diwariskan secara lisan",
+      "pt": "Muitas tradições foram transmitidas oralmente",
+      "tet": "Tradisaun barak fó-tuir liuhusi ko'alia"
+     },
+     "wrong": [
+      {
+       "en": "Nobody in Timor ever wrote anything",
+       "id": "Tidak ada orang Timor yang pernah menulis",
+       "pt": "Ninguém em Timor escreveu alguma coisa",
+       "tet": "Ema Timor ida nunka hakerek buat ida"
+      },
+      {
+       "en": "Oral stories are always exactly correct",
+       "id": "Cerita lisan selalu tepat sekali",
+       "pt": "As histórias orais estão sempre totalmente certas",
+       "tet": "Istória orál sempre loos tebes"
+      },
+      {
+       "en": "It replaces all written sources",
+       "id": "Menggantikan semua sumber tertulis",
+       "pt": "Substitui todas as fontes escritas",
+       "tet": "Ne'e troka fonte hakerek hotu"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "level": "adult",
+   "title": {
+    "en": "Key dates in Timor-Leste's history",
+    "id": "Tanggal penting dalam sejarah Timor-Leste",
+    "pt": "Datas importantes da história de Timor-Leste",
+    "tet": "Data importante sira iha istória Timor-Leste nian"
+   },
+   "points": [
+    {
+     "en": "On 28 November 1975, independence was proclaimed in Dili. This date is now a national holiday.",
+     "id": "Pada 28 November 1975, kemerdekaan diproklamasikan di Dili. Tanggal ini sekarang menjadi hari libur nasional.",
+     "pt": "A 28 de novembro de 1975 foi proclamada a independência em Díli. Esta data é hoje feriado nacional.",
+     "tet": "Iha loron 28 Novembru 1975, ukun-an proklama iha Dili. Data ne'e agora feriadu nasionál."
+    },
+    {
+     "en": "On 30 August 1999, in a vote organised by the United Nations, 78.5% of voters chose independence.",
+     "id": "Pada 30 Agustus 1999, dalam pemungutan suara yang diselenggarakan PBB, 78,5% pemilih memilih kemerdekaan.",
+     "pt": "A 30 de agosto de 1999, numa consulta organizada pelas Nações Unidas, 78,5% dos eleitores escolheram a independência.",
+     "tet": "Iha loron 30 Agostu 1999, iha konsulta populár ne'ebé Nasoins Unidas organiza, votante 78,5% hili ukun-an."
+    },
+    {
+     "en": "Independence was restored on 20 May 2002, and Timor-Leste joined the United Nations on 27 September 2002.",
+     "id": "Kemerdekaan dipulihkan pada 20 Mei 2002, dan Timor-Leste menjadi anggota PBB pada 27 September 2002.",
+     "pt": "A independência foi restaurada a 20 de maio de 2002 e Timor-Leste tornou-se membro das Nações Unidas a 27 de setembro de 2002.",
+     "tet": "Ukun-an restaura iha 20 Maiu 2002, no Timor-Leste sai membru Nasoins Unidas iha 27 Setembru 2002."
+    },
+    {
+     "en": "The Constitution makes Tetun and Portuguese the official languages. Knowing these dates helps citizens understand public holidays and civic life.",
+     "id": "Konstitusi menetapkan bahasa Tetun dan Portugis sebagai bahasa resmi. Mengetahui tanggal-tanggal ini membantu warga memahami hari libur dan kehidupan bernegara.",
+     "pt": "A Constituição define o tétum e o português como línguas oficiais. Conhecer estas datas ajuda os cidadãos a compreender os feriados e a vida cívica.",
+     "tet": "Konstituisaun hatuur Tetun no Portugés hanesan lian ofisiál. Hatene data sira-ne'e ajuda sidadaun sira komprende feriadu no moris sívika."
+    }
+   ],
+   "task": {
+    "en": "Visit a museum or archive, such as the Resistance Archive and Museum in Dili, or read one official document from 2002.",
+    "id": "Kunjungi museum atau arsip, seperti Arsip dan Museum Perlawanan di Dili, atau baca satu dokumen resmi dari tahun 2002.",
+    "pt": "Visita um museu ou arquivo, como o Arquivo e Museu da Resistência Timorense em Díli, ou lê um documento oficial de 2002.",
+    "tet": "Vizita múzeu ka arkivu ida, hanesan Arkivu no Múzeu Rezisténsia Timorense iha Dili, ka lee dokumentu ofisiál ida husi tinan 2002."
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "When was independence proclaimed in Dili?",
+      "id": "Kapan kemerdekaan diproklamasikan di Dili?",
+      "pt": "Quando foi proclamada a independência em Díli?",
+      "tet": "Bainhira mak ukun-an proklama iha Dili?"
+     },
+     "answer": {
+      "en": "28 November 1975",
+      "id": "28 November 1975",
+      "pt": "28 de novembro de 1975",
+      "tet": "28 Novembru 1975"
+     },
+     "wrong": [
+      {
+       "en": "30 August 1999",
+       "id": "30 Agustus 1999",
+       "pt": "30 de agosto de 1999",
+       "tet": "30 Agostu 1999"
+      },
+      {
+       "en": "27 September 2002",
+       "id": "27 September 2002",
+       "pt": "27 de setembro de 2002",
+       "tet": "27 Setembru 2002"
+      },
+      {
+       "en": "1 January 1960",
+       "id": "1 Januari 1960",
+       "pt": "1 de janeiro de 1960",
+       "tet": "1 Janeiru 1960"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "What share of voters chose independence on 30 August 1999?",
+      "id": "Berapa persen pemilih memilih kemerdekaan pada 30 Agustus 1999?",
+      "pt": "Que percentagem dos eleitores escolheu a independência a 30 de agosto de 1999?",
+      "tet": "Votante persentu hira mak hili ukun-an iha 30 Agostu 1999?"
+     },
+     "answer": {
+      "en": "78.5%",
+      "id": "78,5%",
+      "pt": "78,5%",
+      "tet": "78,5%"
+     },
+     "wrong": [
+      {
+       "en": "21.5%",
+       "id": "21,5%",
+       "pt": "21,5%",
+       "tet": "21,5%"
+      },
+      {
+       "en": "50%",
+       "id": "50%",
+       "pt": "50%",
+       "tet": "50%"
+      },
+      {
+       "en": "100%",
+       "id": "100%",
+       "pt": "100%",
+       "tet": "100%"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "What are the official languages of Timor-Leste?",
+      "id": "Apa bahasa resmi Timor-Leste?",
+      "pt": "Quais são as línguas oficiais de Timor-Leste?",
+      "tet": "Saida mak lian ofisiál Timor-Leste nian?"
+     },
+     "answer": {
+      "en": "Tetun and Portuguese",
+      "id": "Tetun dan Portugis",
+      "pt": "Tétum e português",
+      "tet": "Tetun no Portugés"
+     },
+     "wrong": [
+      {
+       "en": "English and French",
+       "id": "Inggris dan Prancis",
+       "pt": "Inglês e francês",
+       "tet": "Inglés no Fransés"
+      },
+      {
+       "en": "Only English",
+       "id": "Hanya bahasa Inggris",
+       "pt": "Só o inglês",
+       "tet": "Inglés de'it"
+      },
+      {
+       "en": "Spanish and Chinese",
+       "id": "Spanyol dan Tionghoa",
+       "pt": "Espanhol e chinês",
+       "tet": "Españól no Xinés"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "level": "senior",
+   "title": {
+    "en": "Sharing your memories with the young",
+    "id": "Berbagi kenangan dengan generasi muda",
+    "pt": "Partilhar as suas memórias com os jovens",
+    "tet": "Fahe ita-nia memória ho foin-sa'e sira"
+   },
+   "points": [
+    {
+     "en": "Your life is living history. Stories about school, farming, markets and family events teach the young what books cannot.",
+     "id": "Hidup Anda adalah sejarah yang hidup. Cerita tentang sekolah, bertani, pasar, dan acara keluarga mengajarkan hal yang tidak ada di buku.",
+     "pt": "A sua vida é história viva. Histórias sobre a escola, a agricultura, os mercados e a família ensinam aos jovens o que os livros não ensinam.",
+     "tet": "Ita-nia moris mak istória moris. Istória kona-ba eskola, to'os, merkadu no festa família hanorin foin-sa'e sira buat ne'ebé livru la hanorin."
+    },
+    {
+     "en": "A grandchild can record your stories on a phone. Say the place, the year and the names, so the story is clear later.",
+     "id": "Cucu dapat merekam cerita Anda dengan telepon. Sebutkan tempat, tahun, dan nama-nama agar ceritanya jelas di kemudian hari.",
+     "pt": "Um neto pode gravar as suas histórias num telemóvel. Diga o lugar, o ano e os nomes, para que a história fique clara mais tarde.",
+     "tet": "Bei-oan ida bele grava ita-nia istória iha telemóvel. Temi fatin, tinan no naran sira, atu istória ne'e moos ba loron aban."
+    },
+    {
+     "en": "Keep old photos and documents dry, in a closed box or plastic folder, away from sun and insects.",
+     "id": "Simpan foto dan dokumen lama di tempat kering, dalam kotak tertutup atau map plastik, jauh dari matahari dan serangga.",
+     "pt": "Guarde fotografias e documentos antigos num lugar seco, numa caixa fechada ou pasta de plástico, longe do sol e dos insetos.",
+     "tet": "Rai foto no dokumentu tuan sira iha fatin maran, iha kaixa taka ka pasta plástiku, dook husi loron no insetu sira."
+    },
+    {
+     "en": "You may share only the memories you choose. Some memories are painful, and it is fine to rest or to talk with someone you trust.",
+     "id": "Anda boleh berbagi hanya kenangan yang Anda pilih. Ada kenangan yang menyakitkan, dan tidak apa-apa untuk beristirahat atau berbicara dengan orang yang Anda percayai.",
+     "pt": "Pode partilhar só as memórias que escolher. Algumas memórias são dolorosas, e não faz mal descansar ou falar com alguém de confiança.",
+     "tet": "Ita bele fahe de'it memória ne'ebé ita hili. Memória balu halo moras, no la iha problema atu deskansa ka ko'alia ho ema ida ne'ebé ita fiar."
+    }
+   ],
+   "task": {
+    "en": "Tell a grandchild one story from your youth and ask them to write it down or record it with the date.",
+    "id": "Ceritakan satu kisah masa muda Anda kepada cucu dan minta mereka menulis atau merekamnya beserta tanggalnya.",
+    "pt": "Conte a um neto uma história da sua juventude e peça-lhe que a escreva ou grave com a data.",
+    "tet": "Konta ba bei-oan ida istória ida husi ita-nia tempu foin-sa'e no husu nia hakerek ka grava ho data."
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "What details make a recorded story clear later?",
+      "id": "Rincian apa yang membuat cerita rekaman jelas di kemudian hari?",
+      "pt": "Que detalhes tornam clara mais tarde uma história gravada?",
+      "tet": "Detalle saida mak halo istória ne'ebé grava sai moos ba loron aban?"
+     },
+     "answer": {
+      "en": "The place, the year and the names",
+      "id": "Tempat, tahun, dan nama-nama",
+      "pt": "O lugar, o ano e os nomes",
+      "tet": "Fatin, tinan no naran sira"
+     },
+     "wrong": [
+      {
+       "en": "Only the weather that day",
+       "id": "Hanya cuaca hari itu",
+       "pt": "Só o tempo que fazia nesse dia",
+       "tet": "Tempu loron ne'e nian de'it"
+      },
+      {
+       "en": "The price of the phone",
+       "id": "Harga telepon",
+       "pt": "O preço do telemóvel",
+       "tet": "Telemóvel nia folin"
+      },
+      {
+       "en": "Nothing, just music",
+       "id": "Tidak ada, hanya musik",
+       "pt": "Nada, só música",
+       "tet": "La iha buat ida, múzika de'it"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "Where should old photos be kept?",
+      "id": "Di mana foto lama sebaiknya disimpan?",
+      "pt": "Onde se devem guardar fotografias antigas?",
+      "tet": "Foto tuan sira tenke rai iha ne'ebé?"
+     },
+     "answer": {
+      "en": "In a dry closed box",
+      "id": "Dalam kotak tertutup yang kering",
+      "pt": "Numa caixa fechada e seca",
+      "tet": "Iha kaixa taka ida ne'ebé maran"
+     },
+     "wrong": [
+      {
+       "en": "Outside in the rain",
+       "id": "Di luar saat hujan",
+       "pt": "Lá fora à chuva",
+       "tet": "Iha li'ur bainhira udan"
+      },
+      {
+       "en": "In direct sunlight",
+       "id": "Di bawah sinar matahari langsung",
+       "pt": "Ao sol direto",
+       "tet": "Iha loron-matan nia okos"
+      },
+      {
+       "en": "On the kitchen floor",
+       "id": "Di lantai dapur",
+       "pt": "No chão da cozinha",
+       "tet": "Iha rai, iha dapur laran"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "What if a memory is painful to share?",
+      "id": "Bagaimana jika suatu kenangan menyakitkan untuk dibagikan?",
+      "pt": "E se uma memória for dolorosa de partilhar?",
+      "tet": "Oinsá se memória ida halo moras atu fahe?"
+     },
+     "answer": {
+      "en": "You may choose not to share it, or rest",
+      "id": "Anda boleh memilih tidak membagikannya, atau beristirahat",
+      "pt": "Pode escolher não a partilhar, ou descansar",
+      "tet": "Ita bele hili atu la fahe, ka deskansa"
+     },
+     "wrong": [
+      {
+       "en": "You must always share everything",
+       "id": "Anda harus selalu membagikan semuanya",
+       "pt": "Tem de partilhar sempre tudo",
+       "tet": "Ita tenke fahe buat hotu nafatin"
+      },
+      {
+       "en": "You must forget all your past",
+       "id": "Anda harus melupakan semua masa lalu",
+       "pt": "Tem de esquecer todo o passado",
+       "tet": "Ita tenke haluha ita-nia pasadu tomak"
+      },
+      {
+       "en": "You must never talk to anyone",
+       "id": "Anda tidak boleh berbicara dengan siapa pun",
+       "pt": "Nunca pode falar com ninguém",
+       "tet": "Ita labele ko'alia ho ema ida"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

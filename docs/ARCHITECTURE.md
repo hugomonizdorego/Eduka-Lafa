@@ -34,6 +34,12 @@ of API access and belongs to the user's browser.
 | timor_atlas | Timor-Leste atlas: 14 categories of topics, municipalities, Presidents and Prime Ministers, leader questions |
 | livefacts | Online refresh of atlas topics from Wikipedia (reader's language, HTTPS, no redirects), dated cache in ~/.cache/lafa (0600) |
 | sources | 79 learning websites (8 categories) from the Edukasaun OS directory and 51 Timor-Leste media/research sources (6 categories), search, hourly availability check cached in ~/.cache/lafa (0600) |
+| memory | LAFA's core memory: BM25 search engine over built-in knowledge, the 130 sources' pages (hourly, robots.txt, same-site HTTPS redirects only, Facebook skipped) and remembered Wikipedia articles; cited answers and AI references; cache ~/.cache/lafa/memory (0600) |
+| curriculum | Learning for ages 5–100: 18 subjects × 7 levels from lafa/assets/curriculum/*.json, age levels, questions for exams |
+| aihub | AI Hub web tabs (optional Qt WebEngine): private persistent profile, navigation kept on each service, permissions refused, prompt typed into selected AIs |
+| signin | OpenRouter OAuth PKCE browser sign-in with a one-shot loopback callback, Gemini key check, LAFA model (Ollama Modelfile) |
+| actions | Agent requests in four languages → fixed allowlist: open apps (installed programs only, no shell), LAFA pages, AI Hub questions, memory search, reminders |
+| motion | Human-like movement for the character: gait, breathing, attention, gestures, fades |
 | offline | Which features work offline; answers from LAFA's lessons and atlas when there is no internet |
 | recommendations | Free-software (GPL / open-source) tips and learning websites shown when LAFA is clicked |
 | languages | Language school: 14 courses × 25 phrases, pronunciation, quiz |

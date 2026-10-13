@@ -17,8 +17,8 @@ class Reminders:
         reminder=Reminder(self.next_id,text,self.clock()+minutes*60);self.items.append(reminder);self.next_id+=1
         return reminder
     def cancel(self,identifier):self.items=[item for item in self.items if item.id!=identifier]
-    def due(self,online):
-        if not online:return []
+    def due(self,online=True):
+        # Reminders are local: they fire offline too (0.2.0; "online" is kept for callers).
         expired=[item for item in self.items if item.due<=self.clock()]
         self.items=[item for item in self.items if item not in expired]
         return expired

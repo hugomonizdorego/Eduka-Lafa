@@ -1,0 +1,1015 @@
+{
+ "subject": "economics",
+ "icon": "💰",
+ "name": {
+  "en": "Economics and money",
+  "id": "Ekonomi dan uang",
+  "pt": "Economia e dinheiro",
+  "tet": "Ekonomia no osan"
+ },
+ "lessons": [
+  {
+   "level": "early",
+   "title": {
+    "en": "Coins, notes and saving",
+    "id": "Koin, uang kertas, dan menabung",
+    "pt": "Moedas, notas e poupar",
+    "tet": "Moeda, nota no rai osan"
+   },
+   "points": [
+    {
+     "en": "We use money to buy things, like bread or a ball. Money can be coins or paper notes.",
+     "id": "Kita memakai uang untuk membeli barang, seperti roti atau bola. Uang bisa berupa koin atau uang kertas.",
+     "pt": "Usamos dinheiro para comprar coisas, como pão ou uma bola. O dinheiro pode ser moedas ou notas.",
+     "tet": "Ita uza osan atu sosa sasán, hanesan paun ka bola. Osan bele moeda ka nota."
+    },
+    {
+     "en": "In Timor-Leste we use the dollar. One dollar is the same as 100 cents.",
+     "id": "Di Timor-Leste kita memakai dolar. Satu dolar sama dengan 100 sen.",
+     "pt": "Em Timor-Leste usamos o dólar. Um dólar vale 100 cêntimos.",
+     "tet": "Iha Timor-Leste ita uza dólar. Dólar ida hanesan séntimu 100."
+    },
+    {
+     "en": "Saving means keeping some money for later. A small box or tin can be your savings box.",
+     "id": "Menabung berarti menyimpan sebagian uang untuk nanti. Kotak kecil atau kaleng bisa menjadi celenganmu.",
+     "pt": "Poupar é guardar algum dinheiro para mais tarde. Uma caixa pequena ou uma lata pode ser o teu mealheiro.",
+     "tet": "Rai osan signifika rai osan balu ba depois. Kaixa ki'ik ka lata ida bele sai ó-nia fatin rai osan."
+    }
+   ],
+   "task": {
+    "en": "Count five coins with an adult. Put one coin in a savings box.",
+    "id": "Hitung lima koin bersama orang dewasa. Masukkan satu koin ke celengan.",
+    "pt": "Conta cinco moedas com um adulto. Põe uma moeda no mealheiro.",
+    "tet": "Sura moeda lima ho ema boot ida. Tau moeda ida iha fatin rai osan."
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "What do we use money for?",
+      "id": "Untuk apa kita memakai uang?",
+      "pt": "Para que usamos o dinheiro?",
+      "tet": "Ita uza osan ba saida?"
+     },
+     "answer": {
+      "en": "To buy things",
+      "id": "Untuk membeli barang",
+      "pt": "Para comprar coisas",
+      "tet": "Atu sosa sasán"
+     },
+     "wrong": [
+      {
+       "en": "To eat it",
+       "id": "Untuk dimakan",
+       "pt": "Para o comer",
+       "tet": "Atu han"
+      },
+      {
+       "en": "To plant it",
+       "id": "Untuk ditanam",
+       "pt": "Para o plantar",
+       "tet": "Atu kuda"
+      },
+      {
+       "en": "To make rain",
+       "id": "Untuk membuat hujan",
+       "pt": "Para fazer chover",
+       "tet": "Atu halo udan"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "How many cents make one dollar?",
+      "id": "Berapa sen sama dengan satu dolar?",
+      "pt": "Quantos cêntimos fazem um dólar?",
+      "tet": "Séntimu hira mak hanesan dólar ida?"
+     },
+     "answer": {
+      "en": "100",
+      "id": "100",
+      "pt": "100",
+      "tet": "100"
+     },
+     "wrong": [
+      {
+       "en": "10",
+       "id": "10",
+       "pt": "10",
+       "tet": "10"
+      },
+      {
+       "en": "5",
+       "id": "5",
+       "pt": "5",
+       "tet": "5"
+      },
+      {
+       "en": "1 000",
+       "id": "1.000",
+       "pt": "1000",
+       "tet": "1 000"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "What is saving?",
+      "id": "Apa itu menabung?",
+      "pt": "O que é poupar?",
+      "tet": "Rai osan mak saida?"
+     },
+     "answer": {
+      "en": "Keeping money for later",
+      "id": "Menyimpan uang untuk nanti",
+      "pt": "Guardar dinheiro para mais tarde",
+      "tet": "Rai osan ba depois"
+     },
+     "wrong": [
+      {
+       "en": "Spending all money now",
+       "id": "Menghabiskan semua uang sekarang",
+       "pt": "Gastar todo o dinheiro já",
+       "tet": "Gasta osan hotu agora"
+      },
+      {
+       "en": "Throwing money away",
+       "id": "Membuang uang",
+       "pt": "Deitar o dinheiro fora",
+       "tet": "Soe osan"
+      },
+      {
+       "en": "Losing your coins",
+       "id": "Kehilangan koin",
+       "pt": "Perder as moedas",
+       "tet": "Lakon moeda sira"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "level": "primary",
+   "title": {
+    "en": "Needs, wants and saving",
+    "id": "Kebutuhan, keinginan, dan menabung",
+    "pt": "Necessidades, desejos e poupança",
+    "tet": "Nesesidade, hakarak no rai osan"
+   },
+   "points": [
+    {
+     "en": "Needs are things we must have to live: food, clean water, clothes and a home. Wants are nice to have, like toys or sweets.",
+     "id": "Kebutuhan adalah hal yang harus kita miliki untuk hidup: makanan, air bersih, pakaian, dan rumah. Keinginan adalah hal yang menyenangkan, seperti mainan atau permen.",
+     "pt": "As necessidades são o que precisamos para viver: comida, água limpa, roupa e casa. Os desejos são coisas agradáveis, como brinquedos ou doces.",
+     "tet": "Nesesidade mak buat ne'ebé ita tenke iha atu moris: hahán, bee moos, ropa no uma. Hakarak mak buat di'ak atu iha, hanesan brinkedu ka bonbon."
+    },
+    {
+     "en": "Buy needs first, then wants if there is money left.",
+     "id": "Belilah kebutuhan terlebih dahulu, lalu keinginan jika masih ada uang.",
+     "pt": "Compra primeiro as necessidades e depois os desejos, se sobrar dinheiro.",
+     "tet": "Sosa nesesidade uluk, depois mak hakarak se osan sei iha."
+    },
+    {
+     "en": "If you save 50 cents every week, after 10 weeks you have 5 dollars.",
+     "id": "Jika kamu menabung 50 sen setiap minggu, setelah 10 minggu kamu punya 5 dolar.",
+     "pt": "Se poupares 50 cêntimos por semana, ao fim de 10 semanas tens 5 dólares.",
+     "tet": "Se ó rai séntimu 50 kada semana, depois semana 10 ó iha dólar 5."
+    }
+   ],
+   "task": {
+    "en": "Make two lists at home: five needs and five wants. Circle the ones your family buys every week.",
+    "id": "Buat dua daftar di rumah: lima kebutuhan dan lima keinginan. Lingkari yang dibeli keluargamu setiap minggu.",
+    "pt": "Faz duas listas em casa: cinco necessidades e cinco desejos. Faz um círculo à volta dos que a tua família compra todas as semanas.",
+    "tet": "Halo lista rua iha uma: nesesidade lima no hakarak lima. Halo sírkulu ba sasán ne'ebé ó-nia família sosa kada semana."
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "Which is a need?",
+      "id": "Manakah yang merupakan kebutuhan?",
+      "pt": "Qual é uma necessidade?",
+      "tet": "Saida mak nesesidade?"
+     },
+     "answer": {
+      "en": "Clean water",
+      "id": "Air bersih",
+      "pt": "Água limpa",
+      "tet": "Bee moos"
+     },
+     "wrong": [
+      {
+       "en": "A new toy",
+       "id": "Mainan baru",
+       "pt": "Um brinquedo novo",
+       "tet": "Brinkedu foun ida"
+      },
+      {
+       "en": "Sweets",
+       "id": "Permen",
+       "pt": "Doces",
+       "tet": "Bonbon"
+      },
+      {
+       "en": "A video game",
+       "id": "Permainan video",
+       "pt": "Um videojogo",
+       "tet": "Video-jogu ida"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "What should you buy first?",
+      "id": "Apa yang harus dibeli terlebih dahulu?",
+      "pt": "O que deves comprar primeiro?",
+      "tet": "Ó tenke sosa saida uluk?"
+     },
+     "answer": {
+      "en": "Needs",
+      "id": "Kebutuhan",
+      "pt": "As necessidades",
+      "tet": "Nesesidade sira"
+     },
+     "wrong": [
+      {
+       "en": "Wants",
+       "id": "Keinginan",
+       "pt": "Os desejos",
+       "tet": "Hakarak sira"
+      },
+      {
+       "en": "Only sweets",
+       "id": "Hanya permen",
+       "pt": "Só doces",
+       "tet": "Bonbon de'it"
+      },
+      {
+       "en": "Nothing ever",
+       "id": "Tidak pernah apa pun",
+       "pt": "Nunca nada",
+       "tet": "Nunka buat ida"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "You save 50 cents a week for 10 weeks. How much do you have?",
+      "id": "Kamu menabung 50 sen seminggu selama 10 minggu. Berapa uangmu?",
+      "pt": "Poupas 50 cêntimos por semana durante 10 semanas. Quanto tens?",
+      "tet": "Ó rai séntimu 50 kada semana durante semana 10. Ó iha osan hira?"
+     },
+     "answer": {
+      "en": "$5",
+      "id": "$5",
+      "pt": "5 dólares",
+      "tet": "Dólar 5"
+     },
+     "wrong": [
+      {
+       "en": "$50",
+       "id": "$50",
+       "pt": "50 dólares",
+       "tet": "Dólar 50"
+      },
+      {
+       "en": "$0.50",
+       "id": "$0,50",
+       "pt": "50 cêntimos",
+       "tet": "Séntimu 50"
+      },
+      {
+       "en": "$10",
+       "id": "$10",
+       "pt": "10 dólares",
+       "tet": "Dólar 10"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "level": "middle",
+   "title": {
+    "en": "Making a budget",
+    "id": "Membuat anggaran",
+    "pt": "Fazer um orçamento",
+    "tet": "Halo orsamentu ida"
+   },
+   "points": [
+    {
+     "en": "A budget is a plan for money. Income is money that comes in; expenses are money that goes out.",
+     "id": "Anggaran adalah rencana keuangan. Pemasukan adalah uang yang masuk; pengeluaran adalah uang yang keluar.",
+     "pt": "Um orçamento é um plano para o dinheiro. O rendimento é o dinheiro que entra; as despesas são o dinheiro que sai.",
+     "tet": "Orsamentu mak planu ba osan. Rendimentu mak osan ne'ebé tama; despeza mak osan ne'ebé sai."
+    },
+    {
+     "en": "Savings = income − expenses. If you earn $20 and spend $15, you save $5.",
+     "id": "Tabungan = pemasukan − pengeluaran. Jika kamu mendapat $20 dan membelanjakan $15, kamu menabung $5.",
+     "pt": "Poupança = rendimento − despesas. Se ganhares 20 dólares e gastares 15, poupas 5 dólares.",
+     "tet": "Osan ne'ebé rai = rendimentu − despeza. Se ó hetan dólar 20 no gasta dólar 15, ó rai dólar 5."
+    },
+    {
+     "en": "If expenses are bigger than income, you have a deficit and may need to borrow. A budget helps you avoid that.",
+     "id": "Jika pengeluaran lebih besar dari pemasukan, kamu mengalami defisit dan mungkin harus meminjam. Anggaran membantu menghindarinya.",
+     "pt": "Se as despesas forem maiores do que o rendimento, tens um défice e podes ter de pedir emprestado. Um orçamento ajuda a evitá-lo.",
+     "tet": "Se despeza boot liu rendimentu, ó iha défise no karik presiza deve osan. Orsamentu ajuda ó atu evita ida-ne'e."
+    },
+    {
+     "en": "Write down every expense for a week. Small daily costs, like phone credit and snacks, add up fast.",
+     "id": "Catat setiap pengeluaran selama seminggu. Biaya kecil harian, seperti pulsa dan jajanan, cepat bertambah.",
+     "pt": "Regista todas as despesas durante uma semana. Pequenos gastos diários, como saldo de telemóvel e lanches, somam depressa.",
+     "tet": "Hakerek despeza hotu durante semana ida. Kustu ki'ik loroloron, hanesan pulsa no hahán ki'ik, aumenta lalais."
+    }
+   ],
+   "task": {
+    "en": "Track your money for one week: write every income and expense, then calculate what you saved.",
+    "id": "Catat uangmu selama seminggu: tulis setiap pemasukan dan pengeluaran, lalu hitung berapa yang kamu tabung.",
+    "pt": "Regista o teu dinheiro durante uma semana: escreve cada rendimento e despesa e depois calcula quanto poupaste.",
+    "tet": "Hakerek ó-nia osan durante semana ida: rendimentu no despeza hotu, depois kalkula osan hira mak ó rai."
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "You earn $30 and spend $22. How much do you save?",
+      "id": "Kamu mendapat $30 dan membelanjakan $22. Berapa tabunganmu?",
+      "pt": "Ganhas 30 dólares e gastas 22. Quanto poupas?",
+      "tet": "Ó hetan dólar 30 no gasta dólar 22. Ó rai osan hira?"
+     },
+     "answer": {
+      "en": "$8",
+      "id": "$8",
+      "pt": "8 dólares",
+      "tet": "Dólar 8"
+     },
+     "wrong": [
+      {
+       "en": "$52",
+       "id": "$52",
+       "pt": "52 dólares",
+       "tet": "Dólar 52"
+      },
+      {
+       "en": "$12",
+       "id": "$12",
+       "pt": "12 dólares",
+       "tet": "Dólar 12"
+      },
+      {
+       "en": "$22",
+       "id": "$22",
+       "pt": "22 dólares",
+       "tet": "Dólar 22"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "What are expenses?",
+      "id": "Apa itu pengeluaran?",
+      "pt": "O que são despesas?",
+      "tet": "Despeza mak saida?"
+     },
+     "answer": {
+      "en": "Money that goes out",
+      "id": "Uang yang keluar",
+      "pt": "Dinheiro que sai",
+      "tet": "Osan ne'ebé sai"
+     },
+     "wrong": [
+      {
+       "en": "Money that comes in",
+       "id": "Uang yang masuk",
+       "pt": "Dinheiro que entra",
+       "tet": "Osan ne'ebé tama"
+      },
+      {
+       "en": "A gift from a bank",
+       "id": "Hadiah dari bank",
+       "pt": "Um presente do banco",
+       "tet": "Prezente husi banku"
+      },
+      {
+       "en": "Coins in a box",
+       "id": "Koin di dalam kotak",
+       "pt": "Moedas numa caixa",
+       "tet": "Moeda iha kaixa laran"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "What is a deficit?",
+      "id": "Apa itu defisit?",
+      "pt": "O que é um défice?",
+      "tet": "Défise mak saida?"
+     },
+     "answer": {
+      "en": "Expenses bigger than income",
+      "id": "Pengeluaran lebih besar dari pemasukan",
+      "pt": "Despesas maiores do que o rendimento",
+      "tet": "Despeza boot liu rendimentu"
+     },
+     "wrong": [
+      {
+       "en": "Income bigger than expenses",
+       "id": "Pemasukan lebih besar dari pengeluaran",
+       "pt": "Rendimento maior do que as despesas",
+       "tet": "Rendimentu boot liu despeza"
+      },
+      {
+       "en": "Income equal to expenses",
+       "id": "Pemasukan sama dengan pengeluaran",
+       "pt": "Rendimento igual às despesas",
+       "tet": "Rendimentu hanesan despeza"
+      },
+      {
+       "en": "A type of coin",
+       "id": "Sejenis koin",
+       "pt": "Um tipo de moeda",
+       "tet": "Moeda tipu ida"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "level": "secondary",
+   "title": {
+    "en": "Supply, demand and prices",
+    "id": "Penawaran, permintaan, dan harga",
+    "pt": "Oferta, procura e preços",
+    "tet": "Oferta, procura no folin"
+   },
+   "points": [
+    {
+     "en": "Demand is how much people want to buy; supply is how much sellers offer. The market price is where they meet.",
+     "id": "Permintaan adalah jumlah yang ingin dibeli orang; penawaran adalah jumlah yang ditawarkan penjual. Harga pasar terbentuk di titik temu keduanya.",
+     "pt": "A procura é quanto as pessoas querem comprar; a oferta é quanto os vendedores oferecem. O preço de mercado está onde se encontram.",
+     "tet": "Procura mak kuantidade ne'ebé ema hakarak sosa; oferta mak kuantidade ne'ebé fa'an-na'in sira oferese. Folin merkadu nian mak iha fatin ne'ebé sira hasoru malu."
+    },
+    {
+     "en": "If supply falls and demand stays the same, the price usually rises. After a storm, fewer boats fish, so fish costs more at the market.",
+     "id": "Jika penawaran turun dan permintaan tetap, harga biasanya naik. Setelah badai, lebih sedikit perahu melaut sehingga ikan lebih mahal di pasar.",
+     "pt": "Se a oferta descer e a procura se mantiver, o preço normalmente sobe. Depois de uma tempestade, saem menos barcos e o peixe fica mais caro no mercado.",
+     "tet": "Se oferta tun no procura la muda, folin baibain sa'e. Depois anin-boot, ró uitoan de'it mak bá kaer ikan, entaun ikan karun liu iha merkadu."
+    },
+    {
+     "en": "If demand rises, prices tend to rise too. When world demand for coffee grows, farmers in Ermera can get better prices.",
+     "id": "Jika permintaan naik, harga cenderung ikut naik. Saat permintaan kopi dunia meningkat, petani di Ermera bisa mendapat harga lebih baik.",
+     "pt": "Se a procura subir, os preços tendem a subir também. Quando a procura mundial de café aumenta, os agricultores de Ermera podem obter melhores preços.",
+     "tet": "Se procura sa'e, folin mós sa'e baibain. Bainhira mundu nia procura ba kafé aumenta, agrikultór sira iha Ermera bele hetan folin di'ak liu."
+    },
+    {
+     "en": "Competition between many sellers keeps prices lower and pushes them to improve quality.",
+     "id": "Persaingan antara banyak penjual menjaga harga tetap rendah dan mendorong mereka meningkatkan mutu.",
+     "pt": "A concorrência entre muitos vendedores mantém os preços mais baixos e leva-os a melhorar a qualidade.",
+     "tet": "Kompetisaun entre fa'an-na'in barak halo folin tun no obriga sira atu hadi'a kualidade."
+    }
+   ],
+   "task": {
+    "en": "Visit a local market twice, a week apart. Note the price of fish, rice and vegetables and explain any change using supply and demand.",
+    "id": "Kunjungi pasar setempat dua kali dengan jarak seminggu. Catat harga ikan, beras, dan sayur, lalu jelaskan perubahannya dengan penawaran dan permintaan.",
+    "pt": "Visita um mercado local duas vezes, com uma semana de intervalo. Anota o preço do peixe, do arroz e dos legumes e explica as mudanças com a oferta e a procura.",
+    "tet": "Vizita merkadu lokál dala rua, ho semana ida iha klaran. Hakerek folin ikan, foos no modo, no esplika mudansa sira ho oferta no procura."
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "After a storm fewer boats fish. What usually happens to the price of fish?",
+      "id": "Setelah badai lebih sedikit perahu melaut. Apa yang biasanya terjadi pada harga ikan?",
+      "pt": "Depois de uma tempestade saem menos barcos. O que acontece normalmente ao preço do peixe?",
+      "tet": "Depois anin-boot ró uitoan de'it mak bá kaer ikan. Saida mak baibain akontese ba folin ikan?"
+     },
+     "answer": {
+      "en": "It rises",
+      "id": "Naik",
+      "pt": "Sobe",
+      "tet": "Sa'e"
+     },
+     "wrong": [
+      {
+       "en": "It falls",
+       "id": "Turun",
+       "pt": "Desce",
+       "tet": "Tun"
+      },
+      {
+       "en": "It becomes zero",
+       "id": "Menjadi nol",
+       "pt": "Passa a zero",
+       "tet": "Sai zero"
+      },
+      {
+       "en": "Fish becomes free",
+       "id": "Ikan menjadi gratis",
+       "pt": "O peixe fica grátis",
+       "tet": "Ikan sai grátis"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "What is demand?",
+      "id": "Apa itu permintaan?",
+      "pt": "O que é a procura?",
+      "tet": "Procura mak saida?"
+     },
+     "answer": {
+      "en": "How much people want to buy",
+      "id": "Jumlah yang ingin dibeli orang",
+      "pt": "Quanto as pessoas querem comprar",
+      "tet": "Kuantidade ne'ebé ema hakarak sosa"
+     },
+     "wrong": [
+      {
+       "en": "How much sellers offer",
+       "id": "Jumlah yang ditawarkan penjual",
+       "pt": "Quanto os vendedores oferecem",
+       "tet": "Kuantidade ne'ebé fa'an-na'in oferese"
+      },
+      {
+       "en": "The tax on goods",
+       "id": "Pajak atas barang",
+       "pt": "O imposto sobre os bens",
+       "tet": "Impostu ba sasán"
+      },
+      {
+       "en": "The weight of goods",
+       "id": "Berat barang",
+       "pt": "O peso dos bens",
+       "tet": "Sasán nia todan"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "What does competition between sellers usually do?",
+      "id": "Apa dampak persaingan antar penjual biasanya?",
+      "pt": "O que costuma fazer a concorrência entre vendedores?",
+      "tet": "Kompetisaun entre fa'an-na'in sira baibain halo saida?"
+     },
+     "answer": {
+      "en": "Keeps prices lower",
+      "id": "Menjaga harga tetap rendah",
+      "pt": "Mantém os preços mais baixos",
+      "tet": "Halo folin tun"
+     },
+     "wrong": [
+      {
+       "en": "Makes all prices double",
+       "id": "Membuat semua harga dua kali lipat",
+       "pt": "Duplica todos os preços",
+       "tet": "Halo folin hotu dobru"
+      },
+      {
+       "en": "Stops all trade",
+       "id": "Menghentikan semua perdagangan",
+       "pt": "Para todo o comércio",
+       "tet": "Hapara komérsiu hotu"
+      },
+      {
+       "en": "Removes all choice",
+       "id": "Menghilangkan semua pilihan",
+       "pt": "Elimina toda a escolha",
+       "tet": "Hasai opsaun hotu"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "level": "university",
+   "title": {
+    "en": "Trade and the US dollar in Timor-Leste",
+    "id": "Perdagangan dan dolar AS di Timor-Leste",
+    "pt": "Comércio e o dólar americano em Timor-Leste",
+    "tet": "Komérsiu no dólar amerikanu iha Timor-Leste"
+   },
+   "points": [
+    {
+     "en": "Timor-Leste has used the US dollar as its official currency since 2000. It also mints its own centavo coins, used alongside US notes.",
+     "id": "Timor-Leste memakai dolar AS sebagai mata uang resmi sejak tahun 2000. Negara ini juga mencetak koin centavo sendiri yang dipakai bersama uang kertas AS.",
+     "pt": "Timor-Leste usa o dólar americano como moeda oficial desde 2000. Também cunha as suas próprias moedas de centavo, usadas a par das notas americanas.",
+     "tet": "Timor-Leste uza dólar amerikanu hanesan moeda ofisiál dezde tinan 2000. Nia mós halo nia moeda sentavu rasik, ne'ebé uza hamutuk ho nota amerikana."
+    },
+    {
+     "en": "Using another country's currency (dollarisation) gives stable prices and low inflation risk, but the country cannot set its own interest rates or print money.",
+     "id": "Memakai mata uang negara lain (dolarisasi) memberi harga stabil dan risiko inflasi rendah, tetapi negara tidak dapat menetapkan suku bunga sendiri atau mencetak uang.",
+     "pt": "Usar a moeda de outro país (dolarização) dá preços estáveis e baixo risco de inflação, mas o país não pode definir as suas taxas de juro nem imprimir dinheiro.",
+     "tet": "Uza moeda nasaun seluk nian (dolarizasaun) fó folin estável no risku inflasaun ki'ik, maibé nasaun labele hatuur ninia taxa juru rasik ka imprime osan."
+    },
+    {
+     "en": "Comparative advantage: countries gain from trade when each produces what it makes at the lowest opportunity cost. Coffee is Timor-Leste's main non-oil export.",
+     "id": "Keunggulan komparatif: negara mendapat manfaat dari perdagangan bila masing-masing memproduksi barang dengan biaya peluang terendah. Kopi adalah ekspor nonmigas utama Timor-Leste.",
+     "pt": "Vantagem comparativa: os países ganham com o comércio quando cada um produz o que faz com menor custo de oportunidade. O café é a principal exportação não petrolífera de Timor-Leste.",
+     "tet": "Vantajen komparativa: nasaun sira hetan benefísiu husi komérsiu bainhira ida-idak produz buat ne'ebé nia halo ho kustu oportunidade ki'ik liu. Kafé mak Timor-Leste nia esportasaun prinsipál la'ós mina-rai."
+    },
+    {
+     "en": "Because many goods are imported, a stronger dollar makes imports cheaper but makes exports like coffee more expensive for foreign buyers.",
+     "id": "Karena banyak barang diimpor, dolar yang menguat membuat impor lebih murah, tetapi ekspor seperti kopi menjadi lebih mahal bagi pembeli asing.",
+     "pt": "Como muitos bens são importados, um dólar mais forte torna as importações mais baratas, mas encarece exportações como o café para os compradores estrangeiros.",
+     "tet": "Tanba sasán barak mak importa, dólar ne'ebé forte liu halo importasaun baratu liu, maibé halo esportasaun hanesan kafé karun liu ba sosa-na'in estranjeiru sira."
+    }
+   ],
+   "task": {
+    "en": "Compare the price of three imported goods and three local goods in a Dili shop. Explain which are affected by exchange rates and why.",
+    "id": "Bandingkan harga tiga barang impor dan tiga barang lokal di sebuah toko di Dili. Jelaskan mana yang dipengaruhi nilai tukar dan mengapa.",
+    "pt": "Compara o preço de três bens importados e três bens locais numa loja de Díli. Explica quais são afetados pelas taxas de câmbio e porquê.",
+    "tet": "Kompara folin sasán importadu tolu no sasán lokál tolu iha loja ida iha Dili. Esplika ida ne'ebé mak taxa kámbiu afeta no tanba saida."
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "Since which year has Timor-Leste used the US dollar?",
+      "id": "Sejak tahun berapa Timor-Leste memakai dolar AS?",
+      "pt": "Desde que ano usa Timor-Leste o dólar americano?",
+      "tet": "Dezde tinan hira mak Timor-Leste uza dólar amerikanu?"
+     },
+     "answer": {
+      "en": "2000",
+      "id": "2000",
+      "pt": "2000",
+      "tet": "2000"
+     },
+     "wrong": [
+      {
+       "en": "1975",
+       "id": "1975",
+       "pt": "1975",
+       "tet": "1975"
+      },
+      {
+       "en": "1945",
+       "id": "1945",
+       "pt": "1945",
+       "tet": "1945"
+      },
+      {
+       "en": "2020",
+       "id": "2020",
+       "pt": "2020",
+       "tet": "2020"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "What is a cost of dollarisation?",
+      "id": "Apa kerugian dolarisasi?",
+      "pt": "Qual é um custo da dolarização?",
+      "tet": "Saida mak dezvantajen ida husi dolarizasaun?"
+     },
+     "answer": {
+      "en": "The country cannot set its own interest rates",
+      "id": "Negara tidak dapat menetapkan suku bunga sendiri",
+      "pt": "O país não pode definir as suas taxas de juro",
+      "tet": "Nasaun labele hatuur ninia taxa juru rasik"
+     },
+     "wrong": [
+      {
+       "en": "Prices become very unstable",
+       "id": "Harga menjadi sangat tidak stabil",
+       "pt": "Os preços ficam muito instáveis",
+       "tet": "Folin sai la estável tebes"
+      },
+      {
+       "en": "Trade with other countries is banned",
+       "id": "Perdagangan dengan negara lain dilarang",
+       "pt": "O comércio com outros países é proibido",
+       "tet": "Komérsiu ho nasaun seluk bandu"
+      },
+      {
+       "en": "Coins cannot be used",
+       "id": "Koin tidak dapat dipakai",
+       "pt": "As moedas não podem ser usadas",
+       "tet": "Moeda labele uza"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "What is Timor-Leste's main non-oil export?",
+      "id": "Apa ekspor nonmigas utama Timor-Leste?",
+      "pt": "Qual é a principal exportação não petrolífera de Timor-Leste?",
+      "tet": "Saida mak Timor-Leste nia esportasaun prinsipál la'ós mina-rai?"
+     },
+     "answer": {
+      "en": "Coffee",
+      "id": "Kopi",
+      "pt": "Café",
+      "tet": "Kafé"
+     },
+     "wrong": [
+      {
+       "en": "Cars",
+       "id": "Mobil",
+       "pt": "Automóveis",
+       "tet": "Karreta"
+      },
+      {
+       "en": "Wheat",
+       "id": "Gandum",
+       "pt": "Trigo",
+       "tet": "Trigu"
+      },
+      {
+       "en": "Computers",
+       "id": "Komputer",
+       "pt": "Computadores",
+       "tet": "Komputadór"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "level": "adult",
+   "title": {
+    "en": "Running a small business",
+    "id": "Menjalankan usaha kecil",
+    "pt": "Gerir um pequeno negócio",
+    "tet": "Jere negósiu ki'ik ida"
+   },
+   "points": [
+    {
+     "en": "Profit = sales − costs. If you sell coffee for $120 and the beans, bags and transport cost $90, your profit is $30.",
+     "id": "Laba = penjualan − biaya. Jika kamu menjual kopi seharga $120 dan biaya biji, karung, serta transportasi $90, labamu $30.",
+     "pt": "Lucro = vendas − custos. Se vender café por 120 dólares e os grãos, sacos e transporte custarem 90, o lucro é de 30 dólares.",
+     "tet": "Lukru = fa'an − kustu. Se ita fa'an kafé ho dólar 120 no fini, saku no transporte nia kustu dólar 90, ita-nia lukru mak dólar 30."
+    },
+    {
+     "en": "Write every sale and every cost in a notebook each day. Records show which products really make money.",
+     "id": "Catat setiap penjualan dan biaya di buku setiap hari. Catatan menunjukkan produk mana yang benar-benar menghasilkan uang.",
+     "pt": "Registe todos os dias cada venda e cada custo num caderno. Os registos mostram que produtos dão realmente dinheiro.",
+     "tet": "Hakerek fa'an no kustu hotu iha kadernu loroloron. Rejistu hatudu produtu ida ne'ebé mak fó osan duni."
+    },
+    {
+     "en": "Keep business money separate from household money, so you know if the business is growing.",
+     "id": "Pisahkan uang usaha dari uang rumah tangga agar kamu tahu apakah usahamu berkembang.",
+     "pt": "Separe o dinheiro do negócio do dinheiro da casa, para saber se o negócio está a crescer.",
+     "tet": "Fahe osan negósiu nian husi osan uma nian, atu ita hatene se negósiu ne'e buras ka lae."
+    },
+    {
+     "en": "Set prices that cover all costs, including your own time, and still match what customers will pay.",
+     "id": "Tetapkan harga yang menutup semua biaya, termasuk waktumu sendiri, dan tetap sesuai dengan yang mau dibayar pelanggan.",
+     "pt": "Defina preços que cubram todos os custos, incluindo o seu tempo, e que os clientes ainda aceitem pagar.",
+     "tet": "Hatuur folin ne'ebé selu kustu hotu, inklui ita-nia tempu rasik, no kliente sira sei hakarak selu."
+    }
+   ],
+   "task": {
+    "en": "For one week, record all sales and costs of your work or a family business. Calculate the profit at the end.",
+    "id": "Selama seminggu, catat semua penjualan dan biaya pekerjaan atau usaha keluarga. Hitung labanya di akhir minggu.",
+    "pt": "Durante uma semana, registe todas as vendas e custos do seu trabalho ou do negócio da família. Calcule o lucro no fim.",
+    "tet": "Durante semana ida, hakerek fa'an no kustu hotu husi ita-nia servisu ka negósiu família nian. Kalkula lukru iha rohan."
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "Sales are $200 and costs are $150. What is the profit?",
+      "id": "Penjualan $200 dan biaya $150. Berapa labanya?",
+      "pt": "As vendas são 200 dólares e os custos 150. Qual é o lucro?",
+      "tet": "Fa'an dólar 200 no kustu dólar 150. Lukru mak hira?"
+     },
+     "answer": {
+      "en": "$50",
+      "id": "$50",
+      "pt": "50 dólares",
+      "tet": "Dólar 50"
+     },
+     "wrong": [
+      {
+       "en": "$350",
+       "id": "$350",
+       "pt": "350 dólares",
+       "tet": "Dólar 350"
+      },
+      {
+       "en": "$150",
+       "id": "$150",
+       "pt": "150 dólares",
+       "tet": "Dólar 150"
+      },
+      {
+       "en": "$200",
+       "id": "$200",
+       "pt": "200 dólares",
+       "tet": "Dólar 200"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "Why keep business and household money separate?",
+      "id": "Mengapa uang usaha dan uang rumah tangga dipisahkan?",
+      "pt": "Porque separar o dinheiro do negócio do dinheiro da casa?",
+      "tet": "Tanba saida mak fahe osan negósiu nian husi osan uma nian?"
+     },
+     "answer": {
+      "en": "To know if the business is growing",
+      "id": "Agar tahu apakah usaha berkembang",
+      "pt": "Para saber se o negócio está a crescer",
+      "tet": "Atu hatene se negósiu buras ka lae"
+     },
+     "wrong": [
+      {
+       "en": "To pay more tax",
+       "id": "Agar membayar pajak lebih banyak",
+       "pt": "Para pagar mais impostos",
+       "tet": "Atu selu impostu barak liu"
+      },
+      {
+       "en": "To hide money from the family",
+       "id": "Agar menyembunyikan uang dari keluarga",
+       "pt": "Para esconder dinheiro da família",
+       "tet": "Atu subar osan husi família"
+      },
+      {
+       "en": "Because the law bans notebooks",
+       "id": "Karena hukum melarang buku catatan",
+       "pt": "Porque a lei proíbe cadernos",
+       "tet": "Tanba lei bandu kadernu"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "A good price should…",
+      "id": "Harga yang baik harus…",
+      "pt": "Um bom preço deve…",
+      "tet": "Folin di'ak tenke…"
+     },
+     "answer": {
+      "en": "Cover all costs, including your time",
+      "id": "Menutup semua biaya, termasuk waktumu",
+      "pt": "Cobrir todos os custos, incluindo o seu tempo",
+      "tet": "Selu kustu hotu, inklui ita-nia tempu"
+     },
+     "wrong": [
+      {
+       "en": "Be lower than your costs",
+       "id": "Lebih rendah dari biaya",
+       "pt": "Ser menor do que os custos",
+       "tet": "Ki'ik liu kustu"
+      },
+      {
+       "en": "Change every hour at random",
+       "id": "Berubah acak setiap jam",
+       "pt": "Mudar ao acaso de hora a hora",
+       "tet": "Muda arbiru kada oras"
+      },
+      {
+       "en": "Ignore what customers pay",
+       "id": "Mengabaikan yang dibayar pelanggan",
+       "pt": "Ignorar o que os clientes pagam",
+       "tet": "La haree saida mak kliente selu"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "level": "senior",
+   "title": {
+    "en": "Keeping your money safe",
+    "id": "Menjaga uang Anda tetap aman",
+    "pt": "Manter o seu dinheiro seguro",
+    "tet": "Rai ita-nia osan ho seguru"
+   },
+   "points": [
+    {
+     "en": "A bank account keeps money safer than cash at home, which can be lost, stolen or damaged by fire or floods.",
+     "id": "Rekening bank menyimpan uang lebih aman daripada uang tunai di rumah, yang bisa hilang, dicuri, atau rusak karena kebakaran atau banjir.",
+     "pt": "Uma conta bancária guarda o dinheiro com mais segurança do que o dinheiro em casa, que se pode perder, ser roubado ou estragar-se com fogo ou cheias.",
+     "tet": "Konta banku rai osan seguru liu duké osan iha uma, tanba osan iha uma bele lakon, ema na'ok ka ahi no bee-sa'e estraga."
+    },
+    {
+     "en": "Keep receipts and bank papers in one dry folder. They help if there is a mistake or a question later.",
+     "id": "Simpan kuitansi dan dokumen bank dalam satu map yang kering. Itu membantu bila ada kesalahan atau pertanyaan kelak.",
+     "pt": "Guarde os recibos e os papéis do banco numa pasta seca. Ajudam se houver um erro ou uma dúvida mais tarde.",
+     "tet": "Rai resibu no surat banku nian iha pasta maran ida. Sira ajuda se iha sala ka pergunta ruma depois."
+    },
+    {
+     "en": "Be careful with offers that promise to double your money fast. If it sounds too good to be true, ask a trusted family member or the bank first.",
+     "id": "Waspadalah terhadap tawaran yang menjanjikan uang berlipat ganda dengan cepat. Jika terdengar terlalu bagus, tanyakan dulu kepada keluarga tepercaya atau bank.",
+     "pt": "Cuidado com ofertas que prometem duplicar o seu dinheiro depressa. Se parecer bom demais para ser verdade, pergunte primeiro a um familiar de confiança ou ao banco.",
+     "tet": "Kuidadu ho oferta ne'ebé promete atu halo ita-nia osan dobru lalais. Se ne'e di'ak liu atu sai loos, husu uluk família ne'ebé ita fiar ka banku."
+    },
+    {
+     "en": "You can teach grandchildren to save by giving them a savings box and counting the coins together each month.",
+     "id": "Anda dapat mengajari cucu menabung dengan memberi mereka celengan dan menghitung koinnya bersama setiap bulan.",
+     "pt": "Pode ensinar os netos a poupar dando-lhes um mealheiro e contando as moedas juntos todos os meses.",
+     "tet": "Ita bele hanorin bei-oan sira atu rai osan ho fó kaixa rai osan ida no sura moeda hamutuk kada fulan."
+    }
+   ],
+   "task": {
+    "en": "Gather your receipts and bank papers into one folder. Then count a grandchild's savings together and write the total.",
+    "id": "Kumpulkan kuitansi dan dokumen bank Anda dalam satu map. Lalu hitung tabungan cucu bersama dan tulis jumlahnya.",
+    "pt": "Junte os seus recibos e papéis do banco numa só pasta. Depois conte as poupanças de um neto em conjunto e escreva o total.",
+    "tet": "Halibur ita-nia resibu no surat banku nian iha pasta ida. Depois sura bei-oan nia osan ne'ebé rai hamutuk no hakerek totál."
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "Why is a bank account safer than cash at home?",
+      "id": "Mengapa rekening bank lebih aman daripada uang tunai di rumah?",
+      "pt": "Porque é uma conta bancária mais segura do que dinheiro em casa?",
+      "tet": "Tanba saida mak konta banku seguru liu duké osan iha uma?"
+     },
+     "answer": {
+      "en": "Cash at home can be lost or stolen",
+      "id": "Uang tunai di rumah bisa hilang atau dicuri",
+      "pt": "O dinheiro em casa pode perder-se ou ser roubado",
+      "tet": "Osan iha uma bele lakon ka ema na'ok"
+     },
+     "wrong": [
+      {
+       "en": "Banks double your money every week",
+       "id": "Bank melipatgandakan uang setiap minggu",
+       "pt": "Os bancos duplicam o dinheiro todas as semanas",
+       "tet": "Banku halo osan dobru kada semana"
+      },
+      {
+       "en": "Cash at home grows by itself",
+       "id": "Uang tunai di rumah bertambah sendiri",
+       "pt": "O dinheiro em casa cresce sozinho",
+       "tet": "Osan iha uma aumenta rasik"
+      },
+      {
+       "en": "Banks never keep records",
+       "id": "Bank tidak pernah mencatat",
+       "pt": "Os bancos nunca guardam registos",
+       "tet": "Banku nunka rai rejistu"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "An offer promises to double your money in a week. What do you do?",
+      "id": "Ada tawaran menjanjikan uang berlipat dalam seminggu. Apa yang Anda lakukan?",
+      "pt": "Uma oferta promete duplicar o seu dinheiro numa semana. O que faz?",
+      "tet": "Oferta ida promete halo ita-nia osan dobru iha semana ida. Ita halo saida?"
+     },
+     "answer": {
+      "en": "Ask a trusted relative or the bank first",
+      "id": "Tanyakan dulu kepada keluarga tepercaya atau bank",
+      "pt": "Pergunto primeiro a um familiar de confiança ou ao banco",
+      "tet": "Husu uluk família ne'ebé fiar ka banku"
+     },
+     "wrong": [
+      {
+       "en": "Pay at once before it ends",
+       "id": "Langsung membayar sebelum berakhir",
+       "pt": "Pago logo antes que acabe",
+       "tet": "Selu kedas molok remata"
+      },
+      {
+       "en": "Give them all your savings",
+       "id": "Memberikan semua tabungan",
+       "pt": "Dou-lhes todas as poupanças",
+       "tet": "Fó ita-nia osan hotu ne'ebé rai"
+      },
+      {
+       "en": "Share your PIN with them",
+       "id": "Memberikan PIN kepada mereka",
+       "pt": "Partilho o meu PIN com eles",
+       "tet": "Fahe ita-nia PIN ho sira"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "Where should receipts and bank papers be kept?",
+      "id": "Di mana kuitansi dan dokumen bank sebaiknya disimpan?",
+      "pt": "Onde se devem guardar recibos e papéis do banco?",
+      "tet": "Resibu no surat banku nian tenke rai iha ne'ebé?"
+     },
+     "answer": {
+      "en": "Together in one dry folder",
+      "id": "Bersama dalam satu map kering",
+      "pt": "Juntos numa pasta seca",
+      "tet": "Hamutuk iha pasta maran ida"
+     },
+     "wrong": [
+      {
+       "en": "Thrown away at once",
+       "id": "Langsung dibuang",
+       "pt": "Deitados fora logo",
+       "tet": "Soe kedas"
+      },
+      {
+       "en": "Left outside in the rain",
+       "id": "Ditinggal di luar saat hujan",
+       "pt": "Deixados lá fora à chuva",
+       "tet": "Husik iha li'ur bainhira udan"
+      },
+      {
+       "en": "Burned every month",
+       "id": "Dibakar setiap bulan",
+       "pt": "Queimados todos os meses",
+       "tet": "Sunu kada fulan"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

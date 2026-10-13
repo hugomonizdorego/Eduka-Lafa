@@ -13,6 +13,8 @@ PROVIDERS = {
     "anthropic": ("Claude", "https://api.anthropic.com/v1/messages", "ANTHROPIC_API_KEY"),
     "deepseek": ("DeepSeek", "https://api.deepseek.com/chat/completions", "DEEPSEEK_API_KEY"),
     "perplexity": ("Perplexity", "https://api.perplexity.ai/v1/agent", "PERPLEXITY_API_KEY"),
+    # Browser sign-in (no key to copy); free models are chosen automatically.
+    "openrouter": ("OpenRouter (sign in, free models)", "https://openrouter.ai/api/v1/chat/completions", "OPENROUTER_API_KEY"),
     # Open-source models: a local Ollama server, or any OpenAI-compatible
     # open-source server (llama.cpp, vLLM, LocalAI, a school-hosted model).
     "ollama": ("Ollama (open-source, local)", "/api/chat", "LAFA_OLLAMA_API_KEY"),
@@ -108,6 +110,8 @@ class Settings:
     click_recommendations: bool = True
     smooth_scrolling: bool = True
     depth_effects: bool = True
+    # Classroom: "school" (Timor-Leste school lessons) or an age level (5–100).
+    learner_level: str = "school"
 
     @property
     def locale(self):return default_language() if self.language=="system" else self.language
@@ -126,7 +130,7 @@ class Settings:
             if not isinstance(data,dict):return cls()
         except (OSError,ValueError,UnicodeError):return cls()
         defaults=cls();values={}
-        enums={'language':{'system','en','id','pt','tet'},'provider':set(PROVIDERS),'costume':{'traditional','tuxedo','casual'},'walk_speed':{'slow','normal','fast'},'animation_speed':{'slow','normal','fast'},'character_size':{'small','normal','large'},'start_page':{'home','classroom','exams','chat','os_help','teachers','homework','learn','coding','live','culture','languages'},'panel_edge':{'bottom','top'},'preset':{'fast'}}
+        enums={'language':{'system','en','id','pt','tet'},'provider':set(PROVIDERS),'costume':{'traditional','tuxedo','casual'},'walk_speed':{'slow','normal','fast'},'animation_speed':{'slow','normal','fast'},'character_size':{'small','normal','large'},'start_page':{'home','classroom','exams','chat','os_help','teachers','homework','learn','hub','coding','live','culture','languages'},'panel_edge':{'bottom','top'},'preset':{'fast'},'learner_level':{'school','early','primary','middle','secondary','university','adult','senior'}}
         for name,choices in enums.items():
             value=data.get(name,getattr(defaults,name))
             values[name]=value if isinstance(value,str) and value in choices else getattr(defaults,name)

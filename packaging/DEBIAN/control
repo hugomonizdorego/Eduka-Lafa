@@ -1,12 +1,12 @@
 Package: lafa
-Version: 0.1.5
+Version: 0.2.0
 Section: education
 Priority: optional
 Architecture: all
 Installed-Size: 0
 Maintainer: Edukasaun OS <dev@edukasaun.org>
 Depends: python3 (>= 3.11), python3-pyqt5, libqt5svg5, python3-keyring, python3-secretstorage, xdg-utils, libglib2.0-bin, fonts-noto-color-emoji, hicolor-icon-theme
-Recommends: edukasaun-desktop-menu (>= 0.9.24), espeak-ng, alsa-utils, poppler-utils, papirus-icon-theme, gnome-keyring, network-manager-gnome, pavucontrol-qt, pcmanfm-qt, system-config-printer, screengrab, libreoffice
+Recommends: edukasaun-desktop-menu (>= 0.9.24), python3-pyqt5.qtwebengine, espeak-ng, alsa-utils, poppler-utils, papirus-icon-theme, gnome-keyring, network-manager-gnome, pavucontrol-qt, pcmanfm-qt, system-config-printer, screengrab, libreoffice
 Homepage: https://github.com/hugomonizdorego/Eduka-Lafa
 Description: LAFA - learning assistant and virtual companion for Edukasaun OS
  LAFA Desktop is a complete school room: teachers for every subject with free
