@@ -4,6 +4,37 @@
 
 _Nothing yet._
 
+## 0.1.5 — 2026-10-13
+
+### Timor-Leste media
+- 51 Timor-Leste sources join the Library in six new categories: news portals
+  and agencies (TATOLI, Timor News, Hatutan, O Diligente, Lafaek News, …),
+  newspapers (Timor Post, STL, Independente, Diário Nacional, Tempo Semanal,
+  The Dili Weekly, Kla'ak, Jornal da República), TV (RTTL, GMN-TV, TVE),
+  radio, 13 community radios, and research and civil society (La'o Hamutuk,
+  Fundasaun Mahein, FONGTIL, TLPU), plus the Tetun Wikipedia main page.
+- The notice board reads more Timor-Leste news feeds where the sites publish
+  one; pages without a website link to their public page.
+
+### Husu LAFA answers what you write
+- Typing a topic (e.g. "buku", "livru", "Ataúro") now answers about that
+  topic: first from LAFA's lessons and atlas, then (online) from Wikipedia in
+  the interface language, with matching Library sites. The generic "I can
+  search public sources…" reply is gone.
+- Personal sentences, long text, code and private-looking text still never
+  leave the computer; LAFA says so and asks for a topic.
+- Stricter matching: a single word no longer pulls in an unrelated atlas topic.
+
+### Virtual Assistant
+- Cleaner glass bubble with only the important buttons: Edukasaun OS help,
+  weather, Timor-Leste news and **Recommendation** (replaces "Focus · 25").
+  Footer: open LAFA, Wikipedia, read aloud, joke, sources.
+
+### Tetun
+- Clearer Tetun throughout the assistant and LAFA Desktop; all 46 atlas
+  topics and 14 municipalities now have Tetun summaries, and Tetun answers no
+  longer mix in English text.
+
 ## 0.1.4 — 2026-10-13
 
 ### Learning sources (from the Edukasaun OS directory)

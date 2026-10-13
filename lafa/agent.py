@@ -3,12 +3,14 @@ from dataclasses import dataclass, field
 from typing import Optional
 import json
 import re
+from urllib.parse import urlsplit
 from .providers import ProviderClient
 from .tools import FileSearch, encyclopedia_search, encyclopedia_article, web_url, resource_search_url, RESOURCES
 from .live_info import weather_query, weather_text, world_news, news_text, LocationChoices
 from .i18n import tr
 from .timor import timor_news
 from .calculator import calculate
+from .net import NetworkError
 from . import osguide, personality
 
 SYSTEM = """You are LAFA, a friendly crocodile AI desktop learning companion for Edukasaun OS in Timor-Leste, developed by Hugo Moniz do Rego with STI, Digitalização & Mídia – MCAS and Grupo IDEA. Speak in the user's language. Support learning with clear steps, questions and source links where actually available. Be empathetic for personal conversations; do not claim to be human, diagnose, or replace professional care. For imminent danger encourage contacting a trusted person or local emergency support. Respect privacy. You cannot execute commands, install applications, delete files, access browser sessions, or control accounts. Edukasaun OS is Debian-based with LXQt/Eduka-Desktop; help users understand desktop settings, file manager, accessibility and updates, while distinguishing assumptions from verified facts.
@@ -111,6 +113,13 @@ def validated_intent(action):
 # Commands that run entirely on this computer (also offline and in review mode).
 LOCAL_TOOLS={"help","calc","joke","os_help"}
 
+PERSONAL=re.compile(r"\b(my|me|mine|i'm|i am|saya|aku|ku|kami|ha'?u|ha’u|ita-nia|hau-nia|eu|meu|minha|address|alamat|enderesu|morada|phone|telepon|telefone|family|keluarga|família|password|kata sandi|problem|masalah|problema|secret|rahasia)\b",re.I)
+
+def public_topic(text):
+    """True for a short topic or question that is safe to look up publicly."""
+    words=text.split()
+    return 1<=len(words)<=8 and not PERSONAL.search(text)
+
 class Agent:
     def __init__(self, settings, secrets):
         self.settings=settings
@@ -157,9 +166,32 @@ class Agent:
                   'pt':'Estou aqui para ouvir. O que te preocupa? Podemos começar com um pequeno passo. O modo de fontes usa respostas de apoio preparadas; um fornecedor de IA permite uma conversa mais completa.',
                   'tet':"Ha'u prontu atu rona. Saida mak halo ita-nia laran susar? Ita bele hahú ho pasu ki'ik ida. Modu fonte uza resposta apoiu preparadu; provedor IA permite konversa kompletu liu."}
             return Result(text.get(lang,text['en']),'sitting')
+        # Text that may be private (code, passwords, long pasted text) never leaves this computer.
         if len(message)>500 or '\n' in message or re.search(r'\b(def |import |console\.log|api[_ -]?key|password|kata sandi)\b',message,re.I):
             return Result(tr(lang,'needkey')+'\n'+tr(lang,'source_mode'),'serious')
-        return Result(tr(lang,'source_help'),'idle')
+        return self.topic_answer(message)
+    def topic_answer(self,message):
+        """Without an AI provider: answer about what was written.
+        1) LAFA's own lessons and atlas, 2) Wikipedia (Tetun first, then English),
+        3) learning and Timor-Leste news sites that match the words."""
+        from . import offline, sources
+        lang=self.settings.locale;query=message.strip().strip('?!.')[:300]
+        sites=sources.search(query,lang)[:4]
+        tail=('\n\n'+tr(lang,'related_sites')+'\n'+'\n'.join(f'• {s[1]} — {s[2]}' for s in sites)) if sites else ''
+        found=offline.answer(query,lang)
+        if found:return Result(found+tail,'reading')
+        # Privacy: only short, topic-like text goes to Wikipedia; personal
+        # sentences ("my address…", "saya ingin cerita…") stay on this computer.
+        if not public_topic(query):return Result(tr(lang,'private_kept')+tail,'sitting')
+        try:
+            found=encyclopedia_search(query,lang)
+            if found:
+                source=found[0];text=encyclopedia_article(source)[:1800]
+                edition=urlsplit(source.url).hostname.split('.')[0]
+                return Result(f"📖 {source.title} · Wikipedia ({edition})\n\n{text}\n\n{source.url}"+tail,'reading',sources=found)
+        except (NetworkError,ValueError):pass
+        if tail:return Result(tr(lang,'no_public_results')+tail,'thinking')
+        return Result(tr(lang,'no_public_results')+'\n'+tr(lang,'try_topic'),'thinking')
     def teacher(self,teacher,message,history):
         """Ask a LAFA School teacher (needs an AI provider)."""
         from .school import teacher_prompt
@@ -176,7 +208,8 @@ class Agent:
         sources=encyclopedia_search(query,lang)
         if not sources:return Result(tr(lang,'no_public_results'),'reading')
         text=encyclopedia_article(sources[0])[:2400]
-        return Result(tr(lang,'source_mode')+'\n\n'+sources[0].title+'\n'+text+'\n\n'+sources[0].url,'reading',sources=sources)
+        edition=urlsplit(sources[0].url).hostname.split('.')[0]
+        return Result(f"📖 {sources[0].title} · Wikipedia ({edition})\n\n{text}\n\n{sources[0].url}",'reading',sources=sources)
     def execute(self, intent):
         lang=self.settings.locale
         if intent.tool=='public_answer':return self.public_answer(intent.query)

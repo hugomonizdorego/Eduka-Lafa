@@ -23,8 +23,9 @@ class V4Core(unittest.TestCase):
     @patch('lafa.providers.json_request')
     def test_ordinary_chat_is_never_sent_to_public_search(self,api,search):
         agent=Agent(Settings(language='id'),Secrets());agent.client.ready=lambda:False
-        for text in ['My address is private','Saya ingin menceritakan masalah keluarga','What is Dili?']:
-            result=agent.run(text,[],True);self.assertIn('Cari sumber publik',result.text)
+        # Personal sentences never leave the computer (0.1.4: short topics are looked up).
+        for text in ['My address is private','Saya ingin menceritakan masalah keluarga']:
+            result=agent.run(text,[],True);self.assertIn('komputer ini',result.text)
         api.assert_not_called();search.assert_not_called()
     def test_invalid_config_fields_do_not_erase_valid_preferences(self):
         with tempfile.TemporaryDirectory() as folder:

@@ -38,7 +38,7 @@ homework go to a temporary folder. Weather, headlines and sources are labelled
 | 21 | `21-virtual-hover-question.png` | Cursor touches LAFA: "Can I help?" while studying |
 | 22 | `22-virtual-tuxedo-party.png` | Tuxedo outfit at a party |
 | 23 | `23-virtual-casual-beach.png` | Casual outfit at the beach |
-| 24 | `24-virtual-chat-bubble.png` | Click LAFA: chat bubble |
+| 24 | `24-virtual-chat-bubble.png` | Click LAFA: chat bubble (OS help, weather, news, recommendation) |
 | 25 | `25-outfits.png` | The three outfits: Tais Mane, Tuxedo, Casual |
 | 26 | `26-formal-activities.png` | Tuxedo activities with scenes |
 | 27 | `27-casual-activities.png` | Casual activities with scenes |
@@ -64,12 +64,13 @@ homework go to a temporary folder. Weather, headlines and sources are labelled
 | 47 | `47-timor-leste-economy.png` | Economy, exports and imports |
 | 48 | `48-classroom-civics.png` | New subject: Civics & Citizenship |
 | 49 | `49-timor-atlas-dark-theme.png` | The atlas in Eduka's dark theme (deep teal, never black) |
-| 50 | `50-library-learning-sources.png` | Library: 79 learning websites as cards, with categories, search and hourly status |
+| 50 | `50-library-learning-sources.png` | Library: 130 learning and Timor-Leste media sources as cards, with categories, search and hourly status |
 | 51 | `51-library-language-sites.png` | Learning websites for world languages |
 | 52 | `52-language-school-japanese.png` | Language school: Japanese with pronunciation and quiz |
 | 53 | `53-language-school-tetun.png` | Language school: Tetun |
 | 54 | `54-offline-answer.png` | Offline mode: LAFA answers from its own atlas |
 | 55 | `55-virtual-recommendation.png` | Click LAFA: free-software tip and a learning website |
+| 56 | `56-library-timor-leste-media.png` | Library: Timor-Leste news portals and agencies (one of six Timor-Leste media categories) |
 
 Captures 20–24 are **compositions of actual LAFA widget pixels on a painted
 desktop and panel**, not screenshots of Edukasaun OS. Captures 18–19 run the

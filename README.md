@@ -50,7 +50,7 @@ runs, so developers can download the `.deb` and try it, but it shows a
 
 | Works offline | Needs internet |
 |---|---|
-| Classroom, exams, report card, homework, Timor-Leste atlas (built-in text), language school, computer lab, Edukasaun OS help desk, files, reminders, read aloud, `/calc`, `/os`, answers from LAFA's lessons and atlas, the Virtual Assistant | AI chat and teachers, Wikipedia search, 79 learning websites, weather and news, hourly refresh of sources, atlas and notice board |
+| Classroom, exams, report card, homework, Timor-Leste atlas (built-in text), language school, computer lab, Edukasaun OS help desk, files, reminders, read aloud, `/calc`, `/os`, answers from LAFA's lessons and atlas, the Virtual Assistant | AI chat and teachers, Wikipedia search, 130 learning and Timor-Leste media sources, weather and news, hourly refresh of sources, atlas and notice board |
 
 Clicking LAFA recommends free software (GNU GPL and other open-source
 licences, such as GIMP, Kiwix, GCompris and Stellarium) and, when online, a
@@ -113,7 +113,9 @@ classroom, teachers' room, exam hall, report card, homework), **Timor-Leste**,
   Arabic, Thai, Vietnamese, Filipino) with pronunciation, quizzes and
   read-aloud.
 - **Library**: 79 learning websites from the Edukasaun OS directory in 8
-  categories, checked every hour, plus Wikipedia search.
+  categories plus 51 Timor-Leste media and research sources (Wikipédia Tetun,
+  news portals, newspapers, TV, radio, 13 community radios, civil society),
+  checked every hour, plus Wikipedia search.
 - Subjects: Mathematics, Science, Languages, History & Geography, Civics &
   Citizenship, Geography, Health & PE, ICT & Coding, Arts & Culture.
 - **Lobby**: word of the day in four languages, LAFA's daily motivation, today
@@ -177,7 +179,8 @@ morning! I am LAFA, from Timor-Leste, a virtual assistant ready to help you.”
   Greetings and supportive notes have prepared responses. Full conversational
   reasoning, personalized explanations and AI summaries use an optional API.
   Choose **Search public sources** or type `/ask topic` to send a public question.
-  Ordinary chat text is never automatically sent to Wikipedia.
+  A short topic typed in Husu LAFA (e.g. "buku") is answered about that topic;
+  personal sentences and long text are never sent to Wikipedia.
 - **Open-source AI**: Ollama running free on this computer (no key), or any
   OpenAI-compatible open-source server (llama.cpp, vLLM, LocalAI, a school or
   community host) over HTTPS. **Fetch available models** lists real model IDs.

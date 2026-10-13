@@ -168,3 +168,72 @@ def check_all(items=None, check=probe):
         ok = check(source[2]); data[source[2]] = {"state": "up" if ok else "down", "checked": now}
         up, down = up + ok, down + (not ok)
     _save_status(data); return up, down
+
+# ------------------------------------------------- Timor-Leste media (0.1.4)
+# From the Edukasaun OS list of Timor-Leste media. Sources without their own
+# website open a Facebook search for the page name (shown as "Facebook").
+TIMOR_CATEGORIES = [
+    ("tl_news", {"en": "TL news portals & agencies", "id": "Portal & agensi berita TL", "pt": "Portais e agências de notícias", "tet": "Portál no ajénsia notísia"}, "#c92a2a"),
+    ("tl_papers", {"en": "TL newspapers", "id": "Surat kabar TL", "pt": "Jornais de TL", "tet": "Jornál TL"}, "#e8590c"),
+    ("tl_tv", {"en": "TL television", "id": "Televisi TL", "pt": "Televisão de TL", "tet": "Televizaun TL"}, "#5f3dc4"),
+    ("tl_radio", {"en": "TL radio & podcasts", "id": "Radio & podcast TL", "pt": "Rádio e podcasts de TL", "tet": "Rádiu no podcast TL"}, "#1971c2"),
+    ("tl_community", {"en": "TL community radio", "id": "Radio komunitas TL", "pt": "Rádios comunitárias", "tet": "Rádiu komunidade"}, "#2b8a3e"),
+    ("tl_research", {"en": "TL research & civil society", "id": "Riset & masyarakat sipil TL", "pt": "Investigação e sociedade civil", "tet": "Peskiza no sosiedade sivíl"}, "#5c940d"),
+]
+SOURCE_CATEGORIES = SOURCE_CATEGORIES + TIMOR_CATEGORIES
+
+def _fb(name):
+    from urllib.parse import quote
+    return "https://www.facebook.com/search/pages/?q=" + quote(name)
+
+def _d(id_, en):
+    return {"id": id_, "en": en}
+
+TIMOR_MEDIA = [
+    ("tl_news", "Wikipédia Tetun", "https://tet.wikipedia.org/wiki/P%C3%A1jina_Mahuluk", _d("Ensiklopedia bebas dalam bahasa Tetun.", "The free encyclopedia in Tetun.")),
+    ("tl_news", "TATOLI", "https://tatoli.tl/", _d("Agensi berita nasional Timor-Leste.", "National news agency of Timor-Leste.")),
+    ("tl_news", "Timor News", "https://timornews.tl/", _d("Portal berita online Timor-Leste.", "Timor-Leste online news portal.")),
+    ("tl_news", "Hatutan", "https://hatutan.com/", _d("Portal berita online.", "Online news portal.")),
+    ("tl_news", "O Diligente", "https://odiligente.com/", _d("Berita online dari Dili.", "Online news from Dili.")),
+    ("tl_news", "Lafaek News", "https://lafaeknews.tl/", _d("Portal berita online.", "Online news portal.")),
+    ("tl_news", "Liquiça Post", "https://liquicapost.com/", _d("Berita dari Liquiçá.", "News from Liquiçá.")),
+    ("tl_news", "SMNews", "https://smnews.tl/", _d("Portal berita online.", "Online news portal.")),
+    ("tl_news", "Ponto.tl", "https://ponto.tl/", _d("Portal berita online.", "Online news portal.")),
+    ("tl_news", "Oekusi Post", "https://oekusipost.com/", _d("Berita dari Oé-Cusse.", "News from Oé-Cusse.")),
+    ("tl_news", "Timor Agora", "https://timoragora.blogspot.com/", _d("Blog berita Timor-Leste.", "Timor-Leste news blog.")),
+    ("tl_news", "SAPO Timor-Leste", "https://www.sapo.tl/", _d("Portal berita dan layanan online.", "News and online services portal.")),
+    ("tl_news", "Neon Metin", "https://neonmetin.info/", _d("Portal berita online.", "Online news portal.")),
+    ("tl_news", "Timoroman", "https://timoroman.com/", _d("Portal berita online.", "Online news portal.")),
+    ("tl_news", "Lalenok", _fb("Lalenok Ba Ema Hotu"), _d("Halaman Facebook resmi.", "Official Facebook page.")),
+    ("tl_papers", "Timor Post", "https://timorpost.com/", _d("Surat kabar harian dengan edisi online.", "Daily newspaper with an online edition.")),
+    ("tl_papers", "Suara Timor Lorosae (STL)", "https://stlnews.co/", _d("Surat kabar harian dengan edisi online.", "Daily newspaper with an online edition.")),
+    ("tl_papers", "Jornal Independente", "https://independente.tl/", _d("Surat kabar harian.", "Daily newspaper.")),
+    ("tl_papers", "Diário Nacional", "https://diarionacional.tl/", _d("Surat kabar harian.", "Daily newspaper.")),
+    ("tl_papers", "Tempo Semanal", "https://temposemanal.com/", _d("Surat kabar mingguan investigasi.", "Weekly investigative newspaper.")),
+    ("tl_papers", "The Dili Weekly", "https://thediliweekly.com/", _d("Berita mingguan dalam bahasa Tetun dan Inggris.", "Weekly news in Tetun and English.")),
+    ("tl_papers", "Kla'ak", "https://klaak.org/", _d("Media dan arsip.", "Media and archive.")),
+    ("tl_papers", "Jornal da República", "https://mj.gov.tl/jornal/", _d("Lembaran negara resmi (undang-undang dan keputusan).", "Official gazette (laws and decrees).")),
+    ("tl_tv", "RTTL", "https://rttl.tl/", _d("Radio dan Televisi Timor-Leste (publik).", "Rádio e Televisão de Timor-Leste (public).")),
+    ("tl_tv", "GMN-TV", "https://gmntv.tl/", _d("Grupo Media Nacional, televisi swasta.", "Grupo Media Nacional, private TV.")),
+    ("tl_tv", "TV Edukasaun (TVE)", "https://www.youtube.com/results?search_query=TV+Edukasaun+Timor-Leste", _d("Televisi pendidikan Kementerian Pendidikan.", "Educational TV of the Ministry of Education.")),
+    ("tl_radio", "Radio Liberdade", "https://radioliberdade.tl/", _d("Radio komersial dengan siaran online.", "Commercial radio with online streaming.")),
+    ("tl_radio", "Radio Timor Kmanek (RTK)", "https://diocesedili.org/", _d("Radio Keuskupan Dili.", "Radio of the Diocese of Dili.")),
+    ("tl_radio", "Radio Vox Populi", _fb("Radio Vox Populi Timor-Leste"), _d("Halaman Facebook.", "Facebook page.")),
+    ("tl_radio", "Radio Rakambia", "https://radiorakambia.tl/", _d("Radio dengan siaran online.", "Radio with online streaming.")),
+    ("tl_radio", "Radio Lorico Lian", _fb("Radio Lorico Lian"), _d("Halaman Facebook.", "Facebook page.")),
+    ("tl_radio", "Radio Metro Dili", _fb("Radio Metro Dili"), _d("Halaman Facebook.", "Facebook page.")),
+    ("tl_radio", "Radio M3", _fb("Radio M3 Timor-Leste"), _d("Halaman Facebook.", "Facebook page.")),
+    ("tl_radio", "JPF Podcast", "https://www.youtube.com/results?search_query=JPF+Podcast+Timor", _d("Podcast di YouTube dan Facebook.", "Podcast on YouTube and Facebook.")),
+]
+for _name, _place in [("Radio Komunidade Mauloko", "Mauloko"), ("Radio Rai Husar Aileu", "Aileu"), ("Radio Tokodede Liquiçá", "Liquiçá"), ("Afoni Lifau", "Oé-Cusse"),
+                      ("Radio Cafe Ermera", "Ermera"), ("Ili Wai Manatuto", "Manatuto"), ("Radio Popular Colelemai Bucoli", "Baucau"), ("Lian Matebian", "Baucau"),
+                      ("Radio Comunidade Los Palos", "Lautém"), ("Radio Povu Viqueque", "Viqueque"), ("Radio Don Boaventura", "Manufahi"), ("Lian Tatamailau", "Ainaro"),
+                      ("Radio Cova Taroman", "Covalima")]:
+    TIMOR_MEDIA.append(("tl_community", _name, _fb(_name), _d(f"Radio komunitas di {_place} (Facebook).", f"Community radio in {_place} (Facebook).")))
+TIMOR_MEDIA += [
+    ("tl_research", "La'o Hamutuk", "https://www.laohamutuk.org/", _d("Institut pemantauan dan analisis pembangunan Timor-Leste.", "Timor-Leste institute for development monitoring and analysis.")),
+    ("tl_research", "Fundasaun Mahein", "https://www.fundasaunmahein.org/", _d("Riset tentang keamanan dan pertahanan.", "Research on security and defence.")),
+    ("tl_research", "FONGTIL", "https://fongtil.tl/", _d("Forum LSM Timor-Leste.", "NGO Forum of Timor-Leste.")),
+    ("tl_research", "Timor-Leste Press Union (TLPU)", _fb("Timor-Leste Press Union TLPU"), _d("Persatuan pers Timor-Leste.", "Timor-Leste press union.")),
+]
+SOURCES = SOURCES + TIMOR_MEDIA
