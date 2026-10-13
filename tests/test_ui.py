@@ -30,10 +30,11 @@ class UITests(unittest.TestCase):
             self.window.navigate(i);self.app.processEvents()
             self.assertFalse(self.window.grab().isNull())
         for state in STATES:self.assertFalse(self.window.atlas.pixmap(state).isNull())
-    def test_offline_pauses_character_and_actions(self):
+    def test_offline_keeps_offline_features(self):
+        # 0.1.4 offline mode: local chat and LAFA keep working; internet-only actions wait.
         self.window.set_online(False)
-        self.assertFalse(self.window.send_button.isEnabled());self.assertFalse(self.window.hero_character.timer.isActive())
-        self.assertFalse(self.window.companion.isVisible());self.assertFalse(self.window.companion.walk_timer.isActive())
+        self.assertTrue(self.window.send_button.isEnabled());self.assertFalse(self.window.weather_button.isEnabled());self.assertFalse(self.window.learn_button.isEnabled())
+        self.assertTrue(self.window.companion.isVisible());self.assertFalse(self.window.companion.public_button.isEnabled())
     def test_pause_stops_idle_and_walk_timers(self):
         companion=self.window.companion
         self.assertTrue(companion.idle_timer.isActive())
@@ -126,7 +127,7 @@ class UITests(unittest.TestCase):
             window=Window(Settings(language='id',companion=True),review=False)
             try:
                 window.set_online(False);window.activate_mode('virtual');self.app.processEvents()
-                self.assertTrue(window.settings_dialog.isVisible());self.assertFalse(window.companion.isVisible());self.assertFalse(window.send_button.isEnabled())
+                self.assertTrue(window.settings_dialog.isVisible());self.assertFalse(window.public_search_button.isEnabled())
             finally:
                 if window.settings_dialog:window.settings_dialog.accept()
                 window.probe_timer.stop();window.reminder_timer.stop();window.companion.close();window.companion.deleteLater();window.deleteLater();self.app.processEvents()

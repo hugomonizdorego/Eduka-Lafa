@@ -33,6 +33,11 @@ of API access and belongs to the user's browser.
 | timorleste | Timor-Leste history timeline, national facts, municipalities, public holidays, today in history, generated history questions |
 | timor_atlas | Timor-Leste atlas: 14 categories of topics, municipalities, Presidents and Prime Ministers, leader questions |
 | livefacts | Online refresh of atlas topics from Wikipedia (reader's language, HTTPS, no redirects), dated cache in ~/.cache/lafa (0600) |
+| sources | 79 learning websites (8 categories) from the Edukasaun OS directory, search, hourly availability check cached in ~/.cache/lafa (0600) |
+| offline | Which features work offline; answers from LAFA's lessons and atlas when there is no internet |
+| recommendations | Free-software (GPL / open-source) tips and learning websites shown when LAFA is clicked |
+| languages | Language school: 14 courses × 25 phrases, pronunciation, quiz |
+| platform_check | Detects Edukasaun OS (os-release or Eduka-Desktop); other systems get a developer-preview banner |
 | ui_kit | Theme palette from the Eduka accent (light or deep teal), gradient lobby tiles, round action button, progress ring, atlas tiles, chips |
 | roles | LAFA's roles (teacher, professor, motivator, magician, master, comedian, helper), daily items and the binary mind reader |
 | updates | Validated online source catalog, cache, merge, release check |

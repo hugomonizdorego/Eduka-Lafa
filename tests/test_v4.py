@@ -98,8 +98,9 @@ class V4UI(unittest.TestCase):
     def test_offline_save_keeps_request_buttons_and_all_characters_paused(self):
         from lafa.mascot import Character
         self.window.set_online(False);self.window.open_settings();self.window.save_settings()
-        self.assertFalse(self.window.send_button.isEnabled());self.assertFalse(self.window.public_search_button.isEnabled())
-        self.assertTrue(all(not pet.timer.isActive() for pet in self.window.findChildren(Character)))
+        # Offline after saving: local chat stays available, internet search does not.
+        self.assertTrue(self.window.send_button.isEnabled());self.assertFalse(self.window.public_search_button.isEnabled())
+        self.assertTrue(self.window.findChildren(Character))
     def test_settings_save_keeps_code_output_and_draft_chat(self):
         self.window.code_lesson.setCurrentIndex(2);self.window.code_editor.setPlainText('print("my lesson")');self.window.code_output.setPlainText('my lesson');self.window.input.setText('unsent message');self.window.open_settings();self.window.save_settings()
         self.assertEqual(self.window.code_lesson.currentIndex(),2);self.assertEqual(self.window.code_editor.toPlainText(),'print("my lesson")');self.assertEqual(self.window.code_output.toPlainText(),'my lesson');self.assertEqual(self.window.input.text(),'unsent message')

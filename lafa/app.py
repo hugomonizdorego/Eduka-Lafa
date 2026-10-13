@@ -1069,6 +1069,7 @@ class Window(QMainWindow):
             intent=direct_intent(text)
             if intent and intent.tool in LOCAL_TOOLS:self.finish_result(self.agent.execute(intent),generation)
             elif osguide.find(text):self.finish_result(self.agent.guide_result(osguide.find(text)),generation)
+            elif not self.online:self.finish_result(self.agent.offline_answer(text),generation)
             else:self.finish_result(Result(self.t("review_chat"),"idle"),generation)
             return
         self.work(lambda:self.agent.run(text,old,self.online),lambda r:self.finish_result(r,generation),busy=True)
@@ -1658,8 +1659,9 @@ class Window(QMainWindow):
             self.history=old_history
             for message in old_history:self.bubble(message['role'],message['content'])
             self.last_answer=next((message['content'] for message in reversed(old_history) if message['role']=='assistant'),'')
-        app=QApplication.instance()
-        if app:app.setStyleSheet(style_sheet(self.settings))
+        app=QApplication.instance();qss=style_sheet(self.settings)
+        # Re-styling every widget is costly; only do it when the theme really changed.
+        if app and app.styleSheet()!=qss:app.setStyleSheet(qss)
         self.navigate(previous_page);self.companion.apply_preferences();self.companion.retranslate();self.set_online(self.online)
         if not was_enabled and self.settings.companion:self.last_local_news=time.monotonic()
     def change_outfit(self,outfit):

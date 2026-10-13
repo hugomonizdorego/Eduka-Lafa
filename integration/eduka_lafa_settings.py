@@ -26,10 +26,10 @@ import time
 
 BINDINGS={'PyQt5','PyQt6','PySide6'}
 TEXT={
-'en':('Activate LAFA Virtual Assistant in Eduka-Desktop','Open LAFA Desktop','LAFA settings','Activating LAFA…','Deactivating LAFA…','LAFA could not start. Check the installed executable.','The change was not applied. Open LAFA settings and try again.','The character appears when internet is available. Desktop and Virtual Assistant are separate.'),
-'id':('Aktifkan LAFA Virtual Assistant di Eduka-Desktop','Buka LAFA Desktop','Pengaturan LAFA','Mengaktifkan LAFA…','Menonaktifkan LAFA…','LAFA tidak dapat dibuka. Periksa executable terpasang.','Perubahan belum diterapkan. Buka pengaturan LAFA dan coba lagi.','Karakter muncul saat internet tersedia. Desktop dan Asisten Virtual terpisah.'),
-'pt':('Ativar o Assistente Virtual LAFA no Eduka-Desktop','Abrir LAFA Desktop','Definições LAFA','A ativar LAFA…','A desativar LAFA…','Não foi possível iniciar LAFA. Verifique o executável instalado.','A alteração não foi aplicada. Abra as definições LAFA e tente novamente.','A personagem aparece quando há internet. Desktop e Assistente Virtual são separados.'),
- 'tet':('Ativa Asistente Virtuál LAFA iha Eduka-Desktop','Loke LAFA Desktop','Konfigurasaun LAFA','Ativa LAFA hela…','Desativa LAFA hela…','La bele loke LAFA. Verifika executable instaladu.','Mudansa seidauk aplika. Loke konfigurasaun LAFA no koko fali.','Karakter mosu bainhira internet disponivel. Desktop no Asistente Virtuál ketak.'),
+'en':('Activate LAFA Virtual Assistant in Eduka-Desktop','Open LAFA Desktop','LAFA settings','Activating LAFA…','Deactivating LAFA…','LAFA could not start. Check the installed executable.','The change was not applied. Open LAFA settings and try again.','The character works offline too; online it also brings websites, news and AI. Desktop and Virtual Assistant are separate.'),
+'id':('Aktifkan LAFA Virtual Assistant di Eduka-Desktop','Buka LAFA Desktop','Pengaturan LAFA','Mengaktifkan LAFA…','Menonaktifkan LAFA…','LAFA tidak dapat dibuka. Periksa executable terpasang.','Perubahan belum diterapkan. Buka pengaturan LAFA dan coba lagi.','Karakter juga bekerja offline; saat online ada situs, berita dan AI. Desktop dan Asisten Virtual terpisah.'),
+'pt':('Ativar o Assistente Virtual LAFA no Eduka-Desktop','Abrir LAFA Desktop','Definições LAFA','A ativar LAFA…','A desativar LAFA…','Não foi possível iniciar LAFA. Verifique o executável instalado.','A alteração não foi aplicada. Abra as definições LAFA e tente novamente.','A personagem também funciona offline; online traz sites, notícias e IA. Desktop e Assistente Virtual são separados.'),
+ 'tet':('Ativa Asistente Virtuál LAFA iha Eduka-Desktop','Loke LAFA Desktop','Konfigurasaun LAFA','Ativa LAFA hela…','Desativa LAFA hela…','La bele loke LAFA. Verifika executable instaladu.','Mudansa seidauk aplika. Loke konfigurasaun LAFA no koko fali.','Karakter mós servisu offline; online iha sítiu, notísia no AI. Desktop no Asistente Virtuál ketak.'),
 }
 
 
