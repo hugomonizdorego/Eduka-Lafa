@@ -4,115 +4,126 @@
 
 _Nothing yet._
 
-## 0.2.0 — 2026-10-13
+## 0.2.0 — 2026-10-14 · "Lafa — Pendamping Belajar dan Asisten Edukasaun OS"
 
-### LAFA's core memory (LAFA Search)
-- LAFA now has its own small search engine on the computer. It indexes the
-  lessons for every age, the Timor-Leste atlas and history, the Edukasaun OS
-  guides, the 130 learning and Timor-Leste media sources and — when online —
-  the public pages it reads from those sites every hour (front page, a few
-  articles and news feeds; robots.txt respected, Facebook pages only linked).
-- **Library → LAFA Search** shows Google-like results: title, address and a
-  snippet with the words in bold, from lessons, atlas, websites and news.
-  Search works offline from what LAFA has already read.
-- Husu LAFA, the Virtual Assistant and the teachers answer from this memory
-  with numbered citations [1] [2] and the website addresses. Wikipedia
-  articles LAFA opens are remembered for offline use. With an AI signed in,
-  the best passages are given to the AI as references, so it cites the
-  learning and Timor-Leste sources too.
-- Searches understand the four languages together (buku = livro = livru =
-  book) and ignore accents (Ataúro = Atauro).
+Compared with 0.1.4 (the last release on `main`). Two drafts, "0.1.5" and an
+AI-centred "0.2.0", were never released. Their AI parts were removed and
+their other work is listed here.
 
-### AI Hub: sign in and make LAFA smart
-- **Sign in with OpenRouter**: a real browser sign-in (Google, GitHub or
-  e-mail); LAFA receives a key on this computer and picks a free model.
-- **Google Gemini**: the AI Studio key page opens inside LAFA; paste the free
-  key and LAFA checks it and chooses a Gemini Flash model.
-- **LAFA model**: with Ollama installed, LAFA creates its own model ("lafa")
-  from an open model and LAFA's personality — it works offline afterwards.
-- **AI websites in signed-in tabs** (inspired by Noi): Gemini, ChatGPT,
-  Claude, Copilot, DeepSeek, Perplexity, Le Chat, Qwen, Kimi, HuggingChat,
-  Grok, Meta AI, NotebookLM. Sign in once; LAFA keeps a private profile.
-  "Ask the selected AIs" types one question into every ticked AI and sends it.
-  Needs python3-pyqt5.qtwebengine (recommended); otherwise the sites open in
-  the browser. LAFA never reads the pages' cookies, tokens or answers.
-- The Virtual Assistant has a **✨ AI** button and understands "tanya Gemini
-  …" / "ask ChatGPT …".
+### Works without AI, login, a Lafa server or internet
+- **The AI dependency is gone.** Removed:
+  - the provider / API key / model / credit flow and generative chat;
+  - AI teachers, AI document summaries and "Explain with AI";
+  - microphone transcription, the AI Hub (web views) and AI sign-in;
+  - the keyring dependency (`python3-keyring`, `python3-secretstorage`,
+    `gnome-keyring`) and `qtwebengine`.
 
-### LAFA as a helping agent
-- Ordinary requests in English, Indonesian, Portuguese and Tetun now *do*
-  things, from a fixed safe list: open apps ("buka browser", "loke
-  kalkuladora", "abre o LibreOffice", "open the Wi-Fi settings"), open LAFA
-  pages ("buka kelas", "open exams"), search the memory ("cari tentang
-  kopi"), set reminders ("ingatkan saya 10 menit lagi minum air") and ask the
-  AI websites. Never a shell command.
+  Lessons, practice, the calculator, document reading and local read-aloud
+  stay. The old code remains in Git history.
+- **Three optional AI links** (ChatGPT, Claude, Gemini) in *Library → External
+  sites*, labelled "Open in browser". Lafa never signs in, reads accounts,
+  cookies or sessions, sends questions or documents, or installs Ollama.
+- **Upgrade keeps everything.** Old AI fields are ignored and the old settings
+  file is backed up once (`settings.json.0.1-backup`, 0600). Tasks,
+  timetable, practice results, reminders, files and preferences are kept.
+  The user's keyring is never cleared.
 
-### Learning for every age, 5 to 100
-- New classroom levels: ages 5–7, 8–11, 12–14, 15–18, 19–25, 26–59 and
-  60–100, with lessons in 18 subjects: mathematics, physics, chemistry,
-  biology, health and medicine, environment, planets and the solar system,
-  atoms and nuclear science, geography, computers, IT and the internet,
-  technology, history, communication, economics, agriculture, civics and
-  arts — 126 lessons with study points, a task and questions, in all four
-  languages (Tetun Ofisiál).
-- Quizzes, tests and exams by subject and age; results go to the report card.
-- Lessons are JSON files (lafa/assets/curriculum), checked by
-  tools/check-curriculum.py, so teachers can improve them.
+### Offline first
+- Local features no longer wait for the internet: file search, open and read,
+  document view, reminders, focus and the Virtual Assistant's quick actions.
+- **Reminders are saved** (dated, validated, written atomically, 0600). They
+  ring offline while Lafa runs. Reminders missed while Lafa was closed are
+  shown once after a restart. Focus is a session-only timer, labelled as such.
+- The connection check uses public hosts (Wikipedia, Open-Meteo,
+  timor-leste.gov.tl), not AI providers. Each internet service fails on its own
+  and never removes local results. Offline shows a calm "Local features are
+  available" badge, without pop-ups.
 
-### LAFA moves like a person
-- Walking with two small bounces per stride, weight shifting from foot to
-  foot, leaning into the walk and stepping legs; breathing when standing or
-  asleep; leaning towards the mouse pointer; waving when touched, nodding when
-  answering and jumping with a crouch, a stretch and a soft landing; new
-  activities fade in. Smoother animation (25 frames per second).
+### Local search instead of a chatbot
+- One search box: *"Cari pelajaran, pengetahuan, atau file…"*. It searches
+  lessons (ages 5–100 and school subjects), the Timor-Leste atlas, Edukasaun
+  OS guides, saved material and file names.
+- Results are labelled **Materi lokal / File lokal / Materi tersimpan /
+  Sumber internet**. A weak match becomes a list of material, not an answer.
+  "Nothing found" is said honestly, with options.
+- "Cari file …" searches file names; "Bagaimana …" questions about the
+  computer open the OS guide; arithmetic uses the safe calculator.
+- The internet is searched only with the separate *Search internet sources*
+  button. Article extracts are labelled and kept apart from Lafa's own text.
 
-### Menus that did not work
-- Offline, these menus wrongly asked for internet and did nothing: file
-  search, open and read document, reminders, focus, running Python in the
-  computer lab and the culture card. They work offline now.
-- Reminders did not fire while offline; now they do. The reminder countdown
-  was refreshed on the wrong page.
-- Buttons with nothing to work on (empty question, no item chosen, no news
-  loaded) now say what to do instead of doing nothing.
-- Teachers answer from LAFA's memory without an AI instead of refusing.
+### Six sections and a calm Home
+- The sidebar has six sections: **Home, Learn, Library, Timor-Leste, My
+  activities, OS help**. Settings and About sit at the bottom. The 16 old
+  pages became tabs, old page names still open the right tab, and teachers
+  became subject guides in Learn.
+- Home has search, four quick accesses (Start learning, Find knowledge,
+  Tasks & schedule, OS help), the last material with *Continue learning*,
+  and the next activities. News, weather and entertainment are not on Home.
+  The version moved to About.
+- Small screens: works at 1024×600 with a compact icon sidebar. Tab pages
+  scroll instead of being cut off, and long lists shrink. Large text (150 %)
+  is tested.
+- Accessibility: `Alt+1…6` and `Ctrl+F`, keyboard-usable quick cards,
+  accessible names, link colours with at least 4.5:1 contrast in light and
+  dark themes. Calm look: Edukasaun green, no drop shadows by default, one
+  small Lafa.
 
-### Layout
-- The menu has four groups: School (home, classroom, teachers, exams, report
-  card, homework, language school), Timor-Leste (atlas, notice board),
-  Search & AI (LAFA Search and library, AI Hub, Husu LAFA) and Tools
-  (computer lab, files, reminders, help desk). The home page shows LAFA
-  Search and the AI Hub first.
+### Practice and content
+- The terms are now **Latihan**, **Simulasi Tes** and **Hasil Latihan**. The
+  results are personal progress, not an official report card, and "Average
+  score" is labelled as such.
+- No question repeats in a session. A small question bank gives fewer
+  questions, and the learner is told.
+- Wrong answers show the lesson sentence that explains the answer and the
+  related lesson, when a lesson states it. *Practise the wrong answers again*
+  retries only the mistakes.
+- Lessons carry ID, topic, difficulty, languages, source, review date,
+  version and licence, marked "not yet reviewed by the Ministry of
+  Education". `tools/check-curriculum.py` validates them.
+- Favourites and *Continue learning* are saved locally. Only lessons the
+  learner opens count.
+- Kiwix: opens when installed, otherwise explains how to install it. Lafa
+  never downloads large archives.
+- Kept from the drafts: lessons for ages 5–100 in 18 subjects, the BM25
+  local search over lessons, atlas and guides, safe app/page actions in four
+  languages, and human-like motion.
 
-## 0.1.5 — 2026-10-13
-
-### Timor-Leste media
-- 51 Timor-Leste sources join the Library in six new categories: news portals
-  and agencies (TATOLI, Timor News, Hatutan, O Diligente, Lafaek News, …),
-  newspapers (Timor Post, STL, Independente, Diário Nacional, Tempo Semanal,
-  The Dili Weekly, Kla'ak, Jornal da República), TV (RTTL, GMN-TV, TVE),
-  radio, 13 community radios, and research and civil society (La'o Hamutuk,
-  Fundasaun Mahein, FONGTIL, TLPU), plus the Tetun Wikipedia main page.
-- The notice board reads more Timor-Leste news feeds where the sites publish
-  one; pages without a website link to their public page.
-
-### Husu LAFA answers what you write
-- Typing a topic (e.g. "buku", "livru", "Ataúro") now answers about that
-  topic: first from LAFA's lessons and atlas, then (online) from Wikipedia in
-  the interface language, with matching Library sites. The generic "I can
-  search public sources…" reply is gone.
-- Personal sentences, long text, code and private-looking text still never
-  leave the computer; LAFA says so and asks for a topic.
-- Stricter matching: a single word no longer pulls in an unrelated atlas topic.
+### Internet sources
+- New official sources: **Governo de Timor-Leste**
+  (https://timor-leste.gov.tl/) and **Ministério da Educação**
+  (https://moe.gov.tl/). Also the 51 Timor-Leste media sources from the
+  0.1.5 draft.
+- Every source has metadata: languages, topics, level, access (free / free
+  with account / partly paid / paid) and the reason it was chosen.
+- Fandom, Everything2 and Conservapedia were moved out of the academic
+  recommendations into a separate "community & entertainment wikis" list,
+  with notes.
+- The status check now distinguishes **ok / not found / restricted /
+  unknown** (404 and 403 are no longer "up"). It runs on demand, is cached
+  for a day, and has a *Check now* button. The hourly check of the whole
+  catalogue is gone.
+- Lafa reads only front pages and feeds (no whole-site downloads). Saved
+  material can be refreshed; cached data is labelled as such.
+- Content updates are validated data only. App updates come from APT / the
+  Eduka Update Service, and the "new release" check was removed.
 
 ### Virtual Assistant
-- Cleaner glass bubble with only the important buttons: Edukasaun OS help,
-  weather, Timor-Leste news and **Recommendation** (replaces "Focus · 25").
-  Footer: open LAFA, Wikipedia, read aloud, joke, sources.
+- Switched on only in Eduka-Settings → Lafa-Configuration. Opening Lafa
+  Desktop never switches it on.
+- Quick actions work offline: continue learning, tasks, focus, OS help.
+- New options:
+  - Quiet mode (also a 🤫 button in the bubble);
+  - reduce motion;
+  - a limit of spontaneous messages per hour (default 4);
+  - entertainment (magician, mind reader, comedian, bathing/toilet and party
+    animations, jokes), off by default.
+- Pauses while another app is fullscreen (X11, needs `xprop`). Wayland is
+  untested.
 
-### Tetun
-- Clearer Tetun throughout the assistant and LAFA Desktop; all 46 atlas
-  topics and 14 municipalities now have Tetun summaries, and Tetun answers no
-  longer mix in English text.
+### Fixed
+- Rebuilding the window (language or theme change) left duplicate keyboard
+  shortcuts, which made them ambiguous so they did nothing.
+- Simply showing the lesson list recorded the first lesson as "last material".
 
 ## 0.1.4 — 2026-10-13
 

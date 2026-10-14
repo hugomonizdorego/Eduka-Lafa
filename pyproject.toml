@@ -5,13 +5,13 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "lafa-assistant"
 dynamic = ["version"]
-description = "LAFA: an animated desktop learning companion for Edukasaun OS"
+description = "Lafa: offline-first learning companion and Edukasaun OS assistant"
 readme = "README.md"
 requires-python = ">=3.11"
 license = {text = "MIT"}
 authors = [{name = "Hugo Moniz do Rego"}]
 # Debian/Edukasaun OS: the .deb uses python3-pyqt5. pip installs use PySide6.
-dependencies = ["PySide6>=6.6,<7", "keyring>=24,<26"]
+dependencies = ["PySide6>=6.6,<7"]
 
 [project.scripts]
 lafa = "lafa.app:main"

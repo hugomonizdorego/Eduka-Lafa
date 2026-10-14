@@ -16,7 +16,7 @@ import time
 from datetime import datetime
 from .qt import Qt,QTimer,QPointF,QRectF,QRect,QEvent,Signal,QPixmap,QPainter,QGuiApplication,QPolygonF,QColor,QPainterPath,QPen,QCursor
 from .qt import QWidget,QMenu,QFrame,QVBoxLayout,QHBoxLayout,QLabel,QLineEdit,QPushButton,QPlainTextEdit,QApplication,global_point,run
-from .config import STATES,IDLE_ACTIVITIES
+from .config import STATES,IDLE_ACTIVITIES,ENTERTAINMENT
 from .i18n import tr
 from . import personality, eduka, outfits, roles
 from .motion import Motion
@@ -37,10 +37,10 @@ QPushButton#bubbleclose {border:0; background:transparent; font-size:17px; paddi
 QPushButton#bubbleclose:hover {color:#c92a2a;}
 QPlainTextEdit#bubbletext {border:0; background:rgba(255,255,255,0.75); border-radius:14px; font-size:13px; padding:8px 10px; color:#1d3b31;}
 QPushButton {border-radius:12px; padding:6px 8px; font-size:11px; font-weight:600; color:white; border:0;}
-QPushButton#chip_os {background:qlineargradient(x1:0,y1:0,x2:1,y2:1,stop:0 #5c7cfa,stop:1 #4263eb);}
-QPushButton#chip_weather {background:qlineargradient(x1:0,y1:0,x2:1,y2:1,stop:0 #22b8cf,stop:1 #1098ad);}
-QPushButton#chip_news {background:qlineargradient(x1:0,y1:0,x2:1,y2:1,stop:0 #fa5252,stop:1 #e03131);}
-QPushButton#chip_recommend {background:qlineargradient(x1:0,y1:0,x2:1,y2:1,stop:0 #fcc419,stop:1 #f59f00); color:#3b2a00;}
+QPushButton#chip_continue {background:#0f7a5c;}
+QPushButton#chip_tasks {background:#0b7285;}
+QPushButton#chip_focus {background:#f2c14e; color:#3b2a00;}
+QPushButton#chip_os {background:#3b5bdb;}
 QPushButton:hover {padding-top:5px; padding-bottom:7px;}
 QPushButton:disabled {background:#dfe7e3; color:#8a9a94;}
 QLineEdit#bubbleinput {background:white; border:1px solid #cfe3d9; border-radius:14px; padding:8px 10px; font-size:13px; color:#1d3b31;}
@@ -50,6 +50,8 @@ QPushButton#footchip {background:white; color:#1d3b31; border:1px solid #d7e6de;
 QPushButton#footchip:hover {background:#eefaf4; border-color:#00a879;}
 '''
 
+# Bubble quick buttons (all offline): key -> label key.
+QUICK={'continue':'continue_learning','tasks':'tasks_short','focus':'focus_short','os':'os_short'}
 ROLE_OF={activity:role for role,(activity,*_) in roles.ROLES.items() if activity in outfits.ROLES}
 
 def greeting_key(hour):
@@ -141,14 +143,14 @@ class Character(QWidget):
         self.update()
     def hop(self):
         """Happy jump with anticipation when LAFA answers; skipped while paused."""
-        if self.animated:self.motion.play('jump')
+        if self.animated and not getattr(self,'reduce_motion',False):self.motion.play('jump')
     def gesture(self,name):
-        if self.animated:self.motion.play(name)
+        if self.animated and not getattr(self,'reduce_motion',False):self.motion.play(name)
     def paintEvent(self,event):
         painter=QPainter(self);painter.setRenderHint(QPainter.SmoothPixmapTransform);painter.setRenderHint(QPainter.Antialiasing)
         pose=self.pose;scene=outfits.scene_of(self.state)
         if scene:outfits.paint_background(painter,scene,self.width(),self.height(),self.phase)
-        f=self.motion.frame(pose,self.animated)
+        f=self.motion.frame(pose,self.animated and not getattr(self,'reduce_motion',False))
         pix=self.atlas.pixmap(self.state,self.width()-10,self.costume)
         ground=self.height()/2+pix.height()/2-4
         if not scene and pose not in {'sleeping'}:
@@ -211,18 +213,18 @@ class Companion(QWidget):
     quit_requested=Signal()
     user_request=Signal(str)
     action_requested=Signal(str)
-    public_search_requested=Signal(str)
-    ai_requested=Signal(str)
     activity_changed=Signal(str)
-    voice_requested=Signal()
+    read_requested=Signal()
     settings_requested=Signal()
     source_requested=Signal(str)
     card_requested=Signal()
     outfit_requested=Signal(str)
+    settings_changed=Signal()
     def __init__(self,atlas,settings,clock=time.monotonic):
         super().__init__();self.settings=settings;self.clock=clock
         self.online=False;self.paused=False;self._busy=False;self.drag=None;self.moved=False;self.direction=1;self.hovered=False;self.walk_target=None
         self.last_activity=clock();self.last_idle_change=clock();self.last_card=clock();self.introduced=False;self.current_source="";self.popup_deadline=0
+        self.spontaneous=[];self.fullscreen_ahead=False
         self.setWindowFlags(Qt.Tool|Qt.FramelessWindowHint|Qt.WindowStaysOnTopHint)
         self.setAttribute(Qt.WA_TranslucentBackground)
         self.setWindowTitle('LAFA Virtual Assistant')
@@ -238,18 +240,18 @@ class Companion(QWidget):
         close=QPushButton('×');close.setObjectName('bubbleclose');close.setFixedWidth(28);close.clicked.connect(self.collapse);header.addWidget(close);col.addLayout(header)
         self.message=QPlainTextEdit();self.message.setObjectName('bubbletext');self.message.setReadOnly(True);self.message.setFixedHeight(128);col.addWidget(self.message)
         quick=QHBoxLayout();quick.setSpacing(6);self.quick_buttons=[]
-        for key in ['os','weather','news','recommend']:
+        # Offline helpers: continue learning, tasks and reminders, focus, OS help.
+        for key in QUICK:
             b=QPushButton();b.setObjectName('chip_'+key);b.setCursor(Qt.PointingHandCursor)
-            b.clicked.connect(lambda checked=False,k=key:self.recommend() if k=='recommend' else self.action_requested.emit(k));quick.addWidget(b);self.quick_buttons.append((key,b))
+            b.clicked.connect(lambda checked=False,k=key:self.action_requested.emit(k));quick.addWidget(b);self.quick_buttons.append((key,b))
         col.addLayout(quick)
         row=QHBoxLayout();row.setSpacing(6);self.input=QLineEdit();self.input.setObjectName('bubbleinput');self.input.returnPressed.connect(self.submit)
         self.send_button=QPushButton('➤');self.send_button.setObjectName('bubblesend');self.send_button.setFixedSize(40,38);self.send_button.clicked.connect(self.submit)
         row.addWidget(self.input,1);row.addWidget(self.send_button);col.addLayout(row)
         footer=QHBoxLayout();footer.setSpacing(6)
         self.full_button=QPushButton();self.full_button.setObjectName('footchip');self.full_button.clicked.connect(self.open_requested.emit);footer.addWidget(self.full_button)
-        self.public_button=QPushButton();self.public_button.setObjectName('footchip');self.public_button.clicked.connect(self.submit_public);footer.addWidget(self.public_button)
-        self.ai_button=QPushButton();self.ai_button.setObjectName('footchip');self.ai_button.clicked.connect(self.submit_ai);footer.addWidget(self.ai_button)
-        self.voice_button=QPushButton();self.voice_button.setObjectName('footchip');self.voice_button.clicked.connect(self.voice_requested.emit);footer.addWidget(self.voice_button)
+        self.voice_button=QPushButton();self.voice_button.setObjectName('footchip');self.voice_button.clicked.connect(self.read_requested.emit);footer.addWidget(self.voice_button)
+        self.quiet_button=QPushButton();self.quiet_button.setObjectName('footchip');self.quiet_button.setCheckable(True);self.quiet_button.toggled.connect(self.set_quiet);footer.addWidget(self.quiet_button)
         self.joke_button=QPushButton('😄');self.joke_button.setObjectName('footchip');self.joke_button.clicked.connect(self.tell_joke);footer.addWidget(self.joke_button)
         self.source_button=QPushButton();self.source_button.setObjectName('footchip');self.source_button.clicked.connect(lambda:self.source_requested.emit(self.current_source));self.source_button.hide();footer.addWidget(self.source_button);footer.addStretch();col.addLayout(footer)
         layout.addWidget(self.bubblebox)
@@ -258,6 +260,7 @@ class Companion(QWidget):
         self.balloon_timer=QTimer(self);self.balloon_timer.setSingleShot(True);self.balloon_timer.timeout.connect(self.hide_balloon)
         self.idle_timer=QTimer(self);self.idle_timer.setInterval(1000);self.idle_timer.timeout.connect(self.choose_idle)
         self.walk_timer=QTimer(self);self.walk_timer.setInterval(120);self.walk_timer.timeout.connect(self.walk)
+        self.fullscreen_timer=QTimer(self);self.fullscreen_timer.setInterval(10_000);self.fullscreen_timer.timeout.connect(self.check_fullscreen)
         self.bubblebox.hide();self.setFixedSize(*self.compact_size());self.animate(False);self.apply_preferences()
         self.retranslate();self.message.setPlainText(tr(settings.locale,'welcome_desktop'))
         rect=QGuiApplication.primaryScreen().availableGeometry();self.move(rect.right()-self.width()-20,rect.bottom()-self.height()-30)
@@ -271,7 +274,7 @@ class Companion(QWidget):
         """Lafa-Configuration: size, animation speed and outfit, applied live."""
         size=PET_SIZES.get(self.settings.character_size,176)
         if self.pet.width()!=size:self.pet.setFixedSize(size,size+16)
-        self.pet.rate=ANIMATION_RATES.get(self.settings.animation_speed,1.0)
+        self.pet.rate=ANIMATION_RATES.get(self.settings.animation_speed,1.0);self.pet.reduce_motion=self.settings.reduce_motion
         if self.pet.costume!=self.settings.costume:
             self.pet.costume=self.settings.costume
             # A new outfit starts with one of its own activities.
@@ -296,9 +299,11 @@ class Companion(QWidget):
     def retranslate(self):
         lang=self.lang
         self.setToolTip('')
-        self.input.setPlaceholderText(tr(lang,'ask'));self.full_button.setText(tr(lang,'desktop'));self.voice_button.setText(tr(lang,'listen'));self.joke_button.setToolTip(tr(lang,'tell_joke'))
-        for key,b in self.quick_buttons:b.setText(tr(lang,{'news':'timor_news','os':'os_short','recommend':'recommend_short'}.get(key,key)))
-        self.status.setText(tr(lang,'online') if self.online else tr(lang,'offline'));self.source_button.setText(tr(lang,'source'));self.public_button.setText('📖 Wikipedia');self.public_button.setToolTip(tr(lang,'public_search'));self.ai_button.setText('✨ AI');self.ai_button.setToolTip(tr(lang,'ask_ai_websites'))
+        self.input.setPlaceholderText(tr(lang,'search_box'));self.input.setAccessibleName(tr(lang,'search_box'));self.full_button.setText(tr(lang,'desktop'));self.voice_button.setText('🔊 '+tr(lang,'speak'));self.joke_button.setToolTip(tr(lang,'tell_joke'))
+        self.quiet_button.blockSignals(True);self.quiet_button.setChecked(self.settings.quiet_mode);self.quiet_button.blockSignals(False);self.quiet_button.setText('🤫 '+tr(lang,'quiet_short'));self.quiet_button.setToolTip(tr(lang,'quiet_mode'))
+        self.joke_button.setVisible(self.settings.entertainment)
+        for key,b in self.quick_buttons:b.setText(tr(lang,QUICK[key]))
+        self.status.setText(tr(lang,'online') if self.online else tr(lang,'local_ready'));self.source_button.setText(tr(lang,'source'))
         self.duty_label.setText('· '+personality.duty(lang,self.pet.state))
     def mark_activity(self):self.popup_deadline=0;self.last_activity=self.clock();self.last_idle_change=self.last_activity
     # ----- input -------------------------------------------------------------
@@ -327,7 +332,7 @@ class Companion(QWidget):
         self.hovered=inside
         if inside:
             self.walk_target=None
-            if not self.paused and not self.bubblebox.isVisible() and self.drag is None and self.settings.hover_questions:
+            if not self.paused and not self.bubblebox.isVisible() and self.drag is None and self.settings.hover_questions and not self.settings.quiet_mode:
                 self.show_balloon(personality.hover_line(self.lang,self.state),personality.duty(self.lang,self.state),'hover',0)
                 self.pet.gesture('wave')
         elif self.balloon.isVisible() and self.balloon.kind=='hover':
@@ -349,7 +354,7 @@ class Companion(QWidget):
         else:self.show_balloon(text,'',"joke",9);self.pet.hop()
     # ----- state -------------------------------------------------------------
     def can_roam(self):
-        return QGuiApplication.platformName()=='xcb' and self.settings.roam and self.settings.companion
+        return QGuiApplication.platformName()=='xcb' and self.settings.roam and self.settings.companion and not self.settings.reduce_motion
     def eduka_panel(self):
         return eduka.panel() if self.settings.follow_eduka_panel else None
     def panel_rect(self):
@@ -384,12 +389,13 @@ class Companion(QWidget):
             if not self.paused:
                 if not self.idle_timer.isActive():self.idle_timer.start()
                 if not self.walk_timer.isActive():self.walk_timer.start()
+                if QGuiApplication.platformName()=='xcb' and not self.fullscreen_timer.isActive():self.fullscreen_timer.start()
                 if changed:self.mark_activity()
                 if not self.introduced:
                     self.introduced=True;self.set_state('idle');self.show_bubble(self.introduction());self.popup_deadline=self.clock()+18
             else:self.idle_timer.stop();self.walk_timer.stop();self.hide_balloon()
         else:
-            self.hide();self.hide_balloon();self.animate(False);self.idle_timer.stop();self.walk_timer.stop()
+            self.hide();self.hide_balloon();self.animate(False);self.idle_timer.stop();self.walk_timer.stop();self.fullscreen_timer.stop()
             if not self.settings.companion:self.introduced=False
     def introduction(self,hour=None):
         lang=self.lang;text=tr(lang,'welcome_virtual')
@@ -397,12 +403,14 @@ class Companion(QWidget):
         return text
     def update_controls(self):
         if not hasattr(self,'send_button'):return
-        free=not self._busy;net=self.online and free
+        # Everything in the bubble works offline.
+        free=not self._busy
         self.send_button.setEnabled(free);self.input.setEnabled(free)
-        self.public_button.setEnabled(net);self.voice_button.setEnabled(net);self.ai_button.setEnabled(net)
-        for key,b in self.quick_buttons:b.setEnabled(net if key in {'weather','news'} else free)
+        for key,b in self.quick_buttons:b.setEnabled(free)
     def activity_choices(self):
         excluded={self.state}|({'walking'} if self.can_roam() else set())|(set() if self.settings.personal_activities else {'bathing','toilet'})
+        if not self.settings.entertainment:excluded|=ENTERTAINMENT
+        if self.settings.reduce_motion:excluded|={'tebe','bidu','walking','stretching'}
         return [s for s in outfits.activities_for(self.settings.costume) if s not in excluded]
     def play_role(self,role):
         """Switch into one of LAFA's roles and say something in that role."""
@@ -412,6 +420,7 @@ class Companion(QWidget):
         """Pick a new job for the assistant; sometimes LAFA comments on it."""
         self.walk_target=None;self.set_state(random.choice(self.activity_choices()));self.last_idle_change=self.clock()
         if self.settings.chatter and self.can_auto_popup() and random.random()<0.35:
+            self.spoke()
             role=ROLE_OF.get(self.state)
             line=roles.line(role,self.lang) if role and random.random()<0.5 else personality.thought(self.lang,self.state)
             self.show_balloon(line,personality.duty(self.lang,self.state),'thought',self.settings.balloon_seconds)
@@ -429,7 +438,7 @@ class Companion(QWidget):
             self.popup_deadline=0
             if not self.input.text().strip():self.collapse()
         if self.bubblebox.isVisible() or self.input.text().strip() or self.hovered:return
-        if (self.settings.cultural_cards or self.settings.positive_messages or self.settings.fun_messages) and now-self.last_activity>=60 and now-self.last_card>=self.settings.card_minutes*60:
+        if (self.settings.cultural_cards or self.settings.positive_messages or self.settings.fun_messages) and self.can_auto_popup() and now-self.last_card>=self.settings.card_minutes*60:
             self.last_card=now;self.card_requested.emit();return
         if self.walk_target is not None:return
         if now-max(self.last_activity,self.last_idle_change)<self.settings.idle_seconds:return
@@ -466,9 +475,28 @@ class Companion(QWidget):
         if self.state=='walking':self.set_state('talking')
         self.resize_overlay(True);self.mark_activity();self.show();self.raise_()
     def can_auto_popup(self):
+        """Spontaneous messages: never in quiet mode, while paused, while a fullscreen
+        app is in front, while the learner types, or above the hourly limit."""
+        if self.settings.quiet_mode or self.fullscreen_ahead:return False
+        recent=[t for t in self.spontaneous if self.clock()-t<3600];self.spontaneous=recent
+        if len(recent)>=self.settings.messages_per_hour:return False
         return self.settings.companion and not self.paused and not self.busy and self.drag is None and not self.hovered and not self.bubblebox.isVisible() and not self.input.text().strip() and self.clock()-self.last_activity>=60
+    def spoke(self):
+        """Count a spontaneous message for the hourly limit."""
+        self.spontaneous.append(self.clock())
+    def set_quiet(self,quiet):
+        """Quiet mode: no spontaneous messages, hover questions or self-talk."""
+        self.settings.quiet_mode=bool(quiet);self.hide_balloon();self.settings_changed.emit()
+    def check_fullscreen(self):
+        """X11: pause while another application is fullscreen (e.g. a video or a test)."""
+        ahead=eduka.fullscreen_active() if self.settings.companion and QGuiApplication.platformName()=='xcb' else False
+        if ahead!=self.fullscreen_ahead:
+            self.fullscreen_ahead=ahead
+            if ahead:self.hide_balloon();self.hide()
+            elif self.settings.companion:self.show();self.snap_to_panel()
     def show_card(self,card,automatic=False):
         if not self.settings.companion or self.busy or (automatic and not self.can_auto_popup()):return
+        if automatic:self.spoke()
         self.set_state(card.mood);self.show_bubble(card.text);self.current_source=card.source
         self.source_button.setVisible(bool(card.source));self.popup_deadline=self.clock()+15
     def toggle_bubble(self):
@@ -487,14 +515,6 @@ class Companion(QWidget):
         self.pet.gesture('nod')
         self.message.setPlainText(text)
         if self.bubblebox.isVisible():self.message.verticalScrollBar().setValue(0)
-    def submit_ai(self):
-        """Ask the signed-in AI websites (AI Hub) the question typed in the bubble."""
-        text=self.input.text().strip()
-        if not text:self.show_answer(tr(self.lang,'type_first'));self.input.setFocus();return
-        if self.online:self.input.clear();self.ai_requested.emit(text)
-    def submit_public(self):
-        text=self.input.text().strip()
-        if text and self.online and not self.busy:self.public_search_requested.emit(text)
     def submit(self):
         text=self.input.text().strip()
         if text and not self.busy:
@@ -507,10 +527,13 @@ class Companion(QWidget):
     def contextMenuEvent(self,event):
         self.mark_activity();self.hide_balloon();menu=QMenu(self);lang=self.lang
         menu.addAction(tr(lang,'virtual'),self.show_bubble);menu.addAction(tr(lang,'fullwindow'),self.open_requested.emit)
-        menu.addAction(tr(lang,'tell_joke'),self.tell_joke)
-        for key in ['os','weather','news','focus']:menu.addAction(tr(lang,{'news':'timor_news','os':'os_help'}.get(key,key)),lambda checked=False,k=key:self.action_requested.emit(k))
-        hats=menu.addMenu(tr(lang,'roles'))
-        for role in roles.ORDER:hats.addAction(roles.text(roles.ROLES[role][2],lang),lambda checked=False,r=role:self.play_role(r))
+        if self.settings.entertainment:menu.addAction(tr(lang,'tell_joke'),self.tell_joke)
+        for key in QUICK:menu.addAction(tr(lang,QUICK[key]),lambda checked=False,k=key:self.action_requested.emit(k))
+        quiet=menu.addAction(tr(lang,'quiet_mode'));quiet.setCheckable(True);quiet.setChecked(self.settings.quiet_mode);quiet.triggered.connect(self.set_quiet)
+        if self.settings.entertainment:
+            # Entertainment (magician, comedian…) is optional, never part of the main flow.
+            hats=menu.addMenu(tr(lang,'roles'))
+            for role in roles.ORDER:hats.addAction(roles.text(roles.ROLES[role][2],lang),lambda checked=False,r=role:self.play_role(r))
         moods=menu.addMenu(tr(lang,'mood'))
         for state in outfits.activities_for(self.settings.costume):moods.addAction(tr(lang,state)+' · '+personality.duty(lang,state),lambda checked=False,s=state:self.set_state(s))
         wardrobe=menu.addMenu(tr(lang,'costume'))

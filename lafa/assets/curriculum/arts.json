@@ -7,9 +7,25 @@
   "pt": "Artes, música e cultura",
   "tet": "Arte, múzika no kultura"
  },
+ "meta": {
+  "version": 1,
+  "license": "CC BY-SA 4.0",
+  "languages": [
+   "en",
+   "id",
+   "pt",
+   "tet"
+  ],
+  "source": "Written by the LAFA team for Edukasaun OS (general knowledge, checked against standard references)",
+  "reviewed": "2026-10-13",
+  "review_status": "LAFA team review; not yet reviewed by the Ministry of Education (not a national curriculum)"
+ },
  "lessons": [
   {
+   "id": "arts.early",
    "level": "early",
+   "difficulty": 1,
+   "topic": "arts",
    "title": {
     "en": "Colours, songs and rhythm",
     "id": "Warna, lagu, dan irama",
@@ -154,7 +170,10 @@
    ]
   },
   {
+   "id": "arts.primary",
    "level": "primary",
+   "difficulty": 2,
+   "topic": "arts",
    "title": {
     "en": "Tais and Timorese dance",
     "id": "Tais dan tarian Timor",
@@ -293,7 +312,10 @@
    ]
   },
   {
+   "id": "arts.middle",
    "level": "middle",
+   "difficulty": 3,
+   "topic": "arts",
    "title": {
     "en": "Elements of art and music",
     "id": "Unsur seni rupa dan musik",
@@ -432,7 +454,10 @@
    ]
   },
   {
+   "id": "arts.secondary",
    "level": "secondary",
+   "difficulty": 4,
+   "topic": "arts",
    "title": {
     "en": "Poetry, perspective and sound",
     "id": "Puisi, perspektif, dan bunyi",
@@ -577,7 +602,10 @@
    ]
   },
   {
+   "id": "arts.university",
    "level": "university",
+   "difficulty": 5,
+   "topic": "arts",
    "title": {
     "en": "Heritage, identity and creative rights",
     "id": "Warisan, identitas, dan hak cipta",
@@ -722,7 +750,10 @@
    ]
   },
   {
+   "id": "arts.adult",
    "level": "adult",
+   "difficulty": 6,
+   "topic": "arts",
    "title": {
     "en": "Crafts, culture and livelihood",
     "id": "Kerajinan, budaya, dan mata pencaharian",
@@ -867,7 +898,10 @@
    ]
   },
   {
+   "id": "arts.senior",
    "level": "senior",
+   "difficulty": 7,
+   "topic": "arts",
    "title": {
     "en": "Keeping culture alive",
     "id": "Menjaga budaya tetap hidup",

@@ -7,9 +7,25 @@
   "pt": "Tecnologia e engenharia",
   "tet": "Teknolojia no enjeñaria"
  },
+ "meta": {
+  "version": 1,
+  "license": "CC BY-SA 4.0",
+  "languages": [
+   "en",
+   "id",
+   "pt",
+   "tet"
+  ],
+  "source": "Written by the LAFA team for Edukasaun OS (general knowledge, checked against standard references)",
+  "reviewed": "2026-10-13",
+  "review_status": "LAFA team review; not yet reviewed by the Ministry of Education (not a national curriculum)"
+ },
  "lessons": [
   {
+   "id": "technology.early",
    "level": "early",
+   "difficulty": 1,
+   "topic": "technology",
    "title": {
     "en": "Tools help us",
     "id": "Alat membantu kita",
@@ -148,7 +164,10 @@
    ]
   },
   {
+   "id": "technology.primary",
    "level": "primary",
+   "difficulty": 2,
+   "topic": "technology",
    "title": {
     "en": "Simple machines",
     "id": "Pesawat sederhana",
@@ -287,7 +306,10 @@
    ]
   },
   {
+   "id": "technology.middle",
    "level": "middle",
+   "difficulty": 3,
+   "topic": "technology",
    "title": {
     "en": "Electricity and circuits",
     "id": "Listrik dan rangkaian",
@@ -432,7 +454,10 @@
    ]
   },
   {
+   "id": "technology.secondary",
    "level": "secondary",
+   "difficulty": 4,
+   "topic": "technology",
    "title": {
     "en": "Energy and renewable power",
     "id": "Energi dan daya terbarukan",
@@ -577,7 +602,10 @@
    ]
   },
   {
+   "id": "technology.university",
    "level": "university",
+   "difficulty": 5,
+   "topic": "technology",
    "title": {
     "en": "Engineering design and systems",
     "id": "Desain rekayasa dan sistem",
@@ -716,7 +744,10 @@
    ]
   },
   {
+   "id": "technology.adult",
    "level": "adult",
+   "difficulty": 6,
+   "topic": "technology",
    "title": {
     "en": "Technology at work and at home",
     "id": "Teknologi di tempat kerja dan di rumah",
@@ -855,7 +886,10 @@
    ]
   },
   {
+   "id": "technology.senior",
    "level": "senior",
+   "difficulty": 7,
+   "topic": "technology",
    "title": {
     "en": "Inventions across a lifetime",
     "id": "Penemuan sepanjang hidup",

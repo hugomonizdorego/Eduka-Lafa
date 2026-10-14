@@ -5,8 +5,9 @@ from unittest.mock import patch
 from lafa.config import Settings
 from lafa.live_info import Location,LocationChoices,forecast,weather_query,weather_text,parse_feed,world_news,condition
 from lafa.reminders import Reminders
-from lafa.agent import Agent,direct_intent,validated_intent
-from lafa.config import Secrets
+import tempfile
+from pathlib import Path
+from lafa.agent import Agent,direct_intent
 from lafa.tools import RESOURCES,resource_search_url
 from lafa.net import NetworkError
 
@@ -46,32 +47,47 @@ class LiveTests(unittest.TestCase):
     @patch('lafa.live_info.request',side_effect=NetworkError('unavailable'))
     def test_all_news_failures_do_not_invent_headlines(self,request):
         with self.assertRaises(NetworkError):world_news()
-    def test_new_direct_commands(self):
+    def test_direct_commands(self):
         self.assertEqual(direct_intent('cuaca di Dili besok').query,'Dili')
-        self.assertEqual(direct_intent('berita dunia').tool,'world_news')
+        self.assertEqual(direct_intent('/berita dunia').tool,'world_news')
         self.assertEqual(direct_intent('/remind 5 minum air').kind,'5')
-        self.assertEqual(direct_intent('/focus').kind,'25')
-        self.assertEqual(direct_intent('/source Ruangguru: pecahan').tool,'resource_search')
-        self.assertEqual(direct_intent('cari pelajaran pecahan di Ruangguru').kind,'Ruangguru')
-        self.assertEqual(validated_intent({'tool':'resource_search','query':'math','source':'Ruangguru'}).kind,'Ruangguru')
-        self.assertIsNone(validated_intent({'tool':'resource_search','query':'a','source':'evil'}))
-        self.assertIsNotNone(validated_intent({'tool':'weather','query':''}))
-    def test_all_library_domains_and_added_sources(self):
+        self.assertEqual(direct_intent('/ask fotosintesis').tool,'public_answer')
+        self.assertEqual(direct_intent('/os wallpaper').tool,'os_help')
+    def test_library_is_academic_and_searchable(self):
         for name,url in RESOURCES:self.assertIn('site%3A',resource_search_url(name,'learning'))
-        self.assertTrue({'Ruangguru','wikiHow','Fandom','Everything2','Conservapedia','Miraheze','Baidu Baike'}<=set(n for n,u in RESOURCES))
-    @patch('lafa.agent.weather_query')
-    @patch('lafa.agent.world_news')
-    def test_offline_gates_live_tools_and_reminders(self,news,weather):
-        a=Agent(Settings(),Secrets())
-        for command in ['/news','/weather','/remind 5 water']:self.assertIsNone(a.run(command,[],False).reminder)
+        names={n for n,u in RESOURCES}
+        self.assertIn('Wikipedia',names);self.assertFalse({'Fandom','Everything2','Conservapedia'}&names)
+    @patch('lafa.live_info.weather_query')
+    @patch('lafa.live_info.world_news')
+    def test_offline_gates_only_internet_tools(self,news,weather):
+        a=Agent(Settings())
+        for command in ['/news','/weather']:self.assertIsNone(a.run(command,[],False).reminder)
         news.assert_not_called();weather.assert_not_called()
+        self.assertEqual(a.run('/remind 5 water',[],False).reminder,(5,'water'))
     def test_reminder_clock_cancel_and_offline_delivery(self):
-        now=[0];reminders=Reminders(lambda:now[0]);first=reminders.add(1,'Water');second=reminders.add(2,'Stretch')
+        now=[0];reminders=Reminders(clock=lambda:now[0]);first=reminders.add(1,'Water');second=reminders.add(2,'Stretch')
         reminders.cancel(second.id);now[0]=59;self.assertEqual(reminders.due(True),[])
         now[0]=60;self.assertEqual(reminders.due(False),[first]);self.assertEqual(reminders.due(True),[])
     def test_reminder_validation(self):
         reminders=Reminders()
         for minutes,text in [(0,'a'),(1441,'a'),(1,''),(1,'a'*241),(float('nan'),'a')]:
             with self.assertRaises(ValueError):reminders.add(minutes,text)
+        with self.assertRaises(ValueError):reminders.add_at(-5,'past')
+    def test_reminders_survive_restart_and_missed_fire_once(self):
+        with tempfile.TemporaryDirectory() as folder:
+            now=[1000.0];first=Reminders(folder,clock=lambda:now[0])
+            first.add(1,'Homework');first.add(30,'Later');first.add(2,'Session only',session=True)
+            path=Path(folder)/'reminders.json';self.assertEqual(path.stat().st_mode&0o777,0o600)
+            now[0]=1000+600  # LAFA was closed for ten minutes
+            second=Reminders(folder,clock=lambda:now[0])
+            self.assertEqual([r.text for r in second.pending],['Homework','Later'])
+            missed=second.missed();self.assertEqual([r.text for r in missed],['Homework'])
+            self.assertEqual(Reminders(folder,clock=lambda:now[0]).missed(),[])
+            now[0]=1000+1800;self.assertEqual([r.text for r in second.due(False)],['Later'])
+            self.assertEqual(second.due(False),[])
+    def test_broken_reminder_file_is_ignored(self):
+        with tempfile.TemporaryDirectory() as folder:
+            (Path(folder)/'reminders.json').write_text('{not json')
+            self.assertEqual(Reminders(folder).pending,[])
 
 if __name__=='__main__':unittest.main()

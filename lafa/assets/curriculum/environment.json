@@ -7,9 +7,25 @@
   "pt": "Ambiente e clima",
   "tet": "Ambiente no klima"
  },
+ "meta": {
+  "version": 1,
+  "license": "CC BY-SA 4.0",
+  "languages": [
+   "en",
+   "id",
+   "pt",
+   "tet"
+  ],
+  "source": "Written by the LAFA team for Edukasaun OS (general knowledge, checked against standard references)",
+  "reviewed": "2026-10-13",
+  "review_status": "LAFA team review; not yet reviewed by the Ministry of Education (not a national curriculum)"
+ },
  "lessons": [
   {
+   "id": "environment.early",
    "level": "early",
+   "difficulty": 1,
+   "topic": "environment",
    "title": {
     "en": "Caring for our place",
     "id": "Menjaga lingkungan kita",
@@ -148,7 +164,10 @@
    ]
   },
   {
+   "id": "environment.primary",
    "level": "primary",
+   "difficulty": 2,
+   "topic": "environment",
    "title": {
     "en": "The water cycle and our hills",
     "id": "Siklus air dan bukit kita",
@@ -287,7 +306,10 @@
    ]
   },
   {
+   "id": "environment.middle",
    "level": "middle",
+   "difficulty": 3,
+   "topic": "environment",
    "title": {
     "en": "Ecosystems and food chains",
     "id": "Ekosistem dan rantai makanan",
@@ -426,7 +448,10 @@
    ]
   },
   {
+   "id": "environment.secondary",
    "level": "secondary",
+   "difficulty": 4,
+   "topic": "environment",
    "title": {
     "en": "The greenhouse effect and climate change",
     "id": "Efek rumah kaca dan perubahan iklim",
@@ -565,7 +590,10 @@
    ]
   },
   {
+   "id": "environment.university",
    "level": "university",
+   "difficulty": 5,
+   "topic": "environment",
    "title": {
     "en": "Climate policy: mitigation and adaptation",
     "id": "Kebijakan iklim: mitigasi dan adaptasi",
@@ -704,7 +732,10 @@
    ]
   },
   {
+   "id": "environment.adult",
    "level": "adult",
+   "difficulty": 6,
+   "topic": "environment",
    "title": {
     "en": "Waste, energy and water at home and work",
     "id": "Sampah, energi, dan air di rumah dan tempat kerja",
@@ -849,7 +880,10 @@
    ]
   },
   {
+   "id": "environment.senior",
    "level": "senior",
+   "difficulty": 7,
+   "topic": "environment",
    "title": {
     "en": "Staying safe in a changing climate",
     "id": "Tetap aman dalam iklim yang berubah",

@@ -7,9 +7,25 @@
   "pt": "Planetas e sistema solar",
   "tet": "Planeta no sistema solar"
  },
+ "meta": {
+  "version": 1,
+  "license": "CC BY-SA 4.0",
+  "languages": [
+   "en",
+   "id",
+   "pt",
+   "tet"
+  ],
+  "source": "Written by the LAFA team for Edukasaun OS (general knowledge, checked against standard references)",
+  "reviewed": "2026-10-13",
+  "review_status": "LAFA team review; not yet reviewed by the Ministry of Education (not a national curriculum)"
+ },
  "lessons": [
   {
+   "id": "astronomy.early",
    "level": "early",
+   "difficulty": 1,
+   "topic": "astronomy",
    "title": {
     "en": "The Sun, the Moon and the stars",
     "id": "Matahari, Bulan, dan bintang",
@@ -148,7 +164,10 @@
    ]
   },
   {
+   "id": "astronomy.primary",
    "level": "primary",
+   "difficulty": 2,
+   "topic": "astronomy",
    "title": {
     "en": "Our solar system",
     "id": "Tata surya kita",
@@ -287,7 +306,10 @@
    ]
   },
   {
+   "id": "astronomy.middle",
    "level": "middle",
+   "difficulty": 3,
+   "topic": "astronomy",
    "title": {
     "en": "Gravity, orbits and the phases of the Moon",
     "id": "Gravitasi, orbit, dan fase Bulan",
@@ -432,7 +454,10 @@
    ]
   },
   {
+   "id": "astronomy.secondary",
    "level": "secondary",
+   "difficulty": 4,
+   "topic": "astronomy",
    "title": {
     "en": "Light, stars and distances in space",
     "id": "Cahaya, bintang, dan jarak di luar angkasa",
@@ -577,7 +602,10 @@
    ]
   },
   {
+   "id": "astronomy.university",
    "level": "university",
+   "difficulty": 5,
+   "topic": "astronomy",
    "title": {
     "en": "Kepler's laws, galaxies and the expanding Universe",
     "id": "Hukum Kepler, galaksi, dan alam semesta yang mengembang",
@@ -722,7 +750,10 @@
    ]
   },
   {
+   "id": "astronomy.adult",
    "level": "adult",
+   "difficulty": 6,
+   "topic": "astronomy",
    "title": {
     "en": "Space technology in daily life",
     "id": "Teknologi antariksa dalam kehidupan sehari-hari",
@@ -861,7 +892,10 @@
    ]
   },
   {
+   "id": "astronomy.senior",
    "level": "senior",
+   "difficulty": 7,
+   "topic": "astronomy",
    "title": {
     "en": "Reading the night sky and sharing it",
     "id": "Membaca langit malam dan membagikannya",

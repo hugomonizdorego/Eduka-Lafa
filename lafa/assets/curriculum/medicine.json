@@ -7,9 +7,25 @@
   "pt": "Saúde e medicina",
   "tet": "Saúde no medisina"
  },
+ "meta": {
+  "version": 1,
+  "license": "CC BY-SA 4.0",
+  "languages": [
+   "en",
+   "id",
+   "pt",
+   "tet"
+  ],
+  "source": "Written by the LAFA team for Edukasaun OS (general knowledge, checked against standard references)",
+  "reviewed": "2026-10-13",
+  "review_status": "LAFA team review; not yet reviewed by the Ministry of Education (not a national curriculum)"
+ },
  "lessons": [
   {
+   "id": "medicine.early",
    "level": "early",
+   "difficulty": 1,
+   "topic": "medicine",
    "title": {
     "en": "Clean hands, happy body",
     "id": "Tangan bersih, tubuh sehat",
@@ -148,7 +164,10 @@
    ]
   },
   {
+   "id": "medicine.primary",
    "level": "primary",
+   "difficulty": 2,
+   "topic": "medicine",
    "title": {
     "en": "Healthy food groups",
     "id": "Kelompok makanan sehat",
@@ -287,7 +306,10 @@
    ]
   },
   {
+   "id": "medicine.middle",
    "level": "middle",
+   "difficulty": 3,
+   "topic": "medicine",
    "title": {
     "en": "Heart, lungs and digestion",
     "id": "Jantung, paru-paru, dan pencernaan",
@@ -426,7 +448,10 @@
    ]
   },
   {
+   "id": "medicine.secondary",
    "level": "secondary",
+   "difficulty": 4,
+   "topic": "medicine",
    "title": {
     "en": "Germs, immunity and vaccines",
     "id": "Kuman, kekebalan, dan vaksin",
@@ -565,7 +590,10 @@
    ]
   },
   {
+   "id": "medicine.university",
    "level": "university",
+   "difficulty": 5,
+   "topic": "medicine",
    "title": {
     "en": "Epidemiology and evidence",
     "id": "Epidemiologi dan bukti ilmiah",
@@ -704,7 +732,10 @@
    ]
   },
   {
+   "id": "medicine.adult",
    "level": "adult",
+   "difficulty": 6,
+   "topic": "medicine",
    "title": {
     "en": "Basic first aid",
     "id": "Pertolongan pertama dasar",
@@ -849,7 +880,10 @@
    ]
   },
   {
+   "id": "medicine.senior",
    "level": "senior",
+   "difficulty": 7,
+   "topic": "medicine",
    "title": {
     "en": "Healthy ageing: pressure, eyes and medicines",
     "id": "Menua sehat: tekanan darah, mata, dan obat",

@@ -7,9 +7,25 @@
   "pt": "Educação cívica e cidadania",
   "tet": "Edukasaun sívika no sidadania"
  },
+ "meta": {
+  "version": 1,
+  "license": "CC BY-SA 4.0",
+  "languages": [
+   "en",
+   "id",
+   "pt",
+   "tet"
+  ],
+  "source": "Written by the LAFA team for Edukasaun OS (general knowledge, checked against standard references)",
+  "reviewed": "2026-10-13",
+  "review_status": "LAFA team review; not yet reviewed by the Ministry of Education (not a national curriculum)"
+ },
  "lessons": [
   {
+   "id": "civics.early",
    "level": "early",
+   "difficulty": 1,
+   "topic": "civics",
    "title": {
     "en": "Rules, sharing and our flag",
     "id": "Aturan, berbagi, dan bendera kita",
@@ -148,7 +164,10 @@
    ]
   },
   {
+   "id": "civics.primary",
    "level": "primary",
+   "difficulty": 2,
+   "topic": "civics",
    "title": {
     "en": "Our country, our rights",
     "id": "Negara kita, hak kita",
@@ -293,7 +312,10 @@
    ]
   },
   {
+   "id": "civics.middle",
    "level": "middle",
+   "difficulty": 3,
+   "topic": "civics",
    "title": {
     "en": "The Constitution and the State",
     "id": "Konstitusi dan negara",
@@ -438,7 +460,10 @@
    ]
   },
   {
+   "id": "civics.secondary",
    "level": "secondary",
+   "difficulty": 4,
+   "topic": "civics",
    "title": {
     "en": "Human rights and democracy",
     "id": "Hak asasi manusia dan demokrasi",
@@ -583,7 +608,10 @@
    ]
   },
   {
+   "id": "civics.university",
    "level": "university",
+   "difficulty": 5,
+   "topic": "civics",
    "title": {
     "en": "Institutions, accountability and civil society",
     "id": "Lembaga, akuntabilitas, dan masyarakat sipil",
@@ -728,7 +756,10 @@
    ]
   },
   {
+   "id": "civics.adult",
    "level": "adult",
+   "difficulty": 6,
+   "topic": "civics",
    "title": {
     "en": "Active citizenship in daily life",
     "id": "Kewarganegaraan aktif dalam kehidupan sehari-hari",
@@ -873,7 +904,10 @@
    ]
   },
   {
+   "id": "civics.senior",
    "level": "senior",
+   "difficulty": 7,
+   "topic": "civics",
    "title": {
     "en": "Elders as guardians of community",
     "id": "Lansia sebagai penjaga komunitas",

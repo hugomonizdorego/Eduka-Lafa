@@ -122,8 +122,10 @@ class SchoolUI(unittest.TestCase):
     def test_school_navigation(self):
         from lafa.app import PAGES
         keys = [key for key, _ in PAGES]
-        self.assertEqual(keys[:6], ['home', 'classroom', 'teachers', 'exams', 'report', 'homework']); self.assertIn('os_help', keys)
-        self.assertEqual(self.w.page_title('learn'), 'Search & library'); self.assertEqual(self.w.page_title('os_help'), 'IT help desk')
+        self.assertEqual(keys, ['home', 'study', 'library', 'timor', 'activities', 'oshelp'])
+        self.assertEqual(self.w.page_title('library'), 'Library'); self.assertEqual(self.w.page_title('oshelp'), 'OS help')
+        # Settings and About sit at the bottom of the sidebar, not among the six sections.
+        self.assertTrue(self.w.settings_button.accessibleName()); self.assertNotIn('settings', keys)
     def test_teacher_practice_flow(self):
         self.w.navigate('teachers'); self.w.teacher_list.setCurrentRow(0)
         self.w.math_answer.setText(str(self.w.math.answer)); self.w.check_math(); self.assertIn('Correct', self.w.math_feedback.text())
@@ -133,17 +135,12 @@ class SchoolUI(unittest.TestCase):
         self.w.teacher_list.setCurrentRow(2); right = next(i for i, b in enumerate(self.w.vocab_buttons) if b.property('option') == self.w.vocab.correct)
         self.w.answer_vocab(right); self.assertIn('Correct', self.w.vocab_feedback.text())
         self.w.teacher_list.setCurrentRow(6); self.assertTrue(self.w.tip_text.text())
-        self.w.teacher_input.setText('What is a fraction?'); self.w.ask_teacher(); self.assertIn('AI Hub', self.w.teacher_answer.toPlainText())
-    def test_teacher_uses_ai_with_subject_prompt(self):
-        from lafa.providers import Answer
-        self.w.review = False; self.w.agent.client.ready = lambda *a: True
-        with patch.object(self.w.agent.client, 'chat', return_value=Answer('A fraction is a part of a whole.')) as chat:
-            result = self.w.agent.teacher(school.BY_KEY['math'], 'What is a fraction?', [])
-        self.assertIn('part of a whole', result.text); self.assertIn('mathematics', chat.call_args.args[1])
-        self.w.review = True
+        with patch('lafa.net.request') as net, patch('lafa.tools.json_request') as wiki:
+            self.w.teacher_input.setText('What is a fraction?'); self.w.ask_teacher()
+        self.assertIn('Fractions', self.w.teacher_answer.toPlainText()); net.assert_not_called(); wiki.assert_not_called()
     def test_homework_page_and_home_summary(self):
         self.w.navigate('homework'); self.w.hw_title.setText('Read chapter 2'); self.w.add_homework()
-        self.assertEqual(self.w.hw_table.rowCount(), 1); self.assertIn('Read chapter 2', self.w.home_homework.text())
+        self.assertEqual(self.w.hw_table.rowCount(), 1); self.assertIn('Read chapter 2', self.w.home_next.text())
         self.w.hw_table.selectRow(0); self.w.toggle_homework(); self.assertTrue(self.w.planner.homework[0].done)
         self.w.timetable.item(0, date.today().weekday() if date.today().weekday() < 6 else 0).setText('Science')
         self.w.hw_table.selectRow(0); self.w.delete_homework(); self.assertEqual(self.w.planner.homework, [])
@@ -157,9 +154,9 @@ class SchoolUI(unittest.TestCase):
         self.w.change_outfit('nonsense'); self.assertEqual(self.w.settings.costume, 'casual')
     def test_lafa_settings_window_has_tuning(self):
         self.w.open_settings(); self.w.walk_select.setCurrentIndex(self.w.walk_select.findData('fast'))
-        self.w.size_select.setCurrentIndex(self.w.size_select.findData('large')); self.w.start_select.setCurrentIndex(self.w.start_select.findData('teachers'))
+        self.w.size_select.setCurrentIndex(self.w.size_select.findData('large')); self.w.start_select.setCurrentIndex(self.w.start_select.findData('study'))
         self.w.save_settings()
-        self.assertEqual((self.w.settings.walk_speed, self.w.settings.character_size, self.w.settings.start_page), ('fast', 'large', 'teachers'))
+        self.assertEqual((self.w.settings.walk_speed, self.w.settings.character_size, self.w.settings.start_page), ('fast', 'large', 'study'))
         self.assertEqual(self.w.companion.pet.width(), 220)
 
 class LafaConfiguration(unittest.TestCase):

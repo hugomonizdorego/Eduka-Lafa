@@ -177,3 +177,20 @@ def prefer_xwayland():
         os.environ["QT_QPA_PLATFORM"] = "xcb"
         return True
     return False
+
+def fullscreen_active(runner=subprocess.run, which=shutil.which):
+    """X11: True when the active window of another application is fullscreen.
+
+    Uses xprop (x11-utils) when installed; without it LAFA simply never pauses
+    for fullscreen. Wayland compositors do not expose this, so it is not used
+    there."""
+    xprop = which("xprop")
+    if not xprop or os.environ.get("WAYLAND_DISPLAY") and not os.environ.get("DISPLAY"): return False
+    try:
+        active = runner([xprop, "-root", "_NET_ACTIVE_WINDOW"], capture_output=True, text=True, timeout=2).stdout
+        match = re.search(r"window id # (0x[0-9a-fA-F]+)", active)
+        if not match or int(match.group(1), 16) == 0: return False
+        state = runner([xprop, "-id", match.group(1), "_NET_WM_STATE"], capture_output=True, text=True, timeout=2).stdout
+        return "_NET_WM_STATE_FULLSCREEN" in state
+    except (OSError, subprocess.SubprocessError, ValueError):
+        return False

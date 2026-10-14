@@ -7,9 +7,25 @@
   "pt": "História",
   "tet": "Istória"
  },
+ "meta": {
+  "version": 1,
+  "license": "CC BY-SA 4.0",
+  "languages": [
+   "en",
+   "id",
+   "pt",
+   "tet"
+  ],
+  "source": "Written by the LAFA team for Edukasaun OS (general knowledge, checked against standard references)",
+  "reviewed": "2026-10-13",
+  "review_status": "LAFA team review; not yet reviewed by the Ministry of Education (not a national curriculum)"
+ },
  "lessons": [
   {
+   "id": "history.early",
    "level": "early",
+   "difficulty": 1,
+   "topic": "history",
    "title": {
     "en": "Yesterday, today and tomorrow",
     "id": "Kemarin, hari ini, dan besok",
@@ -148,7 +164,10 @@
    ]
   },
   {
+   "id": "history.primary",
    "level": "primary",
+   "difficulty": 2,
+   "topic": "history",
    "title": {
     "en": "The story of Timor-Leste",
     "id": "Kisah Timor-Leste",
@@ -293,7 +312,10 @@
    ]
   },
   {
+   "id": "history.middle",
    "level": "middle",
+   "difficulty": 3,
+   "topic": "history",
    "title": {
     "en": "Ancient civilisations and timelines",
     "id": "Peradaban kuno dan garis waktu",
@@ -438,7 +460,10 @@
    ]
   },
   {
+   "id": "history.secondary",
    "level": "secondary",
+   "difficulty": 4,
+   "topic": "history",
    "title": {
     "en": "Cause and effect: the Industrial Revolution",
     "id": "Sebab dan akibat: Revolusi Industri",
@@ -583,7 +608,10 @@
    ]
   },
   {
+   "id": "history.university",
    "level": "university",
+   "difficulty": 5,
+   "topic": "history",
    "title": {
     "en": "Sources and historical method",
     "id": "Sumber dan metode sejarah",
@@ -728,7 +756,10 @@
    ]
   },
   {
+   "id": "history.adult",
    "level": "adult",
+   "difficulty": 6,
+   "topic": "history",
    "title": {
     "en": "Key dates in Timor-Leste's history",
     "id": "Tanggal penting dalam sejarah Timor-Leste",
@@ -873,7 +904,10 @@
    ]
   },
   {
+   "id": "history.senior",
    "level": "senior",
+   "difficulty": 7,
+   "topic": "history",
    "title": {
     "en": "Sharing your memories with the young",
     "id": "Berbagi kenangan dengan generasi muda",

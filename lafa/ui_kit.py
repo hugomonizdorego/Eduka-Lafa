@@ -150,7 +150,9 @@ class SourceCard(QFrame):
         self.set_state(state)
     def set_state(self, state):
         self.state = state
-        self.dot.setStyleSheet("color:%s;" % {"up": "#2fb344", "down": "#e03131"}.get(state, "#adb5bd"))
+        # ok: reachable · restricted: login/limits · not_found: 404 · unknown: no answer / not checked.
+        self.dot.setStyleSheet("color:%s;" % {"ok": "#2fb344", "up": "#2fb344", "restricted": "#f08c00", "not_found": "#e03131", "down": "#e03131"}.get(state, "#adb5bd"))
+        self.dot.setToolTip({"ok": "OK", "restricted": "Login / limited", "not_found": "404", "unknown": "?"}.get(state, "—"))
     def paintEvent(self, event):
         super().paintEvent(event)
         p = QPainter(self); p.setRenderHint(QPainter.Antialiasing); p.setPen(Qt.NoPen); p.setBrush(self.colour)

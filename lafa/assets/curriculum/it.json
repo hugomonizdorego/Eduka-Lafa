@@ -7,9 +7,25 @@
   "pt": "TI e internet",
   "tet": "TI no internet"
  },
+ "meta": {
+  "version": 1,
+  "license": "CC BY-SA 4.0",
+  "languages": [
+   "en",
+   "id",
+   "pt",
+   "tet"
+  ],
+  "source": "Written by the LAFA team for Edukasaun OS (general knowledge, checked against standard references)",
+  "reviewed": "2026-10-13",
+  "review_status": "LAFA team review; not yet reviewed by the Ministry of Education (not a national curriculum)"
+ },
  "lessons": [
   {
+   "id": "it.early",
    "level": "early",
+   "difficulty": 1,
+   "topic": "it",
    "title": {
     "en": "Computers can talk to each other",
     "id": "Komputer bisa saling berbicara",
@@ -148,7 +164,10 @@
    ]
   },
   {
+   "id": "it.primary",
    "level": "primary",
+   "difficulty": 2,
+   "topic": "it",
    "title": {
     "en": "The internet and the web",
     "id": "Internet dan web",
@@ -287,7 +306,10 @@
    ]
   },
   {
+   "id": "it.middle",
    "level": "middle",
+   "difficulty": 3,
+   "topic": "it",
    "title": {
     "en": "First steps in coding with Python",
     "id": "Langkah pertama coding dengan Python",
@@ -432,7 +454,10 @@
    ]
   },
   {
+   "id": "it.secondary",
    "level": "secondary",
+   "difficulty": 4,
+   "topic": "it",
    "title": {
     "en": "Networks, data and cybersecurity",
     "id": "Jaringan, data, dan keamanan siber",
@@ -577,7 +602,10 @@
    ]
   },
   {
+   "id": "it.university",
    "level": "university",
+   "difficulty": 5,
+   "topic": "it",
    "title": {
     "en": "Data, algorithms and AI basics",
     "id": "Data, algoritma, dan dasar AI",
@@ -722,7 +750,10 @@
    ]
   },
   {
+   "id": "it.adult",
    "level": "adult",
+   "difficulty": 6,
+   "topic": "it",
    "title": {
     "en": "Internet and data skills for work",
     "id": "Keterampilan internet dan data untuk kerja",
@@ -867,7 +898,10 @@
    ]
   },
   {
+   "id": "it.senior",
    "level": "senior",
+   "difficulty": 7,
+   "topic": "it",
    "title": {
     "en": "Staying safe and connected online",
     "id": "Tetap aman dan terhubung di internet",

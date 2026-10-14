@@ -13,7 +13,7 @@ import unittest
 from unittest.mock import patch
 from lafa import personality, osguide
 from lafa.agent import Agent, direct_intent
-from lafa.config import Settings, Secrets, STATES, IDLE_ACTIVITIES, PROVIDERS
+from lafa.config import Settings, STATES, IDLE_ACTIVITIES, SECTIONS
 
 ROOT = Path(__file__).resolve().parents[1]
 def module(name, path):
@@ -67,18 +67,17 @@ class OSGuideTests(unittest.TestCase):
 
 class AgentRedesignTests(unittest.TestCase):
     def setUp(self):
-        self.agent = Agent(Settings(language='tet'), Secrets()); self.agent.client.ready = lambda: False
+        self.agent = Agent(Settings(language='tet'))
     def test_os_questions_use_offline_guides(self):
         result = self.agent.run('oinsá liga Wi-Fi?', [], True)
         self.assertEqual(result.guide.key, 'wifi'); self.assertIn('Wi-Fi', result.text)
         self.assertEqual(self.agent.run('/os printer', [], True).guide.key, 'printer')
         listing = self.agent.run('/os', [], True); self.assertIsNone(listing.guide); self.assertIn('wifi', listing.text)
-    @patch('lafa.providers.json_request')
-    def test_os_guide_preferred_over_model(self, api):
-        self.agent.client.ready = lambda: True
-        self.assertEqual(self.agent.run('how do I connect wifi?', [], True).guide.key, 'wifi'); api.assert_not_called()
+    @patch('lafa.net.request')
+    def test_os_guide_without_network(self, net):
+        self.assertEqual(self.agent.run('how do I connect wifi?', [], True).guide.key, 'wifi'); net.assert_not_called()
     def test_joke_command(self):
-        self.assertEqual(direct_intent('/joke').tool, 'joke'); self.assertEqual(direct_intent('Tell me a joke').tool, 'joke')
+        self.assertEqual(direct_intent('/joke').tool, 'joke')
         self.assertIn(self.agent.run('/anedota', [], True).text, personality.JOKES['tet'])
 
 class SettingsTests(unittest.TestCase):
@@ -130,7 +129,7 @@ class CompanionBehaviour(unittest.TestCase):
     def test_joke_and_offline_keeps_lafa(self):
         self.c.tell_joke(); self.assertTrue(self.c.balloon.isVisible()); self.assertIn(self.c.balloon.text.text(), personality.JOKES['en'])
         # 0.1.4: LAFA stays on the desktop offline; only internet buttons are disabled.
-        self.c.set_online(False); self.assertTrue(self.c.isVisible()); self.assertTrue(self.c.send_button.isEnabled()); self.assertFalse(self.c.public_button.isEnabled())
+        self.c.set_online(False); self.assertTrue(self.c.isVisible()); self.assertTrue(self.c.send_button.isEnabled())
 
 class DesktopRedesign(unittest.TestCase):
     @classmethod
@@ -143,36 +142,44 @@ class DesktopRedesign(unittest.TestCase):
     def tearDown(self):
         if self.w.settings_dialog: self.w.settings_dialog.accept()
         self.w.companion.close(); self.w.close(); self.w.deleteLater(); self.app.processEvents()
-    def test_home_dashboard_and_virtual_toggle(self):
+    def wait(self, check):
+        import time
+        end = time.monotonic() + 10
+        while time.monotonic() < end:
+            self.app.processEvents()
+            if check(): return True
+            time.sleep(0.01)
+        return False
+    def test_six_sections_and_calm_home(self):
         from lafa.app import PAGES
-        self.assertEqual(PAGES[0][0], 'home'); self.assertEqual(self.w.stack.currentIndex(), 0)
-        self.assertIn('off', self.w.virtual_status.text()); self.w.toggle_virtual()
-        self.assertTrue(self.w.settings.companion); self.assertTrue(self.w.companion.isVisible()); self.assertIn('active', self.w.virtual_status.text())
-        self.assertNotIn('lafa_settings', [key for key, _ in PAGES])
-    def test_home_question_goes_to_chat(self):
-        self.w.home_input.setText('/os wifi'); self.w.ask_from_home(); self.app.processEvents()
-        from lafa.app import PAGE_INDEX; self.assertEqual(self.w.stack.currentIndex(), PAGE_INDEX['chat']); self.assertEqual(self.w.current_guide.key, 'wifi')
-    def test_review_chat_runs_local_tools(self):
-        self.w.send_message('/calc 6*7'); self.assertIn('42', self.w.last_answer)
-        self.w.send_message('how do I take a screenshot?'); self.assertEqual(self.w.current_guide.key, 'screenshot')
+        self.assertEqual([key for key, _ in PAGES], SECTIONS); self.assertEqual(self.w.stack.currentIndex(), 0)
+        self.assertEqual(len(self.w.nav), 6); self.assertNotIn('lafa_settings', [key for key, _ in PAGES])
+        self.assertEqual(self.w.search_panels['home']['input'].placeholderText(), 'Search lessons, knowledge or files…')
+    def test_home_search_runs_os_guide(self):
+        self.w.run_search('home', '/os wifi'); self.assertTrue(self.wait(lambda: 'Wi-Fi' in self.w.search_panels['home']['results'].toPlainText()))
+        self.assertEqual(self.w.current_guide.key, 'wifi')
+    def test_review_search_runs_local_tools(self):
+        self.w.run_search('home', '/calc 6*7'); self.assertTrue(self.wait(lambda: '42' in (self.w.last_answer or '')))
+        self.w.run_search('home', 'how do I take a screenshot?')
+        self.assertTrue(self.wait(lambda: self.w.search_panels['home']['outcome'] is not None)); self.assertEqual(self.w.current_guide.key, 'screenshot')
     def test_os_page_and_tool_launch_is_allowlisted(self):
         from lafa.app import PAGE_INDEX
-        self.w.show_guide(osguide.BY_KEY['sound']); self.assertEqual(self.w.stack.currentIndex(), PAGE_INDEX['os_help']); self.assertIn('🔊', self.w.os_title.text())
+        self.w.show_guide(osguide.BY_KEY['sound']); self.assertEqual(self.w.stack.currentIndex(), PAGE_INDEX['oshelp']); self.assertIn('🔊', self.w.os_title.text())
         self.w.review = False
         with patch('lafa.osguide.shutil.which', return_value='/usr/bin/pavucontrol'), patch('lafa.app.QProcess.startDetached', return_value=(True, 1)) as start:
             self.w.open_guide_tool(osguide.BY_KEY['sound'])
         start.assert_called_once_with('/usr/bin/pavucontrol', [])
         self.w.review = True
     def test_settings_window_categories_and_personality_save(self):
-        self.w.open_settings(); self.assertEqual(self.w.settings_categories.count(), 6)
+        self.w.open_settings(); self.assertEqual(self.w.settings_categories.count(), 5)
         self.w.activity_interval.setValue(150); self.w.hover_check.setChecked(False); self.w.save_settings()
         self.assertEqual(self.w.settings.idle_seconds, 150); self.assertFalse(self.w.settings.hover_questions)
     def test_reload_role_applies_preferences_from_eduka_settings(self):
         with tempfile.TemporaryDirectory() as folder, patch.dict(os.environ, {'XDG_CONFIG_HOME': folder}):
             Settings(language='id', chatter=False, idle_seconds=200, roots=[]).save()
-            self.w.input.setText('draft'); self.w.activate_mode('reload'); self.app.processEvents()
+            self.w.search_panels['home']['input'].setText('draft'); self.w.activate_mode('reload'); self.app.processEvents()
         self.assertEqual(self.w.settings.locale, 'id'); self.assertFalse(self.w.settings.chatter); self.assertEqual(self.w.settings.idle_seconds, 200)
-        self.assertEqual(self.w.input.text(), 'draft')
+        self.assertEqual(self.w.search_panels['home']['input'].text(), 'draft')
 
 class EdukaSettingsPage(unittest.TestCase):
     @classmethod
@@ -186,27 +193,28 @@ class EdukaSettingsPage(unittest.TestCase):
             self.assertEqual(len(title), 4)
             for name, kind, extra, labels in items:
                 self.assertEqual(len(labels), 4, name)
-                if kind == 'model': continue
                 self.assertIn(name, fields)
                 if name in helper.DEFAULTS: self.assertEqual(helper.DEFAULTS[name], getattr(defaults, name), name)
-        provider = next(item for _, _, items in helper.SECTIONS for item in items if item[0] == 'provider')
-        self.assertEqual(set(provider[2]), set(PROVIDERS))
+        names = {item[0] for _, _, items in helper.SECTIONS for item in items}
+        self.assertFalse(names & {'provider', 'model', 'models', 'keys'})
     def test_full_page_saves_and_requests_reload(self):
         with tempfile.TemporaryDirectory() as folder, patch.dict(os.environ, {'XDG_CONFIG_HOME': folder, 'LC_ALL': 'en_US.UTF-8'}):
-            Settings(models={'openai': 'keep-me'}, roots=[]).save(Path(folder) / 'lafa/settings.json')
+            (Path(folder) / 'lafa').mkdir(); (Path(folder) / 'lafa/settings.json').write_text(json.dumps({'provider': 'openai', 'models': {'openai': 'old'}, 'chatter': True}))
             helper = module('redesign_page', ROOT / 'integration/eduka_lafa_settings.py')
             with patch(BINDING+'.QtCore.QProcess.startDetached', return_value=(True, 1)) as start:
                 page = helper.create_lafa_page(binding=BINDING, command=['/opt/lafa'])
                 controls = page.lafa_preferences.lafa_controls
                 controls['chatter'][1].setChecked(False); controls['idle_seconds'][1].setValue(240)
-                controls['provider'][1].setCurrentIndex(controls['provider'][1].findData('ollama')); controls['model'][1].setText('llama3.2')
+                controls['quiet_mode'][1].setChecked(True)
                 controls['roots'][1].setPlainText(folder)
                 page.lafa_preferences.lafa_save()
             start.assert_called_with('/opt/lafa', ['--reload'])
             path = Path(folder) / 'lafa/settings.json'; self.assertEqual(oct(path.stat().st_mode & 0o777), '0o600')
             loaded = Settings.load(path)
-            self.assertFalse(loaded.chatter); self.assertEqual(loaded.idle_seconds, 240); self.assertEqual(loaded.provider, 'ollama')
-            self.assertEqual(loaded.models['ollama'], 'llama3.2'); self.assertEqual(loaded.models['openai'], 'keep-me'); self.assertEqual(loaded.roots, [folder])
+            self.assertFalse(loaded.chatter); self.assertEqual(loaded.idle_seconds, 240); self.assertTrue(loaded.quiet_mode)
+            self.assertFalse(hasattr(loaded, 'provider')); self.assertEqual(loaded.roots, [folder])
+            # The old AI choice is kept once in a private backup, never deleted silently.
+            backup = Path(folder) / 'lafa/settings.json.0.1-backup'; self.assertIn('openai', backup.read_text())
             self.assertNotIn('key', json.loads(path.read_text()))
             page.deleteLater(); self.app.processEvents()
 

@@ -1,36 +1,33 @@
-# LAFA
+# Lafa — Pendamping Belajar dan Asisten Edukasaun OS
 
-**LAFA 0.2.0 Alpha** is an open-source learning assistant and animated
-crocodile companion from Timor-Leste for **Edukasaun OS** (Debian 13 Trixie,
-LXQt) and the **Eduka-Desktop Suite** (Eduka-Desktop, Eduka-Panel,
-Eduka-Settings). LAFA has **no main server**: it relies on the internet, public
-open sources and open-source software. Source, scripts and developer
-documentation are in English; the interface follows Eduka-Desktop's language
-(English, Indonesian, Portuguese, Tetun). See the [CHANGELOG](CHANGELOG.md)
-and [how to keep developing LAFA](docs/DEVELOPMENT.md).
+**Lafa 0.2.0 Alpha** is a learning companion and Edukasaun OS assistant from
+Timor-Leste, for **Edukasaun OS** (Debian 13 Trixie, LXQt) and the
+**Eduka-Desktop Suite** (Eduka-Desktop, Eduka-Panel, Eduka-Settings).
 
-![LAFA Home](docs/screenshots/01-home.png)
+Its main functions work **without login, without an AI key, without a Lafa
+server and without internet**. The internet only *adds* learning sources
+(Wikipedia, learning websites, Timor-Leste news, weather).
 
-![Lafa-Configuration in Eduka-Settings](docs/screenshots/18-eduka-settings-lafa-configuration.png)
+Lafa is **not** a generative AI and cannot answer every question. It searches
+the lessons, guides and files on this computer, shows where each result comes
+from, and says honestly when it found nothing.
 
-![The three outfits](docs/screenshots/25-outfits.png)
+The interface follows the system language: Tetun, Português, Bahasa Indonesia,
+with English as the fallback. See the [CHANGELOG](CHANGELOG.md), [offline
+behaviour](docs/OFFLINE.md) and [how to keep developing Lafa](docs/DEVELOPMENT.md).
 
-![Exam hall](docs/screenshots/33-exam-hall.png)
+![Lafa Home](docs/screenshots/01-home.png)
 
-![Timor-Leste atlas](docs/screenshots/36-timor-leste-atlas.png)
+![Lafa on a 1024×600 screen](docs/screenshots/02-home-1024x600.png)
 
-![Learning sources](docs/screenshots/50-library-learning-sources.png)
+![Search: local material first](docs/screenshots/03-search-local-material.png)
 
-![LAFA Search](docs/screenshots/57-lafa-search.png)
+![Practice with explanations](docs/screenshots/11-practice-explanation.png)
 
-![AI Hub](docs/screenshots/58-ai-hub.png)
+![Offline: local features stay available](docs/screenshots/27-offline-home.png)
 
-![Classroom for every age](docs/screenshots/59-classroom-every-age.png)
-
-![LAFA moves like a person](docs/screenshots/61-virtual-human-movement.png)
-
-[View all 61 captures](docs/SCREENSHOTS.md). Captures of LAFA on the desktop
-are actual LAFA pixels on an **illustrated desktop**, not Edukasaun OS.
+[View all captures](docs/SCREENSHOTS.md). Captures of Lafa on the desktop
+show actual Lafa pixels on an **illustrated desktop**, not Edukasaun OS.
 
 ## Install on Edukasaun OS
 
@@ -39,333 +36,199 @@ sh tools/build-deb.sh                       # -> dist/lafa_0.2.0_all.deb
 sudo apt install ./dist/lafa_0.2.0_all.deb  # dependencies come from Debian
 ```
 
-`apt` installs every dependency automatically: `python3-pyqt5` (the same Qt
-binding as the Eduka-Desktop suite), `libqt5svg5`, `python3-keyring`,
-`fonts-noto-color-emoji` and more; recommended packages add read-aloud
-(`espeak-ng`), PDF reading (`poppler-utils`), Papirus icons and the desktop
-tools the IT help desk can open. The package installs LAFA Desktop in the
-**Edukasaun** menu category, an autostart entry that runs only when the Virtual
-Assistant is activated, and the **Lafa-Configuration** page for Eduka-Settings.
-Inside Cubic it starts no GUI. Updating later is the same `apt install` command.
+`apt` installs the dependencies (`python3-pyqt5`, the same Qt binding as the
+Eduka-Desktop suite, `libqt5svg5`, `fonts-noto-color-emoji`, …).
 
-## Made for Edukasaun OS, from Timor-Leste
+Recommended packages add:
+- read aloud (`espeak-ng`) and PDF reading (`poppler-utils`);
+- Papirus icons and fullscreen detection (`x11-utils`);
+- the desktop tools that OS help can open.
 
-LAFA is made exclusively for **Edukasaun OS**. On other systems it still
-runs, so developers can download the `.deb` and try it, but it shows a
-"developer preview" banner.
+Suggested: `kiwix` (Wikipedia and books offline), `orca`, `onboard`.
+
+Updates come through APT / the Eduka Update Service. Lafa is not a second
+updater and never runs downloaded code. Upgrading from 0.1.x keeps tasks,
+timetable, practice results, reminders, files and preferences (see
+[Upgrading](#upgrading-from-01x)).
+
+## Six sections
+
+The sidebar has six sections. **Settings** and **About** sit at the bottom.
+Keyboard: `Alt+1` … `Alt+6` open the sections and `Ctrl+F` focuses search.
+Below 1100 px the sidebar becomes a compact icon bar.
+
+| Section | What is in it |
+|---|---|
+| **Beranda / Home** | Search box, four quick accesses (Mulai Belajar, Cari Pengetahuan, Tugas & Jadwal, Bantuan OS), last material with *Continue learning*, the next activities |
+| **Belajar / Learn** | Lessons for ages 5–100 and the Timor-Leste school subjects; subject guides; **Latihan** and **Simulasi Tes** with explanations and *retry my mistakes*; first phrases in many languages; digital literacy; programming examples |
+| **Perpustakaan / Library** | My files, saved material, internet sources (with metadata and an on-demand status check), Wikipedia, favourites, external sites (reference works, Kiwix, optional AI websites, community wikis) |
+| **Timor-Leste** | History, places and symbols (atlas), Timor-Leste news (education, culture, technology), weather |
+| **Aktivitas Saya / My activities** | Tasks and timetable, reminders and focus, **Hasil Latihan** (practice results) |
+| **Bantuan OS / OS help** | Edukasaun OS guides, accessibility, computer check, open the tools that are installed |
+
+## Search: local first
+
+The search box says *"Cari pelajaran, pengetahuan, atau file…"*. It is a
+search, not a chatbot. Every result carries a label:
+
+- **Materi lokal** (lesson or atlas text shipped with Lafa);
+- **File lokal** (a file name in the folders you chose);
+- **Materi tersimpan** (an article or page you saved);
+- **Sumber internet** (only after you press *Cari sumber di internet*).
+
+How it answers:
+
+- **"Apa itu fotosintesis?"** → the lesson text with its reference. If that
+  is not enough, the separate *Cari sumber di internet* button searches
+  Wikipedia. Nothing is sent automatically.
+- **"Cari file tugas matematika"** → a file-name search in your chosen folders.
+- **"Bagaimana mengganti wallpaper?"** → the local Edukasaun OS guide.
+- A weak match is shown as a list of material to choose from, not as an answer.
+- **Nothing found** → Lafa says so and suggests other words, the lesson list,
+  or the internet button. It never makes up an answer.
+
+Article extracts are labelled *Kutipan artikel* with publisher, address and
+fetch date. They are kept apart from Lafa's own lesson text.
 
 ## Offline and online
 
-| Works offline | Needs internet |
+| Works offline (always) | Adds something when online |
 |---|---|
-| Classroom for ages 5–100, exams, report card, homework, Timor-Leste atlas (built-in text), language school, computer lab, Edukasaun OS help desk, files, reminders, read aloud, `/calc`, `/os`, **LAFA Search** over everything LAFA has learned and read, answers with citations, opening apps and pages, the LAFA model (Ollama), the Virtual Assistant | AI Hub sign-in and AI websites, Wikipedia search, reading the 130 learning and Timor-Leste media sources into the memory (every hour), weather and news, atlas and notice board refresh |
+| Search of lessons, atlas, guides, saved material and file names; lessons for ages 5–100; practice and test simulations with explanations; practice results; languages; digital literacy; programming examples (bounded Python); Timor-Leste atlas; tasks, timetable, reminders (they ring offline) and focus; OS help; calculator; read aloud; the Virtual Assistant | Wikipedia extracts, learning-website status, Timor-Leste and world news, weather, saving an article for later, refreshing saved sources |
 
-Clicking LAFA recommends free software (GNU GPL and other open-source
-licences, such as GIMP, Kiwix, GCompris and Stellarium) and, when online, a
-learning website.
+Offline, Lafa shows a calm *"Fitur lokal tetap tersedia"* badge. There are
+no repeated connection pop-ups. Each internet service fails on its own and
+never removes local results or freezes the window. Details:
+[docs/OFFLINE.md](docs/OFFLINE.md).
 
-## Three surfaces
+## Practice and results
 
-| Surface | What it does | Entry point |
-|---|---|---|
-| **LAFA Desktop** | A complete school: classroom lessons, teachers, exam hall (quiz, test, exam), report card, homework & timetable, Timor-Leste history and symbols, library, computer lab, notice board, IT help desk, files, AI services | Edukasaun menu; `lafa` |
-| **LAFA Virtual Assistant** | The character on the Eduka-Panel: walks, does activities that suit its outfit, asks “Can I help?” on hover, chats on click | Activate on Home or in Lafa-Configuration; `lafa --virtual` |
-| **Eduka-Settings → Lafa-Configuration** | Every LAFA preference: activation, outfit, size, speeds, personality, LAFA Desktop, language, AI, folders, weather | `lafa --configure` (falls back to LAFA's own window `lafa --settings`) |
+- **Latihan** (5 questions, answer and explanation at once).
+- **Simulasi Tes** (10 questions, results at the end).
+- **Simulasi Tes berwaktu** (20 questions, 20 minutes).
 
-## Compatible with the Eduka-Desktop Suite
+A session never repeats a question. When a subject has fewer questions than
+asked, Lafa uses fewer and says so. Wrong answers show the lesson sentence
+that explains the answer and the related lesson, when a lesson states it.
+Lafa does not invent explanations. *Retry my mistakes* repeats only the wrong
+questions.
 
-- **Language**: LAFA's default "Follow Eduka-Desktop" uses the language chosen
-  in Eduka-Settings (Tetun) or the session language.
-- **Eduka-Panel**: LAFA reads the panel's edge, height and style (full,
-  floating, short, dock) and stands exactly on top of it.
-- **Theme**: LAFA Desktop follows the Eduka theme (including Edukasaun-Dark)
-  and the accent colour.
-- **Notifications**: reminders appear as Eduka-Panel notifications; homework
-  due dates can go to the Eduka-Panel calendar agenda.
-- **Eduka-Settings**: Lafa-Configuration is a native page (Eduka cards, rows,
-  live apply). Eduka-Settings needs the generic plugin-pages patch
-  ([integration](docs/EDUKA-INTEGRATION.md)); it was verified with the real
-  eduka-settings 0.9.24.
-- **Qt**: PyQt5 like the suite; on Wayland LAFA uses XWayland like Eduka.
+**Hasil Latihan** shows personal progress on this computer: attempts,
+*average score*, best score. It is **not an official school report card**,
+and an average score is not a completion percentage.
 
-## New in 0.2.0
+Lessons carry an ID, topic, difficulty, languages, source, review date,
+version and licence (CC BY-SA 4.0). They are **not yet reviewed by the
+Ministry of Education**. Lafa does not claim national-curriculum alignment.
+The lesson files (`lafa/assets/curriculum/*.json`) are checked by
+`tools/check-curriculum.py`.
 
-- **LAFA's core memory — LAFA Search.** A search engine on the computer, like
-  Google or Bing but for LAFA's own sources: lessons, the Timor-Leste atlas,
-  OS guides and the pages LAFA reads every hour from the 130 learning and
-  Timor-Leste media sites (robots.txt respected). Results show title, address
-  and snippet; answers cite their sources [1] [2]. It works offline.
-- **AI Hub.** Sign in with OpenRouter (browser login, free models), connect a
-  free Gemini key from AI Studio, or create LAFA's own model with Ollama — then
-  LAFA Desktop and the Virtual Assistant think with that AI and cite LAFA's
-  memory. AI websites (Gemini, ChatGPT, Claude, Copilot, DeepSeek, Perplexity,
-  Le Chat, Qwen, Kimi, HuggingChat, Grok, Meta AI, NotebookLM) open in
-  signed-in tabs, and one question can be sent to several at once (inspired by
-  [Noi](https://github.com/lencx/noi)).
-- **A helping agent.** "buka browser", "loke kalkuladora", "buka kelas",
-  "tanya Gemini apa itu atom", "ingatkan saya 10 menit lagi minum air" — LAFA
-  opens apps and pages, asks AIs, searches and reminds, from a fixed safe list
-  (ideas from [Voice-Command](https://github.com/ruapotato/Voice-Command) and
-  [Linubot](https://github.com/agent-sh/linubot)).
-- **Learning for every age, 5 to 100.** 18 subjects × 7 age levels: maths,
-  physics, chemistry, biology, health and medicine, environment, planets and
-  the solar system, atoms and nuclear science, geography, computers, IT,
-  technology, history, communication, economics, agriculture, civics, arts.
-- **LAFA moves like a person**: steps, weight shift, breathing, waving,
-  nodding and jumping.
-- **Menus fixed**: local features no longer ask for internet; reminders fire
-  offline; empty buttons explain what to do.
+## Internet sources
 
-## What LAFA does
+The Library lists curated learning websites and Timor-Leste media, including
+the **Governo de Timor-Leste** (https://timor-leste.gov.tl/) and the
+**Ministério da Educação** (https://moe.gov.tl/). Each source shows its
+languages, topics, level, access (free, free with account, partly paid, paid)
+and why it was chosen. Not all sources are free or of equal quality.
 
-**LAFA Desktop — a complete school**
+The status check runs on demand, is cached for a day, and has a *Check now*
+button. Its results are **ok**, **not found**, **restricted** or **unknown**.
+A reachable website is not proof that its content is correct.
 
-The window follows the Eduka-Desktop theme (mint and cream, or deep teal
-in Eduka's dark themes): a floating sidebar with **search** and a
-**learning progress** card, section tabs and **Ask LAFA** at the top, and a
-lobby of colourful tiles with one round **Start** button.
+Fandom, Everything2 and Conservapedia are not academic sources. They appear
+only under *community & entertainment wikis*, with a note.
 
-The sidebar has four groups: **School** (lobby, classroom, teachers' room,
-exam hall, report card, homework, language school), **Timor-Leste** (atlas,
-notice board), **Search & AI** (LAFA Search and library, AI Hub, Husu LAFA)
-and **Tools** (computer lab, files, reminders, help desk).
+News and extracts show title, publisher, address and the publication or fetch
+date. Cached data is labelled as cached, never as "latest". Lafa reads only
+front pages and feeds (robots.txt respected), never whole sites, and never
+logs in or scrapes behind a login.
 
-- **Classroom**: choose the learner's age (5–7, 8–11, 12–14, 15–18, 19–25,
-  26–59, 60–100) or the Timor-Leste school lessons; every lesson has study
-  notes, a task, a quiz and **Learn more** (LAFA Search).
-- **Exam hall**: **quiz** (5 questions, instant feedback), **test / ulangan**
-  (10 questions on one subject) and **exam / ujian** (20 questions from all
-  subjects, 20-minute timer), with a review of every mistake. Works offline.
-- **Report card**: results saved privately on the computer, averages, best
-  scores and grades, export to a text file.
-- **Timor-Leste atlas** (84 topics): from the formation of the Earth and of
-  the island to today — history, flag, coat of arms and anthem, the map and
-  its history, the 14 municipalities, Ataúro, Jaco and Oé-Cusse, natural
-  wealth, economy, exports and imports, population, fertile regions,
-  tourism, every President and Prime Minister, the system of government and
-  political history — plus the news and culture feed. When online, each
-  topic is refreshed from Wikipedia in the reader's language (with its date)
-  and kept for offline use.
-- **Language school**: first courses in 14 languages (Tetun, Portuguese,
-  Indonesian, English, Spanish, French, German, Mandarin, Japanese, Korean,
-  Arabic, Thai, Vietnamese, Filipino) with pronunciation, quizzes and
-  read-aloud.
-- **Library**: 79 learning websites from the Edukasaun OS directory in 8
-  categories plus 51 Timor-Leste media and research sources (Wikipédia Tetun,
-  news portals, newspapers, TV, radio, 13 community radios, civil society),
-  checked every hour, plus Wikipedia search.
-- Subjects: Mathematics, Science, Languages, History & Geography, Civics &
-  Citizenship, Geography, Health & PE, ICT & Coding, Arts & Culture.
-- **Lobby**: word of the day in four languages, LAFA's daily motivation, today
-  in Timor-Leste or the next holiday, and **LAFA's roles**: teacher,
-  professor, motivator, magician (a binary mind-reading trick), master,
-  comedian and helper.
-- **Teachers**: Mathematics, Science, Languages, History & Geography, ICT &
-  Coding, Arts & Culture and a Counsellor. Each has free learning resources,
-  **offline practice** (maths exercises in three levels, vocabulary cards
-  between Tetun, Portuguese, English and Indonesian, quizzes about science,
-  Timor-Leste, digital safety and culture, study tips) and **Ask the teacher**
-  with an AI provider (the free open-source Ollama works).
-- **Homework & timetable**, stored on the computer; due dates can be added to
-  the Eduka-Panel calendar. Home shows today's classes and homework due soon.
-- **Library**, **Computer lab** (bounded Python lessons), **Notice board**
-  (weather and headlines), **IT help desk** (16 Edukasaun OS guides with an
-  allowlisted tool launcher), **My files**, **Reminders & focus**,
-  **Timor-Leste**, **AI services**, and chat with `/help`, `/os`, `/calc`,
-  `/joke`.
-- **Always up to date**: LAFA refreshes the notice board and downloads the
-  validated source catalog (links, teacher resources, Timor-Leste cards, tips)
-  from its open-source repository, and announces new LAFA releases.
+**Kiwix** works offline once installed: `sudo apt install kiwix`, then copy a
+ZIM archive. Lafa never downloads large archives by itself.
 
-**LAFA Virtual Assistant**
-- **Three outfits**: **Tais Mane** (default), **Tuxedo** (jacket, shirt, bow
-  tie, trousers, shoes) and **Casual** (shirt, shorts, socks and sneakers),
-  worn in every activity except bathing and the toilet. The
-  outfit decides the activities: Tais Mane — school and daily life, Tebe-tebe
-  and Bidu; Tuxedo — parties, meetings, presentations, graduation ceremonies,
-  gala dinners, speeches; Casual — beach, sunbathing, beach ball, sightseeing,
-  café, shopping, snacks. Change it in Lafa-Configuration or by right-clicking
-  LAFA → Outfit.
-- **Roles** in every outfit (right-click → LAFA's roles): teacher at a
-  chalkboard, professor with a mortarboard, motivator with a trophy, magician
-  with a top hat and wand, calm master, comedian at the microphone.
-- Walks to a new spot on the Eduka-Panel, then does an activity, then walks
-  again. **Cursor touches LAFA → it stops and asks how it can help**, in
-  character and reacting to what it is doing. Innocent, curious, clever and
-  funny: it comments on its activities and tells jokes.
-- Tunable in Lafa-Configuration: size, walking speed, animation speed,
-  activity duration, balloon time, hover questions, self-talk, jokes.
+## Optional AI websites
 
-The first activation introduces LAFA with a time-of-day greeting: “Good
-morning! I am LAFA, from Timor-Leste, a virtual assistant ready to help you.”
+*Perpustakaan → Situs eksternal* has three links (ChatGPT, Claude, Gemini),
+labelled **"Buka di browser"**. They open in your own browser, where you sign
+in yourself.
 
-## More features
+Lafa does not:
+- build an AI login;
+- read accounts, cookies, passwords or browser sessions;
+- send questions or documents anywhere by itself;
+- install Ollama or download AI models.
 
-- Seventeen poses: idle, reading, thinking, walking, sitting, gaming, serious,
-  mildly angry, talking, sleeping, bathing, toilet, studying, eating, stretching,
-  **Tebe-tebe** and **Bidu**. Nine have traditional-costume illustrations.
-- Positive notes and source-linked Timor-Leste cards above the character's head,
-  default every five minutes while idle. Cards include Dili, tais, coffee, food,
-  tourism and Tebe, with source URLs and an explicit source-check date.
-  They are curated shipped facts, not continuously scraped assertions.
-- Timor-Leste headline metadata from **Tatoli, Timor Post and the Government of
-  Timor-Leste**, locally filtered for education, arts/culture, development and
-  technology. Manual refresh and optional idle updates every 30 minutes show
-  publisher and dates. Each publisher represents its own perspective.
-- Key-free **public source mode**: explicit Wikipedia queries and article introductions,
-  source links, weather, news, local filename search and supported reading.
-  Greetings and supportive notes have prepared responses. Full conversational
-  reasoning, personalized explanations and AI summaries use an optional API.
-  Choose **Search public sources** or type `/ask topic` to send a public question.
-  A short topic typed in Husu LAFA (e.g. "buku") is answered about that topic;
-  personal sentences and long text are never sent to Wikipedia.
-- **Open-source AI**: Ollama running free on this computer (no key), or any
-  OpenAI-compatible open-source server (llama.cpp, vLLM, LocalAI, a school or
-  community host) over HTTPS. **Fetch available models** lists real model IDs.
-- Five optional official API adapters: OpenAI, Gemini, Claude, DeepSeek and Perplexity.
-  The twelve service cards also link to Copilot, NotebookLM, Midjourney, Firefly,
-  ElevenLabs, Cursor and Lovable. Account login happens in the system browser;
-  a website subscription does not automatically give LAFA API access.
-- Learning links and scoped browser searches for Ruangguru, wikiHow, Fandom,
-  Everything2, Conservapedia, Miraheze and Baidu Baike, plus encyclopedias,
-  Wikibooks, Wikiversity, Khan Academy, OpenStax and Internet Archive.
-- **Virtual Coding**: editable beginner Python examples with a bounded AST
-  interpreter supporting variables, arithmetic, lists, loops, conditions and
-  print. Imports, file/network access, attributes, system commands and Python
-  `eval`/`exec` are unavailable. JavaScript, HTML and CSS have read/export lessons;
-  they are not executed. Explain with AI requires explicit code-transfer consent.
-- Filename-based search within selected local folders; documents, music, video
-  and pictures. TXT, MD, CSV, HTML, DOCX, ODT and text PDFs can be read locally.
-  AI summaries ask before sending document text. No permanent file index.
-- Current weather and three-day forecasts from Open-Meteo, default Dili, with
-  explicit city selection for ambiguous names. World headlines from BBC/Guardian.
-- In-memory session reminders, cancellation and a 25-minute focus timer.
-- `/calc` safe calculator (no `eval`) and translated `/help` command list.
-- The Virtual Assistant greets by time of day and hops when an answer arrives.
-- Tetun/Indonesian/Portuguese Wikipedia searches fall back to English when
-  the local edition has no result.
-- Explicit eight-second microphone recording and OpenAI transcription; the
-  transcript is placed in the input for review. Local espeak read-aloud. Tetun
-  speech uses Portuguese pronunciation because a native Tetun voice is not bundled.
-- Internet check every 30 seconds. Offline hides the character, stops animation
-  and voice, disables requests and defers reminders. Settings stay accessible.
+## Lafa Virtual Assistant
 
-LAFA is not all-knowing. It distinguishes source extracts, browser links, live
-metadata and AI responses. Network access alone does not create an AI model,
-API key or paid credits. General browser searches are links, not fetched results.
+The calm crocodile on the Eduka-Panel is switched on only in **Eduka-Settings
+→ Lafa-Configuration**. Opening Lafa Desktop does not switch it on.
+
+- **Click it** for quick actions that work offline: continue the lesson,
+  tasks, focus and OS help. It also offers read aloud and a 🤫 quiet toggle.
+- **Quiet mode** stops spontaneous messages, hover questions and self-talk.
+- Spontaneous messages are **limited per hour** (default 4). They pause while
+  you type, while Lafa is paused, and while another app is fullscreen (X11).
+- **Reduce motion** stops walking and dance animations.
+- **Entertainment** (magician, mind reader, comedian, bathing/toilet and party
+  animations, jokes) is off by default and switched on in Settings.
+- Greetings, positive messages and Timor-Leste identity stay. There are three
+  outfits: Tais Mane, Tuxedo, Casual.
+- On X11 Lafa stands on the available panel geometry. On Wayland it uses a
+  compositor fallback (XWayland) and is **not yet tested**.
+
+## Upgrading from 0.1.x
+
+- Settings, tasks, timetable, practice results, reminders, saved material and
+  chosen folders are kept.
+- Old AI fields (provider, models, server addresses) are ignored. The old
+  settings file is backed up once to `~/.config/lafa/settings.json.0.1-backup`
+  (mode 0600).
+- Lafa does not touch the system keyring. If a key was stored there by 0.1.x,
+  it stays until you remove it yourself (for example with Seahorse).
+- The old AI code (providers, AI Hub, sign-in, transcription) remains
+  available in Git history.
 
 ## Run from source (developers)
 
 See [docs/DEVELOPMENT.md](docs/DEVELOPMENT.md). In short:
 
 ```bash
-sudo apt install python3-pyqt5 libqt5svg5 python3-keyring papirus-icon-theme fonts-noto-color-emoji
+sudo apt install python3-pyqt5 libqt5svg5 papirus-icon-theme fonts-noto-color-emoji
 LAFA_QT=pyqt5 python3 -m lafa.app --review     # Edukasaun OS stack (PyQt5)
 python3 -m venv .venv && .venv/bin/pip install -e . && LAFA_QT=pyside6 .venv/bin/lafa --review   # PySide6
+QT_QPA_PLATFORM=offscreen python3 -m pytest -q   # tests (PyQt5 and PySide6)
 ```
 
-`scripts/install-user.sh` still creates per-user launchers from a source
-checkout; the `.deb` is the recommended way on Edukasaun OS.
-
-## AI setup
-
-**Easiest:** open **AI Hub** and press **Sign in** (OpenRouter: log in with
-Google, GitHub or e-mail in the browser; LAFA gets a key and a free model), or
-press 🔑 to open Google AI Studio, create a free Gemini key and paste it. With
-[Ollama](https://ollama.com/) installed, **Create LAFA model** downloads an
-open model (gemma3:4b, about 3 GB) and makes LAFA's own offline model.
-
-**Free and open-source (recommended to start):** install [Ollama](https://ollama.com/),
-pull an open model (for example `ollama pull llama3.2`), then in LAFA Settings
-choose **Ollama (open-source, local)**, press **Fetch available models**, pick
-one and Save. No key and no paid credits are needed. The Ollama address must be
-on this computer (`127.0.0.1`, `localhost` or `::1`). A school or community can
-instead host an **OpenAI-compatible open-source server**; enter its HTTPS
-address ending in `/v1` and an optional key.
-
-**Commercial APIs (optional):** select a provider, enter an API key, press
-**Fetch available models** (or type an official model ID), then Save. Perplexity uses its `fast` preset.
-Settings has five categories: **Virtual Assistant**, **AI & language**,
-**Personality & activities**, **Files & weather** and **About**; the same
-preferences (except API keys) are on the Eduka-Settings → LAFA page. Closing without saving leaves provider/model preferences
-unchanged. Saving preserves the coding editor, output and unsent chat draft.
-No model ID is guessed from a changing model catalogue. Keys stay in session
-memory unless secure keyring is selected. Secret Service/KWallet are accepted;
-plaintext fallbacks are rejected. Environment variables in `.env.example` are
-also supported; LAFA does not automatically load that file.
-
-| Provider | Native connection | Browser login |
-|---|---|---|
-| OpenAI | Responses API | [ChatGPT](https://chatgpt.com/) |
-| Google | Gemini GenerateContent | [Gemini](https://gemini.google.com/) |
-| Anthropic | Claude Messages | [Claude](https://claude.ai/) |
-| DeepSeek | Chat completions | [DeepSeek](https://chat.deepseek.com/) |
-| Perplexity | Agent API, fast preset | [Perplexity](https://www.perplexity.ai/) |
-| OpenRouter | Chat completions, free models | Browser sign-in (OAuth PKCE) in AI Hub |
-| Ollama | Local `/api/chat`, open-source models; "lafa" model from AI Hub | Not needed |
-| Open-source server | OpenAI-compatible `/chat/completions` | Not needed |
-
-Models, quotas, account permissions and pricing belong to each provider. The
-AI Hub's web tabs keep their own sign-in cookies in a private LAFA profile
-(`~/.local/share/lafa/aihub`, 0700); LAFA never reads those cookies, tokens or
-answers — it only types the question you send into the page.
-
-## Commands
+## Commands in the search box
 
 ```text
-/help
-/os
-/os wifi
-/joke
-/calc (3+4)*2
-/weather
-/weather Dili
-/news
-/timor education
-/timor arts_culture
-/timor technology
+/help              what Lafa can do
+/os  /os wifi      Edukasaun OS guides
+/calc (3+4)*2      calculator (no eval)
 /remind 5 Drink water
-/focus
-/source Ruangguru: fractions
-/ask Dili
-/learn photosynthesis
-/files lesson
-/music Timor
-/videos tutorial
-/web videos Python lesson
-/web documents mathematics
+/joke              only with entertainment switched on
+/ask photosynthesis   Wikipedia extract (internet, only when you ask)
+/weather Dili  /news  /timor education   (internet)
 ```
 
-Direct commands work without an AI key. `/ask` sends one public topic of at most
-300 characters to Wikipedia and returns a cited introduction. `/learn` searches
-public source snippets. Ordinary chat stays local in source mode; prepared
-greetings and supportive messages are available. The optional API can
-interpret additional natural-language requests. Model actions are read-only
-and validated: files, encyclopedia, browser search, weather, world news and
-known learning-source links. `/timor` explicitly fetches local headlines.
+Ordinary requests also work in the four languages, for example "buka
+kalkulator", "loke kelas", or "ingatkan saya 10 menit lagi minum air". They
+use a fixed, safe list of apps and pages. Lafa never runs a shell command.
 
-## Validation and limits
+## Limits
 
-[Validation results](docs/VALIDATION.md) and [security review](docs/SECURITY.md)
-record checks and remaining limits. No software can be guaranteed unhackable.
-This is a tested alpha implementation, not a certification of the current OS,
-provider accounts, desktop compositor or all dependency vulnerabilities.
+- Lafa is a search and learning tool. It does not generate text and cannot
+  answer everything.
+- Lessons are not reviewed by the Ministry of Education. Short language
+  courses are first phrases, not full courses. The glossary is curated; Lafa
+  does not translate freely.
+- Wayland behaviour of the Virtual Assistant is untested. Fullscreen
+  detection needs `xprop` (x11-utils) on X11.
+- Online features (Wikipedia, news, weather, source checks) were tested with
+  recorded data; real websites can change.
+- [Validation](docs/VALIDATION.md) · [Security](docs/SECURITY.md) ·
+  [Privacy](docs/PRIVACY.md) · [Architecture](docs/ARCHITECTURE.md) ·
+  [Eduka integration](docs/EDUKA-INTEGRATION.md) · [Assets](docs/ASSETS.md)
 
-```bash
-QT_QPA_PLATFORM=offscreen .venv/bin/python -m unittest discover -s tests -v
-QT_QPA_PLATFORM=offscreen .venv/bin/python scripts/capture-screenshots.py
-.venv/bin/python scripts/check-system.py             # read-only readiness report
-.venv/bin/python scripts/check-system.py --network --json
-```
-
-The readiness check inspects runtime dependencies, assets, local activation and
-launcher availability. `--network` explicitly requests Wikipedia, Dili weather
-and Timor-Leste feed checks. It does not print keys, chat, model IDs or selected
-folder paths. An isolated Qt probe reports initialization failures without
-crashing the diagnostic parent process.
-
-[Upload to GitHub](docs/GITHUB.md) · [Privacy](docs/PRIVACY.md) ·
-[Architecture](docs/ARCHITECTURE.md) · [Asset provenance](docs/ASSETS.md)
-
-Code license: MIT. The supplied character identity remains subject to its
-owner's rights. New illustrations are included for this LAFA project.
+Code license: MIT. Lesson content: CC BY-SA 4.0. The supplied character
+identity remains subject to its owner's rights.

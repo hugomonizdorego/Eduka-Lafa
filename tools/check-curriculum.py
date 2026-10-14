@@ -5,6 +5,8 @@
 
 Every text is a dict with en, id, pt and tet; every subject has one lesson per
 age level; every question has one answer and three different wrong options.
+Every file has metadata (version, license, languages, source, review date and
+review status) and every lesson an id, topic and difficulty.
 """
 import json
 import sys
@@ -32,6 +34,14 @@ def check(path):
     if data["subject"] != Path(path).stem: errors.append(f"{path}: subject must match file name")
     text(data.get("name"), "name", errors, 40)
     if not isinstance(data.get("icon"), str) or not data["icon"]: errors.append("icon missing")
+    meta = data.get("meta")
+    if not isinstance(meta, dict): errors.append("meta missing (version, license, languages, source, reviewed, review_status)")
+    else:
+        if not isinstance(meta.get("version"), int) or meta["version"] < 1: errors.append("meta.version must be a positive integer")
+        for key in ("license", "source", "review_status"):
+            if not isinstance(meta.get(key), str) or not meta[key].strip(): errors.append(f"meta.{key} missing")
+        if not isinstance(meta.get("reviewed"), str) or len(meta["reviewed"]) != 10: errors.append("meta.reviewed must be YYYY-MM-DD")
+        if meta.get("languages") != list(LANGS): errors.append(f"meta.languages must be {list(LANGS)}")
     lessons = data.get("lessons")
     if not isinstance(lessons, list): return errors + ["lessons missing"]
     levels = [lesson.get("level") for lesson in lessons if isinstance(lesson, dict)]
@@ -41,6 +51,9 @@ def check(path):
         where = f"lessons[{i}]"
         if not isinstance(lesson, dict): errors.append(f"{where}: not an object"); continue
         if lesson.get("level") not in LEVELS: errors.append(f"{where}: bad level {lesson.get('level')!r}")
+        if lesson.get("id") != f"{data['subject']}.{lesson.get('level')}": errors.append(f"{where}: id must be <subject>.<level>")
+        if lesson.get("level") in LEVELS and lesson.get("difficulty") != LEVELS.index(lesson["level"]) + 1: errors.append(f"{where}: difficulty must match the level (1–7)")
+        if not isinstance(lesson.get("topic"), str) or not lesson["topic"]: errors.append(f"{where}: topic missing")
         text(lesson.get("title"), where + ".title", errors, 80)
         points = lesson.get("points")
         if not isinstance(points, list) or not 3 <= len(points) <= 5: errors.append(f"{where}.points: 3–5 needed")

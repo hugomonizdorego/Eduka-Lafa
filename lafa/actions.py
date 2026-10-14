@@ -1,12 +1,11 @@
 """LAFA as a helping agent: understands everyday requests and acts on them.
 
-Like Voice-Command and Linubot, LAFA can *do* things, but only from a fixed,
-safe list (never a shell command typed by someone):
+LAFA can *do* a few things, only from a fixed, safe list (never a shell
+command typed by someone), and all of them work without internet:
 
 * open an application of Edukasaun OS ("buka browser", "loke kalkuladora",
   "open the file manager", "abre o LibreOffice");
 * open a page of LAFA ("buka kelas", "open exams", "loke biblioteka");
-* ask the AI websites in the AI Hub ("tanya Gemini apa itu fotosintesis");
 * search LAFA's memory ("cari tentang kopi");
 * set a reminder ("ingatkan saya 10 menit lagi minum air").
 
@@ -52,27 +51,26 @@ APP_BY_KEY = {a.key: a for a in APPS}
 # LAFA pages people may ask for.
 PAGES = {
     "home": ("home", "beranda", "inicio", "uma", "lobby"),
-    "classroom": ("classroom", "class", "kelas", "lesson", "lessons", "pelajaran", "aula", "aulas", "sala", "lisaun", "klase"),
-    "exams": ("exam", "exams", "ujian", "quiz", "kuis", "teste", "exame", "ezame"),
-    "report": ("report card", "rapor", "boletim", "relatoriu"),
-    "teachers": ("teacher", "teachers", "guru", "professor", "professores", "profesor"),
-    "languages": ("language school", "sekolah bahasa", "escola de linguas", "eskola lian", "kursus bahasa"),
+    "classroom": ("classroom", "class", "kelas", "lesson", "lessons", "pelajaran", "aula", "aulas", "sala", "lisaun", "klase", "belajar", "learn", "aprende"),
+    "exams": ("exam", "exams", "ujian", "quiz", "kuis", "latihan", "practice", "teste", "exame", "ezame", "simulasi"),
+    "report": ("report card", "rapor", "boletim", "relatoriu", "hasil latihan", "results"),
+    "teachers": ("teacher", "teachers", "guru", "professor", "professores", "profesor", "mata pelajaran", "subjects"),
+    "languages": ("language school", "sekolah bahasa", "escola de linguas", "eskola lian", "kursus bahasa", "bahasa", "languages"),
     "culture": ("timor-leste", "timor", "atlas", "sejarah timor", "istoria"),
-    "learn": ("library", "perpustakaan", "biblioteca", "biblioteka", "lafa search", "pencarian"),
-    "hub": ("ai hub", "hub ai", "ai", "kecerdasan buatan", "inteligencia artificial", "intelijensia artifisial"),
+    "learn": ("library", "perpustakaan", "biblioteca", "biblioteka", "pencarian"),
     "live": ("notice board", "papan pengumuman", "noticias", "weather", "cuaca", "tempo", "berita"),
     "coding": ("computer lab", "lab komputer", "laboratorio", "coding", "python", "programming", "pemrograman"),
     "files": ("my files", "file saya", "meus ficheiros", "ha'u-nia ficheiru"),
-    "reminders": ("reminders", "pengingat", "lembretes", "lembrete", "fó-hanoin"),
-    "os_help": ("help desk", "bantuan os", "ajuda os", "ajuda edukasaun"),
+    "reminders": ("reminders", "pengingat", "lembretes", "lembrete", "fó-hanoin", "fokus", "focus"),
+    "homework": ("homework", "tugas", "pr", "tpc", "jadwal", "timetable", "horario", "orariu"),
+    "os_help": ("help desk", "bantuan os", "ajuda os", "ajuda edukasaun", "bantuan"),
 }
 
 OPEN = r"(?:open|launch|start|show|buka|bukakan|jalankan|tampilkan|abre|abrir|abra|mostra|loke|hatudu|hahu)"
-ASK_AI = r"(?:ask|tanya|tanyakan|pergunta|perguntar|husu)"
 
 @dataclass
 class Action:
-    kind: str             # app, page, ask_ai, search, remind
+    kind: str             # app, page, search, remind
     target: str = ""
     text: str = ""
     minutes: int = 0
@@ -96,12 +94,6 @@ def parse(message):
     def keep(m, group):
         """The user's own words (accents and capitals kept) for a matched part."""
         return original[m.start(group):m.end(group)].strip() if len(original) == len(text) else m.group(group).strip()
-    # Ask the signed-in AI websites: "tanya gemini apa itu atom".
-    m = re.match(ASK_AI + r"\s+(gemini|chatgpt|claude|copilot|deepseek|perplexity|le chat|mistral|qwen|kimi|grok|meta ai|huggingchat|semua ai|all ais?|ai hotu|todas as ias?)\s*[:,]?\s+(.+)$", text)
-    if m:
-        name = m.group(1).replace(" ", "")
-        target = {"lechat": "mistral", "metaai": "meta", "semuaai": "all", "allai": "all", "allais": "all", "aihotu": "all", "todasasia": "all", "todasasias": "all"}.get(name, name)
-        return Action("ask_ai", target, keep(m, 2))
     # Reminders: "ingatkan saya 10 menit lagi minum air", "remind me in 5 minutes to stretch".
     m = re.match(r"(?:remind me|ingatkan(?: saya| aku)?|lembra-me|lembrar|fo-hanoin ha'u|fó-hanoin ha'u)\s+(?:in |dalam |em |iha )?(\d{1,4})\s*(?:minutes?|mins?|menit|minutos?|minutu)\s*(?:lagi|again)?\s*(?:to |untuk |para |atu )?(.*)$", text)
     if m:

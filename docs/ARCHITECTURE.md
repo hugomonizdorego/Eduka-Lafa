@@ -1,114 +1,104 @@
 # Architecture
 
-LAFA is a Python/PySide6 native client with one shared process and three
-independently visible surfaces: Desktop, Settings and Virtual Assistant. There
-is no dedicated network server, embedded login browser or background service.
+Lafa is a Python/Qt desktop client: PyQt5 on Edukasaun OS, with PySide6 for
+developers through `lafa/qt.py`. One process shows three surfaces: Lafa
+Desktop, its settings window and the Virtual Assistant. There is no Lafa
+server, no AI service, no embedded browser and no background daemon.
 
 ```mermaid
 flowchart TD
-    Desktop["LAFA Desktop"] --> Router["Bounded tools and AI router"]
-    Settings["LAFA settings"] --> Pet["Virtual assistant"]
-    Pet --> Router
-    Router --> Local["Local files and lessons"]
-    Router --> Public["Public sources, weather and news"]
-    Router --> API["Optional official AI API"]
+    Desktop["Lafa Desktop (six sections)"] --> Search["search.py: local-first search"]
+    Pet["Virtual Assistant"] --> Desktop
+    Search --> Memory["memory.py: BM25 index of lessons, atlas, guides, saved pages"]
+    Search --> Files["tools.FileSearch: file names in chosen folders"]
+    Search --> Calc["calculator.py (ast, no eval)"]
+    Desktop -->|"only on a button or command"| Internet["Wikipedia · news · weather · source status"]
+    Desktop --> Store["~/.local/share/lafa: tasks, timetable, results, reminders, progress"]
 ```
 
-Eduka-Settings → LAFA (or LAFA's own settings window) enables the mascot and
-holds language, outfit, personality, activity timing, AI provider, files and
-weather. Saving in Eduka-Settings writes the preferences file and sends the
-fixed `reload` role; API keys never pass through the host page. Desktop alone never enables it. Same-user IPC routes fixed launch
-roles to the process holding the instance lock. Browser sign-in is independent
-of API access and belongs to the user's browser.
+## Offline first
+
+Local features never check the connection. These are search, lessons,
+practice, files, reminders, focus, OS help, the calculator and read aloud.
+
+`net.online_probe` only decides whether the internet buttons (Wikipedia,
+news, weather, source status, saving a page) are enabled. Each internet job
+runs in a worker (`Job` / `Delivery`) with its own timeout and error handler.
+A failure changes only that button's note and never the local results. See
+[OFFLINE.md](OFFLINE.md).
+
+## Six sections
+
+`app.PAGES` lists the six sections: home, study, library, timor, activities
+and oshelp. `app.TABS` lists each section's tabs. `app.ROUTES` maps every
+0.1.x page name (`classroom`, `exams`, `report`, `homework`, `learn`, `hub`,
+`live`, `culture`, `os_help`, …) to a (section, tab). Old start-page
+preferences, actions such as "buka kelas", and IPC roles keep working.
+`navigate(page, tab)` accepts section keys, old keys and indexes.
+
+Each tab page is wrapped by `fit_small_screen()`: long drop-down lists shrink,
+and pages scroll instead of being cut off at 1024×600 or with large text.
+Below 1100 px the sidebar becomes an icon bar. Shortcuts (`Alt+1…6`,
+`Ctrl+F`) belong to the rebuilt widgets, so rebuilding never duplicates them.
+
+## Modules
 
 | Module | Responsibility |
 |---|---|
-| app | Desktop pages grouped like a school (lobby, classroom, teachers, exam hall, report card, homework; Timor-Leste; library, lab, notice board, AI services; chat, IT help desk, files, reminders), Eduka-Settings-style settings window, live reload, worker delivery, tray |
-| mascot | Atlases, costumes, chat bubble, hover/thought balloon, walk-then-activity cycle on the Eduka-Panel (X11), popup clock |
-| qt | Single Qt import point: PyQt5 (Edukasaun OS) or PySide6 (developers) |
-| eduka | Eduka-Desktop suite compatibility: language, panel geometry, theme/accent, notifications, agenda, XWayland, Lafa-Configuration launcher |
-| outfits | Tais Mane / Tuxedo / Casual, outfit and role activities, their vector scenes and hats, Timor-Leste flag icon |
-| school | Teachers, offline practice (maths, vocabulary, quizzes, tips), homework and timetable storage |
-| classroom | Lessons, question generation, quiz/test/exam sessions with time limits, grades and the private report card |
-| timorleste | Timor-Leste history timeline, national facts, municipalities, public holidays, today in history, generated history questions |
-| timor_atlas | Timor-Leste atlas: 14 categories of topics, municipalities, Presidents and Prime Ministers, leader questions |
-| livefacts | Online refresh of atlas topics from Wikipedia (reader's language, HTTPS, no redirects), dated cache in ~/.cache/lafa (0600) |
-| sources | 79 learning websites (8 categories) from the Edukasaun OS directory and 51 Timor-Leste media/research sources (6 categories), search, hourly availability check cached in ~/.cache/lafa (0600) |
-| memory | LAFA's core memory: BM25 search engine over built-in knowledge, the 130 sources' pages (hourly, robots.txt, same-site HTTPS redirects only, Facebook skipped) and remembered Wikipedia articles; cited answers and AI references; cache ~/.cache/lafa/memory (0600) |
-| curriculum | Learning for ages 5–100: 18 subjects × 7 levels from lafa/assets/curriculum/*.json, age levels, questions for exams |
-| aihub | AI Hub web tabs (optional Qt WebEngine): private persistent profile, navigation kept on each service, permissions refused, prompt typed into selected AIs |
-| signin | OpenRouter OAuth PKCE browser sign-in with a one-shot loopback callback, Gemini key check, LAFA model (Ollama Modelfile) |
-| actions | Agent requests in four languages → fixed allowlist: open apps (installed programs only, no shell), LAFA pages, AI Hub questions, memory search, reminders |
-| motion | Human-like movement for the character: gait, breathing, attention, gestures, fades |
-| offline | Which features work offline; answers from LAFA's lessons and atlas when there is no internet |
-| recommendations | Free-software (GPL / open-source) tips and learning websites shown when LAFA is clicked |
-| languages | Language school: 14 courses × 25 phrases, pronunciation, quiz |
-| platform_check | Detects Edukasaun OS (os-release or Eduka-Desktop); other systems get a developer-preview banner |
-| ui_kit | Theme palette from the Eduka accent (light or deep teal), gradient lobby tiles, round action button, progress ring, atlas tiles, chips |
-| roles | LAFA's roles (teacher, professor, motivator, magician, master, comedian, helper), daily items and the binary mind reader |
-| updates | Validated online source catalog, cache, merge, release check |
-| personality | LAFA's character: assistant duty per activity, hover questions, activity reactions, self-talk and jokes in EN/ID/PT/TET |
-| osguide | Offline Edukasaun OS guides, fixed tool allowlist launched without a shell, read-only system check, tips |
-| calculator | `/calc` arithmetic parsed with `ast`, never `eval` |
-| agent | Direct commands, Edukasaun OS guide matching, optional model envelopes/actions, cited key-free extracts |
-| timor | Three local feeds, topic filtering, curated multilingual culture cards |
-| learning | Bounded AST teaching interpreter and examples; no host execution |
-| tools | Bounded local filename search, secure document access, Wikipedia and browser links |
-| pdf_worker | Resource-limited Poppler conversion of a private input copy |
-| live_info | Geocoding, forecasts, RSS metadata and source dates |
-| instance | Framed and bounded same-user launch-role socket |
-| providers/net | Official schemas, HTTPS bounds, redirect refusal, reachability |
-| config | System-language preference, XDG settings and secure secrets |
-| desktop_entry | Two-layer freedesktop Exec quoting for fixed launcher paths |
-| voice/reminders | Explicit recording, local playback, in-memory timers |
-| integration/eduka_lafa_settings | Binding-preserving Eduka-Settings page: activation group plus every non-secret LAFA preference; atomic save and `--reload` |
-| integration/demo_eduka_settings | Clearly labeled runnable host for reviewing the actual integration widget |
-| scripts/check-system | Read-only readiness report, isolated Qt probe and opt-in public checks |
+| app | Window, six sections and their tabs, Home, search panel, results HTML (`lafa://` links), reminders and focus, settings window, About, worker delivery, tray |
+| search | Understands a request (files / calc / OS guide / topic), runs the local search, labels results (lesson, guide, file, saved, internet), decides answer vs. choices vs. none; never uses the network |
+| agent | Direct commands (`/help`, `/os`, `/calc`, `/remind`, `/joke`, `/ask`, `/weather`, `/news`, `/timor`); internet commands are refused offline with a calm message; no AI |
+| memory | BM25 search engine with accent folding and cross-language synonyms over built-in lessons, atlas and guides, plus public pages saved on request (front page and feed only, robots.txt, HTTPS, same-site redirects); cache `~/.cache/lafa/memory` (0600) |
+| reminders | Dated reminders saved atomically (0600); fire once, offline too; missed ones shown once after restart; session-only focus items |
+| progress | Last opened material, recent list and favourites (`progress.json`, 0600) |
+| classroom | School lessons, unique question generation with lesson-based explanations, Latihan / Simulasi Tes sessions, retry of mistakes, personal results |
+| curriculum | Lessons for ages 5–100 (18 subjects × 7 levels) from `lafa/assets/curriculum/*.json` with ID, topic, difficulty, licence and review metadata |
+| school | Subject guides, offline practice (maths, vocabulary, quizzes), tasks and timetable |
+| sources / source_meta | Learning websites, Timor-Leste media and official sources (timor-leste.gov.tl, moe.gov.tl); metadata (languages, topics, level, access, reason, academic); status ok / not found / restricted / unknown, on demand, cached 24 h; community wikis kept separate |
+| tools | Bounded file-name search, secure document reading, Wikipedia search and extracts, curated reference links |
+| live_info / timor | Weather (Open-Meteo), world and Timor-Leste RSS headlines with publisher and dates |
+| livefacts | Optional refresh of atlas topics from Wikipedia, dated cache |
+| timorleste / timor_atlas | Timor-Leste history, symbols, municipalities, leaders, holidays |
+| osguide | Edukasaun OS guides in four languages, fixed tool allowlist (no shell), read-only computer check |
+| actions | Requests in four languages → fixed list of apps and Lafa pages, reminders, search |
+| mascot / motion / outfits / personality / roles | Virtual Assistant: quick actions, quiet mode, hourly message limit, fullscreen pause (X11), reduce motion, optional entertainment, outfits and movement |
+| eduka | Eduka-Desktop compatibility: language, panel geometry, theme, notifications, agenda, fullscreen check, Lafa-Configuration launcher |
+| config | Settings with bounds; ignores and backs up 0.1.x AI fields; `AI_LINKS`, `SECTIONS`, `LEGACY_PAGES` |
+| net | HTTPS-only requests with size limits and redirect refusal; connection probe on public hosts |
+| updates | Validated content catalogue (data only); no program updates |
+| learning | Bounded AST teaching interpreter (no eval, exec, imports, files or network) |
+| calculator | Arithmetic parsed with `ast`, never `eval` |
+| voice | Local espeak-ng read aloud |
+| i18n / i18n_v2 | English, Bahasa Indonesia, Português, Tetun; i18n_v2 overrides the 0.2.0 wording |
+| ui_kit | Palette from the Eduka accent (light and dark), cards, chips |
+| pdf_worker | Resource-limited Poppler conversion |
+| instance / desktop_entry | Single instance with fixed same-user roles; launcher quoting |
+| integration/eduka_lafa_settings | Lafa-Configuration page for Eduka-Settings (keeps the host's Qt binding, atomic save, `--reload`) |
 
-Blocking network work, file scans, lessons, PDF conversion and voice run outside
-the UI thread. QObject receivers deliver completion/error handling on that
-thread. Local filenames are never sent back to models. Documents and lesson code
-require separate transfer confirmation. Model actions cannot execute commands.
+## Limits
 
-Source mode formats actual Wikipedia introductions after an explicit public
-search action or `/ask`, not generated reasoning. Ordinary chat never triggers
-an automatic public query; greetings/support can use local prepared replies.
-Curated culture cards have check dates and links; news/weather
-have publication/data/retrieval times. Neither failures nor empty feed windows
-are replaced by sample content during normal operation.
-
-Filename search stops at 40,000 entries, depth 10, eight seconds or 120 matches.
-Documents stop at 10 MB and 20,000 preview characters; PDF reads 30 pages.
-Lessons stop at 20,000 code characters, 1,200 AST nodes and 10,000 interpreter
-steps with nested-value and output bounds. This is not a full Python runtime.
-
-Idle time is monotonic and observes LAFA input only. Busy work, open bubble,
-pause, dragging and offline status suppress random activity. Network checks do
-not restart idle timing. Popups dismiss after 15 seconds unless the user
-interacts. Local headlines are refreshed at a configurable interval only when
-Virtual Assistant and news updates are enabled; automatic popups wait for idle.
-Disabling all card types does not block activity rotation. A typed draft, open
-bubble or pause suppresses unsolicited popups. Provider/model preference edits
-are drafted until Save; rebuilding the UI preserves code, output and chat draft.
-
-On X11, only the walking state changes window position above/below the configured
-panel. Wayland owns position. Animation is procedural around still illustrations;
-the character does not actually bathe, play games or perform a full dance rig.
+- File search stops at 40,000 entries, depth 10, eight seconds or 120 matches.
+- Documents stop at 10 MB and 20,000 preview characters; PDFs at 30 pages.
+- Lesson code stops at 20,000 characters, 1,200 AST nodes and 10,000 steps.
+- Internet requests use timeouts and size limits and accept only HTTPS.
 
 ## Virtual Assistant behaviour
 
 ```mermaid
 stateDiagram-v2
-    [*] --> Activity: enabled and online
-    Activity --> Walking: idle_seconds without input (X11 + roam)
-    Walking --> Activity: reached a random spot on the Eduka-Panel
-    Activity --> Activity: idle_seconds (Wayland / no roam)
-    Activity --> Hover: cursor touches LAFA
-    Walking --> Hover: cursor touches LAFA (walk stops)
-    Hover --> Chat: click LAFA or the balloon
-    Hover --> Activity: cursor leaves
-    Chat --> Activity: close bubble
+    [*] --> Activity: switched on in Eduka-Settings
+    Activity --> Walking: idle (X11, roam, not reduce motion)
+    Walking --> Activity: reached a spot on the Eduka-Panel
+    Activity --> Hover: cursor touches Lafa (not in quiet mode)
+    Hover --> Bubble: click
+    Activity --> Bubble: click
+    Bubble --> Activity: close
+    Activity --> Hidden: another app is fullscreen (X11)
+    Hidden --> Activity: fullscreen ends
 ```
 
-Busy work, an open bubble, an unsent draft, dragging, pause and offline state
-suppress the cycle. Only events inside LAFA's own windows are observed.
+Spontaneous messages need all of these: not quiet mode, no fullscreen app, not
+paused, no typing, idle for a minute, and under the hourly limit. The bubble's
+quick actions (continue, tasks, focus, OS help) work offline. Entertainment
+activities are excluded unless switched on. On Wayland the compositor owns the
+window position, and this has not been tested.

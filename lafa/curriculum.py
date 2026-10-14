@@ -8,6 +8,11 @@ of seven age levels, with study points, a task and three questions, in
 English, Indonesian, Portuguese and Tetun. The lessons live in
 lafa/assets/curriculum/<subject>.json (checked by tools/check-curriculum.py)
 so teachers can improve them without touching code. Everything works offline.
+
+Each file records its version, licence (CC BY-SA 4.0), languages, source and
+review date. The lessons were written and reviewed by the LAFA team; they are
+not (yet) reviewed by the Ministry of Education and are not presented as the
+national curriculum.
 """
 from dataclasses import dataclass
 from functools import lru_cache
@@ -47,12 +52,16 @@ class AgeLesson:
     points: tuple
     task: dict
     questions: tuple     # (question, answer, (wrong, wrong, wrong))
+    id: str = ""
+    difficulty: int = 0
+    topic: str = ""
 
 @dataclass(frozen=True)
 class Subject:
     key: str
     icon: str
     name: dict
+    meta: tuple = ()      # (("version", 1), ("license", …), …) from the file
 
 def _valid_text(value):
     return isinstance(value, dict) and all(isinstance(value.get(lang), str) and value[lang].strip() for lang in LANGS)
@@ -60,7 +69,8 @@ def _valid_text(value):
 def _parse(data):
     """A subject file, or None when it does not follow the format."""
     if not isinstance(data, dict) or not isinstance(data.get("subject"), str) or not _valid_text(data.get("name")): return None
-    subject = Subject(data["subject"], str(data.get("icon") or "📘")[:4], data["name"])
+    meta = data.get("meta") if isinstance(data.get("meta"), dict) else {}
+    subject = Subject(data["subject"], str(data.get("icon") or "📘")[:4], data["name"], tuple((k, v if not isinstance(v, list) else tuple(v)) for k, v in meta.items()))
     lessons = []
     for item in data.get("lessons") or []:
         if not isinstance(item, dict) or item.get("level") not in LEVEL_KEYS: continue
@@ -71,7 +81,10 @@ def _parse(data):
             wrong = q.get("wrong") if isinstance(q, dict) else None
             if isinstance(wrong, list) and len(wrong) == 3 and all(map(_valid_text, wrong)) and _valid_text(q.get("q")) and _valid_text(q.get("answer")):
                 questions.append((q["q"], q["answer"], tuple(wrong)))
-        if points: lessons.append(AgeLesson(subject.key, item["level"], item["title"], points, item["task"], tuple(questions)))
+        if points:
+            difficulty = item.get("difficulty") if isinstance(item.get("difficulty"), int) else LEVEL_KEYS.index(item["level"]) + 1
+            lessons.append(AgeLesson(subject.key, item["level"], item["title"], points, item["task"], tuple(questions),
+                                     str(item.get("id") or f"{subject.key}.{item['level']}"), difficulty, str(item.get("topic") or subject.key)))
     return subject, lessons
 
 @lru_cache(maxsize=1)
@@ -109,11 +122,29 @@ def subject_name(key, lang):
     item = subject(key)
     return text(item.name, lang) if item else key
 
+def meta(subject_key):
+    """Metadata of a subject file: version, license, languages, source, review."""
+    item = subject(subject_key)
+    return dict(item.meta) if item else {}
+
+def lesson(lesson_id):
+    return next((l for l in lessons() if l.id == lesson_id), None)
+
 def lesson_text(lesson, lang):
     """A lesson as plain text, used by search and read aloud."""
     lines = [f"{subject_name(lesson.subject, lang)} · {level_name(lesson.level, lang)}", text(lesson.title, lang)]
     lines += ["• " + text(p, lang) for p in lesson.points]
     return "\n".join(lines + ["✎ " + text(lesson.task, lang)])
+
+def _words(value):
+    import re
+    return {w for w in re.findall(r"\w+", value.casefold()) if len(w) > 2}
+
+def explain(lesson, question, answer, lang):
+    """The lesson point that best explains an answer (by shared words)."""
+    want = _words(text(question, lang)) | _words(text(answer, lang))
+    best = max(lesson.points, key=lambda p: len(_words(text(p, lang)) & want), default=None)
+    return text(best, lang) if best else ""
 
 def questions(subject=None, level=None, lang="en", count=10, rng=None):
     """Multiple-choice questions as classroom.Question objects."""
@@ -125,6 +156,6 @@ def questions(subject=None, level=None, lang="en", count=10, rng=None):
             options = [text(answer, lang)] + [text(w, lang) for w in wrong]
             if len(set(options)) < 4: continue
             correct = options[0]; rng.shuffle(options)
-            pool.append(Question(text(q, lang), options, correct, lesson.subject))
+            pool.append(Question(text(q, lang), options, correct, lesson.subject, explain(lesson, q, answer, lang), text(lesson.title, lang)))
     rng.shuffle(pool)
     return pool[:count]

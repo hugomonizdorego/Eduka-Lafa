@@ -7,9 +7,25 @@
   "pt": "Economia e dinheiro",
   "tet": "Ekonomia no osan"
  },
+ "meta": {
+  "version": 1,
+  "license": "CC BY-SA 4.0",
+  "languages": [
+   "en",
+   "id",
+   "pt",
+   "tet"
+  ],
+  "source": "Written by the LAFA team for Edukasaun OS (general knowledge, checked against standard references)",
+  "reviewed": "2026-10-13",
+  "review_status": "LAFA team review; not yet reviewed by the Ministry of Education (not a national curriculum)"
+ },
  "lessons": [
   {
+   "id": "economics.early",
    "level": "early",
+   "difficulty": 1,
+   "topic": "economics",
    "title": {
     "en": "Coins, notes and saving",
     "id": "Koin, uang kertas, dan menabung",
@@ -148,7 +164,10 @@
    ]
   },
   {
+   "id": "economics.primary",
    "level": "primary",
+   "difficulty": 2,
+   "topic": "economics",
    "title": {
     "en": "Needs, wants and saving",
     "id": "Kebutuhan, keinginan, dan menabung",
@@ -287,7 +306,10 @@
    ]
   },
   {
+   "id": "economics.middle",
    "level": "middle",
+   "difficulty": 3,
+   "topic": "economics",
    "title": {
     "en": "Making a budget",
     "id": "Membuat anggaran",
@@ -432,7 +454,10 @@
    ]
   },
   {
+   "id": "economics.secondary",
    "level": "secondary",
+   "difficulty": 4,
+   "topic": "economics",
    "title": {
     "en": "Supply, demand and prices",
     "id": "Penawaran, permintaan, dan harga",
@@ -577,7 +602,10 @@
    ]
   },
   {
+   "id": "economics.university",
    "level": "university",
+   "difficulty": 5,
+   "topic": "economics",
    "title": {
     "en": "Trade and the US dollar in Timor-Leste",
     "id": "Perdagangan dan dolar AS di Timor-Leste",
@@ -722,7 +750,10 @@
    ]
   },
   {
+   "id": "economics.adult",
    "level": "adult",
+   "difficulty": 6,
+   "topic": "economics",
    "title": {
     "en": "Running a small business",
     "id": "Menjalankan usaha kecil",
@@ -867,7 +898,10 @@
    ]
   },
   {
+   "id": "economics.senior",
    "level": "senior",
+   "difficulty": 7,
+   "topic": "economics",
    "title": {
     "en": "Keeping your money safe",
     "id": "Menjaga uang Anda tetap aman",

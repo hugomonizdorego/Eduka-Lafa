@@ -7,9 +7,25 @@
   "pt": "Geografia",
   "tet": "Jeografia"
  },
+ "meta": {
+  "version": 1,
+  "license": "CC BY-SA 4.0",
+  "languages": [
+   "en",
+   "id",
+   "pt",
+   "tet"
+  ],
+  "source": "Written by the LAFA team for Edukasaun OS (general knowledge, checked against standard references)",
+  "reviewed": "2026-10-13",
+  "review_status": "LAFA team review; not yet reviewed by the Ministry of Education (not a national curriculum)"
+ },
  "lessons": [
   {
+   "id": "geography.early",
    "level": "early",
+   "difficulty": 1,
+   "topic": "geography",
    "title": {
     "en": "Land, sea and maps",
     "id": "Darat, laut, dan peta",
@@ -148,7 +164,10 @@
    ]
   },
   {
+   "id": "geography.primary",
    "level": "primary",
+   "difficulty": 2,
+   "topic": "geography",
    "title": {
     "en": "Timor-Leste on the map",
     "id": "Timor-Leste di peta",
@@ -293,7 +312,10 @@
    ]
   },
   {
+   "id": "geography.middle",
    "level": "middle",
+   "difficulty": 3,
+   "topic": "geography",
    "title": {
     "en": "Reading maps: scale, latitude and longitude",
     "id": "Membaca peta: skala, lintang, dan bujur",
@@ -438,7 +460,10 @@
    ]
   },
   {
+   "id": "geography.secondary",
    "level": "secondary",
+   "difficulty": 4,
+   "topic": "geography",
    "title": {
     "en": "Climate, landforms and plate tectonics",
     "id": "Iklim, bentang alam, dan tektonik lempeng",
@@ -583,7 +608,10 @@
    ]
   },
   {
+   "id": "geography.university",
    "level": "university",
+   "difficulty": 5,
+   "topic": "geography",
    "title": {
     "en": "Human geography, GIS and development",
     "id": "Geografi manusia, SIG, dan pembangunan",
@@ -728,7 +756,10 @@
    ]
   },
   {
+   "id": "geography.adult",
    "level": "adult",
+   "difficulty": 6,
+   "topic": "geography",
    "title": {
     "en": "Geography for work and safety",
     "id": "Geografi untuk pekerjaan dan keselamatan",
@@ -873,7 +904,10 @@
    ]
   },
   {
+   "id": "geography.senior",
    "level": "senior",
+   "difficulty": 7,
+   "topic": "geography",
    "title": {
     "en": "Our land, our stories",
     "id": "Tanah kita, cerita kita",

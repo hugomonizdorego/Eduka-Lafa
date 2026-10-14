@@ -7,9 +7,25 @@
   "pt": "Matemática",
   "tet": "Matemátika"
  },
+ "meta": {
+  "version": 1,
+  "license": "CC BY-SA 4.0",
+  "languages": [
+   "en",
+   "id",
+   "pt",
+   "tet"
+  ],
+  "source": "Written by the LAFA team for Edukasaun OS (general knowledge, checked against standard references)",
+  "reviewed": "2026-10-13",
+  "review_status": "LAFA team review; not yet reviewed by the Ministry of Education (not a national curriculum)"
+ },
  "lessons": [
   {
+   "id": "math.early",
    "level": "early",
+   "difficulty": 1,
+   "topic": "math",
    "title": {
     "en": "Let's count to 10",
     "id": "Ayo berhitung sampai 10",
@@ -148,7 +164,10 @@
    ]
   },
   {
+   "id": "math.primary",
    "level": "primary",
+   "difficulty": 2,
+   "topic": "math",
    "title": {
     "en": "Multiplying and sharing at the market",
     "id": "Mengalikan dan membagi di pasar",
@@ -293,7 +312,10 @@
    ]
   },
   {
+   "id": "math.middle",
    "level": "middle",
+   "difficulty": 3,
+   "topic": "math",
    "title": {
     "en": "Percentages and simple equations",
     "id": "Persentase dan persamaan sederhana",
@@ -432,7 +454,10 @@
    ]
   },
   {
+   "id": "math.secondary",
    "level": "secondary",
+   "difficulty": 4,
+   "topic": "math",
    "title": {
     "en": "Quadratic equations",
     "id": "Persamaan kuadrat",
@@ -577,7 +602,10 @@
    ]
   },
   {
+   "id": "math.university",
    "level": "university",
+   "difficulty": 5,
+   "topic": "math",
    "title": {
     "en": "Derivatives and rates of change",
     "id": "Turunan dan laju perubahan",
@@ -722,7 +750,10 @@
    ]
   },
   {
+   "id": "math.adult",
    "level": "adult",
+   "difficulty": 6,
+   "topic": "math",
    "title": {
     "en": "Budgets, prices and interest",
     "id": "Anggaran, harga, dan bunga",
@@ -867,7 +898,10 @@
    ]
   },
   {
+   "id": "math.senior",
    "level": "senior",
+   "difficulty": 7,
+   "topic": "math",
    "title": {
     "en": "Everyday numbers and sharing them",
     "id": "Angka sehari-hari dan berbagi ilmu",

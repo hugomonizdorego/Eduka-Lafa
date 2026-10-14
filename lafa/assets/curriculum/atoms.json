@@ -7,9 +7,25 @@
   "pt": "Átomos e ciência nuclear",
   "tet": "Átomu no siénsia nukleár"
  },
+ "meta": {
+  "version": 1,
+  "license": "CC BY-SA 4.0",
+  "languages": [
+   "en",
+   "id",
+   "pt",
+   "tet"
+  ],
+  "source": "Written by the LAFA team for Edukasaun OS (general knowledge, checked against standard references)",
+  "reviewed": "2026-10-13",
+  "review_status": "LAFA team review; not yet reviewed by the Ministry of Education (not a national curriculum)"
+ },
  "lessons": [
   {
+   "id": "atoms.early",
    "level": "early",
+   "difficulty": 1,
+   "topic": "atoms",
    "title": {
     "en": "Everything is made of tiny bits",
     "id": "Semua benda terbuat dari bagian kecil",
@@ -148,7 +164,10 @@
    ]
   },
   {
+   "id": "atoms.primary",
    "level": "primary",
+   "difficulty": 2,
+   "topic": "atoms",
    "title": {
     "en": "Inside the atom",
     "id": "Di dalam atom",
@@ -287,7 +306,10 @@
    ]
   },
   {
+   "id": "atoms.middle",
    "level": "middle",
+   "difficulty": 3,
+   "topic": "atoms",
    "title": {
     "en": "The periodic table and isotopes",
     "id": "Tabel periodik dan isotop",
@@ -432,7 +454,10 @@
    ]
   },
   {
+   "id": "atoms.secondary",
    "level": "secondary",
+   "difficulty": 4,
+   "topic": "atoms",
    "title": {
     "en": "Radioactivity and half-life",
     "id": "Radioaktivitas dan waktu paruh",
@@ -577,7 +602,10 @@
    ]
   },
   {
+   "id": "atoms.university",
    "level": "university",
+   "difficulty": 5,
+   "topic": "atoms",
    "title": {
     "en": "Nuclear energy: fission, fusion and E = mc²",
     "id": "Energi nuklir: fisi, fusi, dan E = mc²",
@@ -722,7 +750,10 @@
    ]
   },
   {
+   "id": "atoms.adult",
    "level": "adult",
+   "difficulty": 6,
+   "topic": "atoms",
    "title": {
     "en": "Radiation in medicine and at work",
     "id": "Radiasi dalam kedokteran dan pekerjaan",
@@ -867,7 +898,10 @@
    ]
   },
   {
+   "id": "atoms.senior",
    "level": "senior",
+   "difficulty": 7,
+   "topic": "atoms",
    "title": {
     "en": "Radiation safety and health in daily life",
     "id": "Keselamatan radiasi dan kesehatan sehari-hari",

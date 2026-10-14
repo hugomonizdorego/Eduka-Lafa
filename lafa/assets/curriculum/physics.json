@@ -7,9 +7,25 @@
   "pt": "Física",
   "tet": "Fízika"
  },
+ "meta": {
+  "version": 1,
+  "license": "CC BY-SA 4.0",
+  "languages": [
+   "en",
+   "id",
+   "pt",
+   "tet"
+  ],
+  "source": "Written by the LAFA team for Edukasaun OS (general knowledge, checked against standard references)",
+  "reviewed": "2026-10-13",
+  "review_status": "LAFA team review; not yet reviewed by the Ministry of Education (not a national curriculum)"
+ },
  "lessons": [
   {
+   "id": "physics.early",
    "level": "early",
+   "difficulty": 1,
+   "topic": "physics",
    "title": {
     "en": "Push, pull and fall",
     "id": "Dorong, tarik, dan jatuh",
@@ -148,7 +164,10 @@
    ]
   },
   {
+   "id": "physics.primary",
    "level": "primary",
+   "difficulty": 2,
+   "topic": "physics",
    "title": {
     "en": "Light and shadows",
     "id": "Cahaya dan bayangan",
@@ -293,7 +312,10 @@
    ]
   },
   {
+   "id": "physics.middle",
    "level": "middle",
+   "difficulty": 3,
+   "topic": "physics",
    "title": {
     "en": "Speed and forces",
     "id": "Kecepatan dan gaya",
@@ -438,7 +460,10 @@
    ]
   },
   {
+   "id": "physics.secondary",
    "level": "secondary",
+   "difficulty": 4,
+   "topic": "physics",
    "title": {
     "en": "Newton's laws and energy",
     "id": "Hukum Newton dan energi",
@@ -583,7 +608,10 @@
    ]
   },
   {
+   "id": "physics.university",
    "level": "university",
+   "difficulty": 5,
+   "topic": "physics",
    "title": {
     "en": "Electricity, magnetism and waves",
     "id": "Listrik, magnet, dan gelombang",
@@ -728,7 +756,10 @@
    ]
   },
   {
+   "id": "physics.adult",
    "level": "adult",
+   "difficulty": 6,
+   "topic": "physics",
    "title": {
     "en": "Electricity at home: cost and safety",
     "id": "Listrik di rumah: biaya dan keselamatan",
@@ -873,7 +904,10 @@
    ]
   },
   {
+   "id": "physics.senior",
    "level": "senior",
+   "difficulty": 7,
+   "topic": "physics",
    "title": {
     "en": "Everyday physics for safety",
     "id": "Fisika sehari-hari untuk keselamatan",

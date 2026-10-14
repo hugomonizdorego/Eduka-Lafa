@@ -1,32 +1,31 @@
-"""What LAFA can do without internet, and answers from LAFA's own knowledge.
+"""What Lafa can do without internet, and answers from Lafa's own knowledge.
 
-LAFA keeps working offline: the classroom, exams, report card, homework, the
-Timor-Leste atlas (built-in text), world language courses, the computer lab,
-the IT help desk, files, reminders, roles and the Virtual Assistant. Features
-that need the internet (AI chat, Wikipedia search, weather, news, online
-refresh of sources) wait until the connection is back.
+Everything that matters works offline: search of lessons, the atlas, OS
+guides, saved material and file names; lessons for every age, practice and
+results; basic phrases in many languages; programming examples; tasks,
+timetable, reminders and focus; read aloud; Edukasaun OS help; the Virtual
+Assistant. The internet only adds sources: Wikipedia, news, weather, learning
+websites and the validated source catalogue. There is no AI and no login.
 """
 from .school import L
-from . import timor_atlas, classroom, osguide
+from . import timor_atlas, classroom
 
-# (key, page, name, works offline)
+# (key, section, name, works offline)
 FEATURES = [
-    ("classroom", "classroom", L("Classroom lessons", "Pelajaran di kelas", "Aulas", "Lisaun iha klase"), True),
-    ("exams", "exams", L("Quizzes, tests and exams", "Kuis, ulangan dan ujian", "Quizzes, testes e exames", "Kuis, teste no ezame"), True),
-    ("report", "report", L("Report card", "Rapor", "Boletim", "Boletin"), True),
-    ("homework", "homework", L("Homework & timetable", "PR & jadwal", "Trabalhos e horário", "TPC no orariu"), True),
-    ("atlas", "culture", L("Timor-Leste atlas", "Atlas Timor-Leste", "Atlas de Timor-Leste", "Atlas Timor-Leste"), True),
-    ("languages", "languages", L("World language courses", "Kursus bahasa dunia", "Cursos de línguas do mundo", "Kursu lian mundu"), True),
-    ("lab", "coding", L("Computer lab (Python)", "Lab komputer (Python)", "Laboratório (Python)", "Laboratóriu (Python)"), True),
-    ("helpdesk", "os_help", L("Edukasaun OS help desk", "Bantuan Edukasaun OS", "Ajuda do Edukasaun OS", "Ajuda Edukasaun OS"), True),
-    ("files", "files", L("My files", "File saya", "Os meus ficheiros", "Ha'u-nia ficheiru"), True),
-    ("reminders", "reminders", L("Reminders & focus", "Pengingat & fokus", "Lembretes e foco", "Lembransa no foku"), True),
-    ("local_chat", "chat", L("Ask LAFA (offline answers, /calc, /os)", "Tanya LAFA (jawaban offline, /calc, /os)", "Perguntar ao LAFA (respostas offline, /calc, /os)", "Husu LAFA (resposta offline, /calc, /os)"), True),
-    ("ai_chat", "chat", L("AI chat and teachers", "Chat AI dan guru", "Conversa com IA e professores", "Konversa AI no mestre"), False),
-    ("wikipedia", "learn", L("Wikipedia search", "Pencarian Wikipedia", "Pesquisa na Wikipédia", "Buka Wikipédia"), False),
-    ("sources", "learn", L("Learning websites and Timor-Leste media", "Situs belajar dan media Timor-Leste", "Sites de aprendizagem e media de Timor-Leste", "Sítiu aprendizajen no média Timor-Leste"), False),
-    ("weather_news", "live", L("Weather and news", "Cuaca dan berita", "Tempo e notícias", "Tempu no notísia"), False),
-    ("live_refresh", "culture", L("Hourly refresh of sources and atlas", "Pembaruan sumber dan atlas tiap jam", "Atualização horária de fontes e atlas", "Atualizasaun kada oras ba fonte no atlas"), False),
+    ("search", "home", L("Search lessons, guides and files", "Cari pelajaran, panduan, dan file", "Pesquisar lições, guias e ficheiros", "Buka lisaun, matadalan no ficheiru"), True),
+    ("lessons", "study", L("Lessons for every age (5–100)", "Pelajaran untuk semua usia (5–100)", "Lições para todas as idades (5–100)", "Lisaun ba idade hotu (5–100)"), True),
+    ("practice", "study", L("Practice and test simulations", "Latihan dan simulasi tes", "Exercícios e simulações de teste", "Prátika no simulasaun teste"), True),
+    ("results", "activities", L("Practice results", "Hasil latihan", "Resultados dos exercícios", "Rezultadu prátika"), True),
+    ("phrases", "study", L("Basic phrases in many languages", "Frasa dasar dalam banyak bahasa", "Frases básicas em muitas línguas", "Fraze báziku iha lian barak"), True),
+    ("coding", "study", L("Programming examples (Python)", "Contoh pemrograman (Python)", "Exemplos de programação (Python)", "Ezemplu programasaun (Python)"), True),
+    ("atlas", "timor", L("Timor-Leste atlas and history", "Atlas dan sejarah Timor-Leste", "Atlas e história de Timor-Leste", "Atlas no istória Timor-Leste"), True),
+    ("tasks", "activities", L("Tasks, timetable and reminders", "Tugas, jadwal, dan pengingat", "Trabalhos, horário e lembretes", "Knaar, orariu no fó-hanoin"), True),
+    ("helpdesk", "oshelp", L("Edukasaun OS help", "Bantuan Edukasaun OS", "Ajuda do Edukasaun OS", "Ajuda Edukasaun OS"), True),
+    ("files", "library", L("My files and saved material", "File saya dan materi tersimpan", "Os meus ficheiros e material guardado", "Ha'u-nia ficheiru no materiál rai ona"), True),
+    ("calc", "home", L("Calculator and read aloud", "Kalkulator dan baca keras", "Calculadora e leitura em voz alta", "Kalkuladora no lee ho lian"), True),
+    ("wikipedia", "library", L("Wikipedia extracts", "Kutipan Wikipedia", "Extratos da Wikipédia", "Estratu Wikipédia"), False),
+    ("sources", "library", L("Learning websites and Timor-Leste media", "Situs belajar dan media Timor-Leste", "Sites de aprendizagem e media de Timor-Leste", "Sítiu aprendizajen no média Timor-Leste"), False),
+    ("weather_news", "timor", L("Weather and news", "Cuaca dan berita", "Tempo e notícias", "Tempu no notísia"), False),
 ]
 
 def offline_features(lang="en"):

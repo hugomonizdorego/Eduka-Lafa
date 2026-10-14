@@ -44,20 +44,6 @@ if BINDING == "PyQt5":
             _traceback.print_exception(kind, value, tb)
         _sys.excepthook = _log_exception
 
-# Optional: Qt WebEngine for the AI Hub's signed-in web tabs (Debian:
-# python3-pyqt5.qtwebengine). It must be imported before QApplication exists.
-WEBENGINE = False
-if os.environ.get("LAFA_NO_WEBENGINE", "") != "1":
-    try:
-        if BINDING == "PyQt5":
-            from PyQt5.QtWebEngineWidgets import QWebEngineView, QWebEnginePage, QWebEngineProfile, QWebEngineSettings  # noqa: F401
-        else:
-            from PySide6.QtWebEngineWidgets import QWebEngineView  # noqa: F401
-            from PySide6.QtWebEngineCore import QWebEnginePage, QWebEngineProfile, QWebEngineSettings  # noqa: F401
-        WEBENGINE = True
-    except ImportError:
-        pass
-
 def global_point(event):
     """Global cursor position of a mouse event as an integer QPoint (Qt5 and Qt6)."""
     return event.globalPosition().toPoint() if hasattr(event, "globalPosition") else event.globalPos()

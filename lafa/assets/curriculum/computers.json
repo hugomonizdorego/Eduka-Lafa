@@ -7,9 +7,25 @@
   "pt": "Computadores",
   "tet": "Komputadór"
  },
+ "meta": {
+  "version": 1,
+  "license": "CC BY-SA 4.0",
+  "languages": [
+   "en",
+   "id",
+   "pt",
+   "tet"
+  ],
+  "source": "Written by the LAFA team for Edukasaun OS (general knowledge, checked against standard references)",
+  "reviewed": "2026-10-13",
+  "review_status": "LAFA team review; not yet reviewed by the Ministry of Education (not a national curriculum)"
+ },
  "lessons": [
   {
+   "id": "computers.early",
    "level": "early",
+   "difficulty": 1,
+   "topic": "computers",
    "title": {
     "en": "Meet the computer",
     "id": "Mengenal komputer",
@@ -148,7 +164,10 @@
    ]
   },
   {
+   "id": "computers.primary",
    "level": "primary",
+   "difficulty": 2,
+   "topic": "computers",
    "title": {
     "en": "Parts of a computer",
     "id": "Bagian-bagian komputer",
@@ -287,7 +306,10 @@
    ]
   },
   {
+   "id": "computers.middle",
    "level": "middle",
+   "difficulty": 3,
+   "topic": "computers",
    "title": {
     "en": "Files, folders and the Linux desktop",
     "id": "Berkas, folder, dan desktop Linux",
@@ -432,7 +454,10 @@
    ]
   },
   {
+   "id": "computers.secondary",
    "level": "secondary",
+   "difficulty": 4,
+   "topic": "computers",
    "title": {
     "en": "How computers work inside",
     "id": "Cara kerja komputer di dalam",
@@ -577,7 +602,10 @@
    ]
   },
   {
+   "id": "computers.university",
    "level": "university",
+   "difficulty": 5,
+   "topic": "computers",
    "title": {
     "en": "Computer architecture and the terminal",
     "id": "Arsitektur komputer dan terminal",
@@ -722,7 +750,10 @@
    ]
   },
   {
+   "id": "computers.adult",
    "level": "adult",
+   "difficulty": 6,
+   "topic": "computers",
    "title": {
     "en": "Computers for work and everyday tasks",
     "id": "Komputer untuk kerja dan tugas sehari-hari",
@@ -861,7 +892,10 @@
    ]
   },
   {
+   "id": "computers.senior",
    "level": "senior",
+   "difficulty": 7,
+   "topic": "computers",
    "title": {
     "en": "Using a computer comfortably and safely",
     "id": "Memakai komputer dengan nyaman dan aman",

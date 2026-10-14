@@ -31,10 +31,13 @@ class UITests(unittest.TestCase):
             self.assertFalse(self.window.grab().isNull())
         for state in STATES:self.assertFalse(self.window.atlas.pixmap(state).isNull())
     def test_offline_keeps_offline_features(self):
-        # 0.1.4 offline mode: local chat and LAFA keep working; internet-only actions wait.
+        # Offline: local search and LAFA keep working; only internet actions wait, without popups.
         self.window.set_online(False)
-        self.assertTrue(self.window.send_button.isEnabled());self.assertFalse(self.window.weather_button.isEnabled());self.assertFalse(self.window.learn_button.isEnabled())
-        self.assertTrue(self.window.companion.isVisible());self.assertFalse(self.window.companion.public_button.isEnabled())
+        panel=self.window.search_panels['home'];self.assertTrue(panel['input'].isEnabled());self.assertFalse(panel['internet'].isEnabled())
+        self.assertFalse(self.window.weather_button.isEnabled());self.assertFalse(self.window.learn_button.isEnabled())
+        self.assertTrue(self.window.companion.isVisible());self.assertTrue(self.window.companion.send_button.isEnabled())
+        from lafa.qt import QMessageBox
+        self.assertFalse([w for w in self.app.topLevelWidgets() if isinstance(w,QMessageBox) and w.isVisible()])
     def test_pause_stops_idle_and_walk_timers(self):
         companion=self.window.companion
         self.assertTrue(companion.idle_timer.isActive())
@@ -57,14 +60,26 @@ class UITests(unittest.TestCase):
         self.assertEqual(self.window.file_table.rowCount(),1)
     def test_all_locales_small_screen(self):
         for lang in ['en','id','pt','tet']:
-            self.window.settings.language=lang;self.window.build_ui();self.window.resize(880,640);self.app.processEvents()
+            self.window.settings.language=lang;self.window.build_ui();self.window.resize(1024,600);self.app.processEvents()
             self.assertEqual(self.window.stack.count(),len(PAGES))
-            self.assertGreater(self.window.send_button.width(),40)
-    def test_review_never_calls_provider(self):
-        self.window.agent.run=lambda *a:(_ for _ in ()).throw(AssertionError('should not call'))
-        self.window.input.setText('Hi');self.window.send_chat()
-        self.assertFalse(self.window.busy)
-        self.assertEqual(self.window.last_answer,self.window.t('review_chat'))
+            hint=self.window.centralWidget().minimumSizeHint();self.assertLessEqual(hint.width(),1024,lang);self.assertLessEqual(hint.height(),600,lang)
+            self.assertLessEqual(self.window.sidebar.width(),80)  # compact, icon-only sidebar on small screens
+            for button in self.window.nav:self.assertTrue(button.accessibleName() or button.toolTip(),lang)
+    def test_keyboard_shortcuts_reach_every_section(self):
+        from lafa.qt import QShortcut
+        from lafa.qt import QEvent
+        self.window.build_ui();self.app.sendPostedEvents(None,QEvent.DeferredDelete)  # rebuilding must not leave duplicate (ambiguous) shortcuts
+        found=[s.key().toString() for s in self.window.findChildren(QShortcut)];keys=set(found);self.assertEqual(len(found),len(keys),found)
+        self.assertTrue({'Alt+1','Alt+2','Alt+3','Alt+4','Alt+5','Alt+6','Ctrl+F'}<=keys,keys)
+    def test_large_text_keeps_layout(self):
+        from lafa.qt import QFont
+        font=self.app.font();big=QFont(font);big.setPointSizeF(font.pointSizeF()*1.5 if font.pointSizeF()>0 else 15)
+        try:
+            self.app.setFont(big);self.window.build_ui();self.window.resize(1024,600);self.app.processEvents()
+            self.assertEqual(self.window.stack.count(),len(PAGES))
+            # 1366×768 at 150 % scaling leaves about 910×512 logical pixels.
+            hint=self.window.centralWidget().minimumSizeHint();self.assertLessEqual(hint.width(),910);self.assertLessEqual(hint.height(),512)
+        finally:self.app.setFont(font)
 
     def test_idle_at_sixty_seconds_not_restarted_by_network_probe(self):
         c=self.window.companion;now=[0];c.clock=lambda:now[0];c.mark_activity();c.set_state('idle')
@@ -93,7 +108,7 @@ class UITests(unittest.TestCase):
         c.collapse();self.assertFalse(c.bubblebox.isVisible());QTest.mouseClick(c.pet,Qt.LeftButton);self.app.processEvents();self.assertTrue(c.bubblebox.isVisible())
     def test_ambiguous_city_ui_requires_explicit_selection(self):
         self.window.show_weather(LocationChoices('Springfield',[Location('Springfield',1,2),Location('Springfield',3,4)]))
-        self.assertEqual(self.window.stack.currentIndex(),PAGE_INDEX['live']);self.assertEqual(self.window.city_choices.currentIndex(),-1)
+        self.assertEqual(self.window.stack.currentIndex(),PAGE_INDEX['timor']);self.assertEqual(self.window.city_choices.currentIndex(),-1)
         self.assertEqual(self.window.city_choices.count(),2)
     def test_focus_session_does_not_contact_ai(self):
         self.window.agent.run=lambda *a:(_ for _ in ()).throw(AssertionError('must not call'))
@@ -122,12 +137,15 @@ class UITests(unittest.TestCase):
             finally:
                 if window.settings_dialog:window.settings_dialog.accept()
                 window.probe_timer.stop();window.reminder_timer.stop();window.companion.close();window.companion.deleteLater();window.deleteLater();self.app.processEvents()
-    def test_virtual_role_offline_opens_settings(self):
-        with patch.object(Window,'setup_tray'),patch.object(Window,'probe'):
-            window=Window(Settings(language='id',companion=True),review=False)
+    def test_desktop_never_switches_the_virtual_assistant_on(self):
+        with patch.object(Window,'setup_tray'),patch.object(Window,'probe'),patch('lafa.eduka.settings_page_available',return_value=False):
+            window=Window(Settings(language='id',companion=False),review=False)
             try:
-                window.set_online(False);window.activate_mode('virtual');self.app.processEvents()
-                self.assertTrue(window.settings_dialog.isVisible());self.assertFalse(window.public_search_button.isEnabled())
+                window.set_online(False);window.activate_mode('desktop');self.app.processEvents()
+                self.assertFalse(window.settings.companion);self.assertFalse(window.companion.isVisible())
+                # The launcher entry explains where it is switched on instead.
+                window.activate_mode('virtual');self.app.processEvents()
+                self.assertTrue(window.settings_dialog.isVisible());self.assertFalse(window.settings.companion)
             finally:
                 if window.settings_dialog:window.settings_dialog.accept()
                 window.probe_timer.stop();window.reminder_timer.stop();window.companion.close();window.companion.deleteLater();window.deleteLater();self.app.processEvents()

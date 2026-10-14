@@ -1,6 +1,6 @@
 """Reproducible Qt captures of LAFA for developer review.
 
-Review fixtures never call the internet or an AI provider and never write the
+Review fixtures never call the internet and never write the
 user's preferences or homework. Run after every UI change:
     QT_QPA_PLATFORM=offscreen python3 scripts/capture-screenshots.py
 Set EDUKA_DESKTOP_SRC=/path/to/Eduka-Desktop to also capture the real
@@ -26,7 +26,7 @@ from lafa.tools import FileSearch, Source
 from lafa.live_info import Location, WeatherReport, ForecastDay, NewsReport
 from lafa.learning import LessonPython
 from lafa.i18n import tr
-from lafa import personality, osguide, outfits, classroom, roles
+from lafa import personality, osguide, outfits, classroom
 import random
 
 out = ROOT / 'docs/screenshots'; out.mkdir(parents=True, exist_ok=True)
@@ -48,79 +48,77 @@ def sample_school(window):
 
 temp = tempfile.TemporaryDirectory(prefix='lafa-capture-'); os.environ['XDG_CONFIG_HOME'] = temp.name; os.environ['XDG_CACHE_HOME'] = temp.name
 settings = Settings(language='en', roots=[])
-w = Window(settings=settings, review=True); w.resize(1180, 820); w.show(); pump(); w.hero_character.animate(False)
-sample_school(w); morning(w); save(w, '01-home.png')
-w.navigate('teachers'); w.teacher_list.setCurrentRow(0); save(w, '02-teachers-mathematics.png')
-w.teacher_list.setCurrentRow(2); save(w, '03-teachers-languages.png')
-w.teacher_list.setCurrentRow(3); save(w, '04-teachers-history-quiz.png')
-w.navigate('homework'); save(w, '05-homework.png')
-w.findChildren(__import__(BINDING + '.QtWidgets', fromlist=['QTabWidget']).QTabWidget)[0].setCurrentIndex(1); save(w, '06-timetable.png')
-w.navigate('chat'); w.send_message('How do I connect Wi-Fi?'); w.send_message('/calc 12*7'); save(w, '07-conversation.png')
-w.navigate('os_help'); w.show_guide(osguide.BY_KEY['apps']); save(w, '08-it-help-desk.png')
-w.show_sources([Source('Photosynthesis', 'https://en.wikipedia.org/wiki/Photosynthesis', 'REVIEW SAMPLE · process used by plants to convert light energy'), Source('Dili', 'https://en.wikipedia.org/wiki/Dili', 'REVIEW SAMPLE · capital of Timor-Leste')])
-w.navigate('learn'); save(w, '09-library.png')
-w.navigate('coding'); w.code_lesson.setCurrentIndex(2); result = LessonPython().run(w.code_editor.toPlainText()); w.code_output.setPlainText(result.output + f'\n\n{result.steps} lesson steps'); save(w, '10-computer-lab.png')
-weather = WeatherReport(Location('Dili', -8.5586, 125.5736, 'Asia/Dili', 'Timor-Leste'), 'SAMPLE 10:00', 'REVIEW SAMPLE · not live data', 'Asia/Dili', 29, 32, 65, 12, 2, [ForecastDay('SAMPLE day 1', 24, 31, 20, 2), ForecastDay('SAMPLE day 2', 24, 30, 40, 80), ForecastDay('SAMPLE day 3', 23, 30, 35, 2)])
-w.show_weather(weather); w.show_news(NewsReport([Source('Sample headline to review the news layout', 'https://www.bbc.com/news/world', '', 'BBC World · SAMPLE', 'REVIEW SAMPLE'), Source('Open a headline on the publisher website', 'https://www.theguardian.com/world', '', 'The Guardian · SAMPLE', 'REVIEW SAMPLE')], 'REVIEW SAMPLE · not current news'))
-w.navigate('live'); save(w, '11-notice-board.png')
-w.show_timor_news(NewsReport([Source('SAMPLE · Learning and education in Timor-Leste', 'https://tatoli.tl/', '', 'Tatoli · SAMPLE', 'REVIEW SAMPLE'), Source('SAMPLE · Arts, culture and community life', 'https://timorpost.com/', '', 'Timor Post · SAMPLE', 'REVIEW SAMPLE')], 'REVIEW SAMPLE · not live headlines'))
-w.navigate('culture'); w.timor_tabs.setCurrentIndex(1); save(w, '12-timor-leste.png')
+w = Window(settings=settings, review=True); w.resize(1180, 820); w.show(); pump()
+def wait_search(name='home'):
+    import time
+    end = time.monotonic() + 15; panel = w.search_panels[name]
+    while time.monotonic() < end:
+        app.processEvents()
+        if panel['outcome'] is not None or panel['results'].toPlainText().strip(): break
+        time.sleep(0.02)
+    pump()
+def search(text, name='home'):
+    w.navigate('home'); w.search_panels[name]['outcome'] = None; w.search_panels[name]['results'].clear(); w.run_search(name, text); wait_search(name)
+sample_school(w); morning(w)
+w.reminders.add(45, 'Bring the science poster'); w.progress.opened('lesson', 'lafa://lesson/school/science:0', 'Science · The water cycle'); w.refresh_home()
+save(w, '01-home.png')
+w.resize(1024, 600); pump(); save(w, '02-home-1024x600.png'); w.resize(1180, 820); pump()
+search('What is photosynthesis?'); save(w, '03-search-local-material.png')
+w.search_panels['home']['wiki'] = [Source('Photosynthesis', 'https://en.wikipedia.org/wiki/Photosynthesis', 'REVIEW SAMPLE · extract shown only after “Search internet sources”')]
+w.show_outcome('home', w.search_panels['home']['outcome']); save(w, '04-search-with-internet-source.png'); w.search_panels['home']['wiki'] = []
 with tempfile.TemporaryDirectory(prefix='lafa-review-') as files:
     root = Path(files) / 'Documents'; root.mkdir()
-    for name in ['Lesson_Photosynthesis.txt', 'Lesson_Mathematics.txt', 'Timor_Leste_Notes.md', 'Lesson_Schedule.csv']: (root / name).write_text('REVIEW SAMPLE', encoding='utf-8')
-    w.settings.roots = [str(root)]; w.show_files(FileSearch(w.settings.roots).search('', 'documents')); w.navigate('files'); pump(); w.file_table.selectRow(0); save(w, '13-my-files.png')
-w.navigate('hub'); save(w, '14-ai-services.png')
-w.set_online(False); w.navigate('home'); morning(w); save(w, '15-offline.png'); w.set_online(True)
-# School: classroom, exam hall, report card, Timor-Leste, roles.
-w.navigate('classroom'); w.class_subject.setCurrentIndex(w.class_subject.findData('science')); w.lesson_list.setCurrentRow(1); save(w, '32-classroom.png')
+    for name in ['Math_Homework_Fractions.txt', 'Math_Homework_Geometry.odt', 'Science_Notes.md', 'Timetable.csv']: (root / name).write_text('REVIEW SAMPLE', encoding='utf-8')
+    w.settings.roots = [str(root)]; search('Find file math homework'); save(w, '05-search-files.png')
+    w.show_files(FileSearch(w.settings.roots).search('', 'documents')); w.navigate('library', 'files'); pump(); w.file_table.selectRow(0); save(w, '15-library-my-files.png')
+    w.settings.roots = []
+search('How do I change the wallpaper?'); save(w, '06-search-os-guide.png')
+search('zzqx unknownword'); save(w, '07-search-nothing-found.png')
+w.navigate('study', 'lessons'); w.class_subject.setCurrentIndex(w.class_subject.findData('science')); w.lesson_list.setCurrentRow(1); save(w, '08-learn-lessons.png')
+w.age_level.setCurrentIndex(w.age_level.findData('secondary')); w.class_subject.setCurrentIndex(w.class_subject.findData('atoms')); save(w, '09-learn-every-age.png'); w.age_level.setCurrentIndex(0)
+w.navigate('study', 'subjects'); w.teacher_list.setCurrentRow(0); save(w, '10-learn-subject-guide.png')
 def exam(kind, subject, seed, right):
-    w.navigate('exams'); w.start_exam(kind, subject); w.exam = classroom.ExamSession(kind, subject, w.settings.locale, random.Random(seed)); w.show_exam_question()
+    w.navigate('study', 'practice'); w.start_exam(kind, subject); w.exam = classroom.ExamSession(kind, subject, w.settings.locale, random.Random(seed)); w.show_exam_question()
     for i in range(right[0]):
         q = w.exam.current; w.answer_exam(next(j for j, b in enumerate(w.exam_buttons) if b.property('option') == (q.correct if i % right[1] else q.options[0] if q.options[0] != q.correct else q.options[1]))); w.show_exam_question()
 exam('quiz', 'math', 3, (5, 5)); w.finish_exam()
-exam('exam', 'all', 11, (4, 3)); w.exam.started -= 260; w.tick_exam(); save(w, '33-exam-hall.png')
+exam('quiz', 'health', 11, (0, 1)); q = w.exam.current; w.answer_exam(next(j for j, b in enumerate(w.exam_buttons) if b.property('option') != q.correct)); save(w, '11-practice-explanation.png')
+w.show_exam_question()
 while w.exam.current: exam_q = w.exam.current; w.answer_exam(next(j for j, b in enumerate(w.exam_buttons) if b.property('option') == exam_q.correct)); w.show_exam_question()
-exam('test', 'history', 5, (10, 4)); save(w, '34-exam-result.png')
-w.navigate('report'); save(w, '35-report-card.png')
-w.navigate('culture'); w.timor_tabs.setCurrentIndex(0); w.filter_atlas(None); w.select_atlas('earth_collision'); save(w, '36-timor-leste-atlas.png')
-w.filter_atlas('leaders'); save(w, '37-timor-leste-presidents.png')
-w.filter_atlas('islands'); w.select_atlas('atauro'); save(w, '44-timor-leste-atauro.png')
-w.filter_atlas('history'); w.select_atlas('history_17'); save(w, '45-timor-leste-history.png')
-w.filter_atlas('municipalities'); save(w, '46-timor-leste-municipalities.png')
-w.filter_atlas('economy'); save(w, '47-timor-leste-economy.png')
-w.navigate('classroom'); w.class_subject.setCurrentIndex(w.class_subject.findData('civics')); save(w, '48-classroom-civics.png')
-w.navigate('home'); morning(w); w.play_role('magician'); w.role_pet.animate(False)
-w.findChildren(__import__(BINDING + '.QtWidgets', fromlist=['QScrollArea']).QScrollArea)[0].verticalScrollBar().setValue(330); save(w, '38-home-roles.png')
-w.open_mind_reader(); pump(); save(w.mind_dialog, '39-mind-reader.png')
-for i in range(6): w.mind_dialog.mind_answer(i in (0, 2, 4))
-save(w.mind_dialog, '40-mind-reader-result.png'); w.mind_dialog.close()
-w.navigate('learn'); w.library_tabs.setCurrentIndex(1); w.fill_sources(None); save(w, '50-library-learning-sources.png')
-w.fill_sources('languages'); save(w, '51-library-language-sites.png')
-w.fill_sources('tl_news'); save(w, '56-library-timor-leste-media.png'); w.fill_sources(None)
-w.library_tabs.setCurrentIndex(0); w.search_memory('coffee'); save(w, '57-lafa-search.png')
-w.navigate('hub'); save(w, '58-ai-hub.png')
-w.navigate('classroom'); w.age_level.setCurrentIndex(w.age_level.findData('secondary')); w.class_subject.setCurrentIndex(w.class_subject.findData('atoms')); save(w, '59-classroom-every-age.png')
-w.age_level.setCurrentIndex(w.age_level.findData('early')); w.class_subject.setCurrentIndex(w.class_subject.findData('astronomy')); save(w, '60-classroom-age-5.png')
-w.age_level.setCurrentIndex(0)
-w.navigate('languages'); w.course_list.setCurrentRow(list(__import__('lafa.languages', fromlist=['x']).COURSES).index('ja')); save(w, '52-language-school-japanese.png')
-w.course_list.setCurrentRow(0); save(w, '53-language-school-tetun.png')
-w.set_online(False); w.navigate('chat'); w.new_chat(); w.send_message('Ataúro island'); save(w, '54-offline-answer.png'); w.set_online(True)
+w.finish_exam(); save(w, '12-practice-result.png')
+w.navigate('study', 'languages'); w.course_list.setCurrentRow(0); save(w, '13-learn-languages.png')
+w.navigate('study', 'coding'); w.code_lesson.setCurrentIndex(2); result = LessonPython().run(w.code_editor.toPlainText()); w.code_output.setPlainText(result.output + f'\n\n{result.steps} lesson steps'); save(w, '14-learn-programming.png')
+w.navigate('library', 'sources'); w.fill_sources(None); save(w, '16-library-sources.png')
+w.fill_sources('tl_gov'); save(w, '17-library-timor-leste-government.png'); w.fill_sources(None)
+w.navigate('library', 'external'); save(w, '18-library-external-sites.png')
+w.navigate('timor', 'atlas'); w.filter_atlas(None); w.select_atlas('history_17'); save(w, '19-timor-leste-history.png')
+w.filter_atlas('leaders'); save(w, '20-timor-leste-presidents.png'); w.filter_atlas(None)
+w.show_timor_news(NewsReport([Source('SAMPLE · Learning and education in Timor-Leste', 'https://tatoli.tl/', '', 'Tatoli · SAMPLE', 'REVIEW SAMPLE'), Source('SAMPLE · Arts, culture and community life', 'https://timorpost.com/', '', 'Timor Post · SAMPLE', 'REVIEW SAMPLE')], 'REVIEW SAMPLE · not live headlines'))
+w.navigate('timor', 'news'); save(w, '21-timor-leste-news.png')
+w.navigate('activities', 'tasks'); save(w, '22-activities-tasks.png')
+w.navigate('activities', 'reminders'); w.start_focus(25); w.render_reminders(); save(w, '23-activities-reminders-focus.png')
+w.navigate('activities', 'results'); save(w, '24-activities-practice-results.png')
+w.navigate('oshelp', 'guides'); w.show_guide(osguide.BY_KEY['display']); save(w, '25-os-help-guides.png')
+w.navigate('oshelp', 'access'); save(w, '26-os-help-accessibility.png')
+w.set_online(False); w.navigate('home'); morning(w); save(w, '27-offline-home.png')
+search('Ataúro'); save(w, '28-offline-search.png'); w.set_online(True)
+w.open_about(); pump(); save(w.about_dialog, '29-about.png'); w.about_dialog.accept()
 w.open_settings(); pump()
-for row, name in [(0, '16-lafa-settings-virtual-assistant.png'), (3, '17-lafa-settings-desktop.png')]:
+for row, name in [(0, '30-lafa-settings-virtual-assistant.png'), (3, '31-lafa-settings-desktop.png')]:
     w.settings_categories.setCurrentRow(row); save(w.settings_dialog, name)
 w.settings_dialog.accept()
 
 # Eduka-Settings → Lafa-Configuration (real Eduka-Settings when a checkout is given).
 eduka_src = os.environ.get('EDUKA_DESKTOP_SRC')
 if eduka_src and Path(eduka_src, 'usr/bin/eduka-settings').is_file():
-    for name, scroll in [('18-eduka-settings-lafa-configuration.png', 0.0), ('19-eduka-settings-lafa-configuration-2.png', 0.55)]:
+    for name, scroll in [('32-eduka-settings-lafa-configuration.png', 0.0), ('33-eduka-settings-lafa-configuration-2.png', 0.55)]:
         subprocess.run([sys.executable, str(ROOT / 'tools/eduka-settings-preview.py'), eduka_src, str(out / name), '--scroll', str(scroll)],
                        env={**os.environ, 'LAFA_QT': 'pyqt5'}, check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL); saved.append(name)
 else:
     sys.path.insert(0, str(ROOT / 'integration'))
     from demo_eduka_settings import build_host
     with tempfile.TemporaryDirectory(prefix='lafa-host-capture-') as folder, patch.dict(os.environ, {'XDG_CONFIG_HOME': folder}):
-        host = build_host(review=True); host.setStyleSheet(STYLE); host.resize(1000, 900); host.show(); save(host, '18-eduka-settings-lafa-configuration.png'); host.close()
+        host = build_host(review=True); host.setStyleSheet(STYLE); host.resize(1000, 900); host.show(); save(host, '32-eduka-settings-lafa-configuration.png'); host.close()
 
 class DesktopReview(QWidget):
     """Actual LAFA widget pixels composited on an explicitly illustrative desktop."""
@@ -147,17 +145,17 @@ def balloon_for(state, text):
     with patch('lafa.personality.hover_line', return_value=text): c.on_hover(True)
     image = c.balloon.grab(); c.hide_balloon(); c.hovered = False; return image
 walker = pet('walking')
-compose('20-virtual-walking-on-panel.png', 'LAFA walks on the Eduka-Panel', 'When idle, LAFA walks along the real panel, then studies, reads, plays or dances.', [(walker, QPoint(640, PANEL_TOP - walker.height() + 12))])
+compose('40-virtual-walking-on-panel.png', 'LAFA walks on the Eduka-Panel', 'When idle, LAFA walks along the real panel, then studies, reads, plays or dances.', [(walker, QPoint(640, PANEL_TOP - walker.height() + 12))])
 studying = pet('studying'); bubble = balloon_for('studying', personality.CAUGHT['en']['studying'])
-compose('21-virtual-hover-question.png', 'Touch LAFA with the cursor…', '…and LAFA stops, asks how it can help, and says what it was doing.', [(studying, QPoint(900, PANEL_TOP - studying.height() + 12)), (bubble, QPoint(900 + studying.width() - bubble.width() + 40, PANEL_TOP - studying.height() - bubble.height() + 40))])
+compose('41-virtual-hover-question.png', 'Touch LAFA with the cursor…', '…and LAFA stops, asks how it can help, and says what it was doing.', [(studying, QPoint(900, PANEL_TOP - studying.height() + 12)), (bubble, QPoint(900 + studying.width() - bubble.width() + 40, PANEL_TOP - studying.height() - bubble.height() + 40))])
 party = pet('party', 'tuxedo'); bubble = balloon_for('party', personality.CAUGHT['en']['party'])
-compose('22-virtual-tuxedo-party.png', 'Tuxedo: formal activities', 'Parties, meetings, presentations, ceremonies and gala dinners.', [(party, QPoint(860, PANEL_TOP - party.height() + 12)), (bubble, QPoint(860 + party.width() - bubble.width() + 40, PANEL_TOP - party.height() - bubble.height() + 40))])
+compose('42-virtual-tuxedo-party.png', 'Tuxedo: formal activities', 'Parties, meetings, presentations, ceremonies and gala dinners.', [(party, QPoint(860, PANEL_TOP - party.height() + 12)), (bubble, QPoint(860 + party.width() - bubble.width() + 40, PANEL_TOP - party.height() - bubble.height() + 40))])
 beach = pet('beach', 'casual'); bubble = balloon_for('beach', personality.CAUGHT['en']['beach'])
-compose('23-virtual-casual-beach.png', 'Casual: summer activities', 'Beach, sightseeing, hanging out at a café and shopping.', [(beach, QPoint(500, PANEL_TOP - beach.height() + 12)), (bubble, QPoint(500 + beach.width() - bubble.width() + 40, PANEL_TOP - beach.height() - bubble.height() + 40))])
+compose('43-virtual-casual-beach.png', 'Casual: summer activities', 'Beach, sightseeing, hanging out at a café and shopping.', [(beach, QPoint(500, PANEL_TOP - beach.height() + 12)), (bubble, QPoint(500 + beach.width() - bubble.width() + 40, PANEL_TOP - beach.height() - bubble.height() + 40))])
 pet('idle'); c.introduced = False; c.show_bubble(c.introduction(9)); pump(); chat = c.grab()
 c.collapse(); __import__('random').seed(4); c.recommend(); pump(); recommend = c.grab()
-compose('55-virtual-recommendation.png', 'Click LAFA for a recommendation', 'Free software (GPL) for learning and, online, a learning website.', [(recommend, QPoint(800, PANEL_TOP - recommend.height() + 12))])
-compose('24-virtual-chat-bubble.png', 'Click LAFA to chat', 'Quick help for Edukasaun OS, weather, Timor-Leste news and recommendations.', [(chat, QPoint(800, PANEL_TOP - chat.height() + 12))])
+compose('45-virtual-recommendation.png', 'Click LAFA for a recommendation', 'Free software (GPL) for learning and, online, a learning website.', [(recommend, QPoint(800, PANEL_TOP - recommend.height() + 12))])
+compose('44-virtual-bubble.png', 'Click LAFA', 'Continue learning, tasks, focus and OS help — all without internet.', [(chat, QPoint(800, PANEL_TOP - chat.height() + 12))])
 c.collapse()
 # Human-like movement: frames of one walk cycle and a jump (motion.py).
 steps = []
@@ -168,7 +166,7 @@ c.set_state('talking'); c.pet.motion.t = 0; c.pet.motion.gesture = ''; c.pet.mot
 for i in range(3):
     c.pet.motion.advance(0.15 if i == 0 else 0.2); c.pet.motion.fade = 1.0; pump(); steps.append(c.grab())
 c.pet.animated = False; c.pet.motion.gesture = ''
-compose('61-virtual-human-movement.png', 'LAFA moves like a person', 'Steps with a bounce and weight shift, leans into the walk, breathes, waves, nods and jumps.',
+compose('46-virtual-human-movement.png', 'LAFA moves like a person', 'Steps with a bounce and weight shift, leans into the walk, breathes, waves, nods and jumps.',
         [(img, QPoint(40 + i * 150, PANEL_TOP - img.height() + 12)) for i, img in enumerate(steps)])
 c.collapse()
 
@@ -191,24 +189,24 @@ class Sheet(QWidget):
 sheets = []
 def sheet(name, *args, **kwargs):
     widget = Sheet(*args, **kwargs); sheets.append(widget); widget.show(); save(widget, name)
-sheet('25-outfits.png', 'LAFA · three outfits', 'Tais Mane (default), Tuxedo and Casual. Change them in Lafa-Configuration or by right-clicking LAFA.',
+sheet('50-outfits.png', 'LAFA · three outfits', 'Tais Mane (default), Tuxedo and Casual. Change them in Lafa-Configuration or by right-clicking LAFA.',
       [(s, o, tr('en', o), tr('en', s)) for o in outfits.OUTFITS for s in ['idle', 'talking', 'walking']], columns=3, size=210)
-sheet('26-formal-activities.png', 'Tuxedo · formal activities', 'Each activity is a pose of the outfit plus a small scene.', [(a, 'tuxedo', tr('en', a), personality.duty('en', a)) for a in outfits.FORMAL])
-sheet('27-casual-activities.png', 'Casual · summer activities', 'Beach, town, café and shopping.', [(a, 'casual', tr('en', a), personality.duty('en', a)) for a in outfits.CASUAL])
-sheet('41-lafa-roles.png', "LAFA's roles · every outfit", 'Teacher, professor, motivator, magician, master and comedian.',
+sheet('51-formal-activities.png', 'Tuxedo · formal activities', 'Each activity is a pose of the outfit plus a small scene.', [(a, 'tuxedo', tr('en', a), personality.duty('en', a)) for a in outfits.FORMAL])
+sheet('52-casual-activities.png', 'Casual · summer activities', 'Beach, town, café and shopping.', [(a, 'casual', tr('en', a), personality.duty('en', a)) for a in outfits.CASUAL])
+sheet('53-lafa-roles.png', "LAFA's roles · optional entertainment", 'Teacher, professor, motivator, magician, master and comedian (Settings → entertainment).',
       [(a, o, tr('en', a), tr('en', o)) for o in outfits.OUTFITS for a in outfits.ROLES], columns=6, size=170)
 for o, title in [('tuxedo', 'Tuxedo on every pose'), ('casual', 'Casual on every pose: shirt, shorts, socks and sneakers')]:
-    sheet(f'42-{o}-all-poses.png' if o == 'tuxedo' else '43-casual-all-poses.png', title, 'Only bathing and the toilet are undressed.', [(s, o, tr('en', s), '') for s in STATES if s not in ('tebe', 'bidu')], columns=5, size=170)
-sheet('28-tais-mane-activities.png', 'Tais Mane · school and daily life', 'The default outfit, including Tebe-tebe and Bidu dances.', [(a, 'traditional', tr('en', a), personality.duty('en', a)) for a in outfits.TRADITIONAL], columns=5, size=170)
+    sheet(f'54-{o}-all-poses.png' if o == 'tuxedo' else '55-casual-all-poses.png', title, 'Only bathing and the toilet are undressed.', [(s, o, tr('en', s), '') for s in STATES if s not in ('tebe', 'bidu')], columns=5, size=170)
+sheet('56-tais-mane-activities.png', 'Tais Mane · school and daily life', 'The default outfit, including Tebe-tebe and Bidu dances.', [(a, 'traditional', tr('en', a), personality.duty('en', a)) for a in outfits.TRADITIONAL], columns=5, size=170)
 
 with patch.dict(os.environ, {'LC_ALL': 'tet_TL.UTF-8'}):
-    tet = Window(Settings(language='tet', roots=[]), review=True); tet.resize(1180, 820); tet.show(); pump(); tet.hero_character.animate(False); sample_school(tet); morning(tet); save(tet, '29-home-tetun.png')
-    tet.navigate('teachers'); tet.teacher_list.setCurrentRow(5); save(tet, '30-teachers-tetun.png'); tet.companion.close(); tet.close()
+    tet = Window(Settings(language='tet', roots=[]), review=True); tet.resize(1180, 820); tet.show(); pump(); sample_school(tet); morning(tet); save(tet, '60-home-tetun.png')
+    tet.navigate('study', 'lessons'); save(tet, '61-learn-tetun.png'); tet.companion.close(); tet.close()
 with tempfile.TemporaryDirectory(prefix='lafa-eduka-') as home, patch('lafa.eduka.Path.home', return_value=Path(home)):
     for part, data in [('panel/settings.json', {'height': 42}), ('desktop/settings.json', {'theme_style': 'Edukasaun-Dark', 'accent_color': '#26a69a'})]:
         path = Path(home) / '.config/eduka-desktop' / part; path.parent.mkdir(parents=True, exist_ok=True); path.write_text(json.dumps(data))
     app.setStyleSheet(style_sheet(Settings()))
-    dark = Window(Settings(language='en', roots=[], costume='casual'), review=True); dark.resize(1180, 820); dark.show(); pump(); dark.hero_character.animate(False); morning(dark); save(dark, '31-home-eduka-dark-theme.png'); dark.navigate('culture'); save(dark, '49-timor-atlas-dark-theme.png'); dark.companion.close(); dark.close()
+    dark = Window(Settings(language='en', roots=[], costume='casual'), review=True); dark.resize(1180, 820); dark.show(); pump(); morning(dark); save(dark, '62-home-eduka-dark-theme.png'); dark.navigate('timor'); save(dark, '63-timor-atlas-dark-theme.png'); dark.companion.close(); dark.close()
     app.setStyleSheet(STYLE)
 w.companion.close(); w.close()
 for widget in [*reviews, *sheets]: widget.close()

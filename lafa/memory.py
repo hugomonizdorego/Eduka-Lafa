@@ -1,20 +1,18 @@
-"""LAFA's core memory: a small search engine on this computer.
+"""LAFA's memory: a small search index on this computer.
 
-Like Google or Bing, but for LAFA's own sources. It indexes:
+It indexes LAFA's own knowledge (lessons for every age, the Timor-Leste atlas
+and history, Edukasaun OS guides, the catalogue of learning websites) and the
+material the learner saved for offline use (a Wikipedia extract opened in
+LAFA, or the front page and news feed of a source the learner chose to save).
+Nothing is downloaded automatically: saving and updating saved material
+happen only when the learner presses the button. robots.txt is respected,
+only HTTPS is used, pages behind logins and Facebook are never read and no
+site is downloaded completely.
 
-* LAFA's built-in knowledge: lessons for every age, the Timor-Leste atlas and
-  history, Edukasaun OS guides and the descriptions of all learning and
-  Timor-Leste media sources;
-* public pages of the 130 learning and Timor-Leste sources, read when online
-  (front page, a few linked pages and news feeds; robots.txt is respected,
-  Facebook pages are only linked, never read);
-* Wikipedia articles LAFA has opened, so they stay available offline.
-
-Search ranks documents with BM25 (the classic search-engine formula), shows a
-title, the address and a snippet for every result, and LAFA answers with
-numbered citations [1] [2] pointing to those websites. With an AI provider the
-best passages are given to the model as references. Everything is stored in
-~/.cache/lafa/memory (private to the user, 0600).
+Search ranks documents with BM25, ignores accents and understands simple
+synonyms across English, Indonesian, Portuguese and Tetun (buku = livro =
+livru = book). Saved material is labelled with its source and the date it was
+saved; it may be out of date. Stored in ~/.cache/lafa/memory (0600).
 """
 from collections import Counter
 from dataclasses import dataclass, field
@@ -110,24 +108,30 @@ class Hit:
     titled: bool = False       # every query word is in the title
 
 # ------------------------------------------------------------ built-in docs
+def school_key(lesson):
+    """Stable key of a Timor-Leste school lesson (same as the app's lesson_key)."""
+    from . import classroom
+    title = classroom.text(lesson.title, "en").casefold()
+    return lesson.subject + "." + re.sub(r"[^a-z0-9]+", "-", title).strip("-")[:60]
+
 def builtin_docs(lang):
     """LAFA's own knowledge in one language (rebuilt on demand, never stored)."""
     from . import curriculum, classroom, timor_atlas, timorleste, osguide, sources
     docs = []
     for lesson in curriculum.lessons():
-        docs.append(Doc(f"age:{lesson.subject}:{lesson.level}", curriculum.text(lesson.title, lang), f"lafa://classroom/{lesson.subject}/{lesson.level}",
+        docs.append(Doc(f"age:{lesson.id}", curriculum.text(lesson.title, lang), f"lafa://lesson/age/{lesson.id}",
                         "LAFA · " + curriculum.subject_name(lesson.subject, lang) + " · " + curriculum.level_name(lesson.level, lang), "lesson",
                         "\n".join(curriculum.text(p, lang) for p in lesson.points) + "\n" + curriculum.text(lesson.task, lang), lang))
     for i, lesson in enumerate(classroom.lessons()):
         body = "\n".join(classroom.text(p, lang) for p in lesson.points) + "\n" + classroom.text(lesson.task, lang)
-        docs.append(Doc(f"lesson:{i}", classroom.text(lesson.title, lang), f"lafa://classroom/{lesson.subject}", "LAFA · " + classroom.subject_name(lesson.subject, lang), "lesson", body, lang))
+        docs.append(Doc(f"lesson:{i}", classroom.text(lesson.title, lang), f"lafa://lesson/school/{school_key(lesson)}", "LAFA · " + classroom.subject_name(lesson.subject, lang), "lesson", body, lang))
     for topic in timor_atlas.TOPICS:
         body = timor_atlas.text(topic.summary, lang)
         if topic.body and (lang != "tet" or "tet" in topic.body): body += "\n" + timor_atlas.text(topic.body, lang)
         facts = "\n".join(f"{timor_atlas.text(k, lang)}: {timor_atlas.text(v, lang)}" for k, v in topic.facts)
         docs.append(Doc(f"atlas:{topic.key}", timor_atlas.text(topic.title, lang), f"lafa://atlas/{topic.key}", "LAFA · Timor-Leste", "atlas", body + ("\n" + facts if facts else ""), lang))
     for i, event in enumerate(timorleste.HISTORY):
-        docs.append(Doc(f"history:{i}", f"{event.when(lang)} · {timorleste.text(event.title, lang)}", "lafa://atlas/history", "LAFA · Timor-Leste", "history", timorleste.text(event.text, lang), lang))
+        docs.append(Doc(f"history:{i}", f"{event.when(lang)} · {timorleste.text(event.title, lang)}", f"lafa://atlas/history_{i}", "LAFA · Timor-Leste", "history", timorleste.text(event.text, lang), lang))
     for guide in osguide.GUIDES:
         docs.append(Doc(f"guide:{guide.key}", guide.title.get(lang, guide.title["en"]), f"lafa://os/{guide.key}", "LAFA · Edukasaun OS", "guide",
                         "\n".join(guide.steps.get(lang, guide.steps["en"])), lang, keywords=" ".join(guide.keywords)))
@@ -293,15 +297,6 @@ def answer(query, lang="en", memory=None, k=4, strict=True):
         lines += [f"• {h.doc.title} — {h.doc.url}" for h in sites]
     return "\n".join(lines), facts + sites
 
-def context(query, lang="en", memory=None, k=5, limit=3500):
-    """The best passages as numbered references for an AI model (RAG)."""
-    memory = memory or shared(); out = []; used = 0
-    for n, hit in enumerate([h for h in memory.search(query, lang, k=k * 2) if h.doc.kind != "source"][:k], 1):
-        passage = snippet(hit.doc.text, hit.terms, 700)
-        if used + len(passage) > limit: break
-        out.append((n, hit, passage)); used += len(passage)
-    return out
-
 # ------------------------------------------------------------ reading the web
 class PageParser(HTMLParser):
     SKIP = {"script", "style", "noscript", "svg", "nav", "footer", "header", "form", "button", "iframe", "aside"}
@@ -400,8 +395,9 @@ def skip_host(url):
     host = (urllib.parse.urlsplit(url).hostname or "").lower()
     return any(host == h or host.endswith("." + h) for h in SKIP_HOSTS)
 
-def read_site(name, url, category_name, fetch=fetch, robots=None, per_site=4):
-    """Pages (Doc) from one source: its front page, a few linked pages, its feed."""
+def read_site(name, url, category_name, fetch=fetch, robots=None, per_site=1):
+    """Pages (Doc) from one source: its front page and its news feed (by default no
+    linked pages; the site is never downloaded completely)."""
     robots = robots or Robots(fetch)
     if skip_host(url) or not robots.allowed(url): return []
     final, raw, kind = fetch(url)
@@ -438,12 +434,14 @@ def feed_docs(name, raw, feed_url, limit=12):
             docs.append(Doc("news:" + link, title[:200], link, name, "news", (summary or title) + (f"\n{when}" if when else "")))
     return docs
 
-def refresh(memory=None, items=None, max_age_hours=24, budget=60, fetch=fetch, stop=None):
-    """Read sources whose pages are older than max_age_hours (news: 1 hour).
+def refresh(memory=None, items=None, max_age_hours=24, budget=10, fetch=fetch, stop=None):
+    """Save (or update) the given sources for offline use — only when the learner
+    asks. Pages younger than max_age_hours are skipped (news: 1 hour).
 
     Returns (sites read, pages remembered, failed). Runs in a worker thread."""
     from . import sources
-    memory = memory or shared(); items = items if items is not None else sources.SOURCES
+    memory = memory or shared()
+    if items is None: items = [s for s in sources.SOURCES if memory.page_age(s[2]) is not None]   # update what was saved before
     names = {key: sources.text(label, "en") for key, label, _ in sources.SOURCE_CATEGORIES}
     robots = Robots(fetch); read = pages = failed = 0
     timor_first = sorted(items, key=lambda s: (not s[0].startswith("tl_"), s[1]))
@@ -465,7 +463,7 @@ def refresh(memory=None, items=None, max_age_hours=24, budget=60, fetch=fetch, s
     return read, pages, failed
 
 def remember_article(title, url, text, lang="", memory=None):
-    """Keep a Wikipedia article LAFA showed, for offline use later."""
+    """Save a Wikipedia extract the learner chose to keep for offline use."""
     memory = memory or shared()
     if url.startswith("https://") and text:
         memory.add([Doc("wiki:" + url, title, url, "Wikipedia", "wiki", text, lang)])

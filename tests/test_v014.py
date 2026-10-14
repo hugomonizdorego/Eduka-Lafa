@@ -8,11 +8,11 @@ import unittest
 from unittest.mock import patch
 from lafa import sources, offline, recommendations, languages, platform_check, ui_kit
 from lafa.agent import Agent
-from lafa.config import Settings, Secrets
+from lafa.config import Settings
 
 class Sources(unittest.TestCase):
     def test_directory_from_the_document(self):
-        self.assertEqual(len(sources.SOURCES), 79 + len(sources.TIMOR_MEDIA)); self.assertEqual(len(sources.TIMOR_MEDIA), 51)
+        self.assertEqual(len(sources.SOURCES), 79 + len(sources.OFFICIAL) + len(sources.TIMOR_MEDIA)); self.assertEqual(len(sources.TIMOR_MEDIA), 51)
         self.assertEqual([k for k, _, _ in sources.SOURCE_CATEGORIES][:8], ["elearning", "books", "biomed", "mathspace", "tech", "languages", "thinking", "society"])
         names = [s[1] for s in sources.SOURCES]
         self.assertEqual(len(names), len(set(names))); self.assertNotIn("Z-Library", names)
@@ -21,30 +21,44 @@ class Sources(unittest.TestCase):
             self.assertTrue(description["id"] and description["en"], name)
         self.assertEqual([s[1] for s in sources.search("portugis", "id")], ["Duolingo", "Portuguese Lab"])
         self.assertIn("NASA", [s[1] for s in sources.by_category("mathspace")])
-    def test_hourly_check_is_cached_privately(self):
+    def test_check_is_on_demand_cached_and_precise(self):
         with tempfile.TemporaryDirectory() as folder, patch.dict(os.environ, {"XDG_CACHE_HOME": folder}):
-            up, down = sources.check_all(sources.SOURCES[:3], check=lambda url: "coursera" in url)
-            self.assertEqual((up, down), (1, 2))
-            status = sources.load_status(); self.assertEqual(status["https://www.coursera.org/"]["state"], "up")
+            states = {"https://www.coursera.org/": "ok"}
+            counts = sources.check(sources.SOURCES[:3], check=lambda url: states.get(url, "not_found"), now=1000)
+            self.assertEqual((counts["ok"], counts["not_found"]), (1, 2))
+            status = sources.load_status(); self.assertEqual(status["https://www.coursera.org/"]["state"], "ok")
             self.assertEqual(sources.status_path().stat().st_mode & 0o777, 0o600)
+            # Fresh results are reused; nothing is checked again within a day.
+            calls = []
+            sources.check(sources.SOURCES[:3], check=lambda url: calls.append(url) or "ok", now=2000); self.assertEqual(calls, [])
+            sources.check(sources.SOURCES[:3], check=lambda url: calls.append(url) or "ok", now=2000, force=True); self.assertEqual(len(calls), 3)
             sources.status_path().write_text(json.dumps({"x": {"state": "evil"}, "y": 3}))
             self.assertEqual(sources.load_status(), {})
-        self.assertFalse(sources.probe("http://example.org/"))
-    def test_default_refresh_is_hourly(self):
-        self.assertEqual(Settings().update_hours, 1)
+        self.assertEqual(sources.probe("http://example.org/"), "unknown")
+        self.assertEqual([sources.classify(c) for c in (200, 404, 403, 500)], ["ok", "not_found", "restricted", "unknown"])
+    def test_default_refresh_is_daily(self):
+        self.assertEqual(Settings().update_hours, 24)
+    def test_official_and_community_sources(self):
+        urls = [s[2] for s in sources.SOURCES]
+        self.assertIn("https://timor-leste.gov.tl/", urls); self.assertIn("https://moe.gov.tl/", urls)
+        from lafa import source_meta
+        for _, name, url, _ in sources.SOURCES:
+            m = source_meta.meta(url); self.assertTrue(m["langs"] and m["topics"] and m["access"] in source_meta.ACCESS, name)
+        community = {n for n, *_ in source_meta.COMMUNITY_RESOURCES}
+        self.assertEqual(community, {"Fandom", "Everything2", "Conservapedia"})
 
 class Offline(unittest.TestCase):
     def test_feature_map(self):
-        self.assertIn("Classroom lessons", offline.offline_features("en"))
-        self.assertIn("Wikipedia search", offline.online_features("en"))
+        self.assertIn("Practice and test simulations", offline.offline_features("en"))
+        self.assertIn("Wikipedia extracts", offline.online_features("en"))
         self.assertTrue(set(offline.offline_features("tet")).isdisjoint(offline.online_features("tet")))
     def test_local_answers(self):
         self.assertIn("Ataúro", offline.answer("Tell me about Ataúro island", "en"))
         self.assertIsNone(offline.answer("hi", "en"))
-        agent = Agent(Settings(language="en"), Secrets())
+        agent = Agent(Settings(language="en"))
         self.assertIn("Ataúro", agent.run("Ataúro island", [], False).text)
         self.assertIn("= 4", agent.run("/calc 2+2", [], False).text)
-        self.assertIn("Offline mode", agent.run("zzzz qqqq wwww", [], False).text)
+        self.assertIn("found nothing", agent.run("zzzz qqqq wwww", [], False).text)
 
 class Recommendations(unittest.TestCase):
     def test_free_software_and_websites(self):
@@ -95,34 +109,32 @@ class UI(unittest.TestCase):
     def tearDown(self):
         self.w.companion.close(); self.w.close(); self.w.deleteLater(); self.app.processEvents()
     def test_library_sources_page(self):
-        self.w.navigate("learn"); self.assertEqual(self.w.library_tabs.count(), 3)
+        self.w.navigate("library", "sources"); self.assertEqual(self.w.current_section(), "library")
         self.assertEqual(len(self.w.source_cards), len(sources.SOURCES))
         self.w.fill_sources("languages"); self.assertEqual(len(self.w.source_cards), 10)
         self.w.source_query.setText("NASA"); self.w.fill_sources(None); self.assertEqual(list(self.w.source_cards), ["NASA"])
-        self.w.check_sources(True); self.assertIn("Review mode", self.w.source_status.text())
+        self.w.check_sources(True); self.assertTrue(self.w.source_status.text())
     def test_language_school_page(self):
-        self.w.navigate("languages"); self.assertEqual(self.w.title.text(), "Language school")
+        self.w.navigate("languages"); self.assertEqual(self.w.current_section(), "study"); self.assertEqual(self.w.section_tabs["study"].currentIndex(), 3)
         self.w.course_list.setCurrentRow(list(languages.COURSES).index("ja")); self.assertEqual(self.w.course_title.text(), "Japanese")
         right = next(i for i, b in enumerate(self.w.lang_buttons) if b.property("option") == self.w.language_quiz.correct)
         self.w.answer_language(right); self.assertIn("Correct", self.w.lang_feedback.text())
         self.assertEqual(self.w.course_tables["numbers"].item(0, 1).text(), "一")
     def test_offline_keeps_learning(self):
         self.w.set_online(False); self.app.processEvents()
-        self.assertTrue(self.w.send_button.isEnabled()); self.assertTrue(self.w.home_send.isEnabled())
-        self.assertFalse(self.w.learn_button.isEnabled()); self.assertIn("Offline mode", self.w.badge.toolTip())
+        panel = self.w.search_panels["home"]; self.assertTrue(panel["input"].isEnabled()); self.assertFalse(panel["internet"].isEnabled())
+        self.assertFalse(self.w.learn_button.isEnabled()); self.assertIn("Local features", self.w.badge.text())
         self.w.navigate("exams"); self.w.start_exam("quiz", "math"); self.assertEqual(self.w.exam.total, 5)
-    def test_bubble_buttons(self):
-        keys = [k for k, _ in self.w.companion.quick_buttons]; self.assertEqual(keys, ["os", "weather", "news", "recommend"])
-        c = self.w.companion; c.settings.companion = True; c.set_online(True)
-        c.quick_buttons[3][1].click(); self.assertIn("LAFA recommends", c.message.toPlainText())
+    def test_bubble_buttons_work_offline(self):
+        keys = [k for k, _ in self.w.companion.quick_buttons]; self.assertEqual(keys, ["continue", "tasks", "focus", "os"])
     def test_click_lafa_recommends(self):
         c = self.w.companion; c.settings.companion = True; c.set_online(True); c.collapse()
         c.toggle_bubble(); self.assertIn("LAFA recommends", c.message.toPlainText()); self.assertIn("🐧", c.message.toPlainText())
         c.collapse(); c.settings.click_recommendations = False; c.toggle_bubble(); self.assertNotIn("LAFA recommends", c.message.toPlainText())
     def test_aero_depth_and_menu(self):
         from lafa.qt import QFrame
-        shadows = [f for f in self.w.findChildren(QFrame) if f.objectName() in {"panel", "sidebar"} and f.graphicsEffect() is not None]
-        self.assertTrue(shadows); self.assertTrue(all(not b.icon().isNull() for b in self.w.nav))
+        # Calm look by default: no drop shadows unless the learner turns them on.
+        self.assertFalse(Settings().depth_effects); self.assertTrue(all(not b.icon().isNull() for b in self.w.nav))
         self.assertTrue(hasattr(self.w.source_scroll, "smooth_wheel"))
 
 if __name__ == "__main__": unittest.main()
@@ -134,23 +146,12 @@ class ChatAndMedia(unittest.TestCase):
         for name in ("Wikipédia Tetun", "TATOLI", "Timor Post", "RTTL", "La'o Hamutuk", "Radio Liberdade", "Lian Matebian"): self.assertIn(name, names)
         self.assertEqual(sources.TIMOR_MEDIA[0][2], "https://tet.wikipedia.org/wiki/P%C3%A1jina_Mahuluk")
         self.assertEqual(len([s for s in sources.TIMOR_MEDIA if s[0] == "tl_community"]), 13)
-    def test_chat_answers_the_written_topic(self):
-        from lafa.tools import Source
-        agent = Agent(Settings(language="tet"), Secrets())
-        self.assertIn("Illa iha Dili", agent.run("Ataúro", [], True).text)
-        with patch("lafa.agent.encyclopedia_search", return_value=[Source("Livru", "https://tet.wikipedia.org/wiki/Livru", "")]), patch("lafa.agent.encyclopedia_article", return_value="Livru mak koleksaun pájina."):
-            text = agent.run("livru", [], True).text
-        self.assertTrue(text.startswith("📖 Livru · Wikipedia (tet)")); self.assertNotIn("fonte públika", text)
-        from lafa.net import NetworkError
-        with patch("lafa.agent.encyclopedia_search", side_effect=NetworkError("x")):
-            text = agent.run("buku", [], True).text
-        # LAFA remembered the Wikipedia article it showed ("buku" = "livru").
-        self.assertIn("Livru mak koleksaun", text); self.assertIn("Internet Archive", text)
-        from lafa import memory
-        memory._shared = memory.Memory(); memory._shared.web = {}; memory._shared._indexes = {}
-        with patch("lafa.agent.encyclopedia_search", side_effect=NetworkError("x")):
-            self.assertIn("LibriVox", agent.run("audiobook", [], True).text)
-        self.assertIn("xave API", agent.run("my password is 1234", [], True).text)
+    def test_search_answers_the_written_topic_locally(self):
+        agent = Agent(Settings(language="tet"))
+        with patch("lafa.tools.encyclopedia_search") as wiki:
+            self.assertIn("Ataúro", agent.run("Ataúro", [], True).text)
+            self.assertTrue(agent.run("my password is 1234", [], True).text)
+        wiki.assert_not_called()
     def test_tetun_atlas_has_no_english_mixed_in(self):
         from lafa import timor_atlas
         self.assertTrue(all("tet" in t.summary for t in timor_atlas.TOPICS))

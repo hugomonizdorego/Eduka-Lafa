@@ -1,62 +1,73 @@
 # Privacy and permissions
 
-- API conversation sends the input and up to twelve prior messages to the
-  selected provider after Send. Provider retention policies apply. Chat stays
-  in memory unless the user exports it; switching provider clears context.
-- Without a configured API, a short topic typed in Husu LAFA (up to eight
-  words, for example "buku" or "Ataúro") is first answered from LAFA's own
-  lessons and atlas and, when online, looked up on Wikipedia in the interface
-  language. Personal sentences (my/saya/ha'u, address, family, password,
-  problem…), long text, code and anything that looks private are never sent.
-  Search public sources and `/ask` explicitly send the selected public topic; `/learn` explicitly searches public snippets. Search queries
-  belong to the receiving site, so do not include private information. Prepared
-  greetings and supportive replies are local; general AI conversation requires
-  an optional configured provider.
-- LAFA's memory (`~/.cache/lafa/memory`, 0600) holds only public web pages
-  of the listed learning and Timor-Leste sources, read when online about once
-  an hour (robots.txt respected, HTTPS only, Facebook pages never read), and
-  Wikipedia articles LAFA showed. Searching the memory never leaves the
-  computer. With an AI signed in, the best public passages are sent with the
-  question so the AI can cite them.
-- AI Hub web tabs keep their sign-in cookies in a private LAFA profile
-  (`~/.local/share/lafa/aihub`, 0700). Passwords are typed on the AI
-  company's own page. LAFA never reads those cookies, tokens or the answers;
-  "Ask the selected AIs" only types the question into the pages. Camera,
-  microphone, location and notification requests are refused.
-- OpenRouter sign-in uses OAuth PKCE: openrouter.ai sends a one-time code to
-  a loopback address on this computer (localhost:3000) and LAFA exchanges it
-  for a key, which is kept in the system keyring (or only for the session).
-- Agent actions open installed programs from a fixed list (browser, files,
-  settings, calculator…) without a shell; nothing typed is executed.
-- Local filename results stay on the computer. Document reading is local;
-  Summarize confirms provider and character count before sending selected text.
-  Explain with AI likewise confirms before sending lesson code.
-- Listen confirms eight seconds of microphone capture and OpenAI transcription.
-  The temporary audio is deleted and the transcript is reviewed in the input.
-  There is no always-on microphone, camera, global keyboard hook or telemetry.
-- Read aloud uses local espeak; Tetun uses Portuguese pronunciation as fallback.
-- Website sign-in occurs in the default browser. LAFA does not read passwords,
-  cookies, account sessions or browser storage. No universal account login exists.
-- Secrets stay in session memory, external environment or an approved secure
-  keyring. Settings files never contain API keys. Clear key does not delete
-  externally managed environment variables.
-- Weather sends an explicit city query or coordinates to Open-Meteo. Dili is
-  the default; no device geolocation is used. World/local news retrieves RSS
-  headline metadata. Full stories open only on the publisher website.
-- When enabled, idle Timor-Leste news updates retrieve the three configured
-  feeds at the selected interval. Curated culture cards are shipped locally;
-  a source is contacted when the user opens its link. Browser searches contact
-  that site when opened. Reachability probes run every 30 seconds.
-- The mascot is disabled until enabled through Settings. It hides offline and
-  stops animation/voice. Reminders also fire offline and are lost when LAFA exits.
-- Local IPC accepts five fixed same-user launch roles. It cannot submit a
-  command, URL, message or filename. No network listener is included.
-- `scripts/check-system.py` makes no public requests unless `--network` is
-  selected. Reports include basic runtime and preference status, but no API
-  keys, model IDs, chat text or selected folder paths. The network mode makes
-  fixed public checks for Dili/Wikipedia/weather and configured Timor-Leste feeds.
+Lafa 0.2.0 has no account, no AI service, no Lafa server and no telemetry.
+Everything below happens on this computer unless a line says that something
+goes to a public website. That happens only when the learner presses a
+button or types an internet command.
 
-The prepared supportive-chat messages and optional empathetic AI prompt support
-conversation. They do not establish a human relationship, clinical expertise or
-knowledge of everything on the internet. Source links identify where information
-came from; users can compare independent references.
+## Stays on this computer
+
+- **Search** of lessons, the Timor-Leste atlas, Edukasaun OS guides, saved
+  material and file names. Questions typed in the search box are never sent
+  anywhere by themselves.
+- **Files**: only the folders the learner chose are searched. The search uses
+  file names; documents are read locally (bounded size; PDFs in a
+  resource-limited worker). File contents are never sent to the internet.
+  Symbolic links, FIFOs and files outside the chosen folders are refused.
+- **Practice results, tasks, timetable, reminders, favourites and recent
+  material**: JSON files in `~/.local/share/lafa` (written atomically, 0600).
+  Practice results are personal progress, not an official report.
+- **Settings**: `~/.config/lafa/settings.json` (0600). When upgrading from
+  0.1.x, a one-time backup with the old AI fields is written next to it
+  (`settings.json.0.1-backup`, 0600). Lafa never reads the system keyring.
+  Keys stored there by 0.1.x stay until the user removes them.
+- **Read aloud** uses local espeak-ng. There is no microphone, camera, global
+  keyboard hook or always-on listening.
+- **Actions** ("buka kalkulator", "loke kelas") open installed programs or
+  Lafa pages from a fixed list, without a shell. Nothing typed is executed.
+
+## Goes to a public website (only when asked)
+
+- **Search internet sources** and `/ask`: the topic words (one line, at most
+  300 characters) go to Wikipedia in the interface language. Personal
+  sentences are not sent automatically, because nothing is.
+- **Save for offline**: the chosen public page is fetched once and stored in
+  `~/.cache/lafa/memory` (0600). Only front pages and feeds of the listed
+  sources are read; robots.txt is respected. Logins, Facebook pages and whole
+  sites are never read.
+- **Source status** (Library → Internet sources): a HEAD request to the shown
+  sources, at most once a day, or on *Check now*.
+- **Weather** sends the chosen city or coordinates to Open-Meteo. Dili is the
+  default, and device geolocation is not used.
+- **News** (Timor-Leste and world) retrieves RSS headline metadata. Full
+  stories open on the publisher's website.
+- **Content catalogue** (when "update sources" is on, at most once per chosen
+  interval, default daily): the validated data file `lafa/assets/catalog.json`
+  is downloaded from the Lafa repository on GitHub. It is data only (links,
+  tips, cards) and never code. Program updates come from APT / EUS.
+- **Optional Timor-Leste news updates** for the Virtual Assistant are off by
+  default.
+- **Connection check**: a request to Wikipedia, Open-Meteo or
+  timor-leste.gov.tl, only to know whether internet sources can be offered.
+- **External sites and optional AI websites** (ChatGPT, Claude, Gemini) open
+  in the user's own browser. Lafa does not sign in, read accounts, cookies,
+  passwords or sessions, or send questions or documents there.
+
+## Virtual Assistant
+
+- It is off until it is switched on in Eduka-Settings → Lafa-Configuration.
+  Lafa Desktop never switches it on.
+- It observes only events inside Lafa's own windows. Fullscreen detection on
+  X11 reads the active window's fullscreen state with `xprop`.
+- Quiet mode, reduce motion and the hourly message limit are local preferences.
+
+## Other
+
+- Local IPC accepts five fixed same-user launch roles. It cannot submit a
+  command, URL, message or file name. There is no network listener.
+- `scripts/check-system.py` makes no public requests unless `--network` is
+  given. Its report contains no folder paths or personal data.
+
+Source links show where information came from. A reachable website does not
+prove that its content is correct. Learners can compare independent
+references.

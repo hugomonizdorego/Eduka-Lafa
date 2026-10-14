@@ -1,25 +1,34 @@
-# Validation — LAFA 0.1.4 Alpha
+# Validation — Lafa 0.2.0 Alpha
 
-Checks run on 6 October 2026 in a headless Linux container (Ubuntu 24.04 with
+Checks run on 14 October 2026 in a headless Linux container (Ubuntu 24.04,
 Qt offscreen). Not yet tested on Edukasaun OS hardware.
 
 | Check | Result |
 |---|---|
-| Automated tests, **PyQt5** (Qt 5.15, Edukasaun OS stack) | **214 passed**, 0 skipped; see `test-results.txt` |
-| Automated tests, **PySide6** (Qt 6.11) | **214 passed**, 0 skipped |
-| Debian package | `sh tools/build-deb.sh` → `lafa_0.1.4_all.deb` (13.5 MB); `apt install ./lafa_0.1.4_all.deb` resolved python3-pyqt5, libqt5svg5, python3-keyring, python3-secretstorage, fonts-noto-color-emoji and libglib2.0-bin from the archive; postinst ran without starting a GUI |
-| Installed package smoke test | `/usr/bin/lafa --help`; LAFA Desktop built from `/usr/lib/lafa` with the system PyQt5 (15 pages, 3 outfits, exam hall, Timor-Leste atlas) |
-| Version | `tools/release.py check`: `lafa/__init__.py`, `packaging/DEBIAN/control` and `CHANGELOG.md` agree on 0.1.4 |
-| Eduka-Settings integration | Plugin-pages patch applied to a copy of Eduka-Desktop 0.9.24; the real `eduka-settings` lists Lafa-Configuration under APPS, styles it with Eduka's QSS and live-applies (screenshots 18–19) |
-| Eduka compatibility (fixtures) | Language (Tetun from Eduka-Settings), panel geometry (floating/full/short), dark theme and accent, agenda format, notification arguments, XWayland preference |
-| Screenshots | 31 captures regenerated with PyQt5 and Papirus icons, visually inspected |
-| **Not yet tested** | Online atlas refresh against the real Wikipedia (the build sandbox blocks it; tested with recorded MediaWiki answers); Ubuntu container, not Debian 13 itself (same package names); real X11/Wayland walking and hover on a running Eduka-Panel; real desktop tools from the IT help desk; real Ollama or AI accounts; microphone and espeak; downloading the online catalog from `main` (the file is on this branch until merged); `system-check.json` is still the prototype 0.4 report |
+| Automated tests, **PyQt5** (Qt 5.15, Edukasaun OS stack) | **236 passed**, 0 skipped (+10 subtests); see `test-results.txt` |
+| Automated tests, **PySide6** (Qt 6) | **236 passed**, 0 skipped (+10 subtests) |
+| Offline-first regressions (`tests/test_offline_first.py` and others) | No network for local search, file search/read, calculator, reminders (network, `urlopen` and sockets patched to fail); local search works offline and online without a key; internet failure keeps local results without pop-ups; reminders ring offline, persist across restart, missed ones fire once; upgrade from 0.1.x keeps settings, tasks, results and reminders, backs up AI fields once, never touches the keyring; no AI client import; no AI claims in the UI in four languages |
+| Practice | Unique questions per session; limited bank announced; retry of mistakes; "Average score" labelled correctly |
+| Interface | Six sections and old routes; 1024×600 and 150 % text (layout hints fit); `Alt+1…6` and `Ctrl+F` without duplicates after rebuilds; four languages complete |
+| Virtual Assistant | Quiet mode, hourly limit, fullscreen pause flag, reduce motion, entertainment excluded by default, quick actions offline, Lafa Desktop never switches it on |
+| Sources | Status ok / not found / restricted / unknown; 24 h cache; *Check now*; metadata for every source; timor-leste.gov.tl and moe.gov.tl present; community wikis separate |
+| Debian package | `sh tools/build-deb.sh` → `lafa_0.2.0_all.deb` (13.7 MB). `apt install` resolved the dependencies (no keyring, no WebEngine); postinst ran without a GUI; see `package-smoke.txt` |
+| Installed package smoke test | Lafa 0.2.0 from `/usr/lib/lafa` with the system PyQt5: six sections, compact sidebar at 1024×600, local search modes (answer, files, guide, calc) |
+| Version | `tools/release.py check`: `lafa/__init__.py`, `packaging/DEBIAN/control` and `CHANGELOG.md` agree on 0.2.0 |
+| Lessons | `tools/check-curriculum.py`: all 18 files valid (IDs, metadata, four languages) |
+| Eduka-Settings integration | Real eduka-settings 0.9.24 with the plugin-pages patch renders Lafa-Configuration (screenshots 32–33) |
+| Screenshots | 51 captures regenerated with PyQt5 and Papirus icons, visually inspected |
+| **Not yet tested** | Wayland (untested by design: report only); real X11 walking, hover and fullscreen detection on a running Eduka-Panel (`xprop` needed); live websites (Wikipedia, RSS, Open-Meteo, source status) — tested with recorded data; Debian 13 itself (Ubuntu container, same package names); espeak-ng audio; real desktop tools from OS help |
 
 The Tuxedo, Casual and extra Tais Mane poses are generated from the original
 illustrations (`tools/make-outfits.py`). They are recognisable, but a
 professional illustrator should review or replace them.
 
-## Prototype 0.4 results (history, to be re-checked)
+## 0.1.4 and earlier
+
+0.1.4 passed 214 tests on PyQt5 and PySide6 (6 October 2026).
+
+## Prototype 0.4 results (history)
 
 Completed on 6 October 2026 in a Linux headless environment.
 

@@ -1,95 +1,74 @@
-# Screenshot review — LAFA 0.1.4 Alpha
+# Screenshot review — Lafa 0.2.0 Alpha
 
-Regenerate after every UI change so developers can review and keep improving:
+Regenerate after every UI change:
 
 ```bash
 QT_QPA_PLATFORM=offscreen LAFA_QT=pyqt5 python3 scripts/capture-screenshots.py
-# with the real Eduka-Settings (captures 18–19):
+# with the real Eduka-Settings (captures 32–33):
 EDUKA_DESKTOP_SRC=/path/to/Eduka-Desktop QT_QPA_PLATFORM=offscreen LAFA_QT=pyqt5 python3 scripts/capture-screenshots.py
 ```
 
-Captured with **PyQt5 / Qt 5.15 and the Papirus icon theme**, the same stack
-as Edukasaun OS. Review mode makes no internet/API calls; preferences and
-homework go to a temporary folder. Weather, headlines and sources are labelled
-`SAMPLE`. Greetings are fixed to "morning".
+Captured with **PyQt5 / Qt 5.15** and the Papirus icon theme, the same stack
+as Edukasaun OS, in review mode.
+
+- No internet requests are made.
+- Preferences, tasks and results go to a temporary folder.
+- Internet sources, weather and headlines are labelled `SAMPLE`.
+- Greetings are fixed to "morning" (Home captures may show the afternoon
+  greeting when they are taken after a page change).
+- Captures 40–46 show actual Lafa widgets on an **illustrated** desktop, not
+  Edukasaun OS.
 
 | # | File | Content |
 |---|---|---|
-| 01 | `01-home.png` | Home (school lobby): greeting, quick ask, Virtual Assistant toggle, feature cards, today's classes, homework due, tip, system check |
-| 02 | `02-teachers-mathematics.png` | Mathematics teacher: generated exercises with levels, score, ask the teacher, free resources |
-| 03 | `03-teachers-languages.png` | Languages teacher: vocabulary cards between Tetun, Portuguese, English and Indonesian |
-| 04 | `04-teachers-history-quiz.png` | History & Geography quiz about Timor-Leste |
-| 05 | `05-homework.png` | Homework planner (optionally added to the Eduka-Panel calendar) |
-| 06 | `06-timetable.png` | Weekly timetable |
-| 07 | `07-conversation.png` | Chat: Edukasaun OS question answered by the offline guide, `/calc` |
-| 08 | `08-it-help-desk.png` | IT help desk (Edukasaun OS help) with allowlisted tool launcher and system check |
-| 09 | `09-library.png` | Library (public sources, learning sites) |
-| 10 | `10-computer-lab.png` | Computer lab (bounded Python lessons) |
-| 11 | `11-notice-board.png` | Notice board: weather and world headlines (sample) |
-| 12 | `12-timor-leste.png` | Timor-Leste · news and culture tab (sample) |
-| 13 | `13-my-files.png` | File search in temporary sample folders |
-| 14 | `14-ai-services.png` | AI services opened in the browser |
-| 15 | `15-offline.png` | Offline state |
-| 16 | `16-lafa-settings-virtual-assistant.png` | LAFA's own settings window (fallback) · Virtual Assistant tuning |
-| 17 | `17-lafa-settings-desktop.png` | LAFA's own settings window · LAFA Desktop (start page, theme, notifications, updates) |
-| 18 | `18-eduka-settings-lafa-configuration.png` | **Real Eduka-Settings 0.9.24 with Lafa-Configuration** (APPS group) |
-| 19 | `19-eduka-settings-lafa-configuration-2.png` | Lafa-Configuration, personality and LAFA Desktop cards |
-| 20 | `20-virtual-walking-on-panel.png` | LAFA walking on a floating Eduka-Panel |
-| 21 | `21-virtual-hover-question.png` | Cursor touches LAFA: "Can I help?" while studying |
-| 22 | `22-virtual-tuxedo-party.png` | Tuxedo outfit at a party |
-| 23 | `23-virtual-casual-beach.png` | Casual outfit at the beach |
-| 24 | `24-virtual-chat-bubble.png` | Click LAFA: chat bubble (OS help, weather, news, recommendation) |
-| 25 | `25-outfits.png` | The three outfits: Tais Mane, Tuxedo, Casual |
-| 26 | `26-formal-activities.png` | Tuxedo activities with scenes |
-| 27 | `27-casual-activities.png` | Casual activities with scenes |
-| 28 | `28-tais-mane-activities.png` | Tais Mane activities, including Tebe-tebe and Bidu |
-| 29 | `29-home-tetun.png` | Home in Tetun |
-| 30 | `30-teachers-tetun.png` | Arts & Culture teacher in Tetun |
-| 31 | `31-home-eduka-dark-theme.png` | LAFA following the Edukasaun-Dark theme and accent colour |
-| 32 | `32-classroom.png` | Classroom: lesson notes and a task (Science · coral reefs of Timor-Leste) |
-| 33 | `33-exam-hall.png` | Exam hall: 20-question exam with the timer |
-| 34 | `34-exam-result.png` | Test result with grade and review of mistakes |
-| 35 | `35-report-card.png` | Report card: averages, best scores, grades and history |
-| 36 | `36-timor-leste-atlas.png` | Timor-Leste atlas: category chips, tile map, inspector (Earth & island formation) |
-| 37 | `37-timor-leste-presidents.png` | Presidents and Prime Ministers |
-| 38 | `38-home-roles.png` | Lobby: word of the day, LAFA says, today in Timor-Leste, LAFA's roles (magician) |
-| 39 | `39-mind-reader.png` | Magician's mind reader: binary card |
-| 40 | `40-mind-reader-result.png` | Mind reader result and the maths behind it |
-| 41 | `41-lafa-roles.png` | LAFA's roles in every outfit |
-| 42 | `42-tuxedo-all-poses.png` | Tuxedo on every pose |
-| 43 | `43-casual-all-poses.png` | Casual on every pose: shirt, shorts, socks and sneakers |
-| 44 | `44-timor-leste-atauro.png` | Ataúro, Jaco and Oé-Cusse |
-| 45 | `45-timor-leste-history.png` | History: restoration of independence (2002) |
-| 46 | `46-timor-leste-municipalities.png` | The 14 municipalities with their main towns and history |
-| 47 | `47-timor-leste-economy.png` | Economy, exports and imports |
-| 48 | `48-classroom-civics.png` | New subject: Civics & Citizenship |
-| 49 | `49-timor-atlas-dark-theme.png` | The atlas in Eduka's dark theme (deep teal, never black) |
-| 50 | `50-library-learning-sources.png` | Library: 130 learning and Timor-Leste media sources as cards, with categories, search and hourly status |
-| 51 | `51-library-language-sites.png` | Learning websites for world languages |
-| 52 | `52-language-school-japanese.png` | Language school: Japanese with pronunciation and quiz |
-| 53 | `53-language-school-tetun.png` | Language school: Tetun |
-| 54 | `54-offline-answer.png` | Offline mode: LAFA answers from its own atlas |
-| 55 | `55-virtual-recommendation.png` | Click LAFA: free-software tip and a learning website |
-| 56 | `56-library-timor-leste-media.png` | Library: Timor-Leste news portals and agencies (one of six Timor-Leste media categories) |
-| 57 | `57-lafa-search.png` | LAFA Search: Google-like results from LAFA's memory, with the source of every result |
-| 58 | `58-ai-hub.png` | AI Hub: sign in to OpenRouter, Gemini or the LAFA model, and AI websites in signed-in tabs |
-| 59 | `59-classroom-every-age.png` | Classroom for every age: atoms and nuclear science, ages 15–18 |
-| 60 | `60-classroom-age-5.png` | Classroom for every age: the Sun, the Moon and the stars, ages 5–7 |
-| 61 | `61-virtual-human-movement.png` | LAFA's human-like movement: a walk cycle and a jump |
-
-Captures 20–24 are **compositions of actual LAFA widget pixels on a painted
-desktop and panel**, not screenshots of Edukasaun OS. Captures 18–19 run the
-real `eduka-settings` from an Eduka-Desktop checkout with the plugin-pages
-patch applied in a temporary copy (nothing installed). Without
-`EDUKA_DESKTOP_SRC`, capture 18 shows the small integration test host instead.
-The Tuxedo, Casual and extra Tais Mane poses are generated from the original
-art by `tools/make-outfits.py`; hand-drawn sheets can replace them.
-
-![Home](screenshots/01-home.png)
-![Lafa-Configuration in Eduka-Settings](screenshots/18-eduka-settings-lafa-configuration.png)
-![Learning sources](screenshots/50-library-learning-sources.png)
-![Outfits](screenshots/25-outfits.png)
-![Exam hall](screenshots/33-exam-hall.png)
-![Timor-Leste atlas](screenshots/36-timor-leste-atlas.png)
-![Casual on every pose](screenshots/43-casual-all-poses.png)
-![Teachers](screenshots/02-teachers-mathematics.png)
+| 01 | `01-home.png` | Home: greeting, search, four quick accesses, last material, next activities |
+| 02 | `02-home-1024x600.png` | Home at 1024×600: compact icon sidebar, page scrolls |
+| 03 | `03-search-local-material.png` | “What is photosynthesis?” → *Local material* with its lesson reference |
+| 04 | `04-search-with-internet-source.png` | After *Search internet sources*: a separate *Internet source* result (sample) |
+| 05 | `05-search-files.png` | “Find file math homework” → file-name search in the chosen folders |
+| 06 | `06-search-os-guide.png` | “How do I change the wallpaper?” → the local Edukasaun OS guide |
+| 07 | `07-search-nothing-found.png` | Nothing found: said honestly, with options; nothing sent automatically |
+| 08 | `08-learn-lessons.png` | Learn → Lessons (school subjects), favourite star |
+| 09 | `09-learn-every-age.png` | Lessons for every age (15–18, atoms) |
+| 10 | `10-learn-subject-guide.png` | Subject guide (former “teachers”): practice and local answers |
+| 11 | `11-practice-explanation.png` | Latihan: wrong answer with the lesson explanation and related lesson |
+| 12 | `12-practice-result.png` | Practice result and *Practise the wrong answers again* |
+| 13 | `13-learn-languages.png` | First phrases in many languages (not full courses) |
+| 14 | `14-learn-programming.png` | Programming examples in the bounded Python interpreter |
+| 15 | `15-library-my-files.png` | Library → My files |
+| 16 | `16-library-sources.png` | Library → Internet sources with metadata and status |
+| 17 | `17-library-timor-leste-government.png` | Official sources: Governo de Timor-Leste, Ministério da Educação |
+| 18 | `18-library-external-sites.png` | External sites: reference works, Kiwix, optional AI websites (open in browser), community wikis |
+| 19 | `19-timor-leste-history.png` | Timor-Leste atlas: restoration of independence |
+| 20 | `20-timor-leste-presidents.png` | Timor-Leste atlas: Presidents and Prime Ministers |
+| 21 | `21-timor-leste-news.png` | Timor-Leste news (sample) with publisher and dates |
+| 22 | `22-activities-tasks.png` | My activities → Tasks and timetable |
+| 23 | `23-activities-reminders-focus.png` | Reminders (date and time, quick +5/15/30/60) and the session focus timer |
+| 24 | `24-activities-practice-results.png` | Hasil Latihan: personal progress, average score (not an official report) |
+| 25 | `25-os-help-guides.png` | OS help → Guides with installed tools |
+| 26 | `26-os-help-accessibility.png` | OS help → Accessibility |
+| 27 | `27-offline-home.png` | Offline: calm “Local features are available” badge, internet button disabled |
+| 28 | `28-offline-search.png` | Offline search still answers from local material |
+| 29 | `29-about.png` | About: version, what Lafa is and is not |
+| 30 | `30-lafa-settings-virtual-assistant.png` | Settings → Virtual Assistant: quiet mode, reduce motion, entertainment, messages per hour |
+| 31 | `31-lafa-settings-desktop.png` | Settings → Lafa Desktop |
+| 32 | `32-eduka-settings-lafa-configuration.png` | Eduka-Settings → Lafa-Configuration (real Eduka-Settings) |
+| 33 | `33-eduka-settings-lafa-configuration-2.png` | Lafa-Configuration, lower part |
+| 40 | `40-virtual-walking-on-panel.png` | Virtual Assistant on the Eduka-Panel (illustrated desktop) |
+| 41 | `41-virtual-hover-question.png` | Hover question (off in quiet mode) |
+| 42 | `42-virtual-tuxedo-party.png` | Tuxedo outfit |
+| 43 | `43-virtual-casual-beach.png` | Casual outfit |
+| 44 | `44-virtual-bubble.png` | Bubble: continue learning, tasks, focus, OS help — offline |
+| 45 | `45-virtual-recommendation.png` | Free-software recommendation |
+| 46 | `46-virtual-human-movement.png` | Movement frames (off with reduce motion) |
+| 50 | `50-outfits.png` | Three outfits |
+| 51 | `51-formal-activities.png` | Tuxedo activities |
+| 52 | `52-casual-activities.png` | Casual activities |
+| 53 | `53-lafa-roles.png` | Roles — optional entertainment |
+| 54 | `54-tuxedo-all-poses.png` | Tuxedo on every pose |
+| 55 | `55-casual-all-poses.png` | Casual on every pose |
+| 56 | `56-tais-mane-activities.png` | Tais Mane activities |
+| 60 | `60-home-tetun.png` | Home in Tetun |
+| 61 | `61-learn-tetun.png` | Learn in Tetun |
+| 62 | `62-home-eduka-dark-theme.png` | Home with the Edukasaun-Dark theme |
+| 63 | `63-timor-atlas-dark-theme.png` | Timor-Leste atlas, dark theme |

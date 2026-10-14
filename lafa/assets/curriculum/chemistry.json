@@ -7,9 +7,25 @@
   "pt": "Química",
   "tet": "Kímika"
  },
+ "meta": {
+  "version": 1,
+  "license": "CC BY-SA 4.0",
+  "languages": [
+   "en",
+   "id",
+   "pt",
+   "tet"
+  ],
+  "source": "Written by the LAFA team for Edukasaun OS (general knowledge, checked against standard references)",
+  "reviewed": "2026-10-13",
+  "review_status": "LAFA team review; not yet reviewed by the Ministry of Education (not a national curriculum)"
+ },
  "lessons": [
   {
+   "id": "chemistry.early",
    "level": "early",
+   "difficulty": 1,
+   "topic": "chemistry",
    "title": {
     "en": "Ice, water and steam",
     "id": "Es, air, dan uap",
@@ -148,7 +164,10 @@
    ]
   },
   {
+   "id": "chemistry.primary",
    "level": "primary",
+   "difficulty": 2,
+   "topic": "chemistry",
    "title": {
     "en": "Mixtures and clean water",
     "id": "Campuran dan air bersih",
@@ -293,7 +312,10 @@
    ]
   },
   {
+   "id": "chemistry.middle",
    "level": "middle",
+   "difficulty": 3,
+   "topic": "chemistry",
    "title": {
     "en": "Atoms, elements and pH",
     "id": "Atom, unsur, dan pH",
@@ -438,7 +460,10 @@
    ]
   },
   {
+   "id": "chemistry.secondary",
    "level": "secondary",
+   "difficulty": 4,
+   "topic": "chemistry",
    "title": {
     "en": "Chemical reactions and the mole",
     "id": "Reaksi kimia dan mol",
@@ -583,7 +608,10 @@
    ]
   },
   {
+   "id": "chemistry.university",
    "level": "university",
+   "difficulty": 5,
+   "topic": "chemistry",
    "title": {
     "en": "Bonding, equilibrium and free energy",
     "id": "Ikatan, kesetimbangan, dan energi bebas",
@@ -728,7 +756,10 @@
    ]
   },
   {
+   "id": "chemistry.adult",
    "level": "adult",
+   "difficulty": 6,
+   "topic": "chemistry",
    "title": {
     "en": "Safe chemicals at home and on the farm",
     "id": "Bahan kimia aman di rumah dan di kebun",
@@ -873,7 +904,10 @@
    ]
   },
   {
+   "id": "chemistry.senior",
    "level": "senior",
+   "difficulty": 7,
+   "topic": "chemistry",
    "title": {
     "en": "Kitchen chemistry and a healthy home",
     "id": "Kimia dapur dan rumah yang sehat",

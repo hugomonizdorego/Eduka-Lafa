@@ -7,9 +7,25 @@
   "pt": "Agricultura e alimentação",
   "tet": "Agrikultura no ai-han"
  },
+ "meta": {
+  "version": 1,
+  "license": "CC BY-SA 4.0",
+  "languages": [
+   "en",
+   "id",
+   "pt",
+   "tet"
+  ],
+  "source": "Written by the LAFA team for Edukasaun OS (general knowledge, checked against standard references)",
+  "reviewed": "2026-10-13",
+  "review_status": "LAFA team review; not yet reviewed by the Ministry of Education (not a national curriculum)"
+ },
  "lessons": [
   {
+   "id": "agriculture.early",
    "level": "early",
+   "difficulty": 1,
+   "topic": "agriculture",
    "title": {
     "en": "Seeds grow into plants",
     "id": "Biji tumbuh menjadi tanaman",
@@ -154,7 +170,10 @@
    ]
   },
   {
+   "id": "agriculture.primary",
    "level": "primary",
+   "difficulty": 2,
+   "topic": "agriculture",
    "title": {
     "en": "Food from Timor-Leste",
     "id": "Pangan dari Timor-Leste",
@@ -299,7 +318,10 @@
    ]
   },
   {
+   "id": "agriculture.middle",
    "level": "middle",
+   "difficulty": 3,
+   "topic": "agriculture",
    "title": {
     "en": "Soil, plants and photosynthesis",
     "id": "Tanah, tanaman, dan fotosintesis",
@@ -438,7 +460,10 @@
    ]
   },
   {
+   "id": "agriculture.secondary",
    "level": "secondary",
+   "difficulty": 4,
+   "topic": "agriculture",
    "title": {
     "en": "Water, slopes and crop yield",
     "id": "Air, lereng, dan hasil panen",
@@ -577,7 +602,10 @@
    ]
   },
   {
+   "id": "agriculture.university",
    "level": "university",
+   "difficulty": 5,
+   "topic": "agriculture",
    "title": {
     "en": "Food security and sustainable systems",
     "id": "Ketahanan pangan dan sistem berkelanjutan",
@@ -716,7 +744,10 @@
    ]
   },
   {
+   "id": "agriculture.adult",
    "level": "adult",
+   "difficulty": 6,
+   "topic": "agriculture",
    "title": {
     "en": "Running a farm and storing food",
     "id": "Mengelola usaha tani dan menyimpan pangan",
@@ -861,7 +892,10 @@
    ]
   },
   {
+   "id": "agriculture.senior",
    "level": "senior",
+   "difficulty": 7,
+   "topic": "agriculture",
    "title": {
     "en": "Healthy food and garden wisdom",
     "id": "Makanan sehat dan kearifan berkebun",

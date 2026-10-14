@@ -7,9 +7,25 @@
   "pt": "Biologia",
   "tet": "Biolojia"
  },
+ "meta": {
+  "version": 1,
+  "license": "CC BY-SA 4.0",
+  "languages": [
+   "en",
+   "id",
+   "pt",
+   "tet"
+  ],
+  "source": "Written by the LAFA team for Edukasaun OS (general knowledge, checked against standard references)",
+  "reviewed": "2026-10-13",
+  "review_status": "LAFA team review; not yet reviewed by the Ministry of Education (not a national curriculum)"
+ },
  "lessons": [
   {
+   "id": "biology.early",
    "level": "early",
+   "difficulty": 1,
+   "topic": "biology",
    "title": {
     "en": "Living and non-living things",
     "id": "Makhluk hidup dan benda mati",
@@ -148,7 +164,10 @@
    ]
   },
   {
+   "id": "biology.primary",
    "level": "primary",
+   "difficulty": 2,
+   "topic": "biology",
    "title": {
     "en": "Parts of a plant",
     "id": "Bagian-bagian tumbuhan",
@@ -287,7 +306,10 @@
    ]
   },
   {
+   "id": "biology.middle",
    "level": "middle",
+   "difficulty": 3,
+   "topic": "biology",
    "title": {
     "en": "Cells and photosynthesis",
     "id": "Sel dan fotosintesis",
@@ -426,7 +448,10 @@
    ]
   },
   {
+   "id": "biology.secondary",
    "level": "secondary",
+   "difficulty": 4,
+   "topic": "biology",
    "title": {
     "en": "Genes and inheritance",
     "id": "Gen dan pewarisan sifat",
@@ -565,7 +590,10 @@
    ]
   },
   {
+   "id": "biology.university",
    "level": "university",
+   "difficulty": 5,
+   "topic": "biology",
    "title": {
     "en": "Evolution by natural selection",
     "id": "Evolusi melalui seleksi alam",
@@ -704,7 +732,10 @@
    ]
   },
   {
+   "id": "biology.adult",
    "level": "adult",
+   "difficulty": 6,
+   "topic": "biology",
    "title": {
     "en": "Microbes at home and at work",
     "id": "Mikroba di rumah dan di tempat kerja",
@@ -843,7 +874,10 @@
    ]
   },
   {
+   "id": "biology.senior",
    "level": "senior",
+   "difficulty": 7,
+   "topic": "biology",
    "title": {
     "en": "A strong body and a living garden",
     "id": "Tubuh yang kuat dan kebun yang hidup",
