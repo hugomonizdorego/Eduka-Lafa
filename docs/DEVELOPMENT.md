@@ -8,7 +8,7 @@ English; the interface is translated (English, Indonesian, Portuguese, Tetun).
 
 ```bash
 # Same stack as Edukasaun OS (Debian 13): system PyQt5
-sudo apt install python3-pyqt5 libqt5svg5 python3-keyring python3-pytest papirus-icon-theme fonts-noto-color-emoji
+sudo apt install python3-pyqt5 libqt5svg5 python3-pytest papirus-icon-theme fonts-noto-color-emoji
 LAFA_QT=pyqt5 python3 -m lafa.app --review      # or: python3 -c "from lafa.app import main; main()" --review
 
 # Or PySide6 in a virtual environment
@@ -47,16 +47,24 @@ screenshots (downloadable as workflow artifacts).
 | Eduka-Desktop compatibility | `lafa/eduka.py` (language, panel, theme, notifications, agenda) |
 | Virtual Assistant | `lafa/mascot.py`, `lafa/personality.py`, `lafa/outfits.py` |
 | Outfit art | `tools/make-outfits.py` → `lafa/assets/lafa-{tuxedo,casual,tais}.png` |
-| LAFA Desktop (school) | `lafa/app.py`, `lafa/school.py`, `lafa/classroom.py` (lessons, exams, report card), `lafa/osguide.py`, `lafa/learning.py` |
+| Lafa Desktop | `lafa/app.py`, `lafa/school.py`, `lafa/classroom.py` (lessons, practice, results), `lafa/osguide.py`, `lafa/learning.py` |
 | Timor-Leste content | `lafa/timorleste.py` (timeline, holidays), `lafa/timor_atlas.py` (atlas topics, leaders, municipalities), `lafa/livefacts.py` (online refresh) |
 | Learning sources | `lafa/sources.py` (from the Edukasaun OS directory; add sites here or in the online catalog) |
+| Lessons for ages 5–100 | `lafa/assets/curriculum/<subject>.json` (run `python3 tools/check-curriculum.py`), loader `lafa/curriculum.py` |
+| Local search | `lafa/search.py` (understand a request, label results, answer / choices / none), index in `lafa/memory.py`; UI `build_search_panel` / `show_outcome` in `lafa/app.py` |
+| Sections and routes | `PAGES`, `TABS`, `ROUTES` at the top of `lafa/app.py` (old page names → section and tab) |
+| Reminders, progress | `lafa/reminders.py` (saved, fire offline, missed once), `lafa/progress.py` (last material, favourites) |
+| Source metadata | `lafa/source_meta.py` (languages, topics, level, access, reason, academic) |
+| Offline guarantees | `tests/test_offline_first.py`, [OFFLINE.md](OFFLINE.md) |
+| Agent actions | `lafa/actions.py` (apps allowlist `APPS`, page words `PAGES`) |
+| Character movement | `lafa/motion.py`, painting in `Character.paintEvent` (`lafa/mascot.py`) |
 | Offline mode & language school | `lafa/offline.py`, `lafa/recommendations.py`, `lafa/languages.py` |
 | Look and feel | `lafa/ui_kit.py` (palette, tiles, ring) and `STYLE_TEMPLATE` in `lafa/app.py` — colours come from the Eduka theme |
 | LAFA's roles | `lafa/roles.py`, role texts in `lafa/personality.py`, scenes in `lafa/outfits.py` |
 | Lafa-Configuration (Eduka-Settings) | `integration/eduka_lafa_settings.py`, `integration/lafa-page.json` |
 | Eduka-Settings plugin pages | `integration/eduka-settings-plugin-pages.patch` (apply to Eduka-Desktop) |
 | Online source catalog | `lafa/assets/catalog.json`, `lafa/updates.py` |
-| Translations | `lafa/i18n.py` (+ texts in `personality.py`, `school.py`, `osguide.py`) |
+| Translations | `lafa/i18n.py`, 0.2.0 wording in `lafa/i18n_v2.py` (`key | en | id | pt | tet` rows; four languages required) (+ texts in `personality.py`, `school.py`, `osguide.py`) |
 | Debian package | `packaging/`, `tools/build-deb.sh` |
 
 ## Improving the character art
@@ -85,8 +93,8 @@ git commit -am "Release X.Y.Z" && git tag vX.Y.Z && git push --tags
 ```
 
 The release workflow builds the `.deb` and attaches it to a GitHub release.
-Installed LAFA notices the new release and tells the user to update with the
-Eduka Update System or the software centre.
+Users receive the new version through APT / the Eduka Update Service; Lafa
+itself never checks for or installs program updates.
 
 ## Installing on Edukasaun OS (Cubic or a running system)
 

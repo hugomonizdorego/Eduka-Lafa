@@ -1,0 +1,1055 @@
+{
+ "subject": "physics",
+ "icon": "⚛️",
+ "name": {
+  "en": "Physics",
+  "id": "Fisika",
+  "pt": "Física",
+  "tet": "Fízika"
+ },
+ "meta": {
+  "version": 1,
+  "license": "CC BY-SA 4.0",
+  "languages": [
+   "en",
+   "id",
+   "pt",
+   "tet"
+  ],
+  "source": "Written by the LAFA team for Edukasaun OS (general knowledge, checked against standard references)",
+  "reviewed": "2026-10-13",
+  "review_status": "LAFA team review; not yet reviewed by the Ministry of Education (not a national curriculum)"
+ },
+ "lessons": [
+  {
+   "id": "physics.early",
+   "level": "early",
+   "difficulty": 1,
+   "topic": "physics",
+   "title": {
+    "en": "Push, pull and fall",
+    "id": "Dorong, tarik, dan jatuh",
+    "pt": "Empurrar, puxar e cair",
+    "tet": "Dudu, dada no monu"
+   },
+   "points": [
+    {
+     "en": "A push moves things away from you. A pull brings them close.",
+     "id": "Dorongan menjauhkan benda darimu. Tarikan mendekatkannya.",
+     "pt": "Empurrar afasta as coisas de ti. Puxar aproxima-as.",
+     "tet": "Dudu halo sasán ba dook husi ita. Dada halo sasán mai besik."
+    },
+    {
+     "en": "When we drop a ball, it falls down to the ground.",
+     "id": "Saat kita menjatuhkan bola, bola jatuh ke tanah.",
+     "pt": "Quando largamos uma bola, ela cai para o chão.",
+     "tet": "Bainhira ita husik bola, bola monu ba rai."
+    },
+    {
+     "en": "A ball rolls far on a smooth floor. On sand it stops quickly.",
+     "id": "Bola menggelinding jauh di lantai yang licin. Di pasir bola cepat berhenti.",
+     "pt": "Uma bola rola para longe num chão liso. Na areia para depressa.",
+     "tet": "Bola halai dook iha sorin-ráan ne'ebé mamar. Iha rai-henek nia para lalais."
+    }
+   ],
+   "task": {
+    "en": "Push and pull a toy car. Which way does it go each time?",
+    "id": "Dorong dan tarik mobil mainan. Ke mana mobil itu bergerak?",
+    "pt": "Empurra e puxa um carrinho de brincar. Para onde vai de cada vez?",
+    "tet": "Dudu no dada karreta-halimar ida. Nia lao ba ne'ebé?"
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "You drop a ball. Where does it go?",
+      "id": "Kamu menjatuhkan bola. Ke mana bola itu?",
+      "pt": "Largas uma bola. Para onde vai?",
+      "tet": "Ita husik bola ida. Nia ba ne'ebé?"
+     },
+     "answer": {
+      "en": "Down to the ground",
+      "id": "Ke bawah, ke tanah",
+      "pt": "Para baixo, para o chão",
+      "tet": "Ba okos, ba rai"
+     },
+     "wrong": [
+      {
+       "en": "Up to the sky",
+       "id": "Ke atas, ke langit",
+       "pt": "Para cima, para o céu",
+       "tet": "Ba leten, ba lalehan"
+      },
+      {
+       "en": "It stays in the air",
+       "id": "Tetap di udara",
+       "pt": "Fica no ar",
+       "tet": "Hela iha anin"
+      },
+      {
+       "en": "It goes sideways",
+       "id": "Ke samping",
+       "pt": "Vai para o lado",
+       "tet": "Ba sorin"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "You pull a box. Where does it move?",
+      "id": "Kamu menarik kotak. Ke mana kotak bergerak?",
+      "pt": "Puxas uma caixa. Para onde se move?",
+      "tet": "Ita dada kaixa ida. Nia muda ba ne'ebé?"
+     },
+     "answer": {
+      "en": "Towards you",
+      "id": "Ke arahmu",
+      "pt": "Na tua direção",
+      "tet": "Mai besik ita"
+     },
+     "wrong": [
+      {
+       "en": "Away from you",
+       "id": "Menjauh darimu",
+       "pt": "Para longe de ti",
+       "tet": "Ba dook husi ita"
+      },
+      {
+       "en": "Up into the sky",
+       "id": "Naik ke langit",
+       "pt": "Para o céu",
+       "tet": "Sa'e ba lalehan"
+      },
+      {
+       "en": "It does not move at all",
+       "id": "Tidak bergerak sama sekali",
+       "pt": "Não se move nada",
+       "tet": "La muda kedas"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "Where does a ball roll the farthest?",
+      "id": "Di mana bola menggelinding paling jauh?",
+      "pt": "Onde é que uma bola rola mais longe?",
+      "tet": "Bola halai dook liu iha ne'ebé?"
+     },
+     "answer": {
+      "en": "On a smooth floor",
+      "id": "Di lantai licin",
+      "pt": "Num chão liso",
+      "tet": "Iha sorin-ráan mamar"
+     },
+     "wrong": [
+      {
+       "en": "On sand",
+       "id": "Di pasir",
+       "pt": "Na areia",
+       "tet": "Iha rai-henek"
+      },
+      {
+       "en": "In mud",
+       "id": "Di lumpur",
+       "pt": "Na lama",
+       "tet": "Iha rai-tahu"
+      },
+      {
+       "en": "In tall grass",
+       "id": "Di rumput tinggi",
+       "pt": "Na erva alta",
+       "tet": "Iha du'ut aas"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "physics.primary",
+   "level": "primary",
+   "difficulty": 2,
+   "topic": "physics",
+   "title": {
+    "en": "Light and shadows",
+    "id": "Cahaya dan bayangan",
+    "pt": "Luz e sombras",
+    "tet": "Naroman no lalatak"
+   },
+   "points": [
+    {
+     "en": "Light travels in straight lines, so an object in its way blocks it and makes a shadow.",
+     "id": "Cahaya merambat lurus, sehingga benda yang menghalangi membuat bayangan.",
+     "pt": "A luz propaga-se em linha reta, por isso um objeto no caminho bloqueia-a e faz sombra.",
+     "tet": "Naroman la'o iha liña los, tan ne'e sasán ne'ebé taka nia halo lalatak."
+    },
+    {
+     "en": "At noon the sun is high and shadows are short; in the morning and evening they are long.",
+     "id": "Pada tengah hari matahari tinggi dan bayangan pendek; pagi dan sore bayangan panjang.",
+     "pt": "Ao meio-dia o Sol está alto e as sombras são curtas; de manhã e ao fim da tarde são compridas.",
+     "tet": "Iha loron-tutun loron aas no lalatak badak; iha dadeer no lokraik lalatak naruk."
+    },
+    {
+     "en": "Light is very fast: about 300 000 km every second.",
+     "id": "Cahaya sangat cepat: sekitar 300 000 km setiap detik.",
+     "pt": "A luz é muito rápida: cerca de 300 000 km por segundo.",
+     "tet": "Naroman lalais tebes: besik km 300 000 kada segundu."
+    },
+    {
+     "en": "The Moon makes no light of its own; it reflects light from the Sun.",
+     "id": "Bulan tidak menghasilkan cahaya sendiri; Bulan memantulkan cahaya Matahari.",
+     "pt": "A Lua não tem luz própria; reflete a luz do Sol.",
+     "tet": "Fulan la halo nia naroman rasik; nia reflete naroman husi loron."
+    }
+   ],
+   "task": {
+    "en": "Put a stick in the ground and mark the tip of its shadow in the morning, at noon and in the afternoon.",
+    "id": "Tancapkan tongkat di tanah dan tandai ujung bayangannya pada pagi, siang, dan sore hari.",
+    "pt": "Espeta um pau no chão e marca a ponta da sombra de manhã, ao meio-dia e à tarde.",
+    "tet": "Tau ai-tonka ida iha rai no marka lalatak nia rohan iha dadeer, loron-tutun no lokraik."
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "Why do objects make shadows?",
+      "id": "Mengapa benda membuat bayangan?",
+      "pt": "Porque é que os objetos fazem sombra?",
+      "tet": "Tanba saida mak sasán halo lalatak?"
+     },
+     "answer": {
+      "en": "They block light that travels in straight lines",
+      "id": "Benda menghalangi cahaya yang merambat lurus",
+      "pt": "Bloqueiam a luz, que anda em linha reta",
+      "tet": "Sira taka naroman ne'ebé la'o iha liña los"
+     },
+     "wrong": [
+      {
+       "en": "The wind pushes darkness behind them",
+       "id": "Angin mendorong gelap ke belakangnya",
+       "pt": "O vento empurra a escuridão para trás",
+       "tet": "Anin dudu nakukun ba sira-nia kotuk"
+      },
+      {
+       "en": "The ground makes its own dark patches",
+       "id": "Tanah membuat bercak gelap sendiri",
+       "pt": "O chão faz as suas próprias manchas escuras",
+       "tet": "Rai halo nia fatin nakukun rasik"
+      },
+      {
+       "en": "Objects give out darkness",
+       "id": "Benda memancarkan kegelapan",
+       "pt": "Os objetos emitem escuridão",
+       "tet": "Sasán sira fó sai nakukun"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "When are shadows shortest?",
+      "id": "Kapan bayangan paling pendek?",
+      "pt": "Quando são as sombras mais curtas?",
+      "tet": "Bainhira mak lalatak badak liu?"
+     },
+     "answer": {
+      "en": "Around noon",
+      "id": "Sekitar tengah hari",
+      "pt": "Por volta do meio-dia",
+      "tet": "Besik loron-tutun"
+     },
+     "wrong": [
+      {
+       "en": "Early morning",
+       "id": "Pagi-pagi sekali",
+       "pt": "De manhã cedo",
+       "tet": "Dadeer-saan"
+      },
+      {
+       "en": "Late afternoon",
+       "id": "Sore hari",
+       "pt": "Ao fim da tarde",
+       "tet": "Lokraik"
+      },
+      {
+       "en": "Just after sunrise",
+       "id": "Tepat setelah matahari terbit",
+       "pt": "Logo depois do nascer do Sol",
+       "tet": "Kedas depois loron sa'e"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "Where does moonlight come from?",
+      "id": "Dari mana cahaya bulan berasal?",
+      "pt": "De onde vem a luz da Lua?",
+      "tet": "Fulan nia naroman mai husi ne'ebé?"
+     },
+     "answer": {
+      "en": "Sunlight reflected by the Moon",
+      "id": "Cahaya Matahari yang dipantulkan Bulan",
+      "pt": "Luz do Sol refletida pela Lua",
+      "tet": "Naroman loron ne'ebé fulan reflete"
+     },
+     "wrong": [
+      {
+       "en": "Fire inside the Moon",
+       "id": "Api di dalam Bulan",
+       "pt": "Fogo dentro da Lua",
+       "tet": "Ahi iha fulan nia laran"
+      },
+      {
+       "en": "The Moon makes its own light",
+       "id": "Bulan membuat cahayanya sendiri",
+       "pt": "A Lua produz a sua própria luz",
+       "tet": "Fulan halo nia naroman rasik"
+      },
+      {
+       "en": "Lights from cities on Earth",
+       "id": "Lampu kota di Bumi",
+       "pt": "Luzes das cidades na Terra",
+       "tet": "Ahi-lakan husi sidade sira iha Rai"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "physics.middle",
+   "level": "middle",
+   "difficulty": 3,
+   "topic": "physics",
+   "title": {
+    "en": "Speed and forces",
+    "id": "Kecepatan dan gaya",
+    "pt": "Velocidade e forças",
+    "tet": "Velosidade no forsa"
+   },
+   "points": [
+    {
+     "en": "Speed = distance ÷ time: a bus that travels 60 km in 2 hours goes at 30 km/h.",
+     "id": "Kecepatan = jarak ÷ waktu: bus yang menempuh 60 km dalam 2 jam melaju 30 km/jam.",
+     "pt": "Velocidade = distância ÷ tempo: um autocarro que percorre 60 km em 2 horas anda a 30 km/h.",
+     "tet": "Velosidade = distánsia ÷ tempu: bis ne'ebé la'o km 60 iha oras 2 iha velosidade 30 km/h."
+    },
+    {
+     "en": "A force is a push or a pull, measured in newtons (N).",
+     "id": "Gaya adalah dorongan atau tarikan, diukur dalam newton (N).",
+     "pt": "Uma força é um empurrão ou um puxão, medida em newtons (N).",
+     "tet": "Forsa mak dudu ka dada, sukat ho newton (N)."
+    },
+    {
+     "en": "Friction slows moving things; tyres and sandals need it to grip the road.",
+     "id": "Gesekan memperlambat benda bergerak; ban dan sandal membutuhkannya agar tidak licin.",
+     "pt": "O atrito trava o movimento; os pneus e as sandálias precisam dele para agarrar o chão.",
+     "tet": "Friksaun halo sasán ne'ebé muda sai neineik; pneu no sandália presiza friksaun atu kaer dalan."
+    },
+    {
+     "en": "Gravity pulls objects towards the Earth; the weight of an object is this force.",
+     "id": "Gravitasi menarik benda ke arah Bumi; berat benda adalah gaya ini.",
+     "pt": "A gravidade puxa os objetos para a Terra; o peso de um objeto é essa força.",
+     "tet": "Gravidade dada sasán ba Rai; sasán nia todan mak forsa ne'e."
+    }
+   ],
+   "task": {
+    "en": "Time how long you take to walk 100 m and work out your speed in m/s.",
+    "id": "Ukur waktu yang kamu perlukan untuk berjalan 100 m dan hitung kecepatanmu dalam m/s.",
+    "pt": "Cronometra quanto tempo demoras a andar 100 m e calcula a tua velocidade em m/s.",
+    "tet": "Sukat tempu ne'ebé ita presiza atu la'o m 100 no sura ita-nia velosidade iha m/s."
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "A bus travels 60 km in 2 hours. What is its speed?",
+      "id": "Bus menempuh 60 km dalam 2 jam. Berapa kecepatannya?",
+      "pt": "Um autocarro percorre 60 km em 2 horas. Qual é a velocidade?",
+      "tet": "Bis la'o km 60 iha oras 2. Ninia velosidade mak hira?"
+     },
+     "answer": {
+      "en": "30 km/h",
+      "id": "30 km/h",
+      "pt": "30 km/h",
+      "tet": "30 km/h"
+     },
+     "wrong": [
+      {
+       "en": "120 km/h",
+       "id": "120 km/h",
+       "pt": "120 km/h",
+       "tet": "120 km/h"
+      },
+      {
+       "en": "62 km/h",
+       "id": "62 km/h",
+       "pt": "62 km/h",
+       "tet": "62 km/h"
+      },
+      {
+       "en": "58 km/h",
+       "id": "58 km/h",
+       "pt": "58 km/h",
+       "tet": "58 km/h"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "What is the unit of force?",
+      "id": "Apa satuan gaya?",
+      "pt": "Qual é a unidade de força?",
+      "tet": "Unidade forsa nian mak saida?"
+     },
+     "answer": {
+      "en": "Newton",
+      "id": "Newton",
+      "pt": "Newton",
+      "tet": "Newton"
+     },
+     "wrong": [
+      {
+       "en": "Metre",
+       "id": "Meter",
+       "pt": "Metro",
+       "tet": "Metru"
+      },
+      {
+       "en": "Kilogram",
+       "id": "Kilogram",
+       "pt": "Quilograma",
+       "tet": "Kilograma"
+      },
+      {
+       "en": "Second",
+       "id": "Detik",
+       "pt": "Segundo",
+       "tet": "Segundu"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "What does friction do to a moving object?",
+      "id": "Apa yang dilakukan gesekan pada benda bergerak?",
+      "pt": "O que faz o atrito a um objeto em movimento?",
+      "tet": "Friksaun halo saida ba sasán ne'ebé muda?"
+     },
+     "answer": {
+      "en": "It slows it down",
+      "id": "Memperlambatnya",
+      "pt": "Trava-o",
+      "tet": "Halo nia neineik"
+     },
+     "wrong": [
+      {
+       "en": "It always speeds it up",
+       "id": "Selalu mempercepatnya",
+       "pt": "Acelera-o sempre",
+       "tet": "Halo nia lalais nafatin"
+      },
+      {
+       "en": "It makes it float",
+       "id": "Membuatnya melayang",
+       "pt": "Fá-lo flutuar",
+       "tet": "Halo nia namlele"
+      },
+      {
+       "en": "It makes it lighter",
+       "id": "Membuatnya lebih ringan",
+       "pt": "Torna-o mais leve",
+       "tet": "Halo nia kmaan liu"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "physics.secondary",
+   "level": "secondary",
+   "difficulty": 4,
+   "topic": "physics",
+   "title": {
+    "en": "Newton's laws and energy",
+    "id": "Hukum Newton dan energi",
+    "pt": "Leis de Newton e energia",
+    "tet": "Lei Newton nian no enerjia"
+   },
+   "points": [
+    {
+     "en": "Newton's second law: F = m·a. A 2 kg object with a net force of 10 N accelerates at 5 m/s².",
+     "id": "Hukum II Newton: F = m·a. Benda 2 kg dengan gaya total 10 N mengalami percepatan 5 m/s².",
+     "pt": "Segunda lei de Newton: F = m·a. Um corpo de 2 kg sob uma força resultante de 10 N acelera a 5 m/s².",
+     "tet": "Lei segundu Newton nian: F = m·a. Sasán kg 2 ho forsa totál N 10 hetan aselerasaun 5 m/s²."
+    },
+    {
+     "en": "Third law: every action has an equal and opposite reaction, like a canoe moving back when you jump forward.",
+     "id": "Hukum III: setiap aksi ada reaksi yang sama besar dan berlawanan, seperti perahu mundur saat kamu melompat ke depan.",
+     "pt": "Terceira lei: a cada ação corresponde uma reação igual e oposta, como a canoa que recua quando saltas para a frente.",
+     "tet": "Lei terseiru: kada asaun iha reasaun ne'ebé hanesan no kontráriu, hanesan bero ba kotuk bainhira ita salta ba oin."
+    },
+    {
+     "en": "Kinetic energy is ½mv²; gravitational potential energy near Earth is mgh, with g ≈ 9.8 m/s².",
+     "id": "Energi kinetik adalah ½mv²; energi potensial gravitasi dekat Bumi adalah mgh, dengan g ≈ 9,8 m/s².",
+     "pt": "A energia cinética é ½mv²; a energia potencial gravítica perto da Terra é mgh, com g ≈ 9,8 m/s².",
+     "tet": "Enerjia sinétika mak ½mv²; enerjia potensiál gravitasionál besik Rai mak mgh, ho g ≈ 9.8 m/s²."
+    },
+    {
+     "en": "Energy is conserved: it changes form, for example into heat, but the total is never created or destroyed.",
+     "id": "Energi itu kekal: energi berubah bentuk, misalnya menjadi panas, tetapi totalnya tidak diciptakan atau dimusnahkan.",
+     "pt": "A energia conserva-se: muda de forma, por exemplo em calor, mas o total não se cria nem se destrói.",
+     "tet": "Enerjia la lakon: nia muda forma, ezemplu sai manas, maibé totál la kria no la lakon."
+    }
+   ],
+   "task": {
+    "en": "Drop a ball from 1 m and from 2 m; compare the bounces and explain them using energy.",
+    "id": "Jatuhkan bola dari 1 m dan 2 m; bandingkan pantulannya dan jelaskan dengan konsep energi.",
+    "pt": "Deixa cair uma bola de 1 m e de 2 m; compara os ressaltos e explica-os com a energia.",
+    "tet": "Husik bola monu husi m 1 no m 2; kompara nia salta no esplika uza enerjia."
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "A net force of 10 N acts on a 2 kg mass. What is its acceleration?",
+      "id": "Gaya total 10 N bekerja pada massa 2 kg. Berapa percepatannya?",
+      "pt": "Uma força resultante de 10 N atua sobre 2 kg. Qual é a aceleração?",
+      "tet": "Forsa totál N 10 hala'o ba masa kg 2. Ninia aselerasaun mak hira?"
+     },
+     "answer": {
+      "en": "5 m/s²",
+      "id": "5 m/s²",
+      "pt": "5 m/s²",
+      "tet": "5 m/s²"
+     },
+     "wrong": [
+      {
+       "en": "20 m/s²",
+       "id": "20 m/s²",
+       "pt": "20 m/s²",
+       "tet": "20 m/s²"
+      },
+      {
+       "en": "12 m/s²",
+       "id": "12 m/s²",
+       "pt": "12 m/s²",
+       "tet": "12 m/s²"
+      },
+      {
+       "en": "0.2 m/s²",
+       "id": "0.2 m/s²",
+       "pt": "0.2 m/s²",
+       "tet": "0.2 m/s²"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "Which formula gives kinetic energy?",
+      "id": "Rumus mana untuk energi kinetik?",
+      "pt": "Que fórmula dá a energia cinética?",
+      "tet": "Fórmula saida mak fó enerjia sinétika?"
+     },
+     "answer": {
+      "en": "½mv²",
+      "id": "½mv²",
+      "pt": "½mv²",
+      "tet": "½mv²"
+     },
+     "wrong": [
+      {
+       "en": "mgh",
+       "id": "mgh",
+       "pt": "mgh",
+       "tet": "mgh"
+      },
+      {
+       "en": "m·a",
+       "id": "m·a",
+       "pt": "m·a",
+       "tet": "m·a"
+      },
+      {
+       "en": "m·v",
+       "id": "m·v",
+       "pt": "m·v",
+       "tet": "m·v"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "What does conservation of energy mean?",
+      "id": "Apa arti kekekalan energi?",
+      "pt": "O que significa a conservação da energia?",
+      "tet": "Konservasaun enerjia nian katak saida?"
+     },
+     "answer": {
+      "en": "Energy changes form but the total stays the same",
+      "id": "Energi berubah bentuk tetapi totalnya tetap",
+      "pt": "A energia muda de forma mas o total mantém-se",
+      "tet": "Enerjia muda forma maibé totál hanesan nafatin"
+     },
+     "wrong": [
+      {
+       "en": "Friction destroys energy",
+       "id": "Gesekan memusnahkan energi",
+       "pt": "O atrito destrói a energia",
+       "tet": "Friksaun halakon enerjia"
+      },
+      {
+       "en": "Motion creates new energy",
+       "id": "Gerak menciptakan energi baru",
+       "pt": "O movimento cria energia nova",
+       "tet": "Movimentu kria enerjia foun"
+      },
+      {
+       "en": "Total energy always grows",
+       "id": "Energi total selalu bertambah",
+       "pt": "A energia total aumenta sempre",
+       "tet": "Enerjia totál sa'e nafatin"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "physics.university",
+   "level": "university",
+   "difficulty": 5,
+   "topic": "physics",
+   "title": {
+    "en": "Electricity, magnetism and waves",
+    "id": "Listrik, magnet, dan gelombang",
+    "pt": "Eletricidade, magnetismo e ondas",
+    "tet": "Eletrisidade, magnetizmu no onda"
+   },
+   "points": [
+    {
+     "en": "Ohm's law: V = I·R, so the current through a resistor is proportional to the voltage across it.",
+     "id": "Hukum Ohm: V = I·R, sehingga arus pada resistor sebanding dengan tegangannya.",
+     "pt": "Lei de Ohm: V = I·R, por isso a corrente numa resistência é proporcional à tensão aplicada.",
+     "tet": "Lei Ohm nian: V = I·R, entaun korrente iha rezisténsia proporsionál ba voltajen."
+    },
+    {
+     "en": "Electric power is P = V·I: a 220 V device drawing 2 A uses 440 W.",
+     "id": "Daya listrik adalah P = V·I: alat 220 V dengan arus 2 A memakai 440 W.",
+     "pt": "A potência elétrica é P = V·I: um aparelho de 220 V com 2 A consome 440 W.",
+     "tet": "Poténsia elétrika mak P = V·I: aparellu 220 V ho korrente 2 A uza 440 W."
+    },
+    {
+     "en": "Waves obey v = f·λ; light is an electromagnetic wave travelling at c ≈ 3 × 10⁸ m/s in vacuum.",
+     "id": "Gelombang memenuhi v = f·λ; cahaya adalah gelombang elektromagnetik dengan c ≈ 3 × 10⁸ m/s di ruang hampa.",
+     "pt": "As ondas obedecem a v = f·λ; a luz é uma onda eletromagnética que viaja a c ≈ 3 × 10⁸ m/s no vácuo.",
+     "tet": "Onda tuir v = f·λ; naroman mak onda eletromagnétika ne'ebé la'o ho c ≈ 3 × 10⁸ m/s iha vákuu."
+    },
+    {
+     "en": "Faraday's law: a changing magnetic field induces a voltage, the principle behind generators and transformers.",
+     "id": "Hukum Faraday: medan magnet yang berubah menginduksi tegangan, prinsip dasar generator dan transformator.",
+     "pt": "Lei de Faraday: um campo magnético variável induz uma tensão, o princípio dos geradores e transformadores.",
+     "tet": "Lei Faraday nian: kampu magnétiku ne'ebé muda indús voltajen, prinsípiu ba jeradór no transformadór."
+    }
+   ],
+   "task": {
+    "en": "Read the label of a home appliance (V and W) and calculate the current it draws.",
+    "id": "Baca label alat rumah tangga (V dan W) lalu hitung arus yang dipakainya.",
+    "pt": "Lê a etiqueta de um eletrodoméstico (V e W) e calcula a corrente que consome.",
+    "tet": "Lee etiketa husi aparellu uma nian (V no W) no sura korrente ne'ebé nia uza."
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "A 12 V battery is connected to a 4 Ω resistor. What current flows?",
+      "id": "Baterai 12 V dihubungkan ke resistor 4 Ω. Berapa arusnya?",
+      "pt": "Uma bateria de 12 V liga-se a uma resistência de 4 Ω. Que corrente passa?",
+      "tet": "Bateria 12 V liga ba rezisténsia 4 Ω. Korrente hira mak la'o?"
+     },
+     "answer": {
+      "en": "3 A",
+      "id": "3 A",
+      "pt": "3 A",
+      "tet": "3 A"
+     },
+     "wrong": [
+      {
+       "en": "48 A",
+       "id": "48 A",
+       "pt": "48 A",
+       "tet": "48 A"
+      },
+      {
+       "en": "8 A",
+       "id": "8 A",
+       "pt": "8 A",
+       "tet": "8 A"
+      },
+      {
+       "en": "16 A",
+       "id": "16 A",
+       "pt": "16 A",
+       "tet": "16 A"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "What power does a 220 V device drawing 2 A use?",
+      "id": "Berapa daya alat 220 V yang menarik arus 2 A?",
+      "pt": "Que potência consome um aparelho de 220 V com 2 A?",
+      "tet": "Aparellu 220 V ho korrente 2 A uza poténsia hira?"
+     },
+     "answer": {
+      "en": "440 W",
+      "id": "440 W",
+      "pt": "440 W",
+      "tet": "440 W"
+     },
+     "wrong": [
+      {
+       "en": "110 W",
+       "id": "110 W",
+       "pt": "110 W",
+       "tet": "110 W"
+      },
+      {
+       "en": "222 W",
+       "id": "222 W",
+       "pt": "222 W",
+       "tet": "222 W"
+      },
+      {
+       "en": "218 W",
+       "id": "218 W",
+       "pt": "218 W",
+       "tet": "218 W"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "Electromagnetic induction (Faraday's law) is the basis of which device?",
+      "id": "Induksi elektromagnetik (hukum Faraday) adalah dasar alat apa?",
+      "pt": "A indução eletromagnética (lei de Faraday) é a base de que aparelho?",
+      "tet": "Indusaun eletromagnétika (lei Faraday) mak baze ba aparellu saida?"
+     },
+     "answer": {
+      "en": "The electric generator",
+      "id": "Generator listrik",
+      "pt": "O gerador elétrico",
+      "tet": "Jeradór elétriku"
+     },
+     "wrong": [
+      {
+       "en": "The thermometer",
+       "id": "Termometer",
+       "pt": "O termómetro",
+       "tet": "Termómetru"
+      },
+      {
+       "en": "The flat mirror",
+       "id": "Cermin datar",
+       "pt": "O espelho plano",
+       "tet": "Espellu planu"
+      },
+      {
+       "en": "The magnifying glass",
+       "id": "Kaca pembesar",
+       "pt": "A lupa",
+       "tet": "Lupa"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "physics.adult",
+   "level": "adult",
+   "difficulty": 6,
+   "topic": "physics",
+   "title": {
+    "en": "Electricity at home: cost and safety",
+    "id": "Listrik di rumah: biaya dan keselamatan",
+    "pt": "Eletricidade em casa: custo e segurança",
+    "tet": "Eletrisidade iha uma: kustu no seguransa"
+   },
+   "points": [
+    {
+     "en": "Energy used = power × time: a 100 W lamp left on for 10 hours uses 1 kWh.",
+     "id": "Energi terpakai = daya × waktu: lampu 100 W yang menyala 10 jam memakai 1 kWh.",
+     "pt": "Energia gasta = potência × tempo: uma lâmpada de 100 W acesa 10 horas gasta 1 kWh.",
+     "tet": "Enerjia ne'ebé uza = poténsia × tempu: lámpada 100 W ne'ebé lakan oras 10 uza 1 kWh."
+    },
+    {
+     "en": "LED bulbs give the same light as old bulbs while using much less power.",
+     "id": "Lampu LED memberi cahaya yang sama dengan lampu lama tetapi memakai daya jauh lebih kecil.",
+     "pt": "As lâmpadas LED dão a mesma luz que as antigas gastando muito menos energia.",
+     "tet": "Lámpada LED fó naroman hanesan lámpada tuan maibé uza poténsia menus liu."
+    },
+    {
+     "en": "Never touch switches or plugs with wet hands: water conducts electricity.",
+     "id": "Jangan menyentuh sakelar atau steker dengan tangan basah: air menghantarkan listrik.",
+     "pt": "Nunca toques em interruptores ou fichas com as mãos molhadas: a água conduz a eletricidade.",
+     "tet": "Keta kaer interruptór ka tomada ho liman bokon: bee lori eletrisidade."
+    },
+    {
+     "en": "Plugging many devices into one socket can overheat the wires and start a fire.",
+     "id": "Mencolokkan banyak alat ke satu stopkontak dapat membuat kabel terlalu panas dan memicu kebakaran.",
+     "pt": "Ligar muitos aparelhos à mesma tomada pode aquecer demasiado os fios e provocar um incêndio.",
+     "tet": "Liga aparellu barak ba tomada ida de'it bele halo kabu manas liu no hamosu ahi."
+    }
+   ],
+   "task": {
+    "en": "List your devices with their watts, estimate the daily kWh, and choose one to switch off more often.",
+    "id": "Daftar alat listrikmu beserta wattnya, perkirakan kWh harian, dan pilih satu untuk lebih sering dimatikan.",
+    "pt": "Faz uma lista dos teus aparelhos e dos seus watts, estima os kWh por dia e escolhe um para desligar mais vezes.",
+    "tet": "Hakerek lista aparellu sira ho sira-nia watt, estima kWh kada loron, no hili ida atu hamate beibeik liu."
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "How much energy does a 100 W lamp use in 10 hours?",
+      "id": "Berapa energi yang dipakai lampu 100 W dalam 10 jam?",
+      "pt": "Quanta energia gasta uma lâmpada de 100 W em 10 horas?",
+      "tet": "Lámpada 100 W uza enerjia hira iha oras 10?"
+     },
+     "answer": {
+      "en": "1 kWh",
+      "id": "1 kWh",
+      "pt": "1 kWh",
+      "tet": "1 kWh"
+     },
+     "wrong": [
+      {
+       "en": "10 kWh",
+       "id": "10 kWh",
+       "pt": "10 kWh",
+       "tet": "10 kWh"
+      },
+      {
+       "en": "100 kWh",
+       "id": "100 kWh",
+       "pt": "100 kWh",
+       "tet": "100 kWh"
+      },
+      {
+       "en": "0.1 kWh",
+       "id": "0.1 kWh",
+       "pt": "0.1 kWh",
+       "tet": "0.1 kWh"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "Why should you not touch a switch with wet hands?",
+      "id": "Mengapa tidak boleh menyentuh sakelar dengan tangan basah?",
+      "pt": "Porque não deves tocar num interruptor com as mãos molhadas?",
+      "tet": "Tanba saida ita labele kaer interruptór ho liman bokon?"
+     },
+     "answer": {
+      "en": "Water conducts electricity",
+      "id": "Air menghantarkan listrik",
+      "pt": "A água conduz a eletricidade",
+      "tet": "Bee lori eletrisidade"
+     },
+     "wrong": [
+      {
+       "en": "Water blocks electricity",
+       "id": "Air menghalangi listrik",
+       "pt": "A água bloqueia a eletricidade",
+       "tet": "Bee taka eletrisidade"
+      },
+      {
+       "en": "Wet hands break the switch",
+       "id": "Tangan basah merusak sakelar",
+       "pt": "As mãos molhadas partem o interruptor",
+       "tet": "Liman bokon halo interruptór aat"
+      },
+      {
+       "en": "It only makes the switch dirty",
+       "id": "Hanya membuat sakelar kotor",
+       "pt": "Só suja o interruptor",
+       "tet": "Halo de'it interruptór foer"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "What is the danger of an overloaded socket?",
+      "id": "Apa bahaya stopkontak yang kelebihan beban?",
+      "pt": "Qual é o perigo de uma tomada sobrecarregada?",
+      "tet": "Perigu saida husi tomada ne'ebé iha karga barak liu?"
+     },
+     "answer": {
+      "en": "Overheating and fire",
+      "id": "Terlalu panas dan kebakaran",
+      "pt": "Sobreaquecimento e incêndio",
+      "tet": "Manas liu no ahi"
+     },
+     "wrong": [
+      {
+       "en": "A lower electricity bill",
+       "id": "Tagihan listrik lebih murah",
+       "pt": "Uma conta de luz mais baixa",
+       "tet": "Selu eletrisidade menus"
+      },
+      {
+       "en": "Brighter lamps",
+       "id": "Lampu lebih terang",
+       "pt": "Lâmpadas mais brilhantes",
+       "tet": "Lámpada naroman liu"
+      },
+      {
+       "en": "Faster phone charging",
+       "id": "Pengisian ponsel lebih cepat",
+       "pt": "Carregamento mais rápido do telemóvel",
+       "tet": "Karga telemóvel lalais liu"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "physics.senior",
+   "level": "senior",
+   "difficulty": 7,
+   "topic": "physics",
+   "title": {
+    "en": "Everyday physics for safety",
+    "id": "Fisika sehari-hari untuk keselamatan",
+    "pt": "Física do dia a dia para a segurança",
+    "tet": "Fízika loron-loron ba seguransa"
+   },
+   "points": [
+    {
+     "en": "When lifting, bend your knees and keep the load close to your body: this reduces strain on your back.",
+     "id": "Saat mengangkat, tekuk lutut dan dekatkan beban ke tubuh: ini mengurangi beban pada punggung.",
+     "pt": "Ao levantar pesos, dobra os joelhos e mantém a carga junto ao corpo: isso poupa as costas.",
+     "tet": "Bainhira hi'it sasán, dobra ain-tuur no kaer sasán besik isin: ne'e hamenus todan ba kotuk."
+    },
+    {
+     "en": "A lever lets a small force move a big load: a long handle or crowbar makes the work easier.",
+     "id": "Tuas membuat gaya kecil dapat menggerakkan beban besar: gagang panjang atau linggis memudahkan pekerjaan.",
+     "pt": "Uma alavanca permite mover uma carga grande com pouca força: um cabo comprido ou um pé de cabra facilitam o trabalho.",
+     "tet": "Alavanka halo forsa ki'ik bele muda sasán todan: kabu naruk ka besi-alavanka halo servisu fasil liu."
+    },
+    {
+     "en": "Metal conducts heat: use a cloth or a wooden handle to hold hot pots.",
+     "id": "Logam menghantarkan panas: gunakan kain atau gagang kayu untuk memegang panci panas.",
+     "pt": "O metal conduz o calor: usa um pano ou um cabo de madeira para pegar em panelas quentes.",
+     "tet": "Besi lori manas: uza bitan ka kabu ai atu kaer sanan manas."
+    },
+    {
+     "en": "Wet, smooth floors have little friction; sandals with good grip and a dry floor help prevent falls.",
+     "id": "Lantai basah dan licin gesekannya kecil; sandal yang tidak licin dan lantai kering membantu mencegah jatuh.",
+     "pt": "Chão molhado e liso tem pouco atrito; sandálias que agarram bem e chão seco ajudam a evitar quedas.",
+     "tet": "Sorin-ráan bokon no mamar iha friksaun ki'ik; sandália ne'ebé kaer di'ak no sorin-ráan maran ajuda prevene monu."
+    }
+   ],
+   "task": {
+    "en": "Show a grandchild how a strong stick resting on a stone can lift a heavy rock.",
+    "id": "Tunjukkan kepada cucu bagaimana tongkat kuat yang bertumpu pada batu bisa mengangkat batu besar.",
+    "pt": "Mostra a um neto como um pau forte apoiado numa pedra consegue levantar uma rocha pesada.",
+    "tet": "Hatudu ba bei-oan ida oinsá ai-tonka metin ida ne'ebé tau iha fatuk leten bele hi'it fatuk todan."
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "What is the safest way to lift a heavy sack?",
+      "id": "Bagaimana cara paling aman mengangkat karung berat?",
+      "pt": "Qual é a forma mais segura de levantar um saco pesado?",
+      "tet": "Dalan seguru liu atu hi'it saku todan mak oinsá?"
+     },
+     "answer": {
+      "en": "Bend your knees and keep it close",
+      "id": "Tekuk lutut dan dekatkan ke tubuh",
+      "pt": "Dobrar os joelhos e mantê-lo junto ao corpo",
+      "tet": "Dobra ain-tuur no kaer besik isin"
+     },
+     "wrong": [
+      {
+       "en": "Bend your back with straight legs",
+       "id": "Bungkukkan punggung dengan kaki lurus",
+       "pt": "Dobrar as costas com as pernas esticadas",
+       "tet": "Dobra kotuk ho ain los"
+      },
+      {
+       "en": "Hold it far from your body",
+       "id": "Pegang jauh dari tubuh",
+       "pt": "Segurá-lo longe do corpo",
+       "tet": "Kaer dook husi isin"
+      },
+      {
+       "en": "Twist your body while lifting",
+       "id": "Memutar badan sambil mengangkat",
+       "pt": "Torcer o corpo enquanto levantas",
+       "tet": "Fila isin bainhira hi'it"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "Why does a long handle make a heavy load easier to move?",
+      "id": "Mengapa gagang panjang memudahkan memindahkan beban berat?",
+      "pt": "Porque é que um cabo comprido facilita mover uma carga pesada?",
+      "tet": "Tanba saida kabu naruk halo fasil atu muda sasán todan?"
+     },
+     "answer": {
+      "en": "It works as a lever and multiplies force",
+      "id": "Bekerja sebagai tuas dan melipatgandakan gaya",
+      "pt": "Funciona como alavanca e multiplica a força",
+      "tet": "Nia serbí hanesan alavanka no aumenta forsa"
+     },
+     "wrong": [
+      {
+       "en": "It makes the load lighter in weight",
+       "id": "Membuat berat beban berkurang",
+       "pt": "Torna a carga mais leve",
+       "tet": "Halo sasán nia todan menus"
+      },
+      {
+       "en": "It heats up the load",
+       "id": "Memanaskan beban",
+       "pt": "Aquece a carga",
+       "tet": "Halo sasán manas"
+      },
+      {
+       "en": "It only looks stronger",
+       "id": "Hanya terlihat lebih kuat",
+       "pt": "Só parece mais forte",
+       "tet": "Haree de'it metin liu"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "Why is a wet floor dangerous?",
+      "id": "Mengapa lantai basah berbahaya?",
+      "pt": "Porque é que um chão molhado é perigoso?",
+      "tet": "Tanba saida sorin-ráan bokon perigozu?"
+     },
+     "answer": {
+      "en": "It has less friction, so feet slip",
+      "id": "Gesekannya kecil sehingga kaki tergelincir",
+      "pt": "Tem menos atrito, por isso os pés escorregam",
+      "tet": "Iha friksaun menus, tan ne'e ain sorun"
+     },
+     "wrong": [
+      {
+       "en": "It has more friction",
+       "id": "Gesekannya lebih besar",
+       "pt": "Tem mais atrito",
+       "tet": "Iha friksaun barak liu"
+      },
+      {
+       "en": "It becomes sticky",
+       "id": "Menjadi lengket",
+       "pt": "Fica pegajoso",
+       "tet": "Nia sai pegajozu"
+      },
+      {
+       "en": "It conducts heat to your feet",
+       "id": "Menghantarkan panas ke kaki",
+       "pt": "Conduz calor para os pés",
+       "tet": "Lori manas ba ain"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

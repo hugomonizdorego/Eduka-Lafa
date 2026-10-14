@@ -42,8 +42,16 @@ class ClassroomEngine(unittest.TestCase):
     def test_questions_are_valid(self):
         rng = random.Random(3)
         for subject in classroom.SUBJECTS + ["all"]:
-            items = classroom.questions(subject, "pt", 10, rng); self.assertEqual(len(items), 10, subject)
+            items = classroom.questions(subject, "pt", 10, rng)
+            # Never padded with repeats: a small bank gives fewer, different questions.
+            self.assertEqual(len(items), min(10, classroom.available(subject, "pt")), subject)
+            self.assertEqual(len({q.text for q in items}), len(items), subject)
             for q in items: self.assertIn(q.correct, q.options); self.assertEqual(len(q.options), 4)
+    def test_limited_bank_is_announced_and_retry_uses_mistakes(self):
+        exam = classroom.ExamSession("exam", "science", "en", random.Random(4))
+        self.assertEqual(exam.limited, exam.total < exam.requested)
+        for i in range(exam.total): exam.answer(exam.current.correct if i else "wrong")
+        retry = exam.retry(); self.assertEqual(retry.total, 1); self.assertEqual(retry.items[0].text, exam.items[0].text)
     def test_exam_session_scores_and_time_limit(self):
         now = [0.0]; exam = classroom.ExamSession("exam", "all", "en", random.Random(5), clock=lambda: now[0])
         self.assertEqual(exam.total, 20); self.assertEqual(exam.time_left(), 1200)
@@ -62,7 +70,8 @@ class ClassroomEngine(unittest.TestCase):
             card.add(exam); path = Path(folder) / "report.json"
             self.assertEqual(path.stat().st_mode & 0o777, 0o600)
             again = classroom.ReportCard(folder); self.assertEqual(again.summary(), {"science": (1, 100, 100)})
-            text = again.export_text("id", "Ana"); self.assertIn("Rapor · Ana", text); self.assertIn("Sains", text)
+            text = again.export_text("id", "Ana"); self.assertIn("Hasil Latihan · Ana", text); self.assertIn("Sains", text)
+            self.assertIn("bukan rapor resmi", text); self.assertNotIn("Rapor ·", text)
             path.write_text(json.dumps([{"bad": 1}, "x"])); self.assertEqual(classroom.ReportCard(folder).entries, [])
 
 class Roles(unittest.TestCase):
@@ -120,10 +129,12 @@ class SchoolPages(unittest.TestCase):
         if getattr(self.w, "mind_dialog", None): self.w.mind_dialog.close()
         self.w.companion.close(); self.w.close(); self.w.deleteLater(); self.app.processEvents()
     def test_sidebar_sections(self):
-        from lafa.app import PAGES, SECTIONS
-        keys = [k for k, _ in PAGES]
-        self.assertEqual([keys.index(k) for k in SECTIONS], sorted(keys.index(k) for k in SECTIONS))
-        self.assertEqual(self.w.page_title("report"), "Report card"); self.assertEqual(self.w.page_title("exams"), "Exam hall")
+        from lafa.app import PAGES
+        self.assertEqual([k for k, _ in PAGES], ["home", "study", "library", "timor", "activities", "oshelp"])
+        self.assertEqual(self.w.page_title("study"), "Learn"); self.assertEqual(self.w.t("report_card"), "Practice results")
+        # An average score is labelled as such, never as "completed".
+        self.w.navigate("report"); header = [self.w.report_summary.horizontalHeaderItem(i).text() for i in range(5)]
+        self.assertIn("Average score", header); self.assertFalse(any("complete" in h.lower() for h in header))
     def test_lesson_to_quiz_to_report(self):
         self.w.navigate("classroom"); self.w.class_subject.setCurrentIndex(self.w.class_subject.findData("science"))
         self.assertIn("water", self.w.lesson_title.text().lower())
@@ -136,15 +147,20 @@ class SchoolPages(unittest.TestCase):
     def test_exam_timer_ends_exam(self):
         self.w.start_exam("exam", "all"); self.assertTrue(self.w.exam_timer.isActive())
         self.w.exam.started -= 2000; self.w.tick_exam(); self.assertFalse(self.w.exam_timer.isActive()); self.assertIn("0/20", self.w.exam_question.text())
-    def test_roles_and_mind_reader(self):
+    def test_entertainment_is_optional(self):
+        self.assertFalse(hasattr(self.w, "role_pet")); self.assertNotIn("fun", [self.w.section_tabs["study"].tabText(i) for i in range(self.w.section_tabs["study"].count())])
+        from lafa.app import Window
+        self.w.companion.close(); self.w.close(); self.w.deleteLater(); self.app.processEvents()
+        self.w = Window(Settings(language="en", entertainment=True), review=True)
         self.w.play_role("magician"); self.assertEqual(self.w.role_pet.state, "magic_show"); self.assertFalse(self.w.mind_button.isHidden())
         self.w.open_mind_reader()
         for i in range(6): self.w.mind_dialog.mind_answer(i in (1, 3))
         self.app.processEvents(); self.assertIn("10", "".join(l.text() for l in self.w.mind_dialog.findChildren(type(self.w.role_text))))
         self.w.companion.play_role("motivator"); self.assertEqual(self.w.companion.state, "motivator")
     def test_timor_page(self):
-        self.w.navigate("culture"); self.assertEqual(self.w.timor_tabs.count(), 2)
+        self.w.navigate("culture"); self.assertEqual(self.w.timor_tabs.count(), 3)
         self.w.select_atlas("history_17"); self.assertEqual(self.w.inspect_title.text(), "Restoration of independence")
-        self.assertTrue(self.w.home_word.text() and self.w.home_motivation.text() and self.w.home_history.text())
+        # Home stays calm: news and entertainment are not shown there.
+        self.assertFalse(hasattr(self.w, "home_news"))
 
 if __name__ == "__main__": unittest.main()

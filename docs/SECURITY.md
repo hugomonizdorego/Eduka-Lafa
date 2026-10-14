@@ -1,10 +1,35 @@
-# Security review — 0.1 Alpha (development restart)
+# Security review
 
-> Carried over from the prototype review. It will be re-verified from the
-> beginning for 0.1 Alpha. New in 0.1 Alpha: plain HTTP is accepted only for a
-> loopback Ollama address; other open-source servers must use HTTPS without
-> embedded credentials, query strings or fragments; `/calc` parses arithmetic
-> with `ast` under a node, power and magnitude limit and never uses `eval`.
+## 0.2.0 (14 October 2026)
+
+The 0.2.0 changes remove most of the external attack surface:
+
+- **No AI clients, API keys or keyring.** `providers`, `aihub` (Qt WebEngine
+  with a persistent web profile), `signin` (OAuth loopback listener) and
+  microphone transcription are gone. Lafa holds no secrets, so there are none
+  to leak. `tests/test_offline_first.py` checks that no module imports a
+  keyring or AI client.
+- **No automatic transfers.** Search runs locally. The internet is contacted
+  only by explicit buttons or commands (Wikipedia, news, weather, source
+  status, saving a page) or by the optional data catalogue. The connection
+  probe uses fixed public hosts.
+- **Reminders and progress files**: atomic writes with mode 0600, bounded and
+  validated on load (count, text length, control characters, dates). Broken
+  files are ignored, never executed.
+- **Source status**: HEAD requests with a fixed user agent, no redirects
+  followed, HTTPS only. The result is a state (ok / not found / restricted /
+  unknown), never page content.
+- **Saved pages**: only front pages and feeds of listed sources, robots.txt
+  respected, same-site HTTPS redirects only, size limits.
+- **Updates**: Lafa downloads only the validated content catalogue (data). It
+  never downloads or runs program code; program updates come from APT / EUS.
+- **Fullscreen check** (X11): fixed `xprop` arguments, no shell, short
+  timeout.
+
+The table below is the earlier review. Rows about model actions, secrets and
+AI transfer no longer apply, because those features were removed.
+
+## Earlier review (0.1 Alpha)
 
 Review date: 6 October 2026. Scope: source logic, automated adversarial fixtures,
 Qt worker delivery and packaging. This is not a penetration test or a guarantee
@@ -13,7 +38,7 @@ host OS can also alter LAFA. Maintain dependency and OS updates.
 
 | Boundary | Controls and checks |
 |---|---|
-| Model actions | Fixed read-only tool allowlist; typed/bounded arguments; unknown tools/sources refused; no shell or generated-code executor |
+| Actions | Fixed allowlists of apps and Lafa pages; typed/bounded arguments; unknown tools/sources refused; no shell or generated-code executor |
 | Local document access | Selected roots; visible names; directory-FD traversal using O_NOFOLLOW; regular-file checks; nonblocking special-file access; 10 MB input bound; internal and external symlink fixtures rejected |
 | XML/archives | Bounded archive member size; entity/DOCTYPE declarations refused; no archive extraction into the filesystem |
 | PDF conversion | Private copied input, separate worker, fixed Poppler arguments; CPU 10s, address space 768 MB, output file 1 MB, parent timeout 17s; first 30 pages only |
@@ -24,10 +49,10 @@ host OS can also alter LAFA. Maintain dependency and OS updates.
 | Configuration | 64 KiB bounded nonblocking reads; regular files only; symlink/FIFO rejection; each invalid field falls back independently; strict booleans and finite numeric ranges |
 | Menu launchers | Freedesktop value and Exec argument escaping; literal percent doubled; control characters/equals in executable paths rejected |
 | Host integration | Fixed argv, one Qt binding, bounded preference/launcher reads, activation acknowledgement and timeout; AST-only review-copy generation |
-| Secrets | Session by default; approved secure keyring only; preferences hold no API keys; environment keys managed externally |
+| Secrets | None since 0.2.0: no API keys, no keyring access |
 | UI content | Plain-text labels, editors and table items for source/model data; website links are opened by explicit user action |
-| Transfer of private text | Document/code preview and confirmation before AI transfer; local search results never sent back to a model; microphone recording explicitly confirmed |
-| Public search | Ordinary source-mode chat never issues a public query; dedicated button and explicit `/ask`/`/learn` commands identify public transfers |
+| Transfer of private text | Since 0.2.0 nothing is transferred: documents, code and search text stay local; no microphone |
+| Public search | Local search never issues a public query; only the *Search internet sources* button and `/ask` contact Wikipedia |
 | Worker delivery | QObject slots receive results on the UI thread; callback failures clear busy state rather than leaving the UI locked |
 
 ## Fixes in this revision
@@ -65,7 +90,7 @@ host OS can also alter LAFA. Maintain dependency and OS updates.
 
 The Python interpreter is a small teaching language implemented in Python, not
 an OS sandbox for arbitrary Python. Unsupported syntax raises an error. Poppler,
-Qt, keyring and Python still have their own vulnerability surface. PDF resource
+Qt and Python still have their own vulnerability surface. PDF resource
 limits reduce denial of service but do not isolate a compromised native parser
 from all user privileges. Do not equate resource limits with a full container.
 
@@ -74,7 +99,7 @@ application has its own security behavior; a path can still change after a user
 chooses Open. User-selected roots and local configuration are trusted preferences,
 not a security boundary against another process running as the same OS user.
 
-No live API credentials, account sessions or microphone hardware were tested.
+Live websites were not contacted from the build sandbox; online features were tested with recorded data.
 Real IPC was skipped because the execution environment rejects AF_UNIX sockets.
 Deterministic fragmented-frame and command-injection fixtures passed; these
 do not replace a real host activation test.

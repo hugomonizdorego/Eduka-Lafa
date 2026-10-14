@@ -4,6 +4,127 @@
 
 _Nothing yet._
 
+## 0.2.0 — 2026-10-14 · "Lafa — Pendamping Belajar dan Asisten Edukasaun OS"
+
+Compared with 0.1.4 (the last release on `main`). Two drafts, "0.1.5" and an
+AI-centred "0.2.0", were never released. Their AI parts were removed and
+their other work is listed here.
+
+### Works without AI, login, a Lafa server or internet
+- **The AI dependency is gone.** Removed:
+  - the provider / API key / model / credit flow and generative chat;
+  - AI teachers, AI document summaries and "Explain with AI";
+  - microphone transcription, the AI Hub (web views) and AI sign-in;
+  - the keyring dependency (`python3-keyring`, `python3-secretstorage`,
+    `gnome-keyring`) and `qtwebengine`.
+
+  Lessons, practice, the calculator, document reading and local read-aloud
+  stay. The old code remains in Git history.
+- **Three optional AI links** (ChatGPT, Claude, Gemini) in *Library → External
+  sites*, labelled "Open in browser". Lafa never signs in, reads accounts,
+  cookies or sessions, sends questions or documents, or installs Ollama.
+- **Upgrade keeps everything.** Old AI fields are ignored and the old settings
+  file is backed up once (`settings.json.0.1-backup`, 0600). Tasks,
+  timetable, practice results, reminders, files and preferences are kept.
+  The user's keyring is never cleared.
+
+### Offline first
+- Local features no longer wait for the internet: file search, open and read,
+  document view, reminders, focus and the Virtual Assistant's quick actions.
+- **Reminders are saved** (dated, validated, written atomically, 0600). They
+  ring offline while Lafa runs. Reminders missed while Lafa was closed are
+  shown once after a restart. Focus is a session-only timer, labelled as such.
+- The connection check uses public hosts (Wikipedia, Open-Meteo,
+  timor-leste.gov.tl), not AI providers. Each internet service fails on its own
+  and never removes local results. Offline shows a calm "Local features are
+  available" badge, without pop-ups.
+
+### Local search instead of a chatbot
+- One search box: *"Cari pelajaran, pengetahuan, atau file…"*. It searches
+  lessons (ages 5–100 and school subjects), the Timor-Leste atlas, Edukasaun
+  OS guides, saved material and file names.
+- Results are labelled **Materi lokal / File lokal / Materi tersimpan /
+  Sumber internet**. A weak match becomes a list of material, not an answer.
+  "Nothing found" is said honestly, with options.
+- "Cari file …" searches file names; "Bagaimana …" questions about the
+  computer open the OS guide; arithmetic uses the safe calculator.
+- The internet is searched only with the separate *Search internet sources*
+  button. Article extracts are labelled and kept apart from Lafa's own text.
+
+### Six sections and a calm Home
+- The sidebar has six sections: **Home, Learn, Library, Timor-Leste, My
+  activities, OS help**. Settings and About sit at the bottom. The 16 old
+  pages became tabs, old page names still open the right tab, and teachers
+  became subject guides in Learn.
+- Home has search, four quick accesses (Start learning, Find knowledge,
+  Tasks & schedule, OS help), the last material with *Continue learning*,
+  and the next activities. News, weather and entertainment are not on Home.
+  The version moved to About.
+- Small screens: works at 1024×600 with a compact icon sidebar. Tab pages
+  scroll instead of being cut off, and long lists shrink. Large text (150 %)
+  is tested.
+- Accessibility: `Alt+1…6` and `Ctrl+F`, keyboard-usable quick cards,
+  accessible names, link colours with at least 4.5:1 contrast in light and
+  dark themes. Calm look: Edukasaun green, no drop shadows by default, one
+  small Lafa.
+
+### Practice and content
+- The terms are now **Latihan**, **Simulasi Tes** and **Hasil Latihan**. The
+  results are personal progress, not an official report card, and "Average
+  score" is labelled as such.
+- No question repeats in a session. A small question bank gives fewer
+  questions, and the learner is told.
+- Wrong answers show the lesson sentence that explains the answer and the
+  related lesson, when a lesson states it. *Practise the wrong answers again*
+  retries only the mistakes.
+- Lessons carry ID, topic, difficulty, languages, source, review date,
+  version and licence, marked "not yet reviewed by the Ministry of
+  Education". `tools/check-curriculum.py` validates them.
+- Favourites and *Continue learning* are saved locally. Only lessons the
+  learner opens count.
+- Kiwix: opens when installed, otherwise explains how to install it. Lafa
+  never downloads large archives.
+- Kept from the drafts: lessons for ages 5–100 in 18 subjects, the BM25
+  local search over lessons, atlas and guides, safe app/page actions in four
+  languages, and human-like motion.
+
+### Internet sources
+- New official sources: **Governo de Timor-Leste**
+  (https://timor-leste.gov.tl/) and **Ministério da Educação**
+  (https://moe.gov.tl/). Also the 51 Timor-Leste media sources from the
+  0.1.5 draft.
+- Every source has metadata: languages, topics, level, access (free / free
+  with account / partly paid / paid) and the reason it was chosen.
+- Fandom, Everything2 and Conservapedia were moved out of the academic
+  recommendations into a separate "community & entertainment wikis" list,
+  with notes.
+- The status check now distinguishes **ok / not found / restricted /
+  unknown** (404 and 403 are no longer "up"). It runs on demand, is cached
+  for a day, and has a *Check now* button. The hourly check of the whole
+  catalogue is gone.
+- Lafa reads only front pages and feeds (no whole-site downloads). Saved
+  material can be refreshed; cached data is labelled as such.
+- Content updates are validated data only. App updates come from APT / the
+  Eduka Update Service, and the "new release" check was removed.
+
+### Virtual Assistant
+- Switched on only in Eduka-Settings → Lafa-Configuration. Opening Lafa
+  Desktop never switches it on.
+- Quick actions work offline: continue learning, tasks, focus, OS help.
+- New options:
+  - Quiet mode (also a 🤫 button in the bubble);
+  - reduce motion;
+  - a limit of spontaneous messages per hour (default 4);
+  - entertainment (magician, mind reader, comedian, bathing/toilet and party
+    animations, jokes), off by default.
+- Pauses while another app is fullscreen (X11, needs `xprop`). Wayland is
+  untested.
+
+### Fixed
+- Rebuilding the window (language or theme change) left duplicate keyboard
+  shortcuts, which made them ambiguous so they did nothing.
+- Simply showing the lesson list recorded the first lesson as "last material".
+
 ## 0.1.4 — 2026-10-13
 
 ### Learning sources (from the Edukasaun OS directory)

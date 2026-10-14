@@ -9,11 +9,11 @@ The page uses Eduka-Settings' own structure and object names (pageTitle,
 card, settingRow, rowTitle, rowLine, fieldHint), so Eduka's stylesheet and
 theme style it like every other page. Changes apply live, like Eduka-Settings.
 
-The page holds every LAFA preference (Eduka-Settings → LAFA): activation,
-Virtual Assistant behaviour, personality, AI provider/model, language, files
-and weather. Saving writes ~/.config/lafa/settings.json atomically and asks a
-running LAFA to reload. API keys are never written here; "API keys…" opens
-LAFA's own secure dialog (session memory or system keyring).
+The page holds every LAFA preference (Eduka-Settings → LAFA): activation of
+the Virtual Assistant (only here — LAFA Desktop never switches it on), its
+behaviour (quiet mode, reduced motion, optional entertainment), language,
+files and weather. Saving writes ~/.config/lafa/settings.json atomically and
+asks a running LAFA to reload. LAFA has no AI provider, model or key settings.
 """
 import importlib
 import json
@@ -26,9 +26,9 @@ import time
 
 BINDINGS={'PyQt5','PyQt6','PySide6'}
 TEXT={
-'en':('Activate LAFA Virtual Assistant in Eduka-Desktop','Open LAFA Desktop','LAFA settings','Activating LAFA…','Deactivating LAFA…','LAFA could not start. Check the installed executable.','The change was not applied. Open LAFA settings and try again.','The character works offline too; online it also brings websites, news and AI. Desktop and Virtual Assistant are separate.'),
-'id':('Aktifkan LAFA Virtual Assistant di Eduka-Desktop','Buka LAFA Desktop','Pengaturan LAFA','Mengaktifkan LAFA…','Menonaktifkan LAFA…','LAFA tidak dapat dibuka. Periksa executable terpasang.','Perubahan belum diterapkan. Buka pengaturan LAFA dan coba lagi.','Karakter juga bekerja offline; saat online ada situs, berita dan AI. Desktop dan Asisten Virtual terpisah.'),
-'pt':('Ativar o Assistente Virtual LAFA no Eduka-Desktop','Abrir LAFA Desktop','Definições LAFA','A ativar LAFA…','A desativar LAFA…','Não foi possível iniciar LAFA. Verifique o executável instalado.','A alteração não foi aplicada. Abra as definições LAFA e tente novamente.','A personagem também funciona offline; online traz sites, notícias e IA. Desktop e Assistente Virtual são separados.'),
+'en':('Activate LAFA Virtual Assistant in Eduka-Desktop','Open LAFA Desktop','LAFA settings','Activating LAFA…','Deactivating LAFA…','LAFA could not start. Check the installed executable.','The change was not applied. Open LAFA settings and try again.','Lafa works offline: lessons, search, tasks and reminders. Online it also brings websites, news and weather. Desktop and Virtual Assistant are separate.'),
+'id':('Aktifkan LAFA Virtual Assistant di Eduka-Desktop','Buka LAFA Desktop','Pengaturan LAFA','Mengaktifkan LAFA…','Menonaktifkan LAFA…','LAFA tidak dapat dibuka. Periksa executable terpasang.','Perubahan belum diterapkan. Buka pengaturan LAFA dan coba lagi.','Lafa bekerja offline: pelajaran, pencarian, tugas, dan pengingat. Saat online juga ada situs, berita, dan cuaca. Desktop dan Asisten Virtual terpisah.'),
+'pt':('Ativar o Assistente Virtual LAFA no Eduka-Desktop','Abrir LAFA Desktop','Definições LAFA','A ativar LAFA…','A desativar LAFA…','Não foi possível iniciar LAFA. Verifique o executável instalado.','A alteração não foi aplicada. Abra as definições LAFA e tente novamente.','O Lafa funciona offline: lições, pesquisa, trabalhos e lembretes. Online também traz sites, notícias e tempo. O Desktop e o Assistente Virtual são separados.'),
  'tet':('Ativa Asistente Virtuál LAFA iha Eduka-Desktop','Loke LAFA Desktop','Konfigurasaun LAFA','Ativa LAFA hela…','Desativa LAFA hela…','La bele loke LAFA. Verifika executable instaladu.','Mudansa seidauk aplika. Loke konfigurasaun LAFA no koko fali.','Karakter mós servisu offline; online iha sítiu, notísia no AI. Desktop no Asistente Virtuál ketak.'),
 }
 
@@ -155,6 +155,10 @@ SECTIONS=[
   ('panel_edge','enum',{'bottom':('Bottom','Bawah','Inferior','Kraik'),'top':('Top','Atas','Superior','Leten')},('Panel edge (manual)','Sisi panel (manual)','Posição do painel (manual)','Pozisaun painel (manuál)')),
   ('panel_height','int',(0,160),('Panel height in px (manual)','Tinggi panel px (manual)','Altura do painel px (manual)','Altura painel px (manuál)')),
   ('click_recommendations','bool',None,('Click LAFA for free-software tips and learning websites','Klik LAFA untuk tips perangkat lunak bebas dan situs belajar','Clicar no LAFA para dicas de software livre e sites de aprendizagem','Klik LAFA ba dika software livre no sítiu aprendizajen')),
+  ('quiet_mode','bool',None,('Quiet mode: no spontaneous messages','Mode tenang: tanpa pesan spontan','Modo silencioso: sem mensagens espontâneas','Modu nonok: la iha mensajen espontániu')),
+  ('reduce_motion','bool',None,('Reduce motion (no walking or gestures)','Kurangi gerakan (tanpa berjalan atau gerak)','Reduzir movimento (sem andar nem gestos)','Hamenus movimentu (la la\'o no la halo jestu)')),
+  ('messages_per_hour','int',(0,20),('Spontaneous messages per hour (maximum)','Pesan spontan per jam (maksimum)','Mensagens espontâneas por hora (máximo)','Mensajen espontániu kada oras (másimu)')),
+  ('entertainment','bool',None,('Entertainment: magician, mind reader, jokes, bathroom scenes','Hiburan: pesulap, pembaca pikiran, lelucon, adegan kamar mandi','Entretenimento: mágico, leitor de mentes, piadas, cenas de casa de banho','Divertimentu: majiku, lee hanoin, anedota, sena hariis')),
   ('greet_by_time','bool',None,('Greet by time of day','Sapa sesuai waktu','Saudar conforme a hora','Kumprimenta tuir oras')),
   ('start_with_session','bool',None,('Start with Eduka-Desktop when activated','Mulai bersama Eduka-Desktop saat aktif','Iniciar com o Eduka-Desktop','Hahú ho Eduka-Desktop')),
  ]),
@@ -172,22 +176,19 @@ SECTIONS=[
   ('news_minutes','int',(10,240),('News every (minutes)','Berita setiap (menit)','Notícias a cada (minutos)','Notísia kada (minutu)')),
  ]),
  ('desktop',('LAFA Desktop','LAFA Desktop','LAFA Desktop','LAFA Desktop'),[
-  ('start_page','enum',{'home':('Home','Beranda','Início','Uma'),'classroom':('Classroom','Ruang kelas','Sala de aula','Sala aula'),'exams':('Exam hall','Ruang ujian','Sala de exames','Sala ezame'),'languages':('Language school','Sekolah bahasa','Escola de línguas','Eskola lian'),'culture':('Timor-Leste','Timor-Leste','Timor-Leste','Timor-Leste'),'teachers':('Teachers','Guru','Professores','Mestre sira'),'homework':('Homework & timetable','PR & jadwal','Trabalhos e horário','TPC no orariu'),'chat':('Conversation','Percakapan','Conversa','Konversa'),'os_help':('Edukasaun OS help','Bantuan Edukasaun OS','Ajuda do Edukasaun OS','Ajuda Edukasaun OS')},('Start page','Halaman awal','Página inicial','Pájina inisiál')),
+  ('start_page','enum',{'home':('Home','Beranda','Início','Uma'),'study':('Learn','Belajar','Aprender','Aprende'),'library':('Library','Perpustakaan','Biblioteca','Biblioteka'),'timor':('Timor-Leste',)*4,'activities':('My activities','Aktivitas Saya','As minhas atividades',"Ha'u-nia atividade"),'oshelp':('OS help','Bantuan OS','Ajuda do sistema','Ajuda OS')},('Start page','Halaman awal','Página inicial','Pájina inisiál')),
+  ('learner_level','enum',{'school':('Timor-Leste school lessons','Pelajaran sekolah Timor-Leste','Lições escolares de Timor-Leste','Lisaun eskola Timor-Leste'),'early':('Ages 5–7','Usia 5–7','5–7 anos','Tinan 5–7'),'primary':('Ages 8–11','Usia 8–11','8–11 anos','Tinan 8–11'),'middle':('Ages 12–14','Usia 12–14','12–14 anos','Tinan 12–14'),'secondary':('Ages 15–18','Usia 15–18','15–18 anos','Tinan 15–18'),'university':('Ages 19–25','Usia 19–25','19–25 anos','Tinan 19–25'),'adult':('Ages 26–59','Usia 26–59','26–59 anos','Tinan 26–59'),'senior':('Ages 60–100','Usia 60–100','60–100 anos','Tinan 60–100')},('Learner’s age (classroom)','Usia pelajar (ruang kelas)','Idade do aluno (sala de aula)','Estudante nia idade (sala aula)')),
   ('depth_effects','bool',None,('Soft 3D shadows (aero look)','Bayangan 3D lembut (tampilan aero)','Sombras 3D suaves (aspeto aero)','Sombra 3D maman (aparénsia aero)')),
   ('smooth_scrolling','bool',None,('Smooth scrolling','Gulir halus','Deslocação suave','Scroll maman')),
   ('follow_eduka_theme','bool',None,('Use the Eduka-Desktop theme and accent colour','Pakai tema dan warna aksen Eduka-Desktop','Usar o tema e a cor do Eduka-Desktop','Uza tema no kór Eduka-Desktop')),
   ('notifications','bool',None,('Reminders as Eduka-Panel notifications','Pengingat sebagai notifikasi Eduka-Panel','Lembretes como notificações do Eduka-Panel','Lembransa hanesan notifikasaun Eduka-Panel')),
-  ('auto_update','bool',None,('Keep learning sources up to date automatically (every hour)','Perbarui sumber belajar otomatis (setiap jam)','Atualizar as fontes automaticamente (a cada hora)','Atualiza fonte aprende automátiku (kada oras)')),
-  ('update_hours','int',(1,168),('Check for updates every (hours)','Periksa pembaruan setiap (jam)','Verificar atualizações a cada (horas)','Verifika atualizasaun kada (oras)')),
+  ('auto_update','bool',None,('Update the source catalogue (data only; LAFA itself updates through EUS/APT)','Perbarui katalog sumber (data saja; LAFA diperbarui lewat EUS/APT)','Atualizar o catálogo de fontes (só dados; o LAFA atualiza-se pelo EUS/APT)','Atualiza katálogu fonte (dadus de\'it; LAFA atualiza liuhusi EUS/APT)')),
+  ('update_hours','int',(6,168),('Check for updates every (hours)','Periksa pembaruan setiap (jam)','Verificar atualizações a cada (horas)','Verifika atualizasaun kada (oras)')),
   ('speak_answers','bool',None,('Read answers aloud','Bacakan jawaban','Ler respostas em voz alta','Lee resposta ho lian')),
   ('speech_rate','int',(80,260),('Reading speed (words/min)','Kecepatan membaca (kata/menit)','Velocidade de leitura','Velosidade lee')),
  ]),
- ('ai',('AI & language','AI & bahasa','IA e idioma','IA no lian'),[
+ ('language',('Language & sources','Bahasa & sumber','Língua e fontes','Lian no fonte'),[
   ('language','enum',{'system':('Follow Eduka-Desktop','Ikuti Eduka-Desktop','Seguir o Eduka-Desktop','Tuir Eduka-Desktop'),'en':('English',)*4,'tet':('Tetun',)*4,'pt':('Português',)*4,'id':('Bahasa Indonesia',)*4},('LAFA language','Bahasa LAFA','Idioma do LAFA','Lian LAFA')),
-  ('provider','enum',{'ollama':('Ollama (open-source, local)',)*4,'compatible':('Open-source server (OpenAI-compatible)',)*4,'openai':('OpenAI',)*4,'gemini':('Gemini',)*4,'anthropic':('Claude',)*4,'deepseek':('DeepSeek',)*4,'perplexity':('Perplexity',)*4},('AI provider','Penyedia AI','Fornecedor de IA','Provedor IA')),
-  ('model','model',120,('Model ID for this provider','ID model untuk penyedia ini','ID do modelo','ID modelu')),
-  ('ollama_url','text',300,('Ollama address (this computer)','Alamat Ollama (komputer ini)','Endereço do Ollama','Enderesu Ollama')),
-  ('compatible_url','text',300,('Open-source server (https://…/v1)','Server open-source (https://…/v1)','Servidor open-source (https://…/v1)','Servidór open-source (https://…/v1)')),
  ]),
  ('files',('Files & weather','File & cuaca','Ficheiros e tempo','Ficheiru no tempu'),[
   ('weather_city','text',120,('Home city','Kota utama','Cidade principal','Sidade prinsipál')),
@@ -199,16 +200,16 @@ SECTIONS=[
 ]
 PAGE_TEXT={'title':('Lafa-Configuration','Lafa-Configuration','Lafa-Configuration','Lafa-Configuration'),
  'hint':('Settings for LAFA Desktop and the LAFA Virtual Assistant. Changes apply at once.','Pengaturan LAFA Desktop dan LAFA Asisten Virtual. Perubahan langsung berlaku.','Definições do LAFA Desktop e do Assistente Virtual LAFA. As alterações aplicam-se logo.','Konfigurasaun LAFA Desktop no LAFA Asistente Virtuál. Mudansa aplika kedas.'),
- 'save':('Apply now','Terapkan sekarang','Aplicar agora','Aplika agora'),'keys':('API keys…','API key…','Chaves API…','Xave API…'),
+ 'save':('Apply now','Terapkan sekarang','Aplicar agora','Aplika agora'),
  'reset':('Recommended settings','Pengaturan yang disarankan','Definições recomendadas','Konfigurasaun rekomendadu'),
  'saved':('Saved. LAFA applies the changes now.','Tersimpan. LAFA langsung menerapkan perubahan.','Guardado. O LAFA aplica as alterações.','Rai ona. LAFA aplika mudansa agora.'),
- 'failed':('Could not save LAFA settings.','Pengaturan LAFA gagal disimpan.','Não foi possível guardar.','La bele rai konfigurasaun LAFA.'),
- 'keys_note':('API keys are kept by LAFA in memory or the secure keyring, never in this page.','API key disimpan LAFA di memori atau keyring aman, tidak di halaman ini.','As chaves API ficam no LAFA (memória ou porta-chaves), nunca nesta página.','Xave API LAFA rai iha memória ka keyring seguru, la iha pájina ne’e.')}
+ 'failed':('Could not save LAFA settings.','Pengaturan LAFA gagal disimpan.','Não foi possível guardar.','La bele rai konfigurasaun LAFA.'),}
 # Recommended values (also LAFA's defaults).
-DEFAULTS={'costume':'traditional','character_size':'normal','walk_speed':'normal','animation_speed':'normal','roam':True,'follow_eduka_panel':True,'panel_roam':True,'panel_edge':'bottom','panel_height':42,'greet_by_time':True,'start_with_session':True,
- 'hover_questions':True,'chatter':True,'fun_messages':True,'personal_activities':True,'positive_messages':True,'cultural_cards':True,'local_news_updates':True,'idle_seconds':60,'balloon_seconds':6,'card_minutes':5,'news_minutes':30,
- 'start_page':'home','follow_eduka_theme':True,'notifications':True,'auto_update':True,'update_hours':1,'click_recommendations':True,'smooth_scrolling':True,'depth_effects':True,'speak_answers':False,'speech_rate':155,
- 'language':'system','provider':'openai','ollama_url':'http://127.0.0.1:11434','compatible_url':'','weather_city':'Dili','weather_latitude':-8.5586,'weather_longitude':125.5736,'weather_timezone':'Asia/Dili'}
+DEFAULTS={'learner_level':'school','costume':'traditional','character_size':'normal','walk_speed':'normal','animation_speed':'normal','roam':True,'follow_eduka_panel':True,'panel_roam':True,'panel_edge':'bottom','panel_height':42,'greet_by_time':True,'start_with_session':True,
+ 'quiet_mode':False,'reduce_motion':False,'entertainment':False,'messages_per_hour':4,
+ 'hover_questions':True,'chatter':True,'fun_messages':True,'personal_activities':True,'positive_messages':True,'cultural_cards':True,'local_news_updates':False,'idle_seconds':60,'balloon_seconds':6,'card_minutes':15,'news_minutes':60,
+ 'start_page':'home','follow_eduka_theme':True,'notifications':True,'auto_update':True,'update_hours':24,'click_recommendations':True,'smooth_scrolling':True,'depth_effects':False,'speak_answers':False,'speech_rate':155,
+ 'language':'system','weather_city':'Dili','weather_latitude':-8.5586,'weather_longitude':125.5736,'weather_timezone':'Asia/Dili'}
 
 def pick(labels):return labels[LANG_INDEX.get(language(),0)] if len(labels)>1 else labels[0]
 
@@ -258,22 +259,14 @@ def add_lafa_preferences(layout,binding=None,command=None,live=True,clock=None):
                 control=widgets.QSpinBox();control.setRange(*extra);value=prefs.get(name,DEFAULTS[name]);control.setValue(value if isinstance(value,int) and not isinstance(value,bool) else DEFAULTS[name])
             elif kind=='float':
                 control=widgets.QDoubleSpinBox();control.setDecimals(4);control.setRange(*extra);value=prefs.get(name,DEFAULTS[name]);control.setValue(float(value) if isinstance(value,(int,float)) and not isinstance(value,bool) else DEFAULTS[name])
-            elif kind=='model':
-                models=prefs.get('models',{}) if isinstance(prefs.get('models'),dict) else {}
-                provider=prefs.get('provider',DEFAULTS['provider']);control=widgets.QLineEdit(models.get(provider,'') if isinstance(models.get(provider,''),str) else '');control.setMaxLength(extra)
             elif kind=='paths':
                 roots=prefs.get('roots',[]);control=widgets.QPlainTextEdit('\n'.join(r for r in roots if isinstance(r,str)) if isinstance(roots,list) else '');control.setMaximumHeight(110)
             else:
                 value=prefs.get(name,DEFAULTS.get(name,''));control=widgets.QLineEdit(value if isinstance(value,str) else DEFAULTS.get(name,''));control.setMaxLength(extra)
             _row(widgets,core,card,label,control,first);first=False;controls[name]=(kind,control)
-    provider_box=controls['provider'][1];model_box=controls['model'][1];state={'provider':provider_box.currentData(),'models':dict(prefs.get('models',{})) if isinstance(prefs.get('models'),dict) else {},'loading':False}
-    def provider_changed(*_):
-        state['models'][state['provider']]=model_box.text().strip();state['provider']=provider_box.currentData()
-        value=state['models'].get(state['provider'],'');state['loading']=True;model_box.setText(value if isinstance(value,str) else '');state['loading']=False
-    provider_box.currentIndexChanged.connect(provider_changed)
-    row=widgets.QHBoxLayout();save=widgets.QPushButton(pick(PAGE_TEXT['save']));save.setObjectName('primary');reset=widgets.QPushButton(pick(PAGE_TEXT['reset']));keys=widgets.QPushButton(pick(PAGE_TEXT['keys']))
-    row.addWidget(save);row.addWidget(reset);row.addWidget(keys);row.addStretch();column.addLayout(row)
-    note=widgets.QLabel(pick(PAGE_TEXT['keys_note']));note.setObjectName('fieldHint');note.setWordWrap(True);column.addWidget(note)
+    state={'loading':False}
+    row=widgets.QHBoxLayout();save=widgets.QPushButton(pick(PAGE_TEXT['save']));save.setObjectName('primary');reset=widgets.QPushButton(pick(PAGE_TEXT['reset']))
+    row.addWidget(save);row.addWidget(reset);row.addStretch();column.addLayout(row)
     status=widgets.QLabel();status.setObjectName('fieldHint');status.setWordWrap(True);column.addWidget(status)
     def collect():
         changes={}
@@ -282,9 +275,7 @@ def add_lafa_preferences(layout,binding=None,command=None,live=True,clock=None):
             elif kind=='enum':changes[name]=control.currentData()
             elif kind in {'int','float'}:changes[name]=control.value()
             elif kind=='paths':changes['roots']=[line.strip() for line in control.toPlainText().splitlines() if line.strip()][:100]
-            elif kind=='model':pass
             else:changes[name]=control.text().strip()
-        models=dict(state['models']);models[provider_box.currentData()]=model_box.text().strip();changes['models']=models
         return changes
     def launch(role):
         try:
@@ -295,10 +286,10 @@ def add_lafa_preferences(layout,binding=None,command=None,live=True,clock=None):
         except (OSError,ValueError,TypeError):status.setText(pick(PAGE_TEXT['failed']));return
         launch('--reload');status.setText(pick(PAGE_TEXT['saved']))
     def reset_clicked():
-        """Recommended values for LAFA's behaviour; AI, folders and weather stay."""
+        """Recommended values for LAFA's behaviour; language, folders and weather stay."""
         timer.stop()
         for name,(kind,control) in controls.items():
-            if name not in DEFAULTS or name in {'provider','ollama_url','compatible_url','weather_city','weather_latitude','weather_longitude','weather_timezone','language'}:continue
+            if name not in DEFAULTS or name in {'weather_city','weather_latitude','weather_longitude','weather_timezone','language'}:continue
             if kind=='bool':control.setChecked(DEFAULTS[name])
             elif kind=='enum':control.setCurrentIndex(control.findData(DEFAULTS[name]))
             elif kind in {'int','float'}:control.setValue(DEFAULTS[name])
@@ -314,7 +305,7 @@ def add_lafa_preferences(layout,binding=None,command=None,live=True,clock=None):
             elif kind in {'int','float'}:control.valueChanged.connect(kick)
             elif kind=='paths':control.textChanged.connect(lambda:timer.start(1200))
             else:control.textChanged.connect(lambda *_:None if state['loading'] else timer.start(1200))
-    save.clicked.connect(save_clicked);reset.clicked.connect(reset_clicked);keys.clicked.connect(lambda:launch('--settings'))
+    save.clicked.connect(save_clicked);reset.clicked.connect(reset_clicked)
     layout.addWidget(container)
     container.lafa_controls=controls;container.lafa_save=save_clicked;container.lafa_reset=reset_clicked;container.lafa_status=status;container.lafa_collect=collect;container.lafa_timer=timer
     return container

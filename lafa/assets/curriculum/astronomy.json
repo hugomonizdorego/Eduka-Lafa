@@ -1,0 +1,1037 @@
+{
+ "subject": "astronomy",
+ "icon": "🪐",
+ "name": {
+  "en": "Planets and the solar system",
+  "id": "Planet dan tata surya",
+  "pt": "Planetas e sistema solar",
+  "tet": "Planeta no sistema solar"
+ },
+ "meta": {
+  "version": 1,
+  "license": "CC BY-SA 4.0",
+  "languages": [
+   "en",
+   "id",
+   "pt",
+   "tet"
+  ],
+  "source": "Written by the LAFA team for Edukasaun OS (general knowledge, checked against standard references)",
+  "reviewed": "2026-10-13",
+  "review_status": "LAFA team review; not yet reviewed by the Ministry of Education (not a national curriculum)"
+ },
+ "lessons": [
+  {
+   "id": "astronomy.early",
+   "level": "early",
+   "difficulty": 1,
+   "topic": "astronomy",
+   "title": {
+    "en": "The Sun, the Moon and the stars",
+    "id": "Matahari, Bulan, dan bintang",
+    "pt": "O Sol, a Lua e as estrelas",
+    "tet": "Loron, fulan no fitun sira"
+   },
+   "points": [
+    {
+     "en": "The Sun is a big, hot star. It gives us light and keeps us warm in the day.",
+     "id": "Matahari adalah bintang yang besar dan panas. Matahari memberi kita cahaya dan kehangatan pada siang hari.",
+     "pt": "O Sol é uma estrela grande e quente. Dá-nos luz e calor durante o dia.",
+     "tet": "Loron mak fitun ida ne'ebé boot no manas. Loron fó naroman no manas mai ita iha tempu loron."
+    },
+    {
+     "en": "At night we can see the Moon. Its shape seems to change: round, half, thin.",
+     "id": "Pada malam hari kita bisa melihat Bulan. Bentuknya seperti berubah: bulat, setengah, tipis.",
+     "pt": "À noite podemos ver a Lua. A sua forma parece mudar: redonda, metade, fina.",
+     "tet": "Iha kalan ita bele haree fulan. Ninia forma hanesan muda: kabuar, balun, no kenik."
+    },
+    {
+     "en": "The little lights in the night sky are stars. They are very, very far away.",
+     "id": "Titik-titik cahaya kecil di langit malam adalah bintang. Bintang sangat jauh sekali.",
+     "pt": "As pequenas luzes no céu da noite são estrelas. Estão muito, muito longe.",
+     "tet": "Naroman ki'ik sira iha lalehan kalan nian mak fitun. Sira dook tebes husi ita."
+    }
+   ],
+   "task": {
+    "en": "Tonight, look at the sky with your family. Count the stars you can see, up to 10, and then draw the Moon.",
+    "id": "Malam ini, lihatlah langit bersama keluargamu. Hitung bintang yang kamu lihat sampai 10, lalu gambar Bulan.",
+    "pt": "Esta noite, olha para o céu com a tua família. Conta as estrelas que vês até 10 e depois desenha a Lua.",
+    "tet": "Kalan ne'e, haree lalehan ho ó-nia família. Konta fitun sira ne'ebé ó haree to'o 10, depois dezeña fulan."
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "What gives us light and warmth in the day?",
+      "id": "Apa yang memberi kita cahaya dan kehangatan pada siang hari?",
+      "pt": "O que nos dá luz e calor durante o dia?",
+      "tet": "Saida mak fó naroman no manas mai ita iha tempu loron?"
+     },
+     "answer": {
+      "en": "The Sun",
+      "id": "Matahari",
+      "pt": "O Sol",
+      "tet": "Loron"
+     },
+     "wrong": [
+      {
+       "en": "The Moon",
+       "id": "Bulan",
+       "pt": "A Lua",
+       "tet": "Fulan"
+      },
+      {
+       "en": "The rain",
+       "id": "Hujan",
+       "pt": "A chuva",
+       "tet": "Udan"
+      },
+      {
+       "en": "A tree",
+       "id": "Pohon",
+       "pt": "Uma árvore",
+       "tet": "Ai-hun ida"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "When do we usually see the stars?",
+      "id": "Kapan biasanya kita melihat bintang?",
+      "pt": "Quando costumamos ver as estrelas?",
+      "tet": "Bainhira mak ita baibain haree fitun sira?"
+     },
+     "answer": {
+      "en": "At night",
+      "id": "Pada malam hari",
+      "pt": "À noite",
+      "tet": "Iha kalan"
+     },
+     "wrong": [
+      {
+       "en": "At midday",
+       "id": "Pada tengah hari",
+       "pt": "Ao meio-dia",
+       "tet": "Iha loron-boot"
+      },
+      {
+       "en": "Only when it rains",
+       "id": "Hanya saat hujan",
+       "pt": "Só quando chove",
+       "tet": "Só bainhira udan"
+      },
+      {
+       "en": "Never",
+       "id": "Tidak pernah",
+       "pt": "Nunca",
+       "tet": "Nunka"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "Are the stars near or far?",
+      "id": "Bintang itu dekat atau jauh?",
+      "pt": "As estrelas estão perto ou longe?",
+      "tet": "Fitun sira besik ka dook?"
+     },
+     "answer": {
+      "en": "Very far away",
+      "id": "Sangat jauh",
+      "pt": "Muito longe",
+      "tet": "Dook tebes"
+     },
+     "wrong": [
+      {
+       "en": "Near our house",
+       "id": "Dekat rumah kita",
+       "pt": "Perto da nossa casa",
+       "tet": "Besik ita-nia uma"
+      },
+      {
+       "en": "On top of a tree",
+       "id": "Di atas pohon",
+       "pt": "Em cima de uma árvore",
+       "tet": "Iha ai-hun nia leten"
+      },
+      {
+       "en": "Just above the clouds",
+       "id": "Tepat di atas awan",
+       "pt": "Logo acima das nuvens",
+       "tet": "Iha kalohan nia leten de'it"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "astronomy.primary",
+   "level": "primary",
+   "difficulty": 2,
+   "topic": "astronomy",
+   "title": {
+    "en": "Our solar system",
+    "id": "Tata surya kita",
+    "pt": "O nosso sistema solar",
+    "tet": "Ita-nia sistema solar"
+   },
+   "points": [
+    {
+     "en": "Eight planets travel around the Sun: Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus and Neptune.",
+     "id": "Delapan planet bergerak mengelilingi Matahari: Merkurius, Venus, Bumi, Mars, Yupiter, Saturnus, Uranus, dan Neptunus.",
+     "pt": "Oito planetas giram à volta do Sol: Mercúrio, Vénus, Terra, Marte, Júpiter, Saturno, Úrano e Neptuno.",
+     "tet": "Planeta walu la'o haleu loron: Merkúriu, Vénus, Rai, Marte, Júpiter, Saturnu, Uranu no Neptunu."
+    },
+    {
+     "en": "Earth spins once every day (24 hours), which gives us day and night. It goes around the Sun once a year, in about 365 days.",
+     "id": "Bumi berputar sekali setiap hari (24 jam) sehingga ada siang dan malam. Bumi mengelilingi Matahari sekali setahun, dalam sekitar 365 hari.",
+     "pt": "A Terra roda sobre si mesma uma vez por dia (24 horas), o que dá o dia e a noite. Dá uma volta ao Sol por ano, em cerca de 365 dias.",
+     "tet": "Rai fila an dala ida kada loron (oras 24), tan ne'e iha loron no kalan. Rai la'o haleu loron dala ida kada tinan, iha maizumenus loron 365."
+    },
+    {
+     "en": "Jupiter is the biggest planet and Mercury is the closest to the Sun. The Moon goes around the Earth in about one month.",
+     "id": "Yupiter adalah planet terbesar dan Merkurius paling dekat dengan Matahari. Bulan mengelilingi Bumi dalam waktu sekitar satu bulan.",
+     "pt": "Júpiter é o maior planeta e Mercúrio é o mais próximo do Sol. A Lua dá a volta à Terra em cerca de um mês.",
+     "tet": "Júpiter mak planeta boot liu hotu, no Merkúriu mak besik liu ba loron. Fulan la'o haleu Rai iha maizumenus fulan ida."
+    }
+   ],
+   "task": {
+    "en": "In the school yard, make a solar system with 8 stones or fruits of different sizes, in the right order from the Sun.",
+    "id": "Di halaman sekolah, buatlah tata surya dengan 8 batu atau buah berbagai ukuran, sesuai urutan dari Matahari.",
+    "pt": "No pátio da escola, faz um sistema solar com 8 pedras ou frutas de tamanhos diferentes, pela ordem certa a partir do Sol.",
+    "tet": "Iha eskola nia pátiu, halo sistema solar ida ho fatuk ka ai-fuan 8 ho medida oioin, tuir orden loos husi loron."
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "How many planets go around the Sun?",
+      "id": "Berapa banyak planet yang mengelilingi Matahari?",
+      "pt": "Quantos planetas giram à volta do Sol?",
+      "tet": "Planeta hira mak la'o haleu loron?"
+     },
+     "answer": {
+      "en": "8",
+      "id": "8",
+      "pt": "8",
+      "tet": "8"
+     },
+     "wrong": [
+      {
+       "en": "7",
+       "id": "7",
+       "pt": "7",
+       "tet": "7"
+      },
+      {
+       "en": "9",
+       "id": "9",
+       "pt": "9",
+       "tet": "9"
+      },
+      {
+       "en": "12",
+       "id": "12",
+       "pt": "12",
+       "tet": "12"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "Which planet is the biggest?",
+      "id": "Planet manakah yang terbesar?",
+      "pt": "Qual é o maior planeta?",
+      "tet": "Planeta ida ne'ebé mak boot liu hotu?"
+     },
+     "answer": {
+      "en": "Jupiter",
+      "id": "Yupiter",
+      "pt": "Júpiter",
+      "tet": "Júpiter"
+     },
+     "wrong": [
+      {
+       "en": "Mercury",
+       "id": "Merkurius",
+       "pt": "Mercúrio",
+       "tet": "Merkúriu"
+      },
+      {
+       "en": "Earth",
+       "id": "Bumi",
+       "pt": "Terra",
+       "tet": "Rai"
+      },
+      {
+       "en": "Mars",
+       "id": "Mars",
+       "pt": "Marte",
+       "tet": "Marte"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "Why do we have day and night?",
+      "id": "Mengapa ada siang dan malam?",
+      "pt": "Porque é que temos dia e noite?",
+      "tet": "Tanba saida mak iha loron no kalan?"
+     },
+     "answer": {
+      "en": "Because the Earth spins",
+      "id": "Karena Bumi berputar",
+      "pt": "Porque a Terra roda sobre si mesma",
+      "tet": "Tanba Rai fila an"
+     },
+     "wrong": [
+      {
+       "en": "Because the Sun goes out at night",
+       "id": "Karena Matahari padam pada malam hari",
+       "pt": "Porque o Sol se apaga à noite",
+       "tet": "Tanba loron mate iha kalan"
+      },
+      {
+       "en": "Because the Moon covers the Sun every night",
+       "id": "Karena Bulan menutupi Matahari setiap malam",
+       "pt": "Porque a Lua tapa o Sol todas as noites",
+       "tet": "Tanba fulan taka loron kalan-kalan"
+      },
+      {
+       "en": "Because clouds hide the Sun",
+       "id": "Karena awan menutupi Matahari",
+       "pt": "Porque as nuvens escondem o Sol",
+       "tet": "Tanba kalohan subar loron"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "astronomy.middle",
+   "level": "middle",
+   "difficulty": 3,
+   "topic": "astronomy",
+   "title": {
+    "en": "Gravity, orbits and the phases of the Moon",
+    "id": "Gravitasi, orbit, dan fase Bulan",
+    "pt": "Gravidade, órbitas e fases da Lua",
+    "tet": "Gravidade, órbita no fulan nia fase sira"
+   },
+   "points": [
+    {
+     "en": "Gravity is the pull between objects that have mass. The Sun's gravity keeps the planets in their orbits, and Earth's gravity keeps the Moon near us.",
+     "id": "Gravitasi adalah gaya tarik antara benda-benda yang bermassa. Gravitasi Matahari menjaga planet tetap di orbitnya, dan gravitasi Bumi menjaga Bulan tetap dekat kita.",
+     "pt": "A gravidade é a atração entre corpos com massa. A gravidade do Sol mantém os planetas nas suas órbitas e a da Terra mantém a Lua perto de nós.",
+     "tet": "Gravidade mak forsa ne'ebé dada objetu sira ne'ebé iha masa. Loron nia gravidade halo planeta sira hela iha sira-nia órbita, no Rai nia gravidade halo fulan hela besik ita."
+    },
+    {
+     "en": "The Moon has no light of its own; it reflects sunlight. As it orbits Earth (about 29.5 days per cycle), we see phases: new, crescent, quarter, gibbous and full.",
+     "id": "Bulan tidak memiliki cahaya sendiri; ia memantulkan cahaya Matahari. Saat mengorbit Bumi (sekitar 29,5 hari per siklus), kita melihat fase: bulan baru, sabit, perbani, cembung, dan purnama.",
+     "pt": "A Lua não tem luz própria; reflete a luz do Sol. Enquanto gira à volta da Terra (cerca de 29,5 dias por ciclo), vemos as fases: nova, crescente, quarto, gibosa e cheia.",
+     "tet": "Fulan la iha ninia naroman rasik; nia reflete loron nia naroman. Bainhira nia la'o haleu Rai (maizumenus loron 29,5 ba siklu ida), ita haree fase sira: fulan foun, fulan kenik, fulan balun no fulan kabuar."
+    },
+    {
+     "en": "Seasons happen because Earth's axis is tilted by about 23.5°. Near the equator, as in Timor-Leste, we notice wet and dry seasons more than hot and cold ones.",
+     "id": "Musim terjadi karena sumbu Bumi miring sekitar 23,5°. Di dekat khatulistiwa, seperti di Timor-Leste, kita lebih merasakan musim hujan dan kemarau daripada musim panas dan dingin.",
+     "pt": "As estações do ano acontecem porque o eixo da Terra está inclinado cerca de 23,5°. Perto do equador, como em Timor-Leste, notamos mais a época das chuvas e a seca do que o calor e o frio.",
+     "tet": "Tempu sira (estasaun) mosu tanba Rai nia eixu tortu maizumenus 23,5°. Besik ekuadór, hanesan iha Timor-Leste, ita sente liu tempu udan no tempu bailoron duké manas no malirin."
+    },
+    {
+     "en": "Weight depends on gravity: on the Moon you would weigh about one sixth of your weight on Earth, but your mass stays the same.",
+     "id": "Berat bergantung pada gravitasi: di Bulan beratmu sekitar seperenam beratmu di Bumi, tetapi massamu tetap sama.",
+     "pt": "O peso depende da gravidade: na Lua pesarias cerca de um sexto do teu peso na Terra, mas a tua massa continua igual.",
+     "tet": "Todan depende ba gravidade: iha fulan, ita-nia todan maizumenus parte neen ida husi ita-nia todan iha Rai, maibé ita-nia masa hanesan nafatin."
+    }
+   ],
+   "task": {
+    "en": "For one month, draw the Moon on every night you can see it and write the date. Compare your drawings with the phases.",
+    "id": "Selama satu bulan, gambarlah Bulan setiap malam saat kamu bisa melihatnya dan tulis tanggalnya. Bandingkan gambarmu dengan fase-fase Bulan.",
+    "pt": "Durante um mês, desenha a Lua em cada noite em que a conseguires ver e escreve a data. Compara os desenhos com as fases.",
+    "tet": "Durante fulan ida, dezeña fulan iha kalan ida-idak ne'ebé ó bele haree nia, no hakerek data. Kompara ó-nia dezeñu sira ho fase sira."
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "What keeps the planets in orbit around the Sun?",
+      "id": "Apa yang membuat planet tetap mengorbit Matahari?",
+      "pt": "O que mantém os planetas em órbita à volta do Sol?",
+      "tet": "Saida mak halo planeta sira hela iha órbita haleu loron?"
+     },
+     "answer": {
+      "en": "Gravity",
+      "id": "Gravitasi",
+      "pt": "A gravidade",
+      "tet": "Gravidade"
+     },
+     "wrong": [
+      {
+       "en": "The wind",
+       "id": "Angin",
+       "pt": "O vento",
+       "tet": "Anin"
+      },
+      {
+       "en": "Magnetism from the Moon",
+       "id": "Magnet dari Bulan",
+       "pt": "O magnetismo da Lua",
+       "tet": "Fulan nia manyetizmu"
+      },
+      {
+       "en": "Sunlight pushing them",
+       "id": "Dorongan cahaya Matahari",
+       "pt": "A luz do Sol a empurrá-los",
+       "tet": "Loron nia naroman ne'ebé dudu sira"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "Why does the Moon shine?",
+      "id": "Mengapa Bulan bersinar?",
+      "pt": "Porque é que a Lua brilha?",
+      "tet": "Tanba saida mak fulan nabilan?"
+     },
+     "answer": {
+      "en": "It reflects sunlight",
+      "id": "Bulan memantulkan cahaya Matahari",
+      "pt": "Reflete a luz do Sol",
+      "tet": "Nia reflete loron nia naroman"
+     },
+     "wrong": [
+      {
+       "en": "It burns like a fire",
+       "id": "Bulan terbakar seperti api",
+       "pt": "Arde como uma fogueira",
+       "tet": "Nia sunu hanesan ahi"
+      },
+      {
+       "en": "It has its own lamps",
+       "id": "Bulan punya lampu sendiri",
+       "pt": "Tem luzes próprias",
+       "tet": "Nia iha lámpada rasik"
+      },
+      {
+       "en": "It is a star",
+       "id": "Bulan adalah bintang",
+       "pt": "É uma estrela",
+       "tet": "Nia fitun ida"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "What causes the seasons?",
+      "id": "Apa penyebab musim?",
+      "pt": "O que causa as estações do ano?",
+      "tet": "Saida mak halo tempu sira (estasaun) mosu?"
+     },
+     "answer": {
+      "en": "The tilt of Earth's axis",
+      "id": "Kemiringan sumbu Bumi",
+      "pt": "A inclinação do eixo da Terra",
+      "tet": "Rai nia eixu ne'ebé tortu"
+     },
+     "wrong": [
+      {
+       "en": "Earth getting closer to the Moon",
+       "id": "Bumi mendekati Bulan",
+       "pt": "A Terra aproximar-se da Lua",
+       "tet": "Rai besik liu ba fulan"
+      },
+      {
+       "en": "The Sun changing colour",
+       "id": "Matahari berubah warna",
+       "pt": "O Sol mudar de cor",
+       "tet": "Loron muda kór"
+      },
+      {
+       "en": "The speed of the wind",
+       "id": "Kecepatan angin",
+       "pt": "A velocidade do vento",
+       "tet": "Anin nia velosidade"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "astronomy.secondary",
+   "level": "secondary",
+   "difficulty": 4,
+   "topic": "astronomy",
+   "title": {
+    "en": "Light, stars and distances in space",
+    "id": "Cahaya, bintang, dan jarak di luar angkasa",
+    "pt": "Luz, estrelas e distâncias no espaço",
+    "tet": "Naroman, fitun no distánsia iha espasu"
+   },
+   "points": [
+    {
+     "en": "Light travels at about 300 000 km/s. Sunlight takes about 8 minutes to reach Earth, so we see the Sun as it was 8 minutes ago.",
+     "id": "Cahaya bergerak sekitar 300 000 km/s. Cahaya Matahari butuh sekitar 8 menit untuk sampai ke Bumi, jadi kita melihat Matahari seperti 8 menit yang lalu.",
+     "pt": "A luz viaja a cerca de 300 000 km/s. A luz do Sol demora cerca de 8 minutos a chegar à Terra, por isso vemos o Sol como era há 8 minutos.",
+     "tet": "Naroman la'o maizumenus 300 000 km/s. Loron nia naroman presiza maizumenus minutu 8 atu to'o Rai, tan ne'e ita haree loron hanesan nia iha minutu 8 liubá."
+    },
+    {
+     "en": "A light-year is the distance light travels in one year, about 9.5 trillion km. The nearest star after the Sun, Proxima Centauri, is about 4.2 light-years away.",
+     "id": "Tahun cahaya adalah jarak yang ditempuh cahaya dalam satu tahun, sekitar 9,5 triliun km. Bintang terdekat setelah Matahari, Proxima Centauri, berjarak sekitar 4,2 tahun cahaya.",
+     "pt": "Um ano-luz é a distância que a luz percorre num ano, cerca de 9,5 biliões de km. A estrela mais próxima depois do Sol, Proxima Centauri, está a cerca de 4,2 anos-luz.",
+     "tet": "Tinan-naroman ida mak distánsia ne'ebé naroman la'o iha tinan ida, maizumenus km triliaun 9,5. Fitun besik liu depois loron, Proxima Centauri, dook maizumenus tinan-naroman 4,2."
+    },
+    {
+     "en": "Stars shine because of nuclear fusion in their cores: hydrogen nuclei join to make helium and release energy. Bigger stars use their fuel faster and live shorter lives.",
+     "id": "Bintang bersinar karena fusi nuklir di intinya: inti hidrogen bergabung menjadi helium dan melepaskan energi. Bintang yang lebih besar menghabiskan bahan bakarnya lebih cepat dan hidup lebih singkat.",
+     "pt": "As estrelas brilham devido à fusão nuclear no seu núcleo: núcleos de hidrogénio juntam-se, formam hélio e libertam energia. As estrelas maiores gastam o combustível mais depressa e vivem menos.",
+     "tet": "Fitun sira nabilan tanba fuzaun nukleár iha sira-nia klaran: idrojéniu nia núkleu sira hamutuk halo éliu no hasai enerjia. Fitun boot liu gasta sira-nia kombustível lalais liu no moris badak liu."
+    },
+    {
+     "en": "A star's colour shows its surface temperature: red stars are cooler and blue-white stars are hotter. Our Sun is a yellow, medium-sized star about 4.6 billion years old.",
+     "id": "Warna bintang menunjukkan suhu permukaannya: bintang merah lebih dingin dan bintang putih kebiruan lebih panas. Matahari kita adalah bintang kuning berukuran sedang yang berusia sekitar 4,6 miliar tahun.",
+     "pt": "A cor de uma estrela mostra a temperatura da sua superfície: as vermelhas são mais frias e as branco-azuladas mais quentes. O nosso Sol é uma estrela amarela, média, com cerca de 4600 milhões de anos.",
+     "tet": "Fitun nia kór hatudu ninia temperatura iha superfísie: fitun mean malirin liu no fitun mutin-azúl manas liu. Ita-nia loron mak fitun kinur ida ho medida médiu, ho idade maizumenus tinan biliaun 4,6."
+    }
+   ],
+   "task": {
+    "en": "Calculate: the Moon is about 384 000 km away. How many seconds does its light take to reach us? (time = distance ÷ speed of light)",
+    "id": "Hitunglah: jarak Bulan sekitar 384 000 km. Berapa detik cahayanya sampai ke kita? (waktu = jarak ÷ kecepatan cahaya)",
+    "pt": "Calcula: a Lua está a cerca de 384 000 km. Quantos segundos demora a sua luz a chegar até nós? (tempo = distância ÷ velocidade da luz)",
+    "tet": "Kalkula: fulan dook maizumenus 384 000 km. Ninia naroman presiza segundu hira atu to'o ita? (tempu = distánsia ÷ naroman nia velosidade)"
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "How long does sunlight take to reach Earth?",
+      "id": "Berapa lama cahaya Matahari sampai ke Bumi?",
+      "pt": "Quanto tempo demora a luz do Sol a chegar à Terra?",
+      "tet": "Loron nia naroman presiza tempu hira atu to'o Rai?"
+     },
+     "answer": {
+      "en": "About 8 minutes",
+      "id": "Sekitar 8 menit",
+      "pt": "Cerca de 8 minutos",
+      "tet": "Maizumenus minutu 8"
+     },
+     "wrong": [
+      {
+       "en": "About 8 seconds",
+       "id": "Sekitar 8 detik",
+       "pt": "Cerca de 8 segundos",
+       "tet": "Maizumenus segundu 8"
+      },
+      {
+       "en": "About 8 hours",
+       "id": "Sekitar 8 jam",
+       "pt": "Cerca de 8 horas",
+       "tet": "Maizumenus oras 8"
+      },
+      {
+       "en": "About 8 days",
+       "id": "Sekitar 8 hari",
+       "pt": "Cerca de 8 dias",
+       "tet": "Maizumenus loron 8"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "What is a light-year?",
+      "id": "Apa itu tahun cahaya?",
+      "pt": "O que é um ano-luz?",
+      "tet": "Tinan-naroman mak saida?"
+     },
+     "answer": {
+      "en": "The distance light travels in one year",
+      "id": "Jarak yang ditempuh cahaya dalam satu tahun",
+      "pt": "A distância que a luz percorre num ano",
+      "tet": "Distánsia ne'ebé naroman la'o iha tinan ida"
+     },
+     "wrong": [
+      {
+       "en": "The time Earth takes to go around the Sun",
+       "id": "Waktu Bumi mengelilingi Matahari",
+       "pt": "O tempo que a Terra leva a dar a volta ao Sol",
+       "tet": "Tempu ne'ebé Rai presiza atu haleu loron"
+      },
+      {
+       "en": "How bright a star is",
+       "id": "Ukuran terangnya bintang",
+       "pt": "O brilho de uma estrela",
+       "tet": "Fitun ida nia nabilan"
+      },
+      {
+       "en": "The age of a star",
+       "id": "Umur sebuah bintang",
+       "pt": "A idade de uma estrela",
+       "tet": "Fitun ida nia idade"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "What process makes stars shine?",
+      "id": "Proses apa yang membuat bintang bersinar?",
+      "pt": "Que processo faz as estrelas brilharem?",
+      "tet": "Prosesu saida mak halo fitun sira nabilan?"
+     },
+     "answer": {
+      "en": "Nuclear fusion",
+      "id": "Fusi nuklir",
+      "pt": "Fusão nuclear",
+      "tet": "Fuzaun nukleár"
+     },
+     "wrong": [
+      {
+       "en": "Burning wood",
+       "id": "Pembakaran kayu",
+       "pt": "Queima de madeira",
+       "tet": "Sunu ai"
+      },
+      {
+       "en": "Chemical batteries",
+       "id": "Baterai kimia",
+       "pt": "Pilhas químicas",
+       "tet": "Bateria kímika"
+      },
+      {
+       "en": "Reflecting moonlight",
+       "id": "Memantulkan cahaya Bulan",
+       "pt": "Reflexo da luz da Lua",
+       "tet": "Reflete fulan nia naroman"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "astronomy.university",
+   "level": "university",
+   "difficulty": 5,
+   "topic": "astronomy",
+   "title": {
+    "en": "Kepler's laws, galaxies and the expanding Universe",
+    "id": "Hukum Kepler, galaksi, dan alam semesta yang mengembang",
+    "pt": "Leis de Kepler, galáxias e o Universo em expansão",
+    "tet": "Kepler nia lei sira, galáksia no Universu ne'ebé sai boot"
+   },
+   "points": [
+    {
+     "en": "Kepler's third law: the square of a planet's orbital period is proportional to the cube of its mean distance from the Sun (T² ∝ a³). Newton explained it with universal gravitation, F = Gm₁m₂/r².",
+     "id": "Hukum ketiga Kepler: kuadrat periode orbit planet sebanding dengan pangkat tiga jarak rata-ratanya dari Matahari (T² ∝ a³). Newton menjelaskannya dengan gravitasi universal, F = Gm₁m₂/r².",
+     "pt": "Terceira lei de Kepler: o quadrado do período orbital de um planeta é proporcional ao cubo da sua distância média ao Sol (T² ∝ a³). Newton explicou-a com a gravitação universal, F = Gm₁m₂/r².",
+     "tet": "Kepler nia lei datoluk: planeta ida nia períodu orbitál ho kuadradu proporsionál ba ninia distánsia médiu husi loron ho kubu (T² ∝ a³). Newton esplika lei ne'e ho gravitasaun universál, F = Gm₁m₂/r²."
+    },
+    {
+     "en": "The Milky Way is a barred spiral galaxy with roughly 100–400 billion stars; the Sun is about 26 000 light-years from its centre. The observable Universe contains billions of galaxies.",
+     "id": "Bima Sakti adalah galaksi spiral berbatang dengan sekitar 100–400 miliar bintang; Matahari berjarak sekitar 26 000 tahun cahaya dari pusatnya. Alam semesta teramati berisi miliaran galaksi.",
+     "pt": "A Via Láctea é uma galáxia espiral barrada com cerca de 100 a 400 mil milhões de estrelas; o Sol está a cerca de 26 000 anos-luz do centro. O Universo observável contém milhares de milhões de galáxias.",
+     "tet": "Via Láktea mak galáksia espirál ida ho fitun maizumenus biliaun 100–400; loron dook maizumenus tinan-naroman 26 000 husi ninia sentru. Universu ne'ebé ita bele observa iha galáksia biliaun ba biliaun."
+    },
+    {
+     "en": "Hubble's law (v = H₀d) shows that more distant galaxies recede faster: the Universe is expanding. With the cosmic microwave background, it supports the Big Bang model, about 13.8 billion years ago.",
+     "id": "Hukum Hubble (v = H₀d) menunjukkan bahwa galaksi yang lebih jauh menjauh lebih cepat: alam semesta mengembang. Bersama radiasi latar gelombang mikro kosmik, hukum ini mendukung model Dentuman Besar, sekitar 13,8 miliar tahun lalu.",
+     "pt": "A lei de Hubble (v = H₀d) mostra que as galáxias mais distantes se afastam mais depressa: o Universo está em expansão. Com a radiação cósmica de fundo em micro-ondas, apoia o modelo do Big Bang, há cerca de 13 800 milhões de anos.",
+     "tet": "Hubble nia lei (v = H₀d) hatudu katak galáksia sira ne'ebé dook liu halai dook lalais liu: Universu sai boot hela. Hamutuk ho radiasaun kózmika mikroonda, lei ne'e apoia modelu Big Bang, maizumenus tinan biliaun 13,8 liubá."
+    },
+    {
+     "en": "Spectroscopy splits starlight into a spectrum: dark absorption lines reveal a star's chemical composition, and their redshift shows the star is moving away from us.",
+     "id": "Spektroskopi menguraikan cahaya bintang menjadi spektrum: garis serapan gelap mengungkap komposisi kimia bintang, dan pergeseran merahnya menunjukkan bintang itu menjauh dari kita.",
+     "pt": "A espetroscopia separa a luz das estrelas num espetro: as riscas de absorção escuras revelam a composição química da estrela e o desvio para o vermelho mostra que se afasta de nós.",
+     "tet": "Espetroskopia fahe fitun nia naroman ba espetru ida: liña nakukun sira hatudu fitun nia kompozisaun kímika, no desviu ba mean hatudu katak fitun ne'e halai dook husi ita."
+    }
+   ],
+   "task": {
+    "en": "Use T² ∝ a³: Mars is about 1.52 times farther from the Sun than Earth. Estimate the length of a Martian year in Earth years.",
+    "id": "Gunakan T² ∝ a³: Mars sekitar 1,52 kali lebih jauh dari Matahari dibandingkan Bumi. Perkirakan panjang satu tahun Mars dalam tahun Bumi.",
+    "pt": "Usa T² ∝ a³: Marte está cerca de 1,52 vezes mais longe do Sol do que a Terra. Estima a duração de um ano marciano em anos terrestres.",
+    "tet": "Uza T² ∝ a³: Marte dook husi loron dala 1,52 liu Rai. Estima Marte nia tinan ida naruk hira iha Rai nia tinan."
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "What does Kepler's third law relate?",
+      "id": "Apa yang dihubungkan oleh hukum ketiga Kepler?",
+      "pt": "O que relaciona a terceira lei de Kepler?",
+      "tet": "Kepler nia lei datoluk liga saida ho saida?"
+     },
+     "answer": {
+      "en": "Orbital period squared and mean distance cubed",
+      "id": "Kuadrat periode orbit dan pangkat tiga jarak rata-rata",
+      "pt": "O quadrado do período e o cubo da distância média",
+      "tet": "Períodu orbitál kuadradu ho distánsia médiu kubu"
+     },
+     "wrong": [
+      {
+       "en": "A planet's mass and its colour",
+       "id": "Massa planet dan warnanya",
+       "pt": "A massa de um planeta e a sua cor",
+       "tet": "Planeta nia masa ho ninia kór"
+      },
+      {
+       "en": "A star's age and its temperature",
+       "id": "Umur bintang dan suhunya",
+       "pt": "A idade de uma estrela e a sua temperatura",
+       "tet": "Fitun nia idade ho ninia temperatura"
+      },
+      {
+       "en": "A planet's radius and its number of moons",
+       "id": "Jari-jari planet dan jumlah bulannya",
+       "pt": "O raio de um planeta e o número de luas",
+       "tet": "Planeta nia raiu ho ninia fulan hira"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "What does Hubble's law show?",
+      "id": "Apa yang ditunjukkan hukum Hubble?",
+      "pt": "O que mostra a lei de Hubble?",
+      "tet": "Hubble nia lei hatudu saida?"
+     },
+     "answer": {
+      "en": "The Universe is expanding",
+      "id": "Alam semesta mengembang",
+      "pt": "Que o Universo está em expansão",
+      "tet": "Universu sai boot hela"
+     },
+     "wrong": [
+      {
+       "en": "The Universe is shrinking",
+       "id": "Alam semesta menyusut",
+       "pt": "Que o Universo está a encolher",
+       "tet": "Universu sai ki'ik hela"
+      },
+      {
+       "en": "All galaxies are at the same distance",
+       "id": "Semua galaksi berjarak sama",
+       "pt": "Que todas as galáxias estão à mesma distância",
+       "tet": "Galáksia hotu iha distánsia hanesan"
+      },
+      {
+       "en": "The Sun is the centre of the Universe",
+       "id": "Matahari adalah pusat alam semesta",
+       "pt": "Que o Sol é o centro do Universo",
+       "tet": "Loron mak Universu nia sentru"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "What do absorption lines in a star's spectrum tell us?",
+      "id": "Apa yang diberitahukan garis serapan dalam spektrum bintang?",
+      "pt": "O que nos dizem as riscas de absorção no espetro de uma estrela?",
+      "tet": "Liña nakukun sira iha fitun nia espetru hatete saida mai ita?"
+     },
+     "answer": {
+      "en": "Its chemical composition",
+      "id": "Komposisi kimianya",
+      "pt": "A sua composição química",
+      "tet": "Ninia kompozisaun kímika"
+     },
+     "wrong": [
+      {
+       "en": "The number of planets around it",
+       "id": "Jumlah planet di sekitarnya",
+       "pt": "O número de planetas à sua volta",
+       "tet": "Planeta hira mak haleu nia"
+      },
+      {
+       "en": "Its exact size in km",
+       "id": "Ukuran tepatnya dalam km",
+       "pt": "O seu tamanho exato em km",
+       "tet": "Ninia medida loloos iha km"
+      },
+      {
+       "en": "Whether it has life",
+       "id": "Apakah ada kehidupan di sana",
+       "pt": "Se tem vida",
+       "tet": "Se iha moris iha ne'ebá"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "astronomy.adult",
+   "level": "adult",
+   "difficulty": 6,
+   "topic": "astronomy",
+   "title": {
+    "en": "Space technology in daily life",
+    "id": "Teknologi antariksa dalam kehidupan sehari-hari",
+    "pt": "Tecnologia espacial no dia a dia",
+    "tet": "Teknolojia espasiál iha moris loron-loron"
+   },
+   "points": [
+    {
+     "en": "Satellites orbit Earth to give us weather forecasts, TV, internet and phone links. Weather satellites help warn fishermen and farmers about storms and heavy rain.",
+     "id": "Satelit mengorbit Bumi untuk memberi kita prakiraan cuaca, TV, internet, dan sambungan telepon. Satelit cuaca membantu memperingatkan nelayan dan petani tentang badai dan hujan lebat.",
+     "pt": "Os satélites giram à volta da Terra e dão-nos previsões do tempo, televisão, internet e ligações telefónicas. Os satélites meteorológicos ajudam a avisar pescadores e agricultores sobre tempestades e chuvas fortes.",
+     "tet": "Satélite sira la'o haleu Rai atu fó previzaun tempu, televizaun, internet no ligasaun telefone. Satélite meteorolójiku sira ajuda fó avizu ba peskadór no agrikultór sira kona-ba anin-boot no udan-boot."
+    },
+    {
+     "en": "GPS works by measuring signals from several satellites to find your position. It helps drivers, boats, delivery services and land surveys.",
+     "id": "GPS bekerja dengan mengukur sinyal dari beberapa satelit untuk menentukan posisi Anda. GPS membantu pengemudi, perahu, layanan pengiriman, dan survei tanah.",
+     "pt": "O GPS funciona medindo sinais de vários satélites para encontrar a sua posição. Ajuda condutores, barcos, serviços de entregas e levantamentos de terrenos.",
+     "tet": "GPS servisu hodi sukat sinál husi satélite balun atu hatene ita-nia pozisaun. Nia ajuda kondutór, ró, servisu entrega no sukat rai."
+    },
+    {
+     "en": "The Moon's phases affect the tides: the biggest (spring) tides come near full and new Moon. Fishermen and seaweed farmers on the coast plan their work with tide tables.",
+     "id": "Fase Bulan memengaruhi pasang surut: pasang terbesar terjadi sekitar bulan purnama dan bulan baru. Nelayan dan petani rumput laut di pesisir merencanakan kerja dengan tabel pasang surut.",
+     "pt": "As fases da Lua influenciam as marés: as marés vivas (as maiores) acontecem perto da lua cheia e da lua nova. Pescadores e produtores de algas na costa planeiam o trabalho com tabelas de marés.",
+     "tet": "Fulan nia fase sira influensia tasi-sa'e no tasi-tun: tasi-sa'e boot liu mosu besik fulan kabuar no fulan foun. Peskadór no kuda-na'in alga-tasi iha tasi-ibun planeia sira-nia servisu ho tabela tasi nian."
+    }
+   ],
+   "task": {
+    "en": "Check a weather or tide app (or ask at the port) for the next 7 days. Note the day of the full Moon and the highest tide.",
+    "id": "Periksa aplikasi cuaca atau pasang surut (atau tanyakan di pelabuhan) untuk 7 hari ke depan. Catat hari bulan purnama dan pasang tertinggi.",
+    "pt": "Consulte uma aplicação de meteorologia ou de marés (ou pergunte no porto) para os próximos 7 dias. Anote o dia de lua cheia e a maré mais alta.",
+    "tet": "Haree aplikasaun tempu ka tasi nian (ka husu iha portu) ba loron 7 oin mai. Hakerek loron fulan kabuar no tasi-sa'e boot liu."
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "How does GPS find your position?",
+      "id": "Bagaimana GPS menentukan posisi Anda?",
+      "pt": "Como é que o GPS encontra a sua posição?",
+      "tet": "Oinsá GPS hatene ita-nia pozisaun?"
+     },
+     "answer": {
+      "en": "With signals from several satellites",
+      "id": "Dengan sinyal dari beberapa satelit",
+      "pt": "Com sinais de vários satélites",
+      "tet": "Ho sinál husi satélite balun"
+     },
+     "wrong": [
+      {
+       "en": "By reading the stars at night",
+       "id": "Dengan membaca bintang pada malam hari",
+       "pt": "Lendo as estrelas à noite",
+       "tet": "Hodi lee fitun sira iha kalan"
+      },
+      {
+       "en": "Through a cable under the ground",
+       "id": "Melalui kabel di bawah tanah",
+       "pt": "Por um cabo debaixo da terra",
+       "tet": "Liuhusi kabu ida iha rai okos"
+      },
+      {
+       "en": "By asking the phone company",
+       "id": "Dengan bertanya ke perusahaan telepon",
+       "pt": "Perguntando à companhia telefónica",
+       "tet": "Hodi husu ba kompañia telefone"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "When do the biggest (spring) tides happen?",
+      "id": "Kapan pasang terbesar terjadi?",
+      "pt": "Quando acontecem as marés vivas (as maiores)?",
+      "tet": "Bainhira mak tasi-sa'e boot liu mosu?"
+     },
+     "answer": {
+      "en": "Near full Moon and new Moon",
+      "id": "Sekitar bulan purnama dan bulan baru",
+      "pt": "Perto da lua cheia e da lua nova",
+      "tet": "Besik fulan kabuar no fulan foun"
+     },
+     "wrong": [
+      {
+       "en": "Only in the dry season",
+       "id": "Hanya pada musim kemarau",
+       "pt": "Só na estação seca",
+       "tet": "Só iha tempu bailoron"
+      },
+      {
+       "en": "Only at midday",
+       "id": "Hanya pada tengah hari",
+       "pt": "Só ao meio-dia",
+       "tet": "Só iha loron-boot"
+      },
+      {
+       "en": "When there are no clouds",
+       "id": "Saat tidak ada awan",
+       "pt": "Quando não há nuvens",
+       "tet": "Bainhira la iha kalohan"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "What can weather satellites help with?",
+      "id": "Satelit cuaca membantu dalam hal apa?",
+      "pt": "Em que ajudam os satélites meteorológicos?",
+      "tet": "Satélite meteorolójiku ajuda iha saida?"
+     },
+     "answer": {
+      "en": "Warning about storms and heavy rain",
+      "id": "Memperingatkan badai dan hujan lebat",
+      "pt": "A avisar sobre tempestades e chuvas fortes",
+      "tet": "Fó avizu kona-ba anin-boot no udan-boot"
+     },
+     "wrong": [
+      {
+       "en": "Making it rain over farms",
+       "id": "Membuat hujan turun di kebun",
+       "pt": "A fazer chover nas hortas",
+       "tet": "Halo udan monu iha to'os"
+      },
+      {
+       "en": "Predicting the exact day of an earthquake",
+       "id": "Meramalkan hari pasti gempa bumi",
+       "pt": "A prever o dia exato de um sismo",
+       "tet": "Hatene loron loloos rai-nakdoko nian"
+      },
+      {
+       "en": "Counting the fish in the sea",
+       "id": "Menghitung ikan di laut",
+       "pt": "A contar os peixes no mar",
+       "tet": "Konta ikan iha tasi"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "astronomy.senior",
+   "level": "senior",
+   "difficulty": 7,
+   "topic": "astronomy",
+   "title": {
+    "en": "Reading the night sky and sharing it",
+    "id": "Membaca langit malam dan membagikannya",
+    "pt": "Ler o céu noturno e partilhá-lo",
+    "tet": "Lee lalehan kalan nian no fahe ba ema seluk"
+   },
+   "points": [
+    {
+     "en": "Our grandparents read the sky to know the time and the seasons; the Moon's phases repeat about every 29.5 days. Sharing these stories with grandchildren keeps the knowledge alive.",
+     "id": "Kakek-nenek kita membaca langit untuk mengetahui waktu dan musim; fase Bulan berulang sekitar setiap 29,5 hari. Berbagi cerita ini dengan cucu menjaga pengetahuan tetap hidup.",
+     "pt": "Os nossos avós liam o céu para saber as horas e as estações; as fases da Lua repetem-se a cada 29,5 dias, mais ou menos. Partilhar estas histórias com os netos mantém o conhecimento vivo.",
+     "tet": "Ita-nia avó sira lee lalehan atu hatene tempu no estasaun; fulan nia fase sira repete maizumenus kada loron 29,5. Konta istória hirak ne'e ba bei-oan sira halo koñesimentu moris nafatin."
+    },
+    {
+     "en": "On a clear, dark night you can see the Milky Way as a pale band of light. The Southern Cross is easy to find from Timor-Leste and helps show the way south.",
+     "id": "Pada malam yang cerah dan gelap Anda bisa melihat Bima Sakti sebagai pita cahaya pucat. Rasi Salib Selatan mudah ditemukan dari Timor-Leste dan membantu menunjukkan arah selatan.",
+     "pt": "Numa noite limpa e escura pode ver a Via Láctea como uma faixa pálida de luz. O Cruzeiro do Sul é fácil de encontrar em Timor-Leste e ajuda a mostrar o sul.",
+     "tet": "Iha kalan ne'ebé moos no nakukun, ita bele haree Via Láktea hanesan liña naroman mutin ida. Kruz Súl fasil atu buka husi Timor-Leste no ajuda hatudu dalan ba súl."
+    },
+    {
+     "en": "Never look straight at the Sun, even during an eclipse: it can damage your eyes for life. Use eclipse glasses or a pinhole in card, and see a health worker if your eyes hurt.",
+     "id": "Jangan pernah menatap langsung ke Matahari, bahkan saat gerhana: hal itu dapat merusak mata seumur hidup. Gunakan kacamata gerhana atau lubang jarum pada karton, dan temui petugas kesehatan jika mata Anda sakit.",
+     "pt": "Nunca olhe diretamente para o Sol, mesmo durante um eclipse: pode danificar os olhos para sempre. Use óculos de eclipse ou um pequeno furo num cartão, e procure um profissional de saúde se os olhos doerem.",
+     "tet": "Labele haree direitu ba loron, maski iha eklipse: ida ne'e bele estraga matan ba moris tomak. Uza óklu eklipse nian ka kuak ki'ik iha kartaun, no bá hasoru servisu-na'in saúde se matan moras."
+    }
+   ],
+   "task": {
+    "en": "On a clear night, sit outside with a grandchild. Find the Moon, the Southern Cross and the Milky Way, and tell a story about the sky that your parents told you.",
+    "id": "Pada malam yang cerah, duduklah di luar bersama cucu. Carilah Bulan, Salib Selatan, dan Bima Sakti, lalu ceritakan kisah tentang langit dari orang tua Anda.",
+    "pt": "Numa noite limpa, sente-se lá fora com um neto. Procurem a Lua, o Cruzeiro do Sul e a Via Láctea, e conte uma história sobre o céu que ouviu dos seus pais.",
+    "tet": "Iha kalan moos ida, tuur iha li'ur ho bei-oan ida. Buka fulan, Kruz Súl no Via Láktea, no konta istória ida kona-ba lalehan ne'ebé ita-nia inan-aman konta mai ita."
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "What is a safe way to watch a solar eclipse?",
+      "id": "Bagaimana cara aman melihat gerhana Matahari?",
+      "pt": "Qual é uma forma segura de ver um eclipse do Sol?",
+      "tet": "Oinsá mak haree eklipse loron nian ho seguru?"
+     },
+     "answer": {
+      "en": "Eclipse glasses or a pinhole in card",
+      "id": "Kacamata gerhana atau lubang jarum pada karton",
+      "pt": "Óculos de eclipse ou um furo num cartão",
+      "tet": "Óklu eklipse ka kuak ki'ik iha kartaun"
+     },
+     "wrong": [
+      {
+       "en": "Normal sunglasses",
+       "id": "Kacamata hitam biasa",
+       "pt": "Óculos de sol normais",
+       "tet": "Óklu metan baibain"
+      },
+      {
+       "en": "A quick look with bare eyes",
+       "id": "Melihat sebentar dengan mata telanjang",
+       "pt": "Olhar rapidamente a olho nu",
+       "tet": "Haree lalais ho matan de'it"
+      },
+      {
+       "en": "Looking through binoculars",
+       "id": "Melihat dengan teropong",
+       "pt": "Olhar com binóculos",
+       "tet": "Haree ho binókulu"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "About how often do the Moon's phases repeat?",
+      "id": "Kira-kira seberapa sering fase Bulan berulang?",
+      "pt": "De quanto em quanto tempo se repetem as fases da Lua?",
+      "tet": "Fulan nia fase sira repete maizumenus kada tempu hira?"
+     },
+     "answer": {
+      "en": "Every 29.5 days",
+      "id": "Setiap 29,5 hari",
+      "pt": "A cada 29,5 dias",
+      "tet": "Kada loron 29,5"
+     },
+     "wrong": [
+      {
+       "en": "Every 7 days",
+       "id": "Setiap 7 hari",
+       "pt": "A cada 7 dias",
+       "tet": "Kada loron 7"
+      },
+      {
+       "en": "Once a year",
+       "id": "Setahun sekali",
+       "pt": "Uma vez por ano",
+       "tet": "Dala ida kada tinan"
+      },
+      {
+       "en": "Every 24 hours",
+       "id": "Setiap 24 jam",
+       "pt": "A cada 24 horas",
+       "tet": "Kada oras 24"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "Which star pattern helps find the south from Timor-Leste?",
+      "id": "Rasi bintang mana yang membantu mencari arah selatan dari Timor-Leste?",
+      "pt": "Que constelação ajuda a encontrar o sul a partir de Timor-Leste?",
+      "tet": "Konstelasaun saida mak ajuda buka súl husi Timor-Leste?"
+     },
+     "answer": {
+      "en": "The Southern Cross",
+      "id": "Salib Selatan",
+      "pt": "O Cruzeiro do Sul",
+      "tet": "Kruz Súl"
+     },
+     "wrong": [
+      {
+       "en": "The Big Dipper",
+       "id": "Biduk",
+       "pt": "A Ursa Maior",
+       "tet": "Ursa Maior"
+      },
+      {
+       "en": "The planet Venus",
+       "id": "Planet Venus",
+       "pt": "O planeta Vénus",
+       "tet": "Planeta Vénus"
+      },
+      {
+       "en": "The full Moon",
+       "id": "Bulan purnama",
+       "pt": "A lua cheia",
+       "tet": "Fulan kabuar"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

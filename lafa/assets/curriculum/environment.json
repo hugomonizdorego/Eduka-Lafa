@@ -1,0 +1,1025 @@
+{
+ "subject": "environment",
+ "icon": "🌍",
+ "name": {
+  "en": "Environment and climate",
+  "id": "Lingkungan dan iklim",
+  "pt": "Ambiente e clima",
+  "tet": "Ambiente no klima"
+ },
+ "meta": {
+  "version": 1,
+  "license": "CC BY-SA 4.0",
+  "languages": [
+   "en",
+   "id",
+   "pt",
+   "tet"
+  ],
+  "source": "Written by the LAFA team for Edukasaun OS (general knowledge, checked against standard references)",
+  "reviewed": "2026-10-13",
+  "review_status": "LAFA team review; not yet reviewed by the Ministry of Education (not a national curriculum)"
+ },
+ "lessons": [
+  {
+   "id": "environment.early",
+   "level": "early",
+   "difficulty": 1,
+   "topic": "environment",
+   "title": {
+    "en": "Caring for our place",
+    "id": "Menjaga lingkungan kita",
+    "pt": "Cuidar do nosso lugar",
+    "tet": "Tau matan ba ita-nia fatin"
+   },
+   "points": [
+    {
+     "en": "Put rubbish in the bin. Rubbish in the river or on the beach hurts fish and birds.",
+     "id": "Buang sampah ke tempat sampah. Sampah di sungai atau di pantai melukai ikan dan burung.",
+     "pt": "Põe o lixo no caixote. O lixo no rio ou na praia faz mal aos peixes e às aves.",
+     "tet": "Soe lixu ba fatin lixu. Lixu iha mota ka tasi ibun halo aat ikan no manu."
+    },
+    {
+     "en": "Trees give us shade and fruit. Birds make their homes in trees.",
+     "id": "Pohon memberi kita keteduhan dan buah. Burung membuat rumah di pohon.",
+     "pt": "As árvores dão-nos sombra e fruta. As aves fazem a sua casa nas árvores.",
+     "tet": "Ai-hun fó mahon no ai-fuan ba ita. Manu halo sira-nia uma iha ai-hun."
+    },
+    {
+     "en": "Water is precious. Close the tap when you finish washing your hands.",
+     "id": "Air itu berharga. Tutup keran setelah selesai mencuci tangan.",
+     "pt": "A água é preciosa. Fecha a torneira quando acabares de lavar as mãos.",
+     "tet": "Bee folin boot. Taka torneira bainhira ita hotu ona fase liman."
+    }
+   ],
+   "task": {
+    "en": "With your family, pick up 5 pieces of rubbish near your house and put them in the bin.",
+    "id": "Bersama keluargamu, pungut 5 sampah di dekat rumah dan masukkan ke tempat sampah.",
+    "pt": "Com a tua família, apanha 5 bocados de lixo perto de casa e põe-nos no caixote.",
+    "tet": "Hamutuk ho ita-nia família, foti lixu 5 besik uma no tau ba fatin lixu."
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "Where should rubbish go?",
+      "id": "Ke mana sampah harus dibuang?",
+      "pt": "Para onde deve ir o lixo?",
+      "tet": "Lixu tenke ba ne'ebé?"
+     },
+     "answer": {
+      "en": "In the bin",
+      "id": "Ke tempat sampah",
+      "pt": "Para o caixote do lixo",
+      "tet": "Ba fatin lixu"
+     },
+     "wrong": [
+      {
+       "en": "In the river",
+       "id": "Ke sungai",
+       "pt": "Para o rio",
+       "tet": "Ba mota"
+      },
+      {
+       "en": "On the beach",
+       "id": "Ke pantai",
+       "pt": "Para a praia",
+       "tet": "Ba tasi ibun"
+      },
+      {
+       "en": "Under the bed",
+       "id": "Ke bawah tempat tidur",
+       "pt": "Para debaixo da cama",
+       "tet": "Ba kama okos"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "What do trees give birds?",
+      "id": "Apa yang diberikan pohon kepada burung?",
+      "pt": "O que dão as árvores às aves?",
+      "tet": "Ai-hun fó saida ba manu?"
+     },
+     "answer": {
+      "en": "A home",
+      "id": "Rumah",
+      "pt": "Uma casa",
+      "tet": "Uma"
+     },
+     "wrong": [
+      {
+       "en": "Shoes",
+       "id": "Sepatu",
+       "pt": "Sapatos",
+       "tet": "Sapatu"
+      },
+      {
+       "en": "A car",
+       "id": "Mobil",
+       "pt": "Um carro",
+       "tet": "Karreta"
+      },
+      {
+       "en": "Plastic bags",
+       "id": "Kantong plastik",
+       "pt": "Sacos de plástico",
+       "tet": "Saku plástiku"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "What do you do when you finish washing your hands?",
+      "id": "Apa yang kamu lakukan setelah selesai mencuci tangan?",
+      "pt": "O que fazes quando acabas de lavar as mãos?",
+      "tet": "Ita halo saida bainhira hotu ona fase liman?"
+     },
+     "answer": {
+      "en": "Close the tap",
+      "id": "Menutup keran",
+      "pt": "Fecho a torneira",
+      "tet": "Taka torneira"
+     },
+     "wrong": [
+      {
+       "en": "Leave the tap running",
+       "id": "Membiarkan keran mengalir",
+       "pt": "Deixo a torneira aberta",
+       "tet": "Husik torneira nakloke"
+      },
+      {
+       "en": "Open the tap more",
+       "id": "Membuka keran lebih besar",
+       "pt": "Abro mais a torneira",
+       "tet": "Loke torneira boot liu"
+      },
+      {
+       "en": "Throw the soap away",
+       "id": "Membuang sabun",
+       "pt": "Deito o sabão fora",
+       "tet": "Soe tiha sabaun"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "environment.primary",
+   "level": "primary",
+   "difficulty": 2,
+   "topic": "environment",
+   "title": {
+    "en": "The water cycle and our hills",
+    "id": "Siklus air dan bukit kita",
+    "pt": "O ciclo da água e os nossos montes",
+    "tet": "Siklu bee no ita-nia foho sira"
+   },
+   "points": [
+    {
+     "en": "The sun heats the sea and water rises into the air as vapour. High up it cools, forms clouds and falls as rain.",
+     "id": "Matahari memanaskan laut dan air naik ke udara sebagai uap. Di atas uap itu mendingin, membentuk awan, dan turun sebagai hujan.",
+     "pt": "O sol aquece o mar e a água sobe para o ar como vapor. Lá em cima arrefece, forma nuvens e cai como chuva.",
+     "tet": "Loron halo tasi manas no bee sa'e ba anin hanesan vapór. Iha leten nia sai malirin, halo kalohan no tun fali hanesan udan."
+    },
+    {
+     "en": "Rain fills rivers and springs, and the rivers carry the water back to the sea. Timor-Leste has a rainy season and a long dry season.",
+     "id": "Hujan mengisi sungai dan mata air, lalu sungai membawa air kembali ke laut. Timor-Leste memiliki musim hujan dan musim kemarau yang panjang.",
+     "pt": "A chuva enche os rios e as nascentes, e os rios levam a água de volta ao mar. Timor-Leste tem uma estação das chuvas e uma longa estação seca.",
+     "tet": "Udan hanoin mota no bee-matan, no mota lori bee fila fali ba tasi. Timor-Leste iha tempu udan no bailoron ne'ebé naruk."
+    },
+    {
+     "en": "Tree roots on the hills hold the soil. When trees are cut, heavy rain can wash soil away and cause landslides and floods.",
+     "id": "Akar pohon di bukit menahan tanah. Jika pohon ditebang, hujan lebat dapat menghanyutkan tanah dan menyebabkan longsor serta banjir.",
+     "pt": "As raízes das árvores nos montes seguram a terra. Quando se cortam as árvores, a chuva forte pode levar a terra e causar deslizamentos e cheias.",
+     "tet": "Abut ai-hun iha foho kaer metin rai. Bainhira ema tesi ai-hun, udan boot bele lori rai no halo rai-halai no inundasaun."
+    }
+   ],
+   "task": {
+    "en": "Put a bowl of water in the sun. Mark the water level every day for 5 days and explain where the water went.",
+    "id": "Letakkan semangkuk air di bawah matahari. Tandai tinggi air setiap hari selama 5 hari dan jelaskan ke mana air itu pergi.",
+    "pt": "Põe uma tigela com água ao sol. Marca o nível da água todos os dias durante 5 dias e explica para onde foi a água.",
+    "tet": "Tau mangkok bee ida iha loron okos. Marka bee nia nivel loron-loron durante loron 5 no esplika bee ba ne'ebé."
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "What makes sea water rise into the air?",
+      "id": "Apa yang membuat air laut naik ke udara?",
+      "pt": "O que faz a água do mar subir para o ar?",
+      "tet": "Saida mak halo bee tasi sa'e ba anin?"
+     },
+     "answer": {
+      "en": "The heat of the sun",
+      "id": "Panas matahari",
+      "pt": "O calor do sol",
+      "tet": "Loron nia manas"
+     },
+     "wrong": [
+      {
+       "en": "The moonlight",
+       "id": "Cahaya bulan",
+       "pt": "A luz da lua",
+       "tet": "Naroman fulan"
+      },
+      {
+       "en": "Fishing boats",
+       "id": "Perahu nelayan",
+       "pt": "Os barcos de pesca",
+       "tet": "Ró peskadór sira"
+      },
+      {
+       "en": "The fish",
+       "id": "Ikan-ikan",
+       "pt": "Os peixes",
+       "tet": "Ikan sira"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "What do tree roots on the hills do?",
+      "id": "Apa fungsi akar pohon di bukit?",
+      "pt": "O que fazem as raízes das árvores nos montes?",
+      "tet": "Abut ai-hun iha foho halo saida?"
+     },
+     "answer": {
+      "en": "They hold the soil in place",
+      "id": "Menahan tanah",
+      "pt": "Seguram a terra",
+      "tet": "Sira kaer metin rai"
+     },
+     "wrong": [
+      {
+       "en": "They make the rivers salty",
+       "id": "Membuat sungai menjadi asin",
+       "pt": "Tornam os rios salgados",
+       "tet": "Sira halo mota sai masin"
+      },
+      {
+       "en": "They cause earthquakes",
+       "id": "Menyebabkan gempa bumi",
+       "pt": "Causam sismos",
+       "tet": "Sira halo rai-nakdoko"
+      },
+      {
+       "en": "They stop the rain",
+       "id": "Menghentikan hujan",
+       "pt": "Param a chuva",
+       "tet": "Sira hapara udan"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "Where does rain water finally go?",
+      "id": "Ke mana akhirnya air hujan pergi?",
+      "pt": "Para onde vai, no fim, a água da chuva?",
+      "tet": "Ikus mai bee udan ba ne'ebé?"
+     },
+     "answer": {
+      "en": "Through rivers back to the sea",
+      "id": "Melalui sungai kembali ke laut",
+      "pt": "Pelos rios de volta ao mar",
+      "tet": "Liuhusi mota fila ba tasi"
+     },
+     "wrong": [
+      {
+       "en": "Up to the moon",
+       "id": "Naik ke bulan",
+       "pt": "Até à lua",
+       "tet": "Sa'e ba fulan"
+      },
+      {
+       "en": "Into the sun",
+       "id": "Masuk ke matahari",
+       "pt": "Para dentro do sol",
+       "tet": "Tama ba loron"
+      },
+      {
+       "en": "It disappears forever",
+       "id": "Hilang selamanya",
+       "pt": "Desaparece para sempre",
+       "tet": "Nia lakon ba nafatin"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "environment.middle",
+   "level": "middle",
+   "difficulty": 3,
+   "topic": "environment",
+   "title": {
+    "en": "Ecosystems and food chains",
+    "id": "Ekosistem dan rantai makanan",
+    "pt": "Ecossistemas e cadeias alimentares",
+    "tet": "Ekosistema no kadeia ai-han"
+   },
+   "points": [
+    {
+     "en": "Producers such as plants and algae make food from sunlight. Consumers eat other living things, and decomposers like fungi and bacteria break down dead matter.",
+     "id": "Produsen seperti tumbuhan dan ganggang membuat makanan dari sinar matahari. Konsumen memakan makhluk lain, dan pengurai seperti jamur dan bakteri menguraikan makhluk mati.",
+     "pt": "Os produtores, como as plantas e as algas, fazem alimento a partir da luz do sol. Os consumidores comem outros seres vivos e os decompositores, como fungos e bactérias, decompõem a matéria morta.",
+     "tet": "Produtór hanesan ai-horis no alga halo hahán husi naroman loron. Konsumidór han buat moris seluk, no dekompozitór hanesan fungu no baktéria fahe buat mate sai ki'ik."
+    },
+    {
+     "en": "Only about 10% of the energy at one level of a food chain passes to the next level. That is why there are fewer large predators than small animals.",
+     "id": "Hanya sekitar 10% energi pada satu tingkat rantai makanan berpindah ke tingkat berikutnya. Karena itu predator besar lebih sedikit daripada hewan kecil.",
+     "pt": "Só cerca de 10% da energia de um nível da cadeia alimentar passa para o nível seguinte. Por isso há menos grandes predadores do que pequenos animais.",
+     "tet": "Maizumenus 10% de'it husi enerjia iha nivel ida kadeia ai-han nian mak liu ba nivel tuir mai. Tan ne'e predadór boot sira menus liu animál ki'ik sira."
+    },
+    {
+     "en": "The coral reefs around Ataúro are home to many kinds of fish. Mangroves on the coast shelter young fish and protect the land from waves.",
+     "id": "Terumbu karang di sekitar Ataúro menjadi rumah bagi banyak jenis ikan. Hutan bakau di pesisir melindungi ikan muda dan menahan ombak.",
+     "pt": "Os recifes de coral à volta de Ataúro são a casa de muitos tipos de peixe. Os mangais da costa abrigam peixes jovens e protegem a terra das ondas.",
+     "tet": "Ahu-ruin iha Ataúro nia haleu mak uma ba ikan oioin. Ai-parapa iha tasi ibun proteje ikan oan sira no proteje rai husi laloran."
+    }
+   ],
+   "task": {
+    "en": "Draw a food chain from a Timorese sea or forest with at least four living things. Label the producer, consumers and decomposer.",
+    "id": "Gambarlah rantai makanan dari laut atau hutan di Timor dengan paling sedikit empat makhluk hidup. Beri label produsen, konsumen, dan pengurai.",
+    "pt": "Desenha uma cadeia alimentar de um mar ou de uma floresta de Timor com pelo menos quatro seres vivos. Indica o produtor, os consumidores e o decompositor.",
+    "tet": "Dezeña kadeia ai-han ida husi tasi ka ai-laran Timor nian ho pelumenus buat moris haat. Hakerek naran produtór, konsumidór no dekompozitór."
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "Which living things are producers?",
+      "id": "Makhluk hidup mana yang termasuk produsen?",
+      "pt": "Que seres vivos são produtores?",
+      "tet": "Buat moris saida mak produtór?"
+     },
+     "answer": {
+      "en": "Plants and algae",
+      "id": "Tumbuhan dan ganggang",
+      "pt": "Plantas e algas",
+      "tet": "Ai-horis no alga"
+     },
+     "wrong": [
+      {
+       "en": "Sharks",
+       "id": "Hiu",
+       "pt": "Tubarões",
+       "tet": "Tubaraun"
+      },
+      {
+       "en": "Goats",
+       "id": "Kambing",
+       "pt": "Cabras",
+       "tet": "Bibi"
+      },
+      {
+       "en": "Eagles",
+       "id": "Elang",
+       "pt": "Águias",
+       "tet": "Kikit"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "About how much energy passes to the next level of a food chain?",
+      "id": "Kira-kira berapa energi yang berpindah ke tingkat berikutnya dalam rantai makanan?",
+      "pt": "Cerca de quanta energia passa para o nível seguinte da cadeia alimentar?",
+      "tet": "Enerjia maizumenus hira mak liu ba nivel tuir mai iha kadeia ai-han?"
+     },
+     "answer": {
+      "en": "About 10%",
+      "id": "Sekitar 10%",
+      "pt": "Cerca de 10%",
+      "tet": "Maizumenus 10%"
+     },
+     "wrong": [
+      {
+       "en": "100%",
+       "id": "100%",
+       "pt": "100%",
+       "tet": "100%"
+      },
+      {
+       "en": "About 50%",
+       "id": "Sekitar 50%",
+       "pt": "Cerca de 50%",
+       "tet": "Maizumenus 50%"
+      },
+      {
+       "en": "About 90%",
+       "id": "Sekitar 90%",
+       "pt": "Cerca de 90%",
+       "tet": "Maizumenus 90%"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "How do mangroves help the coast?",
+      "id": "Bagaimana hutan bakau membantu pesisir?",
+      "pt": "Como ajudam os mangais a costa?",
+      "tet": "Ai-parapa ajuda tasi ibun oinsá?"
+     },
+     "answer": {
+      "en": "They shelter young fish and block waves",
+      "id": "Melindungi ikan muda dan menahan ombak",
+      "pt": "Abrigam peixes jovens e travam as ondas",
+      "tet": "Sira proteje ikan oan no hapara laloran"
+     },
+     "wrong": [
+      {
+       "en": "They make sea water fresh",
+       "id": "Membuat air laut menjadi tawar",
+       "pt": "Tornam a água do mar doce",
+       "tet": "Sira halo bee tasi sai bee-moos"
+      },
+      {
+       "en": "They cause storms",
+       "id": "Menyebabkan badai",
+       "pt": "Causam tempestades",
+       "tet": "Sira halo anin-boot"
+      },
+      {
+       "en": "They keep fish away",
+       "id": "Mengusir ikan",
+       "pt": "Afastam os peixes",
+       "tet": "Sira duni ikan sira"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "environment.secondary",
+   "level": "secondary",
+   "difficulty": 4,
+   "topic": "environment",
+   "title": {
+    "en": "The greenhouse effect and climate change",
+    "id": "Efek rumah kaca dan perubahan iklim",
+    "pt": "O efeito de estufa e as alterações climáticas",
+    "tet": "Efeitu estufa no mudansa klimátika"
+   },
+   "points": [
+    {
+     "en": "Gases such as carbon dioxide (CO₂) and methane trap heat in the atmosphere. Without them Earth would be frozen, but too much makes it warmer.",
+     "id": "Gas seperti karbon dioksida (CO₂) dan metana memerangkap panas di atmosfer. Tanpa gas itu Bumi akan membeku, tetapi terlalu banyak membuatnya makin panas.",
+     "pt": "Gases como o dióxido de carbono (CO₂) e o metano retêm o calor na atmosfera. Sem eles a Terra estaria gelada, mas em excesso aquecem-na.",
+     "tet": "Gás hanesan dióksidu karbonu (CO₂) no metanu kaer manas iha atmosfera. Se la iha sira, Rai sei sai jelu, maibé barak liu halo nia sai manas liu."
+    },
+    {
+     "en": "Burning coal, oil and gas has raised CO₂ from about 280 ppm before 1800 to over 420 ppm today. Earth's average temperature has risen by more than 1 °C.",
+     "id": "Pembakaran batu bara, minyak, dan gas menaikkan CO₂ dari sekitar 280 ppm sebelum 1800 menjadi lebih dari 420 ppm sekarang. Suhu rata-rata Bumi naik lebih dari 1 °C.",
+     "pt": "A queima de carvão, petróleo e gás fez subir o CO₂ de cerca de 280 ppm antes de 1800 para mais de 420 ppm hoje. A temperatura média da Terra subiu mais de 1 °C.",
+     "tet": "Sunu karvaun, mina-rai no gás halo CO₂ sa'e husi maizumenus 280 ppm molok 1800 ba liu 420 ppm ohin loron. Temperatura médiu Rai nian sa'e liu 1 °C."
+    },
+    {
+     "en": "Warming melts ice and expands sea water, so sea level rises. It also brings heavier downpours and coral bleaching, which threaten coasts like Tasi Mane.",
+     "id": "Pemanasan mencairkan es dan membuat air laut memuai, sehingga permukaan laut naik. Pemanasan juga membawa hujan lebat dan pemutihan karang yang mengancam pesisir seperti Tasi Mane.",
+     "pt": "O aquecimento derrete o gelo e dilata a água do mar, por isso o nível do mar sobe. Traz também chuvadas mais fortes e branqueamento dos corais, que ameaçam costas como a de Tasi Mane.",
+     "tet": "Manas halo jelu nabeen no bee tasi sai boot, ne'e duni tasi nia nivel sa'e. Nia mós lori udan boot liu no ahu-ruin sai mutin, ne'ebé ameasa tasi ibun hanesan Tasi Mane."
+    }
+   ],
+   "task": {
+    "en": "Ask an older person how the rains and the sea have changed in their lifetime. Compare their answer with what you learned here.",
+    "id": "Tanyakan kepada orang yang lebih tua bagaimana hujan dan laut berubah selama hidupnya. Bandingkan jawabannya dengan yang kamu pelajari di sini.",
+    "pt": "Pergunta a uma pessoa mais velha como mudaram as chuvas e o mar ao longo da vida dela. Compara a resposta com o que aprendeste aqui.",
+    "tet": "Husu ema katuas ka ferik ida oinsá udan no tasi muda durante nia moris. Kompara nia resposta ho buat ne'ebé ita aprende iha ne'e."
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "What is the main source of the extra CO₂ in the air?",
+      "id": "Apa sumber utama tambahan CO₂ di udara?",
+      "pt": "Qual é a principal fonte do CO₂ extra no ar?",
+      "tet": "Saida mak fonte prinsipál ba CO₂ aumenta iha anin?"
+     },
+     "answer": {
+      "en": "Burning coal, oil and gas",
+      "id": "Pembakaran batu bara, minyak, dan gas",
+      "pt": "A queima de carvão, petróleo e gás",
+      "tet": "Sunu karvaun, mina-rai no gás"
+     },
+     "wrong": [
+      {
+       "en": "Ocean waves",
+       "id": "Ombak laut",
+       "pt": "As ondas do mar",
+       "tet": "Laloran tasi"
+      },
+      {
+       "en": "Growing trees",
+       "id": "Pohon yang tumbuh",
+       "pt": "As árvores a crescer",
+       "tet": "Ai-hun ne'ebé boot hela"
+      },
+      {
+       "en": "Moonlight",
+       "id": "Cahaya bulan",
+       "pt": "A luz da lua",
+       "tet": "Naroman fulan"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "About how much CO₂ was in the air before 1800?",
+      "id": "Berapa kira-kira kadar CO₂ di udara sebelum 1800?",
+      "pt": "Cerca de quanto CO₂ havia no ar antes de 1800?",
+      "tet": "Molok 1800, CO₂ maizumenus hira iha anin?"
+     },
+     "answer": {
+      "en": "About 280 ppm",
+      "id": "Sekitar 280 ppm",
+      "pt": "Cerca de 280 ppm",
+      "tet": "Maizumenus 280 ppm"
+     },
+     "wrong": [
+      {
+       "en": "About 28 ppm",
+       "id": "Sekitar 28 ppm",
+       "pt": "Cerca de 28 ppm",
+       "tet": "Maizumenus 28 ppm"
+      },
+      {
+       "en": "About 800 ppm",
+       "id": "Sekitar 800 ppm",
+       "pt": "Cerca de 800 ppm",
+       "tet": "Maizumenus 800 ppm"
+      },
+      {
+       "en": "About 5 000 ppm",
+       "id": "Sekitar 5.000 ppm",
+       "pt": "Cerca de 5000 ppm",
+       "tet": "Maizumenus 5 000 ppm"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "Why does sea level rise as Earth warms?",
+      "id": "Mengapa permukaan laut naik saat Bumi memanas?",
+      "pt": "Porque sobe o nível do mar quando a Terra aquece?",
+      "tet": "Tanba saida mak tasi nia nivel sa'e bainhira Rai sai manas?"
+     },
+     "answer": {
+      "en": "Ice melts and warm sea water expands",
+      "id": "Es mencair dan air laut yang hangat memuai",
+      "pt": "O gelo derrete e a água do mar quente dilata-se",
+      "tet": "Jelu nabeen no bee tasi manas sai boot"
+     },
+     "wrong": [
+      {
+       "en": "Fish drink less water",
+       "id": "Ikan minum lebih sedikit air",
+       "pt": "Os peixes bebem menos água",
+       "tet": "Ikan hemu bee uitoan liu"
+      },
+      {
+       "en": "The Moon moves farther away",
+       "id": "Bulan bergerak menjauh",
+       "pt": "A Lua afasta-se",
+       "tet": "Fulan muda dook liu"
+      },
+      {
+       "en": "Rivers stop flowing",
+       "id": "Sungai berhenti mengalir",
+       "pt": "Os rios deixam de correr",
+       "tet": "Mota hapara suli"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "environment.university",
+   "level": "university",
+   "difficulty": 5,
+   "topic": "environment",
+   "title": {
+    "en": "Climate policy: mitigation and adaptation",
+    "id": "Kebijakan iklim: mitigasi dan adaptasi",
+    "pt": "Política climática: mitigação e adaptação",
+    "tet": "Polítika klimátika: mitigasaun no adaptasaun"
+   },
+   "points": [
+    {
+     "en": "The Paris Agreement of 2015 aims to keep global warming well below 2 °C and to pursue efforts to limit it to 1.5 °C.",
+     "id": "Persetujuan Paris tahun 2015 bertujuan menjaga pemanasan global jauh di bawah 2 °C dan berupaya membatasinya hingga 1,5 °C.",
+     "pt": "O Acordo de Paris de 2015 pretende manter o aquecimento global bem abaixo de 2 °C e prosseguir esforços para o limitar a 1,5 °C.",
+     "tet": "Akordu Paris husi tinan 2015 iha objetivu atu rai manas globál nian kraik liu 2 °C no buka limita ba 1,5 °C."
+    },
+    {
+     "en": "Mitigation reduces emissions, for example with solar power or forest protection. Adaptation reduces harm, for example drought-tolerant crops or safer coastal buildings.",
+     "id": "Mitigasi mengurangi emisi, misalnya dengan tenaga surya atau perlindungan hutan. Adaptasi mengurangi dampak, misalnya tanaman tahan kekeringan atau bangunan pesisir yang lebih aman.",
+     "pt": "A mitigação reduz as emissões, por exemplo com energia solar ou proteção das florestas. A adaptação reduz os danos, por exemplo com culturas resistentes à seca ou edifícios costeiros mais seguros.",
+     "tet": "Mitigasaun hamenus emisaun, ezemplu ho enerjia solár ka protesaun ai-laran. Adaptasaun hamenus estragu, ezemplu ho ai-horis ne'ebé tahan bailoron ka edifísiu seguru liu iha tasi ibun."
+    },
+    {
+     "en": "Net zero means that the greenhouse gases still emitted are balanced by those removed from the air, for instance by growing forests.",
+     "id": "Nol bersih berarti gas rumah kaca yang masih dilepaskan diimbangi oleh gas yang diserap dari udara, misalnya oleh hutan yang tumbuh.",
+     "pt": "Emissões líquidas nulas significam que os gases com efeito de estufa ainda emitidos são compensados pelos que se retiram do ar, por exemplo com florestas em crescimento.",
+     "tet": "Net zero signifika katak gás efeitu estufa ne'ebé sei sai balansa ho gás ne'ebé hasai husi anin, ezemplu liuhusi ai-laran ne'ebé boot hela."
+    }
+   ],
+   "task": {
+    "en": "List three climate actions for your district. Mark each one as mitigation or adaptation and name who would lead it.",
+    "id": "Tuliskan tiga aksi iklim untuk kotamu. Tandai masing-masing sebagai mitigasi atau adaptasi dan sebutkan siapa yang memimpinnya.",
+    "pt": "Faz uma lista de três ações climáticas para o teu município. Indica se cada uma é mitigação ou adaptação e quem a lideraria.",
+    "tet": "Hakerek asaun klimátika tolu ba ita-nia munisípiu. Marka ida-idak hanesan mitigasaun ka adaptasaun no temi se mak sei lidera."
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "In which year was the Paris Agreement adopted?",
+      "id": "Pada tahun berapa Persetujuan Paris disepakati?",
+      "pt": "Em que ano foi adotado o Acordo de Paris?",
+      "tet": "Iha tinan saida mak aprova Akordu Paris?"
+     },
+     "answer": {
+      "en": "2015",
+      "id": "2015",
+      "pt": "2015",
+      "tet": "2015"
+     },
+     "wrong": [
+      {
+       "en": "1992",
+       "id": "1992",
+       "pt": "1992",
+       "tet": "1992"
+      },
+      {
+       "en": "1997",
+       "id": "1997",
+       "pt": "1997",
+       "tet": "1997"
+      },
+      {
+       "en": "2002",
+       "id": "2002",
+       "pt": "2002",
+       "tet": "2002"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "Which of these is an adaptation measure?",
+      "id": "Manakah yang merupakan langkah adaptasi?",
+      "pt": "Qual destas é uma medida de adaptação?",
+      "tet": "Ida ne'ebé mak medida adaptasaun?"
+     },
+     "answer": {
+      "en": "Planting drought-tolerant crops",
+      "id": "Menanam tanaman tahan kekeringan",
+      "pt": "Plantar culturas resistentes à seca",
+      "tet": "Kuda ai-horis ne'ebé tahan bailoron"
+     },
+     "wrong": [
+      {
+       "en": "Switching to solar power",
+       "id": "Beralih ke tenaga surya",
+       "pt": "Mudar para energia solar",
+       "tet": "Muda ba enerjia solár"
+      },
+      {
+       "en": "Using electric vehicles",
+       "id": "Memakai kendaraan listrik",
+       "pt": "Usar veículos elétricos",
+       "tet": "Uza kareta eletrisidade"
+      },
+      {
+       "en": "Burning less diesel",
+       "id": "Mengurangi pembakaran solar",
+       "pt": "Queimar menos gasóleo",
+       "tet": "Sunu gasóleo menus"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "What does net zero mean?",
+      "id": "Apa arti nol bersih (net zero)?",
+      "pt": "O que significa emissões líquidas nulas?",
+      "tet": "Net zero signifika saida?"
+     },
+     "answer": {
+      "en": "Emissions are balanced by removals",
+      "id": "Emisi diimbangi oleh penyerapan",
+      "pt": "As emissões são compensadas pelas remoções",
+      "tet": "Emisaun balansa ho gás ne'ebé hasai"
+     },
+     "wrong": [
+      {
+       "en": "No rain falls at all",
+       "id": "Tidak ada hujan sama sekali",
+       "pt": "Não cai chuva nenhuma",
+       "tet": "Udan la tun dala ida"
+      },
+      {
+       "en": "All farming must stop",
+       "id": "Semua pertanian harus berhenti",
+       "pt": "Toda a agricultura tem de parar",
+       "tet": "Agrikultura hotu tenke para"
+      },
+      {
+       "en": "Temperature drops to 0 °C",
+       "id": "Suhu turun menjadi 0 °C",
+       "pt": "A temperatura desce a 0 °C",
+       "tet": "Temperatura tun to'o 0 °C"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "environment.adult",
+   "level": "adult",
+   "difficulty": 6,
+   "topic": "environment",
+   "title": {
+    "en": "Waste, energy and water at home and work",
+    "id": "Sampah, energi, dan air di rumah dan tempat kerja",
+    "pt": "Resíduos, energia e água em casa e no trabalho",
+    "tet": "Lixu, enerjia no bee iha uma no servisu fatin"
+   },
+   "points": [
+    {
+     "en": "First reduce, then reuse, then recycle. Take a cloth bag to the market and refill bottles instead of buying new plastic.",
+     "id": "Pertama kurangi, lalu gunakan kembali, lalu daur ulang. Bawa tas kain ke pasar dan isi ulang botol daripada membeli plastik baru.",
+     "pt": "Primeiro reduzir, depois reutilizar, depois reciclar. Leva um saco de pano ao mercado e volta a encher garrafas em vez de comprar plástico novo.",
+     "tet": "Uluk hamenus, depois uza fali, depois resikla. Lori kanuru hena ba merkadu no hanoin fali botir duké sosa plástiku foun."
+    },
+    {
+     "en": "Do not burn plastic: the smoke contains toxic chemicals that harm the lungs, especially of children and older people.",
+     "id": "Jangan membakar plastik: asapnya mengandung zat beracun yang merusak paru-paru, terutama anak-anak dan orang lanjut usia.",
+     "pt": "Não queimes plástico: o fumo tem químicos tóxicos que fazem mal aos pulmões, sobretudo das crianças e dos idosos.",
+     "tet": "Keta sunu plástiku: nia ahi-suar iha kímiku venenu ne'ebé halo aat aten-book, liuliu labarik no ema katuas-ferik sira."
+    },
+    {
+     "en": "LED bulbs use much less electricity than old filament bulbs. Switching off lights and fans when you leave a room saves money every month.",
+     "id": "Lampu LED memakai listrik jauh lebih sedikit daripada bohlam pijar lama. Mematikan lampu dan kipas saat keluar ruangan menghemat uang setiap bulan.",
+     "pt": "As lâmpadas LED gastam muito menos eletricidade do que as antigas lâmpadas de filamento. Desligar luzes e ventoinhas ao sair de uma sala poupa dinheiro todos os meses.",
+     "tet": "Lámpada LED uza eletrisidade menus liu lámpada filamentu tuan sira. Hamate lámpada no ventuinha bainhira sai husi kuartu poupa osan fulan-fulan."
+    },
+    {
+     "en": "Fishers and farmers protect their own income by keeping mangroves and reefs healthy, never fishing with explosives, and using compost on the fields.",
+     "id": "Nelayan dan petani melindungi penghasilan mereka dengan menjaga bakau dan karang tetap sehat, tidak pernah menangkap ikan dengan bahan peledak, dan memakai kompos di ladang.",
+     "pt": "Pescadores e agricultores protegem o seu rendimento ao manter saudáveis os mangais e os recifes, nunca pescando com explosivos e usando composto nos campos.",
+     "tet": "Peskadór no agrikultór proteje sira-nia rendimentu rasik bainhira tau matan ba ai-parapa no ahu-ruin, nunka kaer ikan ho bomba, no uza kompostu iha to'os."
+    }
+   ],
+   "task": {
+    "en": "For one week, sort your household rubbish into food scraps, plastic, paper and metal. Find one way to make each pile smaller.",
+    "id": "Selama satu minggu, pilah sampah rumah tangga menjadi sisa makanan, plastik, kertas, dan logam. Cari satu cara untuk mengurangi setiap tumpukan.",
+    "pt": "Durante uma semana, separa o lixo da casa em restos de comida, plástico, papel e metal. Encontra uma forma de diminuir cada monte.",
+    "tet": "Durante semana ida, fahe lixu uma nian ba restu hahán, plástiku, papél no metál. Buka dalan ida atu hamenus lixu ida-idak."
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "Why should we not burn plastic?",
+      "id": "Mengapa kita tidak boleh membakar plastik?",
+      "pt": "Porque não devemos queimar plástico?",
+      "tet": "Tanba saida mak ita labele sunu plástiku?"
+     },
+     "answer": {
+      "en": "Its smoke is toxic and harms the lungs",
+      "id": "Asapnya beracun dan merusak paru-paru",
+      "pt": "O fumo é tóxico e faz mal aos pulmões",
+      "tet": "Nia ahi-suar venenu no halo aat aten-book"
+     },
+     "wrong": [
+      {
+       "en": "It makes it rain",
+       "id": "Membuat hujan turun",
+       "pt": "Faz chover",
+       "tet": "Nia halo udan tun"
+      },
+      {
+       "en": "It costs too much money",
+       "id": "Biayanya terlalu mahal",
+       "pt": "Custa demasiado dinheiro",
+       "tet": "Nia presiza osan barak liu"
+      },
+      {
+       "en": "It makes the fire too cold",
+       "id": "Membuat api terlalu dingin",
+       "pt": "Torna o fogo frio demais",
+       "tet": "Nia halo ahi malirin liu"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "Which uses the least electricity?",
+      "id": "Mana yang paling sedikit memakai listrik?",
+      "pt": "O que gasta menos eletricidade?",
+      "tet": "Ida ne'ebé mak uza eletrisidade menus liu?"
+     },
+     "answer": {
+      "en": "One LED bulb",
+      "id": "Satu lampu LED",
+      "pt": "Uma lâmpada LED",
+      "tet": "Lámpada LED ida"
+     },
+     "wrong": [
+      {
+       "en": "One old filament bulb",
+       "id": "Satu bohlam pijar lama",
+       "pt": "Uma lâmpada de filamento antiga",
+       "tet": "Lámpada filamentu tuan ida"
+      },
+      {
+       "en": "Two old filament bulbs",
+       "id": "Dua bohlam pijar lama",
+       "pt": "Duas lâmpadas de filamento antigas",
+       "tet": "Lámpada filamentu tuan rua"
+      },
+      {
+       "en": "Lights left on all night",
+       "id": "Lampu menyala sepanjang malam",
+       "pt": "Luzes acesas toda a noite",
+       "tet": "Lámpada lakan kalan tomak"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "What is the best order for dealing with waste?",
+      "id": "Apa urutan terbaik untuk menangani sampah?",
+      "pt": "Qual é a melhor ordem para tratar os resíduos?",
+      "tet": "Saida mak orden di'ak liu atu trata lixu?"
+     },
+     "answer": {
+      "en": "Reduce, then reuse, then recycle",
+      "id": "Kurangi, gunakan kembali, lalu daur ulang",
+      "pt": "Reduzir, reutilizar e depois reciclar",
+      "tet": "Hamenus, uza fali, depois resikla"
+     },
+     "wrong": [
+      {
+       "en": "Burn everything first",
+       "id": "Bakar semuanya dulu",
+       "pt": "Queimar tudo primeiro",
+       "tet": "Sunu buat hotu uluk"
+      },
+      {
+       "en": "Throw it into the sea",
+       "id": "Buang ke laut",
+       "pt": "Deitar ao mar",
+       "tet": "Soe ba tasi"
+      },
+      {
+       "en": "Buy more, then throw away",
+       "id": "Beli lebih banyak, lalu buang",
+       "pt": "Comprar mais e depois deitar fora",
+       "tet": "Sosa barak liu, depois soe"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "environment.senior",
+   "level": "senior",
+   "difficulty": 7,
+   "topic": "environment",
+   "title": {
+    "en": "Staying safe in a changing climate",
+    "id": "Tetap aman dalam iklim yang berubah",
+    "pt": "Viver em segurança num clima em mudança",
+    "tet": "Seguru nafatin iha klima ne'ebé muda"
+   },
+   "points": [
+    {
+     "en": "Hot days are becoming more common, and older bodies feel heat more. Drink water often, rest in the shade at midday, and see a health worker if you feel dizzy or confused.",
+     "id": "Hari panas makin sering terjadi, dan tubuh lansia lebih peka terhadap panas. Sering minum air, beristirahat di tempat teduh pada siang hari, dan temui tenaga kesehatan jika pusing atau bingung.",
+     "pt": "Os dias quentes são cada vez mais comuns e o corpo mais velho sente mais o calor. Beba água muitas vezes, descanse à sombra ao meio-dia e procure um profissional de saúde se sentir tonturas ou confusão.",
+     "tet": "Loron manas liu mosu beibeik, no isin katuas-ferik sente manas liu. Hemu bee beibeik, deskansa iha mahon iha meiudia, no ba haree traballadór saúde se ulun-fila ka konfuzaun."
+    },
+    {
+     "en": "Before the rainy season, keep documents in a plastic bag and know a safe, higher place to go if floods or landslides come.",
+     "id": "Sebelum musim hujan, simpan dokumen dalam kantong plastik dan ketahui tempat aman yang lebih tinggi jika banjir atau longsor datang.",
+     "pt": "Antes da estação das chuvas, guarde os documentos num saco de plástico e conheça um local seguro e mais alto para onde ir se vierem cheias ou deslizamentos.",
+     "tet": "Molok tempu udan, rai dokumentu iha saku plástiku no hatene fatin seguru ne'ebé a'as liu atu ba bainhira inundasaun ka rai-halai mai."
+    },
+    {
+     "en": "Your memories of rains, harvests and the sea are valuable records. Traditions such as tara bandu, which set community rules to protect forests, water and sea, can guide young people today.",
+     "id": "Ingatan Anda tentang hujan, panen, dan laut adalah catatan berharga. Tradisi seperti tara bandu, yang menetapkan aturan bersama untuk melindungi hutan, air, dan laut, dapat menuntun generasi muda.",
+     "pt": "As suas memórias das chuvas, das colheitas e do mar são registos valiosos. Tradições como o tara bandu, que define regras comunitárias para proteger florestas, água e mar, podem guiar os jovens de hoje.",
+     "tet": "Ita-nia memória kona-ba udan, kolleita no tasi mak rejistu ne'ebé folin boot. Tradisaun hanesan tara bandu, ne'ebé harii regra komunidade atu proteje ai-laran, bee no tasi, bele hanorin joven sira ohin loron."
+    }
+   ],
+   "task": {
+    "en": "Tell your grandchildren how the seasons have changed in your lifetime. Together, make a simple family plan for floods and very hot days.",
+    "id": "Ceritakan kepada cucu bagaimana musim berubah selama hidup Anda. Bersama-sama, buat rencana keluarga sederhana untuk banjir dan hari yang sangat panas.",
+    "pt": "Conte aos seus netos como as estações mudaram ao longo da sua vida. Juntos, façam um plano familiar simples para cheias e dias muito quentes.",
+    "tet": "Konta ba bei-oan sira oinsá tempu muda durante ita-nia moris. Hamutuk, halo planu família simples ida ba inundasaun no loron manas liu."
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "What should you do on a very hot day?",
+      "id": "Apa yang sebaiknya dilakukan pada hari yang sangat panas?",
+      "pt": "O que deve fazer num dia muito quente?",
+      "tet": "Ita tenke halo saida iha loron manas liu?"
+     },
+     "answer": {
+      "en": "Drink water often and rest in the shade",
+      "id": "Sering minum air dan beristirahat di tempat teduh",
+      "pt": "Beber água muitas vezes e descansar à sombra",
+      "tet": "Hemu bee beibeik no deskansa iha mahon"
+     },
+     "wrong": [
+      {
+       "en": "Do heavy work in the midday sun",
+       "id": "Bekerja berat di bawah terik siang",
+       "pt": "Fazer trabalho pesado ao sol do meio-dia",
+       "tet": "Halo servisu todan iha loron meiudia"
+      },
+      {
+       "en": "Avoid drinking water",
+       "id": "Menghindari minum air",
+       "pt": "Evitar beber água",
+       "tet": "La hemu bee"
+      },
+      {
+       "en": "Wear thick clothes in the sun",
+       "id": "Memakai pakaian tebal di bawah matahari",
+       "pt": "Usar roupa grossa ao sol",
+       "tet": "Hatais ropa mahar iha loron okos"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "What is tara bandu?",
+      "id": "Apa itu tara bandu?",
+      "pt": "O que é o tara bandu?",
+      "tet": "Tara bandu mak saida?"
+     },
+     "answer": {
+      "en": "A traditional community rule that protects nature",
+      "id": "Aturan adat masyarakat untuk melindungi alam",
+      "pt": "Uma regra tradicional da comunidade que protege a natureza",
+      "tet": "Regra tradisionál komunidade nian atu proteje natureza"
+     },
+     "wrong": [
+      {
+       "en": "A type of fishing boat",
+       "id": "Sejenis perahu nelayan",
+       "pt": "Um tipo de barco de pesca",
+       "tet": "Tipu ró peskadór ida"
+      },
+      {
+       "en": "A coffee variety",
+       "id": "Sejenis kopi",
+       "pt": "Uma variedade de café",
+       "tet": "Tipu kafé ida"
+      },
+      {
+       "en": "A modern foreign law",
+       "id": "Undang-undang modern dari luar negeri",
+       "pt": "Uma lei moderna estrangeira",
+       "tet": "Lei modernu husi rai seluk"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "How can you prepare before the rainy season?",
+      "id": "Bagaimana bersiap sebelum musim hujan?",
+      "pt": "Como se pode preparar antes da estação das chuvas?",
+      "tet": "Oinsá mak ita prepara molok tempu udan?"
+     },
+     "answer": {
+      "en": "Keep documents dry and know a higher safe place",
+      "id": "Simpan dokumen agar kering dan ketahui tempat aman yang lebih tinggi",
+      "pt": "Guardar os documentos secos e conhecer um local seguro mais alto",
+      "tet": "Rai dokumentu maran no hatene fatin seguru a'as liu"
+     },
+     "wrong": [
+      {
+       "en": "Move your bed next to the river",
+       "id": "Memindahkan tempat tidur ke dekat sungai",
+       "pt": "Mudar a cama para junto do rio",
+       "tet": "Muda kama ba mota ninin"
+      },
+      {
+       "en": "Cut the trees on the hill",
+       "id": "Menebang pohon di bukit",
+       "pt": "Cortar as árvores do monte",
+       "tet": "Tesi ai-hun iha foho"
+      },
+      {
+       "en": "Block the drains with rubbish",
+       "id": "Menyumbat saluran air dengan sampah",
+       "pt": "Entupir os esgotos com lixo",
+       "tet": "Taka bee-dalan ho lixu"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

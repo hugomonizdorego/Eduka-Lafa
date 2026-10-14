@@ -22,8 +22,10 @@ KINDS = {
     "videos": {".mp4", ".mkv", ".avi", ".webm", ".mov", ".m4v"},
     "pictures": {".png", ".jpg", ".jpeg", ".webp", ".svg", ".gif"},
 }
+# Academic references for the Library (curated). Community and entertainment
+# wikis (Fandom, Everything2, Conservapedia…) are listed separately as extras
+# in source_meta.COMMUNITY_RESOURCES, never as academic recommendations.
 RESOURCES = [
-    ("Sources · encyclopedia directory", "https://www.sources.com/SSR/Docs/SSRW-Online_Encyclopedias_List.htm"),
     ("Wikipedia", "https://www.wikipedia.org/"),
     ("Britannica", "https://www.britannica.com/"),
     ("Wikibooks", "https://www.wikibooks.org/"),
@@ -32,12 +34,6 @@ RESOURCES = [
     ("OpenStax", "https://openstax.org/"),
     ("Internet Archive", "https://archive.org/"),
     ("Ruangguru", "https://www.ruangguru.com/"),
-    ("wikiHow", "https://www.wikihow.com/Main-Page"),
-    ("Fandom", "https://www.fandom.com/"),
-    ("Everything2", "https://everything2.com/"),
-    ("Conservapedia", "https://www.conservapedia.com/Main_Page"),
-    ("Miraheze", "https://miraheze.org/"),
-    ("Baidu Baike", "https://baike.baidu.com/"),
 ]
 
 @dataclass
@@ -203,7 +199,7 @@ def web_url(query, kind="all"):
     if kind == "documents": query += " filetype:pdf"
     return "https://www.google.com/search?"+urlencode({"q":query})
 
-RESOURCE_DOMAINS = {"ruangguru":"www.ruangguru.com","wikihow":"www.wikihow.com","fandom":"fandom.com","everything2":"everything2.com","conservapedia":"conservapedia.com","miraheze":"miraheze.org","baidu":"baike.baidu.com","baike":"baike.baidu.com"}
+RESOURCE_DOMAINS = {"ruangguru":"www.ruangguru.com","wikihow":"www.wikihow.com"}
 
 def resource_search_url(source,query):
     domain=RESOURCE_DOMAINS.get(source.casefold())

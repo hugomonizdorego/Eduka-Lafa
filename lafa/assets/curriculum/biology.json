@@ -1,0 +1,1019 @@
+{
+ "subject": "biology",
+ "icon": "🧬",
+ "name": {
+  "en": "Biology",
+  "id": "Biologi",
+  "pt": "Biologia",
+  "tet": "Biolojia"
+ },
+ "meta": {
+  "version": 1,
+  "license": "CC BY-SA 4.0",
+  "languages": [
+   "en",
+   "id",
+   "pt",
+   "tet"
+  ],
+  "source": "Written by the LAFA team for Edukasaun OS (general knowledge, checked against standard references)",
+  "reviewed": "2026-10-13",
+  "review_status": "LAFA team review; not yet reviewed by the Ministry of Education (not a national curriculum)"
+ },
+ "lessons": [
+  {
+   "id": "biology.early",
+   "level": "early",
+   "difficulty": 1,
+   "topic": "biology",
+   "title": {
+    "en": "Living and non-living things",
+    "id": "Makhluk hidup dan benda mati",
+    "pt": "Seres vivos e coisas sem vida",
+    "tet": "Buat moris no buat la moris"
+   },
+   "points": [
+    {
+     "en": "Living things grow, eat and breathe. A baby, a dog and a mango tree are all living.",
+     "id": "Makhluk hidup tumbuh, makan, dan bernapas. Bayi, anjing, dan pohon mangga semuanya hidup.",
+     "pt": "Os seres vivos crescem, comem e respiram. Um bebé, um cão e uma mangueira são seres vivos.",
+     "tet": "Buat moris sira boot, han no dada iis. Bebé, asu no ai-haas hotu-hotu moris."
+    },
+    {
+     "en": "A stone, a cup and a chair are not living. They do not grow.",
+     "id": "Batu, gelas, dan kursi bukan makhluk hidup. Benda itu tidak tumbuh.",
+     "pt": "Uma pedra, um copo e uma cadeira não têm vida. Eles não crescem.",
+     "tet": "Fatuk, kopu no kadeira la moris. Sira la boot."
+    },
+    {
+     "en": "Plants need water and sunlight to grow. Animals need food and water.",
+     "id": "Tumbuhan butuh air dan sinar matahari untuk tumbuh. Hewan butuh makanan dan air.",
+     "pt": "As plantas precisam de água e de luz do sol para crescer. Os animais precisam de comida e água.",
+     "tet": "Ai-horis presiza bee no naroman loron atu boot. Animál presiza hahán no bee."
+    }
+   ],
+   "task": {
+    "en": "Walk around your home. Find 3 living things and 3 things that are not living.",
+    "id": "Berjalanlah di sekitar rumahmu. Temukan 3 makhluk hidup dan 3 benda mati.",
+    "pt": "Dá uma volta pela tua casa. Encontra 3 seres vivos e 3 coisas sem vida.",
+    "tet": "La'o haleu ita-nia uma. Buka buat moris 3 no buat la moris 3."
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "Which one is a living thing?",
+      "id": "Mana yang merupakan makhluk hidup?",
+      "pt": "Qual destes é um ser vivo?",
+      "tet": "Ida ne'ebé mak buat moris?"
+     },
+     "answer": {
+      "en": "A dog",
+      "id": "Anjing",
+      "pt": "Um cão",
+      "tet": "Asu"
+     },
+     "wrong": [
+      {
+       "en": "A stone",
+       "id": "Batu",
+       "pt": "Uma pedra",
+       "tet": "Fatuk"
+      },
+      {
+       "en": "A cup",
+       "id": "Gelas",
+       "pt": "Um copo",
+       "tet": "Kopu"
+      },
+      {
+       "en": "A chair",
+       "id": "Kursi",
+       "pt": "Uma cadeira",
+       "tet": "Kadeira"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "What do plants need to grow?",
+      "id": "Apa yang dibutuhkan tumbuhan untuk tumbuh?",
+      "pt": "De que precisam as plantas para crescer?",
+      "tet": "Ai-horis presiza saida atu boot?"
+     },
+     "answer": {
+      "en": "Water and sunlight",
+      "id": "Air dan sinar matahari",
+      "pt": "Água e luz do sol",
+      "tet": "Bee no naroman loron"
+     },
+     "wrong": [
+      {
+       "en": "Only sand",
+       "id": "Hanya pasir",
+       "pt": "Só areia",
+       "tet": "Rai-henek de'it"
+      },
+      {
+       "en": "Plastic bags",
+       "id": "Kantong plastik",
+       "pt": "Sacos de plástico",
+       "tet": "Saku plástiku"
+      },
+      {
+       "en": "Total darkness",
+       "id": "Gelap total",
+       "pt": "Escuridão total",
+       "tet": "Nakukun nafatin"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "Does a stone grow?",
+      "id": "Apakah batu tumbuh?",
+      "pt": "Uma pedra cresce?",
+      "tet": "Fatuk boot ka lae?"
+     },
+     "answer": {
+      "en": "No, a stone does not grow",
+      "id": "Tidak, batu tidak tumbuh",
+      "pt": "Não, a pedra não cresce",
+      "tet": "Lae, fatuk la boot"
+     },
+     "wrong": [
+      {
+       "en": "Yes, every day",
+       "id": "Ya, setiap hari",
+       "pt": "Sim, todos os dias",
+       "tet": "Sin, loron-loron"
+      },
+      {
+       "en": "Yes, only at night",
+       "id": "Ya, hanya pada malam hari",
+       "pt": "Sim, só à noite",
+       "tet": "Sin, kalan de'it"
+      },
+      {
+       "en": "Yes, when it eats",
+       "id": "Ya, kalau batu makan",
+       "pt": "Sim, quando come",
+       "tet": "Sin, bainhira nia han"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "biology.primary",
+   "level": "primary",
+   "difficulty": 2,
+   "topic": "biology",
+   "title": {
+    "en": "Parts of a plant",
+    "id": "Bagian-bagian tumbuhan",
+    "pt": "As partes de uma planta",
+    "tet": "Parte sira ai-horis nian"
+   },
+   "points": [
+    {
+     "en": "Roots hold the plant in the soil and take in water. The stem carries the water up to the leaves.",
+     "id": "Akar menahan tumbuhan di tanah dan menyerap air. Batang membawa air ke daun.",
+     "pt": "As raízes seguram a planta na terra e absorvem água. O caule leva a água até às folhas.",
+     "tet": "Abut kaer metin ai-horis iha rai no hemu bee. Ai-kain lori bee sa'e ba tahan."
+    },
+    {
+     "en": "Green leaves use sunlight to make food for the plant. That is why plants grow towards the light.",
+     "id": "Daun hijau memakai sinar matahari untuk membuat makanan bagi tumbuhan. Karena itu tumbuhan tumbuh ke arah cahaya.",
+     "pt": "As folhas verdes usam a luz do sol para fazer alimento para a planta. Por isso as plantas crescem em direção à luz.",
+     "tet": "Tahan matak uza naroman loron atu halo hahán ba ai-horis. Tan ne'e ai-horis boot ba naroman nia sorin."
+    },
+    {
+     "en": "Flowers make fruit and seeds. In Ermera, the red coffee cherries hold the seeds that we dry and roast as coffee beans.",
+     "id": "Bunga menghasilkan buah dan biji. Di Ermera, buah kopi merah berisi biji yang dikeringkan dan disangrai menjadi biji kopi.",
+     "pt": "As flores dão frutos e sementes. Em Ermera, as cerejas vermelhas do café têm as sementes que secamos e torramos.",
+     "tet": "Ai-funan halo ai-fuan no fini. Iha Ermera, kafé-fuan mean iha fini ne'ebé ita habai no sona hanesan kafé."
+    }
+   ],
+   "task": {
+    "en": "Plant a bean or corn seed in a cup of soil. Water it and draw it every day for one week.",
+    "id": "Tanam biji kacang atau jagung di gelas berisi tanah. Siram dan gambar setiap hari selama satu minggu.",
+    "pt": "Planta uma semente de feijão ou de milho num copo com terra. Rega-a e desenha-a todos os dias durante uma semana.",
+    "tet": "Kuda fini fore ka batar ida iha kopu ho rai. Fakar bee no dezeña nia loron-loron durante semana ida."
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "Which part of the plant takes in water from the soil?",
+      "id": "Bagian tumbuhan mana yang menyerap air dari tanah?",
+      "pt": "Que parte da planta absorve a água da terra?",
+      "tet": "Parte ida ne'ebé husi ai-horis mak hemu bee husi rai?"
+     },
+     "answer": {
+      "en": "The roots",
+      "id": "Akar",
+      "pt": "As raízes",
+      "tet": "Abut"
+     },
+     "wrong": [
+      {
+       "en": "The flowers",
+       "id": "Bunga",
+       "pt": "As flores",
+       "tet": "Ai-funan"
+      },
+      {
+       "en": "The fruit",
+       "id": "Buah",
+       "pt": "Os frutos",
+       "tet": "Ai-fuan"
+      },
+      {
+       "en": "The seeds",
+       "id": "Biji",
+       "pt": "As sementes",
+       "tet": "Fini"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "What do green leaves use to make food?",
+      "id": "Apa yang dipakai daun hijau untuk membuat makanan?",
+      "pt": "O que usam as folhas verdes para fazer alimento?",
+      "tet": "Tahan matak uza saida atu halo hahán?"
+     },
+     "answer": {
+      "en": "Sunlight",
+      "id": "Sinar matahari",
+      "pt": "A luz do sol",
+      "tet": "Naroman loron"
+     },
+     "wrong": [
+      {
+       "en": "Moonlight only",
+       "id": "Hanya cahaya bulan",
+       "pt": "Só a luz da lua",
+       "tet": "Naroman fulan de'it"
+      },
+      {
+       "en": "Small stones",
+       "id": "Batu kecil",
+       "pt": "Pedras pequenas",
+       "tet": "Fatuk ki'ik"
+      },
+      {
+       "en": "Sea salt",
+       "id": "Garam laut",
+       "pt": "Sal do mar",
+       "tet": "Masin tasi"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "Coffee beans from Ermera are which part of the coffee plant?",
+      "id": "Biji kopi dari Ermera adalah bagian apa dari tanaman kopi?",
+      "pt": "Os grãos de café de Ermera são que parte do cafeeiro?",
+      "tet": "Kafé husi Ermera mak parte saida husi ai-kafé?"
+     },
+     "answer": {
+      "en": "The seeds",
+      "id": "Bijinya",
+      "pt": "As sementes",
+      "tet": "Fini"
+     },
+     "wrong": [
+      {
+       "en": "The roots",
+       "id": "Akarnya",
+       "pt": "As raízes",
+       "tet": "Abut"
+      },
+      {
+       "en": "The leaves",
+       "id": "Daunnya",
+       "pt": "As folhas",
+       "tet": "Tahan"
+      },
+      {
+       "en": "The stem",
+       "id": "Batangnya",
+       "pt": "O caule",
+       "tet": "Ai-kain"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "biology.middle",
+   "level": "middle",
+   "difficulty": 3,
+   "topic": "biology",
+   "title": {
+    "en": "Cells and photosynthesis",
+    "id": "Sel dan fotosintesis",
+    "pt": "As células e a fotossíntese",
+    "tet": "Sélula no fotosíntese"
+   },
+   "points": [
+    {
+     "en": "All living things are made of cells. Each cell has a membrane, cytoplasm and usually a nucleus that holds the DNA.",
+     "id": "Semua makhluk hidup tersusun dari sel. Setiap sel memiliki membran, sitoplasma, dan biasanya inti sel yang menyimpan DNA.",
+     "pt": "Todos os seres vivos são feitos de células. Cada célula tem membrana, citoplasma e, normalmente, um núcleo que guarda o ADN.",
+     "tet": "Buat moris hotu-hotu halo husi sélula. Sélula ida-idak iha membrana, sitoplasma no baibain núkleu ida ne'ebé rai ADN."
+    },
+    {
+     "en": "Plant cells also have a cell wall and chloroplasts. Animal cells have neither of these.",
+     "id": "Sel tumbuhan juga memiliki dinding sel dan kloroplas. Sel hewan tidak memiliki keduanya.",
+     "pt": "As células vegetais têm também parede celular e cloroplastos. As células animais não têm nenhum dos dois.",
+     "tet": "Sélula ai-horis nian mós iha parede selulár no kloroplastu. Sélula animál nian la iha buat rua ne'e."
+    },
+    {
+     "en": "In photosynthesis, chloroplasts use light: carbon dioxide + water → glucose + oxygen.",
+     "id": "Dalam fotosintesis, kloroplas memakai cahaya: karbon dioksida + air → glukosa + oksigen.",
+     "pt": "Na fotossíntese, os cloroplastos usam a luz: dióxido de carbono + água → glicose + oxigénio.",
+     "tet": "Iha fotosíntese, kloroplastu uza naroman: dióksidu karbonu + bee → glukoze + oksijéniu."
+    }
+   ],
+   "task": {
+    "en": "Peel the thin skin from an onion and look at it with a magnifying glass or a school microscope. Draw the cells you see.",
+    "id": "Kupas kulit tipis bawang dan amati dengan kaca pembesar atau mikroskop sekolah. Gambar sel yang kamu lihat.",
+    "pt": "Tira a película fina de uma cebola e observa-a com uma lupa ou com o microscópio da escola. Desenha as células que vês.",
+    "tet": "Hasai kulit mihis husi liis-mean no haree ho lupa ka mikroskópiu eskola nian. Dezeña sélula sira ne'ebé ita haree."
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "Which part of the cell holds the DNA?",
+      "id": "Bagian sel mana yang menyimpan DNA?",
+      "pt": "Que parte da célula guarda o ADN?",
+      "tet": "Parte saida husi sélula mak rai ADN?"
+     },
+     "answer": {
+      "en": "The nucleus",
+      "id": "Inti sel",
+      "pt": "O núcleo",
+      "tet": "Núkleu"
+     },
+     "wrong": [
+      {
+       "en": "The cell wall",
+       "id": "Dinding sel",
+       "pt": "A parede celular",
+       "tet": "Parede selulár"
+      },
+      {
+       "en": "The cell membrane",
+       "id": "Membran sel",
+       "pt": "A membrana celular",
+       "tet": "Membrana selulár"
+      },
+      {
+       "en": "The vacuole",
+       "id": "Vakuola",
+       "pt": "O vacúolo",
+       "tet": "Vakúolu"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "What do plant cells have that animal cells do not?",
+      "id": "Apa yang dimiliki sel tumbuhan tetapi tidak dimiliki sel hewan?",
+      "pt": "O que têm as células vegetais que as células animais não têm?",
+      "tet": "Saida mak sélula ai-horis nian iha maibé sélula animál nian la iha?"
+     },
+     "answer": {
+      "en": "A cell wall",
+      "id": "Dinding sel",
+      "pt": "Parede celular",
+      "tet": "Parede selulár"
+     },
+     "wrong": [
+      {
+       "en": "A nucleus",
+       "id": "Inti sel",
+       "pt": "Núcleo",
+       "tet": "Núkleu"
+      },
+      {
+       "en": "A membrane",
+       "id": "Membran",
+       "pt": "Membrana",
+       "tet": "Membrana"
+      },
+      {
+       "en": "Cytoplasm",
+       "id": "Sitoplasma",
+       "pt": "Citoplasma",
+       "tet": "Sitoplasma"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "What does photosynthesis produce?",
+      "id": "Apa yang dihasilkan fotosintesis?",
+      "pt": "O que produz a fotossíntese?",
+      "tet": "Fotosíntese prodús saida?"
+     },
+     "answer": {
+      "en": "Glucose and oxygen",
+      "id": "Glukosa dan oksigen",
+      "pt": "Glicose e oxigénio",
+      "tet": "Glukoze no oksijéniu"
+     },
+     "wrong": [
+      {
+       "en": "Salt and water",
+       "id": "Garam dan air",
+       "pt": "Sal e água",
+       "tet": "Masin no bee"
+      },
+      {
+       "en": "Only carbon dioxide",
+       "id": "Hanya karbon dioksida",
+       "pt": "Só dióxido de carbono",
+       "tet": "Dióksidu karbonu de'it"
+      },
+      {
+       "en": "Iron and nitrogen",
+       "id": "Besi dan nitrogen",
+       "pt": "Ferro e azoto",
+       "tet": "Besi no nitrojéniu"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "biology.secondary",
+   "level": "secondary",
+   "difficulty": 4,
+   "topic": "biology",
+   "title": {
+    "en": "Genes and inheritance",
+    "id": "Gen dan pewarisan sifat",
+    "pt": "Genes e hereditariedade",
+    "tet": "Jene no eransa"
+   },
+   "points": [
+    {
+     "en": "A gene is a section of DNA that carries the code for a protein. Genes sit on chromosomes; human body cells have 46 chromosomes in 23 pairs.",
+     "id": "Gen adalah bagian DNA yang membawa kode untuk sebuah protein. Gen terletak pada kromosom; sel tubuh manusia memiliki 46 kromosom dalam 23 pasang.",
+     "pt": "Um gene é uma parte do ADN com o código de uma proteína. Os genes estão nos cromossomas; as células do corpo humano têm 46 cromossomas em 23 pares.",
+     "tet": "Jene mak parte ida husi ADN ne'ebé lori kódigu ba proteína ida. Jene sira iha kromosoma; sélula isin-lolon ema nian iha kromosoma 46 iha pár 23."
+    },
+    {
+     "en": "We get one copy of each gene from each parent. A dominant allele (A) shows its effect even when paired with a recessive allele (a).",
+     "id": "Kita mendapat satu salinan setiap gen dari masing-masing orang tua. Alel dominan (A) tampak walaupun berpasangan dengan alel resesif (a).",
+     "pt": "Recebemos uma cópia de cada gene de cada progenitor. Um alelo dominante (A) mostra o seu efeito mesmo junto de um alelo recessivo (a).",
+     "tet": "Ita simu kópia ida husi jene ida-idak husi inan no aman ida-idak. Alelu dominante (A) hatudu nia efeitu maske hamutuk ho alelu resesivu (a)."
+    },
+    {
+     "en": "Crossing Aa × Aa gives AA, Aa, Aa and aa. So about 3 in 4 children show the dominant trait and 1 in 4 shows the recessive trait.",
+     "id": "Persilangan Aa × Aa menghasilkan AA, Aa, Aa, dan aa. Jadi sekitar 3 dari 4 keturunan menunjukkan sifat dominan dan 1 dari 4 sifat resesif.",
+     "pt": "O cruzamento Aa × Aa dá AA, Aa, Aa e aa. Assim, cerca de 3 em 4 descendentes mostram o carácter dominante e 1 em 4 o recessivo.",
+     "tet": "Kruzamentu Aa × Aa fó AA, Aa, Aa no aa. Ne'e duni, maizumenus oan 3 husi 4 hatudu karakterístika dominante no 1 husi 4 hatudu resesivu."
+    }
+   ],
+   "task": {
+    "en": "Draw a Punnett square for Aa × Aa. Count how many boxes have at least one A.",
+    "id": "Gambarlah diagram Punnett untuk Aa × Aa. Hitung berapa kotak yang memiliki paling sedikit satu A.",
+    "pt": "Desenha um quadro de Punnett para Aa × Aa. Conta quantas casas têm pelo menos um A.",
+    "tet": "Dezeña kuadru Punnett ba Aa × Aa. Sura kaixa hira mak iha pelumenus A ida."
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "How many chromosomes are in a normal human body cell?",
+      "id": "Berapa jumlah kromosom dalam sel tubuh manusia yang normal?",
+      "pt": "Quantos cromossomas tem uma célula normal do corpo humano?",
+      "tet": "Sélula normál isin-lolon ema nian iha kromosoma hira?"
+     },
+     "answer": {
+      "en": "46",
+      "id": "46",
+      "pt": "46",
+      "tet": "46"
+     },
+     "wrong": [
+      {
+       "en": "23",
+       "id": "23",
+       "pt": "23",
+       "tet": "23"
+      },
+      {
+       "en": "48",
+       "id": "48",
+       "pt": "48",
+       "tet": "48"
+      },
+      {
+       "en": "64",
+       "id": "64",
+       "pt": "64",
+       "tet": "64"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "In a cross Aa × Aa, what fraction of offspring is expected to show the recessive trait?",
+      "id": "Pada persilangan Aa × Aa, berapa bagian keturunan yang diharapkan menunjukkan sifat resesif?",
+      "pt": "Num cruzamento Aa × Aa, que fração dos descendentes deve mostrar o carácter recessivo?",
+      "tet": "Iha kruzamentu Aa × Aa, parte hira husi oan sira mak espera hatudu karakterístika resesivu?"
+     },
+     "answer": {
+      "en": "1/4",
+      "id": "1/4",
+      "pt": "1/4",
+      "tet": "1/4"
+     },
+     "wrong": [
+      {
+       "en": "1/2",
+       "id": "1/2",
+       "pt": "1/2",
+       "tet": "1/2"
+      },
+      {
+       "en": "3/4",
+       "id": "3/4",
+       "pt": "3/4",
+       "tet": "3/4"
+      },
+      {
+       "en": "None of them",
+       "id": "Tidak ada",
+       "pt": "Nenhum",
+       "tet": "La iha ida"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "What is a gene?",
+      "id": "Apa itu gen?",
+      "pt": "O que é um gene?",
+      "tet": "Jene mak saida?"
+     },
+     "answer": {
+      "en": "A section of DNA that codes for a protein",
+      "id": "Bagian DNA yang mengode sebuah protein",
+      "pt": "Uma parte do ADN com o código de uma proteína",
+      "tet": "Parte ADN nian ne'ebé iha kódigu ba proteína ida"
+     },
+     "wrong": [
+      {
+       "en": "A type of blood cell",
+       "id": "Sejenis sel darah",
+       "pt": "Um tipo de célula do sangue",
+       "tet": "Tipu sélula ran nian ida"
+      },
+      {
+       "en": "An organ of the body",
+       "id": "Sebuah organ tubuh",
+       "pt": "Um órgão do corpo",
+       "tet": "Órgaun isin-lolon nian ida"
+      },
+      {
+       "en": "A kind of sugar",
+       "id": "Sejenis gula",
+       "pt": "Um tipo de açúcar",
+       "tet": "Tipu masin-midar ida"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "biology.university",
+   "level": "university",
+   "difficulty": 5,
+   "topic": "biology",
+   "title": {
+    "en": "Evolution by natural selection",
+    "id": "Evolusi melalui seleksi alam",
+    "pt": "Evolução por seleção natural",
+    "tet": "Evolusaun liuhusi seleksaun naturál"
+   },
+   "points": [
+    {
+     "en": "Natural selection needs three things: variation between individuals, inheritance of that variation, and unequal survival or reproduction.",
+     "id": "Seleksi alam memerlukan tiga hal: variasi antarindividu, pewarisan variasi itu, dan peluang bertahan hidup atau bereproduksi yang tidak sama.",
+     "pt": "A seleção natural precisa de três coisas: variação entre indivíduos, hereditariedade dessa variação e sobrevivência ou reprodução desigual.",
+     "tet": "Seleksaun naturál presiza buat tolu: variasaun entre ema ka animál ida-idak, eransa husi variasaun ne'e, no sobrevivénsia ka reprodusaun ne'ebé la hanesan."
+    },
+    {
+     "en": "Mutations in DNA are the original source of new genetic variation. Selection then changes how common each allele is over generations.",
+     "id": "Mutasi DNA adalah sumber asli variasi genetik baru. Seleksi lalu mengubah frekuensi setiap alel dari generasi ke generasi.",
+     "pt": "As mutações no ADN são a fonte original de nova variação genética. A seleção muda depois a frequência de cada alelo ao longo das gerações.",
+     "tet": "Mutasaun iha ADN mak fonte orijinál ba variasaun jenétika foun. Depois seleksaun muda frekuénsia alelu ida-idak liuhusi jerasaun sira."
+    },
+    {
+     "en": "Darwin and Alfred Russel Wallace proposed natural selection together in 1858. Wallace studied the islands between Asia and Australia, a region now called Wallacea, which includes Timor.",
+     "id": "Darwin dan Alfred Russel Wallace mengusulkan seleksi alam bersama pada 1858. Wallace meneliti pulau-pulau antara Asia dan Australia, kawasan yang kini disebut Wallacea, termasuk Timor.",
+     "pt": "Darwin e Alfred Russel Wallace propuseram juntos a seleção natural em 1858. Wallace estudou as ilhas entre a Ásia e a Austrália, a região hoje chamada Wallacea, que inclui Timor.",
+     "tet": "Darwin no Alfred Russel Wallace hato'o hamutuk seleksaun naturál iha tinan 1858. Wallace estuda illa sira entre Ázia no Austrália, rejiaun ne'ebé agora naran Wallacea, inklui Timor."
+    }
+   ],
+   "task": {
+    "en": "Choose one animal from Timor-Leste. Write one inherited trait that helps it survive and explain how selection could keep it common.",
+    "id": "Pilih satu hewan dari Timor-Leste. Tulis satu sifat turunan yang membantunya bertahan hidup dan jelaskan bagaimana seleksi menjaganya tetap umum.",
+    "pt": "Escolhe um animal de Timor-Leste. Escreve um carácter herdado que o ajuda a sobreviver e explica como a seleção o pode manter comum.",
+    "tet": "Hili animál ida husi Timor-Leste. Hakerek karakterístika eransa ida ne'ebé ajuda nia moris no esplika oinsá seleksaun bele halo nia komún nafatin."
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "Who proposed natural selection at the same time as Charles Darwin?",
+      "id": "Siapa yang mengusulkan seleksi alam bersamaan dengan Charles Darwin?",
+      "pt": "Quem propôs a seleção natural ao mesmo tempo que Charles Darwin?",
+      "tet": "Se mak hato'o seleksaun naturál iha tempu hanesan ho Charles Darwin?"
+     },
+     "answer": {
+      "en": "Alfred Russel Wallace",
+      "id": "Alfred Russel Wallace",
+      "pt": "Alfred Russel Wallace",
+      "tet": "Alfred Russel Wallace"
+     },
+     "wrong": [
+      {
+       "en": "Gregor Mendel",
+       "id": "Gregor Mendel",
+       "pt": "Gregor Mendel",
+       "tet": "Gregor Mendel"
+      },
+      {
+       "en": "Louis Pasteur",
+       "id": "Louis Pasteur",
+       "pt": "Louis Pasteur",
+       "tet": "Louis Pasteur"
+      },
+      {
+       "en": "Isaac Newton",
+       "id": "Isaac Newton",
+       "pt": "Isaac Newton",
+       "tet": "Isaac Newton"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "What is the original source of new genetic variation?",
+      "id": "Apa sumber asli variasi genetik baru?",
+      "pt": "Qual é a fonte original de nova variação genética?",
+      "tet": "Saida mak fonte orijinál ba variasaun jenétika foun?"
+     },
+     "answer": {
+      "en": "Mutation",
+      "id": "Mutasi",
+      "pt": "A mutação",
+      "tet": "Mutasaun"
+     },
+     "wrong": [
+      {
+       "en": "Photosynthesis",
+       "id": "Fotosintesis",
+       "pt": "A fotossíntese",
+       "tet": "Fotosíntese"
+      },
+      {
+       "en": "Digestion",
+       "id": "Pencernaan",
+       "pt": "A digestão",
+       "tet": "Dijestaun"
+      },
+      {
+       "en": "Erosion",
+       "id": "Erosi",
+       "pt": "A erosão",
+       "tet": "Erozaun"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "Which biogeographic region includes the island of Timor?",
+      "id": "Kawasan biogeografi mana yang mencakup Pulau Timor?",
+      "pt": "Que região biogeográfica inclui a ilha de Timor?",
+      "tet": "Rejiaun biojeográfika ida ne'ebé mak inklui illa Timor?"
+     },
+     "answer": {
+      "en": "Wallacea",
+      "id": "Wallacea",
+      "pt": "Wallacea",
+      "tet": "Wallacea"
+     },
+     "wrong": [
+      {
+       "en": "Amazonia",
+       "id": "Amazonia",
+       "pt": "Amazónia",
+       "tet": "Amazónia"
+      },
+      {
+       "en": "Patagonia",
+       "id": "Patagonia",
+       "pt": "Patagónia",
+       "tet": "Patagónia"
+      },
+      {
+       "en": "The Sahel",
+       "id": "Sahel",
+       "pt": "O Sahel",
+       "tet": "Sahel"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "biology.adult",
+   "level": "adult",
+   "difficulty": 6,
+   "topic": "biology",
+   "title": {
+    "en": "Microbes at home and at work",
+    "id": "Mikroba di rumah dan di tempat kerja",
+    "pt": "Micróbios em casa e no trabalho",
+    "tet": "Mikróbiu iha uma no iha servisu fatin"
+   },
+   "points": [
+    {
+     "en": "In warm places bacteria can double about every 20 minutes. Do not leave cooked food out for more than about 2 hours; cover it and keep it cool.",
+     "id": "Di tempat hangat bakteri dapat berlipat ganda sekitar setiap 20 menit. Jangan biarkan makanan matang di luar lebih dari sekitar 2 jam; tutup dan simpan di tempat sejuk.",
+     "pt": "Em locais quentes as bactérias podem duplicar a cada 20 minutos. Não deixes comida cozinhada fora mais de cerca de 2 horas; tapa-a e guarda-a fresca.",
+     "tet": "Iha fatin manas baktéria bele dobra maizumenus minutu 20 ida-idak. Keta husik hahán ne'ebé tein ona iha li'ur liu oras 2; taka no rai iha fatin malirin."
+    },
+    {
+     "en": "Antibiotics act on bacteria, not on viruses such as colds or flu. Use them only when a health worker prescribes them, and finish the course as told.",
+     "id": "Antibiotik bekerja pada bakteri, bukan pada virus seperti pilek atau flu. Gunakan hanya jika diresepkan tenaga kesehatan dan habiskan sesuai petunjuk.",
+     "pt": "Os antibióticos atuam sobre bactérias, não sobre vírus como a constipação ou a gripe. Usa-os só se um profissional de saúde os receitar e cumpre o tratamento.",
+     "tet": "Antibiótiku servisu hasoru baktéria, la'ós hasoru vírus hanesan konstipasaun ka gripe. Uza de'it bainhira traballadór saúde fó, no hemu to'o remata tuir matadalan."
+    },
+    {
+     "en": "Many microbes are useful. Yeast makes bread rise, bacteria turn milk into yoghurt, and microbes in compost turn food scraps into good soil.",
+     "id": "Banyak mikroba bermanfaat. Ragi membuat roti mengembang, bakteri mengubah susu menjadi yoghurt, dan mikroba dalam kompos mengubah sisa makanan menjadi tanah subur.",
+     "pt": "Muitos micróbios são úteis. A levedura faz o pão crescer, as bactérias transformam o leite em iogurte e os micróbios do composto fazem dos restos de comida boa terra.",
+     "tet": "Mikróbiu barak di'ak. Fermentu halo paun sa'e, baktéria halo susubeen sai iogurte, no mikróbiu iha kompostu halo restu hahán sai rai bokur."
+    }
+   ],
+   "task": {
+    "en": "Start a small compost pile with fruit peels and leaves. Turn it every week and check how warm it becomes.",
+    "id": "Buat tumpukan kompos kecil dari kulit buah dan daun. Balik setiap minggu dan periksa seberapa hangat kompos itu.",
+    "pt": "Começa um pequeno monte de composto com cascas de fruta e folhas. Revolve-o todas as semanas e verifica quão quente fica.",
+    "tet": "Halo kompostu ki'ik ida ho kulit ai-fuan no tahan. Fila nia semana-semana no haree nia sai manas oinsá."
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "Antibiotics work against which kind of germ?",
+      "id": "Antibiotik bekerja melawan kuman jenis apa?",
+      "pt": "Os antibióticos atuam contra que tipo de micróbio?",
+      "tet": "Antibiótiku servisu hasoru moras-oan tipu saida?"
+     },
+     "answer": {
+      "en": "Bacteria",
+      "id": "Bakteri",
+      "pt": "Bactérias",
+      "tet": "Baktéria"
+     },
+     "wrong": [
+      {
+       "en": "Cold and flu viruses",
+       "id": "Virus pilek dan flu",
+       "pt": "Vírus da constipação e da gripe",
+       "tet": "Vírus konstipasaun no gripe"
+      },
+      {
+       "en": "Allergies to dust",
+       "id": "Alergi debu",
+       "pt": "Alergias ao pó",
+       "tet": "Alerjia ba rai-rahun"
+      },
+      {
+       "en": "Broken bones",
+       "id": "Patah tulang",
+       "pt": "Ossos partidos",
+       "tet": "Ruin tohar"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "Which microbe makes bread rise?",
+      "id": "Mikroba apa yang membuat roti mengembang?",
+      "pt": "Que micróbio faz o pão crescer?",
+      "tet": "Mikróbiu saida mak halo paun sa'e?"
+     },
+     "answer": {
+      "en": "Yeast",
+      "id": "Ragi",
+      "pt": "A levedura",
+      "tet": "Fermentu"
+     },
+     "wrong": [
+      {
+       "en": "Malaria parasites",
+       "id": "Parasit malaria",
+       "pt": "O parasita da malária",
+       "tet": "Parazita malária"
+      },
+      {
+       "en": "The flu virus",
+       "id": "Virus flu",
+       "pt": "O vírus da gripe",
+       "tet": "Vírus gripe"
+      },
+      {
+       "en": "Green algae",
+       "id": "Ganggang hijau",
+       "pt": "Algas verdes",
+       "tet": "Alga matak"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "About how long can cooked food safely stay at warm room temperature?",
+      "id": "Kira-kira berapa lama makanan matang aman dibiarkan pada suhu ruang yang hangat?",
+      "pt": "Quanto tempo, aproximadamente, pode a comida cozinhada ficar com segurança à temperatura ambiente quente?",
+      "tet": "Hahán ne'ebé tein ona bele hela seguru iha temperatura uma laran manas maizumenus tempu hira?"
+     },
+     "answer": {
+      "en": "About 2 hours",
+      "id": "Sekitar 2 jam",
+      "pt": "Cerca de 2 horas",
+      "tet": "Maizumenus oras 2"
+     },
+     "wrong": [
+      {
+       "en": "About 2 days",
+       "id": "Sekitar 2 hari",
+       "pt": "Cerca de 2 dias",
+       "tet": "Maizumenus loron 2"
+      },
+      {
+       "en": "About 1 week",
+       "id": "Sekitar 1 minggu",
+       "pt": "Cerca de 1 semana",
+       "tet": "Maizumenus semana 1"
+      },
+      {
+       "en": "A whole month",
+       "id": "Satu bulan penuh",
+       "pt": "Um mês inteiro",
+       "tet": "Fulan ida tomak"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "biology.senior",
+   "level": "senior",
+   "difficulty": 7,
+   "topic": "biology",
+   "title": {
+    "en": "A strong body and a living garden",
+    "id": "Tubuh yang kuat dan kebun yang hidup",
+    "pt": "Um corpo forte e uma horta viva",
+    "tet": "Isin-lolon forte no to'os moris"
+   },
+   "points": [
+    {
+     "en": "Muscles become smaller with age, but regular walking, gardening and carrying light loads keep them strong.",
+     "id": "Otot mengecil seiring bertambahnya usia, tetapi berjalan kaki, berkebun, dan mengangkat beban ringan secara teratur menjaga otot tetap kuat.",
+     "pt": "Os músculos ficam mais pequenos com a idade, mas caminhar, cuidar da horta e carregar pesos leves com regularidade mantém-nos fortes.",
+     "tet": "Múskulu sai ki'ik bainhira ita tinan boot ona, maibé la'o-la'o, servisu to'os no lori buat kmaan beibeik halo sira forte nafatin."
+    },
+    {
+     "en": "Bones can become thinner and break more easily. Small fish eaten with their bones, beans and green leaves help, and a health worker can advise on preventing falls.",
+     "id": "Tulang bisa menipis dan lebih mudah patah. Ikan kecil yang dimakan bersama tulangnya, kacang-kacangan, dan sayuran hijau membantu; tenaga kesehatan dapat memberi saran untuk mencegah jatuh.",
+     "pt": "Os ossos podem ficar mais finos e partir com mais facilidade. Peixe pequeno comido com as espinhas, feijão e folhas verdes ajudam; um profissional de saúde pode aconselhar como evitar quedas.",
+     "tet": "Ruin bele sai mihis no tohar fasil liu. Ikan ki'ik ne'ebé han hamutuk ho nia ruin, fore no modo-tahan matak ajuda; traballadór saúde bele fó konsellu atu prevene monu."
+    },
+    {
+     "en": "A garden is a biology classroom. Show grandchildren how seeds sprout and how bees carry pollen so that flowers become fruit.",
+     "id": "Kebun adalah kelas biologi. Tunjukkan kepada cucu bagaimana biji bertunas dan bagaimana lebah membawa serbuk sari sehingga bunga menjadi buah.",
+     "pt": "Uma horta é uma sala de aula de biologia. Mostra aos netos como as sementes germinam e como as abelhas levam o pólen para as flores darem fruto.",
+     "tet": "To'os mak sala aula biolojia nian. Hatudu ba bei-oan sira oinsá fini moris no oinsá bani lori pólen atu ai-funan sai ai-fuan."
+    }
+   ],
+   "task": {
+    "en": "Plant seeds with a grandchild. Together, name the root, stem, leaf and flower as the plant grows.",
+    "id": "Tanam biji bersama cucu. Bersama-sama, sebutkan akar, batang, daun, dan bunga saat tanaman tumbuh.",
+    "pt": "Planta sementes com um neto. Juntos, deem nome à raiz, ao caule, à folha e à flor enquanto a planta cresce.",
+    "tet": "Kuda fini hamutuk ho bei-oan ida. Hamutuk, temi naran abut, ai-kain, tahan no ai-funan bainhira ai-horis boot."
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "What helps keep muscles strong with age?",
+      "id": "Apa yang membantu menjaga otot tetap kuat saat usia bertambah?",
+      "pt": "O que ajuda a manter os músculos fortes com a idade?",
+      "tet": "Saida mak ajuda múskulu forte nafatin bainhira tinan boot ona?"
+     },
+     "answer": {
+      "en": "Regular walking and light work",
+      "id": "Jalan kaki dan kerja ringan secara teratur",
+      "pt": "Caminhar e fazer trabalho leve com regularidade",
+      "tet": "La'o-la'o no servisu kmaan beibeik"
+     },
+     "wrong": [
+      {
+       "en": "Sitting all day",
+       "id": "Duduk sepanjang hari",
+       "pt": "Ficar sentado o dia todo",
+       "tet": "Tur loron tomak"
+      },
+      {
+       "en": "Sleeping very little",
+       "id": "Tidur sangat sedikit",
+       "pt": "Dormir muito pouco",
+       "tet": "Toba uitoan de'it"
+      },
+      {
+       "en": "Eating only sweets",
+       "id": "Hanya makan makanan manis",
+       "pt": "Comer só doces",
+       "tet": "Han de'it buat midar"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "How do bees help flowers?",
+      "id": "Bagaimana lebah membantu bunga?",
+      "pt": "Como ajudam as abelhas as flores?",
+      "tet": "Bani ajuda ai-funan oinsá?"
+     },
+     "answer": {
+      "en": "They carry pollen so fruit and seeds can form",
+      "id": "Membawa serbuk sari sehingga buah dan biji terbentuk",
+      "pt": "Levam o pólen para se formarem frutos e sementes",
+      "tet": "Sira lori pólen atu ai-fuan no fini bele mosu"
+     },
+     "wrong": [
+      {
+       "en": "They eat the roots",
+       "id": "Memakan akarnya",
+       "pt": "Comem as raízes",
+       "tet": "Sira han abut"
+      },
+      {
+       "en": "They make the leaves green",
+       "id": "Membuat daun menjadi hijau",
+       "pt": "Tornam as folhas verdes",
+       "tet": "Sira halo tahan sai matak"
+      },
+      {
+       "en": "They stop the rain",
+       "id": "Menghentikan hujan",
+       "pt": "Param a chuva",
+       "tet": "Sira hapara udan"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "Which food helps keep bones strong?",
+      "id": "Makanan apa yang membantu menjaga tulang tetap kuat?",
+      "pt": "Que alimento ajuda a manter os ossos fortes?",
+      "tet": "Hahán saida mak ajuda ruin forte nafatin?"
+     },
+     "answer": {
+      "en": "Small fish eaten with their bones",
+      "id": "Ikan kecil yang dimakan dengan tulangnya",
+      "pt": "Peixe pequeno comido com as espinhas",
+      "tet": "Ikan ki'ik ne'ebé han ho nia ruin"
+     },
+     "wrong": [
+      {
+       "en": "Sweet fizzy drinks",
+       "id": "Minuman bersoda manis",
+       "pt": "Refrigerantes doces",
+       "tet": "Bebida gaz midar"
+      },
+      {
+       "en": "Extra salt",
+       "id": "Garam tambahan",
+       "pt": "Sal a mais",
+       "tet": "Masin barak liu"
+      },
+      {
+       "en": "Sugar candy",
+       "id": "Permen gula",
+       "pt": "Rebuçados de açúcar",
+       "tet": "Bonbon masin-midar"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

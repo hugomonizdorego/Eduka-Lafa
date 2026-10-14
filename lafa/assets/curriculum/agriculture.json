@@ -1,0 +1,1037 @@
+{
+ "subject": "agriculture",
+ "icon": "🌾",
+ "name": {
+  "en": "Agriculture and food",
+  "id": "Pertanian dan pangan",
+  "pt": "Agricultura e alimentação",
+  "tet": "Agrikultura no ai-han"
+ },
+ "meta": {
+  "version": 1,
+  "license": "CC BY-SA 4.0",
+  "languages": [
+   "en",
+   "id",
+   "pt",
+   "tet"
+  ],
+  "source": "Written by the LAFA team for Edukasaun OS (general knowledge, checked against standard references)",
+  "reviewed": "2026-10-13",
+  "review_status": "LAFA team review; not yet reviewed by the Ministry of Education (not a national curriculum)"
+ },
+ "lessons": [
+  {
+   "id": "agriculture.early",
+   "level": "early",
+   "difficulty": 1,
+   "topic": "agriculture",
+   "title": {
+    "en": "Seeds grow into plants",
+    "id": "Biji tumbuh menjadi tanaman",
+    "pt": "As sementes crescem e tornam-se plantas",
+    "tet": "Fini sai ai-horis"
+   },
+   "points": [
+    {
+     "en": "A seed needs soil, water and sun to grow.",
+     "id": "Biji butuh tanah, air, dan sinar matahari untuk tumbuh.",
+     "pt": "Uma semente precisa de terra, água e sol para crescer.",
+     "tet": "Fini presiza rai, bee no loron atu moris."
+    },
+    {
+     "en": "Rice, maize and beans are seeds we can eat.",
+     "id": "Padi, jagung, dan kacang adalah biji yang bisa kita makan.",
+     "pt": "O arroz, o milho e o feijão são sementes que podemos comer.",
+     "tet": "Hare, batar no fore mak fini ne'ebé ita bele han."
+    },
+    {
+     "en": "Fruit and vegetables keep our body strong.",
+     "id": "Buah dan sayur membuat tubuh kita kuat.",
+     "pt": "A fruta e os legumes tornam o nosso corpo forte.",
+     "tet": "Ai-fuan no modo halo ita-nia isin forte."
+    },
+    {
+     "en": "Wash your hands before you eat.",
+     "id": "Cuci tangan sebelum makan.",
+     "pt": "Lava as mãos antes de comer.",
+     "tet": "Fase liman molok han."
+    }
+   ],
+   "task": {
+    "en": "Put 3 maize seeds in a cup of soil. Give a little water each day and count the leaves.",
+    "id": "Masukkan 3 biji jagung ke gelas berisi tanah. Beri sedikit air setiap hari dan hitung daunnya.",
+    "pt": "Põe 3 sementes de milho num copo com terra. Dá um pouco de água todos os dias e conta as folhas.",
+    "tet": "Tau fini batar 3 iha kopu ida ho rai. Fó bee uitoan loron-loron no sura ninia tahan."
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "What does a seed need to grow?",
+      "id": "Apa yang dibutuhkan biji untuk tumbuh?",
+      "pt": "De que precisa uma semente para crescer?",
+      "tet": "Fini presiza saida atu moris?"
+     },
+     "answer": {
+      "en": "Soil, water and sun",
+      "id": "Tanah, air, dan matahari",
+      "pt": "Terra, água e sol",
+      "tet": "Rai, bee no loron"
+     },
+     "wrong": [
+      {
+       "en": "Only sweets",
+       "id": "Hanya permen",
+       "pt": "Só doces",
+       "tet": "Doce de'it"
+      },
+      {
+       "en": "Only darkness",
+       "id": "Hanya kegelapan",
+       "pt": "Só escuridão",
+       "tet": "Nakukun de'it"
+      },
+      {
+       "en": "Only toys",
+       "id": "Hanya mainan",
+       "pt": "Só brinquedos",
+       "tet": "Sasan-halimar de'it"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "Which of these is a seed we eat?",
+      "id": "Manakah biji yang kita makan?",
+      "pt": "Qual destas é uma semente que comemos?",
+      "tet": "Ida ne'ebé mak fini ne'ebé ita han?"
+     },
+     "answer": {
+      "en": "Rice",
+      "id": "Padi",
+      "pt": "Arroz",
+      "tet": "Hare"
+     },
+     "wrong": [
+      {
+       "en": "A stone",
+       "id": "Batu",
+       "pt": "Uma pedra",
+       "tet": "Fatuk"
+      },
+      {
+       "en": "A shoe",
+       "id": "Sepatu",
+       "pt": "Um sapato",
+       "tet": "Sapatu"
+      },
+      {
+       "en": "A pencil",
+       "id": "Pensil",
+       "pt": "Um lápis",
+       "tet": "Lapis"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "What do we do before we eat?",
+      "id": "Apa yang kita lakukan sebelum makan?",
+      "pt": "O que fazemos antes de comer?",
+      "tet": "Ita halo saida molok han?"
+     },
+     "answer": {
+      "en": "Wash our hands",
+      "id": "Mencuci tangan",
+      "pt": "Lavamos as mãos",
+      "tet": "Fase liman"
+     },
+     "wrong": [
+      {
+       "en": "Play in the mud",
+       "id": "Bermain lumpur",
+       "pt": "Brincamos na lama",
+       "tet": "Halimar iha rai-tahu"
+      },
+      {
+       "en": "Go to sleep",
+       "id": "Tidur",
+       "pt": "Vamos dormir",
+       "tet": "Ba toba"
+      },
+      {
+       "en": "Climb a tree",
+       "id": "Memanjat pohon",
+       "pt": "Subimos a uma árvore",
+       "tet": "Sa'e ai"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "agriculture.primary",
+   "level": "primary",
+   "difficulty": 2,
+   "topic": "agriculture",
+   "title": {
+    "en": "Food from Timor-Leste",
+    "id": "Pangan dari Timor-Leste",
+    "pt": "Alimentos de Timor-Leste",
+    "tet": "Ai-han husi Timor-Leste"
+   },
+   "points": [
+    {
+     "en": "Rice grows in flooded fields called rice paddies, for example in Viqueque. Farmers plant small rice seedlings by hand.",
+     "id": "Padi tumbuh di sawah yang tergenang air, misalnya di Viqueque. Petani menanam bibit padi kecil dengan tangan.",
+     "pt": "O arroz cresce em campos alagados, os arrozais, por exemplo em Viqueque. Os agricultores plantam à mão pequenas plantas de arroz.",
+     "tet": "Hare moris iha natar ne'ebé nakonu ho bee, ezemplu iha Viqueque. Agrikultór sira kuda hare-oan ho liman."
+    },
+    {
+     "en": "Maize is planted when the rainy season begins. It is one of the most common foods in Timorese homes.",
+     "id": "Jagung ditanam saat musim hujan mulai. Jagung adalah salah satu makanan paling umum di rumah orang Timor.",
+     "pt": "O milho é semeado quando começa a época das chuvas. É um dos alimentos mais comuns nas casas timorenses.",
+     "tet": "Ema kuda batar bainhira tempu udan komesa. Batar mak ai-han ida ne'ebé komún liu iha Timor-oan sira-nia uma."
+    },
+    {
+     "en": "Coffee grows in the cool mountains, for example in Ermera, under tall shade trees. The red coffee cherries are picked, dried and sold.",
+     "id": "Kopi tumbuh di pegunungan yang sejuk, misalnya di Ermera, di bawah pohon peneduh yang tinggi. Buah kopi merah dipetik, dikeringkan, lalu dijual.",
+     "pt": "O café cresce nas montanhas frescas, por exemplo em Ermera, à sombra de árvores altas. Os frutos vermelhos do café são colhidos, secos e vendidos.",
+     "tet": "Kafé moris iha foho malirin, ezemplu iha Ermera, iha ai-hun naruk sira-nia okos. Ema ku'u kafé-fuan mean, habai no fa'an."
+    },
+    {
+     "en": "Fishermen catch fish along the coast and near Ataúro. Fish gives us protein to grow.",
+     "id": "Nelayan menangkap ikan di sepanjang pantai dan di dekat Ataúro. Ikan memberi kita protein untuk tumbuh.",
+     "pt": "Os pescadores apanham peixe ao longo da costa e perto de Ataúro. O peixe dá-nos proteínas para crescer.",
+     "tet": "Peskadór sira kaer ikan iha tasi-ninin no besik Ataúro. Ikan fó proteína ba ita atu boot."
+    }
+   ],
+   "task": {
+    "en": "Visit a market and make a list of 5 foods grown in Timor-Leste. Write the price of one of them.",
+    "id": "Kunjungi pasar dan buat daftar 5 makanan yang ditanam di Timor-Leste. Tulis harga salah satunya.",
+    "pt": "Visita um mercado e faz uma lista de 5 alimentos produzidos em Timor-Leste. Escreve o preço de um deles.",
+    "tet": "Ba vizita merkadu ida no hakerek lista ai-han 5 ne'ebé kuda iha Timor-Leste. Hakerek ida nia folin."
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "Where does rice usually grow?",
+      "id": "Di mana padi biasanya tumbuh?",
+      "pt": "Onde cresce normalmente o arroz?",
+      "tet": "Hare baibain moris iha ne'ebé?"
+     },
+     "answer": {
+      "en": "In flooded paddy fields",
+      "id": "Di sawah yang tergenang air",
+      "pt": "Em arrozais alagados",
+      "tet": "Iha natar ho bee"
+     },
+     "wrong": [
+      {
+       "en": "In the sea",
+       "id": "Di laut",
+       "pt": "No mar",
+       "tet": "Iha tasi"
+      },
+      {
+       "en": "On dry sand dunes",
+       "id": "Di bukit pasir kering",
+       "pt": "Em dunas de areia seca",
+       "tet": "Iha rai-henek maran"
+      },
+      {
+       "en": "Inside caves",
+       "id": "Di dalam gua",
+       "pt": "Dentro de grutas",
+       "tet": "Iha fatuk-kuak laran"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "Which municipality is famous for its coffee?",
+      "id": "Kotamadya mana yang terkenal dengan kopinya?",
+      "pt": "Que município é famoso pelo seu café?",
+      "tet": "Munisípiu ida ne'ebé mak famozu ho ninia kafé?"
+     },
+     "answer": {
+      "en": "Ermera",
+      "id": "Ermera",
+      "pt": "Ermera",
+      "tet": "Ermera"
+     },
+     "wrong": [
+      {
+       "en": "Ataúro",
+       "id": "Ataúro",
+       "pt": "Ataúro",
+       "tet": "Ataúro"
+      },
+      {
+       "en": "Viqueque",
+       "id": "Viqueque",
+       "pt": "Viqueque",
+       "tet": "Viqueque"
+      },
+      {
+       "en": "Oe-Cusse",
+       "id": "Oe-Cusse",
+       "pt": "Oe-Cusse",
+       "tet": "Oe-Cusse"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "What important nutrient does fish give us?",
+      "id": "Zat gizi penting apa yang diberikan ikan?",
+      "pt": "Que nutriente importante nos dá o peixe?",
+      "tet": "Ikan fó nutriente importante saida ba ita?"
+     },
+     "answer": {
+      "en": "Protein",
+      "id": "Protein",
+      "pt": "Proteínas",
+      "tet": "Proteína"
+     },
+     "wrong": [
+      {
+       "en": "Fibre",
+       "id": "Serat",
+       "pt": "Fibra",
+       "tet": "Fibra"
+      },
+      {
+       "en": "Caffeine",
+       "id": "Kafein",
+       "pt": "Cafeína",
+       "tet": "Kafeína"
+      },
+      {
+       "en": "Sugar",
+       "id": "Gula",
+       "pt": "Açúcar",
+       "tet": "Masin-midar"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "agriculture.middle",
+   "level": "middle",
+   "difficulty": 3,
+   "topic": "agriculture",
+   "title": {
+    "en": "Soil, plants and photosynthesis",
+    "id": "Tanah, tanaman, dan fotosintesis",
+    "pt": "Solo, plantas e fotossíntese",
+    "tet": "Rai, ai-horis no fotosíntese"
+   },
+   "points": [
+    {
+     "en": "In photosynthesis, plants use sunlight to turn carbon dioxide and water into sugar and oxygen: 6CO₂ + 6H₂O → C₆H₁₂O₆ + 6O₂.",
+     "id": "Dalam fotosintesis, tanaman memakai cahaya matahari untuk mengubah karbon dioksida dan air menjadi gula dan oksigen: 6CO₂ + 6H₂O → C₆H₁₂O₆ + 6O₂.",
+     "pt": "Na fotossíntese, as plantas usam a luz do sol para transformar dióxido de carbono e água em açúcar e oxigénio: 6CO₂ + 6H₂O → C₆H₁₂O₆ + 6O₂.",
+     "tet": "Iha fotosíntese, ai-horis uza loron nia naroman atu halo dióksidu karbonu no bee sai masin-midar no oksijéniu: 6CO₂ + 6H₂O → C₆H₁₂O₆ + 6O₂."
+    },
+    {
+     "en": "Plants take three main nutrients from the soil: nitrogen (N), phosphorus (P) and potassium (K). Compost made from leaves and animal manure returns these nutrients to the soil.",
+     "id": "Tanaman mengambil tiga unsur hara utama dari tanah: nitrogen (N), fosfor (P), dan kalium (K). Kompos dari daun dan kotoran hewan mengembalikan unsur hara ini ke tanah.",
+     "pt": "As plantas retiram do solo três nutrientes principais: azoto (N), fósforo (P) e potássio (K). O composto feito de folhas e estrume devolve estes nutrientes ao solo.",
+     "tet": "Ai-horis foti nutriente prinsipál tolu husi rai: nitrojéniu (N), fósforu (P) no potásiu (K). Kompostu ne'ebé halo husi ai-tahan no animál nia teen fó fila fali nutriente sira ne'e ba rai."
+    },
+    {
+     "en": "Beans and peanuts are legumes: bacteria in their roots add nitrogen to the soil. Rotating maize with beans keeps the soil fertile.",
+     "id": "Buncis dan kacang tanah adalah polong-polongan: bakteri di akarnya menambah nitrogen ke tanah. Menggilir jagung dengan kacang menjaga tanah tetap subur.",
+     "pt": "O feijão e o amendoim são leguminosas: as bactérias nas suas raízes acrescentam azoto ao solo. Alternar o milho com o feijão mantém o solo fértil.",
+     "tet": "Fore no fore-rai mak legume: bakteria iha sira-nia abut aumenta nitrojéniu ba rai. Kuda batar no fore troka malu halo rai nafatin bokur."
+    }
+   ],
+   "task": {
+    "en": "Make a small compost pile with dry leaves, green leaves, kitchen scraps and a little soil. Keep it damp and turn it every week.",
+    "id": "Buat tumpukan kompos kecil dari daun kering, daun hijau, sisa dapur, dan sedikit tanah. Jaga tetap lembap dan balik setiap minggu.",
+    "pt": "Faz um pequeno monte de composto com folhas secas, folhas verdes, restos de cozinha e um pouco de terra. Mantém-no húmido e revolve-o todas as semanas.",
+    "tet": "Halo kompostu ki'ik ida ho ai-tahan maran, ai-tahan matak, restu husi dapur no rai uitoan. Halo nia bokon nafatin no fila kompostu ne'e semana ida dala ida."
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "Which gas do plants release in photosynthesis?",
+      "id": "Gas apa yang dilepaskan tanaman dalam fotosintesis?",
+      "pt": "Que gás libertam as plantas na fotossíntese?",
+      "tet": "Ai-horis husik sai gás saida iha fotosíntese?"
+     },
+     "answer": {
+      "en": "Oxygen",
+      "id": "Oksigen",
+      "pt": "Oxigénio",
+      "tet": "Oksijéniu"
+     },
+     "wrong": [
+      {
+       "en": "Carbon dioxide",
+       "id": "Karbon dioksida",
+       "pt": "Dióxido de carbono",
+       "tet": "Dióksidu karbonu"
+      },
+      {
+       "en": "Nitrogen",
+       "id": "Nitrogen",
+       "pt": "Azoto",
+       "tet": "Nitrojéniu"
+      },
+      {
+       "en": "Methane",
+       "id": "Metana",
+       "pt": "Metano",
+       "tet": "Metanu"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "What do the letters N, P and K stand for?",
+      "id": "Apa arti huruf N, P, dan K?",
+      "pt": "O que significam as letras N, P e K?",
+      "tet": "Letra N, P no K signifika saida?"
+     },
+     "answer": {
+      "en": "Nitrogen, phosphorus, potassium",
+      "id": "Nitrogen, fosfor, kalium",
+      "pt": "Azoto, fósforo, potássio",
+      "tet": "Nitrojéniu, fósforu, potásiu"
+     },
+     "wrong": [
+      {
+       "en": "Neon, platinum, krypton",
+       "id": "Neon, platina, kripton",
+       "pt": "Néon, platina, crípton",
+       "tet": "Neón, platina, kriptón"
+      },
+      {
+       "en": "Nitrogen, protein, calcium",
+       "id": "Nitrogen, protein, kalsium",
+       "pt": "Azoto, proteína, cálcio",
+       "tet": "Nitrojéniu, proteína, kálsiu"
+      },
+      {
+       "en": "Sodium, phosphate, iron",
+       "id": "Natrium, fosfat, besi",
+       "pt": "Sódio, fosfato, ferro",
+       "tet": "Sódiu, fosfatu, besi"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "Why do farmers plant beans after maize?",
+      "id": "Mengapa petani menanam kacang setelah jagung?",
+      "pt": "Porque é que os agricultores plantam feijão depois do milho?",
+      "tet": "Tanba saida mak agrikultór sira kuda fore hafoin batar?"
+     },
+     "answer": {
+      "en": "Beans add nitrogen to the soil",
+      "id": "Kacang menambah nitrogen ke tanah",
+      "pt": "O feijão acrescenta azoto ao solo",
+      "tet": "Fore aumenta nitrojéniu ba rai"
+     },
+     "wrong": [
+      {
+       "en": "Beans remove all water from the soil",
+       "id": "Kacang menghabiskan semua air tanah",
+       "pt": "O feijão retira toda a água do solo",
+       "tet": "Fore hasai bee hotu husi rai"
+      },
+      {
+       "en": "Beans keep birds away",
+       "id": "Kacang mengusir burung",
+       "pt": "O feijão afasta os pássaros",
+       "tet": "Fore duni manu sira"
+      },
+      {
+       "en": "Beans make the soil salty",
+       "id": "Kacang membuat tanah asin",
+       "pt": "O feijão torna o solo salgado",
+       "tet": "Fore halo rai sai masin"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "agriculture.secondary",
+   "level": "secondary",
+   "difficulty": 4,
+   "topic": "agriculture",
+   "title": {
+    "en": "Water, slopes and crop yield",
+    "id": "Air, lereng, dan hasil panen",
+    "pt": "Água, encostas e produtividade",
+    "tet": "Bee, foho-lolon no produtividade"
+   },
+   "points": [
+    {
+     "en": "On steep hillsides, heavy rain washes fertile topsoil away (erosion). Terraces, contour hedges and tree roots slow the water and hold the soil.",
+     "id": "Di lereng curam, hujan lebat menghanyutkan lapisan atas tanah yang subur (erosi). Terasering, pagar tanaman mengikuti kontur, dan akar pohon memperlambat air dan menahan tanah.",
+     "pt": "Nas encostas íngremes, a chuva forte arrasta a camada fértil do solo (erosão). Os socalcos, as sebes em curva de nível e as raízes das árvores travam a água e seguram o solo.",
+     "tet": "Iha foho-lolon ne'ebé tetuk, udan boot lori rai bokur iha leten (erozaun). Terasu, ai-lidun tuir kontornu no ai-abut halo bee suli neineik no kaer metin rai."
+    },
+    {
+     "en": "Yield = harvest ÷ area. If a field of 2 hectares gives 6 tonnes of rice, the yield is 3 tonnes per hectare (t/ha).",
+     "id": "Hasil panen = jumlah panen ÷ luas lahan. Jika sawah 2 hektare menghasilkan 6 ton padi, hasilnya 3 ton per hektare (t/ha).",
+     "pt": "Produtividade = colheita ÷ área. Se um campo de 2 hectares dá 6 toneladas de arroz, a produtividade é de 3 toneladas por hectare (t/ha).",
+     "tet": "Produtividade = kolleita ÷ área. Se natar hektare 2 fó hare tonelada 6, produtividade mak tonelada 3 kada hektare (t/ha)."
+    },
+    {
+     "en": "Irrigation brings water to crops in the dry season, so farmers can harvest more than once a year. Too much water without drainage can make the soil salty or waterlogged.",
+     "id": "Irigasi membawa air ke tanaman pada musim kemarau sehingga petani bisa panen lebih dari sekali setahun. Air berlebih tanpa saluran pembuangan dapat membuat tanah asin atau tergenang.",
+     "pt": "A rega leva água às culturas na estação seca, para que os agricultores possam colher mais de uma vez por ano. Água a mais sem drenagem pode tornar o solo salgado ou encharcado.",
+     "tet": "Irrigasaun lori bee ba ai-horis iha tempu bailoron, nune'e agrikultór sira bele kolleita liu dala ida iha tinan ida. Se bee barak liu no la iha drenajen, rai bele sai masin ka nakonu ho bee."
+    }
+   ],
+   "task": {
+    "en": "Measure a garden bed in metres, weigh what it produces in one season and calculate the yield in kg per m².",
+    "id": "Ukur bedengan kebun dalam meter, timbang hasilnya dalam satu musim, dan hitung hasil panen dalam kg per m².",
+    "pt": "Mede um canteiro da horta em metros, pesa o que produz numa estação e calcula a produtividade em kg por m².",
+    "tet": "Sukat to'os-fatin ida ho metru, sukat todan husi kolleita iha tempu ida no kalkula produtividade iha kg kada m²."
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "What is soil erosion?",
+      "id": "Apa itu erosi tanah?",
+      "pt": "O que é a erosão do solo?",
+      "tet": "Erozaun rai mak saida?"
+     },
+     "answer": {
+      "en": "Topsoil being washed or blown away",
+      "id": "Lapisan atas tanah terbawa air atau angin",
+      "pt": "A camada superior do solo levada pela água ou pelo vento",
+      "tet": "Rai iha leten ne'ebé bee ka anin lori ba"
+     },
+     "wrong": [
+      {
+       "en": "Soil becoming more fertile",
+       "id": "Tanah menjadi lebih subur",
+       "pt": "O solo tornar-se mais fértil",
+       "tet": "Rai sai bokur liu"
+      },
+      {
+       "en": "Seeds sprouting in the soil",
+       "id": "Biji bertunas di tanah",
+       "pt": "Sementes a germinar no solo",
+       "tet": "Fini moris iha rai"
+      },
+      {
+       "en": "Adding compost to the soil",
+       "id": "Menambahkan kompos ke tanah",
+       "pt": "Juntar composto ao solo",
+       "tet": "Tau kompostu ba rai"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "A 4-hectare field gives 10 tonnes of maize. What is the yield?",
+      "id": "Ladang 4 hektare menghasilkan 10 ton jagung. Berapa hasil panennya?",
+      "pt": "Um campo de 4 hectares dá 10 toneladas de milho. Qual é a produtividade?",
+      "tet": "To'os hektare 4 fó batar tonelada 10. Produtividade hira?"
+     },
+     "answer": {
+      "en": "2.5 t/ha",
+      "id": "2,5 t/ha",
+      "pt": "2,5 t/ha",
+      "tet": "2,5 t/ha"
+     },
+     "wrong": [
+      {
+       "en": "40 t/ha",
+       "id": "40 t/ha",
+       "pt": "40 t/ha",
+       "tet": "40 t/ha"
+      },
+      {
+       "en": "0.4 t/ha",
+       "id": "0,4 t/ha",
+       "pt": "0,4 t/ha",
+       "tet": "0,4 t/ha"
+      },
+      {
+       "en": "14 t/ha",
+       "id": "14 t/ha",
+       "pt": "14 t/ha",
+       "tet": "14 t/ha"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "How do terraces help farmers on hillsides?",
+      "id": "Bagaimana terasering membantu petani di lereng bukit?",
+      "pt": "Como ajudam os socalcos os agricultores nas encostas?",
+      "tet": "Oinsá terasu ajuda agrikultór sira iha foho-lolon?"
+     },
+     "answer": {
+      "en": "They slow water and keep the soil in place",
+      "id": "Memperlambat air dan menahan tanah",
+      "pt": "Travam a água e seguram o solo",
+      "tet": "Halo bee suli neineik no kaer metin rai"
+     },
+     "wrong": [
+      {
+       "en": "They make the rain stop",
+       "id": "Membuat hujan berhenti",
+       "pt": "Fazem parar a chuva",
+       "tet": "Halo udan para"
+      },
+      {
+       "en": "They make the soil salty",
+       "id": "Membuat tanah menjadi asin",
+       "pt": "Tornam o solo salgado",
+       "tet": "Halo rai sai masin"
+      },
+      {
+       "en": "They remove the need for seeds",
+       "id": "Menghilangkan kebutuhan akan biji",
+       "pt": "Dispensam as sementes",
+       "tet": "Halo ita la presiza fini"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "agriculture.university",
+   "level": "university",
+   "difficulty": 5,
+   "topic": "agriculture",
+   "title": {
+    "en": "Food security and sustainable systems",
+    "id": "Ketahanan pangan dan sistem berkelanjutan",
+    "pt": "Segurança alimentar e sistemas sustentáveis",
+    "tet": "Seguransa ai-han no sistema sustentável"
+   },
+   "points": [
+    {
+     "en": "The FAO defines food security through four pillars: availability, access, utilisation and stability. A country can produce enough food and still have hungry households if access or utilisation fails.",
+     "id": "FAO mendefinisikan ketahanan pangan melalui empat pilar: ketersediaan, akses, pemanfaatan, dan stabilitas. Sebuah negara bisa memproduksi cukup pangan tetapi tetap ada rumah tangga yang lapar jika akses atau pemanfaatan gagal.",
+     "pt": "A FAO define a segurança alimentar através de quatro pilares: disponibilidade, acesso, utilização e estabilidade. Um país pode produzir comida suficiente e ainda ter famílias com fome se o acesso ou a utilização falharem.",
+     "tet": "FAO define seguransa ai-han liuhusi pilar haat: disponibilidade, asesu, utilizasaun no estabilidade. Nasaun ida bele prodús ai-han natoon maibé família balu sei hamlaha se asesu ka utilizasaun la la'o di'ak."
+    },
+    {
+     "en": "Agroforestry combines trees with crops, as in Timor-Leste's shade-grown coffee. Trees protect soil, store carbon and give farmers extra products such as fruit and timber.",
+     "id": "Agroforestri memadukan pohon dengan tanaman pangan, seperti kopi bernaungan di Timor-Leste. Pohon melindungi tanah, menyimpan karbon, dan memberi petani hasil tambahan seperti buah dan kayu.",
+     "pt": "A agrofloresta combina árvores com culturas, como o café de sombra de Timor-Leste. As árvores protegem o solo, armazenam carbono e dão aos agricultores produtos extra, como fruta e madeira.",
+     "tet": "Agrofloresta kombina ai-hun ho ai-horis seluk, hanesan kafé ne'ebé moris iha ai-hun nia mahon iha Timor-Leste. Ai-hun proteje rai, halibur karbonu no fó produtu tan ba agrikultór sira, hanesan ai-fuan no ai-riin."
+    },
+    {
+     "en": "In fisheries, the maximum sustainable yield is the largest catch that can be taken each year without shrinking the fish population over time. Fishing above it makes the stock decline and can lead to collapse.",
+     "id": "Dalam perikanan, hasil tangkapan maksimum lestari adalah tangkapan terbesar yang bisa diambil setiap tahun tanpa mengurangi populasi ikan dalam jangka panjang. Menangkap melebihi batas ini membuat stok menurun dan bisa runtuh.",
+     "pt": "Nas pescas, o rendimento máximo sustentável é a maior captura que se pode retirar por ano sem reduzir a população de peixe ao longo do tempo. Pescar acima deste nível faz diminuir o stock e pode levá-lo ao colapso.",
+     "tet": "Iha peska, rendimentu máximu sustentável mak kaer ikan barak liu ne'ebé bele foti kada tinan maibé la hamenus populasaun ikan iha tempu naruk. Se kaer liu ida ne'e, ikan sira menus no bele lakon."
+    }
+   ],
+   "task": {
+    "en": "Choose one food (rice, maize or fish) and write one sentence on how each of the four food-security pillars applies to it in your municipality.",
+    "id": "Pilih satu pangan (padi, jagung, atau ikan) dan tulis satu kalimat tentang penerapan setiap pilar ketahanan pangan untuk pangan itu di kotamadya Anda.",
+    "pt": "Escolhe um alimento (arroz, milho ou peixe) e escreve uma frase sobre como cada um dos quatro pilares da segurança alimentar se aplica a ele no teu município.",
+    "tet": "Hili ai-han ida (hare, batar ka ikan) no hakerek fraze ida kona-ba oinsá pilar ida-idak husi seguransa ai-han nia pilar haat aplika ba ai-han ne'e iha ita-nia munisípiu."
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "Which is NOT one of the FAO's four food-security pillars?",
+      "id": "Manakah yang BUKAN salah satu dari empat pilar ketahanan pangan FAO?",
+      "pt": "Qual NÃO é um dos quatro pilares da segurança alimentar da FAO?",
+      "tet": "Ida ne'ebé LA'ÓS pilar ida husi FAO nia pilar haat ba seguransa ai-han?"
+     },
+     "answer": {
+      "en": "Advertising",
+      "id": "Periklanan",
+      "pt": "Publicidade",
+      "tet": "Publisidade"
+     },
+     "wrong": [
+      {
+       "en": "Availability",
+       "id": "Ketersediaan",
+       "pt": "Disponibilidade",
+       "tet": "Disponibilidade"
+      },
+      {
+       "en": "Access",
+       "id": "Akses",
+       "pt": "Acesso",
+       "tet": "Asesu"
+      },
+      {
+       "en": "Stability",
+       "id": "Stabilitas",
+       "pt": "Estabilidade",
+       "tet": "Estabilidade"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "What is agroforestry?",
+      "id": "Apa itu agroforestri?",
+      "pt": "O que é a agrofloresta?",
+      "tet": "Agrofloresta mak saida?"
+     },
+     "answer": {
+      "en": "Growing trees together with crops or animals",
+      "id": "Menanam pohon bersama tanaman pangan atau ternak",
+      "pt": "Cultivar árvores juntamente com culturas ou animais",
+      "tet": "Kuda ai-hun hamutuk ho ai-horis seluk ka animál"
+     },
+     "wrong": [
+      {
+       "en": "Cutting all trees to plant one crop",
+       "id": "Menebang semua pohon untuk menanam satu jenis tanaman",
+       "pt": "Cortar todas as árvores para plantar uma só cultura",
+       "tet": "Ko'a ai-hun hotu atu kuda ai-horis ida de'it"
+      },
+      {
+       "en": "Growing crops only in greenhouses",
+       "id": "Menanam hanya di rumah kaca",
+       "pt": "Cultivar apenas em estufas",
+       "tet": "Kuda de'it iha estufa laran"
+      },
+      {
+       "en": "Raising fish in rice paddies",
+       "id": "Memelihara ikan di sawah",
+       "pt": "Criar peixe nos arrozais",
+       "tet": "Hakiak ikan iha natar"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "What happens if fishing stays above the maximum sustainable yield?",
+      "id": "Apa yang terjadi jika penangkapan ikan terus melebihi hasil tangkapan maksimum lestari?",
+      "pt": "O que acontece se a pesca ficar acima do rendimento máximo sustentável?",
+      "tet": "Saida mak akontese se ema kaer ikan nafatin liu rendimentu máximu sustentável?"
+     },
+     "answer": {
+      "en": "The fish stock declines and can collapse",
+      "id": "Stok ikan menurun dan bisa runtuh",
+      "pt": "O stock de peixe diminui e pode colapsar",
+      "tet": "Ikan sira menus no bele lakon"
+     },
+     "wrong": [
+      {
+       "en": "The fish stock grows faster",
+       "id": "Stok ikan tumbuh lebih cepat",
+       "pt": "O stock de peixe cresce mais depressa",
+       "tet": "Ikan sira aumenta lalais liu"
+      },
+      {
+       "en": "Nothing changes in the sea",
+       "id": "Tidak ada yang berubah di laut",
+       "pt": "Nada muda no mar",
+       "tet": "La iha buat ida muda iha tasi"
+      },
+      {
+       "en": "Fish get bigger every year",
+       "id": "Ikan semakin besar setiap tahun",
+       "pt": "Os peixes ficam maiores todos os anos",
+       "tet": "Ikan sira sai boot liu kada tinan"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "agriculture.adult",
+   "level": "adult",
+   "difficulty": 6,
+   "topic": "agriculture",
+   "title": {
+    "en": "Running a farm and storing food",
+    "id": "Mengelola usaha tani dan menyimpan pangan",
+    "pt": "Gerir a exploração agrícola e guardar alimentos",
+    "tet": "Jere to'os no rai ai-han"
+   },
+   "points": [
+    {
+     "en": "Dry rice and maize well in the sun before storing them in sealed containers. Damp grain grows mould, and some moulds make toxins that harm health.",
+     "id": "Jemur padi dan jagung sampai benar-benar kering sebelum disimpan dalam wadah tertutup rapat. Biji yang lembap mudah berjamur, dan beberapa jamur menghasilkan racun yang berbahaya bagi kesehatan.",
+     "pt": "Seque bem o arroz e o milho ao sol antes de os guardar em recipientes fechados. O grão húmido ganha bolor, e alguns bolores produzem toxinas prejudiciais à saúde.",
+     "tet": "Habai hare no batar to'o maran di'ak molok rai iha fatin ne'ebé taka metin. Fini ne'ebé bokon sei fungu, no fungu balu halo venenu ne'ebé estraga saúde."
+    },
+    {
+     "en": "Keep a simple notebook of costs and sales for each season. Profit = income − costs, so you can see which crop really pays.",
+     "id": "Catat biaya dan penjualan setiap musim dalam buku sederhana. Keuntungan = pendapatan − biaya, sehingga Anda tahu tanaman mana yang benar-benar menguntungkan.",
+     "pt": "Mantenha um caderno simples com os custos e as vendas de cada estação. Lucro = receitas − custos, para ver que cultura compensa realmente.",
+     "tet": "Rai kadernu simples ida ho kustu no fa'an husi kada tempu. Lukru = rendimentu − kustu, nune'e ita bele haree ai-horis ida ne'ebé mak fó osan duni."
+    },
+    {
+     "en": "Farmer groups and cooperatives can buy seed together, share tools and sell coffee or vegetables at a better price.",
+     "id": "Kelompok tani dan koperasi dapat membeli benih bersama, berbagi alat, dan menjual kopi atau sayur dengan harga lebih baik.",
+     "pt": "Os grupos de agricultores e as cooperativas podem comprar sementes em conjunto, partilhar ferramentas e vender café ou legumes a melhor preço.",
+     "tet": "Grupu agrikultór no kooperativa sira bele sosa fini hamutuk, fahe ekipamentu no fa'an kafé ka modo ho folin di'ak liu."
+    },
+    {
+     "en": "A healthy family plate has half vegetables and fruit, a quarter rice or maize, and a quarter beans, fish, eggs or meat.",
+     "id": "Piring keluarga yang sehat berisi setengah sayur dan buah, seperempat nasi atau jagung, dan seperempat kacang, ikan, telur, atau daging.",
+     "pt": "Um prato familiar saudável tem metade de legumes e fruta, um quarto de arroz ou milho e um quarto de feijão, peixe, ovos ou carne.",
+     "tet": "Bikan saudável ida iha modo no ai-fuan metade, etu ka batar parte ida husi haat, no fore, ikan, manu-tolun ka na'an parte ida husi haat."
+    }
+   ],
+   "task": {
+    "en": "For one crop this season, write down all costs (seed, tools, transport, hired labour) and all sales, then calculate your profit.",
+    "id": "Untuk satu tanaman musim ini, catat semua biaya (benih, alat, transportasi, upah tenaga kerja) dan semua penjualan, lalu hitung keuntungan Anda.",
+    "pt": "Para uma cultura desta estação, anote todos os custos (sementes, ferramentas, transporte, mão de obra) e todas as vendas, e calcule o seu lucro.",
+    "tet": "Ba ai-horis ida iha tempu ida ne'e, hakerek kustu hotu (fini, ekipamentu, transporte, selu ema servisu) no fa'an hotu, depois kalkula ita-nia lukru."
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "Why should grain be dried well before storage?",
+      "id": "Mengapa biji-bijian harus dikeringkan dengan baik sebelum disimpan?",
+      "pt": "Porque deve o grão ser bem seco antes de ser guardado?",
+      "tet": "Tanba saida mak tenke habai fini to'o maran di'ak molok rai?"
+     },
+     "answer": {
+      "en": "To stop mould and toxins",
+      "id": "Untuk mencegah jamur dan racun",
+      "pt": "Para evitar bolor e toxinas",
+      "tet": "Atu prevene fungu no venenu"
+     },
+     "wrong": [
+      {
+       "en": "To make it heavier to sell",
+       "id": "Agar lebih berat saat dijual",
+       "pt": "Para ficar mais pesado na venda",
+       "tet": "Atu sai todan liu bainhira fa'an"
+      },
+      {
+       "en": "To make it grow again",
+       "id": "Agar tumbuh lagi",
+       "pt": "Para voltar a crescer",
+       "tet": "Atu moris fali"
+      },
+      {
+       "en": "To change its colour",
+       "id": "Untuk mengubah warnanya",
+       "pt": "Para mudar a cor",
+       "tet": "Atu muda ninia kór"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "You earn $500 from coffee and spend $200 on costs. What is your profit?",
+      "id": "Anda mendapat $500 dari kopi dan mengeluarkan biaya $200. Berapa keuntungan Anda?",
+      "pt": "Ganha $500 com o café e gasta $200 em custos. Qual é o seu lucro?",
+      "tet": "Ita hetan $500 husi kafé no gasta $200 ba kustu. Ita-nia lukru hira?"
+     },
+     "answer": {
+      "en": "$300",
+      "id": "$300",
+      "pt": "$300",
+      "tet": "$300"
+     },
+     "wrong": [
+      {
+       "en": "$700",
+       "id": "$700",
+       "pt": "$700",
+       "tet": "$700"
+      },
+      {
+       "en": "$200",
+       "id": "$200",
+       "pt": "$200",
+       "tet": "$200"
+      },
+      {
+       "en": "$500",
+       "id": "$500",
+       "pt": "$500",
+       "tet": "$500"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "On a healthy plate, how much should be vegetables and fruit?",
+      "id": "Pada piring sehat, berapa bagian yang harus berisi sayur dan buah?",
+      "pt": "Num prato saudável, que parte deve ser de legumes e fruta?",
+      "tet": "Iha bikan saudável, parte hira mak tenke modo no ai-fuan?"
+     },
+     "answer": {
+      "en": "About half",
+      "id": "Sekitar setengah",
+      "pt": "Cerca de metade",
+      "tet": "Besik metade"
+     },
+     "wrong": [
+      {
+       "en": "None",
+       "id": "Tidak ada",
+       "pt": "Nenhuma",
+       "tet": "La iha"
+      },
+      {
+       "en": "Only a small spoonful",
+       "id": "Hanya satu sendok kecil",
+       "pt": "Só uma colher pequena",
+       "tet": "Kanuru ki'ik ida de'it"
+      },
+      {
+       "en": "The whole plate, with nothing else",
+       "id": "Seluruh piring, tanpa yang lain",
+       "pt": "O prato inteiro, sem mais nada",
+       "tet": "Bikan tomak, la iha buat seluk"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "agriculture.senior",
+   "level": "senior",
+   "difficulty": 7,
+   "topic": "agriculture",
+   "title": {
+    "en": "Healthy food and garden wisdom",
+    "id": "Makanan sehat dan kearifan berkebun",
+    "pt": "Alimentação saudável e saber da horta",
+    "tet": "Ai-han saudável no matenek kona-ba to'os"
+   },
+   "points": [
+    {
+     "en": "With age, the body needs less salt and sugar but still needs protein, vegetables and plenty of water. Beans, fish, eggs and leafy greens help keep muscles and bones strong.",
+     "id": "Seiring bertambahnya usia, tubuh membutuhkan lebih sedikit garam dan gula, tetapi tetap butuh protein, sayur, dan banyak air. Kacang, ikan, telur, dan sayuran hijau membantu menjaga otot dan tulang tetap kuat.",
+     "pt": "Com a idade, o corpo precisa de menos sal e açúcar, mas continua a precisar de proteínas, legumes e muita água. O feijão, o peixe, os ovos e as folhas verdes ajudam a manter os músculos e os ossos fortes.",
+     "tet": "Bainhira ita katuas ona, isin presiza masin no masin-midar menus, maibé sei presiza proteína, modo no bee barak. Fore, ikan, manu-tolun no modo-tahan matak ajuda halo ita-nia múskulu no ruin forte."
+    },
+    {
+     "en": "Garden work is good exercise: work in the cooler morning, wear a hat, drink water and lift with your legs, not your back. If you feel dizzy or have chest pain, stop and see a health worker.",
+     "id": "Berkebun adalah olahraga yang baik: bekerjalah di pagi hari yang sejuk, pakai topi, minum air, dan angkat beban dengan kaki, bukan punggung. Jika merasa pusing atau nyeri dada, berhentilah dan temui petugas kesehatan.",
+     "pt": "Trabalhar na horta é bom exercício: trabalhe de manhã, quando está mais fresco, use chapéu, beba água e levante pesos com as pernas, não com as costas. Se sentir tonturas ou dor no peito, pare e procure um profissional de saúde.",
+     "tet": "Servisu iha to'os mak ezersísiu di'ak: servisu iha dadeer malirin, uza xapéu, hemu bee no hi'it sasan ho ain, la'ós ho kotuk. Se ulun-fila ka hirus-matan moras, para no ba hasoru profisionál saúde."
+    },
+    {
+     "en": "Elders hold knowledge of local seeds, planting calendars and traditional foods. Teaching grandchildren to save seed and cook these foods keeps them alive for the next generation.",
+     "id": "Para lansia menyimpan pengetahuan tentang benih lokal, kalender tanam, dan makanan tradisional. Mengajari cucu menyimpan benih dan memasak makanan ini menjaganya tetap lestari untuk generasi berikutnya.",
+     "pt": "Os mais velhos guardam o conhecimento das sementes locais, dos calendários de plantação e das comidas tradicionais. Ensinar os netos a guardar sementes e a cozinhar estes pratos mantém-nos vivos para a próxima geração.",
+     "tet": "Katuas-ferik sira hatene kona-ba fini lokál, kalendáriu kuda no ai-han tradisionál. Hanorin bei-oan sira atu rai fini no te'in ai-han sira ne'e halo sira moris nafatin ba jerasaun tuir mai."
+    }
+   ],
+   "task": {
+    "en": "Cook a traditional dish with a grandchild and explain where each ingredient comes from and how it was grown.",
+    "id": "Masak hidangan tradisional bersama cucu dan jelaskan dari mana asal setiap bahan dan bagaimana bahan itu ditanam.",
+    "pt": "Cozinhe um prato tradicional com um neto e explique de onde vem cada ingrediente e como foi cultivado.",
+    "tet": "Te'in ai-han tradisionál ida ho bei-oan ida no esplika husi ne'ebé mak ingrediente ida-idak mai no oinsá ema kuda."
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "What should older adults eat less of?",
+      "id": "Apa yang sebaiknya dikurangi oleh lansia?",
+      "pt": "De que devem os mais velhos comer menos?",
+      "tet": "Katuas-ferik sira tenke han menus saida?"
+     },
+     "answer": {
+      "en": "Salt and sugar",
+      "id": "Garam dan gula",
+      "pt": "Sal e açúcar",
+      "tet": "Masin no masin-midar"
+     },
+     "wrong": [
+      {
+       "en": "Water",
+       "id": "Air",
+       "pt": "Água",
+       "tet": "Bee"
+      },
+      {
+       "en": "Leafy greens",
+       "id": "Sayuran hijau",
+       "pt": "Folhas verdes",
+       "tet": "Modo-tahan matak"
+      },
+      {
+       "en": "Beans and fish",
+       "id": "Kacang dan ikan",
+       "pt": "Feijão e peixe",
+       "tet": "Fore no ikan"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "What is the safest way to lift a heavy sack?",
+      "id": "Bagaimana cara paling aman mengangkat karung berat?",
+      "pt": "Qual é a forma mais segura de levantar um saco pesado?",
+      "tet": "Oinsá mak dalan seguru liu atu hi'it saku todan ida?"
+     },
+     "answer": {
+      "en": "Bend your knees and lift with your legs",
+      "id": "Tekuk lutut dan angkat dengan kaki",
+      "pt": "Dobrar os joelhos e levantar com as pernas",
+      "tet": "Hakruuk ain-tuur no hi'it ho ain"
+     },
+     "wrong": [
+      {
+       "en": "Bend your back and pull quickly",
+       "id": "Bungkukkan punggung dan tarik dengan cepat",
+       "pt": "Dobrar as costas e puxar depressa",
+       "tet": "Hakruuk kotuk no dada lalais"
+      },
+      {
+       "en": "Lift it with one hand at noon",
+       "id": "Angkat dengan satu tangan saat tengah hari",
+       "pt": "Levantá-lo com uma mão ao meio-dia",
+       "tet": "Hi'it ho liman ida iha loron-tutuk"
+      },
+      {
+       "en": "Twist your body while lifting",
+       "id": "Memutar badan saat mengangkat",
+       "pt": "Torcer o corpo enquanto levanta",
+       "tet": "Fila isin bainhira hi'it"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "Why teach grandchildren to save seed?",
+      "id": "Mengapa mengajari cucu menyimpan benih?",
+      "pt": "Porque ensinar os netos a guardar sementes?",
+      "tet": "Tanba saida mak hanorin bei-oan sira atu rai fini?"
+     },
+     "answer": {
+      "en": "To keep local crops for the next generation",
+      "id": "Agar tanaman lokal tetap ada untuk generasi berikutnya",
+      "pt": "Para manter as culturas locais para a próxima geração",
+      "tet": "Atu rai ai-horis lokál ba jerasaun tuir mai"
+     },
+     "wrong": [
+      {
+       "en": "Because seeds cannot be stored",
+       "id": "Karena benih tidak bisa disimpan",
+       "pt": "Porque as sementes não se podem guardar",
+       "tet": "Tanba fini la bele rai"
+      },
+      {
+       "en": "To stop them going to school",
+       "id": "Agar mereka tidak bersekolah",
+       "pt": "Para não irem à escola",
+       "tet": "Atu sira la ba eskola"
+      },
+      {
+       "en": "Because only shops sell good food",
+       "id": "Karena hanya toko yang menjual makanan baik",
+       "pt": "Porque só as lojas vendem boa comida",
+       "tet": "Tanba loja de'it mak fa'an ai-han di'ak"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

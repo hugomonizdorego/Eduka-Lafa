@@ -1,4 +1,6 @@
-"""Bounded HTTPS requests; never forward credentials through redirects."""
+"""Bounded HTTPS requests for internet sources (Wikipedia, weather, news, catalog).
+
+No AI provider is contacted. Redirects are refused so nothing is forwarded."""
 import json
 import urllib.request
 import urllib.error
@@ -47,23 +49,25 @@ def json_request(url, data=None, headers=None, timeout=45, loopback_http=False):
     try: return json.loads(request(url, data, headers, timeout, loopback_http=loopback_http))
     except (ValueError, UnicodeError): raise NetworkError("Service returned an invalid JSON response.") from None
 
-def online_probe(provider="openai"):
-    # A TLS response from the official service proves reachability, even when
-    # anonymous API probes return 401. It does not establish account readiness.
-    # Local and self-hosted open-source servers do not prove internet access.
-    hosts = {"openai":"https://api.openai.com/v1/models", "gemini":"https://generativelanguage.googleapis.com/", "anthropic":"https://api.anthropic.com/", "deepseek":"https://api.deepseek.com/", "perplexity":"https://api.perplexity.ai/"}
-    first = hosts.get(provider, "https://www.wikipedia.org/" if provider in {"ollama","compatible"} else hosts["openai"])
-    for url in dict.fromkeys((first, "https://www.wikipedia.org/")):
-        expected = urllib.parse.urlsplit(url).hostname
+# Public hosts used only to show whether internet sources are reachable. Local
+# features never wait for this check; each internet service also handles its
+# own failure (one failing site never blocks another).
+PROBE_HOSTS = ("https://www.wikipedia.org/", "https://api.open-meteo.com/", "https://timor-leste.gov.tl/")
+
+def online_probe(hosts=PROBE_HOSTS, timeout=4):
+    """True when at least one public host answers over HTTPS."""
+    if isinstance(hosts, str): hosts = PROBE_HOSTS     # old callers passed a provider name
+    for url in hosts:
         try:
             req = urllib.request.Request(url, method="HEAD", headers={"User-Agent":USER_AGENT})
-            with urllib.request.urlopen(req, timeout=4) as response:
+            with urllib.request.urlopen(req, timeout=timeout) as response:
                 final = urllib.parse.urlsplit(response.url)
-                if final.scheme == "https" and final.hostname == expected and 200 <= response.status < 400:
+                if final.scheme == "https" and 200 <= response.status < 500:
                     return True
         except urllib.error.HTTPError as error:
-            final = urllib.parse.urlsplit(error.url)
-            if final.scheme == "https" and final.hostname == expected and error.code in {401,403,404,405}:
+            # Any HTTP answer (even 403/404/405) proves the network works.
+            if urllib.parse.urlsplit(error.url).scheme == "https" and error.code < 600:
                 return True
-        except Exception: continue
+        except Exception:
+            continue
     return False

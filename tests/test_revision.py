@@ -8,7 +8,7 @@ import tempfile
 import time
 import unittest
 from unittest.mock import patch
-from lafa.config import Settings,Secrets
+from lafa.config import Settings
 from lafa.learning import LessonPython,LearningError
 from lafa.timor import CardDeck,matches,timor_news
 from lafa.tools import FileSearch,Source
@@ -24,7 +24,7 @@ class RevisionTests(unittest.TestCase):
         self.assertFalse(Settings().companion);self.assertEqual(Settings().costume,'traditional')
     def test_bad_config_types_and_limits(self):
         with tempfile.TemporaryDirectory() as folder:
-            path=Path(folder)/'settings.json';path.write_text(json.dumps({'companion':'true','models':{'openai':[]},'card_minutes':0,'panel_height':999,'language':[]}))
+            path=Path(folder)/'settings.json';path.write_text(json.dumps({'companion':'true','provider':[],'card_minutes':0,'panel_height':999,'language':[]}))
             settings=Settings.load(path);self.assertFalse(settings.companion);self.assertEqual(settings.locale,'en');self.assertEqual(settings.costume,'traditional')
             path.write_text('x'*70000);self.assertFalse(Settings.load(path).companion)
     def test_internal_and_directory_symlinks_blocked(self):
@@ -60,15 +60,16 @@ class RevisionTests(unittest.TestCase):
             card=deck.next('id',True,False);self.assertTrue(card.source.startswith('https://'));self.assertIn('Tahukah kamu',card.text)
             self.assertNotEqual(previous,deck.previous);previous=deck.previous
         self.assertIsNone(deck.next('en',False,False))
-    @patch('lafa.agent.encyclopedia_article',return_value='Dili is the capital of Timor-Leste.')
-    @patch('lafa.agent.encyclopedia_search',return_value=[Source('Dili','https://en.wikipedia.org/wiki/Dili','Capital')])
+    @patch('lafa.tools.encyclopedia_article',return_value='Dili is the capital of Timor-Leste.')
+    @patch('lafa.tools.encyclopedia_search',return_value=[Source('Dili','https://en.wikipedia.org/wiki/Dili','Capital')])
     def test_key_free_public_extract_is_cited(self,search,article):
-        agent=Agent(Settings(language='en'),Secrets());agent.client.ready=lambda:False
+        agent=Agent(Settings(language='en'))
         result=agent.run('/ask What is Dili?',[],True);self.assertIn('https://en.wikipedia.org/wiki/Dili',result.text);self.assertIn('capital',result.text)
-    @patch('lafa.agent.encyclopedia_search')
-    def test_personal_support_is_not_sent_to_public_search(self,search):
-        agent=Agent(Settings(language='id'),Secrets());agent.client.ready=lambda:False
-        result=agent.run('Saya ingin curhat, saya sedih',[],True);self.assertIn('mendengarkan',result.text);search.assert_not_called()
+        self.assertIn('Article extract',result.text)
+    @patch('lafa.tools.encyclopedia_search')
+    def test_personal_sentences_are_not_sent_to_public_search(self,search):
+        agent=Agent(Settings(language='id'))
+        result=agent.run('Saya ingin curhat, saya sedih',[],True);self.assertTrue(result.text);search.assert_not_called()
     def test_timor_command(self):self.assertEqual(direct_intent('/timor education').tool,'timor_news')
     def test_host_settings_patch_preserves_original_and_compiles(self):
         path=Path(__file__).resolve().parents[1]/'scripts/integrate-eduka-settings.py';spec=importlib.util.spec_from_file_location('hook',path);module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)

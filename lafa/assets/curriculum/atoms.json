@@ -1,0 +1,1049 @@
+{
+ "subject": "atoms",
+ "icon": "⚛️",
+ "name": {
+  "en": "Atoms and nuclear science",
+  "id": "Atom dan ilmu nuklir",
+  "pt": "Átomos e ciência nuclear",
+  "tet": "Átomu no siénsia nukleár"
+ },
+ "meta": {
+  "version": 1,
+  "license": "CC BY-SA 4.0",
+  "languages": [
+   "en",
+   "id",
+   "pt",
+   "tet"
+  ],
+  "source": "Written by the LAFA team for Edukasaun OS (general knowledge, checked against standard references)",
+  "reviewed": "2026-10-13",
+  "review_status": "LAFA team review; not yet reviewed by the Ministry of Education (not a national curriculum)"
+ },
+ "lessons": [
+  {
+   "id": "atoms.early",
+   "level": "early",
+   "difficulty": 1,
+   "topic": "atoms",
+   "title": {
+    "en": "Everything is made of tiny bits",
+    "id": "Semua benda terbuat dari bagian kecil",
+    "pt": "Tudo é feito de pedacinhos",
+    "tet": "Buat hotu halo husi parte ki'ik sira"
+   },
+   "points": [
+    {
+     "en": "Everything around us is made of tiny bits called atoms: water, rocks, food and you!",
+     "id": "Semua benda di sekitar kita terbuat dari bagian sangat kecil yang disebut atom: air, batu, makanan, dan kamu!",
+     "pt": "Tudo à nossa volta é feito de pedacinhos chamados átomos: a água, as pedras, a comida e tu!",
+     "tet": "Buat hotu iha ita-nia leet halo husi parte ki'ik tebes naran átomu: bee, fatuk, hahán no ó!"
+    },
+    {
+     "en": "Atoms are so small that we cannot see them, not even with a magnifying glass.",
+     "id": "Atom sangat kecil sehingga kita tidak bisa melihatnya, bahkan dengan kaca pembesar.",
+     "pt": "Os átomos são tão pequenos que não os conseguimos ver, nem com uma lupa.",
+     "tet": "Átomu sira ki'ik tebes, ita la bele haree sira, maski ho lupa."
+    },
+    {
+     "en": "Atoms join together like building blocks to make bigger things.",
+     "id": "Atom-atom bergabung seperti balok mainan untuk membentuk benda yang lebih besar.",
+     "pt": "Os átomos juntam-se como peças de construção para formar coisas maiores.",
+     "tet": "Átomu sira hamutuk hanesan bloku ba halimar atu halo buat ne'ebé boot liu."
+    }
+   ],
+   "task": {
+    "en": "Pour some sand into your hand. Each grain is tiny, but together they make a pile. Atoms are even smaller than a grain of sand!",
+    "id": "Tuangkan pasir ke tanganmu. Setiap butir sangat kecil, tetapi bersama-sama menjadi tumpukan. Atom bahkan lebih kecil dari sebutir pasir!",
+    "pt": "Deita um pouco de areia na tua mão. Cada grão é pequenino, mas juntos fazem um monte. Os átomos são ainda mais pequenos do que um grão de areia!",
+    "tet": "Tau rai-henek uitoan iha ó-nia liman. Rai-henek ida-idak ki'ik, maibé hamutuk sira halo tumpuk ida. Átomu ki'ik liu fali rai-henek ida!"
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "What are the tiny bits that make everything?",
+      "id": "Apa nama bagian kecil yang membentuk semua benda?",
+      "pt": "Como se chamam os pedacinhos que formam tudo?",
+      "tet": "Parte ki'ik sira ne'ebé halo buat hotu naran saida?"
+     },
+     "answer": {
+      "en": "Atoms",
+      "id": "Atom",
+      "pt": "Átomos",
+      "tet": "Átomu"
+     },
+     "wrong": [
+      {
+       "en": "Leaves",
+       "id": "Daun",
+       "pt": "Folhas",
+       "tet": "Ai-tahan"
+      },
+      {
+       "en": "Coins",
+       "id": "Koin",
+       "pt": "Moedas",
+       "tet": "Osan-mutin"
+      },
+      {
+       "en": "Small stones",
+       "id": "Batu kecil",
+       "pt": "Pedrinhas",
+       "tet": "Fatuk ki'ik"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "Can we see an atom with our eyes?",
+      "id": "Bisakah kita melihat atom dengan mata?",
+      "pt": "Conseguimos ver um átomo com os olhos?",
+      "tet": "Ita bele haree átomu ho matan ka lae?"
+     },
+     "answer": {
+      "en": "No, it is too small",
+      "id": "Tidak, terlalu kecil",
+      "pt": "Não, é demasiado pequeno",
+      "tet": "Lae, nia ki'ik liu"
+     },
+     "wrong": [
+      {
+       "en": "Yes, easily",
+       "id": "Ya, dengan mudah",
+       "pt": "Sim, facilmente",
+       "tet": "Bele, fasil de'it"
+      },
+      {
+       "en": "Yes, but only at night",
+       "id": "Ya, tetapi hanya pada malam hari",
+       "pt": "Sim, mas só à noite",
+       "tet": "Bele, maibé só iha kalan"
+      },
+      {
+       "en": "Only with sunglasses",
+       "id": "Hanya dengan kacamata hitam",
+       "pt": "Só com óculos de sol",
+       "tet": "Só ho óklu metan"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "Is water made of atoms?",
+      "id": "Apakah air terbuat dari atom?",
+      "pt": "A água é feita de átomos?",
+      "tet": "Bee halo husi átomu ka lae?"
+     },
+     "answer": {
+      "en": "Yes",
+      "id": "Ya",
+      "pt": "Sim",
+      "tet": "Loos"
+     },
+     "wrong": [
+      {
+       "en": "No, only rocks are",
+       "id": "Tidak, hanya batu",
+       "pt": "Não, só as pedras",
+       "tet": "Lae, só fatuk"
+      },
+      {
+       "en": "No, only people are",
+       "id": "Tidak, hanya manusia",
+       "pt": "Não, só as pessoas",
+       "tet": "Lae, só ema"
+      },
+      {
+       "en": "No, water is empty",
+       "id": "Tidak, air itu kosong",
+       "pt": "Não, a água é vazia",
+       "tet": "Lae, bee mamuk"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "atoms.primary",
+   "level": "primary",
+   "difficulty": 2,
+   "topic": "atoms",
+   "title": {
+    "en": "Inside the atom",
+    "id": "Di dalam atom",
+    "pt": "Dentro do átomo",
+    "tet": "Iha átomu nia laran"
+   },
+   "points": [
+    {
+     "en": "An atom has a tiny centre called the nucleus, made of protons and neutrons. Electrons move around the nucleus.",
+     "id": "Atom memiliki pusat kecil yang disebut inti, terdiri atas proton dan neutron. Elektron bergerak di sekitar inti.",
+     "pt": "Um átomo tem um centro minúsculo chamado núcleo, formado por protões e neutrões. Os eletrões movem-se à volta do núcleo.",
+     "tet": "Átomu iha sentru ki'ik ida naran núkleu, halo husi protaun no neutraun. Eletraun sira muda haleu núkleu."
+    },
+    {
+     "en": "Protons have a positive charge, electrons have a negative charge, and neutrons have no charge.",
+     "id": "Proton bermuatan positif, elektron bermuatan negatif, dan neutron tidak bermuatan.",
+     "pt": "Os protões têm carga positiva, os eletrões têm carga negativa e os neutrões não têm carga.",
+     "tet": "Protaun iha karga pozitivu, eletraun iha karga negativu, no neutraun la iha karga."
+    },
+    {
+     "en": "An element is made of only one kind of atom. Oxygen, iron, gold and carbon are elements; scientists know 118 elements.",
+     "id": "Unsur terbuat dari satu jenis atom saja. Oksigen, besi, emas, dan karbon adalah unsur; ilmuwan mengenal 118 unsur.",
+     "pt": "Um elemento é feito de um só tipo de átomo. O oxigénio, o ferro, o ouro e o carbono são elementos; os cientistas conhecem 118 elementos.",
+     "tet": "Elementu ida halo husi átomu tipu ida de'it. Oksijéniu, besi, osan-mean no karbonu mak elementu; sientista sira hatene elementu 118."
+    }
+   ],
+   "task": {
+    "en": "Draw an atom: a small circle in the middle (the nucleus) with + and o signs inside, and little dots (electrons) going around it.",
+    "id": "Gambarlah atom: lingkaran kecil di tengah (inti) dengan tanda + dan o di dalamnya, serta titik-titik kecil (elektron) di sekelilingnya.",
+    "pt": "Desenha um átomo: um círculo pequeno no meio (o núcleo) com sinais + e o lá dentro, e pontinhos (eletrões) à volta.",
+    "tet": "Dezeña átomu ida: sírkulu ki'ik ida iha klaran (núkleu) ho sinál + no o iha laran, no pontu ki'ik sira (eletraun) haleu nia."
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "What is inside the nucleus?",
+      "id": "Apa yang ada di dalam inti atom?",
+      "pt": "O que há dentro do núcleo?",
+      "tet": "Saida mak iha núkleu laran?"
+     },
+     "answer": {
+      "en": "Protons and neutrons",
+      "id": "Proton dan neutron",
+      "pt": "Protões e neutrões",
+      "tet": "Protaun no neutraun"
+     },
+     "wrong": [
+      {
+       "en": "Only electrons",
+       "id": "Hanya elektron",
+       "pt": "Só eletrões",
+       "tet": "Eletraun de'it"
+      },
+      {
+       "en": "Water and air",
+       "id": "Air dan udara",
+       "pt": "Água e ar",
+       "tet": "Bee no anin"
+      },
+      {
+       "en": "Light",
+       "id": "Cahaya",
+       "pt": "Luz",
+       "tet": "Naroman"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "What charge does an electron have?",
+      "id": "Muatan apa yang dimiliki elektron?",
+      "pt": "Que carga tem um eletrão?",
+      "tet": "Eletraun iha karga saida?"
+     },
+     "answer": {
+      "en": "Negative",
+      "id": "Negatif",
+      "pt": "Negativa",
+      "tet": "Negativu"
+     },
+     "wrong": [
+      {
+       "en": "Positive",
+       "id": "Positif",
+       "pt": "Positiva",
+       "tet": "Pozitivu"
+      },
+      {
+       "en": "No charge",
+       "id": "Tidak bermuatan",
+       "pt": "Nenhuma carga",
+       "tet": "La iha karga"
+      },
+      {
+       "en": "Both positive and negative",
+       "id": "Positif dan negatif",
+       "pt": "Positiva e negativa",
+       "tet": "Pozitivu no negativu"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "Which of these is an element?",
+      "id": "Manakah yang merupakan unsur?",
+      "pt": "Qual destes é um elemento?",
+      "tet": "Ida ne'ebé mak elementu?"
+     },
+     "answer": {
+      "en": "Gold",
+      "id": "Emas",
+      "pt": "Ouro",
+      "tet": "Osan-mean"
+     },
+     "wrong": [
+      {
+       "en": "Rice",
+       "id": "Beras",
+       "pt": "Arroz",
+       "tet": "Fos"
+      },
+      {
+       "en": "Wood",
+       "id": "Kayu",
+       "pt": "Madeira",
+       "tet": "Ai"
+      },
+      {
+       "en": "Salt water",
+       "id": "Air garam",
+       "pt": "Água salgada",
+       "tet": "Bee-masin"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "atoms.middle",
+   "level": "middle",
+   "difficulty": 3,
+   "topic": "atoms",
+   "title": {
+    "en": "The periodic table and isotopes",
+    "id": "Tabel periodik dan isotop",
+    "pt": "A tabela periódica e os isótopos",
+    "tet": "Tabela periódika no izótopu sira"
+   },
+   "points": [
+    {
+     "en": "The atomic number is the number of protons; it tells us which element an atom is. Hydrogen has 1 proton, carbon 6 and oxygen 8.",
+     "id": "Nomor atom adalah jumlah proton; nomor ini menunjukkan unsur suatu atom. Hidrogen punya 1 proton, karbon 6, dan oksigen 8.",
+     "pt": "O número atómico é o número de protões e diz-nos de que elemento é o átomo. O hidrogénio tem 1 protão, o carbono 6 e o oxigénio 8.",
+     "tet": "Númeru atómiku mak protaun hira; nia hatudu átomu ne'e elementu saida. Idrojéniu iha protaun 1, karbonu 6 no oksijéniu 8."
+    },
+    {
+     "en": "Mass number = protons + neutrons. Isotopes are atoms of the same element with different numbers of neutrons, like carbon-12 and carbon-14.",
+     "id": "Nomor massa = proton + neutron. Isotop adalah atom dari unsur yang sama dengan jumlah neutron berbeda, seperti karbon-12 dan karbon-14.",
+     "pt": "Número de massa = protões + neutrões. Os isótopos são átomos do mesmo elemento com números diferentes de neutrões, como o carbono-12 e o carbono-14.",
+     "tet": "Númeru masa = protaun + neutraun. Izótopu sira mak átomu husi elementu hanesan maibé ho neutraun hira la hanesan, hanesan karbonu-12 no karbonu-14."
+    },
+    {
+     "en": "The periodic table arranges the elements by atomic number. Elements in the same column (group) behave in similar ways.",
+     "id": "Tabel periodik menyusun unsur berdasarkan nomor atom. Unsur dalam kolom (golongan) yang sama berperilaku mirip.",
+     "pt": "A tabela periódica organiza os elementos por número atómico. Os elementos da mesma coluna (grupo) comportam-se de forma parecida.",
+     "tet": "Tabela periódika arranja elementu sira tuir númeru atómiku. Elementu sira iha koluna (grupu) hanesan iha hahalok ne'ebé besik hanesan."
+    },
+    {
+     "en": "Atoms join to form molecules: water is H₂O, made of two hydrogen atoms and one oxygen atom.",
+     "id": "Atom-atom bergabung membentuk molekul: air adalah H₂O, terdiri atas dua atom hidrogen dan satu atom oksigen.",
+     "pt": "Os átomos juntam-se e formam moléculas: a água é H₂O, com dois átomos de hidrogénio e um de oxigénio.",
+     "tet": "Átomu sira hamutuk halo molékula: bee mak H₂O, ho átomu idrojéniu rua no átomu oksijéniu ida."
+    }
+   ],
+   "task": {
+    "en": "An atom has 6 protons and 8 neutrons. Find its atomic number, its mass number and the name of the element.",
+    "id": "Sebuah atom memiliki 6 proton dan 8 neutron. Tentukan nomor atom, nomor massa, dan nama unsurnya.",
+    "pt": "Um átomo tem 6 protões e 8 neutrões. Encontra o número atómico, o número de massa e o nome do elemento.",
+    "tet": "Átomu ida iha protaun 6 no neutraun 8. Buka ninia númeru atómiku, númeru masa no elementu nia naran."
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "What does the atomic number count?",
+      "id": "Nomor atom menghitung apa?",
+      "pt": "O que conta o número atómico?",
+      "tet": "Númeru atómiku konta saida?"
+     },
+     "answer": {
+      "en": "The number of protons",
+      "id": "Jumlah proton",
+      "pt": "O número de protões",
+      "tet": "Protaun hira"
+     },
+     "wrong": [
+      {
+       "en": "The number of neutrons",
+       "id": "Jumlah neutron",
+       "pt": "O número de neutrões",
+       "tet": "Neutraun hira"
+      },
+      {
+       "en": "The number of molecules",
+       "id": "Jumlah molekul",
+       "pt": "O número de moléculas",
+       "tet": "Molékula hira"
+      },
+      {
+       "en": "Protons plus neutrons",
+       "id": "Proton ditambah neutron",
+       "pt": "Protões mais neutrões",
+       "tet": "Protaun no neutraun hamutuk"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "Carbon-12 and carbon-14 are…",
+      "id": "Karbon-12 dan karbon-14 adalah…",
+      "pt": "O carbono-12 e o carbono-14 são…",
+      "tet": "Karbonu-12 no karbonu-14 mak…"
+     },
+     "answer": {
+      "en": "Isotopes of the same element",
+      "id": "Isotop dari unsur yang sama",
+      "pt": "Isótopos do mesmo elemento",
+      "tet": "Izótopu husi elementu hanesan"
+     },
+     "wrong": [
+      {
+       "en": "Two different elements",
+       "id": "Dua unsur yang berbeda",
+       "pt": "Dois elementos diferentes",
+       "tet": "Elementu rua ne'ebé la hanesan"
+      },
+      {
+       "en": "Water molecules",
+       "id": "Molekul air",
+       "pt": "Moléculas de água",
+       "tet": "Bee nia molékula"
+      },
+      {
+       "en": "Types of electrons",
+       "id": "Jenis elektron",
+       "pt": "Tipos de eletrões",
+       "tet": "Eletraun nia tipu"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "How many atoms are in one water molecule (H₂O)?",
+      "id": "Berapa atom dalam satu molekul air (H₂O)?",
+      "pt": "Quantos átomos tem uma molécula de água (H₂O)?",
+      "tet": "Átomu hira mak iha bee nia molékula ida (H₂O)?"
+     },
+     "answer": {
+      "en": "3",
+      "id": "3",
+      "pt": "3",
+      "tet": "3"
+     },
+     "wrong": [
+      {
+       "en": "2",
+       "id": "2",
+       "pt": "2",
+       "tet": "2"
+      },
+      {
+       "en": "1",
+       "id": "1",
+       "pt": "1",
+       "tet": "1"
+      },
+      {
+       "en": "4",
+       "id": "4",
+       "pt": "4",
+       "tet": "4"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "atoms.secondary",
+   "level": "secondary",
+   "difficulty": 4,
+   "topic": "atoms",
+   "title": {
+    "en": "Radioactivity and half-life",
+    "id": "Radioaktivitas dan waktu paruh",
+    "pt": "Radioatividade e meia-vida",
+    "tet": "Radioatividade no meia-vida"
+   },
+   "points": [
+    {
+     "en": "Some nuclei are unstable and give out radiation as they decay: alpha particles (helium nuclei), beta particles (electrons) and gamma rays (high-energy light).",
+     "id": "Beberapa inti atom tidak stabil dan memancarkan radiasi saat meluruh: partikel alfa (inti helium), partikel beta (elektron), dan sinar gama (cahaya berenergi tinggi).",
+     "pt": "Alguns núcleos são instáveis e emitem radiação ao decair: partículas alfa (núcleos de hélio), partículas beta (eletrões) e raios gama (luz de alta energia).",
+     "tet": "Núkleu balun la estável no hasai radiasaun bainhira sira dekai: partíkula alfa (éliu nia núkleu), partíkula beta (eletraun) no raiu gama (naroman ho enerjia aas)."
+    },
+    {
+     "en": "Alpha radiation is stopped by paper, beta by a few mm of aluminium, and gamma is reduced by thick lead or concrete.",
+     "id": "Radiasi alfa dihentikan oleh kertas, beta oleh aluminium setebal beberapa mm, dan gama dikurangi oleh timbal atau beton yang tebal.",
+     "pt": "A radiação alfa é travada por papel, a beta por alguns mm de alumínio e a gama é reduzida por chumbo ou betão espessos.",
+     "tet": "Radiasaun alfa para ho surat-tahan, beta para ho aluméniu mm balun, no gama sai menus ho xumbu ka betaun ne'ebé mahar."
+    },
+    {
+     "en": "Half-life is the time it takes for half of a radioactive sample to decay. After 2 half-lives one quarter remains; after 3, one eighth.",
+     "id": "Waktu paruh adalah waktu yang dibutuhkan agar separuh sampel radioaktif meluruh. Setelah 2 waktu paruh tersisa seperempat; setelah 3, seperdelapan.",
+     "pt": "A meia-vida é o tempo que metade de uma amostra radioativa leva a decair. Depois de 2 meias-vidas resta um quarto; depois de 3, um oitavo.",
+     "tet": "Meia-vida mak tempu ne'ebé presiza atu amostra radioativa ida nia metade dekai. Depois meia-vida 2, hela parte haat ida; depois 3, hela parte walu ida."
+    },
+    {
+     "en": "Carbon-14 has a half-life of about 5 730 years, so scientists use it to find the age of old wood, bones and charcoal.",
+     "id": "Karbon-14 memiliki waktu paruh sekitar 5 730 tahun, sehingga ilmuwan menggunakannya untuk menentukan umur kayu, tulang, dan arang tua.",
+     "pt": "O carbono-14 tem uma meia-vida de cerca de 5 730 anos, por isso os cientistas usam-no para datar madeira, ossos e carvão antigos.",
+     "tet": "Karbonu-14 nia meia-vida maizumenus tinan 5 730, tan ne'e sientista sira uza nia atu hatene idade ai, ruin no ahi-klak tuan sira."
+    }
+   ],
+   "task": {
+    "en": "A sample contains 800 g of an isotope with a half-life of 10 days. Make a table of how much is left after 10, 20, 30 and 40 days.",
+    "id": "Sebuah sampel berisi 800 g isotop dengan waktu paruh 10 hari. Buat tabel sisa isotop setelah 10, 20, 30, dan 40 hari.",
+    "pt": "Uma amostra tem 800 g de um isótopo com meia-vida de 10 dias. Faz uma tabela com a quantidade que resta após 10, 20, 30 e 40 dias.",
+    "tet": "Amostra ida iha izótopu 800 g ho meia-vida loron 10. Halo tabela ida kona-ba hira mak hela depois loron 10, 20, 30 no 40."
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "Which radiation is stopped by a sheet of paper?",
+      "id": "Radiasi mana yang dihentikan oleh selembar kertas?",
+      "pt": "Que radiação é travada por uma folha de papel?",
+      "tet": "Radiasaun saida mak para ho surat-tahan ida?"
+     },
+     "answer": {
+      "en": "Alpha",
+      "id": "Alfa",
+      "pt": "Alfa",
+      "tet": "Alfa"
+     },
+     "wrong": [
+      {
+       "en": "Beta",
+       "id": "Beta",
+       "pt": "Beta",
+       "tet": "Beta"
+      },
+      {
+       "en": "Gamma",
+       "id": "Gama",
+       "pt": "Gama",
+       "tet": "Gama"
+      },
+      {
+       "en": "All three",
+       "id": "Ketiganya",
+       "pt": "As três",
+       "tet": "Sira tolu hotu"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "After 2 half-lives, how much of a sample remains?",
+      "id": "Setelah 2 waktu paruh, berapa sisa sampel?",
+      "pt": "Depois de 2 meias-vidas, quanto resta da amostra?",
+      "tet": "Depois meia-vida 2, amostra hira mak hela?"
+     },
+     "answer": {
+      "en": "One quarter",
+      "id": "Seperempat",
+      "pt": "Um quarto",
+      "tet": "Parte haat ida"
+     },
+     "wrong": [
+      {
+       "en": "One half",
+       "id": "Setengah",
+       "pt": "Metade",
+       "tet": "Metade"
+      },
+      {
+       "en": "Nothing",
+       "id": "Tidak ada",
+       "pt": "Nada",
+       "tet": "La iha buat ida"
+      },
+      {
+       "en": "One third",
+       "id": "Sepertiga",
+       "pt": "Um terço",
+       "tet": "Parte tolu ida"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "What is carbon-14 used for?",
+      "id": "Untuk apa karbon-14 digunakan?",
+      "pt": "Para que se usa o carbono-14?",
+      "tet": "Karbonu-14 uza ba saida?"
+     },
+     "answer": {
+      "en": "Finding the age of old wood and bones",
+      "id": "Menentukan umur kayu dan tulang tua",
+      "pt": "Datar madeira e ossos antigos",
+      "tet": "Hatene idade ai no ruin tuan"
+     },
+     "wrong": [
+      {
+       "en": "Making electricity at home",
+       "id": "Membuat listrik di rumah",
+       "pt": "Produzir eletricidade em casa",
+       "tet": "Halo eletrisidade iha uma"
+      },
+      {
+       "en": "Cleaning drinking water",
+       "id": "Membersihkan air minum",
+       "pt": "Limpar a água de beber",
+       "tet": "Hamoos bee-hemu"
+      },
+      {
+       "en": "Making iron stronger",
+       "id": "Memperkuat besi",
+       "pt": "Tornar o ferro mais forte",
+       "tet": "Halo besi metin liu"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "atoms.university",
+   "level": "university",
+   "difficulty": 5,
+   "topic": "atoms",
+   "title": {
+    "en": "Nuclear energy: fission, fusion and E = mc²",
+    "id": "Energi nuklir: fisi, fusi, dan E = mc²",
+    "pt": "Energia nuclear: fissão, fusão e E = mc²",
+    "tet": "Enerjia nukleár: fisaun, fuzaun no E = mc²"
+   },
+   "points": [
+    {
+     "en": "Einstein's E = mc² shows that a small loss of mass releases a large amount of energy. In nuclear reactions the products have slightly less mass than the starting nuclei.",
+     "id": "Persamaan Einstein E = mc² menunjukkan bahwa hilangnya sedikit massa melepaskan energi yang sangat besar. Dalam reaksi nuklir, massa produk sedikit lebih kecil daripada inti awal.",
+     "pt": "A equação de Einstein E = mc² mostra que uma pequena perda de massa liberta uma grande quantidade de energia. Nas reações nucleares, os produtos têm um pouco menos massa do que os núcleos iniciais.",
+     "tet": "Einstein nia ekuasaun E = mc² hatudu katak lakon masa uitoan hasai enerjia barak tebes. Iha reasaun nukleár, produtu sira nia masa ki'ik uitoan duké núkleu inisiál sira."
+    },
+    {
+     "en": "Fission splits heavy nuclei such as uranium-235 after they absorb a neutron; in a reactor, a controlled chain reaction heats water to drive turbines.",
+     "id": "Fisi membelah inti berat seperti uranium-235 setelah menyerap neutron; di reaktor, reaksi berantai yang terkendali memanaskan air untuk memutar turbin.",
+     "pt": "A fissão divide núcleos pesados, como o urânio-235, depois de absorverem um neutrão; num reator, uma reação em cadeia controlada aquece água para mover turbinas.",
+     "tet": "Fisaun fahe núkleu todan sira hanesan uraniu-235 depois sira simu neutraun ida; iha reatór, reasaun kadeia ne'ebé kontroladu halo bee manas atu fila turbina."
+    },
+    {
+     "en": "Fusion joins light nuclei, as in the Sun. It promises abundant energy with little long-lived waste, but the plasma must exceed 100 million °C, so on Earth it is still experimental.",
+     "id": "Fusi menggabungkan inti ringan, seperti di Matahari. Fusi menjanjikan energi melimpah dengan sedikit limbah berumur panjang, tetapi plasmanya harus melebihi 100 juta °C sehingga di Bumi masih bersifat eksperimen.",
+     "pt": "A fusão junta núcleos leves, como no Sol. Promete energia abundante com poucos resíduos de longa duração, mas o plasma tem de ultrapassar 100 milhões de °C, por isso na Terra ainda é experimental.",
+     "tet": "Fuzaun hamutuk núkleu kmaan sira, hanesan iha loron. Nia promete enerjia barak ho lixu uitoan de'it ne'ebé moris kleur, maibé plazma tenke manas liu °C millaun 100, tan ne'e iha Rai sei esperimentál hela."
+    },
+    {
+     "en": "Nuclear power emits very little CO₂ while running, but it needs strict safety regulation, safe long-term storage of spent fuel and careful management of accident risks.",
+     "id": "Pembangkit listrik tenaga nuklir hanya mengeluarkan sedikit CO₂ saat beroperasi, tetapi memerlukan pengawasan keselamatan yang ketat, penyimpanan bahan bakar bekas yang aman dalam jangka panjang, serta pengelolaan risiko kecelakaan.",
+     "pt": "A energia nuclear emite muito pouco CO₂ em funcionamento, mas exige regulação de segurança rigorosa, armazenamento seguro do combustível usado a longo prazo e uma gestão cuidadosa do risco de acidentes.",
+     "tet": "Enerjia nukleár hasai CO₂ uitoan de'it bainhira funsiona, maibé presiza regulasaun seguransa ne'ebé metin, rai kombustível uzadu ho seguru ba tempu naruk, no jestaun di'ak ba risku asidente."
+    }
+   ],
+   "task": {
+    "en": "With E = mc² and c = 3 × 10⁸ m/s, calculate the energy if 1 g (0.001 kg) of mass were turned completely into energy. Compare it with a household's yearly electricity use.",
+    "id": "Dengan E = mc² dan c = 3 × 10⁸ m/s, hitung energi jika 1 g (0,001 kg) massa diubah seluruhnya menjadi energi. Bandingkan dengan pemakaian listrik satu rumah tangga per tahun.",
+    "pt": "Com E = mc² e c = 3 × 10⁸ m/s, calcula a energia se 1 g (0,001 kg) de massa fosse totalmente convertido em energia. Compara com o consumo anual de eletricidade de uma casa.",
+    "tet": "Ho E = mc² no c = 3 × 10⁸ m/s, kalkula enerjia se masa 1 g (0,001 kg) sai enerjia tomak. Kompara ho uma ida nia konsumu eletrisidade iha tinan ida."
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "What happens in nuclear fission?",
+      "id": "Apa yang terjadi pada fisi nuklir?",
+      "pt": "O que acontece na fissão nuclear?",
+      "tet": "Saida mak akontese iha fisaun nukleár?"
+     },
+     "answer": {
+      "en": "A heavy nucleus splits",
+      "id": "Inti berat terbelah",
+      "pt": "Um núcleo pesado divide-se",
+      "tet": "Núkleu todan ida fahe an"
+     },
+     "wrong": [
+      {
+       "en": "Light nuclei join together",
+       "id": "Inti ringan bergabung",
+       "pt": "Núcleos leves juntam-se",
+       "tet": "Núkleu kmaan sira hamutuk"
+      },
+      {
+       "en": "New electrons are created",
+       "id": "Elektron baru tercipta",
+       "pt": "Criam-se eletrões novos",
+       "tet": "Eletraun foun mosu"
+      },
+      {
+       "en": "A molecule burns with oxygen",
+       "id": "Molekul terbakar dengan oksigen",
+       "pt": "Uma molécula arde com oxigénio",
+       "tet": "Molékula ida sunu ho oksijéniu"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "Why is fusion not yet used in power stations?",
+      "id": "Mengapa fusi belum dipakai di pembangkit listrik?",
+      "pt": "Porque é que a fusão ainda não é usada em centrais elétricas?",
+      "tet": "Tanba saida mak fuzaun seidauk uza iha sentrál eletrisidade?"
+     },
+     "answer": {
+      "en": "It needs extremely high temperatures and is still experimental",
+      "id": "Membutuhkan suhu sangat tinggi dan masih eksperimen",
+      "pt": "Exige temperaturas altíssimas e ainda é experimental",
+      "tet": "Presiza temperatura aas tebes no sei esperimentál"
+     },
+     "wrong": [
+      {
+       "en": "It produces too much CO₂",
+       "id": "Menghasilkan terlalu banyak CO₂",
+       "pt": "Produz demasiado CO₂",
+       "tet": "Hasai CO₂ barak liu"
+      },
+      {
+       "en": "It needs coal",
+       "id": "Membutuhkan batu bara",
+       "pt": "Precisa de carvão",
+       "tet": "Presiza karvaun"
+      },
+      {
+       "en": "It only works at night",
+       "id": "Hanya bekerja pada malam hari",
+       "pt": "Só funciona à noite",
+       "tet": "Funsiona só iha kalan"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "In E = mc², what does c stand for?",
+      "id": "Dalam E = mc², c melambangkan apa?",
+      "pt": "Em E = mc², o que representa c?",
+      "tet": "Iha E = mc², c signifika saida?"
+     },
+     "answer": {
+      "en": "The speed of light",
+      "id": "Kecepatan cahaya",
+      "pt": "A velocidade da luz",
+      "tet": "Naroman nia velosidade"
+     },
+     "wrong": [
+      {
+       "en": "Electric charge",
+       "id": "Muatan listrik",
+       "pt": "A carga elétrica",
+       "tet": "Karga elétrika"
+      },
+      {
+       "en": "Carbon",
+       "id": "Karbon",
+       "pt": "O carbono",
+       "tet": "Karbonu"
+      },
+      {
+       "en": "Temperature",
+       "id": "Suhu",
+       "pt": "A temperatura",
+       "tet": "Temperatura"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "atoms.adult",
+   "level": "adult",
+   "difficulty": 6,
+   "topic": "atoms",
+   "title": {
+    "en": "Radiation in medicine and at work",
+    "id": "Radiasi dalam kedokteran dan pekerjaan",
+    "pt": "Radiação na medicina e no trabalho",
+    "tet": "Radiasaun iha medisina no servisu"
+   },
+   "points": [
+    {
+     "en": "X-rays and CT scans use radiation to see inside the body, at the lowest exposure that still gives a clear image. Tell the staff if you might be pregnant.",
+     "id": "Sinar-X dan CT scan menggunakan radiasi untuk melihat bagian dalam tubuh, dengan paparan serendah mungkin yang tetap memberi gambar jelas. Beri tahu petugas jika Anda mungkin hamil.",
+     "pt": "Os raios X e as TAC usam radiação para ver o interior do corpo, com a menor exposição que ainda dá uma imagem nítida. Avise a equipa se puder estar grávida.",
+     "tet": "Raiu-X no CT-scan uza radiasaun atu haree isin laran, ho espozisaun ki'ik liu ne'ebé sei fó imajen moos. Hatete ba ekipa saúde se ita karik isin-rua."
+    },
+    {
+     "en": "Medical isotopes help find and treat disease: technetium-99m shows how organs work, and radiotherapy targets cancer cells. A doctor or health worker explains the benefits and risks.",
+     "id": "Isotop medis membantu menemukan dan mengobati penyakit: teknesium-99m menunjukkan cara kerja organ, dan radioterapi menyasar sel kanker. Dokter atau petugas kesehatan menjelaskan manfaat dan risikonya.",
+     "pt": "Os isótopos médicos ajudam a detetar e tratar doenças: o tecnécio-99m mostra como funcionam os órgãos e a radioterapia ataca células cancerosas. O médico ou profissional de saúde explica os benefícios e os riscos.",
+     "tet": "Izótopu médiku sira ajuda buka no trata moras: teknésiu-99m hatudu oinsá órgaun sira servisu, no radioterapia ataka kankru nia sélula. Doutór ka servisu-na'in saúde esplika benefísiu no risku."
+    },
+    {
+     "en": "People who work with radiation follow three rules: limit time, keep distance and use shielding. They wear a dosimeter badge to check their exposure.",
+     "id": "Orang yang bekerja dengan radiasi mengikuti tiga aturan: batasi waktu, jaga jarak, dan gunakan pelindung. Mereka memakai lencana dosimeter untuk memeriksa paparan.",
+     "pt": "Quem trabalha com radiação segue três regras: limitar o tempo, manter a distância e usar blindagem. Usa um dosímetro para controlar a exposição.",
+     "tet": "Ema ne'ebé servisu ho radiasaun tuir regra tolu: limita tempu, hadook an no uza protesaun. Sira tau dozímetru ida atu kontrola sira-nia espozisaun."
+    },
+    {
+     "en": "Every day we all receive small natural background radiation from rocks, soil, food and space. One chest X-ray adds only a small amount.",
+     "id": "Setiap hari kita semua menerima radiasi latar alami dalam jumlah kecil dari batuan, tanah, makanan, dan luar angkasa. Satu kali rontgen dada hanya menambah sedikit.",
+     "pt": "Todos os dias recebemos uma pequena radiação natural de fundo vinda das rochas, do solo, da comida e do espaço. Um raio X ao tórax acrescenta apenas uma pequena quantidade.",
+     "tet": "Loron-loron ita hotu simu radiasaun naturál ki'ik husi fatuk, rai, hahán no espasu. Raiu-X ida ba hirus-matan aumenta uitoan de'it."
+    }
+   ],
+   "task": {
+    "en": "Look for the yellow-and-black radiation sign (trefoil) at a hospital or clinic. Write down where it is and why people must not enter without permission.",
+    "id": "Carilah tanda radiasi kuning-hitam (trefoil) di rumah sakit atau klinik. Catat letaknya dan mengapa orang tidak boleh masuk tanpa izin.",
+    "pt": "Procure o sinal de radiação amarelo e preto (trevo) num hospital ou clínica. Anote onde está e porque é que as pessoas não podem entrar sem autorização.",
+    "tet": "Buka sinál radiasaun kinur-metan iha ospitál ka klínika ida. Hakerek iha ne'ebé no tanba saida mak ema labele tama se la iha autorizasaun."
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "What are the three rules of radiation protection?",
+      "id": "Apa tiga aturan perlindungan radiasi?",
+      "pt": "Quais são as três regras de proteção contra a radiação?",
+      "tet": "Regra tolu ba protesaun hasoru radiasaun mak saida?"
+     },
+     "answer": {
+      "en": "Time, distance and shielding",
+      "id": "Waktu, jarak, dan pelindung",
+      "pt": "Tempo, distância e blindagem",
+      "tet": "Tempu, distánsia no protesaun"
+     },
+     "wrong": [
+      {
+       "en": "Speed, heat and water",
+       "id": "Kecepatan, panas, dan air",
+       "pt": "Velocidade, calor e água",
+       "tet": "Velosidade, manas no bee"
+      },
+      {
+       "en": "Food, sleep and exercise",
+       "id": "Makanan, tidur, dan olahraga",
+       "pt": "Comida, sono e exercício",
+       "tet": "Hahán, toba no ezersísiu"
+      },
+      {
+       "en": "Light, colour and sound",
+       "id": "Cahaya, warna, dan suara",
+       "pt": "Luz, cor e som",
+       "tet": "Naroman, kór no lian"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "What does a dosimeter badge do?",
+      "id": "Apa fungsi lencana dosimeter?",
+      "pt": "Para que serve um dosímetro?",
+      "tet": "Dozímetru servi ba saida?"
+     },
+     "answer": {
+      "en": "Measures a worker's radiation exposure",
+      "id": "Mengukur paparan radiasi pekerja",
+      "pt": "Mede a exposição do trabalhador à radiação",
+      "tet": "Sukat radiasaun ne'ebé traballadór simu"
+     },
+     "wrong": [
+      {
+       "en": "Blocks all radiation",
+       "id": "Menghalangi semua radiasi",
+       "pt": "Bloqueia toda a radiação",
+       "tet": "Para radiasaun hotu"
+      },
+      {
+       "en": "Shows the time",
+       "id": "Menunjukkan jam",
+       "pt": "Mostra as horas",
+       "tet": "Hatudu oras"
+      },
+      {
+       "en": "Opens locked doors",
+       "id": "Membuka pintu yang terkunci",
+       "pt": "Abre portas trancadas",
+       "tet": "Loke odamatan ne'ebé xave"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "Before an X-ray, what should you tell the staff?",
+      "id": "Sebelum rontgen, apa yang perlu Anda beri tahu petugas?",
+      "pt": "Antes de um raio X, o que deve dizer à equipa?",
+      "tet": "Antes raiu-X, saida mak ita tenke hatete ba ekipa?"
+     },
+     "answer": {
+      "en": "If you might be pregnant",
+      "id": "Jika Anda mungkin hamil",
+      "pt": "Se pode estar grávida",
+      "tet": "Se ita karik isin-rua"
+     },
+     "wrong": [
+      {
+       "en": "Your favourite food",
+       "id": "Makanan favorit Anda",
+       "pt": "A sua comida preferida",
+       "tet": "Ita-nia hahán favoritu"
+      },
+      {
+       "en": "Your shoe size",
+       "id": "Ukuran sepatu Anda",
+       "pt": "O número dos seus sapatos",
+       "tet": "Ita-nia sapatu nia medida"
+      },
+      {
+       "en": "Your favourite TV programme",
+       "id": "Acara TV favorit Anda",
+       "pt": "O seu programa de TV preferido",
+       "tet": "Ita-nia programa TV favoritu"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "atoms.senior",
+   "level": "senior",
+   "difficulty": 7,
+   "topic": "atoms",
+   "title": {
+    "en": "Radiation safety and health in daily life",
+    "id": "Keselamatan radiasi dan kesehatan sehari-hari",
+    "pt": "Segurança radiológica e saúde no dia a dia",
+    "tet": "Seguransa radiasaun no saúde iha moris loron-loron"
+   },
+   "points": [
+    {
+     "en": "Most radiation we meet is natural and low. Health workers plan medical scans so that the benefit is greater than the small risk.",
+     "id": "Sebagian besar radiasi yang kita temui bersifat alami dan rendah. Petugas kesehatan merencanakan pemeriksaan medis agar manfaatnya lebih besar daripada risikonya yang kecil.",
+     "pt": "A maior parte da radiação que encontramos é natural e baixa. Os profissionais de saúde planeiam os exames para que o benefício seja maior do que o pequeno risco.",
+     "tet": "Radiasaun barak liu ne'ebé ita hasoru mak naturál no ki'ik. Servisu-na'in saúde planeia ezame médiku sira atu benefísiu boot liu risku ki'ik."
+    },
+    {
+     "en": "Keep a simple record of your X-rays and scans and bring it to the clinic, so doctors do not repeat tests without need.",
+     "id": "Simpan catatan sederhana tentang rontgen dan pemindaian Anda dan bawalah ke klinik, agar dokter tidak mengulang pemeriksaan tanpa perlu.",
+     "pt": "Guarde um registo simples dos seus raios X e exames e leve-o à clínica, para que os médicos não repitam exames sem necessidade.",
+     "tet": "Rai rejistu simples ida kona-ba ita-nia raiu-X no ezame sira, no lori ba klínika, atu doutór sira la repete ezame se la presiza."
+    },
+    {
+     "en": "Never pick up or sell unknown metal objects with the radiation sign; tell the police or local authorities. If you feel unwell after touching one, see a health worker.",
+     "id": "Jangan pernah mengambil atau menjual benda logam tak dikenal yang bertanda radiasi; laporkan kepada polisi atau pihak berwenang setempat. Jika merasa tidak sehat setelah menyentuhnya, temui petugas kesehatan.",
+     "pt": "Nunca apanhe nem venda objetos metálicos desconhecidos com o sinal de radiação; avise a polícia ou as autoridades locais. Se se sentir mal depois de tocar num, procure um profissional de saúde.",
+     "tet": "Labele foti ka fa'an sasán besi ne'ebé ita la hatene ho sinál radiasaun; hatete ba polísia ka autoridade lokál. Se ita sente la di'ak depois kaer, bá hasoru servisu-na'in saúde."
+    },
+    {
+     "en": "You can tell your grandchildren that atoms power the stars and help doctors, and that safety rules protect everyone.",
+     "id": "Anda bisa menceritakan kepada cucu bahwa atom menjadi sumber energi bintang dan membantu dokter, serta aturan keselamatan melindungi semua orang.",
+     "pt": "Pode explicar aos netos que os átomos dão energia às estrelas e ajudam os médicos, e que as regras de segurança protegem todos.",
+     "tet": "Ita bele esplika ba bei-oan sira katak átomu fó enerjia ba fitun sira no ajuda doutór sira, no regra seguransa proteje ema hotu."
+    }
+   ],
+   "task": {
+    "en": "Make a small health notebook: write the date and reason for every X-ray or scan you remember, and keep it with your health card.",
+    "id": "Buatlah buku catatan kesehatan kecil: tulis tanggal dan alasan setiap rontgen atau pemindaian yang Anda ingat, dan simpan bersama kartu kesehatan Anda.",
+    "pt": "Faça um pequeno caderno de saúde: escreva a data e o motivo de cada raio X ou exame de que se lembre e guarde-o com o seu cartão de saúde.",
+    "tet": "Halo kadernu saúde ki'ik ida: hakerek data no razaun ba raiu-X ka ezame ida-idak ne'ebé ita hanoin, no rai hamutuk ho ita-nia kartaun saúde."
+   },
+   "questions": [
+    {
+     "q": {
+      "en": "You find an unknown metal object with the radiation sign. What should you do?",
+      "id": "Anda menemukan benda logam tak dikenal bertanda radiasi. Apa yang sebaiknya Anda lakukan?",
+      "pt": "Encontra um objeto metálico desconhecido com o sinal de radiação. O que deve fazer?",
+      "tet": "Ita hetan sasán besi ida ne'ebé ita la hatene ho sinál radiasaun. Ita tenke halo saida?"
+     },
+     "answer": {
+      "en": "Leave it and tell the police or authorities",
+      "id": "Biarkan dan laporkan ke polisi atau pihak berwenang",
+      "pt": "Deixá-lo e avisar a polícia ou as autoridades",
+      "tet": "Husik de'it no hatete ba polísia ka autoridade"
+     },
+     "wrong": [
+      {
+       "en": "Take it home",
+       "id": "Membawanya pulang",
+       "pt": "Levá-lo para casa",
+       "tet": "Lori ba uma"
+      },
+      {
+       "en": "Sell it at the market",
+       "id": "Menjualnya di pasar",
+       "pt": "Vendê-lo no mercado",
+       "tet": "Fa'an iha merkadu"
+      },
+      {
+       "en": "Open it to look inside",
+       "id": "Membukanya untuk melihat isinya",
+       "pt": "Abri-lo para ver o que tem",
+       "tet": "Loke atu haree nia laran"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "Why keep a record of your X-rays?",
+      "id": "Mengapa menyimpan catatan rontgen Anda?",
+      "pt": "Porque deve guardar um registo dos seus raios X?",
+      "tet": "Tanba saida mak rai rejistu raiu-X?"
+     },
+     "answer": {
+      "en": "To avoid repeating tests without need",
+      "id": "Agar pemeriksaan tidak diulang tanpa perlu",
+      "pt": "Para evitar repetir exames sem necessidade",
+      "tet": "Atu labele repete ezame se la presiza"
+     },
+     "wrong": [
+      {
+       "en": "To get free medicine",
+       "id": "Agar mendapat obat gratis",
+       "pt": "Para receber medicamentos grátis",
+       "tet": "Atu simu ai-moruk gratis"
+      },
+      {
+       "en": "Because X-rays expire",
+       "id": "Karena rontgen bisa kedaluwarsa",
+       "pt": "Porque os raios X caducam",
+       "tet": "Tanba raiu-X bele expira"
+      },
+      {
+       "en": "To make the next X-ray stronger",
+       "id": "Agar rontgen berikutnya lebih kuat",
+       "pt": "Para o próximo raio X ser mais forte",
+       "tet": "Atu raiu-X tuir mai forte liu"
+      }
+     ]
+    },
+    {
+     "q": {
+      "en": "Most of the radiation we meet every day is…",
+      "id": "Sebagian besar radiasi yang kita temui setiap hari…",
+      "pt": "A maior parte da radiação que encontramos todos os dias é…",
+      "tet": "Radiasaun barak liu ne'ebé ita hasoru loron-loron mak…"
+     },
+     "answer": {
+      "en": "Natural and low",
+      "id": "Alami dan rendah",
+      "pt": "Natural e baixa",
+      "tet": "Naturál no ki'ik"
+     },
+     "wrong": [
+      {
+       "en": "Very dangerous",
+       "id": "Sangat berbahaya",
+       "pt": "Muito perigosa",
+       "tet": "Perigozu tebes"
+      },
+      {
+       "en": "Only from mobile phones",
+       "id": "Hanya dari ponsel",
+       "pt": "Só dos telemóveis",
+       "tet": "Só husi telefone"
+      },
+      {
+       "en": "Only found in hospitals",
+       "id": "Hanya ada di rumah sakit",
+       "pt": "Só existe nos hospitais",
+       "tet": "Só iha ospitál"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

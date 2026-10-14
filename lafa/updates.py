@@ -6,7 +6,8 @@ repository: lafa/assets/catalog.json. Installed copies download it over HTTPS
 every few hours, validate every field (data only, never code), cache it in
 ~/.cache/lafa and merge it with what was shipped. Developers improve sources by
 editing that file and increasing "revision"; nobody has to reinstall LAFA.
-New LAFA releases are announced from the GitHub releases of the repository.
+LAFA itself is updated only through APT / the Eduka Update System (EUS):
+LAFA never downloads or runs program code and is not a second updater.
 """
 import json
 import os
@@ -15,12 +16,10 @@ import tempfile
 import time
 from pathlib import Path
 from urllib.parse import urlsplit
-from . import __version__
-from .net import request, json_request, NetworkError
+from .net import request, NetworkError
 
 REPOSITORY = "hugomonizdorego/Eduka-Lafa"
 CATALOG_URL = f"https://raw.githubusercontent.com/{REPOSITORY}/main/lafa/assets/catalog.json"
-RELEASES_URL = f"https://api.github.com/repos/{REPOSITORY}/releases/latest"
 SHIPPED = Path(__file__).parent / "assets" / "catalog.json"
 LANGS = ("en", "id", "pt", "tet")
 
@@ -151,18 +150,3 @@ def apply(catalog=None):
 def extra_cards(catalog=None):
     catalog = catalog or current()
     return catalog["cards"] if catalog else []
-
-def newer_release(fetch=None):
-    """Version string of a newer LAFA release on GitHub, or None."""
-    data = (fetch or (lambda: json_request(RELEASES_URL, headers={"Accept": "application/vnd.github+json"}, timeout=15)))()
-    tag = str(data.get("tag_name", "")).lstrip("vV") if isinstance(data, dict) else ""
-    if not re.fullmatch(r"\d+(\.\d+){1,3}([ab]\d+)?", tag): return None
-    return tag if version_key(tag) > version_key(__version__) else None
-
-def version_key(text):
-    match = re.fullmatch(r"(\d+)\.(\d+)(?:\.(\d+))?(?:\.(\d+))?(?:([ab])(\d+))?", text)
-    if not match: return (0,)
-    major, minor, patch, extra, stage, number = match.groups()
-    # Final releases sort after alpha/beta of the same version.
-    stage_rank = {"a": 0, "b": 1, None: 2}[stage]
-    return (int(major), int(minor), int(patch or 0), int(extra or 0), stage_rank, int(number or 0))

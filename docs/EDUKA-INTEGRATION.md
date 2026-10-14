@@ -41,9 +41,9 @@ repository with `patch -p1 < eduka-settings-plugin-pages.patch`):
 The page uses Eduka-Settings' own object names (`pageTitle`, `card`,
 `cardTitle`, `settingRow`, `rowTitle`, `rowLine`, `fieldHint`), so every Eduka
 theme styles it. Changes apply live: the page writes
-`~/.config/lafa/settings.json` (0600) and runs `lafa --reload`; API keys never
-pass through it. Verified by rendering the real eduka-settings 0.9.24 with the
-patch (`tools/eduka-settings-preview.py`, screenshots 18–19).
+`~/.config/lafa/settings.json` (0600) and runs `lafa --reload`. Lafa stores no
+keys or passwords. Verified by rendering the real eduka-settings 0.9.24 with the
+patch (`tools/eduka-settings-preview.py`, screenshots 32–33).
 
 Without the patch, `lafa --configure` opens LAFA's own settings window with
 the same options.
@@ -87,20 +87,24 @@ becomes a host registration only when the host consumes it.
 `create_lafa_page()` returns the complete **Eduka-Settings → LAFA** page:
 
 1. the activation group (below), and
-2. `add_lafa_preferences()`: grouped controls for every non-secret preference —
-   Virtual Assistant (outfit, roaming, panel edge/height, greeting),
-   Personality & activities (hover questions, self-talk, jokes, bath/toilet
-   poses, cards, activity duration, intervals), AI & language (language,
-   provider, model, Ollama/open-source server addresses, read aloud) and Files
-   & weather (city, coordinates, time zone, searchable folders).
+2. `add_lafa_preferences()`: grouped controls for every preference —
+   Virtual Assistant (outfit, roaming, panel edge/height, greeting, quiet
+   mode, reduce motion, messages per hour, entertainment), Personality &
+   activities (hover questions, self-talk, cards, activity duration,
+   intervals), Language (language, read aloud, content catalogue updates),
+   Lafa Desktop (start section, theme) and Files & weather (city,
+   coordinates, time zone, searchable folders).
+
+The Virtual Assistant is switched on **only** here (or with the fixed
+`--enable` role from this page); opening Lafa Desktop never switches it on.
 
 **Save** merges the values into `~/.config/lafa/settings.json` with an atomic
 0600 write, then starts the fixed role `--reload`; a running LAFA re-reads the
 file and applies it live while keeping chat, lesson code and drafts. When LAFA
 is not running, `--reload` exits immediately and the values load at the next
-start. LAFA re-validates every field on load. **API keys…** opens LAFA's own
-settings (`--settings`) because keys are kept only in session memory or the
-secure system keyring.
+start. LAFA re-validates every field on load. Fields written by 0.1.x
+(provider, models, server addresses) are left in the file, ignored by Lafa
+0.2.0 and backed up once to `settings.json.0.1-backup`.
 
 ```python
 from eduka_lafa_settings import create_lafa_page
@@ -196,7 +200,7 @@ The first command is read-only and does not query public sources. The second
 also checks fixed Wikipedia/Dili weather queries and Timor-Leste feeds. Warnings
 identify missing optional speech commands, menu entries or local socket support.
 The diagnostic cannot prove native page registration, correct panel placement
-or a provider account's API permission; test those on Edukasaun OS.
+or Wayland behaviour; test those on Edukasaun OS.
 
 ## Panel movement
 

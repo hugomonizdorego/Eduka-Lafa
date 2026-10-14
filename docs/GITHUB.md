@@ -18,8 +18,9 @@ logs and build files are excluded by `.gitignore`.
 
 Suggested repository description:
 
-> LAFA: an animated AI desktop learning companion for Edukasaun OS, with local
-> file search, public research, voice and official multi-provider APIs.
+> Lafa — Pendamping Belajar dan Asisten Edukasaun OS: an offline-first
+> learning companion from Timor-Leste (lessons, practice, local search, OS
+> help, reminders) that needs no login, AI key or server.
 
-GitHub Actions runs core and offscreen Qt tests on push/pull request. Internet
-accounts and provider credentials are not needed by the test suite.
+GitHub Actions runs core and offscreen Qt tests on push/pull request. The test
+suite needs no internet, account or key.

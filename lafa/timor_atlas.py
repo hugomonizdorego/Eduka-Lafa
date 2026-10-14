@@ -378,3 +378,75 @@ def leader_questions(lang="en", rng=None):
         options = [name] + rng.sample([n for n in names if n != name], 3); rng.shuffle(options)
         out.append((q.get(lang, q["en"]).format(a=a), options, name))
     return out
+
+# ------------------------------------------------------- Tetun (0.1.4)
+# Short Tetun summaries so Tetun readers get every topic in their language.
+TETUN = {
+    "earth_age": "Rai (planeta) moris maizumenus tinan biliaun 4,54 liubá husi rai-rahun no fatuk ne'ebé haleu loro-matan foun.",
+    "earth_gondwana": "Fatuk tuan barak iha Timor moris tinan miliaun 300–200 liubá iha tasi okos, iha kontinente tuan ne'ebé depois sai Austrália nia ninin. Fatuk sira-ne'e iha fósil barak.",
+    "earth_collision": "Timor sa'e husi tasi bainhira plaka Austrália baku malu ho arku vulkániku Banda, hahú tinan miliaun balu liubá. Illa ne'e la'ós foho-ahi; nia sei sa'e nafatin, tan ne'e rai-nakdoko mosu.",
+    "earth_wallacea": "Timor iha Wallacea, zona illa entre animál Ázia no Austrália. Manu no ai-horis barak moris iha ne'e de'it. Lafaek mak sagradu iha kultura Timor.",
+    "earth_climate": "Klima tropikál: tempu udan (maizumenus Dezembru to'o Abríl) no tempu bailoron naruk. Iha foho sira, klima malirin.",
+    "flag": "Bandeira mean ho triángulu metan iha triángulu kinur leten no fitun mutin. Mean = luta ba libertasaun; kinur = kolonializmu nia rastu; metan = nakukun ne'ebé tenke manán; fitun mutin = pás. Ofisiál iha 20 Maiu 2002.",
+    "coat_of_arms": "Simbolu nasaun (2007) hatudu Foho Ramelau, fitun, livru, hare no batar, kilat rezisténsia no lema “Unidade, Acção, Progresso” (Unidade, Asaun, Progresu).",
+    "anthem": "Hino nasionál “Pátria”: liafuan husi poeta Francisco Borja da Costa, múzika husi Afonso Redentor Araújo. Kanta dahuluk iha proklamasaun 1975.",
+    "languages_official": "Lian ofisiál mak Tetun no Portugés; Indonézia no Inglés mak lian servisu. Konstituisaun mós proteje lian nasionál sira hanesan Mambai, Makasae, Baikeno, Fataluku, Kemak no Bunak.",
+    "national_days": "Loron nasionál prinsipál: 28 Novembru (proklamasaun 1975) no 20 Maiu (restaurasaun 2002). Loron seluk hanoin fali luta: 20 Agostu, 30 Agostu, 12 Novembru, 7 Dezembru no 31 Dezembru.",
+    "map_size": "Maizumenus 14.950 km² iha Timor illa nia parte leste, hamutuk ho Oé-Cusse, Ataúro no Jaco. Husi oeste ba leste maizumenus 265 km. Fatin aas liu: Ramelau 2.986 m. Oras UTC+9.",
+    "map_mountains": "Foho barak iha illa nia klaran: Ramelau (Tatamailau, 2.986 m), Matebian, Kablaki no Mundo Perdido. Mota badak sira suli ba norte no sul; Laclo no Lóis mak naruk liu. Lagoa boot liu mak Ira Lalaro iha Lautém.",
+    "map_history": "Portugál no Olanda fahe Timor entre 1859 no 1916; Oé-Cusse hela ho Portugál. Depois independénsia, Timor-Leste no Indonézia konkorda fronteira rai (2005); fronteira tasi ho Austrália hatuur iha 2018 (vigór 2019).",
+    "map_borders": "Fronteira rai ho Indonézia (Timor Oeste). Viziñu iha tasi: Indonézia no Austrália. Pontu fronteira prinsipál: Batugade–Motaain no Salele–Motamasin.",
+    "atauro": "Illa iha Dili nia norte (maizumenus 25 km), luan 140 km²; munisípiu desde 2022. Ninia ahu-ruin iha ikan barak tebes. Famozu ho selam, eko-turizmu no bonekas ai.",
+    "jaco": "Illa ki'ik (11 km²) ne'ebé ema la hela, iha rai-ponta leste besik Tutuala; sagradu ba povu Fataluku. Parte husi Parke Nasionál Nino Konis Santana.",
+    "oecusse": "Eksklave iha Timor Oeste nia kosta norte (815 km²). Portugés tun dahuluk iha Lifau (1515). Rejiaun Administrativa Espesiál (RAEOA) desde 2014; ema ko'alia Baikeno.",
+    "oil_gas": "Mina-rai no gás husi Tasi Timor (liuliu Bayu-Undan) selu orsamentu Estadu nia parte boot. Osan rai iha Fundu Petrolíferu (2005). Bayu-Undan atu hotu; Greater Sunrise seidauk dezenvolve.",
+    "coffee": "Kafé arábika husi foho (Ermera, Aileu, Ainaro, Manufahi, Liquiçá) mak esportasaun boot liu la'ós mina-rai. “Híbridu Timor” ajuda kafé iha mundu tomak hasoru moras ferruzen.",
+    "land_sea_wealth": "Ai-kameli, kamii, baunilla, kravu, mármore, ai, ikan no ahu-ruin. Proteje ai-laran, bee-matan no tasi atu riku-soin ne'e hela ba futuru.",
+    "economy_overview": "Osan mak dólar Amerikanu (desde 2000) ho moeda sentavu Timor (2003). Família barak servisu iha agrikultura. Projetu importante: portu Tibar (2022), estrada no eletrisidade.",
+    "exports": "Mina-rai no gás (valór boot liu), kafé (esportasaun boot liu la'ós mina-rai), kamii, baunilla no produtu agríkola seluk.",
+    "imports": "Kombustivel, foos no ai-han seluk, kareta, máquina, materiál konstrusaun no eletróniku. Fornesedór prinsipál: Indonézia, Xina, Singapura, Austrália.",
+    "population": "Maizumenus ema 1,34 miliaun (sensu 2022). Nasaun foin-sa'e — ema barak liu iha idade menus husi tinan 25. Dili mak sidade boot liu.",
+    "religion": "Maizumenus 97% Katóliku; Protestante no Muslin komunidade ki'ik. Kultura tradisionál (uma lulik, tara bandu) forte nafatin. Papa vizita Timor iha 1989 no 2024.",
+    "rice_bowls": "Maliana (Bobonaro), Uatolari no Uatucarbau (Viqueque), Natarbora (Manatuto) no kosta sul Suai–Betano produz hare barak liu.",
+    "highlands": "Ermera no Letefoho (kafé), Maubisse no Hatubuilico (modo, klima malirin), Aileu no Same.",
+    "east_plateaus": "Rai-tetuk fatuk-ahu nian iha leste ho bee-matan, fatuk-kuak no Lagoa Ira Lalaro; famozu ho karau-baka, hare no pintura fatuk tuan.",
+    "cristo_rei": "Estátua Kristu ho altura metru 27 (1996) iha Dili nia leste; sa'e eskada maizumenus 500, tasi-ibun iha sorin rua.",
+    "ramelau_trek": "Ema la'o husi Hatubuilico kalan atu haree loro-sa'e iha Foho Ramelau nia leten, besik estátua Virjen Maria.",
+    "dive_atauro": "Bee moos, didin ahu-ruin no ikan barak tebes; ró sai husi Dili.",
+    "jaco_tutuala": "Rai-henek mutin, tasi azúl no tasi-ibun Valu iha rai-ponta leste; pintura tuan iha fatuk-kuak hanesan Lene Hara.",
+    "heritage_places": "Muzeu Rezisténsia (Dili), ezibisaun Chega! iha komarka Balide uluk, rate Santa Cruz, forte Balibo, forte Maubara no monumentu Lifau iha Oé-Cusse.",
+    "nature_places": "Areia Branca no Dollar Beach (Dili), Com (Lautém), Betano (Manufahi), bee-manas Marobo (Bobonaro) no Maubisse ne'ebé malirin.",
+    "system": "Repúblika demokrátika ho Konstituisaun (aprova 22 Marsu 2002, vigór 20 Maiu 2002). Órgaun soberania: Prezidente Repúblika, Parlamentu Nasionál, Governu no Tribunál sira.",
+    "president_role": "Povu hili Prezidente ba tinan lima (másimu mandatu rua tuir malu). Nia mak Komandante Supremu forsa defeza no promulga ka veta lei.",
+    "parliament": "Kámara ida ho membru 65, hili ba tinan lima. Halo lei no aprova orsamentu Estadu.",
+    "government_body": "Prezidente nomeia Primeiru-Ministru depois eleisaun; Primeiru-Ministru lidera Konsellu Ministru.",
+    "courts": "Tribunál distritál, Tribunál Rekursu (tribunál aas liu to'o Supremu Tribunál Justisa harii) no Kámara Kontas.",
+    "local_power": "Munisípiu 14 (inklui Ataúro no rejiaun espesiál Oé-Cusse), postu administrativu, suku liu 440 no aldeia maizumenus 2.200. Komunidade hili xefe suku.",
+    "security": "F-FDTL defende nasaun; PNTL (polísia nasionál) kaer orden públika.",
+    "international": "Membru ONU (2002), CPLP (2002), fundadór g7+ (2010) no membru ASEAN (2025).",
+    "parties_1974": "Depois 25 Abríl 1974, harii UDT, ASDT (sai FRETILIN), APODETI, KOTA no Partidu Traballista. FRETILIN proklama independénsia 28 Novembru 1975.",
+    "resistance": "Frente armada (FALINTIL), frente klandestina (joventude iha sidade) no frente diplomátika iha rai li'ur, hamutuk iha CNRM (1988) no CNRT (1998).",
+    "elections": "Asembleia Konstituinte 2001; eleisaun prezidensiál 2002, 2007, 2012, 2017, 2022; eleisaun parlamentár 2007, 2012, 2017, 2018 no 2023.",
+    "crises": "Nasaun liu husi destruisaun 1999, krize 2006 no atake 11 Fevereiru 2008; misaun ONU ikus sai iha 2012.",
+}
+TETUN_MUNICIPALITIES = {
+    "Aileu": "Munisípiu foho iha Dili nia sul; baze FRETILIN iha 1975–1976; kafé no modo.",
+    "Ainaro": "Foho Ramelau, Hatubuilico no Maubisse ne'ebé malirin; modo no kafé.",
+    "Ataúro": "Munisípiu illa desde 2022 (uluk parte Dili); selam, peska no eko-turizmu.",
+    "Baucau": "Sidade daruak; vila Portugés tuan ho merkadu no bee-matan; aeroportu ho pista naruk.",
+    "Bobonaro": "Rai-tetuk hare Maliana, bee-manas Marobo, forte Balibo no fronteira Batugade.",
+    "Covalima": "Kosta sul; masakre igreja Suai (6 Setembru 1999); baze Suai ba projetu Tasi Mane.",
+    "Díli": "Kapitál desde 1769; Cristo Rei, Santa Cruz, Palásiu Governu no portu Tibar besik.",
+    "Ermera": "Fatin kafé nian (Letefoho, Railaco, Hatulia); kafé esportasaun barak liu mai husi ne'e.",
+    "Lautém": "Rai-ponta leste; lian Fataluku; Jaco, Tutuala, Lagoa Ira Lalaro no Parke Nasionál Nino Konis Santana.",
+    "Liquiçá": "Kosta oeste Dili nian; forte Maubara (sékulu 18); masakre igreja Liquiçá (Abríl 1999).",
+    "Manatuto": "Kosta norte no rai-tetuk Natarbora; foho Laclubar; fatin moris Xanana Gusmão (Laleia).",
+    "Manufahi": "Rai revolta Dom Boaventura (1912); kafé iha Same no tasi-ibun Betano.",
+    "Viqueque": "Natar hare iha kosta sul (Uatolari, Uatucarbau); revolta Viqueque 1959.",
+    "Oé-Cusse": "Eksklave fatin Portugés tun iha Lifau 1515; rejiaun no zona ekonómika espesiál desde 2014.",
+}
+for _topic in TOPICS:
+    if _topic.key in TETUN: _topic.summary["tet"] = TETUN[_topic.key]
+for _i, (_name, _town, _note) in enumerate(MUNICIPALITY_NOTES):
+    _key = _name.split()[0]
+    if _key in TETUN_MUNICIPALITIES: _note["tet"] = TETUN_MUNICIPALITIES[_key]

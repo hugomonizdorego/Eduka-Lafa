@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Read-only LAFA readiness checks, with no secrets, folder paths or chat output.
+"""Read-only LAFA readiness checks, with no folder paths or personal data.
 
 --network explicitly checks public services. The default check is local only.
 JSON output is suitable for a GitHub issue without exposing private paths.
@@ -37,7 +37,7 @@ def checks(network=False):
             add('Character assets','pass',f"{detail['activities']} activity poses; {detail['traditional']} traditional poses")
             add('Panel movement','pass' if detail['backend']=='xcb' else 'warning','X11 movement available' if detail['backend']=='xcb' else 'Offscreen/Wayland needs target placement testing')
         except (RuntimeError,ValueError,KeyError,OSError,subprocess.TimeoutExpired):add('Qt rendering','fail','Qt initialization failed in an isolated probe; check display and runtime dependencies')
-    for name,command in [('PDF reading','pdftotext'),('Read aloud','espeak-ng'),('Microphone recording','arecord')]:
+    for name,command in [('PDF reading','pdftotext'),('Read aloud','espeak-ng')]:
         present=bool(shutil.which(command));add(name,'pass' if present else 'warning',command+' available' if present else 'Optional command missing: '+command)
     try:
         with tempfile.TemporaryDirectory(prefix='lafa-ipc-check-') as folder:
@@ -53,7 +53,7 @@ def checks(network=False):
         from lafa.timor import timor_news
         from lafa.live_info import forecast,Location
         for name,operation in [('Wikipedia',lambda:encyclopedia_search('Dili','en')),('Dili weather',lambda:forecast(Location('Dili',-8.5586,125.5736,'Asia/Dili'))),('Timor-Leste feeds',timor_news)]:
-            try:operation();add(name,'pass','Public request completed; no AI credentials used')
+            try:operation();add(name,'pass','Public request completed; no account or key used')
             except Exception:add(name,'warning','Public request failed; check internet/service availability')
     return {'lafa_version':__version__,'network_requested':network,'checks':results,'private_data_included':False}
 

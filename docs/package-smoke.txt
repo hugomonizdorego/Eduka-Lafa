@@ -1,9 +1,11 @@
-This plugin does not support propagateSizeHints()
-This plugin does not support propagateSizeHints()
-This plugin does not support propagateSizeHints()
-This plugin does not support propagateSizeHints()
-en: desktop, settings, translations and public search passed
-id: desktop, settings, translations and public search passed
-pt: desktop, settings, translations and public search passed
-tet: desktop, settings, translations and public search passed
-Isolated installed package 0.4.0 passed: 17 activities, 9 traditional poses, 9 pages, 3 settings tabs, 4 locales and system-language selection.
+Lafa 0.2.0 package smoke test — 2026-10-14, Ubuntu 24.04 container, Qt offscreen
+sh tools/build-deb.sh -> dist/lafa_0.2.0_all.deb (13676284 bytes)
+apt-get install --no-install-recommends --reinstall ./dist/lafa_0.2.0_all.deb -> installed; removed 0.1.x modules (providers, aihub, signin) are gone from /usr/lib/lafa
+Depends: python3 (>= 3.11), python3-pyqt5, libqt5svg5, xdg-utils, libglib2.0-bin, fonts-noto-color-emoji, hicolor-icon-theme
+LAFA 0.2.0 PyQt5 sections: ['home', 'study', 'library', 'timor', 'activities', 'oshelp'] sidebar 64
+Apa itu fotosintesis? -> answer
+Cari file tugas matematika -> files
+Bagaimana mengganti wallpaper? -> guide
+12*7 -> calc
+AI client modules present: False
+Note: /usr/bin/lafa uses /usr/bin/python3; in this container that is Python 3.13 while Ubuntu's python3-pyqt5 is built for 3.12, so the smoke test ran with python3.12. On Debian 13 python3-pyqt5 matches the system python3.

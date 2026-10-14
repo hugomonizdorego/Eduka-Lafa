@@ -75,7 +75,8 @@ class Subjects(unittest.TestCase):
         for subject in ("civics", "geography", "health"):
             self.assertIn(subject, classroom.SUBJECTS); self.assertTrue(classroom.lessons(subject))
             self.assertNotEqual(classroom.subject_name(subject, "tet"), subject)
-            items = classroom.questions(subject, "id", 10, random.Random(4)); self.assertEqual(len(items), 10)
+            items = classroom.questions(subject, "id", 10, random.Random(4))
+            self.assertEqual(len(items), min(10, classroom.available(subject, "id"))); self.assertEqual(len({q.text for q in items}), len(items))
         history = classroom.questions("history", "en", 200, random.Random(1))
         self.assertTrue(any("Prime Minister" in q.text for q in history))
 
@@ -97,19 +98,20 @@ class DesignUI(unittest.TestCase):
         self.w = Window(Settings(language="en"), review=True); self.w.show(); self.app.processEvents()
     def tearDown(self):
         self.w.companion.close(); self.w.close(); self.w.deleteLater(); self.app.processEvents()
-    def test_lobby_tiles_ring_and_start(self):
-        self.assertEqual(set(self.w.home_tiles), {"timor", "classroom", "languages", "homework", "exams", "report", "library", "system"})
-        self.assertEqual(self.w.home_tiles["classroom"].value.text(), str(len(classroom.lessons())))
-        self.w.home_tiles["report"].clicked.emit(); self.assertEqual(self.w.page_title("report"), self.w.title.text())
-        self.w.navigate("home"); self.w.start_learning()   # no results yet -> a quiz starts
-        self.assertEqual(self.w.title.text(), "Exam hall"); self.assertEqual(self.w.exam.kind, "quiz")
-    def test_sections_search_and_progress(self):
-        self.w.navigate("learn")
-        checked = [key for key, b in self.w.segments if b.isChecked()]; self.assertEqual(checked, ["learn"])
-        self.w.go_search("Timor-Leste · Ataúro"); self.assertEqual(self.w.inspect_title.text(), "Ataúro")
-        self.w.go_search("fractions"); self.assertEqual(self.w.lesson_title.text(), "Fractions")
-        self.w.go_search("no such thing at all"); self.assertEqual(self.w.title.text(), "Classroom")
-        self.assertEqual(self.w.progress_value.text(), "—")
+    def test_home_has_four_quick_cards_and_keyboard(self):
+        titles = [c.heading.text() for c in self.w.home_quick]
+        self.assertEqual(titles, ["Start learning", "Find knowledge", "Tasks & schedule", "OS help"])
+        from lafa.qt import QKeyEvent, QEvent, Qt
+        self.w.home_quick[2].keyPressEvent(QKeyEvent(QEvent.KeyPress, Qt.Key_Return, Qt.NoModifier))
+        self.assertEqual(self.w.current_section(), "activities")
+        self.w.home_quick[0].keyPressEvent(QKeyEvent(QEvent.KeyPress, Qt.Key_Return, Qt.NoModifier))
+        self.assertEqual(self.w.current_section(), "study")
+    def test_continue_learning_and_favourites(self):
+        self.assertFalse(self.w.continue_button.isVisibleTo(self.w))
+        self.w.progress.opened("lesson", "lafa://lesson/school/science:0", "Water cycle"); self.w.refresh_home()
+        self.assertEqual(self.w.home_recent.text(), "Water cycle"); self.assertTrue(self.w.continue_button.isVisibleTo(self.w))
+        self.assertTrue(self.w.progress.toggle_favourite("lesson", "lafa://lesson/school/science:0", "Water cycle"))
+        self.assertTrue(self.w.progress.is_favourite("lesson", "lafa://lesson/school/science:0"))
     def test_atlas_filters_and_live_text(self):
         self.w.navigate("culture"); self.w.filter_atlas("leaders")
         self.assertEqual(set(self.w.atlas_tiles), {"presidents", "prime_ministers"})

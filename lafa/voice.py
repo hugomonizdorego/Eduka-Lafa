@@ -1,11 +1,11 @@
-"""Explicit microphone capture; no always-on recording or background upload."""
+"""Read aloud on this computer with espeak-ng (works offline).
+
+LAFA does not record the microphone and sends no audio anywhere."""
 import shutil
 import subprocess
-import tempfile
-from pathlib import Path
 
 class Voice:
-    def __init__(self): self.speaker=None; self.recorder=None
+    def __init__(self): self.speaker=None
     def speak(self, text, language="en", rate=155):
         self.stop_speaking()
         executable=shutil.which("espeak-ng") or shutil.which("espeak")
@@ -22,18 +22,5 @@ class Voice:
             if self.speaker is proc: self.speaker=None
     def stop_speaking(self):
         if self.speaker and self.speaker.poll() is None: self.speaker.terminate()
-    def capture_and_transcribe(self, client, online=lambda:True):
-        executable=shutil.which("arecord")
-        if not executable: raise RuntimeError("Microphone capture needs alsa-utils (arecord).")
-        with tempfile.TemporaryDirectory(prefix="lafa-audio-") as folder:
-            path=Path(folder)/"recording.wav"
-            self.recorder=subprocess.Popen([executable,"-q","-D","default","-f","S16_LE","-r","16000","-c","1","-d","8",str(path)],stdout=subprocess.DEVNULL,stderr=subprocess.PIPE)
-            _, error=self.recorder.communicate(timeout=14)
-            code=self.recorder.returncode
-            self.recorder=None
-            if code: raise RuntimeError("Microphone could not be opened. Check your sound device and permissions.")
-            if not online(): raise RuntimeError("Internet disconnected. Recording discarded.")
-            return client.transcribe(path)
     def stop(self):
         self.stop_speaking()
-        if self.recorder and self.recorder.poll() is None: self.recorder.terminate()

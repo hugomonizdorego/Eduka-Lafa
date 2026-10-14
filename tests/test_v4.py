@@ -9,7 +9,7 @@ import tempfile
 import unittest
 from unittest.mock import patch
 from lafa.agent import Agent
-from lafa.config import Settings,Secrets
+from lafa.config import Settings
 from lafa.desktop_entry import exec_path
 from lafa.i18n import RELEASE
 from lafa.instance import ActivationServer
@@ -19,26 +19,26 @@ def module(name,path):
     spec=importlib.util.spec_from_file_location(name,path);item=importlib.util.module_from_spec(spec);spec.loader.exec_module(item);return item
 
 class V4Core(unittest.TestCase):
-    @patch('lafa.agent.encyclopedia_search')
-    @patch('lafa.providers.json_request')
-    def test_ordinary_chat_is_never_sent_to_public_search(self,api,search):
-        agent=Agent(Settings(language='id'),Secrets());agent.client.ready=lambda:False
-        for text in ['My address is private','Saya ingin menceritakan masalah keluarga','What is Dili?']:
-            result=agent.run(text,[],True);self.assertIn('Cari sumber publik',result.text)
-        api.assert_not_called();search.assert_not_called()
+    @patch('lafa.tools.json_request')
+    @patch('lafa.net.request')
+    def test_ordinary_sentences_are_never_sent_to_the_internet(self,net,wiki):
+        agent=Agent(Settings(language='id'))
+        for text in ['My address is private','Saya ingin menceritakan masalah keluarga']:
+            result=agent.run(text,[],True);self.assertNotIn('Wikipedia',result.text)
+        net.assert_not_called();wiki.assert_not_called()
     def test_invalid_config_fields_do_not_erase_valid_preferences(self):
         with tempfile.TemporaryDirectory() as folder:
-            path=Path(folder)/'settings.json';path.write_text(json.dumps({'language':[],'companion':True,'roots':['/tmp/selected'],'card_minutes':float('inf'),'news_minutes':None,'models':{'openai':'saved-model'}}))
-            result=Settings.load(path);self.assertTrue(result.companion);self.assertEqual(result.roots,['/tmp/selected']);self.assertEqual(result.models['openai'],'saved-model');self.assertEqual(result.card_minutes,5)
+            path=Path(folder)/'settings.json';path.write_text(json.dumps({'language':[],'companion':True,'roots':['/tmp/selected'],'card_minutes':float('inf'),'news_minutes':None}))
+            result=Settings.load(path);self.assertTrue(result.companion);self.assertEqual(result.roots,['/tmp/selected']);self.assertEqual(result.card_minutes,15)
     def test_preference_fifo_is_rejected_without_blocking(self):
         import time
         with tempfile.TemporaryDirectory() as folder:
             path=Path(folder)/'settings.json';os.mkfifo(path);started=time.monotonic();settings=Settings.load(path);self.assertFalse(settings.companion);self.assertLess(time.monotonic()-started,1)
     def test_readiness_report_does_not_contain_private_data_or_query_network(self):
         helper=module('v4_diagnostics',ROOT/'scripts/check-system.py')
-        with patch.object(helper.importlib.util,'find_spec',return_value=None),patch.object(helper.Settings,'load',return_value=Settings(roots=['/private/person-folder'],models={'openai':'private-model'})),patch.dict(os.environ,{'OPENAI_API_KEY':'private-test-secret'}),patch('lafa.net.request') as request:
+        with patch.object(helper.importlib.util,'find_spec',return_value=None),patch.object(helper.Settings,'load',return_value=Settings(roots=['/private/person-folder'])),patch.dict(os.environ,{'OPENAI_API_KEY':'private-test-secret'}),patch('lafa.net.request') as request:
             report=helper.checks(False)
-        text=json.dumps(report);self.assertNotIn('person-folder',text);self.assertNotIn('private-model',text);self.assertNotIn('private-test-secret',text);request.assert_not_called()
+        text=json.dumps(report);self.assertNotIn('person-folder',text);self.assertNotIn('private-test-secret',text);request.assert_not_called()
     def test_locale_catalogues_have_the_same_keys(self):
         for code,strings in RELEASE.items():self.assertEqual(set(strings),set(RELEASE['en']),code)
     def test_exec_path_survives_both_desktop_escape_layers(self):
@@ -87,10 +87,9 @@ class V4UI(unittest.TestCase):
         self.window.review=True
         if self.window.settings_dialog:self.window.settings_dialog.accept()
         self.window.companion.close();self.window.close();self.window.deleteLater();self.app.processEvents()
-    def test_cancel_provider_edits_does_not_modify_live_models(self):
-        self.window.settings.models={'openai':'original','gemini':'original-gemini'};before=dict(self.window.settings.models)
-        self.window.open_settings();self.window.model.setText('unsaved');self.window.provider.setCurrentIndex(self.window.provider.findData('gemini'));self.window.settings_dialog.reject()
-        self.assertEqual(self.window.settings.models,before);self.window.open_settings();self.assertEqual(self.window.model.text(),'original')
+    def test_cancel_settings_does_not_modify_live_preferences(self):
+        self.window.open_settings();self.window.quiet_check.setChecked(not self.window.settings.quiet_mode);self.window.settings_dialog.reject()
+        self.assertFalse(self.window.settings.quiet_mode);self.window.open_settings();self.assertFalse(self.window.quiet_check.isChecked())
     def test_failed_preference_write_preserves_live_configuration(self):
         self.window.open_settings();self.window.companion_check.setChecked(True);self.window.review=False;errors=[]
         with patch.object(Settings,'save',side_effect=OSError('write denied')),patch.object(self.window,'error',side_effect=errors.append):self.window.save_settings()
@@ -98,12 +97,12 @@ class V4UI(unittest.TestCase):
     def test_offline_save_keeps_request_buttons_and_all_characters_paused(self):
         from lafa.mascot import Character
         self.window.set_online(False);self.window.open_settings();self.window.save_settings()
-        # Offline after saving: local chat stays available, internet search does not.
-        self.assertTrue(self.window.send_button.isEnabled());self.assertFalse(self.window.public_search_button.isEnabled())
+        # Offline after saving: local search stays available, internet search does not.
+        panel=self.window.search_panels['home'];self.assertTrue(panel['input'].isEnabled());self.assertFalse(panel['internet'].isEnabled())
         self.assertTrue(self.window.findChildren(Character))
     def test_settings_save_keeps_code_output_and_draft_chat(self):
-        self.window.code_lesson.setCurrentIndex(2);self.window.code_editor.setPlainText('print("my lesson")');self.window.code_output.setPlainText('my lesson');self.window.input.setText('unsent message');self.window.open_settings();self.window.save_settings()
-        self.assertEqual(self.window.code_lesson.currentIndex(),2);self.assertEqual(self.window.code_editor.toPlainText(),'print("my lesson")');self.assertEqual(self.window.code_output.toPlainText(),'my lesson');self.assertEqual(self.window.input.text(),'unsent message')
+        self.window.code_lesson.setCurrentIndex(2);self.window.code_editor.setPlainText('print("my lesson")');self.window.code_output.setPlainText('my lesson');self.window.search_panels['home']['input'].setText('unsent search');self.window.open_settings();self.window.save_settings()
+        self.assertEqual(self.window.code_lesson.currentIndex(),2);self.assertEqual(self.window.code_editor.toPlainText(),'print("my lesson")');self.assertEqual(self.window.code_output.toPlainText(),'my lesson');self.assertEqual(self.window.search_panels['home']['input'].text(),'unsent search')
     def test_disabling_all_cards_does_not_starve_minute_activity_changes(self):
         companion=self.window.companion;companion.settings.companion=True;companion.set_online(True);companion.collapse();now=[0];companion.clock=lambda:now[0];companion.mark_activity();companion.last_card=0
         companion.settings.card_minutes=1;companion.settings.cultural_cards=False;companion.settings.positive_messages=False;companion.settings.fun_messages=False;companion.set_state('idle');now[0]=60
@@ -117,8 +116,14 @@ class V4UI(unittest.TestCase):
         c.input.setText('private draft');c.show_card(Card('automatic'),automatic=True);self.assertFalse(c.bubblebox.isVisible())
         c.input.clear();c.paused=True;c.show_card(Card('automatic'),automatic=True);self.assertFalse(c.bubblebox.isVisible())
         c.paused=False;c.show_card(Card('automatic'),automatic=True);self.assertTrue(c.bubblebox.isVisible())
-    def test_public_search_button_uses_an_explicit_command(self):
-        calls=[];self.window.input.setText('Dili');self.window.send_message=lambda text:calls.append(text);self.window.search_public_chat();self.assertEqual(calls,['/ask Dili'])
+    def test_internet_button_searches_only_on_request(self):
+        panel=self.window.search_panels['home']
+        with patch('lafa.app.encyclopedia_search') as wiki:
+            self.window.set_online(True);self.window.run_search('home','fotosintesis')
+            import time
+            end=time.monotonic()+10
+            while panel['outcome'] is None and time.monotonic()<end:self.app.processEvents();time.sleep(0.01)
+            wiki.assert_not_called();self.assertIn('fotosintesis',panel['results'].toPlainText().lower())
     def test_native_activation_pending_state_and_timeout(self):
         from lafa.qt import QWidget,QVBoxLayout
         helper=module('v4_native_pending',ROOT/'integration/eduka_lafa_settings.py');host=QWidget();layout=QVBoxLayout(host);now=[0]

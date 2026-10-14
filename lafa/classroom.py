@@ -13,6 +13,7 @@ vocabulary between LAFA's four languages and Timor-Leste history.
 from dataclasses import dataclass, field
 from datetime import datetime
 import random
+import re
 import time
 
 from . import school, timorleste
@@ -177,6 +178,8 @@ class Question:
     options: list
     correct: str
     subject: str
+    explanation: str = ""      # a sentence from the lesson that explains the answer
+    related: str = ""          # title of the related lesson
 
 SUBJECTS = ["math", "science", "languages", "history", "civics", "geography", "health", "ict", "arts"]
 VOCAB_Q = L("How do you say “{word}” in {target}?", "Apa bahasa {target} dari “{word}”?", "Como se diz “{word}” em {target}?", "Oinsá atu dehan “{word}” iha {target}?")
@@ -184,49 +187,92 @@ LANG_NAMES = {"en": L("English", "Inggris", "inglês", "Inglés"), "id": L("Indo
               "pt": L("Portuguese", "Portugis", "português", "Portugés"), "tet": L("Tetun", "Tetun", "tétum", "Tetun")}
 
 def _math(lang, rng, n):
-    out = []; practice = school.MathPractice(rng)
-    for i in range(n):
-        q = practice.new(1 + i % 3); a = practice.answer
+    out = []; practice = school.MathPractice(rng); seen = set()
+    for i in range(n * 5):
+        if len(out) >= n: break
+        q = practice.new(1 + len(out) % 3); a = practice.answer
+        if q in seen: continue
+        seen.add(q)
         options = {a}
         while len(options) < 4: options.add(a + rng.choice([-10, -2, -1, 1, 2, 3, 10]))
         options = [str(o) for o in options]; rng.shuffle(options)
-        out.append(Question(q, options, str(a), "math"))
+        out.append(Question(q, options, str(a), "math", explanation=q.replace("?", str(a))))
     return out
 
 def _vocab(lang, rng, n):
-    out = []
-    for _ in range(n):
+    out = []; seen = set()
+    for _ in range(n * 6):
+        if len(out) >= n: break
         targets = [l for l in LANGS if l != lang]; target = rng.choice(targets)
         card = rng.choice(VOCAB); s, t = LANGS.index(lang), LANGS.index(target)
+        if (card, target) in seen: continue
+        seen.add((card, target))
         options = {card[t]}
         while len(options) < 4: options.add(rng.choice(VOCAB)[t])
         options = list(options); rng.shuffle(options)
-        out.append(Question(text(VOCAB_Q, lang).format(word=card[s], target=text(LANG_NAMES[target], lang)), options, card[t], "languages"))
+        out.append(Question(text(VOCAB_Q, lang).format(word=card[s], target=text(LANG_NAMES[target], lang)), options, card[t], "languages",
+                            explanation=f"{card[s]} = {card[t]} ({text(LANG_NAMES[target], lang)})"))
     return out
+
+_WORD = re.compile(r"\w{4,}")
+
+def _explain(subject, lang, question, correct):
+    """The lesson sentence that best explains an answer, and its lesson title.
+
+    Only a sentence that names the correct answer counts; otherwise nothing is
+    shown (Lafa never makes up an explanation)."""
+    answer = correct.casefold(); words = set(_WORD.findall(question.casefold()))
+    best = (0, "", "")
+    for lesson in lessons(subject):
+        for point in lesson.points:
+            sentence = text(point, lang); low = sentence.casefold()
+            if answer not in low: continue
+            score = 2 + len(words & set(_WORD.findall(low)))
+            if score > best[0]: best = (score, sentence, text(lesson.title, lang))
+    return best[1], best[2]
 
 def _bank(subject, lang, rng):
     out = []
     for question, options in school.QUIZ.get(subject, []) + EXTRA_QUIZ.get(subject, []):
         texts = [text(o, lang) for o in options]; correct = texts[0]; rng.shuffle(texts)
-        out.append(Question(text(question, lang), texts, correct, subject))
+        why, related = _explain(subject, lang, text(question, lang), correct)
+        out.append(Question(text(question, lang), texts, correct, subject, why, related))
     if subject == "history":
         out += [Question(q, o, c, "history") for q, o, c in timorleste.history_questions(lang, rng)]
         from . import timor_atlas
         out += [Question(q, o, c, "history") for q, o, c in timor_atlas.leader_questions(lang, rng)]
     return out
 
+def unique(items):
+    """Questions without repeats (same question text)."""
+    seen = set(); out = []
+    for q in items:
+        if q.text not in seen: seen.add(q.text); out.append(q)
+    return out
+
 def questions(subject, lang="en", count=10, rng=None):
-    """`count` different questions about a subject ("all" mixes every subject)."""
+    """Up to `count` *different* questions about a subject ("all" mixes every
+    subject). When the question bank is smaller, fewer questions are returned:
+    a session never repeats a question."""
     rng = rng or random.Random()
+    if str(subject).startswith("age:"):
+        # Learning for every age: "age:<subject>:<level>" (either part may be empty).
+        from . import curriculum
+        _, key, level = (subject.split(":") + ["", ""])[:3]
+        return unique(curriculum.questions(key or None, level or None, lang, 1000, rng))[:count]
     if subject == "all":
         per = max(1, -(-count // len(SUBJECTS))); pool = []
         for s in SUBJECTS: pool += questions(s, lang, per, rng)
-        rng.shuffle(pool); return pool[:count]
+        pool = unique(pool); rng.shuffle(pool); return pool[:count]
     if subject == "math": return _math(lang, rng, count)
     if subject == "languages": return _vocab(lang, rng, count)
-    pool = _bank(subject, lang, rng); rng.shuffle(pool)
-    while len(pool) < count and pool: pool += pool[:count - len(pool)]
+    pool = unique(_bank(subject, lang, rng)); rng.shuffle(pool)
     return pool[:count]
+
+def available(subject, lang="en"):
+    """How many different questions a subject has (for the "limited bank" note)."""
+    if subject in ("math", "languages"): return 10**6
+    return len(questions(subject, lang, 10**6, random.Random(0)))
 
 # -------------------------------------------------------------------- exams
 KINDS = {"quiz": (5, 0), "test": (10, 0), "exam": (20, 20 * 60)}   # questions, seconds (0 = no limit)
@@ -243,14 +289,23 @@ def grade(percent, lang="en"):
     for limit, name in GRADES:
         if percent >= limit: return text(name, lang)
 
+def valid_age_subject(subject):
+    from . import curriculum
+    parts = str(subject).split(":")
+    return (len(parts) in (2, 3) and parts[0] == "age" and (not parts[1] or curriculum.subject(parts[1]) is not None)
+            and (len(parts) == 2 or not parts[2] or parts[2] in curriculum.LEVEL_KEYS) and any(parts[1:]))
+
 class ExamSession:
     """One quiz, test or exam. Answers are checked on this computer."""
-    def __init__(self, kind="quiz", subject="all", lang="en", rng=None, clock=time.monotonic):
+    def __init__(self, kind="quiz", subject="all", lang="en", rng=None, clock=time.monotonic, items=None):
         if kind not in KINDS: raise ValueError("Unknown exam kind.")
-        if subject != "all" and subject not in SUBJECTS: raise ValueError("Unknown subject.")
+        if subject != "all" and subject not in SUBJECTS and not valid_age_subject(subject): raise ValueError("Unknown subject.")
         self.kind, self.subject, self.lang, self.clock = kind, subject, lang, clock
         count, self.limit = KINDS[kind]
-        self.items = questions(subject, lang, count, rng); self.index = 0; self.answers = []; self.started = clock()
+        self.items = questions(subject, lang, count, rng) if items is None else unique(items)[:count]
+        self.requested = count; self.limited = len(self.items) < count
+        if self.limited and self.limit: self.limit = max(60, self.limit * len(self.items) // count)
+        self.index = 0; self.answers = []; self.started = clock()
     @property
     def current(self):
         return self.items[self.index] if not self.finished else None
@@ -272,10 +327,18 @@ class ExamSession:
     def percent(self): return round(100 * self.score / self.total) if self.total else 0
     def mistakes(self):
         return [(q, choice) for q, choice, ok in self.answers if not ok]
+    def retry(self, rng=None):
+        """A practice session with only the questions answered wrongly."""
+        wrong = [q for q, _ in self.mistakes()]
+        for q in wrong: (rng or random).shuffle(q.options)
+        return ExamSession("quiz", self.subject, self.lang, clock=self.clock, items=wrong)
 
 # ------------------------------------------------------------- report card
 class ReportCard:
-    """Results of quizzes, tests and exams, kept in ~/.local/share/lafa/report.json."""
+    """Practice results ("Hasil Latihan"), kept in ~/.local/share/lafa/report.json.
+
+    These are the learner's personal progress, not an official school report.
+    Retried mistake sessions are not saved, so averages stay comparable."""
     def __init__(self, folder=None):
         self.path = (data_dir() if folder is None else __import__("pathlib").Path(folder)) / "report.json"
         self.entries = [e for e in _read(self.path, []) if isinstance(e, dict) and {"when", "kind", "subject", "score", "total"} <= e.keys()][-1000:]
@@ -293,7 +356,7 @@ class ReportCard:
         return {s: (a, b, round(t / a)) for s, (a, b, t) in out.items()}
     def export_text(self, lang="en", name=""):
         from .i18n import tr
-        lines = [f"LAFA · {tr(lang, 'report_card')}" + (f" · {name}" if name else ""), datetime.now().strftime("%Y-%m-%d"), ""]
+        lines = [f"LAFA · {tr(lang, 'report_card')}" + (f" · {name}" if name else ""), datetime.now().strftime("%Y-%m-%d"), tr(lang, "results_personal"), ""]
         for subject, (attempts, best, average) in sorted(self.summary().items()):
             lines.append(f"{subject_name(subject, lang)}: {tr(lang, 'average')} {average}% · {tr(lang, 'best')} {best}% · {attempts}× · {grade(average, lang)}")
         lines += ["", tr(lang, "history_label")]
@@ -302,6 +365,11 @@ class ReportCard:
         return "\n".join(lines) + "\n"
 
 def subject_name(subject, lang):
+    if str(subject).startswith("age:"):
+        from . import curriculum
+        _, key, level = (subject.split(":") + ["", ""])[:3]
+        names = [curriculum.subject_name(key, lang) if key else "", curriculum.level_name(level, lang).split(" · ")[0] if level else ""]
+        return " · ".join(n for n in names if n)
     if subject == "all":
         from .i18n import tr
         return tr(lang, "all_subjects")

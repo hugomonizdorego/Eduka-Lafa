@@ -13,8 +13,18 @@ FEEDS=[
  ('Tatoli','https://tatoli.tl/feed/',{'tatoli.tl','www.tatoli.tl'}),
  ('Timor Post','https://timorpost.com/feed/',{'timorpost.com','www.timorpost.com'}),
  ('Government of Timor-Leste','https://timor-leste.gov.tl/?feed=rss2&lang=en',{'timor-leste.gov.tl','www.timor-leste.gov.tl'}),
+ # 0.1.4: more Timor-Leste media (standard WordPress feeds; a site that does
+ # not answer is skipped and named in the status line).
+ ('Timor News','https://timornews.tl/feed/',{'timornews.tl','www.timornews.tl'}),
+ ('Hatutan','https://hatutan.com/feed/',{'hatutan.com','www.hatutan.com'}),
+ ('O Diligente','https://odiligente.com/feed/',{'odiligente.com','www.odiligente.com'}),
+ ('Jornal Independente','https://independente.tl/feed/',{'independente.tl','www.independente.tl'}),
+ ('Diário Nacional','https://diarionacional.tl/feed/',{'diarionacional.tl','www.diarionacional.tl'}),
+ ('The Dili Weekly','https://thediliweekly.com/feed/',{'thediliweekly.com','www.thediliweekly.com'}),
+ ('Neon Metin','https://neonmetin.info/feed/',{'neonmetin.info','www.neonmetin.info'}),
+ ('Fundasaun Mahein','https://www.fundasaunmahein.org/feed/',{'fundasaunmahein.org','www.fundasaunmahein.org'}),
 ]
-NEWS_LINKS=[('Tatoli','https://tatoli.tl/'),('Timor Post','https://timorpost.com/'),('Government of Timor-Leste','https://timor-leste.gov.tl/?lang=en'),('Tatoli Education (English)','https://en.tatoli.tl/category/education/')]
+NEWS_LINKS=[('Tatoli','https://tatoli.tl/'),('Timor Post','https://timorpost.com/'),('RTTL','https://rttl.tl/'),('La\'o Hamutuk','https://www.laohamutuk.org/'),('Government of Timor-Leste','https://timor-leste.gov.tl/?lang=en'),('Tatoli Education (English)','https://en.tatoli.tl/category/education/')]
 TOPICS={
  'education':['education','educacao','edukasaun','school','eskola','university','universidade','student','estudante','teacher','profesor','professor','aprendizagem'],
  'arts_culture':['culture','cultura','kultura','cultural','arte','artes','artist','dance','dansa','tebe','bidu','tais','museum','museu','festival','music'],
@@ -35,7 +45,7 @@ def fetch_one(feed):
 
 def timor_news(topic='priority'):
     if topic not in {'priority',*TOPICS}:raise ValueError('Unknown Timor-Leste news topic.')
-    with ThreadPoolExecutor(max_workers=3) as pool:results=list(pool.map(fetch_one,FEEDS))
+    with ThreadPoolExecutor(max_workers=6) as pool:results=list(pool.map(fetch_one,FEEDS))
     failures=[failure for items,failure in results if failure]
     if len(failures)==len(FEEDS):raise NetworkError('Timor-Leste feeds are unavailable. Open the source websites or try again later.')
     sources=[];seen=set()

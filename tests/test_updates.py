@@ -1,4 +1,4 @@
-"""Automatic source updates: strict catalog validation, caching, merging, releases."""
+"""Content updates: strict catalog validation, caching and merging (no program updates)."""
 import json
 import os
 from pathlib import Path
@@ -57,13 +57,8 @@ class CatalogTests(unittest.TestCase):
         self.assertIn("new-card", [c["id"] for c in CardDeck().cards])
 
 class ReleaseTests(unittest.TestCase):
-    def test_version_ordering(self):
-        k = updates.version_key
-        self.assertLess(k("0.1.0a1"), k("0.1.0")); self.assertLess(k("0.1.0"), k("0.1.1a1")); self.assertLess(k("0.1.1"), k("0.2.0")); self.assertLess(k("0.9.9"), k("0.10.0"))
-    def test_newer_release(self):
-        with patch("lafa.updates.__version__", "0.1.1"):
-            self.assertEqual(updates.newer_release(lambda: {"tag_name": "v0.1.2"}), "0.1.2")
-            self.assertIsNone(updates.newer_release(lambda: {"tag_name": "v0.1.1"}))
-            self.assertIsNone(updates.newer_release(lambda: {"tag_name": "latest; rm -rf"}))
+    def test_lafa_is_not_a_second_updater(self):
+        # App updates come from APT / Eduka Update Service; LAFA only loads validated data.
+        for name in ("newer_release", "version_key", "RELEASES_URL"): self.assertFalse(hasattr(updates, name), name)
 
 if __name__ == "__main__": unittest.main()

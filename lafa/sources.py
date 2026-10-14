@@ -7,13 +7,18 @@ Z-Library from the original list is not included: it distributes copyrighted
 books without permission (its domains were seized in 2022). Open Library,
 Project Gutenberg and the Internet Archive offer free books legally.
 
-Descriptions are in Indonesian (from the directory) and English. LAFA checks
-every hour, when online, whether each site answers, and the list itself can be
-updated through the online catalog (lafa/assets/catalog.json)."""
+Descriptions are in Indonesian (from the directory) and English. The sites
+are not all free and not of equal quality: lafa/source_meta.py records for
+each one its languages, topics, level, whether it needs an account or money,
+whether it is recommended as an academic source and why. Availability is
+checked only when needed (see below), and the list itself can be updated as
+validated data through the online catalog (lafa/assets/catalog.json)."""
+
+from .source_meta import meta, COMMUNITY_RESOURCES  # noqa: F401  (re-exported)
 
 SOURCE_CATEGORIES = [
     ("elearning", {"en": "E-learning & courses", "id": "E-learning & kursus", "pt": "E-learning e cursos", "tet": "Kursu online"}, "#12b886"),
-    ("books", {"en": "Free books & encyclopedias", "id": "Buku gratis & ensiklopedia", "pt": "Livros gratuitos e enciclopédias", "tet": "Livru gratuitu no ensiklopédia"}, "#f59f00"),
+    ("books", {"en": "Books & encyclopedias", "id": "Buku & ensiklopedia", "pt": "Livros e enciclopédias", "tet": "Livru no ensiklopédia"}, "#f59f00"),
     ("biomed", {"en": "Biology, chemistry & medicine", "id": "Biologi, kimia & kedokteran", "pt": "Biologia, química e medicina", "tet": "Biolojia, kímika no medisina"}, "#e64980"),
     ("mathspace", {"en": "Maths, physics & space", "id": "Matematika, fisika & antariksa", "pt": "Matemática, física e espaço", "tet": "Matemátika, fízika no espasu"}, "#4c6ef5"),
     ("tech", {"en": "Computers, technology & architecture", "id": "Komputer, teknologi & arsitektur", "pt": "Informática, tecnologia e arquitetura", "tet": "Informátika, teknolojia no arkitetura"}, "#15aabf"),
@@ -116,26 +121,41 @@ def search(query, lang="en"):
     words = [w for w in str(query).casefold().split() if w]
     return [s for s in SOURCES if all(w in (s[1] + " " + s[2] + " " + text(s[3], lang) + " " + text(s[3], "id")).casefold() for w in words)]
 
-# ------------------------------------------------------------ hourly check
+# ------------------------------------------------------------ availability
+# Checked when needed (opening the Library page or a source, or the "Check now"
+# button), never the whole catalogue every hour. Results are cached for a day.
+# A site that answers is only *reachable*: that never proves its content is
+# correct.
 import json as _json
 import os as _os
 import tempfile as _tempfile
+import time as _time
 import urllib.error as _urlerror
 import urllib.request as _urlrequest
 from datetime import datetime as _datetime
 from pathlib import Path as _Path
+
+STATES = ("ok", "not_found", "restricted", "unknown")
+CACHE_HOURS = 24
 
 def status_path():
     base = _Path(_os.environ.get("XDG_CACHE_HOME", str(_Path.home() / ".cache")))
     return base / "lafa" / "sources-status.json"
 
 def load_status():
+    """{url: {"state", "checked", "at"}}; old "up"/"down" entries are read as ok/unknown."""
     path = status_path()
     try:
         if path.is_file() and not path.is_symlink() and path.stat().st_size < 500_000:
             data = _json.loads(path.read_text(encoding="utf-8"))
             if isinstance(data, dict):
-                return {k: v for k, v in data.items() if isinstance(v, dict) and v.get("state") in {"up", "down"} and isinstance(v.get("checked"), str)}
+                clean = {}
+                for url, v in data.items():
+                    if not isinstance(v, dict) or not isinstance(v.get("checked"), str): continue
+                    state = {"up": "ok", "down": "unknown"}.get(v.get("state"), v.get("state"))
+                    if state in STATES:
+                        at = v.get("at"); clean[url] = {"state": state, "checked": v["checked"], "at": float(at) if isinstance(at, (int, float)) and not isinstance(at, bool) else 0.0}
+                return clean
     except (OSError, ValueError, UnicodeError):
         pass
     return {}
@@ -152,19 +172,114 @@ def _save_status(data):
 class _Stop(_urlrequest.HTTPRedirectHandler):
     def redirect_request(self, *args, **kwargs): return None   # a redirect already proves the site answers
 
+def classify(code):
+    """State for an HTTP status code (None: no answer at all)."""
+    if code is None: return "unknown"
+    if 200 <= code < 400: return "ok"
+    if code in (404, 410): return "not_found"
+    if code in (401, 402, 403, 407, 429, 451): return "restricted"
+    return "unknown"
+
 def probe(url, timeout=6):
-    """True when the HTTPS site answers (any status below 500)."""
-    if not url.startswith("https://"): return False
+    """ok, not_found, restricted or unknown for one HTTPS address."""
+    if not url.startswith("https://"): return "unknown"
     request = _urlrequest.Request(url, method="HEAD", headers={"User-Agent": "LAFA (Edukasaun OS) source check"})
     try:
-        with _urlrequest.build_opener(_Stop()).open(request, timeout=timeout) as response: return response.status < 500
-    except _urlerror.HTTPError as error: return error.code < 500
-    except Exception: return False
+        with _urlrequest.build_opener(_Stop()).open(request, timeout=timeout) as response: return classify(response.status)
+    except _urlerror.HTTPError as error:
+        # A refused HEAD (405) does not mean the page is missing.
+        return "unknown" if error.code == 405 else classify(error.code)
+    except Exception:
+        return "unknown"
 
-def check_all(items=None, check=probe):
-    """Check every source once (runs in a worker thread); returns (up, down)."""
-    data = load_status(); up = down = 0; now = _datetime.now().strftime("%Y-%m-%d %H:%M")
-    for source in (items or SOURCES):
-        ok = check(source[2]); data[source[2]] = {"state": "up" if ok else "down", "checked": now}
-        up, down = up + ok, down + (not ok)
-    _save_status(data); return up, down
+def check(items, check=probe, force=False, now=None):
+    """Check the given sources (worker thread). Fresh results (< CACHE_HOURS)
+    are reused unless force=True. Returns {state: count}."""
+    data = load_status(); now = now if now is not None else _time.time(); counts = {s: 0 for s in STATES}
+    for source in items:
+        url = source[2]; old = data.get(url)
+        if not force and old and now - old.get("at", 0) < CACHE_HOURS * 3600:
+            counts[old["state"]] += 1; continue
+        state = check(url)
+        state = state if state in STATES else ("ok" if state is True else "unknown")
+        data[url] = {"state": state, "checked": _datetime.fromtimestamp(now).strftime("%Y-%m-%d %H:%M"), "at": now}
+        counts[state] += 1
+    _save_status(data); return counts
+
+def check_all(items=None, check_one=probe, force=True):
+    """Manual "Check now" for the whole catalogue."""
+    return check(items or SOURCES, check_one, force)
+
+# ------------------------------------------------- Timor-Leste media (0.1.4)
+# From the Edukasaun OS list of Timor-Leste media. Sources without their own
+# website open a Facebook search for the page name (shown as "Facebook").
+TIMOR_CATEGORIES = [
+    ("tl_news", {"en": "TL news portals & agencies", "id": "Portal & agensi berita TL", "pt": "Portais e agências de notícias", "tet": "Portál no ajénsia notísia"}, "#c92a2a"),
+    ("tl_papers", {"en": "TL newspapers", "id": "Surat kabar TL", "pt": "Jornais de TL", "tet": "Jornál TL"}, "#e8590c"),
+    ("tl_tv", {"en": "TL television", "id": "Televisi TL", "pt": "Televisão de TL", "tet": "Televizaun TL"}, "#5f3dc4"),
+    ("tl_radio", {"en": "TL radio & podcasts", "id": "Radio & podcast TL", "pt": "Rádio e podcasts de TL", "tet": "Rádiu no podcast TL"}, "#1971c2"),
+    ("tl_community", {"en": "TL community radio", "id": "Radio komunitas TL", "pt": "Rádios comunitárias", "tet": "Rádiu komunidade"}, "#2b8a3e"),
+    ("tl_research", {"en": "TL research & civil society", "id": "Riset & masyarakat sipil TL", "pt": "Investigação e sociedade civil", "tet": "Peskiza no sosiedade sivíl"}, "#5c940d"),
+]
+TIMOR_CATEGORIES = [("tl_gov", {"en": "Government & education (official)", "id": "Pemerintah & pendidikan (resmi)", "pt": "Governo e educação (oficial)", "tet": "Governu no edukasaun (ofisiál)"}, "#1864ab")] + TIMOR_CATEGORIES
+SOURCE_CATEGORIES = SOURCE_CATEGORIES + TIMOR_CATEGORIES
+
+def _fb(name):
+    from urllib.parse import quote
+    return "https://www.facebook.com/search/pages/?q=" + quote(name)
+
+def _d(id_, en):
+    return {"id": id_, "en": en}
+
+TIMOR_MEDIA = [
+    ("tl_news", "Wikipédia Tetun", "https://tet.wikipedia.org/wiki/P%C3%A1jina_Mahuluk", _d("Ensiklopedia bebas dalam bahasa Tetun.", "The free encyclopedia in Tetun.")),
+    ("tl_news", "TATOLI", "https://tatoli.tl/", _d("Agensi berita nasional Timor-Leste.", "National news agency of Timor-Leste.")),
+    ("tl_news", "Timor News", "https://timornews.tl/", _d("Portal berita online Timor-Leste.", "Timor-Leste online news portal.")),
+    ("tl_news", "Hatutan", "https://hatutan.com/", _d("Portal berita online.", "Online news portal.")),
+    ("tl_news", "O Diligente", "https://odiligente.com/", _d("Berita online dari Dili.", "Online news from Dili.")),
+    ("tl_news", "Lafaek News", "https://lafaeknews.tl/", _d("Portal berita online.", "Online news portal.")),
+    ("tl_news", "Liquiça Post", "https://liquicapost.com/", _d("Berita dari Liquiçá.", "News from Liquiçá.")),
+    ("tl_news", "SMNews", "https://smnews.tl/", _d("Portal berita online.", "Online news portal.")),
+    ("tl_news", "Ponto.tl", "https://ponto.tl/", _d("Portal berita online.", "Online news portal.")),
+    ("tl_news", "Oekusi Post", "https://oekusipost.com/", _d("Berita dari Oé-Cusse.", "News from Oé-Cusse.")),
+    ("tl_news", "Timor Agora", "https://timoragora.blogspot.com/", _d("Blog berita Timor-Leste.", "Timor-Leste news blog.")),
+    ("tl_news", "SAPO Timor-Leste", "https://www.sapo.tl/", _d("Portal berita dan layanan online.", "News and online services portal.")),
+    ("tl_news", "Neon Metin", "https://neonmetin.info/", _d("Portal berita online.", "Online news portal.")),
+    ("tl_news", "Timoroman", "https://timoroman.com/", _d("Portal berita online.", "Online news portal.")),
+    ("tl_news", "Lalenok", _fb("Lalenok Ba Ema Hotu"), _d("Halaman Facebook resmi.", "Official Facebook page.")),
+    ("tl_papers", "Timor Post", "https://timorpost.com/", _d("Surat kabar harian dengan edisi online.", "Daily newspaper with an online edition.")),
+    ("tl_papers", "Suara Timor Lorosae (STL)", "https://stlnews.co/", _d("Surat kabar harian dengan edisi online.", "Daily newspaper with an online edition.")),
+    ("tl_papers", "Jornal Independente", "https://independente.tl/", _d("Surat kabar harian.", "Daily newspaper.")),
+    ("tl_papers", "Diário Nacional", "https://diarionacional.tl/", _d("Surat kabar harian.", "Daily newspaper.")),
+    ("tl_papers", "Tempo Semanal", "https://temposemanal.com/", _d("Surat kabar mingguan investigasi.", "Weekly investigative newspaper.")),
+    ("tl_papers", "The Dili Weekly", "https://thediliweekly.com/", _d("Berita mingguan dalam bahasa Tetun dan Inggris.", "Weekly news in Tetun and English.")),
+    ("tl_papers", "Kla'ak", "https://klaak.org/", _d("Media dan arsip.", "Media and archive.")),
+    ("tl_papers", "Jornal da República", "https://mj.gov.tl/jornal/", _d("Lembaran negara resmi (undang-undang dan keputusan).", "Official gazette (laws and decrees).")),
+    ("tl_tv", "RTTL", "https://rttl.tl/", _d("Radio dan Televisi Timor-Leste (publik).", "Rádio e Televisão de Timor-Leste (public).")),
+    ("tl_tv", "GMN-TV", "https://gmntv.tl/", _d("Grupo Media Nacional, televisi swasta.", "Grupo Media Nacional, private TV.")),
+    ("tl_tv", "TV Edukasaun (TVE)", "https://www.youtube.com/results?search_query=TV+Edukasaun+Timor-Leste", _d("Televisi pendidikan Kementerian Pendidikan.", "Educational TV of the Ministry of Education.")),
+    ("tl_radio", "Radio Liberdade", "https://radioliberdade.tl/", _d("Radio komersial dengan siaran online.", "Commercial radio with online streaming.")),
+    ("tl_radio", "Radio Timor Kmanek (RTK)", "https://diocesedili.org/", _d("Radio Keuskupan Dili.", "Radio of the Diocese of Dili.")),
+    ("tl_radio", "Radio Vox Populi", _fb("Radio Vox Populi Timor-Leste"), _d("Halaman Facebook.", "Facebook page.")),
+    ("tl_radio", "Radio Rakambia", "https://radiorakambia.tl/", _d("Radio dengan siaran online.", "Radio with online streaming.")),
+    ("tl_radio", "Radio Lorico Lian", _fb("Radio Lorico Lian"), _d("Halaman Facebook.", "Facebook page.")),
+    ("tl_radio", "Radio Metro Dili", _fb("Radio Metro Dili"), _d("Halaman Facebook.", "Facebook page.")),
+    ("tl_radio", "Radio M3", _fb("Radio M3 Timor-Leste"), _d("Halaman Facebook.", "Facebook page.")),
+    ("tl_radio", "JPF Podcast", "https://www.youtube.com/results?search_query=JPF+Podcast+Timor", _d("Podcast di YouTube dan Facebook.", "Podcast on YouTube and Facebook.")),
+]
+for _name, _place in [("Radio Komunidade Mauloko", "Mauloko"), ("Radio Rai Husar Aileu", "Aileu"), ("Radio Tokodede Liquiçá", "Liquiçá"), ("Afoni Lifau", "Oé-Cusse"),
+                      ("Radio Cafe Ermera", "Ermera"), ("Ili Wai Manatuto", "Manatuto"), ("Radio Popular Colelemai Bucoli", "Baucau"), ("Lian Matebian", "Baucau"),
+                      ("Radio Comunidade Los Palos", "Lautém"), ("Radio Povu Viqueque", "Viqueque"), ("Radio Don Boaventura", "Manufahi"), ("Lian Tatamailau", "Ainaro"),
+                      ("Radio Cova Taroman", "Covalima")]:
+    TIMOR_MEDIA.append(("tl_community", _name, _fb(_name), _d(f"Radio komunitas di {_place} (Facebook).", f"Community radio in {_place} (Facebook).")))
+TIMOR_MEDIA += [
+    ("tl_research", "La'o Hamutuk", "https://www.laohamutuk.org/", _d("Institut pemantauan dan analisis pembangunan Timor-Leste.", "Timor-Leste institute for development monitoring and analysis.")),
+    ("tl_research", "Fundasaun Mahein", "https://www.fundasaunmahein.org/", _d("Riset tentang keamanan dan pertahanan.", "Research on security and defence.")),
+    ("tl_research", "FONGTIL", "https://fongtil.tl/", _d("Forum LSM Timor-Leste.", "NGO Forum of Timor-Leste.")),
+    ("tl_research", "Timor-Leste Press Union (TLPU)", _fb("Timor-Leste Press Union TLPU"), _d("Persatuan pers Timor-Leste.", "Timor-Leste press union.")),
+]
+OFFICIAL = [
+    ("tl_gov", "Governo de Timor-Leste", "https://timor-leste.gov.tl/", {"id": "Portal resmi Pemerintah Timor-Leste: berita dan informasi pemerintahan.", "en": "Official portal of the Government of Timor-Leste: news and government information."}),
+    ("tl_gov", "Ministério da Educação (MoE)", "https://moe.gov.tl/", {"id": "Kementerian Pendidikan Timor-Leste: kebijakan, kurikulum dan pengumuman sekolah.", "en": "Ministry of Education of Timor-Leste: policy, curriculum and school announcements."}),
+]
+SOURCES = SOURCES + OFFICIAL + TIMOR_MEDIA

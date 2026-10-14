@@ -7,6 +7,7 @@ inspector panel). Colours come from the Eduka-Desktop theme: light mint and
 cream backgrounds with the Eduka accent, or a deep teal palette for Eduka's
 dark themes — never black.
 """
+from urllib.parse import unquote
 import math
 from .qt import (Qt, Signal, QColor, QPointF, QRectF, QPainter, QPainterPath, QPen, QLinearGradient, QRadialGradient,
                  QFrame, QWidget, QLabel, QVBoxLayout, QHBoxLayout, QPushButton, QSizePolicy, QFont)
@@ -143,13 +144,15 @@ class SourceCard(QFrame):
         v = QVBoxLayout(self); v.setContentsMargins(18, 12, 14, 12); v.setSpacing(3)
         head = QHBoxLayout(); title = QLabel(name); title.setObjectName("sourcetitle"); head.addWidget(title, 1)
         self.dot = QLabel("●"); self.dot.setObjectName("sourcedot"); head.addWidget(self.dot); v.addLayout(head)
-        host = QLabel(url.split("//", 1)[-1].rstrip("/")); host.setObjectName("sourcehost"); v.addWidget(host)
+        host = QLabel(unquote(url.split("//", 1)[-1].rstrip("/"))); host.setObjectName("sourcehost"); v.addWidget(host)
         body = QLabel(description); body.setObjectName("sourcedesc"); body.setWordWrap(True); v.addWidget(body); v.addStretch()
         for child in self.findChildren(QLabel): child.setMinimumWidth(1); child.setSizePolicy(QSizePolicy.Ignored, QSizePolicy.Preferred)
         self.set_state(state)
     def set_state(self, state):
         self.state = state
-        self.dot.setStyleSheet("color:%s;" % {"up": "#2fb344", "down": "#e03131"}.get(state, "#adb5bd"))
+        # ok: reachable · restricted: login/limits · not_found: 404 · unknown: no answer / not checked.
+        self.dot.setStyleSheet("color:%s;" % {"ok": "#2fb344", "up": "#2fb344", "restricted": "#f08c00", "not_found": "#e03131", "down": "#e03131"}.get(state, "#adb5bd"))
+        self.dot.setToolTip({"ok": "OK", "restricted": "Login / limited", "not_found": "404", "unknown": "?"}.get(state, "—"))
     def paintEvent(self, event):
         super().paintEvent(event)
         p = QPainter(self); p.setRenderHint(QPainter.Antialiasing); p.setPen(Qt.NoPen); p.setBrush(self.colour)

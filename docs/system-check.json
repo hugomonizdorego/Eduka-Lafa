@@ -1,11 +1,11 @@
 {
-  "lafa_version": "0.4.0",
-  "network_requested": true,
+  "lafa_version": "0.2.0",
+  "network_requested": false,
   "checks": [
     {
       "check": "Python",
       "status": "pass",
-      "detail": "3.12.14"
+      "detail": "3.13.16"
     },
     {
       "check": "Platform",
@@ -15,12 +15,12 @@
     {
       "check": "Qt dependency",
       "status": "pass",
-      "detail": "PySide6 available"
+      "detail": "PyQt5 + PySide6 available"
     },
     {
       "check": "Character assets",
       "status": "pass",
-      "detail": "17 activity poses; 9 traditional poses"
+      "detail": "17 activity poses; 17 traditional poses"
     },
     {
       "check": "Panel movement",
@@ -38,14 +38,9 @@
       "detail": "Optional command missing: espeak-ng"
     },
     {
-      "check": "Microphone recording",
-      "status": "warning",
-      "detail": "Optional command missing: arecord"
-    },
-    {
       "check": "Local activation",
-      "status": "warning",
-      "detail": "Local sockets unavailable in this environment; test on Edukasaun OS"
+      "status": "pass",
+      "detail": "AF_UNIX binding available"
     },
     {
       "check": "Preferences",
@@ -61,21 +56,6 @@
       "check": "Settings launcher",
       "status": "warning",
       "detail": "Run scripts/install-user.sh from a stable source location"
-    },
-    {
-      "check": "Wikipedia",
-      "status": "pass",
-      "detail": "Public request completed; no AI credentials used"
-    },
-    {
-      "check": "Dili weather",
-      "status": "pass",
-      "detail": "Public request completed; no AI credentials used"
-    },
-    {
-      "check": "Timor-Leste feeds",
-      "status": "pass",
-      "detail": "Public request completed; no AI credentials used"
     }
   ],
   "private_data_included": false
