@@ -1,0 +1,264 @@
+{
+  "area": "world",
+  "category": "human_origins",
+  "articles": [
+    {
+      "id": "w.human_origins.homo_sapiens",
+      "title": {
+        "en": "Where we come from: the story of Homo sapiens",
+        "id": "Dari mana kita berasal: kisah Homo sapiens",
+        "pt": "De onde vimos: a história do Homo sapiens",
+        "tet": "Ita mai husi ne'ebé: Homo sapiens nia istória"
+      },
+      "summary": {
+        "en": "Humans evolved in Africa over millions of years. Our own species, Homo sapiens, appeared there about 300,000 years ago and later spread across the world, meeting other human species such as Neanderthals and Denisovans.",
+        "id": "Manusia berevolusi di Afrika selama jutaan tahun. Spesies kita, Homo sapiens, muncul di sana sekitar 300.000 tahun lalu, lalu menyebar ke seluruh dunia dan bertemu spesies manusia lain seperti Neanderthal dan Denisova.",
+        "pt": "Os seres humanos evoluíram em África ao longo de milhões de anos. A nossa espécie, Homo sapiens, surgiu ali há cerca de 300 mil anos e depois espalhou-se pelo mundo, encontrando outras espécies humanas, como os Neandertais e os Denisovanos.",
+        "tet": "Ema evolui iha Áfrika durante tinan miliaun barak. Ita-nia espésie, Homo sapiens, mosu iha ne'ebá tinan rihun 300 liubá. Depois ita-nia bei'ala sira la'o ba mundu tomak no hasoru ema espésie seluk, hanesan Neandertál no Denisovanu."
+      },
+      "objectives": {
+        "en": [
+          "You will explain the basic idea of human evolution.",
+          "You will describe when and where Homo sapiens first appeared.",
+          "You will name other human species that shared the world with our ancestors."
+        ],
+        "id": [
+          "Anda akan menjelaskan gagasan dasar evolusi manusia.",
+          "Anda akan menguraikan kapan dan di mana Homo sapiens pertama kali muncul.",
+          "Anda akan menyebutkan spesies manusia lain yang pernah hidup sezaman dengan nenek moyang kita."
+        ],
+        "pt": [
+          "Vai explicar a ideia básica da evolução humana.",
+          "Vai descrever quando e onde surgiu o Homo sapiens.",
+          "Vai nomear outras espécies humanas que partilharam o mundo com os nossos antepassados."
+        ],
+        "tet": [
+          "Ita sei esplika ideia baze kona-ba ema nia evolusaun.",
+          "Ita sei hatene bainhira no iha ne'ebé Homo sapiens mosu uluk.",
+          "Ita sei hatene ema espésie seluk ne'ebé moris hamutuk ho ita-nia bei'ala sira."
+        ]
+      },
+      "sections": [
+        {
+          "heading": {"en": "Humans in the tree of life", "id": "Manusia dalam pohon kehidupan"},
+          "body": {
+            "en": "All living things change over many generations. This process is called evolution, and in 1859 Charles Darwin explained one of its main causes, natural selection: living things with features that help them survive and have young pass those features on more often. Humans are part of this story. We belong to the primates, the group that includes monkeys and apes. Our closest living relatives are chimpanzees and bonobos. Humans did not evolve from chimpanzees. Instead, studies of fossils and DNA show that humans and chimpanzees share a common ancestor that lived in Africa roughly 6 to 7 million years ago. Since then, the two lines have evolved separately.",
+            "id": "Semua makhluk hidup berubah selama banyak generasi. Proses ini disebut evolusi, dan pada tahun 1859 Charles Darwin menjelaskan salah satu penyebab utamanya, yaitu seleksi alam: makhluk hidup yang memiliki ciri yang membantu mereka bertahan hidup dan berketurunan lebih sering mewariskan ciri itu. Manusia juga bagian dari kisah ini. Kita termasuk primata, kelompok yang mencakup monyet dan kera. Kerabat terdekat kita yang masih hidup adalah simpanse dan bonobo. Manusia tidak berevolusi dari simpanse. Sebaliknya, penelitian fosil dan DNA menunjukkan bahwa manusia dan simpanse memiliki nenek moyang yang sama yang hidup di Afrika sekitar 6 sampai 7 juta tahun lalu. Sejak itu, kedua garis keturunan berevolusi secara terpisah."
+          }
+        },
+        {
+          "heading": {"en": "Early steps in Africa", "id": "Langkah awal di Afrika"},
+          "body": {
+            "en": "For millions of years, all human relatives lived only in Africa. One of the first big changes was walking upright on two legs. A famous skeleton nicknamed Lucy, found in Ethiopia in 1974, belongs to Australopithecus afarensis and is about 3.2 million years old. Lucy walked upright but had a small brain, about the size of a chimpanzee's. Stone tools appear at least 2.6 million years ago. Later, Homo erectus appeared, with a larger body and brain. It was the first human species known to have left Africa, and its fossils have been found as far away as Java in Indonesia. Over time, human brains grew larger and tools became more skilful.",
+            "id": "Selama jutaan tahun, semua kerabat manusia hanya hidup di Afrika. Salah satu perubahan besar pertama adalah berjalan tegak dengan dua kaki. Kerangka terkenal yang dijuluki Lucy, yang ditemukan di Etiopia pada tahun 1974, termasuk spesies Australopithecus afarensis dan berumur sekitar 3,2 juta tahun. Lucy berjalan tegak, tetapi otaknya kecil, kira-kira sebesar otak simpanse. Perkakas batu muncul setidaknya 2,6 juta tahun lalu. Kemudian muncul Homo erectus yang bertubuh dan berotak lebih besar. Spesies ini adalah spesies manusia pertama yang diketahui keluar dari Afrika, dan fosilnya ditemukan sampai sejauh Jawa di Indonesia. Seiring waktu, otak manusia semakin besar dan perkakasnya semakin terampil."
+          }
+        },
+        {
+          "heading": {"en": "Homo sapiens appears", "id": "Kemunculan Homo sapiens"},
+          "body": {
+            "en": "Our own species is called Homo sapiens. The oldest fossils thought to belong to it come from Jebel Irhoud in Morocco and are about 300,000 years old, as reported in 2017. This and other finds suggest that our species evolved across Africa, not in just one place. Early Homo sapiens made fine stone tools, used fire, collected shells and coloured pigments, and later made beads and art. These are signs of complex language and shared ideas. Groups of Homo sapiens moved out of Africa more than once. Most people living outside Africa today descend mainly from groups that spread out of Africa roughly 70,000 to 50,000 years ago and then travelled across Asia, Europe and to Australia.",
+            "id": "Spesies kita disebut Homo sapiens. Fosil tertua yang diduga termasuk spesies ini berasal dari Jebel Irhoud di Maroko dan berumur sekitar 300.000 tahun, seperti dilaporkan pada tahun 2017. Temuan ini dan temuan lain menunjukkan bahwa spesies kita berevolusi di berbagai wilayah Afrika, bukan hanya di satu tempat. Homo sapiens awal membuat perkakas batu yang halus, memakai api, mengumpulkan kerang dan pewarna, lalu kemudian membuat manik-manik dan karya seni. Semua ini adalah tanda bahasa yang kompleks dan gagasan yang dimiliki bersama. Kelompok Homo sapiens keluar dari Afrika lebih dari sekali. Sebagian besar orang yang hidup di luar Afrika sekarang terutama merupakan keturunan kelompok yang menyebar dari Afrika sekitar 70.000 sampai 50.000 tahun lalu, lalu berpindah ke Asia, Eropa, dan Australia."
+          }
+        },
+        {
+          "heading": {"en": "Other humans who shared the world", "id": "Manusia lain yang pernah hidup sezaman"},
+          "body": {
+            "en": "When Homo sapiens spread out of Africa, other human species already lived in Europe and Asia. Neanderthals lived in Europe and western Asia until about 40,000 years ago. Denisovans are known mostly from DNA found in a few bones and teeth, first from a cave in Siberia. In our own region there were very small humans: Homo floresiensis on the island of Flores in Indonesia, and Homo luzonensis on Luzon in the Philippines. Our ancestors sometimes had children with these other humans. As a result, most people whose ancestors lived outside Africa carry a small amount of Neanderthal DNA, and many people in New Guinea, Australia and nearby islands also carry Denisovan DNA.",
+            "id": "Ketika Homo sapiens menyebar keluar dari Afrika, spesies manusia lain sudah tinggal di Eropa dan Asia. Neanderthal hidup di Eropa dan Asia bagian barat sampai sekitar 40.000 tahun lalu. Manusia Denisova sebagian besar dikenal dari DNA yang ditemukan pada beberapa tulang dan gigi, pertama kali dari sebuah gua di Siberia. Di wilayah kita sendiri pernah hidup manusia bertubuh sangat kecil: Homo floresiensis di Pulau Flores, Indonesia, dan Homo luzonensis di Pulau Luzon, Filipina. Nenek moyang kita kadang-kadang memiliki anak dengan manusia lain ini. Akibatnya, kebanyakan orang yang leluhurnya hidup di luar Afrika membawa sedikit DNA Neanderthal, dan banyak orang di Papua, Australia, dan pulau-pulau sekitarnya juga membawa DNA Denisova."
+          }
+        },
+        {
+          "heading": {"en": "One human family", "id": "Satu keluarga manusia"},
+          "body": {
+            "en": "Today, all the other human species have disappeared, and every person alive belongs to Homo sapiens. Scientists are still studying why the others died out; changes in climate, competition and mixing with our ancestors may all have played a part. Studies of DNA show that all living people are very closely related. There is more genetic variety among people within Africa than between groups on different continents, because our species lived in Africa for the longest time. Differences in appearance, such as skin colour, developed as groups adapted to different amounts of sunlight and are only a tiny part of our DNA. Science gives no support to the idea that any group of people is better than another.",
+            "id": "Sekarang semua spesies manusia lain telah lenyap, dan setiap orang yang hidup termasuk Homo sapiens. Ilmuwan masih meneliti mengapa spesies lain punah; perubahan iklim, persaingan, dan percampuran dengan nenek moyang kita mungkin semuanya berperan. Penelitian DNA menunjukkan bahwa semua manusia yang hidup sekarang berkerabat sangat dekat. Keragaman genetik di antara orang-orang di dalam Afrika lebih besar daripada antara kelompok di benua yang berbeda, karena spesies kita paling lama hidup di Afrika. Perbedaan penampilan, seperti warna kulit, berkembang ketika kelompok-kelompok menyesuaikan diri dengan jumlah sinar matahari yang berbeda, dan hanya merupakan bagian yang sangat kecil dari DNA kita. Ilmu pengetahuan sama sekali tidak mendukung anggapan bahwa suatu kelompok manusia lebih baik daripada kelompok lain."
+          }
+        }
+      ],
+      "facts": [
+        {"label": {"en": "Oldest known Homo sapiens fossils", "id": "Fosil Homo sapiens tertua yang diketahui"}, "value": {"en": "about 300,000 years old (Jebel Irhoud, Morocco)", "id": "berumur sekitar 300.000 tahun (Jebel Irhoud, Maroko)"}, "year": "2017", "source": 1},
+        {"label": {"en": "Last common ancestor of humans and chimpanzees", "id": "Nenek moyang bersama terakhir manusia dan simpanse"}, "value": {"en": "roughly 6 to 7 million years ago", "id": "sekitar 6 sampai 7 juta tahun lalu"}, "year": "", "source": 2},
+        {"label": {"en": "Age of the Lucy skeleton", "id": "Umur kerangka Lucy"}, "value": {"en": "about 3.2 million years", "id": "sekitar 3,2 juta tahun"}, "year": "", "source": 2}
+      ],
+      "figure": {
+        "hint": "A simple branching tree (not a straight line) with time running upwards from 7 million years ago to today. Branches labelled: common ancestor with chimpanzees (about 6-7 million years ago), Australopithecus (Lucy, 3.2 million), Homo erectus, Neanderthals, Denisovans, Homo floresiensis, and Homo sapiens (from about 300,000 years ago) as the only branch reaching today.",
+        "caption": {
+          "en": "Human evolution is a branching bush, not a ladder: Homo sapiens is the only branch still alive.",
+          "id": "Evolusi manusia berbentuk semak bercabang, bukan tangga: Homo sapiens adalah satu-satunya cabang yang masih hidup.",
+          "pt": "A evolução humana é um arbusto com muitos ramos, não uma escada: o Homo sapiens é o único ramo ainda vivo.",
+          "tet": "Ema nia evolusaun hanesan ai-hun ho sanak barak, la'ós hanesan eskada: Homo sapiens mak sanak mesak ne'ebé sei moris."
+        }
+      },
+      "sources": [
+        {"title": "Homo sapiens", "publisher": "Smithsonian National Museum of Natural History, Human Origins Program", "url": "https://humanorigins.si.edu/evidence/human-fossils/species/homo-sapiens", "year": "2024"},
+        {"title": "New fossils from Jebel Irhoud, Morocco and the pan-African origin of Homo sapiens (Hublin et al.)", "publisher": "Nature", "url": "https://www.nature.com/articles/nature22336", "year": "2017"},
+        {"title": "Human evolution", "publisher": "Encyclopaedia Britannica", "url": "https://www.britannica.com/science/human-evolution", "year": "2024"}
+      ],
+      "related": ["w.human_origins.peopling_asia_pacific", "w.dinosaurs.fossils", "w.civilizations.first_farmers", "w.science_space.scientific_method", "tl.history.first_people"],
+      "tags": ["biology", "history", "evolution", "human origins", "africa"],
+      "quiz": [
+        {
+          "q": {"en": "Where were the oldest known Homo sapiens fossils, about 300,000 years old, found?", "id": "Di manakah fosil Homo sapiens tertua yang diketahui, berumur sekitar 300.000 tahun, ditemukan?"},
+          "options": {
+            "en": ["Java, Indonesia", "Jebel Irhoud, Morocco", "A cave in Siberia", "Flores, Indonesia"],
+            "id": ["Jawa, Indonesia", "Jebel Irhoud, Maroko", "Sebuah gua di Siberia", "Flores, Indonesia"]
+          },
+          "answer": 1,
+          "explain": {"en": "Fossils from Jebel Irhoud in Morocco, reported in 2017, are about 300,000 years old and are the oldest known Homo sapiens fossils.", "id": "Fosil dari Jebel Irhoud di Maroko, yang dilaporkan pada tahun 2017, berumur sekitar 300.000 tahun dan merupakan fosil Homo sapiens tertua yang diketahui."}
+        },
+        {
+          "q": {"en": "Which statement about humans and chimpanzees is correct?", "id": "Pernyataan manakah tentang manusia dan simpanse yang benar?"},
+          "options": {
+            "en": ["Humans evolved from chimpanzees", "Chimpanzees evolved from humans", "They are not related at all", "They share a common ancestor from millions of years ago"],
+            "id": ["Manusia berevolusi dari simpanse", "Simpanse berevolusi dari manusia", "Keduanya sama sekali tidak berkerabat", "Keduanya memiliki nenek moyang bersama dari jutaan tahun lalu"]
+          },
+          "answer": 3,
+          "explain": {"en": "Humans and chimpanzees are cousins: both lines come from a shared ancestor that lived roughly 6 to 7 million years ago.", "id": "Manusia dan simpanse bersepupu: kedua garis keturunan berasal dari nenek moyang bersama yang hidup sekitar 6 sampai 7 juta tahun lalu."}
+        },
+        {
+          "q": {"en": "Which small human species lived on the island of Flores in Indonesia?", "id": "Spesies manusia kecil apa yang pernah hidup di Pulau Flores, Indonesia?"},
+          "options": {
+            "en": ["Australopithecus afarensis", "Neanderthals", "Homo floresiensis", "Homo luzonensis"],
+            "id": ["Australopithecus afarensis", "Neanderthal", "Homo floresiensis", "Homo luzonensis"]
+          },
+          "answer": 2,
+          "explain": {"en": "Homo floresiensis, a very small human species, is known from Flores. Homo luzonensis lived on Luzon in the Philippines.", "id": "Homo floresiensis, spesies manusia yang sangat kecil, dikenal dari Flores. Homo luzonensis hidup di Pulau Luzon, Filipina."}
+        }
+      ],
+      "review": {"version": 1, "reviewed": "2026-10-15", "status": "Written by the Lafa team from the listed sources; needs review by a subject expert", "licence": "CC BY-SA 4.0", "langs_full": ["en", "id"]}
+    },
+    {
+      "id": "w.human_origins.peopling_asia_pacific",
+      "title": {
+        "en": "The first people of Asia and the Pacific",
+        "id": "Penghuni pertama Asia dan Pasifik",
+        "pt": "Os primeiros povos da Ásia e do Pacífico",
+        "tet": "Ema uluk sira iha Ázia no Pasífiku"
+      },
+      "summary": {
+        "en": "Tens of thousands of years ago, modern humans crossed the deep seas of Wallacea by boat and reached Australia at least 50,000 years ago. At Jerimalai cave in Timor-Leste, people were catching deep-sea fish such as tuna about 42,000 years ago.",
+        "id": "Puluhan ribu tahun lalu, manusia modern menyeberangi laut dalam di Wallacea dengan perahu dan mencapai Australia setidaknya 50.000 tahun lalu. Di Gua Jerimalai, Timor-Leste, orang sudah menangkap ikan laut dalam seperti tuna sekitar 42.000 tahun lalu.",
+        "pt": "Há dezenas de milhares de anos, os humanos modernos atravessaram de barco os mares profundos da Wallacea e chegaram à Austrália há pelo menos 50 mil anos. Na gruta de Jerimalai, em Timor-Leste, pescava-se atum em alto-mar há cerca de 42 mil anos.",
+        "tet": "Tinan rihun barak liubá, ema hakur tasi kle'an iha Wallacea ho ró no to'o Austrália, tinan rihun 50 liubá ka uluk liu. Iha fatuk-kuak Jerimalai, Timor-Leste, ema kaer ona ikan tasi-laran hanesan atun tinan rihun 42 liubá."
+      },
+      "objectives": {
+        "en": [
+          "You will explain what Wallacea is and why crossing it needed boats.",
+          "You will describe when people first reached Australia, New Guinea and Timor.",
+          "You will explain what the Jerimalai cave tells us about early sea skills."
+        ],
+        "id": [
+          "Anda akan menjelaskan apa itu Wallacea dan mengapa penyeberangannya memerlukan perahu.",
+          "Anda akan menguraikan kapan manusia pertama kali mencapai Australia, Papua, dan Timor.",
+          "Anda akan menjelaskan apa yang diungkap Gua Jerimalai tentang keterampilan melaut pada masa awal."
+        ],
+        "pt": [
+          "Vai explicar o que é a Wallacea e porque atravessá-la exigia barcos.",
+          "Vai descrever quando os seres humanos chegaram à Austrália, à Nova Guiné e a Timor.",
+          "Vai explicar o que a gruta de Jerimalai nos ensina sobre as antigas técnicas do mar."
+        ],
+        "tet": [
+          "Ita sei esplika Wallacea mak saida no tanba saida mak ema presiza ró atu hakur.",
+          "Ita sei hatene bainhira ema to'o uluk iha Austrália, Papua no Timor.",
+          "Ita sei esplika saida mak fatuk-kuak Jerimalai hatudu kona-ba ema uluk sira-nia matenek iha tasi."
+        ]
+      },
+      "sections": [
+        {
+          "heading": {"en": "Ice Age seas and lost lands", "id": "Laut Zaman Es dan daratan yang hilang"},
+          "body": {
+            "en": "During the ice ages, huge ice sheets covered parts of the northern continents and held so much water that the sea level fell. At the coldest time, about 20,000 years ago, the sea was around 120 metres lower than today. Large areas of shallow sea floor became dry land. In the west, Sumatra, Java and Borneo were joined to mainland Asia in a land called Sunda. In the east, Australia, New Guinea and Tasmania formed one continent called Sahul. Between them lay Wallacea, a group of islands including Sulawesi, Maluku and the Lesser Sunda Islands, among them Timor. Deep sea surrounded these islands, so they were never joined to either Sunda or Sahul.",
+            "id": "Selama zaman es, lapisan es raksasa menutupi sebagian benua di belahan utara dan menyimpan begitu banyak air sehingga permukaan laut turun. Pada masa terdingin, sekitar 20.000 tahun lalu, permukaan laut sekitar 120 meter lebih rendah daripada sekarang. Banyak dasar laut dangkal menjadi daratan kering. Di barat, Sumatra, Jawa, dan Kalimantan menyatu dengan daratan Asia dalam satu daratan yang disebut Sunda. Di timur, Australia, Papua, dan Tasmania membentuk satu benua yang disebut Sahul. Di antara keduanya terdapat Wallacea, kumpulan pulau yang meliputi Sulawesi, Maluku, dan Nusa Tenggara, termasuk Timor. Laut dalam mengelilingi pulau-pulau ini, sehingga mereka tidak pernah menyatu dengan Sunda maupun Sahul."
+          }
+        },
+        {
+          "heading": {"en": "The Wallace Line", "id": "Garis Wallace"},
+          "body": {
+            "en": "In the 1850s the British naturalist Alfred Russel Wallace travelled through the islands of Southeast Asia collecting animals. He noticed that the wildlife changed sharply between some islands that are close together, such as Bali and Lombok, or Borneo and Sulawesi. Large Asian mammals such as tigers, rhinoceroses and orangutans live to the west, while marsupials, such as kangaroos and tree kangaroos, live in Australia and New Guinea to the east. The boundary he described is now called the Wallace Line. It follows deep sea channels that stayed full of water even when the sea level was low. These channels were barriers for animals, and for early people they could be crossed only by boat or raft.",
+            "id": "Pada tahun 1850-an, naturalis Inggris Alfred Russel Wallace menjelajahi pulau-pulau Asia Tenggara sambil mengumpulkan hewan. Ia memperhatikan bahwa satwa liar berubah tajam di antara beberapa pulau yang berdekatan, seperti Bali dan Lombok, atau Kalimantan dan Sulawesi. Mamalia besar Asia seperti harimau, badak, dan orang utan hidup di sebelah barat, sedangkan hewan berkantung seperti kanguru dan kanguru pohon hidup di Australia dan Papua di sebelah timur. Batas yang ia uraikan kini disebut Garis Wallace. Garis ini mengikuti selat laut dalam yang tetap berair bahkan ketika permukaan laut rendah. Selat-selat ini menjadi penghalang bagi hewan, dan bagi manusia awal hanya dapat diseberangi dengan perahu atau rakit."
+          }
+        },
+        {
+          "heading": {"en": "The first great sea voyages", "id": "Pelayaran besar pertama"},
+          "body": {
+            "en": "To reach Sahul from Asia, modern humans had to cross several stretches of open sea, some of them tens of kilometres wide. These are among the earliest known sea crossings in human history. Archaeologists agree that people reached Australia at least 50,000 years ago, and some sites in northern Australia may be older, although their dates are debated. Scientists think the voyages were probably planned, because enough men, women and children had to arrive to form lasting communities. There were two likely routes: a northern one through Sulawesi and Maluku to New Guinea, and a southern one through the Lesser Sunda Islands and Timor to Australia. People may well have used both routes at different times.",
+            "id": "Untuk mencapai Sahul dari Asia, manusia modern harus menyeberangi beberapa bentangan laut terbuka, sebagian di antaranya selebar puluhan kilometer. Ini termasuk penyeberangan laut paling awal yang diketahui dalam sejarah manusia. Para arkeolog sepakat bahwa manusia sudah mencapai Australia setidaknya 50.000 tahun lalu, dan beberapa situs di Australia utara mungkin lebih tua, meskipun umurnya masih diperdebatkan. Ilmuwan menduga pelayaran ini kemungkinan direncanakan, karena harus ada cukup banyak laki-laki, perempuan, dan anak-anak yang tiba untuk membentuk masyarakat yang bertahan. Ada dua jalur yang mungkin: jalur utara melalui Sulawesi dan Maluku menuju Papua, dan jalur selatan melalui Nusa Tenggara dan Timor menuju Australia. Bisa jadi manusia memakai kedua jalur itu pada waktu yang berbeda."
+          }
+        },
+        {
+          "heading": {"en": "Jerimalai: deep-sea fishing in Timor-Leste", "id": "Jerimalai: memancing di laut dalam di Timor-Leste"},
+          "body": {
+            "en": "Jerimalai is a rock shelter in the limestone near Tutuala, at the eastern tip of Timor-Leste. Archaeologists led by Sue O'Connor of the Australian National University excavated it and published their results in the journal Science in 2011. They found that people used the shelter from about 42,000 years ago. Among the remains of their meals were thousands of fish bones, including bones of tuna and other fast fish of the open ocean. Catching such fish requires boats, good fishing tools and deep knowledge of the sea. This is some of the oldest evidence in the world for deep-sea fishing. The team also found a fish hook made from shell, thousands of years younger but still among the oldest known.",
+            "id": "Jerimalai adalah ceruk batu di perbukitan batu gamping dekat Tutuala, di ujung timur Timor-Leste. Tim arkeolog yang dipimpin Sue O'Connor dari Australian National University menggalinya dan menerbitkan hasilnya di jurnal Science pada tahun 2011. Mereka menemukan bahwa orang sudah memakai ceruk ini sejak sekitar 42.000 tahun lalu. Di antara sisa makanan mereka terdapat ribuan tulang ikan, termasuk tulang tuna dan ikan cepat lain dari laut lepas. Menangkap ikan seperti itu memerlukan perahu, alat pancing yang baik, dan pengetahuan mendalam tentang laut. Ini termasuk bukti tertua di dunia tentang penangkapan ikan di laut dalam. Tim itu juga menemukan kail ikan dari cangkang, yang ribuan tahun lebih muda tetapi tetap termasuk yang tertua yang diketahui."
+          }
+        },
+        {
+          "heading": {"en": "A long and continuing story", "id": "Kisah panjang yang terus berlanjut"},
+          "body": {
+            "en": "The first people of Timor were not the last to arrive. Over the following tens of thousands of years, other groups crossed the seas of the region, bringing new skills, plants, animals and languages. Much later, newcomers brought farming and pottery to the islands. Scientists think this long history helps explain why Timor-Leste has two families of languages: Austronesian languages, such as Tetun and Mambae, related to languages across Indonesia, the Philippines and the Pacific, and Papuan languages, such as Fataluku, Makasae and Bunak, related to languages of New Guinea. Archaeologists are still studying caves across Timor-Leste, and each new excavation adds to what we know about the island's earliest communities.",
+            "id": "Penghuni pertama Timor bukanlah yang terakhir datang. Selama puluhan ribu tahun berikutnya, kelompok-kelompok lain menyeberangi lautan di wilayah ini sambil membawa keterampilan, tanaman, hewan, dan bahasa baru. Jauh kemudian, pendatang baru membawa pertanian dan gerabah ke pulau-pulau ini. Ilmuwan menduga sejarah panjang ini membantu menjelaskan mengapa Timor-Leste memiliki dua rumpun bahasa: bahasa Austronesia, seperti Tetun dan Mambae, yang berkerabat dengan bahasa-bahasa di Indonesia, Filipina, dan Pasifik, serta bahasa Papua, seperti Fataluku, Makasae, dan Bunak, yang berkerabat dengan bahasa-bahasa di Papua. Para arkeolog masih meneliti gua-gua di seluruh Timor-Leste, dan setiap penggalian baru menambah pengetahuan kita tentang masyarakat paling awal di pulau ini."
+          }
+        }
+      ],
+      "facts": [
+        {"label": {"en": "Sea level at the coldest point of the last ice age", "id": "Permukaan laut pada puncak zaman es terakhir"}, "value": {"en": "about 120 m lower than today (about 20,000 years ago)", "id": "sekitar 120 m lebih rendah daripada sekarang (sekitar 20.000 tahun lalu)"}, "year": "", "source": 1},
+        {"label": {"en": "People in Australia", "id": "Manusia di Australia"}, "value": {"en": "at least 50,000 years ago", "id": "setidaknya 50.000 tahun lalu"}, "year": "", "source": 2},
+        {"label": {"en": "Deep-sea fishing at Jerimalai, Timor-Leste", "id": "Penangkapan ikan laut dalam di Jerimalai, Timor-Leste"}, "value": {"en": "about 42,000 years ago (Science, 2011)", "id": "sekitar 42.000 tahun lalu (Science, 2011)"}, "year": "2011", "source": 0}
+      ],
+      "figure": {
+        "hint": "A map of Southeast Asia and Australia during the last ice age: the land of Sunda (mainland Asia with Sumatra, Java, Borneo) shaded in one colour, Sahul (Australia with New Guinea and Tasmania) in another, the islands of Wallacea in between (Sulawesi, Maluku, Lesser Sunda Islands, Timor), a dashed Wallace Line between Bali and Lombok and between Borneo and Sulawesi, and arrows for a northern and a southern sea route. Mark Jerimalai at the eastern tip of Timor.",
+        "caption": {
+          "en": "During the ice age, Sunda and Sahul were large lands, but the islands of Wallacea, including Timor, could only be reached by boat.",
+          "id": "Pada zaman es, Sunda dan Sahul adalah daratan luas, tetapi pulau-pulau Wallacea, termasuk Timor, hanya dapat dicapai dengan perahu.",
+          "pt": "Durante a era glaciar, Sunda e Sahul eram grandes terras, mas as ilhas da Wallacea, incluindo Timor, só se alcançavam de barco.",
+          "tet": "Iha tempu jelu, Sunda no Sahul mak rai boot, maibé ema bele to'o illa sira iha Wallacea, inklui Timor, ho ró de'it."
+        }
+      },
+      "sources": [
+        {"title": "Pelagic fishing at 42,000 years before the present and the maritime skills of modern humans (O'Connor, Ono and Clarkson)", "publisher": "Science", "url": "https://www.science.org/doi/10.1126/science.1207703", "year": "2011"},
+        {"title": "Wallace Line", "publisher": "Encyclopaedia Britannica", "url": "https://www.britannica.com/science/Wallace-Line", "year": "2024"},
+        {"title": "Homo sapiens", "publisher": "Smithsonian National Museum of Natural History, Human Origins Program", "url": "https://humanorigins.si.edu/evidence/human-fossils/species/homo-sapiens", "year": "2024"}
+      ],
+      "related": ["w.human_origins.homo_sapiens", "w.geography_oceans.coral_triangle", "w.earth.rock_cycle", "tl.history.first_people", "tl.culture.tetun_language", "atlas:earth_wallacea", "atlas:jaco_tutuala"],
+      "tags": ["history", "geography", "archaeology", "wallacea", "fishing", "timor-leste"],
+      "quiz": [
+        {
+          "q": {"en": "What is Wallacea?", "id": "Apa itu Wallacea?"},
+          "options": {
+            "en": ["The ice-age land joining Sumatra, Java and Borneo to Asia", "The ice-age continent of Australia and New Guinea", "A group of islands between Sunda and Sahul that were never joined to either", "A volcano in Indonesia"],
+            "id": ["Daratan zaman es yang menyatukan Sumatra, Jawa, dan Kalimantan dengan Asia", "Benua zaman es yang terdiri atas Australia dan Papua", "Kumpulan pulau di antara Sunda dan Sahul yang tidak pernah menyatu dengan keduanya", "Sebuah gunung api di Indonesia"]
+          },
+          "answer": 2,
+          "explain": {"en": "Wallacea, which includes Timor, is surrounded by deep sea, so it stayed separate from Sunda and Sahul even when sea level was low.", "id": "Wallacea, termasuk Timor, dikelilingi laut dalam, sehingga tetap terpisah dari Sunda dan Sahul bahkan saat permukaan laut rendah."}
+        },
+        {
+          "q": {"en": "What did archaeologists find at Jerimalai that shows deep-sea fishing about 42,000 years ago?", "id": "Apa yang ditemukan arkeolog di Jerimalai yang menunjukkan penangkapan ikan laut dalam sekitar 42.000 tahun lalu?"},
+          "options": {
+            "en": ["Bones of tuna and other open-ocean fish", "A wooden ship", "Paintings of whales", "Metal fish hooks"],
+            "id": ["Tulang tuna dan ikan laut lepas lainnya", "Sebuah kapal kayu", "Lukisan ikan paus", "Kail ikan dari logam"]
+          },
+          "answer": 0,
+          "explain": {"en": "Tuna live in the open ocean, so their bones in the cave show that people had boats and the skills to fish far from shore.", "id": "Tuna hidup di laut lepas, sehingga tulangnya di gua itu menunjukkan bahwa orang sudah memiliki perahu dan keterampilan menangkap ikan jauh dari pantai."}
+        },
+        {
+          "q": {"en": "Why did the first people need boats to reach Australia, even in the ice age?", "id": "Mengapa manusia pertama memerlukan perahu untuk mencapai Australia, bahkan pada zaman es?"},
+          "options": {
+            "en": ["Australia was covered by ice", "Walking was forbidden", "The sea level was higher than today", "Deep sea channels stayed full of water even when the sea level was low"],
+            "id": ["Australia tertutup es", "Berjalan kaki dilarang", "Permukaan laut lebih tinggi daripada sekarang", "Selat laut dalam tetap berair bahkan saat permukaan laut rendah"]
+          },
+          "answer": 3,
+          "explain": {"en": "The sea fell by about 120 metres, but the channels of Wallacea are much deeper, so there was never a land bridge to Sahul.", "id": "Permukaan laut turun sekitar 120 meter, tetapi selat-selat di Wallacea jauh lebih dalam, sehingga tidak pernah ada jembatan darat ke Sahul."}
+        }
+      ],
+      "review": {"version": 1, "reviewed": "2026-10-15", "status": "Written by the Lafa team from the listed sources; needs review by a subject expert", "licence": "CC BY-SA 4.0", "langs_full": ["en", "id"]}
+    }
+  ],
+  "coverage": [
+    {"topic": {"en": "The story of Homo sapiens", "id": "Kisah Homo sapiens"}, "status": "available", "article": "w.human_origins.homo_sapiens"},
+    {"topic": {"en": "The first people of Asia and the Pacific", "id": "Penghuni pertama Asia dan Pasifik"}, "status": "available", "article": "w.human_origins.peopling_asia_pacific"},
+    {"topic": {"en": "Neanderthals and Denisovans", "id": "Neanderthal dan Denisova"}, "status": "planned", "article": ""},
+    {"topic": {"en": "Homo floresiensis, the small humans of Flores", "id": "Homo floresiensis, manusia kecil dari Flores"}, "status": "planned", "article": ""},
+    {"topic": {"en": "Ancient rock art of Southeast Asia and Timor-Leste", "id": "Seni cadas kuno di Asia Tenggara dan Timor-Leste"}, "status": "planned", "article": ""},
+    {"topic": {"en": "Austronesian voyagers of the Pacific", "id": "Para pelaut Austronesia di Pasifik"}, "status": "planned", "article": ""}
+  ]
+}

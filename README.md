@@ -1,6 +1,6 @@
 # Lafa — Pendamping Belajar dan Asisten Edukasaun OS
 
-**Lafa 0.2.0 Alpha** is a learning companion and Edukasaun OS assistant from
+**Lafa 0.2.1 Alpha** is a learning companion and Edukasaun OS assistant from
 Timor-Leste, for **Edukasaun OS** (Debian 13 Trixie, LXQt) and the
 **Eduka-Desktop Suite** (Eduka-Desktop, Eduka-Panel, Eduka-Settings).
 
@@ -18,6 +18,12 @@ behaviour](docs/OFFLINE.md) and [how to keep developing Lafa](docs/DEVELOPMENT.m
 
 ![Lafa Home](docs/screenshots/01-home.png)
 
+![Explore Timor-Leste](docs/screenshots/19-timor-leste-encyclopedia.png)
+
+![Article: Tais](docs/screenshots/20b-timor-leste-article-tais.png)
+
+![World Encyclopedia: dinosaur module](docs/screenshots/73-module-dinosaurs-explore.png)
+
 ![Lafa on a 1024×600 screen](docs/screenshots/02-home-1024x600.png)
 
 ![Search: local material first](docs/screenshots/03-search-local-material.png)
@@ -32,8 +38,8 @@ show actual Lafa pixels on an **illustrated desktop**, not Edukasaun OS.
 ## Install on Edukasaun OS
 
 ```bash
-sh tools/build-deb.sh                       # -> dist/lafa_0.2.0_all.deb
-sudo apt install ./dist/lafa_0.2.0_all.deb  # dependencies come from Debian
+sh tools/build-deb.sh                       # -> dist/lafa_0.2.1_all.deb
+sudo apt install ./dist/lafa_0.2.1_all.deb  # dependencies come from Debian
 ```
 
 `apt` installs the dependencies (`python3-pyqt5`, the same Qt binding as the
@@ -60,9 +66,9 @@ Below 1100 px the sidebar becomes a compact icon bar.
 | Section | What is in it |
 |---|---|
 | **Beranda / Home** | Search box, four quick accesses (Mulai Belajar, Cari Pengetahuan, Tugas & Jadwal, Bantuan OS), last material with *Continue learning*, the next activities |
-| **Belajar / Learn** | Lessons for ages 5–100 and the Timor-Leste school subjects; subject guides; **Latihan** and **Simulasi Tes** with explanations and *retry my mistakes*; first phrases in many languages; digital literacy; programming examples |
-| **Perpustakaan / Library** | My files, saved material, internet sources (with metadata and an on-demand status check), Wikipedia, favourites, external sites (reference works, Kiwix, optional AI websites, community wikis) |
-| **Timor-Leste** | History, places and symbols (atlas), Timor-Leste news (education, culture, technology), weather |
+| **Belajar / Learn** | **World Encyclopedia** (12 categories, sourced articles with objectives, figure, activity, questions; interactive Dinosaurs, Earth-history and Industrial-Revolution modules; coverage list), lessons for ages 5–100 and the Timor-Leste school subjects; subject guides; **Latihan** and **Simulasi Tes** with explanations and *retry my mistakes*; first phrases in many languages; digital literacy; programming examples |
+| **Perpustakaan / Library** | **Download all sources for offline use** (one button), my files, saved material, internet sources (with metadata and an on-demand status check), Wikipedia, favourites, external sites (reference works, Kiwix, optional AI websites, community wikis) |
+| **Timor-Leste** | An encyclopedia in six illustrated categories (History · Map & Regions · Culture & Language · Nature & Life · People & Government · Economy & Society) → topics → articles, with Back, Home, breadcrumb and search; News and Weather (need internet) |
 | **Aktivitas Saya / My activities** | Tasks and timetable, reminders and focus, **Hasil Latihan** (practice results) |
 | **Bantuan OS / OS help** | Edukasaun OS guides, accessibility, computer check, open the tools that are installed |
 
@@ -163,8 +169,9 @@ Lafa does not:
 The calm crocodile on the Eduka-Panel is switched on only in **Eduka-Settings
 → Lafa-Configuration**. Opening Lafa Desktop does not switch it on.
 
-- **Click it** for quick actions that work offline: continue the lesson,
-  tasks, focus and OS help. It also offers read aloud and a 🤫 quiet toggle.
+- **Click it** for the popup: search "Find material or files…", four tiles
+  (Continue learning · Explore · Tasks · OS help), one recommendation, and
+  Open Desktop · Read aloud (only with a local voice) · Quiet mode. No microphone.
 - **Quiet mode** stops spontaneous messages, hover questions and self-talk.
 - Spontaneous messages are **limited per hour** (default 4). They pause while
   you type, while Lafa is paused, and while another app is fullscreen (X11).
@@ -172,9 +179,12 @@ The calm crocodile on the Eduka-Panel is switched on only in **Eduka-Settings
 - **Entertainment** (magician, mind reader, comedian, bathing/toilet and party
   animations, jokes) is off by default and switched on in Settings.
 - Greetings, positive messages and Timor-Leste identity stay. There are three
-  outfits: Tais Mane, Tuxedo, Casual.
-- On X11 Lafa stands on the available panel geometry. On Wayland it uses a
-  compositor fallback (XWayland) and is **not yet tested**.
+  outfits: Tais Mane, Formal, Casual Belajar. Walking uses 8 drawn frames
+  synced to the distance moved; transparent corners pass clicks through.
+- On X11 Lafa walks along the available panel. On **Wayland** (tested with
+  Weston 13, headless) Lafa does not roam: it walks in place, the click mask
+  and the popup work, and the compositor decides the window position;
+  fullscreen pause is X11-only.
 
 ## Upgrading from 0.1.x
 
@@ -222,8 +232,13 @@ use a fixed, safe list of apps and pages. Lafa never runs a shell command.
 - Lessons are not reviewed by the Ministry of Education. Short language
   courses are first phrases, not full courses. The glossary is curated; Lafa
   does not translate freely.
-- Wayland behaviour of the Virtual Assistant is untested. Fullscreen
-  detection needs `xprop` (x11-utils) on X11.
+- On Wayland Lafa cannot place or move its own window (protocol limit); it
+  stays where the compositor puts it. Fullscreen detection needs `xprop`
+  (x11-utils) on X11.
+- The encyclopedia is not complete: 34 hand-written articles plus the
+  regrouped atlas topics; the coverage list shows what is planned. Facts,
+  links and Tetun terms awaiting a human check are in
+  [docs/CONTENT-REVIEW.md](docs/CONTENT-REVIEW.md).
 - Online features (Wikipedia, news, weather, source checks) were tested with
   recorded data; real websites can change.
 - [Validation](docs/VALIDATION.md) · [Security](docs/SECURITY.md) ·

@@ -23,11 +23,11 @@ from datetime import datetime
 from .qt import (
     QSize,QDate,QDateEdit,QDateTimeEdit,QDateTime,QTabWidget,QShortcut,QKeySequence,
     Qt,QObject,Signal,QRunnable,QThreadPool,QTimer,QUrl,QLockFile,Slot,QProcess,
-    QIcon,QDesktopServices,QFont,
+    QIcon,QDesktopServices,QFont,QPalette,
     QApplication,QMainWindow,QWidget,QVBoxLayout,QHBoxLayout,QGridLayout,
     QLabel,QPushButton,QLineEdit,QComboBox,QCheckBox,QStackedWidget,QFrame,
     QScrollArea,QTextBrowser,QTableWidget,QTableWidgetItem,QHeaderView,QFormLayout,QListWidget,
-    QFileDialog,QMessageBox,QDialog,QPlainTextEdit,QMenu,QSystemTrayIcon,QSpinBox,QListWidgetItem,QSizePolicy,QColor,
+    QFileDialog,QMessageBox,QDialog,QPlainTextEdit,QMenu,QSystemTrayIcon,QSpinBox,QListWidgetItem,QSizePolicy,QColor,QProgressBar,
     BINDING,run,started,prepare_application,
 )
 from . import VERSION_LABEL
@@ -44,9 +44,15 @@ from .learning import LessonPython,LESSONS,REFERENCES,LESSON_KEYS
 from .reminders import Reminders
 from .progress import Progress
 from .instance import server_name,activate_existing,ActivationServer
+from . import icons, encyclopedia as enc
+from .encyclopedia_ui import Browser
 from . import osguide, personality, eduka, outfits, school, updates, classroom, roles, timorleste, timor_atlas, livefacts, ui_kit, sources, offline, languages, platform_check, memory, curriculum, actions, search, source_meta
 import random
 
+
+class PackRelay(QObject):
+    """Progress of the offline download, delivered on the UI thread."""
+    progress=Signal(int,int,str)
 
 class Signals(QObject):
     done=Signal(object)
@@ -103,15 +109,15 @@ PAGES=[("home","🏠"),("study","📘"),("library","📚"),("timor","🇹🇱"),
 PAGE_INDEX={key:i for i,(key,_) in enumerate(PAGES)}
 SECTIONS={key:key for key,_ in PAGES}
 # section -> tab keys, in order
-TABS={"study":["lessons","subjects","practice","languages","digital","coding"],
+TABS={"study":["encyclopedia","lessons","subjects","practice","languages","digital","coding"],
       "library":["search","files","saved","sources","wikipedia","favourites","external"],
-      "timor":["atlas","news","weather"],
+      "timor":["atlas","news","weather"],   # pages of the Timor-Leste encyclopedia (not tabs)
       "activities":["tasks","reminders","results"],
       "oshelp":["guides","access","computer"]}
 # old page keys -> (section, tab)
 ROUTES={"home":("home",None),"chat":("home",None),"classroom":("study","lessons"),"teachers":("study","subjects"),"exams":("study","practice"),
         "languages":("study","languages"),"coding":("study","coding"),"learn":("library","search"),"files":("library","files"),"hub":("library","external"),
-        "culture":("timor","atlas"),"live":("timor","weather"),"homework":("activities","tasks"),"reminders":("activities","reminders"),
+        "culture":("timor","atlas"),"encyclopedia":("study","encyclopedia"),"atlas":("timor","atlas"),"live":("timor","weather"),"homework":("activities","tasks"),"reminders":("activities","reminders"),
         "report":("activities","results"),"os_help":("oshelp","guides")}
 TITLE_KEYS={"home":"home","study":"menu_study","library":"menu_library","timor":"menu_timor","activities":"menu_activities","oshelp":"menu_oshelp"}
 SUBTITLE_KEYS={"home":"sub_home","study":"sub_study","library":"sub_library","timor":"sub_timor","activities":"sub_activities","oshelp":"sub_oshelp"}
@@ -120,6 +126,9 @@ NAV_ICONS={"home":["user-home","go-home"],"study":["applications-education","acc
            "timor":[],"activities":["x-office-calendar","office-calendar","view-calendar"],"oshelp":["help-browser","system-help","help-contents"],
            "settings":["preferences-system","configure","settings-configure"],"about":["help-about","dialog-information"]}
 START_PAGES=list(SECTION_KEYS)
+# 0.2.1: each menu has its own SVG icon (lafa/assets/icons, shipped with Lafa).
+SVG_ICONS={"home":"home","study":"book-open","library":"bookshelf","timor":"flag-tl","activities":"calendar-check","oshelp":"monitor-help",
+           "settings":"settings","about":"info"}
 LABEL_KEYS={"lesson":"label_lesson","file":"label_file","saved":"label_saved","internet":"label_internet","guide":"label_guide"}
 LABEL_COLOURS={"lesson":"#0b7a55","file":"#3b5bdb","saved":"#8a5a00","internet":"#5f3dc4","guide":"#0b7285"}
 
@@ -131,26 +140,71 @@ QFrame#sidebar {background:qlineargradient(x1:0,y1:0,x2:0,y2:1,stop:0 @glass_top
 QFrame#sidebar QLabel {background:transparent;}
 QFrame#sidebar QScrollArea, QWidget#navbody {background:transparent; border:0;}
 QLabel#navsection {color:@muted; padding:6px 12px 2px 12px; font-size:10px; font-weight:700; letter-spacing:1px;}
-QFrame#sidebar QPushButton {color:@text; background:transparent; text-align:left; border:0; padding:7px 12px; border-radius:11px; font-size:13px;}
+QFrame#sidebar QPushButton {color:@text; background:transparent; text-align:left; border:2px solid transparent; padding:6px 11px; border-radius:11px; font-size:13px;}
 QFrame#sidebar QPushButton:hover {background:@accent_soft;}
-QFrame#sidebar QPushButton:checked {background:@accent; color:@accent_text; font-weight:700;}
+QFrame#sidebar QPushButton:focus {border-color:@focus;}
+QFrame#sidebar QPushButton:checked {background:@accent_soft; color:@accent_strong; font-weight:700;}
 QFrame#sidebar QPushButton#sidesettings {border:1px solid @border; text-align:center;}
 QFrame#sidebar QLineEdit#sidesearch {background:@surface2; border:1px solid @border; border-radius:12px; padding:7px 10px;}
 QFrame#progresscard {background:@surface2; border:1px solid @border; border-radius:14px;}
 QProgressBar {background:@border; border:0; border-radius:4px; height:8px; max-height:8px; text-align:center; color:transparent;}
 QProgressBar::chunk {background:@accent; border-radius:4px;}
 QFrame#topbar {background:transparent;}
-QPushButton#segment {background:@surface; border:1px solid @border; border-radius:0; padding:7px 14px; color:@muted;}
-QPushButton#segment:checked {background:@accent_soft; color:@text; border-color:@accent;}
-QPushButton#segfirst {background:@surface; border:1px solid @border; border-top-left-radius:14px; border-bottom-left-radius:14px; padding:7px 14px; color:@muted;}
-QPushButton#seglast {background:@surface; border:1px solid @border; border-top-right-radius:14px; border-bottom-right-radius:14px; padding:7px 14px; color:@muted;}
-QPushButton#segfirst:checked, QPushButton#seglast:checked {background:@accent_soft; color:@text; border-color:@accent;}
-QPushButton {background:@surface; border:1px solid @border; border-radius:11px; padding:8px 14px; color:@text;}
+QPushButton#segment {background:@surface; border:2px solid @border; border-radius:0; padding:7px 14px; color:@muted; font-weight:600;}
+QPushButton#segfirst {background:@surface; border:2px solid @border; border-top-left-radius:14px; border-bottom-left-radius:14px; border-top-right-radius:0; border-bottom-right-radius:0; padding:7px 14px; color:@muted; font-weight:600;}
+QPushButton#seglast {background:@surface; border:2px solid @border; border-top-right-radius:14px; border-bottom-right-radius:14px; border-top-left-radius:0; border-bottom-left-radius:0; padding:7px 14px; color:@muted; font-weight:600;}
+QPushButton#segment:checked, QPushButton#segfirst:checked, QPushButton#seglast:checked {background:@accent_soft; color:@accent_strong; border-color:@accent;}
+QPushButton#segment:focus, QPushButton#segfirst:focus, QPushButton#seglast:focus {border-color:@focus;}
+QPushButton {background:@surface; border:2px solid @border; border-radius:11px; padding:7px 13px; color:@text;}
 QPushButton:hover {background:@accent_soft; border-color:@accent;}
+QPushButton:focus {border-color:@focus;}
 QPushButton:disabled {color:@muted; background:@surface2;}
-QPushButton#primary {background:@accent; color:@accent_text; border:0; font-weight:700;}
-QPushButton#primary:hover {background:@accent_dark;}
-QPushButton#primary:disabled {background:@border; color:@muted;}
+QPushButton#primary {background:@accent_button; color:@accent_text; border:2px solid @accent_button; font-weight:700;}
+QPushButton#primary:hover {background:@accent_dark; border-color:@accent_dark;}
+QPushButton#primary:focus {border-color:@focus; background:@accent_dark;}
+QPushButton#primary:disabled {background:@border; border-color:@border; color:@muted;}
+QPushButton#iconbutton {padding:0; border-radius:10px;}
+QFrame#navbar QLabel#breadcrumb {font-size:13px; background:transparent;}
+QLineEdit#contextsearch {border-radius:18px; padding:7px 12px;}
+QFrame#enccard, QFrame#enctile, QFrame#encrow, QFrame#factcard, QFrame#contents {background:@surface; border:2px solid @border; border-radius:16px;}
+QFrame#enccard:hover, QFrame#enctile:hover, QFrame#encrow:hover {border-color:@accent;}
+QFrame#enccard:focus, QFrame#enctile:focus, QFrame#encrow:focus {border-color:@focus; background:@surface2;}
+QFrame#enccard QLabel, QFrame#enctile QLabel, QFrame#encrow QLabel, QFrame#factcard QLabel, QFrame#contents QLabel {background:transparent;}
+QLabel#cardtitle {font-size:15px; font-weight:700;}
+QLabel#rowtitle {font-size:15px; font-weight:700;}
+QLabel#rowwhen {color:@muted; font-size:12px; font-family:'DejaVu Sans Mono',monospace;}
+QLabel#cardcaption {color:@muted; font-size:12px;}
+QLabel#pagetitle {font-size:28px; font-weight:800;}
+QLabel#articletitle {font-size:27px; font-weight:800;}
+QLabel#pagesub, QLabel#articlesub {color:@muted; font-size:15px;}
+QLabel#grouptitle {font-size:17px; font-weight:700; padding-top:8px;}
+QLabel#icontile {background:@accent_soft; border-radius:16px;}
+QLabel#factvalue {font-size:17px; font-weight:700; color:@accent_strong;}
+QLabel#emptytext {color:@muted; font-size:14px;}
+QLabel#badge_ok {background:@accent_soft; color:@accent_strong; padding:5px 11px; border-radius:12px; font-size:12px; font-weight:700;}
+QLabel#badge_net {background:@warn_soft; color:@warn_text; padding:5px 11px; border-radius:12px; font-size:12px; font-weight:700;}
+QLabel#badge_info {background:@surface2; color:@muted; padding:5px 11px; border-radius:12px; font-size:12px; font-weight:700;}
+QPushButton#contentslink {text-align:left; border:2px solid transparent; background:transparent; padding:5px 8px; color:@text;}
+QPushButton#contentslink:hover {background:@accent_soft;}
+QPushButton#contentslink:focus {border-color:@focus;}
+QLabel#quizquestion {font-size:19px; font-weight:700;}
+QPushButton#answer {text-align:left; padding:10px 14px; font-size:14px;}
+QPushButton#answer[state="right"] {background:@accent_soft; border-color:@accent; color:@text;}
+QPushButton#answer[state="wrong"] {background:@warn_soft; border-color:@warn_text; color:@text;}
+QLabel#feedback {font-size:14px;}
+QTextBrowser#reader {background:@surface; border:2px solid @border; border-radius:16px; padding:4px;}
+QPushButton#hotspot {background:@accent_button; color:white; border:3px solid white; border-radius:17px; font-weight:800; padding:0;}
+QPushButton#hotspot:hover, QPushButton#hotspot[active="true"] {background:@accent_dark;}
+QPushButton#hotspot:focus {border-color:@focus;}
+QPushButton#timelinedot {background:@surface; border:3px solid @accent; border-radius:13px; padding:0;}
+QPushButton#timelinedot[active="true"] {background:@accent_button; border-color:@accent_strong;}
+QPushButton#timelinedot:focus {border-color:@focus;}
+QPushButton#periodbutton {font-weight:700;}
+QPushButton#periodbutton:checked {background:@accent_button; color:white; border-color:@accent_button;}
+QComboBox[state="right"] {border-color:@accent;}
+QComboBox[state="wrong"] {border-color:@warn_text;}
+QListWidget#orderlist::item {padding:7px; border-bottom:1px solid @border;}
+QListWidget#orderlist::item:selected {background:@accent_soft; color:@text;}
 QPushButton#chip {background:@accent_soft; border:1px solid @border; border-radius:15px; padding:6px 12px; color:@text;}
 QPushButton#filterchip {background:@surface; border:1px solid @border; border-radius:13px; padding:5px 12px; color:@text; font-size:12px;}
 QPushButton#filterchip:checked {background:@accent; border-color:@accent; color:@accent_text;}
@@ -178,7 +232,8 @@ QFrame#hero QLabel {background:transparent;}
 QFrame#bubble {background:@surface; border:1px solid @border; border-radius:14px;}
 QFrame#userbubble {background:@accent_soft; border:1px solid @border; border-radius:14px;}
 QLineEdit,QComboBox,QSpinBox,QDateEdit,QPlainTextEdit,QListWidget {background:@surface;border:1px solid @border;border-radius:11px;padding:7px;selection-background-color:@accent_soft;selection-color:@text;color:@text;}
-QLineEdit:focus,QPlainTextEdit:focus {border-color:@accent;}
+QLineEdit:focus,QPlainTextEdit:focus,QComboBox:focus,QSpinBox:focus,QListWidget:focus,QTableWidget:focus {border-color:@focus;}
+QCheckBox:focus {color:@accent_strong;}
 QComboBox QAbstractItemView {background:@surface; color:@text; selection-background-color:@accent_soft;}
 QListWidget#categories {background:transparent;border:0;padding:0;}
 QListWidget#categories::item {padding:10px 12px;border-radius:10px;margin:2px 0;}
@@ -199,7 +254,8 @@ QScrollArea > QWidget > QWidget {background:transparent;}
 QStackedWidget > QWidget {background:transparent;}
 QTabWidget::pane {background:transparent;border:0;}
 QTabBar::tab {background:@surface; color:@muted; border:1px solid @border; padding:7px 14px; margin-right:4px; border-radius:11px;}
-QTabBar::tab:selected {background:@accent; color:@accent_text; border-color:@accent;}
+QTabBar::tab:selected {background:@accent_soft; color:@accent_strong; border-color:@accent;}
+QTabBar::tab:focus {border-color:@focus;}
 QCheckBox {spacing:8px;padding:3px;}
 QMenu {background:@surface; border:1px solid @border; color:@text;}
 QMenu::item {padding:8px 20px;}
@@ -274,6 +330,7 @@ def fit_small_screen(page):
     shrink to a short width, and a page taller or wider than the window scrolls."""
     for box in page.findChildren(QComboBox):
         box.setSizeAdjustPolicy(QComboBox.AdjustToMinimumContentsLengthWithIcon);box.setMinimumContentsLength(10)
+    if isinstance(page,Browser):return page   # it scrolls each of its pages itself (no nested scrolling)
     scroll=QScrollArea();scroll.setObjectName("tabscroll");scroll.setWidgetResizable(True);scroll.setFrameShape(QFrame.NoFrame)
     scroll.setWidget(page);return scroll
 
@@ -352,12 +409,14 @@ class Window(QMainWindow):
         section,tab=ROUTES.get(key,(key,None))
         return self.t("tab_"+tab) if tab else self.t(TITLE_KEYS.get(section,section))
     def nav_icon(self,key):
-        if key=="timor":return QIcon(outfits.flag_pixmap(30))
-        icon=theme_icon(NAV_ICONS.get(key,[]),None)
-        return icon if icon is not None else QIcon()
+        """Lafa's own SVG icons (packaged; no icon theme needed)."""
+        tok=getattr(self,"tokens",None) or theme_tokens(self.settings)
+        return icons.icon(SVG_ICONS.get(key,"info"),tok["text"],tok["accent_strong"])
     # ------------------------------------------------------------------ shell
     def build_ui(self):
         self.tokens=theme_tokens(self.settings)
+        # Links in labels, readers and modules use the accent colour, not the default blue.
+        pal=self.palette();pal.setColor(QPalette.Link,QColor(self.tokens["accent_strong"]));pal.setColor(QPalette.LinkVisited,QColor(self.tokens["accent_strong"]));self.setPalette(pal)
         root=QWidget(); root.setObjectName("root"); root_layout=QHBoxLayout(root); root_layout.setContentsMargins(10,10,0,10); root_layout.setSpacing(0)
         # Sidebar: brand, the six sections, then Settings and About at the bottom.
         sidebar=QFrame(); sidebar.setObjectName("sidebar"); self.sidebar=sidebar
@@ -376,12 +435,10 @@ class Window(QMainWindow):
         side.addStretch()
         self.settings_button=button("",self.open_configuration);self.settings_button.setObjectName("navbutton");self.settings_button.setProperty("full",self.t("settings"));self.settings_button.setProperty("glyph","⚙")
         self.settings_button.setToolTip(self.t("settings_in_eduka"));self.settings_button.setAccessibleName(self.t("settings"))
-        ic=theme_icon(NAV_ICONS["settings"],None)
-        if ic is not None:self.settings_button.setIcon(ic);self.settings_button.setIconSize(QSize(20,20));self.settings_button.setProperty("glyph","")
+        self.settings_button.setIcon(self.nav_icon("settings"));self.settings_button.setIconSize(QSize(20,20));self.settings_button.setProperty("glyph","")
         self.about_button=button("",self.open_about);self.about_button.setObjectName("navbutton");self.about_button.setProperty("full",self.t("about"));self.about_button.setProperty("glyph","ℹ")
         self.about_button.setAccessibleName(self.t("about"))
-        ic=theme_icon(NAV_ICONS["about"],None)
-        if ic is not None:self.about_button.setIcon(ic);self.about_button.setIconSize(QSize(20,20));self.about_button.setProperty("glyph","")
+        self.about_button.setIcon(self.nav_icon("about"));self.about_button.setIconSize(QSize(20,20));self.about_button.setProperty("glyph","")
         side.addWidget(self.settings_button);side.addWidget(self.about_button)
         root_layout.addWidget(sidebar)
         content=QWidget(); col=QVBoxLayout(content); col.setContentsMargins(18,4,18,4); col.setSpacing(10)
@@ -433,11 +490,19 @@ class Window(QMainWindow):
         else:key,tab=ROUTES.get(page,("home",None))[0],ROUTES.get(page,("home",None))[1] or tab
         self.stack.setCurrentIndex(PAGE_INDEX[key])
         if tab and key in self.section_tabs and tab in TABS.get(key,[]):self.section_tabs[key].setCurrentIndex(TABS[key].index(tab))
-        self.title.setText(self.page_title(key));self.subtitle.setText(self.t(SUBTITLE_KEYS[key]))
+        if key=="timor" and tab in ("news","weather"):self.timor_browser.open_special(tab)
+        elif key=="timor" and tab=="atlas" and self.timor_browser.state.get("kind")=="special":self.timor_browser.go({"kind":"home"})
+        self.title.setText(self.page_title(key));self.subtitle.setText(self.t(SUBTITLE_KEYS[key]));self.update_header()
         for i,b in enumerate(self.nav):b.setChecked(i==PAGE_INDEX[key])
         if key=="home":self.refresh_home()
         if key=="activities":self.render_reminders()
     def current_section(self):return PAGES[self.stack.currentIndex()][0]
+    def update_header(self,*_):
+        """Encyclopedia pages carry their own big title and breadcrumb; the window
+        title would only repeat it (and cost height on 1024×600 screens)."""
+        key=self.current_section();tabs=self.section_tabs.get("study")
+        own=key=="timor" or (key=="study" and tabs is not None and tabs.currentIndex()==TABS["study"].index("encyclopedia"))
+        self.title.setVisible(not own);self.subtitle.setVisible(not own)
     # ------------------------------------------------------------------ home
     def build_home(self):
         w,layout=page_layout();scroll=QScrollArea();scroll.setWidgetResizable(True);scroll.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
@@ -468,6 +533,8 @@ class Window(QMainWindow):
         if hasattr(self,"progress"):self.refresh_home()
         return w
     def refresh_home(self):
+        last=self.progress.last if hasattr(self,"progress") else None
+        if hasattr(self,"companion"):self.companion.recommendation=self.t("popup_continue_with").format(t=last["title"]) if last else self.t("popup_recommend")
         if not hasattr(self,"home_greeting"):return
         from .mascot import greeting_key
         self.home_greeting.setText(self.t(greeting_key(time.localtime().tm_hour)))
@@ -645,8 +712,11 @@ class Window(QMainWindow):
         if host=="go":self.navigate(path[0] if path else "home",path[1] if len(path)>1 else None);return
         if host=="lesson" or host=="classroom":self.open_lesson_target(host,path);return
         if host=="atlas":
-            self.navigate("timor","atlas")
-            if path and any(i["key"]==path[0] for i in self.atlas_items()):self.select_atlas(path[0])
+            if path and enc.get("atlas:"+path[0]):self.open_article("atlas:"+path[0])
+            else:self.navigate("timor","atlas")
+            return
+        if host=="article":
+            if path and enc.get(path[0]):self.open_article(path[0])
             return
         if host=="os":
             guide=osguide.BY_KEY.get(path[0]) if path else None
@@ -691,9 +761,10 @@ class Window(QMainWindow):
     # ------------------------------------------------------------- sections
     def build_study(self):
         page,outer=page_layout()
-        pages=[("lessons",self.build_classroom()),("subjects",self.build_teachers()),("practice",self.build_exams()),("languages",self.build_languages()),
+        self.world_browser=Browser(self,"world")
+        pages=[("encyclopedia",self.world_browser),("lessons",self.build_classroom()),("subjects",self.build_teachers()),("practice",self.build_exams()),("languages",self.build_languages()),
                ("digital",self.build_digital()),("coding",self.build_coding())]
-        outer.addWidget(self.tabs("study",pages),1)
+        outer.addWidget(self.tabs("study",pages),1);self.section_tabs["study"].currentChanged.connect(self.update_header)
         if self.settings.entertainment:
             # Optional entertainment: LAFA's roles and the mind reader.
             fun=QWidget();fv=QVBoxLayout(fun);self.build_roles_panel(fv);fv.addStretch();self.section_tabs["study"].addTab(fun,self.t("tab_fun"))
@@ -711,8 +782,9 @@ class Window(QMainWindow):
         if key=="favourites":self.render_favourites()
     def build_timor(self):
         page,outer=page_layout()
-        pages=[("atlas",self.build_atlas()),("news",self.build_timor_news()),("weather",self.build_live())]
-        tabs=self.tabs("timor",pages);self.timor_tabs=tabs;outer.addWidget(tabs,1);return page
+        # Timor-Leste is an encyclopedia: six illustrated categories → topics → article,
+        # with News and Weather as separate pages marked "needs internet".
+        self.timor_browser=Browser(self,"timor");self.timor_browser.preload_specials();outer.addWidget(self.timor_browser,1);return page
     def build_activities(self):
         page,outer=page_layout()
         pages=[("tasks",self.build_homework()),("reminders",self.build_reminders()),("results",self.build_report())]
@@ -1135,133 +1207,27 @@ class Window(QMainWindow):
         self.report_status.setText(self.t("saved_to")+" "+path)
     # ------------------------------------------------------------- Timor-Leste
     # ----------------------------------------------------- Timor-Leste atlas
-    def atlas_items(self):
-        """Every atlas topic in the current language (cached per language)."""
+    # ------------------------------------------------------------ encyclopedia
+    def open_article(self,article_id,tab="read"):
+        """Open an encyclopedia article in its own section (World → Learn, Timor-Leste)."""
+        article=enc.get(article_id)
+        if article is None:return
+        if article.area=="world":self.navigate("study","encyclopedia");self.world_browser.open_article(article_id,tab)
+        else:self.navigate("timor");self.timor_browser.open_article(article_id,tab)
+    def voice_available(self):
+        return bool(shutil.which("espeak-ng") or shutil.which("espeak"))
+    def saved_extract(self,article):
+        """Text saved from the internet for an article (offline pack or atlas refresh), or None."""
         lang=self.settings.locale
-        if getattr(self,"_atlas_cache",(None,))[0]==lang:return self._atlas_cache[1]
-        items=[];T=timor_atlas.text
-        def wiki_url(title):return "https://en.wikipedia.org/wiki/"+title.replace(" ","_") if title else ""
-        for t in timor_atlas.TOPICS:
-            # Tetun pages never mix in English: the detail text shows only when written in Tetun.
-            body=T(t.body,lang) if t.body and (lang!="tet" or "tet" in t.body) else ""
-            items.append(dict(key=t.key,category=t.category,title=T(t.title,lang),summary=T(t.summary,lang),body=body,
-                              facts=[(T(a,lang),T(b,lang)) for a,b in t.facts],wiki=t.wiki,url=wiki_url(t.wiki),when=t.when,size=t.size))
-        major={1515,1975,1999,2002,2025}
-        for i,e in enumerate(timorleste.HISTORY):
-            era=next(x for x in timorleste.ERAS if x[0]==e.era)
-            items.append(dict(key=f"history_{i}",category="history",title=timorleste.text(e.title,lang),summary=timorleste.text(e.text,lang),body="",
-                              facts=[(self.t("era"),timorleste.text(era[1],lang))],wiki="",url=era[2],when=e.when(lang),size=2 if e.year in major else 1))
-        for name,town,note in timor_atlas.MUNICIPALITY_NOTES:
-            items.append(dict(key="municipality_"+name.split()[0].lower(),category="municipalities",title=name,summary=T(note,lang),body="",
-                              facts=[(self.t("main_town"),town)],wiki="",url="https://en.wikipedia.org/wiki/Municipalities_of_East_Timor",when=town,size=1))
-        def leaders(rows):return "\n".join(f"• {name} ({a} – {b}) — {T(note,lang)}" for name,a,b,note in rows)
-        items.append(dict(key="presidents",category="leaders",title=self.t("presidents"),summary=T(timor_atlas.ACTING_PRESIDENTS,lang),body=leaders(timor_atlas.PRESIDENTS),tile=leaders(timor_atlas.PRESIDENTS),
-                          facts=[],wiki="President of East Timor",url=wiki_url("President of East Timor"),when="1975 – 2026",size=3))
-        items.append(dict(key="prime_ministers",category="leaders",title=self.t("prime_ministers"),summary=T(timor_atlas.TRANSITION,lang),body=leaders(timor_atlas.PRIME_MINISTERS),tile=leaders(timor_atlas.PRIME_MINISTERS),
-                          facts=[],wiki="Prime Minister of East Timor",url=wiki_url("Prime Minister of East Timor"),when="1975 – 2026",size=3))
-        self._atlas_cache=(lang,items);return items
-    def build_atlas(self):
-        w=QWidget();outer=QVBoxLayout(w);outer.setContentsMargins(0,8,0,0);outer.setSpacing(10);lang=self.settings.locale
-        chips=QHBoxLayout();chips.setSpacing(6);self.atlas_chips=[]
-        everything=ui_kit.chip(self.t("all_topics")+f" ({len(self.atlas_items())})");everything.setChecked(True);everything.clicked.connect(lambda:self.filter_atlas(None));chips.addWidget(everything);self.atlas_chips.append((None,everything))
-        chipbox=QWidget();flow=QHBoxLayout(chipbox);flow.setContentsMargins(0,0,0,0);flow.setSpacing(6)
-        for key,name,colour in timor_atlas.CATEGORIES:
-            count=sum(1 for item in self.atlas_items() if item["category"]==key)
-            c=ui_kit.chip(f"{timor_atlas.text(name,lang)} ({count})",colour);c.clicked.connect(lambda checked=False,k=key:self.filter_atlas(k));flow.addWidget(c);self.atlas_chips.append((key,c))
-        flow.addStretch();chipscroll=QScrollArea();chipscroll.setWidget(chipbox);chipscroll.setWidgetResizable(True);chipscroll.setFixedHeight(46)
-        chipscroll.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff);chipscroll.setHorizontalScrollBarPolicy(Qt.ScrollBarAsNeeded);chips.addWidget(chipscroll,1);outer.addLayout(chips)
-        row=QHBoxLayout();row.setSpacing(12)
-        # Left: Timor-Leste at a glance and the online sources.
-        left=QVBoxLayout();left.setSpacing(12)
-        glance=QFrame();glance.setObjectName("panel");g=QVBoxLayout(glance);g.setContentsMargins(14,12,14,12);g.addWidget(label(self.t("at_a_glance"),10,True))
-        flag=QLabel();flag.setPixmap(outfits.flag_pixmap(120));g.addWidget(flag,0,Qt.AlignHCenter)
-        for name,value in [(self.t("capital"),"Díli"),("km²","≈ 14,950"),(self.t("population_short"),"≈ 1.34 M (2022)"),(self.t("municipalities"),"14"),(self.t("independence"),"28/11/1975 · 20/05/2002")]:
-            line=QHBoxLayout();line.addWidget(label(name,9,muted=True),1);line.addWidget(label(value,9,True));g.addLayout(line)
-        self.culture_today=label(self.today_text(),9);g.addWidget(self.culture_today);left.addWidget(glance)
-        live=QFrame();live.setObjectName("panel");lv=QVBoxLayout(live);lv.setContentsMargins(14,12,14,12);lv.addWidget(label(self.t("online_sources"),10,True))
-        self.live_status=label("",9,muted=True);lv.addWidget(self.live_status);self.live_button=button("⟳  "+self.t("refresh"),lambda:self.refresh_live(True));self.live_button.setToolTip(self.t("refresh_online"));lv.addWidget(self.live_button)
-        links=QGridLayout();links.setSpacing(6)
-        for i,(title,url) in enumerate(timorleste.SOURCES):
-            b=ui_kit.chip(title.split(" · ")[0].split(" (")[0][:24],checkable=False);b.clicked.connect(lambda checked=False,u=url:self.open_web(u));b.setToolTip(title+"\n"+url);links.addWidget(b,i,0)
-        lv.addLayout(links);left.addWidget(live);left.addStretch();holder=QWidget();holder.setLayout(left);holder.setFixedWidth(210);row.addWidget(holder)
-        # Centre: the atlas map of tiles.
-        self.atlas_scroll=QScrollArea();self.atlas_scroll.setWidgetResizable(True);self.atlas_scroll.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
-        self.atlas_body=QWidget();self.atlas_grid=QGridLayout(self.atlas_body);self.atlas_grid.setSpacing(8);self.atlas_grid.setContentsMargins(0,0,6,0)
-        self.atlas_scroll.setWidget(self.atlas_body);row.addWidget(self.atlas_scroll,1)
-        # Right: inspector.
-        inspector=QFrame();inspector.setObjectName("inspector");inspector.setFixedWidth(300);iv=QVBoxLayout(inspector);iv.setContentsMargins(16,14,16,14);iv.setSpacing(8)
-        self.inspect_badge=QLabel();self.inspect_badge.setObjectName("categorybadge");iv.addWidget(self.inspect_badge,0,Qt.AlignLeft)
-        self.inspect_title=label("",17,True);self.inspect_when=label("",9,muted=True);iv.addWidget(self.inspect_title);iv.addWidget(self.inspect_when)
-        scroll=QScrollArea();scroll.setWidgetResizable(True);scroll.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff);inner=QWidget();ii=QVBoxLayout(inner);ii.setContentsMargins(0,0,4,0);ii.setSpacing(8)
-        self.inspect_summary=label("",11,True);self.inspect_body=label("",10);self.inspect_facts=label("",10);self.inspect_live=label("",9);self.inspect_live.setObjectName("livebox")
-        for widget in (self.inspect_summary,self.inspect_body,self.inspect_facts,self.inspect_live):widget.setTextFormat(Qt.PlainText);ii.addWidget(widget)
-        ii.addStretch();scroll.setWidget(inner);iv.addWidget(scroll,1)
-        actions=QHBoxLayout();self.inspect_more=button(self.t("read_more"),lambda:self.open_web(self.inspected.get("url","")) if getattr(self,"inspected",None) and self.inspected.get("url") else None)
-        actions.addWidget(self.inspect_more);actions.addWidget(button(self.t("test_yourself"),lambda:(self.navigate("exams"),self.start_exam("quiz","history")),True));iv.addLayout(actions)
-        row.addWidget(inspector);outer.addLayout(row,1)
-        self.atlas_tiles={};self.filter_atlas(None);self.update_live_status();return w
-    def filter_atlas(self,category):
-        for key,c in self.atlas_chips:c.setChecked(key==category)
-        while self.atlas_grid.count():
-            item=self.atlas_grid.takeAt(0)
-            if item.widget():item.widget().hide();item.widget().deleteLater()
-        colours={key:colour for key,_,colour in timor_atlas.CATEGORIES};self.atlas_tiles={}
-        items=[i for i in self.atlas_items() if category in (None,i["category"])]
-        columns=3;taken=set();row=col=0
-        def free(r,c,w,h):return c+w<=columns and all((r+y,c+x) not in taken for y in range(h) for x in range(w))
-        for item in items:
-            w_,h_={3:(2,2),2:(2,1)}.get(item["size"],(1,1))
-            row=col=0  # first free place, so small tiles fill the gaps
-            while not free(row,col,w_,h_):
-                col+=1
-                if col>=columns:col=0;row+=1
-            tile=ui_kit.AtlasTile(item,colours[item["category"]]);tile.clicked.connect(self.show_atlas_item);tile.setFixedHeight(h_*100+(h_-1)*8)
-            if self.settings.depth_effects:ui_kit.soft_shadow(tile,16,4,36,self.tokens["dark"])
-            self.atlas_grid.addWidget(tile,row,col,h_,w_);self.atlas_tiles[item["key"]]=tile
-            for y in range(h_):
-                for x in range(w_):taken.add((row+y,col+x))
-        for c in range(columns):self.atlas_grid.setColumnStretch(c,1)
-        self.atlas_grid.setRowStretch(max((r for r,_ in taken),default=0)+1,1)
-        if items:self.show_atlas_item(items[0])
-    def select_atlas(self,key):
-        item=next((i for i in self.atlas_items() if i["key"]==key),None)
-        if not item:return
-        if key not in self.atlas_tiles:self.filter_atlas(item["category"])
-        self.show_atlas_item(item);tile=self.atlas_tiles.get(key)
-        if tile:self.atlas_scroll.ensureWidgetVisible(tile)
-    def show_atlas_item(self,item):
-        self.inspected=item;lang=self.settings.locale
-        for key,tile in self.atlas_tiles.items():tile.set_selected(key==item["key"])
-        name,colour=next((timor_atlas.text(n,lang),c) for k,n,c in timor_atlas.CATEGORIES if k==item["category"])
-        self.inspect_badge.setText(name);self.inspect_badge.setStyleSheet(f"background:{colour};")
-        self.inspect_title.setText(item["title"]);self.inspect_when.setText(item.get("when",""))
-        self.inspect_summary.setText(item["summary"]);self.inspect_body.setText(item.get("body",""));self.inspect_body.setVisible(bool(item.get("body")))
-        self.inspect_facts.setText("\n".join(f"{a}: {b}" for a,b in item.get("facts",[])));self.inspect_facts.setVisible(bool(item.get("facts")))
-        live=livefacts.get(item["key"],lang) if item.get("wiki") else None
-        if live:self.inspect_live.setText(self.t("live_from").replace("{lang}",live["lang"]).replace("{date}",live["fetched"])+"\n\n"+live["text"])
-        else:self.inspect_live.setText(self.t("live_pending") if item.get("wiki") else self.t("built_in_text"))
-        self.inspect_more.setEnabled(bool(item.get("url")))
-    def update_live_status(self,message=None):
-        if not hasattr(self,"live_status"):return
-        if message:self.live_status.setText(message);return
-        cached=livefacts.load();lang=self.settings.locale
-        dates=sorted(v["fetched"] for k,v in cached.items() if k.endswith(":"+lang))
-        self.live_status.setText(self.t("live_status").replace("{n}",str(len(dates))).replace("{date}",dates[-1] if dates else "—"))
-    def refresh_live(self,force=False):
-        """Refresh the atlas from Wikipedia in the reader's language (worker thread)."""
-        if getattr(self,"live_running",False):return
-        if self.review:self.update_live_status(self.t("preview_only"));return
-        if not self.online:self.update_live_status(self.t("offline"));return
-        lang=self.settings.locale;self.live_running=True;self.live_button.setEnabled(False);self.update_live_status(self.t("working"))
-        topics=[t for t in timor_atlas.TOPICS if t.wiki]+[timor_atlas.Topic(k,"leaders",{},{},wiki=w) for k,w in (("presidents","President of East Timor"),("prime_ministers","Prime Minister of East Timor"))]
-        def run():return livefacts.refresh(topics,lang,hours=0 if force else self.settings.update_hours)
-        def done(result):
-            self.live_running=False;self.live_button.setEnabled(True);updated,failed=result
-            self.update_live_status(self.t("live_done").replace("{n}",str(updated)).replace("{failed}",str(failed)))
-            if getattr(self,"inspected",None):self.show_atlas_item(self.inspected)
-        job=Job(run);self.jobs.add(job);delivery=Delivery(self,job,done,False);job.signals.done.connect(delivery.done)
-        def failed(message):self.live_running=False;self.live_button.setEnabled(True);self.jobs.discard(job);self.update_live_status(message);delivery.deleteLater()
-        delivery.failed_handler=failed;job.signals.error.connect(delivery.report_error);self.pool.start(job)
+        try:
+            from . import offline_pack
+            found=offline_pack.extract(article.id,lang)
+            if found:return found
+        except ImportError:pass
+        if article.id.startswith("atlas:") and article.wiki:
+            live=livefacts.get(article.id[6:],lang)
+            if live:return {"lang":live["lang"],"fetched":live["fetched"],"text":live["text"],"url":live.get("url",""),"source":"Wikipedia"}
+        return None
     def today_text(self,when=None):
         lang=self.settings.locale;events=timorleste.today_in_history(when,lang)
         if events:return "\n".join(events)
@@ -1496,8 +1462,51 @@ class Window(QMainWindow):
         try:memory.remember_article(title.split(" · ",1)[-1],url,text,self.settings.locale)
         except (OSError,ValueError) as error:self.error(str(error));return
         self.chat_status.setText(self.t("saved_offline"));self.render_saved()
+    def build_offline_pack(self):
+        """The one button that saves every source for offline use (lafa/offline_pack.py)."""
+        from . import offline_pack
+        box=QFrame();box.setObjectName("factcard");v=QVBoxLayout(box);v.setContentsMargins(16,12,16,12);v.setSpacing(8)
+        head=QHBoxLayout();mark=QLabel();mark.setPixmap(icons.pixmap("download",self.tokens["accent_strong"],26));head.addWidget(mark)
+        title=label(self.t("offline_pack_title"),12,True);head.addWidget(title,1)
+        self.pack_button=button(self.t("offline_pack_button"),self.start_offline_pack,True);self.pack_button.setIcon(icons.icon("download","#ffffff"));head.addWidget(self.pack_button)
+        self.pack_stop=button(self.t("offline_pack_stop"),self.stop_offline_pack);self.pack_stop.hide();head.addWidget(self.pack_stop);v.addLayout(head)
+        v.addWidget(label(self.t("offline_pack_note").format(mb=offline_pack.MAX_TOTAL//(1024*1024),path=str(offline_pack.folder())),9,muted=True))
+        self.pack_bar=QProgressBar();self.pack_bar.hide();v.addWidget(self.pack_bar)
+        self.pack_status=label("",9,muted=True);v.addWidget(self.pack_status);self.update_pack_status()
+        self.pack_running=getattr(self,"pack_running",False);self.update_buttons();return box
+    def update_pack_status(self,text=None):
+        from . import offline_pack
+        if not hasattr(self,"pack_status"):return
+        if text:self.pack_status.setText(text);return
+        info=offline_pack.manifest()
+        self.pack_status.setText(self.t("offline_pack_last").format(date=info["date"],size=info.get("size_mb",0)) if info.get("date") else self.t("offline_pack_never"))
+    def start_offline_pack(self):
+        if getattr(self,"pack_running",False):return
+        if self.review:self.update_pack_status(self.t("preview_only"));return
+        if not self.online:self.update_pack_status(self.t("needs_internet_calm"));return
+        from . import offline_pack
+        import threading
+        self.pack_running=True;self.pack_cancel=threading.Event();self.pack_button.hide();self.pack_stop.show();self.pack_bar.show();self.pack_bar.setValue(0)
+        relay=PackRelay(self);relay.progress.connect(self.offline_pack_progress)
+        cancel=self.pack_cancel;lang=self.settings.locale
+        def run():return offline_pack.Pack(lang,progress=lambda d,t,n:relay.progress.emit(d,t,str(n)),stop=cancel.is_set).run()
+        def done(info):
+            self.pack_running=False;self.pack_button.show();self.pack_stop.hide();self.pack_bar.hide();memory.reset_shared() if hasattr(memory,"reset_shared") else None
+            text=self.t("offline_pack_done").format(pages=info["pages"],extracts=info["extracts"],images=info["images"],failed=info["failed"],date=info["date"])
+            self.update_pack_status(self.t("offline_pack_stopped")+" "+text if info.get("stopped") else text);relay.deleteLater()
+        job=Job(run);self.jobs.add(job);delivery=Delivery(self,job,done,False);job.signals.done.connect(delivery.done)
+        def failed(message):
+            self.pack_running=False;self.pack_button.show();self.pack_stop.hide();self.pack_bar.hide();self.jobs.discard(job);self.update_pack_status(message);delivery.deleteLater();relay.deleteLater()
+        delivery.failed_handler=failed;job.signals.error.connect(delivery.report_error);self.pool.start(job)
+    def stop_offline_pack(self):
+        if getattr(self,"pack_cancel",None):self.pack_cancel.set();self.pack_stop.setEnabled(False)
+    def offline_pack_progress(self,done,total,name):
+        if not hasattr(self,"pack_bar"):return
+        self.pack_bar.setMaximum(max(1,total));self.pack_bar.setValue(done);self.pack_stop.setEnabled(True)
+        self.pack_status.setText(self.t("offline_pack_running").format(done=done,total=total,name=name[:60]))
     def build_sources(self):
         w=QWidget();v=QVBoxLayout(w);v.setContentsMargins(0,8,0,0);v.setSpacing(10);lang=self.settings.locale
+        v.addWidget(self.build_offline_pack())
         top=QHBoxLayout();self.source_query=QLineEdit();self.source_query.setPlaceholderText("🔍  "+self.t("search_sources"));self.source_query.textChanged.connect(lambda *_:self.fill_sources())
         top.addWidget(self.source_query,1);self.source_status=label("",9,muted=True);top.addWidget(self.source_status);self.source_check_button=button("⟳  "+self.t("check_now"),lambda:self.check_sources(True));top.addWidget(self.source_check_button);v.addLayout(top)
         v.addWidget(label(self.t("sources_note"),9,muted=True))
@@ -1918,11 +1927,15 @@ class Window(QMainWindow):
         query=action.text if action else text
         self.set_busy(True,"reading")
         def done(result):
-            self.set_busy(False);self.last_answer=result.text;self.companion.show_answer(result.text);self.set_mood(result.mood)
+            self.set_busy(False);self.last_answer=result.text;self.set_mood(result.mood)
+            # A short result in the popup; the full list waits in Lafa Desktop (same window, never a second one).
+            short=result.text if len(result.text)<=420 else result.text[:417].rsplit(" ",1)[0]+"…"
+            if result.outcome is not None and result.outcome.items:short+="\n\n"+self.t("popup_found").format(n=len(result.outcome.items))
+            self.companion.show_answer(short)
             if result.reminder is not None:
                 try:self.reminders.add(*result.reminder);self.render_reminders()
                 except ValueError as error:self.companion.show_answer(str(error))
-            if result.outcome is not None and self.isVisible():self.search_panels["home"]["input"].setText(query);self.show_outcome("home",result.outcome)
+            if result.outcome is not None:self.search_panels["home"]["input"].setText(query);self.show_outcome("home",result.outcome);self.navigate("home")
             if self.settings.speak_answers:self.speak_last()
         self.work(lambda:self.agent.run(query,online=self.online),done,busy=True)
     def perform_action(self,action):
@@ -1947,6 +1960,7 @@ class Window(QMainWindow):
     def desktop_action(self,key):
         """Bubble quick buttons and tray menu — all work offline."""
         if key=="os":self.navigate("oshelp","guides");self.reveal()
+        elif key=="explore":self.navigate("timor","atlas");self.reveal()
         elif key=="focus":self.start_focus();self.companion.show_answer(self.t("focus_started").replace("{n}","25"))
         elif key=="tasks":
             nxt=self.reminders.next();due=self.planner.due_soon(7)
@@ -2006,6 +2020,7 @@ class Window(QMainWindow):
     def update_buttons(self):
         net=self.online
         for name,panel in getattr(self,"search_panels",{}).items():panel["internet"].setEnabled(net)
+        if hasattr(self,"pack_button"):self.pack_button.setEnabled(net and not getattr(self,"pack_running",False))
         for attr in ("learn_button","weather_button","news_button","city_confirm","timor_button","saved_update"):
             b=getattr(self,attr,None)
             if b is not None:b.setEnabled(net and not (attr=="timor_button" and self.news_inflight))

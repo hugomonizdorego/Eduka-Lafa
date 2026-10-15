@@ -132,6 +132,14 @@ def builtin_docs(lang):
         docs.append(Doc(f"atlas:{topic.key}", timor_atlas.text(topic.title, lang), f"lafa://atlas/{topic.key}", "LAFA · Timor-Leste", "atlas", body + ("\n" + facts if facts else ""), lang))
     for i, event in enumerate(timorleste.HISTORY):
         docs.append(Doc(f"history:{i}", f"{event.when(lang)} · {timorleste.text(event.title, lang)}", f"lafa://atlas/history_{i}", "LAFA · Timor-Leste", "history", timorleste.text(event.text, lang), lang))
+    from . import encyclopedia
+    for article in encyclopedia.all_articles():
+        if article.id.startswith("atlas:"): continue          # indexed above as atlas topics
+        sections = "\n".join(encyclopedia.text(x.get("body", {}), lang) for x in article.sections)
+        cat = encyclopedia.category(article.area, article.category)
+        docs.append(Doc(f"article:{article.id}", encyclopedia.text(article.title, lang), f"lafa://article/{article.id}",
+                        "LAFA · " + encyclopedia.text(cat.title, lang), "article", encyclopedia.text(article.summary, lang) + "\n" + sections, lang,
+                        keywords=" ".join(article.tags)))
     for guide in osguide.GUIDES:
         docs.append(Doc(f"guide:{guide.key}", guide.title.get(lang, guide.title["en"]), f"lafa://os/{guide.key}", "LAFA · Edukasaun OS", "guide",
                         "\n".join(guide.steps.get(lang, guide.steps["en"])), lang, keywords=" ".join(guide.keywords)))

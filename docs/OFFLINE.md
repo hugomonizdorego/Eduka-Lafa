@@ -51,3 +51,21 @@ where. The tests that prove it are in `tests/test_offline_first.py`.
 - Download large archives or AI models, or install Ollama.
 - Download whole websites, scrape behind a login, or run downloaded code.
 - Call cached data "latest".
+
+## Download all sources for offline use (0.2.1)
+
+Library → Internet sources → **Download all sources for offline use** saves,
+in `~/.local/share/lafa/offline` (or `$XDG_DATA_HOME/lafa/offline`):
+
+- the front page and feed of every learning and Timor-Leste source (into the
+  local search memory; robots.txt respected, never whole sites);
+- the Wikipedia introduction of every encyclopedia topic in the learner's
+  language (English when that language has no article, and labelled so);
+- one freely licensed Wikimedia Commons picture per topic (CC0, public
+  domain, CC BY or CC BY-SA only), shown with its author, licence and page.
+
+It needs internet only while downloading. The download is bounded (250 MB in
+total, 900 KB per picture), can be stopped at any time and keeps what it
+already saved. Afterwards articles show the saved text and picture offline.
+The data lives in the learner's own Lafa folder, not in `/usr/lib/lafa`:
+that folder belongs to the package and is read-only for learners.

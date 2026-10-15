@@ -1,0 +1,659 @@
+{
+ "area": "timor",
+ "category": "nature",
+ "articles": [
+  {
+   "id": "tl.nature.wildlife",
+   "title": {
+    "en": "Wildlife of Timor-Leste",
+    "id": "Satwa liar Timor-Leste",
+    "pt": "A vida selvagem de Timor-Leste",
+    "tet": "Animál fuik iha Timor-Leste"
+   },
+   "summary": {
+    "en": "Timor-Leste lies in Wallacea, where deep seas kept islands apart, so many of its birds live nowhere else. Its coasts and seas are home to saltwater crocodiles, dugongs, whales, dolphins and some of the richest coral reefs in the world, especially around Ataúro.",
+    "id": "Timor-Leste terletak di Wallacea, tempat laut dalam memisahkan pulau-pulau, sehingga banyak burungnya tidak hidup di tempat lain. Pantai dan lautnya menjadi rumah bagi buaya muara, dugong, paus, lumba-lumba, dan beberapa terumbu karang terkaya di dunia, terutama di sekitar Ataúro.",
+    "pt": "Timor-Leste fica na Wallacea, onde mares profundos separaram as ilhas, por isso muitas das suas aves não vivem em mais lado nenhum. As suas costas e mares abrigam crocodilos-de-água-salgada, dugongos, baleias, golfinhos e alguns dos recifes de coral mais ricos do mundo, sobretudo perto de Ataúro.",
+    "tet": "Timor-Leste iha Wallacea, fatin ne'ebé tasi kle'an fahe illa sira. Tan ne'e manu barak iha ne'e la moris iha fatin seluk. Iha ninia tasi-ibun no tasi iha lafaek, dugongu, baleia, golfiñu no ahu-ruin riku tebes, liuliu iha Ataúro."
+   },
+   "objectives": {
+    "en": [
+     "You will explain why Wallacea has many species found nowhere else.",
+     "You will name animals of Timor-Leste's land and seas, including birds found only in this region.",
+     "You will describe threats to wildlife and ways to protect it."
+    ],
+    "id": [
+     "Kamu akan menjelaskan mengapa Wallacea memiliki banyak spesies yang tidak ada di tempat lain.",
+     "Kamu akan menyebutkan hewan darat dan laut Timor-Leste, termasuk burung yang hanya hidup di wilayah ini.",
+     "Kamu akan menjelaskan ancaman bagi satwa liar dan cara melindunginya."
+    ],
+    "pt": [
+     "Vais explicar porque é que a Wallacea tem muitas espécies que não existem noutros lugares.",
+     "Vais nomear animais da terra e do mar de Timor-Leste, incluindo aves que só vivem nesta região.",
+     "Vais descrever ameaças à vida selvagem e formas de a proteger."
+    ],
+    "tet": [
+     "Ita sei esplika tanba saida Wallacea iha espésie barak ne'ebé la iha iha fatin seluk.",
+     "Ita sei hatene animál iha Timor-Leste nia rai no tasi, inklui manu ne'ebé moris iha rejiaun ne'e de'it.",
+     "Ita sei komprende perigu ba animál fuik no dalan atu proteje sira."
+    ]
+   },
+   "sections": [
+    {
+     "heading": {
+      "en": "Island life in Wallacea",
+      "id": "Kehidupan pulau di Wallacea",
+      "tet": "Moris iha illa Wallacea nian"
+     },
+     "body": {
+      "en": "Timor is part of Wallacea, a group of islands between the Asian and Australian continental shelves. Even during the ice ages, when sea levels were much lower, deep water separated these islands from both continents. Animals could only arrive by flying, swimming or floating across the sea, so few large land mammals reached Timor naturally. Bats, birds, reptiles and insects did much better. Over a long time, many species on the islands changed and became different from their relatives elsewhere. Scientists think some mammals now living on Timor, such as the long-tailed macaque and the Timor deer, were brought by people long ago. This history makes Timor's wildlife special and easy to lose.",
+      "id": "Timor adalah bagian dari Wallacea, sekelompok pulau di antara paparan benua Asia dan Australia. Bahkan pada zaman es, ketika permukaan laut jauh lebih rendah, laut dalam memisahkan pulau-pulau ini dari kedua benua. Hewan hanya bisa datang dengan terbang, berenang, atau terapung menyeberangi laut, sehingga hanya sedikit mamalia darat besar yang tiba di Timor secara alami. Kelelawar, burung, reptil, dan serangga jauh lebih berhasil. Dalam waktu yang lama, banyak spesies di pulau-pulau ini berubah dan menjadi berbeda dari kerabatnya di tempat lain. Ilmuwan menduga beberapa mamalia yang kini hidup di Timor, seperti monyet ekor panjang dan rusa Timor, dibawa oleh manusia sejak lama. Sejarah ini membuat satwa Timor istimewa dan mudah hilang.",
+      "tet": "Timor parte husi Wallacea, grupu illa ida entre Ázia no Austrália nia rai-kontinente. Maski iha tempu jelu, bainhira tasi nia nível tun tebes, tasi kle'an fahe nafatin illa sira-ne'e husi kontinente rua. Animál bele mai de'it ho semo, nani ka namlele liu tasi. Tan ne'e animál boot iha rai menus mak to'o Timor ho dalan naturál. Niki, manu, réptil no insetu to'o barak liu. Iha tempu naruk, espésie barak iha illa sira muda no sai la hanesan ho sira-nia família iha fatin seluk. Sientista sira hanoin katak animál balu ne'ebé agora moris iha Timor, hanesan lekirauk no bibi-rusa, ema mak lori mai uluk liu. Istória ne'e halo Timor nia animál fuik espesiál, no fasil atu lakon."
+     }
+    },
+    {
+     "heading": {
+      "en": "Birds found nowhere else",
+      "id": "Burung yang tidak ada di tempat lain",
+      "tet": "Manu ne'ebé la iha iha fatin seluk"
+     },
+     "body": {
+      "en": "Birds are the best-known wildlife of Timor-Leste. Several species live only on Timor and a few nearby islands, such as the Timor green pigeon, the Timor imperial pigeon, the Timor sparrow, the Timor friarbird and the iris lorikeet. The yellow-crested cockatoo, a critically endangered parrot, still survives in some forests, including in the far east of the country. Many of these birds depend on old forests, so cutting trees and burning land can push them closer to extinction. Catching wild birds to keep or sell is another threat. Birdwatchers from abroad visit places such as Nino Konis Santana National Park and the forests of the mountains, which can bring income to local communities.",
+      "id": "Burung adalah satwa liar Timor-Leste yang paling dikenal. Beberapa spesies hanya hidup di Timor dan beberapa pulau di dekatnya, seperti punai Timor, pergam Timor, gelatik Timor, cikukua Timor, dan perkici iris. Kakatua jambul kuning, burung paruh bengkok yang sangat terancam punah, masih bertahan di beberapa hutan, termasuk di ujung timur negeri ini. Banyak burung ini bergantung pada hutan tua, sehingga penebangan pohon dan pembakaran lahan dapat mendorong mereka mendekati kepunahan. Menangkap burung liar untuk dipelihara atau dijual juga merupakan ancaman. Pengamat burung dari luar negeri mengunjungi tempat seperti Taman Nasional Nino Konis Santana dan hutan pegunungan, yang dapat memberi penghasilan bagi masyarakat setempat.",
+      "tet": "Manu mak animál fuik ne'ebé ema hatene liu iha Timor-Leste. Espésie balu moris iha Timor no illa balu besik de'it, hanesan pombu matak Timor, pombu boot Timor, pardál Timor, manu-koak Timor no lorikeet íris. Kakatua ho fulun kinur iha ulun, ne'ebé iha perigu boot tebes atu lakon, sei moris iha ai-laran balu, inklui iha nasaun nia rohan leste. Manu barak presiza ai-laran tuan. Tan ne'e, bainhira ema ko'a ai no sunu rai, manu sira-ne'e besik atu lakon. Kaer manu fuik atu hakiak ka fa'an mós perigu ida. Turista husi rai li'ur mai haree manu iha fatin hanesan Parke Nasionál Nino Konis Santana no ai-laran iha foho. Ida-ne'e bele fó rendimentu ba komunidade lokál."
+     }
+    },
+    {
+     "heading": {
+      "en": "Crocodiles, dugongs and turtles",
+      "id": "Buaya, dugong, dan penyu",
+      "tet": "Lafaek, dugongu no lenuk"
+     },
+     "body": {
+      "en": "The saltwater crocodile (lafaek) is the largest reptile in the world and lives in rivers, river mouths, swamps, mangroves and along the coast. Large males can grow longer than five metres. In Timorese culture the crocodile is respected as an ancestor, but it is also dangerous, so people must take care near water. The dugong is a gentle sea mammal that eats seagrass in shallow, calm water. It is rare and slow to breed, so every animal matters. Several kinds of sea turtle also feed along the coast, and some nest on sandy beaches. Seagrass beds and mangroves are nurseries for young fish, so protecting them helps both wildlife and fishing families.",
+      "id": "Buaya muara (lafaek) adalah reptil terbesar di dunia dan hidup di sungai, muara, rawa, hutan bakau, dan sepanjang pantai. Buaya jantan yang besar dapat tumbuh lebih dari lima meter. Dalam budaya Timor, buaya dihormati sebagai leluhur, tetapi juga berbahaya, sehingga orang harus berhati-hati di dekat air. Dugong adalah mamalia laut yang jinak dan memakan lamun di perairan dangkal dan tenang. Hewan ini langka dan lambat berkembang biak, sehingga setiap individu penting. Beberapa jenis penyu juga mencari makan di sepanjang pantai, dan sebagian bertelur di pantai berpasir. Padang lamun dan hutan bakau adalah tempat pembesaran ikan muda, sehingga melindunginya membantu satwa liar dan keluarga nelayan.",
+      "tet": "Lafaek tasi nian mak réptil boot liu iha mundu. Nia hela iha mota, mota-ibun, lagoa, ai-parapa no iha tasi-ibun. Lafaek aman boot bele naruk liu metru lima. Iha kultura Timor, ema respeita lafaek hanesan bei'ala, maibé lafaek mós perigu. Tan ne'e ema tenke kuidadu besik bee. Dugongu mak animál tasi nian ne'ebé maus, no han du'ut-tasi iha bee la kle'an no hakmatek. Dugongu la iha barak, no nia hamoris oan neineik tebes, ne'e duni dugongu ida-idak importante. Lenuk oioin mós buka hahán iha tasi-ibun, no balu tau tolun iha rai-henek. Du'ut-tasi no ai-parapa mak fatin ba ikan oan sira atu boot. Tan ne'e, proteje fatin sira-ne'e ajuda animál fuik no mós família peskadór sira."
+     }
+    },
+    {
+     "heading": {
+      "en": "Whales and dolphins in the deep strait",
+      "id": "Paus dan lumba-lumba di selat dalam",
+      "tet": "Baleia no golfiñu iha estreitu kle'an"
+     },
+     "body": {
+      "en": "North of Timor, the Ombai–Wetar Strait separates Timor from the islands of Alor and Wetar. It is more than 3,000 metres deep in places, very close to the coast near Dili and Ataúro. Deep water so close to land is a rare gift: it lets large ocean animals pass near the shore. Many kinds of whales and dolphins have been recorded here, including blue whales, sperm whales, pilot whales and large groups of spinner dolphins. Scientists think the strait is part of a migration route between the Indian and Pacific Oceans. Whale and dolphin watching trips from Dili have grown in recent years. Boats should keep a respectful distance and never chase the animals.",
+      "id": "Di utara Timor, Selat Ombai–Wetar memisahkan Timor dari Pulau Alor dan Wetar. Di beberapa tempat kedalamannya lebih dari 3.000 meter, sangat dekat dengan pantai di sekitar Dili dan Ataúro. Laut dalam yang begitu dekat dengan daratan adalah anugerah langka: hewan laut besar dapat lewat di dekat pantai. Banyak jenis paus dan lumba-lumba telah tercatat di sini, termasuk paus biru, paus sperma, paus pilot, dan kelompok besar lumba-lumba spinner. Ilmuwan menduga selat ini adalah bagian dari jalur migrasi antara Samudra Hindia dan Samudra Pasifik. Wisata melihat paus dan lumba-lumba dari Dili berkembang dalam beberapa tahun terakhir. Kapal harus menjaga jarak yang sopan dan tidak boleh mengejar hewan-hewan itu.",
+      "tet": "Iha Timor nia norte, Estreitu Ombai–Wetar fahe Timor husi illa Alor no Wetar. Iha fatin balu, estreitu ne'e kle'an liu metru 3.000, besik tebes ba tasi-ibun iha Dili no Ataúro. Tasi kle'an besik rai mak buat raru ida: animál tasi boot sira bele liu besik tasi-ibun. Ema haree ona baleia no golfiñu oioin iha ne'e, inklui baleia azúl, baleia kaxalote, baleia pilotu no golfiñu barak tebes ne'ebé la'o hamutuk. Sientista sira hanoin katak estreitu ne'e parte husi dalan ne'ebé animál sira la'o entre Oseanu Índiku no Oseanu Pasífiku. Iha tinan hirak ikus ne'e, viajen atu haree baleia no golfiñu husi Dili aumenta. Ró sira tenke hela dook ho respeitu, no keta tuir animál sira."
+     }
+    },
+    {
+     "heading": {
+      "en": "The reefs of Ataúro and protecting nature",
+      "id": "Terumbu Ataúro dan perlindungan alam",
+      "tet": "Ahu-ruin Ataúro nian no proteje natureza"
+     },
+     "body": {
+      "en": "Timor-Leste is one of the six countries of the Coral Triangle, the region with the greatest variety of corals and reef fish on Earth. Around Ataúro, scientists who surveyed the reefs in 2016 counted some of the highest numbers of reef fish species ever recorded at single sites. Healthy reefs feed families, protect the coast from waves and attract visitors. Threats include overfishing, destructive fishing, plastic waste, soil washed from cleared hillsides, and warmer seas that cause coral bleaching. Communities on Ataúro and elsewhere use tara bandu, a customary agreement that can close areas to fishing for a time, together with marine protected areas, to help nature recover.",
+      "id": "Timor-Leste adalah salah satu dari enam negara di Segitiga Terumbu Karang, wilayah dengan keanekaragaman karang dan ikan karang terbesar di Bumi. Di sekitar Ataúro, ilmuwan yang meneliti terumbu pada 2016 mencatat jumlah spesies ikan karang yang termasuk paling tinggi yang pernah tercatat di satu lokasi. Terumbu yang sehat memberi makan keluarga, melindungi pantai dari ombak, dan menarik wisatawan. Ancamannya meliputi penangkapan ikan berlebihan, cara menangkap ikan yang merusak, sampah plastik, tanah yang hanyut dari bukit gundul, dan laut yang menghangat sehingga karang memutih. Masyarakat di Ataúro dan tempat lain memakai tara bandu, kesepakatan adat yang dapat menutup suatu kawasan dari penangkapan ikan untuk sementara, bersama kawasan konservasi laut, untuk membantu alam pulih.",
+      "tet": "Timor-Leste mak nasaun ida husi nasaun neen iha Triángulu Korál, rejiaun ne'ebé iha ahu-ruin no ikan ahu-ruin nian oioin liu iha planeta Rai. Iha Ataúro, sientista sira ne'ebé estuda ahu-ruin iha 2016 sura espésie ikan barak tebes, ida husi númeru aas liu ne'ebé ema hetan iha fatin ida. Ahu-ruin ne'ebé di'ak fó hahán ba família, proteje tasi-ibun husi laloran no dada turista. Perigu mak kaer ikan barak liu, kaer ikan ho dalan ne'ebé estraga, lixu plástiku, rai ne'ebé udan lori husi foho ne'ebé ai lakon ona, no tasi ne'ebé sai manas no halo ahu-ruin sai mutin. Komunidade iha Ataúro no fatin seluk uza tara bandu, akordu lisan nian ne'ebé bele taka fatin ida ba kaer ikan durante tempu balu. Sira uza mós área protejida tasi nian atu ajuda natureza moris fali."
+     }
+    }
+   ],
+   "facts": [
+    {
+     "label": {
+      "en": "Coral Triangle countries",
+      "id": "Negara Segitiga Terumbu Karang",
+      "tet": "Nasaun iha Triángulu Korál"
+     },
+     "value": {
+      "en": "6, including Timor-Leste",
+      "id": "6, termasuk Timor-Leste",
+      "tet": "6, inklui Timor-Leste"
+     },
+     "year": "",
+     "source": 3
+    },
+    {
+     "label": {
+      "en": "Depth of the Ombai–Wetar Strait",
+      "id": "Kedalaman Selat Ombai–Wetar",
+      "tet": "Estreitu Ombai–Wetar nia kle'an"
+     },
+     "value": {
+      "en": "more than 3,000 m in places",
+      "id": "lebih dari 3.000 m di beberapa tempat",
+      "tet": "liu metru 3.000 iha fatin balu"
+     },
+     "year": "",
+     "source": 2
+    },
+    {
+     "label": {
+      "en": "Ataúro reef fish survey",
+      "id": "Survei ikan karang Ataúro",
+      "tet": "Estudu ikan ahu-ruin iha Ataúro"
+     },
+     "value": {
+      "en": "among the highest counts ever recorded at single sites",
+      "id": "termasuk jumlah tertinggi yang pernah tercatat di satu lokasi",
+      "tet": "númeru ida husi aas liu iha fatin ida"
+     },
+     "year": "2016",
+     "source": 2
+    }
+   ],
+   "figure": {
+    "hint": "Map of Timor-Leste and nearby seas. Labels: Wallacea (shaded area between Asia and Australia), Ombai–Wetar Strait (deep water, whales and dolphins), Ataúro (coral reefs), Lautém forests (cockatoo, Timor green pigeon), river mouths and mangroves (saltwater crocodile), seagrass (dugong).",
+    "caption": {
+     "en": "Where to find Timor-Leste's wildlife",
+     "id": "Tempat satwa liar Timor-Leste",
+     "pt": "Onde encontrar a vida selvagem de Timor-Leste",
+     "tet": "Fatin ba animál fuik iha Timor-Leste"
+    }
+   },
+   "sources": [
+    {
+     "title": "Wallacea biodiversity hotspot",
+     "publisher": "Critical Ecosystem Partnership Fund",
+     "url": "https://www.cepf.net/our-work/biodiversity-hotspots/wallacea",
+     "year": "2024"
+    },
+    {
+     "title": "Timor-Leste country profile",
+     "publisher": "BirdLife International Data Zone",
+     "url": "https://datazone.birdlife.org/country/timor-leste",
+     "year": "2024"
+    },
+    {
+     "title": "Timor-Leste: country profile",
+     "publisher": "Convention on Biological Diversity",
+     "url": "https://www.cbd.int/countries/profile/?country=tl",
+     "year": "2024"
+    },
+    {
+     "title": "Coral Triangle Initiative on Coral Reefs, Fisheries and Food Security",
+     "publisher": "CTI-CFF",
+     "url": "https://www.coraltriangleinitiative.org/",
+     "year": "2024"
+    }
+   ],
+   "related": [
+    "tl.nature.nino_konis_santana",
+    "tl.culture.lafaek_legend",
+    "w.geography_oceans.coral_triangle",
+    "w.life_environment.ecosystems",
+    "atlas:earth_wallacea",
+    "atlas:atauro",
+    "atlas:dive_atauro"
+   ],
+   "tags": [
+    "biology",
+    "environment",
+    "geography",
+    "birds",
+    "ocean",
+    "coral reef"
+   ],
+   "quiz": [
+    {
+     "q": {
+      "en": "Why did few large land mammals reach Timor naturally?",
+      "id": "Mengapa hanya sedikit mamalia darat besar yang tiba di Timor secara alami?",
+      "tet": "Tanba saida animál boot iha rai menus mak to'o Timor ho dalan naturál?"
+     },
+     "options": {
+      "en": [
+       "The island was too cold",
+       "Deep sea separated Timor from the continents",
+       "There was no food",
+       "People hunted them all"
+      ],
+      "id": [
+       "Pulau itu terlalu dingin",
+       "Laut dalam memisahkan Timor dari benua",
+       "Tidak ada makanan",
+       "Manusia memburu semuanya"
+      ],
+      "tet": [
+       "Illa malirin liu",
+       "Tasi kle'an fahe Timor husi kontinente sira",
+       "Hahán la iha",
+       "Ema kaça hotu"
+      ]
+     },
+     "answer": 1,
+     "explain": {
+      "en": "Even in the ice ages deep water separated Wallacea from Asia and Australia.",
+      "id": "Bahkan pada zaman es laut dalam memisahkan Wallacea dari Asia dan Australia.",
+      "tet": "Maski iha tempu jelu, tasi kle'an fahe Wallacea husi Ázia no Austrália."
+     }
+    },
+    {
+     "q": {
+      "en": "What does the dugong eat?",
+      "id": "Apa makanan dugong?",
+      "tet": "Dugongu han saida?"
+     },
+     "options": {
+      "en": [
+       "Fish",
+       "Coral",
+       "Small crabs",
+       "Seagrass"
+      ],
+      "id": [
+       "Ikan",
+       "Karang",
+       "Kepiting kecil",
+       "Lamun"
+      ],
+      "tet": [
+       "Ikan",
+       "Ahu-ruin",
+       "Kadiuk ki'ik",
+       "Du'ut-tasi"
+      ]
+     },
+     "answer": 3,
+     "explain": {
+      "en": "Dugongs graze on seagrass in shallow, calm water.",
+      "id": "Dugong memakan lamun di perairan dangkal dan tenang.",
+      "tet": "Dugongu han du'ut-tasi iha bee la kle'an no hakmatek."
+     }
+    },
+    {
+     "q": {
+      "en": "Why can whales be seen close to the coast near Dili?",
+      "id": "Mengapa paus bisa terlihat dekat pantai di sekitar Dili?",
+      "tet": "Tanba saida ema bele haree baleia besik tasi-ibun iha Dili?"
+     },
+     "options": {
+      "en": [
+       "Very deep water lies close to the shore",
+       "People feed them",
+       "The water is fresh",
+       "They live in rivers"
+      ],
+      "id": [
+       "Laut yang sangat dalam terletak dekat pantai",
+       "Orang memberi mereka makan",
+       "Airnya tawar",
+       "Mereka hidup di sungai"
+      ],
+      "tet": [
+       "Tasi kle'an tebes besik tasi-ibun",
+       "Ema fó hahán ba sira",
+       "Bee la masin",
+       "Sira hela iha mota"
+      ]
+     },
+     "answer": 0,
+     "explain": {
+      "en": "The Ombai–Wetar Strait is more than 3,000 m deep close to land, so ocean animals pass near the shore.",
+      "id": "Selat Ombai–Wetar dalamnya lebih dari 3.000 m dekat daratan, sehingga hewan laut lewat dekat pantai.",
+      "tet": "Estreitu Ombai–Wetar kle'an liu metru 3.000 besik rai, ne'e duni animál tasi liu besik tasi-ibun."
+     }
+    }
+   ],
+   "review": {
+    "version": 1,
+    "reviewed": "2026-10-15",
+    "status": "Written by the Lafa team from the listed sources; needs review by a subject expert and a Timorese reviewer (Tetun text and cultural content)",
+    "licence": "CC BY-SA 4.0",
+    "langs_full": [
+     "en",
+     "id",
+     "tet"
+    ]
+   }
+  },
+  {
+   "id": "tl.nature.nino_konis_santana",
+   "title": {
+    "en": "Nino Konis Santana National Park",
+    "id": "Taman Nasional Nino Konis Santana",
+    "pt": "Parque Nacional Nino Konis Santana",
+    "tet": "Parke Nasionál Nino Konis Santana"
+   },
+   "summary": {
+    "en": "Nino Konis Santana National Park in Lautém, declared in 2007, was Timor-Leste's first national park. It protects forests, caves, Lake Ira Lalaro, Jaco Island and coral reefs, while local communities continue to live and farm in the area.",
+    "id": "Taman Nasional Nino Konis Santana di Lautém, yang dinyatakan pada 2007, adalah taman nasional pertama Timor-Leste. Taman ini melindungi hutan, gua, Danau Ira Lalaro, Pulau Jaco, dan terumbu karang, sementara masyarakat setempat tetap tinggal dan bertani di kawasan itu.",
+    "pt": "O Parque Nacional Nino Konis Santana, em Lautém, declarado em 2007, foi o primeiro parque nacional de Timor-Leste. Protege florestas, grutas, o lago Ira Lalaro, a ilha de Jaco e recifes de coral, enquanto as comunidades locais continuam a viver e a cultivar na zona.",
+    "tet": "Parke Nasionál Nino Konis Santana iha Lautém, ne'ebé governu deklara iha 2007, mak Timor-Leste nia parke nasionál dahuluk. Parke ne'e proteje ai-laran, fatuk-kuak, Lagoa Ira Lalaro, illa Jaco no ahu-ruin. Komunidade lokál sei hela no halo to'os iha área ne'e."
+   },
+   "objectives": {
+    "en": [
+     "You will locate Nino Konis Santana National Park and describe its land and sea areas.",
+     "You will explain why the park is important for nature and culture.",
+     "You will describe how local communities and customary rules help protect the park."
+    ],
+    "id": [
+     "Kamu akan menunjukkan letak Taman Nasional Nino Konis Santana dan menjelaskan kawasan darat dan lautnya.",
+     "Kamu akan menjelaskan mengapa taman ini penting bagi alam dan budaya.",
+     "Kamu akan menjelaskan bagaimana masyarakat setempat dan aturan adat membantu melindungi taman."
+    ],
+    "pt": [
+     "Vais localizar o Parque Nacional Nino Konis Santana e descrever as suas áreas de terra e mar.",
+     "Vais explicar porque é que o parque é importante para a natureza e a cultura.",
+     "Vais descrever como as comunidades locais e as regras tradicionais ajudam a proteger o parque."
+    ],
+    "tet": [
+     "Ita sei hatene Parke Nasionál Nino Konis Santana iha ne'ebé, no ninia rai no tasi.",
+     "Ita sei esplika tanba saida parke ne'e importante ba natureza no kultura.",
+     "Ita sei komprende oinsá komunidade lokál no lisan ajuda proteje parke."
+    ]
+   },
+   "sections": [
+    {
+     "heading": {
+      "en": "Timor-Leste's first national park",
+      "id": "Taman nasional pertama Timor-Leste",
+      "tet": "Parke nasionál dahuluk Timor-Leste nian"
+     },
+     "body": {
+      "en": "Nino Konis Santana National Park covers the eastern tip of Timor-Leste, in the municipality of Lautém. The government declared it in 2007, and further legal steps followed in the next years, so some sources give 2008. It was the country's first national park. The park includes land and a large area of sea, together more than a thousand square kilometres. It is named after Nino Konis Santana, a leader of the armed resistance (FALINTIL) who came from this region and died in 1998. Naming the park after him links the protection of nature with the memory of the struggle for independence. Most of the land is home to the Fataluku people.",
+      "id": "Taman Nasional Nino Konis Santana mencakup ujung timur Timor-Leste, di munisipalitas Lautém. Pemerintah menyatakannya pada 2007, dan langkah hukum berikutnya menyusul pada tahun-tahun setelahnya, sehingga beberapa sumber menyebut 2008. Ini adalah taman nasional pertama di negeri ini. Taman ini mencakup daratan dan wilayah laut yang luas, bersama-sama lebih dari seribu kilometer persegi. Namanya diambil dari Nino Konis Santana, pemimpin perlawanan bersenjata (FALINTIL) yang berasal dari daerah ini dan meninggal pada 1998. Penamaan ini menghubungkan perlindungan alam dengan kenangan perjuangan kemerdekaan. Sebagian besar wilayahnya adalah tanah masyarakat Fataluku.",
+      "tet": "Parke Nasionál Nino Konis Santana iha Timor-Leste nia rohan leste, iha munisípiu Lautém. Governu deklara parke ne'e iha 2007, no pasu legál seluk tuir iha tinan sira tuir mai. Tan ne'e fonte balu hakerek 2008. Ne'e mak nasaun nia parke nasionál dahuluk. Parke ne'e iha rai no tasi luan, hamutuk liu kilómetru kuadradu rihun ida. Parke nia naran mai husi Nino Konis Santana, lideransa rezisténsia armada (FALINTIL) ne'ebé mai husi rejiaun ne'e no mate iha 1998. Naran ne'e liga protesaun natureza ho memória luta ba independénsia. Rai barak iha parke ne'e mak povu Fataluku nian."
+     }
+    },
+    {
+     "heading": {
+      "en": "Forests, caves and Lake Ira Lalaro",
+      "id": "Hutan, gua, dan Danau Ira Lalaro",
+      "tet": "Ai-laran, fatuk-kuak no Lagoa Ira Lalaro"
+     },
+     "body": {
+      "en": "On land, the park protects some of the largest remaining lowland forests in Timor-Leste. Much of the area is limestone, raised from the sea floor over a long time, with caves, sinkholes and cliffs along the coast. Some caves contain ancient paintings and are among the oldest known places of human life on the island. Lake Ira Lalaro, the largest lake in Timor-Leste, lies on a plateau inside the park area; its size changes a lot between the wet and dry seasons. The forests are home to many birds found only in this region, including pigeons, parrots and the rare yellow-crested cockatoo, as well as bats, reptiles and plants used by local families.",
+      "id": "Di darat, taman ini melindungi sebagian hutan dataran rendah terbesar yang masih tersisa di Timor-Leste. Sebagian besar wilayahnya adalah batu kapur yang terangkat dari dasar laut selama waktu yang lama, dengan gua, lubang runtuhan, dan tebing di sepanjang pantai. Beberapa gua menyimpan lukisan kuno dan termasuk tempat kehidupan manusia tertua yang diketahui di pulau ini. Danau Ira Lalaro, danau terbesar di Timor-Leste, terletak di sebuah dataran tinggi di dalam kawasan taman; luasnya banyak berubah antara musim hujan dan musim kemarau. Hutannya menjadi rumah bagi banyak burung yang hanya ada di wilayah ini, termasuk merpati, burung paruh bengkok, dan kakatua jambul kuning yang langka, serta kelelawar, reptil, dan tumbuhan yang dimanfaatkan keluarga setempat.",
+      "tet": "Iha rai, parke ne'e proteje ai-laran boot balu ne'ebé sei hela iha Timor-Leste nia rai-tetuk. Rai barak iha ne'e mak fatuk-ahu ne'ebé sa'e husi tasi nia okos durante tempu naruk. Iha fatuk-kuak, rai-kuak no fatuk-lolon iha tasi-ibun. Fatuk-kuak balu iha pintura tuan, no sai fatin tuan liu balu ne'ebé ema hela iha illa ne'e. Lagoa Ira Lalaro, lagoa boot liu iha Timor-Leste, iha rai-tetuk ida iha parke nia área. Lagoa nia medida muda barak entre tempu udan no tempu bailoron. Ai-laran mak uma ba manu barak ne'ebé moris iha rejiaun ne'e de'it, inklui pombu, kakatua no kakatua ho fulun kinur iha ulun, ne'ebé raru. Iha mós niki, réptil no ai-horis ne'ebé família lokál uza."
+     }
+    },
+    {
+     "heading": {
+      "en": "Jaco Island and the coral reefs",
+      "id": "Pulau Jaco dan terumbu karang",
+      "tet": "Illa Jaco no ahu-ruin"
+     },
+     "body": {
+      "en": "The marine part of the park protects coral reefs, seagrass and the deep waters off the eastern tip, which are part of the Coral Triangle. Turtles, dolphins and whales are seen in these waters. The best-known place is Jaco Island, a small, uninhabited island of white sand and forest just off the coast near Tutuala. Jaco is sacred to the Fataluku people. By local custom, visitors may go there by day with local boatmen but may not stay overnight, and they should take all rubbish away with them. Valu beach, across the water from Jaco, has community-run guesthouses. Respecting these rules is part of protecting both the island's nature and its culture.",
+      "id": "Bagian laut taman ini melindungi terumbu karang, padang lamun, dan perairan dalam di lepas ujung timur, yang merupakan bagian dari Segitiga Terumbu Karang. Penyu, lumba-lumba, dan paus terlihat di perairan ini. Tempat yang paling terkenal adalah Pulau Jaco, pulau kecil tak berpenghuni dengan pasir putih dan hutan, tidak jauh dari pantai dekat Tutuala. Jaco dianggap sakral oleh masyarakat Fataluku. Menurut adat setempat, pengunjung boleh datang pada siang hari dengan perahu nelayan setempat tetapi tidak boleh menginap, dan harus membawa pulang semua sampahnya. Pantai Valu, di seberang Jaco, memiliki penginapan yang dikelola masyarakat. Menghormati aturan ini adalah bagian dari menjaga alam dan budaya pulau tersebut.",
+      "tet": "Parke nia parte tasi nian proteje ahu-ruin, du'ut-tasi no tasi kle'an iha rohan leste, ne'ebé parte husi Triángulu Korál. Ema haree lenuk, golfiñu no baleia iha tasi ne'e. Fatin ne'ebé ema hatene liu mak illa Jaco, illa ki'ik ida ne'ebé ema la hela, ho rai-henek mutin no ai-laran, besik tasi-ibun Tutuala nian. Jaco mak sagradu ba povu Fataluku. Tuir lisan lokál, vizitante sira bele ba iha loron ho peskadór lokál nia ró, maibé labele toba iha ne'ebá. Sira tenke lori fila lixu hotu. Tasi-ibun Valu, iha Jaco nia oin, iha fatin toba ne'ebé komunidade jere. Respeita regra sira-ne'e mak parte husi proteje illa nia natureza no kultura."
+     }
+    },
+    {
+     "heading": {
+      "en": "People and the park",
+      "id": "Masyarakat dan taman",
+      "tet": "Ema no parke"
+     },
+     "body": {
+      "en": "Unlike some national parks in other countries, Nino Konis Santana was created with people living inside it. Villages farm, raise animals, collect forest products and fish within the park area. Protection therefore depends on cooperation between the government, local leaders and communities. Customary rules are important: through tara bandu, communities can agree to ban cutting certain trees, hunting or fishing in a place for a time, with penalties set by custom. Threats include forest fires, clearing land for farming, hunting, collecting wild birds and overfishing. Well-managed ecotourism, such as birdwatching, diving and visits to caves and Jaco Island, can give families income while keeping nature healthy.",
+      "id": "Berbeda dengan beberapa taman nasional di negara lain, Nino Konis Santana dibentuk dengan penduduk yang tinggal di dalamnya. Desa-desa bertani, beternak, mengumpulkan hasil hutan, dan menangkap ikan di dalam kawasan taman. Karena itu perlindungannya bergantung pada kerja sama antara pemerintah, pemimpin setempat, dan masyarakat. Aturan adat sangat penting: melalui tara bandu, masyarakat dapat sepakat melarang penebangan pohon tertentu, perburuan, atau penangkapan ikan di suatu tempat untuk sementara, dengan sanksi menurut adat. Ancamannya meliputi kebakaran hutan, pembukaan lahan untuk pertanian, perburuan, penangkapan burung liar, dan penangkapan ikan berlebihan. Ekowisata yang dikelola dengan baik, seperti mengamati burung, menyelam, dan mengunjungi gua serta Pulau Jaco, dapat memberi penghasilan bagi keluarga sambil menjaga alam tetap sehat.",
+      "tet": "La hanesan parke nasionál balu iha nasaun seluk, Nino Konis Santana moris ho ema ne'ebé hela iha laran. Aldeia sira halo to'os, hakiak animál, foti sasán husi ai-laran no kaer ikan iha parke nia área. Tan ne'e, protesaun depende ba servisu hamutuk entre governu, lider lokál no komunidade. Lisan importante tebes: liuhusi tara bandu, komunidade bele konkorda atu bandu ko'a ai balu, kaça animál ka kaer ikan iha fatin ida durante tempu balu, ho multa tuir lisan. Perigu mak ahi-han ai-laran, ko'a ai atu halo to'os, kaça animál, kaer manu fuik no kaer ikan barak liu. Ekoturizmu ne'ebé jere di'ak, hanesan haree manu, selam no vizita fatuk-kuak no illa Jaco, bele fó rendimentu ba família no mós halo natureza di'ak nafatin."
+     }
+    }
+   ],
+   "facts": [
+    {
+     "label": {
+      "en": "Declared",
+      "id": "Dinyatakan",
+      "tet": "Deklara"
+     },
+     "value": {
+      "en": "2007 (legal steps continued in 2008)",
+      "id": "2007 (langkah hukum berlanjut pada 2008)",
+      "tet": "2007 (pasu legál kontinua iha 2008)"
+     },
+     "year": "2007",
+     "source": 0
+    },
+    {
+     "label": {
+      "en": "Municipality",
+      "id": "Munisipalitas",
+      "tet": "Munisípiu"
+     },
+     "value": {
+      "en": "Lautém",
+      "id": "Lautém",
+      "tet": "Lautém"
+     },
+     "year": "",
+     "source": 0
+    },
+    {
+     "label": {
+      "en": "Total area (land and sea)",
+      "id": "Luas total (darat dan laut)",
+      "tet": "Área tomak (rai no tasi)"
+     },
+     "value": {
+      "en": "more than 1,000 km²",
+      "id": "lebih dari 1.000 km²",
+      "tet": "liu 1.000 km²"
+     },
+     "year": "2007",
+     "source": 0
+    }
+   ],
+   "figure": {
+    "hint": "Simple map of the eastern tip of Timor-Leste (Lautém). Labels: park boundary on land and sea, Lake Ira Lalaro, Tutuala, Jaco Island, Valu beach, coral reef zone, limestone caves with rock art.",
+    "caption": {
+     "en": "Nino Konis Santana National Park on land and at sea",
+     "id": "Taman Nasional Nino Konis Santana di darat dan laut",
+     "pt": "O Parque Nacional Nino Konis Santana em terra e no mar",
+     "tet": "Parke Nasionál Nino Konis Santana iha rai no iha tasi"
+    }
+   },
+   "sources": [
+    {
+     "title": "Timor-Leste: country profile",
+     "publisher": "Convention on Biological Diversity",
+     "url": "https://www.cbd.int/countries/profile/?country=tl",
+     "year": "2024"
+    },
+    {
+     "title": "Timor-Leste country profile",
+     "publisher": "BirdLife International Data Zone",
+     "url": "https://datazone.birdlife.org/country/timor-leste",
+     "year": "2024"
+    },
+    {
+     "title": "Coral Triangle Initiative on Coral Reefs, Fisheries and Food Security",
+     "publisher": "CTI-CFF",
+     "url": "https://www.coraltriangleinitiative.org/",
+     "year": "2024"
+    }
+   ],
+   "related": [
+    "tl.nature.wildlife",
+    "tl.history.first_people",
+    "tl.culture.uma_lulik",
+    "w.geography_oceans.coral_triangle",
+    "atlas:jaco",
+    "atlas:jaco_tutuala",
+    "atlas:east_plateaus",
+    "atlas:resistance"
+   ],
+   "tags": [
+    "environment",
+    "biology",
+    "geography",
+    "national park",
+    "conservation",
+    "civics"
+   ],
+   "quiz": [
+    {
+     "q": {
+      "en": "In which municipality is Nino Konis Santana National Park?",
+      "id": "Di munisipalitas mana Taman Nasional Nino Konis Santana berada?",
+      "tet": "Parke Nasionál Nino Konis Santana iha munisípiu ida ne'ebé?"
+     },
+     "options": {
+      "en": [
+       "Dili",
+       "Oé-Cusse",
+       "Bobonaro",
+       "Lautém"
+      ],
+      "id": [
+       "Dili",
+       "Oé-Cusse",
+       "Bobonaro",
+       "Lautém"
+      ],
+      "tet": [
+       "Dili",
+       "Oé-Cusse",
+       "Bobonaro",
+       "Lautém"
+      ]
+     },
+     "answer": 3,
+     "explain": {
+      "en": "The park covers the eastern tip of Timor-Leste, in Lautém.",
+      "id": "Taman ini mencakup ujung timur Timor-Leste, di Lautém.",
+      "tet": "Parke ne'e iha Timor-Leste nia rohan leste, iha Lautém."
+     }
+    },
+    {
+     "q": {
+      "en": "What is the rule for visitors to Jaco Island?",
+      "id": "Apa aturan bagi pengunjung Pulau Jaco?",
+      "tet": "Saida mak regra ba vizitante iha illa Jaco?"
+     },
+     "options": {
+      "en": [
+       "They may build houses there",
+       "They may visit by day but not stay overnight",
+       "They may hunt birds there",
+       "Nobody may ever visit"
+      ],
+      "id": [
+       "Boleh membangun rumah di sana",
+       "Boleh berkunjung siang hari tetapi tidak boleh menginap",
+       "Boleh berburu burung di sana",
+       "Tidak ada yang boleh berkunjung"
+      ],
+      "tet": [
+       "Bele harii uma iha ne'ebá",
+       "Bele vizita iha loron, maibé labele toba",
+       "Bele kaça manu iha ne'ebá",
+       "Ema ida labele vizita"
+      ]
+     },
+     "answer": 1,
+     "explain": {
+      "en": "Jaco is sacred to the Fataluku people, so visitors come by day and leave before night.",
+      "id": "Jaco sakral bagi masyarakat Fataluku, sehingga pengunjung datang siang hari dan pergi sebelum malam.",
+      "tet": "Jaco mak sagradu ba povu Fataluku, ne'e duni vizitante mai iha loron no fila molok kalan."
+     }
+    },
+    {
+     "q": {
+      "en": "What is tara bandu?",
+      "id": "Apa itu tara bandu?",
+      "tet": "Tara bandu mak saida?"
+     },
+     "options": {
+      "en": [
+       "A type of coral",
+       "A national holiday",
+       "A customary agreement that bans some activities for a time",
+       "A traditional boat"
+      ],
+      "id": [
+       "Sejenis karang",
+       "Hari libur nasional",
+       "Kesepakatan adat yang melarang kegiatan tertentu untuk sementara",
+       "Perahu tradisional"
+      ],
+      "tet": [
+       "Ahu-ruin tipu ida",
+       "Feriadu nasionál",
+       "Akordu lisan nian ne'ebé bandu atividade balu durante tempu balu",
+       "Ró tradisionál"
+      ]
+     },
+     "answer": 2,
+     "explain": {
+      "en": "Through tara bandu, communities agree on bans such as no fishing in a place for a time.",
+      "id": "Melalui tara bandu, masyarakat menyepakati larangan seperti tidak menangkap ikan di suatu tempat untuk sementara.",
+      "tet": "Liuhusi tara bandu, komunidade konkorda atu bandu buat balu, hanesan kaer ikan iha fatin ida durante tempu balu."
+     }
+    }
+   ],
+   "review": {
+    "version": 1,
+    "reviewed": "2026-10-15",
+    "status": "Written by the Lafa team from the listed sources; needs review by a subject expert and a Timorese reviewer (Tetun text and cultural content)",
+    "licence": "CC BY-SA 4.0",
+    "langs_full": [
+     "en",
+     "id",
+     "tet"
+    ]
+   }
+  }
+ ],
+ "coverage": [
+  {
+   "topic": {
+    "en": "Wildlife of Timor-Leste",
+    "id": "Satwa liar Timor-Leste",
+    "tet": "Animál fuik iha Timor-Leste"
+   },
+   "status": "available",
+   "article": "tl.nature.wildlife"
+  },
+  {
+   "topic": {
+    "en": "Nino Konis Santana National Park",
+    "id": "Taman Nasional Nino Konis Santana",
+    "tet": "Parke Nasionál Nino Konis Santana"
+   },
+   "status": "available",
+   "article": "tl.nature.nino_konis_santana"
+  },
+  {
+   "topic": {
+    "en": "Marine reserves and fishing",
+    "id": "Kawasan konservasi laut dan perikanan",
+    "tet": "Área protejida tasi nian no peska"
+   },
+   "status": "planned",
+   "article": ""
+  },
+  {
+   "topic": {
+    "en": "Forests, sandalwood and trees",
+    "id": "Hutan, cendana, dan pepohonan",
+    "tet": "Ai-laran, ai-kameli no ai-hun sira"
+   },
+   "status": "planned",
+   "article": ""
+  },
+  {
+   "topic": {
+    "en": "Mangroves and coasts",
+    "id": "Hutan bakau dan pantai",
+    "tet": "Ai-parapa no tasi-ibun"
+   },
+   "status": "planned",
+   "article": ""
+  },
+  {
+   "topic": {
+    "en": "Climate change in Timor-Leste",
+    "id": "Perubahan iklim di Timor-Leste",
+    "tet": "Mudansa klimátika iha Timor-Leste"
+   },
+   "status": "planned",
+   "article": ""
+  }
+ ]
+}

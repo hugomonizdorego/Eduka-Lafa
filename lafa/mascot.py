@@ -14,11 +14,12 @@ import math
 import random
 import time
 from datetime import datetime
-from .qt import Qt,QTimer,QPointF,QRectF,QRect,QEvent,Signal,QPixmap,QPainter,QGuiApplication,QPolygonF,QColor,QPainterPath,QPen,QCursor
-from .qt import QWidget,QMenu,QFrame,QVBoxLayout,QHBoxLayout,QLabel,QLineEdit,QPushButton,QPlainTextEdit,QApplication,global_point,run
+from .qt import Qt,QTimer,QPointF,QRectF,QRect,QEvent,Signal,QPixmap,QPainter,QGuiApplication,QPolygonF,QColor,QPainterPath,QPen,QCursor,QRegion
+from .qt import QWidget,QMenu,QFrame,QVBoxLayout,QHBoxLayout,QGridLayout,QLabel,QLineEdit,QPushButton,QPlainTextEdit,QApplication,QSize,global_point,run
 from .config import STATES,IDLE_ACTIVITIES,ENTERTAINMENT
 from .i18n import tr
-from . import personality, eduka, outfits, roles
+from . import personality, eduka, outfits, roles, icons
+import shutil
 from .motion import Motion
 
 ASSET=Path(__file__).parent/'assets'/'lafa-atlas.png'
@@ -29,29 +30,38 @@ WALK_STEPS={'slow':2,'normal':3,'fast':5}
 ANIMATION_RATES={'slow':0.6,'normal':1.0,'fast':1.6}
 
 BUBBLE_QSS='''
-QFrame#speech {background:qlineargradient(x1:0,y1:0,x2:0,y2:1,stop:0 rgba(255,255,255,250),stop:1 rgba(236,248,242,246)); border:1px solid rgba(0,168,121,0.28); border-radius:22px;}
-QLabel#bubblename {font-size:19px; font-weight:800; color:#0f5a46; background:transparent;}
-QLabel#bubbleduty {font-size:10px; color:#6b7f78; background:transparent; padding-left:4px;}
-QLabel#bubblestatus {font-size:10px; color:#0f5a46; background:rgba(0,168,121,0.12); border-radius:9px; padding:3px 8px;}
-QPushButton#bubbleclose {border:0; background:transparent; font-size:17px; padding:2px; color:#5b6f68;}
-QPushButton#bubbleclose:hover {color:#c92a2a;}
-QPlainTextEdit#bubbletext {border:0; background:rgba(255,255,255,0.75); border-radius:14px; font-size:13px; padding:8px 10px; color:#1d3b31;}
-QPushButton {border-radius:12px; padding:6px 8px; font-size:11px; font-weight:600; color:white; border:0;}
-QPushButton#chip_continue {background:#0f7a5c;}
-QPushButton#chip_tasks {background:#0b7285;}
-QPushButton#chip_focus {background:#f2c14e; color:#3b2a00;}
-QPushButton#chip_os {background:#3b5bdb;}
-QPushButton:hover {padding-top:5px; padding-bottom:7px;}
-QPushButton:disabled {background:#dfe7e3; color:#8a9a94;}
-QLineEdit#bubbleinput {background:white; border:1px solid #cfe3d9; border-radius:14px; padding:8px 10px; font-size:13px; color:#1d3b31;}
-QLineEdit#bubbleinput:focus {border-color:#00a879;}
-QPushButton#bubblesend {background:qlineargradient(x1:0,y1:0,x2:1,y2:1,stop:0 #20c997,stop:1 #00a879); border-radius:14px; font-size:15px;}
-QPushButton#footchip {background:white; color:#1d3b31; border:1px solid #d7e6de; font-weight:500; font-size:10px; padding:5px 9px;}
-QPushButton#footchip:hover {background:#eefaf4; border-color:#00a879;}
+QFrame#speech {background:#ffffff; border:2px solid #dbe8e1; border-radius:22px;}
+QFrame#speech QLabel {background:transparent; color:#17322b;}
+QLabel#bubblename {font-size:20px; font-weight:800; color:#0b4f3c;}
+QLabel#bubbleduty {font-size:11px; color:#5b6f68;}
+QLabel#bubblestatus {font-size:11px; font-weight:700; color:#0a6047; background:#e3f4ec; border-radius:11px; padding:4px 10px;}
+QPushButton#bubbleclose {border:2px solid transparent; background:transparent; padding:2px; border-radius:10px;}
+QPushButton#bubbleclose:hover {background:#f1f5f2;}
+QPushButton#bubbleclose:focus {border-color:#0a7350;}
+QLineEdit#bubbleinput {background:#ffffff; border:2px solid #dbe8e1; border-radius:14px; padding:8px 10px; font-size:13px; color:#17322b;}
+QLineEdit#bubbleinput:focus {border-color:#0a7350;}
+QPushButton#quicktile {background:#eef7f2; color:#17322b; border:2px solid #eef7f2; border-radius:16px; font-size:13px; font-weight:700; padding:10px 6px;}
+QPushButton#quicktile:hover {border-color:#00a879;}
+QPushButton#quicktile:focus {border-color:#0a7350;}
+QPushButton#quicktile[tone="sand"] {background:#fdf3dc; border-color:#fdf3dc;}
+QPushButton#quicktile[tone="sky"] {background:#e8f1fb; border-color:#e8f1fb;}
+QPushButton#quicktile[tone="sand"]:hover, QPushButton#quicktile[tone="sky"]:hover {border-color:#00a879;}
+QPushButton#quicktile[tone="sand"]:focus, QPushButton#quicktile[tone="sky"]:focus {border-color:#0a7350;}
+QFrame#resultcard {background:#f6faf7; border:2px solid #e7efea; border-radius:14px;}
+QPlainTextEdit#bubbletext {border:0; background:transparent; font-size:13px; color:#17322b;}
+QPushButton#footchip {background:transparent; color:#17322b; border:2px solid transparent; font-weight:600; font-size:12px; padding:6px 8px; border-radius:10px;}
+QPushButton#footchip:hover {background:#eef7f2;}
+QPushButton#footchip:focus {border-color:#0a7350;}
+QPushButton#footchip:checked {background:#e3f4ec; color:#0a6047;}
+QPushButton#footchip:disabled {color:#8a9a94;}
 '''
 
-# Bubble quick buttons (all offline): key -> label key.
-QUICK={'continue':'continue_learning','tasks':'tasks_short','focus':'focus_short','os':'os_short'}
+
+# Popup quick access (2×2, all offline): key -> (label key, icon, tone).
+TILES=[('continue','popup_continue','book-open',''),('explore','popup_explore','compass',''),('tasks','popup_tasks','tasks','sand'),('os','popup_os','monitor-help','sky')]
+# Right-click menu shortcuts (also offline).
+QUICK={'continue':'continue_learning','explore':'popup_explore','tasks':'tasks_short','focus':'focus_short','os':'os_short'}
+POPUP_WIDTH=360
 ROLE_OF={activity:role for role,(activity,*_) in roles.ROLES.items() if activity in outfits.ROLES}
 
 def greeting_key(hour):
@@ -88,6 +98,29 @@ class Atlas:
         self.poses=self.outfits['base'];self.traditional=self.outfits['traditional']
         for state in ['tebe','bidu']:self.poses[state]=self.traditional[state]
         if set(STATES)-self.poses.keys():raise RuntimeError('A LAFA pose is missing.')
+        # Walk cycle: 8 frames per outfit (tools/make-walk.py), facing right.
+        self.walk={};self.walk_meta={}
+        path=ASSET.with_name('lafa-walk.png')
+        try:
+            meta=json.loads(path.with_name('lafa-walk.json').read_text());sheet=QPixmap(str(path))
+            if not sheet.isNull():
+                fw,fh=meta['frame']
+                for r,row in enumerate(meta['rows']):self.walk['traditional' if row=='tais' else row]=[sheet.copy(c*fw,r*fh,fw,fh) for c in range(meta['frames'])]
+                self.walk_meta=meta
+        except (OSError,ValueError,KeyError):self.walk={}
+    def extent(self,pix):
+        """(top, bottom, left, right) of the opaque part of a pixmap, cached."""
+        cache=self.__dict__.setdefault('_extent',{});key=(pix.cacheKey(),pix.width(),pix.height())
+        if key not in cache:
+            image=pix.toImage();w,h=image.width(),image.height();rows=[]
+            step=max(1,w//64)
+            for y in range(h):
+                if any(QColor(image.pixel(x,y)).alpha()>100 for x in range(0,w,step)):rows.append(y)
+            cols=[x for x in range(0,w,step) if any(QColor(image.pixel(x,y)).alpha()>100 for y in range(0,h,max(1,h//64)))]
+            cache[key]=(rows[0],rows[-1],cols[0],cols[-1]) if rows and cols else (0,h-1,0,w-1)
+        return cache[key]
+    def walk_frames(self,costume):
+        return self.walk.get(costume) or self.walk.get('casual') or []
     def head(self,pose):
         """(x, y) of the top of LAFA's head as fractions of the pose canvas."""
         cache=self.__dict__.setdefault('_heads',{})
@@ -115,12 +148,59 @@ class Character(QWidget):
     def __init__(self,atlas,parent=None,size=190):
         super().__init__(parent);self.atlas=atlas;self.state='idle';self.costume='casual';self.phase=0;self.animated=True;self.direction=1;self.rate=1.0
         self.motion=Motion();self.previous=None
+        self.distance=0.0;self.moved_at=0.0;self.hold=0   # walk cycle: travelled pixels, last move, contact-pose ticks
         self.setFixedSize(size,size+16);self.setMouseTracking(True)
         self.timer=QTimer(self);self.timer.timeout.connect(self.tick);self.timer.start(self.FRAME_MS)
     @property
     def hop_phase(self):return 1.0 if self.motion.gesture=="jump" else 0.0
+    @property
+    def direction(self):return self.__dict__.get('_direction',1)
+    @direction.setter
+    def direction(self,value):
+        value=1 if value>=0 else -1
+        # Turning: plant both feet (contact pose) for a moment, then walk the other way.
+        if value!=self.__dict__.get('_direction',1) and self.state=='walking':self.hold=3
+        self._direction=value
+    def advance(self,pixels):
+        """The window moved this many pixels: the feet follow the distance (no sliding)."""
+        self.distance+=abs(pixels);self.moved_at=time.monotonic()
+        if self.hold>0:self.hold-=1
+        self.update()
+    def walk_index(self):
+        frames=self.atlas.walk_frames(self.costume)
+        if not frames or self.hold>0 or not self.animated or getattr(self,'reduce_motion',False):return 0
+        stride=self.atlas.walk_meta.get('stride',120)*self.walk_scale()
+        return int(self.distance/(stride/len(frames))+1e-6)%len(frames)
+    def walk_scale(self):
+        """Walk frames are drawn at the same body height as the standing pose."""
+        idle=self.atlas.pixmap('idle',self.width()-10,self.costume);t,b,_l,_r=self.atlas.extent(idle)
+        frames=self.atlas.walk_frames(self.costume)
+        if not frames:return 1.0
+        ft,fb,_fl,_fr=self.atlas.extent(frames[0])
+        return (b-t)/max(1,fb-ft)
+    def ground_y(self):
+        idle=self.atlas.pixmap('idle',self.width()-10,self.costume);_t,b,_l,_r=self.atlas.extent(idle)
+        return self.height()/2-idle.height()/2+b
+    def mask_region(self):
+        """Where LAFA is drawn (with room for jumps and the shadow); clicks elsewhere go to other windows."""
+        key=(self.state,self.costume,self.direction,self.width(),self.height())
+        if getattr(self,'_mask_key',None)!=key:
+            if self.pose=='walking' and self.atlas.walk_frames(self.costume):
+                sc=self.walk_scale();fw,fh=self.atlas.walk_meta['frame'];ax=self.atlas.walk_meta['anchor_x'];base=self.atlas.walk_meta['baseline']
+                ft,fb,fl,fr=self.atlas.extent(self.atlas.walk_frames(self.costume)[0])
+                x0=self.width()/2+(fl-ax)*sc if self.direction>0 else self.width()/2-(fr-ax)*sc
+                region=QRegion(QRect(int(x0)-14,int(self.ground_y()-(base-ft)*sc)-6,int((fr-fl)*sc)+28,int((base-ft)*sc)+14))
+            else:
+                pix=self.atlas.pixmap(self.state,self.width()-10,self.costume)
+                bits=QRegion(pix.mask()) if not pix.mask().isNull() else QRegion(0,0,pix.width(),pix.height())
+                bits.translate(int(self.width()/2-pix.width()/2),int(self.height()/2-pix.height()/2))
+                region=QRegion(bits)
+                for dx,dy in ((-8,0),(8,0),(0,-26),(0,6)):region=region.united(bits.translated(dx,dy))   # sway, jump, shadow
+            self._mask_key=key;self._mask=region
+        return self._mask
     def set_state(self,state):
         state=state if state in STATES or state in outfits.ACTIVITIES else 'idle'
+        if state=='walking' and self.state!='walking':self.distance=0.0;self.hold=2   # start from the contact pose
         if state!=self.state and self.animated and self.timer.isActive():
             self.previous=(self.state,self.costume);self.motion.changed()
             if state in {'talking','greeting'} and self.state in {'idle','sitting'}:self.motion.play('wave')
@@ -135,6 +215,10 @@ class Character(QWidget):
     def tick(self):
         seconds=self.FRAME_MS/1000*self.rate;self.phase+=0.14*self.rate*self.FRAME_MS/90
         self.motion.advance(seconds)
+        # A walking LAFA that is not being moved (Desktop preview, Wayland) walks on the spot at a calm pace.
+        if self.state=='walking' and time.monotonic()-self.moved_at>0.4 and not getattr(self,'reduce_motion',False):
+            self.distance+=40*seconds
+            if self.hold>0:self.hold-=1
         # Look towards the pointer when it is near (attention, like a person).
         try:
             pos=self.mapFromGlobal(QCursor.pos());near=-120<pos.x()<self.width()+120 and -160<pos.y()<self.height()+60
@@ -158,6 +242,19 @@ class Character(QWidget):
             painter.setPen(Qt.NoPen);painter.setBrush(QColor(0,0,0,int(38*f.shadow)))
             w=pix.width()*0.42*f.shadow;painter.drawEllipse(QPointF(self.width()/2+f.dx,ground),w/2,w/9)
         if not self.timer.isActive():self.motion.fade=1.0;self.previous=None   # paused: no half-faded pictures
+        frames=self.atlas.walk_frames(self.costume) if pose=='walking' and not scene else []
+        if frames:
+            # Drawn walk cycle: same body height, foot line and anchor in every frame.
+            if self.previous and self.motion.fade<1.0:
+                painter.setOpacity(1.0-self.motion.fade);old=self.atlas.pixmap(self.previous[0],self.width()-10,self.previous[1])
+                painter.drawPixmap(int(self.width()/2-old.width()/2),int(self.height()/2-old.height()/2),old);painter.setOpacity(self.motion.fade)
+            frame=frames[self.walk_index()];sc=self.walk_scale();meta=self.atlas.walk_meta
+            painter.save();painter.translate(self.width()/2,self.ground_y())
+            painter.scale(sc*self.direction,sc)
+            painter.drawPixmap(QPointF(-meta['anchor_x'],-meta['baseline']),frame)
+            painter.restore();painter.setOpacity(1.0)
+            if self.motion.fade>=1.0:self.previous=None
+            return
         if self.previous and self.motion.fade<1.0:
             painter.setOpacity(1.0-self.motion.fade);old=self.atlas.pixmap(self.previous[0],self.width()-10,self.previous[1])
             painter.drawPixmap(int(self.width()/2-old.width()/2),int(self.height()/2-old.height()/2),old);painter.setOpacity(self.motion.fade)
@@ -232,34 +329,49 @@ class Companion(QWidget):
         self.bubblebox=QFrame();self.bubblebox.setObjectName('speech')
         # Aero glass bubble: soft white glass, Eduka green accents, colourful chips.
         self.bubblebox.setStyleSheet(BUBBLE_QSS)
-        self.bubblebox.setFixedHeight(344)
-        col=QVBoxLayout(self.bubblebox);col.setContentsMargins(16,12,14,12);col.setSpacing(8)
-        header=QHBoxLayout();name=QLabel('LAFA');name.setObjectName('bubblename');header.addWidget(name)
-        self.duty_label=QLabel();self.duty_label.setObjectName('bubbleduty');header.addWidget(self.duty_label,1)
-        self.status=QLabel();self.status.setObjectName('bubblestatus');header.addWidget(self.status)
-        close=QPushButton('×');close.setObjectName('bubbleclose');close.setFixedWidth(28);close.clicked.connect(self.collapse);header.addWidget(close);col.addLayout(header)
-        self.message=QPlainTextEdit();self.message.setObjectName('bubbletext');self.message.setReadOnly(True);self.message.setFixedHeight(128);col.addWidget(self.message)
-        quick=QHBoxLayout();quick.setSpacing(6);self.quick_buttons=[]
-        # Offline helpers: continue learning, tasks and reminders, focus, OS help.
-        for key in QUICK:
-            b=QPushButton();b.setObjectName('chip_'+key);b.setCursor(Qt.PointingHandCursor)
-            b.clicked.connect(lambda checked=False,k=key:self.action_requested.emit(k));quick.addWidget(b);self.quick_buttons.append((key,b))
-        col.addLayout(quick)
-        row=QHBoxLayout();row.setSpacing(6);self.input=QLineEdit();self.input.setObjectName('bubbleinput');self.input.returnPressed.connect(self.submit)
-        self.send_button=QPushButton('➤');self.send_button.setObjectName('bubblesend');self.send_button.setFixedSize(40,38);self.send_button.clicked.connect(self.submit)
-        row.addWidget(self.input,1);row.addWidget(self.send_button);col.addLayout(row)
-        footer=QHBoxLayout();footer.setSpacing(6)
-        self.full_button=QPushButton();self.full_button.setObjectName('footchip');self.full_button.clicked.connect(self.open_requested.emit);footer.addWidget(self.full_button)
-        self.voice_button=QPushButton();self.voice_button.setObjectName('footchip');self.voice_button.clicked.connect(self.read_requested.emit);footer.addWidget(self.voice_button)
-        self.quiet_button=QPushButton();self.quiet_button.setObjectName('footchip');self.quiet_button.setCheckable(True);self.quiet_button.toggled.connect(self.set_quiet);footer.addWidget(self.quiet_button)
+        col=QVBoxLayout(self.bubblebox);col.setContentsMargins(16,14,14,14);col.setSpacing(10)
+        # Header: LAFA, local status and close.
+        header=QHBoxLayout();header.setSpacing(8)
+        logo=QLabel();logo.setPixmap(atlas.pixmap('idle',36,settings.costume));logo.setFixedSize(38,38);header.addWidget(logo)
+        names=QVBoxLayout();names.setSpacing(0);name=QLabel('LAFA');name.setObjectName('bubblename');names.addWidget(name)
+        self.duty_label=QLabel();self.duty_label.setObjectName('bubbleduty');names.addWidget(self.duty_label);header.addLayout(names,1)
+        self.status=QLabel();self.status.setObjectName('bubblestatus');header.addWidget(self.status,0,Qt.AlignTop)
+        close=QPushButton();close.setObjectName('bubbleclose');close.setFixedSize(30,30);close.setIcon(icons.icon('close','#17322b'));close.clicked.connect(self.collapse);self.close_button=close
+        header.addWidget(close,0,Qt.AlignTop);col.addLayout(header)
+        # Search ("Cari materi atau file…"); the draft stays when the popup closes.
+        self.input=QLineEdit();self.input.setObjectName('bubbleinput');self.input.returnPressed.connect(self.submit);self.input.setClearButtonEnabled(True)
+        self.input.addAction(icons.icon('search','#5b6f68'),QLineEdit.LeadingPosition);col.addWidget(self.input)
+        self.send_button=QPushButton();self.send_button.hide()   # kept for older callers; Enter searches
+        # 2×2 quick access.
+        grid=QGridLayout();grid.setSpacing(8);self.quick_buttons=[]
+        for i,(key,label_key,icon_name,tone) in enumerate(TILES):
+            b=QPushButton();b.setObjectName('quicktile');b.setCursor(Qt.PointingHandCursor);b.setProperty('tone',tone)
+            b.setIcon(icons.icon(icon_name,'#0a6047'));b.setIconSize(QSize(26,26));b.setMinimumHeight(64)
+            b.clicked.connect(lambda checked=False,k=key:self.action_requested.emit(k));grid.addWidget(b,i//2,i%2);self.quick_buttons.append((key,b))
+        col.addLayout(grid)
+        # One recommendation or a short result.
+        card=QFrame();card.setObjectName('resultcard');cv=QHBoxLayout(card);cv.setContentsMargins(10,8,10,8);cv.setSpacing(8)
+        mark=QLabel();mark.setPixmap(icons.pixmap('book-open','#0a6047',22));cv.addWidget(mark,0,Qt.AlignTop)
+        self.message=QPlainTextEdit();self.message.setObjectName('bubbletext');self.message.setReadOnly(True);self.message.setFrameShape(QFrame.NoFrame)
+        self.message.setVerticalScrollBarPolicy(Qt.ScrollBarAsNeeded);self.message.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff);self.message.textChanged.connect(self.fit_message)
+        cv.addWidget(self.message,1);col.addWidget(card)
+        # Footer: open Desktop, read aloud (only with a local voice), quiet mode.
+        footer=QHBoxLayout();footer.setSpacing(4)
+        self.full_button=QPushButton();self.full_button.setObjectName('footchip');self.full_button.setIcon(icons.icon('monitor','#17322b'));self.full_button.clicked.connect(self.open_requested.emit);footer.addWidget(self.full_button)
+        self.voice_button=QPushButton();self.voice_button.setObjectName('footchip');self.voice_button.setIcon(icons.icon('speaker','#17322b'));self.voice_button.clicked.connect(self.read_requested.emit);footer.addWidget(self.voice_button)
+        self.voice_button.setVisible(bool(shutil.which('espeak-ng') or shutil.which('espeak')))
+        footer.addStretch()
+        self.quiet_button=QPushButton();self.quiet_button.setObjectName('footchip');self.quiet_button.setIcon(icons.icon('moon','#17322b'));self.quiet_button.setCheckable(True);self.quiet_button.toggled.connect(self.set_quiet);footer.addWidget(self.quiet_button)
         self.joke_button=QPushButton('😄');self.joke_button.setObjectName('footchip');self.joke_button.clicked.connect(self.tell_joke);footer.addWidget(self.joke_button)
-        self.source_button=QPushButton();self.source_button.setObjectName('footchip');self.source_button.clicked.connect(lambda:self.source_requested.emit(self.current_source));self.source_button.hide();footer.addWidget(self.source_button);footer.addStretch();col.addLayout(footer)
+        self.source_button=QPushButton();self.source_button.setObjectName('footchip');self.source_button.clicked.connect(lambda:self.source_requested.emit(self.current_source));self.source_button.hide();footer.addWidget(self.source_button)
+        col.addLayout(footer)
+        self.bubblebox.setFixedWidth(POPUP_WIDTH)
         layout.addWidget(self.bubblebox)
         self.pet=Character(atlas,self,size=PET_SIZES.get(settings.character_size,176));self.pet.costume=settings.costume;self.pet.clicked.connect(self.toggle_bubble);layout.addWidget(self.pet,0,Qt.AlignRight)
         self.balloon=Balloon();self.balloon.clicked.connect(self.accept_balloon)
         self.balloon_timer=QTimer(self);self.balloon_timer.setSingleShot(True);self.balloon_timer.timeout.connect(self.hide_balloon)
         self.idle_timer=QTimer(self);self.idle_timer.setInterval(1000);self.idle_timer.timeout.connect(self.choose_idle)
-        self.walk_timer=QTimer(self);self.walk_timer.setInterval(120);self.walk_timer.timeout.connect(self.walk)
+        self.walk_timer=QTimer(self);self.walk_timer.setInterval(60);self.walk_timer.timeout.connect(self.walk)
         self.fullscreen_timer=QTimer(self);self.fullscreen_timer.setInterval(10_000);self.fullscreen_timer.timeout.connect(self.check_fullscreen)
         self.bubblebox.hide();self.setFixedSize(*self.compact_size());self.animate(False);self.apply_preferences()
         self.retranslate();self.message.setPlainText(tr(settings.locale,'welcome_desktop'))
@@ -269,7 +381,21 @@ class Companion(QWidget):
     def compact_size(self):
         size=self.pet.width();return (size+16,self.pet.height()+16)
     def expanded_size(self):
-        return (max(EXPANDED[0],self.pet.width()+16),324+12+self.pet.height()+16)
+        """Fit the popup to its content and to the monitor (never a fixed height that cuts text)."""
+        screen=(self.screen() if hasattr(self,'screen') and self.screen() else QGuiApplication.primaryScreen()).availableGeometry()
+        self.bubblebox.adjustSize();height=self.bubblebox.sizeHint().height()
+        total=height+12+self.pet.height()+16
+        if total>screen.height()-8:
+            # Small screen: the message area scrolls instead of the popup leaving the screen.
+            spare=total-(screen.height()-8);self.message.setFixedHeight(max(48,self.message.height()-spare));self.bubblebox.adjustSize()
+            total=min(screen.height()-8,self.bubblebox.sizeHint().height()+12+self.pet.height()+16)
+        return (max(POPUP_WIDTH+16,self.pet.width()+16),total)
+    def fit_message(self):
+        """The message area grows with its text (up to a limit, then it scrolls)."""
+        doc=self.message.document();doc.setTextWidth(max(120,POPUP_WIDTH-80))
+        height=int(doc.size().height())+10
+        self.message.setFixedHeight(max(44,min(height,220)))
+        if self.bubblebox.isVisible():self.setFixedSize(*self.expanded_size())
     def apply_preferences(self):
         """Lafa-Configuration: size, animation speed and outfit, applied live."""
         size=PET_SIZES.get(self.settings.character_size,176)
@@ -281,6 +407,7 @@ class Companion(QWidget):
             if self.state not in outfits.activities_for(self.settings.costume)+['walking','talking','idle']:self.set_state(outfits.activities_for(self.settings.costume)[0])
         self.setFixedSize(*(self.expanded_size() if self.bubblebox.isVisible() else self.compact_size()))
         if self.isVisible() and not self.bubblebox.isVisible():self.snap_to_panel()
+        self.update_mask()
     @property
     def timer(self):return self.pet.timer
     @property
@@ -294,16 +421,25 @@ class Companion(QWidget):
     @property
     def lang(self):return self.settings.locale
     def animate(self,enabled):self.pet.animate(enabled)
+    def update_mask(self):
+        """Compact LAFA only takes clicks on the character itself; transparent
+        corners pass clicks through to the windows below. The popup is a full window."""
+        if self.bubblebox.isVisible() or not hasattr(self,'pet'):self.clearMask();return
+        region=self.pet.mask_region().translated(self.pet.pos())
+        if region.isEmpty():self.clearMask()
+        else:self.setMask(region)
     def set_state(self,state):
-        self.pet.set_state(state);self.duty_label.setText('· '+personality.duty(self.lang,self.pet.state));self.activity_changed.emit(self.pet.state)
+        self.pet.set_state(state);self.update_mask();self.duty_label.setText('· '+personality.duty(self.lang,self.pet.state));self.activity_changed.emit(self.pet.state)
     def retranslate(self):
         lang=self.lang
         self.setToolTip('')
-        self.input.setPlaceholderText(tr(lang,'search_box'));self.input.setAccessibleName(tr(lang,'search_box'));self.full_button.setText(tr(lang,'desktop'));self.voice_button.setText('🔊 '+tr(lang,'speak'));self.joke_button.setToolTip(tr(lang,'tell_joke'))
-        self.quiet_button.blockSignals(True);self.quiet_button.setChecked(self.settings.quiet_mode);self.quiet_button.blockSignals(False);self.quiet_button.setText('🤫 '+tr(lang,'quiet_short'));self.quiet_button.setToolTip(tr(lang,'quiet_mode'))
+        self.input.setPlaceholderText(tr(lang,'popup_search'));self.input.setAccessibleName(tr(lang,'popup_search'));self.full_button.setText(tr(lang,'popup_open_desktop'))
+        self.voice_button.setText(tr(lang,'read_aloud_btn'));self.joke_button.setToolTip(tr(lang,'tell_joke'));self.close_button.setToolTip(tr(lang,'close'));self.close_button.setAccessibleName(tr(lang,'close'))
+        self.quiet_button.blockSignals(True);self.quiet_button.setChecked(self.settings.quiet_mode);self.quiet_button.blockSignals(False);self.quiet_button.setText(tr(lang,'quiet_short'));self.quiet_button.setToolTip(tr(lang,'quiet_mode'))
         self.joke_button.setVisible(self.settings.entertainment)
-        for key,b in self.quick_buttons:b.setText(tr(lang,QUICK[key]))
-        self.status.setText(tr(lang,'online') if self.online else tr(lang,'local_ready'));self.source_button.setText(tr(lang,'source'))
+        for key,b in self.quick_buttons:
+            text=tr(lang,dict((k,l) for k,l,_,_ in TILES)[key]);b.setText(text);b.setAccessibleName(text)
+        self.status.setText('● '+tr(lang,'popup_ready'));self.status.setToolTip(tr(lang,'online') if self.online else tr(lang,'local_ready'));self.source_button.setText(tr(lang,'source'))
         self.duty_label.setText('· '+personality.duty(lang,self.pet.state))
     def mark_activity(self):self.popup_deadline=0;self.last_activity=self.clock();self.last_idle_change=self.last_activity
     # ----- input -------------------------------------------------------------
@@ -436,7 +572,8 @@ class Companion(QWidget):
         if self.paused or self.busy or self.drag:return
         if self.popup_deadline and now>=self.popup_deadline:
             self.popup_deadline=0
-            if not self.input.text().strip():self.collapse()
+            # Never close while the learner is typing (text or focus in the search field).
+            if not self.input.text().strip() and not self.input.hasFocus():self.collapse()
         if self.bubblebox.isVisible() or self.input.text().strip() or self.hovered:return
         if (self.settings.cultural_cards or self.settings.positive_messages or self.settings.fun_messages) and self.can_auto_popup() and now-self.last_card>=self.settings.card_minutes*60:
             self.last_card=now;self.card_requested.emit();return
@@ -452,10 +589,13 @@ class Companion(QWidget):
             nx=self.x()+self.direction*step
             if nx<rect.left() or nx+self.width()>rect.right()+1:self.direction*=-1;nx=self.x()+self.direction*step
         else:
-            self.direction=1 if self.walk_target>self.x() else -1;nx=self.x()+self.direction*min(step,abs(self.walk_target-self.x()))
+            # Slow down for the last steps, then stop on both feet.
+            left=abs(self.walk_target-self.x());step=min(step,max(1,math.ceil(left/8)))
+            self.direction=1 if self.walk_target>self.x() else -1;nx=self.x()+self.direction*min(step,left)
         self.pet.direction=self.direction
         y=self.panel_y(rect) if self.settings.panel_roam else self.y()
-        self.move(max(rect.left(),min(nx,rect.right()-self.width()+1)),y)
+        old=self.x();self.move(max(rect.left(),min(nx,rect.right()-self.width()+1)),y)
+        self.pet.advance(self.x()-old);self.update_mask()
         if self.balloon.isVisible():self.hide_balloon()
         if self.walk_target is not None and abs(self.x()-self.walk_target)<=1:self.start_activity()
     # ----- chat bubble -------------------------------------------------------
@@ -467,7 +607,7 @@ class Companion(QWidget):
             rect=(QGuiApplication.screenAt(anchor) or QGuiApplication.primaryScreen()).availableGeometry()
             self.move(max(rect.left(),min(anchor.x()-self.width(),rect.right()-self.width())),max(rect.top(),min(anchor.y()-self.height(),rect.bottom()-self.height())))
             if not expanded:self.snap_to_panel()
-        self.update()
+        self.update_mask();self.update()
     def show_bubble(self,text=None):
         if not self.settings.companion:return
         if text is not None:self.message.setPlainText(text);self.current_source="";self.source_button.hide()
@@ -500,9 +640,11 @@ class Companion(QWidget):
         self.set_state(card.mood);self.show_bubble(card.text);self.current_source=card.source
         self.source_button.setVisible(bool(card.source));self.popup_deadline=self.clock()+15
     def toggle_bubble(self):
+        """Click on Lafa: the quick-access popup with one learning recommendation
+        (continue the last material, or start with a topic)."""
         if self.bubblebox.isVisible():self.collapse()
-        elif getattr(self.settings,'click_recommendations',True):self.recommend()
-        else:self.show_bubble(self.introduction())
+        elif not self.introduced and not getattr(self,'recommendation',''):self.show_bubble(self.introduction())
+        else:self.show_bubble(getattr(self,'recommendation','') or tr(self.lang,'popup_recommend'))
     def recommend(self):
         """Click on LAFA: a free-software (GPL) tip and, online, a learning website."""
         from . import recommendations
@@ -521,7 +663,7 @@ class Companion(QWidget):
             self.input.clear();self.mark_activity();self.user_request.emit(text)
     def paintEvent(self,event):
         if not self.bubblebox.isVisible():return
-        p=QPainter(self);p.setRenderHint(QPainter.Antialiasing);p.setPen(Qt.NoPen);p.setBrush(QColor(250,253,251,246))
+        p=QPainter(self);p.setRenderHint(QPainter.Antialiasing);p.setPen(Qt.NoPen);p.setBrush(QColor(255,255,255))
         y=self.bubblebox.geometry().bottom()-1;x=self.width()-76
         p.drawPolygon(QPolygonF([QPointF(x-12,y),QPointF(x+12,y),QPointF(x,y+14)]))
     def contextMenuEvent(self,event):

@@ -61,7 +61,7 @@ def understand(query):
     if guide: return "guide", guide
     return "topic", topic_words(text)
 
-LABEL_OF = {"lesson": "lesson", "atlas": "lesson", "history": "lesson", "guide": "guide", "web": "saved", "news": "saved", "wiki": "saved", "source": "internet"}
+LABEL_OF = {"lesson": "lesson", "article": "lesson", "atlas": "lesson", "history": "lesson", "guide": "guide", "web": "saved", "news": "saved", "wiki": "saved", "source": "internet"}
 
 def memory_items(query, lang, store, k=12):
     """Items from LAFA's memory; the first ones are the most relevant."""

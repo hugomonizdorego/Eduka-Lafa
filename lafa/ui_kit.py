@@ -19,12 +19,18 @@ def mix(a, b, t):
 def palette(accent="#00a879", dark=False):
     """Colour tokens for the stylesheet and painted widgets."""
     accent = QColor(accent if QColor(accent).isValid() else "#00a879")
+    # 0.2.1: warm white with Edukasaun green; a calm dark theme that stays readable.
     if dark:
-        base = dict(bg1="#12302b", bg2="#1b2d38", surface="#1d3a36", surface2="#244540", border="#2f5650", text="#e6f2ee", muted="#9db8b0", side="#183632")
+        base = dict(bg1="#121c19", bg2="#16211e", surface="#1b2724", surface2="#22302c", border="#33463f", text="#e7f1ed", muted="#a6bab3", side="#18231f",
+                    warn_text="#f2c46d", warn_soft="#3a3220", focus="#7ee0bf")
     else:
-        base = dict(bg1="#e8f6ef", bg2="#fcf4e6", surface="#ffffff", surface2="#f4faf7", border="#dbe8e1", text="#1d3a33", muted="#66807a", side="#ffffff")
-    base.update(accent=accent.name(), accent_dark=mix(accent, "#000000", 0.18).name(), accent_soft=mix(accent, base["surface"], 0.86).name(),
-                accent_text="#ffffff", dark=dark)
+        base = dict(bg1="#faf8f3", bg2="#f6f3ea", surface="#ffffff", surface2="#f3f6f1", border="#e1e7df", text="#17322b", muted="#5b6f68", side="#ffffff",
+                    warn_text="#7a4f00", warn_soft="#fff1d6", focus="#0a7350")
+    # accent_strong: the accent dark enough for text and buttons (≥ 4.5:1 with white / the surface).
+    strong = "#3ccf9a" if dark else mix(accent, "#000000", 0.32).name()
+    button = mix(accent, "#000000", 0.25).name()
+    base.update(accent=accent.name(), accent_dark=mix(accent, "#000000", 0.38).name(), accent_soft=mix(accent, base["surface"], 0.86 if not dark else 0.78).name(),
+                accent_text="#ffffff", accent_strong=strong, accent_button=button, dark=dark)
     if dark:
         base.update(glass_top="rgba(48,92,84,0.92)", glass="rgba(29,58,54,0.82)", glass_border="rgba(255,255,255,0.10)", scroll="rgba(255,255,255,0.22)")
     else:

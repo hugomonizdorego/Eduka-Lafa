@@ -34,6 +34,15 @@ for _name in _order:
 if BINDING is None:
     raise ImportError("LAFA needs PyQt5 (Debian: apt install python3-pyqt5) or PySide6 (pip install PySide6).")
 
+# SVG rendering for Lafa's own icons and illustrations (python3-pyqt5 ships
+# QtSvg; libqt5svg5 is a package dependency). Without it, Lafa falls back to
+# Qt's image plugin, and finally to text.
+try:
+    if BINDING == "PyQt5": from PyQt5.QtSvg import QSvgRenderer  # noqa: F401
+    else: from PySide6.QtSvg import QSvgRenderer  # noqa: F401
+except ImportError:
+    QSvgRenderer = None
+
 if BINDING == "PyQt5":
     import sys as _sys
     import traceback as _traceback

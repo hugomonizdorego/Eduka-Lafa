@@ -30,7 +30,7 @@ learn_more | Learn more | Pelajari lebih lanjut | Saber mais | Aprende liután
 memory_done | updated {sites} sites, {pages} pages ({failed} did not answer) | {sites} situs, {pages} halaman diperbarui ({failed} tidak menjawab) | {sites} sites, {pages} páginas atualizados ({failed} sem resposta) | sítiu {sites}, pájina {pages} atualiza ona ({failed} la hatán)
 # ---- product, menus and section subtitles
 product_name | Lafa — learning companion and Edukasaun OS assistant | Lafa — Pendamping Belajar dan Asisten Edukasaun OS | Lafa — companheiro de estudo e assistente do Edukasaun OS | Lafa — belun aprendizajen no asistente Edukasaun OS
-home | Home | Beranda | Início | Uma
+home | Home | Beranda | Início | Pájina inisiál
 menu_study | Learn | Belajar | Aprender | Aprende
 menu_library | Library | Perpustakaan | Biblioteca | Biblioteka
 menu_timor | Timor-Leste | Timor-Leste | Timor-Leste | Timor-Leste
@@ -40,7 +40,7 @@ sub_home | Lessons, knowledge and files — on this computer | Pelajaran, penget
 sub_study | Lessons, practice, languages, digital literacy and programming examples | Pelajaran, latihan, bahasa, literasi digital, dan contoh pemrograman | Lições, exercícios, línguas, literacia digital e exemplos de programação | Lisaun, prátika, lian, literasia dijitál no ezemplu programasaun
 sub_library | Local files, saved material, internet sources and favourites | File lokal, materi tersimpan, sumber internet, dan favorit | Ficheiros locais, material guardado, fontes da internet e favoritos | Ficheiru lokál, materiál rai ona, fonte internet no favoritu
 sub_timor | History, geography, culture, national symbols and news | Sejarah, geografi, budaya, simbol nasional, dan berita | História, geografia, cultura, símbolos nacionais e notícias | Istória, jeografia, kultura, símbolu nasionál no notísia
-sub_activities | Tasks, timetable, reminders, focus and practice results | Tugas, jadwal, pengingat, fokus, dan hasil latihan | Trabalhos, horário, lembretes, foco e resultados dos exercícios | Knaar, orariu, fó-hanoin, foku no rezultadu prátika
+sub_activities | Tasks, timetable, reminders, focus and practice results | Tugas, jadwal, pengingat, fokus, dan hasil latihan | Trabalhos, horário, lembretes, foco e resultados dos exercícios | Knaar, oráriu, fó-hanoin, foku no rezultadu prátika
 sub_oshelp | Edukasaun OS guides, accessibility, computer check and apps | Panduan Edukasaun OS, aksesibilitas, pemeriksaan komputer, dan aplikasi | Guias do Edukasaun OS, acessibilidade, verificação do computador e aplicações | Matadalan Edukasaun OS, asesibilidade, verifikasaun komputadór no aplikasaun
 settings | Settings | Pengaturan | Definições | Konfigurasaun
 about | About | Tentang | Sobre | Kona-ba
@@ -48,9 +48,9 @@ close | Close | Tutup | Fechar | Taka
 status | Status | Status | Estado | Estadu
 connection | Connection | Koneksi | Ligação | Koneksaun
 local_ready | Local features are available | Fitur lokal tetap tersedia | As funções locais estão disponíveis | Funsaun lokál prontu
-online | Online · internet sources too | Online · sumber internet juga | Online · também fontes da internet | Online · fonte internet mós
+online | Online · internet sources too | Online · sumber internet juga | Online · também fontes da internet | Online · mós fonte internet
 online_note | Internet adds Wikipedia, news, weather and websites. Everything else works without it. | Internet menambah Wikipedia, berita, cuaca, dan situs web. Fitur lain tetap jalan tanpa internet. | A internet acrescenta Wikipédia, notícias, tempo e sites. Tudo o resto funciona sem ela. | Internet aumenta Wikipédia, notísia, tempu no sítiu. Buat seluk servisu la ho internet.
-offline_intro | Local features are available — these work without internet: | Fitur lokal tetap tersedia — ini bisa dipakai tanpa internet: | As funções locais continuam disponíveis — sem internet: | Funsaun lokál sei iha — ida-ne'e servisu la ho internet:
+offline_intro | Local features are available — these work without internet: | Fitur lokal tetap tersedia — ini bisa dipakai tanpa internet: | As funções locais continuam disponíveis — sem internet: | Funsaun lokál disponível — sira-ne'e servisu la ho internet:
 needs_internet_calm | This needs internet. Local lessons, files, tasks and reminders still work. | Ini memerlukan internet. Pelajaran, file, tugas, dan pengingat lokal tetap bisa dipakai. | Isto precisa de internet. As lições, ficheiros, trabalhos e lembretes locais continuam a funcionar. | Ida-ne'e presiza internet. Lisaun, ficheiru, knaar no fó-hanoin lokál sei servisu.
 internet_later | Internet sources can be searched when you are online. | Sumber internet bisa dicari saat Anda online. | As fontes da internet podem ser pesquisadas quando estiver online. | Fonte internet bele buka bainhira ita online.
 internet_failed | The internet source did not answer. Local results are still shown. | Sumber internet tidak menjawab. Hasil lokal tetap ditampilkan. | A fonte da internet não respondeu. Os resultados locais continuam visíveis. | Fonte internet la hatán. Rezultadu lokál sei hatudu.
@@ -60,11 +60,11 @@ search_box | Search lessons, knowledge or files… | Cari pelajaran, pengetahuan
 find | Search | Cari | Pesquisar | Buka
 start_learning | Start learning | Mulai Belajar | Começar a aprender | Hahú aprende
 find_knowledge | Find knowledge | Cari Pengetahuan | Procurar conhecimento | Buka koñesimentu
-tasks_schedule | Tasks & schedule | Tugas & Jadwal | Trabalhos e horário | Knaar no orariu
+tasks_schedule | Tasks & schedule | Tugas & Jadwal | Trabalhos e horário | Knaar no oráriu
 os_help | OS help | Bantuan OS | Ajuda do sistema | Ajuda OS
 quick_learn_d | Lessons for every age, practice and languages | Pelajaran untuk semua usia, latihan, dan bahasa | Lições para todas as idades, exercícios e línguas | Lisaun ba idade hotu, prátika no lian
 quick_find_d | Search lessons, the atlas and your files | Cari pelajaran, atlas, dan file Anda | Pesquisar lições, o atlas e os seus ficheiros | Buka lisaun, atlas no ita-nia ficheiru
-quick_tasks_d | Homework, timetable and reminders | PR, jadwal, dan pengingat | Trabalhos de casa, horário e lembretes | TPC, orariu no fó-hanoin
+quick_tasks_d | Homework, timetable and reminders | PR, jadwal, dan pengingat | Trabalhos de casa, horário e lembretes | TPC, oráriu no fó-hanoin
 quick_os_d | Guides for Edukasaun OS and your computer | Panduan Edukasaun OS dan komputer Anda | Guias do Edukasaun OS e do computador | Matadalan Edukasaun OS no ita-nia komputadór
 recent_material | Last material | Materi terakhir | Último material | Materiál ikus
 no_recent | Nothing opened yet. Start with a lesson in Learn. | Belum ada yang dibuka. Mulailah dengan pelajaran di Belajar. | Ainda nada aberto. Comece com uma lição em Aprender. | Seidauk loke buat ida. Hahú ho lisaun ida iha Aprende.
@@ -133,7 +133,7 @@ tab_external | External sites | Situs eksternal | Sites externos | Sítiu estern
 tab_atlas | History, places & symbols | Sejarah, tempat & simbol | História, lugares e símbolos | Istória, fatin no símbolu
 tab_news | News | Berita | Notícias | Notísia
 tab_weather | Weather & world | Cuaca & dunia | Tempo e mundo | Tempu no mundu
-tab_tasks | Tasks & timetable | Tugas & jadwal | Trabalhos e horário | Knaar no orariu
+tab_tasks | Tasks & timetable | Tugas & jadwal | Trabalhos e horário | Knaar no oráriu
 tab_reminders | Reminders & focus | Pengingat & fokus | Lembretes e foco | Fó-hanoin no foku
 tab_results | Practice results | Hasil Latihan | Resultados dos exercícios | Rezultadu prátika
 tab_guides | Guides | Panduan | Guias | Matadalan
@@ -150,7 +150,7 @@ quiz_d | 5 questions · answer and explanation at once | 5 soal · jawaban dan p
 test | Test simulation | Simulasi Tes | Simulação de teste | Simulasaun teste
 test_d | 10 questions · results at the end | 10 soal · hasil di akhir | 10 perguntas · resultados no fim | Pergunta 10 · rezultadu iha ikus
 exam | Timed test simulation | Simulasi Tes berwaktu | Simulação de teste com tempo | Simulasaun teste ho tempu
-exam_d | up to 20 questions · with a time limit | hingga 20 soal · dengan batas waktu | até 20 perguntas · com limite de tempo | to pergunta 20 · ho limite tempu
+exam_d | up to 20 questions · with a time limit | hingga 20 soal · dengan batas waktu | até 20 perguntas · com limite de tempo | pergunta to'o 20 · ho limite tempu
 exams | Practice | Latihan | Exercícios | Prátika
 report_card | Practice results | Hasil Latihan | Resultados dos exercícios | Rezultadu prátika
 results_personal | Your personal progress on this computer — not an official school report. | Kemajuan pribadi Anda di komputer ini — bukan rapor resmi sekolah. | O seu progresso pessoal neste computador — não é um boletim oficial da escola. | Ita-nia progresu pesoál iha komputadór ne'e — la'ós boletin ofisiál eskola nian.
@@ -185,7 +185,7 @@ community_title | Community & entertainment wikis (extras) | Wiki komunitas & hi
 community_note | Written by volunteers or fans, sometimes one-sided — not academic sources. | Ditulis relawan atau penggemar, kadang berat sebelah — bukan sumber akademik. | Escritas por voluntários ou fãs, por vezes parciais — não são fontes académicas. | Hakerek husi voluntáriu ka fan, dala ruma la neutru — la'ós fonte akadémiku.
 kiwix_title | Wikipedia and books offline | Wikipedia dan buku offline | Wikipédia e livros offline | Wikipédia no livru offline
 kiwix_ready | Kiwix is installed: open it to read the offline archives (ZIM) on this computer. | Kiwix terpasang: buka untuk membaca arsip offline (ZIM) di komputer ini. | O Kiwix está instalado: abra-o para ler os arquivos offline (ZIM) deste computador. | Kiwix instala ona: loke atu lee arkivu offline (ZIM) iha komputadór ne'e.
-kiwix_missing | Kiwix is not installed. Ask the school technician: sudo apt install kiwix — then copy a ZIM archive (for example Wikipedia in Portuguese) from a USB drive. Lafa never downloads large archives by itself. | Kiwix belum terpasang. Minta teknisi sekolah: sudo apt install kiwix — lalu salin arsip ZIM (misalnya Wikipedia bahasa Portugis) dari flashdisk. Lafa tidak pernah mengunduh arsip besar sendiri. | O Kiwix não está instalado. Peça ao técnico da escola: sudo apt install kiwix — e copie um arquivo ZIM (por exemplo, a Wikipédia em português) de uma pen USB. O Lafa nunca descarrega arquivos grandes sozinho. | Kiwix seidauk instala. Husu tékniku eskola: sudo apt install kiwix — depois kopia arkivu ZIM (hanesan Wikipédia portugés) husi flashdisk. Lafa nunka download arkivu boot rasik.
+kiwix_missing | Kiwix is not installed. Ask the school technician: sudo apt install kiwix — then copy a ZIM archive (for example Wikipedia in Portuguese) from a USB drive. Lafa never downloads large archives by itself. | Kiwix belum terpasang. Minta teknisi sekolah: sudo apt install kiwix — lalu salin arsip ZIM (misalnya Wikipedia bahasa Portugis) dari flashdisk. Lafa tidak pernah mengunduh arsip besar sendiri. | O Kiwix não está instalado. Peça ao técnico da escola: sudo apt install kiwix — e copie um arquivo ZIM (por exemplo, a Wikipédia em português) de uma pen USB. O Lafa nunca descarrega arquivos grandes sozinho. | Kiwix seidauk instala. Husu tékniku eskola nian: sudo apt install kiwix — depois kopia arkivu ZIM (hanesan Wikipédia Portugés) husi flashdisk. Lafa nunka download rasik arkivu boot.
 # ---- activities
 reminders_note | Reminders are saved on this computer and ring offline while Lafa is running. Reminders missed while Lafa was closed are shown once at the next start. | Pengingat disimpan di komputer ini dan berbunyi offline selama Lafa berjalan. Pengingat yang terlewat saat Lafa tertutup ditampilkan sekali saat dibuka lagi. | Os lembretes ficam guardados neste computador e tocam offline enquanto o Lafa está aberto. Os que passaram com o Lafa fechado aparecem uma vez no próximo arranque. | Fó-hanoin rai iha komputadór ne'e no tanis offline bainhira Lafa loke. Fó-hanoin ne'ebé liu bainhira Lafa taka, hatudu dala ida bainhira loke fali.
 when | When | Kapan | Quando | Bainhira
@@ -205,13 +205,13 @@ tasks_short | Tasks | Tugas | Trabalhos | Knaar
 news_note | Headlines show publisher, date and the time they were fetched. Saved headlines are not the latest news. | Judul berita menampilkan penerbit, tanggal, dan waktu pengambilan. Judul tersimpan bukan berita terbaru. | Os títulos mostram editor, data e hora de obtenção. Títulos guardados não são as notícias mais recentes. | Títulu hatudu publikadór, data no oras foti. Títulu rai ona la'ós notísia foun liu.
 # ---- OS help
 access_intro | Tools that help reading, typing and seeing. Lafa opens them only when installed. | Alat untuk membantu membaca, mengetik, dan melihat. Lafa membukanya hanya jika terpasang. | Ferramentas para ler, escrever e ver melhor. O Lafa só as abre quando estão instaladas. | Ferramenta atu ajuda lee, hakerek no haree. Lafa loke de'it bainhira instala ona.
-screen_reader | Screen reader (Orca) | Pembaca layar (Orca) | Leitor de ecrã (Orca) | Lee-na'in ekrán (Orca)
+screen_reader | Screen reader (Orca) | Pembaca layar (Orca) | Leitor de ecrã (Orca) | Leitór ekrán (Orca)
 onscreen_keyboard | On-screen keyboard | Keyboard di layar | Teclado no ecrã | Tekladu iha ekrán
-magnifier | Magnifier | Kaca pembesar | Lupa | Lente boot
+magnifier | Magnifier | Kaca pembesar | Lupa | Lupa
 text_size | Text size and contrast | Ukuran teks dan kontras | Tamanho do texto e contraste | Tamañu testu no kontraste
 installed | installed | terpasang | instalado | instala ona
 not_installed | not installed | belum terpasang | não instalado | seidauk instala
-access_tips | Tips: Ctrl + plus/minus zooms in many apps · Tab moves between buttons, Enter opens · Alt+1…6 opens Lafa's sections · Ctrl+F jumps to search. | Tips: Ctrl + plus/minus memperbesar di banyak aplikasi · Tab pindah antar tombol, Enter membuka · Alt+1…6 membuka bagian Lafa · Ctrl+F ke kolom cari. | Dicas: Ctrl + mais/menos amplia em muitas aplicações · Tab muda de botão, Enter abre · Alt+1…6 abre as secções do Lafa · Ctrl+F vai para a pesquisa. | Dika: Ctrl + plus/minus halo boot iha aplikasaun barak · Tab muda butaun, Enter loke · Alt+1…6 loke parte Lafa · Ctrl+F ba buka.
+access_tips | Tips: Ctrl + plus/minus zooms in many apps · Tab moves between buttons, Enter opens · Alt+1…6 opens Lafa's sections · Ctrl+F jumps to search. | Tips: Ctrl + plus/minus memperbesar di banyak aplikasi · Tab pindah antar tombol, Enter membuka · Alt+1…6 membuka bagian Lafa · Ctrl+F ke kolom cari. | Dicas: Ctrl + mais/menos amplia em muitas aplicações · Tab muda de botão, Enter abre · Alt+1…6 abre as secções do Lafa · Ctrl+F vai para a pesquisa. | Dika: Ctrl + plus/minus halo testu boot ka ki'ik iha aplikasaun barak · Tab muda ba butaun seluk, Enter loke · Alt+1…6 loke parte Lafa nian · Ctrl+F atu buka.
 apps_title | Apps on this computer | Aplikasi di komputer ini | Aplicações neste computador | Aplikasaun iha komputadór ne'e
 updates_via_eus | Edukasaun OS and Lafa are updated with the Eduka Update System (EUS) / APT — Lafa does not update programs itself. | Edukasaun OS dan Lafa diperbarui dengan Eduka Update System (EUS) / APT — Lafa tidak memperbarui program sendiri. | O Edukasaun OS e o Lafa são atualizados com o Eduka Update System (EUS) / APT — o Lafa não atualiza programas sozinho. | Edukasaun OS no Lafa atualiza ho Eduka Update System (EUS) / APT — Lafa la atualiza programa rasik.
 app_browser | Web browser | Browser | Navegador | Navegadór
@@ -243,12 +243,96 @@ language_sources | Language & sources | Bahasa & sumber | Língua e fontes | Lia
 smooth_scrolling | Smooth scrolling | Gulir halus | Deslocamento suave | Scroll suave
 depth_effects | Soft shadows | Bayangan lembut | Sombras suaves | Sombra suave
 no_ai_note | Lafa needs no login, AI key or Lafa server. The internet only adds sources (Wikipedia, news, weather, websites). | Lafa tidak perlu login, kunci AI, atau server Lafa. Internet hanya menambah sumber (Wikipedia, berita, cuaca, situs). | O Lafa não precisa de login, chave de IA nem servidor Lafa. A internet só acrescenta fontes (Wikipédia, notícias, tempo, sites). | Lafa la presiza login, xave IA ka servidór Lafa. Internet aumenta fonte de'it (Wikipédia, notísia, tempu, sítiu).
-autoread | Read answers aloud (espeak-ng, offline) | Bacakan jawaban (espeak-ng, offline) | Ler as respostas em voz alta (espeak-ng, offline) | Lee resposta ho lian (espeak-ng, offline)
+autoread | Read answers aloud (espeak-ng, offline) | Bacakan jawaban (espeak-ng, offline) | Ler as respostas em voz alta (espeak-ng, offline) | Lee resposta ho lian maka'as (espeak-ng, offline)
 about_text | Lafa is free, open-source software from Timor-Leste for Edukasaun OS. It helps with lessons, knowledge, languages, Timor-Leste, school activities and using Edukasaun OS — without login, without an AI key, without a Lafa server and without internet. Internet adds Wikipedia, news, weather and learning websites. | Lafa adalah perangkat lunak bebas dan open-source dari Timor-Leste untuk Edukasaun OS. Lafa membantu pelajaran, pengetahuan, bahasa, Timor-Leste, kegiatan belajar, dan penggunaan Edukasaun OS — tanpa login, tanpa kunci AI, tanpa server Lafa, dan tanpa internet. Internet menambah Wikipedia, berita, cuaca, dan situs belajar. | O Lafa é software livre e de código aberto de Timor-Leste para o Edukasaun OS. Ajuda com lições, conhecimento, línguas, Timor-Leste, atividades escolares e o uso do Edukasaun OS — sem login, sem chave de IA, sem servidor Lafa e sem internet. A internet acrescenta Wikipédia, notícias, tempo e sites de aprendizagem. | Lafa mak software livre no open-source husi Timor-Leste ba Edukasaun OS. Nia ajuda lisaun, koñesimentu, lian, Timor-Leste, atividade eskola no uza Edukasaun OS — la ho login, la ho xave IA, la ho servidór Lafa no la ho internet. Internet aumenta Wikipédia, notísia, tempu no sítiu aprendizajen.
 about_limits | Lafa does not generate answers and cannot answer everything: it searches its own lessons, guides and the material you saved, and says so when it finds nothing. Lessons are written by the LAFA team and are not (yet) reviewed by the Ministry of Education. | Lafa tidak membuat jawaban dan tidak bisa menjawab semua hal: Lafa mencari di pelajaran, panduan, dan materi yang Anda simpan, dan mengatakannya jika tidak menemukan apa pun. Pelajaran ditulis tim LAFA dan belum ditinjau Kementerian Pendidikan. | O Lafa não gera respostas e não responde a tudo: pesquisa nas suas lições, guias e no material guardado, e diz quando não encontra nada. As lições são escritas pela equipa LAFA e ainda não foram revistas pelo Ministério da Educação. | Lafa la halo resposta no la bele hatán buat hotu: nia buka iha ninia lisaun, matadalan no materiál ne'ebé ita rai, no dehan bainhira la hetan buat ida. Lisaun hakerek husi ekipa LAFA no seidauk revee husi Ministériu Edukasaun.
 help_text | Commands (all offline unless marked):\n/calc 12*(3+4) — calculator\n/os wifi — Edukasaun OS guide\n/remind 10 drink water — reminder\n/weather Dili — weather (internet)\n/timor — Timor-Leste news (internet)\n/ask topic — Wikipedia extract (internet) | Perintah (semua offline kecuali yang ditandai):\n/calc 12*(3+4) — kalkulator\n/os wifi — panduan Edukasaun OS\n/remind 10 minum air — pengingat\n/weather Dili — cuaca (internet)\n/timor — berita Timor-Leste (internet)\n/ask topik — kutipan Wikipedia (internet) | Comandos (offline, exceto os marcados):\n/calc 12*(3+4) — calculadora\n/os wifi — guia do Edukasaun OS\n/remind 10 beber água — lembrete\n/weather Dili — tempo (internet)\n/timor — notícias de Timor-Leste (internet)\n/ask tema — extrato da Wikipédia (internet) | Komandu (hotu offline exetu ne'ebé marka):\n/calc 12*(3+4) — kalkuladora\n/os wifi — matadalan Edukasaun OS\n/remind 10 hemu bee — fó-hanoin\n/weather Dili — tempu (internet)\n/timor — notísia Timor-Leste (internet)\n/ask tópiku — estratu Wikipédia (internet)
 os_intro | Choose a topic, or type a question in the search box, for example “how do I connect Wi-Fi?”. Lafa only opens tools that are installed; it never changes system settings by itself. | Pilih topik, atau ketik pertanyaan di kolom cari, misalnya “bagaimana menyambung Wi-Fi?”. Lafa hanya membuka alat yang terpasang; tidak pernah mengubah pengaturan sistem sendiri. | Escolha um tema, ou escreva uma pergunta na pesquisa, por exemplo “como ligo o Wi-Fi?”. O Lafa só abre ferramentas instaladas; nunca muda definições do sistema sozinho. | Hili tópiku ida, ka hakerek pergunta iha buka, hanesan “oinsá liga Wi-Fi?”. Lafa loke de'it ferramenta ne'ebé instala ona; nunka troka konfigurasaun sistema rasik.
 pet_help | Lafa · click for help · drag to move · right click for more | Lafa · klik untuk bantuan · seret untuk memindah · klik kanan untuk menu | Lafa · clique para ajuda · arraste para mover · clique direito para mais | Lafa · klik ba ajuda · dada atu muda · klik-loos ba menu
-welcome_desktop | Hi, I'm Lafa! Type a topic, a file name or a question about Edukasaun OS — I'll look it up on this computer. | Halo, saya Lafa! Ketik topik, nama file, atau pertanyaan tentang Edukasaun OS — saya carikan di komputer ini. | Olá, sou o Lafa! Escreva um tema, um nome de ficheiro ou uma pergunta sobre o Edukasaun OS — procuro neste computador. | Olá, ha'u Lafa! Hakerek tópiku, naran ficheiru ka pergunta kona-ba Edukasaun OS — ha'u buka iha komputadór ne'e.
+welcome_desktop | Hi, I'm Lafa! Type a topic, a file name or a question about Edukasaun OS — I'll look it up on this computer. | Halo, saya Lafa! Ketik topik, nama file, atau pertanyaan tentang Edukasaun OS — saya carikan di komputer ini. | Olá, sou o Lafa! Escreva um tema, um nome de ficheiro ou uma pergunta sobre o Edukasaun OS — procuro neste computador. | Olá, ha'u mak Lafa! Hakerek tópiku, naran ficheiru ka pergunta kona-ba Edukasaun OS — ha'u buka iha komputadór ne'e.
 search_examples_short | e.g. photosynthesis · maths homework file · wallpaper | mis. fotosintesis · file tugas matematika · wallpaper | ex. fotossíntese · ficheiro trabalho matemática · fundo | hanesan fotosíntese · ficheiru knaar matemátika · wallpaper
 """)
+
+# ------------------------------------------------------------- 0.2.1 texts
+# Encyclopedia (World and Timor-Leste), interactive modules, offline pack,
+# Virtual Assistant popup. Tetun follows Tetun Ofisiál (INL orthography).
+_V3 = _rows(r"""
+enc_title | World Encyclopedia | Ensiklopedia Dunia | Enciclopédia do Mundo | Ensiklopédia Mundu
+enc_sub | Explore Earth, life, history, science and culture. | Jelajahi Bumi, kehidupan, sejarah, sains, dan budaya. | Explore a Terra, a vida, a história, a ciência e a cultura. | Esplora planeta Rai, moris, istória, siénsia no kultura.
+tl_title | Explore Timor-Leste | Jelajahi Timor-Leste | Explorar Timor-Leste | Esplora Timor-Leste
+tl_sub | Get to know our land, history and culture. | Kenali tanah, sejarah, dan budaya kita. | Conheça a nossa terra, história e cultura. | Koñese di'ak liu ita-nia rai, istória no kultura.
+tab_encyclopedia | Encyclopedia | Ensiklopedia | Enciclopédia | Ensiklopédia
+offline_material | Offline material | Materi offline | Material offline | Materiál offline
+needs_internet_tag | Needs internet | Perlu internet | Precisa de internet | Presiza internet
+nav_back | Back | Kembali | Voltar | Fila
+nav_home | Start of this encyclopedia | Awal ensiklopedia ini | Início desta enciclopédia | Inísiu ensiklopédia ne'e
+search_tl | Search Timor-Leste topics… | Cari topik Timor-Leste… | Pesquisar temas de Timor-Leste… | Buka tópiku Timor-Leste…
+search_enc | Search the encyclopedia… | Cari di ensiklopedia… | Pesquisar na enciclopédia… | Buka iha ensiklopédia…
+topics_n | {n} topics | {n} topik | {n} temas | tópiku {n}
+art_read | Read | Baca | Ler | Lee
+art_explore | Explore | Jelajahi | Explorar | Esplora
+art_practice | Practice | Latihan | Exercício | Prátika
+objectives | What you will learn | Tujuan belajar | O que vais aprender | Saida mak ita sei aprende
+key_facts | Key facts | Fakta penting | Factos principais | Faktu importante
+sources_title | Sources | Sumber | Fontes | Fonte sira
+related_title | Related topics | Materi terkait | Temas relacionados | Tópiku relasionadu
+related_lessons | Related lessons | Pelajaran terkait | Lições relacionadas | Lisaun relasionadu
+review_line | Version {v} · reviewed {d} · {status} · licence {licence} | Versi {v} · ditinjau {d} · {status} · lisensi {licence} | Versão {v} · revisto em {d} · {status} · licença {licence} | Versaun {v} · revee iha {d} · {status} · lisensa {licence}
+langs_full | Full text: {langs} | Teks lengkap: {langs} | Texto completo: {langs} | Testu kompletu: {langs}
+langs_summary | Summary only: {langs} | Ringkasan saja: {langs} | Só resumo: {langs} | Rezumu de'it: {langs}
+lang_shown_en | This text is not yet written in your language; it is shown in English. | Teks ini belum ditulis dalam bahasa Anda; ditampilkan dalam bahasa Inggris. | Este texto ainda não está escrito na sua língua; é mostrado em inglês. | Testu ne'e seidauk hakerek iha ita-nia lian; tan ne'e hatudu iha lian Inglés.
+read_aloud_btn | Read aloud | Bacakan | Ler em voz alta | Lee ho lian maka'as
+save_btn | Save | Simpan | Guardar | Rai
+saved_btn | Saved | Tersimpan | Guardado | Rai ona
+sources_btn | Sources | Sumber | Fontes | Fonte
+start_practice | Start practice | Mulai latihan | Começar exercício | Hahú prátika
+contents_title | In this article | Isi artikel | Neste artigo | Iha artigu ne'e
+coverage_title | What is covered | Cakupan materi | O que está incluído | Saida mak iha ona
+cov_available | Available | Tersedia | Disponível | Iha ona
+cov_review | Needs review | Perlu ditinjau | Precisa de revisão | Presiza revee
+cov_planned | Planned | Direncanakan | Planeado | Planeadu
+coverage_note | The menu shows a category even when only a few topics are written. Planned topics are not available yet. | Menu menampilkan kategori walau baru sedikit topik yang ditulis. Topik yang direncanakan belum tersedia. | O menu mostra uma categoria mesmo com poucos temas escritos. Os temas planeados ainda não estão disponíveis. | Menu hatudu kategoria maski tópiku balun de'it mak hakerek ona. Tópiku planeadu seidauk disponível.
+news_tile | News | Berita | Notícias | Notísia
+weather_tile | Weather | Cuaca | Tempo | Tempu
+open_world | Open the World Encyclopedia | Buka Ensiklopedia Dunia | Abrir a Enciclopédia do Mundo | Loke Ensiklopédia Mundu
+open_timor | Explore Timor-Leste | Jelajahi Timor-Leste | Explorar Timor-Leste | Esplora Timor-Leste
+enc_results | Results for “{q}” | Hasil untuk “{q}” | Resultados para “{q}” | Rezultadu ba “{q}”
+enc_none | No topic found for “{q}”. Try another word, or browse the categories. | Tidak ada topik untuk “{q}”. Coba kata lain, atau lihat kategori. | Nenhum tema para “{q}”. Tente outra palavra ou veja as categorias. | La hetan tópiku ba “{q}”. Koko liafuan seluk, ka haree kategoria sira.
+quiz_progress | Question {i} of {n} | Soal {i} dari {n} | Pergunta {i} de {n} | Pergunta {i} husi {n}
+quiz_right | Correct! | Benar! | Certo! | Loos!
+quiz_wrong | Not quite. The answer is: {a} | Belum tepat. Jawabannya: {a} | Ainda não. A resposta é: {a} | Seidauk loos. Resposta mak: {a}
+quiz_next | Next question | Soal berikutnya | Pergunta seguinte | Pergunta tuir mai
+quiz_done | You answered {s} of {n} correctly. | Kamu menjawab benar {s} dari {n}. | Acertaste {s} de {n}. | Ita hatán loos {s} husi {n}.
+quiz_best | Your best result: {s} of {n} (saved on this computer). | Hasil terbaikmu: {s} dari {n} (tersimpan di komputer ini). | O teu melhor resultado: {s} de {n} (guardado neste computador). | Ita-nia rezultadu di'ak liu: {s} husi {n} (rai iha komputadór ne'e).
+quiz_again | Try again | Coba lagi | Tentar de novo | Koko fali
+quiz_none | There are no practice questions for this topic yet. | Belum ada soal latihan untuk topik ini. | Ainda não há perguntas para este tema. | Seidauk iha pergunta prátika ba tópiku ne'e.
+figure_title | Picture | Gambar | Imagem | Imajen
+figure_note | Illustration drawn for Lafa (CC BY-SA 4.0). | Ilustrasi dibuat untuk Lafa (CC BY-SA 4.0). | Ilustração feita para o Lafa (CC BY-SA 4.0). | Ilustrasaun ne'ebé halo ba Lafa (CC BY-SA 4.0).
+map_note | Schematic map, not an official map. | Peta skematis, bukan peta resmi. | Mapa esquemático, não é um mapa oficial. | Mapa eskemátiku, la'ós mapa ofisiál.
+online_extract | Online extract ({lang}, {date}) | Kutipan online ({lang}, {date}) | Extrato online ({lang}, {date}) | Estratu online ({lang}, {date})
+offline_photo | Photo saved for offline use · {licence} · {author} | Foto tersimpan untuk offline · {licence} · {author} | Fotografia guardada para uso offline · {licence} · {author} | Foto rai ona ba offline · {licence} · {author}
+when_label | When | Kapan | Quando | Bainhira
+explore_hint | Choose a point on the picture to learn. | Pilih titik pada gambar untuk belajar. | Escolha um ponto na imagem para aprender. | Hili pontu ida iha imajen atu aprende.
+# ---- offline pack
+offline_pack_title | Everything offline | Semua untuk offline | Tudo offline | Buat hotu offline
+offline_pack_button | Download all sources for offline use | Unduh semua sumber untuk offline | Descarregar todas as fontes para offline | Download fonte hotu ba offline
+offline_pack_note | One button saves, for use without internet: the front page of every learning and Timor-Leste source, a Wikipedia extract and a freely licensed picture for every encyclopedia topic (in your language), and the news. It uses about {mb} MB at most and can be stopped at any time. Saved in: {path} | Satu tombol menyimpan, untuk dipakai tanpa internet: halaman depan setiap sumber belajar dan Timor-Leste, kutipan Wikipedia dan gambar berlisensi bebas untuk setiap topik ensiklopedia (dalam bahasa Anda), serta berita. Paling banyak sekitar {mb} MB dan bisa dihentikan kapan saja. Disimpan di: {path} | Um botão guarda, para usar sem internet: a página inicial de cada fonte de aprendizagem e de Timor-Leste, um extrato da Wikipédia e uma imagem de licença livre para cada tema da enciclopédia (na sua língua) e as notícias. Usa no máximo cerca de {mb} MB e pode ser parado a qualquer momento. Guardado em: {path} | Butaun ida rai buat hotu atu uza la ho internet: pájina prinsipál husi fonte aprendizajen no Timor-Leste hotu, estratu Wikipédia ida no imajen ida ho lisensa livre ba tópiku ensiklopédia ida-idak (iha ita-nia lian), no notísia. Uza maizumenus {mb} MB másimu, no ita bele para iha tempu saida de'it. Rai iha: {path}
+offline_pack_stop | Stop | Hentikan | Parar | Para
+offline_pack_running | Downloading… {done} of {total} · {name} | Mengunduh… {done} dari {total} · {name} | A descarregar… {done} de {total} · {name} | Download hela… {done} husi {total} · {name}
+offline_pack_done | Saved for offline: {pages} pages, {extracts} extracts, {images} pictures ({failed} did not answer) · {date} | Tersimpan untuk offline: {pages} halaman, {extracts} kutipan, {images} gambar ({failed} tidak menjawab) · {date} | Guardado para offline: {pages} páginas, {extracts} extratos, {images} imagens ({failed} sem resposta) · {date} | Rai ona ba offline: pájina {pages}, estratu {extracts}, imajen {images} ({failed} la hatán) · {date}
+offline_pack_stopped | Stopped. What was downloaded is kept. | Dihentikan. Yang sudah diunduh tetap disimpan. | Parado. O que foi descarregado fica guardado. | Para ona. Buat ne'ebé download ona sei rai nafatin.
+offline_pack_last | Last download: {date} · {size} MB | Unduhan terakhir: {date} · {size} MB | Última transferência: {date} · {size} MB | Download ikus: {date} · {size} MB
+offline_pack_never | Nothing downloaded yet. | Belum ada yang diunduh. | Ainda nada descarregado. | Seidauk download buat ida.
+# ---- Virtual Assistant popup
+popup_ready | Ready offline | Siap offline | Pronto offline | Prontu offline
+popup_search | Search material or files… | Cari materi atau file… | Pesquisar material ou ficheiros… | Buka materiál ka ficheiru…
+popup_continue | Continue learning | Lanjut belajar | Continuar a aprender | Kontinua aprende
+popup_explore | Explore | Jelajahi | Explorar | Esplora
+popup_tasks | Tasks | Tugas | Trabalhos | Knaar
+popup_os | OS help | Bantuan OS | Ajuda do sistema | Ajuda OS
+popup_open_desktop | Open Desktop | Buka Desktop | Abrir Desktop | Loke Desktop
+popup_recommend | Start with a topic you like. | Mulai dari topik yang kamu sukai. | Comece por um tema de que goste. | Hahú ho tópiku ida ne'ebé ita gosta.
+popup_continue_with | Continue: {t} | Lanjutkan: {t} | Continuar: {t} | Kontinua: {t}
+popup_found | {n} results · open in Lafa Desktop | {n} hasil · buka di Lafa Desktop | {n} resultados · abrir no Lafa Desktop | rezultadu {n} · loke iha Lafa Desktop
+""")
+for _lang in V2: V2[_lang].update(_V3[_lang])

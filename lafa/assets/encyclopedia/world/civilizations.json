@@ -1,0 +1,250 @@
+{
+  "area": "world",
+  "category": "civilizations",
+  "articles": [
+    {
+      "id": "w.civilizations.first_farmers",
+      "title": {
+        "en": "The first farmers",
+        "id": "Para petani pertama",
+        "pt": "Os primeiros agricultores",
+        "tet": "To'os-na'in dahuluk sira"
+      },
+      "summary": {
+        "en": "Between about 12,000 and 10,000 years ago, people in several parts of the world began to grow plants and raise animals. This change, called the Neolithic Revolution, led to villages, larger populations and new ways of life.",
+        "id": "Sekitar 12.000 hingga 10.000 tahun lalu, manusia di beberapa wilayah dunia mulai menanam tumbuhan dan memelihara hewan. Perubahan yang disebut Revolusi Neolitikum ini melahirkan desa, menambah jumlah penduduk, dan mengubah cara hidup manusia.",
+        "pt": "Há cerca de 12 000 a 10 000 anos, pessoas em várias partes do mundo começaram a cultivar plantas e a criar animais. Esta mudança, chamada Revolução Neolítica, levou ao aparecimento de aldeias e a novos modos de vida.",
+        "tet": "Maizumenus tinan 12.000 to'o 10.000 liubá, ema iha fatin oioin iha mundu hahú kuda ai-horis no hakiak animál. Mudansa ne'e naran Revolusaun Neolítika. Ho ne'e, ema hahú hela iha knua."
+      },
+      "objectives": {
+        "en": [
+          "You will explain what the Neolithic Revolution was.",
+          "You will name several places where farming began independently, including New Guinea.",
+          "You will describe how farming changed the way people lived."
+        ],
+        "id": [
+          "Kamu akan menjelaskan apa yang dimaksud dengan Revolusi Neolitikum.",
+          "Kamu akan menyebutkan beberapa tempat tempat pertanian muncul secara mandiri, termasuk Papua Nugini.",
+          "Kamu akan menjelaskan bagaimana pertanian mengubah cara hidup manusia."
+        ],
+        "pt": [
+          "Vais explicar o que foi a Revolução Neolítica.",
+          "Vais indicar vários lugares onde a agricultura começou de forma independente, incluindo a Nova Guiné.",
+          "Vais descrever como a agricultura mudou o modo de vida das pessoas."
+        ],
+        "tet": [
+          "Ita sei esplika saida mak Revolusaun Neolítika.",
+          "Ita sei hatene fatin balu iha mundu ne'ebé ema hahú kuda, inklui Nova Giné.",
+          "Ita sei komprende oinsá to'os muda ema nia moris."
+        ]
+      },
+      "sections": [
+        {
+          "heading": {"en": "From hunting to farming", "id": "Dari berburu ke bertani"},
+          "body": {
+            "en": "For most of human history, people lived by hunting animals, fishing and gathering wild plants. Many groups moved from place to place following their food. Starting roughly 12,000 years ago, after the last ice age ended and the climate became warmer and more stable, some groups began to plant seeds and look after animals. Archaeologists call this change the Neolithic Revolution, the start of the 'New Stone Age'. It was not a sudden event: it took thousands of years, and in many places people kept hunting and gathering alongside farming. Scientists still debate exactly why farming began. A warmer climate, growing numbers of people and long experience with wild plants probably all played a part.",
+            "id": "Sepanjang sebagian besar sejarah manusia, orang hidup dengan berburu hewan, menangkap ikan, dan mengumpulkan tumbuhan liar. Banyak kelompok berpindah-pindah mengikuti sumber makanan. Mulai sekitar 12.000 tahun lalu, setelah zaman es terakhir berakhir dan iklim menjadi lebih hangat dan stabil, sebagian kelompok mulai menanam biji dan merawat hewan. Para arkeolog menyebut perubahan ini Revolusi Neolitikum, yaitu awal 'Zaman Batu Baru'. Perubahan ini tidak terjadi tiba-tiba, tetapi berlangsung selama ribuan tahun, dan di banyak tempat orang tetap berburu dan meramu di samping bertani. Para ilmuwan masih memperdebatkan alasan pasti munculnya pertanian. Iklim yang lebih hangat, bertambahnya jumlah manusia, dan pengalaman panjang dengan tumbuhan liar kemungkinan besar sama-sama berperan."
+          }
+        },
+        {
+          "heading": {"en": "Many centres, not just one", "id": "Banyak pusat, bukan hanya satu"},
+          "body": {
+            "en": "Farming was invented independently in several regions of the world. In the Fertile Crescent of Southwest Asia, people grew wheat, barley, lentils and peas and kept sheep, goats, cattle and pigs from about 11,000 years ago. In China, people grew millet along the Yellow River and rice along the Yangtze River. In Mesoamerica, people tamed squash and later maize (corn) and beans; in the Andes of South America, potatoes and llamas. Africa had its own crops, such as sorghum. In the highlands of New Guinea, at a place called Kuk Swamp, people drained wetlands and grew taro and bananas at least 7,000 years ago. This makes New Guinea one of the world's early centres of farming.",
+            "id": "Pertanian ditemukan secara mandiri di beberapa wilayah dunia. Di Bulan Sabit Subur di Asia Barat Daya, orang menanam gandum, jelai, kacang lentil, dan kacang polong serta memelihara domba, kambing, sapi, dan babi sejak sekitar 11.000 tahun lalu. Di Tiongkok, orang menanam jewawut di sepanjang Sungai Kuning dan padi di sepanjang Sungai Yangtze. Di Mesoamerika, orang membudidayakan labu, lalu jagung dan kacang-kacangan; di Pegunungan Andes, Amerika Selatan, kentang dan llama. Afrika juga memiliki tanamannya sendiri, seperti sorgum. Di dataran tinggi Papua Nugini, di tempat bernama Rawa Kuk, orang mengeringkan lahan basah dan menanam talas serta pisang setidaknya 7.000 tahun lalu. Karena itu, Papua Nugini termasuk salah satu pusat pertanian awal di dunia."
+          }
+        },
+        {
+          "heading": {"en": "How farming changed life", "id": "Bagaimana pertanian mengubah kehidupan"},
+          "body": {
+            "en": "Farming could feed more people from the same area of land, so populations grew. Many farmers settled in permanent villages with houses, storage pits and fields. New tools appeared: polished stone axes for clearing forest, grinding stones for grain, and pottery for cooking and storing food. Animals gave meat, milk, wool and the strength to pull loads. But life did not become easier in every way. Farmers often worked long hours, depended on a few crops and could go hungry when harvests failed. Living close to animals also helped some diseases spread. Over time, extra food allowed some people to become specialists, such as potters, builders or leaders. This prepared the way for towns and cities.",
+            "id": "Pertanian dapat memberi makan lebih banyak orang dari luas lahan yang sama sehingga jumlah penduduk bertambah. Banyak petani menetap di desa permanen yang memiliki rumah, lubang penyimpanan, dan ladang. Muncul pula alat-alat baru: kapak batu yang diasah untuk membuka hutan, batu giling untuk biji-bijian, dan tembikar untuk memasak serta menyimpan makanan. Hewan ternak menghasilkan daging, susu, wol, dan tenaga untuk menarik beban. Namun, hidup tidak menjadi lebih mudah dalam segala hal. Petani sering bekerja berjam-jam, bergantung pada sedikit jenis tanaman, dan bisa kelaparan jika panen gagal. Hidup berdekatan dengan hewan juga mempermudah penyebaran beberapa penyakit. Lama-kelamaan, kelebihan makanan memungkinkan sebagian orang menjadi ahli di bidang tertentu, seperti pembuat tembikar, tukang bangunan, atau pemimpin. Inilah yang membuka jalan bagi munculnya kota."
+          }
+        },
+        {
+          "heading": {"en": "Farming in Timor and the islands", "id": "Pertanian di Timor dan kepulauan sekitarnya"},
+          "body": {
+            "en": "Farming reached the islands of Southeast Asia and the Pacific in several waves. Many archaeologists think that Austronesian-speaking seafarers, who spread from Taiwan through the Philippines from about 4,000 years ago, helped carry pottery, rice and domestic animals such as pigs and chickens across the region. Plants first tamed in New Guinea, including bananas, taro and sugar cane, also spread widely. In Timor, archaeologists have found pottery and the bones of domestic animals in cave sites dating from the last few thousand years. Some crops grown in Timor today arrived much later: maize, cassava and chillies were first domesticated in the Americas and reached Asia only after the 1500s.",
+            "id": "Pertanian sampai ke pulau-pulau di Asia Tenggara dan Pasifik dalam beberapa gelombang. Banyak arkeolog berpendapat bahwa para pelaut penutur bahasa Austronesia, yang menyebar dari Taiwan melalui Filipina sejak sekitar 4.000 tahun lalu, ikut membawa tembikar, padi, dan hewan ternak seperti babi dan ayam ke seluruh kawasan ini. Tanaman yang pertama kali dibudidayakan di Papua Nugini, seperti pisang, talas, dan tebu, juga menyebar luas. Di Timor, para arkeolog menemukan tembikar dan tulang hewan ternak di gua-gua yang berasal dari beberapa ribu tahun terakhir. Beberapa tanaman yang kini ditanam di Timor datang jauh lebih belakangan: jagung, singkong, dan cabai pertama kali dibudidayakan di Benua Amerika dan baru sampai di Asia setelah tahun 1500-an."
+          }
+        }
+      ],
+      "facts": [
+        {"label": {"en": "Start of farming in Southwest Asia", "id": "Awal pertanian di Asia Barat Daya"}, "value": {"en": "about 11,000 years ago", "id": "sekitar 11.000 tahun lalu"}, "year": "", "source": 0},
+        {"label": {"en": "Early farming at Kuk, New Guinea", "id": "Pertanian awal di Kuk, Papua Nugini"}, "value": {"en": "at least 7,000 years ago (taro and bananas)", "id": "setidaknya 7.000 tahun lalu (talas dan pisang)"}, "year": "", "source": 1},
+        {"label": {"en": "First crops in China", "id": "Tanaman pertama di Tiongkok"}, "value": {"en": "millet (Yellow River) and rice (Yangtze River)", "id": "jewawut (Sungai Kuning) dan padi (Sungai Yangtze)"}, "year": "", "source": 0}
+      ],
+      "figure": {
+        "hint": "A simple world map with five or six highlighted farming centres, each labelled with its main early crop or animal: Fertile Crescent (wheat, sheep), China (rice, millet), New Guinea (taro, banana), Mesoamerica (maize), Andes (potato), Africa (sorghum). Timor marked with a small dot for reference.",
+        "caption": {
+          "en": "Farming began independently in several parts of the world, each with its own crops and animals.",
+          "id": "Pertanian muncul secara mandiri di beberapa wilayah dunia, masing-masing dengan tanaman dan hewannya sendiri.",
+          "pt": "A agricultura começou de forma independente em várias partes do mundo, cada uma com as suas plantas e animais.",
+          "tet": "Ema hahú kuda iha fatin oioin iha mundu. Fatin ida-idak iha ninia ai-horis no animál rasik."
+        }
+      },
+      "sources": [
+        {"title": "Neolithic Revolution", "publisher": "Encyclopaedia Britannica", "url": "https://www.britannica.com/topic/Neolithic-Revolution", "year": "2024"},
+        {"title": "Kuk Early Agricultural Site", "publisher": "UNESCO World Heritage Centre", "url": "https://whc.unesco.org/en/list/887", "year": "2008"},
+        {"title": "Origins of agriculture", "publisher": "Encyclopaedia Britannica", "url": "https://www.britannica.com/topic/origins-of-agriculture", "year": "2024"}
+      ],
+      "related": ["w.human_origins.homo_sapiens", "w.human_origins.peopling_asia_pacific", "w.civilizations.cities_writing", "tl.history.first_people", "atlas:rice_bowls"],
+      "tags": ["history", "agriculture", "biology", "neolithic", "new guinea", "farming"],
+      "quiz": [
+        {
+          "q": {"en": "What was the Neolithic Revolution?", "id": "Apa yang dimaksud dengan Revolusi Neolitikum?"},
+          "options": {
+            "en": ["The invention of writing", "The change from hunting and gathering to farming", "A war between early kingdoms", "The first use of iron tools"],
+            "id": ["Penemuan tulisan", "Perubahan dari berburu dan meramu ke bertani", "Perang antara kerajaan-kerajaan awal", "Penggunaan alat besi pertama kali"]
+          },
+          "answer": 1,
+          "explain": {"en": "The Neolithic Revolution was the slow change, over thousands of years, from living by hunting and gathering to growing crops and raising animals.", "id": "Revolusi Neolitikum adalah perubahan perlahan selama ribuan tahun, dari hidup dengan berburu dan meramu menjadi menanam tanaman dan memelihara hewan."}
+        },
+        {
+          "q": {"en": "Which crop did early farmers at Kuk Swamp in New Guinea grow?", "id": "Tanaman apa yang ditanam petani awal di Rawa Kuk, Papua Nugini?"},
+          "options": {
+            "en": ["Wheat", "Maize", "Taro", "Potatoes"],
+            "id": ["Gandum", "Jagung", "Talas", "Kentang"]
+          },
+          "answer": 2,
+          "explain": {"en": "At Kuk, people grew taro and bananas at least 7,000 years ago. Wheat came from Southwest Asia, and maize and potatoes from the Americas.", "id": "Di Kuk, orang menanam talas dan pisang setidaknya 7.000 tahun lalu. Gandum berasal dari Asia Barat Daya, sedangkan jagung dan kentang dari Benua Amerika."}
+        },
+        {
+          "q": {"en": "Why did farming allow populations to grow?", "id": "Mengapa pertanian membuat jumlah penduduk bertambah?"},
+          "options": {
+            "en": ["Farmers no longer needed tools", "Farming ended all diseases", "Farmers worked fewer hours than hunters", "The same land could feed more people"],
+            "id": ["Petani tidak lagi membutuhkan alat", "Pertanian menghapus semua penyakit", "Petani bekerja lebih sedikit daripada pemburu", "Lahan yang sama dapat memberi makan lebih banyak orang"]
+          },
+          "answer": 3,
+          "explain": {"en": "Fields and herds produced more food per area of land than hunting and gathering, so more people could live in one place, even though farmers often worked hard and faced new diseases.", "id": "Ladang dan ternak menghasilkan lebih banyak makanan per luas lahan dibandingkan berburu dan meramu, sehingga lebih banyak orang dapat tinggal di satu tempat, meskipun petani sering bekerja keras dan menghadapi penyakit baru."}
+        }
+      ],
+      "review": {"version": 1, "reviewed": "2026-10-15", "status": "Written by the Lafa team from the listed sources; needs review by a subject expert", "licence": "CC BY-SA 4.0", "langs_full": ["en", "id"]}
+    },
+    {
+      "id": "w.civilizations.cities_writing",
+      "title": {
+        "en": "The first cities and writing",
+        "id": "Kota-kota dan tulisan pertama",
+        "pt": "As primeiras cidades e a escrita",
+        "tet": "Sidade dahuluk sira no hakerek"
+      },
+      "summary": {
+        "en": "From about 5,500 years ago, farming societies in Mesopotamia, Egypt, the Indus Valley, China and Mesoamerica built cities, formed states and, in several places, invented writing. Historians call these large, complex societies civilizations.",
+        "id": "Sejak sekitar 5.500 tahun lalu, masyarakat petani di Mesopotamia, Mesir, Lembah Indus, Tiongkok, dan Mesoamerika membangun kota, membentuk negara, dan di beberapa tempat menciptakan tulisan. Sejarawan menyebut masyarakat besar dan kompleks ini peradaban.",
+        "pt": "Desde há cerca de 5500 anos, sociedades agrícolas na Mesopotâmia, no Egito, no vale do Indo, na China e na Mesoamérica construíram cidades, formaram Estados e, em vários lugares, inventaram a escrita. Os historiadores chamam a estas sociedades civilizações.",
+        "tet": "Maizumenus tinan 5.500 liubá, ema iha Mesopotámia, Ejitu, vale Indu, Xina no Mezoamérika harii sidade no estadu. Iha fatin balu, sira mós hahú hakerek. Istoriadór sira bolu sira sivilizasaun."
+      },
+      "objectives": {
+        "en": [
+          "You will explain what historians mean by a civilization.",
+          "You will name five regions where early cities and states appeared.",
+          "You will describe how writing began, including cuneiform in Mesopotamia."
+        ],
+        "id": [
+          "Kamu akan menjelaskan apa yang dimaksud sejarawan dengan peradaban.",
+          "Kamu akan menyebutkan lima wilayah tempat kota dan negara awal muncul.",
+          "Kamu akan menjelaskan bagaimana tulisan bermula, termasuk aksara paku di Mesopotamia."
+        ],
+        "pt": [
+          "Vais explicar o que os historiadores querem dizer com civilização.",
+          "Vais indicar cinco regiões onde surgiram as primeiras cidades e Estados.",
+          "Vais descrever como começou a escrita, incluindo a escrita cuneiforme na Mesopotâmia."
+        ],
+        "tet": [
+          "Ita sei esplika saida mak sivilizasaun.",
+          "Ita sei hatene rejiaun lima ne'ebé iha sidade no estadu dahuluk.",
+          "Ita sei komprende oinsá ema hahú hakerek, inklui eskrita kuneiforme iha Mesopotámia."
+        ]
+      },
+      "sections": [
+        {
+          "heading": {"en": "What is a civilization?", "id": "Apa itu peradaban?"},
+          "body": {
+            "en": "Historians use the word civilization for a large, complex society. Such societies usually have cities, a government or ruler, people doing many different jobs, large buildings such as temples or palaces, systems of trade and taxes, and often some form of writing. The word does not mean that one people is better than another. Farming villages, hunter-gatherer groups and island communities all had rich cultures, languages, beliefs and knowledge. 'Civilization' simply describes one way of organising a very large number of people. The first civilizations grew where farming produced extra food, often in fertile river valleys where water for crops was easy to find.",
+            "id": "Sejarawan menggunakan kata peradaban untuk menyebut masyarakat yang besar dan kompleks. Masyarakat seperti ini biasanya memiliki kota, pemerintahan atau penguasa, penduduk dengan beragam pekerjaan, bangunan besar seperti kuil atau istana, sistem perdagangan dan pajak, serta sering kali suatu bentuk tulisan. Kata ini tidak berarti bahwa satu bangsa lebih baik daripada bangsa lain. Desa petani, kelompok pemburu-peramu, dan masyarakat pulau semuanya memiliki budaya, bahasa, kepercayaan, dan pengetahuan yang kaya. 'Peradaban' hanya menggambarkan satu cara untuk mengatur jumlah manusia yang sangat besar. Peradaban pertama tumbuh di tempat pertanian menghasilkan makanan berlebih, sering kali di lembah sungai yang subur dan mudah mendapatkan air untuk tanaman."
+          }
+        },
+        {
+          "heading": {"en": "Mesopotamia and Egypt", "id": "Mesopotamia dan Mesir"},
+          "body": {
+            "en": "Mesopotamia means 'land between the rivers': the Tigris and the Euphrates, in today's Iraq. By about 3500 BCE, Uruk had become one of the world's first cities, with thousands of people, large temples and many craft workers. Around 3200 BCE, people in Mesopotamia began to write on clay tablets. At first they drew simple pictures to record goods such as grain and animals. Later the signs became wedge-shaped marks pressed into the clay with a reed. This writing is called cuneiform. Along the Nile River, Egypt was united into one kingdom around 3100 BCE. Egyptians developed their own writing, hieroglyphs, at about the same time, and later built the great pyramids at Giza about 4,500 years ago.",
+            "id": "Mesopotamia berarti 'tanah di antara sungai-sungai', yaitu Sungai Tigris dan Efrat di wilayah Irak sekarang. Sekitar tahun 3500 SM, Uruk telah menjadi salah satu kota pertama di dunia, dengan ribuan penduduk, kuil-kuil besar, dan banyak perajin. Sekitar tahun 3200 SM, orang Mesopotamia mulai menulis di atas lempengan tanah liat. Awalnya mereka menggambar gambar sederhana untuk mencatat barang seperti gandum dan hewan. Kemudian tanda-tanda itu berubah menjadi goresan berbentuk baji yang ditekan ke tanah liat dengan batang buluh. Tulisan ini disebut aksara paku (kuneiform). Di sepanjang Sungai Nil, Mesir dipersatukan menjadi satu kerajaan sekitar tahun 3100 SM. Bangsa Mesir mengembangkan tulisannya sendiri, hieroglif, pada masa yang hampir sama, dan kemudian membangun piramida besar di Giza sekitar 4.500 tahun lalu."
+          }
+        },
+        {
+          "heading": {"en": "The Indus Valley and China", "id": "Lembah Indus dan Tiongkok"},
+          "body": {
+            "en": "In the Indus Valley, in today's Pakistan and northwest India, cities such as Harappa and Mohenjo-daro flourished from about 2600 to 1900 BCE. They had streets laid out in grids, brick houses, covered drains and standard weights for trade. The people used a script found on small stone seals, but no one has yet been able to read it. In China, early states grew along the Yellow River. The Shang dynasty, which ruled from about 1600 BCE, left thousands of 'oracle bones': animal bones and turtle shells carved with questions to the ancestors. Their writing is the ancestor of the Chinese characters used today, so Chinese is one of the oldest writing systems still in use.",
+            "id": "Di Lembah Indus, di wilayah Pakistan dan barat laut India sekarang, kota-kota seperti Harappa dan Mohenjo-daro berkembang sekitar tahun 2600 hingga 1900 SM. Kota-kota ini memiliki jalan yang tertata seperti papan catur, rumah dari bata, saluran air tertutup, dan timbangan baku untuk berdagang. Penduduknya menggunakan aksara yang ditemukan pada stempel batu kecil, tetapi sampai sekarang belum ada yang mampu membacanya. Di Tiongkok, negara-negara awal tumbuh di sepanjang Sungai Kuning. Dinasti Shang, yang berkuasa sejak sekitar tahun 1600 SM, meninggalkan ribuan 'tulang ramalan', yaitu tulang hewan dan tempurung kura-kura yang diukir dengan pertanyaan untuk para leluhur. Tulisan tersebut merupakan cikal bakal aksara Tionghoa yang dipakai hingga kini, sehingga aksara Tionghoa termasuk sistem tulisan tertua yang masih digunakan."
+          }
+        },
+        {
+          "heading": {"en": "The Americas, and societies without writing", "id": "Benua Amerika dan masyarakat tanpa tulisan"},
+          "body": {
+            "en": "Civilizations also arose independently in the Americas. In Mesoamerica (today's Mexico and Central America), the Olmec built large ceremonial centres from about 1200 BCE. Later, the Maya built cities with stone pyramids and developed a full writing system, a calendar and advanced mathematics that included a sign for zero. In the Andes of South America, people built cities too, and the Inca Empire later kept records with knotted strings called khipu. Scholars agree that writing was invented independently at least three times, in Mesopotamia, China and Mesoamerica, and possibly also in Egypt. Many societies, including those of Timor, passed on history, law and knowledge through spoken stories, songs and ceremonies instead of writing.",
+            "id": "Peradaban juga muncul secara mandiri di Benua Amerika. Di Mesoamerika (wilayah Meksiko dan Amerika Tengah sekarang), bangsa Olmek membangun pusat-pusat upacara yang besar sejak sekitar tahun 1200 SM. Kemudian, bangsa Maya membangun kota dengan piramida batu serta mengembangkan sistem tulisan yang lengkap, kalender, dan matematika maju yang mengenal tanda untuk angka nol. Di Pegunungan Andes, Amerika Selatan, orang juga membangun kota, dan Kekaisaran Inka kemudian mencatat informasi dengan tali bersimpul yang disebut khipu. Para ahli sepakat bahwa tulisan diciptakan secara mandiri setidaknya tiga kali, yaitu di Mesopotamia, Tiongkok, dan Mesoamerika, dan mungkin juga di Mesir. Banyak masyarakat, termasuk masyarakat di Timor, mewariskan sejarah, hukum, dan pengetahuan melalui cerita lisan, nyanyian, dan upacara, bukan melalui tulisan."
+          }
+        }
+      ],
+      "facts": [
+        {"label": {"en": "Earliest writing in Mesopotamia", "id": "Tulisan tertua di Mesopotamia"}, "value": {"en": "about 3200 BCE", "id": "sekitar 3200 SM"}, "year": "", "source": 0},
+        {"label": {"en": "Unification of Egypt", "id": "Penyatuan Mesir"}, "value": {"en": "about 3100 BCE", "id": "sekitar 3100 SM"}, "year": "", "source": 1},
+        {"label": {"en": "Indus Valley cities at their height", "id": "Masa jaya kota-kota Lembah Indus"}, "value": {"en": "about 2600–1900 BCE", "id": "sekitar 2600–1900 SM"}, "year": "", "source": 2}
+      ],
+      "figure": {
+        "hint": "A timeline from 3500 BCE to 500 CE with five labelled bars for early civilizations: Mesopotamia (Uruk, cuneiform c. 3200 BCE), Egypt (unified c. 3100 BCE, hieroglyphs), Indus Valley (c. 2600–1900 BCE), China (Shang, oracle bones), Mesoamerica (Olmec, then Maya writing). Beside it, a small drawing of a clay tablet with wedge-shaped signs.",
+        "caption": {
+          "en": "Early civilizations rose at different times in different regions; writing began in Mesopotamia about 3200 BCE.",
+          "id": "Peradaban awal muncul pada waktu yang berbeda di berbagai wilayah; tulisan bermula di Mesopotamia sekitar 3200 SM.",
+          "pt": "As primeiras civilizações surgiram em épocas diferentes em várias regiões; a escrita começou na Mesopotâmia por volta de 3200 a.C.",
+          "tet": "Sivilizasaun dahuluk sira mosu iha tempu oioin iha rejiaun oioin. Hakerek hahú iha Mesopotámia maizumenus tinan 3200 molok Kristu."
+        }
+      },
+      "sources": [
+        {"title": "Cuneiform", "publisher": "Encyclopaedia Britannica", "url": "https://www.britannica.com/topic/cuneiform", "year": "2024"},
+        {"title": "Mesopotamia (historical region, Asia)", "publisher": "Encyclopaedia Britannica", "url": "https://www.britannica.com/place/Mesopotamia-historical-region-Asia", "year": "2024"},
+        {"title": "Indus civilization", "publisher": "Encyclopaedia Britannica", "url": "https://www.britannica.com/topic/Indus-civilization", "year": "2024"}
+      ],
+      "related": ["w.civilizations.first_farmers", "w.inventions.printing", "w.culture_arts.languages_of_the_world", "tl.culture.tetun_language"],
+      "tags": ["history", "civilization", "writing", "cities", "mesopotamia", "egypt", "china"],
+      "quiz": [
+        {
+          "q": {"en": "What does the name 'Mesopotamia' mean?", "id": "Apa arti nama 'Mesopotamia'?"},
+          "options": {
+            "en": ["Land of the pharaohs", "Land between the rivers", "River of gold", "City of temples"],
+            "id": ["Tanah para firaun", "Tanah di antara sungai-sungai", "Sungai emas", "Kota kuil"]
+          },
+          "answer": 1,
+          "explain": {"en": "Mesopotamia means 'land between the rivers', because it lay between the Tigris and Euphrates rivers.", "id": "Mesopotamia berarti 'tanah di antara sungai-sungai' karena terletak di antara Sungai Tigris dan Efrat."}
+        },
+        {
+          "q": {"en": "Which ancient script has still not been deciphered?", "id": "Aksara kuno manakah yang sampai sekarang belum dapat dibaca?"},
+          "options": {
+            "en": ["Cuneiform", "Egyptian hieroglyphs", "The Indus script", "Chinese characters"],
+            "id": ["Aksara paku", "Hieroglif Mesir", "Aksara Indus", "Aksara Tionghoa"]
+          },
+          "answer": 2,
+          "explain": {"en": "Scholars can read cuneiform, hieroglyphs and Chinese characters, but nobody has yet been able to read the script of the Indus Valley.", "id": "Para ahli dapat membaca aksara paku, hieroglif, dan aksara Tionghoa, tetapi belum ada yang mampu membaca aksara Lembah Indus."}
+        },
+        {
+          "q": {"en": "About when did people in Mesopotamia begin to write?", "id": "Kira-kira kapan orang Mesopotamia mulai menulis?"},
+          "options": {
+            "en": ["About 3200 BCE", "About 1200 BCE", "About 500 CE", "About 10,000 BCE"],
+            "id": ["Sekitar 3200 SM", "Sekitar 1200 SM", "Sekitar 500 M", "Sekitar 10.000 SM"]
+          },
+          "answer": 0,
+          "explain": {"en": "The earliest clay tablets with writing from Mesopotamia date to about 3200 BCE, more than 5,000 years ago.", "id": "Lempengan tanah liat bertulisan tertua dari Mesopotamia berasal dari sekitar tahun 3200 SM, lebih dari 5.000 tahun lalu."}
+        }
+      ],
+      "review": {"version": 1, "reviewed": "2026-10-15", "status": "Written by the Lafa team from the listed sources; needs review by a subject expert", "licence": "CC BY-SA 4.0", "langs_full": ["en", "id"]}
+    }
+  ],
+  "coverage": [
+    {"topic": {"en": "The first farmers", "id": "Para petani pertama"}, "status": "available", "article": "w.civilizations.first_farmers"},
+    {"topic": {"en": "The first cities and writing", "id": "Kota-kota dan tulisan pertama"}, "status": "available", "article": "w.civilizations.cities_writing"},
+    {"topic": {"en": "Ancient Greece and Rome", "id": "Yunani dan Romawi Kuno"}, "status": "planned", "article": ""},
+    {"topic": {"en": "Early kingdoms of Southeast Asia (Srivijaya, Angkor, Majapahit)", "id": "Kerajaan-kerajaan awal Asia Tenggara (Sriwijaya, Angkor, Majapahit)"}, "status": "planned", "article": ""},
+    {"topic": {"en": "Great empires of Africa", "id": "Kekaisaran-kekaisaran besar Afrika"}, "status": "planned", "article": ""},
+    {"topic": {"en": "The Bronze Age and the Iron Age", "id": "Zaman Perunggu dan Zaman Besi"}, "status": "planned", "article": ""}
+  ]
+}

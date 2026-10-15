@@ -1,0 +1,19 @@
+{
+ "frame": [
+  194,
+  182
+ ],
+ "frames": 8,
+ "rows": [
+  "casual",
+  "tuxedo",
+  "tais"
+ ],
+ "baseline": 176,
+ "anchor_x": 102,
+ "facing": "right",
+ "stride": 120,
+ "default_row": "casual",
+ "source": "docs/design/lafa-character-sheet.webp (walk row, frames 1-8), owner-supplied design; Formal and Tais rows recoloured by tools/make-walk.py",
+ "licence": "Same as the Lafa artwork (see docs/ASSETS.md)"
+}
