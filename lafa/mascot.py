@@ -14,7 +14,7 @@ import math
 import random
 import time
 from datetime import datetime
-from .qt import Qt,QTimer,QPointF,QRectF,QRect,QEvent,Signal,QPixmap,QPainter,QGuiApplication,QPolygonF,QColor,QPainterPath,QPen,QCursor
+from .qt import Qt,QTimer,QPointF,QRectF,QRect,QEvent,Signal,QPixmap,QPainter,QGuiApplication,QPolygonF,QColor,QPainterPath,QPen,QCursor,QRegion
 from .qt import QWidget,QMenu,QFrame,QVBoxLayout,QHBoxLayout,QGridLayout,QLabel,QLineEdit,QPushButton,QPlainTextEdit,QApplication,QSize,global_point,run
 from .config import STATES,IDLE_ACTIVITIES,ENTERTAINMENT
 from .i18n import tr
@@ -98,6 +98,29 @@ class Atlas:
         self.poses=self.outfits['base'];self.traditional=self.outfits['traditional']
         for state in ['tebe','bidu']:self.poses[state]=self.traditional[state]
         if set(STATES)-self.poses.keys():raise RuntimeError('A LAFA pose is missing.')
+        # Walk cycle: 8 frames per outfit (tools/make-walk.py), facing right.
+        self.walk={};self.walk_meta={}
+        path=ASSET.with_name('lafa-walk.png')
+        try:
+            meta=json.loads(path.with_name('lafa-walk.json').read_text());sheet=QPixmap(str(path))
+            if not sheet.isNull():
+                fw,fh=meta['frame']
+                for r,row in enumerate(meta['rows']):self.walk['traditional' if row=='tais' else row]=[sheet.copy(c*fw,r*fh,fw,fh) for c in range(meta['frames'])]
+                self.walk_meta=meta
+        except (OSError,ValueError,KeyError):self.walk={}
+    def extent(self,pix):
+        """(top, bottom, left, right) of the opaque part of a pixmap, cached."""
+        cache=self.__dict__.setdefault('_extent',{});key=(pix.cacheKey(),pix.width(),pix.height())
+        if key not in cache:
+            image=pix.toImage();w,h=image.width(),image.height();rows=[]
+            step=max(1,w//64)
+            for y in range(h):
+                if any(QColor(image.pixel(x,y)).alpha()>100 for x in range(0,w,step)):rows.append(y)
+            cols=[x for x in range(0,w,step) if any(QColor(image.pixel(x,y)).alpha()>100 for y in range(0,h,max(1,h//64)))]
+            cache[key]=(rows[0],rows[-1],cols[0],cols[-1]) if rows and cols else (0,h-1,0,w-1)
+        return cache[key]
+    def walk_frames(self,costume):
+        return self.walk.get(costume) or self.walk.get('casual') or []
     def head(self,pose):
         """(x, y) of the top of LAFA's head as fractions of the pose canvas."""
         cache=self.__dict__.setdefault('_heads',{})
@@ -125,12 +148,59 @@ class Character(QWidget):
     def __init__(self,atlas,parent=None,size=190):
         super().__init__(parent);self.atlas=atlas;self.state='idle';self.costume='casual';self.phase=0;self.animated=True;self.direction=1;self.rate=1.0
         self.motion=Motion();self.previous=None
+        self.distance=0.0;self.moved_at=0.0;self.hold=0   # walk cycle: travelled pixels, last move, contact-pose ticks
         self.setFixedSize(size,size+16);self.setMouseTracking(True)
         self.timer=QTimer(self);self.timer.timeout.connect(self.tick);self.timer.start(self.FRAME_MS)
     @property
     def hop_phase(self):return 1.0 if self.motion.gesture=="jump" else 0.0
+    @property
+    def direction(self):return self.__dict__.get('_direction',1)
+    @direction.setter
+    def direction(self,value):
+        value=1 if value>=0 else -1
+        # Turning: plant both feet (contact pose) for a moment, then walk the other way.
+        if value!=self.__dict__.get('_direction',1) and self.state=='walking':self.hold=3
+        self._direction=value
+    def advance(self,pixels):
+        """The window moved this many pixels: the feet follow the distance (no sliding)."""
+        self.distance+=abs(pixels);self.moved_at=time.monotonic()
+        if self.hold>0:self.hold-=1
+        self.update()
+    def walk_index(self):
+        frames=self.atlas.walk_frames(self.costume)
+        if not frames or self.hold>0 or not self.animated or getattr(self,'reduce_motion',False):return 0
+        stride=self.atlas.walk_meta.get('stride',120)*self.walk_scale()
+        return int(self.distance/(stride/len(frames)))%len(frames)
+    def walk_scale(self):
+        """Walk frames are drawn at the same body height as the standing pose."""
+        idle=self.atlas.pixmap('idle',self.width()-10,self.costume);t,b,_l,_r=self.atlas.extent(idle)
+        frames=self.atlas.walk_frames(self.costume)
+        if not frames:return 1.0
+        ft,fb,_fl,_fr=self.atlas.extent(frames[0])
+        return (b-t)/max(1,fb-ft)
+    def ground_y(self):
+        idle=self.atlas.pixmap('idle',self.width()-10,self.costume);_t,b,_l,_r=self.atlas.extent(idle)
+        return self.height()/2-idle.height()/2+b
+    def mask_region(self):
+        """Where LAFA is drawn (with room for jumps and the shadow); clicks elsewhere go to other windows."""
+        key=(self.state,self.costume,self.direction,self.width(),self.height())
+        if getattr(self,'_mask_key',None)!=key:
+            if self.pose=='walking' and self.atlas.walk_frames(self.costume):
+                sc=self.walk_scale();fw,fh=self.atlas.walk_meta['frame'];ax=self.atlas.walk_meta['anchor_x'];base=self.atlas.walk_meta['baseline']
+                ft,fb,fl,fr=self.atlas.extent(self.atlas.walk_frames(self.costume)[0])
+                x0=self.width()/2+(fl-ax)*sc if self.direction>0 else self.width()/2-(fr-ax)*sc
+                region=QRegion(QRect(int(x0)-14,int(self.ground_y()-(base-ft)*sc)-6,int((fr-fl)*sc)+28,int((base-ft)*sc)+14))
+            else:
+                pix=self.atlas.pixmap(self.state,self.width()-10,self.costume)
+                bits=QRegion(pix.mask()) if not pix.mask().isNull() else QRegion(0,0,pix.width(),pix.height())
+                bits.translate(int(self.width()/2-pix.width()/2),int(self.height()/2-pix.height()/2))
+                region=QRegion(bits)
+                for dx,dy in ((-8,0),(8,0),(0,-26),(0,6)):region=region.united(bits.translated(dx,dy))   # sway, jump, shadow
+            self._mask_key=key;self._mask=region
+        return self._mask
     def set_state(self,state):
         state=state if state in STATES or state in outfits.ACTIVITIES else 'idle'
+        if state=='walking' and self.state!='walking':self.distance=0.0;self.hold=2   # start from the contact pose
         if state!=self.state and self.animated and self.timer.isActive():
             self.previous=(self.state,self.costume);self.motion.changed()
             if state in {'talking','greeting'} and self.state in {'idle','sitting'}:self.motion.play('wave')
@@ -145,6 +215,10 @@ class Character(QWidget):
     def tick(self):
         seconds=self.FRAME_MS/1000*self.rate;self.phase+=0.14*self.rate*self.FRAME_MS/90
         self.motion.advance(seconds)
+        # A walking LAFA that is not being moved (Desktop preview, Wayland) walks on the spot at a calm pace.
+        if self.state=='walking' and time.monotonic()-self.moved_at>0.4 and not getattr(self,'reduce_motion',False):
+            self.distance+=40*seconds
+            if self.hold>0:self.hold-=1
         # Look towards the pointer when it is near (attention, like a person).
         try:
             pos=self.mapFromGlobal(QCursor.pos());near=-120<pos.x()<self.width()+120 and -160<pos.y()<self.height()+60
@@ -168,6 +242,19 @@ class Character(QWidget):
             painter.setPen(Qt.NoPen);painter.setBrush(QColor(0,0,0,int(38*f.shadow)))
             w=pix.width()*0.42*f.shadow;painter.drawEllipse(QPointF(self.width()/2+f.dx,ground),w/2,w/9)
         if not self.timer.isActive():self.motion.fade=1.0;self.previous=None   # paused: no half-faded pictures
+        frames=self.atlas.walk_frames(self.costume) if pose=='walking' and not scene else []
+        if frames:
+            # Drawn walk cycle: same body height, foot line and anchor in every frame.
+            if self.previous and self.motion.fade<1.0:
+                painter.setOpacity(1.0-self.motion.fade);old=self.atlas.pixmap(self.previous[0],self.width()-10,self.previous[1])
+                painter.drawPixmap(int(self.width()/2-old.width()/2),int(self.height()/2-old.height()/2),old);painter.setOpacity(self.motion.fade)
+            frame=frames[self.walk_index()];sc=self.walk_scale();meta=self.atlas.walk_meta
+            painter.save();painter.translate(self.width()/2,self.ground_y())
+            painter.scale(sc*self.direction,sc)
+            painter.drawPixmap(QPointF(-meta['anchor_x'],-meta['baseline']),frame)
+            painter.restore();painter.setOpacity(1.0)
+            if self.motion.fade>=1.0:self.previous=None
+            return
         if self.previous and self.motion.fade<1.0:
             painter.setOpacity(1.0-self.motion.fade);old=self.atlas.pixmap(self.previous[0],self.width()-10,self.previous[1])
             painter.drawPixmap(int(self.width()/2-old.width()/2),int(self.height()/2-old.height()/2),old);painter.setOpacity(self.motion.fade)
@@ -284,7 +371,7 @@ class Companion(QWidget):
         self.balloon=Balloon();self.balloon.clicked.connect(self.accept_balloon)
         self.balloon_timer=QTimer(self);self.balloon_timer.setSingleShot(True);self.balloon_timer.timeout.connect(self.hide_balloon)
         self.idle_timer=QTimer(self);self.idle_timer.setInterval(1000);self.idle_timer.timeout.connect(self.choose_idle)
-        self.walk_timer=QTimer(self);self.walk_timer.setInterval(120);self.walk_timer.timeout.connect(self.walk)
+        self.walk_timer=QTimer(self);self.walk_timer.setInterval(60);self.walk_timer.timeout.connect(self.walk)
         self.fullscreen_timer=QTimer(self);self.fullscreen_timer.setInterval(10_000);self.fullscreen_timer.timeout.connect(self.check_fullscreen)
         self.bubblebox.hide();self.setFixedSize(*self.compact_size());self.animate(False);self.apply_preferences()
         self.retranslate();self.message.setPlainText(tr(settings.locale,'welcome_desktop'))
@@ -320,6 +407,7 @@ class Companion(QWidget):
             if self.state not in outfits.activities_for(self.settings.costume)+['walking','talking','idle']:self.set_state(outfits.activities_for(self.settings.costume)[0])
         self.setFixedSize(*(self.expanded_size() if self.bubblebox.isVisible() else self.compact_size()))
         if self.isVisible() and not self.bubblebox.isVisible():self.snap_to_panel()
+        self.update_mask()
     @property
     def timer(self):return self.pet.timer
     @property
@@ -333,8 +421,15 @@ class Companion(QWidget):
     @property
     def lang(self):return self.settings.locale
     def animate(self,enabled):self.pet.animate(enabled)
+    def update_mask(self):
+        """Compact LAFA only takes clicks on the character itself; transparent
+        corners pass clicks through to the windows below. The popup is a full window."""
+        if self.bubblebox.isVisible() or not hasattr(self,'pet'):self.clearMask();return
+        region=self.pet.mask_region().translated(self.pet.pos())
+        if region.isEmpty():self.clearMask()
+        else:self.setMask(region)
     def set_state(self,state):
-        self.pet.set_state(state);self.duty_label.setText('· '+personality.duty(self.lang,self.pet.state));self.activity_changed.emit(self.pet.state)
+        self.pet.set_state(state);self.update_mask();self.duty_label.setText('· '+personality.duty(self.lang,self.pet.state));self.activity_changed.emit(self.pet.state)
     def retranslate(self):
         lang=self.lang
         self.setToolTip('')
@@ -494,10 +589,13 @@ class Companion(QWidget):
             nx=self.x()+self.direction*step
             if nx<rect.left() or nx+self.width()>rect.right()+1:self.direction*=-1;nx=self.x()+self.direction*step
         else:
-            self.direction=1 if self.walk_target>self.x() else -1;nx=self.x()+self.direction*min(step,abs(self.walk_target-self.x()))
+            # Slow down for the last steps, then stop on both feet.
+            left=abs(self.walk_target-self.x());step=min(step,max(1,math.ceil(left/8)))
+            self.direction=1 if self.walk_target>self.x() else -1;nx=self.x()+self.direction*min(step,left)
         self.pet.direction=self.direction
         y=self.panel_y(rect) if self.settings.panel_roam else self.y()
-        self.move(max(rect.left(),min(nx,rect.right()-self.width()+1)),y)
+        old=self.x();self.move(max(rect.left(),min(nx,rect.right()-self.width()+1)),y)
+        self.pet.advance(self.x()-old);self.update_mask()
         if self.balloon.isVisible():self.hide_balloon()
         if self.walk_target is not None and abs(self.x()-self.walk_target)<=1:self.start_activity()
     # ----- chat bubble -------------------------------------------------------
@@ -509,7 +607,7 @@ class Companion(QWidget):
             rect=(QGuiApplication.screenAt(anchor) or QGuiApplication.primaryScreen()).availableGeometry()
             self.move(max(rect.left(),min(anchor.x()-self.width(),rect.right()-self.width())),max(rect.top(),min(anchor.y()-self.height(),rect.bottom()-self.height())))
             if not expanded:self.snap_to_panel()
-        self.update()
+        self.update_mask();self.update()
     def show_bubble(self,text=None):
         if not self.settings.companion:return
         if text is not None:self.message.setPlainText(text);self.current_source="";self.source_button.hide()
