@@ -5,13 +5,13 @@ Qt offscreen). Not yet tested on Edukasaun OS hardware.
 
 | Check | Result |
 |---|---|
-| Automated tests, **PyQt5** and **PySide6** | see `test-results.txt` (all passed; numbers there) |
+| Automated tests, **PyQt5** (Qt 5.15) and **PySide6** (Qt 6) | **253 passed** each, 0 skipped (+10 subtests); see `test-results.txt` |
 | New tests (`tests/test_encyclopedia.py`) | encyclopedia checker; 12 + 6 categories with icons, illustrations and 4-language titles; ≥ 2 articles per world category; every article has objectives, sources and questions with explanations; all 0.2.0 atlas topics reachable; accent-folded search; scores saved; Back restores page and scroll; cross-area links; no sideways scrolling at 1024×600; all three modules (hotspots, periods, size chart, exercise; geology vs human scale; order, match, impacts); offline pack with a fake Wikipedia/Commons (extracts, pictures with licence and author, files 0600, stop keeps data, non-free pictures skipped); 8-frame walk follows distance, turn and reduce motion; click mask and popup draft |
 | Content | `tools/check-encyclopedia.py`: ✓ 15 files, 34 articles; `tools/check-curriculum.py` valid |
 | Screens | 1024×600, 1366×768, 1920×1080, dark theme, Tetun and 150 % scaling (`QT_SCALE_FACTOR=1.5`) captured and inspected (captures 63–85). Lafa has no own text-size setting; 150 % was tested as display scaling |
 | Wayland | Weston 13 headless + Qt wayland plugin: `platformName()=wayland`, Lafa does not roam (walks in place ≈ 38 px/s of cycle), window mask set, popup clears the mask, draft kept. Window placement is decided by the compositor; fullscreen pause is X11-only. Not tested on a real Wayland desktop session |
 | Network | The sandbox blocked wikipedia.org, upload.wikimedia.org, commons.wikimedia.org and timor-leste.gov.tl, so the offline pack and links were tested with recorded data only |
-| Debian package | see `package-smoke.txt` |
+| Debian package | `lafa_0.2.1_all.deb` (14.8 MB) installed with apt; ran from `/usr/lib/lafa` with the system PyQt5 in Tetun: SVG icons, Timor-Leste article, dinosaur module, 8 walk frames per outfit; see `package-smoke.txt` |
 
 ## 0.2.0
 
