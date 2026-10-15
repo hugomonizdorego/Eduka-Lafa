@@ -189,7 +189,7 @@ class CalmAssistant(unittest.TestCase):
     def test_quick_actions_work_offline(self):
         c, _ = self.companion(); asked = []; c.action_requested.connect(asked.append)
         for key, b in c.quick_buttons: self.assertTrue(b.isEnabled(), key); self.assertTrue(b.text().strip(), key); b.click()
-        self.assertEqual(asked, ["continue", "tasks", "focus", "os"])
+        self.assertEqual(asked, ["continue", "explore", "tasks", "os"])
 
 
 if __name__ == "__main__":

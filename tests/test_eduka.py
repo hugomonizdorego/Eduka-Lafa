@@ -52,7 +52,7 @@ class PanelThemeTests(EdukaHome):
     def test_lafa_style_follows_eduka_theme(self):
         from lafa.app import style_sheet, STYLE
         self.write('desktop/settings.json', {'theme_style': 'Edukasaun-Dark', 'accent_color': '#2563eb'}); self.write('panel/settings.json', {})
-        qss = style_sheet(Settings()); self.assertIn('#2563eb', qss); self.assertIn('#12302b', qss); self.assertNotIn('#000000', qss)
+        qss = style_sheet(Settings()); self.assertIn('#2563eb', qss); self.assertIn('#121c19', qss); self.assertNotIn('#000000', qss)
         self.assertEqual(style_sheet(Settings(follow_eduka_theme=False)), STYLE)
 
 class AgendaNotifyTests(EdukaHome):

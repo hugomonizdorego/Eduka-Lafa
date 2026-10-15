@@ -80,11 +80,11 @@ class Article:
 
 WORLD = [
     Category("earth", "world", L("Earth & Geology", "Bumi & Geologi", "Terra e Geologia", "Planeta Rai no Jeolojia"),
-             L("How our planet formed, moves and changes.", "Bagaimana planet kita terbentuk, bergerak, dan berubah.", "Como o nosso planeta se formou, se move e muda.", "Oinsá ita-nia planeta moris, book an no muda."), "cat-earth", "#8d6e4a", ("geography", "environment")),
-    Category("dinosaurs", "world", L("Dinosaurs & Ancient Life", "Dinosaurus & Kehidupan Purba", "Dinossauros e Vida Antiga", "Dinossauru no Moris Antigu"),
+             L("How our planet formed, moves and changes.", "Bagaimana planet kita terbentuk, bergerak, dan berubah.", "Como o nosso planeta se formou, se move e muda.", 'Oinsá ita-nia planeta mosu, book-an no muda.'), "cat-earth", "#8d6e4a", ("geography", "environment")),
+    Category("dinosaurs", "world", L("Dinosaurs & Ancient Life", "Dinosaurus & Kehidupan Purba", "Dinossauros e Vida Antiga", 'Dinosauru no Moris Antigu'),
              L("Fossils, habitats and how life changed.", "Fosil, habitat, dan perubahan kehidupan.", "Fósseis, habitats e como a vida mudou.", "Fósil, fatin moris no oinsá moris muda."), "cat-dinosaur", "#7a6a3a", ("biology",)),
     Category("human_origins", "world", L("Human Origins", "Asal-Usul Manusia", "Origens Humanas", "Ema nia Orijen"),
-             L("Where people come from and how they spread.", "Dari mana manusia berasal dan bagaimana menyebar.", "De onde vêm as pessoas e como se espalharam.", "Ema mai husi ne'ebé no oinsá sira hakat ba mundu tomak."), "cat-human", "#c08a3e", ("history", "biology")),
+             L("Where people come from and how they spread.", "Dari mana manusia berasal dan bagaimana menyebar.", "De onde vêm as pessoas e como se espalharam.", "Ema mai husi ne'ebé no oinsá sira habelar-an ba mundu tomak."), "cat-human", "#c08a3e", ("history", "biology")),
     Category("civilizations", "world", L("Civilisations & Societies", "Peradaban & Masyarakat", "Civilizações e Sociedades", "Sivilizasaun no Sosiedade"),
              L("Farming, cities, writing and states.", "Pertanian, kota, tulisan, dan negara.", "Agricultura, cidades, escrita e estados.", "Agrikultura, sidade, hakerek no estadu."), "cat-pyramid", "#c98f4f", ("history",)),
     Category("inventions", "world", L("Inventions & Technology", "Penemuan & Teknologi", "Invenções e Tecnologia", "Invensaun no Teknolojia"),
@@ -112,9 +112,9 @@ TIMOR = [
     Category("culture", "timor", L("Culture & Language", "Budaya & Bahasa", "Cultura e Línguas", "Kultura no Lian"),
              L("Tais, sacred houses, dances, faith and languages.", "Tais, rumah adat, tarian, iman, dan bahasa.", "Tais, casas sagradas, danças, fé e línguas.", "Tais, uma lulik, dansa, fiar no lian."), "cat-culture", "#a23b5b"),
     Category("nature", "timor", L("Nature & Life", "Alam & Kehidupan", "Natureza e Vida", "Natureza no Moris"),
-             L("How the island formed, its wildlife and its seas.", "Bagaimana pulau terbentuk, satwa, dan lautnya.", "Como a ilha se formou, a sua fauna e os seus mares.", "Oinsá illa moris, ninia animál no ninia tasi."), "cat-bird", "#4c8b2b"),
+             L("How the island formed, its wildlife and its seas.", "Bagaimana pulau terbentuk, satwa, dan lautnya.", "Como a ilha se formou, a sua fauna e os seus mares.", 'Oinsá illa mosu, ninia animál no ninia tasi.'), "cat-bird", "#4c8b2b"),
     Category("leaders", "timor", L("People & Government", "Tokoh & Pemerintahan", "Figuras e Governo", "Figura no Governu"),
-             L("National symbols, leaders and how the state works.", "Lambang negara, pemimpin, dan cara negara bekerja.", "Símbolos nacionais, líderes e como funciona o Estado.", "Símbolu nasionál, lider no oinsá Estadu servisu."), "cat-landmark", "#38598b"),
+             L("National symbols, leaders and how the state works.", "Lambang negara, pemimpin, dan cara negara bekerja.", "Símbolos nacionais, líderes e como funciona o Estado.", 'Símbolu nasionál, líder sira no oinsá Estadu servisu.'), "cat-landmark", "#38598b"),
     Category("economy", "timor", L("Economy & Society", "Ekonomi & Masyarakat", "Economia e Sociedade", "Ekonomia no Sosiedade"),
              L("Population, coffee, oil, trade and tourism.", "Penduduk, kopi, minyak, perdagangan, dan pariwisata.", "População, café, petróleo, comércio e turismo.", "Populasaun, kafé, mina-rai, komérsiu no turizmu."), "cat-chart", "#8a5fbf"),
 ]
@@ -144,12 +144,12 @@ OBJECTIVES = {
     "en": ["You will explain the main idea of “{t}” in your own words.", "You will connect “{t}” with related topics.", "You will check what you learned with practice questions."],
     "id": ["Kamu dapat menjelaskan gagasan utama “{t}” dengan kata-katamu sendiri.", "Kamu dapat menghubungkan “{t}” dengan topik terkait.", "Kamu dapat memeriksa pemahamanmu dengan soal latihan."],
     "pt": ["Vais explicar a ideia principal de “{t}” por palavras tuas.", "Vais relacionar “{t}” com temas próximos.", "Vais verificar o que aprendeste com perguntas de exercício."],
-    "tet": ["Ita sei esplika ideia prinsipál husi “{t}” ho ita-nia liafuan rasik.", "Ita sei liga “{t}” ho tópiku seluk ne'ebé besik.", "Ita sei koko saida mak ita aprende ho pergunta prátika."],
+    "tet": ["Ita sei esplika ideia prinsipál husi “{t}” ho ita-nia liafuan rasik.", "Ita sei liga “{t}” ho tópiku seluk ne'ebé iha relasaun.", "Ita sei koko saida mak ita aprende ho pergunta prátika."],
 }
 SUMMARY_HEAD = L("In short", "Ringkasnya", "Em resumo", "Badak de'it")
 DETAIL_HEAD = L("More details", "Rincian", "Mais pormenores", "Detalle tan")
 FACTS_HEAD = L("Key facts", "Fakta penting", "Factos principais", "Faktu importante")
-QUIZ_MATCH = L("Which topic matches this description?", "Topik mana yang sesuai dengan uraian ini?", "Que tema corresponde a esta descrição?", "Tópiku ida ne'ebé mak tuir deskrisaun ne'e?")
+QUIZ_MATCH = L("Which topic matches this description?", "Topik mana yang sesuai dengan uraian ini?", "Que tema corresponde a esta descrição?", "Tópiku ida ne'ebé mak hanesan deskrisaun ne'e?")
 QUIZ_WHEN = L("When did this happen: “{t}”?", "Kapan peristiwa ini terjadi: “{t}”?", "Quando aconteceu isto: “{t}”?", "Bainhira mak ida-ne'e akontese: “{t}”?")
 QUIZ_WHY = L("“{t}”: {s}", "“{t}”: {s}", "“{t}”: {s}", "“{t}”: {s}")
 

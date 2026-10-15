@@ -23,7 +23,7 @@ from datetime import datetime
 from .qt import (
     QSize,QDate,QDateEdit,QDateTimeEdit,QDateTime,QTabWidget,QShortcut,QKeySequence,
     Qt,QObject,Signal,QRunnable,QThreadPool,QTimer,QUrl,QLockFile,Slot,QProcess,
-    QIcon,QDesktopServices,QFont,
+    QIcon,QDesktopServices,QFont,QPalette,
     QApplication,QMainWindow,QWidget,QVBoxLayout,QHBoxLayout,QGridLayout,
     QLabel,QPushButton,QLineEdit,QComboBox,QCheckBox,QStackedWidget,QFrame,
     QScrollArea,QTextBrowser,QTableWidget,QTableWidgetItem,QHeaderView,QFormLayout,QListWidget,
@@ -415,6 +415,8 @@ class Window(QMainWindow):
     # ------------------------------------------------------------------ shell
     def build_ui(self):
         self.tokens=theme_tokens(self.settings)
+        # Links in labels, readers and modules use the accent colour, not the default blue.
+        pal=self.palette();pal.setColor(QPalette.Link,QColor(self.tokens["accent_strong"]));pal.setColor(QPalette.LinkVisited,QColor(self.tokens["accent_strong"]));self.setPalette(pal)
         root=QWidget(); root.setObjectName("root"); root_layout=QHBoxLayout(root); root_layout.setContentsMargins(10,10,0,10); root_layout.setSpacing(0)
         # Sidebar: brand, the six sections, then Settings and About at the bottom.
         sidebar=QFrame(); sidebar.setObjectName("sidebar"); self.sidebar=sidebar

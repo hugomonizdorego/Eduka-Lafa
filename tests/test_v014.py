@@ -115,7 +115,7 @@ class UI(unittest.TestCase):
         self.w.source_query.setText("NASA"); self.w.fill_sources(None); self.assertEqual(list(self.w.source_cards), ["NASA"])
         self.w.check_sources(True); self.assertTrue(self.w.source_status.text())
     def test_language_school_page(self):
-        self.w.navigate("languages"); self.assertEqual(self.w.current_section(), "study"); self.assertEqual(self.w.section_tabs["study"].currentIndex(), 3)
+        self.w.navigate("languages"); self.assertEqual(self.w.current_section(), "study"); from lafa.app import TABS; self.assertEqual(self.w.section_tabs["study"].currentIndex(), TABS["study"].index("languages"))
         self.w.course_list.setCurrentRow(list(languages.COURSES).index("ja")); self.assertEqual(self.w.course_title.text(), "Japanese")
         right = next(i for i, b in enumerate(self.w.lang_buttons) if b.property("option") == self.w.language_quiz.correct)
         self.w.answer_language(right); self.assertIn("Correct", self.w.lang_feedback.text())
@@ -126,11 +126,13 @@ class UI(unittest.TestCase):
         self.assertFalse(self.w.learn_button.isEnabled()); self.assertIn("Local features", self.w.badge.text())
         self.w.navigate("exams"); self.w.start_exam("quiz", "math"); self.assertEqual(self.w.exam.total, 5)
     def test_bubble_buttons_work_offline(self):
-        keys = [k for k, _ in self.w.companion.quick_buttons]; self.assertEqual(keys, ["continue", "tasks", "focus", "os"])
+        keys = [k for k, _ in self.w.companion.quick_buttons]; self.assertEqual(keys, ["continue", "explore", "tasks", "os"])
     def test_click_lafa_recommends(self):
         c = self.w.companion; c.settings.companion = True; c.set_online(True); c.collapse()
-        c.toggle_bubble(); self.assertIn("LAFA recommends", c.message.toPlainText()); self.assertIn("🐧", c.message.toPlainText())
-        c.collapse(); c.settings.click_recommendations = False; c.toggle_bubble(); self.assertNotIn("LAFA recommends", c.message.toPlainText())
+        # 0.2.1: a click shows one learning recommendation (no software tips).
+        c.recommendation = "Continue learning: Tais"; c.toggle_bubble()
+        self.assertEqual(c.message.toPlainText(), "Continue learning: Tais"); self.assertNotIn("🐧", c.message.toPlainText())
+        c.collapse(); c.recommendation = ""; c.introduced = True; c.toggle_bubble(); self.assertTrue(c.message.toPlainText().strip())
     def test_aero_depth_and_menu(self):
         from lafa.qt import QFrame
         # Calm look by default: no drop shadows unless the learner turns them on.

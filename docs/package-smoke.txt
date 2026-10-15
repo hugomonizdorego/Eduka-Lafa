@@ -1,11 +1,13 @@
-Lafa 0.2.0 package smoke test — 2026-10-14, Ubuntu 24.04 container, Qt offscreen
-sh tools/build-deb.sh -> dist/lafa_0.2.0_all.deb (13676284 bytes)
-apt-get install --no-install-recommends --reinstall ./dist/lafa_0.2.0_all.deb -> installed; removed 0.1.x modules (providers, aihub, signin) are gone from /usr/lib/lafa
-Depends: python3 (>= 3.11), python3-pyqt5, libqt5svg5, xdg-utils, libglib2.0-bin, fonts-noto-color-emoji, hicolor-icon-theme
-LAFA 0.2.0 PyQt5 sections: ['home', 'study', 'library', 'timor', 'activities', 'oshelp'] sidebar 64
-Apa itu fotosintesis? -> answer
-Cari file tugas matematika -> files
-Bagaimana mengganti wallpaper? -> guide
-12*7 -> calc
-AI client modules present: False
+Lafa 0.2.1 package smoke test — 2026-10-15, Ubuntu 24.04 container, Qt offscreen
+sh tools/build-deb.sh -> dist/lafa_0.2.1_all.deb (14816640 bytes)
+apt-get install --no-install-recommends --reinstall ./dist/lafa_0.2.1_all.deb -> installed (Setting up lafa (0.2.1))
+Depends: python3 (>= 3.11), python3-pyqt5, python3-pyqt5.qtsvg, libqt5svg5, xdg-utils, libglib2.0-bin, fonts-noto-color-emoji, hicolor-icon-theme
+Package contains 98 encyclopedia JSON / icon SVG / illustration SVG files, lafa-walk.png + lafa-walk.json, encyclopedia_ui.py, interactive.py, offline_pack.py
+Installed run (/usr/lib/lafa, system PyQt5, Tetun, 1024x600):
+  LAFA 0.2.1 PyQt5 from /usr/lib/lafa/lafa/__init__.py
+  SVG renderer: True
+  Timor-Leste: 6 categories; Culture & Language -> Tais opens as an article
+  World Encyclopedia: "What are dinosaurs?" -> Explore -> DinosaurModule
+  Walk frames: casual 8, tuxedo 8, traditional 8
+  Articles 118 (34 written + atlas topics), coverage available 34 / review 0 / planned 61
 Note: /usr/bin/lafa uses /usr/bin/python3; in this container that is Python 3.13 while Ubuntu's python3-pyqt5 is built for 3.12, so the smoke test ran with python3.12. On Debian 13 python3-pyqt5 matches the system python3.

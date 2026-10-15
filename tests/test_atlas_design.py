@@ -112,13 +112,20 @@ class DesignUI(unittest.TestCase):
         self.assertEqual(self.w.home_recent.text(), "Water cycle"); self.assertTrue(self.w.continue_button.isVisibleTo(self.w))
         self.assertTrue(self.w.progress.toggle_favourite("lesson", "lafa://lesson/school/science:0", "Water cycle"))
         self.assertTrue(self.w.progress.is_favourite("lesson", "lafa://lesson/school/science:0"))
-    def test_atlas_filters_and_live_text(self):
-        self.w.navigate("culture"); self.w.filter_atlas("leaders")
-        self.assertEqual(set(self.w.atlas_tiles), {"presidents", "prime_ministers"})
-        self.assertIn("Ramos-Horta", self.w.inspect_body.text()); self.assertIn("2008", self.w.inspect_summary.text())
-        with patch("lafa.livefacts.get", return_value={"lang": "tet", "title": "x", "text": "Testu foun", "url": "https://tet.wikipedia.org/wiki/X", "fetched": "2026-10-13 09:00"}):
-            self.w.select_atlas("flag")
-        self.assertIn("Testu foun", self.w.inspect_live.text()); self.assertIn("2026-10-13", self.w.inspect_live.text())
-        self.w.refresh_live(True); self.assertIn("Review mode", self.w.live_status.text())
+    def test_timor_encyclopedia_category_article_back_and_live_text(self):
+        self.w.navigate("culture"); b = self.w.timor_browser
+        self.assertEqual(b.state["kind"], "home")
+        b.open_category("leaders"); self.assertEqual(b.state["kind"], "category")
+        ids = [a.id for a in __import__("lafa.encyclopedia", fromlist=["x"]).articles("timor", "leaders")]
+        self.assertIn("atlas:presidents", ids); self.assertIn("atlas:prime_ministers", ids)
+        b.open_article("atlas:presidents"); self.assertEqual(b.state["kind"], "article")
+        self.assertIn("Ramos-Horta", b.page.reader.toPlainText()); self.assertIn("2008", b.page.reader.toPlainText())
+        b.go_back()
+        self.assertEqual(b.state["kind"], "category")
+        with patch("lafa.offline_pack.extract", return_value=None), \
+             patch("lafa.livefacts.get", return_value={"lang": "tet", "title": "x", "text": "Testu foun", "url": "https://tet.wikipedia.org/wiki/X", "fetched": "2026-10-13 09:00"}):
+            b.open_article("atlas:flag")
+        text = b.page.reader.toPlainText()
+        self.assertIn("Testu foun", text); self.assertIn("2026-10-13", text)
 
 if __name__ == "__main__": unittest.main()

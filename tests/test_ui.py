@@ -102,7 +102,7 @@ class UITests(unittest.TestCase):
         c.mark_activity();now[0]=200;c.choose_idle();self.assertEqual(c.state,'reading')
     def test_actual_overlay_submission_and_click(self):
         c=self.window.companion;c.show_bubble('Hello');self.app.processEvents();self.assertTrue(c.bubblebox.isVisible())
-        self.assertEqual(c.width(),440);self.assertIn('Hello',c.message.toPlainText())
+        from lafa.mascot import POPUP_WIDTH;self.assertEqual(c.width(),POPUP_WIDTH+16);self.assertIn('Hello',c.message.toPlainText())
         calls=[];c.user_request.connect(calls.append);c.input.setText('cari musik Timor');c.submit()
         self.assertEqual(calls,['cari musik Timor']);self.assertFalse(c.input.text())
         c.collapse();self.assertFalse(c.bubblebox.isVisible());QTest.mouseClick(c.pet,Qt.LeftButton);self.app.processEvents();self.assertTrue(c.bubblebox.isVisible())

@@ -170,7 +170,7 @@ class Character(QWidget):
         frames=self.atlas.walk_frames(self.costume)
         if not frames or self.hold>0 or not self.animated or getattr(self,'reduce_motion',False):return 0
         stride=self.atlas.walk_meta.get('stride',120)*self.walk_scale()
-        return int(self.distance/(stride/len(frames)))%len(frames)
+        return int(self.distance/(stride/len(frames))+1e-6)%len(frames)
     def walk_scale(self):
         """Walk frames are drawn at the same body height as the standing pose."""
         idle=self.atlas.pixmap('idle',self.width()-10,self.costume);t,b,_l,_r=self.atlas.extent(idle)

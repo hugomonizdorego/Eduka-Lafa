@@ -158,8 +158,13 @@ class SchoolPages(unittest.TestCase):
         self.app.processEvents(); self.assertIn("10", "".join(l.text() for l in self.w.mind_dialog.findChildren(type(self.w.role_text))))
         self.w.companion.play_role("motivator"); self.assertEqual(self.w.companion.state, "motivator")
     def test_timor_page(self):
-        self.w.navigate("culture"); self.assertEqual(self.w.timor_tabs.count(), 3)
-        self.w.select_atlas("history_17"); self.assertEqual(self.w.inspect_title.text(), "Restoration of independence")
+        self.w.navigate("culture"); b = self.w.timor_browser
+        # Six illustrated categories, then News and Weather as separate "needs internet" entries.
+        self.assertEqual(len(__import__("lafa.encyclopedia", fromlist=["x"]).categories("timor")), 6)
+        b.open_article("atlas:history_17")
+        from lafa.qt import QLabel
+        self.assertEqual(b.page.findChild(QLabel, "articletitle").text(), "Restoration of independence")
+        self.w.navigate("timor", "news"); self.assertEqual(b.state["kind"], "special")
         # Home stays calm: news and entertainment are not shown there.
         self.assertFalse(hasattr(self.w, "home_news"))
 

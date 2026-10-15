@@ -4,6 +4,91 @@
 
 _Nothing yet._
 
+## 0.2.1 — 2026-10-15 · "Ensiklopedia LAFA"
+
+Redesign following the LAFA design sheets (character sheet, Learn ›
+Encyclopedia page, "Jelajahi Timor-Leste" and the popup). Lafa still works
+without a server, API key, login or generative AI.
+
+### One look for every menu
+- Edukasaun green on warm white, a readable dark theme, 2 px borders so focus
+  and hover change colour only (the layout never jumps), visible keyboard focus.
+- 61 packaged SVG icons (`lafa/assets/icons`, MIT) — house, open book,
+  bookshelf, Timor-Leste flag, calendar with check, monitor with question
+  mark — and 23 flat illustrations (`lafa/assets/illustrations`, CC BY-SA 4.0).
+- Shared components (`lafa/widgets.py`): cards, tiles, topic rows, badges,
+  empty state, and a navigation bar with Back, Home, breadcrumb and context
+  search. Back restores the previous page, tab and scroll position.
+- Links use the accent colour instead of the default blue.
+
+### Timor-Leste as an encyclopedia
+- Six illustrated categories: History · Map & Regions · Culture & Language ·
+  Nature & Life · People & Government · Economy & Society.
+- Category → topic list → article (e.g. Timor-Leste → Culture & Language →
+  Tais). All 0.2.0 atlas material (46 topics, 22 history events,
+  14 municipalities, presidents and prime ministers) is regrouped here.
+- New hand-written articles: Tais, Uma lulik, Tebe/bidu/likurai, the legend of
+  the crocodile, the Tetun language, wildlife, Nino Konis Santana National
+  Park and the first people of Timor.
+- News and Weather are separate entries marked "Needs internet"; changing
+  data shows its year and source.
+
+### World Encyclopedia in Learn
+- 12 categories, each with an illustration and icon, 2–3 sourced articles
+  each (26 world articles) and a coverage list (available / needs review /
+  planned) that does not claim completeness.
+- Every article: objectives, text, figure, key facts with years, an activity,
+  sources, related material, questions with explanations, and a review line
+  (version, date, status, licence) and honest language availability (full
+  text vs summary only).
+
+### Interactive modules (Qt, mouse and keyboard)
+- Dinosaurs: anatomy hotspots on a T. rex, Triassic/Jurassic/Cretaceous
+  periods (ICS), a sourced size comparison (NHM, Field Museum) and a
+  "which period?" exercise.
+- Earth history: a timeline with the geological scale and human history kept
+  separate; arrow keys move between events.
+- Inventions & Industrial Revolution: put events in order, match technology
+  to its use, true/false impacts with explanations.
+- Scores and quiz results are saved locally.
+
+### One button: download all sources for offline use
+- Library → Internet sources → "Download all sources": saves the front pages
+  of every learning and Timor-Leste source, the Wikipedia introduction of
+  every encyclopedia topic in the learner's language, and one freely licensed
+  Wikimedia Commons picture per topic (CC0 / public domain / CC BY(-SA) only,
+  with author and licence) to `~/.local/share/lafa/offline`. Bounded
+  (250 MB, 900 KB per picture), can be stopped, keeps what it saved.
+
+### Virtual Assistant popup
+- Header (LAFA, "Ready offline", close), search "Find material or files…",
+  2×2 tiles (Continue learning · Explore · Tasks · OS help), one
+  recommendation or short result, footer (Open Desktop · Read aloud only with
+  a local voice · Quiet mode). Sized to content and monitor; the draft is kept
+  and the popup never closes while the learner is typing. No microphone.
+
+### Character and walking
+- Casual Belajar: Edukasaun-green shirt with a small tais collar, cream
+  trousers, brown shoes. Formal: charcoal jacket, white shirt, small bow tie.
+- Walking uses 8 drawn frames per outfit (`lafa-walk.png`, from the owner's
+  character sheet, `tools/make-walk.py`), chosen by the distance walked so
+  feet do not slide; start, slow-down, turn and stop on the contact pose;
+  same body height and foot line as the standing pose.
+- The compact window is masked to LAFA's shape: transparent corners pass
+  clicks to the windows below.
+- Tested on Wayland (Weston 13, headless): Lafa does not roam and walks in
+  place, the mask works, the popup works; window position and "fullscreen
+  pause" are X11-only.
+
+### Tetun
+- About 270 Tetun strings corrected (spelling, accents, word order, wrong
+  words such as "Kakorok-ruin" for skull). The home menu is "Pájina inisiál".
+  Terms that still need a native speaker are listed in
+  docs/CONTENT-REVIEW.md.
+
+### Packaging
+- Depends on `python3-pyqt5.qtsvg` (SVG icons and illustrations).
+
 ## 0.2.0 — 2026-10-14 · "Lafa — Pendamping Belajar dan Asisten Edukasaun OS"
 
 Compared with 0.1.4 (the last release on `main`). Two drafts, "0.1.5" and an

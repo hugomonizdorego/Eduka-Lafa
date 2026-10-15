@@ -36,10 +36,10 @@ DUTIES = {
 },
 "tet": {
     "idle": "Prontu atu ajuda", "reading": "Lee hela matadalan Edukasaun OS", "thinking": "Hanoin hela resposta matenek",
-    "walking": "La'o patrulla iha Eduka-Panel", "sitting": "Hein hela ita-nia pergunta", "gaming": "Joga jogu hamatenek ulun",
-    "serious": "Verifika faktu ho kuidadu", "angry": "Funu hasoru bug iha kódigu", "talking": "Koalia ho ita",
+    "walking": "La'o patrulla iha Eduka-Panel", "sitting": "Hein hela ita-nia pergunta", "gaming": 'Halimar jogu atu hamatenek kakutak',
+    "serious": "Verifika faktu ho kuidadu", "angry": "Funu hasoru bug iha kódigu", "talking": "Ko'alia ho ita",
     "sleeping": "Toba uitoan · karga forsa", "bathing": "Oras hariis · asistente moos", "toilet": "Fila fali lalais!",
-    "studying": "Estuda lisaun foun ba ita", "eating": "Han ai-han ki'ik ba ulun", "stretching": "Estika isin depois hakerek",
+    "studying": "Estuda lisaun foun ba ita", "eating": "Han ai-han ki'ik ba kakutak", "stretching": "Estika isin depois hakerek",
     "tebe": "Dansa Tebe-tebe", "bidu": "Dansa Bidu",
 },
 }
@@ -137,14 +137,14 @@ CAUGHT = {
     "bathing": "Ai! Ha'u hariis hela! …Maibé ha'u sei bele ajuda. Presiza saida?",
     "toilet": "Ai, privasidade favór! Ha'u fila fali lalais atu ajuda!",
     "eating": "Mmm, krokante! Deskulpa, ibun nakonu. Ha'u bele ajuda?",
-    "gaming": "Hein, besik ba nivel tuir mai… diak, para! Ha'u bele ajuda?",
+    "gaming": "Hein, besik ba nível tuir mai… di'ak, para! Ha'u bele ajuda?",
     "studying": "Ha'u foin aprende buat foun! Hakarak ha'u ajuda ita aprende mós?",
     "reading": "Matadalan ne'e interesante tebes! Husu ha'u kona-ba Edukasaun OS.",
     "tebe": "Mai dansa Tebe ho ha'u! Ka… ha'u ajuda uluk?",
     "bidu": "Bidu mak ha'u-nia dansa favoritu! Presiza buat ruma?",
     "angry": "Grr, bug ne'e! …Oh, ita! Deskulpa. Ha'u bele ajuda?",
     "walking": "Oh! Ita hetan ha'u la'o hela. Ita ba ne'ebé?",
-    "stretching": "Estika ho ha'u! Liman ba leten… Diak, ha'u bele ajuda saida?",
+    "stretching": "Estika ho ha'u! Liman ba leten… Di'ak, ha'u bele ajuda saida?",
 },
 }
 
@@ -198,9 +198,9 @@ THOUGHTS = {
 "tet": {
     "reading": ["Pájina 42: oinsá liga Wi-Fi. Fasil!", "Ita hatene ka, aplikasaun Ficheiru bele buka mós?"],
     "studying": ["2 + 2 = 4… no 4 + 4 = 8! Ha'u sai matenek liu.", "Ohin ha'u aprende ai-knanoik Tetun."],
-    "thinking": ["Hmm… tanba saa lalehan kór azúl? Ah, naroman loro-matan!", "Se ha'u iha liman atus ida, ha'u hakerek lalais tebes."],
-    "gaming": ["Nivel ida tan ha'u sai kampiaun!", "Puzzle ne'e susar… maibé ha'u maka'as liu! Hehe."],
-    "eating": ["Morin kafé Timor… hein, lafaek hemu kafé ka?", "Ai-han ba ulun = resposta matenek."],
+    "thinking": ['Hmm… tanba sá lalehan kór azúl? Ah, naroman loro-matan!', "Se ha'u iha liman atus ida, ha'u hakerek lalais tebes."],
+    "gaming": ["Nível ida tan ha'u sai kampiaun!", "Puzzle ne'e susar… maibé ha'u maka'as liu! Hehe."],
+    "eating": ["Morin kafé Timor… hein, lafaek hemu kafé ka?", 'Ai-han ba kakutak = resposta matenek.'],
     "bathing": ["La la la… asistente moos, asistente kontente!"],
     "sleeping": ["Zzz… mehi internet lalais… zzz"],
     "stretching": ["Estika mós! Ita-nia isin sei agradese."],
@@ -235,10 +235,10 @@ JOKES = {
     "Qual é o animal mais antigo? A zebra, porque é a preto e branco!",
 ],
 "tet": [
-    "Tanba saa komputadór ba eskola? Atu hadi'a ninia memória! 🧠",
-    "Tanba saa lafaek matenek ho komputadór? Ami-nia tata maka'as tebes! 🐊",
-    "Rato hatete saida ba teklado? Ita mak ha'u-nia tipu!",
-    "Tanba saa livru matemátika triste? Tanba iha problema barak liu.",
+    "Tanba sá komputadór ba eskola? Atu hadi'a ninia memória! 🧠",
+    "Tanba sá lafaek matenek ho komputadór? Ami-nia tata maka'as tebes! 🐊",
+    "Rato hatete saida ba tekladu? Ita mak ha'u-nia tipu!",
+    'Tanba sá livru matemátika triste? Tanba iha problema barak liu.',
     "Lafaek ida ba eskola… nia sai mestre ba nadar! Hehe.",
 ],
 }
@@ -325,20 +325,20 @@ OUTFIT_TEXT = {
 "tet": {
     "party": ("Festa", "Iha festa eskola nian", "Ah! Ita mós mai festa? Hakarak ha'u ajuda uluk?", ["Ema hotu dansa! Ha'u dansa depois ajuda ita.", "Regra festa: di'ak, kontente, hemu bee!"]),
     "meeting": ("Enkontru", "Iha enkontru mestre sira", "Shh… ha'u iha enkontru. Halimar de'it — ha'u iha tempu ba ita!", ["Pontu ida: ajuda estudante. Pontu rua: ajuda liu tan!", "Hakerek nota atu labele haluha."]),
-    "presentation": ("Aprezentasaun", "Halo aprezentasaun", "Slide tuir mai: ITA! Ha'u bele ajuda saida?", ["Gráfiku sa'e — hanesan ita-nia aprendizajen!", "Koalia neineik, hamnasa, dada iis."]),
+    "presentation": ("Aprezentasaun", "Halo aprezentasaun", "Slide tuir mai: ITA! Ha'u bele ajuda saida?", ["Gráfiku sa'e — hanesan ita-nia aprendizajen!", "Ko'alia neineik, hamnasa, dada iis."]),
     "ceremony": ("Serimónia", "Iha serimónia graduasaun", "Parabéns ba ema hotu! Presiza ajuda ohin?", ["Loron ida diploma ne'e sei sai ita-nian!", "Momentu orgullu ba estudante Timor-Leste."]),
     "gala_dinner": ("Jantar formál", "Iha jantar formál", "Deskulpa, ibun nakonu… ehem. Ha'u bele ajuda?", ["Garfu iha karuk, tudik iha loos. Ha'u hanoin!", "Edukasaun di'ak halo jantar furak liu."]),
     "report": ("Relatóriu", "Lee relatóriu importante", "Relatóriu ne'e naruk… ita interesante liu! Husu saida de'it.", ["Rezumu: aprende mak investimentu di'ak liu.", "Verifika faktu dala rua."]),
     "speech_prep": ("Diskursu", "Prepara diskursu", "Ha'u pratika diskursu. Hakarak rona? Ka ha'u ajuda ita uluk?", ["“Senhoras no senhores…” hmm, formál liu?", "Diskursu di'ak hahú ho hamnasa."]),
     "formal_walk": ("La'o formál", "La'o ba eventu", "Ha'u la'o ba eventu. Maibé ita uluk!", ["Sapatu kroat, laço loos. Prontu!", "La'o ho orgullu iha tapete mean."]),
     "beach": ("Tasi-ibun", "Lee iha tasi-ibun", "Ahh, anin tasi! Iha tasi-ibun mós ha'u bele ajuda.", ["Timor-Leste iha tasi-ibun furak — Cristo Rei ha'u-nia favoritu.", "Krema loro-matan uluk!"]),
-    "sunbathing": ("Toba iha loro", "Deskansa iha rai-henek", "Zzz… oh! Ha'u gosta loro-matan. Ha'u bele ajuda?", ["Lian tasi-ben hanesan kanta toba… zzz", "Deskansa importante ba ulun matenek."]),
+    "sunbathing": ('Toba iha loro-matan', "Deskansa iha rai-henek", "Zzz… oh! Ha'u gosta loro-matan. Ha'u bele ajuda?", ['Lian tasi-ben hanesan kanta ba toba… zzz', "Deskansa importante ba ulun matenek."]),
     "beach_ball": ("Bola tasi-ibun", "Halimar bola iha tasi-ibun", "Kaer! …Ups. Hehe. Presiza saida?", ["Ba leten! Keta husik monu!", "Halimar iha li'ur halo isin kontente."]),
     "sightseeing": ("Pasiar", "Esplora sidade", "Ha'u esplora hela! Hakarak esplora hamutuk?", ["Fatin barak atu deskobre!", "Dalan ida-idak iha istória."]),
-    "hangout": ("Tuur hamutuk", "Tuur iha kafé ho belun", "Mai tuur ho ha'u! Ita koalia kona-ba saida?", ["Belun di'ak halo loron naroman.", "Koalia di'ak — aprende hamutuk di'ak liu!"]),
+    "hangout": ("Tuur hamutuk", "Tuur iha kafé ho belun", "Mai tuur ho ha'u! Ita ko'alia kona-ba saida?", ["Belun di'ak halo loron naroman.", "Ko'alia di'ak — aprende hamutuk di'ak liu!"]),
     "shopping": ("Sosa sasán", "Sosa iha merkadu", "Ha'u sosa ai-han ki'ik ba estuda! Presiza ajuda?", ["Lista: paun, ai-fuan, kadernu!", "Rai osan mós hahalok matenek."]),
     "snack": ("Han ki'ik", "Han ai-han ki'ik", "Mmm, krokante! Deskulpa, ibun nakonu. Ha'u bele ajuda?", ["Ai-fuan mak ai-han estuda di'ak liu.", "Ai-han ki'ik, enerjia boot!"]),
-    "game_break": ("Deskansa joga", "Deskansa uitoan ho jogu", "Nivel ida tan… diak, para! Ha'u bele ajuda?", ["Deskansa badak ajuda ulun aprende.", "Jogu remata? Tempu estuda fali!"]),
+    "game_break": ("Deskansa joga", "Deskansa uitoan ho jogu", "Nível ida tan… di'ak, para! Ha'u bele ajuda?", ["Deskansa badak ajuda ulun aprende.", "Jogu remata? Tempu estuda fali!"]),
 },
 }
 # LAFA's roles (all outfits): same format as OUTFIT_TEXT.
@@ -371,17 +371,17 @@ ROLE_TEXT = {
     "lecture": ("Hanorin", "Hanorin lisaun", "Klase loke ona! Iha pergunta ba mestre LAFA?", ["Lisaun ohin: keta para hakarak hatene.", "Se mak hatene 7 × 8? …56! Di'ak loos!"]),
     "professor": ("Profesór", "Profesór LAFA halo peskiza", "Ehem! Profesór LAFA prontu ajuda. Ita deskobre saida?", ["Tuir ha'u-nia peskiza… aprende mak furak!", "Ipóteze: ohin ita sei aprende buat foun."]),
     "motivator": ("Motivadór", "Fó korajen ba estudante hotu", "Ita mai iha tempu loos — ita bele! Ha'u bele ajuda saida?", ["Keta hakruuk — ita-nia eroi sira nunka hakruuk!", "Pájina ida tan, pasu ida tan, manán ida tan!"]),
-    "magic_show": ("Espetákulu majia", "Pratika majia", "Abrakadabra! Ita hetan majiku. Hakarak majia ka ajuda?", ["Majia loloos naran matemátika.", "Hili karta ida… ups, TPC!"]),
+    "magic_show": ("Espetákulu majia", "Pratika majia", "Abrakadabra! Ita hetan majiku. Hakarak majia ka ajuda?", ["Majia loloos naran matemátika.", 'Hili kartaun ida… ups, TPC!']),
     "master": ("Mestre", "Medita hanesan mestre aprendizajen", "Estudante foin-sa'e, mestre rona hela. Ita buka saida?", ["Estudante matenek husu pergunta.", "Pasiénsia, pratika, progresu."]),
-    "comedy": ("Komédia", "Pratika anedota", "Mikrofone moris ka? Hehe. Hakarak hamnasa ka presiza ajuda?", ["Tanba sa lafaek ba eskola? Atu sai lafaek matenek!", "Hamnasa mak ezersísiu ba kakutak."]),
+    "comedy": ("Komédia", "Pratika anedota", "Mikrofone moris ka? Hehe. Hakarak hamnasa ka presiza ajuda?", ['Tanba sá lafaek ba eskola? Atu sai lafaek matenek!', "Hamnasa mak ezersísiu ba kakutak."]),
 },
 }
 for _lang, _items in ROLE_TEXT.items(): OUTFIT_TEXT[_lang].update(_items)
 OUTFIT_NAMES = {
-"en": {"traditional": "Tais Mane (default)", "tuxedo": "Tuxedo (formal)", "casual": "Casual (summer)"},
-"id": {"traditional": "Tais Mane (bawaan)", "tuxedo": "Tuksedo (resmi)", "casual": "Kasual (musim panas)"},
-"pt": {"traditional": "Tais Mane (predefinido)", "tuxedo": "Smoking (formal)", "casual": "Informal (verão)"},
-"tet": {"traditional": "Tais Mane (padraun)", "tuxedo": "Tuxedo (formál)", "casual": "Kazuál (tempu bai-loron)"},
+"en": {"traditional": "Tais Mane (default)", "tuxedo": "Formal", "casual": "Casual study"},
+"id": {"traditional": "Tais Mane (bawaan)", "tuxedo": "Formal", "casual": "Casual Belajar"},
+"pt": {"traditional": "Tais Mane (predefinido)", "tuxedo": "Formal", "casual": "Informal de estudo"},
+"tet": {"traditional": "Tais Mane (padraun)", "tuxedo": "Formál", "casual": "Kazuál ba aprende"},
 }
 for _lang, _items in OUTFIT_TEXT.items():
     for _key, (_name, _duty, _caught, _thoughts) in _items.items():

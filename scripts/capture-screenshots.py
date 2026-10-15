@@ -91,10 +91,31 @@ w.navigate('study', 'coding'); w.code_lesson.setCurrentIndex(2); result = Lesson
 w.navigate('library', 'sources'); w.fill_sources(None); save(w, '16-library-sources.png')
 w.fill_sources('tl_gov'); save(w, '17-library-timor-leste-government.png'); w.fill_sources(None)
 w.navigate('library', 'external'); save(w, '18-library-external-sites.png')
-w.navigate('timor', 'atlas'); w.filter_atlas(None); w.select_atlas('history_17'); save(w, '19-timor-leste-history.png')
-w.filter_atlas('leaders'); save(w, '20-timor-leste-presidents.png'); w.filter_atlas(None)
+tb = w.timor_browser
+w.navigate('timor', 'atlas'); tb.go({'kind': 'home'}); save(w, '19-timor-leste-encyclopedia.png')
+tb.open_category('culture'); save(w, '20-timor-leste-culture-topics.png')
+tb.open_article('tl.culture.tais'); save(w, '20b-timor-leste-article-tais.png')
+tb.open_category('leaders'); tb.open_article('atlas:presidents'); save(w, '20c-timor-leste-presidents.png')
+tb.open_article('atlas:history_17'); save(w, '20d-timor-leste-history.png')
+wb = w.world_browser
+w.navigate('study', 'encyclopedia'); wb.go({'kind': 'home'}); save(w, '70-learn-world-encyclopedia.png')
+wb.open_category('dinosaurs'); save(w, '71-world-dinosaurs-topics.png')
+wb.open_article('w.dinosaurs.what_are_dinosaurs'); save(w, '72-article-dinosaurs-read.png')
+wb.page.set_tab('explore'); save(w, '73-module-dinosaurs-explore.png')
+wb.page.set_tab('practice'); save(w, '74-article-practice-quiz.png')
+wb.open_article('w.earth.formation', 'explore'); save(w, '75-module-earth-history-timeline.png')
+wb.open_article('w.industrial_revolution.steam_factories', 'explore'); save(w, '76-module-industrial-revolution.png')
+wb.go({'kind': 'coverage'}); save(w, '77-encyclopedia-coverage.png')
+w.navigate('library', 'sources'); save(w, '78-library-offline-pack.png')
+for size, name in [((1024, 600), '80-1024x600-timor-leste.png'), ((1366, 768), '81-1366x768-article.png'), ((1920, 1080), '82-1920x1080-world-encyclopedia.png')]:
+    w.resize(*size); pump()
+    if name.startswith('80'): w.navigate('timor', 'atlas'); tb.go({'kind': 'home'})
+    elif name.startswith('81'): w.navigate('timor', 'atlas'); tb.open_article('tl.culture.tais')
+    else: w.navigate('study', 'encyclopedia'); wb.go({'kind': 'home'})
+    save(w, name)
+w.resize(1180, 820); pump()
 w.show_timor_news(NewsReport([Source('SAMPLE · Learning and education in Timor-Leste', 'https://tatoli.tl/', '', 'Tatoli · SAMPLE', 'REVIEW SAMPLE'), Source('SAMPLE · Arts, culture and community life', 'https://timorpost.com/', '', 'Timor Post · SAMPLE', 'REVIEW SAMPLE')], 'REVIEW SAMPLE · not live headlines'))
-w.navigate('timor', 'news'); save(w, '21-timor-leste-news.png')
+w.navigate('timor', 'news'); save(w, '21-timor-leste-news.png'); tb.go({'kind': 'home'})
 w.navigate('activities', 'tasks'); save(w, '22-activities-tasks.png')
 w.navigate('activities', 'reminders'); w.start_focus(25); w.render_reminders(); save(w, '23-activities-reminders-focus.png')
 w.navigate('activities', 'results'); save(w, '24-activities-practice-results.png')
@@ -149,25 +170,25 @@ compose('40-virtual-walking-on-panel.png', 'LAFA walks on the Eduka-Panel', 'Whe
 studying = pet('studying'); bubble = balloon_for('studying', personality.CAUGHT['en']['studying'])
 compose('41-virtual-hover-question.png', 'Touch LAFA with the cursor…', '…and LAFA stops, asks how it can help, and says what it was doing.', [(studying, QPoint(900, PANEL_TOP - studying.height() + 12)), (bubble, QPoint(900 + studying.width() - bubble.width() + 40, PANEL_TOP - studying.height() - bubble.height() + 40))])
 party = pet('party', 'tuxedo'); bubble = balloon_for('party', personality.CAUGHT['en']['party'])
-compose('42-virtual-tuxedo-party.png', 'Tuxedo: formal activities', 'Parties, meetings, presentations, ceremonies and gala dinners.', [(party, QPoint(860, PANEL_TOP - party.height() + 12)), (bubble, QPoint(860 + party.width() - bubble.width() + 40, PANEL_TOP - party.height() - bubble.height() + 40))])
+compose('42-virtual-tuxedo-party.png', 'Formal: formal activities', 'Parties, meetings, presentations, ceremonies and gala dinners.', [(party, QPoint(860, PANEL_TOP - party.height() + 12)), (bubble, QPoint(860 + party.width() - bubble.width() + 40, PANEL_TOP - party.height() - bubble.height() + 40))])
 beach = pet('beach', 'casual'); bubble = balloon_for('beach', personality.CAUGHT['en']['beach'])
-compose('43-virtual-casual-beach.png', 'Casual: summer activities', 'Beach, sightseeing, hanging out at a café and shopping.', [(beach, QPoint(500, PANEL_TOP - beach.height() + 12)), (bubble, QPoint(500 + beach.width() - bubble.width() + 40, PANEL_TOP - beach.height() - bubble.height() + 40))])
+compose('43-virtual-casual-beach.png', 'Casual Belajar: everyday activities', 'Green shirt with a small tais collar, cream trousers and brown shoes.', [(beach, QPoint(500, PANEL_TOP - beach.height() + 12)), (bubble, QPoint(500 + beach.width() - bubble.width() + 40, PANEL_TOP - beach.height() - bubble.height() + 40))])
 pet('idle'); c.introduced = False; c.show_bubble(c.introduction(9)); pump(); chat = c.grab()
-c.collapse(); __import__('random').seed(4); c.recommend(); pump(); recommend = c.grab()
-compose('45-virtual-recommendation.png', 'Click LAFA for a recommendation', 'Free software (GPL) for learning and, online, a learning website.', [(recommend, QPoint(800, PANEL_TOP - recommend.height() + 12))])
-compose('44-virtual-bubble.png', 'Click LAFA', 'Continue learning, tasks, focus and OS help — all without internet.', [(chat, QPoint(800, PANEL_TOP - chat.height() + 12))])
+c.collapse(); c.recommendation = 'Continue learning: Tais — the woven cloth of Timor-Leste'; c.introduced = True; c.toggle_bubble(); pump(); recommend = c.grab()
+compose('45-virtual-recommendation.png', 'Click LAFA', 'One learning recommendation: continue where you stopped.', [(recommend, QPoint(800, PANEL_TOP - recommend.height() + 12))])
+compose('44-virtual-bubble.png', 'Click LAFA', 'Search, Continue learning, Explore, Tasks, OS help — all without internet.', [(chat, QPoint(800, PANEL_TOP - chat.height() + 12))])
 c.collapse()
-# Human-like movement: frames of one walk cycle and a jump (motion.py).
+# Walk cycle: 8 drawn frames chosen by the distance walked (lafa-walk.png), then a jump.
 steps = []
-c.set_state('walking'); c.pet.animated = True
-for i in range(5):
-    c.pet.motion.t = i * 0.12; c.pet.motion.fade = 1.0; pump(); steps.append(c.grab())
+c.settings.costume = 'casual'; c.apply_preferences(); c.set_state('walking'); c.pet.animated = True
+for i in range(8):
+    c.pet.hold = 0; c.pet.distance = i * c.pet.atlas.walk_meta['stride'] * c.pet.walk_scale() / 8 + 0.5; c.pet.motion.fade = 1.0; pump(); steps.append(c.grab())
 c.set_state('talking'); c.pet.motion.t = 0; c.pet.motion.gesture = ''; c.pet.motion.play('jump')
 for i in range(3):
     c.pet.motion.advance(0.15 if i == 0 else 0.2); c.pet.motion.fade = 1.0; pump(); steps.append(c.grab())
 c.pet.animated = False; c.pet.motion.gesture = ''
-compose('46-virtual-human-movement.png', 'LAFA moves like a person', 'Steps with a bounce and weight shift, leans into the walk, breathes, waves, nods and jumps.',
-        [(img, QPoint(40 + i * 150, PANEL_TOP - img.height() + 12)) for i, img in enumerate(steps)])
+compose('46-virtual-human-movement.png', 'LAFA moves like a person', 'Eight walk frames synced to the distance moved (no foot sliding), then a happy jump.',
+        [(img, QPoint(20 + i * 112, PANEL_TOP - img.height() + 12)) for i, img in enumerate(steps)])
 c.collapse()
 
 class Sheet(QWidget):
@@ -189,24 +210,24 @@ class Sheet(QWidget):
 sheets = []
 def sheet(name, *args, **kwargs):
     widget = Sheet(*args, **kwargs); sheets.append(widget); widget.show(); save(widget, name)
-sheet('50-outfits.png', 'LAFA · three outfits', 'Tais Mane (default), Tuxedo and Casual. Change them in Lafa-Configuration or by right-clicking LAFA.',
+sheet('50-outfits.png', 'LAFA · three outfits', 'Tais Mane (default), Formal and Casual Belajar. Change them in Lafa-Configuration or by right-clicking LAFA.',
       [(s, o, tr('en', o), tr('en', s)) for o in outfits.OUTFITS for s in ['idle', 'talking', 'walking']], columns=3, size=210)
-sheet('51-formal-activities.png', 'Tuxedo · formal activities', 'Each activity is a pose of the outfit plus a small scene.', [(a, 'tuxedo', tr('en', a), personality.duty('en', a)) for a in outfits.FORMAL])
-sheet('52-casual-activities.png', 'Casual · summer activities', 'Beach, town, café and shopping.', [(a, 'casual', tr('en', a), personality.duty('en', a)) for a in outfits.CASUAL])
+sheet('51-formal-activities.png', 'Formal · formal activities', 'Each activity is a pose of the outfit plus a small scene.', [(a, 'tuxedo', tr('en', a), personality.duty('en', a)) for a in outfits.FORMAL])
+sheet('52-casual-activities.png', 'Casual Belajar · everyday activities', 'Beach, town, café and shopping.', [(a, 'casual', tr('en', a), personality.duty('en', a)) for a in outfits.CASUAL])
 sheet('53-lafa-roles.png', "LAFA's roles · optional entertainment", 'Teacher, professor, motivator, magician, master and comedian (Settings → entertainment).',
       [(a, o, tr('en', a), tr('en', o)) for o in outfits.OUTFITS for a in outfits.ROLES], columns=6, size=170)
-for o, title in [('tuxedo', 'Tuxedo on every pose'), ('casual', 'Casual on every pose: shirt, shorts, socks and sneakers')]:
+for o, title in [('tuxedo', 'Formal on every pose'), ('casual', 'Casual Belajar on every pose: green shirt, tais collar, cream trousers, brown shoes')]:
     sheet(f'54-{o}-all-poses.png' if o == 'tuxedo' else '55-casual-all-poses.png', title, 'Only bathing and the toilet are undressed.', [(s, o, tr('en', s), '') for s in STATES if s not in ('tebe', 'bidu')], columns=5, size=170)
 sheet('56-tais-mane-activities.png', 'Tais Mane · school and daily life', 'The default outfit, including Tebe-tebe and Bidu dances.', [(a, 'traditional', tr('en', a), personality.duty('en', a)) for a in outfits.TRADITIONAL], columns=5, size=170)
 
 with patch.dict(os.environ, {'LC_ALL': 'tet_TL.UTF-8'}):
     tet = Window(Settings(language='tet', roots=[]), review=True); tet.resize(1180, 820); tet.show(); pump(); sample_school(tet); morning(tet); save(tet, '60-home-tetun.png')
-    tet.navigate('study', 'lessons'); save(tet, '61-learn-tetun.png'); tet.companion.close(); tet.close()
+    tet.navigate('study', 'lessons'); save(tet, '61-learn-tetun.png'); tet.navigate('timor', 'atlas'); tet.timor_browser.open_article('tl.culture.tais'); save(tet, '64-timor-article-tetun.png'); tet.companion.close(); tet.close()
 with tempfile.TemporaryDirectory(prefix='lafa-eduka-') as home, patch('lafa.eduka.Path.home', return_value=Path(home)):
     for part, data in [('panel/settings.json', {'height': 42}), ('desktop/settings.json', {'theme_style': 'Edukasaun-Dark', 'accent_color': '#26a69a'})]:
         path = Path(home) / '.config/eduka-desktop' / part; path.parent.mkdir(parents=True, exist_ok=True); path.write_text(json.dumps(data))
     app.setStyleSheet(style_sheet(Settings()))
-    dark = Window(Settings(language='en', roots=[], costume='casual'), review=True); dark.resize(1180, 820); dark.show(); pump(); morning(dark); save(dark, '62-home-eduka-dark-theme.png'); dark.navigate('timor'); save(dark, '63-timor-atlas-dark-theme.png'); dark.companion.close(); dark.close()
+    dark = Window(Settings(language='en', roots=[], costume='casual'), review=True); dark.resize(1180, 820); dark.show(); pump(); morning(dark); save(dark, '62-home-eduka-dark-theme.png'); dark.navigate('timor'); save(dark, '63-timor-encyclopedia-dark-theme.png'); dark.timor_browser.open_article('tl.culture.tais'); save(dark, '65-article-dark-theme.png'); dark.navigate('study', 'encyclopedia'); dark.world_browser.open_article('w.dinosaurs.what_are_dinosaurs', 'explore'); save(dark, '66-module-dark-theme.png'); dark.companion.close(); dark.close()
     app.setStyleSheet(STYLE)
 w.companion.close(); w.close()
 for widget in [*reviews, *sheets]: widget.close()

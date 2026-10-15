@@ -38,6 +38,9 @@ class ResponsiveGrid(QWidget):
     def __init__(self, min_width=260, max_columns=3, parent=None):
         super().__init__(parent); self.items = []; self.min_width = min_width; self.max_columns = max_columns; self.columns = 0
         self.grid = QGridLayout(self); self.grid.setContentsMargins(0, 0, 0, 0); self.grid.setSpacing(16)
+        # An explicit minimum keeps the layout from demanding all columns' width,
+        # so the page can shrink and the grid drops to fewer columns.
+        self.setMinimumWidth(min_width)
     def add(self, widget):
         self.items.append(widget); self.relayout(force=True)
     def relayout(self, force=False):
@@ -432,17 +435,17 @@ class Browser(QWidget):
             card = CategoryCard(c.illustration, c.icon, enc.text(c.title, lang), t("topics_n").format(n=count) + " · " + enc.text(c.summary, lang), tok)
             card.clicked.connect(lambda k=c.key: self.open_category(k)); grid.add(card)
         v.addWidget(grid)
-        row = QHBoxLayout(); row.setSpacing(14)
+        row = ResponsiveGrid(230, 3)
         if self.area == "timor":
             for name, icon_name, key in (("news", "newspaper", "news_tile"), ("weather", "weather", "weather_tile")):
-                tile = Tile(icon_name, t(key), "", tok, Badge(t("needs_internet_tag"), "net", "globe", tok)); tile.clicked.connect(lambda n=name: self.open_special(n)); row.addWidget(tile, 1)
-            other = Tile("book-open", t("open_world"), t("enc_sub"), tok); other.clicked.connect(lambda: self.win.navigate("study", "encyclopedia")); row.addWidget(other, 1)
+                tile = Tile(icon_name, t(key), "", tok, Badge(t("needs_internet_tag"), "net", "globe", tok)); tile.clicked.connect(lambda n=name: self.open_special(n)); row.add(tile)
+            other = Tile("book-open", t("open_world"), t("enc_sub"), tok); other.clicked.connect(lambda: self.win.navigate("study", "encyclopedia")); row.add(other)
         else:
             counts = enc.coverage_counts("world")
             cov = Tile("tasks", t("coverage_title"), f"{t('cov_available')}: {counts['available']} · {t('cov_review')}: {counts['review']} · {t('cov_planned')}: {counts['planned']}", tok)
-            cov.clicked.connect(lambda: self.go({"kind": "coverage"})); row.addWidget(cov, 1)
-            other = Tile("flag-tl", t("open_timor"), t("tl_sub"), tok); other.clicked.connect(lambda: self.win.navigate("timor")); row.addWidget(other, 1)
-        v.addLayout(row); v.addStretch(1)
+            cov.clicked.connect(lambda: self.go({"kind": "coverage"})); row.add(cov)
+            other = Tile("flag-tl", t("open_timor"), t("tl_sub"), tok); other.clicked.connect(lambda: self.win.navigate("timor")); row.add(other)
+        v.addWidget(row); v.addStretch(1)
         return scroll_page(body)
     def category_page(self, key):
         c = enc.category(self.area, key)

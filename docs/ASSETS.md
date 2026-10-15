@@ -76,3 +76,24 @@ visually inspected; the seventeen-activity sheet and traditional sheet are
 rendered from the same app assets. Other activities use the earlier costume
 artwork. Tebe/Bidu are playful mascot interpretations with procedural sway,
 not a verified choreography or documentation of every Timorese tradition.
+
+## 0.2.1 — icons, illustrations, outfits and the walk cycle
+
+| Asset | Made by | Licence | Manifest |
+|---|---|---|---|
+| `lafa/assets/icons/*.svg` (61 line icons + `flag-tl`) | `tools/make-icons.py` (hand-written SVG paths) | MIT | `icons/manifest.json` |
+| `lafa/assets/illustrations/*.svg` (23 flat scenes: 12 world categories, 7 Timor-Leste, 3 modules) | `tools/make-illustrations.py` | CC BY-SA 4.0 | `illustrations/manifest.json` |
+| `lafa-casual.png`, `lafa-tuxedo.png`, `lafa-tais.png` | `tools/make-outfits.py` recolours the existing poses (Casual Belajar: green shirt, tais collar, cream trousers, brown shoes; Formal: charcoal jacket, white shirt, small bow tie) | as the character art | `casual.json`, `tuxedo.json`, `tais.json` |
+| `lafa-walk.png` (3 rows × 8 frames) | `tools/make-walk.py` cuts frames 1–8 of the owner-supplied design sheet `docs/design/lafa-character-sheet.webp`, removes the paper and shadow, aligns baseline and body anchor; Formal and Tais rows are recoloured from the Casual frames | as the character art (owner's design) | `lafa-walk.json` (frame size, baseline, anchor, stride, source) |
+
+The flag illustration and icon use the official colours and layout of the
+flag of Timor-Leste. The map illustration is **schematic**, not a survey map.
+Photographs are not bundled: the offline pack downloads at most one freely
+licensed Wikimedia Commons picture per topic (CC0, public domain or CC BY /
+CC BY-SA only) and shows its author, licence and source page next to it.
+
+Limits of the walk cycle: the source frames are about 180 px high, so very
+large character sizes are slightly soft; the Tais row is a recolour (lighter
+torso, tais wrap, bead necklace, sandals) and does not yet have the headdress
+and plume of the standing Tais Mane drawings. A hand-drawn Tais walk cycle
+would be better and needs an artist or a Timorese cultural reviewer.
