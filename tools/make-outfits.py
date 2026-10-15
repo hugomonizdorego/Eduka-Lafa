@@ -18,9 +18,10 @@ Garment parts per pose:
     skin  always skin: hands, tail, head (painted last, wins over the rest)
 
 Outfits:
-    tuxedo  black jacket with satin lapels, white shirt front, bow tie, pocket
+    tuxedo  "Formal": charcoal jacket with satin lapels, white shirt front, bow tie, pocket
             square, black trousers and polished black shoes
-    casual  sky-blue button shirt, khaki shorts, white socks and red sneakers
+    casual  "Casual Belajar": Edukasaun-green shirt with a small tais collar,
+            long cream trousers and comfortable brown shoes
     tais    Tais Mane wrap with white sash, bead necklace and belak, arm bands
             (only for poses that have no hand-drawn Tais Mane art)
 
@@ -310,7 +311,7 @@ def tuxedo(image, spec):
     shirt = yellow & part(labels, "top") & opening
     jacket = part(labels, "top", "arm", "fore") & ~shirt; trousers = part(labels, "hip", "shin")
     shoes = closed(part(labels, "shoe")) & (rgba[..., 3] > 150)
-    paint(rgba, jacket, (44, 46, 56), v, (green, yellow))
+    paint(rgba, jacket, (50, 53, 60), v, (green, yellow))
     paint(rgba, shirt, (250, 250, 246), v, (yellow,), 0.82, 1.05)
     paint(rgba, trousers, (36, 38, 47), v, (green, yellow))
     paint(rgba, shoes, (26, 26, 31), v, (green, yellow), 0.9, 1.1)
@@ -325,9 +326,10 @@ def tuxedo(image, spec):
                 draw.line([(x - 2, y), (x + 2, y)], fill=(70, 72, 84))
     if spec.get("tie") is not False:
         layer = Image.new("RGBA", out.size, (0, 0, 0, 0)); bow = ImageDraw.Draw(layer)
-        bow.polygon([(cx, cy + s * .45), (cx - s * 1.25, cy - s * .15), (cx - s * 1.25, cy + s * 1.05)], fill=(18, 18, 22, 255), outline=(0, 0, 0, 255))
-        bow.polygon([(cx, cy + s * .45), (cx + s * 1.25, cy - s * .15), (cx + s * 1.25, cy + s * 1.05)], fill=(18, 18, 22, 255), outline=(0, 0, 0, 255))
-        bow.ellipse([cx - s * .32, cy + s * .14, cx + s * .32, cy + s * .78], fill=(40, 40, 46, 255))
+        b = s * .8   # a small bow tie
+        bow.polygon([(cx, cy + b * .45), (cx - b * 1.15, cy - b * .05), (cx - b * 1.15, cy + b * .95)], fill=(18, 18, 22, 255), outline=(0, 0, 0, 255))
+        bow.polygon([(cx, cy + b * .45), (cx + b * 1.15, cy - b * .05), (cx + b * 1.15, cy + b * .95)], fill=(18, 18, 22, 255), outline=(0, 0, 0, 255))
+        bow.ellipse([cx - b * .3, cy + b * .16, cx + b * .3, cy + b * .74], fill=(40, 40, 46, 255))
         out = on_body(out, layer, grow(jacket | shirt | band, 2) | skin); draw = ImageDraw.Draw(out)
     for i in range(1, 4):
         by = int(cy + s * (1.1 + i * 1.05))
@@ -340,30 +342,35 @@ def tuxedo(image, spec):
     return out
 
 def casual(image, spec):
+    """Casual Belajar: green shirt with a small tais collar, long cream trousers, brown shoes."""
     rgba = np.array(image).copy(); h, w = rgba.shape[:2]
     green, yellow, v = classify(rgba); skin = green | yellow
     labels = garment_map(spec, skin, h, w)
-    shirt = part(labels, "top", "arm", "fore"); shorts = part(labels, "hip")
-    socks = socks_and_shoes(labels, part(labels, "shin"), h)
+    shirt = part(labels, "top", "arm", "fore"); trousers = part(labels, "hip", "shin")
     shoes = closed(part(labels, "shoe")) & (rgba[..., 3] > 150)
-    paint(rgba, shirt, (64, 156, 214), v, (green, yellow), 0.6, 1.12)
-    paint(rgba, shorts, (196, 160, 104), v, (green, yellow), 0.6, 1.12)
-    paint(rgba, socks, (250, 250, 248), v, (green, yellow), 0.8, 1.04)
-    paint(rgba, shoes, (214, 66, 60), v, (green, yellow), 0.88, 1.08)
-    band = np.zeros_like(shirt) if spec.get("collar") is False else collar(rgba, shirt, skin & ~(shirt | shorts | socks | shoes), v, (250, 250, 250), spec, max(4, h // 60))
-    hems(rgba, (shirt & ~band) * 1 + band * 5 + shorts * 2 + socks * 3 + shoes * 4, skin, v, (30, 44, 58))
-    out = Image.fromarray(rgba); draw = ImageDraw.Draw(out); cx, cy = neck(spec, h, w); s = max(9, w // 20)
-    # Sneaker soles and stripe.
+    trousers &= ~shoes
+    paint(rgba, shirt, (31, 112, 78), v, (green, yellow), 0.62, 1.12)
+    paint(rgba, trousers, (232, 220, 192), v, (green, yellow), 0.72, 1.06)
+    paint(rgba, shoes, (92, 62, 42), v, (green, yellow), 0.85, 1.1)
+    band = np.zeros_like(shirt) if spec.get("collar") is False else collar(rgba, shirt, skin & ~(shirt | trousers | shoes), v, (156, 34, 44), spec, max(4, h // 60))
+    hems(rgba, (shirt & ~band) * 1 + band * 5 + trousers * 2 + shoes * 4, skin, v, (24, 52, 40))
+    out = Image.fromarray(rgba); cx, cy = neck(spec, h, w); s = max(9, w // 20)
+    arr = np.array(out)
+    # The collar is a small band of tais: thin gold threads woven into the red.
+    if band.any():
+        rows = np.arange(h)[:, None] * np.ones((1, w), int); cols = np.arange(w)[None, :] * np.ones((h, 1), int)
+        arr[band & ((rows + cols) % 5 == 0), :3] = (230, 182, 66)
+    # Soft rubber soles.
     if shoes.any():
         ys, xs = np.nonzero(shoes); bottom = ys.max()
         sole = shoes & (np.arange(h)[:, None] >= bottom - max(3, h // 70))
-        arr = np.array(out); arr[sole, :3] = (246, 246, 244); stripe = shoes & ~sole & (np.abs(np.arange(h)[:, None] - (bottom - h // 40)) <= 1)
-        arr[stripe, :3] = (250, 250, 250); out = Image.fromarray(arr); draw = ImageDraw.Draw(out)
+        arr[sole, :3] = (204, 180, 140)
+    out = Image.fromarray(arr); draw = ImageDraw.Draw(out)
     # Button placket.
     for i in range(1, 4):
         by = int(cy + s * (1.1 + i * 1.1))
         if 0 <= by < h and 0 <= int(cx) < w and shirt[by, int(cx)]:
-            draw.ellipse([cx - s * .14, by - s * .14, cx + s * .14, by + s * .14], fill=(240, 244, 248))
+            draw.ellipse([cx - s * .14, by - s * .14, cx + s * .14, by + s * .14], fill=(232, 238, 232))
     return out
 
 def tais(image, spec):

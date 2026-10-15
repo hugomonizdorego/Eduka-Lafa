@@ -252,3 +252,87 @@ pet_help | Lafa · click for help · drag to move · right click for more | Lafa
 welcome_desktop | Hi, I'm Lafa! Type a topic, a file name or a question about Edukasaun OS — I'll look it up on this computer. | Halo, saya Lafa! Ketik topik, nama file, atau pertanyaan tentang Edukasaun OS — saya carikan di komputer ini. | Olá, sou o Lafa! Escreva um tema, um nome de ficheiro ou uma pergunta sobre o Edukasaun OS — procuro neste computador. | Olá, ha'u Lafa! Hakerek tópiku, naran ficheiru ka pergunta kona-ba Edukasaun OS — ha'u buka iha komputadór ne'e.
 search_examples_short | e.g. photosynthesis · maths homework file · wallpaper | mis. fotosintesis · file tugas matematika · wallpaper | ex. fotossíntese · ficheiro trabalho matemática · fundo | hanesan fotosíntese · ficheiru knaar matemátika · wallpaper
 """)
+
+# ------------------------------------------------------------- 0.2.1 texts
+# Encyclopedia (World and Timor-Leste), interactive modules, offline pack,
+# Virtual Assistant popup. Tetun follows Tetun Ofisiál (INL orthography).
+_V3 = _rows(r"""
+enc_title | World Encyclopedia | Ensiklopedia Dunia | Enciclopédia do Mundo | Ensiklopédia Mundu
+enc_sub | Explore Earth, life, history, science and culture. | Jelajahi Bumi, kehidupan, sejarah, sains, dan budaya. | Explore a Terra, a vida, a história, a ciência e a cultura. | Esplora planeta Rai, moris, istória, siénsia no kultura.
+tl_title | Explore Timor-Leste | Jelajahi Timor-Leste | Explorar Timor-Leste | Esplora Timor-Leste
+tl_sub | Get to know our land, history and culture. | Kenali tanah, sejarah, dan budaya kita. | Conheça a nossa terra, história e cultura. | Hatene liu ita-nia rai, istória no kultura.
+tab_encyclopedia | Encyclopedia | Ensiklopedia | Enciclopédia | Ensiklopédia
+offline_material | Offline material | Materi offline | Material offline | Materiál offline
+needs_internet_tag | Needs internet | Perlu internet | Precisa de internet | Presiza internet
+nav_back | Back | Kembali | Voltar | Fila
+nav_home | Start of this encyclopedia | Awal ensiklopedia ini | Início desta enciclopédia | Hahú ensiklopédia ne'e
+search_tl | Search Timor-Leste topics… | Cari topik Timor-Leste… | Pesquisar temas de Timor-Leste… | Buka tópiku Timor-Leste…
+search_enc | Search the encyclopedia… | Cari di ensiklopedia… | Pesquisar na enciclopédia… | Buka iha ensiklopédia…
+topics_n | {n} topics | {n} topik | {n} temas | tópiku {n}
+art_read | Read | Baca | Ler | Lee
+art_explore | Explore | Jelajahi | Explorar | Esplora
+art_practice | Practice | Latihan | Exercício | Prátika
+objectives | What you will learn | Tujuan belajar | O que vais aprender | Saida mak ita sei aprende
+key_facts | Key facts | Fakta penting | Factos principais | Faktu importante
+sources_title | Sources | Sumber | Fontes | Fonte sira
+related_title | Related topics | Materi terkait | Temas relacionados | Tópiku relasionadu
+related_lessons | Related lessons | Pelajaran terkait | Lições relacionadas | Lisaun relasionadu
+review_line | Version {v} · reviewed {d} · {status} · licence {licence} | Versi {v} · ditinjau {d} · {status} · lisensi {licence} | Versão {v} · revisto em {d} · {status} · licença {licence} | Versaun {v} · revee iha {d} · {status} · lisensa {licence}
+langs_full | Full text: {langs} | Teks lengkap: {langs} | Texto completo: {langs} | Testu kompletu: {langs}
+langs_summary | Summary only: {langs} | Ringkasan saja: {langs} | Só resumo: {langs} | Rezumu de'it: {langs}
+lang_shown_en | This text is not yet written in your language; it is shown in English. | Teks ini belum ditulis dalam bahasa Anda; ditampilkan dalam bahasa Inggris. | Este texto ainda não está escrito na sua língua; é mostrado em inglês. | Testu ne'e seidauk hakerek iha ita-nia lian; nia hatudu iha lian Inglés.
+read_aloud_btn | Read aloud | Bacakan | Ler em voz alta | Lee ho lian
+save_btn | Save | Simpan | Guardar | Rai
+saved_btn | Saved | Tersimpan | Guardado | Rai ona
+sources_btn | Sources | Sumber | Fontes | Fonte
+start_practice | Start practice | Mulai latihan | Começar exercício | Hahú prátika
+contents_title | In this article | Isi artikel | Neste artigo | Iha artigu ne'e
+coverage_title | What is covered | Cakupan materi | O que está incluído | Saida mak iha ona
+cov_available | Available | Tersedia | Disponível | Iha ona
+cov_review | Needs review | Perlu ditinjau | Precisa de revisão | Presiza revee
+cov_planned | Planned | Direncanakan | Planeado | Planu
+coverage_note | The menu shows a category even when only a few topics are written. Planned topics are not available yet. | Menu menampilkan kategori walau baru sedikit topik yang ditulis. Topik yang direncanakan belum tersedia. | O menu mostra uma categoria mesmo com poucos temas escritos. Os temas planeados ainda não estão disponíveis. | Menu hatudu kategoria maski tópiku balun de'it mak hakerek ona. Tópiku planu seidauk iha.
+news_tile | News | Berita | Notícias | Notísia
+weather_tile | Weather | Cuaca | Tempo | Tempu
+open_world | Open the World Encyclopedia | Buka Ensiklopedia Dunia | Abrir a Enciclopédia do Mundo | Loke Ensiklopédia Mundu
+open_timor | Explore Timor-Leste | Jelajahi Timor-Leste | Explorar Timor-Leste | Esplora Timor-Leste
+enc_results | Results for “{q}” | Hasil untuk “{q}” | Resultados para “{q}” | Rezultadu ba “{q}”
+enc_none | No topic found for “{q}”. Try another word, or browse the categories. | Tidak ada topik untuk “{q}”. Coba kata lain, atau lihat kategori. | Nenhum tema para “{q}”. Tente outra palavra ou veja as categorias. | La hetan tópiku ba “{q}”. Koko liafuan seluk, ka haree kategoria sira.
+quiz_progress | Question {i} of {n} | Soal {i} dari {n} | Pergunta {i} de {n} | Pergunta {i} husi {n}
+quiz_right | Correct! | Benar! | Certo! | Loos!
+quiz_wrong | Not quite. The answer is: {a} | Belum tepat. Jawabannya: {a} | Ainda não. A resposta é: {a} | Seidauk loos. Resposta mak: {a}
+quiz_next | Next question | Soal berikutnya | Pergunta seguinte | Pergunta tuirmai
+quiz_done | You answered {s} of {n} correctly. | Kamu menjawab benar {s} dari {n}. | Acertaste {s} de {n}. | Ita hatán loos {s} husi {n}.
+quiz_best | Your best result: {s} of {n} (saved on this computer). | Hasil terbaikmu: {s} dari {n} (tersimpan di komputer ini). | O teu melhor resultado: {s} de {n} (guardado neste computador). | Ita-nia rezultadu di'ak liu: {s} husi {n} (rai iha komputadór ne'e).
+quiz_again | Try again | Coba lagi | Tentar de novo | Koko fali
+quiz_none | There are no practice questions for this topic yet. | Belum ada soal latihan untuk topik ini. | Ainda não há perguntas para este tema. | Seidauk iha pergunta prátika ba tópiku ne'e.
+figure_title | Picture | Gambar | Imagem | Imajen
+figure_note | Illustration drawn for Lafa (CC BY-SA 4.0). | Ilustrasi dibuat untuk Lafa (CC BY-SA 4.0). | Ilustração feita para o Lafa (CC BY-SA 4.0). | Ilustrasaun ne'ebé halo ba Lafa (CC BY-SA 4.0).
+map_note | Schematic map, not an official map. | Peta skematis, bukan peta resmi. | Mapa esquemático, não é um mapa oficial. | Mapa eskemátiku, la'ós mapa ofisiál.
+online_extract | Online extract ({lang}, {date}) | Kutipan online ({lang}, {date}) | Extrato online ({lang}, {date}) | Estratu online ({lang}, {date})
+offline_photo | Photo saved for offline use · {licence} · {author} | Foto tersimpan untuk offline · {licence} · {author} | Fotografia guardada para uso offline · {licence} · {author} | Foto rai ona ba offline · {licence} · {author}
+when_label | When | Kapan | Quando | Bainhira
+explore_hint | Choose a point on the picture to learn. | Pilih titik pada gambar untuk belajar. | Escolha um ponto na imagem para aprender. | Hili pontu ida iha imajen atu aprende.
+# ---- offline pack
+offline_pack_title | Everything offline | Semua untuk offline | Tudo offline | Buat hotu ba offline
+offline_pack_button | Download all sources for offline use | Unduh semua sumber untuk offline | Descarregar todas as fontes para offline | Download fonte hotu ba offline
+offline_pack_note | One button saves, for use without internet: the front page of every learning and Timor-Leste source, a Wikipedia extract and a freely licensed picture for every encyclopedia topic (in your language), and the news. It uses about {mb} MB at most and can be stopped at any time. Saved in: {path} | Satu tombol menyimpan, untuk dipakai tanpa internet: halaman depan setiap sumber belajar dan Timor-Leste, kutipan Wikipedia dan gambar berlisensi bebas untuk setiap topik ensiklopedia (dalam bahasa Anda), serta berita. Paling banyak sekitar {mb} MB dan bisa dihentikan kapan saja. Disimpan di: {path} | Um botão guarda, para usar sem internet: a página inicial de cada fonte de aprendizagem e de Timor-Leste, um extrato da Wikipédia e uma imagem de licença livre para cada tema da enciclopédia (na sua língua) e as notícias. Usa no máximo cerca de {mb} MB e pode ser parado a qualquer momento. Guardado em: {path} | Butaun ida rai, atu uza la ho internet: pájina prinsipál husi fonte aprendizajen no Timor-Leste hotu, estratu Wikipédia no imajen ho lisensa livre ba tópiku ensiklopédia hotu (iha ita-nia lian), no notísia. Uza maizumenus {mb} MB másimu no bele para iha tempu saida de'it. Rai iha: {path}
+offline_pack_stop | Stop | Hentikan | Parar | Para
+offline_pack_running | Downloading… {done} of {total} · {name} | Mengunduh… {done} dari {total} · {name} | A descarregar… {done} de {total} · {name} | Download hela… {done} husi {total} · {name}
+offline_pack_done | Saved for offline: {pages} pages, {extracts} extracts, {images} pictures ({failed} did not answer) · {date} | Tersimpan untuk offline: {pages} halaman, {extracts} kutipan, {images} gambar ({failed} tidak menjawab) · {date} | Guardado para offline: {pages} páginas, {extracts} extratos, {images} imagens ({failed} sem resposta) · {date} | Rai ona ba offline: pájina {pages}, estratu {extracts}, imajen {images} ({failed} la hatán) · {date}
+offline_pack_stopped | Stopped. What was downloaded is kept. | Dihentikan. Yang sudah diunduh tetap disimpan. | Parado. O que foi descarregado fica guardado. | Para ona. Buat ne'ebé download ona sei rai nafatin.
+offline_pack_last | Last download: {date} · {size} MB | Unduhan terakhir: {date} · {size} MB | Última transferência: {date} · {size} MB | Download ikus: {date} · {size} MB
+offline_pack_never | Nothing downloaded yet. | Belum ada yang diunduh. | Ainda nada descarregado. | Seidauk download buat ida.
+# ---- Virtual Assistant popup
+popup_ready | Ready offline | Siap offline | Pronto offline | Prontu offline
+popup_search | Search material or files… | Cari materi atau file… | Pesquisar material ou ficheiros… | Buka materiál ka ficheiru…
+popup_continue | Continue learning | Lanjut belajar | Continuar a aprender | Kontinua aprende
+popup_explore | Explore | Jelajahi | Explorar | Esplora
+popup_tasks | Tasks | Tugas | Trabalhos | Knaar
+popup_os | OS help | Bantuan OS | Ajuda do sistema | Ajuda OS
+popup_open_desktop | Open Desktop | Buka Desktop | Abrir Desktop | Loke Desktop
+popup_recommend | Start with a topic you like. | Mulai dari topik yang kamu sukai. | Comece por um tema de que goste. | Hahú ho tópiku ida ne'ebé ita gosta.
+popup_continue_with | Continue: {t} | Lanjutkan: {t} | Continuar: {t} | Kontinua: {t}
+popup_found | {n} results · open in Lafa Desktop | {n} hasil · buka di Lafa Desktop | {n} resultados · abrir no Lafa Desktop | rezultadu {n} · loke iha Lafa Desktop
+""")
+for _lang in V2: V2[_lang].update(_V3[_lang])

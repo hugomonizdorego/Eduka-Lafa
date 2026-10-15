@@ -1,0 +1,29 @@
+{
+ "generator": "tools/make-illustrations.py",
+ "licence": "CC BY-SA 4.0 (original work for Lafa)",
+ "note": "Flat vector illustrations drawn in code; the Timor-Leste map is schematic, not an official map.",
+ "illustrations": [
+  "module-size",
+  "module-timeline",
+  "module-trex",
+  "timor-culture",
+  "timor-economy",
+  "timor-flag",
+  "timor-history",
+  "timor-leaders",
+  "timor-map",
+  "timor-nature",
+  "world-civilizations",
+  "world-colonialism",
+  "world-culture_arts",
+  "world-dinosaurs",
+  "world-earth",
+  "world-geography_oceans",
+  "world-human_origins",
+  "world-industrial_revolution",
+  "world-inventions",
+  "world-life_environment",
+  "world-science_space",
+  "world-world_wars"
+ ]
+}

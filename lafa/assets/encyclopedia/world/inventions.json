@@ -1,0 +1,252 @@
+{
+  "area": "world",
+  "category": "inventions",
+  "articles": [
+    {
+      "id": "w.inventions.printing",
+      "title": {
+        "en": "Paper and printing",
+        "id": "Kertas dan percetakan",
+        "pt": "O papel e a imprensa",
+        "tet": "Surat-tahan no imprensa"
+      },
+      "summary": {
+        "en": "Paper was invented in China, and printing with carved wooden blocks and movable type developed in East Asia. In Europe, Johannes Gutenberg's printing press of the 1440s–1450s made books cheaper and helped knowledge spread faster than ever before.",
+        "id": "Kertas ditemukan di Tiongkok, sedangkan cetak balok kayu dan huruf lepas berkembang di Asia Timur. Di Eropa, mesin cetak Johannes Gutenberg pada tahun 1440-an–1450-an membuat buku lebih murah dan membantu pengetahuan menyebar lebih cepat daripada sebelumnya.",
+        "pt": "O papel foi inventado na China, e a impressão com blocos de madeira e com caracteres móveis desenvolveu-se na Ásia Oriental. Na Europa, a prensa de Johannes Gutenberg, das décadas de 1440 e 1450, tornou os livros mais baratos e espalhou o conhecimento mais depressa.",
+        "tet": "Ema iha Xina mak hahú halo surat-tahan. Imprensa ho bloku ai no letra ne'ebé bele muda mosu iha Ázia Leste. Iha Europa, Johannes Gutenberg harii nia imprensa iha tinan 1440 no 1450. Ho ne'e, livru sai baratu liu no koñesimentu habelar lalais."
+      },
+      "objectives": {
+        "en": [
+          "You will explain where and how paper was invented.",
+          "You will describe woodblock printing and movable type in East Asia.",
+          "You will explain how Gutenberg's press changed learning in Europe."
+        ],
+        "id": [
+          "Kamu akan menjelaskan di mana dan bagaimana kertas ditemukan.",
+          "Kamu akan menjelaskan cetak balok kayu dan huruf lepas di Asia Timur.",
+          "Kamu akan menjelaskan bagaimana mesin cetak Gutenberg mengubah dunia pendidikan di Eropa."
+        ],
+        "pt": [
+          "Vais explicar onde e como foi inventado o papel.",
+          "Vais descrever a impressão com blocos de madeira e os caracteres móveis na Ásia Oriental.",
+          "Vais explicar como a prensa de Gutenberg mudou a aprendizagem na Europa."
+        ],
+        "tet": [
+          "Ita sei hatene iha ne'ebé no oinsá ema hahú halo surat-tahan.",
+          "Ita sei komprende imprensa ho bloku ai no letra ne'ebé bele muda iha Ázia Leste.",
+          "Ita sei esplika oinsá Gutenberg nia imprensa muda edukasaun iha Europa."
+        ]
+      },
+      "sections": [
+        {
+          "heading": {"en": "The invention of paper", "id": "Penemuan kertas"},
+          "body": {
+            "en": "Before paper, people wrote on clay, stone, bamboo strips, silk, palm leaves, papyrus or animal skins. These materials were heavy, rare or expensive. Paper was invented in China more than 2,000 years ago. Around 105 CE, a court official named Cai Lun is traditionally credited with improving papermaking. Plant fibres such as tree bark, hemp and old rags were beaten into a wet pulp, spread on a screen and dried into thin sheets. Paper was light, cheap and easy to write on. The knowledge travelled slowly westwards: papermaking was established in Samarkand and Baghdad in the 700s, and later reached Europe through the Islamic world. In parts of Southeast Asia, palm leaves were used for writing for many centuries.",
+            "id": "Sebelum ada kertas, orang menulis di atas tanah liat, batu, bilah bambu, sutra, daun lontar, papirus, atau kulit hewan. Bahan-bahan itu berat, langka, atau mahal. Kertas ditemukan di Tiongkok lebih dari 2.000 tahun lalu. Menurut tradisi, sekitar tahun 105 M seorang pejabat istana bernama Cai Lun menyempurnakan cara membuat kertas. Serat tumbuhan seperti kulit kayu, rami, dan kain bekas ditumbuk menjadi bubur basah, diratakan di atas saringan, lalu dikeringkan menjadi lembaran tipis. Kertas ringan, murah, dan mudah ditulisi. Pengetahuan ini menyebar perlahan ke arah barat: pembuatan kertas sudah ada di Samarkand dan Bagdad pada tahun 700-an, lalu sampai ke Eropa melalui dunia Islam. Di sebagian Asia Tenggara, daun lontar dipakai sebagai media tulis selama berabad-abad."
+          }
+        },
+        {
+          "heading": {"en": "Printing in East Asia", "id": "Percetakan di Asia Timur"},
+          "body": {
+            "en": "The earliest printing used woodblocks. A whole page of text and pictures was carved into a block of wood, covered with ink and pressed onto paper. Woodblock printing was used in China by the 700s. The oldest printed book that carries a date is a copy of the Diamond Sutra, a Buddhist text printed in 868 CE and found in a cave near Dunhuang in western China. In the 1040s, a Chinese craftsman named Bi Sheng made movable type from baked clay: separate characters that could be arranged into a page, printed and then reused. Korean printers later used metal movable type. The Jikji, a Buddhist book printed in Korea in 1377, is the oldest surviving book printed with metal type.",
+            "id": "Percetakan paling awal menggunakan balok kayu. Satu halaman penuh berisi teks dan gambar diukir pada sebuah balok kayu, dilapisi tinta, lalu ditekan ke kertas. Cetak balok kayu sudah dipakai di Tiongkok pada tahun 700-an. Buku cetak tertua yang mencantumkan tanggal adalah salinan Sutra Intan, sebuah teks Buddha yang dicetak pada tahun 868 M dan ditemukan di sebuah gua dekat Dunhuang, Tiongkok bagian barat. Pada tahun 1040-an, seorang perajin Tiongkok bernama Bi Sheng membuat huruf lepas dari tanah liat yang dibakar. Setiap aksara terpisah sehingga bisa disusun menjadi satu halaman, dicetak, lalu dipakai lagi. Para pencetak Korea kemudian menggunakan huruf lepas dari logam. Jikji, buku Buddha yang dicetak di Korea pada tahun 1377, adalah buku tertua yang masih ada yang dicetak dengan huruf logam."
+          }
+        },
+        {
+          "heading": {"en": "Gutenberg's press in Europe", "id": "Mesin cetak Gutenberg di Eropa"},
+          "body": {
+            "en": "In Europe, Johannes Gutenberg, a metalworker in the German city of Mainz, developed a printing system in the 1440s and 1450s. He combined metal movable type cast in moulds, an oil-based ink, and a screw press similar to those used for making wine. His famous Bible was finished around 1455. Because the Latin alphabet has only a few dozen letters, movable type worked very efficiently in Europe. The new technology spread quickly: by 1500, printing presses were working in more than 200 European towns, and millions of printed copies had been made. Printing also travelled with Europeans to other parts of the world. For example, a press was working in Goa, India, by 1556.",
+            "id": "Di Eropa, Johannes Gutenberg, seorang pandai logam di kota Mainz, Jerman, mengembangkan sistem percetakan pada tahun 1440-an dan 1450-an. Ia menggabungkan huruf lepas dari logam yang dicetak dalam cetakan, tinta berbahan minyak, dan alat tekan berulir yang mirip dengan alat pemeras anggur. Alkitabnya yang terkenal selesai sekitar tahun 1455. Karena alfabet Latin hanya memiliki beberapa puluh huruf, huruf lepas bekerja sangat efisien di Eropa. Teknologi baru ini menyebar dengan cepat: pada tahun 1500, mesin cetak sudah beroperasi di lebih dari 200 kota di Eropa, dan jutaan eksemplar cetakan telah dihasilkan. Percetakan juga dibawa orang Eropa ke bagian dunia lain. Misalnya, sebuah mesin cetak sudah beroperasi di Goa, India, pada tahun 1556."
+          }
+        },
+        {
+          "heading": {"en": "How printing changed learning", "id": "Bagaimana percetakan mengubah dunia belajar"},
+          "body": {
+            "en": "Before printing, every book in Europe had to be copied by hand, which could take months. Printing made books much cheaper and more common. More people learned to read, and ideas could be shared exactly, in hundreds or thousands of identical copies. Scientists could compare results and build on each other's work, which helped the Scientific Revolution. Printed pamphlets spread religious and political arguments quickly, as in the Protestant Reformation of the 1500s. Printing also helped to standardise languages, because spelling and grammar became more fixed in printed books. Today, printed textbooks, newspapers and dictionaries in Tetun, Portuguese and other languages continue this long story in the schools of Timor-Leste.",
+            "id": "Sebelum ada percetakan, setiap buku di Eropa harus disalin dengan tangan, dan pekerjaan itu bisa memakan waktu berbulan-bulan. Percetakan membuat buku jauh lebih murah dan mudah didapat. Makin banyak orang belajar membaca, dan gagasan dapat disebarkan secara persis dalam ratusan atau ribuan salinan yang sama. Para ilmuwan dapat membandingkan hasil penelitian dan melanjutkan karya satu sama lain, sehingga membantu terjadinya Revolusi Ilmiah. Pamflet cetak menyebarkan perdebatan agama dan politik dengan cepat, seperti pada masa Reformasi Protestan di abad ke-16. Percetakan juga membantu membakukan bahasa karena ejaan dan tata bahasa menjadi lebih tetap dalam buku cetak. Kini buku pelajaran, surat kabar, dan kamus cetak dalam bahasa Tetun, Portugis, dan bahasa lain melanjutkan kisah panjang ini di sekolah-sekolah Timor Leste."
+          }
+        }
+      ],
+      "facts": [
+        {"label": {"en": "Papermaking improved by Cai Lun (traditional date)", "id": "Pembuatan kertas disempurnakan Cai Lun (tanggal tradisional)"}, "value": {"en": "about 105 CE", "id": "sekitar 105 M"}, "year": "105", "source": 0},
+        {"label": {"en": "Oldest dated printed book (Diamond Sutra)", "id": "Buku cetak bertanggal tertua (Sutra Intan)"}, "value": {"en": "868 CE", "id": "868 M"}, "year": "868", "source": 1},
+        {"label": {"en": "Oldest surviving book printed with metal type (Jikji, Korea)", "id": "Buku tertua yang masih ada dicetak dengan huruf logam (Jikji, Korea)"}, "value": {"en": "1377", "id": "1377"}, "year": "1377", "source": 0},
+        {"label": {"en": "Gutenberg Bible completed", "id": "Alkitab Gutenberg selesai"}, "value": {"en": "about 1455", "id": "sekitar 1455"}, "year": "1455", "source": 2}
+      ],
+      "figure": {
+        "hint": "A simple labelled drawing of an early printing press with movable type: 1) a tray of individual metal letters arranged into lines, 2) the inked type bed, 3) a sheet of paper, 4) the wooden screw and handle that press down, 5) a finished printed page. A small inset shows a carved woodblock for comparison.",
+        "caption": {
+          "en": "In a movable-type press, separate letters are arranged, inked and pressed onto paper, then reused for the next page.",
+          "id": "Pada mesin cetak huruf lepas, huruf-huruf terpisah disusun, diberi tinta, lalu ditekan ke kertas, kemudian dipakai lagi untuk halaman berikutnya.",
+          "pt": "Numa prensa de caracteres móveis, as letras separadas são organizadas, cobertas de tinta e prensadas sobre o papel, sendo depois reutilizadas.",
+          "tet": "Iha imprensa ho letra ne'ebé bele muda, ema tau letra sira tuir liña, hatama tinta, no hanehan ba surat-tahan. Depois sira uza fali letra sira ne'e."
+        }
+      },
+      "sources": [
+        {"title": "Printing (publishing)", "publisher": "Encyclopaedia Britannica", "url": "https://www.britannica.com/technology/printing-publishing", "year": "2024"},
+        {"title": "The Diamond Sutra", "publisher": "British Library", "url": "https://www.bl.uk/collection-items/the-diamond-sutra", "year": "2024"},
+        {"title": "Johannes Gutenberg", "publisher": "Encyclopaedia Britannica", "url": "https://www.britannica.com/biography/Johannes-Gutenberg", "year": "2024"}
+      ],
+      "related": ["w.civilizations.cities_writing", "w.inventions.electricity_communication", "w.science_space.scientific_method", "w.culture_arts.languages_of_the_world"],
+      "tags": ["history", "technology", "communication", "printing", "paper", "books"],
+      "quiz": [
+        {
+          "q": {"en": "In which country was paper invented?", "id": "Di negara manakah kertas ditemukan?"},
+          "options": {
+            "en": ["Egypt", "China", "Germany", "India"],
+            "id": ["Mesir", "Tiongkok", "Jerman", "India"]
+          },
+          "answer": 1,
+          "explain": {"en": "Paper was invented in China more than 2,000 years ago. Egypt used papyrus, which is made differently, from layers of reed stems.", "id": "Kertas ditemukan di Tiongkok lebih dari 2.000 tahun lalu. Mesir memakai papirus, yang dibuat dengan cara berbeda dari lapisan batang tanaman air."}
+        },
+        {
+          "q": {"en": "What was the main advantage of movable type?", "id": "Apa keunggulan utama huruf lepas?"},
+          "options": {
+            "en": ["It printed in many colours at once", "It needed no ink", "It worked using electricity", "Letters could be rearranged and reused"],
+            "id": ["Dapat mencetak banyak warna sekaligus", "Tidak memerlukan tinta", "Bekerja dengan tenaga listrik", "Huruf dapat disusun ulang dan dipakai lagi"]
+          },
+          "answer": 3,
+          "explain": {"en": "With movable type, each letter or character is a separate piece, so after one page is printed the pieces can be rearranged to print another page.", "id": "Pada huruf lepas, setiap huruf atau aksara merupakan potongan terpisah, sehingga setelah satu halaman dicetak, potongan-potongan itu dapat disusun ulang untuk mencetak halaman lain."}
+        },
+        {
+          "q": {"en": "In which city did Johannes Gutenberg develop his printing press?", "id": "Di kota manakah Johannes Gutenberg mengembangkan mesin cetaknya?"},
+          "options": {
+            "en": ["Mainz", "Paris", "Rome", "Lisbon"],
+            "id": ["Mainz", "Paris", "Roma", "Lisboa"]
+          },
+          "answer": 0,
+          "explain": {"en": "Gutenberg worked in Mainz, Germany, in the 1440s and 1450s, where his Bible was finished around 1455.", "id": "Gutenberg bekerja di Mainz, Jerman, pada tahun 1440-an dan 1450-an, dan Alkitabnya selesai di sana sekitar tahun 1455."}
+        }
+      ],
+      "review": {"version": 1, "reviewed": "2026-10-15", "status": "Written by the Lafa team from the listed sources; needs review by a subject expert", "licence": "CC BY-SA 4.0", "langs_full": ["en", "id"]}
+    },
+    {
+      "id": "w.inventions.electricity_communication",
+      "title": {
+        "en": "Electricity and communication",
+        "id": "Listrik dan komunikasi",
+        "pt": "A eletricidade e as comunicações",
+        "tet": "Eletrisidade no komunikasaun"
+      },
+      "summary": {
+        "en": "Since the 1830s, electricity has changed how people communicate: first with the telegraph, then the telephone, radio and television, and later computers and the internet, which today connects billions of people.",
+        "id": "Sejak tahun 1830-an, listrik telah mengubah cara manusia berkomunikasi: mula-mula melalui telegraf, lalu telepon, radio, dan televisi, kemudian komputer dan internet, yang kini menghubungkan miliaran orang.",
+        "pt": "Desde a década de 1830, a eletricidade mudou a forma como as pessoas comunicam: primeiro com o telégrafo, depois com o telefone, a rádio e a televisão, e mais tarde com os computadores e a internet.",
+        "tet": "Hahú husi tinan 1830 nia laran, eletrisidade muda oinsá ema ko'alia malu: uluk ho telégrafu, depois ho telefone, rádiu no televizaun, no agora ho komputadór no internet."
+      },
+      "objectives": {
+        "en": [
+          "You will describe how the electric telegraph sent messages over long distances.",
+          "You will put the telephone, radio, television, computers and the internet in time order.",
+          "You will explain the difference between the internet and the World Wide Web."
+        ],
+        "id": [
+          "Kamu akan menjelaskan bagaimana telegraf listrik mengirim pesan jarak jauh.",
+          "Kamu akan mengurutkan telepon, radio, televisi, komputer, dan internet menurut waktu kemunculannya.",
+          "Kamu akan menjelaskan perbedaan antara internet dan World Wide Web."
+        ],
+        "pt": [
+          "Vais descrever como o telégrafo elétrico enviava mensagens a longa distância.",
+          "Vais ordenar no tempo o telefone, a rádio, a televisão, os computadores e a internet.",
+          "Vais explicar a diferença entre a internet e a World Wide Web."
+        ],
+        "tet": [
+          "Ita sei esplika oinsá telégrafu elétriku haruka mensajen ba fatin dook.",
+          "Ita sei hatene tuir tempu: telefone, rádiu, televizaun, komputadór no internet.",
+          "Ita sei komprende diferensa entre internet no World Wide Web."
+        ]
+      },
+      "sections": [
+        {
+          "heading": {"en": "The electric telegraph", "id": "Telegraf listrik"},
+          "body": {
+            "en": "For most of history, a message could travel only as fast as a runner, a horse or a ship. In the 1800s, scientists learned that an electric current could travel along a wire almost instantly. In the 1830s and 1840s, inventors built the first practical electric telegraphs. In Britain, William Cooke and Charles Wheatstone patented a telegraph in 1837. In the United States, Samuel Morse and his partners developed another system with a code of short and long signals, dots and dashes, now called Morse code. In 1844 they sent a famous message from Washington to Baltimore. Soon telegraph wires crossed whole countries, and from 1866 a lasting cable under the Atlantic Ocean linked Europe and North America.",
+            "id": "Sepanjang sebagian besar sejarah, pesan hanya bisa bergerak secepat pelari, kuda, atau kapal. Pada abad ke-19, para ilmuwan mengetahui bahwa arus listrik dapat mengalir melalui kawat hampir seketika. Pada tahun 1830-an dan 1840-an, para penemu membuat telegraf listrik pertama yang dapat dipakai sehari-hari. Di Inggris, William Cooke dan Charles Wheatstone mematenkan sebuah telegraf pada tahun 1837. Di Amerika Serikat, Samuel Morse dan rekan-rekannya mengembangkan sistem lain dengan kode berupa sinyal pendek dan panjang, titik dan garis, yang kini disebut kode Morse. Pada tahun 1844 mereka mengirim pesan terkenal dari Washington ke Baltimore. Tak lama kemudian, kabel telegraf membentang di seluruh negeri, dan sejak tahun 1866 sebuah kabel bawah laut yang bertahan lama di Samudra Atlantik menghubungkan Eropa dan Amerika Utara."
+          }
+        },
+        {
+          "heading": {"en": "Telephone, radio and television", "id": "Telepon, radio, dan televisi"},
+          "body": {
+            "en": "The telephone carried the human voice itself as an electric signal. Alexander Graham Bell received a patent for the telephone in 1876, although other inventors were working on similar ideas at the same time. Scientists then showed that invisible electromagnetic waves could travel through the air without wires. In the 1890s Guglielmo Marconi developed practical radio, and in 1901 he reported receiving a radio signal across the Atlantic. Radio broadcasting spread in the 1920s, bringing news and music into people's homes. Television, which sends moving pictures as well as sound, was first demonstrated in the 1920s and became common in many countries from the 1950s onwards. In Timor-Leste, radio is still an important way to share news across the mountains.",
+            "id": "Telepon membawa suara manusia itu sendiri dalam bentuk sinyal listrik. Alexander Graham Bell memperoleh paten telepon pada tahun 1876, meskipun beberapa penemu lain sedang mengerjakan gagasan serupa pada waktu yang sama. Para ilmuwan kemudian membuktikan bahwa gelombang elektromagnetik yang tak terlihat dapat merambat melalui udara tanpa kabel. Pada tahun 1890-an Guglielmo Marconi mengembangkan radio yang dapat dipakai, dan pada tahun 1901 ia melaporkan telah menerima sinyal radio dari seberang Samudra Atlantik. Siaran radio menyebar pada tahun 1920-an dan membawa berita serta musik ke rumah-rumah. Televisi, yang mengirim gambar bergerak sekaligus suara, pertama kali diperagakan pada tahun 1920-an dan menjadi umum di banyak negara sejak tahun 1950-an. Di Timor Leste, radio masih menjadi sarana penting untuk menyebarkan berita hingga ke daerah pegunungan."
+          }
+        },
+        {
+          "heading": {"en": "Computers", "id": "Komputer"},
+          "body": {
+            "en": "The first electronic computers were built in the 1940s. Machines such as ENIAC in the United States, completed in 1945, filled whole rooms and used thousands of glass vacuum tubes. The invention of the transistor in 1947, and of the integrated circuit or microchip at the end of the 1950s, made computers smaller, faster and cheaper. By the late 1970s and 1980s, personal computers could sit on a desk, and today a mobile phone holds far more computing power than those first machines. All digital computers work with binary code: information is stored as long patterns of 0s and 1s, which tiny electric switches turn off and on millions or billions of times every second.",
+            "id": "Komputer elektronik pertama dibuat pada tahun 1940-an. Mesin seperti ENIAC di Amerika Serikat, yang selesai pada tahun 1945, memenuhi satu ruangan penuh dan menggunakan ribuan tabung hampa dari kaca. Penemuan transistor pada tahun 1947, lalu sirkuit terpadu atau cip mikro pada akhir tahun 1950-an, membuat komputer menjadi lebih kecil, lebih cepat, dan lebih murah. Pada akhir tahun 1970-an dan 1980-an, komputer pribadi sudah dapat diletakkan di atas meja, dan kini sebuah ponsel memiliki kemampuan hitung jauh lebih besar daripada mesin-mesin pertama itu. Semua komputer digital bekerja dengan kode biner: informasi disimpan sebagai deretan panjang angka 0 dan 1, yang dinyalakan dan dimatikan oleh sakelar listrik mungil jutaan hingga miliaran kali setiap detik."
+          }
+        },
+        {
+          "heading": {"en": "The internet and the World Wide Web", "id": "Internet dan World Wide Web"},
+          "body": {
+            "en": "The internet is a worldwide network of computer networks. It grew from ARPANET, a United States research network that first linked computers in 1969. In 1983, ARPANET switched to the TCP/IP rules that still allow different networks to exchange data. The World Wide Web is a service that runs on the internet: a system of pages joined by links. In 1989, Tim Berners-Lee, a British scientist working at CERN, the European physics laboratory near Geneva, proposed the idea. By 1991 the first website was online and the Web was opened to people outside CERN. In 1993, CERN made the Web software free for everyone to use. Today billions of people use the internet, many of them on mobile phones.",
+            "id": "Internet adalah jaringan sedunia yang terdiri atas banyak jaringan komputer. Internet berkembang dari ARPANET, jaringan penelitian Amerika Serikat yang pertama kali menghubungkan komputer pada tahun 1969. Pada tahun 1983, ARPANET beralih ke aturan TCP/IP yang hingga kini memungkinkan berbagai jaringan bertukar data. World Wide Web adalah layanan yang berjalan di atas internet, yaitu sistem halaman yang saling terhubung melalui tautan. Pada tahun 1989, Tim Berners-Lee, ilmuwan Inggris yang bekerja di CERN, laboratorium fisika Eropa di dekat Jenewa, mengusulkan gagasan ini. Pada tahun 1991, situs web pertama sudah daring dan Web dibuka untuk orang di luar CERN. Pada tahun 1993, CERN membebaskan perangkat lunak Web agar dapat dipakai siapa saja tanpa biaya. Kini miliaran orang menggunakan internet, banyak di antaranya melalui ponsel."
+          }
+        }
+      ],
+      "facts": [
+        {"label": {"en": "Morse's telegraph message, Washington to Baltimore", "id": "Pesan telegraf Morse, Washington ke Baltimore"}, "value": {"en": "1844", "id": "1844"}, "year": "1844", "source": 0},
+        {"label": {"en": "Bell's telephone patent", "id": "Paten telepon Bell"}, "value": {"en": "1876", "id": "1876"}, "year": "1876", "source": 1},
+        {"label": {"en": "World Wide Web proposed at CERN", "id": "World Wide Web diusulkan di CERN"}, "value": {"en": "1989 (first website online by 1991)", "id": "1989 (situs web pertama daring pada 1991)"}, "year": "1989", "source": 2}
+      ],
+      "figure": {
+        "hint": "A horizontal timeline with five labelled icons: electric telegraph (1830s–1840s, Morse 1844), telephone (1876), radio (1890s–1901) and television (1920s), electronic computer (1940s), World Wide Web (1989–1991). Under the last icon, a small diagram shows computers linked in a network, labelled 'internet', with linked pages on top labelled 'Web'.",
+        "caption": {
+          "en": "In less than 200 years, electricity took communication from telegraph wires to the internet.",
+          "id": "Dalam waktu kurang dari 200 tahun, listrik membawa komunikasi dari kabel telegraf hingga internet.",
+          "pt": "Em menos de 200 anos, a eletricidade levou as comunicações dos fios do telégrafo até à internet.",
+          "tet": "Iha tinan 200 nia laran, eletrisidade muda komunikasaun husi telégrafu to'o internet."
+        }
+      },
+      "sources": [
+        {"title": "Telegraph", "publisher": "Encyclopaedia Britannica", "url": "https://www.britannica.com/technology/telegraph", "year": "2024"},
+        {"title": "Telephone", "publisher": "Encyclopaedia Britannica", "url": "https://www.britannica.com/technology/telephone", "year": "2024"},
+        {"title": "The birth of the Web", "publisher": "CERN", "url": "https://home.cern/science/computing/birth-web", "year": "2024"},
+        {"title": "Internet", "publisher": "Encyclopaedia Britannica", "url": "https://www.britannica.com/technology/Internet", "year": "2024"}
+      ],
+      "related": ["w.inventions.printing", "w.industrial_revolution.steam_factories", "w.industrial_revolution.changes_society", "w.science_space.scientific_method"],
+      "tags": ["technology", "communication", "physics", "computers", "it", "history", "internet"],
+      "quiz": [
+        {
+          "q": {"en": "Which code used short and long signals, or dots and dashes?", "id": "Kode apa yang menggunakan sinyal pendek dan panjang, atau titik dan garis?"},
+          "options": {
+            "en": ["Binary code", "Cuneiform", "Morse code", "Braille"],
+            "id": ["Kode biner", "Aksara paku", "Kode Morse", "Huruf Braille"]
+          },
+          "answer": 2,
+          "explain": {"en": "Morse code, developed for the electric telegraph, turns letters into patterns of dots and dashes.", "id": "Kode Morse, yang dikembangkan untuk telegraf listrik, mengubah huruf menjadi pola titik dan garis."}
+        },
+        {
+          "q": {"en": "Who proposed the World Wide Web in 1989?", "id": "Siapa yang mengusulkan World Wide Web pada tahun 1989?"},
+          "options": {
+            "en": ["Alexander Graham Bell", "Tim Berners-Lee", "Samuel Morse", "Guglielmo Marconi"],
+            "id": ["Alexander Graham Bell", "Tim Berners-Lee", "Samuel Morse", "Guglielmo Marconi"]
+          },
+          "answer": 1,
+          "explain": {"en": "Tim Berners-Lee proposed the Web while working at CERN in 1989. Bell is linked with the telephone, Morse with the telegraph and Marconi with radio.", "id": "Tim Berners-Lee mengusulkan Web saat bekerja di CERN pada tahun 1989. Bell dikenal dengan telepon, Morse dengan telegraf, dan Marconi dengan radio."}
+        },
+        {
+          "q": {"en": "What is the difference between the internet and the World Wide Web?", "id": "Apa perbedaan antara internet dan World Wide Web?"},
+          "options": {
+            "en": ["They are exactly the same thing", "The internet is a single website", "The Web is older than the internet", "The Web is a service of linked pages that runs on the internet"],
+            "id": ["Keduanya sama persis", "Internet adalah satu situs web", "Web lebih tua daripada internet", "Web adalah layanan halaman bertaut yang berjalan di atas internet"]
+          },
+          "answer": 3,
+          "explain": {"en": "The internet is the global network that links computers (from 1969 onwards); the Web (from 1989–1991) is one service that uses it, along with others such as email.", "id": "Internet adalah jaringan global yang menghubungkan komputer (sejak 1969); Web (sejak 1989–1991) adalah salah satu layanan yang memakainya, bersama layanan lain seperti surel."}
+        }
+      ],
+      "review": {"version": 1, "reviewed": "2026-10-15", "status": "Written by the Lafa team from the listed sources; needs review by a subject expert", "licence": "CC BY-SA 4.0", "langs_full": ["en", "id"]}
+    }
+  ],
+  "coverage": [
+    {"topic": {"en": "Paper and printing", "id": "Kertas dan percetakan"}, "status": "available", "article": "w.inventions.printing"},
+    {"topic": {"en": "Electricity and communication", "id": "Listrik dan komunikasi"}, "status": "available", "article": "w.inventions.electricity_communication"},
+    {"topic": {"en": "The wheel and early tools", "id": "Roda dan alat-alat awal"}, "status": "planned", "article": ""},
+    {"topic": {"en": "Medicines and vaccines", "id": "Obat-obatan dan vaksin"}, "status": "planned", "article": ""},
+    {"topic": {"en": "Flight and space travel", "id": "Penerbangan dan perjalanan antariksa"}, "status": "planned", "article": ""},
+    {"topic": {"en": "Mobile phones and satellites", "id": "Telepon seluler dan satelit"}, "status": "planned", "article": ""}
+  ]
+}

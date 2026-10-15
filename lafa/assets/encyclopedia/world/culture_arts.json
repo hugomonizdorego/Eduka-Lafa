@@ -1,0 +1,232 @@
+{
+  "area": "world",
+  "category": "culture_arts",
+  "articles": [
+    {
+      "id": "w.culture_arts.languages_of_the_world",
+      "title": {
+        "en": "Languages of the world",
+        "id": "Bahasa-bahasa di dunia",
+        "pt": "As línguas do mundo",
+        "tet": "Lian sira iha mundu"
+      },
+      "summary": {
+        "en": "People speak about 7,000 languages, grouped into families that share a common ancestor. Many are endangered. Timor-Leste, with Tetun and Portuguese as official languages and more than 30 local languages, is a small country with great language diversity.",
+        "id": "Manusia menuturkan sekitar 7.000 bahasa yang dikelompokkan ke dalam rumpun yang berasal dari leluhur yang sama. Banyak di antaranya terancam punah. Timor-Leste, dengan bahasa resmi Tetun dan Portugis serta lebih dari 30 bahasa daerah, adalah negara kecil dengan keragaman bahasa yang besar.",
+        "pt": "As pessoas falam cerca de 7000 línguas, agrupadas em famílias que partilham um antepassado comum. Muitas estão ameaçadas. Timor-Leste, com o tétum e o português como línguas oficiais e mais de 30 línguas locais, é um país pequeno com grande diversidade linguística.",
+        "tet": "Ema iha mundu ko'alia lian besik 7.000, ne'ebé fahe ba família ho beiala ida de'it. Lian barak iha perigu atu lakon. Timor-Leste iha lian ofisiál rua, Tetun no Portugés, no lian lokál liu 30, maski rai ki'ik."
+      },
+      "objectives": {
+        "en": [
+          "You will explain what a language family is and name some large families.",
+          "You will describe why languages become endangered and how they can be kept alive.",
+          "You will describe the languages of Timor-Leste and the families they belong to."
+        ],
+        "id": [
+          "Kamu akan menjelaskan apa itu rumpun bahasa dan menyebutkan beberapa rumpun besar.",
+          "Kamu akan menjelaskan mengapa bahasa terancam punah dan bagaimana bahasa dapat dilestarikan.",
+          "Kamu akan menjelaskan bahasa-bahasa di Timor-Leste dan rumpunnya."
+        ],
+        "pt": [
+          "Vais explicar o que é uma família de línguas e nomear algumas grandes famílias.",
+          "Vais descrever porque é que as línguas ficam ameaçadas e como podem ser mantidas vivas.",
+          "Vais descrever as línguas de Timor-Leste e as famílias a que pertencem."
+        ],
+        "tet": [
+          "Ita sei esplika saida mak família lian no temi família boot balun.",
+          "Ita sei esplika tanba sa mak lian bele lakon no oinsá ita bele hatutan sira.",
+          "Ita sei esplika lian sira iha Timor-Leste no sira-nia família."
+        ]
+      },
+      "sections": [
+        {
+          "heading": {"en": "How many languages are there?", "id": "Ada berapa banyak bahasa?"},
+          "body": {
+            "en": "Experts estimate that there are about 7,000 living languages in the world. The exact number is hard to fix, because it is not always clear whether two ways of speaking are separate languages or dialects of one language, and because some languages have not yet been fully studied. Languages are very unevenly spread. A few, such as Mandarin Chinese, English, Hindi and Spanish, have hundreds of millions of speakers, while thousands of languages are spoken by fewer than 10,000 people each. Some regions are especially rich in languages: the island of New Guinea alone has around a thousand. Sign languages, used by deaf communities, are full languages too, with their own grammar.",
+            "id": "Para ahli memperkirakan ada sekitar 7.000 bahasa yang masih hidup di dunia. Jumlah pastinya sulit ditetapkan, karena tidak selalu jelas apakah dua cara bertutur merupakan bahasa yang berbeda atau dialek dari satu bahasa, dan karena sebagian bahasa belum diteliti sepenuhnya. Persebaran bahasa sangat tidak merata. Beberapa bahasa, seperti bahasa Mandarin, Inggris, Hindi, dan Spanyol, memiliki ratusan juta penutur, sedangkan ribuan bahasa masing-masing dituturkan oleh kurang dari 10.000 orang. Beberapa wilayah sangat kaya bahasa: Pulau Papua (Nugini) saja memiliki sekitar seribu bahasa. Bahasa isyarat yang digunakan komunitas tuli juga merupakan bahasa yang lengkap dengan tata bahasanya sendiri."
+          }
+        },
+        {
+          "heading": {"en": "Language families", "id": "Rumpun bahasa"},
+          "body": {
+            "en": "Languages change slowly over time. When groups of speakers move apart, their speech changes in different ways until they become separate languages. Languages that come from the same ancestor form a language family. Linguists find these links by comparing words and grammar: for example, the words for numbers are similar across many related languages. The Indo-European family, which includes Portuguese, English, Hindi and Persian, has the most speakers. The Austronesian family has more than 1,200 languages, spread from Madagascar to Hawaii and Rapa Nui (Easter Island); it includes Malay and Indonesian, Tagalog, Malagasy, Maori, and Tetun. Other large families include Sino-Tibetan, Niger-Congo and Afro-Asiatic.",
+            "id": "Bahasa berubah perlahan dari waktu ke waktu. Ketika kelompok penutur berpisah, cara bicara mereka berubah dengan cara yang berbeda sampai menjadi bahasa yang terpisah. Bahasa-bahasa yang berasal dari leluhur yang sama membentuk satu rumpun bahasa. Ahli bahasa menemukan hubungan ini dengan membandingkan kata dan tata bahasa; misalnya, kata untuk bilangan mirip di banyak bahasa yang berkerabat. Rumpun Indo-Eropa, yang mencakup bahasa Portugis, Inggris, Hindi, dan Persia, memiliki penutur terbanyak. Rumpun Austronesia memiliki lebih dari 1.200 bahasa yang tersebar dari Madagaskar hingga Hawaii dan Rapa Nui (Pulau Paskah); rumpun ini mencakup bahasa Melayu dan Indonesia, Tagalog, Malagasi, Maori, serta Tetun. Rumpun besar lainnya antara lain Sino-Tibet, Niger-Kongo, dan Afro-Asia."
+          }
+        },
+        {
+          "heading": {"en": "Endangered languages", "id": "Bahasa yang terancam punah"},
+          "body": {
+            "en": "A language is endangered when children stop learning it at home. This often happens when families move to cities, when another language is used in school, work and media, or when speakers feel their language has low status. Experts estimate that around 40% of the world's languages are endangered, and many could disappear this century. When a language dies, a community can lose songs, stories, knowledge of plants and animals, and a way of seeing the world. Languages can be kept alive: parents can speak them with children, schools can teach in the mother tongue in early grades, and communities can record elders and write dictionaries. UNESCO declared 2022–2032 the International Decade of Indigenous Languages.",
+            "id": "Sebuah bahasa terancam punah ketika anak-anak berhenti mempelajarinya di rumah. Hal ini sering terjadi ketika keluarga pindah ke kota, ketika bahasa lain dipakai di sekolah, tempat kerja, dan media, atau ketika penutur merasa bahasanya kurang bergengsi. Para ahli memperkirakan sekitar 40% bahasa di dunia terancam punah, dan banyak yang bisa hilang pada abad ini. Ketika sebuah bahasa mati, masyarakat dapat kehilangan lagu, cerita, pengetahuan tentang tumbuhan dan hewan, serta cara memandang dunia. Bahasa dapat dilestarikan: orang tua dapat memakainya bersama anak, sekolah dapat mengajar dengan bahasa ibu di kelas-kelas awal, dan masyarakat dapat merekam para tetua serta menyusun kamus. UNESCO menetapkan 2022–2032 sebagai Dekade Internasional Bahasa-Bahasa Pribumi."
+          }
+        },
+        {
+          "heading": {"en": "The languages of Timor-Leste", "id": "Bahasa-bahasa di Timor-Leste"},
+          "body": {
+            "en": "Under the Constitution of 2002, Tetun and Portuguese are the official languages of Timor-Leste, and Indonesian and English are working languages. The Constitution also values the national languages, of which there are more than 30, depending on how languages and dialects are counted. Most belong to the Austronesian family, for example Tetun, Mambai, Kemak, Tokodede, Galoli, Baikeno and Waima'a. A few are Papuan (non-Austronesian) languages, such as Fataluku, Makasae, Makalero and Bunak, which are related to languages of eastern Indonesia and New Guinea. Tetun has many words borrowed from Portuguese and serves as a common language between communities. Many Timorese people speak three or four languages.",
+            "id": "Menurut Konstitusi tahun 2002, Tetun dan Portugis adalah bahasa resmi Timor-Leste, sedangkan bahasa Indonesia dan Inggris adalah bahasa kerja. Konstitusi juga menghargai bahasa-bahasa nasional, yang jumlahnya lebih dari 30, tergantung cara menghitung bahasa dan dialek. Sebagian besar termasuk rumpun Austronesia, misalnya Tetun, Mambai, Kemak, Tokodede, Galoli, Baikeno, dan Waima'a. Beberapa adalah bahasa Papua (non-Austronesia), seperti Fataluku, Makasae, Makalero, dan Bunak, yang berkerabat dengan bahasa-bahasa di Indonesia timur dan Papua. Tetun memiliki banyak kata serapan dari bahasa Portugis dan menjadi bahasa penghubung antarkomunitas. Banyak orang Timor menguasai tiga atau empat bahasa."
+          }
+        }
+      ],
+      "facts": [
+        {"label": {"en": "Living languages in the world", "id": "Bahasa yang masih hidup di dunia"}, "value": {"en": "about 7,000", "id": "sekitar 7.000"}, "year": "2024", "source": 0},
+        {"label": {"en": "Share of languages that are endangered", "id": "Bagian bahasa yang terancam punah"}, "value": {"en": "about 40% (estimate)", "id": "sekitar 40% (perkiraan)"}, "year": "2024", "source": 0},
+        {"label": {"en": "Official languages of Timor-Leste", "id": "Bahasa resmi Timor-Leste"}, "value": {"en": "Tetun and Portuguese (Constitution of 2002)", "id": "Tetun dan Portugis (Konstitusi 2002)"}, "year": "2002", "source": 2}
+      ],
+      "figure": {
+        "hint": "A simple language family tree: a trunk labelled Proto-Austronesian branching into Malagasy, Malay/Indonesian, Tagalog, Tetun, Mambai and Maori; beside it a separate small tree labelled Papuan languages of Timor with branches Fataluku, Makasae and Bunak. Labels: Ancestor language, Austronesian family, Papuan family, Tetun, Fataluku, Maori.",
+        "caption": {
+          "en": "Languages with a common ancestor form a family, like branches of a tree.",
+          "id": "Bahasa-bahasa yang berleluhur sama membentuk satu rumpun, seperti cabang-cabang pohon.",
+          "pt": "As línguas com um antepassado comum formam uma família, como os ramos de uma árvore.",
+          "tet": "Lian sira ho beiala ida de'it halo família ida, hanesan ai-sanak husi ai-hun ida."
+        }
+      },
+      "sources": [
+        {"title": "How many languages are there in the world?", "publisher": "Ethnologue (SIL International)", "url": "https://www.ethnologue.com/insights/how-many-languages/", "year": "2024"},
+        {"title": "Austronesian languages", "publisher": "Encyclopaedia Britannica", "url": "https://www.britannica.com/topic/Austronesian-languages", "year": "2024"},
+        {"title": "East Timor (Timor-Leste)", "publisher": "Encyclopaedia Britannica", "url": "https://www.britannica.com/place/East-Timor", "year": "2024"}
+      ],
+      "related": ["tl.culture.tetun_language", "w.human_origins.peopling_asia_pacific", "w.culture_arts.arts_around_the_world", "w.inventions.printing", "atlas:languages_official"],
+      "tags": ["communication", "history", "geography", "language", "linguistics", "culture"],
+      "quiz": [
+        {
+          "q": {"en": "About how many languages are spoken in the world today?", "id": "Kira-kira berapa banyak bahasa yang dituturkan di dunia saat ini?"},
+          "options": {"en": ["About 70", "About 700", "About 7,000", "About 70,000"], "id": ["Sekitar 70", "Sekitar 700", "Sekitar 7.000", "Sekitar 70.000"]},
+          "answer": 2,
+          "explain": {"en": "Ethnologue and UNESCO estimate about 7,000 living languages.", "id": "Ethnologue dan UNESCO memperkirakan ada sekitar 7.000 bahasa yang masih hidup."}
+        },
+        {
+          "q": {"en": "Which language of Timor-Leste is a Papuan (non-Austronesian) language?", "id": "Bahasa manakah di Timor-Leste yang termasuk bahasa Papua (non-Austronesia)?"},
+          "options": {"en": ["Fataluku", "Tetun", "Mambai", "Portuguese"], "id": ["Fataluku", "Tetun", "Mambai", "Portugis"]},
+          "answer": 0,
+          "explain": {"en": "Fataluku, spoken in the far east of Timor-Leste, is a Papuan language; Tetun and Mambai are Austronesian, and Portuguese is Indo-European.", "id": "Fataluku, yang dituturkan di ujung timur Timor-Leste, adalah bahasa Papua; Tetun dan Mambai termasuk Austronesia, sedangkan Portugis termasuk Indo-Eropa."}
+        },
+        {
+          "q": {"en": "When is a language most at risk of disappearing?", "id": "Kapan sebuah bahasa paling berisiko punah?"},
+          "options": {"en": ["When it is written down", "When children stop learning it at home", "When it borrows new words", "When it is used on the radio"], "id": ["Ketika bahasa itu dituliskan", "Ketika anak-anak berhenti mempelajarinya di rumah", "Ketika bahasa itu menyerap kata baru", "Ketika bahasa itu dipakai di radio"]},
+          "answer": 1,
+          "explain": {"en": "If children no longer learn a language, it will have no new speakers when the older generation is gone.", "id": "Jika anak-anak tidak lagi mempelajari sebuah bahasa, bahasa itu tidak akan punya penutur baru ketika generasi tua tiada."}
+        }
+      ],
+      "review": {"version": 1, "reviewed": "2026-10-15", "status": "Written by the Lafa team from the listed sources; needs review by a subject expert", "licence": "CC BY-SA 4.0", "langs_full": ["en", "id"]}
+    },
+    {
+      "id": "w.culture_arts.arts_around_the_world",
+      "title": {
+        "en": "Arts around the world and how heritage is protected",
+        "id": "Seni di seluruh dunia dan cara melindungi warisan budaya",
+        "pt": "As artes pelo mundo e como se protege o património",
+        "tet": "Arte iha mundu tomak no oinsá proteje patrimóniu"
+      },
+      "summary": {
+        "en": "Every culture creates art: pictures and carvings, music, dance, weaving and stories. Living traditions like these are called intangible cultural heritage, and UNESCO helps countries protect them, including Timor-Leste's tais.",
+        "id": "Setiap budaya menciptakan seni: gambar dan ukiran, musik, tari, tenun, dan cerita. Tradisi hidup seperti ini disebut warisan budaya takbenda, dan UNESCO membantu negara-negara melindunginya, termasuk tais dari Timor-Leste.",
+        "pt": "Todas as culturas criam arte: pinturas e esculturas, música, dança, tecelagem e histórias. Tradições vivas como estas chamam-se património cultural imaterial, e a UNESCO ajuda os países a protegê-las, incluindo o tais de Timor-Leste.",
+        "tet": "Kultura hotu kria arte: pintura no ai-kuru, múzika, dansa, soru no ai-knanoik. Tradisaun moris hanesan ne'e naran patrimóniu kulturál imateriál, no UNESCO ajuda nasaun sira atu proteje sira, inklui tais husi Timor-Leste."
+      },
+      "objectives": {
+        "en": [
+          "You will describe several forms of art found around the world.",
+          "You will explain what intangible cultural heritage is and how UNESCO helps protect it.",
+          "You will explain why tais is important and how it is being safeguarded."
+        ],
+        "id": [
+          "Kamu akan menjelaskan beberapa bentuk seni yang ada di seluruh dunia.",
+          "Kamu akan menjelaskan apa itu warisan budaya takbenda dan bagaimana UNESCO membantu melindunginya.",
+          "Kamu akan menjelaskan mengapa tais penting dan bagaimana tais dilestarikan."
+        ],
+        "pt": [
+          "Vais descrever várias formas de arte que existem pelo mundo.",
+          "Vais explicar o que é o património cultural imaterial e como a UNESCO ajuda a protegê-lo.",
+          "Vais explicar porque é que o tais é importante e como está a ser salvaguardado."
+        ],
+        "tet": [
+          "Ita sei esplika forma arte oioin ne'ebé iha mundu.",
+          "Ita sei esplika saida mak patrimóniu kulturál imateriál no oinsá UNESCO ajuda proteje nia.",
+          "Ita sei esplika tanba sa mak tais importante no oinsá ema proteje nia."
+        ]
+      },
+      "sections": [
+        {
+          "heading": {"en": "Visual arts", "id": "Seni rupa"},
+          "body": {
+            "en": "Visual arts are things made to be seen: drawings, paintings, carvings, sculptures, pottery, masks and buildings. People have made pictures for tens of thousands of years. Some of the oldest known cave paintings, found on the island of Sulawesi in Indonesia, are more than 40,000 years old, and rock art is also found in caves in the east of Timor-Leste. Art can decorate everyday objects, show the power of leaders, tell religious stories or simply express feelings. Materials depend on what is available: wood, stone, clay, bone, shell, metal and plant dyes. In Timor-Leste, carvings on sacred houses (uma lulik), wooden figures and decorated objects carry meaning about ancestors and family.",
+            "id": "Seni rupa adalah karya yang dibuat untuk dilihat: gambar, lukisan, ukiran, patung, tembikar, topeng, dan bangunan. Manusia telah membuat gambar selama puluhan ribu tahun. Beberapa lukisan gua tertua yang diketahui, di Pulau Sulawesi, Indonesia, berumur lebih dari 40.000 tahun, dan seni cadas juga ditemukan di gua-gua di bagian timur Timor-Leste. Seni dapat menghiasi benda sehari-hari, menunjukkan kekuasaan pemimpin, menceritakan kisah keagamaan, atau sekadar mengungkapkan perasaan. Bahannya bergantung pada apa yang tersedia: kayu, batu, tanah liat, tulang, kerang, logam, dan pewarna dari tumbuhan. Di Timor-Leste, ukiran pada rumah adat (uma lulik), patung kayu, dan benda berhias mengandung makna tentang leluhur dan keluarga."
+          }
+        },
+        {
+          "heading": {"en": "Music, dance and storytelling", "id": "Musik, tari, dan bercerita"},
+          "body": {
+            "en": "Music and dance are found in every human society. People sing to work together, to celebrate, to mourn and to pray. Instruments are made from what is at hand: drums from wood and animal skin, flutes from bamboo, gongs from metal, and strings from plant fibres or wire. Dance often tells a story or marks an important event such as a harvest, a wedding or the welcome of guests. In Timor-Leste, the tebe circle dance and the likurai dance with small drums are performed at ceremonies and celebrations. Storytelling passes on history, values and humour from one generation to the next, often long before the stories are ever written down, like the legend of the crocodile that became Timor.",
+            "id": "Musik dan tari ada di setiap masyarakat manusia. Orang bernyanyi untuk bekerja bersama, merayakan, berduka, dan berdoa. Alat musik dibuat dari bahan yang ada: gendang dari kayu dan kulit hewan, seruling dari bambu, gong dari logam, dan dawai dari serat tumbuhan atau kawat. Tari sering menceritakan sebuah kisah atau menandai peristiwa penting seperti panen, pernikahan, atau penyambutan tamu. Di Timor-Leste, tari lingkaran tebe dan tari likurai dengan gendang kecil dipentaskan dalam upacara dan perayaan. Bercerita mewariskan sejarah, nilai-nilai, dan humor dari satu generasi ke generasi berikutnya, sering kali jauh sebelum cerita itu dituliskan, seperti legenda buaya yang menjadi Pulau Timor."
+          }
+        },
+        {
+          "heading": {"en": "Weaving and textiles", "id": "Tenun dan kain"},
+          "body": {
+            "en": "Weaving means crossing threads at right angles to make cloth. It is one of the oldest crafts in the world. Across Southeast Asia, women have long woven richly patterned cloth on simple backstrap looms, where the weaver's own body keeps the threads tight. Many weavers use the ikat technique: parts of the threads are tied and dyed before weaving, so the pattern appears as the cloth is made. Colours traditionally come from plants and other natural materials. Patterns can show which place or family a person comes from. Tais, the handwoven cloth of Timor-Leste, is worn at ceremonies, given as a gift, exchanged in marriage arrangements and used to welcome and honour guests.",
+            "id": "Menenun berarti menyilangkan benang secara tegak lurus untuk membuat kain. Ini salah satu kerajinan tertua di dunia. Di seluruh Asia Tenggara, kaum perempuan sejak lama menenun kain bermotif indah dengan alat tenun gendong sederhana, di mana tubuh penenun sendiri menjaga benang tetap tegang. Banyak penenun memakai teknik ikat: sebagian benang diikat dan dicelup sebelum ditenun, sehingga motif muncul ketika kain dibuat. Warna secara tradisional berasal dari tumbuhan dan bahan alami lain. Motif dapat menunjukkan asal daerah atau keluarga seseorang. Tais, kain tenun tangan Timor-Leste, dipakai dalam upacara, diberikan sebagai hadiah, dipertukarkan dalam adat perkawinan, serta dipakai untuk menyambut dan menghormati tamu."
+          }
+        },
+        {
+          "heading": {"en": "Protecting living heritage", "id": "Melindungi warisan budaya yang hidup"},
+          "body": {
+            "en": "Heritage is what we receive from past generations and want to pass on. Some heritage is tangible, such as old buildings and objects. Other heritage is intangible: skills, music, dance, rituals, stories and knowledge that live in people. In 2003 UNESCO member states adopted the Convention for the Safeguarding of the Intangible Cultural Heritage. Countries can propose traditions for UNESCO lists; one list is for heritage in need of urgent safeguarding. In 2021 tais was inscribed on that urgent list, because fewer young people were learning to weave and some patterns, dyes and meanings risked being lost. Safeguarding means supporting weavers, teaching young people, recording patterns and helping weavers earn a fair income.",
+            "id": "Warisan budaya adalah apa yang kita terima dari generasi sebelumnya dan ingin kita wariskan. Sebagian warisan bersifat benda, seperti bangunan dan benda kuno. Warisan lainnya bersifat takbenda: keterampilan, musik, tari, ritual, cerita, dan pengetahuan yang hidup dalam diri manusia. Pada tahun 2003, negara-negara anggota UNESCO mengesahkan Konvensi tentang Perlindungan Warisan Budaya Takbenda. Negara dapat mengusulkan tradisi untuk dimasukkan ke daftar UNESCO; salah satunya daftar warisan yang memerlukan perlindungan mendesak. Pada tahun 2021 tais dimasukkan ke daftar mendesak itu, karena makin sedikit anak muda yang belajar menenun dan sebagian motif, pewarna, serta maknanya terancam hilang. Melindungi berarti mendukung penenun, mengajari anak muda, mendokumentasikan motif, dan membantu penenun memperoleh penghasilan yang layak."
+          }
+        }
+      ],
+      "facts": [
+        {"label": {"en": "UNESCO Intangible Heritage Convention adopted", "id": "Konvensi Warisan Budaya Takbenda UNESCO disahkan"}, "value": {"en": "2003", "id": "2003"}, "year": "2003", "source": 0},
+        {"label": {"en": "Tais inscribed on the Urgent Safeguarding List", "id": "Tais masuk Daftar Perlindungan Mendesak"}, "value": {"en": "2021", "id": "2021"}, "year": "2021", "source": 1},
+        {"label": {"en": "Age of some of the oldest known cave paintings (Sulawesi)", "id": "Umur beberapa lukisan gua tertua yang diketahui (Sulawesi)"}, "value": {"en": "more than 40,000 years", "id": "lebih dari 40.000 tahun"}, "year": "", "source": 2}
+      ],
+      "figure": {
+        "hint": "A woman weaving tais on a backstrap loom, seated on the ground, with the loom strap around her back and the warp tied to a post. Labels: Backstrap, Warp threads, Weft thread, Heddle stick, Finished tais pattern.",
+        "caption": {
+          "en": "Weaving tais on a backstrap loom: the weaver's body keeps the threads tight.",
+          "id": "Menenun tais dengan alat tenun gendong: tubuh penenun menjaga benang tetap tegang.",
+          "pt": "Tecer tais num tear de cintura: o corpo da tecedeira mantém os fios esticados.",
+          "tet": "Soru tais: isin husi feto-soru mak ka'er kabas atu metin."
+        }
+      },
+      "sources": [
+        {"title": "Text of the Convention for the Safeguarding of the Intangible Cultural Heritage", "publisher": "UNESCO", "url": "https://ich.unesco.org/en/convention", "year": "2003"},
+        {"title": "Lists of Intangible Cultural Heritage and the Register of good safeguarding practices", "publisher": "UNESCO", "url": "https://ich.unesco.org/en/lists", "year": "2024"},
+        {"title": "Rock art", "publisher": "Encyclopaedia Britannica", "url": "https://www.britannica.com/art/rock-art", "year": "2024"}
+      ],
+      "related": ["tl.culture.tais", "tl.culture.tebe_bidu", "tl.culture.uma_lulik", "tl.culture.lafaek_legend", "w.culture_arts.languages_of_the_world", "atlas:heritage_places"],
+      "tags": ["arts", "history", "culture", "heritage", "weaving", "music"],
+      "quiz": [
+        {
+          "q": {"en": "Which of these is intangible cultural heritage?", "id": "Manakah yang termasuk warisan budaya takbenda?"},
+          "options": {"en": ["An old stone fort", "A museum building", "A bronze statue", "The skill of weaving tais"], "id": ["Benteng batu tua", "Gedung museum", "Patung perunggu", "Keterampilan menenun tais"]},
+          "answer": 3,
+          "explain": {"en": "Intangible heritage is living knowledge and skills held by people, such as weaving, music and dance.", "id": "Warisan takbenda adalah pengetahuan dan keterampilan hidup yang dimiliki manusia, seperti menenun, musik, dan tari."}
+        },
+        {
+          "q": {"en": "In which year was tais inscribed on UNESCO's Urgent Safeguarding List?", "id": "Pada tahun berapa tais dimasukkan ke Daftar Perlindungan Mendesak UNESCO?"},
+          "options": {"en": ["2002", "2021", "2003", "1975"], "id": ["2002", "2021", "2003", "1975"]},
+          "answer": 1,
+          "explain": {"en": "Tais was inscribed in 2021 because the tradition was at risk and needed urgent support.", "id": "Tais dimasukkan pada tahun 2021 karena tradisi ini terancam dan memerlukan dukungan mendesak."}
+        },
+        {
+          "q": {"en": "In the ikat technique, what happens before weaving?", "id": "Dalam teknik ikat, apa yang dilakukan sebelum menenun?"},
+          "options": {"en": ["The cloth is printed by machine", "Parts of the threads are tied and dyed", "The threads are cut into short pieces", "The finished cloth is painted"], "id": ["Kain dicetak dengan mesin", "Sebagian benang diikat dan dicelup", "Benang dipotong pendek-pendek", "Kain jadi dicat"]},
+          "answer": 1,
+          "explain": {"en": "In ikat, threads are tied in places and dyed, so the pattern appears when the cloth is woven.", "id": "Dalam ikat, benang diikat di bagian tertentu lalu dicelup, sehingga motif muncul ketika kain ditenun."}
+        }
+      ],
+      "review": {"version": 1, "reviewed": "2026-10-15", "status": "Written by the Lafa team from the listed sources; needs review by a subject expert", "licence": "CC BY-SA 4.0", "langs_full": ["en", "id"]}
+    }
+  ],
+  "coverage": [
+    {"topic": {"en": "Languages of the world", "id": "Bahasa-bahasa di dunia"}, "status": "available", "article": "w.culture_arts.languages_of_the_world"},
+    {"topic": {"en": "Arts around the world", "id": "Seni di seluruh dunia"}, "status": "available", "article": "w.culture_arts.arts_around_the_world"},
+    {"topic": {"en": "World religions and beliefs", "id": "Agama dan kepercayaan di dunia"}, "status": "planned", "article": ""},
+    {"topic": {"en": "Writing systems and alphabets", "id": "Sistem tulisan dan abjad"}, "status": "planned", "article": ""},
+    {"topic": {"en": "World Heritage Sites", "id": "Situs Warisan Dunia"}, "status": "planned", "article": ""},
+    {"topic": {"en": "Sport and games around the world", "id": "Olahraga dan permainan di dunia"}, "status": "planned", "article": ""}
+  ]
+}

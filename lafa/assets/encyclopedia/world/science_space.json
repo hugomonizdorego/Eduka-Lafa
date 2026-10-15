@@ -1,0 +1,246 @@
+{
+  "area": "world",
+  "category": "science_space",
+  "articles": [
+    {
+      "id": "w.science_space.solar_system",
+      "title": {
+        "en": "The Solar System: the Sun, planets and Moon",
+        "id": "Tata Surya: Matahari, planet, dan Bulan",
+        "pt": "O Sistema Solar: o Sol, os planetas e a Lua",
+        "tet": "Sistema Solár: loron, planeta sira no fulan"
+      },
+      "summary": {
+        "en": "The Solar System is the Sun and everything that travels around it: eight planets, dwarf planets, moons, asteroids and comets. It formed about 4.6 billion years ago, and it is far bigger than most drawings show.",
+        "id": "Tata Surya adalah Matahari dan semua benda yang beredar mengelilinginya: delapan planet, planet kerdil, satelit, asteroid, dan komet. Tata Surya terbentuk sekitar 4,6 miliar tahun lalu dan jauh lebih luas daripada yang tampak di kebanyakan gambar.",
+        "pt": "O Sistema Solar é o Sol e tudo o que gira à sua volta: oito planetas, planetas anões, luas, asteroides e cometas. Formou-se há cerca de 4,6 mil milhões de anos e é muito maior do que a maioria dos desenhos mostra.",
+        "tet": "Sistema Solár mak loron no buat hotu ne'ebé la'o haleu nia: planeta ualu, planeta anaun, fulan sira, asteroide no kometa. Nia moris tinan biliaun 4,6 liuba, no nia boot liu fali dezeñu barak."
+      },
+      "objectives": {
+        "en": [
+          "You will name the eight planets in order from the Sun.",
+          "You will explain what a dwarf planet is and why Pluto is one.",
+          "You will describe how the Moon causes tides and how big the Solar System really is."
+        ],
+        "id": [
+          "Kamu akan menyebutkan delapan planet secara berurutan dari Matahari.",
+          "Kamu akan menjelaskan apa itu planet kerdil dan mengapa Pluto termasuk planet kerdil.",
+          "Kamu akan menjelaskan bagaimana Bulan menyebabkan pasang surut dan seberapa luas Tata Surya sebenarnya."
+        ],
+        "pt": [
+          "Vais nomear os oito planetas por ordem a partir do Sol.",
+          "Vais explicar o que é um planeta anão e porque é que Plutão é um deles.",
+          "Vais descrever como a Lua causa as marés e qual é o verdadeiro tamanho do Sistema Solar."
+        ],
+        "tet": [
+          "Ita sei temi planeta ualu tuir orden husi loron.",
+          "Ita sei esplika saida mak planeta anaun no tanba sa mak Plutaun planeta anaun ida.",
+          "Ita sei esplika oinsá fulan halo tasi sa'e no tun, no Sistema Solár boot oinsá."
+        ]
+      },
+      "sections": [
+        {
+          "heading": {"en": "The Sun at the centre", "id": "Matahari di pusat"},
+          "body": {
+            "en": "The Sun is a star: a huge ball of very hot gas, mostly hydrogen and helium. Deep in its core, hydrogen is turned into helium by nuclear fusion, which releases enormous amounts of energy as light and heat. The Sun holds about 99.8% of all the mass in the Solar System, and its gravity keeps the planets moving around it in paths called orbits. The Earth is on average about 150 million kilometres from the Sun, so sunlight takes a little more than 8 minutes to reach us. The Sun and planets formed together about 4.6 billion years ago from a spinning cloud of gas and dust. Never look straight at the Sun: it can permanently damage your eyes.",
+            "id": "Matahari adalah sebuah bintang: bola gas yang sangat panas dan besar, sebagian besar terdiri atas hidrogen dan helium. Di intinya, hidrogen diubah menjadi helium melalui fusi nuklir, yang melepaskan energi sangat besar berupa cahaya dan panas. Matahari menyimpan sekitar 99,8% seluruh massa Tata Surya, dan gravitasinya membuat planet-planet terus bergerak mengelilinginya pada lintasan yang disebut orbit. Jarak rata-rata Bumi ke Matahari sekitar 150 juta kilometer, sehingga cahaya Matahari memerlukan sedikit lebih dari 8 menit untuk sampai ke kita. Matahari dan planet-planet terbentuk bersama sekitar 4,6 miliar tahun lalu dari awan gas dan debu yang berputar. Jangan pernah menatap Matahari secara langsung karena dapat merusak mata secara permanen."
+          }
+        },
+        {
+          "heading": {"en": "Eight planets", "id": "Delapan planet"},
+          "body": {
+            "en": "In order from the Sun, the eight planets are Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus and Neptune. The first four are small rocky planets. Mercury is the closest and smallest; Venus is the hottest, because its thick carbon dioxide atmosphere traps heat; Earth is the only planet known to have life and liquid water on its surface; Mars is a cold red desert. Beyond Mars lies the asteroid belt. Then come the giant planets. Jupiter and Saturn are gas giants, mostly hydrogen and helium; Jupiter is the largest planet, and Saturn has the most famous rings. Uranus and Neptune are ice giants, cold and blue-green. All four giant planets have rings and many moons.",
+            "id": "Berurutan dari Matahari, kedelapan planet itu adalah Merkurius, Venus, Bumi, Mars, Jupiter, Saturnus, Uranus, dan Neptunus. Empat yang pertama adalah planet kecil berbatu. Merkurius paling dekat dan paling kecil; Venus paling panas karena atmosfer karbon dioksidanya yang tebal menahan panas; Bumi adalah satu-satunya planet yang diketahui memiliki kehidupan dan air cair di permukaannya; Mars adalah gurun merah yang dingin. Di luar Mars terdapat sabuk asteroid. Setelah itu ada planet-planet raksasa. Jupiter dan Saturnus adalah raksasa gas yang sebagian besar terdiri atas hidrogen dan helium; Jupiter adalah planet terbesar, dan Saturnus memiliki cincin yang paling terkenal. Uranus dan Neptunus adalah raksasa es yang dingin dan berwarna biru kehijauan. Keempat planet raksasa memiliki cincin dan banyak satelit."
+          }
+        },
+        {
+          "heading": {"en": "Dwarf planets, asteroids and comets", "id": "Planet kerdil, asteroid, dan komet"},
+          "body": {
+            "en": "In 2006 the International Astronomical Union (IAU) agreed on a definition of a planet. A planet must orbit the Sun, be big enough for its own gravity to make it round, and have cleared other objects from the area around its orbit. Pluto is round and orbits the Sun, but it shares its region with many other icy bodies, so it was placed in a new group: dwarf planets. Five dwarf planets are officially recognised: Ceres (in the asteroid belt), Pluto, Haumea, Makemake and Eris. Asteroids are rocky leftovers from the formation of the Solar System. Comets are balls of ice and dust from the outer Solar System; when they come near the Sun, they grow glowing tails.",
+            "id": "Pada tahun 2006, Persatuan Astronomi Internasional (IAU) menyepakati definisi planet. Planet harus mengorbit Matahari, cukup besar sehingga gravitasinya membuatnya bulat, dan telah membersihkan benda-benda lain di sekitar orbitnya. Pluto bulat dan mengorbit Matahari, tetapi berbagi wilayah dengan banyak benda es lainnya, sehingga dimasukkan ke kelompok baru: planet kerdil. Lima planet kerdil diakui secara resmi: Ceres (di sabuk asteroid), Pluto, Haumea, Makemake, dan Eris. Asteroid adalah sisa batuan dari pembentukan Tata Surya. Komet adalah bongkahan es dan debu dari bagian luar Tata Surya; ketika mendekati Matahari, komet memiliki ekor yang bercahaya."
+          }
+        },
+        {
+          "heading": {"en": "The Moon and the tides", "id": "Bulan dan pasang surut"},
+          "body": {
+            "en": "The Moon is Earth's only natural satellite. It is about a quarter of Earth's width and orbits at an average distance of about 384,400 kilometres. The Moon makes no light of its own; we see sunlight reflected from it, and its phases change as it orbits the Earth about once a month. The Moon's gravity pulls on the oceans, making the water bulge a little on the side facing the Moon and on the opposite side. As the Earth turns, a coast passes through these bulges, so most places have two high tides and two low tides each day. The Sun's gravity also helps: when Sun and Moon line up, at new and full moon, tides are largest. Fishers and gleaners on Timor-Leste's reefs plan their work around these tides.",
+            "id": "Bulan adalah satu-satunya satelit alami Bumi. Lebarnya sekitar seperempat lebar Bumi dan mengorbit pada jarak rata-rata sekitar 384.400 kilometer. Bulan tidak menghasilkan cahaya sendiri; yang kita lihat adalah cahaya Matahari yang dipantulkannya, dan fasenya berubah ketika mengelilingi Bumi kira-kira sekali sebulan. Gravitasi Bulan menarik air laut sehingga air sedikit menggembung di sisi yang menghadap Bulan dan di sisi sebaliknya. Ketika Bumi berputar, pantai melewati gembungan ini, sehingga kebanyakan tempat mengalami dua kali pasang dan dua kali surut setiap hari. Gravitasi Matahari juga berperan: saat Matahari dan Bulan segaris, pada bulan baru dan bulan purnama, pasang surut paling besar. Nelayan dan pencari hasil laut di terumbu Timor-Leste mengatur pekerjaannya sesuai pasang surut ini."
+          }
+        },
+        {
+          "heading": {"en": "How big is the Solar System?", "id": "Seberapa luas Tata Surya?"},
+          "body": {
+            "en": "Pictures in books squeeze the planets close together, but the real distances are huge. Imagine the Sun as a football about 22 centimetres wide. On that scale the Earth would be a peppercorn about 2 millimetres wide, roughly 24 metres away. Jupiter would be a large marble about 120 metres away, and Neptune a small bead around 700 metres away. Most of the Solar System is empty space. Scientists measure these distances in astronomical units (AU): 1 AU is the average Earth–Sun distance, about 150 million kilometres. Neptune is about 30 AU from the Sun. Beyond it lie the icy Kuiper Belt and, much farther, the cloud of comets thought to surround the whole system.",
+            "id": "Gambar di buku memperlihatkan planet-planet berdekatan, padahal jarak sebenarnya sangat jauh. Bayangkan Matahari sebesar bola sepak dengan lebar sekitar 22 sentimeter. Dengan skala itu, Bumi hanya sebesar butir merica sekitar 2 milimeter, kira-kira 24 meter jauhnya. Jupiter seperti kelereng besar sekitar 120 meter jauhnya, dan Neptunus seperti manik kecil sekitar 700 meter jauhnya. Sebagian besar Tata Surya adalah ruang kosong. Ilmuwan mengukur jarak ini dalam satuan astronomi (SA): 1 SA adalah jarak rata-rata Bumi–Matahari, sekitar 150 juta kilometer. Neptunus berjarak sekitar 30 SA dari Matahari. Di luarnya terdapat Sabuk Kuiper yang berisi benda es dan, jauh lebih jauh lagi, awan komet yang diperkirakan menyelubungi seluruh Tata Surya."
+          }
+        }
+      ],
+      "facts": [
+        {"label": {"en": "Age of the Solar System", "id": "Umur Tata Surya"}, "value": {"en": "about 4.6 billion years", "id": "sekitar 4,6 miliar tahun"}, "year": "", "source": 0},
+        {"label": {"en": "Average Earth–Sun distance (1 AU)", "id": "Jarak rata-rata Bumi–Matahari (1 SA)"}, "value": {"en": "about 150 million km", "id": "sekitar 150 juta km"}, "year": "", "source": 0},
+        {"label": {"en": "Average Earth–Moon distance", "id": "Jarak rata-rata Bumi–Bulan"}, "value": {"en": "about 384,400 km", "id": "sekitar 384.400 km"}, "year": "", "source": 1},
+        {"label": {"en": "Pluto reclassified as a dwarf planet", "id": "Pluto digolongkan sebagai planet kerdil"}, "value": {"en": "by the IAU in 2006", "id": "oleh IAU pada tahun 2006"}, "year": "2006", "source": 2}
+      ],
+      "figure": {
+        "hint": "A line diagram of the Solar System: the Sun on the left, then the eight planets in order on their orbits (sizes not to scale), the asteroid belt between Mars and Jupiter, and Pluto beyond Neptune marked as a dwarf planet. Labels: Sun, Rocky planets, Asteroid belt, Gas giants, Ice giants, Dwarf planet Pluto.",
+        "caption": {
+          "en": "The Sun, the eight planets in order, the asteroid belt and the dwarf planet Pluto (not to scale).",
+          "id": "Matahari, delapan planet secara berurutan, sabuk asteroid, dan planet kerdil Pluto (tidak sesuai skala).",
+          "pt": "O Sol, os oito planetas por ordem, a cintura de asteroides e o planeta anão Plutão (fora de escala).",
+          "tet": "Loron, planeta ualu tuir orden, kintura asteroide no planeta anaun Plutaun (la tuir eskala)."
+        }
+      },
+      "sources": [
+        {"title": "Our Solar System", "publisher": "NASA Science", "url": "https://science.nasa.gov/solar-system/", "year": "2024"},
+        {"title": "Earth's Moon", "publisher": "NASA Science", "url": "https://science.nasa.gov/moon/", "year": "2024"},
+        {"title": "Solar system", "publisher": "Encyclopaedia Britannica", "url": "https://www.britannica.com/science/solar-system", "year": "2024"}
+      ],
+      "related": ["w.earth.formation", "w.science_space.scientific_method", "w.geography_oceans.continents_oceans", "atlas:earth_age"],
+      "tags": ["astronomy", "physics", "planets", "moon", "tides", "space"],
+      "quiz": [
+        {
+          "q": {"en": "Which planet is the largest in the Solar System?", "id": "Planet manakah yang terbesar di Tata Surya?"},
+          "options": {"en": ["Saturn", "Jupiter", "Neptune", "Earth"], "id": ["Saturnus", "Jupiter", "Neptunus", "Bumi"]},
+          "answer": 1,
+          "explain": {"en": "Jupiter, a gas giant, is the largest planet in the Solar System.", "id": "Jupiter, sebuah raksasa gas, adalah planet terbesar di Tata Surya."}
+        },
+        {
+          "q": {"en": "Why is Pluto called a dwarf planet?", "id": "Mengapa Pluto disebut planet kerdil?"},
+          "options": {"en": ["It does not orbit the Sun", "It is not round", "It has not cleared other objects from its orbit", "It is made of gas"], "id": ["Pluto tidak mengorbit Matahari", "Pluto tidak bulat", "Pluto belum membersihkan benda lain dari orbitnya", "Pluto terbuat dari gas"]},
+          "answer": 2,
+          "explain": {"en": "Pluto is round and orbits the Sun, but it shares its region with many icy bodies, so it fails the third rule of the IAU definition.", "id": "Pluto bulat dan mengorbit Matahari, tetapi berbagi wilayah dengan banyak benda es, sehingga tidak memenuhi syarat ketiga definisi IAU."}
+        },
+        {
+          "q": {"en": "What mainly causes the tides in the sea?", "id": "Apa penyebab utama pasang surut air laut?"},
+          "options": {"en": ["The gravity of the Moon", "Strong winds", "Rivers flowing into the sea", "Earthquakes"], "id": ["Gravitasi Bulan", "Angin kencang", "Sungai yang mengalir ke laut", "Gempa bumi"]},
+          "answer": 0,
+          "explain": {"en": "The Moon's gravity pulls the ocean into bulges; the Sun's gravity adds to this effect.", "id": "Gravitasi Bulan menarik air laut sehingga menggembung; gravitasi Matahari menambah efek ini."}
+        }
+      ],
+      "review": {"version": 1, "reviewed": "2026-10-15", "status": "Written by the Lafa team from the listed sources; needs review by a subject expert", "licence": "CC BY-SA 4.0", "langs_full": ["en", "id"]}
+    },
+    {
+      "id": "w.science_space.scientific_method",
+      "title": {
+        "en": "The scientific method: how science finds things out",
+        "id": "Metode ilmiah: cara sains menemukan pengetahuan",
+        "pt": "O método científico: como a ciência descobre as coisas",
+        "tet": "Métodu sientífiku: oinsá sénsia buka hatene buat ruma"
+      },
+      "summary": {
+        "en": "Science is a careful way of learning about the world. Scientists ask questions, suggest testable explanations called hypotheses, test them with experiments and observations, and share their evidence so that others can check it.",
+        "id": "Sains adalah cara yang cermat untuk mempelajari dunia. Ilmuwan mengajukan pertanyaan, membuat dugaan yang dapat diuji yang disebut hipotesis, mengujinya dengan percobaan dan pengamatan, lalu membagikan buktinya agar orang lain dapat memeriksanya.",
+        "pt": "A ciência é uma forma cuidadosa de conhecer o mundo. Os cientistas fazem perguntas, propõem explicações que podem ser testadas, chamadas hipóteses, testam-nas com experiências e observações e partilham as provas para que outros as possam verificar.",
+        "tet": "Sénsia mak dalan ida ne'ebé kuidadu atu aprende kona-ba mundu. Sientista sira husu pergunta, fó esplikasaun ne'ebé bele koko, naran ipóteze, koko ho esperiénsia no observasaun, no fahe sira-nia prova atu ema seluk bele haree fali."
+      },
+      "objectives": {
+        "en": [
+          "You will list the main steps of a scientific investigation.",
+          "You will explain the difference between a hypothesis and evidence.",
+          "You will plan a simple, fair experiment in your classroom."
+        ],
+        "id": [
+          "Kamu akan menyebutkan langkah-langkah utama penyelidikan ilmiah.",
+          "Kamu akan menjelaskan perbedaan antara hipotesis dan bukti.",
+          "Kamu akan merancang percobaan sederhana yang adil di kelas."
+        ],
+        "pt": [
+          "Vais enumerar os principais passos de uma investigação científica.",
+          "Vais explicar a diferença entre uma hipótese e uma prova.",
+          "Vais planear uma experiência simples e justa na tua sala de aula."
+        ],
+        "tet": [
+          "Ita sei temi pasu prinsipál sira husi investigasaun sientífika ida.",
+          "Ita sei esplika diferensa entre ipóteze no prova.",
+          "Ita sei planeia esperiénsia simples no justu ida iha ita-nia sala."
+        ]
+      },
+      "sections": [
+        {
+          "heading": {"en": "Asking a question", "id": "Mengajukan pertanyaan"},
+          "body": {
+            "en": "Science begins with curiosity. You notice something and ask why or how it happens. Why do some seeds grow faster than others? Does salt water boil at a different temperature from fresh water? A good scientific question is one that can be answered by observing or measuring things. Questions about personal taste, such as which song is the most beautiful, cannot be settled by science. Before testing, scientists usually find out what is already known by reading, asking experts and looking at earlier results. Farmers, fishers and healers in Timor-Leste also observe nature carefully over many years; this kind of careful watching is an important part of science too.",
+            "id": "Sains dimulai dari rasa ingin tahu. Kamu memperhatikan sesuatu lalu bertanya mengapa atau bagaimana hal itu terjadi. Mengapa sebagian biji tumbuh lebih cepat daripada yang lain? Apakah air asin mendidih pada suhu yang berbeda dari air tawar? Pertanyaan ilmiah yang baik adalah pertanyaan yang dapat dijawab dengan mengamati atau mengukur. Pertanyaan tentang selera pribadi, misalnya lagu mana yang paling indah, tidak dapat diputuskan oleh sains. Sebelum menguji, ilmuwan biasanya mencari tahu apa yang sudah diketahui dengan membaca, bertanya kepada ahli, dan melihat hasil-hasil sebelumnya. Petani, nelayan, dan penyembuh tradisional di Timor-Leste juga mengamati alam dengan cermat selama bertahun-tahun; pengamatan cermat seperti ini juga bagian penting dari sains."
+          }
+        },
+        {
+          "heading": {"en": "Hypothesis and experiment", "id": "Hipotesis dan percobaan"},
+          "body": {
+            "en": "A hypothesis is a possible explanation or prediction that can be tested, for example: bean seeds grow taller in sunlight than in the dark. It is not just a guess: it should be based on what you already know, and it must be possible to show that it is wrong. Next you design an experiment. In a fair test you change only one thing, called the independent variable (here, the amount of light). You measure one result, the dependent variable (the height of the plants). Everything else, such as the soil, water, seeds and temperature, is kept the same; these are control variables. Repeating the test with several plants makes the result more reliable.",
+            "id": "Hipotesis adalah penjelasan atau perkiraan yang dapat diuji, misalnya: biji kacang tumbuh lebih tinggi di tempat terang daripada di tempat gelap. Hipotesis bukan sekadar tebakan: hipotesis harus didasarkan pada apa yang sudah kamu ketahui, dan harus mungkin dibuktikan salah. Selanjutnya kamu merancang percobaan. Dalam uji yang adil, kamu hanya mengubah satu hal, yang disebut variabel bebas (di sini, jumlah cahaya). Kamu mengukur satu hasil, yaitu variabel terikat (tinggi tanaman). Hal lain, seperti tanah, air, biji, dan suhu, dibuat sama; inilah variabel kontrol. Mengulang uji dengan beberapa tanaman membuat hasilnya lebih dapat dipercaya."
+          }
+        },
+        {
+          "heading": {"en": "Evidence and conclusions", "id": "Bukti dan kesimpulan"},
+          "body": {
+            "en": "During the experiment you record careful observations and measurements, often in a table, and then turn them into a graph. These records are your evidence. You then ask: do the results support the hypothesis or not? If they do not, that is still useful, because you have learned something. Scientists are honest about mistakes and about things they could not control. One experiment is rarely enough. When many tests by different people give the same answer, confidence grows. A scientific theory, such as the theory of evolution or plate tectonics, is a well-tested explanation supported by a large body of evidence, not a simple guess. Even so, science stays open to change if strong new evidence appears.",
+            "id": "Selama percobaan, kamu mencatat pengamatan dan pengukuran dengan teliti, sering kali dalam tabel, lalu mengubahnya menjadi grafik. Catatan ini adalah buktimu. Kemudian kamu bertanya: apakah hasilnya mendukung hipotesis atau tidak? Jika tidak, itu tetap berguna, karena kamu telah belajar sesuatu. Ilmuwan jujur tentang kesalahan dan tentang hal-hal yang tidak dapat mereka kendalikan. Satu percobaan jarang cukup. Ketika banyak uji oleh orang yang berbeda memberikan jawaban yang sama, keyakinan bertambah. Teori ilmiah, seperti teori evolusi atau tektonik lempeng, adalah penjelasan yang telah teruji dengan baik dan didukung oleh banyak bukti, bukan sekadar tebakan. Meski begitu, sains tetap terbuka untuk berubah jika muncul bukti baru yang kuat."
+          }
+        },
+        {
+          "heading": {"en": "Sharing results and peer review", "id": "Membagikan hasil dan telaah sejawat"},
+          "body": {
+            "en": "Science is a team effort. Scientists write up their methods and results so that others can repeat the work. Before a study is published in a scientific journal, other experts in the same field read it and look for errors, weak methods or claims that go beyond the evidence. This checking is called peer review. It does not make a study perfect, but it catches many mistakes. Other scientists may then repeat the experiment to see whether they get the same result. One of the oldest scientific journals still published, Philosophical Transactions of the Royal Society in London, began in 1665. Today scientists all over the world, including in Southeast Asia, share their work in journals and at meetings.",
+            "id": "Sains adalah kerja tim. Ilmuwan menuliskan metode dan hasilnya agar orang lain dapat mengulang penelitian tersebut. Sebelum sebuah penelitian diterbitkan di jurnal ilmiah, para ahli lain di bidang yang sama membacanya dan mencari kesalahan, metode yang lemah, atau klaim yang melampaui bukti. Pemeriksaan ini disebut telaah sejawat (peer review). Telaah ini tidak membuat penelitian sempurna, tetapi dapat menemukan banyak kesalahan. Ilmuwan lain kemudian dapat mengulang percobaan untuk melihat apakah hasilnya sama. Salah satu jurnal ilmiah tertua yang masih terbit, Philosophical Transactions of the Royal Society di London, dimulai pada tahun 1665. Kini ilmuwan di seluruh dunia, termasuk di Asia Tenggara, berbagi karya mereka melalui jurnal dan pertemuan ilmiah."
+          }
+        },
+        {
+          "heading": {"en": "A classroom experiment to try", "id": "Percobaan kelas yang bisa dicoba"},
+          "body": {
+            "en": "Question: do bean or maize seeds need light to grow tall and green? Hypothesis: seedlings kept in light will grow greener and sturdier than seedlings kept in the dark. Method: plant the same kind of seeds in six cups with the same soil. Give each cup the same amount of water every day. Put three cups in a bright place and three inside a closed box. Measure the height of each seedling and note its colour every two days for two weeks. Results: record the measurements in a table and draw a graph. Conclusion: compare the two groups. Many classes find that seedlings in the dark grow tall, thin and pale yellow, because they stretch to look for light and cannot make chlorophyll.",
+            "id": "Pertanyaan: apakah biji kacang atau jagung memerlukan cahaya untuk tumbuh tinggi dan hijau? Hipotesis: kecambah yang disimpan di tempat terang akan tumbuh lebih hijau dan kokoh daripada kecambah di tempat gelap. Cara: tanam biji yang sama jenisnya di enam gelas dengan tanah yang sama. Siram setiap gelas dengan jumlah air yang sama setiap hari. Letakkan tiga gelas di tempat terang dan tiga di dalam kotak tertutup. Ukur tinggi setiap kecambah dan catat warnanya setiap dua hari selama dua minggu. Hasil: catat pengukuran dalam tabel dan buat grafik. Kesimpulan: bandingkan kedua kelompok. Banyak kelas menemukan bahwa kecambah di tempat gelap tumbuh tinggi, kurus, dan kuning pucat, karena memanjang mencari cahaya dan tidak dapat membuat klorofil."
+          }
+        }
+      ],
+      "facts": [
+        {"label": {"en": "Royal Society of London founded", "id": "Royal Society di London didirikan"}, "value": {"en": "1660", "id": "1660"}, "year": "1660", "source": 2},
+        {"label": {"en": "First issue of Philosophical Transactions", "id": "Terbitan pertama Philosophical Transactions"}, "value": {"en": "1665", "id": "1665"}, "year": "1665", "source": 2}
+      ],
+      "figure": {
+        "hint": "A circular flow diagram of the scientific method with arrows: Question, then Hypothesis, then Experiment, then Evidence (data table and graph), then Conclusion, then Share and peer review, with an arrow back to a new Question. Labels: Question, Hypothesis, Experiment, Evidence, Conclusion, Peer review.",
+        "caption": {
+          "en": "The steps of the scientific method form a cycle: each answer leads to new questions.",
+          "id": "Langkah-langkah metode ilmiah membentuk siklus: setiap jawaban memunculkan pertanyaan baru.",
+          "pt": "Os passos do método científico formam um ciclo: cada resposta leva a novas perguntas.",
+          "tet": "Pasu sira husi métodu sientífiku halo siklu ida: resposta ida-idak lori pergunta foun."
+        }
+      },
+      "sources": [
+        {"title": "Scientific method", "publisher": "Encyclopaedia Britannica", "url": "https://www.britannica.com/science/scientific-method", "year": "2024"},
+        {"title": "Understanding Science", "publisher": "University of California Museum of Paleontology, Berkeley", "url": "https://undsci.berkeley.edu/", "year": "2022"},
+        {"title": "Royal Society", "publisher": "Encyclopaedia Britannica", "url": "https://www.britannica.com/topic/Royal-Society", "year": "2024"}
+      ],
+      "related": ["w.science_space.solar_system", "w.inventions.printing", "w.earth.plate_tectonics", "w.dinosaurs.fossils"],
+      "tags": ["physics", "biology", "chemistry", "science", "experiment", "evidence"],
+      "quiz": [
+        {
+          "q": {"en": "What is a hypothesis?", "id": "Apa itu hipotesis?"},
+          "options": {"en": ["A proven law of nature", "A list of measurements", "A graph of results", "A possible explanation that can be tested"], "id": ["Hukum alam yang sudah terbukti", "Daftar hasil pengukuran", "Grafik hasil", "Penjelasan yang mungkin dan dapat diuji"]},
+          "answer": 3,
+          "explain": {"en": "A hypothesis is a testable explanation or prediction; experiments then support it or show it is wrong.", "id": "Hipotesis adalah penjelasan atau perkiraan yang dapat diuji; percobaan kemudian mendukungnya atau menunjukkan bahwa ia salah."}
+        },
+        {
+          "q": {"en": "In a fair test, how many things should you change on purpose?", "id": "Dalam uji yang adil, berapa hal yang sengaja diubah?"},
+          "options": {"en": ["Only one", "Two", "As many as possible", "None"], "id": ["Hanya satu", "Dua", "Sebanyak mungkin", "Tidak ada"]},
+          "answer": 0,
+          "explain": {"en": "Changing only one variable means any difference in the result can be linked to that change.", "id": "Dengan mengubah hanya satu variabel, perbedaan hasil dapat dikaitkan dengan perubahan itu."}
+        },
+        {
+          "q": {"en": "What is peer review?", "id": "Apa itu telaah sejawat (peer review)?"},
+          "options": {"en": ["A vote by the public", "A test done only by the author", "Experts checking a study before it is published", "A school exam"], "id": ["Pemungutan suara oleh masyarakat", "Uji yang hanya dilakukan penulis", "Pemeriksaan penelitian oleh para ahli sebelum diterbitkan", "Ujian sekolah"]},
+          "answer": 2,
+          "explain": {"en": "In peer review, other experts in the field check the methods and claims of a study before it is published.", "id": "Dalam telaah sejawat, ahli lain di bidang yang sama memeriksa metode dan klaim penelitian sebelum diterbitkan."}
+        }
+      ],
+      "review": {"version": 1, "reviewed": "2026-10-15", "status": "Written by the Lafa team from the listed sources; needs review by a subject expert", "licence": "CC BY-SA 4.0", "langs_full": ["en", "id"]}
+    }
+  ],
+  "coverage": [
+    {"topic": {"en": "The Solar System", "id": "Tata Surya"}, "status": "available", "article": "w.science_space.solar_system"},
+    {"topic": {"en": "The scientific method", "id": "Metode ilmiah"}, "status": "available", "article": "w.science_space.scientific_method"},
+    {"topic": {"en": "Stars and galaxies", "id": "Bintang dan galaksi"}, "status": "planned", "article": ""},
+    {"topic": {"en": "Atoms and elements", "id": "Atom dan unsur"}, "status": "planned", "article": ""},
+    {"topic": {"en": "Forces, energy and motion", "id": "Gaya, energi, dan gerak"}, "status": "planned", "article": ""},
+    {"topic": {"en": "Space exploration", "id": "Penjelajahan antariksa"}, "status": "planned", "article": ""}
+  ]
+}

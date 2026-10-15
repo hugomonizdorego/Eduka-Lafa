@@ -1,0 +1,267 @@
+{
+  "area": "world",
+  "category": "industrial_revolution",
+  "articles": [
+    {
+      "id": "w.industrial_revolution.steam_factories",
+      "title": {
+        "en": "Steam power and the first factories",
+        "id": "Tenaga uap dan pabrik-pabrik pertama",
+        "pt": "A energia a vapor e as primeiras fábricas",
+        "tet": "Enerjia vapór no fábrika dahuluk sira"
+      },
+      "summary": {
+        "en": "From about 1760, Britain began to make goods with machines instead of by hand. New textile machines, steam engines and railways changed how people worked and travelled.",
+        "id": "Sejak sekitar tahun 1760, Britania mulai membuat barang dengan mesin, bukan lagi dengan tangan. Mesin tekstil baru, mesin uap, dan kereta api mengubah cara orang bekerja dan bepergian.",
+        "pt": "A partir de cerca de 1760, a Grã-Bretanha começou a produzir bens com máquinas em vez de à mão. Novas máquinas têxteis, motores a vapor e caminhos de ferro mudaram a forma como as pessoas trabalhavam e viajavam.",
+        "tet": "Hahú husi tinan 1760 resin, Grã-Bretanha hahú halo sasán ho mákina, la'ós ho liman. Mákina foun atu halo hena, mákina vapór no komboiu muda oinsá ema servisu no la'o."
+      },
+      "objectives": {
+        "en": [
+          "You will explain why the Industrial Revolution began in Britain.",
+          "You will describe how textile machines and steam engines were used in factories.",
+          "You will name the first important railways and say why they mattered."
+        ],
+        "id": [
+          "Kamu akan menjelaskan mengapa Revolusi Industri dimulai di Britania.",
+          "Kamu akan menggambarkan cara mesin tekstil dan mesin uap digunakan di pabrik.",
+          "Kamu akan menyebutkan jalur kereta api penting yang pertama dan alasan pentingnya."
+        ],
+        "pt": [
+          "Vais explicar porque é que a Revolução Industrial começou na Grã-Bretanha.",
+          "Vais descrever como as máquinas têxteis e os motores a vapor eram usados nas fábricas.",
+          "Vais nomear os primeiros caminhos de ferro importantes e dizer porque foram importantes."
+        ],
+        "tet": [
+          "Ita sei esplika tanba sá mak Revolusaun Industriál hahú iha Grã-Bretanha.",
+          "Ita sei esplika oinsá ema uza mákina hena no mákina vapór iha fábrika.",
+          "Ita sei hatene naran komboiu dahuluk sira no tanba sá sira importante."
+        ]
+      },
+      "sections": [
+        {
+          "heading": {"en": "Why Britain?", "id": "Mengapa dimulai di Britania?"},
+          "body": {
+            "en": "The Industrial Revolution was a great change in how goods were made. It began in Britain around 1760 and continued until about 1840. Before this, most people were farmers, and cloth, tools and furniture were made by hand at home or in small workshops. Britain had several advantages. It had plenty of coal and iron ore under the ground. It had rivers and canals for moving heavy goods, and a large trade network across the world, including colonies that supplied raw materials and bought finished products. Banks and merchants had money to invest in new ideas, and many inventors were looking for ways to make work faster and cheaper.",
+            "id": "Revolusi Industri adalah perubahan besar dalam cara membuat barang. Perubahan ini dimulai di Britania sekitar tahun 1760 dan berlangsung hingga kira-kira tahun 1840. Sebelumnya, kebanyakan orang adalah petani, sedangkan kain, perkakas, dan perabot dibuat dengan tangan di rumah atau di bengkel kecil. Britania memiliki beberapa keunggulan. Tanahnya kaya akan batu bara dan bijih besi. Sungai dan kanal memudahkan pengangkutan barang berat, dan jaringan dagangnya luas di seluruh dunia, termasuk daerah jajahan yang memasok bahan mentah dan membeli barang jadi. Bank dan pedagang memiliki modal untuk mendanai gagasan baru, dan banyak penemu mencari cara agar pekerjaan menjadi lebih cepat dan lebih murah."
+          }
+        },
+        {
+          "heading": {"en": "Machines for making cloth", "id": "Mesin untuk membuat kain"},
+          "body": {
+            "en": "The first big changes came in the cotton and wool industry. Making thread by hand with a spinning wheel was slow: one person made one thread at a time. Around 1764, James Hargreaves built the spinning jenny, which let one worker spin several threads at once. In 1769, Richard Arkwright patented the water frame, a spinning machine driven by a water wheel that made strong thread. Later, Samuel Crompton's spinning mule (1779) combined both ideas, and power looms wove the thread into cloth. These machines were too big and costly for homes, so owners put many of them together in large buildings next to fast rivers. These were among the first factories.",
+            "id": "Perubahan besar pertama terjadi di industri kapas dan wol. Memintal benang dengan roda pintal tangan berjalan lambat: satu orang hanya menghasilkan satu benang pada satu waktu. Sekitar tahun 1764, James Hargreaves membuat spinning jenny, yang memungkinkan satu pekerja memintal beberapa benang sekaligus. Pada tahun 1769, Richard Arkwright mematenkan water frame, mesin pintal yang digerakkan kincir air dan menghasilkan benang yang kuat. Kemudian, spinning mule karya Samuel Crompton (1779) menggabungkan kedua gagasan itu, dan alat tenun bertenaga mesin menenun benang menjadi kain. Mesin-mesin ini terlalu besar dan mahal untuk rumah, sehingga para pemilik menempatkan banyak mesin bersama-sama di gedung besar di tepi sungai yang deras. Itulah beberapa pabrik pertama."
+          }
+        },
+        {
+          "heading": {"en": "Steam engines", "id": "Mesin uap"},
+          "body": {
+            "en": "Steam engines changed where and how factories could work. In 1712, Thomas Newcomen built a steam engine to pump water out of deep coal mines. It worked, but it wasted a lot of fuel because its cylinder was heated and then cooled again with every stroke. From 1769, James Watt improved the design. His most important idea was a separate condenser, which cooled the steam in a different chamber so that the main cylinder stayed hot. This saved a great deal of coal. Working with the businessman Matthew Boulton, Watt later made engines that could turn wheels. Now factories could use coal and steam instead of rivers, so they could be built in towns.",
+            "id": "Mesin uap mengubah tempat dan cara pabrik bekerja. Pada tahun 1712, Thomas Newcomen membuat mesin uap untuk memompa air keluar dari tambang batu bara yang dalam. Mesin itu berfungsi, tetapi boros bahan bakar karena silindernya dipanaskan lalu didinginkan lagi pada setiap gerakan. Sejak tahun 1769, James Watt memperbaiki rancangannya. Gagasannya yang terpenting adalah kondensor terpisah, yaitu ruang lain untuk mendinginkan uap sehingga silinder utama tetap panas. Cara ini menghemat banyak batu bara. Bersama pengusaha Matthew Boulton, Watt kemudian membuat mesin yang dapat memutar roda. Sejak itu pabrik dapat memakai batu bara dan uap sebagai pengganti tenaga sungai, sehingga pabrik bisa dibangun di kota."
+          }
+        },
+        {
+          "heading": {"en": "Life in the factory", "id": "Kehidupan di pabrik"},
+          "body": {
+            "en": "A factory brought many workers and machines together under one roof. Work was divided into small, repeated tasks, and everyone had to start and stop at the same time, following the clock and the factory bell. Machines could run day and night, so shifts of 12 hours or more were common. Factories produced far more cloth, and much more cheaply, than home workers could. Britain imported huge amounts of raw cotton. Much of it was grown on plantations in the Americas by enslaved African people, so the new wealth of the factories was linked to great injustice. Cheap British cloth was sold around the world, including in Asia, where it competed with local weavers.",
+            "id": "Pabrik mengumpulkan banyak pekerja dan mesin di bawah satu atap. Pekerjaan dibagi menjadi tugas-tugas kecil yang diulang-ulang, dan semua orang harus mulai serta berhenti pada waktu yang sama, mengikuti jam dan lonceng pabrik. Mesin bisa berjalan siang dan malam, sehingga giliran kerja 12 jam atau lebih adalah hal biasa. Pabrik menghasilkan kain jauh lebih banyak dan lebih murah daripada pekerja rumahan. Britania mengimpor kapas mentah dalam jumlah sangat besar. Sebagian besar kapas itu ditanam di perkebunan di benua Amerika oleh orang Afrika yang diperbudak, sehingga kekayaan baru dari pabrik berkaitan dengan ketidakadilan yang besar. Kain murah buatan Britania dijual ke seluruh dunia, termasuk ke Asia, dan bersaing dengan para penenun setempat."
+          }
+        },
+        {
+          "heading": {"en": "The first railways", "id": "Jalur kereta api pertama"},
+          "body": {
+            "en": "Steam engines were soon put on wheels. In 1825, the Stockton and Darlington Railway opened in north-east England. George Stephenson's locomotive, Locomotion No. 1, pulled wagons of coal and some passengers. In 1830, the Liverpool and Manchester Railway opened. It linked two big cities and was the first railway between cities where all trains were pulled by steam locomotives and ran to a timetable, carrying both passengers and goods. Railways spread quickly across Britain and then the world. Journeys that once took days now took hours, and coal, food, letters and newspapers moved fast. Steamships did the same at sea, linking Europe more closely with ports in Asia and the Pacific.",
+            "id": "Tak lama kemudian mesin uap dipasang di atas roda. Pada tahun 1825, jalur kereta api Stockton dan Darlington dibuka di timur laut Inggris. Lokomotif buatan George Stephenson, Locomotion No. 1, menarik gerbong berisi batu bara dan beberapa penumpang. Pada tahun 1830, jalur kereta api Liverpool dan Manchester dibuka. Jalur ini menghubungkan dua kota besar dan menjadi jalur antarkota pertama yang semua keretanya ditarik lokomotif uap dan berjalan sesuai jadwal, mengangkut penumpang maupun barang. Jalur kereta api cepat menyebar ke seluruh Britania, lalu ke seluruh dunia. Perjalanan yang dulu memakan waktu berhari-hari kini cukup beberapa jam, dan batu bara, makanan, surat, serta surat kabar bergerak cepat. Kapal uap membawa perubahan serupa di laut dan mendekatkan Eropa dengan pelabuhan-pelabuhan di Asia dan Pasifik."
+          }
+        }
+      ],
+      "facts": [
+        {"label": {"en": "Newcomen's steam engine", "id": "Mesin uap Newcomen"}, "value": {"en": "built in 1712 to pump water from mines", "id": "dibuat tahun 1712 untuk memompa air dari tambang"}, "year": "1712", "source": 1},
+        {"label": {"en": "Watt's separate condenser", "id": "Kondensor terpisah Watt"}, "value": {"en": "patented in 1769", "id": "dipatenkan tahun 1769"}, "year": "1769", "source": 2},
+        {"label": {"en": "Stockton and Darlington Railway opens", "id": "Jalur kereta Stockton dan Darlington dibuka"}, "value": {"en": "1825", "id": "1825"}, "year": "1825", "source": 0},
+        {"label": {"en": "Liverpool and Manchester Railway opens", "id": "Jalur kereta Liverpool dan Manchester dibuka"}, "value": {"en": "1830", "id": "1830"}, "year": "1830", "source": 3}
+      ],
+      "figure": {
+        "hint": "Simple cut-away diagram of a Watt steam engine connected to a factory: label the coal fire and boiler, the cylinder and piston, the separate condenser, the beam, and the flywheel that drives the spinning machines by a belt.",
+        "caption": {
+          "en": "A steam engine burns coal to make steam; the steam pushes a piston, and the moving parts turn the factory machines.",
+          "id": "Mesin uap membakar batu bara untuk menghasilkan uap; uap mendorong piston, dan bagian-bagian yang bergerak memutar mesin-mesin pabrik.",
+          "pt": "Um motor a vapor queima carvão para produzir vapor; o vapor empurra um êmbolo e as peças em movimento fazem girar as máquinas da fábrica.",
+          "tet": "Mákina vapór sunu karvaun atu halo vapór; vapór dudu pistaun, no parte ne'ebé muda halo mákina fábrika nian servisu."
+        }
+      },
+      "sources": [
+        {"title": "Industrial Revolution", "publisher": "Encyclopaedia Britannica", "url": "https://www.britannica.com/event/Industrial-Revolution", "year": "2024"},
+        {"title": "Thomas Newcomen", "publisher": "Encyclopaedia Britannica", "url": "https://www.britannica.com/biography/Thomas-Newcomen", "year": "2024"},
+        {"title": "James Watt", "publisher": "Encyclopaedia Britannica", "url": "https://www.britannica.com/biography/James-Watt", "year": "2024"},
+        {"title": "Liverpool and Manchester Railway", "publisher": "Encyclopaedia Britannica", "url": "https://www.britannica.com/topic/Liverpool-and-Manchester-Railway", "year": "2024"}
+      ],
+      "related": ["w.industrial_revolution.changes_society", "w.inventions.electricity_communication", "w.inventions.printing", "w.colonialism.age_of_sail"],
+      "tags": ["history", "technology", "physics", "economics", "steam", "factory", "railway", "textiles"],
+      "quiz": [
+        {
+          "q": {"en": "What did the spinning jenny allow one worker to do?", "id": "Apa yang dapat dilakukan satu pekerja berkat spinning jenny?"},
+          "options": {
+            "en": ["Pump water out of mines", "Spin several threads at once", "Pull wagons along a railway", "Weave baskets from palm leaves"],
+            "id": ["Memompa air keluar dari tambang", "Memintal beberapa benang sekaligus", "Menarik gerbong di jalur kereta api", "Menganyam keranjang dari daun palem"]
+          },
+          "answer": 1,
+          "explain": {"en": "James Hargreaves' spinning jenny (around 1764) had several spindles, so one person could spin several threads at the same time.", "id": "Spinning jenny buatan James Hargreaves (sekitar 1764) memiliki beberapa kumparan, sehingga satu orang dapat memintal beberapa benang sekaligus."}
+        },
+        {
+          "q": {"en": "What was James Watt's most important improvement to the steam engine?", "id": "Apa perbaikan terpenting James Watt pada mesin uap?"},
+          "options": {
+            "en": ["A boiler made of wood", "A water wheel for mills", "A separate condenser that saved fuel", "The first railway timetable"],
+            "id": ["Ketel uap dari kayu", "Kincir air untuk penggilingan", "Kondensor terpisah yang menghemat bahan bakar", "Jadwal kereta api pertama"]
+          },
+          "answer": 2,
+          "explain": {"en": "Watt's separate condenser cooled the steam outside the main cylinder, so the cylinder stayed hot and much less coal was needed.", "id": "Kondensor terpisah Watt mendinginkan uap di luar silinder utama, sehingga silinder tetap panas dan batu bara yang dibutuhkan jauh lebih sedikit."}
+        },
+        {
+          "q": {"en": "Which railway, opened in 1830, linked two big cities using only steam trains?", "id": "Jalur kereta api manakah, dibuka tahun 1830, yang menghubungkan dua kota besar hanya dengan kereta uap?"},
+          "options": {
+            "en": ["Stockton and Darlington Railway", "London Underground", "Trans-Siberian Railway", "Liverpool and Manchester Railway"],
+            "id": ["Jalur Stockton dan Darlington", "Kereta bawah tanah London", "Jalur Trans-Siberia", "Jalur Liverpool dan Manchester"]
+          },
+          "answer": 3,
+          "explain": {"en": "The Liverpool and Manchester Railway opened in 1830. The Stockton and Darlington Railway (1825) came earlier but was mainly for coal and did not link two big cities.", "id": "Jalur Liverpool dan Manchester dibuka tahun 1830. Jalur Stockton dan Darlington (1825) lebih dulu, tetapi terutama untuk batu bara dan tidak menghubungkan dua kota besar."}
+        }
+      ],
+      "review": {"version": 1, "reviewed": "2026-10-15", "status": "Written by the Lafa team from the listed sources; needs review by a subject expert", "licence": "CC BY-SA 4.0", "langs_full": ["en", "id"]}
+    },
+    {
+      "id": "w.industrial_revolution.changes_society",
+      "title": {
+        "en": "How industry changed society",
+        "id": "Bagaimana industri mengubah masyarakat",
+        "pt": "Como a indústria mudou a sociedade",
+        "tet": "Oinsá indústria muda sosiedade"
+      },
+      "summary": {
+        "en": "Factories and machines made many goods cheaper, but they also brought crowded cities, child labour and pollution. Over time, workers, reformers and new laws improved conditions, and industry spread across the world.",
+        "id": "Pabrik dan mesin membuat banyak barang menjadi lebih murah, tetapi juga membawa kota yang padat, pekerja anak, dan pencemaran. Seiring waktu, para pekerja, pembaru, dan undang-undang baru memperbaiki keadaan, dan industri menyebar ke seluruh dunia.",
+        "pt": "As fábricas e as máquinas tornaram muitos bens mais baratos, mas também trouxeram cidades sobrelotadas, trabalho infantil e poluição. Com o tempo, trabalhadores, reformadores e novas leis melhoraram as condições, e a indústria espalhou-se pelo mundo.",
+        "tet": "Fábrika no mákina halo sasán barak sai baratu, maibé mós lori sidade ne'ebé nakonu ho ema, labarik ne'ebé servisu, no poluisaun. Ho tempu, traballadór sira, reformadór sira no lei foun halo kondisaun di'ak liu, no indústria to'o rai barak iha mundu."
+      },
+      "objectives": {
+        "en": [
+          "You will describe how cities and work changed during the Industrial Revolution.",
+          "You will explain how laws and trade unions improved workers' lives.",
+          "You will compare the first and second industrial revolutions."
+        ],
+        "id": [
+          "Kamu akan menjelaskan perubahan kota dan pekerjaan selama Revolusi Industri.",
+          "Kamu akan menjelaskan bagaimana undang-undang dan serikat pekerja memperbaiki kehidupan pekerja.",
+          "Kamu akan membandingkan revolusi industri pertama dan kedua."
+        ],
+        "pt": [
+          "Vais descrever como as cidades e o trabalho mudaram durante a Revolução Industrial.",
+          "Vais explicar como as leis e os sindicatos melhoraram a vida dos trabalhadores.",
+          "Vais comparar a primeira e a segunda revoluções industriais."
+        ],
+        "tet": [
+          "Ita sei esplika oinsá sidade no servisu muda durante Revolusaun Industriál.",
+          "Ita sei esplika oinsá lei no sindikatu sira ajuda moris traballadór sira nian.",
+          "Ita sei kompara revolusaun industriál dahuluk no daruak."
+        ]
+      },
+      "sections": [
+        {
+          "heading": {"en": "Moving to the cities", "id": "Pindah ke kota"},
+          "body": {
+            "en": "As factories grew, millions of people left the countryside to look for work in towns. Manchester, Birmingham, Leeds and Glasgow grew very fast. By 1851, about half of the people in Britain lived in towns and cities. Britain was one of the first countries where this happened. Housing was built quickly and cheaply. Many families shared small rooms, often without clean water or toilets. Rubbish and sewage went into the streets and rivers, so diseases such as cholera and typhoid spread easily. Over time, cities built sewers, clean water supplies and public parks. Doctors and engineers learned that clean water was one of the best ways to protect people's health.",
+            "id": "Ketika pabrik makin banyak, jutaan orang meninggalkan desa untuk mencari kerja di kota. Manchester, Birmingham, Leeds, dan Glasgow tumbuh sangat cepat. Pada tahun 1851, sekitar separuh penduduk Britania tinggal di kota. Britania termasuk negara pertama yang mengalami hal ini. Rumah-rumah dibangun dengan cepat dan murah. Banyak keluarga berbagi kamar sempit, sering tanpa air bersih atau jamban. Sampah dan kotoran mengalir ke jalan dan sungai, sehingga penyakit seperti kolera dan tifus mudah menyebar. Lama-kelamaan, kota-kota membangun saluran pembuangan, jaringan air bersih, dan taman umum. Para dokter dan insinyur menyadari bahwa air bersih adalah salah satu cara terbaik untuk melindungi kesehatan masyarakat."
+          }
+        },
+        {
+          "heading": {"en": "Workers and child labour", "id": "Pekerja dan pekerja anak"},
+          "body": {
+            "en": "Factory work was hard. Adults often worked 12 to 14 hours a day, six days a week, for low wages. Machines had no safety guards, and accidents could cost workers their fingers, arms or even their lives. Children worked too, as they had on farms before, but now in noisy mills and dark coal mines. Small children crawled under moving machines to clean them, or sat alone for hours opening air doors in mines. Many were tired, injured or unable to go to school. Women also worked in factories and mines, usually for less pay than men. Poor families depended on every wage, so it was hard for parents to keep their children out of work.",
+            "id": "Bekerja di pabrik sangat berat. Orang dewasa sering bekerja 12 sampai 14 jam sehari, enam hari seminggu, dengan upah rendah. Mesin tidak memiliki pelindung, dan kecelakaan bisa membuat pekerja kehilangan jari, lengan, bahkan nyawa. Anak-anak juga bekerja, seperti dulu di ladang, tetapi kini di pabrik yang bising dan tambang batu bara yang gelap. Anak-anak kecil merangkak di bawah mesin yang bergerak untuk membersihkannya, atau duduk sendirian berjam-jam membuka pintu udara di tambang. Banyak yang kelelahan, terluka, atau tidak dapat bersekolah. Perempuan juga bekerja di pabrik dan tambang, biasanya dengan upah lebih rendah daripada laki-laki. Keluarga miskin bergantung pada setiap upah, sehingga orang tua sulit menjauhkan anak-anak mereka dari pekerjaan."
+          }
+        },
+        {
+          "heading": {"en": "Reforms and trade unions", "id": "Reformasi dan serikat pekerja"},
+          "body": {
+            "en": "Slowly, people pushed for change. Writers, doctors and politicians described the bad conditions, and Parliament collected evidence from workers. The Factory Act of 1833 banned children under nine from working in most textile mills, limited the working hours of older children, and created inspectors to check that the law was obeyed. The Mines Act of 1842 stopped women, girls and young boys from working underground. Workers also joined together in trade unions, so that they could ask employers for better pay and safer work as a group instead of alone. At first the law made it very hard for unions to act, but during the 1800s they gained more rights. Free schooling for all children came later.",
+            "id": "Perlahan-lahan, orang mendesak adanya perubahan. Para penulis, dokter, dan politikus menggambarkan keadaan yang buruk, dan Parlemen mengumpulkan kesaksian dari para pekerja. Undang-Undang Pabrik tahun 1833 melarang anak di bawah sembilan tahun bekerja di sebagian besar pabrik tekstil, membatasi jam kerja anak yang lebih tua, dan mengangkat pengawas untuk memastikan undang-undang itu dipatuhi. Undang-Undang Tambang tahun 1842 melarang perempuan, anak perempuan, dan anak laki-laki kecil bekerja di bawah tanah. Para pekerja juga bersatu dalam serikat pekerja agar dapat menuntut upah lebih baik dan pekerjaan lebih aman secara bersama-sama, bukan sendiri-sendiri. Awalnya hukum sangat menyulitkan serikat pekerja, tetapi selama abad ke-19 mereka memperoleh lebih banyak hak. Sekolah gratis untuk semua anak baru datang kemudian."
+          }
+        },
+        {
+          "heading": {"en": "Coal, smoke and pollution", "id": "Batu bara, asap, dan pencemaran"},
+          "body": {
+            "en": "Industry ran on coal. Burning it powered engines, furnaces and, later, power stations, but it filled the air with smoke and soot. Buildings turned black, and many people in industrial cities suffered from lung diseases. Factories also poured waste and dyes into rivers. Burning coal also releases carbon dioxide, a gas that traps heat in the atmosphere. Since the Industrial Revolution, the amount of carbon dioxide in the air has risen by about half, mainly because people burn coal, oil and gas. Scientists agree that this is the main cause of today's climate change. Countries such as Timor-Leste have produced very little of this pollution, but they can be strongly affected by rising seas and changing rainfall.",
+            "id": "Industri digerakkan oleh batu bara. Pembakaran batu bara menjalankan mesin, tungku, dan kemudian pembangkit listrik, tetapi juga memenuhi udara dengan asap dan jelaga. Bangunan menjadi hitam, dan banyak warga kota industri menderita penyakit paru-paru. Pabrik juga membuang limbah dan zat pewarna ke sungai. Pembakaran batu bara juga melepaskan karbon dioksida, gas yang memerangkap panas di atmosfer. Sejak Revolusi Industri, jumlah karbon dioksida di udara telah naik sekitar separuhnya, terutama karena manusia membakar batu bara, minyak, dan gas. Para ilmuwan sepakat bahwa inilah penyebab utama perubahan iklim saat ini. Negara seperti Timor-Leste hanya menghasilkan sedikit sekali pencemaran ini, tetapi dapat terdampak berat oleh naiknya permukaan laut dan berubahnya pola hujan."
+          }
+        },
+        {
+          "heading": {"en": "Industry spreads: a second industrial revolution", "id": "Industri menyebar: revolusi industri kedua"},
+          "body": {
+            "en": "In the 1800s, industry spread from Britain to Belgium, France, Germany and the United States. From 1868, Japan's new Meiji government built railways, factories and shipyards very quickly. Around 1870 a second industrial revolution began. New ways of making cheap steel, such as the Bessemer process, allowed bigger bridges, ships and buildings. Electricity powered lights and motors, and the telephone, new chemicals and new medicines appeared. Oil and the petrol engine led to cars. Industry was now based more on science and research laboratories. In colonies such as Portuguese Timor, the new world economy mostly meant growing export crops like coffee, while the factories stayed far away.",
+            "id": "Pada abad ke-19, industri menyebar dari Britania ke Belgia, Prancis, Jerman, dan Amerika Serikat. Sejak tahun 1868, pemerintahan Meiji yang baru di Jepang membangun jalur kereta api, pabrik, dan galangan kapal dengan sangat cepat. Sekitar tahun 1870 dimulailah revolusi industri kedua. Cara-cara baru membuat baja murah, seperti proses Bessemer, memungkinkan pembangunan jembatan, kapal, dan gedung yang lebih besar. Listrik menyalakan lampu dan motor, dan muncul pula telepon, bahan kimia baru, serta obat-obatan baru. Minyak bumi dan mesin bensin melahirkan mobil. Industri kini lebih banyak bertumpu pada ilmu pengetahuan dan laboratorium penelitian. Di daerah jajahan seperti Timor Portugis, ekonomi dunia yang baru terutama berarti menanam tanaman ekspor seperti kopi, sementara pabrik-pabriknya tetap jauh."
+          }
+        }
+      ],
+      "facts": [
+        {"label": {"en": "Factory Act: minimum working age in textile mills", "id": "UU Pabrik: usia kerja minimum di pabrik tekstil"}, "value": {"en": "9 years old", "id": "9 tahun"}, "year": "1833", "source": 1},
+        {"label": {"en": "Share of Britain's people living in towns", "id": "Penduduk Britania yang tinggal di kota"}, "value": {"en": "about half", "id": "sekitar separuh"}, "year": "1851", "source": 0},
+        {"label": {"en": "Carbon dioxide in the air", "id": "Karbon dioksida di udara"}, "value": {"en": "about 280 ppm before industry; about 420 ppm in 2023", "id": "sekitar 280 ppm sebelum industri; sekitar 420 ppm pada 2023"}, "year": "2023", "source": 2}
+      ],
+      "figure": {
+        "hint": "Two side-by-side scenes, 'Before' and 'After' industry: a village with fields and home spinning, and an industrial town with a factory chimney, crowded houses, a railway and a polluted river. Labels: village, home workshop, factory, smoke, crowded housing, railway.",
+        "caption": {
+          "en": "Industry moved work from homes and fields into factories, and moved people from villages into crowded towns.",
+          "id": "Industri memindahkan pekerjaan dari rumah dan ladang ke pabrik, serta memindahkan orang dari desa ke kota yang padat.",
+          "pt": "A indústria levou o trabalho das casas e dos campos para as fábricas, e levou as pessoas das aldeias para cidades sobrelotadas.",
+          "tet": "Indústria lori servisu husi uma no to'os ba fábrika, no lori ema husi foho ba sidade ne'ebé nakonu ho ema."
+        }
+      },
+      "sources": [
+        {"title": "Industrial Revolution", "publisher": "Encyclopaedia Britannica", "url": "https://www.britannica.com/event/Industrial-Revolution", "year": "2024"},
+        {"title": "1833 Factory Act", "publisher": "The National Archives (UK)", "url": "https://www.nationalarchives.gov.uk/education/resources/1833-factory-act/", "year": "2024"},
+        {"title": "Climate Change: Atmospheric Carbon Dioxide", "publisher": "NOAA Climate.gov", "url": "https://www.climate.gov/news-features/understanding-climate/climate-change-atmospheric-carbon-dioxide", "year": "2024"},
+        {"title": "Bessemer process", "publisher": "Encyclopaedia Britannica", "url": "https://www.britannica.com/technology/Bessemer-process", "year": "2024"}
+      ],
+      "related": ["w.industrial_revolution.steam_factories", "w.life_environment.climate_change", "w.inventions.electricity_communication", "w.colonialism.decolonisation", "atlas:coffee"],
+      "tags": ["history", "civics", "economics", "environment", "child labour", "trade unions", "pollution", "cities"],
+      "quiz": [
+        {
+          "q": {"en": "What did Britain's Factory Act of 1833 do?", "id": "Apa isi Undang-Undang Pabrik Britania tahun 1833?"},
+          "options": {
+            "en": ["It closed all coal mines", "It banned children under nine from most textile mills", "It built the first railway", "It made all factories move to the countryside"],
+            "id": ["Menutup semua tambang batu bara", "Melarang anak di bawah sembilan tahun bekerja di sebagian besar pabrik tekstil", "Membangun jalur kereta api pertama", "Memindahkan semua pabrik ke pedesaan"]
+          },
+          "answer": 1,
+          "explain": {"en": "The 1833 Factory Act set a minimum age of nine in most textile mills, limited children's hours and created factory inspectors.", "id": "Undang-Undang Pabrik 1833 menetapkan usia minimum sembilan tahun di sebagian besar pabrik tekstil, membatasi jam kerja anak, dan mengangkat pengawas pabrik."}
+        },
+        {
+          "q": {"en": "Why did diseases such as cholera spread easily in early industrial cities?", "id": "Mengapa penyakit seperti kolera mudah menyebar di kota-kota industri awal?"},
+          "options": {
+            "en": ["Because there were too many trees", "Because winters were very cold", "Because factories gave out bad medicine", "Because of dirty water and no proper sewers"],
+            "id": ["Karena terlalu banyak pohon", "Karena musim dinginnya sangat dingin", "Karena pabrik membagikan obat yang buruk", "Karena air kotor dan tidak ada saluran pembuangan yang layak"]
+          },
+          "answer": 3,
+          "explain": {"en": "Crowded housing without clean water or sewers let sewage reach drinking water, and cholera spreads through dirty water.", "id": "Permukiman padat tanpa air bersih atau saluran pembuangan membuat kotoran mencemari air minum, dan kolera menyebar melalui air yang kotor."}
+        },
+        {
+          "q": {"en": "Which of these belongs to the second industrial revolution (from about 1870)?", "id": "Manakah yang termasuk revolusi industri kedua (sejak sekitar 1870)?"},
+          "options": {
+            "en": ["Electric lights and cheap steel", "The spinning jenny", "Newcomen's mine pump", "Water wheels beside rivers"],
+            "id": ["Lampu listrik dan baja murah", "Spinning jenny", "Pompa tambang Newcomen", "Kincir air di tepi sungai"]
+          },
+          "answer": 0,
+          "explain": {"en": "The second industrial revolution brought electricity, cheap steel, new chemicals and oil. The other options come from the 1700s.", "id": "Revolusi industri kedua membawa listrik, baja murah, bahan kimia baru, dan minyak bumi. Pilihan lainnya berasal dari abad ke-18."}
+        }
+      ],
+      "review": {"version": 1, "reviewed": "2026-10-15", "status": "Written by the Lafa team from the listed sources; needs review by a subject expert", "licence": "CC BY-SA 4.0", "langs_full": ["en", "id"]}
+    }
+  ],
+  "coverage": [
+    {"topic": {"en": "Steam power and the first factories", "id": "Tenaga uap dan pabrik-pabrik pertama"}, "status": "available", "article": "w.industrial_revolution.steam_factories"},
+    {"topic": {"en": "How industry changed society", "id": "Bagaimana industri mengubah masyarakat"}, "status": "available", "article": "w.industrial_revolution.changes_society"},
+    {"topic": {"en": "Cotton, trade and slavery", "id": "Kapas, perdagangan, dan perbudakan"}, "status": "planned", "article": ""},
+    {"topic": {"en": "Japan's Meiji industrialisation", "id": "Industrialisasi Jepang pada masa Meiji"}, "status": "planned", "article": ""},
+    {"topic": {"en": "Workers' rights today", "id": "Hak-hak pekerja saat ini"}, "status": "planned", "article": ""},
+    {"topic": {"en": "Ships, steam and global trade", "id": "Kapal, uap, dan perdagangan global"}, "status": "planned", "article": ""}
+  ]
+}
