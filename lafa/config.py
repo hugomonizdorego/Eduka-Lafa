@@ -1,5 +1,8 @@
 """LAFA preferences (XDG configuration, 0600).
 
+Lafa 0.3: Lafa Desktop is the Ensiklopédia Timór-Leste (pages in SECTIONS);
+older start pages map to the nearest new page (LEGACY_PAGES).
+
 LAFA's main functions need no login, no AI key and no internet, so there are
 no AI provider, model, key or credit settings. Settings files written by LAFA
 0.1.x contained such fields; they are ignored now. The first time such a file
@@ -29,12 +32,17 @@ IDLE_ACTIVITIES = ["idle", "reading", "thinking", "walking", "sitting", "gaming"
 # Activities that are entertainment only (off unless the user enables them).
 ENTERTAINMENT = {"bathing", "toilet", "magic_show", "comedian", "party", "gaming"}
 
-# The six sections of LAFA Desktop (0.2.0).
-SECTIONS = ["home", "study", "library", "timor", "activities", "oshelp"]
-# Start pages saved by LAFA 0.1.x and where they live now.
-LEGACY_PAGES = {"classroom": "study", "teachers": "study", "exams": "study", "languages": "study", "coding": "study",
-                "learn": "library", "hub": "library", "chat": "home", "files": "library", "culture": "timor", "live": "timor",
-                "homework": "activities", "reminders": "activities", "report": "activities", "os_help": "oshelp"}
+# The pages of Lafa Desktop 0.3 (Ensiklopédia Timór-Leste).
+SECTIONS = ["home", "encyclopedia", "map", "timeline", "places", "calendar", "quiz", "language", "paths"]
+# Start pages saved by Lafa 0.1.x / 0.2.x and where they live now.
+LEGACY_PAGES = {"study": "paths", "library": "encyclopedia", "timor": "encyclopedia", "activities": "home", "oshelp": "home",
+                "classroom": "paths", "teachers": "paths", "exams": "quiz", "languages": "language", "coding": "home",
+                "learn": "encyclopedia", "hub": "home", "chat": "home", "files": "home", "culture": "encyclopedia", "live": "home",
+                "homework": "home", "reminders": "home", "report": "paths", "os_help": "home"}
+LEVELS = ["eb1", "eb2", "eb3", "es", "sup"]
+# Old age levels (0.2) → school levels of the Ministry of Education (0.3).
+LEGACY_LEVELS = {"early": "eb1", "primary": "eb2", "middle": "eb3", "school": "eb3", "secondary": "es", "university": "sup", "adult": "sup", "senior": "sup"}
+VOCAB_TARGETS = ["pt", "id", "en", "ms", "fil", "th", "vi", "km", "lo", "my", "zh", "ta", "es", "fr"]
 # Fields of LAFA 0.1.x that are no longer used (AI providers and keys).
 LEGACY_KEYS = {"provider", "models", "preset", "transcription_model", "ollama_url", "compatible_url"}
 
@@ -109,6 +117,14 @@ class Settings:
     reduce_motion: bool = False       # no walking, gestures or fades
     entertainment: bool = False       # magician, mind reader, jokes, bathing/toilet scenes
     messages_per_hour: int = 4        # limit for spontaneous messages
+    # Lafa 0.3 — Ensiklopédia Timór-Leste
+    learner_name: str = ""            # shown in the greeting; empty = the system user's first name
+    school_level: str = "eb3"         # eb1 eb2 eb3 es sup (Ministry of Education levels)
+    theme: str = "auto"               # light | dark | auto (auto follows Eduka-Settings)
+    text_scale: int = 100             # 100 / 115 / 130 / 150 %
+    vocab_lang: str = "pt"            # target language in "Aprende lian"
+    quiz_timer: bool = False          # millionaire quiz with a timer per question
+    knowledge_tips: bool = True       # the Virtual Assistant shares facts, words and holidays
 
     @property
     def locale(self):return default_language() if self.language=="system" else self.language
@@ -130,11 +146,13 @@ class Settings:
         defaults=cls();values={}
         start=data.get('start_page')
         if isinstance(start,str) and start in LEGACY_PAGES:data=dict(data,start_page=LEGACY_PAGES[start])
-        enums={'language':{'system','en','id','pt','tet'},'costume':{'traditional','tuxedo','casual'},'walk_speed':{'slow','normal','fast'},'animation_speed':{'slow','normal','fast'},'character_size':{'small','normal','large'},'start_page':set(SECTIONS),'panel_edge':{'bottom','top'},'learner_level':{'school','early','primary','middle','secondary','university','adult','senior'}}
+        level=data.get('school_level')
+        if not isinstance(level,str) or level not in LEVELS:data=dict(data,school_level=LEGACY_LEVELS.get(data.get('learner_level'),'eb3'))
+        enums={'school_level':set(LEVELS),'theme':{'light','dark','auto'},'vocab_lang':set(VOCAB_TARGETS),'language':{'system','en','id','pt','tet'},'costume':{'traditional','tuxedo','casual'},'walk_speed':{'slow','normal','fast'},'animation_speed':{'slow','normal','fast'},'character_size':{'small','normal','large'},'start_page':set(SECTIONS),'panel_edge':{'bottom','top'},'learner_level':{'school','early','primary','middle','secondary','university','adult','senior'}}
         for name,choices in enums.items():
             value=data.get(name,getattr(defaults,name))
             values[name]=value if isinstance(value,str) and value in choices else getattr(defaults,name)
-        for name in ['companion','roam','speak_answers','personal_activities','cultural_cards','positive_messages','local_news_updates','panel_roam','greet_by_time','hover_questions','chatter','fun_messages','follow_eduka_panel','follow_eduka_theme','notifications','auto_update','start_with_session','click_recommendations','smooth_scrolling','depth_effects','quiet_mode','reduce_motion','entertainment']:
+        for name in ['companion','roam','speak_answers','personal_activities','cultural_cards','positive_messages','local_news_updates','panel_roam','greet_by_time','hover_questions','chatter','fun_messages','follow_eduka_panel','follow_eduka_theme','notifications','auto_update','start_with_session','click_recommendations','smooth_scrolling','depth_effects','quiet_mode','reduce_motion','entertainment','quiz_timer','knowledge_tips']:
             value=data.get(name,getattr(defaults,name));values[name]=value if isinstance(value,bool) else getattr(defaults,name)
         import math
         for name,lower,upper in [('panel_height',0,160),('card_minutes',1,120),('news_minutes',10,240),('idle_seconds',20,600),('balloon_seconds',3,20),('speech_rate',80,260),('update_hours',6,168),('messages_per_hour',0,20)]:
@@ -143,6 +161,10 @@ class Settings:
                 if isinstance(value,bool) or not isinstance(value,(int,float,str)) or not math.isfinite(float(value)):raise ValueError()
                 values[name]=max(lower,min(upper,int(value)))
             except (TypeError,ValueError,OverflowError):values[name]=getattr(defaults,name)
+        scale=data.get('text_scale',100)
+        values['text_scale']=scale if isinstance(scale,int) and not isinstance(scale,bool) and scale in (100,115,130,150) else 100
+        name_value=data.get('learner_name','')
+        values['learner_name']=name_value.strip()[:40] if isinstance(name_value,str) and not any(ord(c)<32 for c in name_value) else ''
         for name,limit in [('weather_city',120),('weather_timezone',100)]:
             value=data.get(name,getattr(defaults,name))
             values[name]=value.strip() if isinstance(value,str) and value.strip() and len(value)<=limit and not any(ord(c)<32 for c in value) else getattr(defaults,name)
@@ -181,3 +203,7 @@ def backup_legacy(path):
 
 def config_path():
     return Path(os.environ.get("XDG_CONFIG_HOME", str(Path.home() / ".config"))) / "lafa" / "settings.json"
+
+def data_dir():
+    """The learner's Lafa folder (~/.local/share/lafa): progress, downloads, updates."""
+    return Path(os.environ.get("XDG_DATA_HOME", str(Path.home() / ".local" / "share"))) / "lafa"

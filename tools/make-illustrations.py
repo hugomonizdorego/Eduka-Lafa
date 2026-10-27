@@ -1,44 +1,53 @@
 #!/usr/bin/env python3
 """Generate Lafa's illustrations into lafa/assets/illustrations/ (+ manifest.json).
 
-    python3 tools/make-illustrations.py
+    python3 tools/make-illustrations.py            # all
+    python3 tools/make-illustrations.py flag map   # only these keys
 
-Flat vector scenes in Lafa's own style (no photos, no third-party art): one
-picture per encyclopedia category and diagrams for articles and interactive
-modules. All are original work for Lafa, licensed CC BY-SA 4.0 like the
-lessons. Scenes are 640×360 (16:9) unless noted; diagrams carry their labels in
-the article text, not in the picture, so one picture serves every language.
+Soft "clay" vector scenes in Lafa's own style — pastel gradients, rounded
+shapes, gentle shadows — one per key in docs/CONTENT-SCHEMA.md. They are
+original work for Lafa (CC BY-SA 4.0). The Timor-Leste outline comes from the
+packaged map data (geoBoundaries / © OpenStreetMap contributors, ODbL). The
+flag follows Artigu 15 of the Konstituisaun. Real photographs are downloaded by
+the learner (free licences only) and are not part of these files.
+Scenes are 640×360 (16:9) and carry no words, so they serve all languages.
 """
 import json
 import math
 import random
+import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "lafa/assets/illustrations"
 W, H = 640, 360
+_uid = [0]
 
-# ------------------------------------------------------------------ helpers
-def svg(body, w=W, h=H, defs=""):
-    return (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w} {h}" width="{w}" height="{h}">'
-            f'<defs>{defs}</defs>{body}</svg>\n')
+def uid(prefix="g"):
+    _uid[0] += 1; return f"{prefix}{_uid[0]}"
 
-def lin(id_, *stops, x2=0, y2=1):
-    s = "".join(f'<stop offset="{o}" stop-color="{c}"/>' for o, c in stops)
-    return f'<linearGradient id="{id_}" x1="0" y1="0" x2="{x2}" y2="{y2}">{s}</linearGradient>'
-
-def rad(id_, *stops, cx=0.5, cy=0.5, r=0.5):
-    s = "".join(f'<stop offset="{o}" stop-color="{c}"/>' for o, c in stops)
-    return f'<radialGradient id="{id_}" cx="{cx}" cy="{cy}" r="{r}">{s}</radialGradient>'
+# ------------------------------------------------------------------ basics
+class Scene:
+    def __init__(self): self.defs = []; self.body = []
+    def add(self, *parts): self.body.extend(p for p in parts if p); return self
+    def grad(self, *stops, x1=0, y1=0, x2=0, y2=1):
+        i = uid(); s = "".join(f'<stop offset="{o}" stop-color="{c}" stop-opacity="{a}"/>' for o, c, a in [(st + (1,))[:3] if len(st) == 2 else st for st in stops])
+        self.defs.append(f'<linearGradient id="{i}" x1="{x1}" y1="{y1}" x2="{x2}" y2="{y2}">{s}</linearGradient>'); return f"url(#{i})"
+    def radial(self, *stops, cx=0.5, cy=0.5, r=0.5):
+        i = uid(); s = "".join(f'<stop offset="{o}" stop-color="{c}" stop-opacity="{a}"/>' for o, c, a in [(st + (1,))[:3] if len(st) == 2 else st for st in stops])
+        self.defs.append(f'<radialGradient id="{i}" cx="{cx}" cy="{cy}" r="{r}">{s}</radialGradient>'); return f"url(#{i})"
+    def svg(self):
+        return (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="{W}" height="{H}">'
+                f'<defs>{"".join(self.defs)}</defs>{"".join(self.body)}</svg>\n')
 
 def rect(x, y, w, h, fill, rx=0, extra=""):
-    return f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="{rx}" fill="{fill}" {extra}/>'
+    return f'<rect x="{x:.1f}" y="{y:.1f}" width="{w:.1f}" height="{h:.1f}" rx="{rx}" fill="{fill}" {extra}/>'
 
 def circle(cx, cy, r, fill, extra=""):
-    return f'<circle cx="{cx}" cy="{cy}" r="{r}" fill="{fill}" {extra}/>'
+    return f'<circle cx="{cx:.1f}" cy="{cy:.1f}" r="{r:.1f}" fill="{fill}" {extra}/>'
 
 def ellipse(cx, cy, rx, ry, fill, extra=""):
-    return f'<ellipse cx="{cx}" cy="{cy}" rx="{rx}" ry="{ry}" fill="{fill}" {extra}/>'
+    return f'<ellipse cx="{cx:.1f}" cy="{cy:.1f}" rx="{rx:.1f}" ry="{ry:.1f}" fill="{fill}" {extra}/>'
 
 def path(d, fill="none", stroke=None, width=0, extra=""):
     st = f' stroke="{stroke}" stroke-width="{width}" stroke-linecap="round" stroke-linejoin="round"' if stroke else ""
@@ -47,385 +56,1029 @@ def path(d, fill="none", stroke=None, width=0, extra=""):
 def poly(points, fill, extra=""):
     return f'<polygon points="{" ".join(f"{x:.1f},{y:.1f}" for x, y in points)}" fill="{fill}" {extra}/>'
 
-def hills(y, amp, color, seed, n=5, w=W, h=H):
-    rnd = random.Random(seed); pts = [(0, y)]
-    step = w / n
-    d = f"M0 {h} L0 {y} "
+def group(content, transform="", opacity=1):
+    return f'<g transform="{transform}" opacity="{opacity}">{content}</g>'
+
+def shadow(cx, cy, rx, ry=None, alpha=0.16):
+    return ellipse(cx, cy, rx, ry or rx * 0.22, "#2a1d5c", f'opacity="{alpha}"')
+
+# ------------------------------------------------------------------ palettes
+SKIES = {
+    "day": ("#bfe3ff", "#e9f5ff", "#fdf2fb"), "dawn": ("#d9ccff", "#fbd7ea", "#fff1e3"), "sunset": ("#ffc6a8", "#ffb3cf", "#d7c5ff"),
+    "night": ("#2b2468", "#4b3a8f", "#7b5ab5"), "mint": ("#c9f2e6", "#eefcf6", "#fdf6ff"), "paper": ("#fff4e0", "#ffeef3", "#f1ebff"),
+    "lilac": ("#e4d9ff", "#f6eeff", "#ffeef6"), "sea": ("#bde6ff", "#e2f6ff", "#f2fbff"),
+}
+
+def sky(s, kind="day"):
+    a, b, c = SKIES[kind]; s.add(rect(0, 0, W, H, s.grad((0, a), (0.6, b), (1, c))))
+
+def sun(s, x, y, r=34, color="#ffd36b"):
+    s.add(circle(x, y, r * 1.9, s.radial((0, color, 0.55), (1, color, 0)))); s.add(circle(x, y, r, s.grad((0, "#fff2b8"), (1, color))))
+
+def moon(s, x, y, r=26):
+    s.add(circle(x, y, r * 1.8, s.radial((0, "#fff7d6", 0.35), (1, "#fff7d6", 0)))); s.add(circle(x, y, r, "#fff3c4")); s.add(circle(x + r * 0.4, y - r * 0.25, r * 0.9, SKIES["night"][1]))
+
+def cloud(s, x, y, k=1.0, color="#ffffff", opacity=0.95):
+    s.add(group(ellipse(x, y, 40 * k, 15 * k, color) + circle(x - 16 * k, y - 8 * k, 16 * k, color) + circle(x + 12 * k, y - 13 * k, 20 * k, color), opacity=opacity))
+
+def stars(s, n, seed, color="#ffffff"):
+    rnd = random.Random(seed)
+    for _ in range(n): s.add(circle(rnd.uniform(0, W), rnd.uniform(0, H * 0.55), rnd.choice([0.9, 1.3, 1.8]), color, f'opacity="{rnd.uniform(0.4, 1):.2f}"'))
+
+def hills(s, y, amp, c1, c2, seed, n=5):
+    rnd = random.Random(seed); step = W / n; d = f"M0 {H} L0 {y} "
     for i in range(n):
         x1 = i * step + step / 2; y1 = y - amp * (0.5 + rnd.random() * 0.8); x2 = (i + 1) * step; y2 = y + amp * (rnd.random() - 0.5) * 0.6
         d += f"Q{x1:.0f} {y1:.0f} {x2:.0f} {y2:.0f} "
-    return path(d + f"L{w} {h} Z", color)
+    s.add(path(d + f"L{W} {H} Z", s.grad((0, c1), (1, c2))))
 
-def cloud(x, y, s=1.0, color="#ffffff", opacity=0.9):
-    return (f'<g opacity="{opacity}" fill="{color}">' + ellipse(x, y, 34 * s, 14 * s, color) + circle(x - 14 * s, y - 8 * s, 14 * s, color)
-            + circle(x + 10 * s, y - 12 * s, 18 * s, color) + "</g>")
+def mountain(s, x, base, w, h, c1="#8fb5e8", c2="#6c8fd1", snow=False, peak_shift=0):
+    px = x + w / 2 + peak_shift; d = f"M{x} {base} Q{x + w * 0.25} {base - h * 0.55} {px - w * 0.06} {base - h * 0.97} Q{px} {base - h * 1.04} {px + w * 0.06} {base - h * 0.96} Q{x + w * 0.75} {base - h * 0.5} {x + w} {base} Z"
+    s.add(path(d, s.grad((0, c1), (1, c2), x2=0.4, y2=1)))
+    s.add(path(f"M{px - w * 0.06} {base - h * 0.97} Q{px} {base - h * 1.04} {px + w * 0.06} {base - h * 0.96} Q{x + w * 0.62} {base - h * 0.55} {x + w * 0.58} {base - h * 0.2}", "#ffffff", extra='opacity="0.18"'))
+    if snow: s.add(path(f"M{px - w * 0.1} {base - h * 0.86} Q{px} {base - h * 1.04} {px + w * 0.1} {base - h * 0.86} Q{px} {base - h * 0.8} {px - w * 0.1} {base - h * 0.86}Z", "#ffffff", extra='opacity="0.9"'))
 
-def stars(n, seed, w=W, h=H * 0.6, color="#ffffff"):
-    rnd = random.Random(seed)
-    return "".join(circle(rnd.uniform(0, w), rnd.uniform(0, h), rnd.choice([0.8, 1.1, 1.5]), color, f'opacity="{rnd.uniform(0.4, 1):.2f}"') for _ in range(n))
+def sea(s, y, c1="#7fd0ee", c2="#4aa3d6", waves=True):
+    s.add(rect(0, y, W, H - y, s.grad((0, c1), (1, c2))))
+    if waves:
+        for i, wy in enumerate((y + 14, y + 34, y + 58)):
+            d = "M0 %.0f " % wy + " ".join(f"q20 -6 40 0 t40 0" for _ in range(17))
+            s.add(path(d, stroke="#ffffff", width=2, extra=f'opacity="{0.35 - i * 0.08:.2f}"'))
 
-def palm(x, y, s=1.0, trunk="#7a5230", leaf="#2f8f4e"):
-    out = path(f"M{x} {y} Q{x + 6 * s} {y - 50 * s} {x + 2 * s} {y - 100 * s}", stroke=trunk, width=7 * s)
-    tx, ty = x + 2 * s, y - 100 * s
-    for a in (-160, -120, -60, -20, 200):
-        r = math.radians(a); ex, ey = tx + math.cos(r) * 52 * s, ty + math.sin(r) * 26 * s + 18 * s
-        cx, cy = tx + math.cos(r) * 30 * s, ty - 18 * s
-        out += path(f"M{tx:.0f} {ty:.0f} Q{cx:.0f} {cy:.0f} {ex:.0f} {ey:.0f} Q{(cx + ex) / 2:.0f} {cy + 14 * s:.0f} {tx:.0f} {ty:.0f}Z", leaf)
-    return out
+def sand(s, y, c1="#fbe6bd", c2="#f3d39a"):
+    s.add(path(f"M0 {y + 10} Q{W * 0.3} {y - 12} {W * 0.6} {y + 4} T{W} {y - 4} L{W} {H} L0 {H} Z", s.grad((0, c1), (1, c2))))
 
-def fern(x, y, s=1.0, color="#3d8c40", flip=1):
-    out = ""
-    for i in range(7):
-        a = math.radians(-90 + flip * (i - 3) * 18); l = (60 - abs(i - 3) * 8) * s
-        ex, ey = x + math.cos(a) * l, y + math.sin(a) * l
-        out += path(f"M{x} {y} Q{x + (ex - x) * 0.4 - 6 * s:.0f} {y + (ey - y) * 0.6:.0f} {ex:.0f} {ey:.0f} Q{x + (ex - x) * 0.6 + 6 * s:.0f} {y + (ey - y) * 0.4:.0f} {x} {y}Z", color)
-    return out
+def ground(s, y, c1="#bfe6a5", c2="#8fcf7e"):
+    s.add(path(f"M0 {y} Q{W * 0.5} {y - 18} {W} {y} L{W} {H} L0 {H} Z", s.grad((0, c1), (1, c2))))
 
-def tree(x, y, s=1.0, trunk="#6b4a2b", crown="#3f9a52", crown2="#2f7f42"):
-    return (rect(x - 4 * s, y - 40 * s, 8 * s, 40 * s, trunk, 2) + circle(x, y - 58 * s, 26 * s, crown2)
-            + circle(x - 14 * s, y - 50 * s, 18 * s, crown) + circle(x + 12 * s, y - 64 * s, 18 * s, crown))
+def palm(s, x, y, k=1.0, trunk="#a77449", leaf=("#5fc28a", "#2f9a63")):
+    s.add(path(f"M{x} {y} Q{x + 8 * k} {y - 55 * k} {x + 2 * k} {y - 110 * k}", stroke=trunk, width=8 * k))
+    tx, ty = x + 2 * k, y - 110 * k; g = s.grad((0, leaf[0]), (1, leaf[1]))
+    for a in (-165, -125, -60, -15, 205):
+        r = math.radians(a); ex, ey = tx + math.cos(r) * 58 * k, ty + math.sin(r) * 26 * k + 22 * k; cx, cy = tx + math.cos(r) * 32 * k, ty - 20 * k
+        s.add(path(f"M{tx:.0f} {ty:.0f} Q{cx:.0f} {cy:.0f} {ex:.0f} {ey:.0f} Q{(cx + ex) / 2:.0f} {cy + 16 * k:.0f} {tx:.0f} {ty:.0f}Z", g))
+    s.add(circle(tx - 4 * k, ty + 6 * k, 5 * k, "#8a5a32")); s.add(circle(tx + 5 * k, ty + 7 * k, 5 * k, "#7a4e2a"))
 
-def frame(body, defs="", w=W, h=H):
-    # A soft vignette so cards look calm and the title area stays readable.
-    vign = rad("vig", (0, "#000000"), (1, "#000000"), r=0.75).replace('stop-color="#000000"/></radialGradient>', 'stop-color="#000000" stop-opacity="0.18"/></radialGradient>').replace('<stop offset="0" stop-color="#000000"/>', '<stop offset="0" stop-color="#000000" stop-opacity="0"/>')
-    return svg(body + rect(0, 0, w, h, "url(#vig)"), w, h, defs + vign)
+def tree(s, x, y, k=1.0, c1="#7fd49a", c2="#3fa66a", trunk="#9a6a43"):
+    s.add(shadow(x, y + 2, 26 * k)); s.add(rect(x - 5 * k, y - 34 * k, 10 * k, 36 * k, trunk, 4))
+    g = s.grad((0, c1), (1, c2)); s.add(circle(x, y - 52 * k, 28 * k, g)); s.add(circle(x - 20 * k, y - 38 * k, 18 * k, g)); s.add(circle(x + 20 * k, y - 38 * k, 18 * k, g))
+    s.add(circle(x - 8 * k, y - 62 * k, 9 * k, "#ffffff", 'opacity="0.25"'))
 
-# ------------------------------------------------------------- Tyrannosaurus
-# A side view facing left, used on the dinosaur card and in the hotspot module.
-TREX = ("M70 132 C78 112 104 100 134 100 C160 100 186 104 204 116 C226 130 246 138 270 140 "
-        "C320 144 372 148 420 152 C470 156 530 166 600 190 C540 186 480 184 430 186 "
-        "C410 196 396 210 384 222 C376 252 372 280 376 306 L394 318 C396 324 388 328 378 326 L350 324 "
-        "C346 300 344 276 344 252 C336 248 326 246 316 246 C312 268 306 290 302 306 L318 318 C320 324 312 328 302 326 L276 324 "
-        "C274 300 276 272 280 246 C262 238 248 226 238 210 C232 216 226 222 222 230 L230 238 C228 242 222 242 218 238 L210 230 "
-        "C214 220 220 210 226 200 C214 188 204 176 196 166 C184 170 170 172 154 172 L128 168 C114 168 96 166 84 160 "
-        "C74 154 68 144 70 132 Z")
-TREX_JAW = "M84 152 C100 158 122 162 150 164 C170 165 186 162 196 158"
-TREX_EYE = (152, 120)
+def bush(s, x, y, k=1.0, c1="#8ddca6", c2="#4bb070"):
+    g = s.grad((0, c1), (1, c2)); s.add(ellipse(x, y, 30 * k, 16 * k, g)); s.add(circle(x - 12 * k, y - 8 * k, 13 * k, g)); s.add(circle(x + 10 * k, y - 10 * k, 15 * k, g))
 
-def trex(fill="#7a6a3a", shade="#5e522c", belly="#b9a46a", stroke="#3f361d"):
-    teeth = "".join(path(f"M{x} 152 l3 7 l3 -7", "#fffaf0") for x in range(92, 150, 9))
-    stripes = "".join(path(f"M{x} {y} q10 6 22 2", stroke=shade, width=4, extra='opacity="0.7"') for x, y in [(250, 146), (300, 150), (350, 154), (400, 158), (452, 164), (500, 172)])
-    return (path(TREX, fill, stroke, 3) + path("M216 150 C250 166 296 176 340 178 C380 180 410 180 430 186 C400 200 390 210 384 222 C350 230 300 232 262 222 C240 210 224 186 216 150Z", belly, extra='opacity="0.55"')
-            + stripes + teeth + path(TREX_JAW, stroke=stroke, width=3) + circle(*TREX_EYE, 6, "#fff8e0") + circle(TREX_EYE[0] - 1, TREX_EYE[1], 3, "#1d1d1d")
-            + path("M136 112 q14 -6 28 0", stroke=stroke, width=3) + circle(80, 128, 2.5, stroke))
+def flower(s, x, y, k=1.0, petal="#ff8fb8", center="#ffd36b"):
+    for a in range(0, 360, 60):
+        r = math.radians(a); s.add(ellipse(x + math.cos(r) * 7 * k, y + math.sin(r) * 7 * k, 6 * k, 6 * k, petal))
+    s.add(circle(x, y, 5 * k, center))
 
-def sauropod(x, y, s=1.0, fill="#6f8f5a", stroke="#3e5532"):
-    d = (f"M{x} {y} c{20*s} {-6*s} {40*s} {-30*s} {48*s} {-80*s} c{4*s} {-20*s} {14*s} {-30*s} {30*s} {-28*s} c{10*s} {2*s} {12*s} {10*s} {4*s} {14*s} "
-         f"c{-10*s} {4*s} {-16*s} {12*s} {-18*s} {30*s} c{-4*s} {28*s} {10*s} {50*s} {40*s} {58*s} c{40*s} {10*s} {90*s} {6*s} {130*s} {20*s} "
-         f"c{-30*s} {6*s} {-60*s} {6*s} {-80*s} {8*s} l{0} {30*s} l{-16*s} 0 l{-2*s} {-26*s} c{-14*s} {2*s} {-30*s} 0 {-42*s} {-2*s} l{-2*s} {28*s} l{-16*s} 0 l{0} {-36*s} c{-10*s} {-6*s} {-20*s} {-6*s} {-26*s} {-10*s} Z")
-    return path(d, fill, stroke, 2.5)
+# --------------------------------------------------------------- people & co
+SKIN = ["#c98b5e", "#a96f45", "#8c5a37", "#d29b6c"]
 
-# ------------------------------------------------------------------ Timor map
-# Schematic outline (not an official map) from approximate coastal points.
-def lonlat(points, x0=60, y0=40, w=520, h=230, lon=(124.0, 127.4), lat=(-8.1, -9.55)):
-    return [(x0 + (a - lon[0]) / (lon[1] - lon[0]) * w, y0 + (b - lat[0]) / (lat[1] - lat[0]) * h) for a, b in points]
+def person(s, x, y, k=1.0, shirt="#7c5cfc", skin=SKIN[0], hair="#2b1d14", skirt=None, arms_up=False, hat=None, holding=None):
+    """A friendly round figure standing on (x, y)."""
+    s.add(shadow(x, y, 20 * k))
+    if skirt: s.add(path(f"M{x - 15 * k} {y - 34 * k} L{x + 15 * k} {y - 34 * k} L{x + 19 * k} {y - 2 * k} L{x - 19 * k} {y - 2 * k}Z", skirt))
+    else:
+        s.add(rect(x - 11 * k, y - 34 * k, 9 * k, 34 * k, "#3d3a5c", 4)); s.add(rect(x + 2 * k, y - 34 * k, 9 * k, 34 * k, "#3d3a5c", 4))
+    s.add(rect(x - 16 * k, y - 72 * k, 32 * k, 42 * k, s.grad((0, shirt), (1, shirt)), 13 * k))
+    s.add(rect(x - 12 * k, y - 70 * k, 10 * k, 30 * k, "#ffffff", 6, 'opacity="0.15"'))
+    if arms_up:
+        s.add(path(f"M{x - 14 * k} {y - 64 * k} Q{x - 32 * k} {y - 84 * k} {x - 30 * k} {y - 98 * k}", stroke=shirt, width=8 * k))
+        s.add(path(f"M{x + 14 * k} {y - 64 * k} Q{x + 32 * k} {y - 84 * k} {x + 30 * k} {y - 98 * k}", stroke=shirt, width=8 * k))
+        s.add(circle(x - 30 * k, y - 100 * k, 5 * k, skin)); s.add(circle(x + 30 * k, y - 100 * k, 5 * k, skin))
+    else:
+        s.add(path(f"M{x - 15 * k} {y - 62 * k} Q{x - 22 * k} {y - 46 * k} {x - 19 * k} {y - 34 * k}", stroke=shirt, width=8 * k))
+        s.add(path(f"M{x + 15 * k} {y - 62 * k} Q{x + 22 * k} {y - 46 * k} {x + 19 * k} {y - 34 * k}", stroke=shirt, width=8 * k))
+        s.add(circle(x - 19 * k, y - 32 * k, 4.5 * k, skin)); s.add(circle(x + 19 * k, y - 32 * k, 4.5 * k, skin))
+    s.add(circle(x, y - 86 * k, 15 * k, skin)); s.add(path(f"M{x - 15 * k} {y - 88 * k} Q{x - 14 * k} {y - 104 * k} {x} {y - 103 * k} Q{x + 15 * k} {y - 104 * k} {x + 15 * k} {y - 88 * k} Q{x + 6 * k} {y - 96 * k} {x - 15 * k} {y - 88 * k}Z", hair))
+    s.add(circle(x - 5 * k, y - 86 * k, 1.6 * k, "#2b1d14")); s.add(circle(x + 5 * k, y - 86 * k, 1.6 * k, "#2b1d14"))
+    s.add(path(f"M{x - 4 * k} {y - 80 * k} Q{x} {y - 77 * k} {x + 4 * k} {y - 80 * k}", stroke="#5a2e1d", width=1.4 * k))
+    if hat == "straw": s.add(path(f"M{x - 26 * k} {y - 96 * k} Q{x} {y - 128 * k} {x + 26 * k} {y - 96 * k}Z", "#e9c46a"))
+    if hat == "cap": s.add(path(f"M{x - 15 * k} {y - 94 * k} Q{x} {y - 112 * k} {x + 15 * k} {y - 94 * k}Z", "#3b82f6")); s.add(rect(x, y - 96 * k, 20 * k, 4 * k, "#2563eb", 2))
+    if hat == "helmet": s.add(path(f"M{x - 17 * k} {y - 90 * k} Q{x} {y - 118 * k} {x + 17 * k} {y - 90 * k}Z", "#5aa9ff"))
+    if hat == "headdress":
+        s.add(path(f"M{x - 13 * k} {y - 98 * k} L{x - 6 * k} {y - 124 * k} L{x} {y - 102 * k} L{x + 6 * k} {y - 124 * k} L{x + 13 * k} {y - 98 * k}Z", "#e9b949"))
+        s.add(path(f"M{x} {y - 104 * k} Q{x + 4 * k} {y - 140 * k} {x + 16 * k} {y - 150 * k}", stroke="#1f1a17", width=3 * k))
+    if holding == "book": s.add(rect(x - 12 * k, y - 52 * k, 24 * k, 16 * k, "#3b82f6", 3)); s.add(rect(x - 1 * k, y - 52 * k, 2 * k, 16 * k, "#ffffff", 0, 'opacity="0.7"'))
+    if holding == "flag": flag_shape(s, x + 22 * k, y - 120 * k, 44 * k, pole=True)
 
-TIMOR = [(125.07, -8.96), (125.13, -8.80), (125.22, -8.65), (125.33, -8.58), (125.47, -8.56), (125.57, -8.55), (125.72, -8.54),
-         (125.90, -8.52), (126.03, -8.50), (126.20, -8.46), (126.45, -8.46), (126.62, -8.44), (126.85, -8.41), (127.05, -8.37),
-         (127.22, -8.38), (127.31, -8.43), (127.20, -8.52), (127.02, -8.62), (126.83, -8.73), (126.60, -8.83), (126.37, -8.93),
-         (126.10, -9.02), (125.85, -9.10), (125.62, -9.18), (125.40, -9.27), (125.20, -9.37), (125.08, -9.44), (125.12, -9.27),
-         (125.05, -9.15), (125.12, -9.05)]
-OECUSSE = [(124.05, -9.20), (124.25, -9.18), (124.45, -9.20), (124.48, -9.32), (124.38, -9.45), (124.20, -9.48), (124.08, -9.38)]
-ATAURO = [(125.57, -8.13), (125.62, -8.16), (125.64, -8.26), (125.62, -8.33), (125.57, -8.30), (125.55, -8.20)]
-WEST = [(124.0, -9.12), (124.05, -9.20), (124.08, -9.38), (124.20, -9.48), (124.38, -9.45), (124.48, -9.32), (124.45, -9.20),
-        (124.7, -9.08), (125.07, -8.96), (125.12, -9.05), (125.05, -9.15), (125.12, -9.27), (125.08, -9.44), (124.6, -9.55), (124.0, -9.55)]
-
-def timor_map(sea="#9fd3e8", land="#7cbf6a", coast="#3e7a4a", west="#d8e6cf"):
-    body = rect(0, 0, W, H, sea)
-    body += "".join(path(f"M0 {y} q40 -6 80 0 t80 0 t80 0 t80 0 t80 0 t80 0 t80 0 t80 0", stroke="#ffffff", width=1.4, extra='opacity="0.35"') for y in range(30, 360, 42))
-    body += poly(lonlat(WEST), west, f'stroke="#9fb592" stroke-width="1.5"')
-    for shape in (TIMOR, OECUSSE, ATAURO): body += poly(lonlat(shape), land, f'stroke="{coast}" stroke-width="2.5" stroke-linejoin="round"')
-    jaco = lonlat([(127.34, -8.43)])[0]; body += circle(jaco[0], jaco[1], 3.5, land, f'stroke="{coast}" stroke-width="1.5"')
-    rm = lonlat([(125.50, -8.91)])[0]
-    body += poly([(rm[0] - 14, rm[1] + 8), (rm[0], rm[1] - 12), (rm[0] + 14, rm[1] + 8)], "#5a8f4c", 'stroke="#2f5e33" stroke-width="1.5"')
-    dili = lonlat([(125.57, -8.555)])[0]; body += circle(dili[0], dili[1] + 2, 5, "#c0392b", 'stroke="#ffffff" stroke-width="2"')
-    # compass rose
-    cx, cy = 585, 300
-    body += circle(cx, cy, 26, "#ffffff", 'opacity="0.8"') + poly([(cx, cy - 22), (cx + 6, cy), (cx, cy + 22), (cx - 6, cy)], "#3b5b6b") + poly([(cx, cy - 22), (cx + 6, cy), (cx - 6, cy)], "#c0392b")
-    return body
-
-def flag_tl(x, y, w):
-    h = w / 2
-    star = []
-    cx, cy, r = x + w * 0.11, y + h / 2, h * 0.14
-    for i in range(10):
-        a = math.radians(-90 + i * 36 - 30); rr = r if i % 2 == 0 else r * 0.4
-        star.append((cx + rr * math.cos(a), cy + rr * math.sin(a)))
-    return (rect(x, y, w, h, "#dc241f") + poly([(x, y), (x + w / 2, y + h / 2), (x, y + h)], "#ffc726")
-            + poly([(x, y), (x + w / 3, y + h / 2), (x, y + h)], "#000000") + poly(star, "#ffffff"))
-
-def tais_band(x, y, w, h, colours=("#7a1426", "#b52a2a", "#1f1a17", "#e8b33a", "#f4ead8")):
-    """A woven band with ikat-like diamonds (decorative, not a specific regional motif)."""
-    out = rect(x, y, w, h, colours[0])
-    stripe = h / 9
-    out += rect(x, y + stripe, w, stripe * 0.6, colours[2]) + rect(x, y + h - stripe * 1.6, w, stripe * 0.6, colours[2])
-    out += rect(x, y + stripe * 0.2, w, stripe * 0.35, colours[3]) + rect(x, y + h - stripe * 0.55, w, stripe * 0.35, colours[3])
-    size = h * 0.42; cy = y + h / 2; n = int(w // (size * 1.3)) + 1
+def crowd(s, x, y, n=5, k=0.8, seed=3):
+    rnd = random.Random(seed); colors = ["#7c5cfc", "#ec4899", "#14b88c", "#f2a516", "#3b93ec", "#f77f3a"]
     for i in range(n):
-        cx = x + i * size * 1.3 + size * 0.65
-        out += poly([(cx, cy - size / 2), (cx + size / 2, cy), (cx, cy + size / 2), (cx - size / 2, cy)], colours[1], f'stroke="{colours[4]}" stroke-width="2"')
-        out += poly([(cx, cy - size / 5), (cx + size / 5, cy), (cx, cy + size / 5), (cx - size / 5, cy)], colours[4])
-    return out
+        person(s, x + i * 40 * k + rnd.uniform(-6, 6), y + rnd.uniform(-4, 6), k * rnd.uniform(0.85, 1.05), shirt=rnd.choice(colors), skin=rnd.choice(SKIN))
 
-# --------------------------------------------------------------------- scenes
-def scene_earth():
-    defs = lin("sky", (0, "#0b1d3a"), (1, "#1e3a6a")) + rad("glow", (0, "#3d7bd9"), (1, "#0b1d3a"), r=0.6)
-    b = rect(0, 0, W, H, "url(#sky)") + stars(70, 1) + circle(320, 200, 175, "url(#glow)", 'opacity="0.5"')
-    cx, cy = 320, 205
-    # Earth with a quarter cut away to show the layers.
-    b += circle(cx, cy, 140, "#2e7bc4") + path(f"M{cx-120} {cy-40} q40 -50 90 -40 q30 10 20 50 q-30 40 -70 30 q-30 -10 -40 -40Z", "#4caf50")
-    b += path(f"M{cx-60} {cy+60} q30 -20 60 0 q20 30 -10 50 q-40 10 -50 -20Z", "#4caf50")
-    for r, c in [(140, "#8d6e4a"), (122, "#e2733a"), (84, "#f2a93b"), (40, "#ffd75e")]:
-        b += path(f"M{cx} {cy} L{cx} {cy - r} A{r} {r} 0 0 1 {cx + r} {cy} Z", c)
-    b += path(f"M{cx} {cy-140} L{cx} {cy} L{cx+140} {cy}", stroke="#ffffff", width=2, extra='opacity="0.6"')
-    b += circle(540, 80, 26, "#d9d9d9") + circle(532, 72, 6, "#bdbdbd") + circle(548, 88, 4, "#bdbdbd")
-    return frame(b, defs)
+def flag_shape(s, x, y, w, pole=False, wave=True):
+    """Bandeira nasionál (Artigu 15): red field, yellow and black triangles, white star."""
+    h = w / 2
+    if pole: s.add(rect(x - 3, y - 4, 4, h * 3.2, "#8a6a4a", 2))
+    d = f"M{x} {y} Q{x + w * 0.25} {y - h * 0.08} {x + w * 0.5} {y} T{x + w} {y} L{x + w} {y + h} Q{x + w * 0.75} {y + h * 1.08} {x + w * 0.5} {y + h} T{x} {y + h}Z" if wave else f"M{x} {y}h{w}v{h}h{-w}Z"
+    s.add(path(d, "#dc241f")); s.add(poly([(x, y), (x + w * 0.5, y + h / 2), (x, y + h)], "#ffc726")); s.add(poly([(x, y), (x + w / 3, y + h / 2), (x, y + h)], "#1a1a1a"))
+    cx, cy, r = x + w * 0.11, y + h / 2, h * 0.17; pts = []
+    for i in range(10):
+        a = math.radians(-114 + i * 36); rr = r if i % 2 == 0 else r * 0.42; pts.append((cx + math.cos(a) * rr, cy + math.sin(a) * rr))
+    s.add(poly(pts, "#ffffff"))
+    s.add(path(d, "#ffffff", extra='opacity="0.08"'))
 
-def scene_dinosaurs():
-    defs = lin("sky", (0, "#f6c98a"), (0.6, "#fbe6bf"), (1, "#e9f1d6"))
-    b = rect(0, 0, W, H, "url(#sky)") + circle(520, 80, 38, "#ffe7a3", 'opacity="0.9"')
-    b += path("M380 250 L450 120 L470 130 L490 115 L560 250Z", "#8a6a5a") + path("M450 120 q15 -40 40 -5", "#c9b8b0", extra='opacity="0.7"')
-    b += cloud(470, 70, 1.2, "#fff6e6") + hills(260, 40, "#9bbf72", 3) + hills(290, 30, "#7aa85a", 4)
-    b += sauropod(430, 262, 0.9) + palm(600, 300, 1.0) + palm(40, 310, 1.1)
-    b += f'<g transform="translate(40 40) scale(0.62)">{trex()}</g>'
-    b += rect(0, 300, W, 60, "#5f8f45") + fern(110, 330, 1.1) + fern(560, 340, 0.9, flip=-1) + fern(330, 345, 0.8)
-    return frame(b, defs)
+def crocodile(s, x, y, k=1.0, c1="#7fcf6e", c2="#4aa356"):
+    g = s.grad((0, c1), (1, c2)); s.add(shadow(x + 40 * k, y + 4 * k, 110 * k, 10 * k))
+    s.add(path(f"M{x - 70 * k} {y} Q{x - 20 * k} {y - 34 * k} {x + 60 * k} {y - 30 * k} L{x + 140 * k} {y - 22 * k} Q{x + 160 * k} {y - 14 * k} {x + 140 * k} {y - 6 * k} L{x + 60 * k} {y - 4 * k} Q{x + 10 * k} {y + 6 * k} {x - 70 * k} {y}Z", g))
+    s.add(path(f"M{x - 70 * k} {y} Q{x - 110 * k} {y - 6 * k} {x - 150 * k} {y + 4 * k} Q{x - 110 * k} {y + 6 * k} {x - 70 * k} {y + 2 * k}Z", g))
+    for i in range(8): s.add(poly([(x - 60 * k + i * 15 * k, y - 22 * k + i * 0.5 * k), (x - 53 * k + i * 15 * k, y - 32 * k), (x - 46 * k + i * 15 * k, y - 22 * k)], c2))
+    s.add(circle(x + 66 * k, y - 32 * k, 7 * k, "#ffffff")); s.add(circle(x + 68 * k, y - 32 * k, 3.5 * k, "#1f1a3d"))
+    for lx in (-30, 30): s.add(rect(x + lx * k, y - 6 * k, 10 * k, 14 * k, c2, 4))
+    s.add(path(f"M{x + 80 * k} {y - 12 * k} L{x + 140 * k} {y - 12 * k}", stroke="#2e6b33", width=1.6 * k))
 
-def scene_trex_module():
-    """The T. rex for the hotspot module (also used as the article figure)."""
-    defs = lin("sky", (0, "#cfe8d8"), (1, "#f4f1df"))
-    b = rect(0, 0, W, H, "url(#sky)") + hills(300, 30, "#b8d7a0", 7) + rect(0, 318, W, 42, "#9cc17f")
-    b += fern(40, 330, 1.0) + fern(610, 336, 0.9, flip=-1) + ellipse(330, 322, 150, 8, "#000000", 'opacity="0.12"')
-    b += trex()
-    return svg(b, defs=defs)
+def bird(s, x, y, k=1.0, body="#ffffff", crest="#ffd36b", wing="#e8e8f5"):
+    s.add(ellipse(x, y, 20 * k, 13 * k, body)); s.add(circle(x + 16 * k, y - 10 * k, 9 * k, body))
+    s.add(path(f"M{x + 12 * k} {y - 18 * k} Q{x + 8 * k} {y - 34 * k} {x + 20 * k} {y - 30 * k} Q{x + 14 * k} {y - 22 * k} {x + 22 * k} {y - 18 * k}", crest))
+    s.add(poly([(x + 24 * k, y - 11 * k), (x + 31 * k, y - 8 * k), (x + 24 * k, y - 6 * k)], "#3a3a3a")); s.add(circle(x + 18 * k, y - 12 * k, 1.8 * k, "#1f1a3d"))
+    s.add(path(f"M{x - 4 * k} {y - 4 * k} Q{x - 18 * k} {y - 22 * k} {x - 30 * k} {y - 2 * k}Z", wing)); s.add(path(f"M{x - 18 * k} {y + 4 * k} L{x - 34 * k} {y + 12 * k} L{x - 20 * k} {y + 10 * k}Z", body))
 
-def scene_human_origins():
-    defs = lin("sky", (0, "#f4a259"), (0.55, "#f9d78b"), (1, "#f3e1b6"))
-    b = rect(0, 0, W, H, "url(#sky)") + circle(470, 150, 60, "#fff1c1", 'opacity="0.85"') + hills(250, 30, "#d9a65a", 9) + rect(0, 262, W, 98, "#c99446")
-    b += path("M120 262 C120 220 110 190 100 170", stroke="#5a3d22", width=8) + ellipse(100, 160, 80, 18, "#5d7a3a") + ellipse(70, 150, 40, 12, "#6b8a44")
-    for i, (x, s) in enumerate([(330, 1.0), (380, 0.85)]):
-        y = 300
-        b += circle(x, y - 92 * s, 10 * s, "#3b2a1e") + path(f"M{x} {y-80*s} l0 {38*s}", stroke="#3b2a1e", width=9 * s)
-        b += path(f"M{x} {y-42*s} l{-12*s} {40*s} M{x} {y-42*s} l{12*s} {38*s}", stroke="#3b2a1e", width=8 * s)
-        b += path(f"M{x} {y-72*s} l{-14*s} {22*s} M{x} {y-72*s} l{16*s} {18*s}", stroke="#3b2a1e", width=6 * s)
-    for i in range(6): b += ellipse(200 + i * 22, 330 - (i % 2) * 8, 5, 8, "#8a6232", 'opacity="0.7"')
-    return frame(b, defs)
+def fish(s, x, y, k=1.0, c="#ffb35c", stripe="#ffffff"):
+    s.add(path(f"M{x - 18 * k} {y} Q{x} {y - 12 * k} {x + 16 * k} {y} Q{x} {y + 12 * k} {x - 18 * k} {y}Z", c)); s.add(poly([(x - 16 * k, y), (x - 28 * k, y - 9 * k), (x - 28 * k, y + 9 * k)], c))
+    s.add(rect(x - 4 * k, y - 8 * k, 3 * k, 16 * k, stripe, 1, 'opacity="0.8"')); s.add(circle(x + 9 * k, y - 2 * k, 1.8 * k, "#1f1a3d"))
 
-def scene_civilizations():
-    defs = lin("sky", (0, "#7cc4e8"), (1, "#f6e3b4"))
-    b = rect(0, 0, W, H, "url(#sky)") + circle(110, 80, 34, "#fff3c4") + rect(0, 250, W, 110, "#e3c07a")
-    b += poly([(250, 250), (370, 110), (490, 250)], "#d9a85b") + poly([(370, 110), (490, 250), (430, 250)], "#b8863f")
-    b += poly([(470, 250), (540, 170), (610, 250)], "#cf9d52") + poly([(540, 170), (610, 250), (575, 250)], "#ad7d3a")
-    for i in range(4): b += rect(60 + i * 12, 250 - 22 * (i + 1), 140 - i * 24, 22, ["#c98f4f", "#bd844a", "#b07843", "#a36d3d"][i])
-    b += path("M0 300 C120 290 220 320 330 305 C450 290 540 320 640 300 L640 330 C540 345 430 315 330 332 C220 348 110 318 0 330Z", "#3c8dbc")
-    b += palm(30, 300, 0.7) + palm(600, 300, 0.75)
-    return frame(b, defs)
+def whale(s, x, y, k=1.0, c1="#7aa6ee", c2="#4f7fd6"):
+    g = s.grad((0, c1), (1, c2))
+    s.add(path(f"M{x - 90 * k} {y} Q{x - 60 * k} {y - 48 * k} {x + 40 * k} {y - 38 * k} Q{x + 92 * k} {y - 30 * k} {x + 96 * k} {y} Q{x + 60 * k} {y + 22 * k} {x - 40 * k} {y + 14 * k}Z", g))
+    s.add(path(f"M{x - 86 * k} {y} Q{x - 120 * k} {y - 28 * k} {x - 132 * k} {y - 12 * k} Q{x - 110 * k} {y + 4 * k} {x - 130 * k} {y + 22 * k} Q{x - 108 * k} {y + 18 * k} {x - 86 * k} {y + 4 * k}Z", g))
+    s.add(path(f"M{x - 30 * k} {y + 8 * k} Q{x + 30 * k} {y + 18 * k} {x + 86 * k} {y + 6 * k}", stroke="#e4eeff", width=6 * k, extra='opacity="0.7"'))
+    s.add(circle(x + 56 * k, y - 12 * k, 3 * k, "#1f1a3d"))
 
-def scene_inventions():
-    defs = lin("bg", (0, "#1f3b4d"), (1, "#2c5364")) + rad("bulb", (0, "#fff6c2"), (1, "#f9c74f"), r=0.6)
-    b = rect(0, 0, W, H, "url(#bg)") + circle(320, 140, 120, "#f9c74f", 'opacity="0.18"')
-    def gear(cx, cy, r, teeth, color):
-        pts = []
-        for i in range(teeth * 2):
-            a = math.pi * i / teeth; rr = r if i % 2 == 0 else r * 0.8
-            pts += [(cx + rr * math.cos(a - 0.12), cy + rr * math.sin(a - 0.12)), (cx + rr * math.cos(a + 0.12), cy + rr * math.sin(a + 0.12))]
-        return poly(pts, color) + circle(cx, cy, r * 0.35, "#1f3b4d")
-    b += gear(140, 250, 70, 10, "#7fa7bf") + gear(225, 300, 42, 8, "#a9c6d6") + gear(510, 260, 60, 9, "#7fa7bf")
-    b += circle(320, 140, 64, "url(#bulb)") + rect(296, 196, 48, 22, "#cfd8dc", 4) + rect(300, 218, 40, 14, "#9aa8ae", 3) + rect(306, 232, 28, 8, "#7b8a90", 3)
-    b += path("M300 150 q10 -24 20 0 q10 24 20 0", stroke="#e07a1f", width=4)
-    b += rect(400, 300, 120, 18, "#e9e2cf", 3) + rect(404, 284, 112, 18, "#c94f4f", 3) + rect(408, 268, 104, 18, "#3f7fbf", 3)
-    return frame(b, defs)
+def coral(s, x, y, k=1.0, c="#ff8fa3"):
+    for dx, h, a in ((-14, 40, -18), (0, 54, 0), (14, 36, 20)):
+        s.add(path(f"M{x + dx * k} {y} Q{x + (dx + a * 0.3) * k} {y - h * 0.6 * k} {x + (dx + a) * k} {y - h * k}", stroke=c, width=7 * k))
+        s.add(circle(x + (dx + a) * k, y - h * k, 5 * k, c))
 
-def ship(x, y, s=1.0):
-    hull = path(f"M{x-90*s} {y} L{x+90*s} {y} L{x+70*s} {y+34*s} L{x-70*s} {y+34*s}Z", "#6b3f22") + rect(x - 90 * s, y - 4 * s, 180 * s, 8 * s, "#8a5a33")
-    masts = path(f"M{x} {y} L{x} {y-150*s} M{x-50*s} {y} L{x-50*s} {y-110*s} M{x+50*s} {y} L{x+50*s} {y-100*s}", stroke="#4a2c16", width=5 * s)
-    sails = (path(f"M{x-4*s} {y-140*s} Q{x+34*s} {y-110*s} {x-4*s} {y-70*s}Z", "#f6efe0") + path(f"M{x-4*s} {y-64*s} Q{x+40*s} {y-40*s} {x-4*s} {y-14*s}Z", "#f6efe0")
-             + path(f"M{x-54*s} {y-100*s} Q{x-20*s} {y-74*s} {x-54*s} {y-40*s}Z", "#efe4cf") + path(f"M{x+46*s} {y-92*s} Q{x+80*s} {y-66*s} {x+46*s} {y-30*s}Z", "#efe4cf")
-             + path(f"M{x} {y-150*s} l{22*s} {6*s} l{-22*s} {6*s}Z", "#c0392b"))
-    return masts + sails + hull
+def buffalo(s, x, y, k=1.0, c="#6d6a7a"):
+    s.add(shadow(x, y, 50 * k)); s.add(ellipse(x, y - 30 * k, 48 * k, 26 * k, c))
+    for lx in (-32, -14, 16, 32): s.add(rect(x + lx * k - 5 * k, y - 14 * k, 10 * k, 16 * k, c, 3))
+    s.add(ellipse(x + 50 * k, y - 36 * k, 18 * k, 15 * k, c)); s.add(path(f"M{x + 40 * k} {y - 48 * k} Q{x + 20 * k} {y - 70 * k} {x + 34 * k} {y - 76 * k}", stroke="#e8e0cf", width=5 * k))
+    s.add(path(f"M{x + 60 * k} {y - 48 * k} Q{x + 82 * k} {y - 70 * k} {x + 68 * k} {y - 76 * k}", stroke="#e8e0cf", width=5 * k)); s.add(circle(x + 56 * k, y - 38 * k, 2 * k, "#1f1a3d"))
 
-def scene_colonialism():
-    defs = lin("sky", (0, "#f7b267"), (0.5, "#f8d49a"), (1, "#a6d8e8")) + lin("sea", (0, "#3f8fb5"), (1, "#22577a"))
-    b = rect(0, 0, W, H, "url(#sky)") + circle(500, 170, 50, "#fff0c7", 'opacity="0.9"') + rect(0, 240, W, 120, "url(#sea)")
-    b += path("M430 240 q50 -60 110 -30 q40 10 100 20 L640 240Z", "#6a8f5a") + palm(560, 236, 0.5) + palm(600, 238, 0.45)
-    b += ship(250, 250, 0.95)
-    b += "".join(path(f"M{x} {y} q15 -6 30 0", stroke="#ffffff", width=2, extra='opacity="0.6"') for x, y in [(60, 280), (140, 310), (380, 300), (470, 330), (560, 290)])
-    return frame(b, defs)
+def horse(s, x, y, k=1.0, c="#a8714a"):
+    s.add(shadow(x, y, 44 * k)); s.add(ellipse(x, y - 34 * k, 40 * k, 18 * k, c))
+    for lx in (-26, -10, 14, 28): s.add(rect(x + lx * k - 4 * k, y - 20 * k, 8 * k, 22 * k, c, 3))
+    s.add(path(f"M{x + 30 * k} {y - 44 * k} L{x + 48 * k} {y - 78 * k} L{x + 64 * k} {y - 70 * k} L{x + 44 * k} {y - 38 * k}Z", c))
+    s.add(path(f"M{x + 46 * k} {y - 80 * k} Q{x + 34 * k} {y - 60 * k} {x + 30 * k} {y - 46 * k}", stroke="#5a3a24", width=5 * k)); s.add(circle(x + 54 * k, y - 72 * k, 2 * k, "#1f1a3d"))
 
-def scene_industrial():
-    defs = lin("sky", (0, "#9aa5b1"), (1, "#e7dfd0"))
-    b = rect(0, 0, W, H, "url(#sky)")
-    for x, y, r in [(150, 70, 30), (190, 50, 36), (240, 60, 28), (420, 40, 32), (460, 30, 26)]: b += circle(x, y, r, "#cfd3d8", 'opacity="0.85"')
-    b += rect(120, 90, 26, 130, "#7a4b3a") + rect(420, 70, 24, 150, "#7a4b3a") + rect(80, 170, 420, 110, "#9c5a43") + poly([(80, 170), (150, 130), (150, 170)], "#8a4f3a")
-    b += poly([(150, 170), (220, 130), (220, 170)], "#8a4f3a") + poly([(220, 170), (290, 130), (290, 170)], "#8a4f3a")
-    for i in range(6): b += rect(100 + i * 64, 205, 34, 40, "#f6d27a", 3)
-    b += rect(0, 300, W, 60, "#6c6f73") + rect(0, 296, W, 6, "#4b4e52")
-    for x in range(10, W, 36): b += rect(x, 300, 20, 6, "#8d6e63")
-    b += rect(470, 240, 120, 50, "#2f3e4a", 6) + rect(560, 210, 30, 40, "#2f3e4a") + rect(470, 220, 18, 24, "#2f3e4a") + circle(495, 295, 14, "#1d262d") + circle(560, 295, 14, "#1d262d")
-    b += circle(478, 200, 14, "#dfe3e8") + circle(468, 180, 18, "#e9ecef")
-    return frame(b, defs)
+# ------------------------------------------------------------------ buildings
+def uma_lulik(s, x, y, k=1.0, roof=("#c99b5c", "#8d6534"), wall="#a0784c"):
+    """Tall thatched sacred house on stilts (Fataluku-style silhouette, simplified)."""
+    s.add(shadow(x, y + 2, 70 * k, 10 * k))
+    for px in (-40, -14, 14, 40): s.add(rect(x + px * k - 4 * k, y - 48 * k, 8 * k, 50 * k, "#6b4a2b", 2))
+    s.add(rect(x - 46 * k, y - 66 * k, 92 * k, 22 * k, wall, 4)); s.add(rect(x - 46 * k, y - 50 * k, 92 * k, 6 * k, "#5c3d22", 2))
+    s.add(path(f"M{x - 62 * k} {y - 62 * k} Q{x - 30 * k} {y - 120 * k} {x} {y - 186 * k} Q{x + 30 * k} {y - 120 * k} {x + 62 * k} {y - 62 * k}Z", s.grad((0, roof[0]), (1, roof[1]))))
+    for i in range(6): s.add(path(f"M{x - 54 * k + i * 4 * k} {y - 70 * k - i * 18 * k} Q{x} {y - 84 * k - i * 18 * k} {x + 54 * k - i * 4 * k} {y - 70 * k - i * 18 * k}", stroke="#7a5428", width=1.5 * k, extra='opacity="0.5"'))
+    s.add(path(f"M{x} {y - 186 * k} L{x - 8 * k} {y - 206 * k} M{x} {y - 186 * k} L{x + 8 * k} {y - 206 * k}", stroke="#5c3d22", width=3 * k))
+    s.add(rect(x - 10 * k, y - 64 * k, 20 * k, 18 * k, "#e7c36a", 3))
 
-def scene_peace():
-    defs = lin("sky", (0, "#bfe3f5"), (1, "#f4f9fb"))
-    b = rect(0, 0, W, H, "url(#sky)") + cloud(150, 90, 1.2) + cloud(520, 120, 1.0)
-    b += circle(320, 420, 210, "#7fb6d9") + path("M180 300 q60 -40 120 -10 q40 20 80 -10 q60 -40 120 10 L520 360 L160 360Z", "#8bc28a", extra='opacity="0.8"')
-    def dove(x, y, s):
-        return (path(f"M{x} {y} c{20*s} {-10*s} {40*s} {-10*s} {60*s} {4*s} l{20*s} {-6*s} l{-10*s} {14*s} c{-10*s} {20*s} {-40*s} {30*s} {-70*s} {18*s} l{-30*s} {10*s} l{12*s} {-18*s} c{-6*s} {-6*s} {-6*s} {-14*s} {8*s} {-22*s}Z", "#ffffff", "#9fb3c0", 2)
-                + path(f"M{x+16*s} {y-4*s} c{10*s} {-40*s} {40*s} {-60*s} {70*s} {-58*s} c{-14*s} {20*s} {-30*s} {40*s} {-50*s} {54*s}Z", "#f4f8fa", "#9fb3c0", 2)
-                + circle(x + 70 * s, y - 1 * s, 2.2 * s, "#1d3a4d") + path(f"M{x+82*s} {y+0*s} q{20*s} {10*s} {34*s} {2*s}", stroke="#5a8f3c", width=3 * s)
-                + ellipse(x + 104 * s, y - 2 * s, 7 * s, 3.5 * s, "#6ba84f") + ellipse(x + 94 * s, y + 6 * s, 7 * s, 3.5 * s, "#6ba84f"))
-    b += dove(250, 170, 1.4)
-    return frame(b, defs)
+def house(s, x, y, k=1.0, wall="#fff4e6", roof="#e56b6f"):
+    s.add(shadow(x, y + 1, 46 * k)); s.add(rect(x - 36 * k, y - 46 * k, 72 * k, 46 * k, wall, 4)); s.add(poly([(x - 44 * k, y - 44 * k), (x, y - 78 * k), (x + 44 * k, y - 44 * k)], roof))
+    s.add(rect(x - 8 * k, y - 26 * k, 16 * k, 26 * k, "#b07a52", 3)); s.add(rect(x - 28 * k, y - 34 * k, 14 * k, 12 * k, "#9fd3f5", 2)); s.add(rect(x + 14 * k, y - 34 * k, 14 * k, 12 * k, "#9fd3f5", 2))
 
-def scene_oceans():
-    defs = lin("sea", (0, "#59b4d9"), (1, "#1f6f9f"))
-    b = rect(0, 0, W, H, "url(#sea)")
-    b += "".join(path(f"M{-40 + (r % 2) * 40} {y} q40 -12 80 0 t80 0 t80 0 t80 0 t80 0 t80 0 t80 0 t80 0 t80 0", stroke="#ffffff", width=2, extra='opacity="0.25"') for r, y in enumerate(range(20, 360, 34)))
-    b += circle(320, 180, 130, "#2b8ac4") + circle(320, 180, 130, "none", 'stroke="#ffffff" stroke-width="3" opacity="0.6"')
-    b += path("M230 120 q30 -30 70 -10 q20 20 0 40 q-30 20 -60 10 q-20 -10 -10 -40Z", "#7cc576") + path("M330 90 q40 -10 60 20 q10 30 -10 60 q-20 30 -40 0 q-20 -40 -10 -80Z", "#7cc576")
-    b += path("M280 210 q30 -10 50 10 q10 30 -20 50 q-30 10 -40 -20Z", "#7cc576") + path("M380 230 q30 0 40 20 q0 20 -30 20 q-20 -10 -10 -40Z", "#7cc576")
-    for a in range(0, 360, 30):
-        r = math.radians(a); b += path(f"M{320 + 130*math.cos(r):.0f} {180 + 130*math.sin(r):.0f} L{320 + 142*math.cos(r):.0f} {180 + 142*math.sin(r):.0f}", stroke="#ffffff", width=2, extra='opacity="0.6"')
-    cx, cy = 560, 290
-    b += circle(cx, cy, 38, "#ffffff", 'opacity="0.85"') + poly([(cx, cy - 32), (cx + 8, cy), (cx, cy + 32), (cx - 8, cy)], "#2c3e50") + poly([(cx, cy - 32), (cx + 8, cy), (cx - 8, cy)], "#c0392b")
-    b += poly([(cx - 32, cy), (cx, cy - 8), (cx + 32, cy), (cx, cy + 8)], "#7f8c8d", 'opacity="0.7"')
-    return frame(b, defs)
+def church(s, x, y, k=1.0, wall="#fffaf0", roof="#c0607a"):
+    s.add(shadow(x, y + 2, 70 * k, 10 * k)); s.add(rect(x - 54 * k, y - 70 * k, 108 * k, 70 * k, wall, 6)); s.add(poly([(x - 62 * k, y - 66 * k), (x, y - 110 * k), (x + 62 * k, y - 66 * k)], roof))
+    s.add(rect(x - 16 * k, y - 150 * k, 32 * k, 84 * k, wall, 4)); s.add(poly([(x - 20 * k, y - 148 * k), (x, y - 182 * k), (x + 20 * k, y - 148 * k)], roof))
+    s.add(rect(x - 2 * k, y - 204 * k, 4 * k, 24 * k, "#e9b949")); s.add(rect(x - 9 * k, y - 196 * k, 18 * k, 4 * k, "#e9b949"))
+    s.add(path(f"M{x - 12 * k} {y} L{x - 12 * k} {y - 30 * k} Q{x} {y - 44 * k} {x + 12 * k} {y - 30 * k} L{x + 12 * k} {y}Z", "#9b6b4a")); s.add(circle(x, y - 116 * k, 8 * k, "#9fd3f5"))
+    for wx in (-38, 30): s.add(path(f"M{x + wx * k} {y - 22 * k} v-20 q4 -8 8 0 v20z", "#9fd3f5"))
 
-def scene_life():
-    defs = lin("sky", (0, "#a8dadc"), (1, "#f1faee"))
-    b = rect(0, 0, W, H, "url(#sky)") + circle(540, 70, 32, "#ffd166") + hills(200, 50, "#7fb069", 11) + hills(250, 30, "#5c9a4f", 12)
-    b += tree(80, 270, 1.3) + tree(170, 260, 1.0) + tree(470, 265, 1.2) + tree(560, 275, 1.0)
-    b += path("M0 300 C150 280 250 330 400 300 C500 280 560 300 640 290 L640 360 L0 360Z", "#4aa3c7")
-    for x in (300, 340, 380):  # mangroves
-        b += path(f"M{x} 300 l-10 22 M{x} 300 l0 24 M{x} 300 l10 22", stroke="#5b3d23", width=3) + ellipse(x, 290, 24, 14, "#3f8f4a")
-    b += path("M220 90 q8 -8 16 0 q8 -8 16 0", stroke="#2d3a3a", width=2.5) + path("M260 120 q6 -6 12 0 q6 -6 12 0", stroke="#2d3a3a", width=2.5)
-    return frame(b, defs)
+def mosque(s, x, y, k=1.0, wall="#f4fbff", dome="#5cc6a8"):
+    s.add(shadow(x, y + 2, 66 * k, 10 * k)); s.add(rect(x - 50 * k, y - 60 * k, 100 * k, 60 * k, wall, 6)); s.add(path(f"M{x - 34 * k} {y - 60 * k} Q{x - 34 * k} {y - 112 * k} {x} {y - 116 * k} Q{x + 34 * k} {y - 112 * k} {x + 34 * k} {y - 60 * k}Z", dome))
+    s.add(rect(x + 56 * k, y - 140 * k, 16 * k, 140 * k, wall, 4)); s.add(path(f"M{x + 56 * k} {y - 140 * k} Q{x + 64 * k} {y - 162 * k} {x + 72 * k} {y - 140 * k}Z", dome))
+    s.add(path(f"M{x - 3 * k} {y - 126 * k} a8 8 0 1 0 8 -6 a6 6 0 1 1 -8 6z", "#e9b949"))
+    s.add(path(f"M{x - 10 * k} {y} v-24 q10 -14 20 0 v24z", "#7fbfae"))
 
-def scene_space():
-    defs = lin("sky", (0, "#0b0c2a"), (1, "#2a1f5c")) + rad("planet", (0, "#f2c879"), (1, "#c98a3d"), cx=0.4, cy=0.4, r=0.7)
-    b = rect(0, 0, W, H, "url(#sky)") + stars(120, 4, h=H) + circle(150, 260, 160, "#4a3f8c", 'opacity="0.25"')
-    b += ellipse(330, 170, 150, 34, "none", 'stroke="#e9d3a8" stroke-width="10" opacity="0.8" transform="rotate(-14 330 170)"')
-    b += circle(330, 170, 80, "url(#planet)") + path("M262 150 q70 -16 136 0", stroke="#b97b35", width=6, extra='opacity="0.6"')
-    b += path("M180 172 A150 34 0 0 0 480 168", stroke="#e9d3a8", width=10, extra='transform="rotate(-14 330 170)" opacity="0.9"')
-    b += circle(520, 80, 24, "#d6dde8") + circle(510, 74, 24, "#2a1f5c") + circle(90, 70, 12, "#9ec5ff")
-    b += path("M520 330 L560 250 M560 250 l20 8 l-10 -40 l-20 -8 Z", stroke="#cfd6e6", width=6) + path("M548 330 L560 250 L572 330", stroke="#cfd6e6", width=4)
-    return frame(b, defs)
+def columns_building(s, x, y, k=1.0, wall="#fffaf2", roof="#c9b6ff", n=6, w=200, h=90, flag=False, dome=False):
+    s.add(shadow(x, y + 2, w * 0.6 * k, 12 * k)); s.add(rect(x - w / 2 * k, y - 10 * k, w * k, 10 * k, "#e8dcc8", 2))
+    s.add(rect(x - w / 2 * k + 8 * k, y - h * k, (w - 16) * k, (h - 10) * k, wall, 4))
+    for i in range(n):
+        cx = x - w / 2 * k + 22 * k + i * (w - 44) * k / (n - 1); s.add(rect(cx - 5 * k, y - (h - 14) * k, 10 * k, (h - 24) * k, "#ffffff")); s.add(rect(cx - 6 * k, y - (h - 14) * k, 12 * k, 5 * k, "#efe6d6"))
+    s.add(poly([(x - w / 2 * k, y - (h - 2) * k), (x, y - (h + 38) * k), (x + w / 2 * k, y - (h - 2) * k)], s.grad((0, lighten_hex(roof, 0.2)), (1, roof))))
+    if dome: s.add(path(f"M{x - 30 * k} {y - (h + 30) * k} Q{x} {y - (h + 80) * k} {x + 30 * k} {y - (h + 30) * k}Z", "#f3d38a"))
+    if flag: s.add(rect(x - 1.5 * k, y - (h + 96) * k, 3 * k, 60 * k, "#8a6a4a")); flag_shape(s, x + 1.5 * k, y - (h + 96) * k, 44 * k)
 
-def scene_culture_world():
-    defs = lin("bg", (0, "#fbe8d3"), (1, "#f4d1ae"))
-    b = rect(0, 0, W, H, "url(#bg)") + tais_band(0, 250, W, 70)
-    b += ellipse(170, 170, 64, 28, "#8a4b2b") + rect(106, 170, 128, 70, "#a35d34") + ellipse(170, 240, 64, 22, "#7a4126") + ellipse(170, 170, 60, 24, "#e9cfa8")
-    b += path("M118 180 L222 230 M222 180 L118 230", stroke="#5a2d16", width=4)
-    b += path("M300 70 c-40 0 -70 30 -70 70 c0 40 30 60 60 60 c12 0 16 -8 16 -16 s-8 -12 -8 -20 8 -16 20 -16 h14 c26 0 40 -16 40 -36 c0 -26 -30 -42 -72 -42Z", "#fff8ec", "#c9a57a", 2)
-    b += circle(275, 110, 9, "#e63946") + circle(300, 90, 9, "#457b9d") + circle(330, 98, 9, "#2a9d8f") + circle(262, 145, 9, "#f4a261")
-    for x, y in [(450, 80), (500, 120), (540, 70)]:
-        b += path(f"M{x} {y} l0 50", stroke="#3d2c5e", width=4) + ellipse(x - 8, y + 50, 10, 7, "#3d2c5e") + path(f"M{x} {y} q14 6 18 22", stroke="#3d2c5e", width=4)
-    return frame(b, defs)
+def lighten_hex(c, t):
+    c = c.lstrip("#"); r, g, b = (int(c[i:i + 2], 16) for i in (0, 2, 4))
+    return "#%02x%02x%02x" % tuple(int(v + (255 - v) * t) for v in (r, g, b))
 
-# Timor-Leste categories
-def scene_tl_history():
-    defs = lin("bg", (0, "#f3e1c0"), (1, "#e6c896"))
-    b = rect(0, 0, W, H, "url(#bg)")
-    b += path("M120 60 h330 a20 20 0 0 1 20 20 v200 a20 20 0 0 1 -20 20 h-330 a20 20 0 0 1 -20 -20 v-200 a20 20 0 0 1 20 -20Z", "#fbf1dc", "#b98a4e", 3)
-    for i in range(7): b += path(f"M150 {100 + i * 26} q{120} -6 {260} 0", stroke="#8a6a44", width=3, extra='opacity="0.55"')
-    b += path("M430 70 c40 40 50 100 30 160", stroke="#4a3a2a", width=4) + path("M430 70 c30 10 40 40 30 70 c-20 -10 -30 -40 -30 -70Z", "#6f8f8a")
-    b += circle(510, 250, 70, "#b5873f") + circle(510, 250, 58, "#fff7e6") + path("M510 250 L510 205 M510 250 L540 262", stroke="#3d2b1f", width=5)
-    for a in range(0, 360, 30):
-        r = math.radians(a); b += circle(510 + 48 * math.cos(r), 250 + 48 * math.sin(r), 3, "#3d2b1f")
-    b += flag_tl(60, 250, 90)
-    return frame(b, defs)
+def fort(s, x, y, k=1.0, wall="#e9d8b8", shade="#cdb48e"):
+    s.add(shadow(x, y + 2, 120 * k, 12 * k)); s.add(rect(x - 110 * k, y - 60 * k, 220 * k, 60 * k, s.grad((0, wall), (1, shade)), 4))
+    for i in range(11): s.add(rect(x - 110 * k + i * 21 * k, y - 72 * k, 12 * k, 14 * k, wall, 2))
+    for bx in (-110, 92): s.add(rect(x + bx * k, y - 92 * k, 18 * k, 92 * k, shade, 3)); s.add(rect(x + bx * k - 3 * k, y - 98 * k, 24 * k, 8 * k, wall, 2))
+    s.add(path(f"M{x - 16 * k} {y} v-30 q16 -20 32 0 v30z", "#7a5a3a")); s.add(rect(x + 40 * k, y - 40 * k, 16 * k, 4 * k, "#5a4630", 2))
 
-def scene_tl_flag():
-    defs = lin("sky", (0, "#bfe3f5"), (1, "#eef7fb"))
-    b = rect(0, 0, W, H, "url(#sky)") + cloud(520, 70, 1.0) + rect(0, 320, W, 40, "#9cc58a")
-    b += path("M150 330 L150 40", stroke="#6b6b6b", width=8) + circle(150, 36, 7, "#c9a227")
-    b += f'<g transform="translate(154 52)">' + flag_tl(0, 0, 360) + '</g>'
-    return frame(b, defs)
+def statue_cristo(s, x, y, k=1.0):
+    """A statue with open arms on a globe and pedestal on a hill-top (Cristo Rei style)."""
+    s.add(rect(x - 16 * k, y - 40 * k, 32 * k, 40 * k, "#d9d2ee", 3)); s.add(circle(x, y - 56 * k, 20 * k, "#b8c4ea"))
+    s.add(path(f"M{x - 18 * k} {y - 56 * k} q18 -10 36 0", stroke="#aab8de", width=2 * k))
+    stone = s.grad((0, "#ffffff"), (1, "#cfc8e6"), x2=1, y2=0)
+    s.add(path(f"M{x - 7 * k} {y - 74 * k} L{x + 7 * k} {y - 74 * k} L{x + 9 * k} {y - 140 * k} L{x - 9 * k} {y - 140 * k}Z", stone, stroke="#a9a0cc", width=1.2))
+    s.add(path(f"M{x - 44 * k} {y - 128 * k} Q{x} {y - 136 * k} {x + 44 * k} {y - 128 * k} L{x + 44 * k} {y - 122 * k} Q{x} {y - 128 * k} {x - 44 * k} {y - 122 * k}Z", stone, stroke="#a9a0cc", width=1.2))
+    s.add(circle(x, y - 148 * k, 9 * k, "#ffffff", 'stroke="#a9a0cc" stroke-width="1.2"'))
 
-def scene_tl_map():
-    return frame(timor_map())
+def obelisk(s, x, y, k=1.0, c="#efe9ff"):
+    s.add(shadow(x, y + 2, 40 * k)); s.add(rect(x - 30 * k, y - 14 * k, 60 * k, 14 * k, "#ddd3f3", 3))
+    s.add(poly([(x - 14 * k, y - 14 * k), (x + 14 * k, y - 14 * k), (x + 9 * k, y - 140 * k), (x, y - 156 * k), (x - 9 * k, y - 140 * k)], s.grad((0, "#ffffff"), (1, c))))
 
-def scene_tl_culture():
-    defs = lin("bg", (0, "#f7e6d0"), (1, "#efd2b0"))
-    b = rect(0, 0, W, H, "url(#bg)") + tais_band(40, 40, 360, 280)
-    b += path("M40 320 l-6 26 M60 320 l-4 26 M80 320 l-2 26 M100 320 l0 26 M120 320 l2 26", stroke="#f4ead8", width=3)
-    b += ellipse(500, 170, 60, 24, "#8a4b2b") + rect(440, 170, 120, 110, "#a35d34") + ellipse(500, 280, 60, 20, "#7a4126") + ellipse(500, 170, 56, 20, "#d9b98a")
-    for i in range(5): b += path(f"M{446 + i*27} 190 l0 80", stroke="#e8b33a", width=3, extra='opacity="0.8"')
-    b += path("M455 300 l-20 40 M545 300 l20 40", stroke="#5a2d16", width=6)
-    return frame(b, defs)
+def market_stall(s, x, y, k=1.0, awning=("#ff8fa3", "#ffffff"), goods=("#ffb35c", "#7fd49a", "#ff6b6b")):
+    s.add(shadow(x, y + 2, 60 * k)); s.add(rect(x - 52 * k, y - 34 * k, 104 * k, 34 * k, "#c79a6a", 4))
+    for i in range(6): s.add(rect(x - 60 * k + i * 20 * k, y - 82 * k, 20 * k, 22 * k, awning[i % 2], 0))
+    s.add(path(f"M{x - 60 * k} {y - 60 * k} " + " ".join(f"q5 8 10 0" for _ in range(12)), awning[0]))
+    for px in (-52, 48): s.add(rect(x + px * k, y - 82 * k, 4 * k, 48 * k, "#8a6a4a"))
+    for i in range(7): s.add(circle(x - 40 * k + i * 13 * k, y - 40 * k, 7 * k, goods[i % 3]))
 
-def scene_tl_nature():
-    defs = lin("sky", (0, "#9ad1e6"), (1, "#e8f4ea")) + lin("sea", (0, "#2f9cc4"), (1, "#1c6f93"))
-    b = rect(0, 0, W, H, "url(#sky)") + circle(110, 70, 30, "#ffe08a") + path("M200 250 L330 70 L380 120 L430 90 L560 250Z", "#5f8c5a") + path("M310 98 L330 70 L352 98 L340 92 L330 104 L320 92Z", "#e8efe6")
-    b += hills(230, 40, "#4f9a50", 21) + rect(0, 260, W, 100, "url(#sea)")
-    for x in range(20, W, 60): b += path(f"M{x} 300 q12 -18 24 0 q12 -14 22 0", stroke="#ff9f80", width=6, extra='opacity="0.85"')
-    b += path("M420 160 c10 -16 30 -20 44 -10 l14 2 -10 8 c0 18 -16 28 -34 26 l-20 8 6 -12 c-6 -6 -4 -16 0 -22Z", "#e07a2e", "#7a3a12", 2)
-    b += path("M430 168 c10 4 20 2 26 -8", stroke="#7a3a12", width=2) + circle(462, 154, 2.2, "#1d1d1d")
-    b += path("M60 330 q30 -14 60 0 q-8 10 -30 12 q-20 0 -30 -12Z M118 330 l14 -8 l0 16Z", "#f4d35e")
-    return frame(b, defs)
+def boat_outrigger(s, x, y, k=1.0, hull="#e07a5f", sail="#fdf3e7"):
+    s.add(path(f"M{x - 70 * k} {y - 10 * k} Q{x} {y + 16 * k} {x + 70 * k} {y - 10 * k} L{x + 54 * k} {y + 4 * k} Q{x} {y + 22 * k} {x - 54 * k} {y + 4 * k}Z", hull))
+    s.add(path(f"M{x - 30 * k} {y - 4 * k} L{x - 40 * k} {y + 26 * k} M{x + 30 * k} {y - 4 * k} L{x + 40 * k} {y + 26 * k}", stroke="#8a6a4a", width=3 * k))
+    s.add(rect(x - 70 * k, y + 24 * k, 140 * k, 5 * k, "#a8714a", 2)); s.add(rect(x - 2 * k, y - 96 * k, 4 * k, 90 * k, "#8a6a4a"))
+    s.add(path(f"M{x + 2 * k} {y - 92 * k} Q{x + 52 * k} {y - 60 * k} {x + 46 * k} {y - 14 * k} L{x + 2 * k} {y - 14 * k}Z", sail))
 
-def scene_tl_leaders():
-    defs = lin("sky", (0, "#bfe3f5"), (1, "#f6f3ea"))
-    b = rect(0, 0, W, H, "url(#sky)") + cloud(120, 80, 1.1) + rect(0, 290, W, 70, "#9cc58a")
-    b += rect(150, 150, 340, 140, "#f6f1e7") + poly([(140, 150), (320, 90), (500, 150)], "#e9e2d2") + rect(140, 146, 360, 10, "#d9d0bd")
-    for i in range(8): b += rect(170 + i * 40, 160, 14, 120, "#e3dccb")
-    b += rect(290, 220, 60, 70, "#7a5a3a") + rect(140, 282, 360, 12, "#d9d0bd")
-    b += path("M560 290 L560 80", stroke="#6b6b6b", width=5) + flag_tl(562, 82, 70)
-    b += tree(80, 292, 1.0) + tree(600, 300, 0.7)
-    return frame(b, defs)
+def caravel(s, x, y, k=1.0, hull=("#b5835a", "#7f5634")):
+    s.add(path(f"M{x - 100 * k} {y - 40 * k} L{x + 100 * k} {y - 40 * k} Q{x + 92 * k} {y + 4 * k} {x + 60 * k} {y + 10 * k} L{x - 70 * k} {y + 10 * k} Q{x - 96 * k} {y} {x - 100 * k} {y - 40 * k}Z", s.grad((0, hull[0]), (1, hull[1]))))
+    s.add(rect(x - 100 * k, y - 52 * k, 50 * k, 14 * k, hull[1], 3)); s.add(rect(x + 64 * k, y - 50 * k, 36 * k, 12 * k, hull[1], 3))
+    for mx, h in ((-40, 150), (20, 170), (70, 120)):
+        s.add(rect(x + mx * k - 2 * k, y - (h + 40) * k, 4 * k, h * k, "#6b4a2b"))
+        s.add(path(f"M{x + mx * k} {y - (h + 30) * k} Q{x + (mx + 38) * k} {y - (h * 0.7 + 30) * k} {x + mx * k} {y - (h * 0.4 + 40) * k}Z", "#fbf5ea"))
+        s.add(path(f"M{x + (mx + 8) * k} {y - (h * 0.75 + 30) * k} h12 M{x + (mx + 14) * k} {y - (h * 0.75 + 36) * k} v12", stroke="#d64045", width=3 * k))
 
-def scene_tl_economy():
-    defs = lin("bg", (0, "#e9f5e1"), (1, "#f9eedb"))
-    b = rect(0, 0, W, H, "url(#bg)")
-    b += path("M60 60 C160 90 220 160 250 320", stroke="#6b4a2b", width=8)
-    for x, y in [(110, 90), (160, 120), (200, 170), (225, 220)]:
-        b += ellipse(x - 30, y - 10, 34, 14, "#3f8f4a", f'transform="rotate(-30 {x-30} {y-10})"') + ellipse(x + 30, y - 4, 34, 14, "#4fa35a", f'transform="rotate(25 {x+30} {y-4})"')
-        b += circle(x - 4, y + 6, 9, "#c1121f") + circle(x + 10, y + 10, 9, "#d62828") + circle(x + 2, y + 20, 9, "#a4161a")
-    b += path("M300 330 q-10 -80 30 -110 h60 q40 30 30 110Z", "#c8a26b", "#8a6a3a", 3) + ellipse(360, 222, 40, 10, "#6b4a2b")
-    for i in range(12): b += ellipse(340 + (i % 4) * 12, 214 + (i // 4) * 5, 5, 3.5, "#4a2f1a")
-    for i, h in enumerate([60, 90, 120, 170]):
-        b += rect(470 + i * 36, 320 - h, 24, h, ["#90be6d", "#43aa8b", "#277da1", "#f9844a"][i], 4)
-    b += path("M460 320 h160", stroke="#55606a", width=3)
-    return frame(b, defs)
+def cargo_ship(s, x, y, k=1.0):
+    s.add(path(f"M{x - 120 * k} {y - 30 * k} L{x + 120 * k} {y - 30 * k} L{x + 100 * k} {y + 6 * k} L{x - 110 * k} {y + 6 * k}Z", s.grad((0, "#4a6fd8"), (1, "#334fb0"))))
+    colors = ["#ff8fa3", "#ffd36b", "#7fd49a", "#7fbfff", "#c9a7ff", "#ffb35c"]
+    for row in range(2):
+        for i in range(8): s.add(rect(x - 96 * k + i * 22 * k, y - 52 * k - row * 20 * k, 20 * k, 18 * k, colors[(i + row * 3) % 6], 2))
+    s.add(rect(x + 84 * k, y - 76 * k, 26 * k, 46 * k, "#ffffff", 3)); s.add(rect(x + 88 * k, y - 70 * k, 18 * k, 6 * k, "#9fd3f5", 1))
 
-# ------------------------------------------------------------- module diagrams
-def diagram_size_compare():
-    """Background grid for the size comparison (bars are painted live)."""
-    b = rect(0, 0, W, H, "#f8faf5") + "".join(path(f"M40 {y} H620", stroke="#dfe7da", width=1) for y in range(40, 330, 40))
-    return svg(b)
+def oil_platform(s, x, y, k=1.0):
+    for lx in (-50, -18, 18, 50): s.add(rect(x + lx * k - 4 * k, y - 60 * k, 8 * k, 90 * k, "#9aa3b8"))
+    s.add(path(f"M{x - 50 * k} {y - 30 * k} L{x + 50 * k} {y + 10 * k} M{x + 50 * k} {y - 30 * k} L{x - 50 * k} {y + 10 * k}", stroke="#b6bdd0", width=3 * k))
+    s.add(rect(x - 70 * k, y - 76 * k, 140 * k, 18 * k, "#ffb35c", 3)); s.add(rect(x - 60 * k, y - 110 * k, 50 * k, 34 * k, "#ffffff", 3)); s.add(rect(x - 54 * k, y - 104 * k, 38 * k, 8 * k, "#9fd3f5", 1))
+    s.add(path(f"M{x + 20 * k} {y - 76 * k} L{x + 34 * k} {y - 170 * k} L{x + 48 * k} {y - 76 * k}", stroke="#e0566b", width=4 * k)); s.add(path(f"M{x + 26 * k} {y - 120 * k} h16 M{x + 23 * k} {y - 98 * k} h22", stroke="#e0566b", width=3 * k))
+    s.add(path(f"M{x + 34 * k} {y - 170 * k} q8 -16 -2 -28 q14 6 10 26", "#ff9f5a"))
 
-def scene_timeline():
-    defs = lin("bg", (0, "#0f2a3d"), (0.5, "#245a5a"), (1, "#f2d49b"), x2=1, y2=0)
-    b = rect(0, 0, W, H, "url(#bg)") + stars(40, 9, w=200, h=H)
-    b += path("M30 200 H610", stroke="#ffffff", width=4, extra='opacity="0.85"')
-    for i, x in enumerate([60, 150, 250, 350, 450, 560]):
-        b += circle(x, 200, 12, ["#f94144", "#f3722c", "#f9c74f", "#90be6d", "#43aa8b", "#577590"][i], 'stroke="#ffffff" stroke-width="3"')
-    b += circle(60, 120, 30, "#ff8c42", 'opacity="0.9"') + path("M240 140 q30 -50 60 0Z", "#6d597a") + sauropod(320, 160, 0.4, "#90be6d", "#2d5a3a")
-    b += circle(560, 120, 18, "#3b2a1e") + path("M560 138 v40", stroke="#3b2a1e", width=8)
-    return frame(b, defs)
+def crane(s, x, y, k=1.0):
+    s.add(rect(x - 6 * k, y - 160 * k, 12 * k, 160 * k, "#ffb35c")); s.add(rect(x - 70 * k, y - 160 * k, 160 * k, 10 * k, "#ffb35c", 2))
+    s.add(path(f"M{x - 6 * k} {y - 150 * k} L{x - 60 * k} {y - 150 * k} M{x + 6 * k} {y - 150 * k} L{x + 84 * k} {y - 150 * k}", stroke="#e8902f", width=2))
+    s.add(rect(x + 60 * k, y - 150 * k, 2 * k, 60 * k, "#5a5a6a")); s.add(rect(x + 50 * k, y - 92 * k, 22 * k, 16 * k, "#7fbfff", 2))
 
-def scene_industry_module():
-    return scene_industrial()
+def coin(s, x, y, r, c1="#ffe08a", c2="#e9b949", mark="$"):
+    s.add(circle(x, y + r * 0.12, r, "#b8892e")); s.add(circle(x, y, r, s.grad((0, c1), (1, c2)))); s.add(circle(x, y, r * 0.78, "none", f'stroke="#fff6cc" stroke-width="{r * 0.08:.1f}"'))
+    if mark: s.add(f'<text x="{x:.1f}" y="{y + r * 0.34:.1f}" font-family="Nunito, sans-serif" font-weight="800" font-size="{r:.0f}" text-anchor="middle" fill="#b8892e">{mark}</text>')
 
-# --------------------------------------------------------------- the registry
-SCENES = {
-    "world-earth": scene_earth, "world-dinosaurs": scene_dinosaurs, "world-human_origins": scene_human_origins,
-    "world-civilizations": scene_civilizations, "world-inventions": scene_inventions, "world-colonialism": scene_colonialism,
-    "world-industrial_revolution": scene_industrial, "world-world_wars": scene_peace, "world-geography_oceans": scene_oceans,
-    "world-life_environment": scene_life, "world-science_space": scene_space, "world-culture_arts": scene_culture_world,
-    "timor-history": scene_tl_history, "timor-flag": scene_tl_flag, "timor-map": scene_tl_map, "timor-culture": scene_tl_culture, "timor-nature": scene_tl_nature,
-    "timor-leaders": scene_tl_leaders, "timor-economy": scene_tl_economy,
-    "module-trex": scene_trex_module, "module-size": diagram_size_compare, "module-timeline": scene_timeline,
-}
+def banknote(s, x, y, w=150, h=72, c1="#b9f0c8", c2="#7fd49a"):
+    s.add(rect(x, y + 6, w, h, "#2a1d5c", 10, 'opacity="0.12"')); s.add(rect(x, y, w, h, s.grad((0, c1), (1, c2), x2=1, y2=1), 10))
+    s.add(circle(x + w / 2, y + h / 2, h * 0.3, "none", 'stroke="#3fa66a" stroke-width="4"')); s.add(rect(x + 10, y + 10, w - 20, h - 20, "none", 8, 'stroke="#ffffff" stroke-width="2" opacity="0.6"'))
 
-def main():
+def book(s, x, y, w=110, h=80, c="#7c5cfc"):
+    s.add(shadow(x + w / 2, y + h + 4, w * 0.55)); s.add(rect(x, y, w, h, s.grad((0, lighten_hex(c, 0.25)), (1, c)), 8)); s.add(rect(x + 8, y + 6, w - 22, h - 12, "#ffffff", 4, 'opacity="0.92"'))
+    for i in range(4): s.add(rect(x + 16, y + 16 + i * 13, w - 40, 4, "#d9d1ff", 2))
+
+def scroll_doc(s, x, y, w=150, h=110):
+    s.add(shadow(x + w / 2, y + h + 6, w * 0.5)); s.add(rect(x, y, w, h, s.grad((0, "#fff8e8"), (1, "#f5e6c4")), 6))
+    for cy in (y, y + h): s.add(ellipse(x + w / 2, cy, w / 2 + 8, 9, "#e9d2a0"))
+    for i in range(5): s.add(rect(x + 20, y + 20 + i * 16, w - 40 - (i % 2) * 24, 4, "#d8c39a", 2))
+
+def ballot_box(s, x, y, k=1.0):
+    s.add(shadow(x, y + 4, 70 * k)); s.add(rect(x - 64 * k, y - 80 * k, 128 * k, 80 * k, s.grad((0, "#e9f2ff"), (1, "#bcd4ff")), 10))
+    s.add(rect(x - 30 * k, y - 84 * k, 60 * k, 8 * k, "#4a6fd8", 3)); s.add(rect(x - 20 * k, y - 130 * k, 40 * k, 52 * k, "#ffffff", 4))
+    s.add(path(f"M{x - 8 * k} {y - 108 * k} l6 6 l12 -14", stroke="#14b88c", width=4 * k)); s.add(rect(x - 40 * k, y - 44 * k, 80 * k, 14 * k, "#4a6fd8", 4, 'opacity="0.25"'))
+
+def finger_ink(s, x, y, k=1.0):
+    s.add(rect(x - 12 * k, y - 70 * k, 24 * k, 70 * k, "#c98b5e", 12)); s.add(rect(x - 12 * k, y - 70 * k, 24 * k, 22 * k, "#5b4bd6", 12))
+
+def medal(s, x, y, k=1.0, c1="#ffe08a", c2="#e9b949", ribbon=("#7c5cfc", "#ec4899")):
+    s.add(poly([(x - 30 * k, y - 120 * k), (x - 8 * k, y - 120 * k), (x + 6 * k, y - 50 * k), (x - 12 * k, y - 50 * k)], ribbon[0])); s.add(poly([(x + 30 * k, y - 120 * k), (x + 8 * k, y - 120 * k), (x - 6 * k, y - 50 * k), (x + 12 * k, y - 50 * k)], ribbon[1]))
+    coin(s, x, y - 26 * k, 34 * k, c1, c2, mark="")
+    pts = []
+    for i in range(10):
+        a = math.radians(-90 + i * 36); rr = 18 * k if i % 2 == 0 else 8 * k; pts.append((x + math.cos(a) * rr, y - 26 * k + math.sin(a) * rr))
+    s.add(poly(pts, "#fff6cc"))
+
+def dove(s, x, y, k=1.0, c="#ffffff"):
+    s.add(path(f"M{x - 40 * k} {y} Q{x - 10 * k} {y - 20 * k} {x + 20 * k} {y - 10 * k} Q{x + 34 * k} {y - 22 * k} {x + 44 * k} {y - 14 * k} L{x + 54 * k} {y - 10 * k} L{x + 42 * k} {y - 4 * k} Q{x + 30 * k} {y + 18 * k} {x - 4 * k} {y + 14 * k} L{x - 40 * k} {y + 20 * k} L{x - 28 * k} {y + 6 * k}Z", c))
+    s.add(path(f"M{x - 6 * k} {y - 6 * k} Q{x - 30 * k} {y - 60 * k} {x + 10 * k} {y - 64 * k} Q{x + 10 * k} {y - 30 * k} {x + 14 * k} {y - 10 * k}Z", "#eef0ff"))
+    s.add(path(f"M{x + 52 * k} {y - 10 * k} q10 4 16 -2", stroke="#4bb070", width=3 * k)); s.add(ellipse(x + 64 * k, y - 16 * k, 5 * k, 3 * k, "#7fd49a"))
+    s.add(circle(x + 40 * k, y - 15 * k, 1.8 * k, "#1f1a3d"))
+
+def candle(s, x, y, k=1.0, c="#fff4dc"):
+    s.add(circle(x, y - 64 * k, 22 * k, s.radial((0, "#ffd36b", 0.6), (1, "#ffd36b", 0)))); s.add(rect(x - 9 * k, y - 50 * k, 18 * k, 50 * k, c, 4))
+    s.add(path(f"M{x} {y - 74 * k} q8 12 0 22 q-8 -10 0 -22z", "#ffb347")); s.add(path(f"M{x} {y - 66 * k} q4 6 0 12 q-4 -6 0 -12z", "#fff2b8"))
+
+def carnation(s, x, y, k=1.0, c="#e63950"):
+    s.add(path(f"M{x} {y} Q{x - 6 * k} {y - 60 * k} {x} {y - 110 * k}", stroke="#4bb070", width=5 * k)); s.add(ellipse(x - 14 * k, y - 56 * k, 14 * k, 6 * k, "#5fc28a", f'transform="rotate(-30 {x - 14 * k} {y - 56 * k})"'))
+    for i in range(9):
+        a = math.radians(i * 40); s.add(circle(x + math.cos(a) * 14 * k, y - 122 * k + math.sin(a) * 10 * k, 13 * k, c if i % 2 else lighten_hex(c, 0.2)))
+    s.add(circle(x, y - 124 * k, 12 * k, lighten_hex(c, 0.3)))
+
+def scales(s, x, y, k=1.0, c="#e9b949"):
+    s.add(rect(x - 3 * k, y - 140 * k, 6 * k, 140 * k, c)); s.add(rect(x - 40 * k, y - 6 * k, 80 * k, 8 * k, c, 3)); s.add(rect(x - 70 * k, y - 132 * k, 140 * k, 6 * k, c, 3))
+    for side in (-1, 1):
+        cx = x + side * 66 * k; s.add(path(f"M{cx} {y - 128 * k} L{cx - 22 * k} {y - 76 * k} M{cx} {y - 128 * k} L{cx + 22 * k} {y - 76 * k}", stroke=c, width=2 * k))
+        s.add(path(f"M{cx - 28 * k} {y - 76 * k} Q{cx} {y - 52 * k} {cx + 28 * k} {y - 76 * k}Z", c))
+
+def globe(s, x, y, r, sea_c=("#8fd0ff", "#4a9be8"), land="#7fd49a"):
+    s.add(circle(x, y, r, s.grad((0, sea_c[0]), (1, sea_c[1]))))
+    s.add(path(f"M{x - r * 0.6} {y - r * 0.4} q{r * 0.3} {-r * 0.3} {r * 0.6} {-r * 0.1} q{r * 0.1} {r * 0.3} {-r * 0.2} {r * 0.4} q{-r * 0.3} {r * 0.1} {-r * 0.4} {-r * 0.3}z", land))
+    s.add(path(f"M{x + r * 0.1} {y + r * 0.1} q{r * 0.4} {-r * 0.2} {r * 0.6} {r * 0.1} q{-r * 0.1} {r * 0.4} {-r * 0.4} {r * 0.5} q{-r * 0.2} {-r * 0.3} {-r * 0.2} {-r * 0.6}z", land))
+    s.add(circle(x, y, r, "none", f'stroke="#ffffff" stroke-width="2" opacity="0.5"')); s.add(ellipse(x - r * 0.35, y - r * 0.4, r * 0.3, r * 0.18, "#ffffff", 'opacity="0.35"'))
+
+def drum(s, x, y, k=1.0, body="#b5835a"):
+    s.add(shadow(x, y + 2, 36 * k)); s.add(rect(x - 30 * k, y - 70 * k, 60 * k, 70 * k, s.grad((0, lighten_hex(body, 0.2)), (1, body)), 10))
+    s.add(ellipse(x, y - 70 * k, 30 * k, 10 * k, "#f4e4c8"))
+    for i in range(5): s.add(path(f"M{x - 30 * k + i * 15 * k} {y - 64 * k} L{x - 22 * k + i * 15 * k} {y - 6 * k}", stroke="#6b4a2b", width=2 * k))
+
+def tais_cloth(s, x, y, w, h, colors=("#7a1426", "#b52a2a", "#1f1a17", "#e8b33a", "#f4ead8")):
+    s.add(rect(x, y, w, h, colors[0], 6)); stripe = h / 9
+    for i in range(9):
+        if i % 2: s.add(rect(x, y + i * stripe, w, stripe * 0.5, colors[1 + (i // 2) % 3]))
+    for j in range(int(w // 28)):
+        cx = x + 14 + j * 28; cy = y + h / 2
+        s.add(poly([(cx, cy - h * 0.18), (cx + 10, cy), (cx, cy + h * 0.18), (cx - 10, cy)], colors[3])); s.add(poly([(cx, cy - h * 0.08), (cx + 4, cy), (cx, cy + h * 0.08), (cx - 4, cy)], colors[4]))
+    for j in range(int(w // 10)): s.add(rect(x + j * 10 + 2, y + h, 3, 10, colors[3]))
+
+def loom(s, x, y, k=1.0):
+    s.add(rect(x - 90 * k, y - 4 * k, 180 * k, 8 * k, "#8a6a4a", 3)); s.add(rect(x - 90 * k, y - 120 * k, 180 * k, 8 * k, "#8a6a4a", 3))
+    for i in range(30): s.add(rect(x - 86 * k + i * 6 * k, y - 112 * k, 2 * k, 108 * k, ["#b52a2a", "#1f1a17", "#e8b33a"][i % 3], 0, 'opacity="0.9"'))
+    tais_cloth(s, x - 86 * k, y - 60 * k, 172 * k, 56 * k)
+
+def belak(s, x, y, r, c1="#fff1c2", c2="#e2b951"):
+    s.add(circle(x, y + r * 0.08, r, "#a88433")); s.add(circle(x, y, r, s.grad((0, c1), (1, c2)))); s.add(circle(x, y, r * 0.55, "none", f'stroke="#c99a35" stroke-width="{r * 0.06:.1f}"'))
+    s.add(circle(x, y - r * 1.25, r * 0.12, "none", f'stroke="#c99a35" stroke-width="{r * 0.06:.1f}"'))
+
+def calendar_page(s, x, y, w=150, h=150, top="#ec4899", mark=None):
+    s.add(shadow(x + w / 2, y + h + 6, w * 0.55)); s.add(rect(x, y, w, h, "#ffffff", 16)); s.add(path(f"M{x} {y + 16} q0 -16 16 -16 h{w - 32} q16 0 16 16 v26 h{-w}z", top))
+    for i in range(4):
+        for j in range(5): s.add(rect(x + 14 + j * 26, y + 54 + i * 22, 18, 14, "#efeaff" if (i, j) != (1, 2) else (mark or "#7c5cfc"), 4))
+    for px in (x + 34, x + w - 34): s.add(rect(px - 4, y - 10, 8, 22, "#4a3a8f", 4))
+
+def firework(s, x, y, r, c):
+    for i in range(12):
+        a = math.radians(i * 30); s.add(path(f"M{x + math.cos(a) * r * 0.3:.1f} {y + math.sin(a) * r * 0.3:.1f} L{x + math.cos(a) * r:.1f} {y + math.sin(a) * r:.1f}", stroke=c, width=3))
+        s.add(circle(x + math.cos(a) * r * 1.1, y + math.sin(a) * r * 1.1, 3, c))
+
+def tent(s, x, y, k=1.0, c="#7fbfff"):
+    s.add(shadow(x, y + 2, 50 * k)); s.add(poly([(x - 50 * k, y), (x, y - 60 * k), (x + 50 * k, y)], s.grad((0, lighten_hex(c, 0.25)), (1, c)))); s.add(poly([(x - 12 * k, y), (x, y - 40 * k), (x + 12 * k, y)], "#3d5a8a"))
+
+def plane(s, x, y, k=1.0, c="#ffffff"):
+    s.add(path(f"M{x - 70 * k} {y} Q{x - 60 * k} {y - 10 * k} {x + 50 * k} {y - 8 * k} Q{x + 70 * k} {y - 6 * k} {x + 74 * k} {y} Q{x + 70 * k} {y + 6 * k} {x + 50 * k} {y + 6 * k} L{x - 60 * k} {y + 6 * k}Z", c))
+    s.add(poly([(x - 10 * k, y - 4 * k), (x + 20 * k, y - 4 * k), (x - 30 * k, y - 46 * k), (x - 44 * k, y - 46 * k)], lighten_hex("#9fb6ff", 0.2))); s.add(poly([(x - 10 * k, y + 4 * k), (x + 20 * k, y + 4 * k), (x - 30 * k, y + 40 * k), (x - 44 * k, y + 40 * k)], "#9fb6ff"))
+    s.add(poly([(x - 60 * k, y - 4 * k), (x - 48 * k, y - 4 * k), (x - 66 * k, y - 26 * k), (x - 74 * k, y - 26 * k)], "#9fb6ff"))
+    for i in range(5): s.add(circle(x + 4 * k + i * 10 * k, y - 2 * k, 2.2 * k, "#7fbfff"))
+
+def un_helmet(s, x, y, k=1.0):
+    s.add(path(f"M{x - 60 * k} {y} Q{x - 60 * k} {y - 70 * k} {x} {y - 74 * k} Q{x + 60 * k} {y - 70 * k} {x + 60 * k} {y}Z", s.grad((0, "#8cc8ff"), (1, "#4a9be8"))))
+    s.add(rect(x - 70 * k, y - 6 * k, 140 * k, 12 * k, "#4a9be8", 6)); s.add(ellipse(x - 20 * k, y - 50 * k, 18 * k, 10 * k, "#ffffff", 'opacity="0.35"'))
+
+def chart_bars(s, x, y, k=1.0, values=(0.3, 0.5, 0.45, 0.7, 0.9), colors=("#c9a7ff", "#ff8fb8", "#7fd49a", "#7fbfff", "#ffd36b")):
+    for i, v in enumerate(values): s.add(rect(x + i * 34 * k, y - 120 * k * v, 24 * k, 120 * k * v, colors[i % len(colors)], 8))
+    s.add(rect(x - 10 * k, y, (len(values) * 34 + 10) * k, 4 * k, "#4a3a8f", 2))
+
+def road_scene(s, y):
+    s.add(path(f"M{W * 0.42} {y} L{W * 0.58} {y} L{W * 0.85} {H} L{W * 0.15} {H}Z", s.grad((0, "#8e8aa6"), (1, "#5d5878"))))
+    for i in range(4):
+        t0 = 0.15 + i * 0.22; t1 = t0 + 0.1; y0 = y + (H - y) * t0; y1 = y + (H - y) * t1
+        s.add(poly([(W / 2 - 2 - 8 * t0, y0), (W / 2 + 2 + 8 * t0, y0), (W / 2 + 2 + 8 * t1, y1), (W / 2 - 2 - 8 * t1, y1)], "#fff4c2"))
+
+def power_lines(s, y):
+    for x in (100, 330, 560):
+        s.add(rect(x - 3, y - 150, 6, 150, "#7b7896")); s.add(rect(x - 30, y - 140, 60, 5, "#7b7896", 2)); s.add(rect(x - 22, y - 116, 44, 5, "#7b7896", 2))
+    for dy in (-140, -116):
+        s.add(path(f"M70 {y + dy} Q215 {y + dy + 30} 330 {y + dy} T590 {y + dy}", stroke="#5c5a78", width=1.5))
+
+def map_outline(s, x0=40, y0=60, w=560, h=230, land=("#9fe0b7", "#57b98a"), sea=None, highlight=None, labels=False, posts=False):
+    """Timor-Leste from the packaged map data (geoBoundaries/OSM), with the Indonesian half of Timor in grey."""
+    data = json.loads((ROOT / "lafa/assets/timor/map/municipalities.json").read_text(encoding="utf-8"))
+    lon0, lat0, lon1, lat1 = data["bbox"]
+    sx = w / (lon1 - lon0); sy = h / (lat1 - lat0); scale = min(sx, sy)
+    ox = x0 + (w - (lon1 - lon0) * scale) / 2; oy = y0 + (h - (lat1 - lat0) * scale) / 2
+    P = lambda lon, lat: (ox + (lon - lon0) * scale, oy + (lat1 - lat) * scale)
+    fill = s.grad((0, land[0]), (1, land[1]), x2=1, y2=1)
+    for m in data["municipalities"]:
+        color = fill if highlight is None or m["id"] != highlight else s.grad((0, "#ffb3d1"), (1, "#ec4899"))
+        for poly_ in m["polygons"]:
+            d = ""
+            for ring in poly_:
+                pts = [P(lon, lat) for lon, lat in ring]; d += "M" + " L".join(f"{a:.1f} {b:.1f}" for a, b in pts) + "Z "
+            s.add(path(d, color, stroke="#ffffff", width=1.2, extra='fill-rule="evenodd"'))
+    return P
+
+def sparkle(s, x, y, r, c="#ffffff"):
+    s.add(path(f"M{x} {y - r} Q{x + r * 0.15} {y - r * 0.15} {x + r} {y} Q{x + r * 0.15} {y + r * 0.15} {x} {y + r} Q{x - r * 0.15} {y + r * 0.15} {x - r} {y} Q{x - r * 0.15} {y - r * 0.15} {x} {y - r}Z", c))
+
+# ------------------------------------------------------------------- scenes
+SCENES = {}
+
+def scene(*names):
+    def wrap(fn):
+        for n in names: SCENES[n] = fn
+        return fn
+    return wrap
+
+@scene("tl-overview")
+def s_overview(s):
+    sky(s, "sea"); s.add(rect(0, 0, W, H, s.grad((0, "#bfe6ff"), (1, "#7fc8ee"))))
+    map_outline(s, 30, 70, 580, 230); flag_shape(s, 520, 40, 80, pole=False); cloud(s, 120, 50, 0.8); cloud(s, 380, 40, 0.6)
+    for lon, lat in ((125.57, -8.56),): pass
+
+@scene("island-formation")
+def s_island_formation(s):
+    sky(s, "dawn"); sea(s, 190, "#8fd0f0", "#4f9fd8")
+    s.add(path("M0 260 L250 230 L330 300 L0 360Z", s.grad((0, "#d8b98f"), (1, "#a8845c"))))   # Australian plate
+    s.add(path("M640 250 L380 225 L330 300 L640 360Z", s.grad((0, "#c4a6e8"), (1, "#8f74c9"))))   # Banda arc plate
+    s.add(path("M210 205 Q300 120 380 200 Q340 230 300 236 Q250 238 210 205Z", s.grad((0, "#9fe0b7"), (1, "#4fa678"))))
+    for x in (230, 300, 360): s.add(path(f"M{x} 300 l0 -40", stroke="#ffffff", width=4, extra='opacity="0.7"'))
+    s.add(path("M150 300 l60 -20 M500 300 l-60 -20", stroke="#ffffff", width=6, extra='opacity="0.8"')); s.add(poly([(212, 274), (196, 270), (205, 286)], "#ffffff")); s.add(poly([(438, 274), (454, 270), (445, 286)], "#ffffff"))
+    sun(s, 540, 70, 26)
+
+@scene("geology", "minerals")
+def s_geology(s):
+    sky(s, "paper")
+    layers = [("#f1d6a8", "#e3bd84"), ("#e4b7a0", "#cf9a82"), ("#cbb6e6", "#a990d1"), ("#a9c8e8", "#7fa6d1"), ("#b9a28a", "#957d66")]
+    for i, (a, b) in enumerate(layers):
+        y = 120 + i * 48; s.add(path(f"M0 {y} Q160 {y - 18} 320 {y} T640 {y - 6} L640 {y + 52} Q480 {y + 40} 320 {y + 52} T0 {y + 50}Z", s.grad((0, a), (1, b))))
+    s.add(path("M200 205 a26 26 0 1 1 1 0z", "none", stroke="#fff6e0", width=3)); s.add(path("M200 205 a16 16 0 1 1 1 0z", "none", stroke="#fff6e0", width=3))
+    s.add(path("M430 260 q10 -30 30 -10 q14 -26 30 0", stroke="#fff6e0", width=3))
+    for x, c in ((470, "#ffffff"), (510, "#d9f2ff"), (540, "#ffe0ef")): s.add(poly([(x, 100), (x + 18, 70), (x + 34, 100), (x + 18, 118)], c, 'opacity="0.95"'))
+
+@scene("mountain")
+def s_mountain(s):
+    sky(s, "day"); sun(s, 520, 80); cloud(s, 140, 70); cloud(s, 400, 100, 0.7)
+    mountain(s, -40, 300, 360, 200, "#b4a4ef", "#8a76d8"); mountain(s, 220, 300, 460, 240, "#9db8f0", "#6d8ed8", snow=False); hills(s, 290, 30, "#a8e3b6", "#5fbf86", 4)
+    tree(s, 90, 330, 0.8); tree(s, 560, 335, 0.9)
+
+@scene("mountain-ramelau", "trekking")
+def s_ramelau(s):
+    sky(s, "sunset"); sun(s, 120, 200, 40, "#ffd08a")
+    mountain(s, 80, 330, 520, 260, "#c7a7e8", "#8a6cc8", peak_shift=10); cloud(s, 200, 230, 1.2, opacity=0.8); cloud(s, 470, 250, 1.0, opacity=0.8)
+    px = 80 + 260 + 10; s.add(rect(px - 3, 70 - 6, 6, 18, "#ffffff")); s.add(circle(px, 60, 6, "#ffffff"))
+    hills(s, 320, 26, "#9fd7b2", "#4f9f78", 7, 3); person(s, 520, 352, 0.6, shirt="#ec4899", hat="cap")
+
+@scene("river")
+def s_river(s):
+    sky(s, "mint"); hills(s, 170, 40, "#b8e6c4", "#79c99a", 11); mountain(s, 360, 180, 300, 110, "#a8c4ee", "#7c9ad8")
+    s.add(path("M300 180 Q260 240 330 270 Q420 310 360 360 L470 360 Q520 300 420 260 Q350 230 330 180Z", s.grad((0, "#9fe3ff"), (1, "#4aa8e0"))))
+    tree(s, 150, 300); tree(s, 560, 290, 0.9); bush(s, 250, 330, 0.8); flower(s, 120, 330)
+
+@scene("lake")
+def s_lake(s):
+    sky(s, "day"); hills(s, 200, 30, "#b8e6c4", "#79c99a", 4); s.add(ellipse(320, 280, 300, 70, s.grad((0, "#a8e6ff"), (1, "#5ab3e6"))))
+    for x in (90, 130, 520, 560): s.add(path(f"M{x} 300 q-4 -40 4 -70 M{x + 8} 300 q4 -30 -2 -56", stroke="#5fae6f", width=3))
+    bird(s, 300, 140, 0.7, body="#ffffff"); cloud(s, 470, 80); sun(s, 130, 80, 24)
+
+@scene("sea-coast", "seas")
+def s_coast(s):
+    sky(s, "sea"); sun(s, 520, 70); sea(s, 200); s.add(path("M0 180 Q120 150 230 200 Q300 240 360 360 L0 360Z", s.grad((0, "#bfe6a5"), (1, "#7fc56f"))))
+    s.add(path("M0 220 Q120 200 220 240 Q280 270 320 360 L300 360 Q250 280 0 250Z", "#fbe6bd")); palm(s, 120, 250, 0.9); boat_outrigger(s, 470, 250, 0.8)
+
+@scene("beach")
+def s_beach(s):
+    sky(s, "day"); sun(s, 540, 70); cloud(s, 160, 60); sea(s, 175); sand(s, 255); palm(s, 520, 300, 1.0); palm(s, 590, 290, 0.8)
+    s.add(path("M150 270 Q190 230 230 270Z", "#ff8fb8")); s.add(rect(188, 250, 3, 50, "#8a6a4a")); s.add(ellipse(260, 300, 40, 8, "#ffffff", 'opacity="0.6"'))
+
+@scene("coral-reef", "diving")
+def s_reef(s):
+    s.add(rect(0, 0, W, H, s.grad((0, "#7fd6f5"), (1, "#2f7fc4"))))
+    for i in range(6): s.add(path(f"M{60 + i * 110} 0 L{20 + i * 110} 360", stroke="#ffffff", width=26, extra='opacity="0.06"'))
+    s.add(path("M0 300 Q160 270 320 300 T640 290 L640 360 L0 360Z", "#f5dcb0"))
+    for x, c in ((80, "#ff8fa3"), (170, "#ffb35c"), (420, "#c9a7ff"), (540, "#ff8fa3"), (300, "#7fd49a")): coral(s, x, 305, 1.1, c)
+    fish(s, 230, 160, 1.2); fish(s, 400, 120, 1.0, "#ffd36b"); fish(s, 470, 200, 0.9, "#7fbfff"); fish(s, 160, 230, 0.8, "#ff8fa3")
+    if True:
+        person_x = 520; s.add(ellipse(person_x, 120, 34, 12, "#3b3a5c")); s.add(circle(person_x + 32, 116, 10, "#c98b5e")); s.add(rect(person_x + 24, 108, 18, 8, "#7fd6f5", 3))
+        for i in range(4): s.add(circle(person_x + 48 + i * 6, 96 - i * 16, 3 + i, "#ffffff", 'opacity="0.6"'))
+
+@scene("whale")
+def s_whale(s):
+    s.add(rect(0, 0, W, H, s.grad((0, "#bfe8ff"), (0.35, "#7cc8ee"), (1, "#2f6fb8"))))
+    whale(s, 320, 210, 1.2); whale(s, 520, 300, 0.6, "#9cc0f5", "#6a96e0")
+    for i in range(6): s.add(circle(170 + i * 14, 150 - i * 10, 3 + i * 0.6, "#ffffff", 'opacity="0.5"'))
+    s.add(path("M0 50 " + " ".join("q20 -6 40 0 t40 0" for _ in range(17)), stroke="#ffffff", width=2, extra='opacity="0.6"'))
+
+@scene("climate")
+def s_climate(s):
+    s.add(rect(0, 0, W / 2, H, s.grad((0, "#ffe2b8"), (1, "#ffd0e1")))); s.add(rect(W / 2, 0, W / 2, H, s.grad((0, "#b8c8f5"), (1, "#c8e6ff"))))
+    sun(s, 160, 130, 46); hills(s, 290, 20, "#e8d39a", "#cdb06a", 2)
+    cloud(s, 470, 110, 1.6, "#f4f6ff"); cloud(s, 520, 140, 1.2, "#e6ebff")
+    for i in range(14): x = 400 + (i * 37) % 200; y = 170 + (i * 53) % 110; s.add(path(f"M{x} {y} l-6 14", stroke="#4a8ad8", width=3))
+    s.add(path("M320 0 L320 360", stroke="#ffffff", width=3, extra='opacity="0.7"'))
+
+@scene("flood")
+def s_flood(s):
+    sky(s, "lilac"); cloud(s, 200, 70, 1.6, "#d9d9f0"); cloud(s, 450, 60, 1.4, "#cfd3ee")
+    for i in range(30): x = (i * 61) % 640; y = 100 + (i * 37) % 120; s.add(path(f"M{x} {y} l-6 14", stroke="#7f9be0", width=2.5))
+    house(s, 180, 300, 1.0); house(s, 420, 310, 0.8, roof="#7c5cfc")
+    s.add(path("M0 270 " + " ".join("q30 -10 60 0 t60 0" for _ in range(6)) + " L640 360 L0 360Z", s.grad((0, "#9ec7e8", 0.9), (1, "#6a9cc8"))))
+
+@scene("earthquake")
+def s_quake(s):
+    sky(s, "paper"); ground(s, 230, "#e8d3b0", "#cdb08a")
+    s.add(path("M0 250 L180 260 L230 300 L300 250 L360 320 L420 260 L640 270", stroke="#7a5a3a", width=6)); house(s, 150, 240, 0.9); house(s, 480, 250, 0.9, roof="#4a9be8")
+    for x in (260, 320, 380): s.add(path(f"M{x} 140 q10 -10 0 -20 q-10 -10 0 -20", stroke="#a08ae8", width=3))
+
+@scene("forest")
+def s_forest(s):
+    sky(s, "mint"); hills(s, 230, 30, "#b8e6c4", "#79c99a", 12)
+    for i, x in enumerate(range(30, 660, 70)): tree(s, x, 320 - (i % 2) * 20, 1.1 - (i % 3) * 0.12)
+    bird(s, 470, 110, 0.6); sun(s, 560, 60, 20)
+
+@scene("mangrove")
+def s_mangrove(s):
+    sky(s, "day"); sea(s, 230, "#9fd8e8", "#5aaed0")
+    for x in (100, 230, 380, 520):
+        for r in (-30, -12, 10, 28): s.add(path(f"M{x} 220 Q{x + r} 240 {x + r * 1.4} 270", stroke="#7a5a3a", width=4))
+        s.add(circle(x, 190, 40, s.grad((0, "#8ddca6"), (1, "#3fa66a")))); s.add(circle(x - 26, 205, 26, "#5fc28a")); s.add(circle(x + 26, 205, 26, "#4bb070"))
+    fish(s, 300, 300, 0.8, "#ffd36b")
+
+@scene("sandalwood")
+def s_sandalwood(s):
+    sky(s, "paper"); ground(s, 290, "#e8d3b0", "#d0b089"); tree(s, 320, 300, 1.8, "#8fd1a0", "#4f9f72", "#8a5a32")
+    for i in range(5): s.add(path(f"M{430 + i * 24} {180 - i * 10} q10 -14 0 -28 q-10 -14 0 -28", stroke="#d8a7ff", width=3, extra='opacity="0.7"'))
+    for x in (110, 170): s.add(rect(x - 40, 300, 80, 20, "#c7905c", 10)); s.add(circle(x + 40, 310, 10, "#e8c08a"))
+
+@scene("crocodile", "legend")
+def s_croc(s):
+    sky(s, "sea"); sea(s, 210); s.add(path("M380 220 Q480 170 640 190 L640 240 Q520 236 380 220Z", s.grad((0, "#9fe0b7"), (1, "#57b98a"))))
+    crocodile(s, 220, 250, 1.1); sun(s, 540, 70); cloud(s, 140, 70)
+
+@scene("birds")
+def s_birds(s):
+    sky(s, "mint"); tree(s, 150, 360, 2.4, "#9fe0b7", "#4fa678"); bird(s, 360, 180, 1.4); bird(s, 470, 120, 0.9, body="#ffffff", crest="#ffb35c")
+    s.add(path("M250 300 L560 260", stroke="#8a6a4a", width=8)); bird(s, 470, 255, 1.0, body="#7fd49a", crest="#ff6b6b", wing="#5fc28a")
+
+@scene("animals")
+def s_animals(s):
+    sky(s, "day"); ground(s, 250); buffalo(s, 180, 320, 1.0); horse(s, 440, 320, 1.1); tree(s, 590, 300, 0.9); bird(s, 300, 110, 0.6)
+
+@scene("national-park")
+def s_park(s):
+    sky(s, "day"); sea(s, 230); s.add(path("M0 210 Q200 160 400 210 Q470 230 520 360 L0 360Z", s.grad((0, "#9fe0b7"), (1, "#4fa678"))))
+    tree(s, 90, 290); tree(s, 180, 270, 1.2); tree(s, 290, 300); s.add(rect(360, 250, 8, 70, "#8a6a4a")); s.add(rect(330, 236, 70, 34, "#f4e4c8", 6))
+    s.add(path("M345 253 h40 M345 262 h28", stroke="#8a6a4a", width=3)); s.add(path("M520 200 Q560 180 600 200 Q580 215 520 200Z", "#9fe0b7"))
+
+@scene("environment")
+def s_environment(s):
+    sky(s, "mint"); globe(s, 320, 210, 110)
+    s.add(path("M320 120 q-4 -30 10 -50", stroke="#4bb070", width=6)); s.add(ellipse(300, 82, 22, 11, "#7fd49a", 'transform="rotate(-30 300 82)"')); s.add(ellipse(346, 72, 22, 11, "#5fc28a", 'transform="rotate(20 346 72)"'))
+    for x, y in ((120, 90), (520, 100), (540, 300)): sparkle(s, x, y, 14, "#ffffff")
+
+@scene("cave", "prehistory")
+def s_cave(s):
+    s.add(rect(0, 0, W, H, s.grad((0, "#5b4a8a"), (1, "#3a2d63"))))
+    s.add(path("M0 0 L640 0 L640 360 L0 360Z M160 360 Q160 120 320 110 Q480 120 480 360Z", s.grad((0, "#a58e74"), (1, "#7a6550")), extra='fill-rule="evenodd"'))
+    s.add(path("M160 360 Q160 120 320 110 Q480 120 480 360Z", s.grad((0, "#ffd6a8"), (1, "#ffb1c8"))))
+    for x, y in ((70, 120), (110, 200), (540, 150)): s.add(path(f"M{x} {y} c-6 -16 6 -30 14 -18 c6 -12 22 0 10 14 c10 6 0 22 -12 14 c-2 12 -18 10 -12 -10z", "#d8664e", extra='opacity="0.85"'))
+    s.add(path("M560 250 l20 -40 l20 40 M570 236 h20", stroke="#d8664e", width=4)); fish(s, 80, 290, 1.0, "#d8664e", "#d8664e")
+    s.add(path("M300 300 q20 -30 40 0", stroke="#ffffff", width=3, extra='opacity="0.8"'))
+
+@scene("austronesian-boat")
+def s_austro(s):
+    sky(s, "sunset"); sun(s, 500, 120, 40, "#ffd08a"); sea(s, 220, "#8ac6e8", "#4f8fcf"); boat_outrigger(s, 280, 240, 1.4); boat_outrigger(s, 520, 230, 0.6, "#c86b4f")
+    bird(s, 160, 100, 0.5)
+
+@scene("kingdom")
+def s_kingdom(s):
+    sky(s, "paper"); hills(s, 260, 40, "#cfe8b8", "#93c77a", 5); uma_lulik(s, 200, 320, 0.95); person(s, 420, 330, 1.2, shirt="#b52a2a", hat="headdress", skirt="#7a1426")
+    belak(s, 420, 268, 10)
+
+@scene("trade-ships")
+def s_trade(s):
+    sky(s, "dawn"); sea(s, 210); s.add(path("M380 300 Q300 230 220 236 Q140 240 60 300Z", "#e8c08a", extra='opacity="0"'))
+    s.add(path("M160 230 L300 230 L280 262 L180 262Z", "#b5835a")); s.add(rect(228, 120, 4, 112, "#6b4a2b")); s.add(path("M232 128 L300 150 L300 214 L232 214Z", "#e8573f", extra='opacity="0.9"'))
+    for i in range(5): s.add(path(f"M236 {140 + i * 15} L298 {150 + i * 13}", stroke="#b8402d", width=2))
+    for x in (420, 470, 520): s.add(rect(x, 300, 60, 16, "#c7905c", 8))
+    sun(s, 560, 70, 24)
+
+@scene("caravel")
+def s_caravel(s):
+    sky(s, "day"); cloud(s, 120, 70); cloud(s, 460, 60, 0.7); sea(s, 250); caravel(s, 320, 255, 1.1)
+
+@scene("fort")
+def s_fort(s):
+    sky(s, "day"); ground(s, 290, "#d9e8b8", "#b5d08a"); fort(s, 330, 300, 1.2); flag_shape(s, 420, 120, 50, pole=False, wave=True); cloud(s, 120, 80)
+
+@scene("colonial-town")
+def s_colonial(s):
+    sky(s, "paper"); ground(s, 300, "#efe0c4", "#d9c39b")
+    for i, x in enumerate((90, 230, 390, 540)): columns_building(s, x, 310, 0.6, wall=["#fff6e6", "#ffeedd", "#fff1f5", "#f4f0ff"][i], roof=["#e9b6a0", "#c9b6ff", "#ffb3cf", "#b6d6ff"][i], n=4, w=200, h=90)
+    palm(s, 320, 330, 0.7)
+
+@scene("treaty")
+def s_treaty(s):
+    sky(s, "lilac"); scroll_doc(s, 220, 110, 200, 150); s.add(circle(380, 230, 22, "#d8463c")); s.add(circle(380, 230, 12, "#b02c24"))
+    s.add(path("M150 300 L230 230", stroke="#3b2d63", width=6)); s.add(path("M230 230 l8 -10 l4 14z", "#3b2d63"))
+
+@scene("revolt")
+def s_revolt(s):
+    sky(s, "sunset"); hills(s, 260, 50, "#c8a8e8", "#8e72c8", 6); mountain(s, 360, 280, 300, 150, "#b79ce8", "#8064c4")
+    for i, x in enumerate((140, 220, 300)): person(s, x, 330, 1.0, shirt=["#7a1426", "#1f1a17", "#b52a2a"][i], skirt="#e8b33a", hat="headdress" if i == 1 else None)
+
+@scene("ww2")
+def s_ww2(s):
+    sky(s, "lilac"); cloud(s, 140, 80, 1.2, "#e9e4ff"); plane(s, 380, 110, 1.0, "#d9dbe8"); sea(s, 240, "#9db4d8", "#6c86b8")
+    s.add(path("M120 250 L260 250 L240 280 L140 280Z", "#7d86a8")); s.add(rect(180, 214, 30, 36, "#9aa1c0", 3)); s.add(rect(192, 190, 6, 26, "#7d86a8"))
+
+@scene("carnation")
+def s_carnation(s):
+    sky(s, "dawn"); carnation(s, 280, 340, 1.4); carnation(s, 380, 330, 1.1, "#ff5b7a"); sparkle(s, 140, 100, 16); sparkle(s, 520, 120, 12)
+
+@scene("proclamation", "independence")
+def s_independence(s):
+    sky(s, "night"); stars(s, 60, 7)
+    firework(s, 140, 90, 40, "#ffd36b"); firework(s, 520, 80, 46, "#ff8fb8"); firework(s, 340, 60, 30, "#7fd6f5")
+    s.add(rect(318, 90, 5, 230, "#d8cfe8")); flag_shape(s, 323, 100, 150)
+    crowd(s, 120, 360, 8, 0.75, 4)
+
+@scene("resistance")
+def s_resistance(s):
+    sky(s, "dusk" if False else "sunset"); mountain(s, -60, 320, 380, 230, "#9a7cc8", "#6a52a8"); mountain(s, 240, 320, 460, 260, "#8a6cc0", "#5a4598")
+    hills(s, 300, 30, "#5d8a6a", "#3f6a50", 9); s.add(circle(520, 110, 40, s.radial((0, "#ffe9b8"), (1, "#ffd08a"))))
+    s.add(rect(178, 150, 4, 120, "#3a2d4a")); flag_shape(s, 182, 150, 56)
+
+@scene("memorial")
+def s_memorial(s):
+    sky(s, "night"); stars(s, 40, 3); candle(s, 230, 320, 1.2); candle(s, 320, 330, 1.5); candle(s, 410, 320, 1.1)
+    for x in (170, 470): flower(s, x, 330, 1.4, "#ffffff", "#ffd36b")
+
+@scene("nobel", "veterans", "heroes")
+def s_nobel(s):
+    sky(s, "lilac"); medal(s, 320, 320, 1.6)
+    for x, y in ((150, 110), (500, 90), (520, 260), (130, 250)): sparkle(s, x, y, 14, "#ffd36b")
+
+@scene("ballot")
+def s_ballot(s):
+    sky(s, "day"); ballot_box(s, 260, 320, 1.4); finger_ink(s, 470, 330, 1.4); cloud(s, 520, 80); flag_shape(s, 70, 60, 70)
+
+@scene("un-peace")
+def s_un(s):
+    sky(s, "sea"); un_helmet(s, 220, 300, 1.4); dove(s, 440, 160, 1.4)
+    for x, y in ((520, 280), (110, 90)): sparkle(s, x, y, 12)
+
+@scene("constitution")
+def s_constitution(s):
+    sky(s, "paper"); book(s, 200, 110, 240, 170, "#7c5cfc"); flag_shape(s, 250, 150, 90, wave=False); scales(s, 520, 320, 0.7)
+
+@scene("camp")
+def s_camp(s):
+    sky(s, "dawn"); ground(s, 270, "#e8dcc0", "#cdb898"); tent(s, 160, 320, 1.2); tent(s, 320, 330, 1.4, "#ffb3cf"); tent(s, 490, 320, 1.2, "#b6e8c8"); cloud(s, 480, 80)
+
+@scene("reconciliation", "diplomacy")
+def s_reconcile(s):
+    sky(s, "mint"); globe(s, 320, 170, 90)
+    s.add(path("M140 300 Q220 250 300 270 L330 290 L300 312 Q220 320 140 330Z", "#c98b5e")); s.add(path("M500 300 Q420 250 340 270 L310 290 L340 312 Q420 320 500 330Z", "#a96f45"))
+    s.add(rect(90, 290, 60, 50, "#7c5cfc", 10)); s.add(rect(490, 290, 60, 50, "#14b88c", 10)); dove(s, 520, 90, 0.7)
+
+@scene("maritime")
+def s_maritime(s):
+    sky(s, "sea"); sea(s, 120, "#8fd0f0", "#3f8fd0"); s.add(path("M0 240 Q160 220 320 250 T640 230", stroke="#ffffff", width=4, extra='stroke-dasharray="14 10"'))
+    oil_platform(s, 470, 230, 0.8); boat_outrigger(s, 150, 190, 0.6); map_pin(s, 300, 200, "#ec4899")
+
+def map_pin(s, x, y, c="#ec4899"):
+    s.add(path(f"M{x} {y} q-24 -30 -24 -48 a24 24 0 1 1 48 0 q0 18 -24 48z", c)); s.add(circle(x, y - 48, 9, "#ffffff"))
+
+@scene("asean")
+def s_asean(s):
+    sky(s, "lilac"); s.add(circle(320, 180, 110, s.grad((0, "#ffe9a8"), (1, "#ffc94a"))))
+    for i in range(11):
+        a = math.radians(-90 + i * 360 / 11); x = 320 + math.cos(a) * 150; y = 180 + math.sin(a) * 120
+        s.add(circle(x, y, 18, ["#7c5cfc", "#ec4899", "#14b88c", "#3b93ec", "#f77f3a", "#e11d48"][i % 6])); s.add(circle(x, y, 7, "#ffffff", 'opacity="0.5"'))
+    for i in range(10): s.add(path(f"M{290 + i * 6} 240 q-8 -60 {6 - i} -110", stroke="#c98a12", width=3))
+    flag_shape(s, 296, 150, 48)
+
+@scene("church-crowd", "procession")
+def s_church_crowd(s):
+    sky(s, "day"); ground(s, 300, "#e8f0d8", "#cfe0b0"); church(s, 320, 300, 0.95); crowd(s, 60, 360, 4, 0.7, 5); crowd(s, 450, 360, 4, 0.7, 9); cloud(s, 120, 70)
+
+@scene("parliament")
+def s_parliament(s):
+    sky(s, "dawn"); ground(s, 300, "#e8f0d8", "#cfe0b0"); columns_building(s, 320, 310, 1.1, roof="#c9b6ff", n=8, w=300, h=110, flag=True); tree(s, 70, 320); tree(s, 580, 320)
+
+@scene("palace")
+def s_palace(s):
+    sky(s, "day"); ground(s, 300, "#e8f0d8", "#cfe0b0"); columns_building(s, 320, 310, 1.1, wall="#ffffff", roof="#ffd36b", n=6, w=280, h=120, dome=False, flag=True)
+    for x in (70, 580): palm(s, x, 320, 0.8)
+
+@scene("government-palace")
+def s_govpalace(s):
+    sky(s, "sea"); ground(s, 300, "#e8f0d8", "#cfe0b0"); columns_building(s, 320, 310, 1.15, wall="#fffaf2", roof="#e9b6a0", n=10, w=380, h=96, flag=True); palm(s, 50, 330, 0.7)
+
+@scene("justice")
+def s_justice(s):
+    sky(s, "lilac"); scales(s, 320, 320, 1.6); book(s, 80, 240, 120, 80, "#14b88c")
+
+@scene("police")
+def s_police(s):
+    sky(s, "sea"); s.add(path("M320 60 L420 100 Q420 230 320 300 Q220 230 220 100Z", s.grad((0, "#6fa8ff"), (1, "#3a6fd8"))))
+    s.add(path("M320 100 l12 26 28 3 -21 19 6 28 -25 -14 -25 14 6 -28 -21 -19 28 -3z", "#ffd36b")); s.add(rect(250, 250, 140, 14, "#ffffff", 7, 'opacity="0.6"'))
+
+@scene("military")
+def s_military(s):
+    sky(s, "mint"); hills(s, 280, 30, "#9fc8a0", "#5f9a6a", 13); s.add(path("M320 70 L410 110 Q410 220 320 290 Q230 220 230 110Z", s.grad((0, "#8fb58a"), (1, "#557a50"))))
+    sparkle(s, 320, 170, 40, "#ffd36b"); flag_shape(s, 470, 70, 80)
+
+@scene("village-council")
+def s_village(s):
+    sky(s, "paper"); ground(s, 280); tree(s, 320, 300, 2.0, "#9fe0b7", "#4fa678")
+    for i, x in enumerate((180, 250, 390, 460)): person(s, x, 330, 0.8, shirt=["#7c5cfc", "#b52a2a", "#14b88c", "#f2a516"][i], skin=SKIN[i % 4])
+    uma_lulik(s, 560, 330, 0.5)
+
+@scene("flag")
+def s_flag(s):
+    sky(s, "sea"); s.add(rect(150, 40, 8, 300, "#cfc6e8", 4)); flag_shape(s, 158, 50, 330)
+    cloud(s, 560, 300, 0.9); cloud(s, 90, 290, 0.6)
+
+@scene("emblem")
+def s_emblem(s):
+    sky(s, "lilac"); s.add(circle(320, 180, 120, s.grad((0, "#fff3c4"), (1, "#f2c94c")))); s.add(circle(320, 180, 100, "#ffffff", 'opacity="0.35"'))
+    flag_shape(s, 250, 140, 140, wave=False); s.add(circle(320, 180, 120, "none", 'stroke="#e9b949" stroke-width="6"'))
+    for i in range(16):
+        a = math.radians(i * 22.5); s.add(circle(320 + math.cos(a) * 132, 180 + math.sin(a) * 132, 6, "#e9b949"))
+
+@scene("anthem", "music")
+def s_anthem(s):
+    sky(s, "dawn"); drum(s, 160, 320, 1.4); flag_shape(s, 380, 60, 140)
+    for i, (x, y) in enumerate(((300, 220), (360, 180), (430, 230), (500, 190))):
+        s.add(circle(x, y, 12, ["#7c5cfc", "#ec4899", "#14b88c", "#f2a516"][i])); s.add(rect(x + 9, y - 54, 4, 56, ["#7c5cfc", "#ec4899", "#14b88c", "#f2a516"][i]))
+
+@scene("currency", "money")
+def s_currency(s):
+    sky(s, "mint"); banknote(s, 150, 110, 220, 110); banknote(s, 190, 150, 220, 110, "#d6f7e0", "#9fe0b7")
+    coin(s, 470, 240, 52, mark="¢"); coin(s, 540, 170, 36, mark="¢"); coin(s, 420, 150, 30, mark="$")
+
+@scene("languages")
+def s_languages(s):
+    sky(s, "lilac")
+    for i, (x, y, c) in enumerate(((180, 120, "#7c5cfc"), (420, 100, "#ec4899"), (300, 230, "#14b88c"), (500, 240, "#f2a516"), (120, 250, "#3b93ec"))):
+        s.add(rect(x - 70, y - 40, 140, 80, c, 24)); s.add(poly([(x - 20, y + 38), (x - 34, y + 64), (x + 4, y + 38)], c))
+        for j in range(3): s.add(rect(x - 46, y - 18 + j * 16, 92 - j * 20, 6, "#ffffff", 3, 'opacity="0.85"'))
+
+@scene("dili-city", "city", "town")
+def s_dili(s):
+    sky(s, "sunset"); sea(s, 260, "#8ac6e8", "#4f8fcf"); s.add(path("M420 260 Q500 140 640 120 L640 260Z", s.grad((0, "#a8d8a0"), (1, "#5f9f6a"))))
+    statue_cristo(s, 590, 140, 0.45)
+    for i, (x, w, h, c) in enumerate(((40, 60, 80, "#fff1f5"), (110, 70, 120, "#f4f0ff"), (190, 50, 70, "#fff6e6"), (250, 80, 100, "#eaf6ff"), (340, 60, 140, "#fff1f5"))):
+        s.add(rect(x, 260 - h, w, h, c, 6))
+        for r in range(int(h // 24)): s.add(rect(x + 10, 260 - h + 12 + r * 24, w - 20, 8, "#c9b6ff", 3, 'opacity="0.7"'))
+    palm(s, 60, 290, 0.6); palm(s, 400, 290, 0.6)
+
+@scene("tais")
+def s_tais(s):
+    sky(s, "paper"); tais_cloth(s, 60, 60, 520, 120); loom(s, 320, 330, 1.2)
+
+@scene("uma-lulik")
+def s_uma(s):
+    sky(s, "dawn"); hills(s, 280, 30, "#cfe8b8", "#93c77a", 8); uma_lulik(s, 320, 330, 1.25); tree(s, 110, 320); tree(s, 540, 320, 0.9)
+
+@scene("dance", "festival")
+def s_dance(s):
+    sky(s, "sunset"); ground(s, 300, "#f0d9b8", "#e0bf92")
+    for i in range(6):
+        a = math.radians(i * 60); x = 320 + math.cos(a) * 170; y = 330 + math.sin(a) * 20
+        person(s, x, y, 0.9, shirt=["#b52a2a", "#1f1a17", "#7a1426"][i % 3], skirt=["#e8b33a", "#b52a2a", "#f4ead8"][i % 3], arms_up=i % 2 == 0)
+    sparkle(s, 320, 100, 18, "#ffd36b")
+
+@scene("likurai")
+def s_likurai(s):
+    sky(s, "dawn"); ground(s, 300, "#f0d9b8", "#e0bf92"); person(s, 240, 330, 1.3, shirt="#b52a2a", skirt="#1f1a17", arms_up=True); drum(s, 420, 330, 1.2)
+    s.add(path("M210 210 Q160 160 200 120", stroke="#e8b33a", width=10))
+
+@scene("food")
+def s_food(s):
+    sky(s, "paper"); s.add(ellipse(320, 290, 240, 50, "#2a1d5c", 'opacity="0.1"')); s.add(ellipse(320, 260, 220, 60, s.grad((0, "#ffffff"), (1, "#efe8ff"))))
+    s.add(ellipse(230, 250, 70, 28, "#fff8e6")); s.add(ellipse(400, 250, 80, 30, "#ffd8a8"))
+    for i in range(8): s.add(circle(200 + i * 9, 246 - (i % 2) * 6, 6, "#fff3c4"))
+    fish(s, 400, 246, 1.6, "#f4a35c", "#ffd36b"); s.add(path("M150 120 q20 -30 0 -60 M180 120 q20 -30 0 -60", stroke="#c9b6ff", width=4, extra='opacity="0.6"'))
+    s.add(rect(470, 160, 70, 80, "#a8714a", 14)); s.add(ellipse(505, 162, 35, 10, "#6b4a2b"))
+
+@scene("crafts")
+def s_crafts(s):
+    sky(s, "paper"); s.add(path("M160 320 Q110 260 150 200 L250 200 Q290 260 240 320Z", s.grad((0, "#e8a07a"), (1, "#c26a42")))); s.add(ellipse(200, 200, 50, 12, "#a8583a"))
+    s.add(path("M330 320 L320 220 L460 220 L450 320Z", s.grad((0, "#f1d38a"), (1, "#d2a54a"))))
+    for i in range(6): s.add(path(f"M{322 + i * 2} {230 + i * 15} L{458 - i * 2} {230 + i * 15}", stroke="#b8862e", width=3))
+    belak(s, 540, 200, 40)
+
+@scene("adornment")
+def s_adornment(s):
+    sky(s, "lilac"); belak(s, 320, 210, 80)
+    s.add(path("M200 120 L230 60 L260 110 L290 50 L320 110 L350 50 L380 110 L410 60 L440 120Z", s.grad((0, "#fff1c2"), (1, "#e2b951"))))
+    for i in range(14): s.add(circle(170 + i * 22, 312 + math.sin(i) * 6, 7, ["#e8573f", "#ffd36b", "#ffffff"][i % 3]))
+
+@scene("church")
+def s_church(s):
+    sky(s, "day"); ground(s, 300, "#e8f0d8", "#cfe0b0"); church(s, 320, 310, 1.05); tree(s, 90, 320); palm(s, 560, 330, 0.8); cloud(s, 140, 70)
+
+@scene("mosque", "eid")
+def s_mosque(s):
+    sky(s, "night"); stars(s, 50, 11); moon(s, 520, 80, 30); ground(s, 300, "#5a6b9a", "#46557d"); mosque(s, 300, 310, 1.15)
+    for x in (120, 460): s.add(rect(x - 12, 230, 24, 34, "#ffd36b", 8)); s.add(rect(x - 2, 210, 4, 22, "#d8cfe8"))
+
+@scene("football", "sports")
+def s_football(s):
+    sky(s, "day"); ground(s, 240, "#9fe0a8", "#5fbf72"); s.add(rect(80, 250, 480, 4, "#ffffff", 2)); s.add(path("M320 250 a60 18 0 1 1 1 0", stroke="#ffffff", width=3))
+    s.add(rect(520, 170, 6, 90, "#ffffff")); s.add(rect(600, 170, 6, 90, "#ffffff")); s.add(rect(520, 170, 86, 6, "#ffffff"))
+    person(s, 260, 330, 1.0, shirt="#dc241f"); s.add(circle(330, 316, 16, "#ffffff")); s.add(circle(330, 316, 6, "#1f1a3d"))
+
+@scene("literature")
+def s_literature(s):
+    sky(s, "paper"); book(s, 140, 150, 160, 120, "#ec4899"); book(s, 330, 120, 160, 140, "#7c5cfc")
+    s.add(path("M520 90 L560 250 L548 254 Z", "#3b2d63")); s.add(path("M520 90 q20 -10 30 20", stroke="#ffd36b", width=4)); sparkle(s, 110, 90, 12, "#ffd36b")
+
+@scene("people", "population")
+def s_people(s):
+    sky(s, "dawn"); ground(s, 300, "#f0e6fa", "#ddd0f3"); crowd(s, 90, 340, 6, 1.0, 21); crowd(s, 150, 300, 5, 0.75, 8)
+
+@scene("oil-gas")
+def s_oil(s):
+    sky(s, "sunset"); sea(s, 240, "#8ac6e8", "#4f8fcf"); oil_platform(s, 330, 250, 1.3); cargo_ship(s, 130, 300, 0.45)
+
+@scene("fund", "bank")
+def s_fund(s):
+    sky(s, "mint"); s.add(ellipse(300, 230, 130, 90, s.grad((0, "#ffc4dd"), (1, "#f58bbf")))); s.add(circle(390, 190, 26, "#f58bbf")); s.add(rect(250, 150, 60, 10, "#c95a92", 5))
+    for x in (230, 340): s.add(rect(x, 300, 22, 30, "#f58bbf", 8))
+    s.add(path("M470 120 q-30 40 -30 62 a30 30 0 0 0 60 0 q0 -22 -30 -62z", "#4a3a8f")); coin(s, 300, 90, 30, mark="$")
+
+@scene("exports", "port")
+def s_exports(s):
+    sky(s, "day"); sea(s, 230); cargo_ship(s, 300, 260, 1.1); crane(s, 560, 260, 0.9); cloud(s, 120, 70)
+
+@scene("imports")
+def s_imports(s):
+    sky(s, "dawn"); plane(s, 220, 110, 1.2); ground(s, 290, "#e0e4f0", "#c4cadf")
+    colors = ["#ff8fa3", "#ffd36b", "#7fd49a", "#7fbfff", "#c9a7ff"]
+    for i in range(5): s.add(rect(330 + (i % 3) * 64, 250 - (i // 3) * 46, 60, 42, colors[i], 6))
+
+@scene("coffee")
+def s_coffee(s):
+    sky(s, "paper"); hills(s, 290, 40, "#bfe0a8", "#7fbf6f", 14)
+    for x in (120, 200, 280): tree(s, x, 300, 0.9, "#7fd49a", "#3f9a52")
+    for x, y in ((110, 240), (130, 256), (190, 236), (210, 250), (270, 244)): s.add(circle(x, y, 6, "#d93a3a"))
+    s.add(rect(400, 170, 120, 120, "#ffffff", 30)); s.add(rect(410, 180, 100, 30, "#7a4e2a", 14)); s.add(path("M520 200 q40 0 40 30 q0 30 -40 30", stroke="#ffffff", width=12))
+    for x in (430, 460, 490): s.add(path(f"M{x} 150 q10 -16 0 -32", stroke="#c9b6ff", width=4, extra='opacity="0.6"'))
+
+@scene("rice", "crops", "plan")
+def s_rice(s):
+    sky(s, "day"); hills(s, 200, 30, "#cfe8b8", "#93c77a", 17)
+    for i in range(5): s.add(path(f"M0 {220 + i * 28} Q320 {204 + i * 28} 640 {220 + i * 28} L640 {246 + i * 28} Q320 {230 + i * 28} 0 {246 + i * 28}Z", ["#a8e6a0", "#8fd88a", "#bfe8a8", "#9fe09a", "#86d080"][i]))
+    person(s, 420, 300, 1.0, shirt="#3b93ec", hat="straw"); sun(s, 540, 70)
+
+@scene("maize")
+def s_maize(s):
+    sky(s, "paper"); ground(s, 300, "#e8d3b0", "#d0b089")
+    for x in range(80, 600, 70):
+        s.add(path(f"M{x} 300 L{x} 150", stroke="#5fae6f", width=6)); s.add(path(f"M{x} 200 q-30 -20 -40 10 M{x} 240 q30 -20 40 10", stroke="#7fc77f", width=6))
+        s.add(ellipse(x + 10, 190, 9, 22, "#ffd36b"))
+
+@scene("livestock")
+def s_livestock(s):
+    sky(s, "mint"); ground(s, 250); buffalo(s, 220, 320, 1.1); s.add(ellipse(470, 300, 40, 24, "#ffc4c4")); s.add(circle(505, 290, 18, "#ffc4c4")); s.add(ellipse(518, 294, 8, 6, "#f5a0a0"))
+    for x in (440, 480): s.add(rect(x, 312, 8, 16, "#ffb0b0", 3))
+
+@scene("fishing")
+def s_fishing(s):
+    sky(s, "dawn"); sun(s, 520, 120, 40, "#ffd08a"); sea(s, 220); boat_outrigger(s, 300, 230, 1.2)
+    s.add(path("M380 200 Q440 260 420 320", stroke="#ffffff", width=2, extra='opacity="0.8"')); fish(s, 430, 320, 1.0, "#ffd36b")
+
+@scene("tourism")
+def s_tourism(s):
+    sky(s, "day"); sea(s, 200); sand(s, 260); palm(s, 520, 300); s.add(rect(160, 220, 90, 70, "#ff8fb8", 14)); s.add(rect(186, 206, 38, 18, "none", 8, 'stroke="#c95a92" stroke-width="6"'))
+    s.add(path("M330 280 Q370 240 410 280Z", "#ffd36b")); s.add(rect(368, 260, 3, 40, "#8a6a4a")); sun(s, 560, 70, 24)
+
+@scene("road")
+def s_road(s):
+    sky(s, "day"); hills(s, 200, 50, "#bfe6a5", "#7fc56f", 19); road_scene(s, 190); tree(s, 90, 320); tree(s, 560, 320); cloud(s, 470, 70)
+
+@scene("electricity")
+def s_electricity(s):
+    sky(s, "dawn"); ground(s, 300); power_lines(s, 300); s.add(path("M320 60 L280 150 L318 150 L296 230 L366 120 L326 120 L350 60Z", "#ffd36b")); sun(s, 560, 70, 20)
+
+@scene("workers")
+def s_workers(s):
+    sky(s, "sea"); plane(s, 420, 90, 1.0); crowd(s, 120, 340, 4, 0.95, 31); s.add(path("M380 300 q60 -80 160 -150", stroke="#ffffff", width=4, extra='stroke-dasharray="10 10"'))
+
+@scene("school", "youth")
+def s_school(s):
+    sky(s, "day"); ground(s, 300); columns_building(s, 320, 300, 0.9, wall="#fff6e6", roof="#ff8fb8", n=5, w=260, h=90, flag=True)
+    person(s, 140, 340, 0.8, shirt="#ffffff", holding="book"); person(s, 520, 340, 0.8, shirt="#ffffff", skirt="#3b5bd6", holding="book")
+
+@scene("university")
+def s_university(s):
+    sky(s, "lilac"); s.add(poly([(320, 60), (520, 140), (320, 220), (120, 140)], s.grad((0, "#5b4bd6"), (1, "#3b2d8f")))); s.add(path("M200 170 L200 250 Q320 310 440 250 L440 170 L320 220Z", "#4a3cb0"))
+    s.add(path("M520 140 L520 240", stroke="#ffd36b", width=5)); s.add(circle(520, 248, 10, "#ffd36b")); sparkle(s, 100, 90, 14, "#ffd36b"); sparkle(s, 560, 80, 10, "#ffd36b")
+
+@scene("health")
+def s_health(s):
+    sky(s, "mint"); s.add(rect(200, 110, 240, 190, "#ffffff", 22)); s.add(rect(290, 140, 60, 130, "#f25f6f", 12)); s.add(rect(255, 175, 130, 60, "#f25f6f", 12))
+    s.add(path("M480 220 q30 -30 60 0 q-30 40 -30 40 q0 0 -30 -40z", "#ff8fb8"))
+
+@scene("women")
+def s_women(s):
+    sky(s, "dawn"); ground(s, 300, "#f6e6f6", "#e6d0ee")
+    for i, x in enumerate((200, 320, 440)): person(s, x, 340, 1.1, shirt=["#ec4899", "#7c5cfc", "#14b88c"][i], skirt=["#7a1426", "#1f1a17", "#e8b33a"][i], hair="#2b1d14", arms_up=i == 1)
+
+@scene("media")
+def s_media(s):
+    sky(s, "lilac"); s.add(rect(150, 120, 200, 140, "#3b2d63", 18)); s.add(rect(165, 135, 170, 100, s.grad((0, "#9fd3ff"), (1, "#c9a7ff")), 10)); flag_shape(s, 210, 160, 80, wave=False)
+    s.add(rect(400, 150, 120, 110, "#ffffff", 14)); s.add(circle(460, 205, 34, "none", 'stroke="#7c5cfc" stroke-width="6"')); s.add(rect(455, 120, 4, 32, "#7c5cfc"))
+
+@scene("island")
+def s_island(s):
+    sky(s, "day"); sea(s, 200); s.add(path("M140 240 Q240 140 380 160 Q500 180 520 240 Q330 270 140 240Z", s.grad((0, "#9fe0b7"), (1, "#4fa678")))); s.add(path("M140 240 Q330 270 520 240 Q330 262 140 246Z", "#fbe6bd"))
+    palm(s, 300, 230, 0.6); mountain(s, 330, 200, 160, 80, "#9fd8b0", "#5fae7a"); sun(s, 540, 70, 24); cloud(s, 150, 70)
+
+@scene("viewpoint")
+def s_viewpoint(s):
+    sky(s, "sunset"); sun(s, 470, 190, 40, "#ffd08a"); sea(s, 230, "#a4b8ee", "#6f88d8"); s.add(path("M0 260 Q160 200 300 260 L300 360 L0 360Z", s.grad((0, "#9fd7b2"), (1, "#4f9f78"))))
+    person(s, 180, 250, 0.8, shirt="#ec4899", arms_up=True)
+
+@scene("statue")
+def s_statue(s):
+    sky(s, "sunset"); sea(s, 250, "#8ac6e8", "#4f8fcf"); s.add(path("M150 360 Q320 170 490 360Z", s.grad((0, "#a8d8a0"), (1, "#5f9f6a")))); statue_cristo(s, 320, 270, 1.25); cloud(s, 110, 80); cloud(s, 540, 70, 0.8)
+
+@scene("museum")
+def s_museum(s):
+    sky(s, "paper"); ground(s, 300, "#ece4f6", "#d8cdee"); columns_building(s, 320, 310, 1.05, wall="#fffaf2", roof="#c9b6ff", n=6, w=300, h=110)
+    for x in (240, 400): s.add(rect(x - 16, 236, 32, 50, "#ffd36b", 6, 'opacity="0.7"'))
+
+@scene("monument")
+def s_monument(s):
+    sky(s, "dawn"); ground(s, 300); obelisk(s, 320, 310, 1.3); flower(s, 240, 320, 1.4); flower(s, 400, 320, 1.4, "#ffd36b", "#ff8fb8")
+
+@scene("hot-spring")
+def s_hot(s):
+    sky(s, "lilac"); hills(s, 220, 40, "#c8e6c8", "#8fc8a0", 23); s.add(ellipse(320, 290, 220, 50, s.grad((0, "#9fe8e0"), (1, "#4fc0b8"))))
+    for x in (240, 320, 400): s.add(path(f"M{x} 270 q12 -20 0 -40 q-12 -20 0 -40", stroke="#ffffff", width=5, extra='opacity="0.7"'))
+    for x in (120, 520): s.add(circle(x, 300, 26, "#b8a8c8"))
+
+@scene("waterfall")
+def s_waterfall(s):
+    sky(s, "mint"); s.add(path("M180 0 L460 0 L460 360 L180 360Z", s.grad((0, "#7f9a8a"), (1, "#5f7a6a")))); s.add(path("M290 40 Q300 200 270 320 L370 320 Q340 200 350 40Z", s.grad((0, "#e4f7ff"), (1, "#8fd6f5"))))
+    s.add(ellipse(320, 320, 120, 26, "#8fd6f5")); tree(s, 140, 340, 1.2); tree(s, 520, 340, 1.1)
+
+@scene("market")
+def s_market(s):
+    sky(s, "day"); ground(s, 300, "#f0e6d8", "#e0cfb8"); market_stall(s, 180, 320, 1.2); market_stall(s, 450, 320, 1.1, ("#7fbfff", "#ffffff")); person(s, 320, 340, 0.8, shirt="#14b88c")
+
+@scene("village")
+def s_village2(s):
+    sky(s, "dawn"); hills(s, 260, 30, "#cfe8b8", "#93c77a", 29); uma_lulik(s, 170, 320, 0.7); uma_lulik(s, 330, 330, 0.85); house(s, 500, 320, 1.0); tree(s, 600, 330, 0.8)
+
+@scene("garden")
+def s_garden(s):
+    sky(s, "mint"); ground(s, 280)
+    for i, x in enumerate(range(60, 620, 60)): flower(s, x, 300 + (i % 2) * 14, 1.4, ["#ff8fb8", "#ffd36b", "#c9a7ff", "#7fbfff"][i % 4]); s.add(path(f"M{x} {310 + (i % 2) * 14} v40", stroke="#5fae6f", width=3))
+    tree(s, 320, 260, 1.4)
+
+@scene("calendar")
+def s_calendar(s):
+    sky(s, "lilac"); calendar_page(s, 245, 90, 150, 170); flag_shape(s, 440, 90, 80); sparkle(s, 160, 110, 14, "#ffd36b")
+
+@scene("new-year")
+def s_newyear(s):
+    sky(s, "night"); stars(s, 60, 5); firework(s, 200, 120, 50, "#ffd36b"); firework(s, 440, 100, 60, "#ff8fb8"); firework(s, 320, 200, 40, "#7fd6f5"); dili_skyline(s)
+
+def dili_skyline(s):
+    for i, (x, w, h) in enumerate(((20, 70, 60), (100, 60, 90), (170, 80, 70), (260, 60, 110), (330, 90, 80), (430, 70, 100), (510, 110, 70))):
+        s.add(rect(x, 360 - h, w, h, "#2f2a5a", 4))
+        for r in range(int(h // 24)): s.add(rect(x + 10, 360 - h + 10 + r * 24, w - 20, 6, "#ffd36b", 2, 'opacity="0.5"'))
+
+@scene("labour")
+def s_labour(s):
+    sky(s, "dawn"); ground(s, 300); person(s, 200, 330, 1.1, shirt="#3b93ec", hat="helmet"); person(s, 330, 330, 1.1, shirt="#14b88c", hat="straw"); person(s, 460, 330, 1.1, shirt="#f2a516", holding="book")
+
+@scene("christmas")
+def s_christmas(s):
+    sky(s, "night"); stars(s, 50, 13); sparkle(s, 320, 60, 22, "#ffd36b")
+    s.add(poly([(320, 80), (420, 300), (220, 300)], s.grad((0, "#7fd49a"), (1, "#2f9a63")))); s.add(rect(306, 300, 28, 30, "#8a5a32", 4))
+    for x, y, c in ((300, 180, "#ff6b6b"), (350, 220, "#ffd36b"), (280, 260, "#7fbfff"), (370, 270, "#ff8fb8")): s.add(circle(x, y, 8, c))
+
+@scene("easter")
+def s_easter(s):
+    sky(s, "dawn"); sun(s, 320, 220, 60, "#ffe0a0"); hills(s, 280, 30, "#cfe8b8", "#93c77a", 31); s.add(rect(312, 120, 16, 150, "#f4f0fb")); s.add(rect(282, 160, 76, 16, "#f4f0fb"))
+    for x in (180, 460): flower(s, x, 300, 1.6, "#ffffff", "#ffd36b")
+
+@scene("map")
+def s_map(s):
+    s.add(rect(0, 0, W, H, s.grad((0, "#c8ecff"), (1, "#86c8ee")))); map_outline(s, 20, 40, 600, 280)
+
+for _key, _fn in list(SCENES.items()):
+    pass
+
+def manifest_entry(key):
+    return {"key": key, "file": f"{key}.svg", "licence": "CC BY-SA 4.0", "author": "Lafa contributors (tools/make-illustrations.py)",
+            "note": "Timor-Leste outline: geoBoundaries / © OpenStreetMap contributors (ODbL 1.0)" if key in ("tl-overview", "map") else ""}
+
+def main(argv):
     OUT.mkdir(parents=True, exist_ok=True)
-    for name, make in SCENES.items(): (OUT / f"{name}.svg").write_text(make(), encoding="utf-8")
-    manifest = {"generator": "tools/make-illustrations.py", "licence": "CC BY-SA 4.0 (original work for Lafa)",
-                "note": "Flat vector illustrations drawn in code; the Timor-Leste map is schematic, not an official map.",
-                "illustrations": sorted(SCENES)}
-    (OUT / "manifest.json").write_text(json.dumps(manifest, indent=1) + "\n", encoding="utf-8")
-    print(f"{len(SCENES)} illustrations in {OUT}")
+    keys = argv or sorted(SCENES)
+    for key in keys:
+        if key not in SCENES: print("unknown:", key); continue
+        s = Scene(); SCENES[key](s); (OUT / f"{key}.svg").write_text(s.svg(), encoding="utf-8")
+    if not argv:
+        for old in OUT.glob("*.svg"):
+            if old.stem not in SCENES: old.unlink()
+        (OUT / "manifest.json").write_text(json.dumps({"generator": "tools/make-illustrations.py", "licence": "CC BY-SA 4.0",
+            "illustrations": [manifest_entry(k) for k in sorted(SCENES)]}, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
+    print(f"{len(keys)} illustrations in {OUT}")
 
 if __name__ == "__main__":
-    main()
+    main(sys.argv[1:])

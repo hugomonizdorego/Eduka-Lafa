@@ -317,8 +317,9 @@ class Companion(QWidget):
     card_requested=Signal()
     outfit_requested=Signal(str)
     settings_changed=Signal()
-    def __init__(self,atlas,settings,clock=time.monotonic):
-        super().__init__();self.settings=settings;self.clock=clock
+    route_requested=Signal(str,str)
+    def __init__(self,atlas,settings,clock=time.monotonic,kb=None,progress=None):
+        super().__init__();self.settings=settings;self.clock=clock;self.kb=kb;self.progress=progress
         self.online=False;self.paused=False;self._busy=False;self.drag=None;self.moved=False;self.direction=1;self.hovered=False;self.walk_target=None
         self.last_activity=clock();self.last_idle_change=clock();self.last_card=clock();self.introduced=False;self.current_source="";self.popup_deadline=0
         self.spontaneous=[];self.fullscreen_ahead=False

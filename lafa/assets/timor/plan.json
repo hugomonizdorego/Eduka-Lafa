@@ -1,0 +1,929 @@
+{
+ "version": 1,
+ "categories": {
+  "land": "Land, geology and climate",
+  "nature": "Nature and biodiversity",
+  "history": "History (overview and eras)",
+  "colonial": "Colonial history and occupation",
+  "conflicts": "Conflict, resistance and reconciliation",
+  "politics": "State, constitution and politics",
+  "leaders": "Presidents, prime ministers and leaders",
+  "symbols": "National symbols",
+  "geography": "Map, municipalities and islands",
+  "culture": "Culture and tradition",
+  "society": "Society",
+  "economy": "Economy",
+  "tourism": "Tourism",
+  "calendar": "Holidays and national days",
+  "world": "Timor-Leste in the world"
+ },
+ "articles": {
+  "tl.land.overview": {
+   "category": "land",
+   "title_en": "Timor-Leste at a glance: location, size, borders",
+   "agent": "A"
+  },
+  "tl.land.island_formation": {
+   "category": "land",
+   "title_en": "How the island of Timor was formed",
+   "agent": "A"
+  },
+  "tl.land.geology": {
+   "category": "land",
+   "title_en": "Rocks, fossils and minerals",
+   "agent": "A"
+  },
+  "tl.land.mountains": {
+   "category": "land",
+   "title_en": "Mountains (Tatamailau/Ramelau, Matebian, Kablaki, Mundo Perdido)",
+   "agent": "A"
+  },
+  "tl.land.rivers_lakes": {
+   "category": "land",
+   "title_en": "Rivers and lakes (Laclo, Lois, Seiçal, Ira Lalaro, Tasitolu)",
+   "agent": "A"
+  },
+  "tl.land.seas_coasts": {
+   "category": "land",
+   "title_en": "Seas and coasts (Ombai–Wetar strait, Timor Sea, Savu Sea)",
+   "agent": "A"
+  },
+  "tl.land.climate": {
+   "category": "land",
+   "title_en": "Climate and seasons",
+   "agent": "A"
+  },
+  "tl.land.hazards": {
+   "category": "land",
+   "title_en": "Natural hazards: earthquakes, floods, landslides, droughts",
+   "agent": "A"
+  },
+  "tl.nature.biodiversity": {
+   "category": "nature",
+   "title_en": "Biodiversity of Timor (Wallacea)",
+   "agent": "A"
+  },
+  "tl.nature.birds": {
+   "category": "nature",
+   "title_en": "Birds and endemic species",
+   "agent": "A"
+  },
+  "tl.nature.marine": {
+   "category": "nature",
+   "title_en": "Marine life and the Coral Triangle",
+   "agent": "A"
+  },
+  "tl.nature.crocodile": {
+   "category": "nature",
+   "title_en": "The saltwater crocodile (lafaek)",
+   "agent": "A"
+  },
+  "tl.nature.animals": {
+   "category": "nature",
+   "title_en": "Land animals",
+   "agent": "A"
+  },
+  "tl.nature.forests_plants": {
+   "category": "nature",
+   "title_en": "Forests and plants (sandalwood, mangroves)",
+   "agent": "A"
+  },
+  "tl.nature.protected_areas": {
+   "category": "nature",
+   "title_en": "Protected areas and Nino Konis Santana National Park",
+   "agent": "A"
+  },
+  "tl.nature.environment": {
+   "category": "nature",
+   "title_en": "Environmental challenges and conservation (tara bandu)",
+   "agent": "A"
+  },
+  "tl.history.overview": {
+   "category": "history",
+   "title_en": "History of Timor-Leste: the eras",
+   "agent": "B"
+  },
+  "tl.history.first_peoples": {
+   "category": "history",
+   "title_en": "The first peoples (about 44,000 years ago)",
+   "agent": "B"
+  },
+  "tl.history.austronesian_papuan": {
+   "category": "history",
+   "title_en": "Austronesian and Papuan peoples",
+   "agent": "B"
+  },
+  "tl.history.kingdoms": {
+   "category": "history",
+   "title_en": "Traditional kingdoms and the liurai",
+   "agent": "B"
+  },
+  "tl.history.sandalwood_trade": {
+   "category": "history",
+   "title_en": "The sandalwood trade",
+   "agent": "B"
+  },
+  "tl.colonial.portuguese_arrival": {
+   "category": "colonial",
+   "title_en": "Arrival of the Portuguese (c. 1515) and the missions",
+   "agent": "B"
+  },
+  "tl.colonial.topasses": {
+   "category": "colonial",
+   "title_en": "The Topasses and the 17th–18th centuries",
+   "agent": "B"
+  },
+  "tl.colonial.lifau_to_dili": {
+   "category": "colonial",
+   "title_en": "From Lifau to Dili (1702–1769)",
+   "agent": "B"
+  },
+  "tl.colonial.dutch_partition": {
+   "category": "colonial",
+   "title_en": "Dutch rivalry and the partition of Timor (1859–1916)",
+   "agent": "B"
+  },
+  "tl.colonial.colonial_rule": {
+   "category": "colonial",
+   "title_en": "Colonial rule, taxes and the coffee economy",
+   "agent": "B"
+  },
+  "tl.colonial.revolts_manufahi": {
+   "category": "colonial",
+   "title_en": "Revolts and the Manufahi war (1911–1912)",
+   "agent": "B"
+  },
+  "tl.colonial.ww2": {
+   "category": "colonial",
+   "title_en": "World War II and the Japanese occupation (1942–1945)",
+   "agent": "B"
+  },
+  "tl.colonial.postwar": {
+   "category": "colonial",
+   "title_en": "Portuguese Timor 1945–1974 and the 1959 Viqueque revolt",
+   "agent": "B"
+  },
+  "tl.history.carnation_parties_1974": {
+   "category": "history",
+   "title_en": "1974: Carnation Revolution and the first political parties",
+   "agent": "C"
+  },
+  "tl.history.civil_war_1975": {
+   "category": "history",
+   "title_en": "August 1975: the civil conflict",
+   "agent": "C"
+  },
+  "tl.history.proclamation_1975": {
+   "category": "history",
+   "title_en": "28 November 1975: Proclamation of Independence",
+   "agent": "C"
+  },
+  "tl.history.cnrt_1998": {
+   "category": "history",
+   "title_en": "From CNRM to CNRT and Indonesia's reformasi (1987–1998)",
+   "agent": "C"
+  },
+  "tl.history.nobel_1996": {
+   "category": "history",
+   "title_en": "Nobel Peace Prize 1996",
+   "agent": "C"
+  },
+  "tl.history.referendum_1999": {
+   "category": "history",
+   "title_en": "The 5 May Agreements and the Popular Consultation (1999)",
+   "agent": "C"
+  },
+  "tl.history.interfet": {
+   "category": "history",
+   "title_en": "INTERFET (1999–2000)",
+   "agent": "C"
+  },
+  "tl.history.untaet": {
+   "category": "history",
+   "title_en": "UNTAET: the UN transition (1999–2002)",
+   "agent": "C"
+  },
+  "tl.history.restoration_2002": {
+   "category": "history",
+   "title_en": "20 May 2002: Restoration of Independence",
+   "agent": "C"
+  },
+  "tl.history.state_building": {
+   "category": "history",
+   "title_en": "Building the new State (2002–2006)",
+   "agent": "C"
+  },
+  "tl.history.un_missions": {
+   "category": "history",
+   "title_en": "UN missions in Timor-Leste (1999–2012)",
+   "agent": "C"
+  },
+  "tl.history.maritime_boundary": {
+   "category": "history",
+   "title_en": "The maritime boundary with Australia (2018)",
+   "agent": "C"
+  },
+  "tl.history.decade_2012_2022": {
+   "category": "history",
+   "title_en": "Timor-Leste 2012–2022",
+   "agent": "C"
+  },
+  "tl.history.recent_2023_2026": {
+   "category": "history",
+   "title_en": "Timor-Leste 2023–2026",
+   "agent": "C"
+  },
+  "tl.colonial.indonesian_invasion": {
+   "category": "colonial",
+   "title_en": "7 December 1975: the Indonesian invasion and annexation",
+   "agent": "C"
+  },
+  "tl.colonial.indonesian_occupation": {
+   "category": "colonial",
+   "title_en": "Life under Indonesian occupation (1976–1999)",
+   "agent": "C"
+  },
+  "tl.conflicts.overview": {
+   "category": "conflicts",
+   "title_en": "Conflicts in Timor-Leste's history: an overview",
+   "agent": "C"
+  },
+  "tl.conflicts.resistance_fronts": {
+   "category": "conflicts",
+   "title_en": "The resistance: armed, clandestine and diplomatic fronts",
+   "agent": "C"
+  },
+  "tl.conflicts.famine_1977_1979": {
+   "category": "conflicts",
+   "title_en": "Encirclement campaigns and famine (1977–1979)",
+   "agent": "C"
+  },
+  "tl.conflicts.kraras_1983": {
+   "category": "conflicts",
+   "title_en": "Kraras (1983)",
+   "agent": "C"
+  },
+  "tl.conflicts.santa_cruz_1991": {
+   "category": "conflicts",
+   "title_en": "Santa Cruz massacre (12 November 1991)",
+   "agent": "C"
+  },
+  "tl.conflicts.violence_1999": {
+   "category": "conflicts",
+   "title_en": "The violence of 1999",
+   "agent": "C"
+  },
+  "tl.conflicts.crisis_2006": {
+   "category": "conflicts",
+   "title_en": "The 2006 crisis",
+   "agent": "C"
+  },
+  "tl.conflicts.attacks_2008": {
+   "category": "conflicts",
+   "title_en": "11 February 2008",
+   "agent": "C"
+  },
+  "tl.conflicts.reconciliation": {
+   "category": "conflicts",
+   "title_en": "Truth and reconciliation: CAVR, Chega! and the CTF",
+   "agent": "C"
+  },
+  "tl.politics.constitution": {
+   "category": "politics",
+   "title_en": "The Constitution (Lei-Inan) of 2002",
+   "agent": "D"
+  },
+  "tl.politics.system": {
+   "category": "politics",
+   "title_en": "Semi-presidential system and separation of powers",
+   "agent": "D"
+  },
+  "tl.politics.president_office": {
+   "category": "politics",
+   "title_en": "The President of the Republic",
+   "agent": "D"
+  },
+  "tl.politics.parliament": {
+   "category": "politics",
+   "title_en": "The National Parliament",
+   "agent": "D"
+  },
+  "tl.politics.government": {
+   "category": "politics",
+   "title_en": "The Government and the Prime Minister",
+   "agent": "D"
+  },
+  "tl.politics.courts": {
+   "category": "politics",
+   "title_en": "Courts and justice",
+   "agent": "D"
+  },
+  "tl.politics.council_state": {
+   "category": "politics",
+   "title_en": "Council of State and Superior Council for Defence and Security",
+   "agent": "D"
+  },
+  "tl.politics.elections": {
+   "category": "politics",
+   "title_en": "Elections from 1999 to 2023",
+   "agent": "D"
+  },
+  "tl.politics.parties": {
+   "category": "politics",
+   "title_en": "Political parties",
+   "agent": "D"
+  },
+  "tl.politics.local_government": {
+   "category": "politics",
+   "title_en": "Local government: municipalities, posts, sucos and aldeias",
+   "agent": "D"
+  },
+  "tl.politics.defence_security": {
+   "category": "politics",
+   "title_en": "Defence and security: F-FDTL and PNTL",
+   "agent": "D"
+  },
+  "tl.politics.rights_duties": {
+   "category": "politics",
+   "title_en": "Citizens' rights and duties",
+   "agent": "D"
+  },
+  "tl.leaders.presidents": {
+   "category": "leaders",
+   "title_en": "Presidents of Timor-Leste (1975, 2002–today)",
+   "agent": "D"
+  },
+  "tl.leaders.prime_ministers": {
+   "category": "leaders",
+   "title_en": "Prime Ministers of Timor-Leste",
+   "agent": "D"
+  },
+  "tl.leaders.governments": {
+   "category": "leaders",
+   "title_en": "Constitutional Governments I–IX",
+   "agent": "D"
+  },
+  "tl.leaders.parliament_presidents": {
+   "category": "leaders",
+   "title_en": "Presidents of the National Parliament",
+   "agent": "D"
+  },
+  "tl.leaders.xanana_gusmao": {
+   "category": "leaders",
+   "title_en": "Xanana Gusmão",
+   "agent": "D"
+  },
+  "tl.leaders.ramos_horta": {
+   "category": "leaders",
+   "title_en": "José Ramos-Horta",
+   "agent": "D"
+  },
+  "tl.leaders.mari_alkatiri": {
+   "category": "leaders",
+   "title_en": "Mari Alkatiri",
+   "agent": "D"
+  },
+  "tl.leaders.taur_matan_ruak": {
+   "category": "leaders",
+   "title_en": "Taur Matan Ruak",
+   "agent": "D"
+  },
+  "tl.leaders.lu_olo": {
+   "category": "leaders",
+   "title_en": "Francisco Guterres Lú-Olo",
+   "agent": "D"
+  },
+  "tl.leaders.xavier_do_amaral": {
+   "category": "leaders",
+   "title_en": "Francisco Xavier do Amaral",
+   "agent": "D"
+  },
+  "tl.leaders.nicolau_lobato": {
+   "category": "leaders",
+   "title_en": "Nicolau Lobato",
+   "agent": "D"
+  },
+  "tl.leaders.rui_araujo": {
+   "category": "leaders",
+   "title_en": "Rui Maria de Araújo",
+   "agent": "D"
+  },
+  "tl.leaders.national_heroes": {
+   "category": "leaders",
+   "title_en": "National heroes and figures of the resistance",
+   "agent": "D"
+  },
+  "tl.world.overview": {
+   "category": "world",
+   "title_en": "Foreign policy of Timor-Leste",
+   "agent": "D"
+  },
+  "tl.world.united_nations": {
+   "category": "world",
+   "title_en": "Timor-Leste and the United Nations",
+   "agent": "D"
+  },
+  "tl.world.cplp": {
+   "category": "world",
+   "title_en": "CPLP: the Portuguese-speaking community",
+   "agent": "D"
+  },
+  "tl.world.asean": {
+   "category": "world",
+   "title_en": "ASEAN: from observer to member (2025)",
+   "agent": "D"
+  },
+  "tl.world.g7plus": {
+   "category": "world",
+   "title_en": "g7+ and fragile states",
+   "agent": "D"
+  },
+  "tl.world.wto": {
+   "category": "world",
+   "title_en": "World Trade Organization (2024)",
+   "agent": "D"
+  },
+  "tl.world.indonesia": {
+   "category": "world",
+   "title_en": "Relations with Indonesia",
+   "agent": "D"
+  },
+  "tl.world.australia": {
+   "category": "world",
+   "title_en": "Relations with Australia",
+   "agent": "D"
+  },
+  "tl.world.portugal": {
+   "category": "world",
+   "title_en": "Relations with Portugal",
+   "agent": "D"
+  },
+  "tl.world.asia_pacific": {
+   "category": "world",
+   "title_en": "Relations with China, Japan, the Pacific and others",
+   "agent": "D"
+  },
+  "tl.symbols.flag": {
+   "category": "symbols",
+   "title_en": "The national flag",
+   "agent": "E"
+  },
+  "tl.symbols.emblem": {
+   "category": "symbols",
+   "title_en": "The national emblem",
+   "agent": "E"
+  },
+  "tl.symbols.anthem": {
+   "category": "symbols",
+   "title_en": "The national anthem: Pátria",
+   "agent": "E"
+  },
+  "tl.symbols.motto": {
+   "category": "symbols",
+   "title_en": "The motto: Unidade, Acção, Progresso",
+   "agent": "E"
+  },
+  "tl.symbols.currency": {
+   "category": "symbols",
+   "title_en": "Currency: the US dollar and centavo coins",
+   "agent": "E"
+  },
+  "tl.symbols.languages_official": {
+   "category": "symbols",
+   "title_en": "Official and working languages",
+   "agent": "E"
+  },
+  "tl.symbols.capital_dili": {
+   "category": "symbols",
+   "title_en": "Dili, the capital",
+   "agent": "E"
+  },
+  "tl.symbols.name": {
+   "category": "symbols",
+   "title_en": "The name Timor-Leste",
+   "agent": "E"
+  },
+  "tl.economy.overview": {
+   "category": "economy",
+   "title_en": "The economy at a glance",
+   "agent": "E"
+  },
+  "tl.economy.petroleum": {
+   "category": "economy",
+   "title_en": "Oil and gas",
+   "agent": "E"
+  },
+  "tl.economy.petroleum_fund": {
+   "category": "economy",
+   "title_en": "The Petroleum Fund",
+   "agent": "E"
+  },
+  "tl.economy.exports": {
+   "category": "economy",
+   "title_en": "Exports",
+   "agent": "E"
+  },
+  "tl.economy.imports": {
+   "category": "economy",
+   "title_en": "Imports",
+   "agent": "E"
+  },
+  "tl.economy.coffee": {
+   "category": "economy",
+   "title_en": "Coffee and the Timor Hybrid",
+   "agent": "E"
+  },
+  "tl.economy.agriculture": {
+   "category": "economy",
+   "title_en": "Agriculture and food crops",
+   "agent": "E"
+  },
+  "tl.economy.livestock_fisheries": {
+   "category": "economy",
+   "title_en": "Livestock and fisheries",
+   "agent": "E"
+  },
+  "tl.economy.natural_resources": {
+   "category": "economy",
+   "title_en": "Natural resources and minerals",
+   "agent": "E"
+  },
+  "tl.economy.infrastructure": {
+   "category": "economy",
+   "title_en": "Infrastructure: roads, ports, airports, power",
+   "agent": "E"
+  },
+  "tl.economy.banking": {
+   "category": "economy",
+   "title_en": "Central Bank and finance",
+   "agent": "E"
+  },
+  "tl.economy.development_plan": {
+   "category": "economy",
+   "title_en": "Strategic Development Plan 2011–2030",
+   "agent": "E"
+  },
+  "tl.economy.jobs_migration": {
+   "category": "economy",
+   "title_en": "Jobs and workers abroad",
+   "agent": "E"
+  },
+  "tl.society.population": {
+   "category": "society",
+   "title_en": "Population and the 2022 census",
+   "agent": "E"
+  },
+  "tl.society.languages": {
+   "category": "society",
+   "title_en": "Languages of Timor-Leste",
+   "agent": "E"
+  },
+  "tl.society.religion": {
+   "category": "society",
+   "title_en": "Religion",
+   "agent": "E"
+  },
+  "tl.society.education": {
+   "category": "society",
+   "title_en": "Education system and school levels",
+   "agent": "E"
+  },
+  "tl.society.health": {
+   "category": "society",
+   "title_en": "Health",
+   "agent": "E"
+  },
+  "tl.society.cities": {
+   "category": "society",
+   "title_en": "Cities and towns",
+   "agent": "E"
+  },
+  "tl.society.youth_women": {
+   "category": "society",
+   "title_en": "Youth and women",
+   "agent": "E"
+  },
+  "tl.society.media": {
+   "category": "society",
+   "title_en": "Media and communication",
+   "agent": "E"
+  },
+  "tl.culture.overview": {
+   "category": "culture",
+   "title_en": "Culture of Timor-Leste",
+   "agent": "F"
+  },
+  "tl.culture.tais": {
+   "category": "culture",
+   "title_en": "Tais: woven cloth",
+   "agent": "F"
+  },
+  "tl.culture.uma_lulik": {
+   "category": "culture",
+   "title_en": "Uma lulik: sacred houses",
+   "agent": "F"
+  },
+  "tl.culture.lisan": {
+   "category": "culture",
+   "title_en": "Lisan, customary law and tara bandu",
+   "agent": "F"
+  },
+  "tl.culture.marriage_barlake": {
+   "category": "culture",
+   "title_en": "Marriage and barlake",
+   "agent": "F"
+  },
+  "tl.culture.dances": {
+   "category": "culture",
+   "title_en": "Dances: tebe, likurai, dahur, bidu",
+   "agent": "F"
+  },
+  "tl.culture.music": {
+   "category": "culture",
+   "title_en": "Music and instruments",
+   "agent": "F"
+  },
+  "tl.culture.legends": {
+   "category": "culture",
+   "title_en": "Legends and oral tradition",
+   "agent": "F"
+  },
+  "tl.culture.food": {
+   "category": "culture",
+   "title_en": "Food and cuisine",
+   "agent": "F"
+  },
+  "tl.culture.crafts": {
+   "category": "culture",
+   "title_en": "Crafts: pottery, baskets, carving, silver",
+   "agent": "F"
+  },
+  "tl.culture.dress_adornment": {
+   "category": "culture",
+   "title_en": "Traditional dress and adornment (belak, kaibauk)",
+   "agent": "F"
+  },
+  "tl.culture.ethnic_groups": {
+   "category": "culture",
+   "title_en": "Peoples and ethnolinguistic groups",
+   "agent": "F"
+  },
+  "tl.culture.catholic_traditions": {
+   "category": "culture",
+   "title_en": "Catholic faith and traditions",
+   "agent": "F"
+  },
+  "tl.culture.architecture": {
+   "category": "culture",
+   "title_en": "Traditional architecture by region",
+   "agent": "F"
+  },
+  "tl.culture.sports_games": {
+   "category": "culture",
+   "title_en": "Sports and traditional games",
+   "agent": "F"
+  },
+  "tl.culture.arts_literature": {
+   "category": "culture",
+   "title_en": "Literature, poetry, film and art",
+   "agent": "F"
+  },
+  "tl.culture.tetun": {
+   "category": "culture",
+   "title_en": "The Tetun language",
+   "agent": "F"
+  },
+  "tl.geography.map": {
+   "category": "geography",
+   "title_en": "The map of Timor-Leste",
+   "agent": "G1"
+  },
+  "tl.geography.administrative_divisions": {
+   "category": "geography",
+   "title_en": "Administrative divisions",
+   "agent": "G1"
+  },
+  "tl.geography.islands": {
+   "category": "geography",
+   "title_en": "Islands: Ataúro, Jaco, Fatu Sinai and the Oecusse enclave",
+   "agent": "G1"
+  },
+  "tl.geography.border": {
+   "category": "geography",
+   "title_en": "The land border with Indonesia",
+   "agent": "G1"
+  },
+  "tl.geography.regions": {
+   "category": "geography",
+   "title_en": "Regions: north coast, south coast, mountains, east",
+   "agent": "G1"
+  },
+  "tl.calendar.overview": {
+   "category": "calendar",
+   "title_en": "Public holidays and commemorative dates (Law 10/2005, Law 3/2016)",
+   "agent": "G1"
+  },
+  "tl.calendar.liturgical": {
+   "category": "calendar",
+   "title_en": "Religious holidays in the national calendar",
+   "agent": "G1"
+  },
+  "tl.tourism.overview": {
+   "category": "tourism",
+   "title_en": "Tourism in Timor-Leste",
+   "agent": "G2"
+  },
+  "tl.tourism.diving_marine": {
+   "category": "tourism",
+   "title_en": "Diving and marine tourism",
+   "agent": "G2"
+  },
+  "tl.tourism.mountains_trekking": {
+   "category": "tourism",
+   "title_en": "Mountains and trekking",
+   "agent": "G2"
+  },
+  "tl.tourism.heritage": {
+   "category": "tourism",
+   "title_en": "History and heritage places",
+   "agent": "G2"
+  },
+  "tl.tourism.community_eco": {
+   "category": "tourism",
+   "title_en": "Community and eco-tourism",
+   "agent": "G2"
+  },
+  "tl.tourism.food_markets": {
+   "category": "tourism",
+   "title_en": "Markets and local food for visitors",
+   "agent": "G2"
+  }
+ },
+ "municipalities": {
+  "mun.aileu": {
+   "name": "Aileu",
+   "agent": "G1"
+  },
+  "mun.ainaro": {
+   "name": "Ainaro",
+   "agent": "G1"
+  },
+  "mun.atauro": {
+   "name": "Ataúro",
+   "agent": "G1"
+  },
+  "mun.baucau": {
+   "name": "Baucau",
+   "agent": "G1"
+  },
+  "mun.bobonaro": {
+   "name": "Bobonaro",
+   "agent": "G1"
+  },
+  "mun.covalima": {
+   "name": "Cova Lima",
+   "agent": "G1"
+  },
+  "mun.dili": {
+   "name": "Díli",
+   "agent": "G1"
+  },
+  "mun.ermera": {
+   "name": "Ermera",
+   "agent": "G1"
+  },
+  "mun.lautem": {
+   "name": "Lautém",
+   "agent": "G1"
+  },
+  "mun.liquica": {
+   "name": "Liquiçá",
+   "agent": "G1"
+  },
+  "mun.manatuto": {
+   "name": "Manatuto",
+   "agent": "G1"
+  },
+  "mun.manufahi": {
+   "name": "Manufahi",
+   "agent": "G1"
+  },
+  "mun.oecusse": {
+   "name": "Oé-Cusse Ambeno (RAEOA)",
+   "agent": "G1"
+  },
+  "mun.viqueque": {
+   "name": "Viqueque",
+   "agent": "G1"
+  }
+ },
+ "days": {
+  "day.new_year": {
+   "date": "01-01",
+   "name_en": "New Year's Day",
+   "agent": "G1"
+  },
+  "day.veterans": {
+   "date": "03-03",
+   "name_en": "Veterans' Day",
+   "agent": "G1"
+  },
+  "day.good_friday": {
+   "date": "easter-2",
+   "name_en": "Good Friday",
+   "agent": "G1"
+  },
+  "day.labour": {
+   "date": "05-01",
+   "name_en": "International Workers' Day",
+   "agent": "G1"
+  },
+  "day.restoration": {
+   "date": "05-20",
+   "name_en": "Restoration of Independence Day",
+   "agent": "G1"
+  },
+  "day.corpus_christi": {
+   "date": "easter+60",
+   "name_en": "Corpus Christi",
+   "agent": "G1"
+  },
+  "day.consultation": {
+   "date": "08-30",
+   "name_en": "Popular Consultation Day",
+   "agent": "G1"
+  },
+  "day.all_saints": {
+   "date": "11-01",
+   "name_en": "All Saints' Day",
+   "agent": "G1"
+  },
+  "day.all_souls": {
+   "date": "11-02",
+   "name_en": "All Souls' Day",
+   "agent": "G1"
+  },
+  "day.youth": {
+   "date": "11-12",
+   "name_en": "National Youth Day",
+   "agent": "G1"
+  },
+  "day.proclamation": {
+   "date": "11-28",
+   "name_en": "Proclamation of Independence Day",
+   "agent": "G1"
+  },
+  "day.memorial": {
+   "date": "12-07",
+   "name_en": "Memorial Day",
+   "agent": "G1"
+  },
+  "day.immaculate": {
+   "date": "12-08",
+   "name_en": "Immaculate Conception",
+   "agent": "G1"
+  },
+  "day.christmas": {
+   "date": "12-25",
+   "name_en": "Christmas Day",
+   "agent": "G1"
+  },
+  "day.heroes": {
+   "date": "12-31",
+   "name_en": "National Heroes Day",
+   "agent": "G1"
+  },
+  "day.eid_fitr": {
+   "date": "islamic:eid_al_fitr",
+   "name_en": "Idul Fitri (Eid al-Fitr)",
+   "agent": "G1"
+  },
+  "day.eid_adha": {
+   "date": "islamic:eid_al_adha",
+   "name_en": "Idul Adha (Eid al-Adha)",
+   "agent": "G1"
+  },
+  "day.falintil": {
+   "date": "08-20",
+   "name_en": "FALINTIL Day (commemorative)",
+   "agent": "G1"
+  },
+  "day.women": {
+   "date": "11-03",
+   "name_en": "National Women's Day (verify)",
+   "agent": "G1"
+  },
+  "day.children": {
+   "date": "06-01",
+   "name_en": "International Children's Day (commemorative)",
+   "agent": "G1"
+  }
+ },
+ "levels": {
+  "eb1": "Ensinu Báziku 1º siklu (1º–4º ano)",
+  "eb2": "Ensinu Báziku 2º siklu (5º–6º ano)",
+  "eb3": "Ensinu Báziku 3º siklu (7º–9º ano)",
+  "es": "Ensinu Sekundáriu (10º–12º ano)",
+  "sup": "Ensinu Superiór no públiku jerál"
+ }
+}

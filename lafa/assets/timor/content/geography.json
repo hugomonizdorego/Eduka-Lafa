@@ -1,0 +1,2244 @@
+{
+ "articles": [
+  {
+   "id": "tl.geography.map",
+   "category": "geography",
+   "also": [
+    "land"
+   ],
+   "title": {
+    "tet": "Mapa Timór-Leste nian",
+    "pt": "O mapa de Timor-Leste",
+    "id": "Peta Timor-Leste",
+    "en": "The map of Timor-Leste"
+   },
+   "summary": {
+    "tet": "Timór-Leste iha Ázia Sudeste, iha illa Timór nia parte loro-sa'e. Mapa mós hatudu rai-le'un Oe-Kusi Ambenu, tasi-le'un Atauru no illa ki'ik Jaku. Nasaun ne'e iha munisípiu 14, no Dili mak kapitál.",
+    "pt": "Timor-Leste fica no Sudeste Asiático, na metade oriental da ilha de Timor. O seu mapa inclui também o enclave de Oé-Cusse Ambeno, a ilha de Ataúro e o ilhéu de Jaco. O país tem 14 municípios e a capital é Díli.",
+    "id": "Timor-Leste terletak di Asia Tenggara, di bagian timur Pulau Timor. Petanya juga mencakup enklave Oé-Cusse Ambeno, Pulau Ataúro, dan Pulau Jaco yang kecil. Negara ini memiliki 14 munisipalitas dengan ibu kota Dili.",
+    "en": "Timor-Leste lies in Southeast Asia, on the eastern half of the island of Timor. Its map also includes the Oé-Cusse Ambeno enclave, Ataúro Island and the islet of Jaco. The country has 14 municipalities, and Dili is the capital."
+   },
+   "levels": [
+    "eb1",
+    "eb2",
+    "eb3",
+    "es",
+    "sup"
+   ],
+   "sections": [
+    {
+     "heading": {
+      "tet": "Timór-Leste iha ne'ebé?",
+      "pt": "Onde fica Timor-Leste?",
+      "id": "Di mana letak Timor-Leste?",
+      "en": "Where is Timor-Leste?"
+     },
+     "text": {
+      "tet": "Timór-Leste iha Ázia Sudeste, iha rohan loro-sa'e husi illa Sunda Ki'ik sira, kadeia illa ne'ebé iha Java no Bali nia loro-sa'e. Ninia latitude maizumenus grau 8 to'o 9,5 sul, no ninia longitude grau 124 to'o 127,4 leste. Iha norte, iha illa Alor no Wetar, ne'ebé Indonézia nian. Iha loro-monu, iha Timór loro-monu, ne'ebé mós Indonézia nian. Iha sul, iha Tasi Timór nia sorin seluk, iha Austrália. Timór-Leste uza oras UTC+9, hanesan Japaun no Koreia. Tan ne'e, kuandu iha Dili oras tuku 12 loron-boot, iha Bali oras tuku 11.",
+      "pt": "Timor-Leste fica no Sudeste Asiático, no extremo oriental das Pequenas Ilhas da Sonda, a cadeia de ilhas a leste de Java e de Bali. Situa-se entre cerca de 8° e 9,5° de latitude sul e entre 124° e 127,4° de longitude este. A norte ficam as ilhas indonésias de Alor e Wetar; a oeste fica Timor Ocidental, que pertence à Indonésia; a sul, do outro lado do mar de Timor, fica a Austrália. O país usa o fuso horário UTC+9, o mesmo do Japão e da Coreia. Assim, quando é meio-dia em Díli, são 11 horas em Bali.",
+      "id": "Timor-Leste terletak di Asia Tenggara, di ujung timur Kepulauan Sunda Kecil, yaitu rangkaian pulau di sebelah timur Jawa dan Bali. Negara ini berada di antara sekitar 8° dan 9,5° Lintang Selatan serta 124° dan 127,4° Bujur Timur. Di utara terdapat Pulau Alor dan Wetar milik Indonesia; di barat ada Timor Barat yang juga milik Indonesia; di selatan, di seberang Laut Timor, terdapat Australia. Timor-Leste memakai zona waktu UTC+9, sama dengan Jepang dan Korea. Jadi, saat pukul 12 siang di Dili, di Bali baru pukul 11.",
+      "en": "Timor-Leste is in Southeast Asia, at the eastern end of the Lesser Sunda Islands, the chain of islands east of Java and Bali. It lies between about 8° and 9.5° south and between 124° and 127.4° east. To the north are the Indonesian islands of Alor and Wetar; to the west is West Timor, which is also part of Indonesia; to the south, across the Timor Sea, is Australia. The country uses the time zone UTC+9, the same as Japan and Korea. So when it is noon in Dili, it is 11 o'clock in Bali."
+     }
+    },
+    {
+     "heading": {
+      "tet": "Parte sira husi rai nasionál",
+      "pt": "As partes do território nacional",
+      "id": "Bagian-bagian wilayah nasional",
+      "en": "The parts of the national territory"
+     },
+     "text": {
+      "tet": "Konstituisaun (artigu 4) hateten katak Timór-Leste nia rai mak illa Timór nia parte loro-sa'e, rai-le'un Oe-Kusi Ambenu, tasi-le'un Atauru no tasi-le'un Jaku, hamutuk ho tasi no kalohan-laran ne'ebé haleu sira. Rai nia luan maizumenus km² 15 000. Fonte sira hatudu entre km² 14 870 no 15 010, tuir oinsá sira sukat illa no kosta. Parte boot husi loro-monu ba loro-sa'e naruk maizumenus km 265. Kosta tomak naruk maizumenus km 700. Dili, kapitál, iha kosta norte, iha Atauru nia oin.",
+      "pt": "A Constituição (artigo 4.º) diz que o território de Timor-Leste é a parte oriental da ilha de Timor, o enclave de Oé-Cusse Ambeno, a ilha de Ataúro e o ilhéu de Jaco, com o mar e o espaço aéreo à sua volta. Em terra, o país tem cerca de 15 000 km². As fontes indicam entre 14 870 e 15 010 km², conforme a forma de medir as ilhas e a costa. A parte principal tem cerca de 265 km de oeste a leste. A costa mede cerca de 700 km e Díli, a capital, fica na costa norte, em frente a Ataúro.",
+      "id": "Konstitusi (Pasal 4) menyatakan bahwa wilayah Timor-Leste adalah bagian timur Pulau Timor, enklave Oé-Cusse Ambeno, Pulau Ataúro, dan Pulau Jaco, beserta laut dan ruang udara di sekitarnya. Luas daratannya sekitar 15.000 km². Berbagai sumber menyebut antara 14.870 dan 15.010 km², tergantung cara mengukur pulau dan pantainya. Bagian utamanya membentang sekitar 265 km dari barat ke timur. Garis pantainya sekitar 700 km, dan Dili, ibu kotanya, terletak di pantai utara, berhadapan dengan Ataúro.",
+      "en": "The Constitution (Article 4) says that the territory of Timor-Leste is the eastern part of the island of Timor, the enclave of Oé-Cusse Ambeno, the island of Ataúro and the islet of Jaco, together with the sea and air space around them. On land the country covers about 15,000 km². Sources give between 14,870 and 15,010 km², depending on how the islands and coast are measured. The main part is about 265 km long from west to east. The coastline is about 700 km long, and Dili, the capital, is on the north coast, facing Ataúro."
+     }
+    },
+    {
+     "heading": {
+      "tet": "Oinsá lee mapa",
+      "pt": "Como ler o mapa",
+      "id": "Cara membaca peta",
+      "en": "Reading the map"
+     },
+     "text": {
+      "tet": "Iha mapa barak, norte iha leten. Kór sira hatudu munisípiu 14, no eskala ajuda sukat distánsia. Foho barak halo kadeia naruk ida iha illa nia klaran. Fatin aas liu mak Tatamailau (Foho Ramelau), m 2 986, iha Ainaru. Mota sira badak, no suli ba norte ka ba sul to'o tasi. Iha Timór nia norte iha estreitu kle'an Ombai no Wetar, ne'ebé liga ba Tasi Banda. Tasi Timór iha sul, no Tasi Savu iha Oe-Kusi Ambenu nia kosta. Ho mapa, ita bele haree lalais katak la iha fatin ida iha Timór-Leste ne'ebé dook tebes husi tasi.",
+      "pt": "Na maioria dos mapas, o norte fica em cima. As cores mostram os 14 municípios e a escala ajuda a medir distâncias. Uma longa cadeia de montanhas atravessa o centro da ilha. O ponto mais alto é o Tatamailau (monte Ramelau), com 2986 m, em Ainaro. Os rios são curtos e correm para norte ou para sul até ao mar. A norte de Timor ficam os profundos estreitos de Ombai e de Wetar, que ligam ao mar de Banda. O mar de Timor fica a sul e o mar de Savu banha a costa de Oé-Cusse Ambeno. No mapa vê-se logo que nenhum lugar de Timor-Leste fica muito longe do mar.",
+      "id": "Pada sebagian besar peta, arah utara berada di atas. Warna-warna menunjukkan 14 munisipalitas, dan skala membantu mengukur jarak. Rangkaian pegunungan panjang membentang di tengah pulau. Titik tertingginya adalah Tatamailau (Gunung Ramelau), 2.986 m, di Ainaro. Sungai-sungainya pendek dan mengalir ke utara atau ke selatan menuju laut. Di utara Timor terdapat Selat Ombai dan Selat Wetar yang dalam, yang terhubung ke Laut Banda. Laut Timor ada di selatan, dan Laut Sawu membasahi pantai Oé-Cusse Ambeno. Dari peta terlihat bahwa tidak ada tempat di Timor-Leste yang sangat jauh dari laut.",
+      "en": "On most maps north is at the top. The colours show the 14 municipalities, and the scale bar helps to measure distances. A long chain of mountains runs through the middle of the island. The highest point is Tatamailau (Mount Ramelau), 2,986 m, in Ainaro. Rivers are short and flow north or south to the sea. North of Timor are the deep Ombai and Wetar straits, which lead to the Banda Sea. The Timor Sea lies to the south, and the Savu Sea washes the coast of Oé-Cusse Ambeno. The map also shows that no place in Timor-Leste is very far from the sea."
+     }
+    },
+    {
+     "heading": {
+      "tet": "Oinsá liña fronteira sira mosu",
+      "pt": "Como se traçaram as fronteiras",
+      "id": "Bagaimana garis batas terbentuk",
+      "en": "How the border lines were drawn"
+     },
+     "text": {
+      "tet": "Liña sira iha mapa ohin loron nian iha istória naruk. Portugál no Olanda hakarak ukun Timór durante sékulu barak. Tratadu ida ne'ebé sira asina iha Lisboa iha 1859 hahú fahe illa ne'e. Konvensaun ida iha 1904 deskreve fronteira, no arbitrajen internasionál ida iha 1914 rezolve disputa ikus. Durante okupasaun Indonézia (1975–1999), Indonézia trata rai ne'e hanesan ninia provínsia ba dala-27. Hafoin independénsia, Timór-Leste no Indonézia konkorda fronteira rai nia parte boot iha 2005. Tratadu ida ho Austrália iha 2018, ne'ebé tama iha vigór iha 2019, hatuur fronteira tasi iha Tasi Timór.",
+      "pt": "As linhas do mapa atual têm uma longa história. Portugal e os Países Baixos disputaram Timor durante séculos. Um tratado assinado em Lisboa em 1859 iniciou a divisão da ilha. Uma convenção de 1904 descreveu a fronteira e uma arbitragem internacional em 1914 resolveu a última disputa. Durante a ocupação indonésia (1975–1999), a Indonésia tratou o território como a sua 27.ª província. Depois da independência, Timor-Leste e a Indonésia acordaram a maior parte da fronteira terrestre em 2005. Um tratado de 2018 com a Austrália, em vigor desde 2019, fixou a fronteira marítima no mar de Timor.",
+      "id": "Garis-garis pada peta masa kini memiliki sejarah panjang. Portugal dan Belanda bersaing memperebutkan Timor selama berabad-abad. Sebuah perjanjian yang ditandatangani di Lisboa pada 1859 memulai pembagian pulau ini. Sebuah konvensi pada 1904 menguraikan garis perbatasan, dan arbitrase internasional pada 1914 menyelesaikan sengketa terakhir. Selama pendudukan Indonesia (1975–1999), Indonesia memperlakukan wilayah ini sebagai provinsi ke-27. Setelah merdeka, Timor-Leste dan Indonesia menyepakati sebagian besar batas darat pada 2005. Perjanjian 2018 dengan Australia, yang berlaku sejak 2019, menetapkan batas laut di Laut Timor.",
+      "en": "The lines on today's map have a long history. Portugal and the Netherlands competed for Timor for centuries. A treaty signed in Lisbon in 1859 began the division of the island. A convention in 1904 described the border, and an international arbitration in 1914 settled the last dispute. During the Indonesian occupation (1975–1999), Indonesia treated the territory as its 27th province. After independence, Timor-Leste and Indonesia agreed on most of the land border in 2005. A 2018 treaty with Australia, in force since 2019, fixed the sea border in the Timor Sea."
+     }
+    },
+    {
+     "heading": {
+      "tet": "Mapa ohin loron",
+      "pt": "Os mapas hoje",
+      "id": "Peta masa kini",
+      "en": "Maps today"
+     },
+     "text": {
+      "tet": "Ohin loron ema halo mapa ho imajen satélite, foto husi aviaun no sukat ho GPS. Mapa munisípiu iha Lafa uza dadus livre husi geoBoundaries no OpenStreetMap, ne'ebé ami halo simples atu bele uza maski la iha internet. Mapa di'ak ajuda Estadu atu planu estrada, eskola, bee no servisu saúde. Mapa mós ajuda ema hotu atu prepara an ba inundasaun no rai-halai. Estudante sira bele buka sira-nia munisípiu rasik, ninia kapitál no tasi-ibun ne'ebé besik liu, no depois sukat distánsia ba Dili ho eskala.",
+      "pt": "Hoje os mapas fazem-se com imagens de satélite, fotografias aéreas e medições por GPS. O mapa dos municípios no Lafa usa dados abertos do geoBoundaries e do OpenStreetMap, simplificados para funcionar sem internet. Bons mapas ajudam o Estado a planear estradas, escolas, água e serviços de saúde. Também ajudam todos a preparar-se para cheias e deslizamentos de terra. Os alunos podem procurar o seu município, a sua capital e a costa mais próxima, e depois medir a distância até Díli com a escala.",
+      "id": "Kini peta dibuat dengan citra satelit, foto udara, dan pengukuran GPS. Peta munisipalitas di Lafa memakai data terbuka dari geoBoundaries dan OpenStreetMap yang disederhanakan agar dapat dipakai tanpa internet. Peta yang baik membantu negara merencanakan jalan, sekolah, air bersih, dan layanan kesehatan. Peta juga membantu semua orang bersiap menghadapi banjir dan tanah longsor. Siswa dapat mencari munisipalitasnya sendiri, ibu kotanya, dan pantai terdekat, lalu mengukur jarak ke Dili dengan skala peta.",
+      "en": "Today maps are made with satellite images, aerial photos and GPS measurements. The municipal map in Lafa uses open data from geoBoundaries and OpenStreetMap, simplified so that it works without the internet. Good maps help the State plan roads, schools, water and health services. They also help everyone prepare for floods and landslides. Students can find their own municipality, its capital and the nearest coast, and then measure the distance to Dili with the scale bar."
+     }
+    }
+   ],
+   "facts": [
+    {
+     "label": {
+      "tet": "Luan",
+      "pt": "Área",
+      "id": "Luas",
+      "en": "Area"
+     },
+     "value": "≈ 14 950 km²"
+    },
+    {
+     "label": {
+      "tet": "Fatin aas liu",
+      "pt": "Ponto mais alto",
+      "id": "Titik tertinggi",
+      "en": "Highest point"
+     },
+     "value": {
+      "tet": "Tatamailau (Ramelau), m 2 986",
+      "pt": "Tatamailau (Ramelau), 2986 m",
+      "id": "Tatamailau (Ramelau), 2.986 m",
+      "en": "Tatamailau (Ramelau), 2,986 m"
+     }
+    },
+    {
+     "label": {
+      "tet": "Kapitál",
+      "pt": "Capital",
+      "id": "Ibu kota",
+      "en": "Capital"
+     },
+     "value": {
+      "tet": "Dili",
+      "pt": "Díli",
+      "id": "Dili",
+      "en": "Dili"
+     }
+    },
+    {
+     "label": {
+      "tet": "Zona oras",
+      "pt": "Fuso horário",
+      "id": "Zona waktu",
+      "en": "Time zone"
+     },
+     "value": "UTC+9"
+    },
+    {
+     "label": {
+      "tet": "Munisípiu",
+      "pt": "Municípios",
+      "id": "Munisipalitas",
+      "en": "Municipalities"
+     },
+     "value": {
+      "tet": "14 (munisípiu 13 no RAEOA)",
+      "pt": "14 (13 municípios e a RAEOA)",
+      "id": "14 (13 munisipalitas dan RAEOA)",
+      "en": "14 (13 municipalities and RAEOA)"
+     }
+    },
+    {
+     "label": {
+      "tet": "Kosta",
+      "pt": "Costa",
+      "id": "Garis pantai",
+      "en": "Coastline"
+     },
+     "value": "≈ 700 km"
+    },
+    {
+     "label": {
+      "tet": "Viziñu",
+      "pt": "Vizinhos",
+      "id": "Tetangga",
+      "en": "Neighbours"
+     },
+     "value": {
+      "tet": "Indonézia (rai) no Austrália (tasi)",
+      "pt": "Indonésia (terra) e Austrália (mar)",
+      "id": "Indonesia (darat) dan Australia (laut)",
+      "en": "Indonesia (land) and Australia (sea)"
+     }
+    },
+    {
+     "label": {
+      "tet": "Kódigu telefone / internet",
+      "pt": "Indicativo / internet",
+      "id": "Kode telepon / internet",
+      "en": "Calling code / internet"
+     },
+     "value": "+670 · .tl"
+    }
+   ],
+   "timeline": [
+    {
+     "date": "1859",
+     "title": {
+      "tet": "Tratadu Lisboa hahú fahe illa Timór",
+      "pt": "O Tratado de Lisboa inicia a divisão de Timor",
+      "id": "Perjanjian Lisboa memulai pembagian Timor",
+      "en": "The Treaty of Lisbon begins the division of Timor"
+     }
+    },
+    {
+     "date": "1904",
+     "title": {
+      "tet": "Konvensaun Portugál–Olanda deskreve fronteira",
+      "pt": "Convenção luso-holandesa descreve a fronteira",
+      "id": "Konvensi Portugal–Belanda menguraikan perbatasan",
+      "en": "Portuguese–Dutch convention describes the border"
+     }
+    },
+    {
+     "date": "1914",
+     "title": {
+      "tet": "Arbitrajen internasionál rezolve disputa ikus",
+      "pt": "Arbitragem internacional resolve a última disputa",
+      "id": "Arbitrase internasional menyelesaikan sengketa terakhir",
+      "en": "International arbitration settles the last dispute"
+     }
+    },
+    {
+     "date": "1976",
+     "title": {
+      "tet": "Indonézia deklara rai ne'e ninia provínsia ba dala-27",
+      "pt": "A Indonésia declara o território a sua 27.ª província",
+      "id": "Indonesia menyatakan wilayah ini provinsi ke-27",
+      "en": "Indonesia declares the territory its 27th province"
+     }
+    },
+    {
+     "date": "2002-05-20",
+     "title": {
+      "tet": "Restaurasaun independénsia; Konstituisaun define rai nasionál",
+      "pt": "Restauração da independência; a Constituição define o território",
+      "id": "Pemulihan kemerdekaan; Konstitusi menetapkan wilayah",
+      "en": "Independence restored; the Constitution defines the territory"
+     }
+    },
+    {
+     "date": "2005",
+     "title": {
+      "tet": "Akordu provizóriu kona-ba fronteira rai ho Indonézia",
+      "pt": "Acordo provisório sobre a fronteira terrestre com a Indonésia",
+      "id": "Perjanjian sementara tentang batas darat dengan Indonesia",
+      "en": "Provisional agreement on the land border with Indonesia"
+     }
+    },
+    {
+     "date": "2019-08-30",
+     "title": {
+      "tet": "Tratadu fronteira tasi ho Austrália tama iha vigór",
+      "pt": "Entra em vigor o tratado de fronteira marítima com a Austrália",
+      "id": "Perjanjian batas laut dengan Australia mulai berlaku",
+      "en": "Maritime boundary treaty with Australia enters into force"
+     }
+    },
+    {
+     "date": "2022-01-01",
+     "title": {
+      "tet": "Atauru sai munisípiu",
+      "pt": "Ataúro torna-se município",
+      "id": "Ataúro menjadi munisipalitas",
+      "en": "Ataúro becomes a municipality"
+     }
+    }
+   ],
+   "figure": {
+    "illustration": "tl-overview",
+    "caption": {
+     "tet": "Timór-Leste: illa Timór nia parte loro-sa'e, Oe-Kusi Ambenu, Atauru no Jaku.",
+     "pt": "Timor-Leste: a metade oriental de Timor, Oé-Cusse Ambeno, Ataúro e Jaco.",
+     "id": "Timor-Leste: bagian timur Pulau Timor, Oé-Cusse Ambeno, Ataúro, dan Jaco.",
+     "en": "Timor-Leste: the eastern half of Timor, Oé-Cusse Ambeno, Ataúro and Jaco."
+    }
+   },
+   "wiki": {
+    "en": "Geography of East Timor",
+    "pt": "Geografia de Timor-Leste",
+    "id": "Geografi Timor Leste"
+   },
+   "related": [
+    "tl.land.overview",
+    "tl.geography.administrative_divisions",
+    "tl.geography.islands",
+    "tl.geography.border",
+    "tl.geography.regions",
+    "tl.land.mountains",
+    "tl.land.seas_coasts",
+    "tl.colonial.dutch_partition",
+    "tl.history.maritime_boundary",
+    "mun.dili"
+   ],
+   "tags": [
+    "map",
+    "geography",
+    "territory",
+    "coordinates",
+    "time zone"
+   ],
+   "quiz": [
+    {
+     "q": {
+      "tet": "Timór-Leste iha illa saida?",
+      "pt": "Em que ilha fica Timor-Leste?",
+      "id": "Timor-Leste berada di pulau apa?",
+      "en": "On which island is Timor-Leste?"
+     },
+     "options": [
+      {
+       "tet": "Timór",
+       "pt": "Timor",
+       "id": "Timor",
+       "en": "Timor"
+      },
+      {
+       "tet": "Bali",
+       "pt": "Bali",
+       "id": "Bali",
+       "en": "Bali"
+      },
+      {
+       "tet": "Java",
+       "pt": "Java",
+       "id": "Jawa",
+       "en": "Java"
+      },
+      {
+       "tet": "Sumatra",
+       "pt": "Samatra",
+       "id": "Sumatra",
+       "en": "Sumatra"
+      }
+     ],
+     "answer": 0,
+     "why": {
+      "tet": "Timór-Leste iha illa Timór nia parte loro-sa'e; parte loro-monu mak Indonézia nian.",
+      "pt": "Timor-Leste ocupa a parte oriental da ilha de Timor; a parte ocidental pertence à Indonésia.",
+      "id": "Timor-Leste menempati bagian timur Pulau Timor; bagian baratnya milik Indonesia.",
+      "en": "Timor-Leste is on the eastern part of the island of Timor; the western part belongs to Indonesia."
+     },
+     "difficulty": 1
+    },
+    {
+     "q": {
+      "tet": "Saida mak Timór-Leste nia kapitál?",
+      "pt": "Qual é a capital de Timor-Leste?",
+      "id": "Apa ibu kota Timor-Leste?",
+      "en": "What is the capital of Timor-Leste?"
+     },
+     "options": [
+      {
+       "tet": "Baukau",
+       "pt": "Baucau",
+       "id": "Baucau",
+       "en": "Baucau"
+      },
+      {
+       "tet": "Maliana",
+       "pt": "Maliana",
+       "id": "Maliana",
+       "en": "Maliana"
+      },
+      {
+       "tet": "Dili",
+       "pt": "Díli",
+       "id": "Dili",
+       "en": "Dili"
+      },
+      {
+       "tet": "Same",
+       "pt": "Same",
+       "id": "Same",
+       "en": "Same"
+      }
+     ],
+     "answer": 2,
+     "why": {
+      "tet": "Dili, iha kosta norte, mak kapitál desde 1769.",
+      "pt": "Díli, na costa norte, é a capital desde 1769.",
+      "id": "Dili, di pantai utara, menjadi ibu kota sejak 1769.",
+      "en": "Dili, on the north coast, has been the capital since 1769."
+     },
+     "difficulty": 3
+    },
+    {
+     "q": {
+      "tet": "Nasaun saida mak iha fronteira rai ho Timór-Leste?",
+      "pt": "Que país tem fronteira terrestre com Timor-Leste?",
+      "id": "Negara mana yang berbatasan darat dengan Timor-Leste?",
+      "en": "Which country shares a land border with Timor-Leste?"
+     },
+     "options": [
+      {
+       "tet": "Austrália",
+       "pt": "Austrália",
+       "id": "Australia",
+       "en": "Australia"
+      },
+      {
+       "tet": "Indonézia",
+       "pt": "Indonésia",
+       "id": "Indonesia",
+       "en": "Indonesia"
+      },
+      {
+       "tet": "Papua-Nova Ginea",
+       "pt": "Papua-Nova Guiné",
+       "id": "Papua Nugini",
+       "en": "Papua New Guinea"
+      },
+      {
+       "tet": "Filipina",
+       "pt": "Filipinas",
+       "id": "Filipina",
+       "en": "Philippines"
+      }
+     ],
+     "answer": 1,
+     "why": {
+      "tet": "Fronteira rai úniku mak ho Indonézia, iha illa Timór. Austrália mak viziñu iha tasi.",
+      "pt": "A única fronteira terrestre é com a Indonésia, na ilha de Timor. A Austrália é vizinha por mar.",
+      "id": "Satu-satunya batas darat adalah dengan Indonesia di Pulau Timor. Australia adalah tetangga lewat laut.",
+      "en": "The only land border is with Indonesia, on the island of Timor. Australia is a neighbour across the sea."
+     },
+     "difficulty": 6
+    },
+    {
+     "q": {
+      "tet": "Parte ida husi Timór-Leste mak Indonézia haleu iha rai. Ida-ne'ebé?",
+      "pt": "Que parte de Timor-Leste está rodeada por terra indonésia?",
+      "id": "Bagian Timor-Leste mana yang dikelilingi daratan Indonesia?",
+      "en": "Which part of Timor-Leste is surrounded on land by Indonesia?"
+     },
+     "options": [
+      {
+       "tet": "Atauru",
+       "pt": "Ataúro",
+       "id": "Ataúro",
+       "en": "Ataúro"
+      },
+      {
+       "tet": "Lautein",
+       "pt": "Lautém",
+       "id": "Lautém",
+       "en": "Lautém"
+      },
+      {
+       "tet": "Jaku",
+       "pt": "Jaco",
+       "id": "Jaco",
+       "en": "Jaco"
+      },
+      {
+       "tet": "Oe-Kusi Ambenu",
+       "pt": "Oé-Cusse Ambeno",
+       "id": "Oé-Cusse Ambeno",
+       "en": "Oé-Cusse Ambeno"
+      }
+     ],
+     "answer": 3,
+     "why": {
+      "tet": "Oe-Kusi Ambenu iha Timór loro-monu nia kosta norte; iha rai, Indonézia haleu nia.",
+      "pt": "Oé-Cusse Ambeno fica na costa norte de Timor Ocidental e, por terra, está rodeado pela Indonésia.",
+      "id": "Oé-Cusse Ambeno terletak di pantai utara Timor Barat dan di darat dikelilingi Indonesia.",
+      "en": "Oé-Cusse Ambeno is on the north coast of West Timor and is surrounded on land by Indonesia."
+     },
+     "difficulty": 9
+    },
+    {
+     "q": {
+      "tet": "Tratadu saida, iha 1859, hahú fahe illa Timór entre Portugál no Olanda?",
+      "pt": "Que tratado de 1859 iniciou a divisão de Timor entre Portugal e os Países Baixos?",
+      "id": "Perjanjian apa pada 1859 yang memulai pembagian Timor antara Portugal dan Belanda?",
+      "en": "Which 1859 treaty began the division of Timor between Portugal and the Netherlands?"
+     },
+     "options": [
+      {
+       "tet": "Tratadu Lisboa",
+       "pt": "Tratado de Lisboa",
+       "id": "Perjanjian Lisboa",
+       "en": "Treaty of Lisbon"
+      },
+      {
+       "tet": "Tratadu Tordesilhas",
+       "pt": "Tratado de Tordesilhas",
+       "id": "Perjanjian Tordesillas",
+       "en": "Treaty of Tordesillas"
+      },
+      {
+       "tet": "Tratadu Paris",
+       "pt": "Tratado de Paris",
+       "id": "Perjanjian Paris",
+       "en": "Treaty of Paris"
+      },
+      {
+       "tet": "Tratadu Utrecht",
+       "pt": "Tratado de Utreque",
+       "id": "Perjanjian Utrecht",
+       "en": "Treaty of Utrecht"
+      }
+     ],
+     "answer": 0,
+     "why": {
+      "tet": "Tratadu Lisboa (1859) hahú divizaun; konvensaun 1904 no arbitrajen 1914 kompleta.",
+      "pt": "O Tratado de Lisboa (1859) iniciou a divisão; a convenção de 1904 e a arbitragem de 1914 completaram-na.",
+      "id": "Perjanjian Lisboa (1859) memulai pembagian; konvensi 1904 dan arbitrase 1914 melengkapinya.",
+      "en": "The Treaty of Lisbon (1859) began the division; the 1904 convention and the 1914 arbitration completed it."
+     },
+     "difficulty": 12
+    },
+    {
+     "q": {
+      "tet": "Timór-Leste uza zona oras saida?",
+      "pt": "Que fuso horário usa Timor-Leste?",
+      "id": "Zona waktu apa yang dipakai Timor-Leste?",
+      "en": "Which time zone does Timor-Leste use?"
+     },
+     "options": [
+      {
+       "tet": "UTC+7",
+       "pt": "UTC+7",
+       "id": "UTC+7",
+       "en": "UTC+7"
+      },
+      {
+       "tet": "UTC+8",
+       "pt": "UTC+8",
+       "id": "UTC+8",
+       "en": "UTC+8"
+      },
+      {
+       "tet": "UTC+9",
+       "pt": "UTC+9",
+       "id": "UTC+9",
+       "en": "UTC+9"
+      },
+      {
+       "tet": "UTC+10",
+       "pt": "UTC+10",
+       "id": "UTC+10",
+       "en": "UTC+10"
+      }
+     ],
+     "answer": 2,
+     "why": {
+      "tet": "Timór-Leste uza UTC+9, hanesan Japaun no Koreia; Bali uza UTC+8.",
+      "pt": "Timor-Leste usa UTC+9, como o Japão e a Coreia; Bali usa UTC+8.",
+      "id": "Timor-Leste memakai UTC+9, sama dengan Jepang dan Korea; Bali memakai UTC+8.",
+      "en": "Timor-Leste uses UTC+9, like Japan and Korea; Bali uses UTC+8."
+     },
+     "difficulty": 13
+    }
+   ],
+   "sources": [
+    {
+     "title": "East Timor",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/East_Timor",
+     "accessed": "2026-10-27",
+     "licence": "CC BY-SA 4.0"
+    },
+    {
+     "title": "Geography of East Timor",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Geography_of_East_Timor",
+     "accessed": "2026-10-27",
+     "licence": "CC BY-SA 4.0"
+    },
+    {
+     "title": "Treaty of Lisbon (1859)",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Treaty_of_Lisbon_(1859)",
+     "accessed": "2026-10-27",
+     "licence": "CC BY-SA 4.0"
+    },
+    {
+     "title": "Constitution of East Timor",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Constitution_of_East_Timor",
+     "accessed": "2026-10-27",
+     "licence": "CC BY-SA 4.0"
+    },
+    {
+     "title": "Timor Gap",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Timor_Gap",
+     "accessed": "2026-10-27",
+     "licence": "CC BY-SA 4.0"
+    },
+    {
+     "title": "geoBoundaries – Timor-Leste ADM1/ADM2 boundaries",
+     "publisher": "geoBoundaries (William & Mary geoLab)",
+     "url": "https://www.geoboundaries.org",
+     "accessed": "2026-10-27",
+     "licence": "ODbL 1.0 / CC BY 3.0 IGO"
+    }
+   ],
+   "review": {
+    "status": "draft",
+    "notes": "Area: sources give 14 870–15 010 km² (used ≈14 950 / about 15 000). Ramelau 2 986 m (some sources 2 963 m). Coastline ≈700 km and main-part length ≈265 km come from the old Lafa atlas; check. 1859/1904/1914 border steps and the 27th-province claim (1976) are well known, but I could only check them against the Wikipedia pages listed. The web-search budget ran out during this task, so I could not open these pages again. Tetun: 'tasi-le'un', 'rai-le'un' and 'kalohan-laran' follow Constitution art. 4. 'Sunda Ki'ik' (Lesser Sunda) is my own term; check it."
+   }
+  },
+  {
+   "id": "tl.geography.administrative_divisions",
+   "category": "geography",
+   "also": [
+    "politics"
+   ],
+   "title": {
+    "tet": "Divizaun administrativa",
+    "pt": "Divisão administrativa",
+    "id": "Pembagian administratif",
+    "en": "Administrative divisions"
+   },
+   "summary": {
+    "tet": "Timór-Leste iha munisípiu 14: munisípiu 13 no Rejiaun Administrativa Espesiál Oe-Kusi Ambenu (RAEOA). Munisípiu ida-idak fahe ba postu administrativu, postu fahe ba suku, no suku fahe ba aldeia.",
+    "pt": "Timor-Leste tem 14 municípios: 13 municípios e a Região Administrativa Especial de Oé-Cusse Ambeno (RAEOA). Cada um divide-se em postos administrativos, os postos em sucos e os sucos em aldeias.",
+    "id": "Timor-Leste memiliki 14 munisipalitas: 13 munisipalitas dan Wilayah Administratif Khusus Oé-Cusse Ambeno (RAEOA). Masing-masing dibagi menjadi pos administratif, pos dibagi menjadi suco (desa), dan suco dibagi menjadi aldeia (dusun).",
+    "en": "Timor-Leste has 14 municipalities: 13 municipalities and the Special Administrative Region of Oé-Cusse Ambeno (RAEOA). Each is divided into administrative posts, the posts into sucos (villages) and the sucos into aldeias (hamlets)."
+   },
+   "levels": [
+    "eb2",
+    "eb3",
+    "es",
+    "sup"
+   ],
+   "sections": [
+    {
+     "heading": {
+      "tet": "Nível haat",
+      "pt": "Quatro níveis",
+      "id": "Empat tingkat",
+      "en": "Four levels"
+     },
+     "text": {
+      "tet": "Organizasaun lokál iha nível haat. Boot liu mak munisípiu. Tuir mai postu administrativu, ne'ebé dala barak iha naran hanesan ninia vila prinsipál. Postu ida-idak iha suku balu, no suku ida-idak iha aldeia balu. Suku mak nível ne'ebé besik liu ba moris loroloron. Ninia populasaun hili xefe suku no konsellu suku, no aldeia ida-idak iha ninia xefe rasik. Hotu-hotu, iha postu administrativu maizumenus 65 to'o 70, suku maizumenus 450 no aldeia liu 2 200.",
+      "pt": "A organização local tem quatro níveis. O maior é o município. Segue-se o posto administrativo, que muitas vezes tem o nome da sua vila principal. Cada posto tem vários sucos e cada suco tem várias aldeias. O suco é o nível mais próximo da vida diária. A sua população elege um chefe de suco e um conselho de suco, e cada aldeia tem o seu próprio chefe. No total há entre 65 e 70 postos administrativos, cerca de 450 sucos e mais de 2200 aldeias.",
+      "id": "Organisasi lokal memiliki empat tingkat. Yang terbesar adalah munisipalitas. Berikutnya pos administratif, yang sering bernama sama dengan kota utamanya. Setiap pos memiliki beberapa suco, dan setiap suco memiliki beberapa aldeia. Suco adalah tingkat yang paling dekat dengan kehidupan sehari-hari. Warganya memilih kepala suco (xefe suku) dan dewan suco, dan setiap aldeia memiliki kepala sendiri. Secara keseluruhan terdapat sekitar 65 sampai 70 pos administratif, sekitar 450 suco, dan lebih dari 2.200 aldeia.",
+      "en": "Local organisation has four levels. The largest is the municipality. Next comes the administrative post, which often has the same name as its main town. Each post has several sucos, and each suco has several aldeias. The suco is the level closest to daily life. Its people elect a suco chief (xefe suku) and a suco council, and each aldeia has its own chief. In total there are around 65 to 70 administrative posts, about 450 sucos and more than 2,200 aldeias."
+     }
+    },
+    {
+     "heading": {
+      "tet": "Munisípiu 14 no sira-nia kapitál",
+      "pt": "Os 14 municípios e as suas capitais",
+      "id": "Ke-14 munisipalitas dan ibu kotanya",
+      "en": "The 14 municipalities and their capitals"
+     },
+     "text": {
+      "tet": "Munisípiu 14 no sira-nia kapitál mak: Aileu (Aileu), Ainaru (Ainaru), Atauru (Vila Maumeta), Baukau (Baukau), Bobonaru (Maliana), Kovalima (Suai), Dili (Dili), Ermera (Gleno), Lautein (Lospalos), Likisá (Likisá), Manatutu (Manatutu), Manufahi (Same), Oe-Kusi Ambenu (Pante Makasar) no Vikeke (Vikeke). Dili mak iha ema barak liu. Munisípiu ne'ebé luan liu iha loro-sa'e no iha klaran, hanesan Lautein, Vikeke no Manatutu. Atauru mak ki'ik liu.",
+      "pt": "Os 14 municípios e as suas capitais são: Aileu (Aileu), Ainaro (Ainaro), Ataúro (Vila Maumeta), Baucau (Baucau), Bobonaro (Maliana), Cova Lima (Suai), Díli (Díli), Ermera (Gleno), Lautém (Lospalos), Liquiçá (Liquiçá), Manatuto (Manatuto), Manufahi (Same), Oé-Cusse Ambeno (Pante Macassar) e Viqueque (Viqueque). Díli é, de longe, o que tem mais habitantes. Os maiores em área ficam no leste e no centro, como Lautém, Viqueque e Manatuto. Ataúro é o mais pequeno.",
+      "id": "Ke-14 munisipalitas dan ibu kotanya adalah: Aileu (Aileu), Ainaro (Ainaro), Ataúro (Vila Maumeta), Baucau (Baucau), Bobonaro (Maliana), Cova Lima (Suai), Dili (Dili), Ermera (Gleno), Lautém (Lospalos), Liquiçá (Liquiçá), Manatuto (Manatuto), Manufahi (Same), Oé-Cusse Ambeno (Pante Macassar), dan Viqueque (Viqueque). Dili memiliki penduduk paling banyak. Yang terluas berada di timur dan tengah, seperti Lautém, Viqueque, dan Manatuto. Ataúro adalah yang terkecil.",
+      "en": "The 14 municipalities and their capitals are: Aileu (Aileu), Ainaro (Ainaro), Ataúro (Vila Maumeta), Baucau (Baucau), Bobonaro (Maliana), Cova Lima (Suai), Dili (Dili), Ermera (Gleno), Lautém (Lospalos), Liquiçá (Liquiçá), Manatuto (Manatuto), Manufahi (Same), Oé-Cusse Ambeno (Pante Macassar) and Viqueque (Viqueque). Dili has by far the most people. The largest by area are in the east and the centre, such as Lautém, Viqueque and Manatuto. Ataúro is the smallest."
+     }
+    },
+    {
+     "heading": {
+      "tet": "Husi 'concelho' ba munisípiu",
+      "pt": "Dos concelhos aos municípios",
+      "id": "Dari concelho ke munisipalitas",
+      "en": "From concelhos to municipalities"
+     },
+     "text": {
+      "tet": "Divizaun sira-nia naran muda tuir istória. Iha tempu Portugés, rai ne'e fahe ba unidade ne'ebé naran 'concelho' no 'circunscrição', ho postu iha sira-nia okos. Iha okupasaun Indonézia nia okos, rai ne'e sai provínsia ida ho kabupaten 13 no kecamatan barak. Durante tranzisaun ONU nian, unidade 13 ne'e naran distritu, ho subdistritu. Iha dékada 2010 nian, distritu sira muda naran ba munisípiu, no subdistritu ba postu administrativu. Iha 1 Janeiru 2022, Atauru, ne'ebé uluk postu ida husi Dili, sai munisípiu foun liu.",
+      "pt": "Os nomes das divisões mudaram com a história. No tempo português, o território dividia-se em concelhos e circunscrições, com postos abaixo deles. Sob a ocupação indonésia, tornou-se uma província com 13 kabupaten (regências) e muitos kecamatan (subdistritos). Durante a transição da ONU, as 13 unidades chamavam-se distritos, com subdistritos. Na década de 2010, os distritos passaram a chamar-se municípios e os subdistritos postos administrativos. A 1 de janeiro de 2022, Ataúro, até então um posto de Díli, tornou-se o município mais recente.",
+      "id": "Nama-nama wilayah berubah mengikuti sejarah. Pada masa Portugis, wilayah ini dibagi menjadi concelho dan circunscrição, dengan posto di bawahnya. Di bawah pendudukan Indonesia, wilayah ini menjadi provinsi dengan 13 kabupaten dan banyak kecamatan. Selama masa transisi PBB, ke-13 unit itu disebut distrik, dengan subdistrik. Pada dekade 2010-an, distrik diganti namanya menjadi munisipalitas dan subdistrik menjadi pos administratif. Pada 1 Januari 2022, Ataúro, yang sebelumnya pos administratif Dili, menjadi munisipalitas terbaru.",
+      "en": "The names of the divisions changed with history. In Portuguese times the territory was divided into units called concelhos and circunscrições, with postos below them. Under Indonesian occupation it became a province with 13 kabupaten (regencies) and many kecamatan (subdistricts). During the UN transition the 13 units were called districts, with subdistricts. In the 2010s the districts were renamed municipalities and the subdistricts administrative posts. On 1 January 2022 Ataúro, until then a post of Dili, became the newest municipality."
+     }
+    },
+    {
+     "heading": {
+      "tet": "Estatutu espesiál: Oe-Kusi Ambenu no Atauru",
+      "pt": "Estatuto especial: Oé-Cusse Ambeno e Ataúro",
+      "id": "Status khusus: Oé-Cusse Ambeno dan Ataúro",
+      "en": "Special status: Oé-Cusse Ambeno and Ataúro"
+     },
+     "text": {
+      "tet": "Konstituisaun fó tratamentu espesiál ba fatin rua. Artigu 5 hateten katak Oe-Kusi Ambenu no Atauru hetan tratamentu administrativu no ekonómiku espesiál. Artigu 71 hateten katak Oe-Kusi Ambenu hala'o polítika administrativa ho rejime ekonómiku espesiál, no Atauru iha estatutu ekonómiku rasik. Iha 2014, lei ida harii Rejiaun Administrativa Espesiál Oe-Kusi Ambenu (RAEOA), ho ninia Autoridade rasik no zona espesiál ekonomia sosiál merkadu nian (ZEESM). Atauru, illa ida ne'ebé dook husi Dili nia servisu, hetan ninia administrasaun munisipál rasik iha 2022.",
+      "pt": "A Constituição dá tratamento especial a dois lugares. O artigo 5.º diz que Oé-Cusse Ambeno e Ataúro gozam de tratamento administrativo e económico especial. O artigo 71.º diz que Oé-Cusse Ambeno se rege por uma política administrativa e um regime económico especiais, e que Ataúro tem estatuto económico próprio. Em 2014, uma lei criou a Região Administrativa Especial de Oé-Cusse Ambeno (RAEOA), com Autoridade própria e uma Zona Especial de Economia Social de Mercado (ZEESM). Ataúro, uma ilha longe dos serviços de Díli, ganhou administração municipal própria em 2022.",
+      "id": "Konstitusi memberikan perlakuan khusus kepada dua tempat. Pasal 5 menyatakan bahwa Oé-Cusse Ambeno dan Ataúro mendapat perlakuan administratif dan ekonomi khusus. Pasal 71 menyatakan bahwa Oé-Cusse Ambeno menjalankan kebijakan administratif dan rezim ekonomi khusus, sedangkan Ataúro memiliki status ekonomi tersendiri. Pada 2014 sebuah undang-undang membentuk Wilayah Administratif Khusus Oé-Cusse Ambeno (RAEOA), dengan Otoritas sendiri dan Zona Khusus Ekonomi Pasar Sosial (ZEESM). Ataúro, pulau yang jauh dari layanan di Dili, mendapat administrasi munisipalitas sendiri pada 2022.",
+      "en": "The Constitution gives two places special treatment. Article 5 says that Oé-Cusse Ambeno and Ataúro have special administrative and economic treatment. Article 71 says that Oé-Cusse Ambeno follows a special administrative policy and economic regime, while Ataúro has its own economic status. In 2014 a law created the Special Administrative Region of Oé-Cusse Ambeno (RAEOA), with its own Authority and a special zone of social market economy (ZEESM). Ataúro, an island far from Dili's services, gained its own municipal administration in 2022."
+     }
+    },
+    {
+     "heading": {
+      "tet": "Hakbesik governu ba povu",
+      "pt": "Aproximar o governo das pessoas",
+      "id": "Mendekatkan pemerintah kepada rakyat",
+      "en": "Bringing government closer to people"
+     },
+     "text": {
+      "tet": "Konstituisaun nia artigu 5 mós hateten katak Estadu respeita desentralizasaun, katak fahe servisu administrasaun públika ho órgaun lokál sira. Administrasaun munisipál sira ajuda fó servisu hanesan merkadu lokál, bee no saneamentu, no servisu hamutuk ho ministériu sira iha Dili. Xefe suku no konsellu suku ajuda rezolve problema lokál, organiza servisu komunidade nian no kaer metin lisan hanesan tara bandu. Hatene nível sira-ne'e ajuda sidadaun hatene tenke ba ne'ebé: ba aldeia no suku ba asuntu komunidade nian, ba postu no munisípiu ba servisu públiku barak.",
+      "pt": "O artigo 5.º da Constituição diz também que o Estado respeita a descentralização, isto é, a partilha do trabalho da administração pública com órgãos locais. As administrações municipais ajudam a prestar serviços como mercados locais, água e saneamento, e trabalham com os ministérios em Díli. Os chefes e os conselhos de suco ajudam a resolver problemas locais, organizam trabalho comunitário e mantêm regras tradicionais como o tara bandu. Conhecer estes níveis ajuda os cidadãos a saber onde ir: à aldeia e ao suco para assuntos da comunidade, ao posto e ao município para muitos serviços públicos.",
+      "id": "Pasal 5 Konstitusi juga menyatakan bahwa negara menghormati desentralisasi, yaitu berbagi tugas administrasi publik dengan badan-badan lokal. Administrasi munisipalitas membantu menyediakan layanan seperti pasar lokal, air bersih, dan sanitasi, serta bekerja sama dengan kementerian di Dili. Kepala dan dewan suco membantu menyelesaikan masalah setempat, mengatur kerja bakti, dan menjaga aturan adat seperti tara bandu. Mengenal tingkat-tingkat ini membantu warga tahu ke mana harus pergi: ke aldeia dan suco untuk urusan masyarakat, ke pos dan munisipalitas untuk banyak layanan publik.",
+      "en": "Article 5 of the Constitution also says that the State respects decentralisation, which means sharing the work of public administration with local bodies. Municipal administrations help deliver services such as local markets, water and sanitation, and they work with the ministries in Dili. Suco chiefs and councils help to solve local problems, organise community work and keep customary rules such as tara bandu. Knowing these levels helps citizens know where to go: the aldeia and suco for community matters, the post and the municipality for many public services."
+     }
+    }
+   ],
+   "facts": [
+    {
+     "label": {
+      "tet": "Munisípiu",
+      "pt": "Municípios",
+      "id": "Munisipalitas",
+      "en": "Municipalities"
+     },
+     "value": "14 (13 + RAEOA)"
+    },
+    {
+     "label": {
+      "tet": "Postu administrativu",
+      "pt": "Postos administrativos",
+      "id": "Pos administratif",
+      "en": "Administrative posts"
+     },
+     "value": "≈ 65–70"
+    },
+    {
+     "label": {
+      "tet": "Suku",
+      "pt": "Sucos",
+      "id": "Suco",
+      "en": "Sucos"
+     },
+     "value": "≈ 450"
+    },
+    {
+     "label": {
+      "tet": "Aldeia",
+      "pt": "Aldeias",
+      "id": "Aldeia",
+      "en": "Aldeias"
+     },
+     "value": "> 2 200"
+    },
+    {
+     "label": {
+      "tet": "RAEOA harii",
+      "pt": "Criação da RAEOA",
+      "id": "RAEOA dibentuk",
+      "en": "RAEOA created"
+     },
+     "value": "2014"
+    },
+    {
+     "label": {
+      "tet": "Atauru sai munisípiu",
+      "pt": "Ataúro torna-se município",
+      "id": "Ataúro menjadi munisipalitas",
+      "en": "Ataúro becomes a municipality"
+     },
+     "value": {
+      "tet": "1 Janeiru 2022",
+      "pt": "1 de janeiro de 2022",
+      "id": "1 Januari 2022",
+      "en": "1 January 2022"
+     }
+    }
+   ],
+   "timeline": [
+    {
+     "date": "1976",
+     "title": {
+      "tet": "Indonézia halo rai ne'e provínsia ida ho kabupaten 13",
+      "pt": "A Indonésia faz do território uma província com 13 kabupaten",
+      "id": "Indonesia menjadikan wilayah ini provinsi dengan 13 kabupaten",
+      "en": "Indonesia makes the territory a province with 13 kabupaten"
+     }
+    },
+    {
+     "date": "1999-10-25",
+     "title": {
+      "tet": "ONU harii UNTAET; rai ne'e fahe ba distritu 13",
+      "pt": "A ONU cria a UNTAET; o território tem 13 distritos",
+      "id": "PBB membentuk UNTAET; wilayah dibagi menjadi 13 distrik",
+      "en": "The UN creates UNTAET; the territory has 13 districts"
+     }
+    },
+    {
+     "date": "2014",
+     "title": {
+      "tet": "Lei harii Rejiaun Administrativa Espesiál Oe-Kusi Ambenu",
+      "pt": "Lei cria a Região Administrativa Especial de Oé-Cusse Ambeno",
+      "id": "Undang-undang membentuk Wilayah Administratif Khusus Oé-Cusse Ambeno",
+      "en": "A law creates the Special Administrative Region of Oé-Cusse Ambeno"
+     }
+    },
+    {
+     "date": "2022-01-01",
+     "title": {
+      "tet": "Atauru sai munisípiu",
+      "pt": "Ataúro torna-se município",
+      "id": "Ataúro menjadi munisipalitas",
+      "en": "Ataúro becomes a municipality"
+     }
+    }
+   ],
+   "figure": {
+    "illustration": "village-council",
+    "caption": {
+     "tet": "Munisípiu, postu administrativu, suku no aldeia: nível haat organizasaun lokál nian.",
+     "pt": "Município, posto administrativo, suco e aldeia: os quatro níveis da organização local.",
+     "id": "Munisipalitas, pos administratif, suco, dan aldeia: empat tingkat organisasi lokal.",
+     "en": "Municipality, administrative post, suco and aldeia: the four levels of local organisation."
+    }
+   },
+   "wiki": {
+    "en": "Municipalities of East Timor",
+    "pt": "Municípios de Timor-Leste"
+   },
+   "related": [
+    "tl.politics.local_government",
+    "tl.geography.map",
+    "tl.geography.islands",
+    "tl.politics.constitution",
+    "tl.culture.lisan",
+    "mun.oecusse",
+    "mun.atauro",
+    "mun.dili"
+   ],
+   "tags": [
+    "municipality",
+    "administrative post",
+    "suco",
+    "aldeia",
+    "RAEOA",
+    "decentralisation"
+   ],
+   "quiz": [
+    {
+     "q": {
+      "tet": "Timór-Leste iha munisípiu hira (konta mós Oe-Kusi Ambenu)?",
+      "pt": "Quantos municípios tem Timor-Leste (contando Oé-Cusse Ambeno)?",
+      "id": "Berapa munisipalitas di Timor-Leste (termasuk Oé-Cusse Ambeno)?",
+      "en": "How many municipalities does Timor-Leste have (counting Oé-Cusse Ambeno)?"
+     },
+     "options": [
+      {
+       "tet": "10",
+       "pt": "10",
+       "id": "10",
+       "en": "10"
+      },
+      {
+       "tet": "12",
+       "pt": "12",
+       "id": "12",
+       "en": "12"
+      },
+      {
+       "tet": "14",
+       "pt": "14",
+       "id": "14",
+       "en": "14"
+      },
+      {
+       "tet": "20",
+       "pt": "20",
+       "id": "20",
+       "en": "20"
+      }
+     ],
+     "answer": 2,
+     "why": {
+      "tet": "Iha munisípiu 13 no Rejiaun Administrativa Espesiál Oe-Kusi Ambenu: hamutuk 14.",
+      "pt": "Há 13 municípios e a Região Administrativa Especial de Oé-Cusse Ambeno: 14 ao todo.",
+      "id": "Ada 13 munisipalitas dan Wilayah Administratif Khusus Oé-Cusse Ambeno: semuanya 14.",
+      "en": "There are 13 municipalities plus the Special Administrative Region of Oé-Cusse Ambeno: 14 in all."
+     },
+     "difficulty": 2
+    },
+    {
+     "q": {
+      "tet": "Saida mak munisípiu Bobonaru nia kapitál?",
+      "pt": "Qual é a capital do município de Bobonaro?",
+      "id": "Apa ibu kota Munisipalitas Bobonaro?",
+      "en": "What is the capital of Bobonaro municipality?"
+     },
+     "options": [
+      {
+       "tet": "Maliana",
+       "pt": "Maliana",
+       "id": "Maliana",
+       "en": "Maliana"
+      },
+      {
+       "tet": "Suai",
+       "pt": "Suai",
+       "id": "Suai",
+       "en": "Suai"
+      },
+      {
+       "tet": "Same",
+       "pt": "Same",
+       "id": "Same",
+       "en": "Same"
+      },
+      {
+       "tet": "Gleno",
+       "pt": "Gleno",
+       "id": "Gleno",
+       "en": "Gleno"
+      }
+     ],
+     "answer": 0,
+     "why": {
+      "tet": "Maliana mak Bobonaru nia kapitál. Suai mak Kovalima nian, Same mak Manufahi nian no Gleno mak Ermera nian.",
+      "pt": "Maliana é a capital de Bobonaro. Suai é a de Cova Lima, Same a de Manufahi e Gleno a de Ermera.",
+      "id": "Maliana adalah ibu kota Bobonaro. Suai ibu kota Cova Lima, Same ibu kota Manufahi, dan Gleno ibu kota Ermera.",
+      "en": "Maliana is the capital of Bobonaro. Suai is Cova Lima's, Same is Manufahi's and Gleno is Ermera's."
+     },
+     "difficulty": 4
+    },
+    {
+     "q": {
+      "tet": "Nível ki'ik liu iha suku nia laran mak saida?",
+      "pt": "Qual é o nível mais pequeno, dentro de um suco?",
+      "id": "Apa tingkat terkecil di dalam suco?",
+      "en": "What is the smallest level, inside a suco?"
+     },
+     "options": [
+      {
+       "tet": "Postu administrativu",
+       "pt": "Posto administrativo",
+       "id": "Pos administratif",
+       "en": "Administrative post"
+      },
+      {
+       "tet": "Aldeia",
+       "pt": "Aldeia",
+       "id": "Aldeia",
+       "en": "Aldeia"
+      },
+      {
+       "tet": "Munisípiu",
+       "pt": "Município",
+       "id": "Munisipalitas",
+       "en": "Municipality"
+      },
+      {
+       "tet": "Rejiaun",
+       "pt": "Região",
+       "id": "Wilayah",
+       "en": "Region"
+      }
+     ],
+     "answer": 1,
+     "why": {
+      "tet": "Suku ida iha aldeia balu; aldeia mak nível ki'ik liu.",
+      "pt": "Um suco tem várias aldeias; a aldeia é o nível mais pequeno.",
+      "id": "Satu suco memiliki beberapa aldeia; aldeia adalah tingkat terkecil.",
+      "en": "A suco has several aldeias; the aldeia is the smallest level."
+     },
+     "difficulty": 6
+    },
+    {
+     "q": {
+      "tet": "Munisípiu ida-ne'ebé mak Rejiaun Administrativa Espesiál (RAEOA)?",
+      "pt": "Que município é Região Administrativa Especial (RAEOA)?",
+      "id": "Munisipalitas mana yang menjadi Wilayah Administratif Khusus (RAEOA)?",
+      "en": "Which municipality is a Special Administrative Region (RAEOA)?"
+     },
+     "options": [
+      {
+       "tet": "Atauru",
+       "pt": "Ataúro",
+       "id": "Ataúro",
+       "en": "Ataúro"
+      },
+      {
+       "tet": "Lautein",
+       "pt": "Lautém",
+       "id": "Lautém",
+       "en": "Lautém"
+      },
+      {
+       "tet": "Dili",
+       "pt": "Díli",
+       "id": "Dili",
+       "en": "Dili"
+      },
+      {
+       "tet": "Oe-Kusi Ambenu",
+       "pt": "Oé-Cusse Ambeno",
+       "id": "Oé-Cusse Ambeno",
+       "en": "Oé-Cusse Ambeno"
+      }
+     ],
+     "answer": 3,
+     "why": {
+      "tet": "Lei ida iha 2014 harii RAEOA iha Oe-Kusi Ambenu.",
+      "pt": "Uma lei de 2014 criou a RAEOA em Oé-Cusse Ambeno.",
+      "id": "Sebuah undang-undang tahun 2014 membentuk RAEOA di Oé-Cusse Ambeno.",
+      "en": "A 2014 law created the RAEOA in Oé-Cusse Ambeno."
+     },
+     "difficulty": 8
+    },
+    {
+     "q": {
+      "tet": "Iha tinan saida mak Atauru sai munisípiu?",
+      "pt": "Em que ano Ataúro se tornou município?",
+      "id": "Pada tahun berapa Ataúro menjadi munisipalitas?",
+      "en": "In which year did Ataúro become a municipality?"
+     },
+     "options": [
+      {
+       "tet": "2002",
+       "pt": "2002",
+       "id": "2002",
+       "en": "2002"
+      },
+      {
+       "tet": "2012",
+       "pt": "2012",
+       "id": "2012",
+       "en": "2012"
+      },
+      {
+       "tet": "2019",
+       "pt": "2019",
+       "id": "2019",
+       "en": "2019"
+      },
+      {
+       "tet": "2022",
+       "pt": "2022",
+       "id": "2022",
+       "en": "2022"
+      }
+     ],
+     "answer": 3,
+     "why": {
+      "tet": "Atauru, uluk postu administrativu ida husi Dili, sai munisípiu iha 1 Janeiru 2022.",
+      "pt": "Ataúro, antes um posto administrativo de Díli, tornou-se município a 1 de janeiro de 2022.",
+      "id": "Ataúro, sebelumnya pos administratif Dili, menjadi munisipalitas pada 1 Januari 2022.",
+      "en": "Ataúro, formerly an administrative post of Dili, became a municipality on 1 January 2022."
+     },
+     "difficulty": 11
+    },
+    {
+     "q": {
+      "tet": "Konstituisaun nia artigu saida mak fó tratamentu administrativu no ekonómiku espesiál ba Oe-Kusi Ambenu no Atauru?",
+      "pt": "Que artigo da Constituição dá tratamento administrativo e económico especial a Oé-Cusse Ambeno e Ataúro?",
+      "id": "Pasal Konstitusi mana yang memberi perlakuan administratif dan ekonomi khusus kepada Oé-Cusse Ambeno dan Ataúro?",
+      "en": "Which article of the Constitution gives Oé-Cusse Ambeno and Ataúro special administrative and economic treatment?"
+     },
+     "options": [
+      {
+       "tet": "Artigu 1",
+       "pt": "Artigo 1.º",
+       "id": "Pasal 1",
+       "en": "Article 1"
+      },
+      {
+       "tet": "Artigu 5",
+       "pt": "Artigo 5.º",
+       "id": "Pasal 5",
+       "en": "Article 5"
+      },
+      {
+       "tet": "Artigu 13",
+       "pt": "Artigo 13.º",
+       "id": "Pasal 13",
+       "en": "Article 13"
+      },
+      {
+       "tet": "Artigu 50",
+       "pt": "Artigo 50.º",
+       "id": "Pasal 50",
+       "en": "Article 50"
+      }
+     ],
+     "answer": 1,
+     "why": {
+      "tet": "Artigu 5 (desentralizasaun), númeru 3, no mós artigu 71.",
+      "pt": "O artigo 5.º (descentralização), n.º 3, e também o artigo 71.º.",
+      "id": "Pasal 5 (desentralisasi) ayat 3, dan juga Pasal 71.",
+      "en": "Article 5 (decentralisation), paragraph 3, and also Article 71."
+     },
+     "difficulty": 13
+    }
+   ],
+   "sources": [
+    {
+     "title": "Municipalities of East Timor",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Municipalities_of_East_Timor",
+     "accessed": "2026-10-27",
+     "licence": "CC BY-SA 4.0"
+    },
+    {
+     "title": "Administrative posts of East Timor",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Administrative_posts_of_East_Timor",
+     "accessed": "2026-10-27",
+     "licence": "CC BY-SA 4.0"
+    },
+    {
+     "title": "Constitution of East Timor",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Constitution_of_East_Timor",
+     "accessed": "2026-10-27",
+     "licence": "CC BY-SA 4.0"
+    },
+    {
+     "title": "Oecusse",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Oecusse",
+     "accessed": "2026-10-27",
+     "licence": "CC BY-SA 4.0"
+    },
+    {
+     "title": "Atauro Island",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Atauro_Island",
+     "accessed": "2026-10-27",
+     "licence": "CC BY-SA 4.0"
+    },
+    {
+     "title": "Timor-Leste – Subnational Administrative Boundaries",
+     "publisher": "OCHA Humanitarian Data Exchange",
+     "url": "https://data.humdata.org/dataset/timor-leste-administrative-boundaries-levels-0-3",
+     "accessed": "2026-10-27",
+     "licence": "CC BY 3.0 IGO"
+    }
+   ],
+   "review": {
+    "status": "draft",
+    "notes": "Counts: the 2020 OCHA data has 65 posts (incl. 'Atauro' as one post of Dili); after 2022 Ataúro's sucos may have become posts, so I wrote 'around 65 to 70'. Sucos ≈450 (442 in older data, 452 after later changes?) and aldeias >2 200: check the current Ministry of State Administration figures. RAEOA created by Law n.º 3/2014 (June 2014) – number/date from memory, so the text only says 'a law in 2014'. 'Districts renamed municipalities in the 2010s' kept vague on purpose (2014–2016 decree-laws). Ataúro municipality from 1 January 2022 matches the old Lafa atlas and the map notes, but I could not find a source for it with web search (the search budget ran out). Tetun: 'zona espesiál ekonomia sosiál merkadu nian' is my rendering of ZEESM."
+   }
+  },
+  {
+   "id": "tl.geography.islands",
+   "category": "geography",
+   "also": [
+    "land"
+   ],
+   "title": {
+    "tet": "Illa sira: Atauru, Jaku, Fatu Sinai no rai-le'un Oe-Kusi Ambenu",
+    "pt": "Ilhas: Ataúro, Jaco, Fatu Sinai e o enclave de Oé-Cusse",
+    "id": "Pulau-pulau: Ataúro, Jaco, Fatu Sinai, dan enklave Oé-Cusse",
+    "en": "Islands: Ataúro, Jaco, Fatu Sinai and the Oé-Cusse enclave"
+   },
+   "summary": {
+    "tet": "Aleinde illa Timór nia parte loro-sa'e, nasaun ne'e iha mós tasi-le'un Atauru iha Dili nia norte, illa ki'ik no lulik Jaku iha rohan loro-sa'e, no rai-le'un Oe-Kusi Ambenu iha loro-monu. Fatu Sinai, illa-fatuk ki'ik ida besik Oe-Kusi, sai asuntu ida iha diskusaun ho Indonézia.",
+    "pt": "Além da metade oriental de Timor, o país inclui a ilha de Ataúro, a norte de Díli, a pequena ilha sagrada de Jaco, no extremo leste, e o enclave de Oé-Cusse Ambeno, a oeste. Fatu Sinai, um pequeno ilhéu rochoso perto de Oé-Cusse, tem sido tema de conversações com a Indonésia.",
+    "id": "Selain bagian timur Pulau Timor, negara ini mencakup Pulau Ataúro di utara Dili, Pulau Jaco yang kecil dan sakral di ujung timur, serta enklave Oé-Cusse Ambeno di barat. Fatu Sinai, pulau karang kecil di dekat Oé-Cusse, menjadi salah satu pokok pembicaraan dengan Indonesia.",
+    "en": "Besides the eastern half of Timor, the country includes Ataúro Island north of Dili, the small sacred island of Jaco at the eastern tip and the Oé-Cusse Ambeno enclave in the west. Fatu Sinai, a tiny rocky islet near Oé-Cusse, has been a question in talks with Indonesia."
+   },
+   "levels": [
+    "eb1",
+    "eb2",
+    "eb3",
+    "es",
+    "sup"
+   ],
+   "sections": [
+    {
+     "heading": {
+      "tet": "Timór, illa boot",
+      "pt": "Timor, a ilha principal",
+      "id": "Timor, pulau utama",
+      "en": "Timor, the main island"
+     },
+     "text": {
+      "tet": "Timór mak illa boot liu iha illa Sunda Ki'ik sira, ho luan maizumenus km² 30 000. Timór-Leste iha parte loro-sa'e no Oe-Kusi; parte seluk mak Indonézia nia provínsia Nusa Tenggara Timur. Naran Timór mai husi liafuan Malaiu 'timur', katak 'loro-sa'e'. Timór la hanesan viziñu balu ne'ebé iha foho-ahi: Timór la'ós foho-ahi. Ninia fatuk mak kamada barak ne'ebé sa'e, tanba plaka Austrália baku malu ho arku Banda, no illa ne'e sa'e neineik nafatin. Ahu-ruin tuan ne'ebé sa'e ona iha kosta hatudu movimentu ne'e.",
+      "pt": "Timor é a maior das Pequenas Ilhas da Sonda, com cerca de 30 000 km². Timor-Leste tem a metade oriental e Oé-Cusse; o resto pertence à província indonésia de Nusa Tenggara Oriental. O nome Timor vem da palavra malaia timur, que quer dizer 'leste'. Ao contrário de algumas ilhas vizinhas, Timor não é um vulcão: é um amontoado de camadas de rocha empurradas para cima onde a placa australiana encontra o arco de Banda, e continua a subir devagar. Os terraços de coral levantados na costa mostram este movimento.",
+      "id": "Timor adalah pulau terbesar di Kepulauan Sunda Kecil, dengan luas sekitar 30.000 km². Timor-Leste memiliki bagian timur dan Oé-Cusse; sisanya termasuk Provinsi Nusa Tenggara Timur, Indonesia. Nama Timor berasal dari kata Melayu timur, yaitu arah matahari terbit. Berbeda dengan beberapa pulau tetangganya, Timor bukan gunung api: pulau ini adalah tumpukan lapisan batuan yang terdorong naik di tempat lempeng Australia bertemu busur Banda, dan masih terus naik perlahan. Teras karang yang terangkat di pantai menunjukkan gerakan ini.",
+      "en": "Timor is the largest of the Lesser Sunda Islands, with about 30,000 km². Timor-Leste has the eastern half and Oé-Cusse; the rest belongs to the Indonesian province of East Nusa Tenggara. The name Timor comes from the Malay word timur, which means 'east'. Unlike some of its neighbours, Timor is not a volcano: it is a pile of rock layers pushed up where the Australian plate meets the Banda arc, and it is still rising slowly. Raised coral terraces on the coast show this movement."
+     }
+    },
+    {
+     "heading": {
+      "tet": "Atauru",
+      "pt": "Ataúro",
+      "id": "Ataúro",
+      "en": "Ataúro"
+     },
+     "text": {
+      "tet": "Atauru iha Dili nia norte, maizumenus km 25, iha Estreitu Wetar nia parte kle'an nia sorin seluk. Ninia luan maizumenus km² 140, no ninia foho aas liu, Manucoco, aas besik m 1 000. La hanesan Timór, Atauru mak illa foho-ahi tuan. Ema maizumenus 10 000 hela iha ninia knua sira, hanesan Vila Maumeta, Beloi, Biqueli, Macadade no Maquili. Iha tempu koloniál, governu haruka ema ba hela iha ne'ebá hanesan kastigu. Ohin loron Atauru famozu ho peska, artezanatu no ahu-ruin ne'ebé riku liu ida iha mundu. Desde 1 Janeiru 2022, Atauru mak munisípiu.",
+      "pt": "Ataúro fica cerca de 25 km a norte de Díli, do outro lado de uma parte profunda do estreito de Wetar. Tem cerca de 140 km² e o seu pico mais alto, o Manucoco, tem quase 1000 m. Ao contrário de Timor, Ataúro é uma antiga ilha vulcânica. Cerca de 10 000 pessoas vivem nas suas povoações, como Vila Maumeta, Beloi, Biqueli, Macadade e Maquili. No tempo colonial foi lugar de desterro. Hoje é conhecida pela pesca, pelo artesanato e por alguns dos recifes de coral mais ricos alguma vez estudados. Desde 1 de janeiro de 2022, Ataúro é um município.",
+      "id": "Ataúro terletak sekitar 25 km di utara Dili, di seberang bagian Selat Wetar yang dalam. Luasnya sekitar 140 km², dan puncak tertingginya, Manucoco, tingginya hampir 1.000 m. Berbeda dengan Timor, Ataúro adalah pulau gunung api tua. Sekitar 10.000 orang tinggal di desa-desanya, seperti Vila Maumeta, Beloi, Biqueli, Macadade, dan Maquili. Pada masa kolonial, pulau ini menjadi tempat pembuangan. Kini Ataúro dikenal karena perikanan, kerajinan tangan, dan terumbu karang yang termasuk paling kaya yang pernah diteliti. Sejak 1 Januari 2022, Ataúro menjadi munisipalitas.",
+      "en": "Ataúro lies about 25 km north of Dili, across a deep part of the Wetar Strait. It covers about 140 km², and its highest peak, Manucoco, is almost 1,000 m high. Unlike Timor, Ataúro is an old volcanic island. About 10,000 people live in its villages, such as Vila Maumeta, Beloi, Biqueli, Macadade and Maquili. In colonial times it was a place of exile. Today it is known for fishing, handicrafts and some of the richest coral reefs ever surveyed. Since 1 January 2022 Ataúro has been a municipality."
+     }
+    },
+    {
+     "heading": {
+      "tet": "Jaku",
+      "pt": "Jaco",
+      "id": "Jaco",
+      "en": "Jaco"
+     },
+     "text": {
+      "tet": "Jaku mak illa ki'ik ida ho luan maizumenus km² 11, besik Timór nia rohan loro-sa'e, iha Tutuala, Lautein. Ema ida la hela iha ne'ebá. Iha rai-henek mutin, bee moos, ai-laran no ahu-ruin. Ba povu Fataluku, Jaku mak fatin lulik. Tan ne'e, vizitante sira bele hakur tasi husi tasi-ibun Valu ho peskadór lokál ba loron ida de'it, maibé labele toba iha ne'ebá kalan. Illa ne'e parte husi Parke Nasionál Nino Konis Santana, ne'ebé harii iha 2007. Parke ne'e proteje ai-laran, fatuk-kuak, ahu-ruin no Lagoa Ira Lalaro.",
+      "pt": "Jaco é uma pequena ilha de cerca de 11 km², junto ao extremo leste de Timor, perto de Tutuala, em Lautém. Ninguém vive lá. Tem areia branca, água límpida, floresta e recifes de coral. Para o povo fataluku, Jaco é sagrada (lulik); por isso, os visitantes podem atravessar a partir da praia de Valu com pescadores locais durante o dia, mas não podem passar lá a noite. A ilha faz parte do Parque Nacional Nino Konis Santana, criado em 2007, que protege florestas, grutas, recifes e o lago Ira Lalaro.",
+      "id": "Jaco adalah pulau kecil seluas sekitar 11 km² di dekat ujung timur Timor, dekat Tutuala di Lautém. Tidak ada yang tinggal di sana. Pulau ini memiliki pasir putih, air jernih, hutan, dan terumbu karang. Bagi orang Fataluku, Jaco adalah tempat sakral (lulik), sehingga pengunjung boleh menyeberang dari Pantai Valu bersama nelayan setempat pada siang hari, tetapi tidak boleh menginap. Pulau ini termasuk Taman Nasional Nino Konis Santana, yang dibentuk pada 2007 dan melindungi hutan, gua, terumbu karang, serta Danau Ira Lalaro.",
+      "en": "Jaco is a small island of about 11 km² just off the eastern tip of Timor, near Tutuala in Lautém. Nobody lives there. It has white sand, clear water, forest and coral reefs. For the Fataluku people Jaco is sacred (lulik), so visitors may cross from Valu beach with local fishermen for the day, but they must not stay overnight. The island is part of the Nino Konis Santana National Park, created in 2007, which protects forests, caves, reefs and Lake Ira Lalaro."
+     }
+    },
+    {
+     "heading": {
+      "tet": "Rai-le'un Oe-Kusi Ambenu",
+      "pt": "O enclave de Oé-Cusse Ambeno",
+      "id": "Enklave Oé-Cusse Ambeno",
+      "en": "The Oé-Cusse Ambeno enclave"
+     },
+     "text": {
+      "tet": "Oe-Kusi Ambenu la'ós illa, maibé nia hela mesak husi nasaun nia parte seluk: nia iha Timór loro-monu nia kosta norte, no iha rai, Indonézia haleu nia. Ninia luan maizumenus km² 815. Ró Portugés to'o Lifau, iha kosta ne'e, maizumenus iha 1515. Depois Lifau sai fatin dahuluk ne'ebé Portugés hela, no kapitál Timór Portugés nian to'o 1769. Bainhira Portugál no Olanda fahe illa, Oe-Kusi hela nafatin ho Portugál. Ema barak ko'alia Baikenu. Atu ba Dili, ema sa'e ró-ahi, aviaun ka liu estrada iha Indonézia.",
+      "pt": "Oé-Cusse Ambeno não é uma ilha, mas está separado do resto do país: fica na costa norte de Timor Ocidental e, por terra, está rodeado pela Indonésia. Tem cerca de 815 km². Navios portugueses chegaram a Lifau, nesta costa, por volta de 1515. Mais tarde, Lifau tornou-se o primeiro povoado português e a capital do Timor Português até 1769. Quando Portugal e os Países Baixos dividiram a ilha, Oé-Cusse ficou português. A maioria das pessoas fala baikeno. Para ir a Díli, viaja-se de ferry, de avião ou por estrada através da Indonésia.",
+      "id": "Oé-Cusse Ambeno bukan pulau, tetapi terpisah dari bagian lain negara ini: wilayah ini terletak di pantai utara Timor Barat dan di darat dikelilingi Indonesia. Luasnya sekitar 815 km². Kapal Portugis tiba di Lifau, di pantai ini, sekitar tahun 1515. Kemudian Lifau menjadi permukiman Portugis pertama dan ibu kota Timor Portugis sampai 1769. Ketika Portugal dan Belanda membagi pulau ini, Oé-Cusse tetap milik Portugis. Sebagian besar penduduknya berbahasa Baikeno. Perjalanan ke Dili ditempuh dengan kapal feri, pesawat, atau jalan darat melalui Indonesia.",
+      "en": "Oé-Cusse Ambeno is not an island, but it is cut off from the rest of the country: it lies on the north coast of West Timor and is surrounded on land by Indonesia. It covers about 815 km². Portuguese ships reached Lifau, on this coast, around 1515. Lifau later became the first Portuguese settlement and the capital of Portuguese Timor until 1769. When Portugal and the Netherlands divided the island, Oé-Cusse stayed Portuguese. Most people speak Baikeno. Travel to Dili is by ferry, by plane or by road through Indonesia."
+     }
+    },
+    {
+     "heading": {
+      "tet": "Fatu Sinai no illa ki'ik sira",
+      "pt": "Fatu Sinai e os ilhéus",
+      "id": "Fatu Sinai dan pulau-pulau kecil",
+      "en": "Fatu Sinai and the small islets"
+     },
+     "text": {
+      "tet": "Fatu Sinai, ne'ebé iha lian Indonézia naran Pulau Batek, mak illa-fatuk ki'ik ida ne'ebé ema la hela, iha tasi iha Oe-Kusi nia norte. Timór-Leste no Indonézia rua-rua hateten katak illa ne'e sira-nian, no iha realidade Indonézia mak kontrola nia. Ninia futuru liga ho negosiasaun kona-ba fronteira tasi entre nasaun rua, ne'ebé la'o nafatin iha dékada 2020 nian. Illa ki'ik sira hanesan ne'e importante, tanba sira bele muda fatin ne'ebé fronteira tasi liu, no se mak bele kaer ikan ka buka mina-rai no gás iha tasi ne'ebé haleu sira.",
+      "pt": "Fatu Sinai, chamado Pulau Batek em indonésio, é um pequeno ilhéu rochoso e desabitado no mar a norte de Oé-Cusse. Timor-Leste e a Indonésia reivindicaram-no e, na prática, tem estado sob controlo indonésio. O seu futuro está ligado às negociações sobre a fronteira marítima entre os dois países, que continuavam na década de 2020. Ilhéus como este são importantes porque podem mudar o traçado de uma fronteira marítima e quem pode pescar ou procurar petróleo e gás nas águas à sua volta.",
+      "id": "Fatu Sinai, yang dalam bahasa Indonesia disebut Pulau Batek, adalah pulau karang kecil tak berpenghuni di laut sebelah utara Oé-Cusse. Timor-Leste dan Indonesia sama-sama pernah mengklaimnya, dan dalam praktiknya pulau ini berada di bawah kendali Indonesia. Masa depannya terkait dengan perundingan batas laut kedua negara, yang masih berlangsung pada dekade 2020-an. Pulau kecil seperti ini penting karena dapat mengubah letak batas laut serta siapa yang boleh menangkap ikan atau mencari minyak dan gas di perairan sekitarnya.",
+      "en": "Fatu Sinai, called Pulau Batek in Indonesian, is a tiny uninhabited rock island in the sea north of Oé-Cusse. Both Timor-Leste and Indonesia have claimed it, and in practice it has been under Indonesian control. Its future is linked to the talks on the sea border between the two countries, which were still going on in the 2020s. Small islands like this matter because they can change where a sea border runs, and who may fish or look for oil and gas in the waters around them."
+     }
+    }
+   ],
+   "facts": [
+    {
+     "label": {
+      "tet": "Illa Timór nia luan",
+      "pt": "Área da ilha de Timor",
+      "id": "Luas Pulau Timor",
+      "en": "Area of Timor island"
+     },
+     "value": "≈ 30 000 km²"
+    },
+    {
+     "label": {
+      "tet": "Atauru nia luan",
+      "pt": "Área de Ataúro",
+      "id": "Luas Ataúro",
+      "en": "Area of Ataúro"
+     },
+     "value": "≈ 140 km²"
+    },
+    {
+     "label": {
+      "tet": "Atauru nia populasaun",
+      "pt": "População de Ataúro",
+      "id": "Penduduk Ataúro",
+      "en": "Population of Ataúro"
+     },
+     "value": "≈ 10 000",
+     "year": 2022
+    },
+    {
+     "label": {
+      "tet": "Distánsia Dili–Atauru",
+      "pt": "Distância Díli–Ataúro",
+      "id": "Jarak Dili–Ataúro",
+      "en": "Distance Dili–Ataúro"
+     },
+     "value": "≈ 25 km"
+    },
+    {
+     "label": {
+      "tet": "Jaku nia luan",
+      "pt": "Área de Jaco",
+      "id": "Luas Jaco",
+      "en": "Area of Jaco"
+     },
+     "value": "≈ 11 km²"
+    },
+    {
+     "label": {
+      "tet": "Oe-Kusi Ambenu nia luan",
+      "pt": "Área de Oé-Cusse Ambeno",
+      "id": "Luas Oé-Cusse Ambeno",
+      "en": "Area of Oé-Cusse Ambeno"
+     },
+     "value": "≈ 815 km²"
+    }
+   ],
+   "timeline": [
+    {
+     "date": "1515",
+     "title": {
+      "tet": "Ró Portugés to'o Lifau, Oe-Kusi",
+      "pt": "Navios portugueses chegam a Lifau, Oé-Cusse",
+      "id": "Kapal Portugis tiba di Lifau, Oé-Cusse",
+      "en": "Portuguese ships reach Lifau, Oé-Cusse"
+     }
+    },
+    {
+     "date": "1769",
+     "title": {
+      "tet": "Kapitál muda husi Lifau ba Dili",
+      "pt": "A capital muda de Lifau para Díli",
+      "id": "Ibu kota pindah dari Lifau ke Dili",
+      "en": "The capital moves from Lifau to Dili"
+     }
+    },
+    {
+     "date": "1975-08",
+     "title": {
+      "tet": "Governadór Portugés muda ba Atauru durante funu-maluk",
+      "pt": "O governador português muda-se para Ataúro durante a guerra civil",
+      "id": "Gubernur Portugis pindah ke Ataúro selama perang saudara",
+      "en": "The Portuguese governor moves to Ataúro during the civil conflict"
+     }
+    },
+    {
+     "date": "2007",
+     "title": {
+      "tet": "Parke Nasionál Nino Konis Santana, ho Jaku",
+      "pt": "Parque Nacional Nino Konis Santana, com Jaco",
+      "id": "Taman Nasional Nino Konis Santana, termasuk Jaco",
+      "en": "Nino Konis Santana National Park, including Jaco"
+     }
+    },
+    {
+     "date": "2014",
+     "title": {
+      "tet": "Oe-Kusi Ambenu sai Rejiaun Administrativa Espesiál",
+      "pt": "Oé-Cusse Ambeno torna-se Região Administrativa Especial",
+      "id": "Oé-Cusse Ambeno menjadi Wilayah Administratif Khusus",
+      "en": "Oé-Cusse Ambeno becomes a Special Administrative Region"
+     }
+    },
+    {
+     "date": "2022-01-01",
+     "title": {
+      "tet": "Atauru sai munisípiu",
+      "pt": "Ataúro torna-se município",
+      "id": "Ataúro menjadi munisipalitas",
+      "en": "Ataúro becomes a municipality"
+     }
+    }
+   ],
+   "figure": {
+    "illustration": "island",
+    "caption": {
+     "tet": "Atauru, illa foho-ahi tuan iha Dili nia oin, ho ninia ahu-ruin.",
+     "pt": "Ataúro, antiga ilha vulcânica em frente a Díli, com os seus recifes.",
+     "id": "Ataúro, pulau gunung api tua di depan Dili, dengan terumbu karangnya.",
+     "en": "Ataúro, an old volcanic island facing Dili, with its coral reefs."
+    }
+   },
+   "wiki": {
+    "en": "Atauro Island",
+    "pt": "Ataúro"
+   },
+   "related": [
+    "mun.atauro",
+    "mun.oecusse",
+    "mun.lautem",
+    "tl.nature.protected_areas",
+    "tl.nature.marine",
+    "tl.colonial.portuguese_arrival",
+    "tl.colonial.lifau_to_dili",
+    "tl.geography.border",
+    "tl.geography.map",
+    "tl.land.island_formation"
+   ],
+   "tags": [
+    "Ataúro",
+    "Jaco",
+    "Oé-Cusse",
+    "Fatu Sinai",
+    "island",
+    "enclave"
+   ],
+   "quiz": [
+    {
+     "q": {
+      "tet": "Illa ida-ne'ebé mak iha Dili nia norte, maizumenus km 25?",
+      "pt": "Que ilha fica cerca de 25 km a norte de Díli?",
+      "id": "Pulau mana yang terletak sekitar 25 km di utara Dili?",
+      "en": "Which island lies about 25 km north of Dili?"
+     },
+     "options": [
+      {
+       "tet": "Jaku",
+       "pt": "Jaco",
+       "id": "Jaco",
+       "en": "Jaco"
+      },
+      {
+       "tet": "Atauru",
+       "pt": "Ataúro",
+       "id": "Ataúro",
+       "en": "Ataúro"
+      },
+      {
+       "tet": "Bali",
+       "pt": "Bali",
+       "id": "Bali",
+       "en": "Bali"
+      },
+      {
+       "tet": "Flores",
+       "pt": "Flores",
+       "id": "Flores",
+       "en": "Flores"
+      }
+     ],
+     "answer": 1,
+     "why": {
+      "tet": "Atauru iha Dili nia oin, iha Estreitu Wetar nia sorin seluk.",
+      "pt": "Ataúro fica em frente a Díli, do outro lado do estreito de Wetar.",
+      "id": "Ataúro berada di depan Dili, di seberang Selat Wetar.",
+      "en": "Ataúro faces Dili, across the Wetar Strait."
+     },
+     "difficulty": 1
+    },
+    {
+     "q": {
+      "tet": "Tanba saida vizitante sira labele toba kalan iha illa Jaku?",
+      "pt": "Porque é que os visitantes não podem passar a noite em Jaco?",
+      "id": "Mengapa pengunjung tidak boleh menginap di Pulau Jaco?",
+      "en": "Why may visitors not stay overnight on Jaco Island?"
+     },
+     "options": [
+      {
+       "tet": "Tanba illa ne'e lulik ba povu Fataluku",
+       "pt": "Porque a ilha é sagrada para o povo fataluku",
+       "id": "Karena pulau itu sakral bagi orang Fataluku",
+       "en": "Because the island is sacred to the Fataluku people"
+      },
+      {
+       "tet": "Tanba iha baze militár",
+       "pt": "Porque há lá uma base militar",
+       "id": "Karena ada pangkalan militer",
+       "en": "Because there is a military base"
+      },
+      {
+       "tet": "Tanba la iha tasi-ibun",
+       "pt": "Porque não tem praia",
+       "id": "Karena tidak ada pantai",
+       "en": "Because it has no beach"
+      },
+      {
+       "tet": "Tanba malirin tebes",
+       "pt": "Porque é muito frio",
+       "id": "Karena terlalu dingin",
+       "en": "Because it is too cold"
+      }
+     ],
+     "answer": 0,
+     "why": {
+      "tet": "Jaku mak fatin lulik; komunidade lokál husu atu vizitante ba loron ida de'it.",
+      "pt": "Jaco é um lugar sagrado; a comunidade local pede que as visitas sejam só de dia.",
+      "id": "Jaco adalah tempat sakral; masyarakat setempat meminta kunjungan hanya pada siang hari.",
+      "en": "Jaco is a sacred place; the local community asks for day visits only."
+     },
+     "difficulty": 4
+    },
+    {
+     "q": {
+      "tet": "Iha ne'ebé mak ró Portugés to'o dahuluk iha Timór, maizumenus iha 1515?",
+      "pt": "Onde chegaram os primeiros navios portugueses a Timor, por volta de 1515?",
+      "id": "Di mana kapal Portugis pertama kali tiba di Timor sekitar tahun 1515?",
+      "en": "Where did Portuguese ships first reach Timor, around 1515?"
+     },
+     "options": [
+      {
+       "tet": "Batugade",
+       "pt": "Batugade",
+       "id": "Batugade",
+       "en": "Batugade"
+      },
+      {
+       "tet": "Manatutu",
+       "pt": "Manatuto",
+       "id": "Manatuto",
+       "en": "Manatuto"
+      },
+      {
+       "tet": "Lifau",
+       "pt": "Lifau",
+       "id": "Lifau",
+       "en": "Lifau"
+      },
+      {
+       "tet": "Vikeke",
+       "pt": "Viqueque",
+       "id": "Viqueque",
+       "en": "Viqueque"
+      }
+     ],
+     "answer": 2,
+     "why": {
+      "tet": "Lifau, iha Oe-Kusi Ambenu, mak fatin dahuluk; nia sai kapitál to'o 1769.",
+      "pt": "Lifau, em Oé-Cusse Ambeno, foi o primeiro lugar; foi capital até 1769.",
+      "id": "Lifau di Oé-Cusse Ambeno adalah tempat pertama; Lifau menjadi ibu kota sampai 1769.",
+      "en": "Lifau, in Oé-Cusse Ambeno, was the first place; it was the capital until 1769."
+     },
+     "difficulty": 7
+    },
+    {
+     "q": {
+      "tet": "Ema barak iha Oe-Kusi Ambenu ko'alia lian saida iha uma?",
+      "pt": "Que língua fala a maioria das pessoas em Oé-Cusse Ambeno?",
+      "id": "Bahasa apa yang dipakai sebagian besar orang di Oé-Cusse Ambeno?",
+      "en": "Which language do most people in Oé-Cusse Ambeno speak at home?"
+     },
+     "options": [
+      {
+       "tet": "Fataluku",
+       "pt": "Fataluku",
+       "id": "Fataluku",
+       "en": "Fataluku"
+      },
+      {
+       "tet": "Makasae",
+       "pt": "Makasae",
+       "id": "Makasae",
+       "en": "Makasae"
+      },
+      {
+       "tet": "Galoli",
+       "pt": "Galoli",
+       "id": "Galoli",
+       "en": "Galoli"
+      },
+      {
+       "tet": "Baikenu",
+       "pt": "Baikeno",
+       "id": "Baikeno",
+       "en": "Baikeno"
+      }
+     ],
+     "answer": 3,
+     "why": {
+      "tet": "Baikenu mak variante ida husi lian Uab Meto, ne'ebé ema mós ko'alia iha Timór loro-monu.",
+      "pt": "O baikeno é uma variedade da língua uab meto, falada também em Timor Ocidental.",
+      "id": "Baikeno adalah ragam bahasa Uab Meto yang juga dituturkan di Timor Barat.",
+      "en": "Baikeno is a variety of the Uab Meto language, also spoken in West Timor."
+     },
+     "difficulty": 9
+    },
+    {
+     "q": {
+      "tet": "Illa Timór mak foho-ahi ka lae?",
+      "pt": "A ilha de Timor é um vulcão?",
+      "id": "Apakah Pulau Timor sebuah gunung api?",
+      "en": "Is the island of Timor a volcano?"
+     },
+     "options": [
+      {
+       "tet": "Sin, iha foho-ahi barak ne'ebé ativu",
+       "pt": "Sim, tem muitos vulcões ativos",
+       "id": "Ya, banyak gunung api aktif",
+       "en": "Yes, it has many active volcanoes"
+      },
+      {
+       "tet": "Lae: nia sa'e bainhira plaka Austrália baku malu ho arku Banda",
+       "pt": "Não: subiu quando a placa australiana encontrou o arco de Banda",
+       "id": "Tidak: pulau ini terangkat saat lempeng Australia bertemu busur Banda",
+       "en": "No: it was pushed up where the Australian plate met the Banda arc"
+      },
+      {
+       "tet": "Sin, Ramelau mak foho-ahi ativu",
+       "pt": "Sim, o Ramelau é um vulcão ativo",
+       "id": "Ya, Ramelau adalah gunung api aktif",
+       "en": "Yes, Ramelau is an active volcano"
+      },
+      {
+       "tet": "Lae, ema mak halo illa ne'e",
+       "pt": "Não, foi feita por pessoas",
+       "id": "Tidak, pulau itu dibuat manusia",
+       "en": "No, it was built by people"
+      }
+     ],
+     "answer": 1,
+     "why": {
+      "tet": "Timór mak fatuk tasi nian ne'ebé sa'e; Atauru de'it mak foho-ahi tuan.",
+      "pt": "Timor é feito de rochas que subiram do mar; só Ataúro é um antigo vulcão.",
+      "id": "Timor terdiri atas batuan yang terangkat dari laut; hanya Ataúro yang gunung api tua.",
+      "en": "Timor is made of rocks pushed up from the sea; only Ataúro is an old volcano."
+     },
+     "difficulty": 12
+    },
+    {
+     "q": {
+      "tet": "Iha Agostu 1975, durante funu-maluk, governadór Portugés no ninia administrasaun muda ba ne'ebé?",
+      "pt": "Em agosto de 1975, durante a guerra civil, para onde foi o governador português com a sua administração?",
+      "id": "Pada Agustus 1975, saat perang saudara, ke mana gubernur Portugis dan pemerintahannya pindah?",
+      "en": "In August 1975, during the civil conflict, where did the Portuguese governor and his administration move?"
+     },
+     "options": [
+      {
+       "tet": "Atauru",
+       "pt": "Ataúro",
+       "id": "Ataúro",
+       "en": "Ataúro"
+      },
+      {
+       "tet": "Baukau",
+       "pt": "Baucau",
+       "id": "Baucau",
+       "en": "Baucau"
+      },
+      {
+       "tet": "Oe-Kusi",
+       "pt": "Oé-Cusse",
+       "id": "Oé-Cusse",
+       "en": "Oé-Cusse"
+      },
+      {
+       "tet": "Jaku",
+       "pt": "Jaco",
+       "id": "Jaco",
+       "en": "Jaco"
+      }
+     ],
+     "answer": 0,
+     "why": {
+      "tet": "Governadór husi Dili ba Atauru, no sai husi illa ne'e bainhira Indonézia invade Dili iha Dezembru 1975.",
+      "pt": "O governador saiu de Díli para Ataúro e deixou a ilha quando a Indonésia invadiu Díli, em dezembro de 1975.",
+      "id": "Gubernur pindah dari Dili ke Ataúro dan meninggalkan pulau itu ketika Indonesia menginvasi Dili pada Desember 1975.",
+      "en": "The governor left Dili for Ataúro and left the island when Indonesia invaded Dili in December 1975."
+     },
+     "difficulty": 14
+    }
+   ],
+   "sources": [
+    {
+     "title": "Atauro Island",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Atauro_Island",
+     "accessed": "2026-10-27",
+     "licence": "CC BY-SA 4.0"
+    },
+    {
+     "title": "Jaco Island",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Jaco_Island",
+     "accessed": "2026-10-27",
+     "licence": "CC BY-SA 4.0"
+    },
+    {
+     "title": "Oecusse",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Oecusse",
+     "accessed": "2026-10-27",
+     "licence": "CC BY-SA 4.0"
+    },
+    {
+     "title": "Timor",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Timor",
+     "accessed": "2026-10-27",
+     "licence": "CC BY-SA 4.0"
+    },
+    {
+     "title": "Nino Konis Santana National Park",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Nino_Konis_Santana_National_Park",
+     "accessed": "2026-10-27",
+     "licence": "CC BY-SA 4.0"
+    },
+    {
+     "title": "Constitution of East Timor",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Constitution_of_East_Timor",
+     "accessed": "2026-10-27",
+     "licence": "CC BY-SA 4.0"
+    }
+   ],
+   "review": {
+    "status": "draft",
+    "notes": "Fatu Sinai / Pulau Batek: I wrote 'claimed by both, in practice under Indonesian control, linked to sea-border talks'. This is from memory and not verified (the web-search budget ran out), so check the current status. Ataúro: ≈140 km²; Manucoco 'almost 1 000 m' (sources 995–999 m); ≈10 000 people (2022 census, my figure 10 302 not verified); village names in pt spelling (tet Makadade/Makili?). 'Richest reefs ever surveyed' refers to the 2016 Conservation International reef-fish survey. Jaco ≈11 km². NKS park 2007 (some sources 2008). Lifau 'around 1515'. Governor Lemos Pires moved to Ataúro on 26–27 Aug 1975 and left on 7–8 Dec 1975 (from memory)."
+   }
+  },
+  {
+   "id": "tl.geography.border",
+   "category": "geography",
+   "also": [
+    "world"
+   ],
+   "title": {
+    "tet": "Fronteira rai ho Indonézia",
+    "pt": "A fronteira terrestre com a Indonésia",
+    "id": "Perbatasan darat dengan Indonesia",
+    "en": "The land border with Indonesia"
+   },
+   "summary": {
+    "tet": "Timór-Leste nia fronteira rai úniku mak ho Indonézia, iha illa Timór. Fronteira ne'e iha parte rua: liña ida iha illa nia klaran no liña seluk haleu rai-le'un Oe-Kusi Ambenu. Portugál no Olanda mak dezeña liña ne'e, no iha 2005 viziñu independente rua konkorda ninia parte boot.",
+    "pt": "A única fronteira terrestre de Timor-Leste é com a Indonésia, na ilha de Timor. Tem duas partes: uma linha que atravessa o meio da ilha e outra à volta do enclave de Oé-Cusse Ambeno. A linha foi traçada por Portugal e pelos Países Baixos, e em 2005 os dois vizinhos independentes acordaram a maior parte dela.",
+    "id": "Satu-satunya batas darat Timor-Leste adalah dengan Indonesia, di Pulau Timor. Batas ini terdiri atas dua bagian: satu garis melintasi tengah pulau dan satu lagi mengelilingi enklave Oé-Cusse Ambeno. Garis ini ditarik oleh Portugal dan Belanda, dan pada 2005 kedua negara tetangga yang merdeka menyepakati sebagian besarnya.",
+    "en": "Timor-Leste's only land border is with Indonesia, on the island of Timor. It has two parts: one line across the middle of the island and another around the Oé-Cusse Ambeno enclave. The line was drawn by Portugal and the Netherlands, and in 2005 the two independent neighbours agreed on most of it."
+   },
+   "levels": [
+    "eb2",
+    "eb3",
+    "es",
+    "sup"
+   ],
+   "sections": [
+    {
+     "heading": {
+      "tet": "Fronteira liu iha ne'ebé",
+      "pt": "Por onde passa a fronteira",
+      "id": "Di mana garis batas berada",
+      "en": "Where the border runs"
+     },
+     "text": {
+      "tet": "Fronteira nia parte boot hakur illa husi norte ba sul. Nia hahú iha kosta norte besik Batugade, iha Bobonaru, no remata iha kosta sul besik Salele, iha Kovalima. Iha fatin barak, liña ne'e tuir mota no foho-leten sira. Parte daruak haleu Oe-Kusi Ambenu iha sorin tolu; ninia sorin norte de'it mak hasoru tasi. Iha liña nia sorin seluk iha Indonézia nia provínsia Nusa Tenggara Timur. Fronteira rai tomak naruk maizumenus km 250, maski fonte sira sukat ho oin-oin.",
+      "pt": "A parte principal da fronteira atravessa a ilha de norte a sul. Começa na costa norte perto de Batugade, em Bobonaro, e termina na costa sul perto de Salele, em Cova Lima, seguindo em muitos troços rios e cumeadas de montanhas. A segunda parte rodeia Oé-Cusse Ambeno por três lados; só o lado norte dá para o mar. Do outro lado da linha fica a província indonésia de Nusa Tenggara Oriental. Toda a fronteira terrestre tem cerca de 250 km, embora as fontes a meçam de formas diferentes.",
+      "id": "Bagian utama perbatasan melintasi pulau dari utara ke selatan. Garis ini dimulai di pantai utara dekat Batugade, di Bobonaro, dan berakhir di pantai selatan dekat Salele, di Cova Lima, dan di banyak tempat mengikuti sungai dan punggung gunung. Bagian kedua mengelilingi Oé-Cusse Ambeno di tiga sisi; hanya sisi utaranya yang menghadap laut. Di seberang garis terdapat Provinsi Nusa Tenggara Timur, Indonesia. Seluruh batas darat panjangnya sekitar 250 km, meskipun sumber-sumber mengukurnya secara berbeda.",
+      "en": "The main part of the border crosses the island from north to south. It starts on the north coast near Batugade, in Bobonaro, and ends on the south coast near Salele, in Cova Lima, following rivers and mountain ridges for much of the way. The second part surrounds Oé-Cusse Ambeno on three sides; only its northern side faces the sea. On the other side of the line is the Indonesian province of East Nusa Tenggara. The whole land border is roughly 250 km long, although sources measure it differently."
+     }
+    },
+    {
+     "heading": {
+      "tet": "Fronteira ne'ebé poténsia koloniál dezeña",
+      "pt": "Uma fronteira traçada por potências coloniais",
+      "id": "Perbatasan buatan penjajah",
+      "en": "A border drawn by colonial powers"
+     },
+     "text": {
+      "tet": "Husi sékulu 17, Portugés ukun Timór nia parte loro-sa'e barak, no Kompañia Olandeza Índia Orientál ukun Kupang iha loro-monu. Reinu lokál sira dala ruma muda sira-nia aliadu. Iha 1859, tratadu ida ne'ebé sira asina iha Lisboa fahe illa no troka rai balu. Konvensaun ida iha 1904 deskreve liña ho detalle no troka rai-le'un ki'ik sira: Maukatar sai Portugés nian, no Noimuti sai Olanda nian. Disputa ikus, kona-ba Oe-Kusi nia fronteira, arbitrajen internasionál ida mak rezolve iha 1914. Hafoin Indonézia nia independénsia iha 1949, Timór loro-monu sai Indonézia nia parte.",
+      "pt": "A partir do século XVII, os portugueses dominavam grande parte do leste de Timor e a Companhia Holandesa das Índias Orientais dominava Kupang, a oeste, enquanto os reinos locais mudavam por vezes de aliados. Em 1859, um tratado assinado em Lisboa dividiu a ilha e trocou alguns territórios. Uma convenção de 1904 descreveu a linha em pormenor e trocou pequenos enclaves: Maucatar passou a ser português e Noimuti holandês. A última disputa, sobre as fronteiras de Oé-Cusse, foi resolvida por uma arbitragem internacional em 1914. Depois da independência da Indonésia, em 1949, Timor Ocidental passou a fazer parte dela.",
+      "id": "Sejak abad ke-17, Portugis menguasai sebagian besar timur Timor dan Kompeni Belanda (VOC) menguasai Kupang di barat, sementara kerajaan-kerajaan lokal kadang berganti sekutu. Pada 1859 sebuah perjanjian yang ditandatangani di Lisboa membagi pulau ini dan menukar beberapa wilayah. Sebuah konvensi pada 1904 menguraikan garis batas secara rinci dan menukar enklave-enklave kecil: Maucatar menjadi milik Portugis dan Noimuti milik Belanda. Sengketa terakhir, mengenai batas Oé-Cusse, diselesaikan oleh arbitrase internasional pada 1914. Setelah kedaulatan Indonesia diakui pada 1949, Timor Barat menjadi bagian dari Indonesia.",
+      "en": "From the 1600s the Portuguese held much of the east of Timor and the Dutch East India Company held Kupang in the west, while local kingdoms sometimes changed sides. In 1859 a treaty signed in Lisbon divided the island and exchanged some territories. A convention in 1904 described the line in detail and swapped small enclaves: Maucatar became Portuguese and Noimuti Dutch. The last dispute, on the borders of Oé-Cusse, was settled by an international arbitration in 1914. After Indonesia's independence in 1949, West Timor became part of Indonesia."
+     }
+    },
+    {
+     "heading": {
+      "tet": "Hafoin independénsia",
+      "pt": "Depois da independência",
+      "id": "Setelah kemerdekaan",
+      "en": "After independence"
+     },
+     "text": {
+      "tet": "Hafoin 2002, nasaun rua tenke halo liña koloniál tuan sai fronteira modernu. Iha 2005, sira asina akordu provizóriu ida ne'ebé hatuur fronteira rai nia parte boot. Segmentu badak balu hela nakloke, no segmentu ikus rua iha Oe-Kusi nia sorin, besik Noel Besi–Citrana no Bidjael Sunan–Oben. Iha 2019, governu rua konkorda kona-ba prinsípiu atu rezolve sira. Fronteira tasi mak asuntu seluk: tratadu ida iha 2018 hatuur ona fronteira ho Austrália, maibé negosiasaun ho Indonézia kona-ba fronteira tasi iha Timór nia norte no sul kontinua nafatin.",
+      "pt": "Depois de 2002, os dois países tiveram de transformar a velha linha colonial numa fronteira moderna. Em 2005 assinaram um acordo provisório que fixou a maior parte da fronteira terrestre. Ficaram em aberto alguns segmentos curtos, os dois últimos à volta de Oé-Cusse, perto de Noel Besi–Citrana e de Bidjael Sunan–Oben. Em 2019 os dois governos chegaram a um acordo de princípio sobre eles. As fronteiras marítimas são outro assunto: um tratado de 2018 fixou a fronteira com a Austrália, enquanto as negociações com a Indonésia sobre as fronteiras marítimas a norte e a sul de Timor continuaram.",
+      "id": "Setelah 2002, kedua negara harus mengubah garis kolonial lama menjadi perbatasan modern. Pada 2005 mereka menandatangani perjanjian sementara yang menetapkan sebagian besar batas darat. Beberapa segmen pendek masih terbuka, dua yang terakhir di sekitar Oé-Cusse, dekat Noel Besi–Citrana dan Bidjael Sunan–Oben. Pada 2019 kedua pemerintah mencapai kesepakatan prinsip mengenai segmen-segmen itu. Batas laut adalah persoalan lain: perjanjian 2018 menetapkan batas dengan Australia, sedangkan perundingan dengan Indonesia tentang batas laut di utara dan selatan Timor terus berlanjut.",
+      "en": "After 2002 the two countries had to turn the old colonial line into a modern border. In 2005 they signed a provisional agreement that fixed most of the land boundary. A few short segments stayed open, the last two of them around Oé-Cusse, near Noel Besi–Citrana and Bidjael Sunan–Oben. In 2019 the two governments reached an agreement in principle on them. Sea borders are another matter: a 2018 treaty fixed the border with Australia, while talks with Indonesia on the sea borders north and south of Timor continued."
+     }
+    },
+    {
+     "heading": {
+      "tet": "Hakur fronteira",
+      "pt": "Atravessar a fronteira",
+      "id": "Melintasi perbatasan",
+      "en": "Crossing the border"
+     },
+     "text": {
+      "tet": "Pontu ne'ebé ema hakur barak liu mak Batugade–Motaain, iha estrada tasi-ibun entre Dili no Kupang. Pontu seluk mak Salele–Motamasin iha kosta sul, no postu balu iha Oe-Kusi nia sorin, hanesan Sakato–Wini no Oesilo–Napan. Viajante sira presiza pasaporte no, tuir sira-nia nasionalidade, vistu. Kamiaun sira lori ai-han, kombustível no materiál konstrusaun, no komersiante sira hakur atu sosa no fa'an iha merkadu fronteira nian. Família iha sorin rua dala barak ko'alia lian hanesan, hanesan Tetun, Bunak, Kemak no Baikenu (Uab Meto), no fahe lisan no família.",
+      "pt": "A passagem mais movimentada é Batugade–Motaain, na estrada costeira entre Díli e Kupang. Há outras, como Salele–Motamasin, na costa sul, e vários postos à volta de Oé-Cusse, como Sakato–Wini e Oesilo–Napan. Os viajantes precisam de passaporte e, conforme a nacionalidade, de visto. Os camiões trazem alimentos, combustível e materiais de construção, e os comerciantes atravessam para comprar e vender nos mercados de fronteira. Muitas famílias dos dois lados falam as mesmas línguas, como o tétum, o bunak, o kemak e o baikeno (uab meto), e partilham costumes e parentes.",
+      "id": "Pos lintas batas tersibuk adalah Batugade–Motaain, di jalan pesisir antara Dili dan Kupang. Pos lainnya antara lain Salele–Motamasin di pantai selatan dan beberapa pos di sekitar Oé-Cusse, seperti Sakato–Wini dan Oesilo–Napan. Pelintas batas memerlukan paspor dan, tergantung kewarganegaraannya, visa. Truk membawa bahan pangan, bahan bakar, dan bahan bangunan, dan para pedagang menyeberang untuk berjual beli di pasar perbatasan. Keluarga di kedua sisi sering berbicara bahasa yang sama, seperti Tetun, Bunak, Kemak, dan Baikeno (Uab Meto), serta berbagi adat dan kerabat.",
+      "en": "The busiest crossing is Batugade–Motaain, on the coastal road between Dili and Kupang. Others include Salele–Motamasin on the south coast and several posts around Oé-Cusse, such as Sakato–Wini and Oesilo–Napan. Travellers need a passport and, depending on their nationality, a visa. Trucks bring food, fuel and building materials, and traders cross to buy and sell at border markets. Families on both sides often speak the same languages, such as Tetun, Bunak, Kemak and Baikeno (Uab Meto), and share customs and relatives."
+     }
+    },
+    {
+     "heading": {
+      "tet": "Moris iha fronteira nia sorin",
+      "pt": "Viver junto à fronteira",
+      "id": "Hidup di tepi perbatasan",
+      "en": "Living by the border"
+     },
+     "text": {
+      "tet": "Fronteira ne'e liu ona tempu susar. Iha 1975, tropa Indonézia hakur nia atu ataka molok invazaun tomak. Iha 1999, hafoin konsulta populár, ema maizumenus 250 000 sai ba Timór loro-monu: balu tanba ema obriga sira, balu tanba halai. Ema barak fila fali iha tinan sira tuir mai. Ohin loron nasaun rua servisu hamutuk kona-ba komérsiu, seguransa no ema nia movimentu. Vila fronteira nian hanesan Batugade, Maliana no Suai presiza kooperasaun ne'e, no relasaun di'ak ajuda família sira ne'ebé hela iha liña nia sorin rua.",
+      "pt": "A fronteira viveu tempos difíceis. Em 1975, tropas indonésias atravessaram-na em ataques antes da invasão total. Em 1999, depois da consulta popular, cerca de 250 000 pessoas foram obrigadas a atravessá-la ou fugiram para Timor Ocidental; a maioria regressou nos anos seguintes. Hoje os dois países cooperam no comércio, na segurança e na circulação de pessoas. Vilas fronteiriças como Batugade, Maliana e Suai dependem desta cooperação, e as boas relações ajudam as famílias que vivem dos dois lados da linha.",
+      "id": "Perbatasan ini pernah mengalami masa sulit. Pada 1975 pasukan Indonesia menyeberanginya dalam serangan-serangan sebelum invasi penuh. Pada 1999, setelah jajak pendapat, sekitar 250.000 orang dipaksa menyeberang atau mengungsi ke Timor Barat; sebagian besar pulang pada tahun-tahun berikutnya. Kini kedua negara bekerja sama dalam perdagangan, keamanan, dan lalu lintas orang. Kota-kota perbatasan seperti Batugade, Maliana, dan Suai bergantung pada kerja sama ini, dan hubungan baik membantu keluarga yang tinggal di kedua sisi garis.",
+      "en": "The border has seen hard times. In 1975 Indonesian troops crossed it in attacks before the full invasion. In 1999, after the popular consultation, about 250,000 people were forced across it or fled into West Timor; most came home in the following years. Today the two countries work together on trade, security and the movement of people. Border towns such as Batugade, Maliana and Suai depend on this cooperation, and good relations help families who live on both sides of the line."
+     }
+    }
+   ],
+   "facts": [
+    {
+     "label": {
+      "tet": "Viziñu",
+      "pt": "Vizinho",
+      "id": "Tetangga",
+      "en": "Neighbour"
+     },
+     "value": {
+      "tet": "Indonézia (Nusa Tenggara Timur)",
+      "pt": "Indonésia (Nusa Tenggara Oriental)",
+      "id": "Indonesia (Nusa Tenggara Timur)",
+      "en": "Indonesia (East Nusa Tenggara)"
+     }
+    },
+    {
+     "label": {
+      "tet": "Pontu prinsipál",
+      "pt": "Passagem principal",
+      "id": "Pos lintas batas utama",
+      "en": "Main crossing"
+     },
+     "value": "Batugade–Motaain"
+    },
+    {
+     "label": {
+      "tet": "Naruk",
+      "pt": "Comprimento",
+      "id": "Panjang",
+      "en": "Length"
+     },
+     "value": "≈ 250 km"
+    },
+    {
+     "label": {
+      "tet": "Divizaun dahuluk",
+      "pt": "Primeira divisão",
+      "id": "Pembagian pertama",
+      "en": "First division"
+     },
+     "value": "1859"
+    },
+    {
+     "label": {
+      "tet": "Arbitrajen ikus",
+      "pt": "Última arbitragem",
+      "id": "Arbitrase terakhir",
+      "en": "Last arbitration"
+     },
+     "value": "1914"
+    },
+    {
+     "label": {
+      "tet": "Akordu provizóriu",
+      "pt": "Acordo provisório",
+      "id": "Perjanjian sementara",
+      "en": "Provisional agreement"
+     },
+     "value": "2005"
+    }
+   ],
+   "timeline": [
+    {
+     "date": "1859",
+     "title": {
+      "tet": "Tratadu Lisboa fahe Timór",
+      "pt": "O Tratado de Lisboa divide Timor",
+      "id": "Perjanjian Lisboa membagi Timor",
+      "en": "The Treaty of Lisbon divides Timor"
+     }
+    },
+    {
+     "date": "1904",
+     "title": {
+      "tet": "Konvensaun troka Maukatar no Noimuti",
+      "pt": "Convenção troca Maucatar e Noimuti",
+      "id": "Konvensi menukar Maucatar dan Noimuti",
+      "en": "Convention swaps Maucatar and Noimuti"
+     }
+    },
+    {
+     "date": "1914",
+     "title": {
+      "tet": "Arbitrajen internasionál kona-ba Oe-Kusi nia fronteira",
+      "pt": "Arbitragem internacional sobre as fronteiras de Oé-Cusse",
+      "id": "Arbitrase internasional tentang batas Oé-Cusse",
+      "en": "International arbitration on the Oé-Cusse borders"
+     }
+    },
+    {
+     "date": "1949",
+     "title": {
+      "tet": "Timór loro-monu sai Indonézia nia parte",
+      "pt": "Timor Ocidental passa a fazer parte da Indonésia",
+      "id": "Timor Barat menjadi bagian Indonesia",
+      "en": "West Timor becomes part of Indonesia"
+     }
+    },
+    {
+     "date": "1999-09",
+     "title": {
+      "tet": "Ema rihun ba rihun sai ba Timór loro-monu",
+      "pt": "Milhares de pessoas levadas ou em fuga para Timor Ocidental",
+      "id": "Ribuan orang dibawa atau mengungsi ke Timor Barat",
+      "en": "Thousands of people taken or fleeing to West Timor"
+     }
+    },
+    {
+     "date": "2005",
+     "title": {
+      "tet": "Akordu provizóriu kona-ba fronteira rai",
+      "pt": "Acordo provisório sobre a fronteira terrestre",
+      "id": "Perjanjian sementara tentang batas darat",
+      "en": "Provisional agreement on the land border"
+     }
+    },
+    {
+     "date": "2018",
+     "title": {
+      "tet": "Tratadu fronteira tasi ho Austrália",
+      "pt": "Tratado de fronteira marítima com a Austrália",
+      "id": "Perjanjian batas laut dengan Australia",
+      "en": "Maritime boundary treaty with Australia"
+     }
+    },
+    {
+     "date": "2019",
+     "title": {
+      "tet": "Akordu prinsípiu kona-ba segmentu ikus rua iha Oe-Kusi",
+      "pt": "Acordo de princípio sobre os dois últimos segmentos em Oé-Cusse",
+      "id": "Kesepakatan prinsip tentang dua segmen terakhir di Oé-Cusse",
+      "en": "Agreement in principle on the last two segments around Oé-Cusse"
+     }
+    }
+   ],
+   "figure": {
+    "illustration": "treaty",
+    "caption": {
+     "tet": "Tratadu sira entre Portugál no Olanda mak dezeña fronteira iha Timór.",
+     "pt": "Os tratados entre Portugal e os Países Baixos traçaram a fronteira em Timor.",
+     "id": "Perjanjian antara Portugal dan Belanda menarik garis batas di Timor.",
+     "en": "Treaties between Portugal and the Netherlands drew the border on Timor."
+    }
+   },
+   "wiki": {
+    "en": "Treaty of Lisbon (1859)"
+   },
+   "related": [
+    "tl.colonial.dutch_partition",
+    "tl.world.indonesia",
+    "tl.history.maritime_boundary",
+    "tl.conflicts.violence_1999",
+    "tl.geography.map",
+    "tl.geography.islands",
+    "mun.bobonaro",
+    "mun.covalima",
+    "mun.oecusse"
+   ],
+   "tags": [
+    "border",
+    "Indonesia",
+    "Batugade",
+    "Oé-Cusse",
+    "treaty"
+   ],
+   "quiz": [
+    {
+     "q": {
+      "tet": "Timór-Leste fahe illa Timór ho nasaun saida?",
+      "pt": "Com que país Timor-Leste partilha a ilha de Timor?",
+      "id": "Dengan negara mana Timor-Leste berbagi Pulau Timor?",
+      "en": "With which country does Timor-Leste share the island of Timor?"
+     },
+     "options": [
+      {
+       "tet": "Austrália",
+       "pt": "Austrália",
+       "id": "Australia",
+       "en": "Australia"
+      },
+      {
+       "tet": "Portugál",
+       "pt": "Portugal",
+       "id": "Portugal",
+       "en": "Portugal"
+      },
+      {
+       "tet": "Indonézia",
+       "pt": "Indonésia",
+       "id": "Indonesia",
+       "en": "Indonesia"
+      },
+      {
+       "tet": "Malázia",
+       "pt": "Malásia",
+       "id": "Malaysia",
+       "en": "Malaysia"
+      }
+     ],
+     "answer": 2,
+     "why": {
+      "tet": "Timór loro-monu mak Indonézia nia parte, iha provínsia Nusa Tenggara Timur.",
+      "pt": "Timor Ocidental faz parte da Indonésia, na província de Nusa Tenggara Oriental.",
+      "id": "Timor Barat adalah bagian Indonesia, di Provinsi Nusa Tenggara Timur.",
+      "en": "West Timor is part of Indonesia, in East Nusa Tenggara province."
+     },
+     "difficulty": 2
+    },
+    {
+     "q": {
+      "tet": "Pontu fronteira ida-ne'ebé mak iha estrada boot entre Dili no Kupang?",
+      "pt": "Que passagem de fronteira fica na estrada principal entre Díli e Kupang?",
+      "id": "Pos lintas batas mana yang berada di jalan utama Dili–Kupang?",
+      "en": "Which border crossing is on the main road between Dili and Kupang?"
+     },
+     "options": [
+      {
+       "tet": "Batugade–Motaain",
+       "pt": "Batugade–Motaain",
+       "id": "Batugade–Motaain",
+       "en": "Batugade–Motaain"
+      },
+      {
+       "tet": "Salele–Motamasin",
+       "pt": "Salele–Motamasin",
+       "id": "Salele–Motamasin",
+       "en": "Salele–Motamasin"
+      },
+      {
+       "tet": "Sakato–Wini",
+       "pt": "Sakato–Wini",
+       "id": "Sakato–Wini",
+       "en": "Sakato–Wini"
+      },
+      {
+       "tet": "Oesilo–Napan",
+       "pt": "Oesilo–Napan",
+       "id": "Oesilo–Napan",
+       "en": "Oesilo–Napan"
+      }
+     ],
+     "answer": 0,
+     "why": {
+      "tet": "Batugade (Bobonaru) iha kosta norte, iha estrada tasi-ibun ba Kupang.",
+      "pt": "Batugade (Bobonaro) fica na costa norte, na estrada costeira para Kupang.",
+      "id": "Batugade (Bobonaro) terletak di pantai utara, di jalan pesisir menuju Kupang.",
+      "en": "Batugade (Bobonaro) is on the north coast, on the coastal road to Kupang."
+     },
+     "difficulty": 5
+    },
+    {
+     "q": {
+      "tet": "Poténsia koloniál rua ne'ebé mak fahe illa Timór?",
+      "pt": "Que duas potências coloniais dividiram a ilha de Timor?",
+      "id": "Dua kekuatan kolonial mana yang membagi Pulau Timor?",
+      "en": "Which two colonial powers divided the island of Timor?"
+     },
+     "options": [
+      {
+       "tet": "España no Portugál",
+       "pt": "Espanha e Portugal",
+       "id": "Spanyol dan Portugal",
+       "en": "Spain and Portugal"
+      },
+      {
+       "tet": "Inglaterra no Olanda",
+       "pt": "Inglaterra e Países Baixos",
+       "id": "Inggris dan Belanda",
+       "en": "Britain and the Netherlands"
+      },
+      {
+       "tet": "Portugál no Olanda",
+       "pt": "Portugal e Países Baixos",
+       "id": "Portugal dan Belanda",
+       "en": "Portugal and the Netherlands"
+      },
+      {
+       "tet": "Japaun no Portugál",
+       "pt": "Japão e Portugal",
+       "id": "Jepang dan Portugal",
+       "en": "Japan and Portugal"
+      }
+     ],
+     "answer": 2,
+     "why": {
+      "tet": "Portugál iha loro-sa'e no Olanda iha loro-monu; tratadu 1859 hahú divizaun.",
+      "pt": "Portugal no leste e os Países Baixos no oeste; o tratado de 1859 iniciou a divisão.",
+      "id": "Portugal di timur dan Belanda di barat; perjanjian 1859 memulai pembagian.",
+      "en": "Portugal held the east and the Netherlands the west; the 1859 treaty began the division."
+     },
+     "difficulty": 7
+    },
+    {
+     "q": {
+      "tet": "Iha tinan saida mak Timór-Leste no Indonézia asina akordu provizóriu ne'ebé hatuur fronteira rai nia parte boot?",
+      "pt": "Em que ano Timor-Leste e a Indonésia assinaram o acordo provisório que fixou a maior parte da fronteira terrestre?",
+      "id": "Pada tahun berapa Timor-Leste dan Indonesia menandatangani perjanjian sementara yang menetapkan sebagian besar batas darat?",
+      "en": "In which year did Timor-Leste and Indonesia sign the provisional agreement that fixed most of the land border?"
+     },
+     "options": [
+      {
+       "tet": "1999",
+       "pt": "1999",
+       "id": "1999",
+       "en": "1999"
+      },
+      {
+       "tet": "2005",
+       "pt": "2005",
+       "id": "2005",
+       "en": "2005"
+      },
+      {
+       "tet": "2012",
+       "pt": "2012",
+       "id": "2012",
+       "en": "2012"
+      },
+      {
+       "tet": "2019",
+       "pt": "2019",
+       "id": "2019",
+       "en": "2019"
+      }
+     ],
+     "answer": 1,
+     "why": {
+      "tet": "Akordu provizóriu asina iha 2005; segmentu ikus sira hetan akordu prinsípiu iha 2019.",
+      "pt": "O acordo provisório foi assinado em 2005; os últimos segmentos tiveram acordo de princípio em 2019.",
+      "id": "Perjanjian sementara ditandatangani pada 2005; segmen terakhir mendapat kesepakatan prinsip pada 2019.",
+      "en": "The provisional agreement was signed in 2005; the last segments got an agreement in principle in 2019."
+     },
+     "difficulty": 10
+    },
+    {
+     "q": {
+      "tet": "Hafoin 2005, parte saida husi fronteira mak presiza desizaun ikus?",
+      "pt": "Depois de 2005, que parte da fronteira ainda precisava de decisões finais?",
+      "id": "Setelah 2005, bagian perbatasan mana yang masih memerlukan keputusan akhir?",
+      "en": "After 2005, which part of the border still needed final decisions?"
+     },
+     "options": [
+      {
+       "tet": "Segmentu badak rua iha Oe-Kusi nia sorin",
+       "pt": "Dois segmentos curtos à volta de Oé-Cusse",
+       "id": "Dua segmen pendek di sekitar Oé-Cusse",
+       "en": "Two short segments around Oé-Cusse"
+      },
+      {
+       "tet": "Fronteira iha Batugade",
+       "pt": "A fronteira em Batugade",
+       "id": "Perbatasan di Batugade",
+       "en": "The border at Batugade"
+      },
+      {
+       "tet": "Atauru nia kosta",
+       "pt": "A costa de Ataúro",
+       "id": "Pantai Ataúro",
+       "en": "The coast of Ataúro"
+      },
+      {
+       "tet": "Fronteira rai ho Austrália",
+       "pt": "A fronteira terrestre com a Austrália",
+       "id": "Batas darat dengan Australia",
+       "en": "The land border with Australia"
+      }
+     ],
+     "answer": 0,
+     "why": {
+      "tet": "Noel Besi–Citrana no Bidjael Sunan–Oben, rua-rua iha Oe-Kusi nia sorin. Austrália la iha fronteira rai ho Timór-Leste.",
+      "pt": "Noel Besi–Citrana e Bidjael Sunan–Oben, ambos à volta de Oé-Cusse. A Austrália não tem fronteira terrestre com Timor-Leste.",
+      "id": "Noel Besi–Citrana dan Bidjael Sunan–Oben, keduanya di sekitar Oé-Cusse. Australia tidak berbatasan darat dengan Timor-Leste.",
+      "en": "Noel Besi–Citrana and Bidjael Sunan–Oben, both around Oé-Cusse. Australia has no land border with Timor-Leste."
+     },
+     "difficulty": 12
+    },
+    {
+     "q": {
+      "tet": "Saida mak arbitrajen internasionál ida rezolve iha 1914?",
+      "pt": "O que resolveu uma arbitragem internacional em 1914?",
+      "id": "Apa yang diselesaikan arbitrase internasional pada 1914?",
+      "en": "What did an international arbitration settle in 1914?"
+     },
+     "options": [
+      {
+       "tet": "Fronteira tasi ho Austrália",
+       "pt": "A fronteira marítima com a Austrália",
+       "id": "Batas laut dengan Australia",
+       "en": "The sea border with Australia"
+      },
+      {
+       "tet": "Timór-Leste nia independénsia",
+       "pt": "A independência de Timor-Leste",
+       "id": "Kemerdekaan Timor-Leste",
+       "en": "The independence of Timor-Leste"
+      },
+      {
+       "tet": "Kapitál nia mudansa ba Dili",
+       "pt": "A mudança da capital para Díli",
+       "id": "Pemindahan ibu kota ke Dili",
+       "en": "The move of the capital to Dili"
+      },
+      {
+       "tet": "Disputa ikus kona-ba Oe-Kusi nia fronteira",
+       "pt": "A última disputa sobre as fronteiras de Oé-Cusse",
+       "id": "Sengketa terakhir tentang batas Oé-Cusse",
+       "en": "The last dispute on the borders of Oé-Cusse"
+      }
+     ],
+     "answer": 3,
+     "why": {
+      "tet": "Portugál no Olanda haruka disputa ba arbitrajen internasionál, ne'ebé fó desizaun iha 1914.",
+      "pt": "Portugal e os Países Baixos levaram a disputa a uma arbitragem internacional, decidida em 1914.",
+      "id": "Portugal dan Belanda membawa sengketa itu ke arbitrase internasional, yang memutuskannya pada 1914.",
+      "en": "Portugal and the Netherlands took the dispute to an international arbitration, decided in 1914."
+     },
+     "difficulty": 14
+    }
+   ],
+   "sources": [
+    {
+     "title": "Treaty of Lisbon (1859)",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Treaty_of_Lisbon_(1859)",
+     "accessed": "2026-10-27",
+     "licence": "CC BY-SA 4.0"
+    },
+    {
+     "title": "Geography of East Timor",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Geography_of_East_Timor",
+     "accessed": "2026-10-27",
+     "licence": "CC BY-SA 4.0"
+    },
+    {
+     "title": "East Timor",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/East_Timor",
+     "accessed": "2026-10-27",
+     "licence": "CC BY-SA 4.0"
+    },
+    {
+     "title": "Oecusse",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Oecusse",
+     "accessed": "2026-10-27",
+     "licence": "CC BY-SA 4.0"
+    },
+    {
+     "title": "Timor",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Timor",
+     "accessed": "2026-10-27",
+     "licence": "CC BY-SA 4.0"
+    },
+    {
+     "title": "Timor Gap",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Timor_Gap",
+     "accessed": "2026-10-27",
+     "licence": "CC BY-SA 4.0"
+    }
+   ],
+   "review": {
+    "status": "draft",
+    "notes": "Border length 'roughly 250 km' (figures of about 250–270 km circulate) — check. The Maucatar/Noimuti swap in the 1904 convention and the 1914 arbitration are from memory. So are the 2005 provisional agreement, the open segments (Noel Besi–Citrana, Bidjael Sunan–Oben) and the July 2019 agreement in principle; check whether a final text has been signed since. Crossing names Sakato–Wini and Oesilo–Napan are from memory. ≈250 000 people taken or fled to West Timor in 1999 is the usual UNHCR estimate. The web-search budget ran out, so these points rest on the Wikipedia pages listed and on memory. Tetun: 'foho-leten sira' used for 'mountain ridges'."
+   }
+  }
+ ]
+}

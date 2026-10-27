@@ -1,29 +1,902 @@
 {
  "generator": "tools/make-illustrations.py",
- "licence": "CC BY-SA 4.0 (original work for Lafa)",
- "note": "Flat vector illustrations drawn in code; the Timor-Leste map is schematic, not an official map.",
+ "licence": "CC BY-SA 4.0",
  "illustrations": [
-  "module-size",
-  "module-timeline",
-  "module-trex",
-  "timor-culture",
-  "timor-economy",
-  "timor-flag",
-  "timor-history",
-  "timor-leaders",
-  "timor-map",
-  "timor-nature",
-  "world-civilizations",
-  "world-colonialism",
-  "world-culture_arts",
-  "world-dinosaurs",
-  "world-earth",
-  "world-geography_oceans",
-  "world-human_origins",
-  "world-industrial_revolution",
-  "world-inventions",
-  "world-life_environment",
-  "world-science_space",
-  "world-world_wars"
+  {
+   "key": "adornment",
+   "file": "adornment.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "animals",
+   "file": "animals.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "anthem",
+   "file": "anthem.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "asean",
+   "file": "asean.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "austronesian-boat",
+   "file": "austronesian-boat.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "ballot",
+   "file": "ballot.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "bank",
+   "file": "bank.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "beach",
+   "file": "beach.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "birds",
+   "file": "birds.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "calendar",
+   "file": "calendar.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "camp",
+   "file": "camp.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "caravel",
+   "file": "caravel.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "carnation",
+   "file": "carnation.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "cave",
+   "file": "cave.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "christmas",
+   "file": "christmas.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "church",
+   "file": "church.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "church-crowd",
+   "file": "church-crowd.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "city",
+   "file": "city.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "climate",
+   "file": "climate.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "coffee",
+   "file": "coffee.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "colonial-town",
+   "file": "colonial-town.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "constitution",
+   "file": "constitution.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "coral-reef",
+   "file": "coral-reef.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "crafts",
+   "file": "crafts.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "crocodile",
+   "file": "crocodile.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "crops",
+   "file": "crops.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "currency",
+   "file": "currency.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "dance",
+   "file": "dance.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "dili-city",
+   "file": "dili-city.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "diplomacy",
+   "file": "diplomacy.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "diving",
+   "file": "diving.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "earthquake",
+   "file": "earthquake.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "easter",
+   "file": "easter.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "eid",
+   "file": "eid.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "electricity",
+   "file": "electricity.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "emblem",
+   "file": "emblem.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "environment",
+   "file": "environment.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "exports",
+   "file": "exports.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "festival",
+   "file": "festival.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "fishing",
+   "file": "fishing.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "flag",
+   "file": "flag.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "flood",
+   "file": "flood.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "food",
+   "file": "food.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "football",
+   "file": "football.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "forest",
+   "file": "forest.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "fort",
+   "file": "fort.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "fund",
+   "file": "fund.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "garden",
+   "file": "garden.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "geology",
+   "file": "geology.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "government-palace",
+   "file": "government-palace.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "health",
+   "file": "health.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "heroes",
+   "file": "heroes.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "hot-spring",
+   "file": "hot-spring.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "imports",
+   "file": "imports.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "independence",
+   "file": "independence.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "island",
+   "file": "island.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "island-formation",
+   "file": "island-formation.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "justice",
+   "file": "justice.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "kingdom",
+   "file": "kingdom.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "labour",
+   "file": "labour.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "lake",
+   "file": "lake.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "languages",
+   "file": "languages.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "legend",
+   "file": "legend.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "likurai",
+   "file": "likurai.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "literature",
+   "file": "literature.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "livestock",
+   "file": "livestock.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "maize",
+   "file": "maize.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "mangrove",
+   "file": "mangrove.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "map",
+   "file": "map.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": "Timor-Leste outline: geoBoundaries / © OpenStreetMap contributors (ODbL 1.0)"
+  },
+  {
+   "key": "maritime",
+   "file": "maritime.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "market",
+   "file": "market.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "media",
+   "file": "media.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "memorial",
+   "file": "memorial.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "military",
+   "file": "military.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "minerals",
+   "file": "minerals.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "money",
+   "file": "money.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "monument",
+   "file": "monument.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "mosque",
+   "file": "mosque.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "mountain",
+   "file": "mountain.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "mountain-ramelau",
+   "file": "mountain-ramelau.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "museum",
+   "file": "museum.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "music",
+   "file": "music.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "national-park",
+   "file": "national-park.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "new-year",
+   "file": "new-year.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "nobel",
+   "file": "nobel.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "oil-gas",
+   "file": "oil-gas.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "palace",
+   "file": "palace.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "parliament",
+   "file": "parliament.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "people",
+   "file": "people.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "plan",
+   "file": "plan.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "police",
+   "file": "police.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "population",
+   "file": "population.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "port",
+   "file": "port.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "prehistory",
+   "file": "prehistory.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "procession",
+   "file": "procession.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "proclamation",
+   "file": "proclamation.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "reconciliation",
+   "file": "reconciliation.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "resistance",
+   "file": "resistance.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "revolt",
+   "file": "revolt.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "rice",
+   "file": "rice.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "river",
+   "file": "river.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "road",
+   "file": "road.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "sandalwood",
+   "file": "sandalwood.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "school",
+   "file": "school.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "sea-coast",
+   "file": "sea-coast.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "seas",
+   "file": "seas.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "sports",
+   "file": "sports.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "statue",
+   "file": "statue.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "tais",
+   "file": "tais.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "tl-overview",
+   "file": "tl-overview.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": "Timor-Leste outline: geoBoundaries / © OpenStreetMap contributors (ODbL 1.0)"
+  },
+  {
+   "key": "tourism",
+   "file": "tourism.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "town",
+   "file": "town.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "trade-ships",
+   "file": "trade-ships.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "treaty",
+   "file": "treaty.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "trekking",
+   "file": "trekking.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "uma-lulik",
+   "file": "uma-lulik.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "un-peace",
+   "file": "un-peace.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "university",
+   "file": "university.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "veterans",
+   "file": "veterans.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "viewpoint",
+   "file": "viewpoint.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "village",
+   "file": "village.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "village-council",
+   "file": "village-council.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "waterfall",
+   "file": "waterfall.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "whale",
+   "file": "whale.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "women",
+   "file": "women.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "workers",
+   "file": "workers.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "ww2",
+   "file": "ww2.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "youth",
+   "file": "youth.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  }
  ]
 }

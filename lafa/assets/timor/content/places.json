@@ -1,0 +1,1390 @@
+{
+ "places": [
+  {
+   "id": "place.cristo_rei",
+   "name": {
+    "tet": "Cristo Rei Dili",
+    "pt": "Cristo Rei de Díli",
+    "id": "Patung Cristo Rei Dili",
+    "en": "Cristo Rei of Dili"
+   },
+   "municipality": "mun.dili",
+   "type": "statue",
+   "lat": -8.5205,
+   "lon": 125.6083,
+   "summary": {
+    "tet": "Estátua Kristu ho altura metru 27, ne'ebé hamriik iha globu (mundu) nia leten, iha Kabu Fatucama, Dili nia leste. Eskada liu 500 lori ema to'o leten, no husi ne'ebá ema haree sidade no tasi.",
+    "pt": "Estátua de Cristo com 27 metros, de pé sobre um globo, no cabo Fatucama, a leste de Díli. Mais de 500 degraus levam até ela, com vistas largas sobre a cidade e o mar.",
+    "id": "Patung Kristus setinggi 27 meter yang berdiri di atas bola dunia di Tanjung Fatucama, timur Dili. Lebih dari 500 anak tangga menuju ke sana, dengan pemandangan luas ke kota dan laut.",
+    "en": "A 27-metre statue of Christ standing on a globe at Cape Fatucama, east of Dili. More than 500 steps lead up to it, with wide views of the city and the sea."
+   },
+   "text": {
+    "tet": "Cristo Rei ('Kristu Liurai') mak monumentu ne'ebé ema hatene liu iha Dili. Estátua Jesus ne'e nia altura metru 27, no nia hamriik iha globu boot ida nia leten, iha Kabu Fatucama nia tutun. Kabu ne'e mak rai-ponta fatuk ida, kilómetru balun husi sidade nia klaran ba leste. Indonézia harii estátua ne'e iha tempu okupasaun no inaugura iha 1996. Sira hili altura metru 27 atu hatudu rai ne'e nu'udar provínsia númeru 27 Indonézia nian. Ohin loron fatin ne'e sai fatin reza nian no símbolu fiar katólika iha nasaun ne'e. Dalan ho eskada liu 500 sa'e ba foho no liu estasaun 14 Via-Sacra nian. Husi leten ita haree Dili, ninia baía, illa Atauru (bainhira lalehan moos) no foho sira. Iha tasi-ibun iha kabu nia sorin rua.",
+    "pt": "O Cristo Rei é o monumento mais conhecido de Díli. A estátua de Jesus tem 27 metros de altura e está de pé sobre um grande globo, no alto do cabo Fatucama, um promontório rochoso a poucos quilómetros a leste do centro da cidade. Foi construída durante a ocupação indonésia e inaugurada em 1996; a altura de 27 metros foi escolhida para representar o território como a 27.ª província da Indonésia. Hoje é um lugar de oração e um símbolo da fé católica do país. Um caminho com mais de 500 degraus sobe a colina e passa pelas catorze estações da Via-Sacra. Lá de cima vê-se Díli, a baía, a ilha de Ataúro em dias claros e as montanhas. Há praias dos dois lados do cabo.",
+    "id": "Cristo Rei ('Kristus Raja') adalah penanda kota paling terkenal di Dili. Patung Yesus ini setinggi 27 meter dan berdiri di atas bola dunia besar di puncak Tanjung Fatucama, sebuah tanjung berbatu beberapa kilometer di timur pusat kota. Patung ini dibangun pada masa pendudukan Indonesia dan diresmikan pada 1996; tinggi 27 meter dipilih untuk melambangkan wilayah ini sebagai provinsi ke-27 Indonesia. Kini tempat ini menjadi tempat berdoa dan simbol iman Katolik negeri ini. Jalan dengan lebih dari 500 anak tangga mendaki bukit dan melewati empat belas perhentian Jalan Salib. Dari puncak terlihat Dili, teluknya, Pulau Ataúro saat cuaca cerah, dan pegunungan. Ada pantai di kedua sisi tanjung.",
+    "en": "Cristo Rei ('Christ the King') is Dili's best-known landmark. The statue of Jesus is 27 metres tall and stands on a large globe on top of Cape Fatucama, a rocky headland a few kilometres east of the city centre. It was built during the Indonesian occupation and inaugurated in 1996; the height of 27 metres was chosen to stand for the territory as Indonesia's 27th province. Today it is a place of prayer and a symbol of the country's Catholic faith. A path of more than 500 steps climbs the hill and passes the fourteen Stations of the Cross. From the top you see Dili, its bay, Ataúro Island on clear days and the mountains. There are beaches on both sides of the cape."
+   },
+   "tips": {
+    "tet": "Sa'e iha dadeer-saan ka loro-kraik, tanba eskada la iha mahon barak no manas tebes. Lori bee-hemu no xapéu. La selu atu tama. La iha transporte públiku to'o iha ne'ebá, entaun vizitante barak ba ho táxi, motor ka bisikleta. Hatais roupa ne'ebé di'ak, tanba ne'e fatin reza nian.",
+    "pt": "Suba de manhã cedo ou ao fim da tarde: os degraus têm pouca sombra e aquecem muito. Leve água e chapéu. A entrada é gratuita. Não há transporte público até lá; a maioria dos visitantes vai de táxi, mota ou bicicleta. Vista-se com respeito, porque é um lugar de oração.",
+    "id": "Naiklah pagi-pagi atau sore hari: anak tangganya kurang teduh dan sangat panas. Bawa air minum dan topi. Masuk gratis. Tidak ada angkutan umum ke sana, jadi kebanyakan pengunjung datang dengan taksi, sepeda motor atau sepeda. Berpakaianlah sopan, karena ini tempat berdoa.",
+    "en": "Climb early in the morning or in the late afternoon: the steps have little shade and get very hot. Bring water and a hat. Entry is free. There is no public transport to the site, so most visitors come by taxi, scooter or bicycle. Dress respectfully, because it is a place of prayer."
+   },
+   "illustration": "statue",
+   "wiki": {
+    "en": "Cristo Rei of Dili",
+    "pt": "Cristo Rei de Díli"
+   },
+   "quiz": [
+    {
+     "q": {
+      "tet": "Estátua Cristo Rei iha Dili nia altura hira?",
+      "pt": "Que altura tem a estátua do Cristo Rei em Díli?",
+      "id": "Berapa tinggi patung Cristo Rei di Dili?",
+      "en": "How tall is the Cristo Rei statue in Dili?"
+     },
+     "options": [
+      {
+       "tet": "metru 7",
+       "pt": "7 metros",
+       "id": "7 meter",
+       "en": "7 metres"
+      },
+      {
+       "tet": "metru 17",
+       "pt": "17 metros",
+       "id": "17 meter",
+       "en": "17 metres"
+      },
+      {
+       "tet": "metru 27",
+       "pt": "27 metros",
+       "id": "27 meter",
+       "en": "27 metres"
+      },
+      {
+       "tet": "metru 47",
+       "pt": "47 metros",
+       "id": "47 meter",
+       "en": "47 metres"
+      }
+     ],
+     "answer": 2,
+     "why": {
+      "tet": "Estátua ne'e nia altura metru 27, no nia hamriik iha globu ida iha Kabu Fatucama.",
+      "pt": "A estátua tem 27 metros e está sobre um globo no cabo Fatucama.",
+      "id": "Patung itu setinggi 27 meter dan berdiri di atas bola dunia di Tanjung Fatucama.",
+      "en": "The statue is 27 metres tall and stands on a globe on Cape Fatucama."
+     },
+     "difficulty": 3
+    },
+    {
+     "q": {
+      "tet": "Cristo Rei hamriik iha kabu ida-ne'ebé?",
+      "pt": "Em que cabo está o Cristo Rei?",
+      "id": "Di tanjung mana Cristo Rei berdiri?",
+      "en": "On which cape does Cristo Rei stand?"
+     },
+     "options": [
+      {
+       "tet": "Kabu Fatucama",
+       "pt": "Cabo Fatucama",
+       "id": "Tanjung Fatucama",
+       "en": "Cape Fatucama"
+      },
+      {
+       "tet": "Kabu Tutuala",
+       "pt": "Cabo Tutuala",
+       "id": "Tanjung Tutuala",
+       "en": "Cape Tutuala"
+      },
+      {
+       "tet": "Ponta Lifau",
+       "pt": "Ponta de Lifau",
+       "id": "Tanjung Lifau",
+       "en": "Lifau Point"
+      },
+      {
+       "tet": "Kabu Batugade",
+       "pt": "Cabo Batugade",
+       "id": "Tanjung Batugade",
+       "en": "Cape Batugade"
+      }
+     ],
+     "answer": 0,
+     "why": {
+      "tet": "Cristo Rei hamriik iha Kabu Fatucama, rai-ponta fatuk ida iha Dili nia leste.",
+      "pt": "O Cristo Rei está no cabo Fatucama, um promontório a leste do centro de Díli.",
+      "id": "Cristo Rei berdiri di Tanjung Fatucama, tanjung berbatu di timur pusat Dili.",
+      "en": "Cristo Rei stands on Cape Fatucama, a rocky headland east of Dili's centre."
+     },
+     "difficulty": 8
+    }
+   ],
+   "related": [
+    "mun.dili",
+    "place.areia_branca",
+    "place.jesus_backside_beach",
+    "place.dollar_beach",
+    "tl.tourism.heritage",
+    "tl.culture.catholic_traditions"
+   ],
+   "tags": [
+    "statue",
+    "dili",
+    "pilgrimage",
+    "viewpoint"
+   ],
+   "sources": [
+    {
+     "title": "Cristo Rei",
+     "publisher": "timorleste.tl (official tourism website of Timor-Leste)",
+     "url": "https://timorleste.tl/destinations/attractions/cristo-rei-of-dili-timor-leste",
+     "accessed": "2026-10-27",
+     "licence": "© publisher"
+    },
+    {
+     "title": "Cristo Rei, Dili – visitor reviews",
+     "publisher": "Tripadvisor",
+     "url": "https://www.tripadvisor.com/Attraction_Review-g297517-d447290-Reviews-Cristo_Rei-Dili_Dili_District.html",
+     "accessed": "2026-10-27",
+     "licence": "© Tripadvisor"
+    },
+    {
+     "title": "Cristo Rei of Dili",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Cristo_Rei_of_Dili",
+     "accessed": "2026-10-27",
+     "licence": "CC BY-SA 4.0"
+    },
+    {
+     "title": "Cristo Rei – Dili, East Timor",
+     "publisher": "Atlas Obscura",
+     "url": "https://www.atlasobscura.com/places/cristo-rei",
+     "accessed": "2026-10-27",
+     "licence": "© Atlas Obscura"
+    },
+    {
+     "title": "Govt and USAID hold the first consultation with the private sector for the management of Cristo Rei tourism site",
+     "publisher": "Tatoli (Agência Noticiosa de Timor-Leste)",
+     "url": "https://en.tatoli.tl/2022/07/27/govt-and-usaid-hold-the-first-consultation-with-the-private-sector-for-the-management-of-cristo-reitourism-site/11/",
+     "accessed": "2026-10-27",
+     "licence": "© publisher"
+    }
+   ],
+   "review": {
+    "status": "draft",
+    "notes": "Written on 27 Oct 2026 after the shared web-search budget ran out: facts come from the cited pages as far as seen in search results plus general knowledge; coordinates are approximate (recalled or estimated, checked only against the Lafa municipality map) — verify on OpenStreetMap/Wikipedia. Coordinates from English Wikipedia (8°31′14″S 125°36′30″E). Check: inauguration year 1996 and the '27th province' meaning of the height (Wikipedia); the number of steps (sources say from about 500 to 570). A 2024 review said the top part was closed for a while; check access."
+   }
+  },
+  {
+   "id": "place.areia_branca",
+   "name": {
+    "tet": "Tasi-ibun Areia Branca",
+    "pt": "Praia de Areia Branca",
+    "id": "Pantai Areia Branca (Pasir Putih)",
+    "en": "Areia Branca Beach"
+   },
+   "municipality": "mun.dili",
+   "type": "beach",
+   "lat": -8.534,
+   "lon": 125.604,
+   "summary": {
+    "tet": "Tasi-ibun naruk ho rai-henek iha dalan husi Dili ba Cristo Rei. Ninia naran iha lian Portugés katak 'rai-henek mutin'. Ema gosta nani no haree loro tun iha ne'ebá.",
+    "pt": "Uma praia longa e arenosa na estrada de Díli para o Cristo Rei. O nome quer dizer 'areia branca' e é um lugar preferido para nadar e ver o pôr do sol.",
+    "id": "Pantai berpasir panjang di jalan dari Dili ke Cristo Rei. Namanya berarti 'pasir putih' dalam bahasa Portugis, dan menjadi tempat favorit untuk berenang dan menikmati matahari terbenam.",
+    "en": "A long, sandy beach on the road from Dili to Cristo Rei. Its name means 'white sand' in Portuguese, and it is a favourite place for swimming and sunsets."
+   },
+   "text": {
+    "tet": "Areia Branca iha Kabu Fatucama nia sorin loro-monu, entre Dili nia rohan leste no foho Cristo Rei. Iha tasi-ibun iha ai-hun ho mahon, kafé ki'ik no restaurante. Tan ne'e família barak husi Dili mai iha ne'e iha Sábadu no Domingu atu nani, han ikan tunu no haree loro tun iha baía nia leten. Tasi baibain kalma. Bainhira lalehan moos, ita bele haree illa Atauru iha dook. Ema balu bolu tasi-ibun ne'e ho ninia naran Indonézia, Pasir Putih, ne'ebé mós katak 'rai-henek mutin'. Husi tasi-ibun ita bele la'o ain to'o Cristo Rei nia eskada. Tan ne'e ema dala barak vizita fatin rua ne'e hamutuk.",
+    "pt": "A Areia Branca fica no lado ocidental do cabo Fatucama, entre o limite leste de Díli e a colina do Cristo Rei. A margem tem árvores de sombra, pequenos cafés e restaurantes, por isso muitas famílias de Díli vêm cá ao fim de semana para nadar, comer peixe grelhado e ver o sol a pôr-se sobre a baía. A água costuma estar calma e, em dias claros, vê-se a ilha de Ataúro no horizonte. Há quem use o nome indonésio, Pasir Putih, que também quer dizer 'areia branca'. Da praia pode seguir-se a pé até aos degraus do Cristo Rei, por isso os dois lugares são muitas vezes visitados juntos.",
+    "id": "Areia Branca terletak di sisi barat Tanjung Fatucama, antara ujung timur Dili dan bukit Cristo Rei. Tepi pantainya dipenuhi pohon rindang, kafe kecil dan restoran, sehingga banyak keluarga dari Dili datang pada akhir pekan untuk berenang, makan ikan bakar dan menyaksikan matahari terbenam di atas teluk. Airnya biasanya tenang, dan pada hari cerah Pulau Ataúro terlihat di cakrawala. Sebagian orang menyebut pantai ini dengan nama Indonesianya, Pasir Putih, yang juga berarti 'pasir putih'. Dari pantai orang bisa berjalan kaki ke tangga Cristo Rei, sehingga kedua tempat ini sering dikunjungi bersama.",
+    "en": "Areia Branca lies along the western side of Cape Fatucama, between the eastern edge of Dili and the hill of Cristo Rei. The shore is lined with shady trees, small cafés and restaurants, so many families from Dili come here at weekends to swim, eat grilled fish and watch the sun go down over the bay. The water is usually calm, and on clear days you can see Ataúro Island on the horizon. Some people call the beach by its Indonesian name, Pasir Putih, which also means 'white sand'. From the beach you can walk on to the steps of Cristo Rei, so the two places are often visited together."
+   },
+   "tips": {
+    "tet": "Ba iha loro-kraik atu haree loro tun no hetan anin malirin. Nani de'it iha fatin ne'ebé ema lokál nani, no lori fila ita-nia lixu. Táxi no kareta uza estrada tasi-ibun nian. Iha meiudia mahon uitoan de'it.",
+    "pt": "Vá ao fim da tarde para ver o pôr do sol e apanhar ar mais fresco. Nade só onde a população local nada e leve o seu lixo consigo. Táxis e carros usam a estrada da costa; ao meio-dia há pouca sombra.",
+    "id": "Datanglah sore hari untuk melihat matahari terbenam dan menikmati udara yang lebih sejuk. Berenanglah hanya di tempat warga setempat berenang, dan bawa pulang sampahmu. Taksi dan mobil pribadi melewati jalan pantai; siang hari hanya ada sedikit tempat teduh.",
+    "en": "Go in the late afternoon for the sunset and cooler air. Swim only where local people swim, and take your rubbish with you. Taxis and private cars use the coast road; there is little shade at midday."
+   },
+   "illustration": "beach",
+   "related": [
+    "mun.dili",
+    "place.cristo_rei",
+    "place.dollar_beach"
+   ],
+   "tags": [
+    "beach",
+    "dili",
+    "sunset"
+   ],
+   "sources": [
+    {
+     "title": "Dili",
+     "publisher": "timorleste.tl (official tourism website of Timor-Leste)",
+     "url": "https://timorleste.tl/destinations/dili",
+     "accessed": "2026-10-27",
+     "licence": "© publisher"
+    },
+    {
+     "title": "The 15 Best Things to Do in Dili, Timor-Leste",
+     "publisher": "Backpack Moments (travel guide)",
+     "url": "https://backpackmoments.com/things-to-do-in-dili/",
+     "accessed": "2026-10-27",
+     "licence": "© publisher"
+    },
+    {
+     "title": "The 15 best things to do in Dili",
+     "publisher": "Tripadvisor",
+     "url": "https://www.tripadvisor.com/Attractions-g297517-Activities-Dili_Dili_District.html",
+     "accessed": "2026-10-27",
+     "licence": "© Tripadvisor"
+    }
+   ],
+   "review": {
+    "status": "draft",
+    "notes": "Written on 27 Oct 2026 after the shared web-search budget ran out: facts come from the cited pages as far as seen in search results plus general knowledge; coordinates are approximate (recalled or estimated, checked only against the Lafa municipality map) — verify on OpenStreetMap/Wikipedia. Coordinates approximate (middle of the beach on the west side of Cape Fatucama). Check that 'Pasir Putih' is used for the same beach and that cafés still operate."
+   }
+  },
+  {
+   "id": "place.jesus_backside_beach",
+   "name": {
+    "tet": "Tasi-ibun iha Cristo Rei nia kotuk ('Jesus Backside')",
+    "pt": "Praia nas costas do Cristo Rei ('Jesus Backside')",
+    "id": "Pantai di belakang Cristo Rei ('Jesus Backside')",
+    "en": "Jesus Backside Beach"
+   },
+   "municipality": "mun.dili",
+   "type": "beach",
+   "lat": -8.518,
+   "lon": 125.613,
+   "summary": {
+    "tet": "Tasi-ibun ki'ik ida iha foho Cristo Rei nia sorin leste. Ema bolu 'Jesus Backside' tanba estátua nia kotuk hasoru tasi-ibun ne'e. Ema gosta nani no haree ikan ho máskara (snorkel) iha ne'e.",
+    "pt": "Uma pequena praia abrigada no lado leste da colina do Cristo Rei, com a alcunha 'Jesus Backside' porque a estátua está de costas para ela. É procurada para nadar e fazer snorkel.",
+    "id": "Pantai kecil yang terlindung di sisi timur bukit Cristo Rei, dijuluki 'Jesus Backside' karena patungnya membelakangi pantai ini. Tempat ini populer untuk berenang dan snorkeling.",
+    "en": "A small, sheltered beach on the eastern side of the Cristo Rei hill, nicknamed 'Jesus Backside' because the statue has its back to it. It is popular for swimming and snorkelling."
+   },
+   "text": {
+    "tet": "Iha foho Cristo Rei nia kotuk, iha Kabu Fatucama nia sorin seluk, iha baía kleuk ida ho rai-henek mutin no bee moos. Vizitante estranjeiru sira fó naran halimar 'Jesus Backside Beach', tanba estátua hateke ba loro-monu, ba Dili, no ninia kotuk hasoru baía ne'e. Ema to'o iha ne'ebá liu husi dalan ki'ik ida ne'ebé sai husi estátua nia eskada, ka liu husi estrada ne'ebé haleu kabu. Besik tasi-ibun iha ahu-ruin no ikan ki'ik barak, tan ne'e ema lori máskara no snorkel. Iha loron servisu tasi-ibun baibain hakmatek. Iha Sábadu no Domingu família husi Dili mai han hamutuk iha ne'e. Fasilidade uitoan de'it, entaun lori bee-hemu no hahán.",
+    "pt": "Atrás da colina do Cristo Rei, no outro lado do cabo Fatucama, há uma baía curva com areia clara e água transparente. Os visitantes estrangeiros deram-lhe o nome brincalhão de 'Jesus Backside Beach', porque a estátua olha para oeste, para Díli, e fica de costas para esta baía. Chega-se lá por um caminho que sai dos degraus da estátua ou pela estrada que contorna o cabo. Perto da margem há corais e muitos peixes pequenos de recife, por isso as pessoas trazem máscara e tubo. Nos dias de semana a praia costuma estar sossegada; ao fim de semana, famílias de Díli vêm fazer piqueniques. Há poucos serviços: leve água e comida.",
+    "id": "Di balik bukit Cristo Rei, di sisi lain Tanjung Fatucama, ada teluk melengkung dengan pasir terang dan air jernih. Wisatawan asing memberinya nama bercanda 'Jesus Backside Beach', karena patung itu menghadap ke barat ke arah Dili dan membelakangi teluk ini. Pantai ini dicapai lewat jalan setapak yang bercabang dari tangga menuju patung, atau lewat jalan yang mengitari tanjung. Dekat tepi pantai ada karang dan banyak ikan karang kecil, sehingga orang membawa masker dan snorkel. Pada hari kerja pantai sering sepi, sedangkan pada akhir pekan keluarga dari Dili datang berpiknik. Fasilitasnya sedikit, jadi bawalah air dan makanan.",
+    "en": "Behind the hill of Cristo Rei, on the far side of Cape Fatucama, is a curved bay with pale sand and clear water. Foreign visitors gave it the joking name 'Jesus Backside Beach', because the statue looks west towards Dili and turns its back to this bay. Visitors reach it by a path that branches off from the steps up to the statue, or by the road around the cape. Close to the shore there are corals and many small reef fish, so people bring a mask and snorkel. On weekdays the beach is often quiet, while at weekends families from Dili come to picnic. There are few facilities, so bring water and food."
+   },
+   "tips": {
+    "tet": "Keta hamriik ka la'o iha ahu-ruin nia leten, no keta lori kakuluk-tasi ka ahu-ruin ba uma. Kuidadu ho bee-suli iha fatin dook husi tasi-ibun. Ba iha dadeer, tanba tasi kalma liu no ema la barak.",
+    "pt": "Não pise nem caminhe sobre o coral e não leve conchas ou coral para casa. Atenção às correntes longe da margem. Vá de manhã, quando a água está mais calma e há menos gente.",
+    "id": "Jangan berdiri atau berjalan di atas karang, dan jangan membawa pulang kerang atau karang. Waspadai arus di bagian yang jauh dari pantai. Datanglah pagi hari, saat air lebih tenang dan pengunjung lebih sedikit.",
+    "en": "Do not stand or walk on the coral, and do not take shells or coral home. Watch for currents away from the shore. Go in the morning, when the water is calmer and there are fewer people."
+   },
+   "illustration": "beach",
+   "related": [
+    "mun.dili",
+    "place.cristo_rei",
+    "place.dollar_beach",
+    "tl.tourism.diving_marine"
+   ],
+   "tags": [
+    "beach",
+    "snorkelling",
+    "dili"
+   ],
+   "sources": [
+    {
+     "title": "Cristo Rei, Dili – visitor reviews",
+     "publisher": "Tripadvisor",
+     "url": "https://www.tripadvisor.com/Attraction_Review-g297517-d447290-Reviews-Cristo_Rei-Dili_Dili_District.html",
+     "accessed": "2026-10-27",
+     "licence": "© Tripadvisor"
+    },
+    {
+     "title": "Dili",
+     "publisher": "timorleste.tl (official tourism website of Timor-Leste)",
+     "url": "https://timorleste.tl/destinations/dili",
+     "accessed": "2026-10-27",
+     "licence": "© publisher"
+    },
+    {
+     "title": "Visit Cristo Rei of Dili",
+     "publisher": "Take Your Backpack (travel guide)",
+     "url": "https://www.takeyourbackpack.com/backpacking-in-timor-leste/visit-cristo-rei-of-dili/",
+     "accessed": "2026-10-27",
+     "licence": "© publisher"
+    }
+   ],
+   "review": {
+    "status": "draft",
+    "notes": "Written on 27 Oct 2026 after the shared web-search budget ran out: facts come from the cited pages as far as seen in search results plus general knowledge; coordinates are approximate (recalled or estimated, checked only against the Lafa municipality map) — verify on OpenStreetMap/Wikipedia. Coordinates approximate (bay just east of the statue). The English nickname is informal; check whether a Tetun name (possibly 'Dolok Oan', a Wikipedia title that appeared in search results next to Cristo Rei) belongs to this beach or to Dollar Beach. Tetun 'kakuluk-tasi' (sea shell) to be checked."
+   }
+  },
+  {
+   "id": "place.dollar_beach",
+   "name": {
+    "tet": "Tasi-ibun Dollar",
+    "pt": "Dollar Beach (praia)",
+    "id": "Pantai Dollar",
+    "en": "Dollar Beach"
+   },
+   "municipality": "mun.dili",
+   "type": "beach",
+   "lat": -8.516,
+   "lon": 125.621,
+   "summary": {
+    "tet": "Baía hakmatek ida ho rai-henek mutin no bee moos, uitoan liu ba leste husi foho Cristo Rei. Vizitante sira mai nani, haree ikan no deskansa dook husi sidade.",
+    "pt": "Uma baía sossegada, de areia branca e água límpida, um pouco mais a leste da colina do Cristo Rei. Os visitantes vêm nadar, fazer snorkel e fugir da cidade.",
+    "id": "Teluk sepi berpasir putih dan berair jernih, sedikit lebih ke timur dari bukit Cristo Rei. Pengunjung datang untuk berenang, snorkeling dan menjauh dari keramaian kota.",
+    "en": "A quiet bay with white sand and clear water a little further east of the Cristo Rei hill. Visitors come to swim, snorkel and escape the city."
+   },
+   "text": {
+    "tet": "Tasi-ibun Dollar mak tasi-ibun ki'ik ida husi tasi-ibun balu iha kosta norte, iha Dili nia leste, liu tiha baía ne'ebé iha estátua Cristo Rei nia kotuk. Ema uitoan de'it mak vizita ne'e kompara ho Areia Branca. Tan ne'e iha loron servisu rai-henek dala barak mamuk. Tasi-ibun ne'e hasoru tasi kle'an entre Timor no Atauru. Ninia ahu-ruin mak fatin di'ak atu haree ikan ho kór oin-oin besik tasi-ibun. Ema to'o iha ne'ebá ho ain, liu husi rai-ponta ki'ik husi Cristo Rei, ka ho kareta liu husi estrada kosta ne'ebé aat. Husu ba ema lokál dalan ne'ebé di'ak liu, tanba dalan sira muda depois tempu udan. La iha loja ka sentina, no iha meiudia mahon uitoan de'it.",
+    "pt": "A Dollar Beach é uma de várias pequenas praias da costa norte a leste de Díli, depois da baía que fica atrás do Cristo Rei. É menos visitada do que a Areia Branca e, nos dias de semana, a areia está muitas vezes vazia. A praia está virada para o estreito profundo entre Timor e Ataúro, e o seu recife é um bom lugar para ver peixes coloridos perto da margem. Chega-se a pé, atravessando o pequeno promontório a partir da zona do Cristo Rei, ou de carro pela estrada irregular da costa. Pergunte localmente qual é o melhor caminho, porque os trilhos mudam depois da época das chuvas. Não há lojas nem casas de banho, e ao meio-dia há pouca sombra.",
+    "id": "Dollar Beach adalah salah satu dari beberapa pantai kecil di pesisir utara di timur Dili, setelah teluk di belakang patung Cristo Rei. Pantai ini lebih sepi daripada Areia Branca, sehingga pada hari kerja pasirnya sering kosong. Pantai menghadap selat dalam antara Timor dan Ataúro, dan terumbunya menjadi tempat yang baik untuk melihat ikan berwarna-warni dekat pantai. Orang mencapainya dengan berjalan kaki melewati tanjung rendah dari kawasan Cristo Rei, atau dengan mobil lewat jalan pantai yang rusak. Tanyakan kepada warga jalan terbaik, karena jalur berubah setelah musim hujan. Tidak ada toko atau toilet, dan siang hari hanya ada sedikit tempat teduh.",
+    "en": "Dollar Beach is one of several small beaches on the north coast east of Dili, beyond the bay behind the Cristo Rei statue. It is less visited than Areia Branca, so the sand is often empty on weekdays. The beach faces the deep strait between Timor and Ataúro, and its reef is a good place to see colourful fish close to the shore. People reach it on foot over the low headland from the Cristo Rei area, or by car along the rough coast road. Ask locally about the best way, because tracks change after the rainy season. There are no shops or toilets, and there is little shade in the middle of the day."
+   },
+   "tips": {
+    "tet": "Ba ho kolega ka guia lokál, lori bee-hemu no protesaun ba loron-manas, no keta husik lixu. Keta husik sasán folin-boot iha kareta laran.",
+    "pt": "Vá com um amigo ou um guia local, leve água e proteção solar e não deixe lixo. Não deixe objetos de valor no carro estacionado.",
+    "id": "Pergilah bersama teman atau pemandu setempat, bawa air dan pelindung matahari, dan jangan meninggalkan sampah. Jangan tinggalkan barang berharga di mobil yang diparkir.",
+    "en": "Go with a friend or a local guide, carry water and sun protection, and leave nothing behind. Do not leave valuables in a parked car."
+   },
+   "illustration": "beach",
+   "related": [
+    "mun.dili",
+    "place.cristo_rei",
+    "place.jesus_backside_beach"
+   ],
+   "tags": [
+    "beach",
+    "snorkelling",
+    "dili"
+   ],
+   "sources": [
+    {
+     "title": "Dili",
+     "publisher": "timorleste.tl (official tourism website of Timor-Leste)",
+     "url": "https://timorleste.tl/destinations/dili",
+     "accessed": "2026-10-27",
+     "licence": "© publisher"
+    },
+    {
+     "title": "The 15 Best Things to Do in Dili, Timor-Leste",
+     "publisher": "Backpack Moments (travel guide)",
+     "url": "https://backpackmoments.com/things-to-do-in-dili/",
+     "accessed": "2026-10-27",
+     "licence": "© publisher"
+    },
+    {
+     "title": "Cristo Rei, Dili – visitor reviews",
+     "publisher": "Tripadvisor",
+     "url": "https://www.tripadvisor.com/Attraction_Review-g297517-d447290-Reviews-Cristo_Rei-Dili_Dili_District.html",
+     "accessed": "2026-10-27",
+     "licence": "© Tripadvisor"
+    }
+   ],
+   "review": {
+    "status": "draft",
+    "notes": "Written on 27 Oct 2026 after the shared web-search budget ran out: facts come from the cited pages as far as seen in search results plus general knowledge; coordinates are approximate (recalled or estimated, checked only against the Lafa municipality map) — verify on OpenStreetMap/Wikipedia. Coordinates approximate (estimated 1–2 km east of the statue; position and access route need checking). The cited pages describe the beaches around Cristo Rei in general. The name may come from Tetun 'Dolok Oan' (unconfirmed)."
+   }
+  },
+  {
+   "id": "place.cristo_rei_reef",
+   "name": {
+    "tet": "Ahu-ruin Cristo Rei (fatin snorkel no mergullu)",
+    "pt": "Recife do Cristo Rei (snorkel e mergulho)",
+    "id": "Terumbu Cristo Rei (situs snorkeling dan selam)",
+    "en": "Cristo Rei reef (snorkel and dive site)"
+   },
+   "municipality": "mun.dili",
+   "type": "reef",
+   "lat": -8.519,
+   "lon": 125.6095,
+   "summary": {
+    "tet": "Ahu-ruin iha Kabu Fatucama nia ponta, iha estátua Cristo Rei nia okos, mak fatin ida ne'ebé fasil liu besik Dili atu halo snorkel ka mergullu husi tasi-ibun.",
+    "pt": "O recife de coral à volta da ponta do cabo Fatucama, por baixo da estátua do Cristo Rei, é um dos lugares mais fáceis perto de Díli para fazer snorkel ou mergulhar a partir da praia.",
+    "id": "Terumbu karang di sekitar ujung Tanjung Fatucama, di bawah patung Cristo Rei, adalah salah satu tempat termudah di dekat Dili untuk snorkeling atau menyelam dari pantai.",
+    "en": "The coral reef around the tip of Cape Fatucama, below the Cristo Rei statue, is one of the easiest places near Dili to snorkel or make a shore dive."
+   },
+   "text": {
+    "tet": "Timór-Leste iha Triángulu Korál nia laran. Ne'e mak parte tasi nian ne'ebé iha ahu-ruin no ikan oin-oin barak liu iha mundu. Minutu balun de'it husi sidade, tasi iha Kabu Fatucama nia haleu hatudu riku-soin ne'e. Husi tasi-ibun sira iha Cristo Rei nia sorin, ema ne'ebé halo mergullu ka snorkel nani ba ahu-ruin nia lolon. Iha ne'ebá iha ahu-ruin toos no ahu-ruin mamar, esponja no ikan ho kór oin-oin barak. Iha dook liu, tasi nia okos tun lalais ba tasi kle'an, tan ne'e ikan boot dala ruma liu iha ne'ebá. Sentru mergullu sira iha Dili lori sira-nia kliente mai halo mergullu husi tasi-ibun no aprende mergullu. Bee moos liu baibain iha tempu bailoron, bainhira mota sira lori rai-tahu uitoan ba tasi.",
+    "pt": "Timor-Leste fica dentro do Triângulo de Coral, a zona do oceano com a maior variedade de corais e peixes de recife do mundo. A poucos minutos da cidade, as águas à volta do cabo Fatucama mostram parte desta riqueza. A partir das praias junto ao Cristo Rei, mergulhadores e praticantes de snorkel nadam sobre uma encosta de recife com corais duros e moles, esponjas e muitos peixes coloridos. Mais ao largo, o fundo desce depressa para águas profundas, e por isso às vezes passam peixes grandes. Os centros de mergulho de Díli trazem clientes para mergulhos a partir da praia e para aulas. A visibilidade costuma ser melhor na época seca, quando os rios levam menos lama para o mar.",
+    "id": "Timor-Leste terletak di dalam Segitiga Terumbu Karang, kawasan laut dengan keragaman karang dan ikan karang terbesar di dunia. Hanya beberapa menit dari kota, perairan di sekitar Tanjung Fatucama menunjukkan sebagian kekayaan itu. Dari pantai di samping Cristo Rei, penyelam dan perenang snorkel berenang di atas lereng terumbu dengan karang keras dan lunak, spons, serta banyak ikan berwarna-warni. Lebih ke tengah, dasar laut cepat menurun ke perairan dalam, sehingga ikan besar kadang lewat. Pusat selam di Dili membawa tamu ke sini untuk selam pantai dan latihan. Jarak pandang biasanya paling baik pada musim kemarau, ketika sungai membawa lebih sedikit lumpur ke laut.",
+    "en": "Timor-Leste lies inside the Coral Triangle, the part of the ocean with the greatest variety of corals and reef fish in the world. Just a few minutes from the city, the waters around Cape Fatucama show part of this richness. From the beaches beside Cristo Rei, divers and snorkellers swim out over a reef slope with hard and soft corals, sponges and many colourful fish. Further out, the sea floor drops quickly into deep water, so large fish sometimes pass by. Dive centres in Dili bring guests here for shore dives and training. Visibility is usually best in the dry season, when the rivers carry less mud into the sea."
+   },
+   "tips": {
+    "tet": "Halo mergullu ho sentru mergullu ne'ebé rejista ona no ho kolega ida. Haree uluk bee-suli molok tama ba tasi. Keta kaer ka hamriik iha ahu-ruin nia leten.",
+    "pt": "Mergulhe com um centro de mergulho registado e com um companheiro, e confirme a corrente antes de entrar na água. Nunca toque nem pise o coral.",
+    "id": "Menyelamlah bersama pusat selam resmi dan seorang rekan, dan periksa arus sebelum masuk ke air. Jangan pernah menyentuh atau berdiri di atas karang.",
+    "en": "Dive with a registered dive centre and a buddy, and check the current before entering the water. Never touch or stand on coral."
+   },
+   "illustration": "coral-reef",
+   "related": [
+    "mun.dili",
+    "place.cristo_rei",
+    "place.jesus_backside_beach",
+    "tl.tourism.diving_marine",
+    "tl.nature.marine"
+   ],
+   "tags": [
+    "diving",
+    "snorkelling",
+    "reef"
+   ],
+   "sources": [
+    {
+     "title": "Cristo Rei, Dili – visitor reviews",
+     "publisher": "Tripadvisor",
+     "url": "https://www.tripadvisor.com/Attraction_Review-g297517-d447290-Reviews-Cristo_Rei-Dili_Dili_District.html",
+     "accessed": "2026-10-27",
+     "licence": "© Tripadvisor"
+    },
+    {
+     "title": "Attractions (directory of beaches, dive sites, peaks, forts, markets and sacred places)",
+     "publisher": "timorleste.tl (official tourism website of Timor-Leste)",
+     "url": "https://timorleste.tl/destinations/attractions",
+     "accessed": "2026-10-27",
+     "licence": "© publisher"
+    },
+    {
+     "title": "Coral Triangle",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Coral_Triangle",
+     "accessed": "2026-10-27",
+     "licence": "CC BY-SA 4.0"
+    }
+   ],
+   "review": {
+    "status": "draft",
+    "notes": "Written on 27 Oct 2026 after the shared web-search budget ran out: facts come from the cited pages as far as seen in search results plus general knowledge; coordinates are approximate (recalled or estimated, checked only against the Lafa municipality map) — verify on OpenStreetMap/Wikipedia. Coordinates approximate (tip of Cape Fatucama). Tripadvisor reviews describe a 'great reefscape' and a snorkelling/dive site in front of Cristo Rei; names of individual dive sites were not checked. Tetun 'ahu-ruin mamar' (soft coral) to be checked."
+   }
+  },
+  {
+   "id": "place.tasitolu",
+   "name": {
+    "tet": "Lagoa Tasitolu",
+    "pt": "Lagoas de Tasitolu",
+    "id": "Danau Tasitolu",
+    "en": "Tasitolu lakes"
+   },
+   "municipality": "mun.dili",
+   "type": "lake",
+   "lat": -8.554,
+   "lon": 125.506,
+   "summary": {
+    "tet": "Lagoa bee-masin tolu iha Dili nia rohan loro-monu, besik aeroportu. Rai-luan iha sira-nia sorin uza ba eventu nasionál no relijiozu boot sira, no manu bee nian hela iha rai-bokon ne'e.",
+    "pt": "Três lagoas salgadas no limite oeste de Díli, perto do aeroporto. O terreno aberto ao lado delas recebe grandes eventos nacionais e religiosos, e as zonas húmidas abrigam aves aquáticas.",
+    "id": "Tiga danau asin di tepi barat Dili, dekat bandara. Lapangan terbuka di sampingnya dipakai untuk acara nasional dan keagamaan besar, dan lahan basahnya menjadi rumah burung air.",
+    "en": "Three salty lakes on the western edge of Dili, near the airport. The open field beside them is used for great national and religious events, and the wetlands are a home for water birds."
+   },
+   "text": {
+    "tet": "Tasitolu katak 'lagoa tolu' iha Tetun (tasi = tasi ka bee-masin, tolu = tolu). Lagoa sira iha estrada tasi-ibun nian no foho sira nia klaran, kilómetru balun husi sidade nia klaran ba loro-monu. Sira-nia bee la kle'an no masin. Tan ne'e manu bee nian oin-oin mai iha ne'e, inklui manu ne'ebé semo husi rai dook iha tempu balu. Ema ne'ebé gosta haree manu mai iha dadeer-saan. Rai-luan boot iha lagoa sira nia sorin sai fatin ba enkontru boot liu balu iha nasaun nia istória. Papa João Paulo II halo misa iha ne'e iha Outubru 1989, no ohin estátua boot ida ninian hamriik iha foho leten. Serimónia restaurasaun independénsia nian hala'o iha Tasitolu iha kalan 19 ba 20 Maiu 2002. Iha Setembru 2024, Papa Francisco halo misa iha ne'e ho ema barak tebes.",
+    "pt": "Tasitolu quer dizer 'três lagoas' em tétum (tasi = mar ou água salgada, tolu = três). As lagoas ficam entre a estrada da costa e as colinas, a poucos quilómetros a oeste do centro. A água pouco funda e salgada atrai garças e aves limícolas migratórias, por isso os observadores de aves vêm cedo de manhã. O grande campo ao lado das lagoas recebeu alguns dos maiores encontros da história do país. O Papa João Paulo II celebrou missa aqui em outubro de 1989, e hoje uma grande estátua sua está no alto da colina. A cerimónia da restauração da independência realizou-se em Tasitolu na noite de 19 para 20 de maio de 2002. Em setembro de 2024, o Papa Francisco celebrou missa aqui perante uma multidão enorme.",
+    "id": "Tasitolu berarti 'tiga danau' dalam bahasa Tetun (tasi = laut atau air asin, tolu = tiga). Danau-danau ini terletak di antara jalan pantai dan perbukitan, beberapa kilometer di barat pusat kota. Airnya yang dangkal dan asin menarik burung kuntul dan burung pantai yang bermigrasi, sehingga pengamat burung datang pagi-pagi. Lapangan luas di samping danau pernah menjadi tempat beberapa pertemuan terbesar dalam sejarah negeri ini. Paus Yohanes Paulus II merayakan Misa di sini pada Oktober 1989, dan kini patung besarnya berdiri di bukit di atasnya. Upacara pemulihan kemerdekaan diadakan di Tasitolu pada malam 19–20 Mei 2002. Pada September 2024 Paus Fransiskus merayakan Misa di sini di hadapan kerumunan yang sangat besar.",
+    "en": "Tasitolu means 'three lakes' in Tetun (tasi = sea or salt water, tolu = three). The lakes lie between the coast road and the hills, a few kilometres west of the city centre. Their shallow, salty water attracts herons, egrets and migrating shorebirds, so birdwatchers visit early in the morning. The wide field next to the lakes has seen some of the biggest gatherings in the country's history. Pope John Paul II celebrated Mass here in October 1989, and a large statue of him now stands on the hill above. The ceremony for the restoration of independence took place at Tasitolu on the night of 19 to 20 May 2002. In September 2024 Pope Francis celebrated Mass here before a very large crowd."
+   },
+   "tips": {
+    "tet": "Vizita iha dadeer-saan atu haree manu no hetan anin malirin. Iha fatin barak lagoa la iha lutu. Kuidadu labarik sira, keta husik sira besik bee nia ninin, no keta halo ta'uk manu ne'ebé tau tolun. Lori xapéu, tanba mahon uitoan de'it.",
+    "pt": "Visite de manhã cedo para ver aves e apanhar ar fresco. Em muitos sítios as lagoas não têm vedação: mantenha as crianças longe da margem e não perturbe as aves nos ninhos. Leve chapéu; há pouca sombra.",
+    "id": "Datanglah pagi-pagi untuk melihat burung dan menikmati udara sejuk. Di banyak tempat danau tidak berpagar: jauhkan anak-anak dari tepi air dan jangan mengganggu burung yang bersarang. Bawa topi; tempat teduh sedikit.",
+    "en": "Visit early in the morning for birds and cooler air. In many places the lakes have no fence: keep children away from the water's edge, and do not disturb nesting birds. Bring a hat; there is little shade."
+   },
+   "illustration": "lake",
+   "wiki": {
+    "en": "Tasitolu"
+   },
+   "quiz": [
+    {
+     "q": {
+      "tet": "Naran Tetun 'Tasitolu' katak saida?",
+      "pt": "O que quer dizer o nome tétum 'Tasitolu'?",
+      "id": "Apa arti nama Tetun 'Tasitolu'?",
+      "en": "What does the Tetun name 'Tasitolu' mean?"
+     },
+     "options": [
+      {
+       "tet": "Lagoa tolu",
+       "pt": "Três lagoas",
+       "id": "Tiga danau",
+       "en": "Three lakes"
+      },
+      {
+       "tet": "Rai-henek mutin",
+       "pt": "Areia branca",
+       "id": "Pasir putih",
+       "en": "White sand"
+      },
+      {
+       "tet": "Foho lulik",
+       "pt": "Montanha sagrada",
+       "id": "Gunung suci",
+       "en": "Holy mountain"
+      },
+      {
+       "tet": "Mota boot",
+       "pt": "Rio grande",
+       "id": "Sungai besar",
+       "en": "Big river"
+      }
+     ],
+     "answer": 0,
+     "why": {
+      "tet": "Iha Tetun 'tasi' mak tasi ka bee-masin no 'tolu' mak numeru 3: fatin ne'e iha lagoa masin tolu.",
+      "pt": "Em tétum 'tasi' é mar ou água salgada e 'tolu' é três: o lugar tem três lagoas salgadas.",
+      "id": "Dalam bahasa Tetun 'tasi' berarti laut atau air asin dan 'tolu' berarti tiga: tempat itu punya tiga danau asin.",
+      "en": "In Tetun 'tasi' is sea or salt water and 'tolu' is three: the place has three salty lakes."
+     },
+     "difficulty": 4
+    }
+   ],
+   "related": [
+    "mun.dili",
+    "place.john_paul_ii_statue",
+    "tl.history.restoration_2002",
+    "day.restoration",
+    "tl.nature.birds"
+   ],
+   "tags": [
+    "lake",
+    "birds",
+    "dili",
+    "pilgrimage"
+   ],
+   "sources": [
+    {
+     "title": "Faith-Based Tourism",
+     "publisher": "timorleste.tl (official tourism website of Timor-Leste)",
+     "url": "https://www.timorleste.tl/?p=17821",
+     "accessed": "2026-10-27",
+     "licence": "© publisher"
+    },
+    {
+     "title": "Dili Municipality",
+     "publisher": "timorleste.tl (official tourism website of Timor-Leste)",
+     "url": "https://timorleste.tl/destinations/municipalities/dili",
+     "accessed": "2026-10-27",
+     "licence": "© publisher"
+    },
+    {
+     "title": "Dili",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Dili",
+     "accessed": "2026-10-27",
+     "licence": "CC BY-SA 4.0"
+    }
+   ],
+   "review": {
+    "status": "draft",
+    "notes": "Written on 27 Oct 2026 after the shared web-search budget ran out: facts come from the cited pages as far as seen in search results plus general knowledge; coordinates are approximate (recalled or estimated, checked only against the Lafa municipality map) — verify on OpenStreetMap/Wikipedia. Coordinates approximate (centre of the lakes). NB: the Lafa map data (posts.json/municipalities.json) puts this western part of Dili (Dom Aleixo) inside Liquiçá; in reality it belongs to Dili. Check: the 2002 independence ceremony at Tasitolu, the dates of the papal Masses (12 Oct 1989; 10 Sep 2024) and the wiki title 'Tasitolu'."
+   }
+  },
+  {
+   "id": "place.john_paul_ii_statue",
+   "name": {
+    "tet": "Estátua Papa João Paulo II (Tasitolu)",
+    "pt": "Estátua do Papa João Paulo II (Tasitolu)",
+    "id": "Patung Paus Yohanes Paulus II (Tasitolu)",
+    "en": "Statue of Pope John Paul II (Tasitolu)"
+   },
+   "municipality": "mun.dili",
+   "type": "statue",
+   "lat": -8.5575,
+   "lon": 125.5075,
+   "summary": {
+    "tet": "Estátua boot Papa João Paulo II nian iha foho ida iha lagoa Tasitolu nia leten. Estátua ne'e hanoin fali ninia vizita ba Timor iha Outubru 1989.",
+    "pt": "Uma grande estátua do Papa João Paulo II numa colina sobre as lagoas de Tasitolu. Recorda a sua visita a Timor em outubro de 1989.",
+    "id": "Patung besar Paus Yohanes Paulus II di bukit di atas danau Tasitolu. Patung ini mengenang kunjungannya ke Timor pada Oktober 1989.",
+    "en": "A large statue of Pope John Paul II on a hill above the Tasitolu lakes. It recalls his visit to Timor in October 1989."
+   },
+   "text": {
+    "tet": "Iha 12 Outubru 1989, Papa João Paulo II vizita Dili iha tempu okupasaun Indonézia nian no halo misa ba ema barak tebes iha Tasitolu. Ba timoroan barak, vizita ne'e fó esperansa, tanba mundu tomak haree ba sira-nia rai ba tempu badak. Iha misa nia rohan, grupu joven ida halo protestu ba independénsia, no forsa seguransa dispersa sira. Tinan barak depois, ema harii estátua boot ida Papa nian iha foho ne'ebé hateke ba lagoa sira no ba rai-luan ne'ebé misa hala'o. Peregrinu no família sira sa'e atu reza, foti foto no haree lagoa, aeroportu no tasi husi leten. Fatin ne'e parte husi turizmu fiar nian ne'ebé ema promove iha Dili.",
+    "pt": "A 12 de outubro de 1989, o Papa João Paulo II visitou Díli durante a ocupação indonésia e celebrou missa para uma enorme multidão em Tasitolu. Para muitos timorenses foi um momento de esperança, porque a atenção do mundo se virou por pouco tempo para o seu país. No fim da missa, um grupo de jovens fez um protesto pela independência, que as forças de segurança dispersaram. Anos mais tarde ergueu-se uma grande estátua do Papa na colina sobre as lagoas e o campo onde se celebrou a missa. Peregrinos e famílias sobem para rezar, tirar fotografias e apreciar a vista sobre as lagoas, o aeroporto e o mar. O local faz parte do turismo religioso promovido em Díli.",
+    "id": "Pada 12 Oktober 1989 Paus Yohanes Paulus II mengunjungi Dili pada masa pendudukan Indonesia dan merayakan Misa bagi kerumunan besar di Tasitolu. Bagi banyak orang Timor kunjungan itu adalah saat penuh harapan, karena perhatian dunia sejenak tertuju ke negeri mereka. Di akhir Misa sekelompok anak muda melakukan protes untuk kemerdekaan, yang dibubarkan aparat keamanan. Bertahun-tahun kemudian patung besar Paus didirikan di bukit yang menghadap danau dan lapangan tempat Misa itu. Peziarah dan keluarga mendaki untuk berdoa, berfoto dan menikmati pemandangan danau, bandara dan laut. Tempat ini termasuk wisata rohani yang dipromosikan di Dili.",
+    "en": "On 12 October 1989 Pope John Paul II visited Dili during the Indonesian occupation and celebrated Mass for a huge crowd at Tasitolu. For many Timorese the visit was a moment of hope, because the world's attention turned briefly to their country. At the end of the Mass a group of young people held a protest for independence, which the security forces broke up. Years later a large statue of the Pope was raised on the hill that overlooks the lakes and the field where the Mass took place. Pilgrims and families climb up to pray, to take photographs and to enjoy the view over the lakes, the airport and the sea. The site is part of the faith-based tourism promoted in Dili."
+   },
+   "tips": {
+    "tet": "Ba iha dadeer ka loro-kraik, tanba dalan ba foho la iha mahon. Hahalok hanesan iha igreja: ko'alia neineik no hatais roupa ne'ebé di'ak.",
+    "pt": "Vá cedo ou ao fim do dia; o caminho para a colina está exposto ao sol. Comporte-se como numa igreja: fale baixo e vista-se com modéstia.",
+    "id": "Datanglah pagi atau sore; jalan ke bukit terbuka terhadap matahari. Bersikaplah seperti di gereja: bicara pelan dan berpakaian sopan.",
+    "en": "Go early or late in the day; the path up the hill is exposed to the sun. Behave as you would in a church: speak quietly and dress modestly."
+   },
+   "illustration": "statue",
+   "related": [
+    "mun.dili",
+    "place.tasitolu",
+    "tl.culture.catholic_traditions",
+    "tl.colonial.indonesian_occupation"
+   ],
+   "tags": [
+    "statue",
+    "pilgrimage",
+    "dili"
+   ],
+   "sources": [
+    {
+     "title": "Faith-Based Tourism",
+     "publisher": "timorleste.tl (official tourism website of Timor-Leste)",
+     "url": "https://www.timorleste.tl/?p=17821",
+     "accessed": "2026-10-27",
+     "licence": "© publisher"
+    },
+    {
+     "title": "Dili Municipality",
+     "publisher": "timorleste.tl (official tourism website of Timor-Leste)",
+     "url": "https://timorleste.tl/destinations/municipalities/dili",
+     "accessed": "2026-10-27",
+     "licence": "© publisher"
+    }
+   ],
+   "review": {
+    "status": "draft",
+    "notes": "Written on 27 Oct 2026 after the shared web-search budget ran out: facts come from the cited pages as far as seen in search results plus general knowledge; coordinates are approximate (recalled or estimated, checked only against the Lafa municipality map) — verify on OpenStreetMap/Wikipedia. Coordinates approximate (hill beside the Tasitolu lakes). The year the statue was raised was not confirmed (possibly 2008). Check the account of the youth protest at the end of the 1989 Mass. Map data note as for Tasitolu (Dom Aleixo shown in Liquiçá)."
+   }
+  },
+  {
+   "id": "place.resistance_museum",
+   "name": {
+    "tet": "Arkivu no Muzeu Rezisténsia Timorense",
+    "pt": "Arquivo e Museu da Resistência Timorense",
+    "id": "Arsip dan Museum Perlawanan Timor",
+    "en": "Archive and Museum of the Timorese Resistance"
+   },
+   "municipality": "mun.dili",
+   "type": "museum",
+   "lat": -8.5565,
+   "lon": 125.576,
+   "summary": {
+    "tet": "Muzeu no arkivu iha Dili nia klaran ne'ebé konta istória luta ba independénsia durante tinan 24 (1975–1999) liu husi foto, dokumentu no sasán sira.",
+    "pt": "Museu e arquivo no centro de Díli que conta a história de 24 anos de luta pela independência (1975–1999) com fotografias, documentos e objetos.",
+    "id": "Museum dan arsip di pusat Dili yang menceritakan perjuangan kemerdekaan selama 24 tahun (1975–1999) melalui foto, dokumen dan benda-benda.",
+    "en": "A museum and archive in central Dili that tells the story of the 24-year struggle for independence (1975–1999) through photographs, documents and objects."
+   },
+   "text": {
+    "tet": "Arkivu no Muzeu Rezisténsia Timorense (AMRT) rai memória luta hasoru okupasaun Indonézia nian. Ezibisaun tuir istória husi invazaun Dezembru 1975 to'o konsulta populár 1999, no esplika rezisténsia nia frente tolu: frente armada FALINTIL iha foho, rede klandestina iha sidade no aldeia, no frente diplomátika iha rai-li'ur. Vizitante sira haree foto, karta, bandeira, kilat, rádiu no sasán husi funu-na'in sira no ema baibain. Arkivu mós halibur dokumentu no testemuñu ba peskizadór no estudante sira. Iha sala barak ema labele foti foto. Vizita ida han oras ida to'o rua, no ne'e dalan di'ak atu komprende Timór-Leste ohin loron.",
+    "pt": "O Arquivo e Museu da Resistência Timorense (AMRT) guarda a memória da luta contra a ocupação indonésia. A exposição segue a história desde a invasão de dezembro de 1975 até à consulta de 1999 e explica as três frentes da resistência: a frente armada das FALINTIL nas montanhas, a rede clandestina nas cidades e aldeias e a frente diplomática no estrangeiro. Os visitantes veem fotografias, cartas, bandeiras, armas, rádios e objetos pessoais de combatentes e de pessoas comuns. O arquivo também reúne documentos e testemunhos para investigadores e estudantes. Não é permitido fotografar na maior parte das salas. Uma visita dura uma a duas horas e ajuda a compreender o Timor-Leste de hoje.",
+    "id": "Arsip dan Museum Perlawanan Timor (AMRT) menjaga ingatan tentang perjuangan melawan pendudukan Indonesia. Pamerannya mengikuti kisah dari invasi Desember 1975 hingga jajak pendapat 1999, dan menjelaskan tiga front perlawanan: front bersenjata FALINTIL di pegunungan, jaringan klandestin di kota dan desa, serta front diplomatik di luar negeri. Pengunjung melihat foto, surat, bendera, senjata, radio dan barang pribadi para pejuang serta warga biasa. Arsipnya juga mengumpulkan dokumen dan kesaksian untuk peneliti dan pelajar. Memotret tidak diizinkan di sebagian besar ruangan. Kunjungan memakan waktu satu sampai dua jam dan sangat membantu untuk memahami Timor-Leste modern.",
+    "en": "The Archive and Museum of the Timorese Resistance (AMRT) keeps the memory of the struggle against the Indonesian occupation. Its exhibition follows the story from the invasion of December 1975 to the vote of 1999 and explains the three fronts of the resistance: the armed front of FALINTIL in the mountains, the clandestine network in towns and villages, and the diplomatic front abroad. Visitors see photographs, letters, flags, weapons, radios and the personal belongings of fighters and ordinary people. The archive also collects documents and testimonies for researchers and students. Photography is not allowed in most rooms. A visit takes one to two hours and is a good way to understand modern Timor-Leste."
+   },
+   "tips": {
+    "tet": "Haree oráriu molok ba; baibain taka iha feriadu balu. Husu iha odamatan iha ne'ebé ita bele foti foto. Ezibisaun balu todan ba labarik ki'ik, tan ne'e profesór sira bele prepara alunu sira iha aula uluk.",
+    "pt": "Confirme o horário antes de ir; costuma fechar em alguns feriados. Pergunte à entrada onde se pode fotografar. Algumas partes são difíceis para crianças pequenas, por isso os professores podem preparar os alunos antes, na aula.",
+    "id": "Periksa jam buka sebelum datang; biasanya tutup pada beberapa hari libur. Tanyakan di pintu masuk di mana boleh memotret. Beberapa pameran berat bagi anak kecil, jadi guru bisa mempersiapkan murid di kelas lebih dulu.",
+    "en": "Check the opening hours before you go; it is usually closed on some public holidays. Ask at the entrance where photos are allowed. Some displays are hard for young children, so teachers can prepare pupils in class first."
+   },
+   "illustration": "museum",
+   "related": [
+    "mun.dili",
+    "place.chega_balide",
+    "place.santa_cruz_cemetery",
+    "tl.conflicts.resistance_fronts",
+    "tl.colonial.indonesian_occupation",
+    "tl.tourism.heritage"
+   ],
+   "tags": [
+    "museum",
+    "resistance",
+    "history",
+    "dili"
+   ],
+   "sources": [
+    {
+     "title": "The 15 best things to do in Timor-Leste",
+     "publisher": "Tripadvisor",
+     "url": "https://www.tripadvisor.com/Attractions-g295117-Activities-Timor_Leste.html",
+     "accessed": "2026-10-27",
+     "licence": "© Tripadvisor"
+    },
+    {
+     "title": "The best indoor things to do in Timor-Leste on a rainy day",
+     "publisher": "Tripadvisor",
+     "url": "https://www.tripadvisor.com/Attractions-g295117-Activities-zft11295-Timor_Leste.html",
+     "accessed": "2026-10-27",
+     "licence": "© Tripadvisor"
+    },
+    {
+     "title": "Indonesian occupation of East Timor",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Indonesian_occupation_of_East_Timor",
+     "accessed": "2026-10-27",
+     "licence": "CC BY-SA 4.0"
+    }
+   ],
+   "review": {
+    "status": "draft",
+    "notes": "Written on 27 Oct 2026 after the shared web-search budget ran out: facts come from the cited pages as far as seen in search results plus general knowledge; coordinates are approximate (recalled or estimated, checked only against the Lafa municipality map) — verify on OpenStreetMap/Wikipedia. Coordinates approximate (central Dili; the exact building was not checked). Check the opening date of the museum, whether the exhibition is organised by the three fronts, and current opening hours. Tripadvisor confirms that photography is restricted."
+   }
+  },
+  {
+   "id": "place.chega_balide",
+   "name": {
+    "tet": "Ezibisaun Chega! iha Komarka Balide uluk",
+    "pt": "Exposição Chega! na antiga Comarca de Balide",
+    "id": "Pameran Chega! di bekas penjara Comarca Balide",
+    "en": "Chega! exhibition at the former Comarca Balide prison"
+   },
+   "municipality": "mun.dili",
+   "type": "memorial",
+   "lat": -8.5655,
+   "lon": 125.585,
+   "summary": {
+    "tet": "Komarka (kadeia) uluk iha Balide, Dili, fatin ne'ebé prezu polítiku barak hela iha tempu okupasaun. Komisaun ba lia-loos (CAVR) servisu iha ne'e, no ohin ema bele haree ezibisaun Chega! no sela tuan sira.",
+    "pt": "Uma antiga prisão em Balide, Díli, onde muitos presos políticos estiveram detidos durante a ocupação. Acolheu a comissão da verdade (CAVR) e hoje mostra a exposição Chega! e as antigas celas.",
+    "id": "Bekas penjara di Balide, Dili, tempat banyak tahanan politik ditahan pada masa pendudukan. Gedung ini pernah menjadi kantor komisi kebenaran (CAVR) dan kini menampilkan pameran Chega! serta sel-sel lama.",
+    "en": "A former prison in Balide, Dili, where many political prisoners were held during the occupation. It housed the truth commission (CAVR) and now shows the Chega! exhibition and the old cells."
+   },
+   "text": {
+    "tet": "Komarka iha Balide mak kadeia ne'ebé Portugés harii iha tempu koloniál. Iha tempu okupasaun Indonézia, ema uza ne'e atu prende prezu polítiku, no ema barak terus iha ne'ebá. Depois 1999 ema hadi'a uma ne'e, no hahú iha 2002 sai eskritóriu Komisaun ba Simu Malu, Lia-loos no Rekonsiliasaun (CAVR). Komisaun rona vítima rihun-rihun no hakerek relatóriu 'Chega!', ne'ebé iha lian Portugés katak 'To'o ona!'. Relatóriu ne'e sai iha 2005. Ohin loron Centro Nacional Chega! mak jere fatin ne'e. Iha ezibisaun kona-ba komisaun nia rezultadu, hamutuk ho sela tuan sira. Iha sela nia didin ita sei haree dezeñu no liafuan ne'ebé prezu sira hakerek. Ne'e fatin atu aprende, hanoin fali no halo dame.",
+    "pt": "A Comarca de Balide foi construída como prisão no período colonial português. Durante a ocupação indonésia foi usada para deter presos políticos, e muitas pessoas sofreram ali. Depois de 1999 o edifício foi recuperado e, a partir de 2002, tornou-se a sede da Comissão de Acolhimento, Verdade e Reconciliação (CAVR). A comissão ouviu milhares de vítimas e escreveu o relatório 'Chega!', publicado em 2005. Hoje o local é gerido pelo Centro Nacional Chega! e tem uma exposição sobre as conclusões da comissão, junto com as antigas celas, onde ainda se veem desenhos e palavras escritas pelos presos nas paredes. É um lugar para aprender, lembrar e reconciliar.",
+    "id": "Comarca di Balide dibangun sebagai penjara pada masa kolonial Portugis. Pada masa pendudukan Indonesia gedung ini dipakai untuk menahan tahanan politik, dan banyak orang menderita di sana. Setelah 1999 gedung ini dipugar, dan sejak 2002 menjadi kantor Komisi Penerimaan, Kebenaran dan Rekonsiliasi (CAVR). Komisi itu mendengarkan ribuan korban dan menulis laporan 'Chega!', yang berarti 'Cukup!' dalam bahasa Portugis; laporan itu diterbitkan pada 2005. Kini tempat ini dikelola oleh Centro Nacional Chega! dan memiliki pameran tentang temuan komisi, bersama sel-sel lama yang dindingnya masih memuat gambar dan tulisan para tahanan. Ini tempat untuk belajar, mengenang dan berdamai.",
+    "en": "The Comarca in Balide was built as a prison in the Portuguese colonial period. During the Indonesian occupation it was used to hold political prisoners, and many people suffered there. After 1999 the building was restored, and from 2002 it became the office of the Commission for Reception, Truth and Reconciliation (CAVR). The commission listened to thousands of victims and wrote the report 'Chega!', which means 'Enough!' in Portuguese; it was published in 2005. Today the site is run by the Centro Nacional Chega! and holds an exhibition about the commission's findings, together with the old cells, where you can still see drawings and words written by prisoners on the walls. It is a place for learning, remembering and reconciliation."
+   },
+   "tips": {
+    "tet": "Vizitante sira bele mai. Husu iha odamatan kona-ba oráriu no vizita ho guia. La'o hakmatek iha sela laran no keta kaer liafuan iha didin. Istória sira-ne'e moras, entaun prepara alunu ki'ik sira uluk.",
+    "pt": "Os visitantes são bem-vindos; pergunte à entrada pelo horário e pelas visitas guiadas. Ande em silêncio nas celas e não toque nas inscrições das paredes. As histórias são dolorosas, por isso prepare antes os alunos mais novos.",
+    "id": "Pengunjung dipersilakan; tanyakan di pintu masuk tentang jam buka dan kunjungan berpemandu. Berjalanlah dengan tenang di sel dan jangan menyentuh tulisan di dinding. Kisah-kisahnya menyakitkan, jadi persiapkan murid yang lebih muda sebelumnya.",
+    "en": "Visitors are welcome; ask at the entrance about opening hours and guided visits. Walk quietly in the cells and do not touch the writing on the walls. The stories are painful, so prepare young students beforehand."
+   },
+   "illustration": "memorial",
+   "related": [
+    "mun.dili",
+    "place.resistance_museum",
+    "place.santa_cruz_cemetery",
+    "tl.conflicts.reconciliation",
+    "tl.tourism.heritage"
+   ],
+   "tags": [
+    "memorial",
+    "reconciliation",
+    "history",
+    "dili"
+   ],
+   "sources": [
+    {
+     "title": "Commission for Reception, Truth and Reconciliation in East Timor",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Commission_for_Reception,_Truth_and_Reconciliation_in_East_Timor",
+     "accessed": "2026-10-27",
+     "licence": "CC BY-SA 4.0"
+    },
+    {
+     "title": "Chega! The report of the Commission for Reception, Truth and Reconciliation (CAVR)",
+     "publisher": "Centro Nacional Chega! (chegareport.net)",
+     "url": "https://chegareport.net/",
+     "accessed": "2026-10-27",
+     "licence": "© publisher"
+    }
+   ],
+   "review": {
+    "status": "draft",
+    "notes": "Written on 27 Oct 2026 after the shared web-search budget ran out: facts come from the cited pages as far as seen in search results plus general knowledge; coordinates are approximate (recalled or estimated, checked only against the Lafa municipality map) — verify on OpenStreetMap/Wikipedia. Coordinates approximate (Balide, Dili). Check: when the prison was built, the years the CAVR used the building (2002–2005), the present operator (Centro Nacional Chega!), and the official Tetun name of the CAVR ('Komisaun ba Simu Malu, Lia-loos no Rekonsiliasaun' used here). The chegareport.net root URL is the owner-listed site; a page on the exhibition itself was not seen."
+   }
+  },
+  {
+   "id": "place.santa_cruz_cemetery",
+   "name": {
+    "tet": "Semitériu Santa Cruz",
+    "pt": "Cemitério de Santa Cruz",
+    "id": "Pemakaman Santa Cruz",
+    "en": "Santa Cruz Cemetery"
+   },
+   "municipality": "mun.dili",
+   "type": "memorial",
+   "lat": -8.5635,
+   "lon": 125.5895,
+   "summary": {
+    "tet": "Semitériu katóliku tuan iha Dili, fatin ne'ebé militár Indonézia tiru ba prosisaun dame ida iha 12 Novembru 1991. Ema filma masakre ne'e, no imajen sira halo mundu tomak hateke ba Timor.",
+    "pt": "O antigo cemitério católico de Díli, onde tropas indonésias dispararam sobre uma procissão pacífica a 12 de novembro de 1991. O massacre foi filmado e as imagens chamaram a atenção do mundo para Timor.",
+    "id": "Pemakaman Katolik lama di Dili, tempat tentara Indonesia menembaki prosesi damai pada 12 November 1991. Pembantaian itu direkam, dan gambarnya menarik perhatian dunia ke Timor.",
+    "en": "The old Catholic cemetery of Dili, where Indonesian troops fired on a peaceful procession on 12 November 1991. The massacre was filmed, and the pictures turned the world's attention to Timor."
+   },
+   "text": {
+    "tet": "Iha 12 Novembru 1991, ema rihun-rihun, barak mak estudante, la'o husi igreja Motael to'o semitériu Santa Cruz atu tau ai-funan iha Sebastião Gomes nia rate. Nia mak joven ida ne'ebé forsa Indonézia oho semana rua molok ne'e. Ema balu lori faixa ba independénsia. Iha semitériu, soldadu Indonézia tiru ba ema barak ne'e. Estimativa barak hatete katak ema 250 resin mate, no ema seluk barak kanek ka lakon. Jornalista Britániku Max Stahl filma tiru ne'e, no ema lori filme ne'e ba rai-li'ur ho subar. Imajen sira-ne'e halo mundu tomak hakfodak, no fó forsa foun ba kampaña ba autodeterminasaun. Ohin loron, 12 Novembru mak Loron Nasionál Joventude nian, no ema halibur iha semitériu atu reza no hanoin fali.",
+    "pt": "A 12 de novembro de 1991, milhares de pessoas, muitas delas estudantes, caminharam da igreja de Motael até ao cemitério de Santa Cruz para pôr flores na campa de Sebastião Gomes, um jovem morto pelas forças indonésias duas semanas antes. Alguns levavam faixas pela independência. No cemitério, soldados indonésios abriram fogo sobre a multidão. A maioria das estimativas indica que pelo menos 250 pessoas foram mortas, e muitas outras ficaram feridas ou desapareceram. O jornalista britânico Max Stahl filmou os disparos, e o filme saiu do país às escondidas. As imagens chocaram o mundo e deram nova força à campanha pela autodeterminação. Hoje, 12 de novembro é o Dia Nacional da Juventude, e as pessoas reúnem-se no cemitério para rezar e recordar.",
+    "id": "Pada 12 November 1991 ribuan orang, banyak di antaranya pelajar, berjalan dari gereja Motael ke pemakaman Santa Cruz untuk menaburkan bunga di makam Sebastião Gomes, seorang pemuda yang dibunuh pasukan Indonesia dua minggu sebelumnya. Sebagian membawa spanduk kemerdekaan. Di pemakaman, tentara Indonesia menembaki kerumunan. Sebagian besar perkiraan menyebut sedikitnya 250 orang tewas, dan banyak lainnya terluka atau hilang. Jurnalis Inggris Max Stahl merekam penembakan itu, dan rekamannya diselundupkan ke luar negeri. Gambar-gambar itu mengejutkan dunia dan memberi kekuatan baru bagi kampanye penentuan nasib sendiri. Kini 12 November adalah Hari Pemuda Nasional, dan orang berkumpul di pemakaman untuk berdoa dan mengenang.",
+    "en": "On 12 November 1991 thousands of people, many of them students, walked from the Motael church to Santa Cruz cemetery to lay flowers on the grave of Sebastião Gomes, a young man killed by Indonesian forces two weeks before. Some carried banners calling for independence. At the cemetery, Indonesian soldiers opened fire on the crowd. Most estimates say that at least 250 people were killed, and many others were wounded or disappeared. The British journalist Max Stahl filmed the shooting, and the film was smuggled out of the country. The pictures shocked the world and gave new strength to the campaign for self-determination. Today 12 November is National Youth Day, and people gather at the cemetery to pray and remember."
+   },
+   "tips": {
+    "tet": "Ne'e semitériu no fatin tristeza nian: la'o hakmatek, keta sa'e iha rate leten, no husu lisensa molok foti foto ba ema. Iha 12 Novembru iha serimónia no ema barak.",
+    "pt": "É um cemitério e um lugar de luto: ande em silêncio, não suba às campas e peça licença antes de fotografar pessoas. A 12 de novembro há cerimónias e muita gente.",
+    "id": "Ini pemakaman dan tempat duka: berjalanlah dengan tenang, jangan naik ke atas makam dan mintalah izin sebelum memotret orang. Pada 12 November ada upacara dan kerumunan besar.",
+    "en": "This is a cemetery and a place of grief: walk quietly, do not climb on graves and ask before photographing people. On 12 November there are ceremonies and large crowds."
+   },
+   "illustration": "memorial",
+   "wiki": {
+    "en": "Santa Cruz massacre",
+    "pt": "Massacre de Santa Cruz"
+   },
+   "quiz": [
+    {
+     "q": {
+      "tet": "Masakre Santa Cruz akontese iha loron saida?",
+      "pt": "Em que data aconteceu o massacre de Santa Cruz?",
+      "id": "Kapan pembantaian Santa Cruz terjadi?",
+      "en": "On which date did the Santa Cruz massacre happen?"
+     },
+     "options": [
+      {
+       "tet": "28 Novembru 1975",
+       "pt": "28 de novembro de 1975",
+       "id": "28 November 1975",
+       "en": "28 November 1975"
+      },
+      {
+       "tet": "12 Novembru 1991",
+       "pt": "12 de novembro de 1991",
+       "id": "12 November 1991",
+       "en": "12 November 1991"
+      },
+      {
+       "tet": "30 Agostu 1999",
+       "pt": "30 de agosto de 1999",
+       "id": "30 Agustus 1999",
+       "en": "30 August 1999"
+      },
+      {
+       "tet": "20 Maiu 2002",
+       "pt": "20 de maio de 2002",
+       "id": "20 Mei 2002",
+       "en": "20 May 2002"
+      }
+     ],
+     "answer": 1,
+     "why": {
+      "tet": "Soldadu Indonézia tiru ba ema iha semitériu Santa Cruz iha 12 Novembru 1991. Ohin loron data ne'e mak Loron Nasionál Joventude nian.",
+      "pt": "As tropas indonésias dispararam sobre a procissão no cemitério de Santa Cruz a 12 de novembro de 1991; a data é hoje o Dia Nacional da Juventude.",
+      "id": "Tentara Indonesia menembaki pelayat di pemakaman Santa Cruz pada 12 November 1991; tanggal itu kini Hari Pemuda Nasional.",
+      "en": "Indonesian troops fired on mourners at Santa Cruz cemetery on 12 November 1991; the date is now National Youth Day."
+     },
+     "difficulty": 4
+    },
+    {
+     "q": {
+      "tet": "Jornalista ida-ne'ebé mak filma masakre Santa Cruz no halo mundu tomak haree imajen sira?",
+      "pt": "Que jornalista filmou o massacre de Santa Cruz e deu a conhecer as imagens ao mundo?",
+      "id": "Jurnalis mana yang merekam pembantaian Santa Cruz dan membuat gambarnya dikenal di seluruh dunia?",
+      "en": "Which journalist filmed the Santa Cruz massacre and made the pictures known around the world?"
+     },
+     "options": [
+      {
+       "tet": "Max Stahl",
+       "pt": "Max Stahl",
+       "id": "Max Stahl",
+       "en": "Max Stahl"
+      },
+      {
+       "tet": "Roger East",
+       "pt": "Roger East",
+       "id": "Roger East",
+       "en": "Roger East"
+      },
+      {
+       "tet": "Greg Shackleton",
+       "pt": "Greg Shackleton",
+       "id": "Greg Shackleton",
+       "en": "Greg Shackleton"
+      },
+      {
+       "tet": "Sérgio Vieira de Mello",
+       "pt": "Sérgio Vieira de Mello",
+       "id": "Sérgio Vieira de Mello",
+       "en": "Sérgio Vieira de Mello"
+      }
+     ],
+     "answer": 0,
+     "why": {
+      "tet": "Max Stahl mak filma tiru ne'e, no ema lori kasete ba rai-li'ur ho subar. Roger East no Greg Shackleton mak jornalista ne'ebé mate iha 1975, no Sérgio Vieira de Mello mak lidera tranzisaun ONU nian.",
+      "pt": "Max Stahl filmou os disparos e a cassete saiu do país às escondidas. Roger East e Greg Shackleton foram jornalistas mortos em 1975, e Sérgio Vieira de Mello dirigiu a transição da ONU.",
+      "id": "Max Stahl merekam penembakan itu dan kasetnya diselundupkan ke luar negeri. Roger East dan Greg Shackleton adalah jurnalis yang dibunuh pada 1975, dan Sérgio Vieira de Mello memimpin transisi PBB.",
+      "en": "Max Stahl filmed the shooting; the tape was smuggled abroad. Roger East and Greg Shackleton were journalists killed in 1975, and Sérgio Vieira de Mello led the UN transition."
+     },
+     "difficulty": 11
+    }
+   ],
+   "related": [
+    "mun.dili",
+    "place.motael_church",
+    "tl.conflicts.santa_cruz_1991",
+    "day.youth",
+    "tl.tourism.heritage"
+   ],
+   "tags": [
+    "memorial",
+    "1991",
+    "youth",
+    "dili"
+   ],
+   "sources": [
+    {
+     "title": "Santa Cruz massacre",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Santa_Cruz_massacre",
+     "accessed": "2026-10-27",
+     "licence": "CC BY-SA 4.0"
+    },
+    {
+     "title": "The 15 best things to do in Timor-Leste",
+     "publisher": "Tripadvisor",
+     "url": "https://www.tripadvisor.com/Attractions-g295117-Activities-Timor_Leste.html",
+     "accessed": "2026-10-27",
+     "licence": "© Tripadvisor"
+    },
+    {
+     "title": "Attractions (directory of beaches, dive sites, peaks, forts, markets and sacred places)",
+     "publisher": "timorleste.tl (official tourism website of Timor-Leste)",
+     "url": "https://timorleste.tl/destinations/attractions",
+     "accessed": "2026-10-27",
+     "licence": "© publisher"
+    }
+   ],
+   "review": {
+    "status": "draft",
+    "notes": "Written on 27 Oct 2026 after the shared web-search budget ran out: facts come from the cited pages as far as seen in search results plus general knowledge; coordinates are approximate (recalled or estimated, checked only against the Lafa municipality map) — verify on OpenStreetMap/Wikipedia. Coordinates approximate (cemetery in Santa Cruz, Dili). Death toll: sources differ (Wikipedia gives at least 250; other estimates are higher) — the text keeps 'at least 250'."
+   }
+  },
+  {
+   "id": "place.motael_church",
+   "name": {
+    "tet": "Igreja Santo António Motael",
+    "pt": "Igreja de Santo António de Motael",
+    "id": "Gereja Santo Antonius Motael",
+    "en": "Motael Church (Saint Anthony of Motael)"
+   },
+   "municipality": "mun.dili",
+   "type": "church",
+   "lat": -8.5525,
+   "lon": 125.565,
+   "summary": {
+    "tet": "Igreja katólika istóriku ida iha Dili nia tasi-ibun. Iha 1991, akontesimentu iha ne'e lori ba prosisaun ne'ebé remata ho masakre Santa Cruz.",
+    "pt": "Uma igreja católica histórica na marginal de Díli. Em 1991, os acontecimentos aqui levaram à procissão que terminou no massacre de Santa Cruz.",
+    "id": "Gereja Katolik bersejarah di tepi laut Dili. Pada 1991 peristiwa di sini memicu prosesi yang berakhir dengan pembantaian Santa Cruz.",
+    "en": "A historic Catholic church on the Dili seafront. In 1991 events here led to the procession that ended in the Santa Cruz massacre."
+   },
+   "text": {
+    "tet": "Igreja Santo António Motael iha estrada tasi-ibun nian, iha Palásiu Governu nia loro-monu, besik portu no farol tuan. Motael mak parókia katólika tuan liu balu iha Dili, no ema hatene igreja ne'e, ema bele haree husi tasi. Iha tempu okupasaun, igreja ne'e fó protesaun ba joven sira husi rezisténsia klandestina. Iha 28 Outubru 1991, forsa Indonézia tama iha igreja nia rai-laran, no joven ida, Sebastião Gomes, mate. Semana rua depois, sira halo misa ba nia iha Motael. Prosisaun ne'ebé tuir misa ne'e la'o ba semitériu Santa Cruz, fatin ne'ebé masakre 12 Novembru akontese. Igreja ne'e sei sai parókia ativa to'o ohin.",
+    "pt": "A igreja de Santo António de Motael fica na estrada marginal, a oeste do Palácio do Governo, perto do porto e do antigo farol. Motael é uma das paróquias católicas mais antigas de Díli, e a igreja é um ponto de referência bem conhecido, visível do mar. Durante a ocupação, a igreja deu abrigo a jovens da resistência clandestina. A 28 de outubro de 1991, forças indonésias entraram no recinto da igreja e um jovem, Sebastião Gomes, foi morto. Duas semanas depois celebrou-se em Motael a missa em sua memória, e a procissão que se seguiu foi até ao cemitério de Santa Cruz, onde aconteceu o massacre de 12 de novembro. A igreja continua a ser uma paróquia ativa.",
+    "id": "Gereja Santo Antonius Motael berdiri di jalan tepi laut di barat Istana Pemerintah, dekat pelabuhan dan mercusuar lama. Motael adalah salah satu paroki Katolik tertua di Dili, dan gerejanya menjadi penanda yang terkenal, terlihat dari laut. Pada masa pendudukan, gereja ini melindungi anak-anak muda dari perlawanan klandestin. Pada 28 Oktober 1991 pasukan Indonesia memasuki halaman gereja, dan seorang pemuda, Sebastião Gomes, tewas. Dua minggu kemudian Misa peringatan untuknya diadakan di Motael, dan prosesi sesudahnya menuju pemakaman Santa Cruz, tempat terjadinya pembantaian 12 November. Gereja ini masih menjadi paroki yang aktif.",
+    "en": "The church of Saint Anthony of Motael stands on the waterfront road west of the Government Palace, close to the harbour and the old lighthouse. Motael is one of the oldest Catholic parishes of Dili, and its church is a well-known landmark seen from the sea. During the occupation the church gave shelter to young people of the clandestine resistance. On 28 October 1991 Indonesian forces entered the church grounds, and a young man, Sebastião Gomes, was killed. Two weeks later his memorial Mass was held at Motael, and the procession that followed went to Santa Cruz cemetery, where the massacre of 12 November took place. The church is still an active parish."
+   },
+   "tips": {
+    "tet": "Vizitante sira bele mai iha oras ne'ebé la iha misa. Hatais roupa naruk no di'ak, no nonok iha igreja laran. Bele foti foto iha li'ur; husu lisensa molok foti foto ba ema ne'ebé reza hela.",
+    "pt": "Os visitantes são bem-vindos fora das horas de missa. Vista-se com modéstia e guarde silêncio lá dentro. Pode fotografar o exterior; peça licença antes de fotografar pessoas a rezar.",
+    "id": "Pengunjung dipersilakan di luar jam Misa. Berpakaianlah sopan dan diamlah di dalam. Memotret bagian luar boleh; mintalah izin sebelum memotret orang yang sedang berdoa.",
+    "en": "Visitors are welcome outside Mass times. Dress modestly and keep silent inside. Photos of the outside are fine; ask before photographing people who are praying."
+   },
+   "illustration": "church",
+   "related": [
+    "mun.dili",
+    "place.santa_cruz_cemetery",
+    "tl.conflicts.santa_cruz_1991",
+    "tl.culture.catholic_traditions"
+   ],
+   "tags": [
+    "church",
+    "1991",
+    "dili"
+   ],
+   "sources": [
+    {
+     "title": "Santa Cruz massacre",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Santa_Cruz_massacre",
+     "accessed": "2026-10-27",
+     "licence": "CC BY-SA 4.0"
+    },
+    {
+     "title": "Faith-Based Tourism",
+     "publisher": "timorleste.tl (official tourism website of Timor-Leste)",
+     "url": "https://www.timorleste.tl/?p=17821",
+     "accessed": "2026-10-27",
+     "licence": "© publisher"
+    },
+    {
+     "title": "Dili",
+     "publisher": "timorleste.tl (official tourism website of Timor-Leste)",
+     "url": "https://timorleste.tl/destinations/dili",
+     "accessed": "2026-10-27",
+     "licence": "© publisher"
+    }
+   ],
+   "review": {
+    "status": "draft",
+    "notes": "Written on 27 Oct 2026 after the shared web-search budget ran out: facts come from the cited pages as far as seen in search results plus general knowledge; coordinates are approximate (recalled or estimated, checked only against the Lafa municipality map) — verify on OpenStreetMap/Wikipedia. Coordinates approximate (Motael, Dili waterfront). Check the age of the parish and of the present building, and that the events of 28 Oct 1991 took place in the church grounds (Wikipedia: Santa Cruz massacre)."
+   }
+  },
+  {
+   "id": "place.dili_cathedral",
+   "name": {
+    "tet": "Katedrál Imakulada Konseisaun (Dili)",
+    "pt": "Catedral da Imaculada Conceição (Díli)",
+    "id": "Katedral Maria Dikandung Tanpa Noda (Dili)",
+    "en": "Dili Cathedral (Immaculate Conception)"
+   },
+   "municipality": "mun.dili",
+   "type": "church",
+   "lat": -8.5605,
+   "lon": 125.579,
+   "summary": {
+    "tet": "Katedrál katólika boot iha Dili, ne'ebé hamahan iha Imakulada Konseisaun nia naran. Ne'e mak Arkidioseze Dili nia sede.",
+    "pt": "A grande catedral católica de Díli, dedicada à Imaculada Conceição. É a sede da Arquidiocese de Díli.",
+    "id": "Katedral Katolik besar di Dili yang dipersembahkan kepada Maria Dikandung Tanpa Noda. Katedral ini adalah pusat Keuskupan Agung Dili.",
+    "en": "The large Catholic cathedral of Dili, dedicated to the Immaculate Conception. It is the seat of the Archdiocese of Dili."
+   },
+   "text": {
+    "tet": "Katedrál Imakulada Konseisaun mak igreja katólika prinsipál iha Timór-Leste, nasaun ida ne'ebé besik povu tomak mak katóliku. Ema harii uma ne'e iha dékada 1980, iha tempu Indonézia, no ne'e mak igreja boot liu balu iha rai ne'e. Papa João Paulo II vizita katedrál ne'e iha 1989, no Papa Francisco hasoru amu sira, madre sira no katekista sira iha ne'e iha Setembru 2024. Desde 2019 Dili sai arkidioseze, no katedrál ne'e mak Arsebispu nia sede. Festa boot sira hala'o iha ne'e iha Natál, Páskoa no iha 8 Dezembru, loron Imakulada Konseisaun nian, ne'ebé mak feriadu. Vizitante sira bele tuir misa ka tama ho hakmatek entre misa sira.",
+    "pt": "A Catedral da Imaculada Conceição é a principal igreja católica de Timor-Leste, um país onde quase toda a população é católica. O edifício atual foi construído nos anos 1980, durante o período indonésio, e é uma das maiores igrejas do país. O Papa João Paulo II visitou-a em 1989, e o Papa Francisco encontrou-se aqui com padres, religiosas e catequistas em setembro de 2024. Desde 2019 Díli é arquidiocese, e a catedral é a sede do Arcebispo. Celebram-se aqui grandes festas no Natal, na Páscoa e a 8 de dezembro, dia da Imaculada Conceição, que é feriado. Os visitantes podem participar na missa ou entrar em silêncio entre as celebrações.",
+    "id": "Katedral Maria Dikandung Tanpa Noda adalah gereja Katolik utama di Timor-Leste, negeri yang hampir seluruh penduduknya beragama Katolik. Gedung yang sekarang dibangun pada tahun 1980-an, pada masa Indonesia, dan merupakan salah satu gereja terbesar di negeri ini. Paus Yohanes Paulus II mengunjunginya pada 1989, dan Paus Fransiskus bertemu para imam, biarawati dan katekis di sini pada September 2024. Sejak 2019 Dili menjadi keuskupan agung, dan katedral ini adalah takhta Uskup Agung. Perayaan besar diadakan di sini pada Natal, Paskah dan 8 Desember, hari raya Maria Dikandung Tanpa Noda, yang merupakan hari libur. Pengunjung boleh mengikuti Misa atau masuk dengan tenang di antara ibadat.",
+    "en": "The Cathedral of the Immaculate Conception is the main Catholic church of Timor-Leste, a country where almost the whole population is Catholic. The present building was built in the 1980s, during the Indonesian period, and it is one of the largest churches in the country. Pope John Paul II visited it in 1989, and Pope Francis met priests, religious sisters and catechists here in September 2024. Since 2019 Dili has been an archdiocese, and the cathedral is the seat of the Archbishop. Great celebrations take place here at Christmas, at Easter and on 8 December, the feast of the Immaculate Conception, which is a public holiday. Visitors can join Mass or come in quietly between services."
+   },
+   "tips": {
+    "tet": "Hatais roupa ne'ebé di'ak, hamate telemóvel no keta la'o-la'o bainhira misa la'o hela. Misa Domingu dadeer nian iha ema barak no kanta barak.",
+    "pt": "Vista-se com modéstia, desligue o telemóvel e não ande pela igreja durante a missa. As missas de domingo de manhã enchem-se de gente e de cânticos.",
+    "id": "Berpakaianlah sopan, matikan telepon dan jangan berjalan-jalan saat Misa. Misa Minggu pagi sangat ramai dan penuh nyanyian.",
+    "en": "Dress modestly, switch off your phone and do not walk around during Mass. Sunday morning Masses are crowded and full of singing."
+   },
+   "illustration": "church",
+   "related": [
+    "mun.dili",
+    "tl.culture.catholic_traditions",
+    "tl.society.religion",
+    "day.immaculate"
+   ],
+   "tags": [
+    "church",
+    "cathedral",
+    "dili"
+   ],
+   "sources": [
+    {
+     "title": "Faith-Based Tourism",
+     "publisher": "timorleste.tl (official tourism website of Timor-Leste)",
+     "url": "https://www.timorleste.tl/?p=17821",
+     "accessed": "2026-10-27",
+     "licence": "© publisher"
+    },
+    {
+     "title": "Roman Catholic Archdiocese of Dili",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Roman_Catholic_Archdiocese_of_Dili",
+     "accessed": "2026-10-27",
+     "licence": "CC BY-SA 4.0"
+    },
+    {
+     "title": "Dili",
+     "publisher": "timorleste.tl (official tourism website of Timor-Leste)",
+     "url": "https://timorleste.tl/destinations/dili",
+     "accessed": "2026-10-27",
+     "licence": "© publisher"
+    }
+   ],
+   "review": {
+    "status": "draft",
+    "notes": "Written on 27 Oct 2026 after the shared web-search budget ran out: facts come from the cited pages as far as seen in search results plus general knowledge; coordinates are approximate (recalled or estimated, checked only against the Lafa municipality map) — verify on OpenStreetMap/Wikipedia. Coordinates approximate (central Dili). Check the construction/inauguration date (1980s; possibly 1988), the 1989 papal visit to the cathedral, and the 2024 meeting of Pope Francis with clergy here. Check local Indonesian usage for the dedication name."
+   }
+  },
+  {
+   "id": "place.tais_market",
+   "name": {
+    "tet": "Merkadu Tais",
+    "pt": "Mercado do Tais",
+    "id": "Pasar Tais",
+    "en": "Tais Market"
+   },
+   "municipality": "mun.dili",
+   "type": "market",
+   "lat": -8.558,
+   "lon": 125.5725,
+   "summary": {
+    "tet": "Merkadu ida iha Dili nia klaran. Ema husi munisípiu hotu faan tais iha ne'e, hena ne'ebé feto sira soru ho liman, hamutuk ho lafatik, sasán husi ai no artezanatu seluk.",
+    "pt": "Um mercado no centro de Díli onde vendedores de todos os municípios oferecem tais, o pano tecido à mão de Timor, além de cestos, esculturas e outro artesanato.",
+    "id": "Pasar di pusat Dili tempat pedagang dari semua munisipalitas menjual tais, kain tenun tangan khas Timor, bersama keranjang, ukiran dan kerajinan lain.",
+    "en": "A market in central Dili where sellers from every municipality offer tais, the hand-woven cloth of Timor, together with baskets, carvings and other crafts."
+   },
+   "text": {
+    "tet": "Tais mak hena tradisionál Timór-Leste nian ne'ebé feto sira soru ho liman, ho ekipamentu simples. Rejiaun ida-idak iha ninia kór, motivu no signifikadu rasik. Iha 2021, UNESCO tau tais iha lista patrimóniu kulturál imateriál ne'ebé presiza protesaun urjente. Iha Merkadu Tais iha Dili nia klaran, fatin-faan sira nakonu ho tais ki'ik ba kakorok, tais ba hatais, bolsa no tais ba didin, husi Oe-Kusi Ambenu to'o Lautein. Dala ruma ita bele haree feto ida soru hela. Ema faan mós lafatik, sasán husi ai, jóia no lembransa seluk. Folin iha dólar Amerikanu. Sosa tais ne'ebé ema soru ho liman tulun feto sira-nia servisu no ajuda arte tuan ida atu moris nafatin.",
+    "pt": "O tais é o pano tradicional tecido à mão de Timor-Leste. As mulheres tecem-no em teares simples de cintura, e cada região tem as suas cores, padrões e significados. Em 2021 a UNESCO inscreveu o tais na lista do património cultural imaterial que precisa de salvaguarda urgente. No Mercado do Tais, no centro de Díli, as bancas estão cheias de lenços, sarongues, sacos e panos de parede, de Oé-Cusse Ambeno a Lautém, e às vezes pode ver-se uma tecedeira a trabalhar. Os vendedores também têm cestos, esculturas de madeira, joias e outras lembranças. Os preços são em dólares americanos. Comprar um tais feito à mão apoia o trabalho das mulheres e ajuda a manter viva uma arte antiga.",
+    "id": "Tais adalah kain tradisional tenunan tangan dari Timor-Leste. Kaum perempuan menenunnya dengan alat tenun gendong yang sederhana, dan setiap daerah punya warna, motif dan makna sendiri. Pada 2021 UNESCO memasukkan tais ke dalam daftar warisan budaya takbenda yang memerlukan perlindungan mendesak. Di Pasar Tais di pusat Dili, kios-kios penuh dengan selendang, sarung, tas dan hiasan dinding dari Oé-Cusse Ambeno sampai Lautém, dan kadang-kadang kita bisa melihat penenun bekerja. Para pedagang juga menjual keranjang, ukiran kayu, perhiasan dan suvenir lain. Harga dalam dolar Amerika. Membeli tais buatan tangan mendukung pekerjaan perempuan dan membantu melestarikan seni kuno.",
+    "en": "Tais is the traditional hand-woven cloth of Timor-Leste. Women weave it on simple back-strap looms, and each region has its own colours, patterns and meanings. In 2021 UNESCO added tais to its list of intangible cultural heritage in need of urgent safeguarding. At the Tais Market in central Dili, the stalls are full of scarves, sarongs, bags and wall hangings from Oé-Cusse Ambeno to Lautém, and sometimes you can watch a weaver at work. Sellers also offer baskets, wooden carvings, jewellery and other souvenirs. Prices are in US dollars. Buying a tais made by hand supports women's work and helps to keep an old art alive."
+   },
+   "tips": {
+    "tet": "Husu ba ema faan tais mai husi ne'ebé no ninia motivu katak saida. Husu menus folin ho maneira di'ak no ho hamnasa, tanba tais ida ne'ebé ema soru ho liman han semana barak. Lori osan-surat ki'ik no osan-mean.",
+    "pt": "Pergunte ao vendedor de onde vem o tais e o que significa o padrão. Regateie com educação e com um sorriso: uma peça feita à mão leva semanas de trabalho. Leve notas pequenas e moedas.",
+    "id": "Tanyakan kepada penjual dari mana tais itu berasal dan apa makna motifnya. Tawarlah dengan sopan dan tersenyum: kain buatan tangan memerlukan kerja berminggu-minggu. Bawa uang kecil dan koin.",
+    "en": "Ask the seller where a tais comes from and what its pattern means. Bargain politely and with a smile: a hand-made piece takes weeks of work. Bring small notes and coins."
+   },
+   "illustration": "market",
+   "quiz": [
+    {
+     "q": {
+      "tet": "Tais mak saida?",
+      "pt": "O que é o tais?",
+      "id": "Apa itu tais?",
+      "en": "What is tais?"
+     },
+     "options": [
+      {
+       "tet": "Hena ne'ebé ema soru ho liman",
+       "pt": "Um pano tecido à mão",
+       "id": "Kain tenunan tangan",
+       "en": "A hand-woven cloth"
+      },
+      {
+       "tet": "Hemu kafé ida",
+       "pt": "Uma bebida de café",
+       "id": "Minuman kopi",
+       "en": "A coffee drink"
+      },
+      {
+       "tet": "Uma lulik",
+       "pt": "Uma casa sagrada",
+       "id": "Rumah adat yang sakral",
+       "en": "A sacred house"
+      },
+      {
+       "tet": "Dansa tradisionál ida",
+       "pt": "Uma dança tradicional",
+       "id": "Tarian tradisional",
+       "en": "A traditional dance"
+      }
+     ],
+     "answer": 0,
+     "why": {
+      "tet": "Tais mak hena tradisionál ne'ebé feto timoroan soru ho liman. UNESCO tau iha ninia lista iha 2021.",
+      "pt": "O tais é o pano tradicional tecido à mão pelas mulheres timorenses; a UNESCO inscreveu-o em 2021.",
+      "id": "Tais adalah kain tradisional yang ditenun tangan oleh perempuan Timor; UNESCO mencatatnya pada 2021.",
+      "en": "Tais is the traditional cloth woven by hand by Timorese women; UNESCO listed it in 2021."
+     },
+     "difficulty": 2
+    }
+   ],
+   "related": [
+    "mun.dili",
+    "tl.culture.tais",
+    "tl.culture.crafts",
+    "tl.tourism.food_markets"
+   ],
+   "tags": [
+    "market",
+    "tais",
+    "crafts",
+    "dili"
+   ],
+   "sources": [
+    {
+     "title": "The 15 best things to do in Timor-Leste",
+     "publisher": "Tripadvisor",
+     "url": "https://www.tripadvisor.com/Attractions-g295117-Activities-Timor_Leste.html",
+     "accessed": "2026-10-27",
+     "licence": "© Tripadvisor"
+    },
+    {
+     "title": "Attractions (directory of beaches, dive sites, peaks, forts, markets and sacred places)",
+     "publisher": "timorleste.tl (official tourism website of Timor-Leste)",
+     "url": "https://timorleste.tl/destinations/attractions",
+     "accessed": "2026-10-27",
+     "licence": "© publisher"
+    }
+   ],
+   "review": {
+    "status": "draft",
+    "notes": "Written on 27 Oct 2026 after the shared web-search budget ran out: facts come from the cited pages as far as seen in search results plus general knowledge; coordinates are approximate (recalled or estimated, checked only against the Lafa municipality map) — verify on OpenStreetMap/Wikipedia. Coordinates approximate (central Dili; exact position not checked). Check the UNESCO inscription (2021, List of Intangible Cultural Heritage in Need of Urgent Safeguarding). Tetun weaving terms (soru tais) to be checked by a reviewer."
+   }
+  },
+  {
+   "id": "place.government_palace",
+   "name": {
+    "tet": "Palásiu Governu",
+    "pt": "Palácio do Governo",
+    "id": "Istana Pemerintah (Palácio do Governo)",
+    "en": "Government Palace (Palácio do Governo)"
+   },
+   "municipality": "mun.dili",
+   "type": "monument",
+   "lat": -8.556,
+   "lon": 125.5795,
+   "summary": {
+    "tet": "Uma boot ida husi tempu koloniál ne'ebé hateke ba tasi iha Dili nia klaran. Iha ne'e Primeiru-Ministru nia gabinete no Konsellu-Ministru.",
+    "pt": "Um grande edifício da época colonial, virado para o mar, no centro de Díli. Acolhe o gabinete do Primeiro-Ministro e o Conselho de Ministros.",
+    "id": "Bangunan besar dari masa kolonial yang menghadap laut di pusat Dili. Gedung ini menjadi kantor Perdana Menteri dan Dewan Menteri.",
+    "en": "A large colonial-era building facing the sea in the centre of Dili. It houses the office of the Prime Minister and the Council of Ministers."
+   },
+   "text": {
+    "tet": "Palásiu Governu iha Dili nia tasi-ibun, ho largu boot no jardín iha ninia oin. Portugés harii uma ne'e iha tempu koloniál nu'udar administrasaun koloniál nia sede, no iha tinan Indonézia nian uma ne'e sei sai uma importante ba governu. Iha 1999 uma ne'e aat tebes, hanesan Dili nia parte barak, no depois ema hadi'a fali. Ohin loron ne'e mak Governu nia sede: Primeiru-Ministru nia gabinete iha ne'e, no Konsellu-Ministru halo enkontru iha uma ne'e. Iha largu dala barak hala'o serimónia ofisiál no lideransa estranjeiru sira-nia vizita. Vizitante sira bele foti foto husi estrada no la'o-la'o iha tasi-ibun besik ne'e.",
+    "pt": "O Palácio do Governo fica na marginal de Díli, com uma grande praça e jardins à frente. Foi construído no período colonial português como sede da administração colonial e continuou a ser um edifício importante do governo durante os anos indonésios. Em 1999 ficou muito danificado, como grande parte de Díli, e mais tarde foi restaurado. Hoje é a sede do Governo: o Primeiro-Ministro tem aqui o seu gabinete e o Conselho de Ministros reúne-se no edifício. Na praça realizam-se muitas vezes cerimónias oficiais e visitas de líderes estrangeiros. Os visitantes podem fotografar o edifício a partir da rua e passear pela marginal ali perto.",
+    "id": "Palácio do Governo berdiri di tepi laut Dili, dengan alun-alun luas dan taman di depannya. Gedung ini dibangun pada masa kolonial Portugis sebagai pusat pemerintahan kolonial, dan tetap menjadi gedung pemerintahan penting pada masa Indonesia. Pada 1999 gedung ini rusak berat, seperti sebagian besar Dili, lalu kemudian dipugar. Kini gedung ini menjadi pusat Pemerintah: Perdana Menteri berkantor di sini, dan Dewan Menteri bersidang di gedung ini. Upacara resmi dan kunjungan pemimpin asing sering diadakan di alun-alunnya. Pengunjung dapat memotret gedung dari jalan dan berjalan-jalan di sepanjang tepi laut di dekatnya.",
+    "en": "The Palácio do Governo stands on the Dili waterfront, with a wide square and gardens in front of it. It was built in the Portuguese colonial period as the seat of the colonial administration, and it remained an important government building during the Indonesian years. In 1999 it was badly damaged, like much of Dili, and it was later restored. Today it is the seat of the Government: the Prime Minister has his office here, and the Council of Ministers meets in the building. Official ceremonies and visits by foreign leaders often take place on the square. Visitors can photograph the building from the street and walk along the seafront promenade nearby."
+   },
+   "tips": {
+    "tet": "Ne'e eskritóriu governu ne'ebé servisu hela: keta tama se la iha lisensa, no tuir guarda sira-nia orientasaun. Largu ne'e kapás iha loro-kraik.",
+    "pt": "É um edifício de trabalho do governo: não entre sem autorização e siga as indicações dos guardas. A praça é agradável ao fim da tarde.",
+    "id": "Ini kantor pemerintah yang aktif: jangan masuk tanpa izin dan ikuti petunjuk penjaga. Alun-alunnya nyaman pada sore hari.",
+    "en": "It is a working government office: do not enter without permission, and follow the instructions of the guards. The square is pleasant in the early evening."
+   },
+   "illustration": "government-palace",
+   "related": [
+    "mun.dili",
+    "tl.politics.government",
+    "tl.leaders.prime_ministers",
+    "place.dili_waterfront"
+   ],
+   "tags": [
+    "palace",
+    "government",
+    "dili"
+   ],
+   "sources": [
+    {
+     "title": "Dili",
+     "publisher": "timorleste.tl (official tourism website of Timor-Leste)",
+     "url": "https://timorleste.tl/destinations/dili",
+     "accessed": "2026-10-27",
+     "licence": "© publisher"
+    },
+    {
+     "title": "Dili",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Dili",
+     "accessed": "2026-10-27",
+     "licence": "CC BY-SA 4.0"
+    }
+   ],
+   "review": {
+    "status": "draft",
+    "notes": "Written on 27 Oct 2026 after the shared web-search budget ran out: facts come from the cited pages as far as seen in search results plus general knowledge; coordinates are approximate (recalled or estimated, checked only against the Lafa municipality map) — verify on OpenStreetMap/Wikipedia. Coordinates approximate (Dili waterfront). Check the construction date (colonial period, possibly around 1960), the 1999 damage and the restoration."
+   }
+  },
+  {
+   "id": "place.presidential_palace",
+   "name": {
+    "tet": "Palásiu Prezidensiál Nicolau Lobato",
+    "pt": "Palácio Presidencial Nicolau Lobato",
+    "id": "Istana Kepresidenan Nicolau Lobato",
+    "en": "Presidential Palace Nicolau Lobato"
+   },
+   "municipality": "mun.dili",
+   "type": "monument",
+   "lat": -8.553,
+   "lon": 125.54,
+   "summary": {
+    "tet": "Prezidente Repúblika nia sede ofisiál, iha Dili nia parte loro-monu. Palásiu ne'e iha asuwa'in rezisténsia Nicolau Lobato nia naran.",
+    "pt": "A sede oficial do Presidente da República, na zona oeste de Díli. O palácio tem o nome do herói da resistência Nicolau Lobato.",
+    "id": "Kantor resmi Presiden Republik di bagian barat Dili. Istana ini memakai nama pahlawan perlawanan Nicolau Lobato.",
+    "en": "The official seat of the President of the Republic, in western Dili. The palace carries the name of the resistance hero Nicolau Lobato."
+   },
+   "text": {
+    "tet": "Prezidente Repúblika mak xefe-estadu Timór-Leste nian, no povu mak hili nia ba tinan lima. Palásiu Prezidensiál mak fatin ne'ebé Prezidente servisu, simu embaixadór no lideransa estranjeiru, no hala'o serimónia ofisiál, hanesan tomada-de-posse Governu foun nian. Uma modernu ne'e, ho eskada luan no rai-luan boot iha oin, loke besik tinan 2009, no Xina mak tulun harii. Ninia naran mai husi Nicolau Lobato, Primeiru-Ministru iha governu ne'ebé proklama iha 1975 no depois lider FALINTIL nian. Nia mate iha funu iha 31 Dezembru 1978. Data ne'e ohin loron mak Loron Asuwa'in Nasionál sira. Dili nia aeroportu mós iha ninia naran.",
+    "pt": "O Presidente da República é o chefe de Estado de Timor-Leste e é eleito pelo povo para cinco anos. O Palácio Presidencial é onde o Presidente trabalha, recebe embaixadores e líderes estrangeiros e realiza cerimónias oficiais, como a tomada de posse de um novo Governo. O edifício moderno, com uma escadaria larga e um grande átrio, abriu por volta de 2009 e foi construído com apoio da China. Tem o nome de Nicolau Lobato, Primeiro-Ministro do governo proclamado em 1975 e mais tarde líder das FALINTIL, morto em combate a 31 de dezembro de 1978. Essa data é hoje o Dia dos Heróis Nacionais. O aeroporto de Díli também tem o seu nome.",
+    "id": "Presiden Republik adalah kepala negara Timor-Leste dan dipilih oleh rakyat untuk lima tahun. Istana Kepresidenan adalah tempat Presiden bekerja, menerima duta besar dan pemimpin asing, serta mengadakan upacara resmi seperti pelantikan Pemerintah baru. Gedung modern dengan tangga lebar dan halaman depan yang luas ini dibuka sekitar 2009 dan dibangun dengan bantuan Tiongkok. Namanya diambil dari Nicolau Lobato, Perdana Menteri dalam pemerintahan yang diproklamasikan pada 1975 dan kemudian pemimpin FALINTIL, yang gugur dalam pertempuran pada 31 Desember 1978. Tanggal itu kini Hari Pahlawan Nasional. Bandara Dili juga memakai namanya.",
+    "en": "The President of the Republic is the head of State of Timor-Leste and is elected by the people for five years. The Presidential Palace is where the President works, receives ambassadors and foreign leaders, and holds official ceremonies such as the swearing-in of a new Government. The modern building, with wide steps and a large forecourt, opened around 2009 and was built with support from China. It is named after Nicolau Lobato, Prime Minister in the government proclaimed in 1975 and later leader of FALINTIL, who was killed in combat on 31 December 1978. That date is now National Heroes Day. The airport of Dili also carries his name."
+   },
+   "tips": {
+    "tet": "Palásiu ne'e eskritóriu ida ho seguransa. Foti foto de'it husi estrada públiku, no tuir guarda sira-nia orientasaun.",
+    "pt": "O palácio é um local de trabalho com segurança. Fotografe-o apenas a partir da via pública e siga as indicações dos guardas.",
+    "id": "Istana ini adalah kantor yang dijaga ketat. Potretlah hanya dari jalan umum dan ikuti petunjuk penjaga.",
+    "en": "The palace is a working office with security. Photograph it only from the public road and follow the guards' instructions."
+   },
+   "illustration": "palace",
+   "related": [
+    "mun.dili",
+    "tl.politics.president_office",
+    "tl.leaders.nicolau_lobato",
+    "day.heroes",
+    "place.arte_moris"
+   ],
+   "tags": [
+    "palace",
+    "president",
+    "dili"
+   ],
+   "sources": [
+    {
+     "title": "Nicolau Lobato",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Nicolau_Lobato",
+     "accessed": "2026-10-27",
+     "licence": "CC BY-SA 4.0"
+    },
+    {
+     "title": "Dili",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Dili",
+     "accessed": "2026-10-27",
+     "licence": "CC BY-SA 4.0"
+    },
+    {
+     "title": "Dili Municipality",
+     "publisher": "timorleste.tl (official tourism website of Timor-Leste)",
+     "url": "https://timorleste.tl/destinations/municipalities/dili",
+     "accessed": "2026-10-27",
+     "licence": "© publisher"
+    }
+   ],
+   "review": {
+    "status": "draft",
+    "notes": "Written on 27 Oct 2026 after the shared web-search budget ran out: facts come from the cited pages as far as seen in search results plus general knowledge; coordinates are approximate (recalled or estimated, checked only against the Lafa municipality map) — verify on OpenStreetMap/Wikipedia. Coordinates approximate (western Dili; position not checked on a map). Check the opening year (around 2009), the Chinese funding and the official name of the palace."
+   }
+  },
+  {
+   "id": "place.arte_moris",
+   "name": {
+    "tet": "Arte Moris (eskola arte no galeria)",
+    "pt": "Arte Moris (escola de arte e galeria)",
+    "id": "Arte Moris (sekolah seni dan galeri)",
+    "en": "Arte Moris art school and gallery"
+   },
+   "municipality": "mun.dili",
+   "type": "museum",
+   "lat": -8.5535,
+   "lon": 125.5385,
+   "summary": {
+    "tet": "Eskola arte gratuita no galeria iha Dili, fatin ne'ebé joven timoroan sira aprende pintura, eskultura, múzika no teatru. Ninia naran katak 'arte ne'ebé moris'.",
+    "pt": "Uma escola de arte gratuita e galeria em Díli, onde jovens timorenses aprendem pintura, escultura, música e teatro. O nome quer dizer 'arte viva'.",
+    "id": "Sekolah seni gratis dan galeri di Dili tempat anak muda Timor belajar melukis, memahat, musik dan teater. Namanya berarti 'seni yang hidup'.",
+    "en": "A free art school and gallery in Dili where young Timorese learn painting, sculpture, music and theatre. Its name means 'living art'."
+   },
+   "text": {
+    "tet": "Arte Moris hahú iha 2003, la kleur depois independénsia, nu'udar fatin ida ba joven sira ne'ebé boot iha tinan konflitu nian atu estuda arte la ho selu propina. Ninia fundadór sira, artista Luca no Gabriela Gansser, servisu hamutuk ho artista timoroan sira. Pintór, eskultór no múziku barak ne'ebé ema hatene iha rai ne'e estuda iha ne'e. Eskola ne'e famozu ho pintura iha didin ho kór oin-oin, eskultura husi materiál reziklajen, no ezibisaun iha Timór-Leste no rai-li'ur. Durante tinan barak eskola ne'e iha uma muzeu uluk ida iha Comoro. Tuir vizitante foun sira, agora nia muda ba aeroportu nia torre kontrolu tuan, iha Palásiu Prezidensiál nia kotuk. Vizitante sira bele haree no sosa arte no hasoru artista sira.",
+    "pt": "A Arte Moris foi fundada em 2003, pouco depois da independência, como um lugar onde os jovens que cresceram em anos de conflito pudessem estudar arte sem pagar propinas. Os fundadores, os artistas Luca e Gabriela Gansser, trabalharam com artistas timorenses, e muitos dos pintores, escultores e músicos mais conhecidos do país estudaram aqui. A escola ficou conhecida pelos murais coloridos, pelas esculturas feitas com materiais reciclados e pelas exposições em Timor-Leste e no estrangeiro. Durante muitos anos funcionou num antigo edifício de museu em Comoro; segundo visitantes recentes, mudou-se para a antiga torre de controlo do aeroporto, atrás do Palácio Presidencial. Os visitantes podem ver e comprar obras e conhecer os artistas.",
+    "id": "Arte Moris didirikan pada 2003, tak lama setelah kemerdekaan, sebagai tempat anak muda yang tumbuh di tengah konflik bisa belajar seni tanpa membayar biaya. Pendirinya, seniman Luca dan Gabriela Gansser, bekerja bersama seniman Timor, dan banyak pelukis, pematung dan musisi terkenal negeri ini pernah belajar di sini. Sekolah ini dikenal karena mural berwarna-warni, patung dari bahan daur ulang, dan pameran di Timor-Leste maupun luar negeri. Selama bertahun-tahun sekolah ini menempati bekas gedung museum di Comoro; menurut pengunjung terbaru, kini pindah ke bekas menara kontrol bandara, di belakang Istana Kepresidenan. Pengunjung dapat melihat dan membeli karya serta bertemu para seniman.",
+    "en": "Arte Moris was founded in 2003, soon after independence, as a place where young people who had grown up in years of conflict could study art without paying fees. Its founders, the artists Luca and Gabriela Gansser, worked with Timorese artists, and many of the country's best-known painters, sculptors and musicians studied here. The school became known for its colourful murals, its sculptures made from recycled materials and its exhibitions in Timor-Leste and abroad. For many years it was based in a former museum building in Comoro; according to recent visitors it has moved to the old airport control tower, behind the Presidential Palace. Visitors can see and buy works and meet the artists."
+   },
+   "tips": {
+    "tet": "Haree enderesu no oráriu foun molok ba, tanba eskola muda ona fatin. Husu lisensa molok foti foto ba artista no sira-nia servisu. Sosa arte tulun estudante sira.",
+    "pt": "Confirme a morada e o horário atuais antes de ir, porque a escola mudou de lugar. Peça licença antes de fotografar artistas e obras; comprar arte apoia os alunos.",
+    "id": "Periksa alamat dan jam buka terbaru sebelum datang, karena sekolah ini sudah pindah. Mintalah izin sebelum memotret seniman dan karyanya; membeli karya seni mendukung para siswa.",
+    "en": "Check the current address and opening times before you go, because the school has moved. Ask before photographing artists and their work; buying art supports the students."
+   },
+   "illustration": "museum",
+   "wiki": {
+    "en": "Arte Moris"
+   },
+   "related": [
+    "mun.dili",
+    "tl.culture.arts_literature",
+    "place.presidential_palace"
+   ],
+   "tags": [
+    "art",
+    "gallery",
+    "youth",
+    "dili"
+   ],
+   "sources": [
+    {
+     "title": "Arte Moris (Tetun page)",
+     "publisher": "timorleste.tl (official tourism website of Timor-Leste)",
+     "url": "https://timorleste.tl/tet/destinations/attractions/arte-moris",
+     "accessed": "2026-10-27",
+     "licence": "© publisher"
+    },
+    {
+     "title": "The 15 best things to do in Timor-Leste",
+     "publisher": "Tripadvisor",
+     "url": "https://www.tripadvisor.com/Attractions-g295117-Activities-Timor_Leste.html",
+     "accessed": "2026-10-27",
+     "licence": "© Tripadvisor"
+    }
+   ],
+   "review": {
+    "status": "draft",
+    "notes": "Written on 27 Oct 2026 after the shared web-search budget ran out: facts come from the cited pages as far as seen in search results plus general knowledge; coordinates are approximate (recalled or estimated, checked only against the Lafa municipality map) — verify on OpenStreetMap/Wikipedia. Coordinates approximate (new location near the Presidential Palace reported by Tripadvisor reviewers; not checked on a map). Check founding year (2003), founders and current address. Wiki title 'Arte Moris' to be verified."
+   }
+  }
+ ]
+}
