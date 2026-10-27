@@ -1,7 +1,7 @@
 [Desktop Entry]
 Type=Application
-Name=LAFA Virtual Assistant
-Comment=Show the LAFA character on the Eduka-Panel
+Name=Lafa Virtual Assistant
+Comment=Lafa, the Timor-Leste guide and study buddy on the Eduka-Panel
 Exec=lafa --virtual
 Icon=lafa
 Terminal=false

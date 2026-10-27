@@ -1,21 +1,30 @@
 Package: lafa
-Version: 0.2.1
+Version: 0.3.0
 Section: education
 Priority: optional
 Architecture: all
 Installed-Size: 0
 Maintainer: Edukasaun OS <dev@edukasaun.org>
-Depends: python3 (>= 3.11), python3-pyqt5, python3-pyqt5.qtsvg, libqt5svg5, xdg-utils, libglib2.0-bin, fonts-noto-color-emoji, hicolor-icon-theme
-Recommends: edukasaun-desktop-menu (>= 0.9.24), espeak-ng, poppler-utils, papirus-icon-theme, x11-utils, network-manager-gnome, pavucontrol-qt, pcmanfm-qt, system-config-printer, screengrab, libreoffice
-Suggests: kiwix, orca, onboard, gnome-session-canberra
+Depends: python3 (>= 3.11), python3-pyqt5, python3-pyqt5.qtsvg, libqt5svg5, xdg-utils, libglib2.0-bin, hicolor-icon-theme
+Recommends: edukasaun-desktop-menu (>= 0.9.24), espeak-ng, fonts-noto-core, fonts-noto-cjk, fonts-noto-color-emoji, x11-utils, network-manager-gnome, pavucontrol-qt, pcmanfm-qt, system-config-printer, screengrab, libreoffice
+Suggests: orca, onboard
 Homepage: https://github.com/hugomonizdorego/Eduka-Lafa
-Description: Lafa - learning companion and Edukasaun OS assistant
- Lafa helps with lessons, knowledge, languages, Timor-Leste, school
- activities and using Edukasaun OS. Its main functions work without login,
- without an AI key, without a Lafa server and without internet: a local
- search of lessons (ages 5-100), the Timor-Leste atlas, Edukasaun OS guides,
- saved material and file names; practice with explanations; tasks,
- timetable, reminders and focus; read aloud with espeak-ng. Internet only
- adds sources (Wikipedia, news, weather, learning websites). The optional
- Lafa Virtual Assistant (switched on in Eduka-Settings -> Lafa-Configuration)
- is a calm crocodile from Timor-Leste on the Eduka-Panel.
+Description: Lafa - encyclopedia of Timor-Leste and virtual assistant
+ Lafa Desktop is an interactive encyclopedia of Timor-Leste, from the
+ formation of the island to 2026: history, colonial times and the
+ occupation, the State and its leaders, the flag and national symbols,
+ culture, society, economy (exports, imports, coffee, oil and gas),
+ land and nature, the 14 municipalities on an interactive map, tourist
+ places, public holidays and national days, a "millionaire" quiz, more
+ than 1000 Tetun words with their meaning in Portuguese, Indonesian,
+ English and other ASEAN and CPLP languages, and learning paths for the
+ school levels of the Ministry of Education. Texts are in Tetun,
+ Portuguese, Indonesian and English, with sources and licences.
+ .
+ Everything works offline. With internet, Lafa can download Wikipedia
+ introductions and free-licence photos for offline use, World Bank data
+ and new content (checked with SHA-256). No login, no AI, no server.
+ .
+ The optional Lafa Virtual Assistant (switched on in Eduka-Settings ->
+ Lafa-Configuration) is a Timor-Leste guide and study buddy on the
+ Eduka-Panel: daily facts, holidays, Tetun words and mini quizzes.

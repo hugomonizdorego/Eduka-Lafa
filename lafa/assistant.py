@@ -20,13 +20,13 @@ import shutil
 import time
 from datetime import datetime
 
-from .qt import (Qt, QTimer, QPointF, QRectF, QRect, QEvent, Signal, QColor, QPainter, QPainterPath, QPen, QGuiApplication, QApplication,
-                 QWidget, QFrame, QLabel, QPushButton, QVBoxLayout, QHBoxLayout, QGridLayout, QMenu, QSize, QProcess, global_point)
+from .qt import (Qt, QTimer, QPointF, QRectF, QRect, QEvent, Signal, QColor, QPainter, QPainterPath, QPen, QGuiApplication, QApplication, QIcon,
+                 QWidget, QFrame, QLabel, QPushButton, QToolButton, QSizePolicy, QVBoxLayout, QHBoxLayout, QGridLayout, QMenu, QSize, QProcess, global_point)
 from . import kb, eduka, outfits, icons, actions
 from .tips import TipChooser, Tip, welcome
 from .desk import theme
 from .desk.texts import t as tr_text, extend
-from .desk.widgets import Card, ClayIcon, SearchBox, label, button, tok_of, clear_layout, clip
+from .desk.widgets import Card, ClayIcon, SearchBox, label, button, tok_of, clear_layout, clip, scroll
 from .mascot import Character
 
 extend({
@@ -58,7 +58,7 @@ extend({
     "app_settings": ("Konfigurasaun sistema", "Definições do sistema", "Pengaturan sistem", "System settings"), "app_calculator": ("Kalkuladora", "Calculadora", "Kalkulator", "Calculator"),
     "app_editor": ("Editór testu", "Editor de texto", "Editor teks", "Text editor"), "app_writer": ("LibreOffice", "LibreOffice", "LibreOffice", "LibreOffice"),
     "app_screenshot": ("Foti ekrã", "Captura de ecrã", "Tangkapan layar", "Screenshot"), "app_sound": ("Som / volume", "Som / volume", "Suara / volume", "Sound / volume"),
-    "app_network": ("Wi-Fi / rede", "Wi-Fi / rede", "Wi-Fi / jaringan", "Wi-Fi / network"), "app_printer": ("Imprimidora", "Impressora", "Pencetak", "Printer"),
+    "app_network": ("Wi-Fi / rede", "Wi-Fi / rede", "Wi-Fi / jaringan", "Wi-Fi / network"), "app_printer": ("Impresora", "Impressora", "Pencetak", "Printer"),
 })
 
 OUTFIT_NAMES = {"casual": ("Kazuál aprende", "Casual de estudo", "Santai belajar", "Casual study"), "traditional": ("Tais Mane", "Tais Mane", "Tais Mane", "Tais Mane"),
@@ -66,7 +66,7 @@ OUTFIT_NAMES = {"casual": ("Kazuál aprende", "Casual de estudo", "Santai belaja
 PET_SIZES = {"small": 132, "normal": 176, "large": 220}
 WALK_SPEED = {"slow": 38.0, "normal": 58.0, "fast": 92.0}          # pixels per second
 ANIMATION_RATES = {"slow": 0.6, "normal": 1.0, "fast": 1.6}
-POPUP_WIDTH = 392
+POPUP_WIDTH = 420
 # Calm, useful activities (the Timor-Leste guide studies, reads, thinks and dances tebe).
 CALM = {"idle", "reading", "thinking", "studying", "sitting", "stretching", "tebe", "bidu", "talking", "lecture", "professor", "report",
         "presentation", "speech_prep", "sightseeing", "hangout", "snack", "eating", "gaming", "ceremony", "meeting"}
@@ -180,10 +180,13 @@ class Companion(QWidget):
         self.tok = theme.tokens(self.dark())
         self.setWindowFlags(Qt.Tool | Qt.FramelessWindowHint | Qt.WindowStaysOnTopHint); self.setAttribute(Qt.WA_TranslucentBackground)
         self.setWindowTitle("Lafa Virtual Assistant")
-        layout = QVBoxLayout(self); layout.setContentsMargins(8, 8, 8, 8); layout.setSpacing(10)
-        self.popup = Card(14, 26); self.popup.setFixedWidth(POPUP_WIDTH); layout.addWidget(self.popup); self.build_popup()
+        # The popup opens beside Lafa (fits 1366×768 school screens); its content scrolls on smaller ones.
+        layout = QHBoxLayout(self); layout.setContentsMargins(8, 8, 8, 8); layout.setSpacing(14)
+        self.popup = Card(10, 26); self.popup.setFixedWidth(POPUP_WIDTH)
+        self.inner = QWidget(); self.inner_box = QVBoxLayout(self.inner); self.inner_box.setContentsMargins(4, 4, 4, 4)
+        self.scroller = scroll(self.inner); self.popup.box.addWidget(self.scroller); layout.addWidget(self.popup, 0, Qt.AlignBottom); self.build_popup()
         self.pet = Character(atlas, self, size=PET_SIZES.get(settings.character_size, 176)); self.pet.costume = settings.costume
-        layout.addWidget(self.pet, 0, Qt.AlignRight)
+        layout.addWidget(self.pet, 0, Qt.AlignBottom | Qt.AlignRight)
         self.balloon = Balloon(self); self.balloon.action.connect(self.follow); self.balloon.clicked.connect(lambda: self.show_bubble())
         self.balloon.answered.connect(self.quiz_answered)
         self.idle_timer = QTimer(self); self.idle_timer.setInterval(1000); self.idle_timer.timeout.connect(self.choose_idle)
@@ -205,19 +208,22 @@ class Companion(QWidget):
     def timer(self): return self.pet.timer
     def compact_size(self): return (self.pet.width() + 16, self.pet.height() + 16)
     def expanded_size(self):
-        """Popup + Lafa, sized for the wrapped texts at the popup's width (never squashed), within the screen."""
+        """Popup beside Lafa: the popup is as tall as its wrapped text needs (it scrolls only when the screen is too small)."""
         screen = (self.screen().availableGeometry() if hasattr(self, "screen") and self.screen() else QGuiApplication.primaryScreen().availableGeometry())
-        self.popup.layout().activate()
-        h = self.popup.heightForWidth(POPUP_WIDTH) if self.popup.hasHeightForWidth() else -1
-        if h <= 0: self.popup.adjustSize(); h = self.popup.sizeHint().height()
-        return (max(POPUP_WIDTH + 16, self.pet.width() + 16), min(h + 10 + self.pet.height() + 16 + 4, screen.height() - 8))
+        margins = self.popup.box.contentsMargins(); width = POPUP_WIDTH - margins.left() - margins.right()
+        self.inner_box.activate()
+        need = self.inner.heightForWidth(width) if self.inner.hasHeightForWidth() else -1
+        if need <= 0: need = self.inner.sizeHint().height()
+        height = min(need + margins.top() + margins.bottom() + 4, screen.height() - 24)
+        self.popup.setFixedHeight(max(160, height))
+        return (POPUP_WIDTH + 14 + self.pet.width() + 16, max(self.popup.height(), self.pet.height()) + 16)
     def mark_activity(self): self.popup_deadline = 0; self.last_activity = self.clock(); self.last_idle_change = self.last_activity
     # ----------------------------------------------------------------- popup
     def build_popup(self):
-        box = self.popup.box; box.setSpacing(10)
+        box = self.inner_box; box.setSpacing(10)
         self.header = Card(12, 20, gradient=(self.tok["nav_a"], self.tok["primary"], self.tok["nav_b"]))
         row = QHBoxLayout(); row.setSpacing(10); self.face = QLabel(); row.addWidget(self.face, 0, Qt.AlignBottom)
-        names = QVBoxLayout(); names.setSpacing(0); self.hello = label("", "h3", wrap=True); self.hello.setStyleSheet("color:white;")
+        names = QVBoxLayout(); names.setSpacing(2); self.hello = label("", "h3", wrap=True); self.hello.setStyleSheet("color:white;"); self.hello.setMinimumWidth(10)
         self.role = label("", "caption", wrap=True); self.role.setStyleSheet("color:rgba(255,255,255,0.9);"); names.addWidget(self.hello); names.addWidget(self.role)
         self.status = label("", "caption"); self.status.setStyleSheet("color:white; background:rgba(255,255,255,0.2); border-radius:9px; padding:2px 8px;"); names.addWidget(self.status, 0, Qt.AlignLeft)
         row.addLayout(names, 1)
@@ -230,10 +236,11 @@ class Companion(QWidget):
         grid = QGridLayout(); grid.setSpacing(8); self.tiles = {}
         for i, (key, icon_name, accent_key) in enumerate((("continue", "book-open", "violet"), ("quiz", "trophy", "butter"), ("words", "translate", "mint"),
                                                           ("map", "map", "teal"), ("calendar", "calendar-check", "rose"), ("pc", "monitor-help", "sky"))):
-            tile = QPushButton(); tile.setObjectName("chip"); tile.setCursor(Qt.PointingHandCursor); tile.setMinimumHeight(58)
-            tile.setIcon(icons.icon(icon_name, theme.accent(accent_key)[0])); tile.setIconSize(QSize(22, 22))
+            tile = QToolButton(); tile.setToolButtonStyle(Qt.ToolButtonTextUnderIcon); tile.setCursor(Qt.PointingHandCursor)
+            tile.setIcon(QIcon(theme.clay_icon(icon_name, theme.accent(accent_key)[0], 30))); tile.setIconSize(QSize(30, 30))
+            tile.setSizePolicy(QSizePolicy.Ignored, QSizePolicy.Fixed); tile.setMinimumHeight(70); tile.setProperty("tile", True)
             tile.clicked.connect(lambda checked=False, k=key: self.tile(k)); grid.addWidget(tile, i // 3, i % 3); self.tiles[key] = tile
-        box.addLayout(grid)
+        box.addLayout(grid); self.style_tiles()
         foot = QHBoxLayout(); foot.setSpacing(6)
         self.desk_button = button("", self.open_requested.emit, "primary", "monitor"); foot.addWidget(self.desk_button, 1)
         self.voice_button = button("", self.read_tip, "icon", "speaker"); self.voice_button.setFixedSize(38, 38); foot.addWidget(self.voice_button)
@@ -241,10 +248,18 @@ class Companion(QWidget):
         self.quiet_button = button("", None, "icon", "moon"); self.quiet_button.setCheckable(True); self.quiet_button.setFixedSize(38, 38); self.quiet_button.toggled.connect(self.set_quiet); foot.addWidget(self.quiet_button)
         self.config_button = button("", self.settings_requested.emit, "icon", "settings"); self.config_button.setFixedSize(38, 38); foot.addWidget(self.config_button)
         box.addLayout(foot)
-    def retranslate(self):
+    def style_tiles(self):
+        t = self.tok
+        for tile in getattr(self, "tiles", {}).values():
+            tile.setStyleSheet(f"QToolButton {{ background:{t['input']}; border:2px solid {t['line']}; border-radius:16px; padding:6px 4px; font-weight:700; color:{t['text']}; }}"
+                               f"QToolButton:hover {{ border-color:{t['primary']}; }} QToolButton:focus {{ border-color:{t['focus']}; }}")
+    def refresh_header(self):
+        """Greeting by the time of day (morning, afternoon, evening) and the online state."""
         t = self.t; name = self.settings.learner_name or first_name() or t("learner")
-        self.hello.setText(t("va_hello", greet=t(greeting_key(datetime.now().hour)), name=name)); self.role.setText(t("va_role"))
+        self.hello.setText(t("va_hello", greet=t(greeting_key(datetime.now().hour)), name=name) if self.settings.greet_by_time else f"Lafa · {name}")
         self.status.setText("● " + (t("online") if self.online else t("offline")))
+    def retranslate(self):
+        t = self.t; self.refresh_header(); self.role.setText(t("va_role"))
         self.face.setPixmap(self.atlas.pose_pixmap(self.settings.costume, 64)); self.close_button.setToolTip(t("close"))
         self.ask.setPlaceholderText(t("va_ask")); self.ask.setAccessibleName(t("va_ask")); self.more_button.setText(t("va_more_tips"))
         for key, b in self.tiles.items(): b.setText(t("va_tile_" + key)); b.setAccessibleName(t("va_tile_" + key))
@@ -260,7 +275,7 @@ class Companion(QWidget):
         if self.pet.costume != self.settings.costume:
             self.pet.costume = self.settings.costume
             if self.state not in self.activity_choices() + ["walking", "talking", "idle", "greeting"]: self.set_state("idle")
-        self.tok = theme.tokens(self.dark()); self.header.gradient = (self.tok["nav_a"], self.tok["primary"], self.tok["nav_b"]); self.header.update(); self.popup.update()
+        self.tok = theme.tokens(self.dark()); self.header.gradient = (self.tok["nav_a"], self.tok["primary"], self.tok["nav_b"]); self.header.update(); self.popup.update(); self.style_tiles()
         self.setFixedSize(*(self.expanded_size() if self.popup.isVisible() else self.compact_size()))
         if self.isVisible() and not self.popup.isVisible(): self.snap_to_panel()
         self.retranslate(); self.update_mask()
@@ -333,7 +348,7 @@ class Companion(QWidget):
     def show_bubble(self, text=None):
         if not self.settings.companion: return
         if self.tip is None: self.next_tip()
-        self.balloon.hide(); self.walk_target = None
+        self.refresh_header(); self.balloon.hide(); self.walk_target = None
         if self.state == "walking": self.set_state("idle")
         anchor = self.geometry().bottomRight(); self.popup.show(); self.setFixedSize(*self.expanded_size())
         self.place_near(anchor); self.update_mask(); self.mark_activity(); self.show(); self.raise_(); self.pet.gesture("wave")
@@ -359,7 +374,7 @@ class Companion(QWidget):
             was_visible = self.isVisible(); self.show(); self.pet.animate(not self.paused)
             if not was_visible: self.snap_to_panel()
             if not self.paused:
-                for timer in (self.idle_timer, self.walk_timer): timer.start() if not timer.isActive() else None
+                if not self.idle_timer.isActive(): self.idle_timer.start()
                 if QGuiApplication.platformName() == "xcb" and not self.fullscreen_timer.isActive(): self.fullscreen_timer.start()
                 if not self.introduced:
                     self.introduced = True; self.set_state("greeting")
@@ -404,12 +419,12 @@ class Companion(QWidget):
         target = random.randint(left, right)
         if abs(target - self.x()) < 120: target = left if self.x() - left > right - self.x() else right
         self.walk_target = target; self.pos_x = float(self.x()); self.direction = 1 if target > self.x() else -1; self.pet.direction = self.direction
-        self.set_state("walking"); self.last_idle_change = self.clock(); self.last_step = self.clock()
+        self.set_state("walking"); self.last_idle_change = self.clock(); self.last_step = self.clock(); self.walk_timer.start()
     def walk(self):
         """Smooth walking: moves by speed × time (60 updates a second), easing out at the end."""
         now = self.clock(); dt = min(0.1, max(0.0, now - self.last_step)); self.last_step = now
-        if (self.paused or not self.settings.companion or self.state != "walking" or not self.settings.roam or self.drag or self.hovered
-                or self.popup.isVisible() or QGuiApplication.platformName() != "xcb" or self.walk_target is None): return
+        if self.state != "walking" or self.walk_target is None or self.paused or not self.settings.companion: self.walk_timer.stop(); return
+        if not self.settings.roam or self.drag or self.hovered or self.popup.isVisible() or QGuiApplication.platformName() != "xcb": return
         rect = self.panel_rect(); speed = WALK_SPEED.get(self.settings.walk_speed, 58.0) * ANIMATION_RATES.get(self.settings.animation_speed, 1.0)
         if self.pos_x is None: self.pos_x = float(self.x())
         left = self.walk_target - self.pos_x; distance = abs(left)
@@ -490,9 +505,10 @@ class Companion(QWidget):
         menu.exec_(event.globalPos()) if hasattr(menu, "exec_") else menu.exec(event.globalPos())
     def paintEvent(self, event):
         if not self.popup.isVisible(): return
+        # A small tail from the popup towards Lafa's head.
         p = QPainter(self); p.setRenderHint(QPainter.Antialiasing); p.setPen(Qt.NoPen); p.setBrush(QColor(self.tok["glass_solid"]))
-        y = self.popup.geometry().bottom() - 8; x = self.width() - self.pet.width() * 0.45
-        path = QPainterPath(); path.moveTo(x - 12, y); path.lineTo(x + 12, y); path.lineTo(x + 2, y + 16); path.closeSubpath(); p.drawPath(path)
+        g = self.popup.geometry(); x = g.right() - 6; y = max(g.top() + 40, self.pet.geometry().top() + self.pet.height() * 0.3)
+        path = QPainterPath(); path.moveTo(x, y - 12); path.lineTo(x + 18, y + 2); path.lineTo(x, y + 12); path.closeSubpath(); p.drawPath(path)
     def hideEvent(self, event): self.balloon.hide(); super().hideEvent(event)
     def closeEvent(self, event):
         app = QApplication.instance()

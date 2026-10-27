@@ -1,109 +1,61 @@
-# Developing LAFA
+# Developing Lafa 0.3
 
-LAFA is developed in small, tested steps so each version can be checked and
-improved in the next one. Source, comments and developer documentation are in
-English; the interface is translated (English, Indonesian, Portuguese, Tetun).
-
-## Set up
+## Run from the source tree
 
 ```bash
-# Same stack as Edukasaun OS (Debian 13): system PyQt5
-sudo apt install python3-pyqt5 libqt5svg5 python3-pytest papirus-icon-theme fonts-noto-color-emoji
-LAFA_QT=pyqt5 python3 -m lafa.app --review      # or: python3 -c "from lafa.app import main; main()" --review
-
-# Or PySide6 in a virtual environment
-python3 -m venv .venv && .venv/bin/pip install -e . pytest
-LAFA_QT=pyside6 .venv/bin/python -m lafa.app --review
+python3 -m lafa.app                 # PyQt5 (as on Edukasaun OS)
+LAFA_QT=pyside6 python3 -m lafa.app # PySide6 (pip install PySide6)
+python3 -m lafa.app --review        # sample learner, nothing saved or sent
 ```
 
-`--review` makes no network calls and writes no preferences or homework.
-
-## Every change
-
-1. Work on a branch; keep changes small.
-2. Run the tests on **both** Qt bindings:
-   ```bash
-   LAFA_QT=pyqt5   QT_QPA_PLATFORM=offscreen python3 -m pytest -q
-   LAFA_QT=pyside6 QT_QPA_PLATFORM=offscreen .venv/bin/python -m pytest -q
-   ```
-3. Regenerate and look at the screenshots after any UI change:
-   ```bash
-   QT_QPA_PLATFORM=offscreen python3 scripts/capture-screenshots.py
-   ```
-   With an Eduka-Desktop checkout, the script also captures the real
-   Eduka-Settings with Lafa-Configuration:
-   `EDUKA_DESKTOP_SRC=/path/to/Eduka-Desktop python3 scripts/capture-screenshots.py`.
-4. Add a line under `## Unreleased` in `CHANGELOG.md`.
-
-CI (`.github/workflows/ci.yml`) repeats this on every push: tests on PyQt5 and
-PySide6, version check, `.deb` build, `apt install` of the package and the
-screenshots (downloadable as workflow artifacts).
-
-## Where things live
-
-| Area | Files |
-|---|---|
-| Qt binding (PyQt5 / PySide6) | `lafa/qt.py` — always import Qt names from here |
-| Eduka-Desktop compatibility | `lafa/eduka.py` (language, panel, theme, notifications, agenda) |
-| Virtual Assistant | `lafa/mascot.py`, `lafa/personality.py`, `lafa/outfits.py` |
-| Outfit art | `tools/make-outfits.py` → `lafa/assets/lafa-{tuxedo,casual,tais}.png` |
-| Lafa Desktop | `lafa/app.py`, `lafa/school.py`, `lafa/classroom.py` (lessons, practice, results), `lafa/osguide.py`, `lafa/learning.py` |
-| Timor-Leste content | `lafa/timorleste.py` (timeline, holidays), `lafa/timor_atlas.py` (atlas topics, leaders, municipalities), `lafa/livefacts.py` (online refresh) |
-| Learning sources | `lafa/sources.py` (from the Edukasaun OS directory; add sites here or in the online catalog) |
-| Lessons for ages 5–100 | `lafa/assets/curriculum/<subject>.json` (run `python3 tools/check-curriculum.py`), loader `lafa/curriculum.py` |
-| Local search | `lafa/search.py` (understand a request, label results, answer / choices / none), index in `lafa/memory.py`; UI `build_search_panel` / `show_outcome` in `lafa/app.py` |
-| Sections and routes | `PAGES`, `TABS`, `ROUTES` at the top of `lafa/app.py` (old page names → section and tab) |
-| Reminders, progress | `lafa/reminders.py` (saved, fire offline, missed once), `lafa/progress.py` (last material, favourites) |
-| Source metadata | `lafa/source_meta.py` (languages, topics, level, access, reason, academic) |
-| Offline guarantees | `tests/test_offline_first.py`, [OFFLINE.md](OFFLINE.md) |
-| Agent actions | `lafa/actions.py` (apps allowlist `APPS`, page words `PAGES`) |
-| Character movement | `lafa/motion.py`, painting in `Character.paintEvent` (`lafa/mascot.py`) |
-| Offline mode & language school | `lafa/offline.py`, `lafa/recommendations.py`, `lafa/languages.py` |
-| Look and feel | `lafa/ui_kit.py` (palette, tiles, ring) and `STYLE_TEMPLATE` in `lafa/app.py` — colours come from the Eduka theme |
-| LAFA's roles | `lafa/roles.py`, role texts in `lafa/personality.py`, scenes in `lafa/outfits.py` |
-| Lafa-Configuration (Eduka-Settings) | `integration/eduka_lafa_settings.py`, `integration/lafa-page.json` |
-| Eduka-Settings plugin pages | `integration/eduka-settings-plugin-pages.patch` (apply to Eduka-Desktop) |
-| Online source catalog | `lafa/assets/catalog.json`, `lafa/updates.py` |
-| Translations | `lafa/i18n.py`, 0.2.0 wording in `lafa/i18n_v2.py` (`key | en | id | pt | tet` rows; four languages required) (+ texts in `personality.py`, `school.py`, `osguide.py`) |
-| Debian package | `packaging/`, `tools/build-deb.sh` |
-
-## Improving the character art
-
-The Tuxedo, Casual and extra Tais Mane sheets are generated from the original
-illustrations (`python3 tools/make-outfits.py`, needs numpy and Pillow). Body
-garment shapes per pose (shirt, sleeves, trousers or shorts, shoes, and skin that stays bare) are in `POSES` in that script; `--preview` writes `build/outfits-preview.png` with every pose in every outfit. Hand-drawn art can replace
-any sheet: keep the file name and the JSON format (`canvas`, `states`,
-`rects`), and LAFA uses it without code changes.
-
-## Updating learning sources without a release
-
-Edit `lafa/assets/catalog.json` (links, teacher resources, Timor-Leste cards,
-tips, desktop tool names), increase `revision` (`YYYYMMDDNN`) and merge to
-`main`. Installed LAFA downloads it within `update_hours` (default 24 h),
-validates it and merges it. Only HTTPS links and plain text are accepted.
-
-## Releasing a new version
+## Tests and checks
 
 ```bash
-python3 tools/release.py patch        # or minor / major / set X.Y.Z
-LAFA_QT=pyqt5 QT_QPA_PLATFORM=offscreen python3 -m pytest -q
-QT_QPA_PLATFORM=offscreen python3 scripts/capture-screenshots.py
-sh tools/build-deb.sh                 # dist/lafa_X.Y.Z_all.deb
-git commit -am "Release X.Y.Z" && git tag vX.Y.Z && git push --tags
+LAFA_QT=pyqt5   QT_QPA_PLATFORM=offscreen python3 -m pytest -q
+LAFA_QT=pyside6 QT_QPA_PLATFORM=offscreen python3 -m pytest -q
+python3 tools/check-content.py [content/<file>.json | vocab/<file>.json] [--strict]
+python3 scripts/check-system.py [--network] [--json]
 ```
 
-The release workflow builds the `.deb` and attaches it to a GitHub release.
-Users receive the new version through APT / the Eduka Update Service; Lafa
-itself never checks for or installs program updates.
+The tests cover the content (sources, quizzes, four languages, map links,
+vocabulary), the knowledge base, progress, the millionaire game, tips, the
+offline store and the update channel (with a fake network), settings
+migration, the interface texts, every page in every language, items of every
+kind, the quiz game, the word page, settings, school levels, small screens
+and the Virtual Assistant.
 
-## Installing on Edukasaun OS (Cubic or a running system)
+## Content
+
+* Format: [CONTENT-SCHEMA.md](CONTENT-SCHEMA.md). Tetun: [TETUN-STYLE.md](TETUN-STYLE.md).
+* Planned ids and categories: `lafa/assets/timor/plan.json`.
+* Add or fix an article: edit the JSON (with Python, `ensure_ascii=False`),
+  run `tools/check-content.py`, then `tools/make-manifest.py` so installed
+  copies receive the change through *Konteúdu foun*.
+* Every item needs at least two `https://` sources with `accessed`, a
+  `review` object and four languages. Quiz `difficulty` 1–15 is the step of
+  the millionaire ladder.
+
+## Generators
+
+| Tool | Makes |
+| --- | --- |
+| `tools/make-fonts.py` | Nunito static fonts |
+| `tools/make-map.py` | Municipality and post map JSON from geoBoundaries (cached in `build/geo`) |
+| `tools/make-icons.py` | SVG icons |
+| `tools/make-illustrations.py` | SVG illustrations + manifest |
+| `tools/make-poses.py` | Waving outfit poses from the owner's design sheet |
+| `tools/make-outfits.py`, `tools/make-walk.py` | Outfit sheets and the walk cycle |
+| `tools/make-manifest.py` | `manifest.json` for content updates |
+| `scripts/capture-screenshots.py` | `docs/screenshots/*.png` |
+
+## Release
 
 ```bash
-sudo apt update
-sudo apt install ./lafa_X.Y.Z_all.deb   # dependencies come from Debian
+python3 tools/release.py minor      # or patch / set X.Y.Z (updates version and changelog)
+python3 tools/make-manifest.py
+python3 -m pytest -q                # both bindings
+python3 scripts/capture-screenshots.py
+sh tools/build-deb.sh               # dist/lafa_<version>_all.deb
 ```
 
-For Lafa-Configuration inside Eduka-Settings, Eduka-Desktop needs the plugin
-pages patch (`/usr/share/doc/lafa/eduka-settings-plugin-pages.patch`). Without
-it, the menu entry "Lafa-Configuration" opens LAFA's own settings window with
-the same options.
+Tag `v<version>`; the release workflow builds and publishes the `.deb`.

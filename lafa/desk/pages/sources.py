@@ -10,7 +10,7 @@ from ..texts import extend
 from ..widgets import Card, ClayIcon, Pill, ResponsiveGrid, FlowLayout, SearchBox, label, button, scroll, section_title, clear_layout
 
 extend({
-    "src_title": ("Fontes, lisensa no kréditu", "Fontes, licenças e créditos", "Sumber, lisensi dan kredit", "Sources, licences and credits"),
+    "src_title": ("Fonte, lisensa no kréditu", "Fontes, licenças e créditos", "Sumber, lisensi dan kredit", "Sources, licences and credits"),
     "src_sub": ("Lafa hakerek ninia testu rasik bazeia ba fonte sira ne'e. Obrigadu barak ba autór no organizasaun hotu ne'ebé fahe koñesimentu kona-ba Timór-Leste.",
                 "O Lafa escreve os seus próprios textos com base nestas fontes. Muito obrigado a todos os autores e organizações que partilham conhecimento sobre Timor-Leste.",
                 "Lafa menulis teksnya sendiri berdasarkan sumber-sumber ini. Terima kasih kepada semua penulis dan lembaga yang berbagi pengetahuan tentang Timor-Leste.",
@@ -25,7 +25,7 @@ extend({
     "no_photos": ("Seidauk iha foto. Uza “Offline no atualizasaun” atu download foto ho lisensa livre husi Wikimedia Commons.", "Ainda não há fotos. Use “Offline e atualizações” para descarregar fotos de licença livre do Wikimedia Commons.",
                   "Belum ada foto. Gunakan “Luring dan pembaruan” untuk mengunduh foto berlisensi bebas dari Wikimedia Commons.", "No photos yet. Use “Offline and updates” to download free-licence photos from Wikimedia Commons."),
     "visit": ("Vizita", "Visitar", "Kunjungi", "Visit"),
-    "copyright_note": ("Fonte ho © la kopia: Lafa uza de'it fatus no hakerek ho liafuan rasik, no hatudu fonte.", "Fontes com © não são copiadas: o Lafa usa só factos, escreve com palavras próprias e cita a fonte.",
+    "copyright_note": ("Fonte ho © la kopia: Lafa uza de'it faktu no hakerek ho liafuan rasik, no hatudu fonte.", "Fontes com © não são copiadas: o Lafa usa só factos, escreve com palavras próprias e cita a fonte.",
                        "Sumber ber-© tidak disalin: Lafa hanya memakai fakta, menulis dengan kata-kata sendiri, dan mencantumkan sumber.", "Sources marked © are not copied: Lafa only uses facts, writes in its own words and cites the source."),
 })
 
@@ -39,7 +39,7 @@ MAIN_SOURCES = [
     ("Timor-Leste Tourism", "https://timorleste.tl/", "© Timor-Leste tourism", "umbrella", "cyan",
      ("Informasaun turizmu ofisiál.", "Informação turística oficial.", "Informasi pariwisata resmi.", "Official tourism information.")),
     ("MAF Timor-Leste Fact File", "https://timorleste.mafint.org/maf-timor-leste/fact-file", "© MAF", "leaf", "green",
-     ("Fatus kona-ba agrikultura, rai no klima.", "Factos sobre agricultura, terra e clima.", "Fakta pertanian, lahan dan iklim.", "Facts on farming, land and climate.")),
+     ("Faktu kona-ba agrikultura, rai no klima.", "Factos sobre agricultura, terra e clima.", "Fakta pertanian, lahan dan iklim.", "Facts on farming, land and climate.")),
     ("Timor Research", "http://timor-research.org/about-timor-leste", "© Timor Research", "scroll", "lilac",
      ("Peskiza kona-ba Timór-Leste.", "Investigação sobre Timor-Leste.", "Riset tentang Timor-Leste.", "Research about Timor-Leste.")),
     ("World Bank Open Data", "https://data.worldbank.org/country/timor-leste", "CC BY 4.0", "chart", "green",

@@ -273,6 +273,7 @@ class MapPage(QWidget):
             if isinstance(place.get("lat"), (int, float)): self.map.focus_on(place.get("lon"), place.get("lat"), 3.0)
             self.show_place(place.id)
         elif params.get("municipality"): self.select_municipality(params["municipality"])
+        if params.get("layer") in self.layer_buttons: self.layer_buttons[params["layer"]].setChecked(True)
     def set_mode(self, mode): self.map.mode = mode; self.map.update()
     def set_layer(self, key, on):
         if key == "places": self.map.show_places = on

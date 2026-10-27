@@ -295,9 +295,14 @@ class Window(QMainWindow):
         if outfit not in outfits.OUTFITS: return
         self.settings.costume = outfit; self.save_quietly(); self.companion.apply_preferences(); self.avatar.setPixmap(self.atlas.pose_pixmap(outfit, 34))
     # -------------------------------------------------- assistant and system
-    def open_from_assistant(self, route, item_id):
+    def open_from_assistant(self, route, value):
+        """The Virtual Assistant asks for a page: an item, the map on a place, a search…"""
         self.reveal()
-        if item_id and self.kb.get(item_id): self.open("item", id=item_id)
+        item = self.kb.get(value) if value else None
+        if route == "item" and item: self.open("item", id=item.id)
+        elif route == "map" and item: self.open("map", **({"place": item.id} if item.kind == "place" else {"municipality": item.id}))
+        elif route == "search" and value: self.open("search", q=value)
+        elif route == "language" and value in ("words", "cards", "quiz"): self.open("language", tab=value)
         elif route: self.open(route)
     def activate_mode(self, mode):
         if mode == "virtual-start": return

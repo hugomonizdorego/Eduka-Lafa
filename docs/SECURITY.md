@@ -1,5 +1,30 @@
 # Security review
 
+## 0.3.0 (27 October 2026)
+
+- **Removed code paths**: file search, PDF reading (pdftotext worker), the
+  Python lesson sandbox, RSS news, weather and the source-status checker are
+  gone with the old school and library.
+- **New network code (`lafa/sync.py`)**: HTTPS only, fixed hosts
+  (`*.wikipedia.org`, `commons.wikimedia.org`, `upload.wikimedia.org`,
+  `api.worldbank.org`, `raw.githubusercontent.com/hugomonizdorego/Eduka-Lafa`),
+  redirects refused, size limits (JSON 4 MB, photos 6 MB, content files 8 MB),
+  descriptive user agent, no cookies or personal data.
+- **Content updates are data only**: the manifest's paths must match
+  `(content|vocab|map)/<name>.json` (no `..`), each file must match its
+  SHA-256 and size, and its JSON must have the expected shape before it is
+  written atomically to `~/.local/share/lafa/updates`. A broken or unknown
+  file is ignored when loading. Trust comes from the project's GitHub
+  repository; no code is downloaded or run.
+- **Photos**: only Wikimedia Commons files with a free licence (CC0, public
+  domain, CC BY, CC BY-SA; non-free flag rejected); the bytes must be a JPEG,
+  PNG or WebP; file names are sanitised.
+- **Offline store**: SQLite with parameterised queries; a damaged database
+  disables downloads but never stops the app.
+- **PC help** launches only programs from a fixed list (`actions.APPS`), found
+  on PATH, with no arguments and no shell.
+- **Calendar export** writes only to the file the learner chooses.
+
 ## 0.2.0 (14 October 2026)
 
 The 0.2.0 changes remove most of the external attack surface:

@@ -193,9 +193,13 @@ class Character(QWidget):
         # Real elapsed time keeps the speed right even when a frame is late; slow
         # computers fall back to 30 frames a second.
         now=time.monotonic();elapsed=min(0.1,max(0.0,now-self.last_tick));self.last_tick=now
-        if elapsed>0.028:self.slow_frames+=1
+        if elapsed>0.028 and self.timer.interval()<20:self.slow_frames+=1
         else:self.slow_frames=max(0,self.slow_frames-1)
-        if self.slow_frames>45 and self.timer.interval()<33:self.timer.setInterval(33)
+        # 60 fps while something moves (walk, dance, gesture, cross-fade); 30 fps for calm breathing;
+        # slow computers stay at 30 fps.
+        busy=self.state=='walking' or self.pose in ('tebe','bidu') or bool(self.motion.gesture) or self.motion.fade<1.0
+        want=self.FRAME_MS if busy and self.slow_frames<45 else 33
+        if self.timer.interval()!=want:self.timer.setInterval(want)
         seconds=elapsed*self.rate;self.phase+=1.55*seconds
         self.motion.advance(seconds)
         # A walking LAFA that is not being moved (Desktop preview, Wayland) walks on the spot at a calm pace.
@@ -208,6 +212,11 @@ class Character(QWidget):
             self.motion.attend((pos.x()-self.width()/2)/(self.width()) if near else 0.0)
         except RuntimeError:pass
         self.update()
+    def hideEvent(self,event):
+        self.timer.stop();super().hideEvent(event)
+    def showEvent(self,event):
+        super().showEvent(event)
+        if self.animated:self.last_tick=time.monotonic();self.timer.start(self.FRAME_MS)
     def hop(self):
         """Happy jump with anticipation when LAFA answers; skipped while paused."""
         if self.animated and not getattr(self,'reduce_motion',False):self.motion.play('jump')

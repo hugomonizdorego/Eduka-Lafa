@@ -4,6 +4,45 @@
 
 _Nothing yet._
 
+## 0.3.0 — 2026-10-27 · "Ensiklopédia Timór-Leste"
+
+Lafa Desktop is rebuilt as an encyclopedia of Timor-Leste only, and the
+Virtual Assistant as a Timor-Leste guide, study buddy and computer helper.
+
+### Lafa Desktop
+- New pastel design combining the three reference images: gradient
+  backgrounds, glass cards, 3-D clay icons, gradient menu pill, charts and a
+  month calendar; Nunito font (OFL); light and dark themes; text size 90–160 %;
+  compact sidebar on 1024×600 screens; keyboard shortcuts.
+- Encyclopedia in 15 categories and four languages (Tetun, Português, Bahasa
+  Indonesia, English): about 150 articles from the formation of the island to
+  2026, 14 municipalities, tourist places, holidays and national days, each
+  with sources, licences, key facts, timeline, related pages and a quiz.
+- Interactive map of the municipalities, posts and places (geoBoundaries).
+- Timeline of about 200 events by era and topic.
+- Tourism page with filters; calendar with Easter and Islamic dates and
+  `.ics` export; "millionaire" quiz with lifelines and safe havens.
+- 1 173 Tetun words with meanings in 14 languages (CPLP and ASEAN), flash
+  cards with spaced repetition and a word quiz.
+- Learning paths for the school levels of the Ministry of Education.
+- Sources, licences and credits page; search over everything.
+- Offline pack (Wikipedia introductions and free-licence Commons photos),
+  content updates verified with SHA-256, World Bank data refresh.
+- Tetun of the interface follows the official text of the Constitution.
+
+### Lafa Virtual Assistant
+- New popup beside Lafa: greeting, search, tip of the moment, quick tiles,
+  PC help with safe applications, read aloud, quiet mode.
+- Tips every 10 minutes by default (holidays, history, facts, words, mini
+  quiz in the balloon, places, word review, next article, streak).
+- Waving poses for Casual Belajar, Tais Mane and Formal cut from the owner's
+  character sheet; 60 fps animation with cached pictures; smooth walking.
+
+### Removed (not about Timor-Leste)
+- The old school (lessons for ages 5–100), library, world encyclopedia,
+  dinosaurs and inventions modules, news, weather, AI links, file search and
+  PDF reading. Settings and progress from 0.2.x are kept.
+
 ## 0.2.1 — 2026-10-15 · "Ensiklopedia LAFA"
 
 Redesign following the LAFA design sheets (character sheet, Learn ›

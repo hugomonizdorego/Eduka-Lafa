@@ -1,7 +1,7 @@
 [Desktop Entry]
 Type=Application
-Name=LAFA Virtual Assistant
-Comment=Starts only when the LAFA Virtual Assistant is activated in Lafa-Configuration
+Name=Lafa Virtual Assistant
+Comment=Starts only when the Lafa Virtual Assistant is activated in Lafa-Configuration
 Exec=lafa --autostart
 Icon=lafa
 Terminal=false

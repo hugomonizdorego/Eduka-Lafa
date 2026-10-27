@@ -19,14 +19,6 @@ import shutil
 import tempfile
 import stat
 
-# Optional links in Library → External sites. They open in the user's own web
-# browser; LAFA never signs in, reads accounts, cookies or sessions, and never
-# sends questions or documents there.
-AI_LINKS = [
-    ("ChatGPT", "https://chatgpt.com/"),
-    ("Claude", "https://claude.ai/"),
-    ("Gemini", "https://gemini.google.com/"),
-]
 STATES = ["idle", "reading", "thinking", "walking", "sitting", "gaming", "serious", "angry", "talking", "sleeping", "bathing", "toilet", "studying", "eating", "stretching", "tebe", "bidu"]
 IDLE_ACTIVITIES = ["idle", "reading", "thinking", "walking", "sitting", "gaming", "sleeping", "bathing", "toilet", "studying", "eating", "stretching", "tebe", "bidu"]
 # Activities that are entertainment only (off unless the user enables them).
@@ -76,7 +68,7 @@ class Settings:
     roam: bool = True
     speak_answers: bool = False
     idle_seconds: int = 60
-    personal_activities: bool = True
+    personal_activities: bool = False
     weather_city: str = "Dili"
     weather_latitude: float = -8.5586
     weather_longitude: float = 125.5736
@@ -84,7 +76,7 @@ class Settings:
     costume: str = "traditional"
     cultural_cards: bool = True
     positive_messages: bool = True
-    card_minutes: int = 15
+    card_minutes: int = 10            # the Virtual Assistant shares a tip this often (minutes)
     news_minutes: int = 60
     local_news_updates: bool = False
     panel_edge: str = "bottom"
@@ -116,12 +108,12 @@ class Settings:
     quiet_mode: bool = False          # no spontaneous messages at all
     reduce_motion: bool = False       # no walking, gestures or fades
     entertainment: bool = False       # magician, mind reader, jokes, bathing/toilet scenes
-    messages_per_hour: int = 4        # limit for spontaneous messages
+    messages_per_hour: int = 6        # limit for spontaneous messages
     # Lafa 0.3 — Ensiklopédia Timór-Leste
     learner_name: str = ""            # shown in the greeting; empty = the system user's first name
     school_level: str = "eb3"         # eb1 eb2 eb3 es sup (Ministry of Education levels)
     theme: str = "auto"               # light | dark | auto (auto follows Eduka-Settings)
-    text_scale: int = 100             # 100 / 115 / 130 / 150 %
+    text_scale: int = 100             # 90 … 160 %
     vocab_lang: str = "pt"            # target language in "Aprende lian"
     quiz_timer: bool = False          # millionaire quiz with a timer per question
     knowledge_tips: bool = True       # the Virtual Assistant shares facts, words and holidays
@@ -162,7 +154,7 @@ class Settings:
                 values[name]=max(lower,min(upper,int(value)))
             except (TypeError,ValueError,OverflowError):values[name]=getattr(defaults,name)
         scale=data.get('text_scale',100)
-        values['text_scale']=scale if isinstance(scale,int) and not isinstance(scale,bool) and scale in (100,115,130,150) else 100
+        values['text_scale']=max(90,min(160,scale)) if isinstance(scale,int) and not isinstance(scale,bool) else 100
         name_value=data.get('learner_name','')
         values['learner_name']=name_value.strip()[:40] if isinstance(name_value,str) and not any(ord(c)<32 for c in name_value) else ''
         for name,limit in [('weather_city',120),('weather_timezone',100)]:

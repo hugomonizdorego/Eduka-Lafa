@@ -1,71 +1,36 @@
-# Lafa offline and online
+# Offline and online (Lafa 0.3)
 
-Lafa's main functions work without internet, login, an AI key or a Lafa
-server. The internet only adds sources. This page says exactly what works
-where. The tests that prove it are in `tests/test_offline_first.py`.
+Lafa is offline first: everything in Lafa Desktop and the Virtual Assistant
+works without internet. The internet only adds downloads and updates.
 
-## Always available (no internet)
+| Works offline | Needs internet (on request or when allowed) |
+| --- | --- |
+| Encyclopedia (≈150 articles, municipalities, places, holidays), search, map, timeline, tourism, calendar and `.ics` export, millionaire quiz, words, flash cards, learning paths, progress, read aloud (espeak-ng), the Virtual Assistant | Offline pack (Wikipedia introductions + free-licence photos), content updates, World Bank data, opening a source page or Wikipedia in the web browser |
 
-| Feature | Where | Notes |
-|---|---|---|
-| Search of lessons, atlas, OS guides, saved material | Home, Library → Search | Results labelled *Materi lokal* / *Materi tersimpan*; weak matches are shown as choices |
-| File search and reading | Home ("Cari file …"), Library → My files | File names in the chosen folders; TXT, MD, CSV, HTML, DOCX, ODT, PDF (pdftotext) |
-| Lessons for ages 5–100 and school subjects | Learn → Lessons | Favourites and *Continue learning* |
-| Latihan, Simulasi Tes, retry mistakes | Learn → Practice | No repeated questions; explanations from the lessons |
-| Hasil Latihan | My activities → Practice results | Personal progress, not an official report |
-| Languages, digital literacy, programming examples | Learn | Python examples run in a bounded interpreter |
-| Timor-Leste atlas | Timor-Leste → History, places and symbols | Built-in text; online refresh is optional |
-| Tasks, timetable | My activities → Tasks | Saved on this computer |
-| Reminders | My activities → Reminders | Saved; ring offline while Lafa runs; missed ones shown once after a restart |
-| Focus timer | My activities → Reminders | This session only, labelled so; no alarm when Lafa is closed |
-| OS help | OS help | Guides, accessibility, computer check, installed tools |
-| Calculator | Search box (`12 * 7`, `/calc`) | No eval |
-| Read aloud | Search results, Virtual Assistant | Local espeak-ng |
-| Kiwix | Library → External sites | Offline Wikipedia and books once installed and a ZIM file is copied |
-| Virtual Assistant | Eduka-Panel | Continue learning, tasks, focus, OS help, quiet mode |
+## Offline pack
 
-## Adds something when online
+*Offline no atualizasaun → Download hotu* downloads, for every item that names
+a Wikipedia page, the introduction in Tetun, Portuguese, Indonesian and
+English (Wikipedia, CC BY-SA 4.0) and one photo from Wikimedia Commons.
+Photos are downloaded **only** when their licence is CC0, public domain,
+CC BY or CC BY-SA and they are not marked non-free; the author, licence and
+source page are saved with the photo and shown under it and on *Fonte no
+lisensa*. Everything is stored in `~/.local/share/lafa/lafa.db` and
+`~/.local/share/lafa/media/`, and can be cleared on the same page.
 
-| Feature | How it starts | When it fails |
-|---|---|---|
-| Wikipedia extracts | *Search internet sources* button or `/ask` | The note says the internet search failed; local results stay |
-| Save a page for offline | *Save* on an extract or a source | Nothing saved; message in the status line |
-| Learning-website status | Opening Library → Internet sources (cached 24 h) or *Check now* | Status stays "unknown" |
-| Timor-Leste and world news | Timor-Leste → News | Previous headlines stay, labelled with their fetch date |
-| Weather | Timor-Leste → Weather | Message under the weather box |
-| Atlas refresh | Timor-Leste → atlas | Built-in text stays |
-| Content catalogue (data) | Automatic, at most once per chosen interval, if switched on | Previous catalogue stays |
+## Updates without a Lafa server
 
-## What offline looks like
+`lafa/assets/timor/manifest.json` (content version + SHA-256 and size of each
+content, vocabulary and map file) is published in this public repository.
+*Buka agora* (check now) — or the automatic check once a day when online and
+allowed — downloads the manifest from `raw.githubusercontent.com`, then only
+the files whose hash differs. A file is saved in `~/.local/share/lafa/updates`
+only when its SHA-256 and size match, its path is a content/vocab/map JSON
+file and its JSON has the expected shape. Newer files replace the packaged
+ones when Lafa loads; a broken file is ignored. Lafa never downloads or runs
+code.
 
-- The badge at the top right says *"Fitur lokal tetap tersedia"* (Local
-  features are available). It never shows a pop-up and does not repeat.
-- Internet buttons are disabled and explain that they need internet. Local
-  buttons are never disabled for lack of internet.
-- The connection check runs in the background against public hosts
-  (Wikipedia, Open-Meteo, timor-leste.gov.tl) and never blocks the window.
+## Online status
 
-## What Lafa never does
-
-- Send a question, document or file content anywhere by itself.
-- Download large archives or AI models, or install Ollama.
-- Download whole websites, scrape behind a login, or run downloaded code.
-- Call cached data "latest".
-
-## Download all sources for offline use (0.2.1)
-
-Library → Internet sources → **Download all sources for offline use** saves,
-in `~/.local/share/lafa/offline` (or `$XDG_DATA_HOME/lafa/offline`):
-
-- the front page and feed of every learning and Timor-Leste source (into the
-  local search memory; robots.txt respected, never whole sites);
-- the Wikipedia introduction of every encyclopedia topic in the learner's
-  language (English when that language has no article, and labelled so);
-- one freely licensed Wikimedia Commons picture per topic (CC0, public
-  domain, CC BY or CC BY-SA only), shown with its author, licence and page.
-
-It needs internet only while downloading. The download is bounded (250 MB in
-total, 900 KB per picture), can be stopped at any time and keeps what it
-already saved. Afterwards articles show the saved text and picture offline.
-The data lives in the learner's own Lafa folder, not in `/usr/lib/lafa`:
-that folder belongs to the package and is read-only for learners.
+The top bar shows *Online* or *Offline*. A light HEAD request to a few public
+hosts runs every 90 seconds in a worker; nothing waits for it.

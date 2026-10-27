@@ -1,4 +1,4 @@
-"""Bounded HTTPS requests for internet sources (Wikipedia, weather, news, catalog).
+"""Bounded HTTPS requests (Wikipedia, Wikimedia Commons, World Bank, Lafa content updates).
 
 No AI provider is contacted. Redirects are refused so nothing is forwarded."""
 import json
@@ -7,7 +7,7 @@ import urllib.error
 import urllib.parse
 from . import __version__
 
-USER_AGENT = f"LAFA/{__version__} (Edukasaun OS desktop assistant)"
+USER_AGENT = f"Lafa/{__version__} (Edukasaun OS encyclopedia of Timor-Leste; +https://github.com/hugomonizdorego/Eduka-Lafa)"
 LOOPBACK = {"127.0.0.1", "localhost", "::1"}
 
 class NetworkError(RuntimeError): pass
@@ -52,7 +52,7 @@ def json_request(url, data=None, headers=None, timeout=45, loopback_http=False):
 # Public hosts used only to show whether internet sources are reachable. Local
 # features never wait for this check; each internet service also handles its
 # own failure (one failing site never blocks another).
-PROBE_HOSTS = ("https://www.wikipedia.org/", "https://api.open-meteo.com/", "https://timor-leste.gov.tl/")
+PROBE_HOSTS = ("https://www.wikipedia.org/", "https://raw.githubusercontent.com/", "https://timor-leste.gov.tl/")
 
 def online_probe(hosts=PROBE_HOSTS, timeout=4):
     """True when at least one public host answers over HTTPS."""

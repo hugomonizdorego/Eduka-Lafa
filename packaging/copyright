@@ -6,3 +6,29 @@ Files: *
 Copyright: 2026 Hugo Moniz do Rego, STI Digitalização & Mídia – MCAS, Grupo IDEA
 License: MIT
  See /usr/share/common-licenses or the LICENSE file in the source repository.
+
+Files: lafa/assets/timor/content/* lafa/assets/timor/vocab/* lafa/assets/illustrations/* lafa/assets/lafa-poses.png
+Copyright: 2026 Lafa contributors
+License: CC-BY-SA-4.0
+ Encyclopedia texts, quizzes, vocabulary and illustrations written for Lafa,
+ based on the sources listed with each item (https://creativecommons.org/licenses/by-sa/4.0/).
+
+Files: lafa/assets/timor/map/municipalities.json
+Copyright: OpenStreetMap contributors; geoBoundaries (Runfola et al. 2020)
+License: ODbL-1.0
+ https://opendatacommons.org/licenses/odbl/1-0/
+
+Files: lafa/assets/timor/map/posts.json
+Copyright: WHO, OCHA ROAP; geoBoundaries (Runfola et al. 2020)
+License: CC-BY-3.0-IGO
+ https://creativecommons.org/licenses/by/3.0/igo/
+
+Files: lafa/assets/timor/content/indicators.json
+Copyright: The World Bank, World Development Indicators
+License: CC-BY-4.0
+
+Files: lafa/assets/fonts/*
+Copyright: 2014 The Nunito Project Authors (Vernon Adams, Cyreal, Jacques Le Bailly)
+License: OFL-1.1
+ See lafa/assets/fonts/OFL.txt.
+

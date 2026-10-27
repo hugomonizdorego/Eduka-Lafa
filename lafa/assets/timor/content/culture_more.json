@@ -3548,6 +3548,604 @@
     "status": "draft",
     "notes": "Sylvan: born Dili 26 Aug 1917, died Cascais 25 Dec 1993, president of the Sociedade de Língua Portuguesa (Wikipedia). Borja da Costa: killed in December 1975, as in tl.symbols.anthem (exact day not confirmed). Xanana's poetry: only that scholars compare the sea in his poems and Sylvan's (CITCEM abstract; title of the source given here is descriptive); the book 'Mar Meu' and his paintings were not confirmed, so not named. João Aparício named from the Boletín Galego de Literatura (2018). Cardoso: born 1958 in Cailaco; went to Portugal in 1974; novel titles and dates from search snippets (Wikipedia and studies); Oceanos 2021 and 'first Timorese winner' from PublishNews (Dec 2021). Beatriz's War: premiere 17 Sep 2013 in Dili, ~30,000 viewers at outdoor screenings, Golden Peacock (best film) at the 44th IFFI 2013 — from Wikipedia as summarised; the plot line is a short paraphrase of the Martin Guerre story the film adapts — check. Arte Moris: 2003, Luca Gansser (Gabriela Gansser named in place.arte_moris), former National Museum building in Comoro, eviction Dec 2021 (Wikipedia); 'many best-known artists trained there' follows place.arte_moris. Tetun to check: romansista, hakerek-na'in, realizadór, diretora teatru, tela-boot, Kailaku (Cailaco), ezíliu."
    }
+  },
+  {
+   "id": "tl.culture.tetun",
+   "category": "culture",
+   "also": [
+    "symbols"
+   ],
+   "title": {
+    "tet": "Lian Tetun",
+    "pt": "A língua tétum",
+    "id": "Bahasa Tetun",
+    "en": "The Tetun language"
+   },
+   "summary": {
+    "tet": "Tetun mak lian ne'ebé timoroan barak liu fahe hamutuk, maske sira-nia lian-inan la hanesan. Tetun mak lian Austronézia, no ninia forma iha sidade, Tetun Prasa ka Tetun Dili, foti liafuan barak husi Portugés. Hamutuk ho Portugés, Tetun mak Timór-Leste nia lian ofisiál.",
+    "pt": "O tétum é a língua que a maioria dos timorenses partilha, seja qual for a sua língua materna. É uma língua austronésia, e a sua forma urbana, o tétum-praça ou tétum de Díli, recebeu muitas palavras do português. Com o português, é uma das duas línguas oficiais de Timor-Leste.",
+    "id": "Tetun adalah bahasa yang dipakai bersama oleh sebagian besar orang Timor-Leste, apa pun bahasa ibu mereka. Tetun termasuk rumpun Austronesia, dan ragam kotanya, Tetun Prasa atau Tetun Dili, menyerap banyak kata dari bahasa Portugis. Bersama bahasa Portugis, Tetun adalah salah satu dari dua bahasa resmi Timor-Leste.",
+    "en": "Tetun is the language that most Timorese share, whatever their mother tongue. It is an Austronesian language, and its town form, Tetun Prasa or Tetun Dili, has taken many words from Portuguese. Together with Portuguese, it is one of the two official languages of Timor-Leste."
+   },
+   "levels": [
+    "eb1",
+    "eb2",
+    "eb3",
+    "es",
+    "sup"
+   ],
+   "sections": [
+    {
+     "heading": {
+      "tet": "Lian ida ba illa tomak",
+      "pt": "Uma língua de toda a ilha",
+      "id": "Bahasa seluruh pulau",
+      "en": "A language of the whole island"
+     },
+     "text": {
+      "tet": "Tetun mak lian ida husi família boot Austronézia, ne'ebé la'o husi Madagaskar to'o illa sira iha Pasífiku, no iha mós lian Malaiu no Tagalog. Ema ko'alia Tetun iha illa Timór nia sorin rua: iha Timór-Leste no iha rejénsia Belu no Malaka, iha Timór Osidentál, Indonézia. Durante sékulu barak, Tetun sai lian komún: lian ne'ebé ajuda ema ho lian-inan oin-oin atu ko'alia ba malu iha merkadu, iha Uma-Kreda no iha governu. Iha sensu 2015, maizumenus 79% husi ema iha Timór-Leste dehan katak sira bele ko'alia Tetun. Ne'e barak liu ema ne'ebé aprende Tetun nu'udar lian-inan iha uma.",
+      "pt": "O tétum pertence à grande família austronésia, que vai de Madagáscar às ilhas do Pacífico e inclui o malaio e o tagalo. É falado nos dois lados da ilha de Timor: em Timor-Leste e nas regências vizinhas de Belu e Malaka, em Timor Ocidental, na Indonésia. Durante séculos serviu de língua franca, uma língua comum que permite a pessoas com línguas maternas diferentes falarem entre si, nos mercados, na Igreja e na administração. No censo de 2015, cerca de 79% das pessoas em Timor-Leste disseram saber falar tétum, muito mais do que as que o aprenderam primeiro em casa.",
+      "id": "Bahasa Tetun termasuk rumpun besar Austronesia, yang terbentang dari Madagaskar sampai ke pulau-pulau Pasifik dan mencakup bahasa Melayu dan Tagalog. Bahasa ini dipakai di kedua sisi Pulau Timor: di Timor-Leste dan di Kabupaten Belu dan Malaka di Timor Barat, Indonesia. Selama berabad-abad Tetun menjadi lingua franca, bahasa bersama yang memungkinkan orang dengan bahasa ibu berbeda berbicara satu sama lain, di pasar, di gereja, dan dalam pemerintahan. Dalam sensus 2015, sekitar 79 persen penduduk Timor-Leste menyatakan dapat berbahasa Tetun, jauh lebih banyak daripada mereka yang mempelajarinya sebagai bahasa pertama di rumah.",
+      "en": "Tetun belongs to the large Austronesian family, which stretches from Madagascar to the Pacific islands and includes Malay and Tagalog. It is spoken on both sides of the island of Timor: in Timor-Leste and in the neighbouring Belu and Malaka regencies of West Timor, in Indonesia. For centuries it has served as a lingua franca, a common language that lets people with different mother tongues talk to each other, in markets, in the Church and in government. In the 2015 census, about 79 per cent of people in Timor-Leste said they could speak Tetun, far more than the number who learned it first at home."
+     }
+    },
+    {
+     "heading": {
+      "tet": "Tetun Prasa no Tetun Terik",
+      "pt": "Tétum-praça e tétum terik",
+      "id": "Tetun Prasa dan Tetun Terik",
+      "en": "Tetun Prasa and Tetun Terik"
+     },
+     "text": {
+      "tet": "Tetun iha forma prinsipál rua. Tetun Terik mak forma tuan liu: ema ko'alia iha parte balu husi tasi-ibun sul no iha Timór Osidentál, no nia rai liafuan tuan barak ne'ebé ema uza iha ko'alia serimónia nian. Tetun Prasa, ka Tetun Dili, buras iha kapitál. Ninia naran mai husi liafuan Portugés praça, katak sidade nia kampu ka merkadu. Tanba nia buras iha fatin ne'ebé ema husi grupu oin-oin hasoru malu, Tetun Prasa nia gramátika simples liu iha parte balu, no iha liafuan barak husi lian seluk. Estudu ba testu jornál sira hatudu katak maizumenus liafuan ida husi tolu mai husi Portugés. Linguista sira sei diskute oinsá Tetun rua ne'e nia ko'alia-na'in komprende malu. Iha Timór-Leste, 'Tetun' baibain katak Tetun Prasa.",
+      "pt": "Há duas formas principais. O tétum terik é a forma mais antiga, falada em partes da costa sul e em Timor Ocidental; conserva muitas palavras antigas, usadas na fala ritual. O tétum-praça, também chamado tétum de Díli, cresceu na capital, e o nome vem da palavra portuguesa praça. Como se formou onde se encontravam pessoas de muitos grupos, o tétum-praça tem uma gramática em alguns pontos mais simples e muitas palavras emprestadas: estudos de textos de jornais mostram que cerca de um terço das palavras vem do português. Os linguistas ainda discutem até que ponto os falantes das duas formas se entendem. Em Timor-Leste, «tétum» quer dizer geralmente tétum-praça.",
+      "id": "Ada dua ragam utama. Tetun Terik adalah ragam yang lebih tua, dipakai di sebagian pesisir selatan dan di Timor Barat; ragam ini menyimpan banyak kata lama yang dipakai dalam tuturan adat. Tetun Prasa, yang juga disebut Tetun Dili, berkembang di ibu kota, dan namanya berasal dari kata Portugis praça, yaitu alun-alun atau pasar kota. Karena tumbuh di tempat bertemunya orang dari banyak kelompok, tata bahasa Tetun Prasa dalam beberapa hal lebih sederhana dan memiliki banyak kata serapan: penelitian atas teks surat kabar menemukan bahwa kira-kira sepertiga katanya berasal dari bahasa Portugis. Para ahli bahasa masih membahas seberapa mudah penutur kedua ragam saling memahami. Di Timor-Leste, 'Tetun' biasanya berarti Tetun Prasa.",
+      "en": "There are two main forms. Tetun Terik is the older form, spoken in parts of the south coast and in West Timor; it keeps many old words that are used in ritual speech. Tetun Prasa, also called Tetun Dili, grew in the capital, and its name comes from the Portuguese word praça, the town square or market. Because it grew where people from many groups met, Tetun Prasa has a simpler grammar in some ways and many borrowed words: studies of newspaper texts find that roughly a third of the words come from Portuguese. Linguists still discuss how easily speakers of the two forms understand each other. In Timor-Leste, 'Tetun' usually means Tetun Prasa."
+     }
+    },
+    {
+     "heading": {
+      "tet": "Fiar, rezisténsia no identidade",
+      "pt": "Fé, resistência e identidade",
+      "id": "Iman, perlawanan, dan identitas",
+      "en": "Faith, resistance and identity"
+     },
+     "text": {
+      "tet": "Iha tempu okupasaun Indonézia, lian Indonéziu sai lian eskola no governu nian, no Indonézia bandu lian Portugés. Uma-Kreda Katólika iha Dili la simu atu muda misa ba lian Indonéziu. Entre 1981 no 1983 Uma-Kreda hili Tetun nu'udar lian ba misa no orasaun, atu povu bele reza iha sira-nia lian rasik. Tan ne'e, ema prepara orasaun, lia-fuan Bíblia no knananuk relijiozu iha Tetun, no Uma-Kreda sai fatin públiku uitoan ne'ebé ema uza Tetun ho dignidade. Nune'e, Tetun sai símbolu forte ba identidade timoroan no ba hakarak independénsia, hamutuk ho Portugés, lian ne'ebé rezisténsia uza atu ko'alia ho mundu.",
+      "pt": "Durante a ocupação indonésia, o indonésio tornou-se a língua das escolas e da administração, e o português foi proibido. A Igreja Católica de Díli recusou passar o culto para indonésio. Entre 1981 e 1983 escolheu o tétum como língua da missa e da oração, para que o povo pudesse rezar numa língua sua. Por isso foram preparadas orações, leituras da Bíblia e cânticos em tétum, e a Igreja tornou-se um dos poucos espaços públicos onde a língua era usada com dignidade. Assim, o tétum tornou-se um símbolo forte da identidade timorense e do desejo de independência, ao lado do português, a língua dos contactos da resistência com o mundo.",
+      "id": "Selama pendudukan Indonesia, bahasa Indonesia menjadi bahasa sekolah dan pemerintahan, dan bahasa Portugis dilarang. Gereja Katolik di Dili menolak mengganti bahasa ibadahnya menjadi bahasa Indonesia. Antara 1981 dan 1983 Gereja memilih bahasa Tetun sebagai bahasa misa dan doa agar umat dapat berdoa dalam bahasa mereka sendiri. Karena itu doa, bacaan Kitab Suci, dan lagu rohani disiapkan dalam bahasa Tetun, dan Gereja menjadi salah satu dari sedikit ruang publik tempat bahasa ini dipakai dengan bermartabat. Dengan demikian Tetun menjadi lambang kuat identitas Timor-Leste dan keinginan untuk merdeka, bersama bahasa Portugis, bahasa yang dipakai perlawanan untuk berhubungan dengan dunia.",
+      "en": "During the Indonesian occupation, Indonesian became the language of schools and government, and Portuguese was banned. The Catholic Church in Dili refused to switch its worship to Indonesian. Between 1981 and 1983 it chose Tetun as its language of Mass and prayer, so that people could pray in a language of their own. Prayers, Bible readings and hymns were therefore prepared in Tetun, and the Church became one of the few public places where the language was used with dignity. In this way Tetun became a strong symbol of Timorese identity and of the wish for independence, alongside Portuguese, the language the resistance used to speak to the world."
+     }
+    },
+    {
+     "heading": {
+      "tet": "Lian ofisiál no ortografia padraun",
+      "pt": "Língua oficial e ortografia padrão",
+      "id": "Bahasa resmi dan ejaan baku",
+      "en": "Official language and standard spelling"
+     },
+     "text": {
+      "tet": "Konstituisaun 2002 hatuur Tetun no Portugés nu'udar lian ofisiál, no haruka Estadu atu valoriza no dezenvolve Tetun no lian nasionál sira seluk (Artigu 13). Atu Tetun iha forma hakerek ida de'it, Institutu Nasionál Linguístika (INL) prepara ortografia padraun ida, no Governu aprova ho dekretu iha 14 Abríl 2004. Iha ortografia ne'e, apóstrofu hatudu lian ne'ebé para badak iha kakorok (glotál), hanesan iha ne'e no la'o. Ema hakerek liafuan Portugés tuir oinsá ema ko'alia iha Tetun, hanesan eskola no nasaun. Asentu hatudu forsa iha silaba ne'ebé la baibain, hanesan iha nasionál. Maibé iha prátika, ema sei hakerek liafuan balu ho forma oin-oin.",
+      "pt": "A Constituição de 2002 fez do tétum e do português as línguas oficiais e pediu ao Estado que valorize e desenvolva o tétum e as outras línguas nacionais (artigo 13.º). Para dar ao tétum uma só forma escrita, o Instituto Nacional de Linguística (INL) preparou uma ortografia padrão, que o Governo aprovou por decreto em 14 de abril de 2004. Nesta ortografia, o apóstrofo marca a oclusiva glotal, um pequeno corte na garganta, como em ne'e (isto) e la'o (andar); as palavras portuguesas escrevem-se como se dizem em tétum, como eskola e nasaun; e os acentos mostram a sílaba tónica quando é invulgar, como em nasionál. Na prática, ainda há palavras escritas de maneiras diferentes.",
+      "id": "Konstitusi 2002 menetapkan Tetun dan Portugis sebagai bahasa resmi dan meminta negara menghargai serta mengembangkan Tetun dan bahasa-bahasa nasional lainnya (Pasal 13). Agar Tetun memiliki satu bentuk tulisan, Institut Nasional Linguistik (INL) menyusun ejaan baku yang disahkan pemerintah melalui dekret pada 14 April 2004. Dalam ejaan ini, tanda apostrof menandai hentian glotal, yaitu jeda singkat di tenggorokan, seperti pada ne'e (ini) dan la'o (berjalan); kata-kata Portugis ditulis sesuai bunyinya dalam Tetun, seperti eskola (sekolah) dan nasaun (bangsa); dan tanda aksen menunjukkan tekanan yang tidak biasa, seperti pada nasionál. Dalam praktiknya, masih ada kata yang ditulis dengan cara berbeda-beda.",
+      "en": "The Constitution of 2002 made Tetun and Portuguese the official languages and asked the State to value and develop Tetun and the other national languages (Article 13). To give Tetun one written form, the National Institute of Linguistics (INL) prepared a standard spelling, which the Government adopted by decree on 14 April 2004. In this spelling, the apostrophe marks the glottal stop, a short catch in the throat, as in ne'e (this) and la'o (walk); Portuguese words are written as they sound in Tetun, such as eskola (school) and nasaun (nation); and accents show unusual stress, as in nasionál. In practice, some words are still spelled in different ways."
+     }
+    },
+    {
+     "heading": {
+      "tet": "Gramátika ne'ebé fasil",
+      "pt": "Uma gramática amiga de quem aprende",
+      "id": "Tata bahasa yang ramah",
+      "en": "A learner-friendly grammar"
+     },
+     "text": {
+      "tet": "Tetun nia gramátika fasil ba ema ne'ebé aprende. Verbu sira la muda sira-nia rohan; liafuan ki'ik mak hatudu tempu. Ha'u han hatudu agora; ha'u han ona hatudu katak han remata tiha ona; no ha'u sei han hatudu aban-bainrua. Atu halo plurál, tau sira iha substantivu nia kotuk: labarik sira. Atu hatudu na'in, uza nia, no na'in mai uluk: ha'u-nia uma, Timór-Leste nia bandeira. Atu dehan lae, tau la molok verbu: ha'u la hatene. Kumprimentu loroloron balu, hanesan bondia no obrigadu, mai husi Portugés. Ita bele aprende liafuan foun loron-loron iha Lafa nia disionáriu.",
+      "pt": "A gramática do tétum é amiga de quem aprende. Os verbos nunca mudam a terminação: são pequenas palavras que mostram o tempo. Ha'u han quer dizer «eu como», ha'u han ona «eu já comi» e ha'u sei han «eu vou comer». Para o plural, junta-se sira depois do nome: labarik sira quer dizer «crianças». A posse usa nia, com o possuidor primeiro: ha'u-nia uma é «a minha casa» e Timór-Leste nia bandeira «a bandeira de Timor-Leste». Para negar, põe-se la antes do verbo: ha'u la hatene, «eu não sei». Cumprimentos do dia a dia, como bondia (bom dia) e obrigadu (obrigado), vêm do português.",
+      "id": "Tata bahasa Tetun ramah bagi pelajar. Kata kerja tidak pernah berubah bentuk; kata-kata kecillah yang menunjukkan waktu. Ha'u han berarti 'saya makan', ha'u han ona 'saya sudah makan', dan ha'u sei han 'saya akan makan'. Untuk bentuk jamak, tambahkan sira setelah kata benda: labarik sira berarti 'anak-anak'. Kepemilikan memakai nia, dengan pemilik di depan: ha'u-nia uma berarti 'rumah saya' dan Timór-Leste nia bandeira 'bendera Timor-Leste'. Untuk menyangkal, letakkan la sebelum kata kerja: ha'u la hatene, 'saya tidak tahu'. Salam sehari-hari seperti bondia (selamat pagi) dan obrigadu (terima kasih) berasal dari bahasa Portugis.",
+      "en": "Tetun grammar is friendly to learners. Verbs never change their endings; small words show the time instead. Ha'u han means 'I eat', ha'u han ona 'I have eaten' and ha'u sei han 'I will eat'. To make a plural, add sira after the noun: labarik sira means 'children'. Possession uses nia, with the owner first: ha'u-nia uma means 'my house' and Timór-Leste nia bandeira 'the flag of Timor-Leste'. To say no, put la before the verb: ha'u la hatene, 'I do not know'. Everyday greetings such as bondia (good morning) and obrigadu (thank you) come from Portuguese."
+     }
+    },
+    {
+     "heading": {
+      "tet": "Tetun ohin loron no iha internet",
+      "pt": "O tétum hoje e na internet",
+      "id": "Tetun hari ini dan di internet",
+      "en": "Tetun today and online"
+     },
+     "text": {
+      "tet": "Ohin loron ita rona Tetun iha rádiu no televizaun, iha Uma-Kreda, iha eskola no iha moris públiku. Disionáriu sira, hanesan disionáriu padraun Tetun–Inglés ida, ajuda ema ne'ebé aprende. Tetun mós buras iha internet. Iha Wikipedia ida iha Tetun (tet.wikipedia.org), ne'ebé voluntáriu sira hakerek artigu iha sira-nia lian rasik, no iha mós parte Tetun iha Wikisource, biblioteka ida ba testu livre sira. Investigadór sira harii hela ferramenta komputadór nian ba Tetun, hanesan sistema buka ne'ebé komprende ninia ortografia no ninia liafuan husi lian seluk. Aplikasaun hanesan Lafa, ne'ebé hatudu ensiklopédia ida-ne'e iha Tetun, mós ajuda. Bainhira ita lee, hakerek ka buka iha Tetun, ita ajuda lian ne'e atu buras.",
+      "pt": "Hoje o tétum ouve-se na rádio e na televisão, nas igrejas, nas escolas e na vida pública, e dicionários como um dicionário padrão tétum–inglês ajudam quem aprende. Também está a crescer na internet. Há uma Wikipédia em tétum (tet.wikipedia.org), onde voluntários escrevem artigos na sua própria língua, e uma secção tétum na Wikisource, uma biblioteca de textos livres. Investigadores estão a criar ferramentas informáticas para o tétum, como sistemas de pesquisa capazes de lidar com a sua ortografia e as suas muitas palavras emprestadas. Aplicações como a Lafa, que mostra esta enciclopédia em tétum, também ajudam. Sempre que lê, escreve ou pesquisa em tétum, ajuda a língua a crescer.",
+      "id": "Kini bahasa Tetun terdengar di radio dan televisi, di gereja, di sekolah, dan dalam kehidupan publik, dan kamus seperti kamus baku Tetun–Inggris membantu para pelajar. Tetun juga berkembang di internet. Ada Wikipedia berbahasa Tetun (tet.wikipedia.org), tempat para relawan menulis artikel dalam bahasa mereka sendiri, dan bagian Tetun di Wikisource, perpustakaan teks bebas. Para peneliti sedang membuat perangkat komputer untuk Tetun, misalnya sistem pencarian yang dapat menangani ejaan dan banyaknya kata serapannya. Aplikasi seperti Lafa, yang menampilkan ensiklopedia ini dalam bahasa Tetun, juga membantu. Setiap kali Anda membaca, menulis, atau mencari dalam bahasa Tetun, Anda membantu bahasa ini berkembang.",
+      "en": "Today Tetun is heard on radio and television, in churches, in schools and in public life, and dictionaries such as a standard Tetun–English dictionary help learners. It is also growing on the internet. There is a Wikipedia in Tetun (tet.wikipedia.org), where volunteers write articles in their own language, and a Tetun section of Wikisource, a library of free texts. Researchers are building computer tools for Tetun, for example search systems that can handle its spelling and its many borrowed words. Apps such as Lafa, which shows this encyclopedia in Tetun, help too. Every time you read, write or search in Tetun, you help the language grow."
+     }
+    }
+   ],
+   "facts": [
+    {
+     "label": {
+      "tet": "Família lian",
+      "pt": "Família linguística",
+      "id": "Rumpun bahasa",
+      "en": "Language family"
+     },
+     "value": {
+      "tet": "Austronézia",
+      "pt": "austronésia",
+      "id": "Austronesia",
+      "en": "Austronesian"
+     }
+    },
+    {
+     "label": {
+      "tet": "Forma prinsipál",
+      "pt": "Formas principais",
+      "id": "Ragam utama",
+      "en": "Main forms"
+     },
+     "value": {
+      "tet": "Tetun Prasa (Tetun Dili) no Tetun Terik",
+      "pt": "tétum-praça (tétum de Díli) e tétum terik",
+      "id": "Tetun Prasa (Tetun Dili) dan Tetun Terik",
+      "en": "Tetun Prasa (Tetun Dili) and Tetun Terik"
+     }
+    },
+    {
+     "label": {
+      "tet": "Estatutu",
+      "pt": "Estatuto",
+      "id": "Status",
+      "en": "Status"
+     },
+     "value": {
+      "tet": "lian ofisiál hamutuk ho Portugés (Konstituisaun, Artigu 13)",
+      "pt": "língua oficial, com o português (Constituição, artigo 13.º)",
+      "id": "bahasa resmi bersama bahasa Portugis (Konstitusi, Pasal 13)",
+      "en": "official language with Portuguese (Constitution, Article 13)"
+     }
+    },
+    {
+     "label": {
+      "tet": "Ortografia padraun",
+      "pt": "Ortografia padrão",
+      "id": "Ejaan baku",
+      "en": "Standard spelling"
+     },
+     "value": {
+      "tet": "INL; Governu aprova iha 14 Abríl 2004",
+      "pt": "INL; aprovada pelo Governo em 14 de abril de 2004",
+      "id": "INL; disahkan pemerintah pada 14 April 2004",
+      "en": "INL; adopted by the Government on 14 April 2004"
+     }
+    },
+    {
+     "label": {
+      "tet": "Liafuan husi Portugés iha jornál",
+      "pt": "Palavras de origem portuguesa nos jornais",
+      "id": "Kata dari bahasa Portugis di surat kabar",
+      "en": "Portuguese loanwords in newspapers"
+     },
+     "value": {
+      "tet": "maizumenus terseiru ida (32–35% iha estudu sira)",
+      "pt": "cerca de um terço (32–35% nos estudos)",
+      "id": "sekitar sepertiga (32–35% dalam penelitian)",
+      "en": "about one third (32–35% in studies)"
+     }
+    },
+    {
+     "label": {
+      "tet": "Ema ne'ebé bele ko'alia Tetun",
+      "pt": "Pessoas que falam tétum",
+      "id": "Orang yang dapat berbahasa Tetun",
+      "en": "People who can speak Tetun"
+     },
+     "value": {
+      "tet": "maizumenus 79% husi populasaun",
+      "pt": "cerca de 79% da população",
+      "id": "sekitar 79% penduduk",
+      "en": "about 79% of the population"
+     },
+     "year": 2015
+    },
+    {
+     "label": {
+      "tet": "Wikipedia iha Tetun",
+      "pt": "Wikipédia em tétum",
+      "id": "Wikipedia bahasa Tetun",
+      "en": "Tetun Wikipedia"
+     },
+     "value": "tet.wikipedia.org"
+    }
+   ],
+   "timeline": [
+    {
+     "date": "1981",
+     "title": {
+      "tet": "Uma-Kreda iha Dili hahú uza Tetun ba misa (1981–1983)",
+      "pt": "A Igreja em Díli começa a usar o tétum na missa (1981–1983)",
+      "id": "Gereja di Dili mulai memakai bahasa Tetun dalam misa (1981–1983)",
+      "en": "The Church in Dili begins to use Tetun for Mass (1981–1983)"
+     }
+    },
+    {
+     "date": "2002-03-22",
+     "title": {
+      "tet": "Konstituisaun hatuur Tetun no Portugés nu'udar lian ofisiál (Artigu 13)",
+      "pt": "A Constituição faz do tétum e do português as línguas oficiais (artigo 13.º)",
+      "id": "Konstitusi menetapkan Tetun dan Portugis sebagai bahasa resmi (Pasal 13)",
+      "en": "The Constitution makes Tetun and Portuguese the official languages (Article 13)"
+     }
+    },
+    {
+     "date": "2004-04-14",
+     "title": {
+      "tet": "Governu aprova ortografia padraun Tetun nian husi INL",
+      "pt": "O Governo aprova a ortografia padrão do tétum preparada pelo INL",
+      "id": "Pemerintah mengesahkan ejaan baku Tetun yang disusun INL",
+      "en": "The Government adopts the INL standard spelling of Tetun"
+     }
+    }
+   ],
+   "figure": {
+    "illustration": "languages",
+    "caption": {
+     "tet": "Liafuan Tetun: ne'e, la'o, eskola, nasionál",
+     "pt": "Palavras em tétum: ne'e, la'o, eskola, nasionál",
+     "id": "Kata-kata Tetun: ne'e, la'o, eskola, nasionál",
+     "en": "Tetun words: ne'e, la'o, eskola, nasionál"
+    }
+   },
+   "wiki": {
+    "en": "Tetum language",
+    "pt": "Língua tétum"
+   },
+   "related": [
+    "tl.symbols.languages_official",
+    "tl.society.languages",
+    "tl.culture.ethnic_groups",
+    "tl.culture.catholic_traditions",
+    "tl.politics.constitution",
+    "tl.society.education",
+    "tl.society.media"
+   ],
+   "tags": [
+    "tetun",
+    "tetum",
+    "language",
+    "tetun prasa",
+    "tetun terik",
+    "INL",
+    "orthography",
+    "lingua franca"
+   ],
+   "quiz": [
+    {
+     "q": {
+      "tet": "Saida mak Timór-Leste nia lian ofisiál rua?",
+      "pt": "Quais são as duas línguas oficiais de Timor-Leste?",
+      "id": "Apa dua bahasa resmi Timor-Leste?",
+      "en": "What are the two official languages of Timor-Leste?"
+     },
+     "options": [
+      {
+       "tet": "Tetun no Indonéziu",
+       "pt": "Tétum e indonésio",
+       "id": "Tetun dan Indonesia",
+       "en": "Tetun and Indonesian"
+      },
+      {
+       "tet": "Tetun no Portugés",
+       "pt": "Tétum e português",
+       "id": "Tetun dan Portugis",
+       "en": "Tetun and Portuguese"
+      },
+      {
+       "tet": "Portugés no Inglés",
+       "pt": "Português e inglês",
+       "id": "Portugis dan Inggris",
+       "en": "Portuguese and English"
+      },
+      {
+       "tet": "Mambai no Tetun",
+       "pt": "Mambai e tétum",
+       "id": "Mambai dan Tetun",
+       "en": "Mambai and Tetun"
+      }
+     ],
+     "answer": 1,
+     "why": {
+      "tet": "Konstituisaun nia Artigu 13 hatuur Tetun no Portugés nu'udar lian ofisiál.",
+      "pt": "O artigo 13.º da Constituição faz do tétum e do português as línguas oficiais.",
+      "id": "Pasal 13 Konstitusi menetapkan Tetun dan Portugis sebagai bahasa resmi.",
+      "en": "Article 13 of the Constitution makes Tetun and Portuguese the official languages."
+     },
+     "difficulty": 2
+    },
+    {
+     "q": {
+      "tet": "Tetun ida ne'ebé mak buras iha Dili no iha liafuan barak husi Portugés?",
+      "pt": "Que forma de tétum cresceu em Díli e tem muitas palavras portuguesas?",
+      "id": "Ragam Tetun mana yang berkembang di Dili dan memiliki banyak kata Portugis?",
+      "en": "Which form of Tetun grew in Dili and has many Portuguese words?"
+     },
+     "options": [
+      {
+       "tet": "Tetun Terik",
+       "pt": "Tétum terik",
+       "id": "Tetun Terik",
+       "en": "Tetun Terik"
+      },
+      {
+       "tet": "Tetun Prasa",
+       "pt": "Tétum-praça",
+       "id": "Tetun Prasa",
+       "en": "Tetun Prasa"
+      },
+      {
+       "tet": "Baikeno",
+       "pt": "Baikeno",
+       "id": "Baikeno",
+       "en": "Baikeno"
+      },
+      {
+       "tet": "Fataluku",
+       "pt": "Fataluku",
+       "id": "Fataluku",
+       "en": "Fataluku"
+      }
+     ],
+     "answer": 1,
+     "why": {
+      "tet": "Tetun Prasa, ka Tetun Dili, buras iha kapitál; ninia naran mai husi liafuan Portugés praça.",
+      "pt": "O tétum-praça, ou tétum de Díli, cresceu na capital; o nome vem de praça.",
+      "id": "Tetun Prasa atau Tetun Dili berkembang di ibu kota; namanya berasal dari kata Portugis praça.",
+      "en": "Tetun Prasa, or Tetun Dili, grew in the capital; its name comes from the Portuguese word praça."
+     },
+     "difficulty": 5
+    },
+    {
+     "q": {
+      "tet": "Iha liafuan ne'e no la'o, apóstrofu hatudu saida?",
+      "pt": "Em ne'e e la'o, o que marca o apóstrofo?",
+      "id": "Pada kata ne'e dan la'o, apa yang ditandai apostrof?",
+      "en": "In ne'e and la'o, what does the apostrophe show?"
+     },
+     "options": [
+      {
+       "tet": "Vogál naruk",
+       "pt": "Uma vogal longa",
+       "id": "Vokal panjang",
+       "en": "A long vowel"
+      },
+      {
+       "tet": "Lian ne'ebé para badak iha kakorok (glotál)",
+       "pt": "Uma oclusiva glotal",
+       "id": "Hentian glotal",
+       "en": "A glottal stop"
+      },
+      {
+       "tet": "Pergunta ida",
+       "pt": "Uma pergunta",
+       "id": "Sebuah pertanyaan",
+       "en": "A question"
+      },
+      {
+       "tet": "Plurál",
+       "pt": "O plural",
+       "id": "Bentuk jamak",
+       "en": "A plural"
+      }
+     ],
+     "answer": 1,
+     "why": {
+      "tet": "Apóstrofu hatudu glotál: lian ne'ebé para badak iha kakorok.",
+      "pt": "O apóstrofo marca a oclusiva glotal, um pequeno corte na garganta.",
+      "id": "Apostrof menandai hentian glotal, jeda singkat di tenggorokan.",
+      "en": "The apostrophe marks a glottal stop, a short catch in the throat."
+     },
+     "difficulty": 7
+    },
+    {
+     "q": {
+      "tet": "Iha ha'u han ona, liafuan ona hatudu saida?",
+      "pt": "Em ha'u han ona, o que mostra a palavra ona?",
+      "id": "Dalam ha'u han ona, kata ona menunjukkan apa?",
+      "en": "In ha'u han ona, what does the word ona show?"
+     },
+     "options": [
+      {
+       "tet": "Han remata tiha ona",
+       "pt": "Que a ação já terminou",
+       "id": "Tindakan sudah selesai",
+       "en": "The action is already finished"
+      },
+      {
+       "tet": "Aban-bainrua",
+       "pt": "O futuro",
+       "id": "Masa depan",
+       "en": "The future"
+      },
+      {
+       "tet": "Pergunta",
+       "pt": "Uma pergunta",
+       "id": "Sebuah pertanyaan",
+       "en": "A question"
+      },
+      {
+       "tet": "Plurál",
+       "pt": "O plural",
+       "id": "Bentuk jamak",
+       "en": "A plural"
+      }
+     ],
+     "answer": 0,
+     "why": {
+      "tet": "Ona hatudu katak buat ida remata tiha ona; sei hatudu buat ne'ebé sei mai.",
+      "pt": "Ona mostra que a ação já acabou; sei mostra o futuro.",
+      "id": "Ona menunjukkan tindakan yang sudah selesai; sei menunjukkan masa depan.",
+      "en": "Ona shows a finished action; sei shows the future."
+     },
+     "difficulty": 9
+    },
+    {
+     "q": {
+      "tet": "Institutu ida ne'ebé mak prepara ortografia padraun Tetun nian ne'ebé Governu aprova iha 2004?",
+      "pt": "Que instituto preparou a ortografia padrão do tétum aprovada em 2004?",
+      "id": "Lembaga mana yang menyusun ejaan baku Tetun yang disahkan pada 2004?",
+      "en": "Which institute prepared the standard Tetun spelling adopted in 2004?"
+     },
+     "options": [
+      {
+       "tet": "Institutu Nasionál Linguístika (INL)",
+       "pt": "Instituto Nacional de Linguística (INL)",
+       "id": "Institut Nasional Linguistik (INL)",
+       "en": "National Institute of Linguistics (INL)"
+      },
+      {
+       "tet": "UNESCO",
+       "pt": "UNESCO",
+       "id": "UNESCO",
+       "en": "UNESCO"
+      },
+      {
+       "tet": "Institutu Nasionál Estatístika",
+       "pt": "Instituto Nacional de Estatística",
+       "id": "Institut Nasional Statistik",
+       "en": "National Statistics Institute"
+      },
+      {
+       "tet": "Banku Sentrál",
+       "pt": "Banco Central",
+       "id": "Bank Sentral",
+       "en": "Central Bank"
+      }
+     ],
+     "answer": 0,
+     "why": {
+      "tet": "INL prepara ortografia, no Governu aprova iha 14 Abríl 2004.",
+      "pt": "O INL preparou a ortografia, aprovada pelo Governo em 14 de abril de 2004.",
+      "id": "INL menyusun ejaannya, yang disahkan pemerintah pada 14 April 2004.",
+      "en": "The INL prepared it, and the Government adopted it on 14 April 2004."
+     },
+     "difficulty": 11
+    },
+    {
+     "q": {
+      "tet": "Tanba saida mak Tetun sai símbolu identidade nian iha tempu okupasaun?",
+      "pt": "Porque é que o tétum se tornou símbolo de identidade durante a ocupação?",
+      "id": "Mengapa Tetun menjadi lambang identitas selama pendudukan?",
+      "en": "Why did Tetun become a symbol of identity during the occupation?"
+     },
+     "options": [
+      {
+       "tet": "Tanba Uma-Kreda uza Tetun ba misa, la'ós lian Indonéziu",
+       "pt": "Porque a Igreja o usou na missa em vez do indonésio",
+       "id": "Karena Gereja memakainya dalam misa, bukan bahasa Indonesia",
+       "en": "Because the Church used it for Mass instead of Indonesian"
+      },
+      {
+       "tet": "Tanba ne'e lian militár Indonézia nian",
+       "pt": "Porque era a língua do exército indonésio",
+       "id": "Karena itu bahasa tentara Indonesia",
+       "en": "Because it was the language of the Indonesian army"
+      },
+      {
+       "tet": "Tanba ema hanorin de'it iha Portugál",
+       "pt": "Porque só era ensinado em Portugal",
+       "id": "Karena hanya diajarkan di Portugal",
+       "en": "Because it was only taught in Portugal"
+      },
+      {
+       "tet": "Tanba ne'e lian ASEAN nian",
+       "pt": "Porque era a língua da ASEAN",
+       "id": "Karena itu bahasa ASEAN",
+       "en": "Because it was the language of ASEAN"
+      }
+     ],
+     "answer": 0,
+     "why": {
+      "tet": "Entre 1981 no 1983 Uma-Kreda hili Tetun ba misa no orasaun, no Tetun sai símbolu identidade timoroan.",
+      "pt": "Entre 1981 e 1983 a Igreja escolheu o tétum para a missa, e ele tornou-se símbolo da identidade timorense.",
+      "id": "Antara 1981 dan 1983 Gereja memilih Tetun untuk misa, dan Tetun menjadi lambang identitas.",
+      "en": "Between 1981 and 1983 the Church chose Tetun for Mass, and it became a symbol of Timorese identity."
+     },
+     "difficulty": 13
+    }
+   ],
+   "sources": [
+    {
+     "title": "Tetum language",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Tetum_language",
+     "accessed": "2026-10-27",
+     "licence": "CC BY-SA 4.0"
+    },
+    {
+     "title": "Tetun people",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Tetun_people",
+     "accessed": "2026-10-27",
+     "licence": "CC BY-SA 4.0"
+    },
+    {
+     "title": "Martinho da Costa Lopes",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Martinho_da_Costa_Lopes",
+     "accessed": "2026-10-27",
+     "licence": "CC BY-SA 4.0"
+    },
+    {
+     "title": "Wikipedia Tetun (Wikipédia iha lia-Tetun)",
+     "publisher": "Wikimedia Foundation",
+     "url": "https://tet.wikipedia.org/",
+     "accessed": "2026-10-27",
+     "licence": "CC BY-SA 4.0"
+    },
+    {
+     "title": "Wikisource: Main Page/Tetun",
+     "publisher": "Wikimedia Foundation",
+     "url": "https://wikisource.org/wiki/Main_Page/Tetun",
+     "accessed": "2026-10-27",
+     "licence": "CC BY-SA 4.0"
+    },
+    {
+     "title": "Text Information Retrieval in Tetun: A Preliminary Study",
+     "publisher": "arXiv",
+     "url": "https://arxiv.org/pdf/2406.07331",
+     "accessed": "2026-10-27",
+     "licence": "© authors"
+    },
+    {
+     "title": "Constitution of the Democratic Republic of Timor-Leste (2002)",
+     "publisher": "Constitute Project",
+     "url": "https://www.constituteproject.org/constitution/East_Timor_2002",
+     "accessed": "2026-10-27"
+    },
+    {
+     "title": "The Second Vatican Council and the path of faith in Timor-Leste",
+     "publisher": "Tatoli",
+     "url": "https://en.tatoli.tl/2026/03/17/the-second-vatican-council-and-the-path-of-faith-in-timor-leste/10/",
+     "accessed": "2026-10-27",
+     "licence": "© Tatoli"
+    },
+    {
+     "title": "Standard Tetum-English dictionary (review)",
+     "publisher": "Inside Indonesia",
+     "url": "https://www.insideindonesia.org/standard-tetum-english-dictionary",
+     "accessed": "2026-10-27",
+     "licence": "© publisher"
+    },
+    {
+     "title": "Tetum",
+     "publisher": "Omniglot",
+     "url": "https://omniglot.com/writing/tetum.php",
+     "accessed": "2026-10-27",
+     "licence": "© publisher"
+    }
+   ],
+   "review": {
+    "status": "draft",
+    "notes": "Overlaps on purpose only lightly with tl.symbols.languages_official (Art. 13/159, INL) and tl.society.languages (census table). Decree date 14 April 2004 (Decreto do Governo n.º 1/2004, on the Tetun orthography) from search snippets of a 2024 study — check the number. 'About 79% can speak Tetun (2015 census)' is the figure 78.78% cited in arXiv 2406.07331 — check the INETL table (speak vs. speak/read/write). Portuguese loans: 32% (newspaper samples) and 35% (interview corpus) in studies cited by the same paper; 'about one third' used. Church liturgy in Tetun 1981–1983 from Tatoli (2026); Wikipedia ('Tetum language', 'Martinho da Costa Lopes') confirms the switch without one exact year. Belu and Malaka regencies from Wikipedia 'Tetun people' (not re-read). 'praça' etymology and Tetun Dili's simplified grammar from Wikipedia. Mutual intelligibility of Terik and Prasa is disputed — kept as 'linguists still discuss'. Tetun Wikipedia cited by its root URL (tet.wikipedia.org); Wikisource Tetun main page seen in search results. Grammar examples (ona, sei, sira, nia, la) are standard Tetun — a native speaker should check the Tetun explanations. Tetun terms to check: glotál, apóstrofu, ortografia padraun, ferramenta, sistema buka, kumprimentu, aban-bainrua."
+   }
   }
  ]
 }

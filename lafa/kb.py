@@ -458,13 +458,13 @@ class KnowledgeBase:
         for cat in order:
             items = [a for a in self.articles(cat, level) if a.kind == "article" and a.category == cat]
             items += [a for a in self.articles(cat, level) if a.kind == "article" and a.category != cat and a.id not in seen and a not in items]
-            items = sorted(items, key=lambda a: self.reading_key(a))
+            items = sorted(items, key=lambda a, c=cat: self.reading_key(a, c))
             seen.update(a.id for a in items)
             if items: units.append({"category": cat, "items": items})
         return units
-    def reading_key(self, item):
+    def reading_key(self, item, unit=None):
         """Chronological for history topics (period start), editorial order otherwise."""
-        if item.category in ("history", "colonial", "conflicts", "leaders"):
+        if (unit or item.category) in ("history", "colonial", "conflicts", "leaders"):
             p = item.get("period") if isinstance(item.get("period"), dict) else {}
             if isinstance(p.get("from"), (int, float)): return (0, p["from"], self.plan_rank(item.id))
         return (1, 0, self.plan_rank(item.id))

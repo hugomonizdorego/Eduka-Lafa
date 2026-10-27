@@ -87,24 +87,25 @@ becomes a host registration only when the host consumes it.
 `create_lafa_page()` returns the complete **Eduka-Settings → LAFA** page:
 
 1. the activation group (below), and
-2. `add_lafa_preferences()`: grouped controls for every preference —
-   Virtual Assistant (outfit, roaming, panel edge/height, greeting, quiet
-   mode, reduce motion, messages per hour, entertainment), Personality &
-   activities (hover questions, self-talk, cards, activity duration,
-   intervals), Language (language, read aloud, content catalogue updates),
-   Lafa Desktop (start section, theme) and Files & weather (city,
-   coordinates, time zone, searchable folders).
+2. `add_lafa_preferences()`: grouped controls (0.3.0) — Virtual Assistant
+   (outfit: Tais Mane, Casual Belajar, Formal; size, walking, panel edge and
+   height, reduce motion, greeting, start with the session), Knowledge and
+   tips (Timor-Leste tips on/off, a tip every N minutes, messages per hour,
+   quiet mode, hello on hover, activities, balloon time), Lafa Desktop (start
+   page, school level, language for Tetun words, quiz clock, Eduka theme,
+   content updates, reading speed) and Language.
 
 The Virtual Assistant is switched on **only** here (or with the fixed
 `--enable` role from this page); opening Lafa Desktop never switches it on.
 
 **Save** merges the values into `~/.config/lafa/settings.json` with an atomic
 0600 write, then starts the fixed role `--reload`; a running LAFA re-reads the
-file and applies it live while keeping chat, lesson code and drafts. When LAFA
+file and applies it live while keeping the open page and quiz. When Lafa
 is not running, `--reload` exits immediately and the values load at the next
 start. LAFA re-validates every field on load. Fields written by 0.1.x
 (provider, models, server addresses) are left in the file, ignored by Lafa
-0.2.0 and backed up once to `settings.json.0.1-backup`.
+and backed up once to `settings.json.0.1-backup`. Start pages and age levels
+of 0.2 move to the nearest 0.3 page and school level.
 
 ```python
 from eduka_lafa_settings import create_lafa_page
@@ -197,7 +198,7 @@ patched or executed. Native registration remains a target-host integration step.
 ```
 
 The first command is read-only and does not query public sources. The second
-also checks fixed Wikipedia/Dili weather queries and Timor-Leste feeds. Warnings
+also checks Wikipedia, the World Bank API and the Lafa content manifest. Warnings
 identify missing optional speech commands, menu entries or local socket support.
 The diagnostic cannot prove native page registration, correct panel placement
 or Wayland behaviour; test those on Edukasaun OS.

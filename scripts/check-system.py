@@ -37,7 +37,7 @@ def checks(network=False):
             add('Character assets','pass',f"{detail['activities']} activity poses; {detail['traditional']} traditional poses")
             add('Panel movement','pass' if detail['backend']=='xcb' else 'warning','X11 movement available' if detail['backend']=='xcb' else 'Offscreen/Wayland needs target placement testing')
         except (RuntimeError,ValueError,KeyError,OSError,subprocess.TimeoutExpired):add('Qt rendering','fail','Qt initialization failed in an isolated probe; check display and runtime dependencies')
-    for name,command in [('PDF reading','pdftotext'),('Read aloud','espeak-ng')]:
+    for name,command in [('Read aloud','espeak-ng')]:
         present=bool(shutil.which(command));add(name,'pass' if present else 'warning',command+' available' if present else 'Optional command missing: '+command)
     try:
         with tempfile.TemporaryDirectory(prefix='lafa-ipc-check-') as folder:
@@ -48,11 +48,13 @@ def checks(network=False):
     data=Path(os.environ.get('XDG_DATA_HOME',str(Path.home()/'.local/share')))
     for name,filename in [('Desktop launcher','lafa-desktop.desktop'),('Settings launcher','lafa-settings.desktop')]:
         installed=(data/'applications'/filename).is_file();add(name,'pass' if installed else 'warning','Installed' if installed else 'Run scripts/install-user.sh from a stable source location')
+    from lafa.kb import KnowledgeBase
+    base=KnowledgeBase();stats=base.stats()
+    add('Encyclopedia content','pass' if stats['articles'] else 'fail',f"{stats['articles']} articles, {stats['places']} places, {stats['days']} days, {stats['words']} words, {stats['questions']} quiz questions")
     if network:
-        from lafa.tools import encyclopedia_search
-        from lafa.timor import timor_news
-        from lafa.live_info import forecast,Location
-        for name,operation in [('Wikipedia',lambda:encyclopedia_search('Dili','en')),('Dili weather',lambda:forecast(Location('Dili',-8.5586,125.5736,'Asia/Dili'))),('Timor-Leste feeds',timor_news)]:
+        from lafa import sync
+        for name,operation in [('Wikipedia',lambda:sync.wiki_intros('en',['Timor-Leste'])),('World Bank',lambda:sync.net.json_request('https://api.worldbank.org/v2/country/TLS?format=json',timeout=20)),
+                               ('Lafa content updates',lambda:sync.check_updates(Path(sync.__file__).parent/'assets'/'timor',Path(tempfile.gettempdir())/'lafa-check-updates'))]:
             try:operation();add(name,'pass','Public request completed; no account or key used')
             except Exception:add(name,'warning','Public request failed; check internet/service availability')
     return {'lafa_version':__version__,'network_requested':network,'checks':results,'private_data_included':False}

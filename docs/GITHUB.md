@@ -18,9 +18,10 @@ logs and build files are excluded by `.gitignore`.
 
 Suggested repository description:
 
-> Lafa — Pendamping Belajar dan Asisten Edukasaun OS: an offline-first
-> learning companion from Timor-Leste (lessons, practice, local search, OS
-> help, reminders) that needs no login, AI key or server.
+> Lafa — Ensiklopédia Timór-Leste: an offline-first encyclopedia of
+> Timor-Leste in Tetun, Portuguese, Indonesian and English (history, State,
+> culture, economy, map, tourism, holidays, millionaire quiz, 1000+ Tetun
+> words) with a virtual assistant for Edukasaun OS. No login, AI or server.
 
 GitHub Actions runs core and offscreen Qt tests on push/pull request. The test
 suite needs no internet, account or key.

@@ -1,6 +1,803 @@
 {
  "articles": [
   {
+   "id": "tl.history.overview",
+   "category": "history",
+   "title": {
+    "tet": "Timór-Leste nia istória: tempu sira",
+    "pt": "História de Timor-Leste: as épocas",
+    "id": "Sejarah Timor-Leste: zaman demi zaman",
+    "en": "History of Timor-Leste: the eras"
+   },
+   "summary": {
+    "tet": "Ema hela iha Timór maizumenus tinan 44 000 ona. Reinu sira, negósiu ai-kameli, Portugés nia prezensa liu sékulu haat, Funu Mundiál Daruak no okupasaun Indonézia tinan 24 forma nasaun ne'e. Timór-Leste proklama independénsia iha 1975 no hetan fali independénsia iha 20 Maiu 2002.",
+    "pt": "Há pessoas a viver em Timor há cerca de 44 000 anos. Reinos, o comércio do sândalo, mais de quatro séculos de presença portuguesa, a Segunda Guerra Mundial e 24 anos de ocupação indonésia moldaram o país. Timor-Leste proclamou a independência em 1975 e restaurou-a a 20 de maio de 2002.",
+    "id": "Manusia sudah tinggal di Timor sekitar 44.000 tahun. Kerajaan-kerajaan, perdagangan cendana, lebih dari empat abad kehadiran Portugis, Perang Dunia II dan 24 tahun pendudukan Indonesia membentuk negeri ini. Timor-Leste memproklamasikan kemerdekaan pada 1975 dan memulihkannya pada 20 Mei 2002.",
+    "en": "People have lived on Timor for about 44,000 years. Kingdoms, the sandalwood trade, more than four centuries of Portuguese presence, the Second World War and 24 years of Indonesian occupation all shaped the country. Timor-Leste proclaimed independence in 1975 and restored it on 20 May 2002."
+   },
+   "levels": [
+    "eb2",
+    "eb3",
+    "es",
+    "sup"
+   ],
+   "period": {
+    "from": -44000,
+    "to": 2026
+   },
+   "sections": [
+    {
+     "heading": {
+      "tet": "Husi ema dahuluk to'o reinu sira",
+      "pt": "Dos primeiros habitantes aos reinos",
+      "id": "Dari manusia pertama sampai kerajaan",
+      "en": "From the first people to the kingdoms"
+     },
+     "text": {
+      "tet": "Ema dahuluk to'o Timór liu tasi maizumenus tinan 44 000 liubá. Iha fatuk-kuak hanesan Laili, Jerimalai no Lene Hara sira husik hela ekipamentu fatuk, ikan nia ruin no pintura. Tinan rihun hirak liubá, ema foun ne'ebé ko'alia lian Austronézia lori sanan-rai no to'os, no sira moris hamutuk ho grupu sira ne'ebé ko'alia lian Papua. Tan ne'e nasaun ne'e iha lian barak. Ho tempu, illa fahe ba reinu ki'ik barak ne'ebé liurai sira ukun, no Wehali mak sentru lulik. Komersiante Xina, Java no Malaiu mai buka ai-kameli mutin, no rejistu Xina temi Timór husi sékulu 13.",
+      "pt": "Os primeiros habitantes chegaram a Timor por mar há cerca de 44 000 anos; em grutas como Laili, Jerimalai e Lene Hara deixaram ferramentas de pedra, ossos de peixe e pinturas. Há alguns milhares de anos, recém-chegados de língua austronésia trouxeram a cerâmica e a agricultura e passaram a viver ao lado de grupos de língua papua, e por isso o país tem tantas línguas. Com o tempo, a ilha dividiu-se em muitos pequenos reinos governados por liurais, com Wehali como centro ritual. Mercadores chineses, javaneses e malaios vinham buscar sândalo branco, e Timor aparece em registos chineses desde o século XIII.",
+      "id": "Manusia pertama tiba di Timor lewat laut sekitar 44.000 tahun lalu; di gua-gua seperti Laili, Jerimalai dan Lene Hara mereka meninggalkan alat batu, tulang ikan dan lukisan. Beberapa ribu tahun lalu, pendatang berbahasa Austronesia membawa tembikar dan pertanian, lalu hidup berdampingan dengan kelompok berbahasa Papua; karena itu negeri ini memiliki banyak bahasa. Lama-kelamaan pulau ini terbagi menjadi banyak kerajaan kecil yang dipimpin para liurai, dengan Wehali sebagai pusat ritual. Pedagang Tiongkok, Jawa dan Melayu datang mencari cendana putih, dan Timor sudah muncul dalam catatan Tiongkok sejak abad ke-13.",
+      "en": "The first people reached Timor by sea about 44,000 years ago; in caves such as Laili, Jerimalai and Lene Hara they left stone tools, fish bones and rock art. A few thousand years ago Austronesian-speaking newcomers brought pottery and farming and lived alongside Papuan-speaking groups, which is why the country has so many languages. Over time the island was divided into many small kingdoms led by liurai, with Wehali as a ritual centre. Chinese, Javanese and Malay traders came for white sandalwood, and Timor appears in Chinese records from the 13th century."
+     }
+    },
+    {
+     "heading": {
+      "tet": "Timór Portugés (maizumenus 1515–1941)",
+      "pt": "O Timor Português (c. 1515–1941)",
+      "id": "Timor Portugis (sekitar 1515–1941)",
+      "en": "Portuguese Timor (c. 1515–1941)"
+     },
+     "text": {
+      "tet": "Komersiante Portugés to'o maizumenus iha 1515, no frade dominikanu sira hahú misaun husi Solor iha 1556. Governadór dahuluk hahú knaar iha Lifau, iha Oe-Kusi, iha 1702, maibé Topasse sira no reinu barak hasoru, no iha 1769 kapitál muda ba Dili. Portugál no Olanda fahe illa husi 1859 to'o arbitrajen 1914. Hahú iha dékada 1890, Portugál hatuur ukun direta ho kampaña militár, impostu, servisu forsadu no plantasaun kafé. Reinu sira reziste; Portugés hakotu funu boot Manufahi 1911–1912, ne'ebé Dom Boaventura lidera, no ema barak tebes mate.",
+      "pt": "Os mercadores portugueses chegaram por volta de 1515, e os frades dominicanos iniciaram a missão a partir de Solor em 1556. O primeiro governador instalou-se em Lifau, em Oé-Cusse, em 1702, mas os topasses e muitos reinos resistiram, e em 1769 a capital mudou-se para Díli. Portugal e os Países Baixos dividiram a ilha entre 1859 e a arbitragem de 1914. A partir da década de 1890, Portugal impôs um domínio direto com campanhas militares, impostos, trabalho forçado e plantações de café. Os reinos resistiram; a grande guerra de Manufahi, de 1911–1912, chefiada por D. Boaventura, foi esmagada com um enorme custo humano.",
+      "id": "Pedagang Portugis tiba sekitar 1515, dan biarawan Dominikan memulai misi dari Solor pada 1556. Gubernur pertama mulai bertugas di Lifau, Oé-Cusse, pada 1702, tetapi kaum Topas dan banyak kerajaan melawan, dan pada 1769 ibu kota pindah ke Dili. Portugal dan Belanda membagi pulau ini antara 1859 dan arbitrase 1914. Sejak 1890-an Portugal menerapkan pemerintahan langsung dengan kampanye militer, pajak, kerja paksa dan perkebunan kopi. Kerajaan-kerajaan melawan; perang besar Manufahi 1911–1912 yang dipimpin Dom Boaventura ditumpas dengan korban jiwa yang sangat besar.",
+      "en": "Portuguese traders arrived around 1515, and Dominican friars began their mission from Solor in 1556. The first governor took office at Lifau, in Oecusse, in 1702, but the Topasses and many kingdoms resisted, and in 1769 the capital moved to Dili. Portugal and the Netherlands divided the island between 1859 and the 1914 arbitration. From the 1890s Portugal imposed direct rule through military campaigns, taxes, forced labour and coffee plantations. The kingdoms resisted; the great Manufahi war of 1911–1912, led by Dom Boaventura, was crushed at a heavy human cost."
+     }
+    },
+    {
+     "heading": {
+      "tet": "Funu, provínsia Portugés no dalan ba 1975",
+      "pt": "A guerra, a província portuguesa e o caminho para 1975",
+      "id": "Perang, provinsi Portugis dan jalan menuju 1975",
+      "en": "War, a Portuguese province and the road to 1975"
+     },
+     "text": {
+      "tet": "Iha Funu Mundiál Daruak, Japaun okupa Timór (1942–1945). Timór-oan barak ajuda komandu Austrália, no estimativa ba Timór-oan ne'ebé mate entre maizumenus 40 000 no 70 000. Depois, Portugál fila mai, no iha 1951 Timór sai 'provínsia ultramarina'. Revolta iha Vikeke iha 1959 hetan represaun todan. Revolusaun Kravu iha Portugál, iha 25 Abríl 1974, loke dalan ba deskolonizasaun, no Timór-oan harii partidu polítiku sira hanesan UDT, ASDT (depois FRETILIN) no APODETI. Depois funu-maluk badak iha Agostu 1975, FRETILIN proklama Repúblika Demokrátika Timór-Leste iha 28 Novembru 1975.",
+      "pt": "Na Segunda Guerra Mundial, o Japão ocupou Timor (1942–1945); muitos timorenses ajudaram os comandos australianos, e as estimativas de timorenses mortos vão de cerca de 40 000 a 70 000. Depois, Portugal regressou e, em 1951, Timor passou a 'província ultramarina'. Uma revolta em Viqueque, em 1959, foi duramente reprimida. A Revolução dos Cravos, a 25 de abril de 1974, abriu caminho à descolonização, e os timorenses fundaram partidos como a UDT, a ASDT (depois FRETILIN) e a APODETI. Após uma breve guerra civil em agosto de 1975, a FRETILIN proclamou a República Democrática de Timor-Leste a 28 de novembro de 1975.",
+      "id": "Dalam Perang Dunia II, Jepang menduduki Timor (1942–1945); banyak orang Timor membantu pasukan komando Australia, dan perkiraan jumlah orang Timor yang tewas berkisar antara sekitar 40.000 dan 70.000. Setelah itu Portugal kembali, dan pada 1951 Timor menjadi 'provinsi seberang laut'. Pemberontakan di Viqueque pada 1959 ditumpas dengan keras. Revolusi Anyelir di Portugal pada 25 April 1974 membuka jalan bagi dekolonisasi, dan orang Timor mendirikan partai seperti UDT, ASDT (kemudian FRETILIN) dan APODETI. Setelah perang saudara singkat pada Agustus 1975, FRETILIN memproklamasikan Republik Demokratik Timor-Leste pada 28 November 1975.",
+      "en": "In the Second World War Japan occupied Timor (1942–1945); many Timorese helped Australian commandos, and estimates of Timorese deaths range from about 40,000 to 70,000. Afterwards Portugal returned, and in 1951 Timor became an 'overseas province'. A revolt in Viqueque in 1959 was harshly put down. The Carnation Revolution of 25 April 1974 in Portugal opened the way to decolonisation, and Timorese founded parties such as UDT, ASDT (later FRETILIN) and APODETI. After a short civil war in August 1975, FRETILIN proclaimed the Democratic Republic of East Timor on 28 November 1975."
+     }
+    },
+    {
+     "heading": {
+      "tet": "Okupasaun no rezisténsia (1975–1999)",
+      "pt": "Ocupação e resistência (1975–1999)",
+      "id": "Pendudukan dan perlawanan (1975–1999)",
+      "en": "Occupation and resistance (1975–1999)"
+     },
+     "text": {
+      "tet": "Iha 7 Dezembru 1975 Indonézia invade, no iha Jullu 1976 deklara territóriu ne'e nu'udar ninia provínsia ba dala-27. Nasaun Unidas nunka simu ida-ne'e. Durante okupasaun tinan 24, rezisténsia hala'o luta iha frente tolu: armada (FALINTIL), klandestina no diplomátika. Komisaun lia-loos CAVR estima ema mate tanba konflitu pelumenus 102 800 entre 1974 no 1999, barak tanba hamlaha no moras. Masakre Santa Cruz iha 1991 no Prémiu Nobel ba Dame 1996 ba Bispu Carlos Filipe Ximenes Belo no José Ramos-Horta dada mundu nia atensaun. Iha Konsulta Populár ONU nian iha 30 Agostu 1999, 78,5% hili independénsia; violénsia mosu, no INTERFET to'o iha Setembru.",
+      "pt": "A 7 de dezembro de 1975 a Indonésia invadiu e, em julho de 1976, declarou o território a sua 27.ª província, o que as Nações Unidas nunca aceitaram. Durante 24 anos de ocupação, a resistência lutou em três frentes: armada (FALINTIL), clandestina e diplomática. A comissão da verdade CAVR estimou pelo menos 102 800 mortes ligadas ao conflito entre 1974 e 1999, muitas por fome e doença. O massacre de Santa Cruz, em 1991, e o Prémio Nobel da Paz de 1996, atribuído a D. Carlos Filipe Ximenes Belo e a José Ramos-Horta, chamaram a atenção do mundo. Na Consulta Popular da ONU, a 30 de agosto de 1999, 78,5% escolheram a independência; seguiu-se a violência, e a INTERFET chegou em setembro.",
+      "id": "Pada 7 Desember 1975 Indonesia menyerbu, dan pada Juli 1976 menyatakan wilayah itu sebagai provinsi ke-27, yang tidak pernah diakui PBB. Selama 24 tahun pendudukan, perlawanan berjuang di tiga front: bersenjata (FALINTIL), klandestin dan diplomatik. Komisi kebenaran CAVR memperkirakan sedikitnya 102.800 kematian terkait konflik antara 1974 dan 1999, banyak di antaranya karena kelaparan dan penyakit. Pembantaian Santa Cruz pada 1991 dan Hadiah Nobel Perdamaian 1996 untuk Uskup Carlos Filipe Ximenes Belo dan José Ramos-Horta menarik perhatian dunia. Dalam Jajak Pendapat PBB pada 30 Agustus 1999, 78,5% memilih merdeka; kekerasan menyusul, dan INTERFET tiba pada September.",
+      "en": "On 7 December 1975 Indonesia invaded, and in July 1976 it declared the territory its 27th province, which the United Nations never accepted. During 24 years of occupation the resistance fought on three fronts: armed (FALINTIL), clandestine and diplomatic. The truth commission CAVR estimated at least 102,800 conflict-related deaths between 1974 and 1999, many from hunger and illness. The Santa Cruz massacre of 1991 and the 1996 Nobel Peace Prize for Bishop Carlos Filipe Ximenes Belo and José Ramos-Horta drew the world's attention. In the UN Popular Consultation of 30 August 1999, 78.5% chose independence; violence followed, and INTERFET arrived in September."
+     }
+    },
+    {
+     "heading": {
+      "tet": "Estadu independente (2002–2026)",
+      "pt": "O Estado independente (2002–2026)",
+      "id": "Negara merdeka (2002–2026)",
+      "en": "The independent State (2002–2026)"
+     },
+     "text": {
+      "tet": "Depois tranzisaun ONU nian ho UNTAET, Timór-Leste hetan fali independénsia iha 20 Maiu 2002, ho Xanana Gusmão hanesan Prezidente Repúblika no Konstituisaun foun. Iha 27 Setembru 2002 nia tama ONU hanesan membru ba dala-191. Estadu foun harii ninia instituisaun sira no harii Fundu Petrolíferu iha 2005, maibé nia mós liu krize 2006 no atake 11 Fevereiru 2008. Misaun ONU ikus sai iha 2012 nia rohan. Iha 2018 Timór-Leste asina tratadu fronteira tasi nian ho Austrália. Timór-Leste tama Organizasaun Mundiál Komérsiu iha 2024, no sai membru ba dala-11 ASEAN iha 26 Outubru 2025.",
+      "pt": "Depois da transição da ONU, dirigida pela UNTAET, Timor-Leste restaurou a independência a 20 de maio de 2002, com Xanana Gusmão como Presidente da República e uma nova Constituição, e a 27 de setembro de 2002 tornou-se o 191.º membro da ONU. O jovem Estado construiu as suas instituições e criou o Fundo Petrolífero em 2005, mas viveu também a crise de 2006 e os ataques de 11 de fevereiro de 2008. A última missão da ONU saiu no fim de 2012. Em 2018 foi assinado um tratado de fronteira marítima com a Austrália. Timor-Leste entrou na OMC em 2024 e tornou-se o 11.º membro da ASEAN a 26 de outubro de 2025.",
+      "id": "Setelah masa transisi PBB di bawah UNTAET, Timor-Leste memulihkan kemerdekaannya pada 20 Mei 2002, dengan Xanana Gusmão sebagai Presiden dan Konstitusi baru, dan pada 27 September 2002 menjadi anggota PBB ke-191. Negara muda ini membangun lembaga-lembaganya dan membentuk Dana Perminyakan pada 2005, tetapi juga mengalami krisis 2006 dan serangan 11 Februari 2008. Misi PBB terakhir berakhir pada akhir 2012. Pada 2018 ditandatangani perjanjian batas laut dengan Australia. Timor-Leste bergabung dengan WTO pada 2024 dan menjadi anggota ke-11 ASEAN pada 26 Oktober 2025.",
+      "en": "After a UN transition led by UNTAET, Timor-Leste restored its independence on 20 May 2002, with Xanana Gusmão as President and a new Constitution, and on 27 September 2002 it joined the UN as its 191st member. The young State built its institutions and set up a Petroleum Fund in 2005, but it also lived through the crisis of 2006 and the attacks of 11 February 2008. The last UN mission left at the end of 2012. In 2018 a maritime boundary treaty was signed with Australia. Timor-Leste joined the WTO in 2024 and became the 11th member of ASEAN on 26 October 2025."
+     }
+    }
+   ],
+   "facts": [
+    {
+     "label": {
+      "tet": "Ema nia rastu tuan liu",
+      "pt": "Vestígios humanos mais antigos",
+      "id": "Jejak manusia tertua",
+      "en": "Oldest traces of people"
+     },
+     "value": {
+      "tet": "maizumenus tinan 44 000 liubá (Laili)",
+      "pt": "há cerca de 44 000 anos (Laili)",
+      "id": "sekitar 44.000 tahun lalu (Laili)",
+      "en": "about 44,000 years ago (Laili)"
+     }
+    },
+    {
+     "label": {
+      "tet": "Portugés to'o",
+      "pt": "Chegada dos portugueses",
+      "id": "Kedatangan Portugis",
+      "en": "Portuguese arrival"
+     },
+     "value": {
+      "tet": "maizumenus 1515 (Lifau)",
+      "pt": "c. 1515 (Lifau)",
+      "id": "sekitar 1515 (Lifau)",
+      "en": "around 1515 (Lifau)"
+     }
+    },
+    {
+     "label": {
+      "tet": "Dili sai kapitál",
+      "pt": "Díli torna-se capital",
+      "id": "Dili menjadi ibu kota",
+      "en": "Dili becomes the capital"
+     },
+     "value": "1769"
+    },
+    {
+     "label": {
+      "tet": "Proklamasaun Independénsia",
+      "pt": "Proclamação da Independência",
+      "id": "Proklamasi Kemerdekaan",
+      "en": "Proclamation of Independence"
+     },
+     "value": {
+      "tet": "28 Novembru 1975",
+      "pt": "28 de novembro de 1975",
+      "id": "28 November 1975",
+      "en": "28 November 1975"
+     }
+    },
+    {
+     "label": {
+      "tet": "Okupasaun Indonézia",
+      "pt": "Ocupação indonésia",
+      "id": "Pendudukan Indonesia",
+      "en": "Indonesian occupation"
+     },
+     "value": "1975–1999"
+    },
+    {
+     "label": {
+      "tet": "Konsulta Populár",
+      "pt": "Consulta Popular",
+      "id": "Jajak Pendapat",
+      "en": "Popular Consultation"
+     },
+     "value": {
+      "tet": "30 Agostu 1999 (78,5% ba independénsia)",
+      "pt": "30 de agosto de 1999 (78,5% pela independência)",
+      "id": "30 Agustus 1999 (78,5% memilih merdeka)",
+      "en": "30 August 1999 (78.5% for independence)"
+     }
+    },
+    {
+     "label": {
+      "tet": "Restaurasaun Independénsia",
+      "pt": "Restauração da Independência",
+      "id": "Pemulihan Kemerdekaan",
+      "en": "Restoration of Independence"
+     },
+     "value": {
+      "tet": "20 Maiu 2002",
+      "pt": "20 de maio de 2002",
+      "id": "20 Mei 2002",
+      "en": "20 May 2002"
+     }
+    },
+    {
+     "label": {
+      "tet": "Membru ASEAN",
+      "pt": "Membro da ASEAN",
+      "id": "Anggota ASEAN",
+      "en": "ASEAN member"
+     },
+     "value": {
+      "tet": "26 Outubru 2025 (membru ba dala-11)",
+      "pt": "26 de outubro de 2025 (11.º membro)",
+      "id": "26 Oktober 2025 (anggota ke-11)",
+      "en": "26 October 2025 (11th member)"
+     }
+    }
+   ],
+   "timeline": [
+    {
+     "date": "-44000",
+     "title": {
+      "tet": "Ema dahuluk iha Laili",
+      "pt": "Primeiros habitantes em Laili",
+      "id": "Manusia pertama di Laili",
+      "en": "First people at Laili"
+     }
+    },
+    {
+     "date": "-2500",
+     "title": {
+      "tet": "Ema ko'alia lian Austronézia to'o (tinan 4 500–3 000 liubá)",
+      "pt": "Chegam falantes austronésios (há 4500–3000 anos)",
+      "id": "Penutur Austronesia tiba (4.500–3.000 tahun lalu)",
+      "en": "Austronesian speakers arrive (4,500–3,000 years ago)"
+     }
+    },
+    {
+     "date": "1225",
+     "title": {
+      "tet": "Livru Xina temi ai-kameli Timór nian (sékulu 13)",
+      "pt": "Livro chinês refere o sândalo de Timor (século XIII)",
+      "id": "Buku Tiongkok menyebut cendana Timor (abad ke-13)",
+      "en": "Chinese book mentions Timor's sandalwood (13th century)"
+     }
+    },
+    {
+     "date": "1515",
+     "title": {
+      "tet": "Portugés to'o Lifau (data tradisionál)",
+      "pt": "Os portugueses chegam a Lifau (data tradicional)",
+      "id": "Portugis tiba di Lifau (tanggal tradisional)",
+      "en": "The Portuguese reach Lifau (traditional date)"
+     }
+    },
+    {
+     "date": "1556",
+     "title": {
+      "tet": "Misaun dominikanu hahú husi Solor",
+      "pt": "Começa a missão dominicana em Solor",
+      "id": "Misi Dominikan dimulai dari Solor",
+      "en": "Dominican mission begins from Solor"
+     }
+    },
+    {
+     "date": "1702",
+     "title": {
+      "tet": "Governadór dahuluk iha Lifau",
+      "pt": "Primeiro governador em Lifau",
+      "id": "Gubernur pertama di Lifau",
+      "en": "First governor at Lifau"
+     }
+    },
+    {
+     "date": "1769-10-10",
+     "title": {
+      "tet": "Dili sai kapitál foun",
+      "pt": "Díli torna-se a nova capital",
+      "id": "Dili menjadi ibu kota baru",
+      "en": "Dili becomes the new capital"
+     }
+    },
+    {
+     "date": "1859-04-20",
+     "title": {
+      "tet": "Tratadu Lisboa hahú fahe illa",
+      "pt": "O Tratado de Lisboa começa a dividir a ilha",
+      "id": "Perjanjian Lisboa mulai membagi pulau",
+      "en": "Treaty of Lisbon begins dividing the island"
+     }
+    },
+    {
+     "date": "1912-08",
+     "title": {
+      "tet": "Funu Manufahi remata",
+      "pt": "Fim da guerra de Manufahi",
+      "id": "Perang Manufahi berakhir",
+      "en": "End of the Manufahi war"
+     }
+    },
+    {
+     "date": "1942-02-20",
+     "title": {
+      "tet": "Japaun invade Timór",
+      "pt": "O Japão invade Timor",
+      "id": "Jepang menyerbu Timor",
+      "en": "Japan invades Timor"
+     }
+    },
+    {
+     "date": "1945-09",
+     "title": {
+      "tet": "Okupasaun Japaun remata",
+      "pt": "Fim da ocupação japonesa",
+      "id": "Pendudukan Jepang berakhir",
+      "en": "Japanese occupation ends"
+     }
+    },
+    {
+     "date": "1951",
+     "title": {
+      "tet": "Timór sai 'provínsia ultramarina'",
+      "pt": "Timor passa a 'província ultramarina'",
+      "id": "Timor menjadi 'provinsi seberang laut'",
+      "en": "Timor becomes an 'overseas province'"
+     }
+    },
+    {
+     "date": "1959-06",
+     "title": {
+      "tet": "Revolta Vikeke",
+      "pt": "Revolta de Viqueque",
+      "id": "Pemberontakan Viqueque",
+      "en": "Viqueque revolt"
+     }
+    },
+    {
+     "date": "1974-04-25",
+     "title": {
+      "tet": "Revolusaun Kravu iha Portugál",
+      "pt": "Revolução dos Cravos em Portugal",
+      "id": "Revolusi Anyelir di Portugal",
+      "en": "Carnation Revolution in Portugal"
+     }
+    },
+    {
+     "date": "1975-11-28",
+     "title": {
+      "tet": "Proklamasaun Independénsia",
+      "pt": "Proclamação da Independência",
+      "id": "Proklamasi Kemerdekaan",
+      "en": "Proclamation of Independence"
+     }
+    },
+    {
+     "date": "1975-12-07",
+     "title": {
+      "tet": "Indonézia invade",
+      "pt": "A Indonésia invade",
+      "id": "Indonesia menyerbu",
+      "en": "Indonesia invades"
+     }
+    },
+    {
+     "date": "1991-11-12",
+     "title": {
+      "tet": "Masakre Santa Cruz",
+      "pt": "Massacre de Santa Cruz",
+      "id": "Pembantaian Santa Cruz",
+      "en": "Santa Cruz massacre"
+     }
+    },
+    {
+     "date": "1999-08-30",
+     "title": {
+      "tet": "Konsulta Populár: 78,5% ba independénsia",
+      "pt": "Consulta Popular: 78,5% pela independência",
+      "id": "Jajak Pendapat: 78,5% memilih merdeka",
+      "en": "Popular Consultation: 78.5% for independence"
+     }
+    },
+    {
+     "date": "2002-05-20",
+     "title": {
+      "tet": "Restaurasaun Independénsia",
+      "pt": "Restauração da Independência",
+      "id": "Pemulihan Kemerdekaan",
+      "en": "Restoration of Independence"
+     }
+    },
+    {
+     "date": "2002-09-27",
+     "title": {
+      "tet": "Timór-Leste tama ONU",
+      "pt": "Timor-Leste entra na ONU",
+      "id": "Timor-Leste masuk PBB",
+      "en": "Timor-Leste joins the UN"
+     }
+    },
+    {
+     "date": "2012-12-31",
+     "title": {
+      "tet": "Misaun ONU ikus remata",
+      "pt": "Termina a última missão da ONU",
+      "id": "Misi PBB terakhir berakhir",
+      "en": "Last UN mission ends"
+     }
+    },
+    {
+     "date": "2018-03-06",
+     "title": {
+      "tet": "Tratadu fronteira tasi nian ho Austrália",
+      "pt": "Tratado de fronteira marítima com a Austrália",
+      "id": "Perjanjian batas laut dengan Australia",
+      "en": "Maritime boundary treaty with Australia"
+     }
+    },
+    {
+     "date": "2024-08-30",
+     "title": {
+      "tet": "Timór-Leste tama Organizasaun Mundiál Komérsiu",
+      "pt": "Timor-Leste entra na OMC",
+      "id": "Timor-Leste masuk WTO",
+      "en": "Timor-Leste joins the WTO"
+     }
+    },
+    {
+     "date": "2025-10-26",
+     "title": {
+      "tet": "Timór-Leste sai membru ba dala-11 ASEAN",
+      "pt": "Timor-Leste torna-se o 11.º membro da ASEAN",
+      "id": "Timor-Leste menjadi anggota ke-11 ASEAN",
+      "en": "Timor-Leste becomes ASEAN's 11th member"
+     }
+    }
+   ],
+   "figure": {
+    "illustration": "prehistory",
+    "caption": {
+     "tet": "Timór-Leste nia istória hahú ho ema dahuluk, maizumenus tinan 44 000 liubá.",
+     "pt": "A história de Timor-Leste começa com os primeiros habitantes, há cerca de 44 000 anos.",
+     "id": "Sejarah Timor-Leste dimulai dengan manusia pertama, sekitar 44.000 tahun lalu.",
+     "en": "Timor-Leste's story begins with its first people, about 44,000 years ago."
+    }
+   },
+   "wiki": {
+    "en": "History of Timor-Leste",
+    "pt": "História de Timor-Leste",
+    "tet": "Istória Timór-Leste",
+    "id": "Sejarah Timor Leste"
+   },
+   "related": [
+    "tl.history.first_peoples",
+    "tl.history.austronesian_papuan",
+    "tl.history.kingdoms",
+    "tl.history.sandalwood_trade",
+    "tl.colonial.portuguese_arrival",
+    "tl.colonial.topasses",
+    "tl.colonial.lifau_to_dili",
+    "tl.colonial.dutch_partition",
+    "tl.colonial.colonial_rule",
+    "tl.colonial.revolts_manufahi",
+    "tl.colonial.ww2",
+    "tl.colonial.postwar",
+    "tl.history.carnation_parties_1974",
+    "tl.history.civil_war_1975",
+    "tl.history.proclamation_1975",
+    "tl.colonial.indonesian_invasion",
+    "tl.colonial.indonesian_occupation",
+    "tl.conflicts.overview",
+    "tl.conflicts.resistance_fronts",
+    "tl.conflicts.famine_1977_1979",
+    "tl.conflicts.kraras_1983",
+    "tl.conflicts.santa_cruz_1991",
+    "tl.history.nobel_1996",
+    "tl.history.cnrt_1998",
+    "tl.history.referendum_1999",
+    "tl.conflicts.violence_1999",
+    "tl.history.interfet",
+    "tl.history.untaet",
+    "tl.history.restoration_2002",
+    "tl.history.state_building",
+    "tl.history.un_missions",
+    "tl.conflicts.crisis_2006",
+    "tl.conflicts.attacks_2008",
+    "tl.conflicts.reconciliation",
+    "tl.history.maritime_boundary",
+    "tl.history.decade_2012_2022",
+    "tl.history.recent_2023_2026",
+    "tl.world.asean",
+    "tl.world.wto",
+    "day.proclamation",
+    "day.restoration",
+    "day.consultation",
+    "day.memorial"
+   ],
+   "tags": [
+    "history",
+    "eras",
+    "timeline",
+    "colonialism",
+    "resistance",
+    "independence"
+   ],
+   "quiz": [
+    {
+     "q": {
+      "tet": "Bainhira mak Timór-Leste hetan fali ninia independénsia?",
+      "pt": "Quando restaurou Timor-Leste a sua independência?",
+      "id": "Kapan Timor-Leste memulihkan kemerdekaannya?",
+      "en": "When did Timor-Leste restore its independence?"
+     },
+     "options": [
+      {
+       "tet": "20 Maiu 2002",
+       "pt": "20 de maio de 2002",
+       "id": "20 Mei 2002",
+       "en": "20 May 2002"
+      },
+      {
+       "tet": "28 Novembru 1975",
+       "pt": "28 de novembro de 1975",
+       "id": "28 November 1975",
+       "en": "28 November 1975"
+      },
+      {
+       "tet": "30 Agostu 1999",
+       "pt": "30 de agosto de 1999",
+       "id": "30 Agustus 1999",
+       "en": "30 August 1999"
+      },
+      {
+       "tet": "25 Abríl 1974",
+       "pt": "25 de abril de 1974",
+       "id": "25 April 1974",
+       "en": "25 April 1974"
+      }
+     ],
+     "answer": 0,
+     "why": {
+      "tet": "Proklamasaun iha 28 Novembru 1975; independénsia hetan fali iha 20 Maiu 2002.",
+      "pt": "A independência foi proclamada a 28 de novembro de 1975 e restaurada a 20 de maio de 2002.",
+      "id": "Kemerdekaan diproklamasikan 28 November 1975 dan dipulihkan 20 Mei 2002.",
+      "en": "Independence was proclaimed on 28 November 1975 and restored on 20 May 2002."
+     },
+     "difficulty": 2
+    },
+    {
+     "q": {
+      "tet": "Nasaun Europa ida ne'ebé mak iha Timór durante liu sékulu haat?",
+      "pt": "Que país europeu esteve presente em Timor durante mais de quatro séculos?",
+      "id": "Negara Eropa mana yang hadir di Timor lebih dari empat abad?",
+      "en": "Which European country was present on Timor for more than four centuries?"
+     },
+     "options": [
+      {
+       "tet": "Olanda",
+       "pt": "Países Baixos",
+       "id": "Belanda",
+       "en": "The Netherlands"
+      },
+      {
+       "tet": "Portugál",
+       "pt": "Portugal",
+       "id": "Portugal",
+       "en": "Portugal"
+      },
+      {
+       "tet": "España",
+       "pt": "Espanha",
+       "id": "Spanyol",
+       "en": "Spain"
+      },
+      {
+       "tet": "Inglaterra",
+       "pt": "Grã-Bretanha",
+       "id": "Inggris",
+       "en": "Britain"
+      }
+     ],
+     "answer": 1,
+     "why": {
+      "tet": "Portugés sira iha Timór husi maizumenus 1515 to'o 1975.",
+      "pt": "Os portugueses estiveram em Timor de cerca de 1515 até 1975.",
+      "id": "Orang Portugis hadir di Timor dari sekitar 1515 sampai 1975.",
+      "en": "The Portuguese were on Timor from about 1515 until 1975."
+     },
+     "difficulty": 3
+    },
+    {
+     "q": {
+      "tet": "Iha tinan ida ne'ebé mak Dili sai kapitál?",
+      "pt": "Em que ano Díli se tornou a capital?",
+      "id": "Pada tahun berapa Dili menjadi ibu kota?",
+      "en": "In which year did Dili become the capital?"
+     },
+     "options": [
+      {
+       "tet": "1515",
+       "pt": "1515",
+       "id": "1515",
+       "en": "1515"
+      },
+      {
+       "tet": "1702",
+       "pt": "1702",
+       "id": "1702",
+       "en": "1702"
+      },
+      {
+       "tet": "1769",
+       "pt": "1769",
+       "id": "1769",
+       "en": "1769"
+      },
+      {
+       "tet": "1975",
+       "pt": "1975",
+       "id": "1975",
+       "en": "1975"
+      }
+     ],
+     "answer": 2,
+     "why": {
+      "tet": "Iha 1769 governadór husik Lifau no harii kapitál foun iha Dili.",
+      "pt": "Em 1769 o governador deixou Lifau e fundou a nova capital em Díli.",
+      "id": "Pada 1769 gubernur meninggalkan Lifau dan mendirikan ibu kota baru di Dili.",
+      "en": "In 1769 the governor left Lifau and founded the new capital at Dili."
+     },
+     "difficulty": 6
+    },
+    {
+     "q": {
+      "tet": "Tuir Konstituisaun, rezisténsia hala'o luta iha frente saida?",
+      "pt": "Segundo a Constituição, em que frentes lutou a resistência?",
+      "id": "Menurut Konstitusi, di front mana perlawanan berjuang?",
+      "en": "According to the Constitution, on which fronts did the resistance fight?"
+     },
+     "options": [
+      {
+       "tet": "Tasi, anin no rai",
+       "pt": "Mar, ar e terra",
+       "id": "Laut, udara dan darat",
+       "en": "Sea, air and land"
+      },
+      {
+       "tet": "Ekonomia, desportu no múzika",
+       "pt": "Economia, desporto e música",
+       "id": "Ekonomi, olahraga dan musik",
+       "en": "Economy, sport and music"
+      },
+      {
+       "tet": "Norte, sul no loro-sa'e",
+       "pt": "Norte, sul e leste",
+       "id": "Utara, selatan dan timur",
+       "en": "North, south and east"
+      },
+      {
+       "tet": "Armada, klandestina no diplomátika",
+       "pt": "Armada, clandestina e diplomática",
+       "id": "Bersenjata, klandestin dan diplomatik",
+       "en": "Armed, clandestine and diplomatic"
+      }
+     ],
+     "answer": 3,
+     "why": {
+      "tet": "Konstituisaun nia preámbulu temi frente tolu: armada (FALINTIL), klandestina no diplomátika.",
+      "pt": "O preâmbulo da Constituição refere três frentes: armada (FALINTIL), clandestina e diplomática.",
+      "id": "Pembukaan Konstitusi menyebut tiga front: bersenjata (FALINTIL), klandestin dan diplomatik.",
+      "en": "The Constitution's preamble names three fronts: armed (FALINTIL), clandestine and diplomatic."
+     },
+     "difficulty": 8
+    },
+    {
+     "q": {
+      "tet": "Tau iha orden loos: A) funu Manufahi, B) governadór dahuluk iha Lifau, C) okupasaun Japaun, D) Tratadu Lisboa.",
+      "pt": "Ordena: A) guerra de Manufahi, B) primeiro governador em Lifau, C) ocupação japonesa, D) Tratado de Lisboa.",
+      "id": "Urutkan: A) perang Manufahi, B) gubernur pertama di Lifau, C) pendudukan Jepang, D) Perjanjian Lisboa.",
+      "en": "Put in order: A) Manufahi war, B) first governor at Lifau, C) Japanese occupation, D) Treaty of Lisbon."
+     },
+     "options": [
+      {
+       "tet": "B, D, A, C",
+       "pt": "B, D, A, C",
+       "id": "B, D, A, C",
+       "en": "B, D, A, C"
+      },
+      {
+       "tet": "D, B, C, A",
+       "pt": "D, B, C, A",
+       "id": "D, B, C, A",
+       "en": "D, B, C, A"
+      },
+      {
+       "tet": "B, A, D, C",
+       "pt": "B, A, D, C",
+       "id": "B, A, D, C",
+       "en": "B, A, D, C"
+      },
+      {
+       "tet": "A, B, C, D",
+       "pt": "A, B, C, D",
+       "id": "A, B, C, D",
+       "en": "A, B, C, D"
+      }
+     ],
+     "answer": 0,
+     "why": {
+      "tet": "Lifau 1702, Tratadu Lisboa 1859, funu Manufahi 1911–1912, okupasaun Japaun 1942–1945.",
+      "pt": "Lifau 1702, Tratado de Lisboa 1859, guerra de Manufahi 1911–1912, ocupação japonesa 1942–1945.",
+      "id": "Lifau 1702, Perjanjian Lisboa 1859, perang Manufahi 1911–1912, pendudukan Jepang 1942–1945.",
+      "en": "Lifau 1702, Treaty of Lisbon 1859, Manufahi war 1911–1912, Japanese occupation 1942–1945."
+     },
+     "difficulty": 11
+    },
+    {
+     "q": {
+      "tet": "Tuir komisaun CAVR, ema pelumenus na'in hira mak mate tanba konflitu entre 1974 no 1999?",
+      "pt": "Segundo a comissão CAVR, quantas mortes ligadas ao conflito houve, no mínimo, entre 1974 e 1999?",
+      "id": "Menurut komisi CAVR, sedikitnya berapa kematian terkait konflik antara 1974 dan 1999?",
+      "en": "According to the CAVR commission, at least how many conflict-related deaths were there between 1974 and 1999?"
+     },
+     "options": [
+      {
+       "tet": "1 028",
+       "pt": "1028",
+       "id": "1.028",
+       "en": "1,028"
+      },
+      {
+       "tet": "10 280",
+       "pt": "10 280",
+       "id": "10.280",
+       "en": "10,280"
+      },
+      {
+       "tet": "102 800",
+       "pt": "102 800",
+       "id": "102.800",
+       "en": "102,800"
+      },
+      {
+       "tet": "1 028 000",
+       "pt": "1 028 000",
+       "id": "1.028.000",
+       "en": "1,028,000"
+      }
+     ],
+     "answer": 2,
+     "why": {
+      "tet": "CAVR estima pelumenus 102 800; barak mate tanba hamlaha no moras, la'ós de'it tanba oho.",
+      "pt": "A CAVR estimou pelo menos 102 800; muitos morreram de fome e doença, não só de violência direta.",
+      "id": "CAVR memperkirakan sedikitnya 102.800; banyak yang meninggal karena kelaparan dan penyakit, bukan hanya karena dibunuh.",
+      "en": "The CAVR estimated at least 102,800; many died of hunger and illness, not only from killings."
+     },
+     "difficulty": 14
+    }
+   ],
+   "sources": [
+    {
+     "title": "History of Timor-Leste",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/History_of_Timor-Leste",
+     "accessed": "2026-10-27",
+     "licence": "CC BY-SA 4.0"
+    },
+    {
+     "title": "História de Timor-Leste",
+     "publisher": "Wikipédia (português)",
+     "url": "https://pt.wikipedia.org/wiki/Hist%C3%B3ria_de_Timor-Leste",
+     "accessed": "2026-10-27",
+     "licence": "CC BY-SA 4.0"
+    },
+    {
+     "title": "Timeline of East Timorese history",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Timeline_of_East_Timorese_history",
+     "accessed": "2026-10-27",
+     "licence": "CC BY-SA 4.0"
+    },
+    {
+     "title": "Portuguese Timor",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Portuguese_Timor",
+     "accessed": "2026-10-27",
+     "licence": "CC BY-SA 4.0"
+    },
+    {
+     "title": "Excavation reveals 'major' ancient migration to Timor Island",
+     "publisher": "Australian National University",
+     "url": "https://www.anu.edu.au/news/all-news/excavation-reveals-major-ancient-migration-to-timor-island",
+     "accessed": "2026-10-27",
+     "licence": "© ANU"
+    },
+    {
+     "title": "East Timor",
+     "publisher": "Encyclopaedia Britannica",
+     "url": "https://www.britannica.com/place/East-Timor",
+     "accessed": "2026-10-27",
+     "licence": "© Encyclopaedia Britannica"
+    },
+    {
+     "title": "Timor-Leste",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Timor-Leste",
+     "accessed": "2026-10-27",
+     "licence": "CC BY-SA 4.0"
+    }
+   ],
+   "review": {
+    "status": "draft",
+    "notes": "Overview summarises the 12 detailed articles of this file; facts for 1974–2025 follow the other writers' files (history_1974_2002, conflicts_recent, politics_world, world_recent): CAVR minimum 102,800; 78.5%; UN 191st member; maritime treaty signed 6 Mar 2018; WTO 30 Aug 2024; ASEAN 26 Oct 2025. Not verified this session: 'overseas province' in 1951. The tet Wikipedia title 'Istória Timór-Leste' is copied from the schema example — check it exists. Tetun terms: frente tolu, pelumenus, Komisaun lia-loos (CAVR), Organizasaun Mundiál Komérsiu, Fundu Petrolíferu, membru ba dala-191 / dala-11."
+   }
+  },
+  {
    "id": "tl.history.first_peoples",
    "category": "history",
    "title": {

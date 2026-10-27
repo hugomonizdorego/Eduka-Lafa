@@ -34,8 +34,7 @@ class Store:
         with self.lock: self.db.close()
     # ------------------------------------------------------------------ meta
     def get_meta(self, key, default=""):
-        with self.lock:
-            row = self.db.execute("SELECT value FROM meta WHERE key=?", (key,)).fetchone()
+        row = self._one("SELECT value FROM meta WHERE key=?", (key,))
         return row[0] if row else default
     def set_meta(self, key, value):
         with self.lock:
@@ -46,9 +45,13 @@ class Store:
         with self.lock:
             self.db.execute("INSERT OR REPLACE INTO extracts VALUES (?, ?, ?, ?, ?, ?, ?, ?)",
                             (item_id, lang, title[:300], text[:MAX_EXTRACT], url[:600], source[:120], licence[:60], time.time())); self.db.commit()
+    def _one(self, query, args):
+        """A single row, or None when the database cannot be read (never stops a page)."""
+        try:
+            with self.lock: return self.db.execute(query, args).fetchone()
+        except sqlite3.Error: return None
     def extract(self, item_id, lang):
-        with self.lock:
-            row = self.db.execute("SELECT title, text, url, source, licence, fetched FROM extracts WHERE item_id=? AND lang=?", (item_id, lang)).fetchone()
+        row = self._one("SELECT title, text, url, source, licence, fetched FROM extracts WHERE item_id=? AND lang=?", (item_id, lang))
         if not row: return None
         return {"title": row[0], "text": row[1], "url": row[2], "source": row[3], "licence": row[4], "fetched": row[5]}
     # ----------------------------------------------------------------- media
@@ -66,21 +69,23 @@ class Store:
         return path
     def photo(self, item_id):
         """(path, info) of the downloaded picture, or None."""
-        with self.lock:
-            row = self.db.execute("SELECT file, title, author, licence, licence_url, source_url FROM media WHERE item_id=?", (item_id,)).fetchone()
+        row = self._one("SELECT file, title, author, licence, licence_url, source_url FROM media WHERE item_id=?", (item_id,))
         if not row: return None
         path = self.media_dir / row[0]
         if not path.is_file(): return None
         return path, {"title": row[1], "author": row[2], "licence": row[3], "licence_url": row[4], "source_url": row[5]}
     def photos(self):
-        with self.lock:
-            rows = self.db.execute("SELECT item_id, file, title, author, licence, licence_url, source_url FROM media ORDER BY item_id").fetchall()
+        try:
+            with self.lock: rows = self.db.execute("SELECT item_id, file, title, author, licence, licence_url, source_url FROM media ORDER BY item_id").fetchall()
+        except sqlite3.Error: rows = []
         return [{"item": r[0], "file": r[1], "title": r[2], "author": r[3], "licence": r[4], "licence_url": r[5], "source_url": r[6]} for r in rows]
     # ----------------------------------------------------------------- stats
     def stats(self):
-        with self.lock:
-            extracts = self.db.execute("SELECT COUNT(*) FROM extracts").fetchone()[0]
-            media = self.db.execute("SELECT COUNT(*) FROM media").fetchone()[0]
+        try:
+            with self.lock:
+                extracts = self.db.execute("SELECT COUNT(*) FROM extracts").fetchone()[0]
+                media = self.db.execute("SELECT COUNT(*) FROM media").fetchone()[0]
+        except sqlite3.Error: extracts = media = 0
         size = 0
         for p in [self.folder / "lafa.db"] + (list(self.media_dir.glob("*")) if self.media_dir.is_dir() else []):
             try: size += p.stat().st_size

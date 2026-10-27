@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "lafa-assistant"
 dynamic = ["version"]
-description = "Lafa: offline-first learning companion and Edukasaun OS assistant"
+description = "Lafa: encyclopedia of Timor-Leste and virtual assistant for Edukasaun OS"
 readme = "README.md"
 requires-python = ">=3.11"
 license = {text = "MIT"}
@@ -23,4 +23,4 @@ version = {attr = "lafa.__version__"}
 include = ["lafa*"]
 
 [tool.setuptools.package-data]
-lafa = ["assets/*.png", "assets/*.json"]
+lafa = ["assets/*.png", "assets/*.json", "assets/fonts/*", "assets/icons/*", "assets/illustrations/*", "assets/timor/*.json", "assets/timor/*/*.json", "assets/timor/*/*.md"]

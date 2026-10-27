@@ -97,3 +97,21 @@ large character sizes are slightly soft; the Tais row is a recolour (lighter
 torso, tais wrap, bead necklace, sandals) and does not yet have the headdress
 and plume of the standing Tais Mane drawings. A hand-drawn Tais walk cycle
 would be better and needs an artist or a Timorese cultural reviewer.
+
+## 0.3.0 — Ensiklopédia Timór-Leste
+
+| Asset | Made by | Licence | Notes |
+|---|---|---|---|
+| `lafa-poses.png` + `lafa-poses.json` (waving Casual Belajar, Tais Mane, Formal) | `tools/make-poses.py` cuts the three outfit poses out of the owner's design sheet `docs/design/lafa-character-sheet.webp` (background removed, de-matted edges, same height) | as the character art (owner's design) | Used for the greeting, the headers, the outfit picker and the window icon |
+| `lafa/assets/icons/*.svg` (97 icons) | `tools/make-icons.py` (hand-written SVG paths; the old world-encyclopedia icons were removed) | MIT | Drawn as 3-D "clay" tiles at runtime (`desk/theme.clay_icon`) |
+| `lafa/assets/illustrations/*.svg` (128 scenes: land, nature, history, State, symbols, culture, economy, society, places, days) | `tools/make-illustrations.py` | CC BY-SA 4.0 | Flat vector scenes; the flag follows Article 15 of the Constitution; maps use the real geodata |
+| `lafa/assets/fonts/Nunito-*.ttf` | `tools/make-fonts.py` (static instances of Nunito) | SIL OFL 1.1 (`OFL.txt`) | ASEAN scripts use the system Noto fonts (`fonts-noto-core`, `fonts-noto-cjk`) |
+| `lafa/assets/timor/map/municipalities.json` | `tools/make-map.py` from geoBoundaries TLS ADM1 (OpenStreetMap) | ODbL 1.0 | Ataúro split from Díli (municipality since 2022) |
+| `lafa/assets/timor/map/posts.json` | `tools/make-map.py` from geoBoundaries TLS ADM2 (OCHA ROAP, WHO) | CC BY 3.0 IGO | Post boundaries may predate the 2022 changes |
+| `lafa/assets/timor/content/*.json`, `vocab/*.json` | Lafa content writers, from the sources listed in each item | CC BY-SA 4.0 | Draft until expert review (`review.notes`) |
+| `lafa/assets/timor/content/indicators.json` | World Bank WDI (and republishers where noted) | CC BY 4.0 | Refreshed online from `api.worldbank.org` |
+
+Photographs are still not bundled: the offline pack downloads freely licensed
+Wikimedia Commons pictures with their author and licence (see OFFLINE.md).
+Removed in 0.3.0: the world-encyclopedia illustrations and icons, the
+curriculum and the old encyclopedia JSON.
