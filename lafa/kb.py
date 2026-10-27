@@ -49,6 +49,12 @@ def fold(value):
     value = unicodedata.normalize("NFKD", str(value)).casefold().replace("’", "'")
     return "".join(c for c in value if not unicodedata.combining(c)).replace("'", "")
 
+# Small words ignored when comparing event titles (tet, pt, id, en).
+STOPWORDS = set("""iha no nia ba husi ho sira ida ne'e neebe mak sai hosi
+o a os as de da do das dos e em no na nos nas um uma para por com que se ao
+di dan yang ke dari untuk dengan pada oleh ini itu
+the of and in to a an for on by with is as at from its""".replace("'", "").split())
+
 TOKEN = re.compile(r"[0-9a-z฀-໿က-႟ក-៿஀-௿一-鿿]+")
 
 def tokens(value):
@@ -121,6 +127,16 @@ ERAS = [
     ("transition", 1999, 2002, L("Tranzisaun ONU", "Transição da ONU", "Transisi PBB", "UN transition"), "indigo"),
     ("state", 2002, 2026, L("Estadu independente", "Estado independente", "Negara merdeka", "Independent State"), "green"),
 ]
+
+# Where each era begins (year, month, day); an event belongs to the last era that began before it.
+ERA_STARTS = [("prehistory", (-10 ** 7, 0, 0)), ("portuguese", (1515, 0, 0)), ("ww2", (1942, 2, 0)), ("late_colonial", (1945, 9, 0)),
+              ("decolonisation", (1974, 4, 25)), ("occupation", (1975, 12, 7)), ("transition", (1999, 10, 25)), ("state", (2002, 5, 20))]
+
+def era_of(key):
+    era = ERA_STARTS[0][0]
+    for name, start in ERA_STARTS:
+        if key >= start: era = name
+    return era
 
 # ----------------------------------------------------------------- the items
 @dataclass
@@ -240,24 +256,32 @@ class KnowledgeBase:
             if isinstance(data.get("indicators"), list): self.indicators = [i for i in data["indicators"] if isinstance(i, dict)]
             if isinstance(data.get("islamic_dates"), dict): self.islamic = data["islamic_dates"]
             if isinstance(data.get("notes"), dict) and data.get("days"): self.days_notes = data["notes"]
-        vocab = None
-        for path in self._files("vocab"):
-            if path.name == "words.json": vocab = _read_json(path)
-        if isinstance(vocab, dict):
+        word_files = [p for p in self._files("vocab") if p.name == "words.json" or p.name.startswith("words_")]
+        for path in sorted(word_files, key=lambda p: (p.name != "words.json", p.name)):
+            vocab = _read_json(path)
+            if not isinstance(vocab, dict): continue
             for w in vocab.get("words", []):
-                if not isinstance(w, dict) or not w.get("id") or not w.get("tet"): continue
-                tr = {k: w[k] for k in ("pt", "id", "en") if isinstance(w.get(k), str)}
+                if not isinstance(w, dict) or not isinstance(w.get("id"), str) or not w.get("tet") or w["id"] in self.word_by_id: continue
+                # `id` is the word id; the Indonesian meaning is `ind`.
+                tr = {k: w[src] for k, src in (("pt", "pt"), ("id", "ind"), ("en", "en")) if isinstance(w.get(src), str)}
                 word = Word(w["id"], w["tet"], w.get("cat", "phrases"), w.get("pos", ""), int(w.get("level", 2)) if str(w.get("level", "2")).isdigit() else 2,
                             tr, w.get("ex") if isinstance(w.get("ex"), dict) else {})
                 self.words.append(word); self.word_by_id[word.id] = word
+        if self.words:
             for path in self._files("vocab"):
-                if path.name == "words.json": continue
+                if path in word_files: continue
                 data = _read_json(path)
                 if not isinstance(data, dict) or data.get("lang") not in VOCAB_LANGS: continue
                 for wid, value in (data.get("words") or {}).items():
                     if wid in self.word_by_id and isinstance(value, str) and value.strip(): self.word_by_id[wid].tr[data["lang"]] = value.strip()
     # ------------------------------------------------------------------ access
     def get(self, item_id): return self.items.get(item_id)
+    def plan_rank(self, item_id):
+        """Position in plan.json (the editorial order), unplanned items last."""
+        if not hasattr(self, "_rank"):
+            ids = list((self.plan.get("articles") or {}).keys()) + list((self.plan.get("municipalities") or {}).keys()) + list((self.plan.get("days") or {}).keys())
+            self._rank = {i: n for n, i in enumerate(ids)}
+        return self._rank.get(item_id, 10 ** 5 + self.order.index(item_id) if item_id in self.items else 10 ** 6)
     def all(self, kind=None): return [self.items[i] for i in self.order if kind is None or self.items[i].kind == kind]
     def articles(self, category=None, level=None):
         out = []
@@ -342,6 +366,13 @@ class KnowledgeBase:
                     if not tf: continue
                     k = 1.2 * (0.25 + 0.75 * lengths[doc_id] / avg)
                     scores[doc_id] = scores.get(doc_id, 0) + idf * tf * 2.2 / (tf + k) * (1.0 if v == term else 0.7)
+        # Titles matter most: a title that contains the whole query comes first.
+        phrase = fold(query).strip()
+        if phrase:
+            for doc_id in list(scores):
+                titles = [fold(text(self.items[doc_id].data.get("title") or self.items[doc_id].data.get("name"), l)) for l in LANGS]
+                if any(t.startswith(phrase) for t in titles): scores[doc_id] += 8
+                elif any(phrase in t for t in titles): scores[doc_id] += 5
         hits = sorted(scores.items(), key=lambda kv: -kv[1])
         out = []
         for doc_id, score in hits:
@@ -393,11 +424,12 @@ class KnowledgeBase:
                 key = parse_when(t.get("date"))
                 if key is None: continue
                 events.append({"key": key, "date": t.get("date"), "title": text(t.get("title"), lang), "item": item.id, "category": item.category})
-        seen = set(); unique = []
+        unique = []; by_key = {}
         for e in sorted(events, key=lambda e: e["key"]):
-            sig = (e["key"], fold(e["title"])[:40])
-            if sig in seen: continue
-            seen.add(sig); unique.append(e)
+            words = set(tokens(e["title"])) - STOPWORDS
+            # The same event told by two articles: keep the first.
+            if any(len(words & w) >= max(2, 0.6 * min(len(words), len(w))) for w in by_key.get(e["key"], [])): continue
+            by_key.setdefault(e["key"], []).append(words); unique.append(e)
         return unique
     def today_in_history(self, today, lang="en"):
         out = []
@@ -422,12 +454,20 @@ class KnowledgeBase:
                  "eb3": ["history", "colonial", "geography", "symbols", "politics", "culture", "society", "economy", "nature", "land", "calendar"],
                  "es": ["history", "colonial", "conflicts", "politics", "leaders", "economy", "society", "world", "land", "culture"],
                  "sup": ["history", "colonial", "conflicts", "politics", "leaders", "world", "economy", "society", "land", "nature", "culture", "tourism"]}[level]
-        units = []
+        units = []; seen = set()
         for cat in order:
-            items = [a for a in self.articles(cat, level) if a.kind == "article"]
-            if level in ("eb1", "eb2") and cat == "geography": items += self.municipalities()[:0]
+            items = [a for a in self.articles(cat, level) if a.kind == "article" and a.category == cat]
+            items += [a for a in self.articles(cat, level) if a.kind == "article" and a.category != cat and a.id not in seen and a not in items]
+            items = sorted(items, key=lambda a: self.reading_key(a))
+            seen.update(a.id for a in items)
             if items: units.append({"category": cat, "items": items})
         return units
+    def reading_key(self, item):
+        """Chronological for history topics (period start), editorial order otherwise."""
+        if item.category in ("history", "colonial", "conflicts", "leaders"):
+            p = item.get("period") if isinstance(item.get("period"), dict) else {}
+            if isinstance(p.get("from"), (int, float)): return (0, p["from"], self.plan_rank(item.id))
+        return (1, 0, self.plan_rank(item.id))
 
 def easter(year):
     """Western (Gregorian) Easter Sunday — anonymous Gregorian algorithm."""
@@ -446,9 +486,12 @@ def format_when(value, lang="en"):
     key = parse_when(value)
     if key is None: return str(value or "")
     y, mo, d = key
-    if y < 0:
+    if y <= -10000:
+        # Deep time is told as "years ago" (the difference to BCE does not matter there).
         years = f"{-y:,}".replace(",", " ")
         return {"tet": f"tinan {years} liubá", "pt": f"há {years} anos", "id": f"{years} tahun lalu", "en": f"{years} years ago"}[lang if lang in LANGS else "en"]
+    if y < 0:
+        return {"tet": f"tinan {-y} molok Kristu", "pt": f"{-y} a.C.", "id": f"{-y} SM", "en": f"{-y} BCE"}[lang if lang in LANGS else "en"]
     if d: return f"{d} {month_name(mo, lang)} {y}"
     if mo: return f"{month_name(mo, lang)} {y}"
     return str(y)

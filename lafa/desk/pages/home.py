@@ -78,7 +78,7 @@ class HomePage(QWidget):
         hero = Card(22, 26, gradient=(win.tok["nav_a"], win.tok["primary"], win.tok["nav_b"]))
         row = QHBoxLayout(); row.setSpacing(18); text_col = QVBoxLayout(); text_col.setSpacing(6)
         name = win.settings.learner_name or __import__("lafa.app", fromlist=["first_name"]).first_name() or t("learner")
-        hi = label(f"{t(greeting_key(datetime.now().hour))}, {name}! 👋", "h1", wrap=True); hi.setStyleSheet("color:white;")
+        hi = label(f"{t(greeting_key(datetime.now().hour))}, {name}!", "h1", wrap=True); hi.setStyleSheet("color:white;")
         sub = label(t("home_sub"), wrap=True); sub.setStyleSheet("color:rgba(255,255,255,0.92); font-size:16px;")
         text_col.addWidget(hi); text_col.addWidget(sub); text_col.addSpacing(8)
         buttons = QHBoxLayout(); buttons.setSpacing(10)
@@ -88,9 +88,9 @@ class HomePage(QWidget):
         refresh_icon(b1, "#3b2a8f"); refresh_icon(b2, "#ffffff"); buttons.addWidget(b1); buttons.addWidget(b2); buttons.addStretch(); text_col.addLayout(buttons)
         streak = prog.streak
         if streak > 1:
-            s = label("🔥 " + t("streak", n=streak)); s.setStyleSheet("color:white; font-weight:800;"); text_col.addWidget(s)
+            s = label("★ " + t("streak", n=streak)); s.setStyleSheet("color:white; font-weight:800;"); text_col.addWidget(s)
         row.addLayout(text_col, 1)
-        pic = QLabel(); pic.setPixmap(win.atlas.pose_pixmap(win.settings.costume, 170) if hasattr(win.atlas, "pose_pixmap") else win.atlas.pixmap("idle", 170, win.settings.costume))
+        pic = QLabel(); pic.setPixmap(win.atlas.pose_pixmap(win.settings.costume, 170))
         pic.setAlignment(Qt.AlignBottom | Qt.AlignRight); row.addWidget(pic, 0, Qt.AlignBottom)
         hero.box.addLayout(row); self.col.addWidget(hero)
         # 2. Stats.

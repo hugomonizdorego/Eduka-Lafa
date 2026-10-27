@@ -133,9 +133,24 @@ def clay_icon(name, color, size=48, ratio=None, radius=0.32, glyph=0.5, flat=Fal
 def accent(key):
     return ACCENTS.get(key, ACCENTS["violet"])
 
+def _chevron_file(color):
+    """A small chevron for combo boxes (style sheets need a file; kept in the user's cache)."""
+    import os
+    folder = Path(os.environ.get("XDG_CACHE_HOME") or Path.home() / ".cache") / "lafa"
+    path = folder / f"chevron-{QColor(color).name()[1:]}.svg"
+    if not path.exists():
+        try:
+            folder.mkdir(parents=True, exist_ok=True)
+            path.write_text(f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M6 9l6 6 6-6" fill="none" '
+                            f'stroke="{QColor(color).name()}" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>', encoding="utf-8")
+        except OSError: return ""
+    return path.as_posix()
+
 def style_sheet(tok, scale=1.0):
     """The application style sheet. Borders are always 2 px so focus/hover never move the layout."""
     t = tok; fs = lambda px: f"{round(px * scale)}px"
+    chevron = _chevron_file(t["muted"])
+    arrow = f"QComboBox::down-arrow {{{{ image: url({chevron}); width: 14px; height: 14px; }}}}" if chevron else ""
     return f"""
 * {{ font-family: '{FONT_FAMILY}', 'Noto Sans', 'DejaVu Sans', sans-serif; }}
 QWidget {{ color: {t['text']}; font-size: {fs(14)}; }}
@@ -176,12 +191,14 @@ QPushButton#chip {{ background: {t['input']}; border: 2px solid {t['line']}; bor
 QPushButton#chip:checked {{ background: {t['primary_soft']}; color: {t['primary']}; border-color: {rgba(t['primary'], 0.5)}; }}
 QPushButton#chip:hover {{ border-color: {rgba(t['primary'], 0.5)}; }}
 QPushButton#chip:focus {{ border-color: {t['focus']}; }}
+QPushButton#chip:disabled, QPushButton#ghost:disabled {{ color: {t['muted']}; background: {t['track']}; border-color: transparent; }}
 QPushButton#icon {{ background: {t['input']}; border: 2px solid {t['line']}; border-radius: 14px; padding: 0; }}
 QPushButton#icon:hover {{ border-color: {rgba(t['primary'], 0.55)}; }}
 QPushButton#icon:focus {{ border-color: {t['focus']}; }}
 QPushButton#answer {{ text-align: left; padding: 12px 16px; border-radius: 18px; font-size: {fs(15)}; }}
 QPushButton#answer[state="right"] {{ background: {t['ok_soft']}; border-color: {t['ok']}; color: {t['text']}; }}
 QPushButton#answer[state="wrong"] {{ background: {t['bad_soft']}; border-color: {t['bad']}; color: {t['text']}; }}
+QPushButton#answer[state="locked"] {{ background: {t['warn_soft']}; border-color: {t['warn']}; color: {t['text']}; }}
 QPushButton#answer[state="hidden"] {{ color: transparent; background: {t['track']}; border-color: {t['track']}; }}
 QPushButton#segment {{ background: transparent; border: 2px solid transparent; border-radius: 14px; padding: 6px 16px; color: {t['text2']}; font-weight: 700; }}
 QPushButton#segment:checked {{ background: {t['card']}; color: {t['text']}; border-color: {t['line']}; }}
@@ -191,7 +208,8 @@ QLineEdit, QComboBox, QSpinBox, QPlainTextEdit {{ background: {t['input']}; bord
     selection-background-color: {t['primary']}; selection-color: #ffffff; color: {t['text']}; }}
 QLineEdit:focus, QComboBox:focus, QSpinBox:focus, QPlainTextEdit:focus {{ border-color: {t['focus']}; }}
 QLineEdit#search {{ border-radius: 20px; padding: 9px 14px; font-size: {fs(14)}; }}
-QComboBox QAbstractItemView {{ background: {t['glass_solid']}; color: {t['text']}; border: 1px solid {t['line']}; selection-background-color: {t['primary_soft']}; selection-color: {t['text']}; }}
+QComboBox::drop-down {{ border: 0; width: 30px; subcontrol-origin: padding; subcontrol-position: center right; }}
+""" + (arrow.replace("{{", "{").replace("}}", "}") + "\n") + f"""QComboBox QAbstractItemView {{ background: {t['glass_solid']}; color: {t['text']}; border: 1px solid {t['line']}; selection-background-color: {t['primary_soft']}; selection-color: {t['text']}; }}
 QCheckBox {{ spacing: 10px; }}
 QCheckBox:focus {{ color: {t['primary']}; }}
 QTextBrowser {{ background: transparent; border: 0; color: {t['text']}; font-size: {fs(15)}; }}

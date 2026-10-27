@@ -25,10 +25,12 @@ from .qt import (Qt, QTimer, QSize, QPoint, QRectF, QPropertyAnimation, QEasingC
 from . import __version__, VERSION_LABEL, kb, eduka, icons, platform_check
 from .config import Settings, config_path, data_dir, SECTIONS
 from .progress import Progress
+from .store import Store
 from .voice import Voice
 from .net import online_probe
 from .instance import ActivationServer, activate_existing, server_name
-from .mascot import Atlas, Companion
+from .mascot import Atlas
+from .assistant import Companion
 from .desk import theme
 from .desk.texts import t as tr_text
 from .desk.widgets import (Card, Clickable, ClayIcon, NavButton, SearchBox, Toast, label, button, refresh_icon, tok_of)
@@ -66,12 +68,14 @@ class Window(QMainWindow):
         self.folder = Path(tempfile.mkdtemp(prefix="lafa-review-")) if review else data_dir()
         self.kb = kb.KnowledgeBase(overrides=self.folder / "updates")
         self.progress = Progress(self.folder)
+        try: self.store = Store(self.folder)
+        except Exception: self.store = None      # a broken database never stops the app (sqlite3.Error, OSError)
         self.voice = Voice(); self.pool = QThreadPool(self); self.pool.setMaxThreadCount(3); self.jobs = set()
         self.atlas = Atlas(); self.online = bool(review); self.history = []; self.pages = {}; self.route = None; self.params = {}
         self.settings_dialog = None; self.tray = None; self.compact = None; self.speaking = False
         self.tok = self.theme_tokens()
         self.setWindowTitle("Lafa · " + self.t("app_subtitle")); self.resize(1360, 860); self.setMinimumSize(980, 600)
-        self.setWindowIcon(QIcon(self.atlas.pixmap("idle", 128)))
+        self.setWindowIcon(QIcon(self.atlas.pose_pixmap(self.settings.costume, 128)))
         self.companion = Companion(self.atlas, self.settings, kb=self.kb, progress=self.progress)
         self.companion.open_requested.connect(self.reveal)
         self.companion.quit_requested.connect(self.exit_app)
@@ -109,7 +113,7 @@ class Window(QMainWindow):
         # Sidebar (glass): brand, pages, offline card, footer.
         side = QFrame(); side.setObjectName("sidebar"); self.sidebar = side
         col = QVBoxLayout(side); col.setContentsMargins(14, 18, 14, 14); col.setSpacing(4)
-        brand = QHBoxLayout(); brand.setSpacing(10); face = QLabel(); face.setPixmap(self.atlas.pixmap("idle", 46, self.settings.costume)); face.setFixedSize(48, 48)
+        brand = QHBoxLayout(); brand.setSpacing(10); face = QLabel(); face.setPixmap(self.atlas.pose_pixmap(self.settings.costume, 46)); face.setFixedSize(48, 48)
         brand.addWidget(face); names = QVBoxLayout(); names.setSpacing(0); self.brand_name = label("Lafa", "h2"); self.brand_sub = label(self.t("app_subtitle"), "caption", wrap=True)
         names.addWidget(self.brand_name); names.addWidget(self.brand_sub); brand.addLayout(names, 1); col.addLayout(brand); col.addSpacing(14)
         self.nav = {}
@@ -141,7 +145,7 @@ class Window(QMainWindow):
         bar.addWidget(self.status_chip)
         self.bell = button("", self.show_notifications, "icon", "bell", self.t("notifications")); self.bell.setFixedSize(44, 44); bar.addWidget(self.bell)
         self.profile = Clickable(6, 18); self.profile.SH = (2, 1, 2, 3); self.profile.box.setContentsMargins(10, 4, 12, 6)
-        prow = QHBoxLayout(); prow.setSpacing(8); self.avatar = QLabel(); self.avatar.setPixmap(self.atlas.pixmap("idle", 34, self.settings.costume)); prow.addWidget(self.avatar)
+        prow = QHBoxLayout(); prow.setSpacing(8); self.avatar = QLabel(); self.avatar.setPixmap(self.atlas.pose_pixmap(self.settings.costume, 34)); prow.addWidget(self.avatar)
         pcol = QVBoxLayout(); pcol.setSpacing(0); self.profile_name = label("", "h3"); self.profile_level = label("", "caption"); pcol.addWidget(self.profile_name); pcol.addWidget(self.profile_level)
         prow.addLayout(pcol); self.profile.box.addLayout(prow); self.profile.clicked.connect(lambda: self.open("settings")); bar.addWidget(self.profile)
         ccol.addLayout(bar)
@@ -197,9 +201,18 @@ class Window(QMainWindow):
         for key, b in self.nav.items(): b.setChecked(key == active)
         self.back_button.setVisible(bool(self.history))
         self.update_profile()
+        # After a menu click the keyboard focus moves to the page (like "skip to content").
+        focus = QApplication.focusWidget()
+        if focus is None or isinstance(focus, NavButton): page.setFocus(Qt.OtherFocusReason)
     def go_back(self):
         if not self.history: return
         route, params = self.history.pop(); self.open(route, push=False, **params); self.back_button.setVisible(bool(self.history))
+    def reload_content(self):
+        """New content files were installed: load them and rebuild the pages."""
+        self.kb = kb.KnowledgeBase(overrides=self.folder / "updates"); self.companion.kb = self.kb
+        route, params = self.route, dict(self.params)
+        for page in self.pages.values(): self.stack.removeWidget(page); page.deleteLater()
+        self.pages = {}; self.open(route or "home", push=False, **params)
     def open_item(self, item_id):
         if self.kb.get(item_id): self.open("item", id=item_id)
     def fade_to(self, page):
@@ -224,7 +237,7 @@ class Window(QMainWindow):
     def announce(self, achievements):
         from .desk.pages.home import achievement_title
         for key in achievements or []:
-            self.toast.show_text("🏆  " + achievement_title(self.lang, key))
+            self.toast.show_text("★  " + achievement_title(self.lang, key))
     # --------------------------------------------------------- notifications
     def upcoming(self, days=7):
         today = date.today(); out = []
@@ -280,7 +293,7 @@ class Window(QMainWindow):
     def change_outfit(self, outfit):
         from . import outfits
         if outfit not in outfits.OUTFITS: return
-        self.settings.costume = outfit; self.save_quietly(); self.companion.apply_preferences(); self.avatar.setPixmap(self.atlas.pixmap("idle", 34, outfit))
+        self.settings.costume = outfit; self.save_quietly(); self.companion.apply_preferences(); self.avatar.setPixmap(self.atlas.pose_pixmap(outfit, 34))
     # -------------------------------------------------- assistant and system
     def open_from_assistant(self, route, item_id):
         self.reveal()

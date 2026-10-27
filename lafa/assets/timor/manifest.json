@@ -1,0 +1,66 @@
+{
+ "content_version": "2026.10.27",
+ "min_app": "0.3.0",
+ "files": {
+  "content/conflicts_recent.json": {
+   "sha256": "b88220db895707e5ffbf3df09cee6ba9b2251872d00d548845d60ec7a9896e29",
+   "size": 212692
+  },
+  "content/culture.json": {
+   "sha256": "6e551e748ae1533b6276705e8c4dcb9c7916db0f36e7df93a899cdd22ef02e47",
+   "size": 204467
+  },
+  "content/economy.json": {
+   "sha256": "b5e8ef241d41073c6fd3d94068ce0457c50284f0e7756e831995c3db5818fb53",
+   "size": 384260
+  },
+  "content/geography.json": {
+   "sha256": "aa95d656e2f5979a0e6c40a01487b1a7c1dfdaa09cb33aa4e5f84daf164d9c48",
+   "size": 196067
+  },
+  "content/history_1974_2002.json": {
+   "sha256": "6e22574b2c1cb227c80d2a12e662d6540021a6327fb6713393c95a4388f6bb46",
+   "size": 341300
+  },
+  "content/history_early.json": {
+   "sha256": "80a84c5a092b77f8875fada64421e8975dc1e30b5229c558c503bddea95244cb",
+   "size": 203328
+  },
+  "content/land_nature.json": {
+   "sha256": "be2d487c51200418ea5903c732ed3b9f041fbbcd2cb6ef4951ec2fe4c457f5a7",
+   "size": 354047
+  },
+  "content/leaders.json": {
+   "sha256": "788630d0583f419b35deba14bc3d26a1c7ab40122661b07a1ea893e5d670221f",
+   "size": 276751
+  },
+  "content/municipalities.json": {
+   "sha256": "6c406e3f4bd6a8cb070b1fd2655db91fe1c2c1e48e8d8a373a416ac44aa3fbb6",
+   "size": 118056
+  },
+  "content/places.json": {
+   "sha256": "1dd464683017e8370c2745470efccab2fbe81954c857a7a89ccebce8c54fa61c",
+   "size": 266594
+  },
+  "content/politics_world.json": {
+   "sha256": "6a3e198466c74b7b4d93104193d06110576724f2e018064301e082525fb22376",
+   "size": 439030
+  },
+  "content/symbols_society.json": {
+   "sha256": "0570e48d22bc741c09a4bca14d4602aad5f9bb49326819b2ff05bd29e364b892",
+   "size": 415396
+  },
+  "vocab/words.json": {
+   "sha256": "be69a799575c592da02bbfe33f3ca7be9de4fd150d0f4bcbb12de7833c28382d",
+   "size": 97270
+  },
+  "map/municipalities.json": {
+   "sha256": "00dc778914a939c63276243c3efbca8960fb17a740d030e12329b12cae19af8e",
+   "size": 17306
+  },
+  "map/posts.json": {
+   "sha256": "e37af372b5864fdc84cc93ebfe3433e57910b4031f46025293b4014b6d9f1a8e",
+   "size": 52713
+  }
+ }
+}

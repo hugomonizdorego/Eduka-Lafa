@@ -1,0 +1,218 @@
+{
+ "indicators": [
+  {
+   "id": "SP.POP.TOTL",
+   "name": {
+    "tet": "Populasaun totál",
+    "pt": "População total",
+    "id": "Jumlah penduduk",
+    "en": "Population, total"
+   },
+   "unit": "people",
+   "series": [
+    [
+     2002,
+     879159
+    ],
+    [
+     2010,
+     1084679
+    ],
+    [
+     2015,
+     1205131
+    ],
+    [
+     2020,
+     1326053
+    ],
+    [
+     2023,
+     1384286
+    ],
+    [
+     2024,
+     1400638
+    ]
+   ],
+   "source": "World Bank WDI",
+   "url": "https://data.worldbank.org/indicator/SP.POP.TOTL?locations=TL",
+   "licence": "CC BY 4.0",
+   "accessed": "2026-10-27",
+   "notes": "World Bank mid-year estimates as mirrored by FRED (series POPTOTTLA647NWDB, WDI release of July 2025). 2023 and 2024 also equal GDP divided by GDP per capita in the same release. Not the census count (2022 census: 1,340,434)."
+  },
+  {
+   "id": "NY.GDP.MKTP.CD",
+   "name": {
+    "tet": "PIB (dólar Amerikanu atuál)",
+    "pt": "PIB (dólares americanos correntes)",
+    "id": "PDB (dolar AS berlaku)",
+    "en": "GDP (current US$)"
+   },
+   "unit": "US$",
+   "series": [
+    [
+     2010,
+     881909300
+    ],
+    [
+     2015,
+     1590282400
+    ],
+    [
+     2020,
+     2160000000
+    ],
+    [
+     2021,
+     3625000000
+    ],
+    [
+     2022,
+     3208599889
+    ],
+    [
+     2023,
+     2079767170
+    ],
+    [
+     2024,
+     1865608515
+    ]
+   ],
+   "source": "World Bank WDI",
+   "url": "https://data.worldbank.org/indicator/NY.GDP.MKTP.CD?locations=TL",
+   "licence": "CC BY 4.0",
+   "accessed": "2026-10-27",
+   "notes": "2022–2024 exact values from FRED MKTGDPTLA646NWDB (World Bank WDI, Dec 2025 release); 2020 (about 2.16 bn) and 2021 (3,625 m, the series maximum) are rounded; 2010 and 2015 from Worldometers (citing World Bank), matching IMF figures – confirm against the WDI download. The World Bank country page shows about 1.9 bn for 2025 (not added, too rounded). 2021–2022 are high because of oil and gas; check how offshore petroleum is counted before comparing with 2010–2015."
+  },
+  {
+   "id": "NY.GDP.PCAP.CD",
+   "name": {
+    "tet": "PIB ba ema ida (dólar atuál)",
+    "pt": "PIB per capita (dólares correntes)",
+    "id": "PDB per kapita (dolar AS berlaku)",
+    "en": "GDP per capita (current US$)"
+   },
+   "unit": "US$",
+   "series": [
+    [
+     2020,
+     1631
+    ],
+    [
+     2021,
+     2685
+    ],
+    [
+     2022,
+     2343
+    ],
+    [
+     2023,
+     1502
+    ],
+    [
+     2024,
+     1332
+    ]
+   ],
+   "source": "World Bank WDI",
+   "url": "https://data.worldbank.org/indicator/NY.GDP.PCAP.CD?locations=TL",
+   "licence": "CC BY 4.0",
+   "accessed": "2026-10-27",
+   "notes": "FRED PCAGDPTLA646NWDB (World Bank WDI, Dec 2025 release), rounded to whole dollars; 2024 = 1,332.0 also on the World Bank country page. Earlier years left out (sources disagree)."
+  },
+  {
+   "id": "SP.DYN.LE00.IN",
+   "name": {
+    "tet": "Esperansa moris bainhira moris (tinan)",
+    "pt": "Esperança de vida à nascença (anos)",
+    "id": "Angka harapan hidup saat lahir (tahun)",
+    "en": "Life expectancy at birth (years)"
+   },
+   "unit": "years",
+   "series": [
+    [
+     2010,
+     63.7
+    ],
+    [
+     2015,
+     65.3
+    ],
+    [
+     2022,
+     67.4
+    ],
+    [
+     2023,
+     67.7
+    ]
+   ],
+   "source": "World Bank WDI",
+   "url": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=TL",
+   "licence": "CC BY 4.0",
+   "accessed": "2026-10-27",
+   "notes": "FRED SPDYNLE00INTLS (World Bank WDI): 63.660 (2010), 65.326 (2015), 67.368 (2022), 67.689 (2023), rounded to one decimal. An aggregator citing World Bank Open Data gives 67.9 for 2024 (not added)."
+  },
+  {
+   "id": "EG.ELC.ACCS.ZS",
+   "name": {
+    "tet": "Asesu ba eletrisidade (% populasaun)",
+    "pt": "Acesso à eletricidade (% da população)",
+    "id": "Akses listrik (% penduduk)",
+    "en": "Access to electricity (% of population)"
+   },
+   "unit": "% of population",
+   "series": [
+    [
+     2022,
+     99.7
+    ],
+    [
+     2023,
+     100.0
+    ]
+   ],
+   "source": "World Bank WDI",
+   "url": "https://data.worldbank.org/indicator/EG.ELC.ACCS.ZS?locations=TL",
+   "licence": "CC BY 4.0",
+   "accessed": "2026-10-27",
+   "notes": "World Bank values as republished by Macrotrends and Statistics of the World. Earlier national totals not found in search results (a news report cites about 60% for 2015 'according to the World Bank'; not added)."
+  },
+  {
+   "id": "IT.NET.USER.ZS",
+   "name": {
+    "tet": "Ema ne'ebé uza internet (% populasaun)",
+    "pt": "Utilizadores de internet (% da população)",
+    "id": "Pengguna internet (% penduduk)",
+    "en": "Individuals using the internet (% of population)"
+   },
+   "unit": "% of population",
+   "series": [
+    [
+     2017,
+     24.2
+    ],
+    [
+     2021,
+     35.0
+    ],
+    [
+     2022,
+     34.5
+    ],
+    [
+     2023,
+     34.0
+    ]
+   ],
+   "source": "World Bank WDI",
+   "url": "https://data.worldbank.org/indicator/IT.NET.USER.ZS?locations=TL",
+   "licence": "CC BY 4.0",
+   "accessed": "2026-10-27",
+   "notes": "World Bank WDI values as republished by Statistics of the World (single source – check against the WDI download). DataReportal/Kepios use another method (34.5% early 2025)."
+  }
+ ]
+}

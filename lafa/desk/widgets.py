@@ -49,6 +49,21 @@ def refresh_icon(b, color=None):
     col = color or ("#ffffff" if b.objectName() == "primary" else t["primary"] if b.objectName() in ("ghost", "chip", "icon") else t["text"])
     b.setIcon(icons.icon(name, col)); b.setIconSize(QSize(18, 18))
 
+def clip(text, limit=160):
+    """Shorten a text at a word boundary (cards show the start; the page shows all)."""
+    text = " ".join(str(text or "").split())
+    if len(text) <= limit: return text
+    cut = text[:limit].rsplit(" ", 1)[0].rstrip(",;:.–- ")
+    return cut + "…"
+
+def rounded(pm, radius=12):
+    """A copy of the picture with rounded corners."""
+    if pm is None or pm.isNull(): return pm
+    ratio = pm.devicePixelRatio() or 1.0; out = QPixmap(pm.size()); out.setDevicePixelRatio(ratio); out.fill(Qt.transparent)
+    p = QPainter(out); p.setRenderHint(QPainter.Antialiasing); path = QPainterPath()
+    path.addRoundedRect(QRectF(0, 0, pm.width() / ratio, pm.height() / ratio), radius, radius); p.setClipPath(path); p.drawPixmap(0, 0, pm); p.end()
+    return out
+
 def clear_layout(layout):
     while layout.count():
         item = layout.takeAt(0); w = item.widget()
@@ -237,7 +252,7 @@ class ListRow(Clickable):
         super().__init__(10, 18, parent)
         row = QHBoxLayout(); row.setSpacing(12)
         if thumb is not None:
-            pic = QLabel(); pic.setPixmap(thumb); pic.setFixedSize(thumb.width() / max(1, thumb.devicePixelRatio()), thumb.height() / max(1, thumb.devicePixelRatio())); row.addWidget(pic)
+            ratio = max(1.0, thumb.devicePixelRatio()); pic = QLabel(); pic.setPixmap(thumb); pic.setFixedSize(int(thumb.width() / ratio), int(thumb.height() / ratio)); row.addWidget(pic)
         elif icon_name: row.addWidget(ClayIcon(icon_name, accent_key, 40))
         status = QLabel(); status.setFixedSize(22, 22); status.setPixmap(icons.pixmap("check", "#ffffff", 14) if done else QPixmap())
         status.setAlignment(Qt.AlignCenter)

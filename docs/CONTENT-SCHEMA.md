@@ -107,9 +107,12 @@ every file with:
 
 ```json
 {"words": [{"id": "w0001", "tet": "bondia", "cat": "greetings", "pos": "phrase",
-            "en": "good morning", "pt": "bom dia", "id": "selamat pagi", "level": 1,
+            "en": "good morning", "pt": "bom dia", "ind": "selamat pagi", "level": 1,
             "ex": {"tet": "Bondia, mestre!", "en": "Good morning, teacher!"}}]}
 ```
+
+`id` is the word id; the Indonesian meaning is in `ind`. Words are in `vocab/words.json`
+(and `vocab/words_*.json`, read the same way).
 
 Other languages (ASEAN and CPLP) are `vocab/<code>.json`: `{"lang": "th", "words": {"w0001": "สวัสดีตอนเช้า"}}`.
 Codes: ms (Malay), fil (Filipino), th (Thai), vi (Vietnamese), km (Khmer),

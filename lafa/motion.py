@@ -28,7 +28,7 @@ class Frame:
     shadow: float = 1.0      # ground shadow size
     split: bool = False      # draw body and legs separately
 
-STANDING = {"idle", "talking", "thinking", "reading", "serious", "walking", "stretching", "gaming", "studying", "lecture", "motivator", "magic_show", "professor", "party"}
+STANDING = {"idle", "greeting", "waving", "talking", "thinking", "reading", "serious", "walking", "stretching", "gaming", "studying", "lecture", "motivator", "magic_show", "professor", "party"}
 DANCING = {"tebe", "bidu"}
 
 class Motion:

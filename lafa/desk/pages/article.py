@@ -49,9 +49,9 @@ class AutoText(QTextBrowser):
 def css(tok, scale=1.0):
     fs = lambda px: f"{round(px * scale)}px"
     return (f"body {{ color:{tok['text']}; font-size:{fs(15)}; }} h2 {{ font-size:{fs(19)}; font-weight:800; margin-top:14px; margin-bottom:4px; color:{tok['text']}; }}"
-            f"h3 {{ font-size:{fs(16)}; font-weight:700; margin-top:10px; color:{tok['text']}; }} p {{ line-height:155%; margin-top:2px; margin-bottom:10px; }}"
+            f"h3 {{ font-size:{fs(16)}; font-weight:700; margin-top:10px; color:{tok['text']}; }} p {{ line-height:125%; margin-top:2px; margin-bottom:10px; }}"
             f"a {{ color:{tok['primary']}; text-decoration:none; font-weight:700; }} .muted {{ color:{tok['muted']}; font-size:{fs(13)}; }}"
-            f"li {{ margin-bottom:6px; line-height:145%; }}")
+            f"li {{ margin-bottom:6px; line-height:120%; }}")
 
 class QuizWidget(QWidget):
     """Questions one at a time; explanation after each answer; score saved."""
@@ -122,12 +122,7 @@ class ItemPage(QWidget):
         if item is None: self.col.addWidget(EmptyState("search", t("no_results"))); return
         cat = kb.CATEGORY.get(item.category, kb.CATEGORIES[0])
         photo = win.store.photo(item.id) if getattr(win, "store", None) else None
-        def picture(w, h, it=item, ph=photo):
-            if ph:
-                pm = QPixmap(str(ph[0]))
-                if not pm.isNull(): return cover(pm, w, h)
-            return icons.illustration(it.illustration(), w, h)
-        self.col.addWidget(Banner(picture, 230, 26, item.title(lang), kb.text(cat.title, lang)))
+        self.col.addWidget(Banner(lambda w, h, it=item: item_pixmap(win, it, w, h), 230, 26, item.title(lang), kb.text(cat.title, lang)))
         # Pills and actions.
         row = QHBoxLayout(); row.setSpacing(8)
         row.addWidget(Pill(kb.text(cat.title, lang), cat.accent))
@@ -266,6 +261,15 @@ class ItemPage(QWidget):
         if url.startswith("lafa://item/"): self.win.open_item(url[len("lafa://item/"):])
         elif url.startswith("https://"): self.win.open_url(url)
     def retranslate(self): self.render()
+
+def item_pixmap(win, item, w, h):
+    """The photo downloaded for offline use (free licence) or Lafa's illustration."""
+    store = getattr(win, "store", None) if win is not None else None
+    photo = store.photo(item.id) if store else None
+    if photo:
+        pm = QPixmap(str(photo[0]))
+        if not pm.isNull(): return cover(pm, w, h)
+    return icons.illustration(item.illustration(), w, h)
 
 def cover(pm, w, h):
     """Cover-crop a picture to w×h."""

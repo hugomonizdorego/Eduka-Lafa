@@ -53,7 +53,7 @@ def icon(name, color="#17322b", active=None, size=48):
         result.addPixmap(hot, QIcon.Normal, QIcon.On); result.addPixmap(hot, QIcon.Active, QIcon.On); result.addPixmap(hot, QIcon.Selected, QIcon.On)
     return result
 
-@lru_cache(maxsize=128)
+@lru_cache(maxsize=768)
 def illustration(name, width, height, ratio=1.0):
     """An illustration scaled to cover width×height (cropped in the centre)."""
     data = _svg(ILLUSTRATIONS / f"{name}.svg")

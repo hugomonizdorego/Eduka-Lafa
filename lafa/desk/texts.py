@@ -82,7 +82,7 @@ T = {
     "empty_content_text": ("Seidauk iha artigu iha ne'e. Atualiza dadus bainhira iha internet.", "Ainda não há artigos aqui. Atualize os dados quando tiver internet.", "Belum ada artikel di sini. Perbarui data saat ada internet.", "No articles here yet. Update the data when you are online."),
     # --- encyclopedia & articles
     "enc_title": ("Ensiklopédia Timór-Leste", "Enciclopédia de Timor-Leste", "Ensiklopedia Timor-Leste", "Encyclopedia of Timor-Leste"),
-    "enc_sub": ("Husi tasi-le'un nia moris to'o 2026: istória, kultura, Estadu, ekonomia no natureza.", "Da formação da ilha até 2026: história, cultura, Estado, economia e natureza.", "Dari terbentuknya pulau sampai 2026: sejarah, budaya, negara, ekonomi dan alam.", "From the birth of the island to 2026: history, culture, State, economy and nature."),
+    "enc_sub": ("Husi tasi-le'un Timór nia moris to'o 2026: istória, kultura, Estadu, ekonomia no natureza.", "Da formação da ilha até 2026: história, cultura, Estado, economia e natureza.", "Dari terbentuknya pulau sampai 2026: sejarah, budaya, negara, ekonomi dan alam.", "From the birth of the island to 2026: history, culture, State, economy and nature."),
     "n_articles": ("artigu {n}", "{n} artigos", "{n} artikel", "{n} articles"),
     "n_items": ("{n}", "{n}", "{n}", "{n}"),
     "all_levels": ("Nível hotu", "Todos os níveis", "Semua jenjang", "All levels"),
@@ -96,7 +96,7 @@ T = {
     "sources": ("Fontes", "Fontes", "Sumber", "Sources"),
     "licence": ("Lisensa", "Licença", "Lisensi", "Licence"),
     "accessed": ("asesu {date}", "acedido em {date}", "diakses {date}", "accessed {date}"),
-    "review_draft": ("Rasunhu: presiza revizaun husi espesialista", "Rascunho: precisa de revisão por especialista", "Draf: perlu ditinjau ahli", "Draft: needs expert review"),
+    "review_draft": ("Versaun provizória: presiza revizaun husi espesialista", "Rascunho: precisa de revisão por especialista", "Draf: perlu ditinjau ahli", "Draft: needs expert review"),
     "review_ok": ("Revee ona", "Revisto", "Sudah ditinjau", "Reviewed"),
     "save": ("Rai", "Guardar", "Simpan", "Save"),
     "saved": ("Rai ona", "Guardado", "Tersimpan", "Saved"),

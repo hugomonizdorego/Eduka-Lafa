@@ -34,7 +34,7 @@
       "en": "Where is Timor-Leste?"
      },
      "text": {
-      "tet": "Timór-Leste iha Ázia Sudeste, iha rohan loro-sa'e husi illa Sunda Ki'ik sira, kadeia illa ne'ebé iha Java no Bali nia loro-sa'e. Ninia latitude maizumenus grau 8 to'o 9,5 sul, no ninia longitude grau 124 to'o 127,4 leste. Iha norte, iha illa Alor no Wetar, ne'ebé Indonézia nian. Iha loro-monu, iha Timór loro-monu, ne'ebé mós Indonézia nian. Iha sul, iha Tasi Timór nia sorin seluk, iha Austrália. Timór-Leste uza oras UTC+9, hanesan Japaun no Koreia. Tan ne'e, kuandu iha Dili oras tuku 12 loron-boot, iha Bali oras tuku 11.",
+      "tet": "Timór-Leste iha Ázia Sudeste, iha rohan loro-sa'e husi illa Sunda Ki'ik sira, kadeia illa ne'ebé iha Java no Bali nia loro-sa'e. Ninia latitude maizumenus grau 8 to'o 9,5 sul, no ninia longitude grau 124 to'o 127,4 leste. Iha norte, iha illa Alor no Wetar, ne'ebé Indonézia nian. Iha loro-monu, iha Timór loro-monu, ne'ebé mós Indonézia nian. Iha sul, iha Tasi Timór nia sorin seluk, iha Austrália. Timór-Leste uza oras UTC+9, hanesan Japaun no Koreia. Tan ne'e, bainhira iha Dili oras tuku 12 loron-boot, iha Bali oras tuku 11.",
       "pt": "Timor-Leste fica no Sudeste Asiático, no extremo oriental das Pequenas Ilhas da Sonda, a cadeia de ilhas a leste de Java e de Bali. Situa-se entre cerca de 8° e 9,5° de latitude sul e entre 124° e 127,4° de longitude este. A norte ficam as ilhas indonésias de Alor e Wetar; a oeste fica Timor Ocidental, que pertence à Indonésia; a sul, do outro lado do mar de Timor, fica a Austrália. O país usa o fuso horário UTC+9, o mesmo do Japão e da Coreia. Assim, quando é meio-dia em Díli, são 11 horas em Bali.",
       "id": "Timor-Leste terletak di Asia Tenggara, di ujung timur Kepulauan Sunda Kecil, yaitu rangkaian pulau di sebelah timur Jawa dan Bali. Negara ini berada di antara sekitar 8° dan 9,5° Lintang Selatan serta 124° dan 127,4° Bujur Timur. Di utara terdapat Pulau Alor dan Wetar milik Indonesia; di barat ada Timor Barat yang juga milik Indonesia; di selatan, di seberang Laut Timor, terdapat Australia. Timor-Leste memakai zona waktu UTC+9, sama dengan Jepang dan Korea. Jadi, saat pukul 12 siang di Dili, di Bali baru pukul 11.",
       "en": "Timor-Leste is in Southeast Asia, at the eastern end of the Lesser Sunda Islands, the chain of islands east of Java and Bali. It lies between about 8° and 9.5° south and between 124° and 127.4° east. To the north are the Indonesian islands of Alor and Wetar; to the west is West Timor, which is also part of Indonesia; to the south, across the Timor Sea, is Australia. The country uses the time zone UTC+9, the same as Japan and Korea. So when it is noon in Dili, it is 11 o'clock in Bali."
@@ -2238,6 +2238,1639 @@
    "review": {
     "status": "draft",
     "notes": "Border length 'roughly 250 km' (figures of about 250–270 km circulate) — check. The Maucatar/Noimuti swap in the 1904 convention and the 1914 arbitration are from memory. So are the 2005 provisional agreement, the open segments (Noel Besi–Citrana, Bidjael Sunan–Oben) and the July 2019 agreement in principle; check whether a final text has been signed since. Crossing names Sakato–Wini and Oesilo–Napan are from memory. ≈250 000 people taken or fled to West Timor in 1999 is the usual UNHCR estimate. The web-search budget ran out, so these points rest on the Wikipedia pages listed and on memory. Tetun: 'foho-leten sira' used for 'mountain ridges'."
+   }
+  },
+  {
+   "id": "tl.geography.regions",
+   "category": "geography",
+   "also": [
+    "land"
+   ],
+   "title": {
+    "tet": "Rejiaun sira: kosta norte, kosta sul, foho no loro-sa'e",
+    "pt": "Regiões: costa norte, costa sul, montanhas e leste",
+    "id": "Wilayah: pantai utara, pantai selatan, pegunungan, dan timur",
+    "en": "Regions: north coast, south coast, mountains and the east"
+   },
+   "summary": {
+    "tet": "Timór-Leste ki'ik, maibé ninia rejiaun sira la hanesan malu. Kosta norte maran no kloot, foho sira iha klaran malirin no matak, kosta sul iha rai-tetuk luan no udan barak liu, no loro-sa'e iha rai-tetuk fatuk-ahu, fatuk-kuak no lagoa boot liu.",
+    "pt": "Timor-Leste é pequeno, mas as suas regiões são muito diferentes. A costa norte é seca e estreita, as montanhas do centro são frescas e verdes, a costa sul tem planícies largas e mais chuva, e o leste tem planaltos de calcário, grutas e o maior lago do país.",
+    "id": "Timor-Leste kecil, tetapi wilayah-wilayahnya sangat berbeda. Pantai utara kering dan sempit, pegunungan di tengah sejuk dan hijau, pantai selatan memiliki dataran luas dan hujan lebih banyak, sedangkan bagian timur memiliki dataran tinggi kapur, gua, dan danau terbesar.",
+    "en": "Timor-Leste is small, but its regions are very different. The north coast is dry and narrow, the central mountains are cool and green, the south coast has wide plains and more rain, and the east has limestone plateaus, caves and the largest lake."
+   },
+   "levels": [
+    "eb1",
+    "eb2",
+    "eb3",
+    "es",
+    "sup"
+   ],
+   "sections": [
+    {
+     "heading": {
+      "tet": "Kosta norte",
+      "pt": "Costa norte",
+      "id": "Pantai utara",
+      "en": "The north coast"
+     },
+     "text": {
+      "tet": "Iha kosta norte, foho sira besik tasi, no rai-tetuk iha de'it fatin kloot ida. Parte ne'e maran durante tinan nia parte boot, tanba foho sira taka anin balu ne'ebé lori udan. Udan barak liu monu entre maizumenus Dezembru no Abríl. Iha du'ut savana, ai-akadiru no ai-parapa iha tasi-ibun. Vila barak iha ne'e, hanesan Dili, Likisá, Manatutu no Baukau, no estrada tasi-ibun liga sira. Ema kaer ikan, kuda batar no modo iha fatin ne'ebé iha bee, no halo komérsiu iha vila sira.",
+      "pt": "Ao longo da costa norte, as montanhas chegam perto do mar e deixam só uma faixa estreita de terra plana. Este lado da ilha é seco durante grande parte do ano, porque as montanhas travam alguns dos ventos que trazem chuva. A maior parte da chuva cai entre dezembro e abril, aproximadamente. São comuns a savana, as palmeiras e os mangais. Aqui ficam muitas vilas, como Díli, Liquiçá, Manatuto e Baucau, ligadas pela estrada costeira. As pessoas pescam, cultivam milho e legumes onde há água e fazem comércio nas vilas.",
+      "id": "Di sepanjang pantai utara, pegunungan dekat dengan laut sehingga hanya ada jalur sempit dataran rendah. Sisi pulau ini kering sepanjang sebagian besar tahun karena pegunungan menghalangi sebagian angin pembawa hujan. Sebagian besar hujan turun antara sekitar Desember dan April. Padang sabana, pohon lontar, dan bakau banyak dijumpai. Banyak kota berada di sini, seperti Dili, Liquiçá, Manatuto, dan Baucau, yang dihubungkan jalan pesisir. Penduduk menangkap ikan, menanam jagung dan sayuran di tempat yang ada air, dan berdagang di kota.",
+      "en": "Along the north coast the mountains come close to the sea, leaving only a narrow strip of flat land. This side of the island is dry for much of the year, because the mountains block some of the winds that bring rain. Most rain falls between about December and April. Savanna grass, lontar palms and mangroves are common. Many towns are here, such as Dili, Liquiçá, Manatuto and Baucau, linked by the coastal road. People fish, grow maize and vegetables where there is water, and trade in the towns."
+     }
+    },
+    {
+     "heading": {
+      "tet": "Foho iha klaran",
+      "pt": "As montanhas do centro",
+      "id": "Pegunungan tengah",
+      "en": "The central mountains"
+     },
+     "text": {
+      "tet": "Kadeia foho ida la'o iha illa nia klaran hanesan ruin-kotuk. Tatamailau (Foho Ramelau) aas m 2 986, no foho aas seluk mak Kablaki no Matebian. Iha leten ne'e, anin malirin, kalan bele malirin tebes, no dala barak iha abuabu no udan. Agrikultór sira iha Ermera, Aileu, Ainaru, Manufahi no Likisá nia foho kuda kafé iha ai-hun ne'ebé halo mahon nia okos. Vila hanesan Maubisse no Hatu-Builico famozu ho modo. Tanba rai iha ne'e tun-sa'e makaas, udan boot bele hamosu rai-halai no kotu estrada.",
+      "pt": "Uma espinha dorsal de montanhas percorre o meio da ilha. O Tatamailau (monte Ramelau) chega aos 2986 m, e outros picos altos são o Kablaki e o Matebian. Lá em cima o ar é fresco, as noites podem ser frias e há muitas vezes nevoeiro e chuva. Os agricultores de Ermera, Aileu, Ainaro, Manufahi e das colinas de Liquiçá cultivam café à sombra de árvores. Vilas como Maubisse e Hatu-Builico são conhecidas pelos legumes. Como as encostas são íngremes, as chuvas fortes podem provocar deslizamentos e cortar estradas.",
+      "id": "Rangkaian pegunungan membentang di tengah pulau seperti tulang punggung. Tatamailau (Gunung Ramelau) mencapai 2.986 m, dan puncak tinggi lainnya antara lain Kablaki dan Matebian. Di ketinggian ini udaranya sejuk, malam bisa dingin, serta sering berkabut dan hujan. Petani di Ermera, Aileu, Ainaro, Manufahi, dan perbukitan Liquiçá menanam kopi di bawah pohon peneduh. Kota seperti Maubisse dan Hatu-Builico terkenal dengan sayurannya. Karena lerengnya curam, hujan lebat dapat menyebabkan tanah longsor dan memutus jalan.",
+      "en": "A spine of mountains runs along the middle of the island. Tatamailau (Mount Ramelau) reaches 2,986 m, and other high peaks include Kablaki and Matebian. Up here the air is cool, nights can be cold, and fog and rain are frequent. Farmers in Ermera, Aileu, Ainaro, Manufahi and the hills of Liquiçá grow coffee under shade trees. Towns such as Maubisse and Hatu-Builico are known for their vegetables. Because the slopes are steep, heavy rain can cause landslides and cut roads."
+     }
+    },
+    {
+     "heading": {
+      "tet": "Kosta sul",
+      "pt": "Costa sul",
+      "id": "Pantai selatan",
+      "en": "The south coast"
+     },
+     "text": {
+      "tet": "Iha sorin sul, rai tun neineik liu ba Tasi Timór, no rai-tetuk tasi-ibun nian luan liu. Kosta sul dala barak iha tempu udan naruk liu kosta norte, ho tempu udan daruak iha tinan nia klaran. Mota sira lori bee ba natar iha rai-tetuk hanesan Suai, Betano, Natarbora, Uato-Lari no Uatucarbau. Projetu Tasi Mane planeia indústria petróleu nian iha Suai, Betano no Beaço. Inundasaun mak risku ida bainhira mota sira nakonu iha tempu udan.",
+      "pt": "Do lado sul, a terra desce mais suavemente até ao mar de Timor e as planícies costeiras são mais largas. A costa sul tem normalmente uma estação das chuvas mais longa do que a norte, com um segundo período de chuva a meio do ano. Os rios levam água aos arrozais de planícies como Suai, Betano, Natarbora, Uato-Lari e Uatucarbau. O projeto Tasi Mane prevê indústria petrolífera em Suai, Betano e Beaço. As cheias são um risco quando os rios transbordam na época das chuvas.",
+      "id": "Di sisi selatan, daratan menurun lebih landai ke Laut Timor, dan dataran pantainya lebih luas. Pantai selatan biasanya memiliki musim hujan yang lebih panjang daripada pantai utara, dengan masa hujan kedua di pertengahan tahun. Sungai-sungai membawa air ke sawah di dataran seperti Suai, Betano, Natarbora, Uato-Lari, dan Uatucarbau. Proyek Tasi Mane merencanakan industri perminyakan di Suai, Betano, dan Beaço. Banjir menjadi ancaman ketika sungai meluap pada musim hujan.",
+      "en": "On the south side the land slopes more gently to the Timor Sea, and the coastal plains are wider. The south coast usually has a longer rainy season than the north, with a second period of rain in the middle of the year. Rivers bring water to rice fields on plains such as Suai, Betano, Natarbora, Uato-Lari and Uatucarbau. The Tasi Mane project plans a petroleum industry at Suai, Betano and Beaço. Floods are a risk when rivers overflow in the wet season."
+     }
+    },
+    {
+     "heading": {
+      "tet": "Loro-sa'e",
+      "pt": "O leste",
+      "id": "Bagian timur",
+      "en": "The east"
+     },
+     "text": {
+      "tet": "Iha loro-sa'e, iha Lautein no iha Baukau no Vikeke nia parte balu, iha rai-tetuk aas fatuk-ahu nian. Fatuk ne'e mai husi ahu-ruin tuan ne'ebé sa'e husi tasi, hanesan rai-tetuk iha Baukau no Lospalos nia sorin. Bee-udan tama ba fatuk nia laran no suli iha dalan rai-okos, tan ne'e iha fatuk-kuak no bee-matan barak, maibé mota uitoan de'it. Lagoa Ira Lalaro, lagoa boot liu iha nasaun, iha rai-tetuk besik Lospalos. Fatuk-kuak sira besik Tutuala hatudu katak ema hela iha ne'e liu tinan 40 000 liubá. Ema barak ko'alia Fataluku ka Makasae.",
+      "pt": "No leste, em Lautém e em partes de Baucau e Viqueque, há planaltos altos de calcário, formado por antigos recifes de coral que subiram do mar, como os planaltos à volta de Baucau e de Lospalos. A água da chuva infiltra-se na rocha e corre por canais subterrâneos; por isso há muitas grutas e nascentes, mas poucos rios. O lago Ira Lalaro, o maior do país, fica no planalto perto de Lospalos. Grutas perto de Tutuala mostram que já havia pessoas aqui há mais de 40 000 anos. A maioria das pessoas fala fataluku ou makasae.",
+      "id": "Di timur, di Lautém serta sebagian Baucau dan Viqueque, terdapat dataran tinggi batu kapur yang berasal dari terumbu karang tua yang terangkat dari laut, seperti dataran tinggi di sekitar Baucau dan Lospalos. Air hujan meresap ke dalam batuan dan mengalir melalui saluran bawah tanah, sehingga ada banyak gua dan mata air tetapi sedikit sungai. Danau Ira Lalaro, danau terbesar di negara ini, terletak di dataran tinggi dekat Lospalos. Gua-gua dekat Tutuala menunjukkan bahwa manusia sudah tinggal di sini lebih dari 40.000 tahun lalu. Sebagian besar penduduk berbahasa Fataluku atau Makasae.",
+      "en": "In the east, in Lautém and parts of Baucau and Viqueque, there are high plateaus of limestone made from old coral reefs that rose from the sea, such as the plateaus around Baucau and Lospalos. Rainwater sinks into the rock and flows through underground channels, so there are many caves and springs but few rivers. Lake Ira Lalaro, the largest lake in the country, lies on the plateau near Lospalos. Caves near Tutuala show that people lived here more than 40,000 years ago. Most people speak Fataluku or Makasae."
+     }
+    },
+    {
+     "heading": {
+      "tet": "Loro-monu no Oe-Kusi",
+      "pt": "O oeste e Oé-Cusse",
+      "id": "Bagian barat dan Oé-Cusse",
+      "en": "The west and Oé-Cusse"
+     },
+     "text": {
+      "tet": "Iha loro-monu, Bobonaru no Kovalima iha fronteira ho Indonézia. Rai-tetuk Maliana mak fatin ida ne'ebé produz hare barak liu, no iha foho sira iha bee-manas iha Marobo. Ema barak ko'alia Bunak, Kemak ka Tetun Terik. Oe-Kusi Ambenu, ne'ebé hela mesak husi nasaun nia parte seluk, iha ninia foho rasik, rai-tetuk tasi-ibun kloot ida, no lian no kultura Baikenu. Hatene rejiaun sira ajuda ita komprende tanba saida mak ai-horis, uma, lian no festa muda husi fatin ida ba fatin seluk.",
+      "pt": "No oeste, Bobonaro e Cova Lima fazem fronteira com a Indonésia. O vale de Maliana é uma das principais zonas de arroz, e nas colinas há nascentes de água quente em Marobo. Muitas pessoas falam bunak, kemak ou tétum terik. Oé-Cusse Ambeno, separado do resto do país, tem as suas próprias montanhas, uma planície costeira estreita e a língua e a cultura baikeno. Conhecer as regiões ajuda a perceber porque as culturas, as casas, as línguas e até as festas mudam de um lugar para o outro.",
+      "id": "Di barat, Bobonaro dan Cova Lima berbatasan dengan Indonesia. Lembah Maliana adalah salah satu daerah padi utama, dan di perbukitannya ada mata air panas di Marobo. Banyak orang berbahasa Bunak, Kemak, atau Tetun Terik. Oé-Cusse Ambeno, yang terpisah dari bagian lain negara ini, memiliki pegunungan sendiri, dataran pantai yang sempit, serta bahasa dan budaya Baikeno. Mengenal wilayah-wilayah ini membantu kita memahami mengapa tanaman, rumah, bahasa, dan bahkan pesta berbeda dari satu tempat ke tempat lain.",
+      "en": "In the west, Bobonaro and Cova Lima border Indonesia. The Maliana valley is one of the main rice areas, and the hills have hot springs at Marobo. Many people speak Bunak, Kemak or Tetun Terik. Oé-Cusse Ambeno, cut off from the rest of the country, has its own mountains, a narrow coastal plain and the Baikeno language and culture. Knowing the regions helps us understand why crops, houses, languages and even festivals change from one place to the next."
+     }
+    }
+   ],
+   "facts": [
+    {
+     "label": {
+      "tet": "Fatin aas liu",
+      "pt": "Ponto mais alto",
+      "id": "Titik tertinggi",
+      "en": "Highest point"
+     },
+     "value": {
+      "tet": "Tatamailau, m 2 986",
+      "pt": "Tatamailau, 2986 m",
+      "id": "Tatamailau, 2.986 m",
+      "en": "Tatamailau, 2,986 m"
+     }
+    },
+    {
+     "label": {
+      "tet": "Tempu udan (kosta norte)",
+      "pt": "Época das chuvas (costa norte)",
+      "id": "Musim hujan (pantai utara)",
+      "en": "Rainy season (north coast)"
+     },
+     "value": {
+      "tet": "Dezembru–Abríl (maizumenus)",
+      "pt": "dezembro–abril (aprox.)",
+      "id": "Desember–April (kira-kira)",
+      "en": "December–April (approx.)"
+     }
+    },
+    {
+     "label": {
+      "tet": "Lagoa boot liu",
+      "pt": "Maior lago",
+      "id": "Danau terbesar",
+      "en": "Largest lake"
+     },
+     "value": "Ira Lalaro"
+    },
+    {
+     "label": {
+      "tet": "Fatin kafé prinsipál",
+      "pt": "Principais zonas de café",
+      "id": "Daerah kopi utama",
+      "en": "Main coffee areas"
+     },
+     "value": {
+      "tet": "Ermera, Aileu, Ainaru, Manufahi, Likisá",
+      "pt": "Ermera, Aileu, Ainaro, Manufahi, Liquiçá",
+      "id": "Ermera, Aileu, Ainaro, Manufahi, Liquiçá",
+      "en": "Ermera, Aileu, Ainaro, Manufahi, Liquiçá"
+     }
+    },
+    {
+     "label": {
+      "tet": "Rai-tetuk hare nian",
+      "pt": "Planícies de arroz",
+      "id": "Dataran padi",
+      "en": "Rice plains"
+     },
+     "value": "Maliana, Suai, Betano, Natarbora, Uato-Lari"
+    },
+    {
+     "label": {
+      "tet": "Ema nia rastu tuan liu",
+      "pt": "Vestígios humanos mais antigos",
+      "id": "Jejak manusia tertua",
+      "en": "Oldest human traces"
+     },
+     "value": {
+      "tet": "liu tinan 40 000 (Tutuala)",
+      "pt": "mais de 40 000 anos (Tutuala)",
+      "id": "lebih dari 40.000 tahun (Tutuala)",
+      "en": "more than 40,000 years (Tutuala)"
+     }
+    }
+   ],
+   "figure": {
+    "illustration": "mountain",
+    "caption": {
+     "tet": "Foho, kosta no rai-tetuk: Timór-Leste nia rejiaun sira.",
+     "pt": "Montanhas, costas e planícies: as regiões de Timor-Leste.",
+     "id": "Pegunungan, pantai, dan dataran: wilayah-wilayah Timor-Leste.",
+     "en": "Mountains, coasts and plains: the regions of Timor-Leste."
+    }
+   },
+   "wiki": {
+    "en": "Mount Ramelau"
+   },
+   "related": [
+    "tl.land.mountains",
+    "tl.land.climate",
+    "tl.land.rivers_lakes",
+    "tl.land.hazards",
+    "tl.economy.coffee",
+    "tl.economy.agriculture",
+    "tl.nature.protected_areas",
+    "tl.history.first_peoples",
+    "tl.geography.map",
+    "mun.lautem",
+    "mun.ermera",
+    "mun.ainaro",
+    "mun.bobonaro",
+    "mun.covalima"
+   ],
+   "tags": [
+    "regions",
+    "north coast",
+    "south coast",
+    "mountains",
+    "plateau",
+    "climate"
+   ],
+   "quiz": [
+    {
+     "q": {
+      "tet": "Ai-horis saida mak moris di'ak iha foho malirin Ermera nian?",
+      "pt": "Que cultura cresce bem nas montanhas frescas de Ermera?",
+      "id": "Tanaman apa yang tumbuh baik di pegunungan sejuk Ermera?",
+      "en": "Which crop grows well in the cool mountains of Ermera?"
+     },
+     "options": [
+      {
+       "tet": "Nuu",
+       "pt": "Coco",
+       "id": "Kelapa",
+       "en": "Coconuts"
+      },
+      {
+       "tet": "Kafé",
+       "pt": "Café",
+       "id": "Kopi",
+       "en": "Coffee"
+      },
+      {
+       "tet": "Du'ut-tasi",
+       "pt": "Algas",
+       "id": "Rumput laut",
+       "en": "Seaweed"
+      },
+      {
+       "tet": "Tohu",
+       "pt": "Cana-de-açúcar",
+       "id": "Tebu",
+       "en": "Sugar cane"
+      }
+     ],
+     "answer": 1,
+     "why": {
+      "tet": "Kafé gosta klima malirin no mahon; Ermera mak fatin kafé boot liu.",
+      "pt": "O café gosta de clima fresco e de sombra; Ermera é a maior zona de café.",
+      "id": "Kopi menyukai iklim sejuk dan naungan; Ermera adalah daerah kopi terbesar.",
+      "en": "Coffee likes a cool climate and shade; Ermera is the largest coffee area."
+     },
+     "difficulty": 2
+    },
+    {
+     "q": {
+      "tet": "Saida mak Timór-Leste nia foho aas liu?",
+      "pt": "Qual é a montanha mais alta de Timor-Leste?",
+      "id": "Apa gunung tertinggi di Timor-Leste?",
+      "en": "What is the highest mountain of Timor-Leste?"
+     },
+     "options": [
+      {
+       "tet": "Matebian",
+       "pt": "Matebian",
+       "id": "Matebian",
+       "en": "Matebian"
+      },
+      {
+       "tet": "Kablaki",
+       "pt": "Kablaki",
+       "id": "Kablaki",
+       "en": "Kablaki"
+      },
+      {
+       "tet": "Tatamailau (Ramelau)",
+       "pt": "Tatamailau (Ramelau)",
+       "id": "Tatamailau (Ramelau)",
+       "en": "Tatamailau (Ramelau)"
+      },
+      {
+       "tet": "Manucoco",
+       "pt": "Manucoco",
+       "id": "Manucoco",
+       "en": "Manucoco"
+      }
+     ],
+     "answer": 2,
+     "why": {
+      "tet": "Tatamailau, iha Ainaru, aas m 2 986.",
+      "pt": "O Tatamailau, em Ainaro, tem 2986 m.",
+      "id": "Tatamailau di Ainaro tingginya 2.986 m.",
+      "en": "Tatamailau, in Ainaro, is 2,986 m high."
+     },
+     "difficulty": 4
+    },
+    {
+     "q": {
+      "tet": "Kosta ida-ne'ebé mak dala barak iha tempu udan naruk liu?",
+      "pt": "Que costa tem normalmente uma época das chuvas mais longa?",
+      "id": "Pantai mana yang biasanya memiliki musim hujan lebih panjang?",
+      "en": "Which coast usually has a longer rainy season?"
+     },
+     "options": [
+      {
+       "tet": "Kosta norte",
+       "pt": "A costa norte",
+       "id": "Pantai utara",
+       "en": "The north coast"
+      },
+      {
+       "tet": "Kosta sul",
+       "pt": "A costa sul",
+       "id": "Pantai selatan",
+       "en": "The south coast"
+      },
+      {
+       "tet": "Rua-rua hanesan loloos",
+       "pt": "As duas exatamente iguais",
+       "id": "Keduanya persis sama",
+       "en": "Both exactly the same"
+      },
+      {
+       "tet": "La iha ida",
+       "pt": "Nenhuma",
+       "id": "Tidak keduanya",
+       "en": "Neither"
+      }
+     ],
+     "answer": 1,
+     "why": {
+      "tet": "Kosta sul iha tempu udan daruak iha tinan nia klaran; kosta norte maran liu.",
+      "pt": "A costa sul tem um segundo período de chuva a meio do ano; a costa norte é mais seca.",
+      "id": "Pantai selatan memiliki masa hujan kedua di pertengahan tahun; pantai utara lebih kering.",
+      "en": "The south coast has a second rainy period in mid-year; the north coast is drier."
+     },
+     "difficulty": 7
+    },
+    {
+     "q": {
+      "tet": "Lagoa ida-ne'ebé mak boot liu iha Timór-Leste?",
+      "pt": "Qual é o maior lago de Timor-Leste?",
+      "id": "Danau mana yang terbesar di Timor-Leste?",
+      "en": "Which is the largest lake in Timor-Leste?"
+     },
+     "options": [
+      {
+       "tet": "Tasitolu",
+       "pt": "Tasitolu",
+       "id": "Tasitolu",
+       "en": "Tasitolu"
+      },
+      {
+       "tet": "Lagoa Maubara",
+       "pt": "Lagoa de Maubara",
+       "id": "Danau Maubara",
+       "en": "Maubara lagoon"
+      },
+      {
+       "tet": "Ira Lalaro",
+       "pt": "Ira Lalaro",
+       "id": "Ira Lalaro",
+       "en": "Ira Lalaro"
+      },
+      {
+       "tet": "Be Malai",
+       "pt": "Be Malai",
+       "id": "Be Malai",
+       "en": "Be Malai"
+      }
+     ],
+     "answer": 2,
+     "why": {
+      "tet": "Ira Lalaro iha rai-tetuk besik Lospalos, iha Lautein; ninia medida muda tuir tempu udan no bailoron.",
+      "pt": "O Ira Lalaro fica no planalto perto de Lospalos, em Lautém; o seu tamanho muda entre a época seca e a das chuvas.",
+      "id": "Ira Lalaro berada di dataran tinggi dekat Lospalos, Lautém; luasnya berubah antara musim kemarau dan hujan.",
+      "en": "Ira Lalaro lies on the plateau near Lospalos, in Lautém; its size changes between the dry and wet seasons."
+     },
+     "difficulty": 9
+    },
+    {
+     "q": {
+      "tet": "Fatuk saida mak halo rai-tetuk aas Baukau no Lospalos nian?",
+      "pt": "Que rocha forma os planaltos de Baucau e de Lospalos?",
+      "id": "Batuan apa yang membentuk dataran tinggi Baucau dan Lospalos?",
+      "en": "What kind of rock forms the plateaus of Baucau and Lospalos?"
+     },
+     "options": [
+      {
+       "tet": "Fatuk-ahu husi ahu-ruin tuan",
+       "pt": "Calcário de antigos recifes de coral",
+       "id": "Batu kapur dari terumbu karang tua",
+       "en": "Limestone from old coral reefs"
+      },
+      {
+       "tet": "Granitu",
+       "pt": "Granito",
+       "id": "Granit",
+       "en": "Granite"
+      },
+      {
+       "tet": "Fatuk foho-ahi nian (bazaltu)",
+       "pt": "Basalto vulcânico",
+       "id": "Basal vulkanik",
+       "en": "Volcanic basalt"
+      },
+      {
+       "tet": "Gelu",
+       "pt": "Gelo",
+       "id": "Es",
+       "en": "Ice"
+      }
+     ],
+     "answer": 0,
+     "why": {
+      "tet": "Ahu-ruin tuan sa'e husi tasi no sai fatuk-ahu; bee-udan halo fatuk-kuak iha laran.",
+      "pt": "Antigos recifes subiram do mar e tornaram-se calcário; a chuva abre grutas lá dentro.",
+      "id": "Terumbu karang tua terangkat dari laut dan menjadi batu kapur; air hujan membentuk gua di dalamnya.",
+      "en": "Old reefs rose from the sea and became limestone; rainwater carves caves inside."
+     },
+     "difficulty": 12
+    },
+    {
+     "q": {
+      "tet": "Fatin ida-ne'ebé mak rai-tetuk hare nian iha kosta sul?",
+      "pt": "Qual destes lugares é uma planície de arroz na costa sul?",
+      "id": "Manakah dataran padi di pantai selatan?",
+      "en": "Which of these is a rice plain on the south coast?"
+     },
+     "options": [
+      {
+       "tet": "Maubisse",
+       "pt": "Maubisse",
+       "id": "Maubisse",
+       "en": "Maubisse"
+      },
+      {
+       "tet": "Hatu-Builico",
+       "pt": "Hatu-Builico",
+       "id": "Hatu-Builico",
+       "en": "Hatu-Builico"
+      },
+      {
+       "tet": "Aileu",
+       "pt": "Aileu",
+       "id": "Aileu",
+       "en": "Aileu"
+      },
+      {
+       "tet": "Natarbora",
+       "pt": "Natarbora",
+       "id": "Natarbora",
+       "en": "Natarbora"
+      }
+     ],
+     "answer": 3,
+     "why": {
+      "tet": "Natarbora (Manatutu) iha kosta sul; Maubisse, Hatu-Builico no Aileu iha foho.",
+      "pt": "Natarbora (Manatuto) fica na costa sul; Maubisse, Hatu-Builico e Aileu ficam nas montanhas.",
+      "id": "Natarbora (Manatuto) berada di pantai selatan; Maubisse, Hatu-Builico, dan Aileu di pegunungan.",
+      "en": "Natarbora (Manatuto) is on the south coast; Maubisse, Hatu-Builico and Aileu are in the mountains."
+     },
+     "difficulty": 14
+    }
+   ],
+   "sources": [
+    {
+     "title": "Geography of East Timor",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Geography_of_East_Timor",
+     "accessed": "2026-10-27",
+     "licence": "CC BY-SA 4.0"
+    },
+    {
+     "title": "East Timor",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/East_Timor",
+     "accessed": "2026-10-27",
+     "licence": "CC BY-SA 4.0"
+    },
+    {
+     "title": "Mount Ramelau",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Mount_Ramelau",
+     "accessed": "2026-10-27",
+     "licence": "CC BY-SA 4.0"
+    },
+    {
+     "title": "Nino Konis Santana National Park",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Nino_Konis_Santana_National_Park",
+     "accessed": "2026-10-27",
+     "licence": "CC BY-SA 4.0"
+    },
+    {
+     "title": "Timor",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Timor",
+     "accessed": "2026-10-27",
+     "licence": "CC BY-SA 4.0"
+    }
+   ],
+   "review": {
+    "status": "draft",
+    "notes": "General climate pattern (north drier, rain mainly Dec–Apr; south coast with a second rainy period in mid-year) is standard, but align it with writer A's climate article. 'More than 40 000 years' near Tutuala (Jerimalai) is used to match other articles, which say about 42 000–44 000. Ira Lalaro is the largest lake. Tetun terms to check: 'ai-akadiru' (lontar palm), 'ai-parapa' (mangrove, as in old Lafa text), 'abuabu' (fog), 'ruin-kotuk' (spine), 'tun-sa'e makaas' (steep). The web-search budget ran out, so I did not add new sources."
+   }
+  },
+  {
+   "id": "tl.calendar.overview",
+   "category": "calendar",
+   "also": [
+    "politics"
+   ],
+   "title": {
+    "tet": "Feriadu nasionál no loron komemorativu",
+    "pt": "Feriados nacionais e datas comemorativas",
+    "id": "Hari libur nasional dan hari peringatan",
+    "en": "Public holidays and commemorative dates"
+   },
+   "summary": {
+    "tet": "Lei n.º 10/2005 mak hatuur Timór-Leste nia feriadu nasionál, no lei ne'e muda iha 2016 no 2023. Agora iha feriadu 18: loron sanulu ne'ebé hanoin-hikas nasaun nia istória no festa relijiozu ualu. Loron seluk, hanesan Loron FALINTIL iha 20 Agostu, mak loron komemorativu ofisiál, maibé tuir lei la'ós feriadu.",
+    "pt": "Os feriados de Timor-Leste são fixados pela Lei n.º 10/2005, alterada em 2016 e em 2023. Hoje há 18 feriados: dez dias que recordam a história da nação e oito festas religiosas. Outras datas, como o Dia das FALINTIL, a 20 de agosto, são comemorações oficiais, mas não são feriados por lei.",
+    "id": "Hari libur nasional Timor-Leste ditetapkan oleh Undang-Undang No. 10/2005, yang diubah pada 2016 dan 2023. Kini ada 18 hari libur: sepuluh hari yang mengenang sejarah bangsa dan delapan hari raya keagamaan. Tanggal lain, seperti Hari FALINTIL pada 20 Agustus, adalah hari peringatan resmi, tetapi menurut undang-undang bukan hari libur.",
+    "en": "Timor-Leste's public holidays are set by Law n.º 10/2005, which was changed in 2016 and 2023. There are now 18 holidays: ten days that remember the nation's history and eight religious feasts. Other dates, such as FALINTIL Day on 20 August, are official commemorations but not holidays by law."
+   },
+   "levels": [
+    "eb2",
+    "eb3",
+    "es",
+    "sup"
+   ],
+   "sections": [
+    {
+     "heading": {
+      "tet": "Lei kona-ba feriadu",
+      "pt": "A lei dos feriados",
+      "id": "Undang-undang hari libur",
+      "en": "The holiday law"
+     },
+     "text": {
+      "tet": "Durante tranzisaun ONU nian, orden ezekutiva ida husi UNTAET iha 2000 hatuur lista feriadu dahuluk. Iha 2005, Parlamentu Nasionál aprova Lei n.º 10/2005 kona-ba feriadu nasionál, loron komemorativu ofisiál no toleransia pontu. Lei ne'e aplika ba servisu públiku no privadu. Lei n.º 3/2016 muda lei ne'e atu fó omenajen ba luta libertasaun: 3 Marsu sai Loron Veteranu, 7 Dezembru Loron Memória no 31 Dezembru Loron Asuwa'in Nasionál. Iha 2023, Parlamentu muda tan lei ne'e no aumenta Loron Nasionál Feto iha 3 Novembru.",
+      "pt": "Durante a transição da ONU, uma ordem executiva da UNTAET de 2000 fixou a primeira lista de feriados. Em 2005, o Parlamento Nacional aprovou a Lei n.º 10/2005, sobre feriados nacionais, datas oficiais comemorativas e tolerância de ponto, aplicável ao trabalho público e privado. A Lei n.º 3/2016 alterou-a para homenagear a luta de libertação: o 3 de março passou a ser o Dia dos Veteranos, o 7 de dezembro o Dia da Memória e o 31 de dezembro o Dia dos Heróis Nacionais. Em 2023, o Parlamento voltou a alterá-la e acrescentou o Dia Nacional da Mulher, a 3 de novembro.",
+      "id": "Selama masa transisi PBB, sebuah perintah eksekutif UNTAET tahun 2000 menetapkan daftar hari libur pertama. Pada 2005 Parlemen Nasional mengesahkan Undang-Undang No. 10/2005 tentang hari libur nasional, hari peringatan resmi, dan tolerância de ponto, yang berlaku bagi pekerjaan publik maupun swasta. Undang-Undang No. 3/2016 mengubahnya untuk menghormati perjuangan pembebasan: 3 Maret menjadi Hari Veteran, 7 Desember Hari Peringatan, dan 31 Desember Hari Pahlawan Nasional. Pada 2023 Parlemen mengubahnya lagi dan menambahkan Hari Perempuan Nasional pada 3 November.",
+      "en": "During the UN transition, a UNTAET executive order of 2000 set the first list of holidays. In 2005 the National Parliament passed Law n.º 10/2005 on national holidays, official commemorative dates and 'tolerância de ponto'; it applies to public and private work. Law n.º 3/2016 changed it to honour the liberation struggle: 3 March became Veterans' Day, 7 December Memorial Day and 31 December National Heroes Day. In 2023 Parliament changed the law again and added National Women's Day on 3 November."
+     }
+    },
+    {
+     "heading": {
+      "tet": "Feriadu ho data fiksu no data muda",
+      "pt": "Feriados fixos e móveis",
+      "id": "Hari libur tetap dan berpindah",
+      "en": "Fixed and movable holidays"
+     },
+     "text": {
+      "tet": "Feriadu sanulu-resin-haat iha data fiksu: 1 Janeiru, 3 Marsu, 1 Maiu, 20 Maiu, 30 Agostu, 1, 2, 3, 12 no 28 Novembru, no 7, 8, 25 no 31 Dezembru. Feriadu haat muda kada tinan. Sesta-Feira Santa no Korpu de Deus depende ba Páskoa nia data. Idul Fitri no Idul Adha tuir kalendáriu Islámiku, ne'ebé tuir fulan. Kada tinan, membru Governu ne'ebé tau matan ba servisu no empregu fó-sai data loloos liu husi despaxu. Data Islámiku sira hatuur tuir komunidade Islámika nia konsellu, tanba sira depende ba fulan foun.",
+      "pt": "Catorze feriados têm data fixa: 1 de janeiro, 3 de março, 1 de maio, 20 de maio, 30 de agosto, 1, 2, 3, 12 e 28 de novembro, e 7, 8, 25 e 31 de dezembro. Quatro mudam todos os anos. A Sexta-Feira Santa e o Corpo de Deus dependem da data da Páscoa. O Idul Fitri e o Idul Adha seguem o calendário lunar islâmico. Todos os anos, o membro do Governo responsável pela área do trabalho publica as datas exatas por despacho; as datas islâmicas são fixadas ouvida a comunidade islâmica, porque dependem da lua nova.",
+      "id": "Empat belas hari libur memiliki tanggal tetap: 1 Januari, 3 Maret, 1 Mei, 20 Mei, 30 Agustus, 1, 2, 3, 12, dan 28 November, serta 7, 8, 25, dan 31 Desember. Empat lainnya berpindah setiap tahun. Jumat Agung dan Corpus Christi bergantung pada tanggal Paskah. Idul Fitri dan Idul Adha mengikuti kalender bulan Islam. Setiap tahun anggota pemerintah yang membidangi ketenagakerjaan menerbitkan tanggal pastinya melalui despacho; tanggal hari raya Islam ditetapkan atas saran komunitas Muslim karena bergantung pada bulan baru.",
+      "en": "Fourteen holidays have a fixed date: 1 January, 3 March, 1 May, 20 May, 30 August, 1, 2, 3, 12 and 28 November, and 7, 8, 25 and 31 December. Four move every year. Good Friday and Corpus Christi depend on the date of Easter. Eid al-Fitr and Eid al-Adha follow the Islamic lunar calendar. Each year the Government member responsible for labour publishes the exact dates by despacho; the Islamic dates are fixed on the advice of the Islamic community, because they depend on the new moon."
+     }
+    },
+    {
+     "heading": {
+      "tet": "Loron sira ne'ebé konta nasaun nia istória",
+      "pt": "Dias que contam a história da nação",
+      "id": "Hari-hari yang menceritakan sejarah bangsa",
+      "en": "Days that tell the nation's story"
+     },
+     "text": {
+      "tet": "Se ita lee tuir eventu sira-nia orden, loron nasionál sira konta nasaun nia istória. 28 Novembru hanoin-hikas proklamasaun independénsia iha 1975, no 7 Dezembru invazaun Indonézia nian loron sia depois. 31 Dezembru hanoin-hikas Nicolau Lobato, ne'ebé mate iha funu iha 1978, no asuwa'in nasionál sira hotu. 12 Novembru hanoin-hikas foin-sa'e sira husi masakre Santa Cruz iha 1991. 30 Agostu marka konsulta populár 1999, no 20 Maiu restaurasaun independénsia iha 2002. 3 Marsu fó omenajen ba veteranu sira, no 3 Novembru ba feto sira husi luta.",
+      "pt": "Lidos pela ordem dos acontecimentos, os dias nacionais contam a história do país. O 28 de novembro recorda a proclamação da independência em 1975, e o 7 de dezembro a invasão indonésia nove dias depois. O 31 de dezembro lembra Nicolau Lobato, morto em combate em 1978, e todos os heróis nacionais. O 12 de novembro recorda os jovens do massacre de Santa Cruz, em 1991. O 30 de agosto assinala a consulta popular de 1999 e o 20 de maio a restauração da independência em 2002. O 3 de março homenageia os veteranos e o 3 de novembro as mulheres da luta.",
+      "id": "Jika dibaca menurut urutan peristiwanya, hari-hari nasional menceritakan sejarah negeri ini. Tanggal 28 November mengenang proklamasi kemerdekaan pada 1975, dan 7 Desember invasi Indonesia sembilan hari kemudian. Tanggal 31 Desember mengenang Nicolau Lobato, yang gugur dalam pertempuran pada 1978, dan semua pahlawan nasional. Tanggal 12 November mengenang kaum muda korban pembantaian Santa Cruz 1991. Tanggal 30 Agustus menandai jajak pendapat 1999, dan 20 Mei pemulihan kemerdekaan pada 2002. Tanggal 3 Maret menghormati para veteran, dan 3 November kaum perempuan dalam perjuangan.",
+      "en": "Read in the order of the events, the national days tell the story of the country. 28 November recalls the proclamation of independence in 1975, and 7 December the Indonesian invasion nine days later. 31 December remembers Nicolau Lobato, killed in combat in 1978, and all national heroes. 12 November recalls the young people of the Santa Cruz massacre of 1991. 30 August marks the 1999 popular consultation, and 20 May the restoration of independence in 2002. 3 March honours the veterans, and 3 November the women of the struggle."
+     }
+    },
+    {
+     "heading": {
+      "tet": "Loron komemorativu no toleransia pontu",
+      "pt": "Datas comemorativas e tolerância de ponto",
+      "id": "Hari peringatan dan tolerância de ponto",
+      "en": "Commemorative dates and 'tolerância de ponto'"
+     },
+     "text": {
+      "tet": "Aleinde feriadu, lei ne'e mós iha lista loron komemorativu ofisiál. Ema selebra sira ho seremónia, maibé servisu no eskola la'o nafatin, se Governu la deside buat seluk. Primeiru-Ministru bele fó toleransia pontu, katak funsionáriu públiku sira deskansa loron tomak ka loron balu. Ne'e akontese dala barak iha 20 Agostu, Loron FALINTIL, no iha loron espesiál seluk, hanesan 15 Agostu 2014. Eskola sira mós selebra loron internasionál ne'ebé la'ós feriadu, hanesan Loron Internasionál Feto (8 Marsu) no Loron Internasionál Labarik (1 Juñu).",
+      "pt": "Além dos feriados, a lei enumera datas oficiais comemorativas. São assinaladas com cerimónias, mas o trabalho e as aulas continuam, salvo decisão em contrário do Governo. O Primeiro-Ministro pode conceder tolerância de ponto, um dia ou meio-dia de dispensa para os funcionários públicos. Isso aconteceu muitas vezes a 20 de agosto, Dia das FALINTIL, e noutros dias especiais, como 15 de agosto de 2014. As escolas celebram também dias internacionais que não são feriados, como o Dia Internacional da Mulher (8 de março) e o Dia Mundial da Criança (1 de junho).",
+      "id": "Selain hari libur, undang-undang ini juga memuat daftar hari peringatan resmi. Hari-hari itu diperingati dengan upacara, tetapi kerja dan sekolah tetap berjalan kecuali pemerintah memutuskan lain. Perdana Menteri dapat memberikan tolerância de ponto, yaitu libur sehari atau setengah hari bagi pegawai negeri. Hal ini sering terjadi pada 20 Agustus, Hari FALINTIL, dan pada hari-hari khusus lain, seperti 15 Agustus 2014. Sekolah juga merayakan hari internasional yang bukan hari libur, seperti Hari Perempuan Internasional (8 Maret) dan Hari Anak Internasional (1 Juni).",
+      "en": "Besides holidays, the law lists official commemorative dates. They are marked with ceremonies, but work and school go on unless the Government decides otherwise. The Prime Minister can grant a 'tolerância de ponto', a full or half day off for public servants. This has often happened on 20 August, FALINTIL Day, and on other special days, such as 15 August 2014. Schools also celebrate international days that are not holidays, such as International Women's Day (8 March) and International Children's Day (1 June)."
+     }
+    },
+    {
+     "heading": {
+      "tet": "Novembru no Dezembru: fulan ho feriadu barak",
+      "pt": "Novembro e dezembro: os meses com mais feriados",
+      "id": "November dan Desember: bulan dengan hari libur terbanyak",
+      "en": "November and December: the busiest months"
+     },
+     "text": {
+      "tet": "Novembru iha feriadu lima: Santu Sira Hotu (1), Matebian sira (2), Loron Nasionál Feto (3), Loron Nasionál Foin-Sa'e (12) no Loron Proklamasaun (28). Dezembru iha tan haat: Loron Memória (7), Imakulada Konseisaun (8), Natál (25) no Loron Asuwa'in Nasionál (31). Tempu ida-ne'e iha tinan nia rohan mak tempu ba vizita família, Misa, seremónia no fila ba knua. Tanba data balu muda no Governu bele fó-sai loron deskansa tan, di'ak liu haree avizu feriadu ne'ebé Governu publika kada tinan iha timor-leste.gov.tl.",
+      "pt": "Novembro tem cinco feriados: Todos os Santos (1), Fiéis Defuntos (2), Dia Nacional da Mulher (3), Dia Nacional da Juventude (12) e Dia da Proclamação (28). Dezembro tem mais quatro: Dia da Memória (7), Imaculada Conceição (8), Natal (25) e Dia dos Heróis Nacionais (31). Este fim de ano é tempo de visitas à família, missas, cerimónias e viagens à terra natal. Como algumas datas mudam e podem ser anunciados dias extra de descanso, convém consultar o aviso de feriados que o Governo publica todos os anos em timor-leste.gov.tl.",
+      "id": "November memiliki lima hari libur: Hari Semua Orang Kudus (1), Hari Arwah (2), Hari Perempuan Nasional (3), Hari Pemuda Nasional (12), dan Hari Proklamasi (28). Desember memiliki empat lagi: Hari Peringatan (7), Hari Maria Dikandung Tanpa Noda (8), Natal (25), dan Hari Pahlawan Nasional (31). Akhir tahun ini adalah masa kunjungan keluarga, misa, upacara, dan pulang kampung. Karena beberapa tanggal berpindah dan hari libur tambahan bisa diumumkan, sebaiknya periksa pengumuman hari libur yang diterbitkan pemerintah setiap tahun di timor-leste.gov.tl.",
+      "en": "November has five holidays: All Saints (1), All Souls (2), National Women's Day (3), National Youth Day (12) and Proclamation Day (28). December has four more: Memorial Day (7), the Immaculate Conception (8), Christmas (25) and National Heroes Day (31). This end-of-year season is a time of family visits, Masses, ceremonies and trips to home villages. Because some dates move and extra days off may be announced, it is wise to check the holiday notice the Government publishes each year on timor-leste.gov.tl."
+     }
+    }
+   ],
+   "facts": [
+    {
+     "label": {
+      "tet": "Feriadu nasionál",
+      "pt": "Feriados nacionais",
+      "id": "Hari libur nasional",
+      "en": "Public holidays"
+     },
+     "value": {
+      "tet": "18 (desde 2023)",
+      "pt": "18 (desde 2023)",
+      "id": "18 (sejak 2023)",
+      "en": "18 (since 2023)"
+     }
+    },
+    {
+     "label": {
+      "tet": "Ho data fiksu",
+      "pt": "De data fixa",
+      "id": "Tanggal tetap",
+      "en": "Fixed date"
+     },
+     "value": "14"
+    },
+    {
+     "label": {
+      "tet": "Ho data muda",
+      "pt": "De data móvel",
+      "id": "Tanggal berpindah",
+      "en": "Movable date"
+     },
+     "value": "4"
+    },
+    {
+     "label": {
+      "tet": "Lei",
+      "pt": "Lei",
+      "id": "Undang-undang",
+      "en": "Law"
+     },
+     "value": "Lei n.º 10/2005"
+    },
+    {
+     "label": {
+      "tet": "Alterasaun",
+      "pt": "Alterações",
+      "id": "Perubahan",
+      "en": "Amendments"
+     },
+     "value": {
+      "tet": "Lei n.º 3/2016 no Lei n.º 10/2023",
+      "pt": "Lei n.º 3/2016 e Lei n.º 10/2023",
+      "id": "UU No. 3/2016 dan UU No. 10/2023",
+      "en": "Law n.º 3/2016 and Law n.º 10/2023"
+     }
+    },
+    {
+     "label": {
+      "tet": "Fulan ho feriadu barak liu",
+      "pt": "Mês com mais feriados",
+      "id": "Bulan dengan libur terbanyak",
+      "en": "Month with most holidays"
+     },
+     "value": {
+      "tet": "Novembru (5)",
+      "pt": "novembro (5)",
+      "id": "November (5)",
+      "en": "November (5)"
+     }
+    }
+   ],
+   "timeline": [
+    {
+     "date": "2000",
+     "title": {
+      "tet": "Orden ezekutiva UNTAET hatuur feriadu dahuluk",
+      "pt": "Ordem executiva da UNTAET fixa os primeiros feriados",
+      "id": "Perintah eksekutif UNTAET menetapkan hari libur pertama",
+      "en": "UNTAET executive order sets the first holidays"
+     }
+    },
+    {
+     "date": "2005-08-10",
+     "title": {
+      "tet": "Lei n.º 10/2005 kona-ba feriadu nasionál",
+      "pt": "Lei n.º 10/2005 sobre os feriados nacionais",
+      "id": "UU No. 10/2005 tentang hari libur nasional",
+      "en": "Law n.º 10/2005 on national holidays"
+     }
+    },
+    {
+     "date": "2016-05-25",
+     "title": {
+      "tet": "Lei n.º 3/2016: Loron Veteranu, Loron Memória no Loron Asuwa'in Nasionál",
+      "pt": "Lei n.º 3/2016: Dia dos Veteranos, Dia da Memória e Dia dos Heróis Nacionais",
+      "id": "UU No. 3/2016: Hari Veteran, Hari Peringatan, dan Hari Pahlawan Nasional",
+      "en": "Law n.º 3/2016: Veterans' Day, Memorial Day and National Heroes Day"
+     }
+    },
+    {
+     "date": "2023-03-13",
+     "title": {
+      "tet": "Parlamentu aprova 3 Novembru hanesan feriadu",
+      "pt": "O Parlamento aprova o 3 de novembro como feriado",
+      "id": "Parlemen menyetujui 3 November sebagai hari libur",
+      "en": "Parliament approves 3 November as a holiday"
+     }
+    },
+    {
+     "date": "2023-04-05",
+     "title": {
+      "tet": "Lei n.º 10/2023, alterasaun daruak ba lei feriadu",
+      "pt": "Lei n.º 10/2023, segunda alteração à lei dos feriados",
+      "id": "UU No. 10/2023, perubahan kedua undang-undang hari libur",
+      "en": "Law n.º 10/2023, second amendment to the holiday law"
+     }
+    }
+   ],
+   "figure": {
+    "illustration": "calendar",
+    "caption": {
+     "tet": "Kalendáriu nasionál: feriadu 18 no loron komemorativu sira.",
+     "pt": "O calendário nacional: 18 feriados e as datas comemorativas.",
+     "id": "Kalender nasional: 18 hari libur dan hari-hari peringatan.",
+     "en": "The national calendar: 18 public holidays and the commemorative dates."
+    }
+   },
+   "wiki": {
+    "en": "Public holidays in East Timor"
+   },
+   "related": [
+    "tl.calendar.liturgical",
+    "day.new_year",
+    "day.veterans",
+    "day.good_friday",
+    "day.labour",
+    "day.restoration",
+    "day.corpus_christi",
+    "day.consultation",
+    "day.all_saints",
+    "day.all_souls",
+    "day.women",
+    "day.youth",
+    "day.proclamation",
+    "day.memorial",
+    "day.immaculate",
+    "day.christmas",
+    "day.heroes",
+    "day.eid_fitr",
+    "day.eid_adha",
+    "day.falintil",
+    "day.children",
+    "tl.politics.parliament"
+   ],
+   "tags": [
+    "holidays",
+    "calendar",
+    "Law 10/2005",
+    "Law 3/2016",
+    "tolerância de ponto"
+   ],
+   "quiz": [
+    {
+     "q": {
+      "tet": "Iha loron saida mak ita selebra Restaurasaun Independénsia?",
+      "pt": "Em que dia se celebra a Restauração da Independência?",
+      "id": "Pada tanggal berapa Pemulihan Kemerdekaan dirayakan?",
+      "en": "On which day is the Restoration of Independence celebrated?"
+     },
+     "options": [
+      {
+       "tet": "28 Novembru",
+       "pt": "28 de novembro",
+       "id": "28 November",
+       "en": "28 November"
+      },
+      {
+       "tet": "20 Maiu",
+       "pt": "20 de maio",
+       "id": "20 Mei",
+       "en": "20 May"
+      },
+      {
+       "tet": "30 Agostu",
+       "pt": "30 de agosto",
+       "id": "30 Agustus",
+       "en": "30 August"
+      },
+      {
+       "tet": "1 Janeiru",
+       "pt": "1 de janeiro",
+       "id": "1 Januari",
+       "en": "1 January"
+      }
+     ],
+     "answer": 1,
+     "why": {
+      "tet": "Iha 20 Maiu 2002, Timór-Leste hetan fali ninia independénsia.",
+      "pt": "A 20 de maio de 2002, Timor-Leste recuperou a independência.",
+      "id": "Pada 20 Mei 2002 Timor-Leste memperoleh kembali kemerdekaannya.",
+      "en": "On 20 May 2002 Timor-Leste's independence was restored."
+     },
+     "difficulty": 1
+    },
+    {
+     "q": {
+      "tet": "Fulan ida-ne'ebé mak iha feriadu barak liu?",
+      "pt": "Que mês tem mais feriados?",
+      "id": "Bulan mana yang memiliki hari libur terbanyak?",
+      "en": "Which month has the most public holidays?"
+     },
+     "options": [
+      {
+       "tet": "Maiu",
+       "pt": "Maio",
+       "id": "Mei",
+       "en": "May"
+      },
+      {
+       "tet": "Agostu",
+       "pt": "Agosto",
+       "id": "Agustus",
+       "en": "August"
+      },
+      {
+       "tet": "Novembru",
+       "pt": "Novembro",
+       "id": "November",
+       "en": "November"
+      },
+      {
+       "tet": "Janeiru",
+       "pt": "Janeiro",
+       "id": "Januari",
+       "en": "January"
+      }
+     ],
+     "answer": 2,
+     "why": {
+      "tet": "Novembru iha lima: 1, 2, 3, 12 no 28.",
+      "pt": "Novembro tem cinco: 1, 2, 3, 12 e 28.",
+      "id": "November memiliki lima: 1, 2, 3, 12, dan 28.",
+      "en": "November has five: the 1st, 2nd, 3rd, 12th and 28th."
+     },
+     "difficulty": 4
+    },
+    {
+     "q": {
+      "tet": "Lei ida-ne'ebé mak hatuur Timór-Leste nia feriadu?",
+      "pt": "Que lei fixa os feriados de Timor-Leste?",
+      "id": "Undang-undang mana yang menetapkan hari libur Timor-Leste?",
+      "en": "Which law sets the public holidays of Timor-Leste?"
+     },
+     "options": [
+      {
+       "tet": "Lei n.º 10/2005",
+       "pt": "Lei n.º 10/2005",
+       "id": "UU No. 10/2005",
+       "en": "Law n.º 10/2005"
+      },
+      {
+       "tet": "Lei n.º 4/2012",
+       "pt": "Lei n.º 4/2012",
+       "id": "UU No. 4/2012",
+       "en": "Law n.º 4/2012"
+      },
+      {
+       "tet": "Lei n.º 3/2014",
+       "pt": "Lei n.º 3/2014",
+       "id": "UU No. 3/2014",
+       "en": "Law n.º 3/2014"
+      },
+      {
+       "tet": "Lei n.º 1/2002",
+       "pt": "Lei n.º 1/2002",
+       "id": "UU No. 1/2002",
+       "en": "Law n.º 1/2002"
+      }
+     ],
+     "answer": 0,
+     "why": {
+      "tet": "Lei n.º 10/2005 kona-ba feriadu, ne'ebé Lei n.º 3/2016 no Lei n.º 10/2023 muda.",
+      "pt": "A Lei n.º 10/2005, dos feriados, alterada pelas Leis n.º 3/2016 e n.º 10/2023.",
+      "id": "UU No. 10/2005 tentang hari libur, diubah oleh UU No. 3/2016 dan UU No. 10/2023.",
+      "en": "Law n.º 10/2005 on holidays, amended by Law n.º 3/2016 and Law n.º 10/2023."
+     },
+     "difficulty": 7
+    },
+    {
+     "q": {
+      "tet": "Saida mak 'toleransia pontu'?",
+      "pt": "O que é a 'tolerância de ponto'?",
+      "id": "Apa itu 'tolerância de ponto'?",
+      "en": "What is a 'tolerância de ponto'?"
+     },
+     "options": [
+      {
+       "tet": "Feriadu ida ne'ebé Konstituisaun hatuur",
+       "pt": "Um feriado fixado na Constituição",
+       "id": "Hari libur yang ditetapkan Konstitusi",
+       "en": "A holiday set in the Constitution"
+      },
+      {
+       "tet": "Festa relijiozu ida",
+       "pt": "Uma festa religiosa",
+       "id": "Sebuah hari raya keagamaan",
+       "en": "A religious feast"
+      },
+      {
+       "tet": "Loron deskansa ne'ebé Governu fó ba funsionáriu públiku",
+       "pt": "Um dia de dispensa que o Governo dá aos funcionários públicos",
+       "id": "Libur yang diberikan pemerintah kepada pegawai negeri",
+       "en": "A day off the Government gives to public servants"
+      },
+      {
+       "tet": "Tempu ezame iha eskola",
+       "pt": "Um período de exames",
+       "id": "Masa ujian sekolah",
+       "en": "A school exam period"
+      }
+     ],
+     "answer": 2,
+     "why": {
+      "tet": "Primeiru-Ministru bele fó toleransia pontu, hanesan iha 20 Agostu, Loron FALINTIL.",
+      "pt": "O Primeiro-Ministro pode conceder tolerância de ponto, como a 20 de agosto, Dia das FALINTIL.",
+      "id": "Perdana Menteri dapat memberikannya, misalnya pada 20 Agustus, Hari FALINTIL.",
+      "en": "The Prime Minister can grant it, for example on 20 August, FALINTIL Day."
+     },
+     "difficulty": 9
+    },
+    {
+     "q": {
+      "tet": "Loron ida-ne'ebé mak sai feriadu tanba alterasaun lei iha 2023?",
+      "pt": "Que dia passou a feriado com a alteração da lei em 2023?",
+      "id": "Hari apa yang menjadi hari libur karena perubahan undang-undang tahun 2023?",
+      "en": "Which day became a public holiday through the 2023 change to the law?"
+     },
+     "options": [
+      {
+       "tet": "Loron Veteranu (3 Marsu)",
+       "pt": "Dia dos Veteranos (3 de março)",
+       "id": "Hari Veteran (3 Maret)",
+       "en": "Veterans' Day (3 March)"
+      },
+      {
+       "tet": "Loron FALINTIL (20 Agostu)",
+       "pt": "Dia das FALINTIL (20 de agosto)",
+       "id": "Hari FALINTIL (20 Agustus)",
+       "en": "FALINTIL Day (20 August)"
+      },
+      {
+       "tet": "Loron Nasionál Feto (3 Novembru)",
+       "pt": "Dia Nacional da Mulher (3 de novembro)",
+       "id": "Hari Perempuan Nasional (3 November)",
+       "en": "National Women's Day (3 November)"
+      },
+      {
+       "tet": "Natál (25 Dezembru)",
+       "pt": "Natal (25 de dezembro)",
+       "id": "Natal (25 Desember)",
+       "en": "Christmas (25 December)"
+      }
+     ],
+     "answer": 2,
+     "why": {
+      "tet": "Parlamentu aprova iha Marsu 2023; Loron Veteranu sai feriadu iha 2016.",
+      "pt": "O Parlamento aprovou-o em março de 2023; o Dia dos Veteranos passou a feriado em 2016.",
+      "id": "Parlemen menyetujuinya pada Maret 2023; Hari Veteran menjadi hari libur pada 2016.",
+      "en": "Parliament approved it in March 2023; Veterans' Day became a holiday in 2016."
+     },
+     "difficulty": 12
+    },
+    {
+     "q": {
+      "tet": "Se mak fó-sai data loloos ba feriadu ho data muda, hanesan Korpu de Deus ka Idul Fitri?",
+      "pt": "Quem publica as datas exatas dos feriados móveis, como o Corpo de Deus ou o Idul Fitri?",
+      "id": "Siapa yang menerbitkan tanggal pasti hari libur yang berpindah, seperti Corpus Christi atau Idul Fitri?",
+      "en": "Who publishes the exact dates of movable holidays such as Corpus Christi or Eid al-Fitr?"
+     },
+     "options": [
+      {
+       "tet": "Prezidente Repúblika, ho dekretu",
+       "pt": "O Presidente da República, por decreto",
+       "id": "Presiden, dengan dekret",
+       "en": "The President of the Republic, by decree"
+      },
+      {
+       "tet": "Membru Governu ba servisu no empregu, ho despaxu",
+       "pt": "O membro do Governo responsável pelo trabalho, por despacho",
+       "id": "Anggota pemerintah bidang ketenagakerjaan, melalui despacho",
+       "en": "The Government member for labour, by despacho"
+      },
+      {
+       "tet": "Parlamentu Nasionál, ho lei foun kada tinan",
+       "pt": "O Parlamento Nacional, com uma lei nova todos os anos",
+       "id": "Parlemen Nasional, dengan undang-undang baru setiap tahun",
+       "en": "The National Parliament, with a new law every year"
+      },
+      {
+       "tet": "Tribunál sira",
+       "pt": "Os tribunais",
+       "id": "Pengadilan",
+       "en": "The courts"
+      }
+     ],
+     "answer": 1,
+     "why": {
+      "tet": "Lei feriadu nian hateten katak membru Governu ne'ebé tau matan ba servisu mak fó-sai data muda kada tinan.",
+      "pt": "A lei dos feriados diz que o membro do Governo responsável pelo trabalho fixa as datas móveis todos os anos.",
+      "id": "Undang-undang hari libur menyatakan bahwa anggota pemerintah bidang ketenagakerjaan menetapkan tanggal berpindah setiap tahun.",
+      "en": "The holiday law says that the Government member for labour fixes the movable dates every year."
+     },
+     "difficulty": 14
+    }
+   ],
+   "sources": [
+    {
+     "title": "Lei n.º 10/2005 – Feriados nacionais e datas oficiais comemorativas",
+     "publisher": "Jornal da República / Ministério da Justiça",
+     "url": "https://www.mj.gov.tl/jornal/public/docs/2002_2005/leis_parlamento_nacional/10_2005.pdf",
+     "accessed": "2026-10-27",
+     "licence": "© Jornal da República"
+    },
+    {
+     "title": "Jornal da República, Série I, N.º 20 (2016) – Lei n.º 3/2016",
+     "publisher": "Jornal da República / Ministério da Justiça",
+     "url": "https://www.mj.gov.tl/jornal/public/docs/2016/serie_1/SERIE_I_NO_20.pdf",
+     "accessed": "2026-10-27",
+     "licence": "© Jornal da República"
+    },
+    {
+     "title": "Feriados em 2017 (nota de imprensa)",
+     "publisher": "Governo de Timor-Leste",
+     "url": "https://timor-leste.gov.tl/wp-content/uploads/2017/01/Feriados-em-2017.pdf",
+     "accessed": "2026-10-27",
+     "licence": "© Governo de Timor-Leste"
+    },
+    {
+     "title": "Feriados nacionais 2021 (comunicado de imprensa)",
+     "publisher": "Governo de Timor-Leste",
+     "url": "https://timor-leste.gov.tl/wp-content/uploads/2021/01/PT-CdI_feriados_2021.pdf",
+     "accessed": "2026-10-27",
+     "licence": "© Governo de Timor-Leste"
+    },
+    {
+     "title": "Jornal da República, Série II, N.º 32 B (2024)",
+     "publisher": "Jornal da República / Ministério da Justiça",
+     "url": "https://www.mj.gov.tl/jornal/public/docs/2024/serie_2/SERIE_II_NO_32_B.pdf",
+     "accessed": "2026-10-27",
+     "licence": "© Jornal da República"
+    },
+    {
+     "title": "Parlamento timorense cria novo feriado para o Dia Nacional da Mulher",
+     "publisher": "DNoticias.pt (Lusa)",
+     "url": "https://www.dnoticias.pt/2023/3/13/351797-parlamento-timorense-cria-novo-feriado-para-o-dia-nacional-da-mulher/",
+     "accessed": "2026-10-27",
+     "licence": "© DNoticias / Lusa"
+    },
+    {
+     "title": "Tolerância de ponto nos dias 15 e 20 de agosto de 2014",
+     "publisher": "Governo de Timor-Leste",
+     "url": "https://timor-leste.gov.tl/wp-content/uploads/2014/08/Toler%c3%a2ncia-de-ponto-nos-dias-15-e-20-de-agosto-de-2014.pdf",
+     "accessed": "2026-10-27",
+     "licence": "© Governo de Timor-Leste"
+    },
+    {
+     "title": "Public holidays in East Timor",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Public_holidays_in_East_Timor",
+     "accessed": "2026-10-27",
+     "licence": "CC BY-SA 4.0"
+    }
+   ],
+   "review": {
+    "status": "draft",
+    "notes": "18 holidays assumes Law n.º 10/2023 (5 April 2023) made 3 November a holiday. Lusa/dnoticias (13 Mar 2023) reported Parliament's approval, and 2024–2025 despachos (JR Série II) cite 'Leis n.os 3/2016 e 10/2023'. I could not read the law itself, so confirm it. The 17 holidays before 2023 match the 2017 government list a)–q). 'UNTAET executive order 2000' comes from a search snippet (Executive Order 2000/1?). Article references (despacho of the labour minister for movable dates; PM grants tolerância de ponto under art. 7) come from search snippets of the government notices. Tetun: 'toleransia pontu' as in the government's Tetun notices; 'despaxu' needs a check."
+   }
+  },
+  {
+   "id": "tl.calendar.liturgical",
+   "category": "calendar",
+   "also": [
+    "culture",
+    "society"
+   ],
+   "title": {
+    "tet": "Feriadu relijiozu iha kalendáriu nasionál",
+    "pt": "Feriados religiosos no calendário nacional",
+    "id": "Hari raya keagamaan dalam kalender nasional",
+    "en": "Religious holidays in the national calendar"
+   },
+   "summary": {
+    "tet": "Husi feriadu 18 iha Timór-Leste, ualu mak relijiozu: festa katólika neen no festa muslin rua. Timoroan barak liu mak katóliku, maibé lei mós fó feriadu ba Idul Fitri no Idul Adha, tuir liberdade relijiaun ne'ebé Konstituisaun hakerek.",
+    "pt": "Dos dezoito feriados de Timor-Leste, oito são religiosos: seis festas católicas e duas festas muçulmanas. A maioria dos timorenses é católica, mas a lei também dá feriado no Idul Fitri e no Idul Adha, no espírito da liberdade religiosa consagrada na Constituição.",
+    "id": "Dari delapan belas hari libur di Timor-Leste, delapan adalah hari raya keagamaan: enam hari raya Katolik dan dua hari raya Islam. Sebagian besar orang Timor beragama Katolik, tetapi undang-undang juga memberi hari libur pada Idul Fitri dan Idul Adha, sesuai semangat kebebasan beragama dalam Konstitusi.",
+    "en": "Eight of Timor-Leste's eighteen public holidays are religious: six Catholic feasts and two Muslim feasts. Most Timorese are Catholic, but the law also gives a holiday for Eid al-Fitr and Eid al-Adha, in the spirit of the freedom of religion written in the Constitution."
+   },
+   "levels": [
+    "eb2",
+    "eb3",
+    "es",
+    "sup"
+   ],
+   "sections": [
+    {
+     "heading": {
+      "tet": "Fiar no Estadu",
+      "pt": "A fé e o Estado",
+      "id": "Agama dan negara",
+      "en": "Faith and the State"
+     },
+     "text": {
+      "tet": "Konstituisaun hateten katak Estadu rekoñese no respeita fiar oin-oin, ne'ebé iha liberdade atu organiza sira-nia atividade, no Estadu servisu hamutuk ho sira ba povu nia di'ak (artigu 12). Artigu 45 garante liberdade ba konxiénsia, relijiaun no kultu. Konstituisaun mós rekoñese Uma-Kreda Katólika nia partisipasaun iha luta libertasaun (artigu 11). Timoroan barak liu mak katóliku; iha mós komunidade Protestante no Muslin, no grupu ki'ik husi fiar seluk.",
+      "pt": "A Constituição diz que o Estado reconhece e respeita as diferentes confissões religiosas, livres na organização das suas atividades, e que coopera com elas para o bem do povo (artigo 12.º). O artigo 45.º garante a liberdade de consciência, de religião e de culto. A Constituição reconhece também a participação da Igreja Católica na luta de libertação (artigo 11.º). A grande maioria dos timorenses é católica; há também comunidades protestantes e muçulmanas e pequenos grupos de outras religiões.",
+      "id": "Konstitusi menyatakan bahwa negara mengakui dan menghormati berbagai agama, yang bebas mengatur kegiatannya, serta bekerja sama dengan mereka demi kebaikan rakyat (Pasal 12). Pasal 45 menjamin kebebasan hati nurani, beragama, dan beribadah. Konstitusi juga mengakui peran Gereja Katolik dalam perjuangan pembebasan (Pasal 11). Sebagian besar orang Timor beragama Katolik; ada juga komunitas Protestan dan Muslim, serta kelompok kecil penganut agama lain.",
+      "en": "The Constitution says that the State recognises and respects the different religious denominations, which are free to organise their activities, and that it cooperates with them for the good of the people (Article 12). Article 45 guarantees freedom of conscience, religion and worship. The Constitution also recognises the part played by the Catholic Church in the liberation struggle (Article 11). The great majority of Timorese are Catholic; there are also Protestant and Muslim communities and small groups of other faiths."
+     }
+    },
+    {
+     "heading": {
+      "tet": "Festa katólika neen",
+      "pt": "Seis festas católicas",
+      "id": "Enam hari raya Katolik",
+      "en": "Six Catholic feasts"
+     },
+     "text": {
+      "tet": "Feriadu katóliku neen tuir Uma-Kreda nia tinan. Sesta-Feira Santa hanoin-hikas Jesus nia mate iha kruz, loron rua molok Páskoa. Korpu de Deus selebra Eukaristia ho prosesaun. Loron Santu Sira Hotu (1 Novembru) fó onra ba santu sira hotu, no Loron Matebian sira (2 Novembru) mak loron atu reza ba ema mate sira; família sira hamoos no tau ai-funan iha rate. Imakulada Konseisaun (8 Dezembru) fó onra ba Maria, no Dili nia katedrál iha naran ne'e. Natál (25 Dezembru) selebra Jesus nia moris.",
+      "pt": "Os seis feriados católicos seguem o ano da Igreja. A Sexta-Feira Santa recorda a morte de Jesus na cruz, dois dias antes da Páscoa. O Corpo de Deus celebra a Eucaristia com procissões. O Dia de Todos os Santos (1 de novembro) honra todos os santos e o Dia dos Fiéis Defuntos (2 de novembro) é dia de rezar pelos mortos, quando as famílias limpam e enfeitam as campas. A Imaculada Conceição (8 de dezembro) honra Maria, e a catedral de Díli tem este nome. O Natal (25 de dezembro) celebra o nascimento de Jesus.",
+      "id": "Enam hari libur Katolik mengikuti tahun Gereja. Jumat Agung mengenang wafat Yesus di kayu salib, dua hari sebelum Paskah. Corpus Christi merayakan Ekaristi dengan perarakan. Hari Semua Orang Kudus (1 November) menghormati semua orang kudus, dan Hari Arwah (2 November) adalah hari mendoakan orang yang telah meninggal, saat keluarga membersihkan dan menghias makam. Hari Maria Dikandung Tanpa Noda (8 Desember) menghormati Maria, dan katedral Dili memakai nama ini. Natal (25 Desember) merayakan kelahiran Yesus.",
+      "en": "The six Catholic holidays follow the Church's year. Good Friday remembers the death of Jesus on the cross, two days before Easter. Corpus Christi celebrates the Eucharist with processions. All Saints' Day (1 November) honours all the saints, and All Souls' Day (2 November) is a day to pray for the dead, when families clean and decorate graves. The Immaculate Conception (8 December) honours Mary, and Dili's cathedral bears this name. Christmas (25 December) celebrates the birth of Jesus."
+     }
+    },
+    {
+     "heading": {
+      "tet": "Oinsá kalkula festa sira ne'ebé muda",
+      "pt": "Como se calculam as festas móveis",
+      "id": "Cara menghitung hari raya yang berpindah",
+      "en": "How the movable feasts are calculated"
+     },
+     "text": {
+      "tet": "Páskoa mak Domingu dahuluk hafoin fulan-kabuar dahuluk iha ka hafoin 21 Marsu (tuir Uma-Kreda nia tabela). Tan ne'e Páskoa monu sempre entre 22 Marsu no 25 Abríl. Sesta-Feira Santa monu loron rua molok Páskoa, no Korpu de Deus mak Kinta, loron 60 hafoin Páskoa. Tinan litúrjiku iha tempu oin-oin: Adventu molok Natál, tempu Natál, Kuaresma (hahú husi Kuarta-Feira Sinzas), Semana Santa no Páskoa, no Tempu Komún. Festa balu de'it mak feriadu, maibé paróquia sira iha nasaun tomak selebra festa barak seluk.",
+      "pt": "A Páscoa é o primeiro domingo depois da primeira lua cheia que ocorre a 21 de março ou depois (segundo as tabelas da Igreja); por isso cai sempre entre 22 de março e 25 de abril. A Sexta-Feira Santa é dois dias antes da Páscoa e o Corpo de Deus é a quinta-feira 60 dias depois da Páscoa. O ano litúrgico tem tempos: o Advento antes do Natal, o tempo do Natal, a Quaresma (a partir da Quarta-Feira de Cinzas), a Semana Santa e a Páscoa, e o Tempo Comum. Só algumas festas são feriados, mas muitas outras são celebradas nas paróquias de todo o país.",
+      "id": "Paskah jatuh pada hari Minggu pertama setelah bulan purnama pertama pada atau setelah 21 Maret (menurut tabel Gereja), sehingga selalu jatuh antara 22 Maret dan 25 April. Jumat Agung jatuh dua hari sebelum Paskah, dan Corpus Christi adalah hari Kamis, 60 hari setelah Paskah. Tahun liturgi memiliki masa-masa: Adven sebelum Natal, masa Natal, Prapaskah (mulai Rabu Abu), Pekan Suci dan Paskah, serta Masa Biasa. Hanya sebagian hari raya yang menjadi hari libur, tetapi banyak hari raya lain dirayakan di paroki-paroki di seluruh negeri.",
+      "en": "Easter is the first Sunday after the first full moon on or after 21 March (by the Church's tables), so it always falls between 22 March and 25 April. Good Friday comes two days before Easter, and Corpus Christi is the Thursday 60 days after Easter. The liturgical year has seasons: Advent before Christmas, the Christmas season, Lent (from Ash Wednesday), Holy Week and Easter, and Ordinary Time. Only some feasts are public holidays, but parishes across the country celebrate many others."
+     }
+    },
+    {
+     "heading": {
+      "tet": "Festa muslin rua",
+      "pt": "Duas festas muçulmanas",
+      "id": "Dua hari raya Islam",
+      "en": "Two Muslim feasts"
+     },
+     "text": {
+      "tet": "Kalendáriu Islámiku iha fulan 12 ne'ebé tuir fulan iha lalehan, no tinan ida naruk maizumenus loron 354. Tan ne'e festa ida-idak mai maizumenus loron 11 sedu liu kada tinan. Idul Fitri remata Ramadan, fulan jejun nian. Idul Adha, festa sakrifísiu nian, monu durante peregrinasaun ba Meka no hanoin-hikas profeta Ibrahim nia fiar. Fulan foun hahú bainhira ema haree fulan-foun iha lalehan, tan ne'e data hatuur besik festa nia loron. Iha Timór-Leste, Governu hatuur feriadu tuir komunidade Islámika nia konsellu; iha 2018, ezemplu, Idul Adha monu iha 22 Agostu.",
+      "pt": "O calendário islâmico tem doze meses lunares e cerca de 354 dias; por isso, cada festa chega cerca de 11 dias mais cedo em cada ano. O Idul Fitri (Eid al-Fitr) encerra o Ramadão, o mês de jejum. O Idul Adha (Eid al-Adha), a Festa do Sacrifício, calha durante a peregrinação a Meca e recorda a fé do profeta Abraão (Ibrahim). Um mês começa quando se avista o novo crescente lunar; por isso, a data só se fixa pouco antes da festa. Em Timor-Leste, o Governo marca o feriado ouvida a comunidade islâmica; em 2018, por exemplo, o Idul Adha foi a 22 de agosto.",
+      "id": "Kalender Islam memiliki dua belas bulan yang mengikuti peredaran bulan dan panjangnya sekitar 354 hari, sehingga setiap hari raya datang sekitar 11 hari lebih awal setiap tahun. Idul Fitri menutup bulan puasa Ramadan. Idul Adha, hari raya kurban, jatuh saat ibadah haji ke Mekah dan mengenang iman Nabi Ibrahim. Bulan baru dimulai ketika hilal terlihat, sehingga tanggalnya baru ditetapkan menjelang hari raya. Di Timor-Leste pemerintah menetapkan hari libur atas saran komunitas Muslim; pada 2018, misalnya, Idul Adha jatuh pada 22 Agustus.",
+      "en": "The Islamic calendar has twelve lunar months and is about 354 days long, so each feast comes about 11 days earlier every year. Eid al-Fitr (Idul Fitri) ends Ramadan, the month of fasting. Eid al-Adha (Idul Adha), the Feast of Sacrifice, falls during the pilgrimage to Mecca and remembers the faith of the prophet Ibrahim (Abraham). A month begins when the new crescent moon is seen, so the date is fixed shortly before the feast. In Timor-Leste the Government sets the holiday on the advice of the Islamic community; in 2018, for example, Idul Adha was on 22 August."
+     }
+    },
+    {
+     "heading": {
+      "tet": "Selebra hamutuk",
+      "pt": "Celebrar juntos",
+      "id": "Merayakan bersama",
+      "en": "Celebrating together"
+     },
+     "text": {
+      "tet": "Feriadu relijiozu mak tempu ba Misa ka reza, han hamutuk ho família no vizita malu. Festa katólika halo igreja no dalan sira nakonu ho ema no prosesaun. Iha festa muslin, mesquita sira iha Dili no vila seluk halo reza espesiál. Estadu nia lider sira haruka parabéns ba komunidade ida-idak. Papa na'in rua ona mak vizita nasaun: João Paulo II iha 1989 no Francisco iha Setembru 2024, bainhira halo Misa boot ida iha Tasitolu. Iha 2015, Timór-Leste no Santa Sé asina konkordata ida kona-ba Uma-Kreda nia estatutu legál.",
+      "pt": "Os feriados religiosos são tempo de missa ou oração, refeições em família e visitas. As festas católicas enchem as igrejas e as ruas de gente e de procissões. Nas festas muçulmanas, as mesquitas de Díli e de outras vilas fazem orações especiais. Os dirigentes do Estado enviam saudações a cada comunidade. Dois papas visitaram o país: João Paulo II em 1989 e Francisco em setembro de 2024, quando se celebrou uma enorme missa em Tasitolu. Em 2015, Timor-Leste e a Santa Sé assinaram uma concordata sobre o estatuto jurídico da Igreja.",
+      "id": "Hari raya keagamaan adalah waktu untuk misa atau doa, makan bersama keluarga, dan saling berkunjung. Hari raya Katolik memenuhi gereja dan jalan-jalan dengan umat dan perarakan. Pada hari raya Islam, masjid-masjid di Dili dan kota lain mengadakan salat khusus. Para pemimpin negara menyampaikan ucapan selamat kepada setiap komunitas. Dua paus pernah mengunjungi negeri ini: Yohanes Paulus II pada 1989 dan Fransiskus pada September 2024, ketika misa akbar diadakan di Tasitolu. Pada 2015 Timor-Leste dan Takhta Suci menandatangani konkordat tentang status hukum Gereja.",
+      "en": "Religious holidays are times for Mass or prayer, family meals and visits. Catholic feasts fill churches and streets with people and processions. On Muslim feasts, the mosques in Dili and other towns hold special prayers. Leaders of the State send greetings to each community. Two popes have visited the country: John Paul II in 1989 and Francis in September 2024, when a huge Mass was held at Tasitolu. In 2015 Timor-Leste and the Holy See signed a concordat on the legal status of the Church."
+     }
+    }
+   ],
+   "facts": [
+    {
+     "label": {
+      "tet": "Feriadu relijiozu",
+      "pt": "Feriados religiosos",
+      "id": "Hari libur keagamaan",
+      "en": "Religious holidays"
+     },
+     "value": {
+      "tet": "8 (katóliku 6, muslin 2)",
+      "pt": "8 (6 católicos, 2 muçulmanos)",
+      "id": "8 (6 Katolik, 2 Islam)",
+      "en": "8 (6 Catholic, 2 Muslim)"
+     }
+    },
+    {
+     "label": {
+      "tet": "Páskoa monu entre",
+      "pt": "A Páscoa cai entre",
+      "id": "Paskah jatuh antara",
+      "en": "Easter falls between"
+     },
+     "value": {
+      "tet": "22 Marsu – 25 Abríl",
+      "pt": "22 de março e 25 de abril",
+      "id": "22 Maret – 25 April",
+      "en": "22 March – 25 April"
+     }
+    },
+    {
+     "label": {
+      "tet": "Korpu de Deus",
+      "pt": "Corpo de Deus",
+      "id": "Corpus Christi",
+      "en": "Corpus Christi"
+     },
+     "value": {
+      "tet": "Páskoa + loron 60 (Kinta)",
+      "pt": "Páscoa + 60 dias (quinta-feira)",
+      "id": "Paskah + 60 hari (Kamis)",
+      "en": "Easter + 60 days (Thursday)"
+     }
+    },
+    {
+     "label": {
+      "tet": "Tinan Islámiku",
+      "pt": "Ano islâmico",
+      "id": "Tahun Hijriah",
+      "en": "Islamic year"
+     },
+     "value": {
+      "tet": "≈ loron 354",
+      "pt": "≈ 354 dias",
+      "id": "≈ 354 hari",
+      "en": "≈ 354 days"
+     }
+    },
+    {
+     "label": {
+      "tet": "Papa nia vizita",
+      "pt": "Visitas papais",
+      "id": "Kunjungan Paus",
+      "en": "Papal visits"
+     },
+     "value": "1989, 2024"
+    }
+   ],
+   "timeline": [
+    {
+     "date": "1989-10",
+     "title": {
+      "tet": "Papa João Paulo II vizita no halo Misa iha Tasitolu",
+      "pt": "O Papa João Paulo II visita o território e celebra missa em Tasitolu",
+      "id": "Paus Yohanes Paulus II berkunjung dan memimpin misa di Tasitolu",
+      "en": "Pope John Paul II visits and celebrates Mass at Tasitolu"
+     }
+    },
+    {
+     "date": "2015",
+     "title": {
+      "tet": "Konkordata ho Santa Sé",
+      "pt": "Concordata com a Santa Sé",
+      "id": "Konkordat dengan Takhta Suci",
+      "en": "Concordat with the Holy See"
+     }
+    },
+    {
+     "date": "2018-08-22",
+     "title": {
+      "tet": "Idul Adha sai feriadu tuir komunidade Islámika nia konsellu",
+      "pt": "Idul Adha é feriado, ouvida a comunidade islâmica",
+      "id": "Idul Adha menjadi hari libur atas saran komunitas Muslim",
+      "en": "Idul Adha holiday set on the advice of the Islamic community"
+     }
+    },
+    {
+     "date": "2024-09",
+     "title": {
+      "tet": "Papa Francisco vizita; Misa boot iha Tasitolu",
+      "pt": "Visita do Papa Francisco; grande missa em Tasitolu",
+      "id": "Kunjungan Paus Fransiskus; misa akbar di Tasitolu",
+      "en": "Pope Francis visits; huge Mass at Tasitolu"
+     }
+    }
+   ],
+   "figure": {
+    "illustration": "church",
+    "caption": {
+     "tet": "Igreja, prosesaun no mesquita: festa relijiozu iha kalendáriu nasionál.",
+     "pt": "Igrejas, procissões e mesquitas: as festas religiosas no calendário nacional.",
+     "id": "Gereja, perarakan, dan masjid: hari raya keagamaan dalam kalender nasional.",
+     "en": "Churches, processions and mosques: religious feasts in the national calendar."
+    }
+   },
+   "wiki": {
+    "en": "Liturgical year",
+    "pt": "Ano litúrgico",
+    "id": "Tahun liturgi"
+   },
+   "related": [
+    "tl.society.religion",
+    "tl.culture.catholic_traditions",
+    "tl.calendar.overview",
+    "day.good_friday",
+    "day.corpus_christi",
+    "day.all_saints",
+    "day.all_souls",
+    "day.immaculate",
+    "day.christmas",
+    "day.eid_fitr",
+    "day.eid_adha"
+   ],
+   "tags": [
+    "religion",
+    "Catholic",
+    "Islam",
+    "Easter",
+    "Eid",
+    "calendar"
+   ],
+   "quiz": [
+    {
+     "q": {
+      "tet": "Iha data saida mak ita selebra Natál?",
+      "pt": "Em que data se celebra o Natal?",
+      "id": "Pada tanggal berapa Natal dirayakan?",
+      "en": "On which date is Christmas celebrated?"
+     },
+     "options": [
+      {
+       "tet": "8 Dezembru",
+       "pt": "8 de dezembro",
+       "id": "8 Desember",
+       "en": "8 December"
+      },
+      {
+       "tet": "1 Novembru",
+       "pt": "1 de novembro",
+       "id": "1 November",
+       "en": "1 November"
+      },
+      {
+       "tet": "25 Dezembru",
+       "pt": "25 de dezembro",
+       "id": "25 Desember",
+       "en": "25 December"
+      },
+      {
+       "tet": "31 Dezembru",
+       "pt": "31 de dezembro",
+       "id": "31 Desember",
+       "en": "31 December"
+      }
+     ],
+     "answer": 2,
+     "why": {
+      "tet": "Natál iha 25 Dezembru selebra Jesus nia moris.",
+      "pt": "O Natal, a 25 de dezembro, celebra o nascimento de Jesus.",
+      "id": "Natal pada 25 Desember merayakan kelahiran Yesus.",
+      "en": "Christmas on 25 December celebrates the birth of Jesus."
+     },
+     "difficulty": 1
+    },
+    {
+     "q": {
+      "tet": "Feriadu hira iha Timór-Leste mak festa muslin?",
+      "pt": "Quantos feriados de Timor-Leste são festas muçulmanas?",
+      "id": "Berapa hari libur di Timor-Leste yang merupakan hari raya Islam?",
+      "en": "How many public holidays in Timor-Leste are Muslim feasts?"
+     },
+     "options": [
+      {
+       "tet": "La iha",
+       "pt": "Nenhum",
+       "id": "Tidak ada",
+       "en": "None"
+      },
+      {
+       "tet": "1",
+       "pt": "1",
+       "id": "1",
+       "en": "1"
+      },
+      {
+       "tet": "2",
+       "pt": "2",
+       "id": "2",
+       "en": "2"
+      },
+      {
+       "tet": "4",
+       "pt": "4",
+       "id": "4",
+       "en": "4"
+      }
+     ],
+     "answer": 2,
+     "why": {
+      "tet": "Rua: Idul Fitri no Idul Adha.",
+      "pt": "Dois: o Idul Fitri e o Idul Adha.",
+      "id": "Dua: Idul Fitri dan Idul Adha.",
+      "en": "Two: Eid al-Fitr and Eid al-Adha."
+     },
+     "difficulty": 4
+    },
+    {
+     "q": {
+      "tet": "Korpu de Deus monu loron hira hafoin Domingu Páskoa?",
+      "pt": "O Corpo de Deus é quantos dias depois do Domingo de Páscoa?",
+      "id": "Corpus Christi jatuh berapa hari setelah Minggu Paskah?",
+      "en": "Corpus Christi falls how many days after Easter Sunday?"
+     },
+     "options": [
+      {
+       "tet": "7",
+       "pt": "7",
+       "id": "7",
+       "en": "7"
+      },
+      {
+       "tet": "40",
+       "pt": "40",
+       "id": "40",
+       "en": "40"
+      },
+      {
+       "tet": "50",
+       "pt": "50",
+       "id": "50",
+       "en": "50"
+      },
+      {
+       "tet": "60",
+       "pt": "60",
+       "id": "60",
+       "en": "60"
+      }
+     ],
+     "answer": 3,
+     "why": {
+      "tet": "Korpu de Deus mak Kinta, loron 60 hafoin Páskoa; Pentekostes mak loron 50.",
+      "pt": "O Corpo de Deus é a quinta-feira 60 dias depois da Páscoa; o Pentecostes é ao dia 50.",
+      "id": "Corpus Christi adalah hari Kamis, 60 hari setelah Paskah; Pentakosta pada hari ke-50.",
+      "en": "Corpus Christi is the Thursday 60 days after Easter; Pentecost is day 50."
+     },
+     "difficulty": 7
+    },
+    {
+     "q": {
+      "tet": "Tanba saida mak Idul Fitri no Idul Adha mai maizumenus loron 11 sedu liu kada tinan?",
+      "pt": "Porque é que o Idul Fitri e o Idul Adha chegam cerca de 11 dias mais cedo em cada ano?",
+      "id": "Mengapa Idul Fitri dan Idul Adha datang sekitar 11 hari lebih awal setiap tahun?",
+      "en": "Why do Eid al-Fitr and Eid al-Adha come about 11 days earlier each year?"
+     },
+     "options": [
+      {
+       "tet": "Tanba Governu muda sira",
+       "pt": "Porque o Governo os muda",
+       "id": "Karena pemerintah mengubahnya",
+       "en": "Because the Government changes them"
+      },
+      {
+       "tet": "Tanba kalendáriu Islámiku tuir fulan no iha maizumenus loron 354",
+       "pt": "Porque o calendário islâmico segue a lua e tem cerca de 354 dias",
+       "id": "Karena kalender Islam mengikuti bulan dan panjangnya sekitar 354 hari",
+       "en": "Because the Islamic calendar follows the moon and has about 354 days"
+      },
+      {
+       "tet": "Tanba sira tuir loro-matan",
+       "pt": "Porque seguem o sol",
+       "id": "Karena mengikuti matahari",
+       "en": "Because they follow the sun"
+      },
+      {
+       "tet": "Tanba sira depende ba tempu udan",
+       "pt": "Porque dependem da época das chuvas",
+       "id": "Karena bergantung pada musim hujan",
+       "en": "Because they depend on the rainy season"
+      }
+     ],
+     "answer": 1,
+     "why": {
+      "tet": "Tinan lunár badak liu tinan solár maizumenus loron 11.",
+      "pt": "O ano lunar é cerca de 11 dias mais curto do que o ano solar.",
+      "id": "Tahun bulan sekitar 11 hari lebih pendek daripada tahun matahari.",
+      "en": "The lunar year is about 11 days shorter than the solar year."
+     },
+     "difficulty": 9
+    },
+    {
+     "q": {
+      "tet": "Dili nia katedrál iha naran tuir festa saida?",
+      "pt": "A catedral de Díli tem o nome de que festa?",
+      "id": "Katedral Dili dinamai menurut hari raya apa?",
+      "en": "Dili's cathedral is named after which feast?"
+     },
+     "options": [
+      {
+       "tet": "Imakulada Konseisaun",
+       "pt": "Imaculada Conceição",
+       "id": "Maria Dikandung Tanpa Noda",
+       "en": "Immaculate Conception"
+      },
+      {
+       "tet": "Korpu de Deus",
+       "pt": "Corpo de Deus",
+       "id": "Corpus Christi",
+       "en": "Corpus Christi"
+      },
+      {
+       "tet": "Santu Sira Hotu",
+       "pt": "Todos os Santos",
+       "id": "Semua Orang Kudus",
+       "en": "All Saints"
+      },
+      {
+       "tet": "Natál",
+       "pt": "Natal",
+       "id": "Natal",
+       "en": "Christmas"
+      }
+     ],
+     "answer": 0,
+     "why": {
+      "tet": "Katedrál Imakulada Konseisaun iha Dili; nia festa mak 8 Dezembru.",
+      "pt": "É a Catedral da Imaculada Conceição, cuja festa é a 8 de dezembro.",
+      "id": "Namanya Katedral Maria Dikandung Tanpa Noda, yang dirayakan 8 Desember.",
+      "en": "It is the Cathedral of the Immaculate Conception, whose feast is on 8 December."
+     },
+     "difficulty": 12
+    },
+    {
+     "q": {
+      "tet": "Konstituisaun nia artigu ida-ne'ebé mak garante liberdade konxiénsia, relijiaun no kultu?",
+      "pt": "Que artigo da Constituição garante a liberdade de consciência, de religião e de culto?",
+      "id": "Pasal Konstitusi mana yang menjamin kebebasan hati nurani, beragama, dan beribadah?",
+      "en": "Which article of the Constitution guarantees freedom of conscience, religion and worship?"
+     },
+     "options": [
+      {
+       "tet": "Artigu 4",
+       "pt": "Artigo 4.º",
+       "id": "Pasal 4",
+       "en": "Article 4"
+      },
+      {
+       "tet": "Artigu 19",
+       "pt": "Artigo 19.º",
+       "id": "Pasal 19",
+       "en": "Article 19"
+      },
+      {
+       "tet": "Artigu 45",
+       "pt": "Artigo 45.º",
+       "id": "Pasal 45",
+       "en": "Article 45"
+      },
+      {
+       "tet": "Artigu 71",
+       "pt": "Artigo 71.º",
+       "id": "Pasal 71",
+       "en": "Article 71"
+      }
+     ],
+     "answer": 2,
+     "why": {
+      "tet": "Artigu 45 garante liberdade relijiaun; artigu 12 kona-ba Estadu no relijiaun sira.",
+      "pt": "O artigo 45.º garante a liberdade religiosa; o 12.º trata do Estado e das confissões religiosas.",
+      "id": "Pasal 45 menjamin kebebasan beragama; Pasal 12 mengatur negara dan agama.",
+      "en": "Article 45 guarantees religious freedom; Article 12 deals with the State and religions."
+     },
+     "difficulty": 14
+    }
+   ],
+   "sources": [
+    {
+     "title": "Religion in East Timor",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Religion_in_East_Timor",
+     "accessed": "2026-10-27",
+     "licence": "CC BY-SA 4.0"
+    },
+    {
+     "title": "Catholic Church in East Timor",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Catholic_Church_in_East_Timor",
+     "accessed": "2026-10-27",
+     "licence": "CC BY-SA 4.0"
+    },
+    {
+     "title": "Islam in East Timor",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Islam_in_East_Timor",
+     "accessed": "2026-10-27",
+     "licence": "CC BY-SA 4.0"
+    },
+    {
+     "title": "Liturgical year",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Liturgical_year",
+     "accessed": "2026-10-27",
+     "licence": "CC BY-SA 4.0"
+    },
+    {
+     "title": "Easter",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Easter",
+     "accessed": "2026-10-27",
+     "licence": "CC BY-SA 4.0"
+    },
+    {
+     "title": "Feriados em 2017 (nota de imprensa)",
+     "publisher": "Governo de Timor-Leste",
+     "url": "https://timor-leste.gov.tl/wp-content/uploads/2017/01/Feriados-em-2017.pdf",
+     "accessed": "2026-10-27",
+     "licence": "© Governo de Timor-Leste"
+    },
+    {
+     "title": "Feriado – Idul Adha 2018",
+     "publisher": "Governo de Timor-Leste",
+     "url": "https://timor-leste.gov.tl/wp-content/uploads/2018/08/feriado_idul_adha2.pdf",
+     "accessed": "2026-10-27",
+     "licence": "© Governo de Timor-Leste"
+    },
+    {
+     "title": "Comunicado de imprensa – Idul Adha 2019",
+     "publisher": "Governo de Timor-Leste",
+     "url": "https://timor-leste.gov.tl/wp-content/uploads/2019/08/CdI_Idul-Adha-2019.pdf",
+     "accessed": "2026-10-27",
+     "licence": "© Governo de Timor-Leste"
+    }
+   ],
+   "review": {
+    "status": "draft",
+    "notes": "Constitution arts. 11, 12 and 45 checked against the Tetun text. From memory, so please check: concordat with the Holy See signed in 2015 (14 Aug 2015?); John Paul II visit Oct 1989 (12 Oct); Francis 9–11 Sept 2024 with the Tasitolu Mass on 10 Sept; Dili cathedral dedicated to the Immaculate Conception. Idul Adha 22 Aug 2018 and 11 Aug 2019 are from government notices. Tetun liturgical terms to check: Adventu, Kuaresma, Kuarta-Feira Sinzas, Tempu Komún, konkordata, Santa Sé, fulan-kabuar, fulan-foun."
    }
   }
  ]

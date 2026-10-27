@@ -166,22 +166,25 @@ def check_day(r, where, d, known):
     sections(r, where, d.get("sections"), minimum=2); quiz(r, where, d.get("quiz"), minimum=2)
     sources(r, where, d.get("sources")); common(r, where, d, known, "day")
 
-def check_vocab(r):
-    path = BASE / "vocab" / "words.json"
-    if not path.exists(): r.warn("vocab", "vocab/words.json not written yet"); return 0
-    data = json.loads(path.read_text(encoding="utf-8")); words = data.get("words", [])
+def check_vocab(r, path=None):
+    main = path is None
+    paths = [path] if path else [BASE / "vocab" / "words.json"] + sorted((BASE / "vocab").glob("words_*.json"))
+    if not paths[0].exists(): r.warn("vocab", f"vocab/{paths[0].name} not written yet"); return 0
+    words = []
+    for one in paths: words += json.loads(one.read_text(encoding="utf-8")).get("words", [])
     ids = set(); seen = {}
     for w in words:
         where = f"vocab {w.get('id')}"
-        if not re.match(r"^w\d{4}$", str(w.get("id", ""))): r.err(where, "bad id")
+        if not re.match(r"^w\d{4,5}$", str(w.get("id", ""))): r.err(where, "bad id")
         if w.get("id") in ids: r.err(where, "duplicate id")
         ids.add(w.get("id"))
-        for key in ("tet", "en", "pt", "id", "cat", "pos"):
+        for key in ("tet", "en", "pt", "ind", "cat", "pos"):
             if not isinstance(w.get(key), str) or not w[key].strip(): r.err(where, f"{key} missing")
         if not isinstance(w.get("level"), int) or w["level"] not in (1, 2, 3): r.err(where, "level must be 1, 2 or 3")
         key = (str(w.get("tet", "")).casefold(), str(w.get("en", "")).casefold())
         if key in seen: r.warn(where, f"same word as {seen[key]}")
         seen[key] = w.get("id")
+    if not main: return len(words)
     if len(words) < 1000: r.warn("vocab", f"only {len(words)} words (goal: 1000+)")
     for lang in VOCAB_LANGS:
         p = BASE / "vocab" / f"{lang}.json"
@@ -208,6 +211,8 @@ def main(argv):
     plan = json.loads((BASE / "plan.json").read_text(encoding="utf-8"))
     every = sorted((BASE / "content").glob("*.json"))
     chosen = [BASE / a if not Path(a).is_absolute() else Path(a) for a in args] or every
+    vocab_files = [p for p in chosen if p.parent.name == "vocab"]
+    chosen = [p for p in chosen if p.parent.name != "vocab"]
     r = Report(); all_items = load_all(every)
     known = set(plan["articles"]) | set(plan["municipalities"]) | set(plan["days"])
     ids = {}
@@ -230,6 +235,7 @@ def main(argv):
                 if not isinstance(ind.get("series"), list) or not ind["series"]: r.err(w, "series missing")
                 if not str(ind.get("url", "")).startswith("https://"): r.err(w, "url missing")
     if not args: counts["words"] = check_vocab(r)
+    for p in vocab_files: counts["words"] = counts.get("words", 0) + check_vocab(r, p)
     if not args:
         written = {i for i, (f, k) in ids.items() if k == "articles"}
         missing = sorted(set(plan["articles"]) - written)

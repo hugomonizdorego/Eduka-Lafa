@@ -1,0 +1,24 @@
+{
+ "source": "docs/design/lafa-character-sheet.webp (owner's design)",
+ "pose": "wave",
+ "rects": {
+  "casual": [
+   0,
+   0,
+   373,
+   420
+  ],
+  "traditional": [
+   381,
+   0,
+   340,
+   420
+  ],
+  "tuxedo": [
+   729,
+   0,
+   370,
+   420
+  ]
+ }
+}
