@@ -1,13 +1,18 @@
-Lafa 0.2.1 package smoke test — 2026-10-15, Ubuntu 24.04 container, Qt offscreen
-sh tools/build-deb.sh -> dist/lafa_0.2.1_all.deb (14816640 bytes)
-apt-get install --no-install-recommends --reinstall ./dist/lafa_0.2.1_all.deb -> installed (Setting up lafa (0.2.1))
-Depends: python3 (>= 3.11), python3-pyqt5, python3-pyqt5.qtsvg, libqt5svg5, xdg-utils, libglib2.0-bin, fonts-noto-color-emoji, hicolor-icon-theme
-Package contains 98 encyclopedia JSON / icon SVG / illustration SVG files, lafa-walk.png + lafa-walk.json, encyclopedia_ui.py, interactive.py, offline_pack.py
-Installed run (/usr/lib/lafa, system PyQt5, Tetun, 1024x600):
-  LAFA 0.2.1 PyQt5 from /usr/lib/lafa/lafa/__init__.py
-  SVG renderer: True
-  Timor-Leste: 6 categories; Culture & Language -> Tais opens as an article
-  World Encyclopedia: "What are dinosaurs?" -> Explore -> DinosaurModule
-  Walk frames: casual 8, tuxedo 8, traditional 8
-  Articles 118 (34 written + atlas topics), coverage available 34 / review 0 / planned 61
-Note: /usr/bin/lafa uses /usr/bin/python3; in this container that is Python 3.13 while Ubuntu's python3-pyqt5 is built for 3.12, so the smoke test ran with python3.12. On Debian 13 python3-pyqt5 matches the system python3.
+Lafa 0.3.0 package smoke test — 2026-11-02, Ubuntu 24.04 container, Qt offscreen
+sh tools/build-deb.sh -> dist/lafa_0.3.0_all.deb (17557896 bytes, Installed-Size 24 448 KiB)
+apt-get install --no-install-recommends --reinstall ./dist/lafa_0.3.0_all.deb -> "Unpacking lafa (0.3.0) over (0.2.1) ... Setting up lafa (0.3.0)"
+Depends: python3 (>= 3.11), python3-pyqt5, python3-pyqt5.qtsvg, libqt5svg5, xdg-utils, libglib2.0-bin, hicolor-icon-theme
+Recommends (new): python3-pyqt5.qtmultimedia, gstreamer1.0-plugins-good, mpg123 (anthem audio)
+Package contains: constitution.json (170 articles, tet + pt), anthem/patria.mp3 + patria.json (10 cues),
+  constitution.py, anthem.py, audio.py, desk/pages/constitution.py and symbols.py, 142 illustrations, 101 icons
+Installed run (/usr/lib/lafa, system PyQt5 5.15, Tetun, 1366x860):
+  Lafa 0.3.0 PyQt5 from /usr/lib/lafa/lafa/__init__.py
+  content: 195 articles, 14 municipalities, 113 places, 20 days, 1173 words, 1321 questions, 1152 sources
+  constitution: 170 articles, 33 headings, 7 parts; search "bandeira" -> articles 15, 14, 156
+  anthem: 12 lines, 10 cues, audio file present; audio backend in this container: external player (ffplay),
+    because python3-pyqt5.qtmultimedia is not installed here (it is recommended by the package)
+  pages opened without errors: home, encyclopedia, symbols, constitution, timeline, places, map;
+  Constitution opened on article 166 (Inu Nasionál)
+Note: /usr/bin/lafa uses /usr/bin/python3; in this container that is Python 3.13 while Ubuntu's
+python3-pyqt5 is built for 3.12, so the smoke test ran with python3.12. On Debian 13 python3-pyqt5
+matches the system python3. The container has no sound device, so playback itself was not heard.

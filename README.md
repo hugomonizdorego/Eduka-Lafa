@@ -19,6 +19,10 @@ no Lafa server, no personal data sent.
 
 ![Article with sources, key facts and timeline](docs/screenshots/04-article-flag.png)
 
+![National anthem «Pátria»: the sung line lights up](docs/screenshots/25-anthem-lyrics.png)
+
+![Constitution of the RDTL: search in Tetun and Portuguese](docs/screenshots/27-constitution-search.png)
+
 ![Millionaire quiz](docs/screenshots/14-millionaire-game.png)
 
 ![Lafa Virtual Assistant](docs/screenshots/40-assistant-traditional.png)

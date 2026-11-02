@@ -1,4 +1,25 @@
-# Validation — Lafa 0.2.1 Alpha
+# Validation — Lafa 0.3.0
+
+Checks run on 2 November 2026 in a headless Linux container (Ubuntu 24.04,
+Qt offscreen). Not yet tested on Edukasaun OS hardware.
+
+| Check | Result |
+|---|---|
+| Automated tests, **PyQt5** (Qt 5.15) and **PySide6** (Qt 6) | **80 passed** each, 0 skipped; see `test-results.txt` |
+| New tests | Interface and content only in Tetun and Portuguese; old English/Indonesian settings become "system"; system language → Tetun or Portuguese; Constitution: 170 articles in both languages, references ("15", "art. 15", "Artigu 59", "artigo 166.º"), search ("bandeira" → 15, "línguas oficiais" → 13, "Provedor" → 27, "liberdade de imprensa" → 41), accent-free highlighting without word parts; anthem cues ordered and inside the recording, intro/interlude, next occurrence of a line; audio player without a backend reports it, external player command starts at the position; Constitution and Symbols pages in the app (search, bilingual view, preamble, copy, karaoke line); links "artigu 15" → reader only in paragraphs about the Constitution; photo gallery with a fake Wikipedia/Commons (maps, flags and logos skipped, nothing fetched twice); every page in both languages |
+| Content | `tools/check-content.py`: ✓ 195 articles, 20 days, 6 indicators, 14 municipalities, 113 places, 1 173 words · 0 errors · 0 warnings; 1 321 quiz questions; `docs/REVIEW-NOTES.md` lists 342 items for review |
+| Constitution | Parsed from the official PDFs: 170 articles and 33 headings in both languages, paragraph counts equal for every article (after handling "1.Text" and "Artigu 22.O" in the Tetun edition) |
+| Anthem timing | Vocal separation (MDX-Net) + Whisper large-v3-turbo teacher-forced scoring + melody matching (`tools/anthem/`): the refrain is sung five times; start times 0:13.4, 0:42.9, 1:13.1, 2:14.2, 2:46.4 (±0.5 s). **Not yet checked by ear** |
+| Audio | PySide6 Qt Multimedia plays and seeks (position 61.4 s two seconds after seeking to 60 s); without a sound device it falls back to an external player or reports "can't play audio here" instead of scrolling lyrics in silence; PyQt5 here has no Qt Multimedia, so the ffplay fallback was used |
+| Map | Municipalities = union of the posts by the official list (shapely); areas: Díli 227 km², Liquiçá 550, Aileu 736, Cova Lima 1 207; airport and Comoro in Díli, Zumalai in Cova Lima |
+| Screens | 44 captures regenerated with PyQt5 and inspected (`SCREENSHOTS.md`): both languages, dark theme, 1024×600, 150 % scaling, assistant |
+| Eduka-Settings page | Built directly from `integration/eduka_lafa_settings.py` in Tetun and Portuguese (language choice: system, Tetun, Português) |
+| Network | The sandbox blocked every source site (wikipedia.org, commons.wikimedia.org, timorleste.tl, Tatoli, gov.tl sites, WIPO); content was researched with web search only, and the offline pack and gallery were tested with recorded data |
+| Debian package | `lafa_0.3.0_all.deb` (17.6 MB) installed with apt over 0.2.1; ran from `/usr/lib/lafa` with the system PyQt5; see `package-smoke.txt` |
+| **Not yet tested** | Edukasaun OS hardware; hearing the anthem with a real sound device and `python3-pyqt5.qtmultimedia` on Debian 13; live photo downloads; expert review of the drafts |
+
+## 0.2.1
+
 
 Checks run on 15 October 2026 in a headless Linux container (Ubuntu 24.04,
 Qt offscreen). Not yet tested on Edukasaun OS hardware.

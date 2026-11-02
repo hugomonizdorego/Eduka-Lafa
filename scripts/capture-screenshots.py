@@ -48,7 +48,9 @@ def main_set():
              ("20-offline-updates.png", "data", {}), ("21-settings.png", "settings", {}), ("22-about.png", "about", {}), ("23-search.png", "search", {"q": "Ramelau"}),
              ("24-national-symbols.png", "symbols", {}), ("26-constitution.png", "constitution", {"article": 15}),
              ("28-category-prehistory.png", "category", {"category": "prehistory"}), ("29-category-sports.png", "category", {"category": "sports"})]
-    for name, route, params in shots: save(w, name, route, **params)
+    for name, route, params in shots:
+        save(w, name, route, **params)
+        if route == "search": w.search.clear()          # later captures start with an empty search box
     if first_place: save(w, "10-place.png", "item", id=first_place.id)
     if first_day: save(w, "12-holiday.png", "item", id=first_day.id)
     page = w.pages["item"]; w.open("item", id="tl.symbols.flag"); page.set_tab("quiz"); save(w, "04b-article-quiz.png")

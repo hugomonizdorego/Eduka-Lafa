@@ -1,0 +1,3582 @@
+{
+ "places": [
+  {
+   "id": "place.farol_lighthouse",
+   "name": {
+    "tet": "Farol Dili",
+    "pt": "Farol de Díli"
+   },
+   "municipality": "mun.dili",
+   "type": "monument",
+   "lat": -8.5505,
+   "lon": 125.5625,
+   "summary": {
+    "tet": "Farol tuan iha portu Dili, torre mutin ida husi tempu koloniál Portugés nia rohan, iha baía nia ponta loro-monu. Website turizmu ofisiál hatama farol ne'e iha sidade nia monumentu sira, no ne'e fatin fasil atu para bainhira la'o iha tasi-ibun.",
+    "pt": "O velho farol do porto de Díli, uma torre branca do fim do período colonial português, na ponta oeste da baía. O site oficial de turismo inclui-o entre os monumentos da cidade, e é uma paragem fácil num passeio pela marginal."
+   },
+   "text": {
+    "tet": "Durante tinan atus ida resin, farol ne'e ajuda ró sira atu tama portu Dili, ne'ebé ahu-ruin proteje. Fonte istóriku sira hatete katak ema harii farol iha 1896, iha sékulu 19 nia rohan, bainhira Dili sai ona Timor Portugés nia kapitál. Torre ne'e iha baía nia sorin loro-monu, besik igreja Motael, no bairru iha ninia haleu ema sei bolu Farol. Fonte ida dehan katak torre ne'e aas besik metru 19, no ema hadi'a iha 2003 ho apoiu husi Japaun. Farol ne'e la boot, maibé ne'e parte husi sidade nia istória tasi nian, ne'ebé liga ho komérsiu, ró-ahi no peskadór sira. Iha loro-kraik, naroman iha baía no illa Atauru iha dook halo la'o-la'o iha ne'e furak tebes.",
+    "pt": "Durante mais de um século, o farol ajudou os barcos a entrar no porto de Díli, protegido por recifes de coral. Fontes históricas datam-no de 1896, nos últimos anos do século XIX, quando Díli já era a capital do Timor Português. A torre fica no lado oeste da baía, perto da igreja de Motael, e o bairro à volta ainda se chama Farol. Uma fonte diz que tem cerca de 19 metros de altura e que foi recuperada em 2003 com apoio do Japão. O farol é modesto, mas faz parte da história marítima da cidade, ligada ao comércio, aos ferries e aos pescadores. Ao fim da tarde, a luz sobre a baía e a ilha de Ataúro no horizonte tornam o passeio muito agradável."
+   },
+   "tips": {
+    "tet": "Haree farol husi li'ur, husi dalan-la'o tasi-ibun nian; keta tama fatin portu nian ka fatin ne'ebé taka ho pagar. Halo vizita hamutuk ho igreja Motael no la'o-la'o iha tasi-ibun bainhira loro tun.",
+    "pt": "Veja o farol de fora, a partir do passeio junto ao mar; não entre em zonas portuárias ou vedadas. Junte a visita à igreja de Motael e a um passeio pela marginal ao pôr do sol."
+   },
+   "illustration": "monument",
+   "wiki": {
+    "en": "Dili Harbor Lighthouse"
+   },
+   "quiz": [
+    {
+     "q": {
+      "tet": "Tuir fonte istóriku sira, ema harii farol Dili iha sékulu saida?",
+      "pt": "Segundo fontes históricas, em que século foi construído o farol de Díli?"
+     },
+     "options": [
+      {
+       "tet": "Sékulu 19 (1896)",
+       "pt": "No século XIX (1896)"
+      },
+      {
+       "tet": "Sékulu 16",
+       "pt": "No século XVI"
+      },
+      {
+       "tet": "Sékulu 21",
+       "pt": "No século XXI"
+      },
+      {
+       "tet": "Sékulu 17",
+       "pt": "No século XVII"
+      }
+     ],
+     "answer": 0,
+     "why": {
+      "tet": "Fonte istóriku sira hatete katak farol ne'e husi 1896, iha sékulu 19 nia rohan.",
+      "pt": "As fontes históricas datam o farol de 1896, no fim do século XIX."
+     },
+     "difficulty": 6
+    }
+   ],
+   "related": [
+    "mun.dili",
+    "place.motael_church",
+    "place.dili_waterfront",
+    "tl.tourism.heritage"
+   ],
+   "tags": [
+    "lighthouse",
+    "dili",
+    "colonial"
+   ],
+   "sources": [
+    {
+     "title": "Dili Harbor Lighthouse",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Dili_Harbor_Lighthouse",
+     "accessed": "2026-11-02",
+     "licence": "CC BY-SA 4.0"
+    },
+    {
+     "title": "Attractions (beaches, dive sites, peaks, waterfalls, forts, markets and sacred places)",
+     "publisher": "timorleste.tl (official tourism website of Timor-Leste)",
+     "url": "https://timorleste.tl/destinations/attractions",
+     "accessed": "2026-11-02",
+     "licence": "© publisher"
+    },
+    {
+     "title": "Bay of Dili",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Bay_of_Dili",
+     "accessed": "2026-11-02",
+     "licence": "CC BY-SA 4.0"
+    }
+   ],
+   "review": {
+    "status": "draft",
+    "notes": "Written on 2 Nov 2026 from WebSearch result summaries (timorleste.tl itself could not be opened in the sandbox); coordinates checked only against the Lafa municipality map. Date 1896 from historical sources quoted with Wikipedia 'Dili Harbor Lighthouse' in a search summary; the height (about 19 m) and the 2003 Japanese-funded refurbishment come from one source seen only in a search summary — check. Listed under monuments in Dili on timorleste.tl/destinations/attractions. Coordinates approximate (west end of Dili harbour near Motael; not checked on a map). The neighbourhood name 'Farol' is general knowledge. Bay of Dili source was verified by another Lafa writer."
+   }
+  },
+  {
+   "id": "place.xanana_reading_room",
+   "name": {
+    "tet": "Sala Leitura Xanana Gusmão",
+    "pt": "Sala de Leitura Xanana Gusmão"
+   },
+   "municipality": "mun.dili",
+   "type": "museum",
+   "lat": -8.556,
+   "lon": 125.573,
+   "summary": {
+    "tet": "Sala leitura no biblioteka ida iha Dili ho Xanana Gusmão nia naran, rezisténsia nia lider no Prezidente dahuluk husi Repúblika ne'ebé restaura. Website turizmu ofisiál hatudu sala ne'e nu'udar fatin kultura nian iha kapitál.",
+    "pt": "Uma sala de leitura e biblioteca em Díli com o nome de Xanana Gusmão, líder da resistência e primeiro Presidente da República restaurada. O site oficial de turismo destaca-a entre os lugares de cultura da capital."
+   },
+   "text": {
+    "tet": "Xanana Gusmão ukun rezisténsia armada hasoru okupasaun Indonézia iha tinan 1980 no 1990 sira, sai prezu iha Jakarta, no iha 2002 povu hili nia nu'udar Prezidente dahuluk husi Repúblika ne'ebé restaura; depois nia mós sai Primeiru-Ministru. Sala leitura ho ninia naran mak fatin hakmatek ida, ne'ebé estudante, profesór no vizitante sira bele lee livru, jornál no dokumentu kona-ba Timór-Leste no luta ba independénsia. Website turizmu ofisiál tau sala ne'e iha Dili nia atrasaun importante sira, hamutuk ho Arkivu no Muzeu Rezisténsia. Ba estudante sira, ne'e fatin di'ak atu buka informasaun ba servisu eskola nian kona-ba istória nasionál. Molok ba, haree uluk oráriu no se iha atividade ruma, hanesan ezibisaun ka lansamentu livru.",
+    "pt": "Xanana Gusmão comandou a resistência armada contra a ocupação indonésia nos anos 1980 e 1990, esteve preso em Jacarta e foi eleito em 2002 o primeiro Presidente da República restaurada; mais tarde foi também Primeiro-Ministro. A sala de leitura com o seu nome é um espaço calmo onde estudantes, professores e visitantes podem ler livros, jornais e documentos sobre Timor-Leste e a luta pela independência. O site oficial de turismo coloca-a entre as atrações em destaque de Díli, ao lado do Arquivo e Museu da Resistência. Para os estudantes, é um bom lugar para procurar informação para trabalhos escolares sobre a história nacional. Antes de ir, confirme o horário e se há atividades, como exposições ou apresentações de livros."
+   },
+   "tips": {
+    "tet": "Ko'alia neineik no kaer livru no dokumentu ho kuidadu. Husu lisensa molok foti foto iha laran. Halo vizita hamutuk ho Arkivu no Muzeu Rezisténsia iha loron hanesan.",
+    "pt": "Fale baixo e trate os livros e documentos com cuidado. Peça licença antes de fotografar o interior. Junte a visita ao Arquivo e Museu da Resistência no mesmo dia."
+   },
+   "illustration": "literature",
+   "quiz": [
+    {
+     "q": {
+      "tet": "Xanana Gusmão sai Prezidente dahuluk husi Repúblika ne'ebé restaura iha tinan saida?",
+      "pt": "Em que ano Xanana Gusmão foi eleito primeiro Presidente da República restaurada?"
+     },
+     "options": [
+      {
+       "tet": "1975",
+       "pt": "1975"
+      },
+      {
+       "tet": "2002",
+       "pt": "2002"
+      },
+      {
+       "tet": "1999",
+       "pt": "1999"
+      },
+      {
+       "tet": "2012",
+       "pt": "2012"
+      }
+     ],
+     "answer": 1,
+     "why": {
+      "tet": "Iha 2002 povu hili Xanana Gusmão nu'udar Prezidente dahuluk, no independénsia restaura iha 20 Maiu 2002.",
+      "pt": "Em 2002 o povo elegeu Xanana Gusmão primeiro Presidente, e a independência foi restaurada a 20 de maio de 2002."
+     },
+     "difficulty": 5
+    }
+   ],
+   "related": [
+    "mun.dili",
+    "place.resistance_museum",
+    "tl.leaders.xanana_gusmao",
+    "tl.tourism.heritage"
+   ],
+   "tags": [
+    "library",
+    "museum",
+    "dili",
+    "resistance"
+   ],
+   "sources": [
+    {
+     "title": "Attractions (beaches, dive sites, peaks, waterfalls, forts, markets and sacred places)",
+     "publisher": "timorleste.tl (official tourism website of Timor-Leste)",
+     "url": "https://timorleste.tl/destinations/attractions",
+     "accessed": "2026-11-02",
+     "licence": "© publisher"
+    },
+    {
+     "title": "Xanana Gusmão",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Xanana_Gusm%C3%A3o",
+     "accessed": "2026-11-02",
+     "licence": "CC BY-SA 4.0"
+    },
+    {
+     "title": "List of museums in Timor-Leste",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/List_of_museums_in_Timor-Leste",
+     "accessed": "2026-11-02",
+     "licence": "CC BY-SA 4.0"
+    }
+   ],
+   "review": {
+    "status": "draft",
+    "notes": "Written on 2 Nov 2026 from WebSearch result summaries (timorleste.tl itself could not be opened in the sandbox); coordinates checked only against the Lafa municipality map. Listed among the featured attractions on timorleste.tl/destinations/attractions (search summary). Its address, opening hours, founding date and current activities were not found — check; coordinates are those of central Dili. Facts about Xanana Gusmão follow the leaders articles (Wikipedia URL verified by another writer)."
+   }
+  },
+  {
+   "id": "place.metinaro_heroes_garden",
+   "name": {
+    "tet": "Jardín Asuwa'in no Martir Pátria nian (Metinaro)",
+    "pt": "Jardim dos Heróis e Mártires da Pátria (Metinaro)"
+   },
+   "municipality": "mun.dili",
+   "type": "memorial",
+   "lat": -8.53,
+   "lon": 125.825,
+   "summary": {
+    "tet": "Rate nasionál asuwa'in sira-nian iha Metinaro, iha Dili nia leste, fatin ne'ebé Estadu hakoi asuwa'in nasionál no kombatente luta ba independénsia nian. Ne'e fatin memória no nonok nian.",
+    "pt": "O cemitério nacional dos heróis, em Metinaro, a leste de Díli, onde o Estado sepulta heróis nacionais e combatentes da luta pela independência. É um lugar de memória e de silêncio."
+   },
+   "text": {
+    "tet": "Metinaro iha estrada tasi-ibun nian husi Dili ba Manatutu, menus oras ida ho kareta husi kapitál ba leste, maibé sei iha munisípiu Dili nia laran. Iha ne'e iha Jardín Asuwa'in no Martir Pátria nian, fatin ne'ebé kombatente FALINTIL no figura rezisténsia seluk deskansa. Kombatente barak mate durante okupasaun tinan 24, no iha ne'e nasaun fó onra ba sira. Lider tuan balu mós hetan rate iha ne'e: Francisco Xavier do Amaral, Prezidente dahuluk ne'ebé proklama iha 1975, no Francisco Guterres Lú-Olo, Prezidente husi 2017 to'o 2022, ne'ebé Estadu hakoi iha 26 Juñu 2026. Iha loron memória nasionál, lider, veteranu no família sira tau ai-funan iha rate sira. Ba timoroan barak, vizita ne'e hanesan peregrinasaun ki'ik ida.",
+    "pt": "Metinaro fica na estrada costeira de Díli para Manatuto, a menos de uma hora de carro a leste da capital, mas ainda dentro do município de Díli. Aqui fica o Jardim dos Heróis e Mártires da Pátria, onde repousam combatentes das FALINTIL e outras figuras da resistência. Muitos combatentes morreram durante os 24 anos de ocupação, e aqui o país presta-lhes homenagem. Também estão sepultados antigos dirigentes: Francisco Xavier do Amaral, o primeiro Presidente proclamado em 1975, e Francisco Guterres Lú-Olo, Presidente de 2017 a 2022, sepultado a 26 de junho de 2026. Em dias de memória nacional, dirigentes, veteranos e famílias deixam flores nas campas. Para muitos timorenses, a visita é uma pequena peregrinação."
+   },
+   "tips": {
+    "tet": "Hatais roupa ho respeitu, ko'alia neineik no keta hakat iha rate leten. Husu lisensa molok foti foto ba serimónia ka família sira. Rate nasionál bele taka ka reservadu durante serimónia Estadu nian.",
+    "pt": "Vista-se com respeito, fale baixo e não pise as campas. Peça licença antes de fotografar cerimónias ou famílias. O cemitério pode estar fechado ou reservado durante cerimónias de Estado."
+   },
+   "illustration": "heroes",
+   "quiz": [
+    {
+     "q": {
+      "tet": "Prezidente tuan ida ne'ebé Estadu hakoi iha Metinaro iha Juñu 2026 mak se?",
+      "pt": "Que antigo Presidente foi sepultado no Jardim dos Heróis de Metinaro em junho de 2026?"
+     },
+     "options": [
+      {
+       "tet": "José Ramos-Horta",
+       "pt": "José Ramos-Horta"
+      },
+      {
+       "tet": "Taur Matan Ruak",
+       "pt": "Taur Matan Ruak"
+      },
+      {
+       "tet": "Francisco Guterres Lú-Olo",
+       "pt": "Francisco Guterres Lú-Olo"
+      },
+      {
+       "tet": "Xanana Gusmão",
+       "pt": "Xanana Gusmão"
+      }
+     ],
+     "answer": 2,
+     "why": {
+      "tet": "Lú-Olo, Prezidente husi 2017 to'o 2022, mate iha Juñu 2026 no hetan rate iha Metinaro, hamutuk ho asuwa'in nasionál sira.",
+      "pt": "Lú-Olo, Presidente de 2017 a 2022, morreu em junho de 2026 e foi sepultado em Metinaro, entre os heróis nacionais."
+     },
+     "difficulty": 9
+    }
+   ],
+   "related": [
+    "mun.dili",
+    "tl.leaders.national_heroes",
+    "tl.leaders.lu_olo",
+    "tl.leaders.xavier_do_amaral",
+    "day.heroes"
+   ],
+   "tags": [
+    "memorial",
+    "heroes",
+    "metinaro",
+    "falintil"
+   ],
+   "sources": [
+    {
+     "title": "Former President Lu-Olo laid to rest in Metinaro, Dili, among national heroes",
+     "publisher": "Tatoli – Agência Noticiosa de Timor-Leste",
+     "url": "https://en.tatoli.tl/2026/06/26/former-president-lu-olo-laid-to-rest-in-metinaro-dili-among-national-heroes/17/",
+     "accessed": "2026-11-02",
+     "licence": "© publisher"
+    },
+    {
+     "title": "Francisco Xavier do Amaral",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Francisco_Xavier_do_Amaral",
+     "accessed": "2026-11-02",
+     "licence": "CC BY-SA 4.0"
+    },
+    {
+     "title": "Dili Municipality",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Dili_Municipality",
+     "accessed": "2026-11-02",
+     "licence": "CC BY-SA 4.0"
+    }
+   ],
+   "review": {
+    "status": "draft",
+    "notes": "Written on 2 Nov 2026 from WebSearch result summaries (timorleste.tl itself could not be opened in the sandbox); coordinates checked only against the Lafa municipality map. Not in the attractions list seen in search results; added as the national heroes' cemetery. Name 'Jardim dos Heróis e Mártires da Pátria' and the burials of Xavier do Amaral (2012) and Lú-Olo (26 June 2026) follow leaders.json (Tatoli URL verified by that writer). 'Leaders, veterans and families lay flowers on national days' is general — check which days have ceremonies. Coordinates: Metinaro town (approximate; the cemetery's exact site was not checked)."
+   }
+  },
+  {
+   "id": "place.manleuana_market",
+   "name": {
+    "tet": "Merkadu Manleuana",
+    "pt": "Mercado de Manleuana"
+   },
+   "municipality": "mun.dili",
+   "type": "market",
+   "lat": -8.565,
+   "lon": 125.555,
+   "summary": {
+    "tet": "Merkadu bairru ida iha Dili nia sudoeste, ne'ebé website turizmu ofisiál hatama iha sidade nia merkadu sira. Fatin di'ak atu haree produtu foun ne'ebé mai husi foho no husi tasi-ibun.",
+    "pt": "Um mercado de bairro no sudoeste de Díli, que o site oficial de turismo inclui entre os mercados da cidade. Bom lugar para ver os produtos frescos que chegam das montanhas e da costa."
+   },
+   "text": {
+    "tet": "Merkadu bairru nian mak fatin ne'ebé família barak iha Dili sosa buat loro-loron nian, no Merkadu Manleuana, iha sidade nia sudoeste, mak ida husi merkadu ne'ebé website turizmu ofisiál hatudu ba vizitante sira. Iha dadeer sedu, meza sira nakonu ho modo no ai-fuan husi foho malirin Aileu, Ermera no Maubisse nian, ikan husi tasi-ibun, foos, batar, manu-tolun, rempa no bua-malus, ne'ebé ema boot barak han. Iha mós roupa, sasán dapur nian no fatin ki'ik ne'ebé fa'an hahán. Folin iha dólar no iha osan-besi sentavu Timor nian. Kompara ho Merkadu Tais, iha ne'e ita haree liu moris loro-loron nian duké artezanatu. Ne'e fatin di'ak atu aprende naran ai-fuan no modo iha Tetun.",
+    "pt": "Os mercados de bairro são o lugar onde a maior parte das famílias de Díli faz as compras do dia a dia, e o de Manleuana, no sudoeste da cidade, é um dos que o site oficial de turismo indica aos visitantes. Logo de manhã, as bancas enchem-se de legumes e fruta das colinas frescas de Aileu, Ermera e Maubisse, peixe da costa, arroz, milho, ovos, especiarias e areca e folha de bétel (bua-malus), que muitos adultos mascam. Há também roupa, utensílios de cozinha e pequenas bancas de comida. Os preços são em dólares e em moedas de centavo timorenses. Comparado com o Mercado do Tais, aqui vê-se mais a vida diária do que o artesanato. É um bom lugar para aprender os nomes das frutas e dos legumes em tétum."
+   },
+   "tips": {
+    "tet": "Ba sedu, entre tuku 6 no tuku 9 dadeer, bainhira produtu barak no manas seidauk makaas. Lori osan-surat ki'ik no osan-besi, ko'alia kona-ba folin ho maneira di'ak, no kaer metin karteira iha ema barak nia klaran. Fase di'ak ai-fuan molok han.",
+    "pt": "Vá cedo, entre as 6 e as 9 horas, quando há mais produtos e menos calor. Leve notas pequenas e moedas, regateie com simpatia e guarde bem a carteira no meio da multidão. Lave bem a fruta antes de comer."
+   },
+   "illustration": "market",
+   "related": [
+    "mun.dili",
+    "place.tais_market",
+    "tl.tourism.food_markets",
+    "tl.culture.food"
+   ],
+   "tags": [
+    "market",
+    "dili",
+    "food"
+   ],
+   "sources": [
+    {
+     "title": "Attractions (beaches, dive sites, peaks, waterfalls, forts, markets and sacred places)",
+     "publisher": "timorleste.tl (official tourism website of Timor-Leste)",
+     "url": "https://timorleste.tl/destinations/attractions",
+     "accessed": "2026-11-02",
+     "licence": "© publisher"
+    },
+    {
+     "title": "Dili",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Dili",
+     "accessed": "2026-11-02",
+     "licence": "CC BY-SA 4.0"
+    }
+   ],
+   "review": {
+    "status": "draft",
+    "notes": "Written on 2 Nov 2026 from WebSearch result summaries (timorleste.tl itself could not be opened in the sandbox); coordinates checked only against the Lafa municipality map. Listed as a market in Dili on timorleste.tl/destinations/attractions (search summary); no description was seen, so the text describes a typical Dili neighbourhood market from general knowledge — check opening days, size and products. Location (Manleuana, south-west Dili) and coordinates approximate. Tetun 'han bua-malus' (chew betel) as used elsewhere in Lafa."
+   }
+  },
+  {
+   "id": "place.makili",
+   "name": {
+    "tet": "Makili",
+    "pt": "Makili (Maquili)"
+   },
+   "municipality": "mun.atauro",
+   "type": "village",
+   "lat": -8.298,
+   "lon": 125.588,
+   "summary": {
+    "tet": "Aldeia boot ida iha Atauru, iha kosta sudeste, iha Vila nia sul. Ema to'o ne'ebá ho ain ka ho ró, no dalan la'o ain ida liu foho, fatuk-kuak Lady Mary no fila liu tasi-ibun.",
+    "pt": "Uma das maiores povoações de Ataúro, na costa sudeste, a sul de Vila. Chega-se a pé ou de barco, e um percurso circular pelas colinas passa pela gruta de Lady Mary e volta pela costa."
+   },
+   "text": {
+    "tet": "Makili (iha mapa ofisiál hakerek Maquili) mak suku ida husi suku lima Atauru nian, no iha illa nia kosta sudeste, iha Vila nia sul, illa nia kapitál. Guia viajen ida dehan katak ne'e povoasaun boot liu duké ema hanoin, no di'ak atu vizita ho ain ka ho ró. Dalan la'o ain ida ne'ebé ema rekomenda sa'e ba foho, liu fatuk-kuak Lady Mary, tun to'o Makili no fila liu tasi-ibun, liu tasi-ibun Lampia, ne'ebé ema bele liu de'it bainhira tasi maran. Família sira moris husi peska no to'os ki'ik, no bero ai ho sema toba iha rai-henek. Ahu-ruin hahú besik tasi-ibun, no tasi kle'an iha Atauru nia haleu riku ho moris tasi nian. Hanesan iha illa nia fatin seluk, regra tara bandu proteje ahu-ruin nia parte balu.",
+    "pt": "Makili (escrito Maquili nos mapas oficiais) é um dos cinco sucos de Ataúro e fica na costa sudeste da ilha, a sul de Vila, a capital. Um guia de viagem descreve-a como uma povoação surpreendentemente grande, que vale a pena visitar a pé ou de barco. Um percurso circular recomendado sobe às colinas, passa pela gruta de Lady Mary, desce até Makili e regressa pela costa, pela praia de Lampia, que só se pode atravessar na maré baixa. As famílias vivem da pesca e de pequenas hortas, e as canoas de madeira com flutuadores descansam na areia. O recife começa perto da margem, e o mar profundo à volta de Ataúro é rico em vida marinha. Como no resto da ilha, as regras de tara bandu protegem algumas zonas do recife."
+   },
+   "tips": {
+    "tet": "La'o ho guia lokál no haree uluk oras tasi maran molok liu tasi-ibun Lampia. Lori bee-hemu no xapéu, tanba mahon uitoan de'it. Husu lisensa molok tama fatuk-kuak, tanba bele sai fatin lulik.",
+    "pt": "Faça o percurso com um guia local e confirme a hora da maré baixa antes de passar pela praia de Lampia. Leve água e chapéu, porque há pouca sombra. Peça licença antes de entrar na gruta, que pode ser um lugar lulik."
+   },
+   "illustration": "village",
+   "quiz": [
+    {
+     "q": {
+      "tet": "Makili iha illa saida?",
+      "pt": "Makili fica em que ilha?"
+     },
+     "options": [
+      {
+       "tet": "Jaku",
+       "pt": "Jaco"
+      },
+      {
+       "tet": "Atauru",
+       "pt": "Ataúro"
+      },
+      {
+       "tet": "Bali",
+       "pt": "Bali"
+      },
+      {
+       "tet": "Wetar",
+       "pt": "Wetar"
+      }
+     ],
+     "answer": 1,
+     "why": {
+      "tet": "Makili mak suku ida husi suku lima illa Atauru nian, iha Dili nia norte.",
+      "pt": "Makili é um dos cinco sucos da ilha de Ataúro, a norte de Díli."
+     },
+     "difficulty": 3
+    }
+   ],
+   "related": [
+    "mun.atauro",
+    "place.atauro_island",
+    "place.vila_maumeta",
+    "place.mount_manucoco",
+    "tl.tourism.beaches_islands"
+   ],
+   "tags": [
+    "village",
+    "atauro",
+    "hiking"
+   ],
+   "sources": [
+    {
+     "title": "Atauro Island",
+     "publisher": "Exploring Timor-Leste (exploringtimor.com)",
+     "url": "https://exploringtimor.com/atauroisland/",
+     "accessed": "2026-11-02",
+     "licence": "© publisher"
+    },
+    {
+     "title": "Ataúro municipality – official website",
+     "publisher": "Município de Ataúro (atauro.gov.tl)",
+     "url": "https://atauro.gov.tl/en/",
+     "accessed": "2026-11-02",
+     "licence": "© publisher"
+    },
+    {
+     "title": "Atauro Island",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Atauro_Island",
+     "accessed": "2026-11-02",
+     "licence": "CC BY-SA 4.0"
+    }
+   ],
+   "review": {
+    "status": "draft",
+    "notes": "Written on 2 Nov 2026 from WebSearch result summaries (timorleste.tl itself could not be opened in the sandbox); coordinates checked only against the Lafa municipality map. From search summaries of exploringtimor.com (Makili 'a surprisingly large settlement south of Vila'; loop hike via Lady Mary Cave and Lampia Beach at low tide) and atauro.gov.tl (Makili and Vila in the south-east). Coordinates approximate (south-east coast; estimated on the Lafa map). Tetun to check: 'tasi maran' (low tide); 'bero ai ho sema' (outrigger canoe) as in place.beloi."
+   }
+  },
+  {
+   "id": "place.bikeli",
+   "name": {
+    "tet": "Biqueli (Bikeli)",
+    "pt": "Biqueli (Bikeli)"
+   },
+   "municipality": "mun.atauro",
+   "type": "village",
+   "lat": -8.16,
+   "lon": 125.6,
+   "summary": {
+    "tet": "Aldeia peskadór ida iha Atauru nia norte, no fatin hahú ba la'o ain fasil ida to'o tasi-ibun Akrema, iha illa nia rohan norte.",
+    "pt": "Aldeia de pescadores no norte de Ataúro e ponto de partida de um passeio fácil até à praia de Akrema, no extremo norte da ilha."
+   },
+   "text": {
+    "tet": "Biqueli, ne'ebé ema mós hakerek Bikeli, mak suku ida husi suku lima Atauru nian, no iha illa nia norte, hanesan Beloi. Uma sira hamriik iha tasi-ibun, fatin ne'ebé tasi nia okos tun lalais ba bee kle'an iha selat, no família barak moris husi peska no to'os ki'ik. Ahu-ruin hahú besik tasi-ibun no sai parte husi Atauru nia riku-soin tasi nian ne'ebé boot: iha 2016, estudu ida sura iha illa nia haleu espésie ikan ahu-ruin nian iha fatin ida barak liu duké iha fatin seluk hotu ne'ebé ema estuda. Husi Biqueli, dalan fasil ida, besik oras tolu ba-mai, lori ita to'o tasi-ibun Akrema, iha rohan norte; tuir guia viajen ida, la presiza guia. Servisu uitoan de'it, entaun lori husi Dili ka Vila buat ne'ebé ita presiza.",
+    "pt": "Biqueli, também escrito Bikeli, é um dos cinco sucos de Ataúro e fica no norte da ilha, tal como Beloi. As casas estendem-se junto à costa, onde o fundo desce depressa para as águas profundas do estreito, e muitas famílias vivem da pesca e de pequenas hortas. O recife começa perto da margem e faz parte da grande riqueza marinha de Ataúro: em 2016, um estudo contou à volta da ilha mais espécies de peixes de recife por local do que em qualquer outro sítio estudado. De Biqueli parte um caminho fácil, de cerca de três horas ida e volta, até à praia de Akrema, no extremo norte; segundo um guia de viagem, não é preciso guia. Os serviços são poucos, por isso traga de Díli ou de Vila o que precisar."
+   },
+   "tips": {
+    "tet": "Husu iha aldeia kona-ba dalan ba Akrema no sai sedu, molok loron manas. Halo snorkel de'it bainhira tasi kalma, no respeita fatin ne'ebé tara bandu taka.",
+    "pt": "Pergunte na aldeia pelo caminho para Akrema e saia cedo, antes do calor. Faça snorkel só com mar calmo e respeite as zonas fechadas por tara bandu."
+   },
+   "illustration": "village",
+   "quiz": [
+    {
+     "q": {
+      "tet": "Iha 2016, estudu ida iha Atauru nia haleu hetan rekorde mundiál kona-ba saida?",
+      "pt": "Em 2016, um estudo à volta de Ataúro bateu um recorde mundial de quê?"
+     },
+     "options": [
+      {
+       "tet": "Ondas aas liu",
+       "pt": "Altura das ondas"
+      },
+      {
+       "tet": "Foho-ahi barak liu",
+       "pt": "Número de vulcões"
+      },
+      {
+       "tet": "Udan barak liu iha loron ida",
+       "pt": "Chuva num só dia"
+      },
+      {
+       "tet": "Espésie ikan ahu-ruin nian iha fatin ida",
+       "pt": "Espécies de peixes de recife por local"
+      }
+     ],
+     "answer": 3,
+     "why": {
+      "tet": "Estudu 2016 hetan iha Atauru nia haleu espésie ikan ahu-ruin nian iha fatin ida barak liu duké iha fatin seluk ne'ebé ema estuda.",
+      "pt": "O estudo de 2016 contou à volta de Ataúro mais espécies de peixes de recife por local do que em qualquer outro sítio estudado."
+     },
+     "difficulty": 8
+    }
+   ],
+   "related": [
+    "mun.atauro",
+    "place.atauro_island",
+    "place.beloi",
+    "place.adara",
+    "place.akrema_beach",
+    "tl.tourism.diving_marine"
+   ],
+   "tags": [
+    "village",
+    "atauro",
+    "fishing"
+   ],
+   "sources": [
+    {
+     "title": "Ataúro municipality – official website",
+     "publisher": "Município de Ataúro (atauro.gov.tl)",
+     "url": "https://atauro.gov.tl/en/",
+     "accessed": "2026-11-02",
+     "licence": "© publisher"
+    },
+    {
+     "title": "Atauro Island",
+     "publisher": "Exploring Timor-Leste (exploringtimor.com)",
+     "url": "https://exploringtimor.com/atauroisland/",
+     "accessed": "2026-11-02",
+     "licence": "© publisher"
+    },
+    {
+     "title": "Atauro Island has highest average reef fish diversity in the world",
+     "publisher": "Mongabay",
+     "url": "https://news.mongabay.com/2016/08/atauro-island-has-highest-average-reef-fish-diversity-in-the-world/",
+     "accessed": "2026-11-02",
+     "licence": "© Mongabay"
+    }
+   ],
+   "review": {
+    "status": "draft",
+    "notes": "Written on 2 Nov 2026 from WebSearch result summaries (timorleste.tl itself could not be opened in the sandbox); coordinates checked only against the Lafa municipality map. Spelling varies (Biqueli, Biqeli, Bikeli, Biceli); atauro.gov.tl says Bikeli and Beloi are in the north. 'Bikeli to Akrema, easy, about 3 hours return, no guide needed' from exploringtimor.com (search summary). 2016 reef-fish study as in other Lafa files (Mongabay URL verified by another writer). Coordinates approximate (north-west coast; estimated)."
+   }
+  },
+  {
+   "id": "place.akrema_beach",
+   "name": {
+    "tet": "Tasi-ibun Akrema",
+    "pt": "Praia de Akrema"
+   },
+   "municipality": "mun.atauro",
+   "type": "beach",
+   "lat": -8.137,
+   "lon": 125.63,
+   "summary": {
+    "tet": "Tasi-ibun naruk ho rai-henek mutin iha Atauru nia rohan norte. Guia viajen ida dehan katak ne'e fatin di'ak liu iha illa atu halo kampu. Besik ne'e iha fatuk-kuak tuan ida ho mate-ruin, fatin ida ne'ebé tenke respeita.",
+    "pt": "Uma longa praia de areia branca no extremo norte de Ataúro, que um guia de viagem considera o melhor lugar da ilha para acampar. Perto há uma gruta funerária antiga, um lugar a respeitar."
+   },
+   "text": {
+    "tet": "Akrema iha Atauru nia rohan norte, fatin ne'ebé illa sai kloot entre tasi nakloke no foho maran sira. Iha tasi-ibun naruk ho rai-henek mutin, bee moos no vista ba selat ne'ebé golfiñu no, iha sira-nia tempu, baleia liu. Guia viajen ida dehan katak ne'e fatin furak no fatin di'ak liu iha illa atu halo kampu. Besik tasi-ibun iha fatuk-kuak ida ne'ebé vizitante sira bolu 'fatuk-kuak mate-isin nian', ho ema nia ruin tuan: ba komunidade, fatin ne'e liga ho bei'ala sira, tan ne'e keta tama la ho lisensa, keta kaer buat ida no keta foti foto la ho autorizasaun. Ema to'o Akrema liu dalan fasil ida husi Biqueli, besik oras tolu ba-mai, ka ho ró.",
+    "pt": "Akrema fica no extremo norte de Ataúro, onde a ilha se estreita entre o mar aberto e as colinas secas. Tem uma longa praia de areia branca, água transparente e vistas para o estreito por onde passam golfinhos e, na época própria, baleias. Um guia de viagem chama-lhe um lugar lindo e diz que é o melhor sítio da ilha para acampar. Perto da praia há uma gruta a que os visitantes chamam 'gruta dos mortos', onde se veem ossos humanos antigos: para a comunidade é um lugar ligado aos antepassados, por isso não se deve entrar sem licença, mexer em nada ou fotografar sem autorização. Chega-se a Akrema por um caminho fácil a partir de Biqueli, cerca de três horas ida e volta, ou de barco."
+   },
+   "tips": {
+    "tet": "Husu lisensa iha aldeia molok halo kampu no lori fila lixu hotu. Lori bee-hemu naton, tanba la iha servisu. Keta tama fatuk-kuak mate-isin nian la ho komunidade nia autorizasaun.",
+    "pt": "Peça licença na aldeia antes de acampar e leve todo o lixo consigo. Leve água suficiente, porque não há serviços. Não entre na gruta funerária sem autorização da comunidade."
+   },
+   "illustration": "beach",
+   "quiz": [
+    {
+     "q": {
+      "tet": "Tanba saida mak vizitante sira tenke husu lisensa molok tama fatuk-kuak besik Akrema?",
+      "pt": "Porque é que os visitantes devem pedir licença antes de entrar na gruta perto de Akrema?"
+     },
+     "options": [
+      {
+       "tet": "Tanba iha bei'ala sira-nia ruin no fatin ne'e hetan respeitu",
+       "pt": "Porque guarda ossos de antepassados e é um lugar respeitado"
+      },
+      {
+       "tet": "Tanba iha muzeu ho bilhete",
+       "pt": "Porque tem um museu pago"
+      },
+      {
+       "tet": "Tanba ne'e baze militár",
+       "pt": "Porque é uma base militar"
+      },
+      {
+       "tet": "Tanba ne'e mina osan-mean",
+       "pt": "Porque é uma mina de ouro"
+      }
+     ],
+     "answer": 0,
+     "why": {
+      "tet": "Fatuk-kuak ne'e iha ema nia ruin tuan, no komunidade liga nia ho bei'ala sira; tan ne'e presiza lisensa.",
+      "pt": "A gruta guarda ossos humanos antigos, que a comunidade liga aos antepassados; por isso é preciso licença."
+     },
+     "difficulty": 6
+    }
+   ],
+   "related": [
+    "mun.atauro",
+    "place.bikeli",
+    "place.atauro_island",
+    "tl.tourism.beaches_islands",
+    "tl.culture.lisan"
+   ],
+   "tags": [
+    "beach",
+    "atauro",
+    "camping",
+    "sacred"
+   ],
+   "sources": [
+    {
+     "title": "Atauro Island",
+     "publisher": "Exploring Timor-Leste (exploringtimor.com)",
+     "url": "https://exploringtimor.com/atauroisland/",
+     "accessed": "2026-11-02",
+     "licence": "© publisher"
+    },
+    {
+     "title": "Ataúro municipality – official website",
+     "publisher": "Município de Ataúro (atauro.gov.tl)",
+     "url": "https://atauro.gov.tl/en/",
+     "accessed": "2026-11-02",
+     "licence": "© publisher"
+    },
+    {
+     "title": "Atauro Island",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Atauro_Island",
+     "accessed": "2026-11-02",
+     "licence": "CC BY-SA 4.0"
+    }
+   ],
+   "review": {
+    "status": "draft",
+    "notes": "Written on 2 Nov 2026 from WebSearch result summaries (timorleste.tl itself could not be opened in the sandbox); coordinates checked only against the Lafa municipality map. Description (long white-sand beach, 'Cave of the Dead' with human bones, best campsite on the island) from exploringtimor.com as seen in a search summary; the boat option is ours. Tetun 'fatuk-kuak mate-isin nian' to check. Coordinates approximate (north tip of Ataúro on the Lafa map)."
+   }
+  },
+  {
+   "id": "place.macadade",
+   "name": {
+    "tet": "Macadade",
+    "pt": "Macadade"
+   },
+   "municipality": "mun.atauro",
+   "type": "village",
+   "lat": -8.265,
+   "lon": 125.535,
+   "summary": {
+    "tet": "Suku iha Atauru nia foho sudoeste, iha Foho Manucoco nia haleu. Dalan aldeia nian liga ba Beloi no Vila, no lori ita ba illa nia fatin aas liu.",
+    "pt": "O suco das colinas do sudoeste de Ataúro, à volta do monte Manucoco. Caminhos de aldeia ligam-no a Beloi e a Vila e levam ao ponto mais alto da ilha."
+   },
+   "text": {
+    "tet": "Macadade mak suku ida husi suku lima Atauru nian, no hela iha rai aas iha illa nia sudoeste, iha Foho Manucoco nia haleu, fatin aas liu ho besik metru 1.000. Iha ne'e paizajen la hanesan ho kosta: aldeia sira iha foho-tutun ho to'os batar no ai-farina, bee-matan ki'ik no ai-laran ki'ik ne'ebé manu illa nian hela. Anin malirin liu, no husi fatin barak ita haree tasi kle'an iha haleu no, bainhira lalehan moos, Timor nia foho sira. Dalan ki'ik ne'ebé agrikultór sira uza sa'e husi Beloi no husi povoasaun seluk iha kosta to'o Macadade, no husi ne'e ita bele kontinua to'o Manucoco nia tutun. Ne'e área di'ak atu la'o ain ho guia husi aldeia no koñese moris iha illa nia foho.",
+    "pt": "Macadade é um dos cinco sucos de Ataúro e ocupa as terras altas do sudoeste da ilha, à volta do monte Manucoco, o ponto mais alto, com quase mil metros. Aqui a paisagem é diferente da costa: as aldeias ficam em cumeadas com hortas de milho e mandioca, pequenas nascentes e manchas de floresta onde vivem aves da ilha. O ar é mais fresco, e de muitos pontos vê-se o mar profundo à volta e, em dias limpos, as montanhas de Timor. Caminhos usados pelos agricultores sobem de Beloi e de outras povoações da costa até Macadade, e daqui pode continuar-se até ao cimo do Manucoco. É uma boa zona para caminhar com um guia da aldeia e conhecer a vida rural das montanhas da ilha."
+   },
+   "tips": {
+    "tet": "Buka guia iha aldeia no hahú sedu, molok loron manas. Dalan sira sai susar liu depois udan. Husu lisensa molok tama fatin lulik, no respeita to'os sira.",
+    "pt": "Combine um guia na aldeia e comece cedo, antes do calor. Os caminhos ficam mais difíceis depois da chuva. Peça licença antes de entrar em lugares sagrados e respeite as hortas."
+   },
+   "illustration": "village",
+   "related": [
+    "mun.atauro",
+    "place.mount_manucoco",
+    "place.beloi",
+    "place.vila_maumeta",
+    "tl.tourism.mountains_trekking"
+   ],
+   "tags": [
+    "village",
+    "atauro",
+    "trekking"
+   ],
+   "sources": [
+    {
+     "title": "Ataúro municipality – official website",
+     "publisher": "Município de Ataúro (atauro.gov.tl)",
+     "url": "https://atauro.gov.tl/en/",
+     "accessed": "2026-11-02",
+     "licence": "© publisher"
+    },
+    {
+     "title": "Atauro Island",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Atauro_Island",
+     "accessed": "2026-11-02",
+     "licence": "CC BY-SA 4.0"
+    },
+    {
+     "title": "Atauro Island",
+     "publisher": "Exploring Timor-Leste (exploringtimor.com)",
+     "url": "https://exploringtimor.com/atauroisland/",
+     "accessed": "2026-11-02",
+     "licence": "© publisher"
+    }
+   ],
+   "review": {
+    "status": "draft",
+    "notes": "Written on 2 Nov 2026 from WebSearch result summaries (timorleste.tl itself could not be opened in the sandbox); coordinates checked only against the Lafa municipality map. atauro.gov.tl (search summary) places Macadade in the south-west; the link with Manucoco and the farm paths from Beloi follow the existing places 'Beloi' and 'Monte Manucoco'. Crops and landscape are general. Coordinates approximate (interior of the south-west of the island)."
+   }
+  },
+  {
+   "id": "place.lautem_fort",
+   "name": {
+    "tet": "Vila Lautein no ninia forte",
+    "pt": "Vila de Lautém e o seu forte"
+   },
+   "municipality": "mun.lautem",
+   "type": "fort",
+   "lat": -8.365,
+   "lon": 126.9,
+   "summary": {
+    "tet": "Vila ki'ik Lautein, iha kosta norte, fó naran ba munisípiu. Iha vila nia leten iha forte Portugés ida nia rahun, ne'ebé uluk hein kosta.",
+    "pt": "A pequena vila de Lautém, na costa norte, deu o nome ao município. Acima da vila ficam os restos de um forte português que vigiava a costa."
+   },
+   "text": {
+    "tet": "Vila Lautein, ne'ebé ema mós bolu Moro, iha estrada tasi-ibun norte nian entre Baukau no rohan leste, iha dalan klaran entre Laga no Com. Vila ne'e fó naran ba munisípiu, maske ohin loron kapitál mak Lospalos, iha rai-tetuk iha rai-laran. Iha foho ida iha vila nia leten, ita haree forte Portugés ida nia rahun: didin fatuk ne'ebé du'ut no ai-hun taka, no vista luan ba kosta no tasi. Hanesan forte sira iha Baguia, Balibo no Batugade, forte ne'e parte husi postu sira ne'ebé administrasaun koloniál uza atu hein kosta no rejiaun sira iha haleu. Vila iha okos hakmatek, iha tasi ninin, ho ró peskadór iha rai-henek. Viajante barak para iha ne'e iha dalan ba Com, Tutuala no illa Jaku.",
+    "pt": "A vila de Lautém, também conhecida como Moro, fica na estrada costeira do norte entre Baucau e o extremo leste, a meio caminho entre Laga e Com. Deu o nome ao município, embora a capital seja hoje Lospalos, no planalto do interior. Numa colina acima da vila veem-se os restos de um forte português: muros de pedra cobertos de vegetação e vistas largas sobre a costa e o mar. Tal como os fortes de Baguia, Balibó e Batugade, fazia parte da rede de postos com que a administração colonial vigiava as costas e as regiões à volta. A vila em baixo é tranquila, junto ao mar, com barcos de pesca na areia. Muitos viajantes param aqui a caminho de Com, Tutuala e da ilha de Jaco."
+   },
+   "tips": {
+    "tet": "Sa'e foho ho sapatu metin no kuidadu ho fatuk ne'ebé la metin; keta sa'e ba didin ne'ebé fraku. Husu ema iha vila atu hatudu dalan. Iha loro-kraik, naroman iha tasi leten furak liu.",
+    "pt": "Suba à colina com sapatos firmes e cuidado com pedras soltas; não suba aos muros frágeis. Peça a alguém da vila que lhe mostre o caminho. Ao fim da tarde, a luz sobre o mar é a mais bonita."
+   },
+   "illustration": "fort",
+   "quiz": [
+    {
+     "q": {
+      "tet": "Ohin loron, munisípiu Lautein nia kapitál mak ne'ebé?",
+      "pt": "Qual é hoje a capital do município de Lautém?"
+     },
+     "options": [
+      {
+       "tet": "Lospalos",
+       "pt": "Lospalos"
+      },
+      {
+       "tet": "Vila Lautein (Moro)",
+       "pt": "Vila de Lautém (Moro)"
+      },
+      {
+       "tet": "Tutuala",
+       "pt": "Tutuala"
+      },
+      {
+       "tet": "Com",
+       "pt": "Com"
+      }
+     ],
+     "answer": 0,
+     "why": {
+      "tet": "Vila Lautein fó naran ba munisípiu, maibé kapitál mak Lospalos, iha rai-tetuk.",
+      "pt": "A vila de Lautém deu o nome ao município, mas a capital é Lospalos, no planalto."
+     },
+     "difficulty": 4
+    }
+   ],
+   "related": [
+    "mun.lautem",
+    "place.lospalos",
+    "place.com",
+    "place.tutuala",
+    "place.baguia",
+    "tl.tourism.heritage"
+   ],
+   "tags": [
+    "fort",
+    "colonial",
+    "lautem"
+   ],
+   "sources": [
+    {
+     "title": "Lautem",
+     "publisher": "Exploring Timor-Leste (exploringtimor.com)",
+     "url": "https://exploringtimor.com/lautem/",
+     "accessed": "2026-11-02",
+     "licence": "© publisher"
+    },
+    {
+     "title": "Lautém Municipality",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Laut%C3%A9m_Municipality",
+     "accessed": "2026-11-02",
+     "licence": "CC BY-SA 4.0"
+    }
+   ],
+   "review": {
+    "status": "draft",
+    "notes": "Written on 2 Nov 2026 from WebSearch result summaries (timorleste.tl itself could not be opened in the sandbox); coordinates checked only against the Lafa municipality map. 'Remains of a Portuguese fort above the town' from exploringtimor.com/lautem (search summary); the fort's date and builder were not found. 'Moro' as another name of Lautém town is general knowledge — check. Coordinates approximate (north coast, Lautém post)."
+   }
+  },
+  {
+   "id": "place.jerimalai",
+   "name": {
+    "tet": "Fatuk-kuak Jerimalai",
+    "pt": "Abrigo rochoso de Jerimalai"
+   },
+   "municipality": "mun.lautem",
+   "type": "cave",
+   "lat": -8.41,
+   "lon": 127.285,
+   "summary": {
+    "tet": "Fatuk-kuak ki'ik ida husi fatuk-ahu besik Tutuala, fatin ne'ebé arkeólogu sira hetan prova katak ema kaer ikan iha tasi kle'an maizumenus tinan 42 000 liubá, no anzól ida ne'ebé tuan liu balu iha mundu.",
+    "pt": "Um abrigo rochoso de calcário perto de Tutuala onde arqueólogos encontraram provas de pesca em alto mar com cerca de 42 000 anos e um dos anzóis mais antigos do mundo."
+   },
+   "text": {
+    "tet": "Jerimalai mak fatuk-kuak ki'ik ida husi fatuk-ahu iha Timór-Leste nia rohan leste, besik Tutuala, iha Parke Nasionál Nino Konis Santana nia laran. Iha 2011, ekipa ida husi Universidade Nasionál Austrália, ho arkeóloga Sue O'Connor nu'udar xefe, publika rezultadu eskavasaun nian iha revista Science. Iha fatuk-kuak nia rai iha ikan nia ruin liu 38 000, no maizumenus metade mai husi ikan lalais tasi kle'an nian, hanesan atun. Ida-ne'e hatudu katak, maizumenus tinan 42 000 liubá, ema ne'ebé hela iha ne'e hatene ona halo ró no kaer ikan dook husi tasi-ibun. Ekipa mós hetan anzól ida husi kulit-tasi ho idade maizumenus tinan 23 000 to'o 16 000, ida husi anzól tuan liu ne'ebé ema koñese. Ohin loron fatin ne'e parte husi povu Fataluku nia paizajen no istória.",
+    "pt": "Jerimalai é um abrigo rochoso de calcário no extremo leste de Timor-Leste, perto de Tutuala, dentro do Parque Nacional Nino Konis Santana. Em 2011, uma equipa da Universidade Nacional Australiana, dirigida pela arqueóloga Sue O'Connor, publicou na revista Science os resultados das escavações. No chão do abrigo havia mais de 38 000 ossos de peixe, e cerca de metade vinha de peixes rápidos do alto mar, como o atum. Isto mostra que, há cerca de 42 000 anos, as pessoas que viviam aqui já sabiam fazer barcos e pescar longe da costa. A equipa encontrou também um anzol feito de concha com cerca de 23 000 a 16 000 anos, um dos mais antigos conhecidos. Hoje o lugar faz parte da paisagem e da história do povo fataluco."
+   },
+   "tips": {
+    "tet": "Vizita de'it ho guia husi Tutuala, ne'ebé hatene dalan no fatin nia regra. Keta ke'e, keta kaer rai no keta foti fatuk, kulit-tasi ka ruin: sira mak prova sientífiku no patrimóniu. Lori bee-hemu no sapatu metin.",
+    "pt": "Visite só com um guia de Tutuala, que conhece o caminho e as regras do lugar. Não cave, não mexa no chão e não leve pedras, conchas ou ossos: são provas científicas e património. Leve água e sapatos firmes."
+   },
+   "illustration": "prehistory",
+   "quiz": [
+    {
+     "q": {
+      "tet": "Ikan nia ruin ne'ebé arkeólogu sira hetan iha Jerimalai hatudu saida?",
+      "pt": "O que mostram os ossos de peixe encontrados em Jerimalai?"
+     },
+     "options": [
+      {
+       "tet": "Katak iha merkadu ikan koloniál iha ne'ebá",
+       "pt": "Que ali havia um mercado de peixe colonial"
+      },
+      {
+       "tet": "Katak tasi taka Tutuala tinan 100 liubá",
+       "pt": "Que o mar cobria Tutuala há 100 anos"
+      },
+      {
+       "tet": "Katak ema kaer ikan iha tasi kle'an maizumenus tinan 42 000 liubá",
+       "pt": "Que se pescava em alto mar há cerca de 42 000 anos"
+      },
+      {
+       "tet": "Katak ikan sira moris iha mota de'it",
+       "pt": "Que os peixes viviam só nos rios"
+      }
+     ],
+     "answer": 2,
+     "why": {
+      "tet": "Metade husi ikan sira mak ikan tasi kle'an nian, hanesan atun, no ida-ne'e hatudu katak ema iha ró no kaer ikan dook husi tasi-ibun.",
+      "pt": "Cerca de metade eram peixes de alto mar, como o atum, o que mostra que as pessoas tinham barcos e pescavam longe da costa."
+     },
+     "difficulty": 10
+    }
+   ],
+   "related": [
+    "mun.lautem",
+    "place.tutuala",
+    "place.lene_hara",
+    "place.ili_kere_kere",
+    "place.nino_konis_santana_park",
+    "tl.history.first_peoples",
+    "tl.prehistory.cave_sites"
+   ],
+   "tags": [
+    "archaeology",
+    "cave",
+    "prehistory",
+    "lautem"
+   ],
+   "sources": [
+    {
+     "title": "Pelagic fishing at 42,000 years before the present and the maritime skills of modern humans (O'Connor, Ono, Clarkson)",
+     "publisher": "Science (AAAS)",
+     "url": "https://www.science.org/doi/10.1126/science.1207703",
+     "accessed": "2026-11-02",
+     "licence": "© AAAS"
+    },
+    {
+     "title": "World's oldest fishing hook found",
+     "publisher": "Australian Geographic",
+     "url": "https://www.australiangeographic.com.au/news/2011/11/worlds-oldest-fishing-hook-found/",
+     "accessed": "2026-11-02",
+     "licence": "© Australian Geographic"
+    },
+    {
+     "title": "Lautém Municipality",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Laut%C3%A9m_Municipality",
+     "accessed": "2026-11-02",
+     "licence": "CC BY-SA 4.0"
+    }
+   ],
+   "review": {
+    "status": "draft",
+    "notes": "Written on 2 Nov 2026 from WebSearch result summaries (timorleste.tl itself could not be opened in the sandbox); coordinates checked only against the Lafa municipality map. Facts match tl.history.first_peoples (O'Connor et al., Science 2011; >38,000 fish bones; about 42,000 years; shell hook 23,000–16,000 years). The Science and Australian Geographic URLs were found by the writer of history_early.json, not in this session. Visitor access and the exact site were not checked; coordinates approximate (near Tutuala). A Wikipedia page 'Jerimalai' may exist — not added to 'wiki' because it was not checked."
+   }
+  },
+  {
+   "id": "place.paitchau",
+   "name": {
+    "tet": "Foho Paitchau",
+    "pt": "Serra de Paitchau"
+   },
+   "municipality": "mun.lautem",
+   "type": "mountain",
+   "lat": -8.48,
+   "lon": 127.17,
+   "summary": {
+    "tet": "Foho fatuk-ahu nian ida ne'ebé ai-laran taka, iha Lautein nia leste, iha Parke Nasionál Nino Konis Santana nia laran, besik lagoa Ira Lalaro.",
+    "pt": "Uma serra de calcário coberta de floresta no leste de Lautém, dentro do Parque Nacional Nino Konis Santana, perto da lagoa Ira Lalaro."
+   },
+   "text": {
+    "tet": "Foho Paitchau sa'e iha Lautein nia leste, iha Parke Nasionál Nino Konis Santana nia laran, besik lagoa Ira Lalaro no rai-tetuk Fuiloro. Foho ne'e husi fatuk-ahu, fatuk ne'ebé moris husi ahu-ruin tuan sira ne'ebé sa'e husi tasi durante tinan tokon barak, no foho ne'e iha ai-laran ne'ebé di'ak liu balu iha Timór-Leste. Iha ai-laran hirak ne'e hela manu ne'ebé iha de'it iha Timor no illa viziñu sira, no ema ne'ebé gosta haree manu mai husi dook atu haree sira. Ba povu Fataluku, foho, fatuk-kuak no bee-matan iha ne'e parte husi klan sira-nia istória, no fatin balu lulik. Dalan ho marka uitoan de'it, tan ne'e ema la'o ain ho guia husi aldeia sira, ne'ebé hatene dalan no regra.",
+    "pt": "A serra de Paitchau ergue-se no leste de Lautém, dentro do Parque Nacional Nino Konis Santana, perto da lagoa Ira Lalaro e do planalto de Fuiloro. É feita de calcário, a rocha formada por antigos recifes de coral que subiram do mar ao longo de milhões de anos, e está coberta por algumas das florestas mais bem conservadas de Timor-Leste. Nestas florestas vivem aves que só existem em Timor e nas ilhas vizinhas, e os observadores de aves vêm de longe para as ver. Para o povo fataluco, os montes, as grutas e as nascentes da serra fazem parte da história dos clãs, e alguns lugares são lulik. Há poucos trilhos marcados, por isso as caminhadas fazem-se com guias das aldeias, que conhecem os caminhos e as regras."
+   },
+   "tips": {
+    "tet": "Selu guia ida iha Lospalos, Tutuala ka iha aldeia ida besik lagoa, no husu lisensa molok tama fatin lulik. Lori bee-hemu barak; ai-laran manas no bokon. Keta foti ai-horis ka manu.",
+    "pt": "Contrate um guia em Lospalos, Tutuala ou numa aldeia perto da lagoa e peça licença antes de entrar em lugares sagrados. Leve muita água; a floresta é quente e húmida. Não apanhe plantas nem aves."
+   },
+   "illustration": "mountain",
+   "related": [
+    "mun.lautem",
+    "place.nino_konis_santana_park",
+    "place.ira_lalaro",
+    "place.lospalos",
+    "tl.nature.protected_areas",
+    "tl.nature.birds"
+   ],
+   "tags": [
+    "mountain",
+    "forest",
+    "birds",
+    "lautem"
+   ],
+   "sources": [
+    {
+     "title": "Nino Konis Santana National Park",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Nino_Konis_Santana_National_Park",
+     "accessed": "2026-11-02",
+     "licence": "CC BY-SA 4.0"
+    },
+    {
+     "title": "Lautém Municipality",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Laut%C3%A9m_Municipality",
+     "accessed": "2026-11-02",
+     "licence": "CC BY-SA 4.0"
+    },
+    {
+     "title": "Lautem",
+     "publisher": "Exploring Timor-Leste (exploringtimor.com)",
+     "url": "https://exploringtimor.com/lautem/",
+     "accessed": "2026-11-02",
+     "licence": "© publisher"
+    }
+   ],
+   "review": {
+    "status": "draft",
+    "notes": "Written on 2 Nov 2026 from WebSearch result summaries (timorleste.tl itself could not be opened in the sandbox); coordinates checked only against the Lafa municipality map. NOT seen in this session's search results: the Paitchau range inside Nino Konis Santana National Park, near Ira Lalaro, is from general knowledge (it is named in common descriptions of the park and of a bird area with Ira Lalaro). Check the spelling (Paitchau/Paichau/Paitxau), its extent and access, and drop the entry if it cannot be confirmed. Coordinates are a rough estimate."
+   }
+  },
+  {
+   "id": "place.baucau_cathedral",
+   "name": {
+    "tet": "Katedrál Santo António (Baukau)",
+    "pt": "Catedral de Santo António (Baucau)"
+   },
+   "municipality": "mun.baucau",
+   "type": "church",
+   "lat": -8.469,
+   "lon": 126.455,
+   "summary": {
+    "tet": "Diosese Baukau nia katedrál, ho Santo António nia naran, mak igreja prinsipál iha Timór-Leste nia leste. Website turizmu ofisiál hatama katedrál ne'e iha fatin sira atu vizita iha Baukau.",
+    "pt": "A catedral da Diocese de Baucau, dedicada a Santo António, é a principal igreja do leste de Timor-Leste. O site oficial de turismo inclui-a entre os lugares a visitar em Baucau."
+   },
+   "text": {
+    "tet": "Baukau, sidade daruak Timór-Leste nian, mak sede ba diosese katólika ida husi diosese tolu iha nasaun. Diosese Baukau moris iha 1996, ketak husi Dili nian, no ninia katedrál iha Santo António nia naran, santu Portugés husi Lisboa ne'ebé timoroan barak hadomi. Iha Domingu no iha festa boot sira, hanesan Páskoa no Natál, igreja nakonu ho família sira ne'ebé hatais roupa di'ak, no ema rona kantiku iha Tetun to'o li'ur. Fiar katólika iha papél importante durante okupasaun, bainhira Igreja mak fatin uitoan ida ne'ebé ema bele halibur no ko'alia ho liberdade uitoan. Ba vizitante, katedrál mak fatin di'ak atu para entre vila tuan, merkadu no fatin ne'ebé ita haree tasi husi rai-tetuk.",
+    "pt": "Baucau, a segunda cidade de Timor-Leste, é a sede de uma das três dioceses católicas do país. A Diocese de Baucau foi criada em 1996, separada da de Díli, e a sua catedral é dedicada a Santo António, o santo português de Lisboa, muito querido em Timor. Ao domingo e nas grandes festas, como a Páscoa e o Natal, a igreja enche-se de famílias vestidas a rigor, e os cânticos em tétum ouvem-se cá fora. A fé católica teve um papel importante durante a ocupação, quando a Igreja era um dos poucos lugares onde as pessoas podiam juntar-se e falar com alguma liberdade. Para o visitante, a catedral é uma boa paragem entre a vila antiga, o mercado e o miradouro sobre o mar, na beira do planalto."
+   },
+   "tips": {
+    "tet": "Hatais roupa naruk no di'ak no tama ho nonok. Durante misa, keta la'o-la'o no keta foti foto la ho lisensa. Misa Domingu dadeer nian mak oportunidade di'ak atu rona kantiku sira.",
+    "pt": "Vista roupa que cubra ombros e joelhos e entre em silêncio. Durante a missa, não circule nem fotografe sem licença. A missa de domingo de manhã é uma boa ocasião para ouvir os cânticos."
+   },
+   "illustration": "church",
+   "quiz": [
+    {
+     "q": {
+      "tet": "Diosese Baukau moris iha tinan saida?",
+      "pt": "Em que ano foi criada a Diocese de Baucau?"
+     },
+     "options": [
+      {
+       "tet": "1975",
+       "pt": "1975"
+      },
+      {
+       "tet": "1515",
+       "pt": "1515"
+      },
+      {
+       "tet": "2010",
+       "pt": "2010"
+      },
+      {
+       "tet": "1996",
+       "pt": "1996"
+      }
+     ],
+     "answer": 3,
+     "why": {
+      "tet": "Diosese Baukau moris iha 1996, ketak husi Diosese Dili. Iha 2010 moris Diosese Maliana.",
+      "pt": "A Diocese de Baucau foi criada em 1996, separada da de Díli. Em 2010 foi criada a Diocese de Maliana."
+     },
+     "difficulty": 11
+    }
+   ],
+   "related": [
+    "mun.baucau",
+    "place.baucau_old_town",
+    "place.baucau_market",
+    "tl.culture.catholic_traditions",
+    "tl.society.religion"
+   ],
+   "tags": [
+    "church",
+    "cathedral",
+    "baucau"
+   ],
+   "sources": [
+    {
+     "title": "Attractions (beaches, dive sites, peaks, waterfalls, forts, markets and sacred places)",
+     "publisher": "timorleste.tl (official tourism website of Timor-Leste)",
+     "url": "https://timorleste.tl/destinations/attractions",
+     "accessed": "2026-11-02",
+     "licence": "© publisher"
+    },
+    {
+     "title": "Baucau",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Baucau",
+     "accessed": "2026-11-02",
+     "licence": "CC BY-SA 4.0"
+    },
+    {
+     "title": "Roman Catholic Diocese of Baucau",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Roman_Catholic_Diocese_of_Baucau",
+     "accessed": "2026-11-02",
+     "licence": "CC BY-SA 4.0"
+    }
+   ],
+   "review": {
+    "status": "draft",
+    "notes": "Written on 2 Nov 2026 from WebSearch result summaries (timorleste.tl itself could not be opened in the sandbox); coordinates checked only against the Lafa municipality map. 'St. Anthony Cathedral' listed for Baucau on timorleste.tl/destinations/attractions (search summary). Diocese created 1996 (from Dili); three dioceses today (Dili, an archdiocese since 2019; Baucau; Maliana, 2010) — general knowledge, check; the Wikipedia page title 'Roman Catholic Diocese of Baucau' was not opened. Coordinates: centre of Baucau, approximate; whether the cathedral is in the upper or lower town was not checked."
+   }
+  },
+  {
+   "id": "place.baucau_market",
+   "name": {
+    "tet": "Merkadu tradisionál Baukau",
+    "pt": "Mercado tradicional de Baucau"
+   },
+   "municipality": "mun.baucau",
+   "type": "market",
+   "lat": -8.464,
+   "lon": 126.455,
+   "summary": {
+    "tet": "Merkadu Baukau halibur agrikultór husi foho leste nian no peskadór husi tasi-ibun. Website turizmu ofisiál hatama merkadu ne'e iha nasaun nia sidade daruak nia atrasaun sira.",
+    "pt": "O mercado de Baucau junta agricultores das montanhas do leste e pescadores da costa. O site oficial de turismo inclui-o entre as atrações da segunda cidade do país."
+   },
+   "text": {
+    "tet": "Baukau iha estrada sira nia krusamentu: ba loro-monu ita ba Dili, ba leste ba Lautein, no ba sul, liu Venilale no Ossu, ba Vikeke no kosta sul. Tan ne'e ninia merkadu tradisionál simu produtu husi área barak. Agrikultór sira husi foho lori modo, ai-fuan, batar, ai-farina, kafé no bua; husi tasi-ibun mai ikan foun no ikan maran; no feto sira fa'an tais, lafatik no biti. Iha tempu koloniál, merkadu munisipál uluk iha edifísiu koloniál ida iha vila tuan, ne'ebé sei dada vizitante sira-nia matan. Ba merkadu iha dadeer mak dalan di'ak atu rona lian Makasae no Tetun, koko hahán lokál no komprende moris iha nasaun nia leste.",
+    "pt": "Baucau fica num cruzamento de estradas: para oeste vai-se para Díli, para leste para Lautém e para sul, por Venilale e Ossu, para Viqueque e a costa sul. Por isso o seu mercado tradicional recebe produtos de muitas zonas. Agricultores das colinas trazem legumes, fruta, milho, mandioca, café e areca; da costa chegam peixe fresco e peixe seco; e as mulheres vendem tais, cestos e esteiras. No período colonial, o mercado municipal funcionava num edifício colonial da vila antiga, que ainda chama a atenção dos visitantes. Ir ao mercado de manhã é uma boa maneira de ouvir makasae e tétum, provar comida da terra e perceber a vida do leste do país."
+   },
+   "tips": {
+    "tet": "Ba iha dadeer sedu, bainhira merkadu moris liu. Husu lisensa molok foti foto ba ema fa'an-na'in sira. Sosa direitamente husi produtór sira no lori osan-surat ki'ik.",
+    "pt": "Vá de manhã cedo, quando o mercado está mais animado. Peça licença antes de fotografar os vendedores. Compre diretamente aos produtores e leve notas pequenas."
+   },
+   "illustration": "market",
+   "quiz": [
+    {
+     "q": {
+      "tet": "Aleinde Tetun, lian saida mak ema rona barak iha merkadu Baukau?",
+      "pt": "Além do tétum, que língua se ouve muito no mercado de Baucau?"
+     },
+     "options": [
+      {
+       "tet": "Baikenu",
+       "pt": "Baiqueno"
+      },
+      {
+       "tet": "Makasae",
+       "pt": "Makasae"
+      },
+      {
+       "tet": "Tokodede",
+       "pt": "Tokodede"
+      },
+      {
+       "tet": "Bunak",
+       "pt": "Bunak"
+      }
+     ],
+     "answer": 1,
+     "why": {
+      "tet": "Makasae mak lian prinsipál iha Baukau; Baikenu iha Oe-Kusi, Tokodede iha Likisá no Bunak iha Bobonaru no Kovalima.",
+      "pt": "O makasae é a principal língua de Baucau; o baiqueno fala-se em Oé-Cusse, o tokodede em Liquiçá e o bunak em Bobonaro e Cova Lima."
+     },
+     "difficulty": 7
+    }
+   ],
+   "related": [
+    "mun.baucau",
+    "place.baucau_old_town",
+    "place.baucau_cathedral",
+    "place.venilale_caves",
+    "tl.tourism.food_markets"
+   ],
+   "tags": [
+    "market",
+    "baucau",
+    "food",
+    "crafts"
+   ],
+   "sources": [
+    {
+     "title": "Attractions (beaches, dive sites, peaks, waterfalls, forts, markets and sacred places)",
+     "publisher": "timorleste.tl (official tourism website of Timor-Leste)",
+     "url": "https://timorleste.tl/destinations/attractions",
+     "accessed": "2026-11-02",
+     "licence": "© publisher"
+    },
+    {
+     "title": "Baucau",
+     "publisher": "Exploring Timor-Leste (exploringtimor.com)",
+     "url": "https://exploringtimor.com/baucau/",
+     "accessed": "2026-11-02",
+     "licence": "© publisher"
+    },
+    {
+     "title": "Baucau",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Baucau",
+     "accessed": "2026-11-02",
+     "licence": "CC BY-SA 4.0"
+    }
+   ],
+   "review": {
+    "status": "draft",
+    "notes": "Written on 2 Nov 2026 from WebSearch result summaries (timorleste.tl itself could not be opened in the sandbox); coordinates checked only against the Lafa municipality map. 'Traditional Baucau market' listed on timorleste.tl/destinations/attractions (search summary). Products, roads and the colonial market building follow the existing place 'Vila antiga de Baucau' and general knowledge — check market days and where the market is held today. Coordinates approximate."
+   }
+  },
+  {
+   "id": "place.beaco_beach",
+   "name": {
+    "tet": "Tasi-ibun Beaço",
+    "pt": "Praia de Beaço"
+   },
+   "municipality": "mun.viqueque",
+   "type": "beach",
+   "lat": -8.94,
+   "lon": 126.43,
+   "summary": {
+    "tet": "Tasi-ibun luan ida iha kosta sul, iha vila Vikeke nia sul, ho Tasi Timor nia ondas no la'o naruk iha rai-henek. Website turizmu ofisiál hatama tasi-ibun ne'e iha fatin sira atu vizita iha Vikeke.",
+    "pt": "Uma praia larga na costa sul, a sul da vila de Viqueque, com as ondas do mar de Timor e longos passeios pela areia. O site oficial de turismo inclui-a entre os lugares a visitar em Viqueque."
+   },
+   "text": {
+    "tet": "Beaço mak suku ida iha postu Vikeke, iha rai-tetuk ne'ebé tun husi vila to'o Tasi Timor. Tasi-ibun naruk no nakloke, ho rai-henek nakukun, hanesan iha tasi-ibun barak iha sul, nu'u-hun no ró ki'ik peskadór nian. La hanesan kosta norte, iha ne'e ahu-ruin uitoan de'it mak proteje kosta, no ondas to'o ho forsa, liuliu iha tempu udan. Tan ne'e tasi-ibun ne'e di'ak liu atu la'o-la'o, haree loro tun no ko'alia ho peskadór sira duké atu nani. Lafaek hela iha mota no lagoa sira iha kosta ne'e. Beaço mós mosu iha Governu nia planu ba kosta sul: iha 2011, projetu Tasi Mane planeia fábrika gás naturál ida iha ne'e, maibé iha 2023 planu ne'e muda.",
+    "pt": "Beaço é um suco do posto de Viqueque, na planície que desce da vila até ao mar de Timor. A praia é longa e aberta, com areia escura, como muitas praias do sul, coqueiros e pequenos barcos de pescadores. Ao contrário da costa norte, aqui poucos recifes protegem a costa, e as ondas chegam com força, sobretudo na época das chuvas. Por isso a praia é melhor para passear, ver o pôr do sol e conversar com os pescadores do que para nadar. Nos rios e lagoas desta costa vivem crocodilos de água salgada. Beaço aparece também nos planos do Governo para a costa sul: em 2011, o projeto Tasi Mane previa aqui uma fábrica de gás natural, mas em 2023 o plano foi reorganizado."
+   },
+   "tips": {
+    "tet": "Keta nani besik mota-ibun no iha loro-tun, no husu ba peskadór sira fatin ne'ebé seguru atu tama bee. Lori bee-hemu no buat ba mahon; servisu uitoan de'it. Halo vizita hamutuk ho kalan ida iha Vikeke.",
+    "pt": "Não nade perto de fozes de rios nem ao anoitecer, e pergunte aos pescadores onde é seguro entrar na água. Leve água e sombra; há poucos serviços. Combine a visita com uma noite em Viqueque."
+   },
+   "illustration": "beach",
+   "quiz": [
+    {
+     "q": {
+      "tet": "Tanba saida mak tasi-ibun Beaço di'ak liu atu la'o-la'o duké atu nani?",
+      "pt": "Porque é que a praia de Beaço é melhor para passear do que para nadar?"
+     },
+     "options": [
+      {
+       "tet": "Tanba bee la masin",
+       "pt": "Porque a água não é salgada"
+      },
+      {
+       "tet": "Tanba ondas makaas no lafaek iha mota no lagoa sira",
+       "pt": "Por causa das ondas fortes e dos crocodilos nos rios e lagoas"
+      },
+      {
+       "tet": "Tanba bandu atu kaer rai-henek",
+       "pt": "Porque é proibido tocar na areia"
+      },
+      {
+       "tet": "Tanba nia iha foho nia tutun",
+       "pt": "Porque fica no alto de uma montanha"
+      }
+     ],
+     "answer": 1,
+     "why": {
+      "tet": "Iha kosta sul, ondas makaas no lafaek hela iha mota no lagoa sira; tan ne'e nani perigu.",
+      "pt": "Na costa sul as ondas são fortes e há crocodilos nos rios e lagoas, por isso nadar é perigoso."
+     },
+     "difficulty": 5
+    }
+   ],
+   "related": [
+    "mun.viqueque",
+    "place.viqueque_town",
+    "place.betano_beach",
+    "tl.tourism.beaches_islands",
+    "tl.nature.crocodile"
+   ],
+   "tags": [
+    "beach",
+    "south-coast",
+    "viqueque"
+   ],
+   "sources": [
+    {
+     "title": "Viqueque",
+     "publisher": "timorleste.tl (official tourism website of Timor-Leste)",
+     "url": "https://timorleste.tl/destinations/viqueque",
+     "accessed": "2026-11-02",
+     "licence": "© publisher"
+    },
+    {
+     "title": "Visit Viqueque Municipality in Timor-Leste",
+     "publisher": "timorleste.tl (official tourism website of Timor-Leste)",
+     "url": "https://www.timorleste.tl/?p=5393",
+     "accessed": "2026-11-02",
+     "licence": "© publisher"
+    },
+    {
+     "title": "Viqueque Municipality",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Viqueque_Municipality",
+     "accessed": "2026-11-02",
+     "licence": "CC BY-SA 4.0"
+    }
+   ],
+   "review": {
+    "status": "draft",
+    "notes": "Written on 2 Nov 2026 from WebSearch result summaries (timorleste.tl itself could not be opened in the sandbox); coordinates checked only against the Lafa municipality map. 'Beaco Beach' listed for Viqueque on timorleste.tl (search summary); sand colour, palms and surf are general for the south coast — check. Tasi Mane (an LNG plant at Beaço in the 2011 plan; plan reorganised in 2023) follows economy.json. Coordinates approximate (south coast below Viqueque town)."
+   }
+  },
+  {
+   "id": "place.viqueque_church",
+   "name": {
+    "tet": "Igreja Imakulada Konseisaun (Vikeke)",
+    "pt": "Igreja da Imaculada Conceição (Viqueque)"
+   },
+   "municipality": "mun.viqueque",
+   "type": "church",
+   "lat": -8.866,
+   "lon": 126.366,
+   "summary": {
+    "tet": "Igreja paróquia boot iha vila Vikeke, ho Imakulada Konseisaun nia naran. Tuir guia viajen ida, igreja ne'e remata iha 2014. Ne'e vila nia moris katólika nia sentru.",
+    "pt": "A grande igreja paroquial da vila de Viqueque, dedicada à Imaculada Conceição e concluída em 2014, segundo um guia de viagem. É o centro da vida católica da vila."
+   },
+   "text": {
+    "tet": "Vikeke mak kapitál ba munisípiu ho naran hanesan, iha foho sira nia sorin sul, no ninia igreja paróquia boot mak fatin sentrál ida iha vila nia moris. Tuir guia viajen ida, igreja Imakulada Konseisaun remata iha 2014. Hanesan iha vila barak iha Timór-Leste, ne'ebé ema maioria boot mak katóliku, igreja simu misa Domingu nian, batizmu no kazamentu, no prosisaun Semana Santa nian sai husi ne'e. Iha 8 Dezembru, loron Imakulada Konseisaun no feriadu nasionál, paróquia selebra ninia padroeira. Iha Maiu no Outubru, fulan ne'ebé dedika ba Maria, grupu orasaun sira reza rozáriu iha aldeia sira iha haleu. Igreja mós fatin hasoru malu ba koru no grupu foin-sa'e sira.",
+    "pt": "Viqueque é a capital do município com o mesmo nome, no lado sul das montanhas, e a sua grande igreja paroquial é um lugar central da vida da vila. Segundo um guia de viagem, a igreja da Imaculada Conceição foi concluída em 2014. Como em quase todas as vilas de Timor-Leste, onde a grande maioria da população é católica, a igreja recebe as missas de domingo, os batismos e os casamentos, e dela saem as procissões da Semana Santa. A 8 de dezembro, dia da Imaculada Conceição e feriado nacional, a paróquia celebra a sua padroeira. Em maio e outubro, meses dedicados a Maria, grupos de oração rezam o terço nas aldeias à volta. A igreja é também ponto de encontro de coros e grupos de jovens."
+   },
+   "tips": {
+    "tet": "Hatais roupa ne'ebé di'ak no tama ho nonok. Se ita to'o durante misa, tuur iha kotuk no keta foti foto. Iha festa 8 Dezembru ema barak tebes: to'o sedu.",
+    "pt": "Vista-se com modéstia e entre em silêncio. Se chegar durante a missa, sente-se atrás e não fotografe. Na festa de 8 de dezembro há muita gente: chegue cedo."
+   },
+   "illustration": "church",
+   "quiz": [
+    {
+     "q": {
+      "tet": "Loron saida mak feriadu nasionál no festa ba igreja ne'e nia padroeira?",
+      "pt": "Que dia é feriado nacional e festa da padroeira desta igreja?"
+     },
+     "options": [
+      {
+       "tet": "20 Maiu",
+       "pt": "20 de maio"
+      },
+      {
+       "tet": "1 Janeiru",
+       "pt": "1 de janeiro"
+      },
+      {
+       "tet": "8 Dezembru",
+       "pt": "8 de dezembro"
+      },
+      {
+       "tet": "30 Agostu",
+       "pt": "30 de agosto"
+      }
+     ],
+     "answer": 2,
+     "why": {
+      "tet": "8 Dezembru mak festa Imakulada Konseisaun, feriadu nasionál iha Timór-Leste.",
+      "pt": "O 8 de dezembro é a festa da Imaculada Conceição, feriado nacional em Timor-Leste."
+     },
+     "difficulty": 6
+    }
+   ],
+   "related": [
+    "mun.viqueque",
+    "place.viqueque_town",
+    "day.immaculate",
+    "tl.culture.catholic_traditions"
+   ],
+   "tags": [
+    "church",
+    "viqueque"
+   ],
+   "sources": [
+    {
+     "title": "Viqueque",
+     "publisher": "Exploring Timor-Leste (exploringtimor.com)",
+     "url": "https://exploringtimor.com/viqueque",
+     "accessed": "2026-11-02",
+     "licence": "© publisher"
+    },
+    {
+     "title": "Viqueque",
+     "publisher": "timorleste.tl (official tourism website of Timor-Leste)",
+     "url": "https://timorleste.tl/destinations/viqueque",
+     "accessed": "2026-11-02",
+     "licence": "© publisher"
+    },
+    {
+     "title": "Viqueque",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Viqueque",
+     "accessed": "2026-11-02",
+     "licence": "CC BY-SA 4.0"
+    }
+   ],
+   "review": {
+    "status": "draft",
+    "notes": "Written on 2 Nov 2026 from WebSearch result summaries (timorleste.tl itself could not be opened in the sandbox); coordinates checked only against the Lafa municipality map. Name and completion year (2014) from a travel guide seen only in a search summary (most likely exploringtimor.com/viqueque) — check both. The patron feast on 8 December is assumed from the dedication; choirs and youth groups are general. Coordinates: Viqueque town, approximate."
+   }
+  },
+  {
+   "id": "place.uato_lari",
+   "name": {
+    "tet": "Uato-Lari",
+    "pt": "Uato-Lari (Uatolari)"
+   },
+   "municipality": "mun.viqueque",
+   "type": "town",
+   "lat": -8.8,
+   "lon": 126.52,
+   "summary": {
+    "tet": "Postu administrativu ida iha Vikeke nia leste, ho natar luan iha rai-tetuk ne'ebé tun ba Tasi Timor. Iha 1959, área ne'e sai sentru ida husi revolta hasoru ukun koloniál.",
+    "pt": "Posto administrativo do leste de Viqueque, com largos arrozais na planície que desce para o mar de Timor. Em 1959, esta zona foi um dos centros de uma revolta contra o domínio colonial."
+   },
+   "text": {
+    "tet": "Uato-Lari iha vila Vikeke nia leste, entre foho sira no kosta sul nia rai-tetuk. Hamutuk ho Uatucarbau, iha ninia sorin, ne'e área hare prinsipál ida iha Timór-Leste: mota sira ne'ebé tun husi foho fó bee ba natar luan, ne'ebé iha tempu kuda sai matak no iha tempu kolleita nakonu ho família sira ne'ebé servisu. Ema ko'alia Makasae no Naueti, hamutuk ho Tetun. Iha Juñu 1959, Uato-Lari no Uatucarbau sai sentru ba revolta ida hasoru administrasaun Portugés, ne'ebé autoridade sira hanetik ho forsa makaas; ema barak mate ka sai prezu, no lider balu hetan deportasaun. Ohin loron ema hanoin revolta ne'e nu'udar sinál sedu ida husi hakarak ba liberdade. Husi ne'e, dalan sira lori ba tasi-ibun hakmatek iha kosta sul.",
+    "pt": "Uato-Lari fica a leste da vila de Viqueque, entre as colinas e a planície da costa sul. Com Uatucarbau, ali ao lado, é uma das principais zonas de arroz de Timor-Leste: rios que descem das montanhas regam campos largos, que na época de cultivo ficam verde-vivos e, na colheita, se enchem de famílias a trabalhar. Fala-se makasae e naueti, além do tétum. Em junho de 1959, Uato-Lari e Uatucarbau foram centros de uma revolta contra a administração portuguesa, que as autoridades reprimiram com dureza; muitas pessoas foram mortas ou presas, e alguns líderes foram deportados. Hoje a revolta é lembrada como um sinal precoce do desejo de liberdade. Daqui, caminhos levam às praias tranquilas da costa sul."
+   },
+   "tips": {
+    "tet": "Keta la'o iha natar nia ninin la ho lisensa, no keta hakat iha hare foun. Iha tempu udan mota sira nakonu lalais: husu kona-ba estrada nia kondisaun. Husu lisensa molok foti foto ba ema ne'ebé servisu iha natar.",
+    "pt": "Não caminhe pelos diques dos arrozais sem licença e não pise o arroz novo. Na época das chuvas os rios enchem depressa: pergunte pelo estado das estradas. Peça licença antes de fotografar quem trabalha nos campos."
+   },
+   "illustration": "rice",
+   "quiz": [
+    {
+     "q": {
+      "tet": "Revolta Vikeke, ho sentru iha Uato-Lari no Uatucarbau, hahú iha tinan saida?",
+      "pt": "Em que ano começou a revolta de Viqueque, com centro em Uato-Lari e Uatucarbau?"
+     },
+     "options": [
+      {
+       "tet": "1912",
+       "pt": "1912"
+      },
+      {
+       "tet": "1975",
+       "pt": "1975"
+      },
+      {
+       "tet": "1999",
+       "pt": "1999"
+      },
+      {
+       "tet": "1959",
+       "pt": "1959"
+      }
+     ],
+     "answer": 3,
+     "why": {
+      "tet": "Revolta hahú iha Juñu 1959 no autoridade koloniál hanetik ho forsa makaas.",
+      "pt": "A revolta começou em junho de 1959 e foi reprimida com dureza pelas autoridades coloniais."
+     },
+     "difficulty": 12
+    }
+   ],
+   "related": [
+    "mun.viqueque",
+    "place.viqueque_town",
+    "tl.economy.agriculture",
+    "tl.colonial.colonial_rule"
+   ],
+   "tags": [
+    "town",
+    "rice",
+    "viqueque",
+    "1959"
+   ],
+   "sources": [
+    {
+     "title": "1959 Viqueque rebellion",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/1959_Viqueque_rebellion",
+     "accessed": "2026-11-02",
+     "licence": "CC BY-SA 4.0"
+    },
+    {
+     "title": "Viqueque Municipality",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Viqueque_Municipality",
+     "accessed": "2026-11-02",
+     "licence": "CC BY-SA 4.0"
+    },
+    {
+     "title": "Viqueque",
+     "publisher": "Exploring Timor-Leste (exploringtimor.com)",
+     "url": "https://exploringtimor.com/viqueque",
+     "accessed": "2026-11-02",
+     "licence": "© publisher"
+    }
+   ],
+   "review": {
+    "status": "draft",
+    "notes": "Written on 2 Nov 2026 from WebSearch result summaries (timorleste.tl itself could not be opened in the sandbox); coordinates checked only against the Lafa municipality map. Not in the attractions list seen in search results; added as a town of Viqueque. 1959 revolt (June 1959, centred on Uato-Lari and Uatucarbau, harsh repression, deportations) from general knowledge and the Wikipedia article cited by other writers — check the start date and wording against the tl.colonial articles. Rice (economy.json) and languages Makasae/Naueti (tl.culture.ethnic_groups) — check. Coordinates approximate (Uato-Lari post)."
+   }
+  },
+  {
+   "id": "place.manatuto_monument",
+   "name": {
+    "tet": "Monumentu Manatutu",
+    "pt": "Monumento de Manatuto"
+   },
+   "municipality": "mun.manatuto",
+   "type": "monument",
+   "lat": -8.513,
+   "lon": 126.005,
+   "summary": {
+    "tet": "Memoriál boot ida iha vila Manatutu nia odamatan, iha estrada husi Dili ba Baukau, ne'ebé hanoin fali amu-lulik no asuwa'in sira husi rai ne'e. Website turizmu ofisiál hatama monumentu ne'e iha munisípiu nia atrasaun sira.",
+    "pt": "Um grande memorial à entrada da vila de Manatuto, na estrada de Díli para Baucau, que lembra os padres e os heróis da terra. O site oficial de turismo inclui-o entre as atrações do município."
+   },
+   "text": {
+    "tet": "Ema ne'ebé to'o Manatutu liu estrada tasi-ibun nian haree memoriál boot ida iha vila nia odamatan. Guia viajen ida deskreve memoriál ne'e nu'udar onra ba amu-lulik no asuwa'in sira husi Manatutu, no website turizmu ofisiál hatama 'Monumentu Manatutu' iha fatin sira atu vizita iha munisípiu. Munisípiu ne'e mós rai-moris ba figura independénsia nian: Xanana Gusmão moris iha Laleia no Nicolau Lobato iha Soibada, sira na'in-rua iha 1946. Iha tempu koloniál, misaun katólika iha Soibada eduka timoroan barak ne'ebé depois sai profesór, amu-lulik no lider. Monumentu ne'e fatin para badak ida iha viajen ba leste, no husi ne'e ita bele kontinua ba merkadu Domingu nian, ba tasi-ibun ka ba igreja Laleia.",
+    "pt": "Quem chega a Manatuto pela estrada costeira vê, à entrada da vila, um grande memorial. Um guia de viagem descreve-o como uma homenagem aos padres e aos heróis de Manatuto, e o site oficial de turismo inclui o 'Monumento de Manatuto' entre os lugares a visitar no município. O município é também terra natal de figuras da independência: Xanana Gusmão nasceu em Laleia e Nicolau Lobato em Soibada, ambos em 1946. No período colonial, a missão católica de Soibada educou muitos timorenses que mais tarde foram professores, padres e líderes. O monumento é uma paragem curta na viagem para leste, e daqui pode continuar-se para o mercado de domingo, a praia ou a igreja de Laleia."
+   },
+   "tips": {
+    "tet": "Para ho kuidadu iha estrada ninin, tanba estrada tasi-ibun nian iha kareta barak. Respeita memoriál: keta sa'e no keta tuur iha nia leten. Lee plaka sira no husu ba ema lokál se mak hetan onra iha ne'e.",
+    "pt": "Pare com cuidado na berma, porque a estrada costeira tem muito trânsito. Respeite o memorial: não suba nem se sente nele. Leia as placas e pergunte às pessoas da terra quem é homenageado."
+   },
+   "illustration": "monument",
+   "quiz": [
+    {
+     "q": {
+      "tet": "Xanana Gusmão no Nicolau Lobato moris iha ne'ebé?",
+      "pt": "Onde nasceram Xanana Gusmão e Nicolau Lobato?"
+     },
+     "options": [
+      {
+       "tet": "Iha munisípiu Manatutu (Laleia no Soibada)",
+       "pt": "No município de Manatuto (Laleia e Soibada)"
+      },
+      {
+       "tet": "Iha Lospalos",
+       "pt": "Em Lospalos"
+      },
+      {
+       "tet": "Iha Oe-Kusi",
+       "pt": "Em Oé-Cusse"
+      },
+      {
+       "tet": "Iha Atauru",
+       "pt": "Em Ataúro"
+      }
+     ],
+     "answer": 0,
+     "why": {
+      "tet": "Xanana Gusmão moris iha Laleia no Nicolau Lobato iha Soibada, sira na'in-rua iha 1946, iha munisípiu Manatutu.",
+      "pt": "Xanana Gusmão nasceu em Laleia e Nicolau Lobato em Soibada, ambos em 1946, no município de Manatuto."
+     },
+     "difficulty": 9
+    }
+   ],
+   "related": [
+    "mun.manatuto",
+    "place.manatuto_town",
+    "place.laleia_church",
+    "place.aitara_shrine",
+    "tl.leaders.xanana_gusmao",
+    "tl.leaders.nicolau_lobato"
+   ],
+   "tags": [
+    "monument",
+    "manatuto",
+    "heroes"
+   ],
+   "sources": [
+    {
+     "title": "Visit Manatuto Municipality in Timor-Leste",
+     "publisher": "timorleste.tl (official tourism website of Timor-Leste)",
+     "url": "https://www.timorleste.tl/?p=5385",
+     "accessed": "2026-11-02",
+     "licence": "© publisher"
+    },
+    {
+     "title": "Manatuto",
+     "publisher": "Exploring Timor-Leste (exploringtimor.com)",
+     "url": "https://exploringtimor.com/manatuto/",
+     "accessed": "2026-11-02",
+     "licence": "© publisher"
+    },
+    {
+     "title": "Manatuto Municipality",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Manatuto_Municipality",
+     "accessed": "2026-11-02",
+     "licence": "CC BY-SA 4.0"
+    }
+   ],
+   "review": {
+    "status": "draft",
+    "notes": "Written on 2 Nov 2026 from WebSearch result summaries (timorleste.tl itself could not be opened in the sandbox); coordinates checked only against the Lafa municipality map. Listed as 'Manatuto Monument' on timorleste.tl (search summary); 'a large memorial to Manatuto priests (and heroes) at the town entrance' from exploringtimor.com (search summaries) — the names on it were not checked. Birthplaces and the Soibada mission school as in municipalities.json and place.aitara_shrine. Coordinates approximate (western entrance of Manatuto town)."
+   }
+  },
+  {
+   "id": "place.manatuto_market",
+   "name": {
+    "tet": "Merkadu Domingu no artezanatu Manatutu",
+    "pt": "Mercado de domingo e artesanato de Manatuto"
+   },
+   "municipality": "mun.manatuto",
+   "type": "market",
+   "lat": -8.512,
+   "lon": 126.018,
+   "summary": {
+    "tet": "Manatutu iha merkadu moris ida iha Domingu, no ema hatene rai ne'e ho sanan-rai ne'ebé ema halo ho liman no ho fatin halo masin iha tasi-ibun, ne'ebé boot liu balu iha nasaun.",
+    "pt": "Manatuto tem um mercado animado ao domingo, e a terra é conhecida pela cerâmica de barro feita à mão e pelas salinas junto à costa, entre as maiores do país."
+   },
+   "text": {
+    "tet": "Website turizmu ofisiál ko'alia kona-ba merkadu Domingu ida ne'ebé moris tebes iha vila Manatutu no kona-ba sanan-rai terakota ne'ebé ema halo iha área ne'e. Sanan, bikan no sasán seluk husi rai, ema forma ho liman no sunu iha ahi, téknika tuan ida iha Timor, fatin ne'ebé sanan-rai to'o tinan rihun barak liubá ho povu Austronézia sira. Besik vila, iha kosta maran, família sira halo masin husi tasi-been iha tempu bailoron. Guia viajen ida dehan katak fatin halo masin sira ne'e boot liu balu iha nasaun. Iha merkadu, ita bele hetan masin, sanan-rai, ikan, modo no bua. Ba vizitante, ne'e oportunidade atu sosa artezanatu direitamente husi ema ne'ebé halo no atu ajuda família lokál sira.",
+    "pt": "O site oficial de turismo fala de um mercado de domingo muito animado na vila de Manatuto e da cerâmica de terracota feita na zona. Potes, tigelas e outros objetos de barro são moldados à mão e cozidos ao fogo, uma técnica antiga em Timor, onde a cerâmica chegou há milhares de anos com os povos austronésios. Perto da vila, na costa seca, as famílias fazem sal a partir da água do mar durante a época seca. Um guia de viagem diz que estas salinas estão entre as maiores do país. No mercado podem encontrar-se sal, cerâmica, peixe, legumes e areca. Para o visitante, é uma ocasião para comprar artesanato diretamente a quem o faz e para ajudar as famílias da terra."
+   },
+   "tips": {
+    "tet": "Ba merkadu iha Domingu dadeer. Husu lisensa molok foti foto ba ema ne'ebé halo sanan-rai no ba fatin halo masin, tanba ne'e sira-nia fatin servisu. Falun di'ak sanan-rai ba viajen, tanba nia fasil atu kotu.",
+    "pt": "Vá ao mercado na manhã de domingo. Pergunte antes de fotografar as oleiras e as salinas, que são locais de trabalho. Embrulhe bem a cerâmica para a viagem, porque parte com facilidade."
+   },
+   "illustration": "pottery",
+   "quiz": [
+    {
+     "q": {
+      "tet": "Produtu tradisionál saida mak halo Manatutu sai famozu?",
+      "pt": "Que produtos tradicionais tornam Manatuto conhecida?"
+     },
+     "options": [
+      {
+       "tet": "Vinhu no keiju",
+       "pt": "Vinho e queijo"
+      },
+      {
+       "tet": "Seda no xá",
+       "pt": "Seda e chá"
+      },
+      {
+       "tet": "Sanan-rai no masin",
+       "pt": "Cerâmica de barro e sal"
+      },
+      {
+       "tet": "Osan-mean no diamante",
+       "pt": "Ouro e diamantes"
+      }
+     ],
+     "answer": 2,
+     "why": {
+      "tet": "Manatutu famozu ho sanan-rai terakota ne'ebé ema halo ho liman no ho fatin halo masin iha kosta.",
+      "pt": "Manatuto é conhecida pela cerâmica de terracota feita à mão e pelas salinas da costa."
+     },
+     "difficulty": 4
+    }
+   ],
+   "related": [
+    "mun.manatuto",
+    "place.manatuto_town",
+    "place.manatuto_monument",
+    "tl.tourism.food_markets",
+    "tl.culture.crafts"
+   ],
+   "tags": [
+    "market",
+    "pottery",
+    "salt",
+    "manatuto"
+   ],
+   "sources": [
+    {
+     "title": "Visit Manatuto Municipality in Timor-Leste",
+     "publisher": "timorleste.tl (official tourism website of Timor-Leste)",
+     "url": "https://www.timorleste.tl/?p=5385",
+     "accessed": "2026-11-02",
+     "licence": "© publisher"
+    },
+    {
+     "title": "Manatuto",
+     "publisher": "Exploring Timor-Leste (exploringtimor.com)",
+     "url": "https://exploringtimor.com/manatuto/",
+     "accessed": "2026-11-02",
+     "licence": "© publisher"
+    },
+    {
+     "title": "Manatuto Municipality",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Manatuto_Municipality",
+     "accessed": "2026-11-02",
+     "licence": "CC BY-SA 4.0"
+    }
+   ],
+   "review": {
+    "status": "draft",
+    "notes": "Written on 2 Nov 2026 from WebSearch result summaries (timorleste.tl itself could not be opened in the sandbox); coordinates checked only against the Lafa municipality map. Sunday market and terracotta pottery from timorleste.tl (search summary of the Manatuto page); salt fields 'among the largest in the country' from exploringtimor.com (search summary). Pottery firing and salt-making are described in general terms — check (open firing; evaporation or boiling). Coordinates: Manatuto town, approximate."
+   }
+  },
+  {
+   "id": "place.laclubar",
+   "name": {
+    "tet": "Laclubar",
+    "pt": "Laclubar"
+   },
+   "municipality": "mun.manatuto",
+   "type": "town",
+   "lat": -8.75,
+   "lon": 125.9,
+   "summary": {
+    "tet": "Vila foho ida iha Manatutu nia klaran, ho anin malirin, vista luan no merkadu ida ne'ebé website turizmu ofisiál hatama iha atrasaun sira. Vila ne'e iha estrada ne'ebé liga kosta rua.",
+    "pt": "Vila de montanha no centro de Manatuto, com ar fresco, vistas largas e um mercado que o site oficial de turismo inclui entre as atrações. Fica na estrada que liga as duas costas."
+   },
+   "text": {
+    "tet": "Laclubar iha foho aas iha Manatutu nia rai-laran, iha estrada ne'ebé sa'e husi kosta norte no tun ba Natarbora nia rai-tetuk, besik Tasi Timor. Tan ne'e, ne'e ida husi estrada sira ne'ebé hakat illa husi kosta ida ba kosta seluk. Anin malirin, no husi foho-tutun sira ita haree vale kle'an no foho ne'ebé ai-laran taka. Iha ne'e ema ko'alia Idaté, lian ida ne'ebé la hanesan Galoli iha Manatutu nia kosta, hamutuk ho Tetun. Merkadu Laclubar, ne'ebé website turizmu ofisiál hatama iha atrasaun sira, halibur agrikultór sira ne'ebé fa'an modo, ai-fuan, batar no animál. Soibada no santuáriu Aitara iha besik. Kalan sira malirin, no iha dadeer kalohan dala barak taka vale sira.",
+    "pt": "Laclubar fica no alto das montanhas do interior de Manatuto, na estrada que sobe da costa norte e desce para a planície de Natarbora, junto ao mar de Timor. É, por isso, uma das estradas que atravessam a ilha de costa a costa. O ar é fresco, e das cumeadas veem-se vales profundos e serras cobertas de floresta. Aqui fala-se idaté, uma língua diferente do galóli da costa de Manatuto, além do tétum. O mercado de Laclubar, que o site oficial de turismo inclui entre as atrações, junta agricultores que vendem legumes, fruta, milho e animais. Soibada e o santuário de Aitara ficam perto. As noites são frescas, e de manhã o nevoeiro cobre muitas vezes os vales."
+   },
+   "tips": {
+    "tet": "Estrada foho nian kloot no kleuk-kleuk: halo viajen iha loron no, iha tempu udan, husu kona-ba estrada nia kondisaun. Lori roupa manas ba kalan. Ba merkadu iha dadeer.",
+    "pt": "A estrada de montanha é estreita e sinuosa: viaje de dia e, na época das chuvas, pergunte pelo estado da estrada. Leve roupa quente para a noite. Vá ao mercado de manhã."
+   },
+   "illustration": "town",
+   "quiz": [
+    {
+     "q": {
+      "tet": "Aleinde Tetun, lian saida mak ema ko'alia iha Laclubar?",
+      "pt": "Que língua se fala em Laclubar além do tétum?"
+     },
+     "options": [
+      {
+       "tet": "Fataluku",
+       "pt": "Fataluco"
+      },
+      {
+       "tet": "Baikenu",
+       "pt": "Baiqueno"
+      },
+      {
+       "tet": "Idaté",
+       "pt": "Idaté"
+      },
+      {
+       "tet": "Tokodede",
+       "pt": "Tokodede"
+      }
+     ],
+     "answer": 2,
+     "why": {
+      "tet": "Iha foho Laclubar ema ko'alia Idaté; Galoli iha kosta Manatutu nian.",
+      "pt": "Nas montanhas de Laclubar fala-se idaté; na costa de Manatuto fala-se galóli."
+     },
+     "difficulty": 10
+    }
+   ],
+   "related": [
+    "mun.manatuto",
+    "place.aitara_shrine",
+    "place.natarbora",
+    "place.manatuto_town",
+    "tl.culture.ethnic_groups"
+   ],
+   "tags": [
+    "town",
+    "market",
+    "manatuto",
+    "mountains"
+   ],
+   "sources": [
+    {
+     "title": "Attractions (beaches, dive sites, peaks, waterfalls, forts, markets and sacred places)",
+     "publisher": "timorleste.tl (official tourism website of Timor-Leste)",
+     "url": "https://timorleste.tl/destinations/attractions",
+     "accessed": "2026-11-02",
+     "licence": "© publisher"
+    },
+    {
+     "title": "Visit Manatuto Municipality in Timor-Leste",
+     "publisher": "timorleste.tl (official tourism website of Timor-Leste)",
+     "url": "https://www.timorleste.tl/?p=5385",
+     "accessed": "2026-11-02",
+     "licence": "© publisher"
+    },
+    {
+     "title": "Manatuto",
+     "publisher": "Exploring Timor-Leste (exploringtimor.com)",
+     "url": "https://exploringtimor.com/manatuto/",
+     "accessed": "2026-11-02",
+     "licence": "© publisher"
+    },
+    {
+     "title": "Manatuto Municipality",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Manatuto_Municipality",
+     "accessed": "2026-11-02",
+     "licence": "CC BY-SA 4.0"
+    }
+   ],
+   "review": {
+    "status": "draft",
+    "notes": "Written on 2 Nov 2026 from WebSearch result summaries (timorleste.tl itself could not be opened in the sandbox); coordinates checked only against the Lafa municipality map. Laclubar market listed on timorleste.tl/destinations/attractions (the search summary put it under Ainaro by mistake; Laclubar is in Manatuto). Idaté and the coast-to-coast road (Manatuto–Laclubar–Natarbora) as in municipalities.json — check the road's current state. Coordinates approximate (Laclubar post)."
+   }
+  },
+  {
+   "id": "place.natarbora",
+   "name": {
+    "tet": "Natarbora",
+    "pt": "Natarbora"
+   },
+   "municipality": "mun.manatuto",
+   "type": "town",
+   "lat": -9.0,
+   "lon": 126.06,
+   "summary": {
+    "tet": "Rai-tetuk iha Manatutu nia kosta sul, ho natar, karau no tasi-ibun naruk no hakmatek iha Tasi Timor. Governu hili área ne'e ba sentru ida husi projetu mina-rai Tasi Mane.",
+    "pt": "Planície da costa sul de Manatuto, com arrozais, búfalos e praias longas e tranquilas no mar de Timor. O Governo escolheu esta zona para um polo do projeto petrolífero Tasi Mane."
+   },
+   "text": {
+    "tet": "Natarbora iha postu administrativu Barique, fatin ne'ebé Manatutu nia foho sira tun ba rai-tetuk luan ida besik Tasi Timor. Ne'e mak Manatutu nia parte ne'ebé to'o kosta sul. Rai ne'e tetuk no manas, ho du'ut savana, natar ne'ebé mota sira fó bee, no karau barak. Ema barak ko'alia Tetun Terik, Tetun nia forma tuan liu, ne'ebé ema ko'alia iha kosta sul. Tasi-ibun sira naruk, hakmatek no kuaze mamuk, maibé tasi nakloke no lafaek hela iha mota no lagoa sira. Iha 2023, ema muda planu Tasi Mane no hili Natarbora ba sentru refinaria no gás naturál nian, ne'ebé bele lori estrada no servisu, maibé mós mudansa ba rai no ba moris iha aldeia sira.",
+    "pt": "Natarbora fica no posto administrativo de Barique, onde as montanhas de Manatuto descem para uma larga planície junto ao mar de Timor. É a parte de Manatuto que chega à costa sul. A terra é plana e quente, com savana, arrozais regados pelos rios e muitos búfalos e gado. Muitas pessoas falam tétum terik, a forma mais antiga do tétum, típica da costa sul. As praias são longas, tranquilas e quase vazias, mas o mar é aberto e há crocodilos nos rios e lagoas. Em 2023, o plano Tasi Mane foi reorganizado e Natarbora foi escolhida para um polo de refinaria e de gás natural, o que pode trazer estradas e empregos, mas também mudanças à terra e à vida das aldeias."
+   },
+   "tips": {
+    "tet": "Keta nani besik mota-ibun no iha loro-tun. Estrada iha rai-tetuk bele nakonu ho bee iha tempu udan: husu uluk molok halo viajen. Lori bee-hemu, xapéu no osan, tanba servisu uitoan de'it.",
+    "pt": "Não nade perto das fozes dos rios nem ao anoitecer. As estradas da planície podem ficar alagadas na época das chuvas: pergunte antes de viajar. Leve água, chapéu e dinheiro, porque há poucos serviços."
+   },
+   "illustration": "rice",
+   "related": [
+    "mun.manatuto",
+    "place.laclubar",
+    "place.aitara_shrine",
+    "tl.economy.petroleum",
+    "tl.economy.agriculture"
+   ],
+   "tags": [
+    "town",
+    "rice",
+    "south-coast",
+    "manatuto"
+   ],
+   "sources": [
+    {
+     "title": "Manatuto Municipality",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Manatuto_Municipality",
+     "accessed": "2026-11-02",
+     "licence": "CC BY-SA 4.0"
+    },
+    {
+     "title": "Manatuto",
+     "publisher": "Exploring Timor-Leste (exploringtimor.com)",
+     "url": "https://exploringtimor.com/manatuto/",
+     "accessed": "2026-11-02",
+     "licence": "© publisher"
+    },
+    {
+     "title": "Visit Manatuto Municipality in Timor-Leste",
+     "publisher": "timorleste.tl (official tourism website of Timor-Leste)",
+     "url": "https://www.timorleste.tl/?p=5385",
+     "accessed": "2026-11-02",
+     "licence": "© publisher"
+    }
+   ],
+   "review": {
+    "status": "draft",
+    "notes": "Written on 2 Nov 2026 from WebSearch result summaries (timorleste.tl itself could not be opened in the sandbox); coordinates checked only against the Lafa municipality map. Not in the attractions list seen in search results; described from municipalities.json (rice, beaches, Tetun Terik) and economy.json (2023 reorganisation of Tasi Mane with a refinery/LNG hub at Natarbora, per TIMOR GAP in a search summary). Check the plan's current status. Coordinates approximate (near the south coast, Barique post)."
+   }
+  },
+  {
+   "id": "place.aileu_memorial_museum",
+   "name": {
+    "tet": "Muzeu Memoriál Aileu",
+    "pt": "Museu Memorial de Aileu"
+   },
+   "municipality": "mun.aileu",
+   "type": "museum",
+   "lat": -8.7285,
+   "lon": 125.5665,
+   "summary": {
+    "tet": "Muzeu memória munisipál ida iha vila Aileu, ne'ebé loke iha 2022. Website turizmu ofisiál hatama muzeu ne'e iha munisípiu nia fatin kultura no muzeu sira.",
+    "pt": "Um museu municipal de memória na vila de Aileu, aberto em 2022. O site oficial de turismo inclui-o entre os lugares de cultura e museus do município."
+   },
+   "text": {
+    "tet": "Aileu iha fatin espesiál iha Timór-Leste nia istória foin daudaun. Iha 1975 no 1976, iha funu nia fulan dahuluk sira, foho sira iha vila nia haleu sai baze importante ba FRETILIN no FALINTIL; depois konsulta populár 1999, kombatente FALINTIL sira halibur iha akantonamentu ida iha Aileu, bainhira nasaun prepara forsa defeza foun, F-FDTL, ne'ebé moris iha 2001. Muzeu Memoriál Aileu, ne'ebé loke iha 2022 tuir lista ida husi nasaun nia muzeu sira, mak muzeu munisipál ida ne'ebé dedika ba memória lokál. Website turizmu ofisiál hatama muzeu ne'e iha fatin kultura no muzeu sira. Ba eskola sira iha munisípiu, muzeu hanesan ne'e ajuda estudante sira atu aprende istória husi sira-nia rai rasik. Molok ba, haree uluk oráriu, tanba muzeu ki'ik sira la loke beibeik.",
+    "pt": "Aileu tem um lugar especial na história recente de Timor-Leste. Em 1975 e 1976, nos primeiros meses da guerra, as colinas à volta da vila foram uma base importante da FRETILIN e das FALINTIL; depois da consulta popular de 1999, os combatentes das FALINTIL juntaram-se num acantonamento em Aileu enquanto se preparava a nova força de defesa, as F-FDTL, criada em 2001. O Museu Memorial de Aileu, aberto em 2022 segundo uma lista dos museus do país, é um museu municipal dedicado à memória local. O site oficial de turismo inclui-o entre os lugares de cultura e museus. Para as escolas do município, um museu assim ajuda os alunos a aprender a história a partir da sua própria terra. Antes de ir, confirme o horário, porque os museus pequenos nem sempre estão abertos."
+   },
+   "tips": {
+    "tet": "Husu iha fatin kona-ba oráriu molok ba. Husu lisensa molok foti foto ba ezibisaun sira. Halo vizita hamutuk ho merkadu Aileu (Kuarta ka Sábadu) no lagoa Seloi Kraik.",
+    "pt": "Pergunte localmente pelo horário antes de ir. Peça licença antes de fotografar as exposições. Junte a visita ao mercado de Aileu (quarta ou sábado) e à lagoa de Seloi Kraik."
+   },
+   "illustration": "museum",
+   "quiz": [
+    {
+     "q": {
+      "tet": "Forsa defeza saida mak moris husi FALINTIL iha 2001?",
+      "pt": "Que força de defesa nasceu das FALINTIL em 2001?"
+     },
+     "options": [
+      {
+       "tet": "PNTL",
+       "pt": "A PNTL"
+      },
+      {
+       "tet": "UNTAET",
+       "pt": "A UNTAET"
+      },
+      {
+       "tet": "F-FDTL",
+       "pt": "As F-FDTL"
+      },
+      {
+       "tet": "ONU",
+       "pt": "A ONU"
+      }
+     ],
+     "answer": 2,
+     "why": {
+      "tet": "Iha 2001, FALINTIL sai F-FDTL, Timór-Leste nia forsa defeza; PNTL mak polísia.",
+      "pt": "Em 2001, as FALINTIL deram origem às F-FDTL, a força de defesa de Timor-Leste; a PNTL é a polícia."
+     },
+     "difficulty": 8
+    }
+   ],
+   "related": [
+    "mun.aileu",
+    "place.aileu_town",
+    "place.aileu_1942_monument",
+    "place.seloi_kraik",
+    "day.falintil",
+    "tl.tourism.heritage"
+   ],
+   "tags": [
+    "museum",
+    "aileu",
+    "resistance"
+   ],
+   "sources": [
+    {
+     "title": "List of museums in Timor-Leste",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/List_of_museums_in_Timor-Leste",
+     "accessed": "2026-11-02",
+     "licence": "CC BY-SA 4.0"
+    },
+    {
+     "title": "Visit Aileu Municipality in Timor-Leste",
+     "publisher": "timorleste.tl (official tourism website of Timor-Leste)",
+     "url": "https://www.timorleste.tl/?p=5272",
+     "accessed": "2026-11-02",
+     "licence": "© publisher"
+    },
+    {
+     "title": "Attractions (beaches, dive sites, peaks, waterfalls, forts, markets and sacred places)",
+     "publisher": "timorleste.tl (official tourism website of Timor-Leste)",
+     "url": "https://timorleste.tl/destinations/attractions",
+     "accessed": "2026-11-02",
+     "licence": "© publisher"
+    },
+    {
+     "title": "Aileu",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Aileu",
+     "accessed": "2026-11-02",
+     "licence": "CC BY-SA 4.0"
+    }
+   ],
+   "review": {
+    "status": "draft",
+    "notes": "Written on 2 Nov 2026 from WebSearch result summaries (timorleste.tl itself could not be opened in the sandbox); coordinates checked only against the Lafa municipality map. 'Aileu Memorial Municipal Museum – 2022' from Wikipedia 'List of museums in Timor-Leste' and 'Museum Memorial Aileu' listed under culture & museums on timorleste.tl (both seen only in search summaries). Its exhibits were not found, so the text only says it is dedicated to local memory. FRETILIN base (1975–76) and FALINTIL cantonment (1999–2001) follow municipalities.json (written from memory there — check). Market days as in place.aileu_town. Coordinates: Aileu town, approximate."
+   }
+  },
+  {
+   "id": "place.aileu_1942_monument",
+   "name": {
+    "tet": "Monumentu vítima 1942 nian (Aileu)",
+    "pt": "Monumento às vítimas de 1942 (Aileu)"
+   },
+   "municipality": "mun.aileu",
+   "type": "memorial",
+   "lat": -8.728,
+   "lon": 125.566,
+   "summary": {
+    "tet": "Monumentu ida iha vila Aileu ne'ebé hanoin fali ema sira ne'ebé mate iha atake ida ba vila iha 1942, durante Funu Mundiál II.",
+    "pt": "Um monumento na vila de Aileu que lembra as pessoas mortas num ataque à vila em 1942, durante a Segunda Guerra Mundial."
+   },
+   "text": {
+    "tet": "Iha Fevereiru 1942, tropa Japonés tun iha Timor, no durante besik tinan ida soldadu Australianu no Olandés sira, ho timoroan barak nia ajuda, halo funu gerilla iha foho sira. Timor Portugés, ne'ebé ofisialmente neutru, hela iha funu nia klaran, no povu terus barak tanba funu, hamlaha no vingansa. Iha 1942, vila Aileu, postu administrasaun Portugés nian iha foho sira iha Dili nia sul, hetan atake, no ema balu mate. Monumentu ida iha vila hanoin fali masakre ne'e no ninia vítima sira. Hamutuk ho memoriál Dare, besik Dili, monumentu ne'e hanoin katak Funu Mundiál II mós sai trajédia ida ba Timor, fatin ne'ebé ema rihun sanulu barak mate. Família barak iha Aileu sei rai istória husi tempu ne'ebá.",
+    "pt": "Em fevereiro de 1942, tropas japonesas desembarcaram em Timor, e durante cerca de um ano soldados australianos e holandeses, ajudados por muitos timorenses, fizeram guerra de guerrilha nas montanhas. O Timor Português, oficialmente neutro, ficou no meio do conflito, e a população sofreu muito com os combates, a fome e as represálias. Em 1942, a vila de Aileu, um posto da administração portuguesa nas colinas a sul de Díli, foi atacada, e várias pessoas foram mortas. Um monumento na vila recorda este massacre e as suas vítimas. Juntamente com o memorial de Dare, mais perto de Díli, lembra que a Segunda Guerra Mundial foi também uma tragédia para Timor, onde morreram dezenas de milhares de pessoas. Muitas famílias de Aileu ainda guardam histórias desse tempo."
+   },
+   "tips": {
+    "tet": "Vizita ho nonok no keta sa'e ba monumentu. Husu ba ema katuas sira iha vila saida mak sira hatene kona-ba funu, ho respeitu, tanba memória ne'e bele moras ba família sira.",
+    "pt": "Visite em silêncio e não suba ao monumento. Pergunte com respeito às pessoas mais velhas da vila o que sabem sobre a guerra, porque estas memórias podem ser dolorosas para as famílias."
+   },
+   "illustration": "ww2",
+   "quiz": [
+    {
+     "q": {
+      "tet": "Tropa Japonés tun iha Timor iha tinan saida?",
+      "pt": "Em que ano desembarcaram as tropas japonesas em Timor?"
+     },
+     "options": [
+      {
+       "tet": "1912",
+       "pt": "1912"
+      },
+      {
+       "tet": "1942",
+       "pt": "1942"
+      },
+      {
+       "tet": "1975",
+       "pt": "1975"
+      },
+      {
+       "tet": "1959",
+       "pt": "1959"
+      }
+     ],
+     "answer": 1,
+     "why": {
+      "tet": "Tropa Japonés tun iha Timor iha Fevereiru 1942, durante Funu Mundiál II.",
+      "pt": "As tropas japonesas desembarcaram em Timor em fevereiro de 1942, durante a Segunda Guerra Mundial."
+     },
+     "difficulty": 7
+    }
+   ],
+   "related": [
+    "mun.aileu",
+    "place.aileu_town",
+    "place.dare_memorial",
+    "place.venilale_caves",
+    "tl.colonial.ww2"
+   ],
+   "tags": [
+    "memorial",
+    "ww2",
+    "aileu"
+   ],
+   "sources": [
+    {
+     "title": "Battle of Timor",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Battle_of_Timor",
+     "accessed": "2026-11-02",
+     "licence": "CC BY-SA 4.0"
+    },
+    {
+     "title": "Attractions (beaches, dive sites, peaks, waterfalls, forts, markets and sacred places)",
+     "publisher": "timorleste.tl (official tourism website of Timor-Leste)",
+     "url": "https://timorleste.tl/destinations/attractions",
+     "accessed": "2026-11-02",
+     "licence": "© publisher"
+    },
+    {
+     "title": "Aileu",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Aileu",
+     "accessed": "2026-11-02",
+     "licence": "CC BY-SA 4.0"
+    },
+    {
+     "title": "Aileu",
+     "publisher": "Exploring Timor-Leste (exploringtimor.com)",
+     "url": "https://exploringtimor.com/aileu/",
+     "accessed": "2026-11-02",
+     "licence": "© publisher"
+    }
+   ],
+   "review": {
+    "status": "draft",
+    "notes": "Written on 2 Nov 2026 from WebSearch result summaries (timorleste.tl itself could not be opened in the sandbox); coordinates checked only against the Lafa municipality map. 'Aileu Massacre Monument, which marks a 1942 attack on the town' was seen only in a search summary (source among the Aileu results: timorleste.tl, exploringtimor.com or Wikipedia). The attackers and the number of victims were not checked, so they are not named. WWII background as in place.dare_memorial (Battle of Timor URL verified by another writer). Coordinates: Aileu town, approximate."
+   }
+  },
+  {
+   "id": "place.berloi_waterfall",
+   "name": {
+    "tet": "Bee-tuda Berloi",
+    "pt": "Cascata Be Tuda Berloi"
+   },
+   "municipality": "mun.aileu",
+   "type": "waterfall",
+   "lat": -8.7281,
+   "lon": 125.5664,
+   "summary": {
+    "tet": "Bee-tuda ida iha foho Aileu nian, iha mota ki'ik ida ne'ebé parte husi mota Komoru nia sistema, ne'ebé tun ba Dili. Guia ida dehan katak estrada kuaze liu iha bee-tuda nia laran.",
+    "pt": "Uma cascata nas colinas de Aileu, num afluente do sistema do rio Comoro, que desce para Díli. Um guia diz que a estrada passa praticamente por ela."
+   },
+   "text": {
+    "tet": "Bee-tuda mak liafuan Tetun ba kaskata, no Bee-tuda Berloi mak ida husi bee-tuda sira ne'ebé website turizmu ofisiál hatudu iha munisípiu Aileu. Nia iha mota ki'ik ida ne'ebé parte husi mota Komoru nia sistema, sistema mota boot liu ida iha Timór-Leste, ne'ebé hahú iha foho no to'o tasi iha Dili. Guia viajen ida dehan, ho hamnasa, katak estrada 'kuaze liu iha bee-tuda nia laran', no ida-ne'e hatudu oinsá bee suli besik dalan. Bee-tuda furak liu iha tempu udan no iha tempu bailoron nia hahú, bainhira bee barak. Iha haleu iha to'os, kafé iha ai-hun nia mahon okos no ai-laran, hanesan baibain iha Aileu nia foho malirin. Ne'e fatin di'ak atu para no deskansa iha viajen foho nian.",
+    "pt": "Bee-tuda é a palavra tétum para cascata, e a Be Tuda Berloi é uma das cascatas que o site oficial de turismo indica no município de Aileu. Fica num pequeno rio que pertence ao sistema do rio Comoro, um dos maiores sistemas de rios de Timor-Leste, que nasce nas montanhas e chega ao mar em Díli. Um guia de viagem diz, com humor, que a estrada 'praticamente passa por ela', o que mostra como a água corre perto do caminho. A cascata é mais bonita na época das chuvas e no início da época seca, quando leva mais água. À volta há hortas, café à sombra de árvores e floresta, como é habitual nas colinas frescas de Aileu. É um bom lugar para parar e descansar numa viagem pelas montanhas."
+   },
+   "tips": {
+    "tet": "Husu iha Aileu kona-ba dalan loos no ba ho ema ida husi área ne'e. Fatuk bokon bele halo ita monu: uza sapatu metin. Depois udan boot, bee sa'e lalais: hela dook husi bee-suli.",
+    "pt": "Pergunte em Aileu pelo caminho exato e vá com alguém da zona. As pedras molhadas escorregam: use calçado firme. Depois de chuva forte, a água sobe depressa: mantenha-se afastado da corrente."
+   },
+   "illustration": "waterfall",
+   "related": [
+    "mun.aileu",
+    "place.aileu_town",
+    "place.seloi_kraik",
+    "tl.land.rivers_lakes"
+   ],
+   "tags": [
+    "waterfall",
+    "aileu"
+   ],
+   "sources": [
+    {
+     "title": "Visit Aileu Municipality in Timor-Leste",
+     "publisher": "timorleste.tl (official tourism website of Timor-Leste)",
+     "url": "https://www.timorleste.tl/?p=5272",
+     "accessed": "2026-11-02",
+     "licence": "© publisher"
+    },
+    {
+     "title": "Aileu",
+     "publisher": "Exploring Timor-Leste (exploringtimor.com)",
+     "url": "https://exploringtimor.com/aileu/",
+     "accessed": "2026-11-02",
+     "licence": "© publisher"
+    },
+    {
+     "title": "Aileu Municipality",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Aileu_Municipality",
+     "accessed": "2026-11-02",
+     "licence": "CC BY-SA 4.0"
+    }
+   ],
+   "review": {
+    "status": "draft",
+    "notes": "Written on 2 Nov 2026 from WebSearch result summaries (timorleste.tl itself could not be opened in the sandbox); coordinates checked only against the Lafa municipality map. Name, 'the road basically goes through it' and the Comoro river system come from search summaries (timorleste.tl and exploringtimor.com Aileu pages); also named in place.aileu_town. The exact location is unknown: the coordinates are those of Aileu town (nearest town) — please replace them with the real position."
+   }
+  },
+  {
+   "id": "place.remexio",
+   "name": {
+    "tet": "Remexio",
+    "pt": "Remexio"
+   },
+   "municipality": "mun.aileu",
+   "type": "town",
+   "lat": -8.635,
+   "lon": 125.665,
+   "summary": {
+    "tet": "Vila foho ida iha Aileu, iha foho sira iha Dili nia sudeste, ho vista luan ba vale no ba tasi. Iha 1894 Portugés harii iha ne'e postu militár dahuluk balu iha rai-laran.",
+    "pt": "Vila de montanha de Aileu, nas colinas a sudeste de Díli, com vistas largas sobre vales e para o mar. Em 1894, os portugueses criaram aqui um dos primeiros postos militares do interior."
+   },
+   "text": {
+    "tet": "Remexio mak postu administrativu ida husi postu haat Aileu nian, no iha foho sira entre Dili no foho klaran sira, besik liu ba kapitál duké vila Aileu rasik. Husi estrada no foho-tutun sira iha haleu, ita haree vale kle'an no, bainhira lalehan moos, tasi no kosta norte. Iha istória koloniál, Remexio iha knaar sedu: iha Agostu 1894, administrasaun Portugés harii postu militár ida iha ne'e, ho viveiru kafé ida, nu'udar pasu dahuluk atu kontrola illa nia rai-laran. Ohin loron ne'e área rurál ida ne'ebé ema ko'alia Mambai, ho to'os, kafé iha mahon okos no aldeia ki'ik ho uma tradisionál. Estrada foho sira mós dada ema sa'e-bisikleta no ema la'o ain husi Dili.",
+    "pt": "Remexio é um dos quatro postos administrativos de Aileu e fica nas colinas entre Díli e as montanhas do centro, mais perto da capital do que a própria vila de Aileu. Das estradas e cumeadas à volta veem-se vales profundos e, em dias limpos, o mar e a costa norte. Na história colonial, Remexio teve um papel precoce: em agosto de 1894, a administração portuguesa criou aqui um posto militar, com um viveiro de café, como primeiro passo para controlar o interior da ilha. Hoje é uma zona rural de língua mambai, com hortas, café à sombra e pequenas aldeias com casas tradicionais. As estradas de montanha atraem também ciclistas e caminhantes vindos de Díli."
+   },
+   "tips": {
+    "tet": "Estrada sira kloot no kleuk: lori kareta neineik no keta la'o iha kalan. Lori kazaku, tanba tempu muda lalais iha foho. Husu lisensa molok vizita uma lulik.",
+    "pt": "As estradas são estreitas e com curvas: conduza devagar e evite a noite. Leve um casaco, porque o tempo muda depressa nas colinas. Peça licença antes de visitar casas sagradas."
+   },
+   "illustration": "viewpoint",
+   "quiz": [
+    {
+     "q": {
+      "tet": "Iha 1894, Portugés harii saida iha Remexio?",
+      "pt": "O que criaram os portugueses em Remexio em 1894?"
+     },
+     "options": [
+      {
+       "tet": "Universidade ida",
+       "pt": "Uma universidade"
+      },
+      {
+       "tet": "Postu militár ida ho viveiru kafé",
+       "pt": "Um posto militar com um viveiro de café"
+      },
+      {
+       "tet": "Portu ida ba ró boot",
+       "pt": "Um porto para grandes navios"
+      },
+      {
+       "tet": "Aeroportu ida",
+       "pt": "Um aeroporto"
+      }
+     ],
+     "answer": 1,
+     "why": {
+      "tet": "Postu militár Remexio, ho viveiru kafé, mak pasu dahuluk atu kontrola rai-laran.",
+      "pt": "O posto militar de Remexio, com um viveiro de café, foi um primeiro passo para controlar o interior."
+     },
+     "difficulty": 12
+    }
+   ],
+   "related": [
+    "mun.aileu",
+    "place.aileu_town",
+    "place.dare_memorial",
+    "tl.colonial.colonial_rule",
+    "tl.economy.coffee"
+   ],
+   "tags": [
+    "town",
+    "aileu",
+    "viewpoint",
+    "colonial"
+   ],
+   "sources": [
+    {
+     "title": "Aileu Municipality",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Aileu_Municipality",
+     "accessed": "2026-11-02",
+     "licence": "CC BY-SA 4.0"
+    },
+    {
+     "title": "Aileu",
+     "publisher": "Exploring Timor-Leste (exploringtimor.com)",
+     "url": "https://exploringtimor.com/aileu/",
+     "accessed": "2026-11-02",
+     "licence": "© publisher"
+    },
+    {
+     "title": "Visit Aileu Municipality in Timor-Leste",
+     "publisher": "timorleste.tl (official tourism website of Timor-Leste)",
+     "url": "https://www.timorleste.tl/?p=5272",
+     "accessed": "2026-11-02",
+     "licence": "© publisher"
+    }
+   ],
+   "review": {
+    "status": "draft",
+    "notes": "Written on 2 Nov 2026 from WebSearch result summaries (timorleste.tl itself could not be opened in the sandbox); coordinates checked only against the Lafa municipality map. Not in the attractions list seen in search results; added as a hill town of Aileu. The 1894 military post with a coffee nursery follows history_early.json; views, Mambai and cycling follow municipalities.json. Coordinates approximate (Remexio post)."
+   }
+  },
+  {
+   "id": "place.hatubuilico_flowers",
+   "name": {
+    "tet": "To'os ai-funan Hatubuilico",
+    "pt": "Plantação de flores de Hatubuilico"
+   },
+   "municipality": "mun.ainaro",
+   "type": "garden",
+   "lat": -8.891,
+   "lon": 125.521,
+   "summary": {
+    "tet": "Iha Ramelau nia lolon malirin, Hatubuilico iha to'os ai-funan ida ne'ebé website turizmu ofisiál hatama iha Ainaru nia atrasaun sira. Fatin para ida ho kór barak molok sa'e Tatamailau.",
+    "pt": "Nas encostas frias do Ramelau, Hatubuilico tem uma plantação de flores que o site oficial de turismo inclui entre as atrações de Ainaro. Uma paragem colorida antes da subida ao Tatamailau."
+   },
+   "text": {
+    "tet": "Hatubuilico mak aldeia aas liu balu iha Timór-Leste, iha vale malirin ida iha Ramelau nia lolon leste. Klima foho nian halo ema bele kuda ai-horis ne'ebé la moris di'ak iha tasi-ibun manas: agrikultór sira iha ne'e kuda fehuk, kubis no modo seluk ba Dili nia merkadu sira. Website turizmu ofisiál mós hatama to'os ai-funan Hatubuilico nian iha munisípiu Ainaru nia atrasaun sira. Ba ema ne'ebé mai husi tasi-ibun manas, ai-funan ho kór barak entre to'os modo no foho-tutun ne'ebé kalohan taka mak buat ida ne'ebé halo hakfodak. Di'ak atu vizita iha loro-kraik, depois to'o husi Maubisse no molok toba iha aldeia atu sa'e Tatamailau iha kalan.",
+    "pt": "Hatubuilico é uma das aldeias mais altas de Timor-Leste, num vale frio nas encostas orientais da serra do Ramelau. O clima de montanha permite cultivar plantas que crescem mal no litoral quente: os agricultores daqui produzem batatas, couves e outros legumes para os mercados de Díli. O site oficial de turismo inclui também uma plantação de flores de Hatubuilico entre as atrações do município de Ainaro. Para quem chega do calor da costa, os canteiros floridos entre os campos de legumes e as cumeadas cobertas de nevoeiro são uma surpresa. A visita faz-se bem à tarde, depois de chegar de Maubisse e antes de dormir na aldeia para subir ao Tatamailau durante a noite."
+   },
+   "tips": {
+    "tet": "Husu lisensa ba na'in sira molok tama ka foti foto: to'os sira mak família sira-nia servisu no rendimentu. Keta ku ai-funan. Lori roupa manas, tanba iha loro-kraik malirin lalais.",
+    "pt": "Peça licença aos donos antes de entrar ou fotografar: as plantações são o trabalho e o rendimento das famílias. Não apanhe flores. Leve roupa quente, porque à tarde arrefece depressa."
+   },
+   "illustration": "garden",
+   "related": [
+    "mun.ainaro",
+    "place.hatubuilico",
+    "place.mount_ramelau",
+    "place.maubisse",
+    "tl.tourism.mountains_trekking"
+   ],
+   "tags": [
+    "garden",
+    "flowers",
+    "ainaro"
+   ],
+   "sources": [
+    {
+     "title": "Attractions (beaches, dive sites, peaks, waterfalls, forts, markets and sacred places)",
+     "publisher": "timorleste.tl (official tourism website of Timor-Leste)",
+     "url": "https://timorleste.tl/destinations/attractions",
+     "accessed": "2026-11-02",
+     "licence": "© publisher"
+    },
+    {
+     "title": "Ainaro Municipality",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Ainaro_Municipality",
+     "accessed": "2026-11-02",
+     "licence": "CC BY-SA 4.0"
+    },
+    {
+     "title": "Mount Ramelau",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Mount_Ramelau",
+     "accessed": "2026-11-02",
+     "licence": "CC BY-SA 4.0"
+    }
+   ],
+   "review": {
+    "status": "draft",
+    "notes": "Written on 2 Nov 2026 from WebSearch result summaries (timorleste.tl itself could not be opened in the sandbox); coordinates checked only against the Lafa municipality map. 'Hato-Builico Flower Plantation' listed on timorleste.tl/destinations/attractions (search summary). No description was found: what is grown, who runs it and whether visits are organised must be checked. Crops (potatoes, cabbages) as in place.hatubuilico. Coordinates approximate (near Hatubuilico village)."
+   }
+  },
+  {
+   "id": "place.modomahut_lagoon",
+   "name": {
+    "tet": "Lagoa Modomahut",
+    "pt": "Lagoa Modomahut"
+   },
+   "municipality": "mun.manufahi",
+   "type": "lake",
+   "lat": -9.12,
+   "lon": 125.93,
+   "summary": {
+    "tet": "Rai-bokon ida besik kosta sul, iha Manufahi nia leste, importante ba manu bee nian. Fatin di'ak atu haree manu ho guia lokál.",
+    "pt": "Uma zona húmida perto da costa sul, no leste de Manufahi, importante para as aves aquáticas. Um bom lugar para observar aves com um guia local."
+   },
+   "text": {
+    "tet": "Guia viajen ida hatudu lagoa Modomahut, rai-bokon ida besik kosta, iha munisípiu Manufahi nia leste, nu'udar fatin importante ba manu. Iha lagoa no rai-bokon sira iha kosta sul, manu bee nian oin-oin, hanesan manu-rade, no, iha sira-nia tempu, manu migrante ne'ebé halo viajen entre Ázia no Austrália halibur hamutuk. Bee no ai-horis mós fó ikan no kadiuk ba família sira iha aldeia besik, ne'ebé hatene di'ak dalan no fatin lulik sira. Hanesan iha kosta sul tomak, lafaek hela iha lagoa no mota sira, tan ne'e haree manu tenke halo husi dook no ho guia. Tempu di'ak liu mak dadeer sedu, iha tempu bailoron, bainhira manu barak halibur iha bee ne'ebé sei hela.",
+    "pt": "Um guia de viagem destaca a lagoa Modomahut, uma zona húmida perto da costa, no leste do município de Manufahi, como um lugar importante para as aves. Nas lagoas e pântanos da costa sul juntam-se várias aves aquáticas, como patos e garças, e, na época própria, aves migratórias que viajam entre a Ásia e a Austrália. A água e as plantas dão também peixe e caranguejos às famílias das aldeias próximas, que conhecem bem os caminhos e os lugares sagrados. Como em toda a costa sul, há crocodilos de água salgada nas lagoas e nos rios, por isso a observação deve fazer-se de longe e com um guia. A melhor altura é de manhã cedo, na época seca, quando as aves se juntam na água que resta."
+   },
+   "tips": {
+    "tet": "Ba ho guia husi aldeia besik liu no hela dook husi bee nia ninin. Keta book manu-knuuk no manu sira, no lori binókulu. Husu lisensa molok tama fatin lulik.",
+    "pt": "Vá com um guia da aldeia mais próxima e fique longe da margem da água. Não perturbe ninhos nem aves e leve binóculos. Peça licença antes de entrar em lugares sagrados."
+   },
+   "illustration": "birds",
+   "related": [
+    "mun.manufahi",
+    "place.betano_beach",
+    "place.same_town",
+    "tl.nature.birds",
+    "tl.nature.crocodile"
+   ],
+   "tags": [
+    "lake",
+    "birds",
+    "wetland",
+    "manufahi"
+   ],
+   "sources": [
+    {
+     "title": "Manufahi",
+     "publisher": "Exploring Timor-Leste (exploringtimor.com)",
+     "url": "https://exploringtimor.com/manufahi/",
+     "accessed": "2026-11-02",
+     "licence": "© publisher"
+    },
+    {
+     "title": "Manufahi Municipality",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Manufahi_Municipality",
+     "accessed": "2026-11-02",
+     "licence": "CC BY-SA 4.0"
+    }
+   ],
+   "review": {
+    "status": "draft",
+    "notes": "Written on 2 Nov 2026 from WebSearch result summaries (timorleste.tl itself could not be opened in the sandbox); coordinates checked only against the Lafa municipality map. Known only from exploringtimor.com ('Lake Modo Mahut (Lagoa Modomahut), a wetland on the eastern coast, important for birdlife' — search summary). The exact location is unknown: coordinates are an estimate on the south coast of eastern Manufahi (Alas/Fatuberliu) — please check. Bird groups are general for south-coast wetlands; Tetun bird words to check."
+   }
+  },
+  {
+   "id": "place.turiscai",
+   "name": {
+    "tet": "Turiscai",
+    "pt": "Turiscai"
+   },
+   "municipality": "mun.manufahi",
+   "type": "town",
+   "lat": -8.817,
+   "lon": 125.7,
+   "summary": {
+    "tet": "Postu foho ida iha Manufahi nia norte, rai kafé no lian Mambai nian, fatin ne'ebé Francisco Xavier do Amaral, Prezidente dahuluk ne'ebé proklama iha 1975, moris. Monumentu ida hanoin fali nia.",
+    "pt": "Posto de montanha no norte de Manufahi, terra de café e de língua mambai, onde nasceu Francisco Xavier do Amaral, o primeiro Presidente proclamado em 1975. Um monumento lembra-o."
+   },
+   "text": {
+    "tet": "Turiscai mak postu administrativu ida husi postu haat Manufahi nian, no iha foho sira iha munisípiu nia norte, entre Maubisse, Same no Manatutu nia foho sira. Ema to'o ne'ebá liu estrada foho ne'ebé liu to'os kafé no ai-laran. Ema barak ko'alia Mambai, no aldeia sira rai uma lulik no serimónia ne'ebé liga família sira ho bei'ala sira. Turiscai iha fatin iha istória nasionál: iha ne'e mak Francisco Xavier do Amaral moris, iha 3 Dezembru 1937. Nia mak FRETILIN nia prezidente ne'ebé lee proklamasaun independénsia iha Dili iha 28 Novembru 1975, no sai Prezidente dahuluk. Nia mate iha 2012 no hetan rate hamutuk ho asuwa'in sira iha Metinaro; iha Turiscai ema harii monumentu ida ba nia.",
+    "pt": "Turiscai é um dos quatro postos administrativos de Manufahi e fica nas montanhas do norte do município, entre Maubisse, Same e as serras de Manatuto. Chega-se por estradas de montanha que passam por hortas de café e florestas. A maior parte das pessoas fala mambai, e as aldeias guardam casas sagradas e cerimónias que ligam as famílias aos antepassados. Turiscai tem um lugar na história nacional: aqui nasceu, a 3 de dezembro de 1937, Francisco Xavier do Amaral, o presidente da FRETILIN que leu a proclamação da independência em Díli, a 28 de novembro de 1975, e se tornou o primeiro Presidente. Morreu em 2012 e foi sepultado entre os heróis, em Metinaro; em Turiscai foi-lhe dedicado um monumento."
+   },
+   "tips": {
+    "tet": "Estrada foho nian neineik no bele taka iha tempu udan: husu informasaun iha Same ka Maubisse. Lori roupa manas. Husu lisensa molok vizita uma lulik, no sosa kafé direitamente husi agrikultór sira.",
+    "pt": "As estradas de montanha são lentas e podem ficar cortadas na época das chuvas: informe-se em Same ou Maubisse. Leve roupa quente. Peça licença antes de visitar casas sagradas e compre café diretamente aos agricultores."
+   },
+   "illustration": "coffee",
+   "quiz": [
+    {
+     "q": {
+      "tet": "Se mak moris iha Turiscai iha 1937?",
+      "pt": "Quem nasceu em Turiscai em 1937?"
+     },
+     "options": [
+      {
+       "tet": "Nicolau Lobato",
+       "pt": "Nicolau Lobato"
+      },
+      {
+       "tet": "Xanana Gusmão",
+       "pt": "Xanana Gusmão"
+      },
+      {
+       "tet": "D. Boaventura",
+       "pt": "D. Boaventura"
+      },
+      {
+       "tet": "Francisco Xavier do Amaral",
+       "pt": "Francisco Xavier do Amaral"
+      }
+     ],
+     "answer": 3,
+     "why": {
+      "tet": "Francisco Xavier do Amaral, Prezidente dahuluk ne'ebé proklama iha 1975, moris iha Turiscai iha 3 Dezembru 1937.",
+      "pt": "Francisco Xavier do Amaral, primeiro Presidente proclamado em 1975, nasceu em Turiscai a 3 de dezembro de 1937."
+     },
+     "difficulty": 10
+    }
+   ],
+   "related": [
+    "mun.manufahi",
+    "place.same_town",
+    "place.maubisse",
+    "place.metinaro_heroes_garden",
+    "tl.leaders.xavier_do_amaral",
+    "tl.history.proclamation_1975"
+   ],
+   "tags": [
+    "town",
+    "coffee",
+    "manufahi",
+    "history"
+   ],
+   "sources": [
+    {
+     "title": "Francisco Xavier do Amaral",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Francisco_Xavier_do_Amaral",
+     "accessed": "2026-11-02",
+     "licence": "CC BY-SA 4.0"
+    },
+    {
+     "title": "Manufahi Municipality",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Manufahi_Municipality",
+     "accessed": "2026-11-02",
+     "licence": "CC BY-SA 4.0"
+    },
+    {
+     "title": "Manufahi",
+     "publisher": "Exploring Timor-Leste (exploringtimor.com)",
+     "url": "https://exploringtimor.com/manufahi/",
+     "accessed": "2026-11-02",
+     "licence": "© publisher"
+    }
+   ],
+   "review": {
+    "status": "draft",
+    "notes": "Written on 2 Nov 2026 from WebSearch result summaries (timorleste.tl itself could not be opened in the sandbox); coordinates checked only against the Lafa municipality map. Not in the attractions list seen in search results; added for its history. Birth date and place, burial at Metinaro and the monument in Turiscai follow leaders.json (Tatoli); the monument's exact place and form were not checked. Coffee and Mambai as in municipalities.json. Coordinates approximate (Turiscai post)."
+   }
+  },
+  {
+   "id": "place.bandeira_waterfall",
+   "name": {
+    "tet": "Bee-tuda Bandeira",
+    "pt": "Cascata da Bandeira"
+   },
+   "municipality": "mun.ermera",
+   "type": "waterfall",
+   "lat": -8.905,
+   "lon": 125.42,
+   "summary": {
+    "tet": "Bee-tuda aas liu iha Timór-Leste, tuir website turizmu ofisiál, iha Ermera nia foho entre Letefoho no Atsabe. Furak liu iha tempu udan.",
+    "pt": "A cascata mais alta de Timor-Leste, segundo o site oficial de turismo, nas montanhas de Ermera entre Letefoho e Atsabe. É mais impressionante na época das chuvas."
+   },
+   "text": {
+    "tet": "Bee-tuda Bandeira iha foho sira iha Ermera nia sul, entre Letefoho no Atsabe, iha paizajen ho vale kle'an, ai-laran no to'os kafé. Website turizmu ofisiál aprezenta bee-tuda ne'e nu'udar bee-tuda aas liu iha nasaun, no guia viajen ida dehan katak bee monu besik metru 200. Bee-tuda furak liu iha tempu udan, bainhira mota lori bee barak, maibé iha tempu ne'e mós estrada foho sira sai susar liu. Dalan la'o ain loron tolu ida, ne'ebé operadór lokál ida organiza husi Tapo, iha Bobonaru, to'o Atsabe, liu bee-tuda ne'e no bee-manas sira. Ba vizitante sira, ne'e razaun di'ak atu toba kalan ida iha Letefoho ka Atsabe, no atu koñese mós rai kafé Ermera nian.",
+    "pt": "A cascata da Bandeira fica nas montanhas do sul de Ermera, entre Letefoho e Atsabe, numa paisagem de vales profundos, florestas e hortas de café. O site oficial de turismo apresenta-a como a cascata mais alta do país, e um guia de viagem diz que a água cai cerca de 200 metros. O espetáculo é maior na época das chuvas, quando o rio leva muita água, mas é também nessa altura que as estradas de montanha ficam mais difíceis. Um percurso de três dias organizado por um operador local, de Tapo, em Bobonaro, até Atsabe, passa pela cascata e por nascentes de água quente. Para os visitantes, é uma boa razão para ficar uma noite em Letefoho ou Atsabe e conhecer também a terra do café de Ermera."
+   },
+   "tips": {
+    "tet": "Ba ho guia lokál; dalan ikus sa'e makaas no fasil atu monu. Keta besik bee-tuda nia ninin no keta nani iha nia okos depois udan boot. Iha tempu bailoron bee menus, maibé dalan fasil liu.",
+    "pt": "Vá com um guia local; o caminho final é íngreme e escorregadio. Não se aproxime da beira nem nade por baixo da queda depois de chuva forte. Na época seca há menos água, mas o acesso é mais fácil."
+   },
+   "illustration": "waterfall",
+   "wiki": {
+    "en": "Bandeira Waterfall"
+   },
+   "quiz": [
+    {
+     "q": {
+      "tet": "Tuir website turizmu ofisiál, bee-tuda ida ne'ebé mak aas liu iha Timór-Leste?",
+      "pt": "Segundo o site oficial de turismo, qual é a cascata mais alta de Timor-Leste?"
+     },
+     "options": [
+      {
+       "tet": "Bee-tuda Berloi (Aileu)",
+       "pt": "Be Tuda Berloi (Aileu)"
+      },
+      {
+       "tet": "Loi Hunu (Vikeke)",
+       "pt": "Loi Hunu (Viqueque)"
+      },
+      {
+       "tet": "Bee-tuda Bandeira (Ermera)",
+       "pt": "A cascata da Bandeira (Ermera)"
+      },
+      {
+       "tet": "Marobo (Bobonaru)",
+       "pt": "Marobo (Bobonaro)"
+      }
+     ],
+     "answer": 2,
+     "why": {
+      "tet": "Website turizmu ofisiál dehan katak Bee-tuda Bandeira, iha Ermera, mak aas liu iha nasaun.",
+      "pt": "O site oficial de turismo diz que a cascata da Bandeira, em Ermera, é a mais alta do país."
+     },
+     "difficulty": 6
+    }
+   ],
+   "related": [
+    "mun.ermera",
+    "place.letefoho",
+    "place.atsabe",
+    "place.ermera_coffee",
+    "tl.tourism.mountains_trekking",
+    "tl.tourism.coffee_villages"
+   ],
+   "tags": [
+    "waterfall",
+    "ermera",
+    "trekking"
+   ],
+   "sources": [
+    {
+     "title": "Bandeira Waterfall",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Bandeira_Waterfall",
+     "accessed": "2026-11-02",
+     "licence": "CC BY-SA 4.0"
+    },
+    {
+     "title": "Visit Ermera Municipality in Timor-Leste",
+     "publisher": "timorleste.tl (official tourism website of Timor-Leste)",
+     "url": "https://www.timorleste.tl/?p=5395",
+     "accessed": "2026-11-02",
+     "licence": "© publisher"
+    },
+    {
+     "title": "Ermera",
+     "publisher": "Exploring Timor-Leste (exploringtimor.com)",
+     "url": "https://exploringtimor.com/ermera/",
+     "accessed": "2026-11-02",
+     "licence": "© publisher"
+    }
+   ],
+   "review": {
+    "status": "draft",
+    "notes": "Written on 2 Nov 2026 from WebSearch result summaries (timorleste.tl itself could not be opened in the sandbox); coordinates checked only against the Lafa municipality map. 'Tallest waterfall in the country' (timorleste.tl) and 'about 200 m' (one guide) from search summaries — heights are not measured, check. The three-day Tapo–Atsabe hike (Eco Discovery) comes from a tour listing seen in a search summary — check that it still runs. Coordinates approximate (between Letefoho and Atsabe); use the Wikipedia article's coordinates if it gives them."
+   }
+  },
+  {
+   "id": "place.atsabe",
+   "name": {
+    "tet": "Atsabe",
+    "pt": "Atsabe"
+   },
+   "municipality": "mun.ermera",
+   "type": "town",
+   "lat": -8.938,
+   "lon": 125.395,
+   "summary": {
+    "tet": "Vila foho ida iha Ermera nia sul, rai povu Kemak nian, ho merkadu ida ne'ebé husi ne'ebá ita haree paizajen luan. Besik bee-tuda Bandeira.",
+    "pt": "Vila de montanha no sul de Ermera, terra do povo kemak, com um mercado de onde se avistam largas paisagens. Fica perto da cascata da Bandeira."
+   },
+   "text": {
+    "tet": "Atsabe mak postu administrativu ida iha Ermera nia foho sul, besik rohan ho Bobonaru no Ainaru. Ne'e povu Kemak nia rai, ne'ebé ninia lian no uma tradisionál la hanesan povu Mambai nian, iha leste liu. Iha pasadu, Atsabe sai sede ba reinu Kemak ida ne'ebé importante, ho ninia liurai rasik. Vila nia merkadu mak fatin hasoru malu ba aldeia sira iha haleu, no tuir informasaun turizmu nian, husi ne'ebá ita haree paizajen luan. Foho-lolon sira produz kafé no modo, no iha tempu kolleita, maizumenus Maiu to'o Setembru, dalan sira nakonu ho saku kafé-fuan mean. Atsabe mak baze besik liu atu vizita bee-tuda Bandeira, no fatin di'ak atu haree moris foho nian.",
+    "pt": "Atsabe é um posto administrativo nas montanhas do sul de Ermera, junto aos limites de Bobonaro e Ainaro. É terra do povo kemak, cuja língua e casas tradicionais são diferentes das do povo mambai, mais a leste. No passado, Atsabe foi a sede de um importante reino kemak, com os seus próprios liurais. O mercado da vila é o ponto de encontro das aldeias à volta e, segundo informação turística, tem vistas largas sobre a paisagem. As encostas produzem café e legumes, e na época da colheita, mais ou menos de maio a setembro, os caminhos enchem-se de sacos de cereja de café. Atsabe é a base mais próxima para visitar a cascata da Bandeira e um bom lugar para conhecer a vida da montanha."
+   },
+   "tips": {
+    "tet": "Ba merkadu iha dadeer. Estrada husi Gleno no Letefoho sa'e makaas: iha tempu udan uza kareta 4x4. Husu lisensa molok foti foto ba uma lulik no serimónia Kemak nian.",
+    "pt": "Vá ao mercado de manhã. A estrada de Gleno e Letefoho é íngreme: na época das chuvas use um 4x4. Peça licença antes de fotografar casas sagradas e cerimónias kemak."
+   },
+   "illustration": "town",
+   "quiz": [
+    {
+     "q": {
+      "tet": "Povu no lian saida mak barak liu iha Atsabe?",
+      "pt": "Que povo e língua predominam em Atsabe?"
+     },
+     "options": [
+      {
+       "tet": "Kemak",
+       "pt": "Kemak"
+      },
+      {
+       "tet": "Fataluku",
+       "pt": "Fataluco"
+      },
+      {
+       "tet": "Baikenu",
+       "pt": "Baiqueno"
+      },
+      {
+       "tet": "Galoli",
+       "pt": "Galóli"
+      }
+     ],
+     "answer": 0,
+     "why": {
+      "tet": "Atsabe mak rai povu Kemak nian; Fataluku iha Lautein, Baikenu iha Oe-Kusi no Galoli iha Manatutu nia kosta.",
+      "pt": "Atsabe é terra do povo kemak; o fataluco fala-se em Lautém, o baiqueno em Oé-Cusse e o galóli na costa de Manatuto."
+     },
+     "difficulty": 9
+    }
+   ],
+   "related": [
+    "mun.ermera",
+    "place.bandeira_waterfall",
+    "place.letefoho",
+    "place.gleno",
+    "tl.culture.ethnic_groups",
+    "tl.tourism.coffee_villages"
+   ],
+   "tags": [
+    "town",
+    "market",
+    "kemak",
+    "ermera"
+   ],
+   "sources": [
+    {
+     "title": "Visit Ermera Municipality in Timor-Leste",
+     "publisher": "timorleste.tl (official tourism website of Timor-Leste)",
+     "url": "https://www.timorleste.tl/?p=5395",
+     "accessed": "2026-11-02",
+     "licence": "© publisher"
+    },
+    {
+     "title": "Ermera",
+     "publisher": "Exploring Timor-Leste (exploringtimor.com)",
+     "url": "https://exploringtimor.com/ermera/",
+     "accessed": "2026-11-02",
+     "licence": "© publisher"
+    },
+    {
+     "title": "Ermera Municipality",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Ermera_Municipality",
+     "accessed": "2026-11-02",
+     "licence": "CC BY-SA 4.0"
+    }
+   ],
+   "review": {
+    "status": "draft",
+    "notes": "Written on 2 Nov 2026 from WebSearch result summaries (timorleste.tl itself could not be opened in the sandbox); coordinates checked only against the Lafa municipality map. Market with wide views from a search summary (Ermera pages of timorleste.tl/exploringtimor.com). The Kemak language and the old Atsabe kingdom are general knowledge — check. Harvest months as in place.gleno. Coordinates approximate (Atsabe post)."
+   }
+  },
+  {
+   "id": "place.fatubessi_shrine",
+   "name": {
+    "tet": "Santuáriu Na'i Feto Fatubessi",
+    "pt": "Santuário de Nossa Senhora de Fatubessi"
+   },
+   "municipality": "mun.ermera",
+   "type": "church",
+   "lat": -8.79,
+   "lon": 125.32,
+   "summary": {
+    "tet": "Santuáriu Virjen Maria nian iha Ermera, fatin ba peregrinasaun ida iha fulan Agostu. Iha 2026, kalendáriu eventu ofisiál marka peregrinasaun ne'e ba 22 Agostu.",
+    "pt": "Um santuário mariano em Ermera, destino de uma peregrinação em agosto. Em 2026, o calendário oficial de eventos marcou-a para 22 de agosto."
+   },
+   "text": {
+    "tet": "Fatubessi mak suku ida iha postu administrativu Hatulia, iha foho kafé iha Ermera nia loro-monu. Kalendáriu eventu ofisiál Timór-Leste nian hatama peregrinasaun ba Na'i Feto Fatubessi, ne'ebé iha 2026 marka ba 22 Agostu: peregrinu sira la'o ain to'o Na'i Feto nia santuáriu, reza no partisipa iha misa no prosisaun. Hanesan iha Aitara (Soibada) no iha Ramelau, peregrinasaun hirak ne'e kombina fiar katólika, ne'ebé forte tebes iha Timór-Leste, ho respeitu tradisionál ba fatin aas no lulik sira. Área Hatulia mak rai kafé prinsipál ida iha nasaun, no peregrinasaun hala'o iha tempu kolleita kafé nian. Ba família barak, la'o hamutuk to'o santuáriu mak momentu fiar no hasoru malu nian.",
+    "pt": "Fatubessi é um suco do posto administrativo de Hatulia, nas colinas cafeeiras do oeste de Ermera. O calendário oficial de eventos de Timor-Leste inclui a peregrinação a Nossa Senhora de Fatubessi, marcada em 2026 para 22 de agosto: os peregrinos caminham até ao santuário de Nossa Senhora, rezam e participam na missa e na procissão. Tal como em Aitara (Soibada) e no Ramelau, estas peregrinações juntam a fé católica, muito forte em Timor-Leste, ao respeito tradicional pelos lugares altos e sagrados. A zona de Hatulia é uma das principais terras do café do país, e a peregrinação acontece durante a época da colheita. Para muitas famílias, caminhar juntas até ao santuário é um momento de fé e de encontro."
+   },
+   "tips": {
+    "tet": "Se ita hakarak tuir, haree uluk data iha kalendáriu eventu no ba hamutuk ho paróquia ka grupu lokál ida. Lori bee-hemu, xapéu no sapatu atu la'o. Hatais roupa ne'ebé di'ak no tuir orasaun sira ho nonok.",
+    "pt": "Se quiser participar, confirme a data no calendário de eventos e vá com a paróquia ou com um grupo local. Leve água, chapéu e calçado para caminhar. Vista-se com modéstia e acompanhe as orações em silêncio."
+   },
+   "illustration": "procession",
+   "quiz": [
+    {
+     "q": {
+      "tet": "Iha 2026, kalendáriu ofisiál marka peregrinasaun ba Na'i Feto Fatubessi iha fulan saida?",
+      "pt": "Em 2026, para que mês o calendário oficial marcou a peregrinação a Nossa Senhora de Fatubessi?"
+     },
+     "options": [
+      {
+       "tet": "Fevereiru",
+       "pt": "Fevereiro"
+      },
+      {
+       "tet": "Agostu",
+       "pt": "Agosto"
+      },
+      {
+       "tet": "Juñu",
+       "pt": "Junho"
+      },
+      {
+       "tet": "Dezembru",
+       "pt": "Dezembro"
+      }
+     ],
+     "answer": 1,
+     "why": {
+      "tet": "Kalendáriu eventu ofisiál marka peregrinasaun ba 22 Agostu 2026.",
+      "pt": "O calendário oficial de eventos marcou a peregrinação para 22 de agosto de 2026."
+     },
+     "difficulty": 8
+    }
+   ],
+   "related": [
+    "mun.ermera",
+    "place.aitara_shrine",
+    "place.mount_ramelau",
+    "tl.culture.catholic_traditions",
+    "tl.tourism.events_festivals"
+   ],
+   "tags": [
+    "church",
+    "pilgrimage",
+    "ermera"
+   ],
+   "sources": [
+    {
+     "title": "Events",
+     "publisher": "timorleste.tl (official tourism website of Timor-Leste)",
+     "url": "https://timorleste.tl/events",
+     "accessed": "2026-11-02",
+     "licence": "© publisher"
+    },
+    {
+     "title": "Visit Ermera Municipality in Timor-Leste",
+     "publisher": "timorleste.tl (official tourism website of Timor-Leste)",
+     "url": "https://www.timorleste.tl/?p=5395",
+     "accessed": "2026-11-02",
+     "licence": "© publisher"
+    },
+    {
+     "title": "Ermera Municipality",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Ermera_Municipality",
+     "accessed": "2026-11-02",
+     "licence": "CC BY-SA 4.0"
+    }
+   ],
+   "review": {
+    "status": "draft",
+    "notes": "Written on 2 Nov 2026 from WebSearch result summaries (timorleste.tl itself could not be opened in the sandbox); coordinates checked only against the Lafa municipality map. Pilgrimage date (22 August 2026) and 'pilgrims walk to the shrine of Our Lady at Fatu Besi' from timorleste.tl/events (search summary). Fatubessi as a suco of Hatulia is general knowledge; the shrine's exact location was not found — coordinates approximate (Hatulia area). Whether the date is the same every year was not checked."
+   }
+  },
+  {
+   "id": "place.maubara_lake",
+   "name": {
+    "tet": "Lagoa Maubara",
+    "pt": "Lagoa de Maubara"
+   },
+   "municipality": "mun.liquica",
+   "type": "lake",
+   "lat": -8.625,
+   "lon": 125.18,
+   "summary": {
+    "tet": "Lagoa bee-masin ida besik Maubara, ne'ebé ema hatene ho manu pelikanu sira ne'ebé hela iha ne'e. Guia viajen ida rekomenda tanba nia hakmatek no reflexu iha bee leten.",
+    "pt": "Uma lagoa salgada perto de Maubara, conhecida pelos pelicanos que ali vivem. Um guia de viagem recomenda-a pela calma e pelos reflexos na água."
+   },
+   "text": {
+    "tet": "Besik forte Maubara, iha rai-tetuk tasi-ibun nian iha vila Likisá nia loro-monu, iha lagoa bee-masin ida. Tuir website turizmu ofisiál, ema hatene lagoa ne'e ho ninia manu pelikanu barak, manu boot ho ibun naruk no bolsa ida iha okos atu kaer ikan. Guia viajen ida rekomenda atu para iha ne'e tanba nia hakmatek no foho sira-nia reflexu iha bee leten, liuliu iha dadeer sedu ka loro-kraik, bainhira naroman mamar. Iha ninin sira ita mós bele haree manu bee nian seluk. Lagoa ne'e fatin para fasil ida iha estrada tasi-ibun entre Dili no fronteira, no di'ak atu vizita hamutuk ho forte no ho lafatik kór-kór ne'ebé feto Maubara sira halo.",
+    "pt": "Perto do forte de Maubara, na planície costeira a oeste da vila de Liquiçá, fica uma lagoa de água salgada. Segundo o site oficial de turismo, é conhecida pela sua população de pelicanos, aves grandes de bico comprido com uma bolsa por baixo para apanhar peixe. Um guia de viagem recomenda parar aqui pela calma e pelos reflexos das colinas na água, sobretudo de manhã cedo ou ao fim da tarde, quando a luz é suave. Nas margens podem ver-se também outras aves aquáticas. A lagoa é uma paragem fácil na estrada costeira entre Díli e a fronteira, e combina bem com a visita ao forte e aos cestos coloridos que as mulheres de Maubara tecem."
+   },
+   "tips": {
+    "tet": "Haree manu sira husi dook no ho nonok; keta tuda fatuk ka duni sira. Keta tama bee: husu ba ema lokál se iha lafaek. Lori binókulu no xapéu.",
+    "pt": "Observe as aves de longe e em silêncio; não lhes atire pedras nem as persiga. Não entre na água: pergunte localmente se há crocodilos. Leve binóculos e chapéu."
+   },
+   "illustration": "birds",
+   "quiz": [
+    {
+     "q": {
+      "tet": "Manu boot saida mak halo lagoa Maubara sai famozu?",
+      "pt": "Que aves grandes tornam a lagoa de Maubara conhecida?"
+     },
+     "options": [
+      {
+       "tet": "Pinguin",
+       "pt": "Pinguins"
+      },
+      {
+       "tet": "Avestrús",
+       "pt": "Avestruzes"
+      },
+      {
+       "tet": "Flamingu",
+       "pt": "Flamingos"
+      },
+      {
+       "tet": "Pelikanu",
+       "pt": "Pelicanos"
+      }
+     ],
+     "answer": 3,
+     "why": {
+      "tet": "Website turizmu ofisiál dehan katak ema hatene lagoa Maubara ho ninia pelikanu barak.",
+      "pt": "O site oficial de turismo diz que a lagoa de Maubara é conhecida pela sua população de pelicanos."
+     },
+     "difficulty": 4
+    }
+   ],
+   "related": [
+    "mun.liquica",
+    "place.maubara_fort",
+    "place.liquica_town",
+    "tl.nature.birds",
+    "tl.land.rivers_lakes"
+   ],
+   "tags": [
+    "lake",
+    "birds",
+    "liquica"
+   ],
+   "sources": [
+    {
+     "title": "Maubara, Liquiçá",
+     "publisher": "timorleste.tl (official tourism website of Timor-Leste)",
+     "url": "https://timorleste.tl/destinations/maubara-liquica",
+     "accessed": "2026-11-02",
+     "licence": "© publisher"
+    },
+    {
+     "title": "Visit Liquica Municipality in Timor-Leste",
+     "publisher": "timorleste.tl (official tourism website of Timor-Leste)",
+     "url": "https://www.timorleste.tl/?p=5397",
+     "accessed": "2026-11-02",
+     "licence": "© publisher"
+    },
+    {
+     "title": "Liquica",
+     "publisher": "Exploring Timor-Leste (exploringtimor.com)",
+     "url": "https://exploringtimor.com/liquica/",
+     "accessed": "2026-11-02",
+     "licence": "© publisher"
+    }
+   ],
+   "review": {
+    "status": "draft",
+    "notes": "Written on 2 Nov 2026 from WebSearch result summaries (timorleste.tl itself could not be opened in the sandbox); coordinates checked only against the Lafa municipality map. 'Salt lake known for its pelican population' (timorleste.tl) and 'stillness and reflections' (exploringtimor.com) from search summaries. Other waterbirds and the crocodile warning are general. Maubara baskets as in municipalities.json. Coordinates approximate (near Maubara; estimated)."
+   }
+  },
+  {
+   "id": "place.aipelo_prison",
+   "name": {
+    "tet": "Kadeia tuan Aipelo nia rahun",
+    "pt": "Ruínas da prisão de Aipelo"
+   },
+   "municipality": "mun.liquica",
+   "type": "monument",
+   "lat": -8.585,
+   "lon": 125.338,
+   "summary": {
+    "tet": "Kadeia ida husi tempu koloniál Portugés nia rahun, besik Likisá. Website turizmu ofisiál hatama rahun ne'e iha munisípiu nia fatin istóriku sira.",
+    "pt": "As ruínas de uma prisão do período colonial português perto de Liquiçá. O site oficial de turismo inclui-as entre os lugares históricos do município."
+   },
+   "text": {
+    "tet": "Iha Aipelo, iha munisípiu Likisá, iha kadeia ida husi tempu koloniál Portugés nia rahun. Website turizmu ofisiál hatama rahun ne'e iha fatin istóriku sira iha kosta Dili nia loro-monu, hamutuk ho forte Maubara no igreja Likisá. Ohin loron hela liu didin tuan sira, balu ho ai-horis taka. Maske nune'e, fatin ne'e hanoin fali oinsá administrasaun koloniál ukun rai ne'e: ho postu militár, impostu, servisu obrigatóriu no kadeia ba ema ne'ebé la tuir. Ba estudante sira, ne'e oportunidade di'ak atu husu oinsá moris iha ukun koloniál nia okos no tanba saida mak timoroan barak halo rezisténsia, hanesan iha revolta boot 1911–1912. Ema iha área ne'e bele konta saida mak sira hatene kona-ba edifísiu ne'e.",
+    "pt": "Em Aipelo, no município de Liquiçá, ficam as ruínas de uma prisão do período colonial português. O site oficial de turismo inclui-as entre os lugares históricos da costa a oeste de Díli, ao lado do forte de Maubara e da igreja de Liquiçá. Restam sobretudo paredes velhas, em parte cobertas de vegetação. Mesmo assim, o lugar lembra como a administração colonial governava o território: com postos militares, impostos, trabalho obrigatório e prisões para quem desobedecia. Para os estudantes, é uma boa ocasião para perguntar como era a vida sob o domínio colonial e porque é que tantos timorenses resistiram, como na grande revolta de 1911–1912. As pessoas da zona podem contar o que sabem sobre o edifício."
+   },
+   "tips": {
+    "tet": "Keta sa'e ba didin sira, ne'ebé bele monu. Kuidadu ho samea no ai-tarak iha rahun sira-nia klaran. Husu lisensa se rai ne'e iha na'in, no keta foti fatuk.",
+    "pt": "Não suba às paredes, que podem cair. Cuidado com cobras e plantas espinhosas entre as ruínas. Peça licença se o terreno tiver dono e não leve pedras."
+   },
+   "illustration": "fort",
+   "related": [
+    "mun.liquica",
+    "place.liquica_town",
+    "place.maubara_fort",
+    "tl.colonial.colonial_rule",
+    "tl.colonial.revolts_manufahi"
+   ],
+   "tags": [
+    "ruins",
+    "prison",
+    "colonial",
+    "liquica"
+   ],
+   "sources": [
+    {
+     "title": "Liquiçá Municipality",
+     "publisher": "timorleste.tl (official tourism website of Timor-Leste)",
+     "url": "https://timorleste.tl/destinations/municipalities/liquica",
+     "accessed": "2026-11-02",
+     "licence": "© publisher"
+    },
+    {
+     "title": "Visit Liquica Municipality in Timor-Leste",
+     "publisher": "timorleste.tl (official tourism website of Timor-Leste)",
+     "url": "https://www.timorleste.tl/?p=5397",
+     "accessed": "2026-11-02",
+     "licence": "© publisher"
+    },
+    {
+     "title": "Liquiçá Municipality",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Liqui%C3%A7%C3%A1_Municipality",
+     "accessed": "2026-11-02",
+     "licence": "CC BY-SA 4.0"
+    }
+   ],
+   "review": {
+    "status": "draft",
+    "notes": "Written on 2 Nov 2026 from WebSearch result summaries (timorleste.tl itself could not be opened in the sandbox); coordinates checked only against the Lafa municipality map. 'Aipelo prison ruins, a Portuguese-era site in Liquiçá' from search summaries (timorleste.tl Liquiçá pages); also named in place.liquica_town. Construction date, use and state of the ruins were not found. The exact location is unknown: the coordinates are those of Liquiçá town (nearest town) — please correct."
+   }
+  },
+  {
+   "id": "place.loes_river",
+   "name": {
+    "tet": "Mota Lois",
+    "pt": "Ribeira de Lóis (rio Loes)"
+   },
+   "municipality": "mun.liquica",
+   "type": "river",
+   "lat": -8.73,
+   "lon": 125.115,
+   "summary": {
+    "tet": "Mota boot liu ida iha Timór-Leste, ne'ebé tun husi foho iha rai-laran no to'o tasi iha kosta norte, iha Likisá no Bobonaru nia rohan. Estrada tasi-ibun nian hakat mota ne'e liu ponte naruk ida.",
+    "pt": "Um dos maiores rios de Timor-Leste, que desce das montanhas do interior e chega ao mar na costa norte, no limite entre Liquiçá e Bobonaro. A estrada costeira atravessa-o numa ponte comprida."
+   },
+   "text": {
+    "tet": "Mota Lois, ne'ebé ema mós hakerek Loes, mak mota boot liu ida iha Timór-Leste. Ninia bee mai husi foho sira iha rai-laran no suli ba norte-loro-monu to'o tasi, fatin ne'ebé mota sai rohan entre Likisá no Bobonaru. Iha tempu udan, mota nia leet luan nakonu ho bee kór kafé no bele sai liu; iha tempu bailoron sai mota kloot liu iha fatuk no rai-henek nia klaran. Estrada tasi-ibun husi Dili ba fronteira hakat mota ne'e liu ponte naruk ida, entre Maubara no Atabae. Iha rai-tetuk besik mota iha to'os no natar. Iha mota-ibun no iha mota nia parte okos lafaek hela, tan ne'e keta nani ka fase roupa iha ne'ebá molok husu ba ema lokál.",
+    "pt": "A ribeira de Lóis, também escrita Loes, é um dos maiores rios de Timor-Leste. As suas águas vêm das montanhas do interior e correm para noroeste até ao mar, onde o rio marca o limite entre Liquiçá e Bobonaro. Na época das chuvas, o leito largo enche-se de água castanha e pode transbordar; na época seca fica um rio mais estreito entre bancos de pedras e areia. A estrada costeira de Díli para a fronteira atravessa-o numa ponte comprida, entre Maubara e Atabae. Nas planícies junto ao rio há hortas e arrozais. Na foz e nos troços mais baixos vivem crocodilos de água salgada, por isso não se deve nadar nem lavar roupa ali sem perguntar às pessoas da terra."
+   },
+   "tips": {
+    "tet": "Para iha ponte de'it iha fatin seguru, dook husi kareta sira. Keta nani iha mota ka iha mota-ibun. Iha tempu udan, keta hakat mota ho ain ka ho kareta bainhira bee sa'e.",
+    "pt": "Pare na ponte só onde houver espaço seguro, longe do trânsito. Não nade no rio nem na foz. Na época das chuvas, não atravesse a pé nem de carro quando a água sobe."
+   },
+   "illustration": "river",
+   "quiz": [
+    {
+     "q": {
+      "tet": "Mota Lois marka rohan entre munisípiu saida, besik tasi?",
+      "pt": "A ribeira de Lóis marca o limite entre que municípios, junto ao mar?"
+     },
+     "options": [
+      {
+       "tet": "Dili no Manatutu",
+       "pt": "Díli e Manatuto"
+      },
+      {
+       "tet": "Baukau no Lautein",
+       "pt": "Baucau e Lautém"
+      },
+      {
+       "tet": "Ainaru no Manufahi",
+       "pt": "Ainaro e Manufahi"
+      },
+      {
+       "tet": "Likisá no Bobonaru",
+       "pt": "Liquiçá e Bobonaro"
+      }
+     ],
+     "answer": 3,
+     "why": {
+      "tet": "Besik tasi, mota Lois mak rohan entre Likisá (Maubara) no Bobonaru (Atabae).",
+      "pt": "Junto ao mar, a ribeira de Lóis separa Liquiçá (Maubara) de Bobonaro (Atabae)."
+     },
+     "difficulty": 11
+    }
+   ],
+   "related": [
+    "mun.liquica",
+    "mun.bobonaro",
+    "place.maubara_fort",
+    "place.atabae",
+    "tl.land.rivers_lakes",
+    "tl.nature.crocodile"
+   ],
+   "tags": [
+    "river",
+    "liquica",
+    "bobonaro"
+   ],
+   "sources": [
+    {
+     "title": "Liquiçá Municipality",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Liqui%C3%A7%C3%A1_Municipality",
+     "accessed": "2026-11-02",
+     "licence": "CC BY-SA 4.0"
+    },
+    {
+     "title": "Bobonaro Municipality",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Bobonaro_Municipality",
+     "accessed": "2026-11-02",
+     "licence": "CC BY-SA 4.0"
+    },
+    {
+     "title": "Liquica",
+     "publisher": "Exploring Timor-Leste (exploringtimor.com)",
+     "url": "https://exploringtimor.com/liquica/",
+     "accessed": "2026-11-02",
+     "licence": "© publisher"
+    }
+   ],
+   "review": {
+    "status": "draft",
+    "notes": "Written on 2 Nov 2026 from WebSearch result summaries (timorleste.tl itself could not be opened in the sandbox); coordinates checked only against the Lafa municipality map. Not in the attractions list seen in search results; added as a major river (the brief asks for rivers). 'One of the largest rivers' and the long bridge between Maubara and Atabae are general knowledge; the boundary role matches municipalities.json ('from Tibar Bay to the Lóis') and the Lafa map — check. Coordinates: lower course on the Liquiçá side of the boundary (approximate)."
+   }
+  },
+  {
+   "id": "place.bazartete",
+   "name": {
+    "tet": "Bazartete",
+    "pt": "Bazartete"
+   },
+   "municipality": "mun.liquica",
+   "type": "viewpoint",
+   "lat": -8.62,
+   "lon": 125.4,
+   "summary": {
+    "tet": "Postu foho ida iha Likisá, iha foho sira iha kosta nia leten, ho vista ba tasi no to'os kafé. Fatin malirin ida, la hanesan estrada tasi-ibun nian ne'ebé manas.",
+    "pt": "Posto de montanha de Liquiçá, nas colinas acima da costa, com vistas sobre o mar e as hortas de café. Uma alternativa fresca à estrada costeira."
+   },
+   "text": {
+    "tet": "Bazartete mak postu administrativu ida husi postu tolu Likisá nian, no hela iha foho sira entre kosta no Ermera nia foho. Husi estrada ne'ebé sa'e husi kosta, ita haree rai-tetuk, baía no tasi. Klima malirin liu duké iha tasi-ibun, no foho-lolon sira iha to'os kafé iha ai-hun nia mahon okos, batar, modo no ai-fuan. Iha foho sira ema ko'alia liu Mambai, hamutuk ho Tetun. Postu ne'e mós inklui, iha tasi ninin, área Tibar, fatin ne'ebé desde 2022 nasaun nia portu kontentór foun servisu. Ba vizitante sira, Bazartete mak viajen meiu-loron ida ne'ebé di'ak husi Dili ka Likisá, atu haree moris rurál iha foho no atu sosa kafé husi agrikultór sira.",
+    "pt": "Bazartete é um dos três postos administrativos de Liquiçá e ocupa as colinas entre a costa e as montanhas de Ermera. Das estradas que sobem da costa veem-se a planície, a baía e o mar. O clima é mais fresco do que no litoral, e as encostas têm hortas de café à sombra de árvores, milho, legumes e fruta. Nas colinas fala-se sobretudo mambai, além do tétum. O posto inclui também, junto ao mar, a zona de Tibar, onde desde 2022 funciona o novo porto de contentores do país. Para os visitantes, Bazartete é um bom passeio de meio dia a partir de Díli ou de Liquiçá, para ver a vida rural das colinas e comprar café diretamente aos agricultores."
+   },
+   "tips": {
+    "tet": "Estrada foho nian kloot: lori kareta neineik no keta la'o iha kalan no iha udan boot. Husu lisensa molok tama to'os kafé. Lori bee-hemu no kazaku kmaan ida.",
+    "pt": "As estradas de montanha são estreitas: conduza devagar e evite a noite e a chuva forte. Peça licença antes de entrar em quintas de café. Leve água e um casaco leve."
+   },
+   "illustration": "viewpoint",
+   "related": [
+    "mun.liquica",
+    "place.liquica_town",
+    "place.maubara_fort",
+    "place.ermera_coffee",
+    "tl.economy.infrastructure"
+   ],
+   "tags": [
+    "viewpoint",
+    "coffee",
+    "liquica"
+   ],
+   "sources": [
+    {
+     "title": "Liquiçá Municipality",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Liqui%C3%A7%C3%A1_Municipality",
+     "accessed": "2026-11-02",
+     "licence": "CC BY-SA 4.0"
+    },
+    {
+     "title": "Visit Liquica Municipality in Timor-Leste",
+     "publisher": "timorleste.tl (official tourism website of Timor-Leste)",
+     "url": "https://www.timorleste.tl/?p=5397",
+     "accessed": "2026-11-02",
+     "licence": "© publisher"
+    },
+    {
+     "title": "Liquica",
+     "publisher": "Exploring Timor-Leste (exploringtimor.com)",
+     "url": "https://exploringtimor.com/liquica/",
+     "accessed": "2026-11-02",
+     "licence": "© publisher"
+    }
+   ],
+   "review": {
+    "status": "draft",
+    "notes": "Written on 2 Nov 2026 from WebSearch result summaries (timorleste.tl itself could not be opened in the sandbox); coordinates checked only against the Lafa municipality map. Not in the attractions list seen in search results; described from municipalities.json (views over the coast and coffee gardens, Mambai in the hills, Tibar Bay Port since 2022). Check that Tibar lies in Bazartete post. Coordinates approximate (Bazartete post)."
+   }
+  },
+  {
+   "id": "place.leohito_waterfall",
+   "name": {
+    "tet": "Bee-tuda Leohito",
+    "pt": "Cascata de Leohito"
+   },
+   "municipality": "mun.bobonaro",
+   "type": "waterfall",
+   "lat": -9.0,
+   "lon": 125.08,
+   "summary": {
+    "tet": "Bee-tuda ida iha foho sira iha Balibo nia sudeste, besik minutu 15 ho kareta husi vila, liu dalan rai. Presiza kareta 4x4 no guia lokál.",
+    "pt": "Uma cascata nas colinas a sudeste de Balibó, a cerca de quinze minutos de carro da vila, por caminhos de terra. É preciso um 4x4 e um guia local."
+   },
+   "text": {
+    "tet": "Leohito mak suku ida iha postu administrativu Balibo, iha foho sira iha Bobonaru nia loro-monu, besik fronteira ho Timor Oeste. Guia viajen ida deskreve bee-tuda ida iha ne'e, besik minutu 15 ho kareta ba sudeste husi vila Balibo, liu estrada rai ne'ebé presiza kareta 4x4, no fó konsellu atu ba ho ema lokál ida. Bee-tuda iha bee barak liu iha tempu udan no iha tempu bailoron nia hahú. Hanesan bee-matan no bee-tuda barak iha Timor, nia bele iha signifikadu espesiál ba família sira iha área ne'e, ne'ebé hatene dalan no regra sira. Di'ak atu vizita hamutuk ho forte no Uma Balibo, no ho bee-manas Marobo, iha viajen ida iha nasaun nia loro-monu.",
+    "pt": "Leohito é um suco do posto administrativo de Balibó, nas colinas do oeste de Bobonaro, perto da fronteira com Timor Ocidental. Um guia de viagem descreve aqui uma cascata a cerca de quinze minutos de carro para sudeste da vila de Balibó, por estradas de terra que exigem um 4x4, e aconselha a ir com orientação local. A cascata tem mais água na época das chuvas e no início da época seca. Como muitas nascentes e cascatas de Timor, pode ter um significado especial para as famílias da zona, que sabem por onde passar e que regras seguir. É um bom complemento a uma visita ao forte e à Casa de Balibó e às termas de Marobo, num circuito pelo oeste do país."
+   },
+   "tips": {
+    "tet": "Husu ema ida husi Balibo atu akompaña ita, no husu se presiza lisensa husi komunidade. Uza sapatu metin no keta nani depois udan boot. Lori bee-hemu no lori fila lixu.",
+    "pt": "Peça a alguém de Balibó que o acompanhe e pergunte se é preciso licença da comunidade. Use calçado firme e não nade depois de chuva forte. Leve água e traga o lixo de volta."
+   },
+   "illustration": "waterfall",
+   "related": [
+    "mun.bobonaro",
+    "place.balibo_fort",
+    "place.balibo_house",
+    "place.marobo_hot_springs"
+   ],
+   "tags": [
+    "waterfall",
+    "bobonaro",
+    "balibo"
+   ],
+   "sources": [
+    {
+     "title": "Bobonaro",
+     "publisher": "Exploring Timor-Leste (exploringtimor.com)",
+     "url": "https://exploringtimor.com/bobonaro/",
+     "accessed": "2026-11-02",
+     "licence": "© publisher"
+    },
+    {
+     "title": "Visit Bobonaro Municipality in Timor-Leste",
+     "publisher": "timorleste.tl (official tourism website of Timor-Leste)",
+     "url": "https://www.timorleste.tl/?p=5585",
+     "accessed": "2026-11-02",
+     "licence": "© publisher"
+    },
+    {
+     "title": "Balibo",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Balibo",
+     "accessed": "2026-11-02",
+     "licence": "CC BY-SA 4.0"
+    }
+   ],
+   "review": {
+    "status": "draft",
+    "notes": "Written on 2 Nov 2026 from WebSearch result summaries (timorleste.tl itself could not be opened in the sandbox); coordinates checked only against the Lafa municipality map. Known only from exploringtimor.com (search summary: 'Leohito waterfall, about 15 minutes' drive south-east of Balibó; 4WD roads and local guidance'); no timorleste.tl page was found. Leohito as a suco of Balibo is general knowledge. Coordinates estimated from that description — check."
+   }
+  },
+  {
+   "id": "place.bobonaro_town",
+   "name": {
+    "tet": "Vila Bobonaru",
+    "pt": "Vila de Bobonaro"
+   },
+   "municipality": "mun.bobonaro",
+   "type": "town",
+   "lat": -9.033,
+   "lon": 125.317,
+   "summary": {
+    "tet": "Vila foho ne'ebé fó naran ba munisípiu, iha foho sira entre Maliana no fronteira sul. Besik bee-manas Marobo.",
+    "pt": "A vila de montanha que deu o nome ao município, nas colinas entre Maliana e a fronteira sul. Fica perto das termas de Marobo."
+   },
+   "text": {
+    "tet": "Vila Bobonaru iha foho sira iha Maliana nia sudeste (Maliana mak munisípiu nia kapitál), iha área ho foho, vale no ai-laran. Ne'e sede ba postu administrativu ida husi postu neen, no fó naran ba munisípiu tomak. Iha aldeia sira iha haleu ema ko'alia liu Bunak, lian Papua ida, no mós Kemak; uma tradisionál no serimónia sira liga família sira ho bei'ala sira-nia rai. Entre Maliana no vila Bobonaru iha bee-manas Marobo, fatin ne'ebé bee manas sai husi rai. Estrada foho sira aat no neineik, liuliu iha tempu udan, maibé paizajen ho foho matak, vale kle'an no to'os sira selu fali viajen. Ba viajante ne'ebé gosta fatin hakmatek, vila ne'e hatudu moris foho iha nasaun nia loro-monu.",
+    "pt": "A vila de Bobonaro fica nas colinas a sudeste de Maliana, a capital do município, numa zona de montanhas, vales e florestas. É a sede de um dos seis postos administrativos e deu o nome a todo o município. Nas aldeias à volta fala-se sobretudo bunak, uma língua papua, e também kemak; as casas tradicionais e as cerimónias ligam as famílias à terra dos antepassados. Entre Maliana e a vila de Bobonaro ficam as termas de Marobo, onde a água quente brota do chão. As estradas de montanha são más e lentas, sobretudo na época das chuvas, mas a paisagem de colinas verdes, vales profundos e campos compensa a viagem. Para quem gosta de lugares tranquilos, mostra a vida da montanha no oeste do país."
+   },
+   "tips": {
+    "tet": "Uza kareta 4x4 ka motor no husu iha Maliana kona-ba estrada nia kondisaun. Lori osan no kombustivel, tanba servisu uitoan. Husu lisensa molok vizita uma lulik.",
+    "pt": "Use um 4x4 ou uma mota e pergunte em Maliana pelo estado da estrada. Leve dinheiro e combustível, porque há poucos serviços. Peça licença antes de visitar casas sagradas."
+   },
+   "illustration": "town",
+   "quiz": [
+    {
+     "q": {
+      "tet": "Lian Papua saida mak ema ko'alia barak iha vila Bobonaru nia haleu?",
+      "pt": "Que língua papua se fala muito à volta da vila de Bobonaro?"
+     },
+     "options": [
+      {
+       "tet": "Galoli",
+       "pt": "Galóli"
+      },
+      {
+       "tet": "Bunak",
+       "pt": "Bunak"
+      },
+      {
+       "tet": "Tetun Terik",
+       "pt": "Tétum terik"
+      },
+      {
+       "tet": "Baikenu",
+       "pt": "Baiqueno"
+      }
+     ],
+     "answer": 1,
+     "why": {
+      "tet": "Bunak mak lian Papua ida; Galoli, Tetun Terik no Baikenu mak lian Austronézia.",
+      "pt": "O bunak é uma língua papua; o galóli, o tétum terik e o baiqueno são línguas austronésias."
+     },
+     "difficulty": 11
+    }
+   ],
+   "related": [
+    "mun.bobonaro",
+    "place.maliana",
+    "place.marobo_hot_springs",
+    "place.balibo_fort",
+    "tl.culture.ethnic_groups"
+   ],
+   "tags": [
+    "town",
+    "bobonaro",
+    "mountains"
+   ],
+   "sources": [
+    {
+     "title": "Bobonaro Municipality",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Bobonaro_Municipality",
+     "accessed": "2026-11-02",
+     "licence": "CC BY-SA 4.0"
+    },
+    {
+     "title": "Visit Bobonaro Municipality in Timor-Leste",
+     "publisher": "timorleste.tl (official tourism website of Timor-Leste)",
+     "url": "https://www.timorleste.tl/?p=5585",
+     "accessed": "2026-11-02",
+     "licence": "© publisher"
+    },
+    {
+     "title": "Bobonaro",
+     "publisher": "Exploring Timor-Leste (exploringtimor.com)",
+     "url": "https://exploringtimor.com/bobonaro/",
+     "accessed": "2026-11-02",
+     "licence": "© publisher"
+    }
+   ],
+   "review": {
+    "status": "draft",
+    "notes": "Written on 2 Nov 2026 from WebSearch result summaries (timorleste.tl itself could not be opened in the sandbox); coordinates checked only against the Lafa municipality map. Not in the attractions list seen in search results; added as the town that gives the municipality its name. Languages (Bunak, Kemak) follow municipalities.json and tl.culture.ethnic_groups. Coordinates approximate (Bobonaro post)."
+   }
+  },
+  {
+   "id": "place.atabae",
+   "name": {
+    "tet": "Atabae",
+    "pt": "Atabae"
+   },
+   "municipality": "mun.bobonaro",
+   "type": "town",
+   "lat": -8.84,
+   "lon": 125.07,
+   "summary": {
+    "tet": "Postu ida iha Bobonaru nia kosta norte, entre mota Lois no Batugade, ho tasi-ibun hakmatek. Iha Novembru 1975, funu iha Atabae mosu molok proklamasaun independénsia.",
+    "pt": "Posto da costa norte de Bobonaro, entre a ribeira de Lóis e Batugade, com praias tranquilas. Em novembro de 1975, os combates em Atabae precederam a proclamação da independência."
+   },
+   "text": {
+    "tet": "Atabae mak postu administrativu ida husi postu neen Bobonaru nian, no hela iha kosta norte entre mota Lois, iha leste, no Batugade, besik fronteira, iha loro-monu. Estrada tasi-ibun husi Dili liu iha ne'e, iha paizajen ho rai-tetuk maran, foho no tasi-ibun hakmatek. Atabae iha fatin iha istória 1975 nian: iha Novembru tinan ne'e, forsa Indonézia ataka no okupa área ne'e, semana balun molok invazaun ba Dili. Istoriadór barak liga lakon Atabae ho FRETILIN nia desizaun atu proklama independénsia iha 28 Novembru 1975, ho esperansa atu hetan apoiu internasionál. Ohin loron ne'e área rurál hakmatek, ho agrikultór no peskadór, no viajante sira para iha ne'e iha dalan ba Batugade no Balibo.",
+    "pt": "Atabae é um dos seis postos administrativos de Bobonaro e ocupa a costa norte entre a ribeira de Lóis, a leste, e Batugade, perto da fronteira, a oeste. A estrada costeira de Díli passa por aqui, numa paisagem de planícies secas, colinas e praias tranquilas. Atabae tem um lugar na história de 1975: em novembro desse ano, forças indonésias atacaram e ocuparam a zona, semanas antes da invasão de Díli. Muitos historiadores ligam a perda de Atabae à decisão da FRETILIN de proclamar a independência a 28 de novembro de 1975, na esperança de obter apoio internacional. Hoje é uma zona rural calma, de agricultores e pescadores, onde os viajantes param a caminho de Batugade e de Balibó."
+   },
+   "tips": {
+    "tet": "Nani de'it iha fatin ne'ebé ema lokál dehan seguru, no keta nani besik mota Lois nia ibun. Vizita Atabae hamutuk ho Batugade no Balibo iha loron hanesan. Lori bee-hemu; servisu uitoan.",
+    "pt": "Nade só onde as pessoas da terra dizem que é seguro e nunca perto da foz da ribeira de Lóis. Combine Atabae com Batugade e Balibó no mesmo dia. Leve água; há poucos serviços."
+   },
+   "illustration": "town",
+   "quiz": [
+    {
+     "q": {
+      "tet": "FRETILIN proklama independénsia iha data saida, foin depois funu iha Atabae?",
+      "pt": "Em que data a FRETILIN proclamou a independência, pouco depois dos combates em Atabae?"
+     },
+     "options": [
+      {
+       "tet": "20 Maiu 2002",
+       "pt": "20 de maio de 2002"
+      },
+      {
+       "tet": "28 Novembru 1975",
+       "pt": "28 de novembro de 1975"
+      },
+      {
+       "tet": "30 Agostu 1999",
+       "pt": "30 de agosto de 1999"
+      },
+      {
+       "tet": "7 Dezembru 1975",
+       "pt": "7 de dezembro de 1975"
+      }
+     ],
+     "answer": 1,
+     "why": {
+      "tet": "FRETILIN proklama independénsia iha 28 Novembru 1975; invazaun ba Dili mai iha 7 Dezembru 1975.",
+      "pt": "A FRETILIN proclamou a independência a 28 de novembro de 1975; a invasão de Díli veio a 7 de dezembro de 1975."
+     },
+     "difficulty": 7
+    }
+   ],
+   "related": [
+    "mun.bobonaro",
+    "place.batugade",
+    "place.balibo_fort",
+    "place.loes_river",
+    "day.proclamation",
+    "tl.history.proclamation_1975"
+   ],
+   "tags": [
+    "town",
+    "bobonaro",
+    "1975",
+    "coast"
+   ],
+   "sources": [
+    {
+     "title": "Bobonaro Municipality",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Bobonaro_Municipality",
+     "accessed": "2026-11-02",
+     "licence": "CC BY-SA 4.0"
+    },
+    {
+     "title": "Indonesian invasion of East Timor",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Indonesian_invasion_of_East_Timor",
+     "accessed": "2026-11-02",
+     "licence": "CC BY-SA 4.0"
+    },
+    {
+     "title": "Liquica",
+     "publisher": "Exploring Timor-Leste (exploringtimor.com)",
+     "url": "https://exploringtimor.com/liquica/",
+     "accessed": "2026-11-02",
+     "licence": "© publisher"
+    }
+   ],
+   "review": {
+    "status": "draft",
+    "notes": "Written on 2 Nov 2026 from WebSearch result summaries (timorleste.tl itself could not be opened in the sandbox); coordinates checked only against the Lafa municipality map. Not in the attractions list seen in search results. The fall of Atabae in late November 1975 and its link with the 28 November proclamation are general knowledge (cf. Wikipedia 'Indonesian invasion of East Timor', not opened in this session) — verify the dates and wording against tl.history.proclamation_1975 before publishing. 'Quiet beaches' as in municipalities.json; the coastal road 'with little else until Atabae' from exploringtimor.com (search summary). Coordinates approximate (Atabae post)."
+   }
+  },
+  {
+   "id": "place.tilomar_reserve",
+   "name": {
+    "tet": "Rezerva Naturál Tilomar",
+    "pt": "Reserva Natural de Tilomar"
+   },
+   "municipality": "mun.covalima",
+   "type": "park",
+   "lat": -9.38,
+   "lon": 125.12,
+   "summary": {
+    "tet": "Área protejida ida iha Kovalima nia sudoeste, ho ai-laran iha foho fatuk-ahu, bee-matan, rai-bokon ki'ik ida no lagoa masin iha kosta. Ne'e Área Importante ba Manu.",
+    "pt": "Uma área protegida no sudoeste de Cova Lima, com florestas em colinas calcárias, nascentes, uma pequena zona húmida e lagoas salgadas na costa. É uma Área Importante para as Aves."
+   },
+   "text": {
+    "tet": "Tilomar iha Kovalima nia sudoeste, besik kosta sul no fronteira ho Timor Oeste, maizumenus kilómetru 100 husi Dili. Rezerva ne'e proteje ai-laran tropikál maran, ne'ebé ninia tahan monu iha tempu bailoron, iha foho fatuk-ahu, ho ai-laran matak besik bee-matan sira, rai-bokon ki'ik ida ho bee la masin no lagoa masin ho ai-horis barak iha tasi ninin. Protesaun ne'e tuan ona: Portugés sira propoin iha 1967 atu proteje ai-kameli, no iha 2000 administrasaun ONU nian (UNTAET) hatama ne'e iha nasaun nia área protejida sira. BirdLife International klasifika ne'e nu'udar Área Importante ba Manu. Ameasa boot liu mak ko'a ai ilegál, sunu rai, to'os foun iha ai-laran no kasa animál.",
+    "pt": "Tilomar fica no sudoeste de Cova Lima, perto da costa sul e da fronteira com Timor Ocidental, a cerca de 100 quilómetros de Díli. A reserva protege florestas tropicais secas, que perdem as folhas na estação seca, em colinas de calcário, com manchas de floresta sempre verde junto às nascentes, uma pequena zona húmida de água doce e lagoas salgadas com muita vegetação junto ao mar. A proteção é antiga: os portugueses propuseram-na em 1967 para proteger o sândalo, e em 2000 a administração da ONU (UNTAET) incluiu-a entre as áreas protegidas do país. A BirdLife International classificou-a como Área Importante para as Aves. As maiores ameaças são o corte ilegal de madeira, as queimadas, as novas hortas na floresta e a caça."
+   },
+   "tips": {
+    "tet": "Vizita ho guia husi komunidade no fó-hatene ba autoridade lokál. Keta ko'a ai, keta sunu ahi no keta kasa ka kaer manu. Tempu bailoron di'ak liu atu haree manu, iha dadeer sedu.",
+    "pt": "Visite com guias da comunidade e informe as autoridades locais. Não corte árvores, não faça fogo e não cace nem apanhe aves. A época seca é a melhor para observar aves, de manhã cedo."
+   },
+   "illustration": "forest",
+   "wiki": {
+    "en": "Tilomar Important Bird Area"
+   },
+   "quiz": [
+    {
+     "q": {
+      "tet": "Tanba saida mak Portugés sira propoin atu proteje Tilomar iha 1967?",
+      "pt": "Porque é que os portugueses propuseram proteger Tilomar em 1967?"
+     },
+     "options": [
+      {
+       "tet": "Atu harii aeroportu ida",
+       "pt": "Para construir um aeroporto"
+      },
+      {
+       "tet": "Atu proteje ai-kameli",
+       "pt": "Para proteger o sândalo"
+      },
+      {
+       "tet": "Atu ke'e osan-mean",
+       "pt": "Para extrair ouro"
+      },
+      {
+       "tet": "Atu harii sidade ida",
+       "pt": "Para criar uma cidade"
+      }
+     ],
+     "answer": 1,
+     "why": {
+      "tet": "Iha 1967, Portugés sira propoin Tilomar nu'udar área protejida atu proteje ai-kameli.",
+      "pt": "Em 1967, os portugueses propuseram Tilomar como área protegida para proteger o sândalo."
+     },
+     "difficulty": 9
+    }
+   ],
+   "related": [
+    "mun.covalima",
+    "place.suai_coast",
+    "place.suai_cathedral",
+    "tl.nature.protected_areas",
+    "tl.nature.birds"
+   ],
+   "tags": [
+    "park",
+    "forest",
+    "birds",
+    "covalima"
+   ],
+   "sources": [
+    {
+     "title": "Tilomar Important Bird Area",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Tilomar_Important_Bird_Area",
+     "accessed": "2026-11-02",
+     "licence": "CC BY-SA 4.0"
+    },
+    {
+     "title": "Tilomar IBA (Timor-Leste) – site factsheet",
+     "publisher": "BirdLife International (DataZone)",
+     "url": "https://datazone.birdlife.org/site/factsheet/tilomar-iba-timor-leste",
+     "accessed": "2026-11-02",
+     "licence": "© publisher"
+    },
+    {
+     "title": "Tilomar",
+     "publisher": "Protected Planet (UNEP-WCMC and IUCN)",
+     "url": "https://protectedplanet.net/313040",
+     "accessed": "2026-11-02",
+     "licence": "© publisher"
+    }
+   ],
+   "review": {
+    "status": "draft",
+    "notes": "Written on 2 Nov 2026 from WebSearch result summaries (timorleste.tl itself could not be opened in the sandbox); coordinates checked only against the Lafa municipality map. Facts from search summaries of Wikipedia 'Tilomar Important Bird Area', BirdLife DataZone and Protected Planet. The area differs between sources (5,348 ha BirdLife; 57 km² Protected Planet; 227 km² for the IBA in Wikipedia) and is left out. Coordinates approximate (Tilomar post)."
+   }
+  },
+  {
+   "id": "place.fatululik_fatumean",
+   "name": {
+    "tet": "Fatululik no Fatumean (foho loro-monu)",
+    "pt": "Fatululik e Fatumean (terras altas do oeste)"
+   },
+   "municipality": "mun.covalima",
+   "type": "viewpoint",
+   "lat": -9.2,
+   "lon": 125.15,
+   "summary": {
+    "tet": "Postu foho rua iha Kovalima nia loro-monu, besik fronteira, ho estrada furak atu haree paizajen, aldeia no lisan tradisionál.",
+    "pt": "Dois postos de montanha no oeste de Cova Lima, junto à fronteira, com estradas panorâmicas, aldeias e costumes tradicionais."
+   },
+   "text": {
+    "tet": "Iha Kovalima nia loro-monu, Suai nia rai-tetuk sa'e ba foho no foho aas sira besik fronteira ho Timor Oeste. Iha ne'e iha postu Fatululik no Fatumean, no iha sul liu postu Fohorem. Guia viajen ida rekomenda estrada sira iha área ne'e tanba paizajen: foho-tutun matak, vale kle'an no, iha dook, rai-tetuk no Tasi Timor. Iha aldeia sira, família barak sei kaer metin uma tradisionál no lisan tuan, no ema ko'alia lian hanesan Bunak no Tetun Terik. Moris liu husi agrikultura, ho batar, ai-farina no animál. Ne'e rejiaun ida ne'ebé vizitante uitoan mak to'o, ho fatin uitoan atu toba, tan ne'e vizitante sira tenke halo viajen ho ema ida husi área ne'e no husu lisensa molok vizita fatin lulik.",
+    "pt": "No oeste de Cova Lima, as planícies de Suai sobem para colinas e montanhas junto à fronteira com Timor Ocidental. Aqui ficam os postos de Fatululik e Fatumean e, mais a sul, o de Fohorem. Um guia de viagem recomenda as estradas desta zona pelas paisagens: cumeadas verdes, vales profundos e, ao longe, a planície e o mar de Timor. Nas aldeias, muitas famílias mantêm casas tradicionais e costumes antigos, e falam-se línguas como o bunak e o tétum terik. A vida é sobretudo agrícola, com milho, mandioca e animais. É uma região pouco visitada e com poucos lugares para dormir, por isso os visitantes devem viajar com alguém da zona e pedir licença antes de visitar lugares sagrados."
+   },
+   "tips": {
+    "tet": "Uza kareta 4x4 no halo viajen iha tempu bailoron; iha tempu udan rai-monu barak. Lori osan, kombustivel no hahán. Keta foti foto ba postu fronteira, no lori nafatin pasaporte ka bilhete identidade.",
+    "pt": "Use um 4x4 e viaje na época seca; na época das chuvas há muitos deslizamentos. Leve dinheiro, combustível e comida. Não fotografe postos fronteiriços e tenha sempre consigo o passaporte ou o bilhete de identidade."
+   },
+   "illustration": "viewpoint",
+   "related": [
+    "mun.covalima",
+    "place.suai_cathedral",
+    "place.tilomar_reserve",
+    "tl.geography.border",
+    "tl.culture.uma_lulik"
+   ],
+   "tags": [
+    "viewpoint",
+    "mountains",
+    "covalima",
+    "border"
+   ],
+   "sources": [
+    {
+     "title": "Covalima",
+     "publisher": "Exploring Timor-Leste (exploringtimor.com)",
+     "url": "https://exploringtimor.com/covalima/",
+     "accessed": "2026-11-02",
+     "licence": "© publisher"
+    },
+    {
+     "title": "Visit Cova Lima Municipality in Timor-Leste",
+     "publisher": "timorleste.tl (official tourism website of Timor-Leste)",
+     "url": "https://www.timorleste.tl/?p=5588",
+     "accessed": "2026-11-02",
+     "licence": "© publisher"
+    },
+    {
+     "title": "Cova Lima Municipality",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Cova_Lima_Municipality",
+     "accessed": "2026-11-02",
+     "licence": "CC BY-SA 4.0"
+    }
+   ],
+   "review": {
+    "status": "draft",
+    "notes": "Written on 2 Nov 2026 from WebSearch result summaries (timorleste.tl itself could not be opened in the sandbox); coordinates checked only against the Lafa municipality map. Scenic drives 'to the west in areas such as Fatululic and Fatumea' from exploringtimor.com (search summary); traditional houses and languages from municipalities.json. No single attraction is named — the entry describes the area. Coordinates: Fatululik post (approximate)."
+   }
+  },
+  {
+   "id": "place.fatusuba",
+   "name": {
+    "tet": "Fatusuba",
+    "pt": "Fatusuba"
+   },
+   "municipality": "mun.oecusse",
+   "type": "fort",
+   "lat": -9.21,
+   "lon": 124.375,
+   "summary": {
+    "tet": "Edifísiu militár tuan ida iha foho ida nia tutun, iha Pante Macassar nia kotuk. Website turizmu ofisiál hatudu nu'udar forte no fatin di'ak atu haree vila no baía.",
+    "pt": "Um antigo edifício de guarnição militar no alto de uma colina, logo atrás de Pante Macassar. O site oficial de turismo apresenta-o como forte e bom miradouro sobre a vila e a baía."
+   },
+   "text": {
+    "tet": "Fatusuba mak foho ida iha Pante Macassar nia kotuk, Oe-Kusi Ambenu nia kapitál. Iha leten iha edifísiu guarnisaun tuan ida, husi tempu ne'ebé soldadu Portugés sira hein vila no kosta, no website turizmu ofisiál hatama nia iha nasaun nia forte sira. Husi leten ita haree Pante Macassar nia baía tomak, tasi-ibun naruk, ró peskadór nian no, ba loro-monu, Lifau nia kosta, fatin ne'ebé Portugés sira tun dahuluk, tuir tradisaun iha 1515. Di'ak atu sa'e iha loro-kraik, bainhira manas tun no loro tun iha tasi leten. Fatin ne'e ajuda ita komprende tanba saida mak rai-le'un ki'ik ne'e importante tebes iha Timor nia istória: Lifau, besik ne'e, mak kapitál dahuluk to'o 1769.",
+    "pt": "Fatusuba é uma colina logo atrás de Pante Macassar, a capital de Oé-Cusse Ambeno. No alto fica um antigo edifício de guarnição, do tempo em que soldados portugueses vigiavam a vila e a costa, e o site oficial de turismo inclui-o entre os fortes do país. Do cimo vê-se toda a baía de Pante Macassar, a longa praia, os barcos de pesca e, para oeste, a costa de Lifau, onde os portugueses desembarcaram pela primeira vez, tradicionalmente em 1515. A subida faz-se bem ao fim da tarde, quando o calor diminui e o sol se põe sobre o mar. O lugar ajuda a perceber porque é que este pequeno enclave foi tão importante na história de Timor: Lifau, ali perto, foi a primeira capital até 1769."
+   },
+   "tips": {
+    "tet": "Sa'e iha loro-kraik, ho bee-hemu no sapatu metin. Keta sa'e ba didin tuan sira. Husu iha Pante Macassar kona-ba dalan no se presiza lisensa atu tama edifísiu.",
+    "pt": "Suba ao fim da tarde, com água e calçado firme. Não suba às paredes antigas. Pergunte em Pante Macassar pelo caminho e se é preciso licença para entrar no edifício."
+   },
+   "illustration": "fort",
+   "quiz": [
+    {
+     "q": {
+      "tet": "Husi Fatusuba nia leten, fatin saida iha loro-monu mak marka Portugés sira-nia tun dahuluk?",
+      "pt": "Que lugar, a oeste, se vê do alto de Fatusuba e marca o primeiro desembarque português?"
+     },
+     "options": [
+      {
+       "tet": "Batugade",
+       "pt": "Batugade"
+      },
+      {
+       "tet": "Jaku",
+       "pt": "Jaco"
+      },
+      {
+       "tet": "Lifau",
+       "pt": "Lifau"
+      },
+      {
+       "tet": "Betano",
+       "pt": "Betano"
+      }
+     ],
+     "answer": 2,
+     "why": {
+      "tet": "Lifau, iha Pante Macassar nia loro-monu, mak fatin ne'ebé Portugés sira tun dahuluk, tuir tradisaun iha 1515.",
+      "pt": "Lifau, a oeste de Pante Macassar, é o lugar do primeiro desembarque português, tradicionalmente em 1515."
+     },
+     "difficulty": 8
+    }
+   ],
+   "related": [
+    "mun.oecusse",
+    "place.pante_macassar",
+    "place.lifau",
+    "place.mahata_beach",
+    "tl.tourism.heritage",
+    "tl.colonial.lifau_to_dili"
+   ],
+   "tags": [
+    "fort",
+    "viewpoint",
+    "oecusse"
+   ],
+   "sources": [
+    {
+     "title": "Visit Oecussi-Ambeno Municipality in Timor-Leste",
+     "publisher": "timorleste.tl (official tourism website of Timor-Leste)",
+     "url": "https://www.timorleste.tl/?p=5600",
+     "accessed": "2026-11-02",
+     "licence": "© publisher"
+    },
+    {
+     "title": "Attractions (beaches, dive sites, peaks, waterfalls, forts, markets and sacred places)",
+     "publisher": "timorleste.tl (official tourism website of Timor-Leste)",
+     "url": "https://timorleste.tl/destinations/attractions",
+     "accessed": "2026-11-02",
+     "licence": "© publisher"
+    },
+    {
+     "title": "Pante Macassar",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Pante_Macassar",
+     "accessed": "2026-11-02",
+     "licence": "CC BY-SA 4.0"
+    }
+   ],
+   "review": {
+    "status": "draft",
+    "notes": "Written on 2 Nov 2026 from WebSearch result summaries (timorleste.tl itself could not be opened in the sandbox); coordinates checked only against the Lafa municipality map. 'Old garrison building on a hilltop right behind the town, a good viewpoint' (timorleste.tl Oecusse page) and 'Fatu-Suba, a fort in Oecusse' (attractions list) from search summaries. Its date was not found. Lifau as capital until 1769 as in place.lifau. Coordinates approximate (hill just south of Pante Macassar)."
+   }
+  },
+  {
+   "id": "place.citrana",
+   "name": {
+    "tet": "Citrana",
+    "pt": "Citrana"
+   },
+   "municipality": "mun.oecusse",
+   "type": "village",
+   "lat": -9.335,
+   "lon": 124.075,
+   "summary": {
+    "tet": "Povoasaun ki'ik ida iha Oe-Kusi nia rohan loro-monu, besik mota Noel Besi nia ibun, ne'ebé marka fronteira ho Indonézia. Iha igreja ida ho estilu tradisionál Timor nian no festa kolleita bua nian iha Setembru.",
+    "pt": "Pequena povoação no extremo oeste de Oé-Cusse, perto da foz do rio Noel Besi, que marca a fronteira com a Indonésia. Tem uma igreja em estilo tradicional timorense e uma festa da colheita da areca em setembro."
+   },
+   "text": {
+    "tet": "Citrana iha rai-le'un Oe-Kusi Ambenu nia rohan loro-monu, besik Noel Besi nia ibun, mota ne'ebé iha ne'e sai parte husi fronteira ho Timor Oeste, iha Indonézia. Guia viajen ida deskreve aldeia hakmatek ida ho igreja interesante ida, ne'ebé ema harii ho estilu tradisionál Timor nian, kosta furak no to'os bua boot ida, fatin ne'ebé tinan-tinan, iha Setembru, ema halo festa kolleita nian. Bua, ne'ebé ema han hamutuk ho malus no ahu, mak parte importante husi oinsá ema simu bainaka no husi serimónia sira iha Timor. Família sira moris husi agrikultura no peska. Viajen husi Pante Macassar naruk, liu estrada no mota ne'ebé bele susar iha tempu udan, maibé rejiaun ne'e hakmatek no furak.",
+    "pt": "Citrana fica no extremo oeste do enclave de Oé-Cusse Ambeno, perto da foz do Noel Besi, o rio que aqui forma parte da fronteira com Timor Ocidental, na Indonésia. Um guia de viagem descreve uma aldeia tranquila com uma igreja interessante, construída no estilo tradicional timorense, uma costa agradável e uma grande plantação de areca, onde todos os anos, em setembro, se faz uma festa da colheita. A areca, mascada com folha de bétel e cal, é parte importante da maneira de receber os convidados e das cerimónias em Timor. As famílias vivem da agricultura e da pesca. A viagem desde Pante Macassar é longa, por estradas e rios que podem ser difíceis na época das chuvas, mas a região é calma e bonita."
+   },
+   "tips": {
+    "tet": "Husu iha Pante Macassar kona-ba estrada nia kondisaun no festa nia data. Keta besik fronteira la ho autorizasaun, no lori ita-nia dokumentu identidade. Husu lisensa molok tama igreja no molok foti foto ba festa.",
+    "pt": "Pergunte em Pante Macassar pelo estado da estrada e pela data da festa. Não se aproxime da fronteira sem autorização e tenha consigo o documento de identidade. Peça licença antes de entrar na igreja e de fotografar a festa."
+   },
+   "illustration": "village",
+   "wiki": {
+    "en": "Citrana"
+   },
+   "quiz": [
+    {
+     "q": {
+      "tet": "Mota saida mak sai parte husi fronteira besik Citrana?",
+      "pt": "Que rio forma parte da fronteira perto de Citrana?"
+     },
+     "options": [
+      {
+       "tet": "Lois",
+       "pt": "Lóis"
+      },
+      {
+       "tet": "Laclo",
+       "pt": "Laclo"
+      },
+      {
+       "tet": "Komoru",
+       "pt": "Comoro"
+      },
+      {
+       "tet": "Noel Besi",
+       "pt": "Noel Besi"
+      }
+     ],
+     "answer": 3,
+     "why": {
+      "tet": "Citrana besik Noel Besi nia ibun, mota ne'ebé marka fronteira ho Timor Oeste iha Oe-Kusi nia loro-monu.",
+      "pt": "Citrana fica perto da foz do Noel Besi, que marca a fronteira com Timor Ocidental no oeste de Oé-Cusse."
+     },
+     "difficulty": 11
+    }
+   ],
+   "related": [
+    "mun.oecusse",
+    "place.pante_macassar",
+    "place.lifau",
+    "tl.geography.border",
+    "tl.culture.food"
+   ],
+   "tags": [
+    "village",
+    "oecusse",
+    "border",
+    "festival"
+   ],
+   "sources": [
+    {
+     "title": "Citrana",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Citrana",
+     "accessed": "2026-11-02",
+     "licence": "CC BY-SA 4.0"
+    },
+    {
+     "title": "Oecusse",
+     "publisher": "Exploring Timor-Leste (exploringtimor.com)",
+     "url": "https://exploringtimor.com/oecusse/",
+     "accessed": "2026-11-02",
+     "licence": "© publisher"
+    },
+    {
+     "title": "Visit Oecussi-Ambeno Municipality in Timor-Leste",
+     "publisher": "timorleste.tl (official tourism website of Timor-Leste)",
+     "url": "https://www.timorleste.tl/?p=5600",
+     "accessed": "2026-11-02",
+     "licence": "© publisher"
+    }
+   ],
+   "review": {
+    "status": "draft",
+    "notes": "Written on 2 Nov 2026 from WebSearch result summaries (timorleste.tl itself could not be opened in the sandbox); coordinates checked only against the Lafa municipality map. Location and the Noel Besi border from Wikipedia 'Citrana'; church in traditional style, coastline, betel-nut plantation and September harvest festival from exploringtimor.com (search summaries). The Citrana/Naktuka border question is left out on purpose. Coordinates approximate (west end of the enclave, inside the Lafa map)."
+   }
+  }
+ ]
+}

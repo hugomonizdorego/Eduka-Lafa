@@ -93,7 +93,7 @@ class ConstitutionPage(QWidget):
         self.style_lists(); self.fill_tree()
     def style_lists(self):
         tok = tok_of(self.win)
-        css = (f"QTreeWidget, QListWidget {{ background:transparent; color:{tok['text']}; outline:0; }}"
+        css = (f"QTreeWidget, QListWidget {{ background:transparent; color:{tok['text']}; outline:0; show-decoration-selected:0; }}"
                f"QTreeWidget::item, QListWidget::item {{ padding:5px 4px; border-radius:8px; }}"
                f"QTreeWidget::item:selected, QListWidget::item:selected {{ background:{tok['primary_soft']}; color:{tok['text']}; }}"
                f"QTreeWidget::item:hover, QListWidget::item:hover {{ background:{tok['card_hover']}; }}"

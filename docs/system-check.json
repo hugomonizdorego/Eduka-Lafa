@@ -1,5 +1,5 @@
 {
-  "lafa_version": "0.2.0",
+  "lafa_version": "0.3.0",
   "network_requested": false,
   "checks": [
     {
@@ -28,11 +28,6 @@
       "detail": "Offscreen/Wayland needs target placement testing"
     },
     {
-      "check": "PDF reading",
-      "status": "pass",
-      "detail": "pdftotext available"
-    },
-    {
       "check": "Read aloud",
       "status": "warning",
       "detail": "Optional command missing: espeak-ng"
@@ -45,7 +40,7 @@
     {
       "check": "Preferences",
       "status": "pass",
-      "detail": "Language: en; virtual enabled: False; selected folders: 0"
+      "detail": "Language: tet; virtual enabled: False; selected folders: 1"
     },
     {
       "check": "Desktop launcher",
@@ -56,6 +51,11 @@
       "check": "Settings launcher",
       "status": "warning",
       "detail": "Run scripts/install-user.sh from a stable source location"
+    },
+    {
+      "check": "Encyclopedia content",
+      "status": "pass",
+      "detail": "195 articles, 113 places, 20 days, 1173 words, 1321 quiz questions"
     }
   ],
   "private_data_included": false

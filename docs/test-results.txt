@@ -1,8 +1,14 @@
-Lafa 0.2.1 — 2026-10-15, Ubuntu 24.04 container, Python 3.13, Qt offscreen
-LAFA_QT=pyqt5|pyside6 QT_QPA_PLATFORM=offscreen python -m pytest -q
+Lafa 0.3.0 automated tests — 2026-11-02, Ubuntu 24.04 container, Qt offscreen
+
+PyQt5 5.15 (pip wheels in a venv; the Debian package uses python3-pyqt5) and PySide6:
 == pyqt5
-253 passed, 10 subtests passed in 336.42s (0:05:36)
+........................................................................ [ 90%]
+........                                                                 [100%]
+80 passed in 91.86s (0:01:31)
 == pyside6
-253 passed, 10 subtests passed in 612.06s (0:10:12)
-tools/check-encyclopedia.py: ✓ 15 files, 34 articles
-tools/check-curriculum.py: all files valid
+........................................................................ [ 90%]
+........                                                                 [100%]
+80 passed in 142.71s (0:02:22)
+
+Content: ✓ 195 articles, 20 days, 6 indicators, 14 municipalities, 113 places, 1173 words · 0 errors · 0 warnings
+Manifest: 2026.11.02 38 files
