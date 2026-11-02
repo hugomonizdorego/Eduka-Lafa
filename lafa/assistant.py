@@ -331,6 +331,12 @@ class Companion(QWidget):
             self.tip_card.show(); self.more_button.show(); self.setFixedSize(*self.expanded_size()); return
         self.tip_card.hide(); self.more_button.hide(); lang = self.lang
         hits = self.kb.search(q, lang, limit=5); words = self.kb.search_words(q, self.settings.vocab_lang, limit=3)
+        from .constitution import load as load_constitution
+        con = load_constitution(); laws = con.search(q, lang, limit=2)
+        for a, _score, _snippet in laws:
+            row = QPushButton(f"  {'Artigu' if lang == 'tet' else 'Artigo'} {a['n']} · {kb.show(con.article_title(a, lang), lang)}"); row.setObjectName("chip"); row.setCursor(Qt.PointingHandCursor)
+            row.setIcon(icons.icon("scales", theme.accent("indigo")[0])); row.setStyleSheet("text-align:left; padding:8px 10px;")
+            row.clicked.connect(lambda checked=False, n=a["n"]: self.follow("constitution", str(n))); self.results.addWidget(row)
         for item, _score in hits:
             cat = kb.CATEGORY.get(item.category); row = QPushButton(f"  {item.title(lang)}"); row.setObjectName("chip"); row.setCursor(Qt.PointingHandCursor)
             row.setIcon(icons.icon(cat.icon if cat else "book-open", theme.accent(cat.accent if cat else "violet")[0])); row.setStyleSheet("text-align:left; padding:8px 10px;")
@@ -338,7 +344,7 @@ class Companion(QWidget):
         for w in words:
             meaning = w.meaning(self.settings.vocab_lang) or w.meaning("en")
             l = label(f"<b>{kb.show(w.tet, 'tet')}</b> = {meaning}", wrap=True); l.setStyleSheet(f"background:{self.tok['card_hover']}; border-radius:12px; padding:6px 10px;"); self.results.addWidget(l)
-        if not hits and not words: self.results.addWidget(label(self.t("va_no_results"), "muted", wrap=True))
+        if not hits and not words and not laws: self.results.addWidget(label(self.t("va_no_results"), "muted", wrap=True))
         more = button(self.t("va_see_all"), self.search_all, "ghost", "search"); self.results.addWidget(more, 0, Qt.AlignLeft)
         self.setFixedSize(*self.expanded_size())
     def search_all(self):

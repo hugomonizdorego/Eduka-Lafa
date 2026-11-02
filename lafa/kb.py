@@ -87,6 +87,8 @@ CATEGORIES = [
              L("Oinsá tasi-le'un Timór moris, foho, mota no tempu.", "Como a ilha se formou, montanhas, rios e clima."), "mountain", "peach", "island-formation"),
     Category("nature", L("Natureza no Biodiversidade", "Natureza e biodiversidade"),
              L("Manu, lafaek, tasi no ai-laran sira.", "Aves, crocodilos, mar e florestas."), "leaf", "mint", "coral-reef"),
+    Category("prehistory", L("Pre-istória", "Pré-história"),
+             L("Fósil, animál antigu, ema dahuluk no arte iha fatuk-kuak.", "Fósseis, animais antigos, primeiros povos e arte rupestre."), "layers", "peach", "fossil"),
     Category("history", L("Istória", "História"),
              L("Husi ema dahuluk to'o 2026.", "Dos primeiros povos até 2026."), "scroll", "lilac", "prehistory"),
     Category("colonial", L("Kolonializmu no Okupasaun", "Colonialismo e ocupação"),
@@ -95,6 +97,8 @@ CATEGORIES = [
              L("Rezisténsia, terus no dame.", "Resistência, sofrimento e paz."), "dove", "coral", "reconciliation"),
     Category("politics", L("Estadu no Polítika", "Estado e política"),
              L("Lei-Inan, órgaun soberania no eleisaun sira.", "Constituição, órgãos de soberania e eleições."), "landmark", "violet", "parliament"),
+    Category("institutions", L("Instituisaun Estadu", "Instituições do Estado"),
+             L("Ministériu sira, F-FDTL, PNTL no órgaun independente.", "Ministérios, F-FDTL, PNTL e órgãos independentes."), "shield", "indigo", "government-palace"),
     Category("leaders", L("Prezidente no Primeiru-Ministru", "Presidentes e primeiros-ministros"),
              L("Lider sira husi 1975 to'o ohin.", "Líderes de 1975 até hoje."), "user", "pink", "palace"),
     Category("symbols", L("Símbolu Nasionál", "Símbolos nacionais"),
@@ -103,6 +107,8 @@ CATEGORIES = [
              L("Munisípiu 14, postu administrativu no tasi-le'un sira.", "Os 14 municípios, postos e ilhas."), "map", "teal", "tl-overview"),
     Category("culture", L("Kultura no Lisan", "Cultura e tradição"),
              L("Tais, uma lulik, dansa, múzika no ai-han.", "Tais, uma lulik, danças, música e comida."), "palette", "butter", "tais"),
+    Category("sports", L("Desportu", "Desporto"),
+             L("Futebol, Jogu Olímpiku, SEA Games, arte marsiál no jogu tradisionál.", "Futebol, Jogos Olímpicos, SEA Games, artes marciais e jogos tradicionais."), "medal", "green", "athletics"),
     Category("society", L("Sosiedade", "Sociedade"),
              L("Populasaun, lian, relijiaun, edukasaun no saúde.", "População, línguas, religião, educação e saúde."), "people", "indigo", "population"),
     Category("economy", L("Ekonomia", "Economia"),
@@ -118,7 +124,8 @@ CATEGORY = {c.key: c for c in CATEGORIES}
 
 # History eras for the timeline (years; negative = before the common era).
 ERAS = [
-    ("prehistory", -44000, 1500, L("Ema dahuluk no reinu sira", "Primeiros povos e reinos"), "lilac"),
+    ("deep_time", -300_000_000, -50000, L("Rai, fósil no animál antigu", "Terra, fósseis e animais antigos"), "peach"),
+    ("prehistory", -50000, 1500, L("Ema dahuluk no reinu sira", "Primeiros povos e reinos"), "lilac"),
     ("portuguese", 1515, 1941, L("Tempu Portugés", "Período português"), "sky"),
     ("ww2", 1942, 1945, L("Funu Mundiál II", "II Guerra Mundial"), "slate"),
     ("late_colonial", 1945, 1974, L("Timór Portugés ikus", "Timor Português tardio"), "teal"),
@@ -129,7 +136,7 @@ ERAS = [
 ]
 
 # Where each era begins (year, month, day); an event belongs to the last era that began before it.
-ERA_STARTS = [("prehistory", (-10 ** 7, 0, 0)), ("portuguese", (1515, 0, 0)), ("ww2", (1942, 2, 0)), ("late_colonial", (1945, 9, 0)),
+ERA_STARTS = [("deep_time", (-10 ** 10, 0, 0)), ("prehistory", (-50000, 0, 0)), ("portuguese", (1515, 0, 0)), ("ww2", (1942, 2, 0)), ("late_colonial", (1945, 9, 0)),
               ("decolonisation", (1974, 4, 25)), ("occupation", (1975, 12, 7)), ("transition", (1999, 10, 25)), ("state", (2002, 5, 20))]
 
 def era_of(key):
@@ -478,7 +485,7 @@ def easter(year):
 
 def parse_when(value):
     """Sortable key for "1975-11-28", "1975-11", "1975", "-42000"."""
-    m = re.match(r"^(-?\d{1,6})(?:-(\d{2}))?(?:-(\d{2}))?$", str(value or "").strip())
+    m = re.match(r"^(-?\d{1,10})(?:-(\d{2}))?(?:-(\d{2}))?$", str(value or "").strip())
     if not m: return None
     return (int(m.group(1)), int(m.group(2) or 0), int(m.group(3) or 0))
 
@@ -486,6 +493,10 @@ def format_when(value, lang="tet"):
     key = parse_when(value)
     if key is None: return str(value or "")
     y, mo, d = key
+    if y <= -1_000_000:
+        # Geological time: millions of years ago.
+        m = -y / 1_000_000; n = f"{m:.1f}".rstrip("0").rstrip(".").replace(".", ",")
+        return {"tet": f"tinan tokon {n} liubá", "pt": f"há {n} {'milhão' if m == 1 else 'milhões'} de anos"}[lang if lang in LANGS else "tet"]
     if y <= -10000:
         # Deep time is told as "years ago" (the difference to BCE does not matter there).
         years = f"{-y:,}".replace(",", " ")

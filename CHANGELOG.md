@@ -4,18 +4,46 @@
 
 _Nothing yet._
 
-## 0.3.0 — 2026-10-27 · "Ensiklopédia Timór-Leste"
+## 0.3.0 — 2026-11-02 · "Ensiklopédia Timór-Leste"
 
 Lafa Desktop is rebuilt as an encyclopedia of Timor-Leste only, and the
 Virtual Assistant as a Timor-Leste guide, study buddy and computer helper.
+
+### Added in the second half of 0.3.0
+- **Two languages**: the interface and every text are now in Tetun and
+  Portuguese, the official languages (Constitution, art. 13). Settings of
+  English or Indonesian become "follow the system". The word lists keep
+  Portuguese, Indonesian, English and the ASEAN/CPLP languages.
+- **Konstituisaun RDTL**: the full official text in Tetun and Portuguese
+  (parsed from the official PDFs by `tools/make-constitution.py`): contents,
+  bilingual view, quick links, search by article number ("15", "art. 59") or
+  words with highlighting, copy and read aloud; Constitution results in the
+  global search.
+- **Símbolu Nasionál**: the anthem «Pátria» with the recording provided by the
+  owner and lyrics that light up as they are sung (timing measured with vocal
+  separation and Whisper scoring, `tools/anthem/`), the full Portuguese lyrics
+  with a Tetun translation, the flag with the colours of art. 15, and an
+  explanatory drawing of the emblem (*belak*) with its eight parts.
+- **New categories**: prehistory (fossils, the 2026 pterosaur of Lesululi,
+  Stegodon, the first people, rock art), State institutions (ministries,
+  F-FDTL, PNTL, independent bodies), sports (football, Olympic, SEA and CPLP
+  Games, martial arts, cycling, athletics); more animals; archives of the
+  resistance; more tourist places and guides.
+- **Photo gallery**: optional download of three more free-licence photos per
+  item, with author and licence, shown in every article.
+- **Map fix**: municipalities are now the union of their administrative posts
+  by the official list (Dom Aleixo and western Díli in Díli, Zumalai in Cova
+  Lima); map data from OCHA only (CC BY 3.0 IGO).
+- Timeline: geological dates (millions of years) and a "deep time" era.
+- 14 new illustrations; assistant tips with a Constitution article and the
+  anthem; the menu scrolls on 1024×600 screens.
 
 ### Lafa Desktop
 - New pastel design combining the three reference images: gradient
   backgrounds, glass cards, 3-D clay icons, gradient menu pill, charts and a
   month calendar; Nunito font (OFL); light and dark themes; text size 90–160 %;
   compact sidebar on 1024×600 screens; keyboard shortcuts.
-- Encyclopedia in 15 categories and four languages (Tetun, Português, Bahasa
-  Indonesia, English): about 150 articles from the formation of the island to
+- Encyclopedia in 15 categories (18 since the second half of 0.3.0): about 150 articles from the formation of the island to
   2026, 14 municipalities, tourist places, holidays and national days, each
   with sources, licences, key facts, timeline, related pages and a quiz.
 - Interactive map of the municipalities, posts and places (geoBoundaries).

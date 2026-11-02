@@ -2,6 +2,8 @@
 encyclopedia and the learner's own progress (nothing is sent anywhere):
 
 holiday   a public holiday or national day in the next days
+anthem    the national anthem «Pátria», to listen to with its lyrics
+law       an article of the Constitution of the RDTL
 today     this day (or month) in Timor-Leste's history
 fact      a "did you know?" fact from an article
 word      a Tetun word with its meaning in the learner's language
@@ -44,6 +46,11 @@ extend({
     "act_cards": ("Repete agora", "Rever agora"),
     "act_calendar": ("Kalendáriu", "Calendário"),
     "act_timeline": ("Liña tempu", "Linha do tempo"),
+    "tip_constitution": ("Konstituisaun, artigu {n}: {title}", "Constituição, artigo {n}: {title}"),
+    "act_constitution": ("Lee artigu", "Ler o artigo"),
+    "tip_anthem": ("Inu nasionál «Pátria»", "Hino nacional «Pátria»"),
+    "tip_anthem_text": ("Rona no hananu hamutuk: letra tuir múzika, ho tradusaun Tetun.", "Ouça e cante connosco: a letra acompanha a música, com tradução em tétum."),
+    "act_listen": ("Rona", "Ouvir"),
     "act_quiz": ("Kuis Milionáriu", "Quiz Milionário"),
     "act_paths": ("Nível eskola", "Níveis escolares"),
     "welcome_title": ("Bondia! Ha'u Lafa.", "Olá! Eu sou o Lafa."),
@@ -52,20 +59,13 @@ extend({
 })
 
 COMPUTER_TIPS = [
-    ("Iha Lafa Desktop, Ctrl+F loke buka. Alt+1 to'o Alt+9 loke menu sira.", "No Lafa Desktop, Ctrl+F abre a pesquisa. Alt+1 a Alt+9 abrem os menus.",
-     "Di Lafa Desktop, Ctrl+F membuka pencarian. Alt+1 sampai Alt+9 membuka menu.", "In Lafa Desktop, Ctrl+F opens search. Alt+1 to Alt+9 open the menus."),
-    ("Atu muda lian Lafa nian, loke Konfigurasaun → Lian aplikasaun nian.", "Para mudar a língua do Lafa, abra Definições → Língua da aplicação.",
-     "Untuk mengganti bahasa Lafa, buka Pengaturan → Bahasa aplikasi.", "To change Lafa's language, open Settings → App language."),
-    ("Download “Pakote offline” bainhira iha internet: depois ita bele lee testu no haree foto la ho internet.", "Descarregue o “Pacote offline” quando tiver internet: depois lê textos e vê fotos sem internet.",
-     "Unduh “Paket luring” saat ada internet: nanti kamu bisa membaca teks dan melihat foto tanpa internet.", "Download the “Offline pack” when you are online: later you can read texts and see photos without internet."),
-    ("Klik-loos iha Lafa atu hili hatais: Kazuál, Tais Mane ka Formál.", "Clique com o botão direito no Lafa para escolher a roupa: Casual, Tais Mane ou Formal.",
-     "Klik kanan pada Lafa untuk memilih pakaian: Santai, Tais Mane atau Formal.", "Right-click Lafa to choose an outfit: Casual, Tais Mane or Formal."),
-    ("Rai ita-nia servisu beibeik (Ctrl+S) no halo kópia iha USB ka nuvem.", "Guarde o seu trabalho muitas vezes (Ctrl+S) e faça cópias numa pen ou na nuvem.",
-     "Simpan pekerjaanmu sering-sering (Ctrl+S) dan buat salinan di USB atau awan.", "Save your work often (Ctrl+S) and keep a copy on a USB stick or in the cloud."),
-    ("Modu kalma: klik-loos iha Lafa → “Modu kalma” atu Lafa la ko'alia mesak.", "Modo calmo: clique com o botão direito no Lafa → “Modo calmo” para o Lafa não falar sozinho.",
-     "Mode tenang: klik kanan Lafa → “Mode tenang” agar Lafa tidak berbicara sendiri.", "Quiet mode: right-click Lafa → “Quiet mode” so Lafa does not talk by itself."),
-    ("Ekrã naroman liu ka nakukun liu? Muda tema iha Konfigurasaun → Tema.", "Ecrã muito claro ou escuro? Mude o tema em Definições → Tema.",
-     "Layar terlalu terang atau gelap? Ganti tema di Pengaturan → Tema.", "Screen too bright or too dark? Change the theme in Settings → Theme."),
+    ("Iha Lafa Desktop, Ctrl+F loke buka. Alt+1 to'o Alt+9 loke menu sira.", "No Lafa Desktop, Ctrl+F abre a pesquisa. Alt+1 a Alt+9 abrem os menus."),
+    ("Atu muda lian Lafa nian, loke Konfigurasaun → Lian aplikasaun nian.", "Para mudar a língua do Lafa, abra Definições → Língua da aplicação."),
+    ("Download “Pakote offline” bainhira iha internet: depois ita bele lee testu no haree foto la ho internet.", "Descarregue o “Pacote offline” quando tiver internet: depois lê textos e vê fotos sem internet."),
+    ("Klik-loos iha Lafa atu hili hatais: Kazuál, Tais Mane ka Formál.", "Clique com o botão direito no Lafa para escolher a roupa: Casual, Tais Mane ou Formal."),
+    ("Rai ita-nia servisu beibeik (Ctrl+S) no halo kópia iha USB ka nuvem.", "Guarde o seu trabalho muitas vezes (Ctrl+S) e faça cópias numa pen ou na nuvem."),
+    ("Modu kalma: klik-loos iha Lafa → “Modu kalma” atu Lafa la ko'alia mesak.", "Modo calmo: clique com o botão direito no Lafa → “Modo calmo” para o Lafa não falar sozinho."),
+    ("Ekrã naroman liu ka nakukun liu? Muda tema iha Konfigurasaun → Tema.", "Ecrã muito claro ou escuro? Mude o tema em Definições → Tema."),
 ]
 
 @dataclass
@@ -80,7 +80,8 @@ class Tip:
     def speech(self):
         return f"{self.title}. {self.text}" + (f" {self.quiz['q']}" if self.quiz else "")
 
-KINDS = {"holiday": 3, "today": 2, "fact": 3, "word": 3, "quiz": 4, "place": 2, "review": 2, "continue": 1, "level": 2, "streak": 1, "computer": 1}
+KINDS = {"holiday": 3, "today": 2, "fact": 3, "word": 3, "quiz": 4, "place": 2, "review": 2, "continue": 1, "level": 2, "streak": 1, "computer": 1,
+         "law": 2, "anthem": 1}
 
 def _lang(lang): return lang if lang in kb.LANGS else "tet"
 
@@ -155,6 +156,17 @@ def tip_of(kind, base, progress, settings, lang, today=None, rng=None):
         n = progress.streak if progress else 0
         if n < 2: return None
         return Tip("streak", "star", "peach", tr("tip_streak", n=n), tr("tip_streak_text"), [(tr("act_quiz"), "quiz", "")])
+    if kind == "law":
+        from .constitution import load as load_constitution
+        con = load_constitution()
+        if not con.articles: return None
+        a = rng.choice(con.articles); blocks = con.blocks(a, lang)
+        first = (blocks[0].get("text") or " ".join(t_ for _l, t_ in blocks[0].get("items", []))) if blocks else ""
+        text = kb.show(first if len(first) <= 260 else first[:257].rsplit(" ", 1)[0] + "…", lang)
+        return Tip("law", "scales", "indigo", tr("tip_constitution", n=a["n"], title=con.article_title(a, lang)), text,
+                   [(tr("act_constitution"), "constitution", str(a["n"]))])
+    if kind == "anthem":
+        return Tip("anthem", "music", "rose", tr("tip_anthem"), tr("tip_anthem_text"), [(tr("act_listen"), "symbols", "play")])
     if kind == "computer":
         row = rng.choice(COMPUTER_TIPS)
         return Tip("computer", "monitor-help", "sky", tr("tip_computer"), kb.show(row[kb.LANGS.index(lang)], lang), [])

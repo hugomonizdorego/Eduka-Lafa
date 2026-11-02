@@ -1118,6 +1118,185 @@ def s_easter(s):
 def s_map(s):
     s.add(rect(0, 0, W, H, s.grad((0, "#c8ecff"), (1, "#86c8ee")))); map_outline(s, 20, 40, 600, 280)
 
+# ------------------------------------------------------------- prehistory
+def ammonite(s, x, y, r, c1="#e8c98f", c2="#b98c4e"):
+    pts = []
+    for i in range(140):
+        a = i * 0.16; rr = r * (0.08 + 0.92 * i / 140)
+        pts.append(f"{x + rr * math.cos(a):.1f} {y + rr * math.sin(a):.1f}")
+    s.add(circle(x, y, r, s.radial((0, c1), (1, c2)))); s.add(path("M" + " L".join(pts), "none", "#8a6230", 2.2))
+    for i in range(12):
+        a = i * math.pi / 6; s.add(path(f"M{x + r * 0.55 * math.cos(a):.1f} {y + r * 0.55 * math.sin(a):.1f} L{x + r * 0.97 * math.cos(a):.1f} {y + r * 0.97 * math.sin(a):.1f}", "none", "#9b7239", 1.4))
+
+@scene("fossil")
+def s_fossil(s):
+    sky(s, "dawn")
+    for i, (y, c) in enumerate(((150, "#e9d2a9"), (196, "#dcbf8f"), (240, "#cfae7b"), (286, "#c19d6c"), (330, "#b38d5e"))):
+        s.add(path(f"M0 {y} Q160 {y - 14 + i * 4} 320 {y} T640 {y} L640 360 L0 360Z", c))
+    ammonite(s, 210, 250, 52); ammonite(s, 470, 300, 30, "#efd6a6", "#c49a5c")
+    for i in range(9): s.add(ellipse(380 + i * 14, 220 - i * 6, 7, 5, "#a37a46"))         # crinoid stem
+    s.add(path("M500 168 q20 -30 40 -8 q-16 4 -22 30", "#a37a46"))
+    s.add(circle(560, 120, 34, "none", 'stroke="#5b4ccc" stroke-width="8"'), circle(560, 120, 30, "#ffffff", 'opacity="0.35"'))
+    s.add(path("M583 143 L616 176", "none", "#5b4ccc", 10))
+
+@scene("pterosaur")
+def s_pterosaur(s):
+    sky(s, "dawn"); sun(s, 520, 90, 30); sea(s, 280)
+    s.add(path("M0 280 L0 170 Q60 150 110 190 L150 280Z", "#b9876a"), path("M0 280 L0 200 Q50 186 90 214 L120 280Z", "#a2735a"))
+    for (x, y, k) in ((330, 120, 1.0), (470, 190, 0.55)):
+        s.add(path(f"M{x} {y} Q{x - 70 * k} {y - 50 * k} {x - 150 * k} {y - 10 * k} Q{x - 80 * k} {y - 8 * k} {x - 20 * k} {y + 12 * k}Z", "#7a5cc8"))
+        s.add(path(f"M{x} {y} Q{x + 70 * k} {y - 50 * k} {x + 150 * k} {y - 10 * k} Q{x + 80 * k} {y - 8 * k} {x + 20 * k} {y + 12 * k}Z", "#8a6ad6"))
+        s.add(ellipse(x, y + 4 * k, 20 * k, 9 * k, "#6b4fb8"))
+        s.add(path(f"M{x + 14 * k} {y} L{x + 52 * k} {y - 10 * k} L{x + 18 * k} {y + 6 * k}Z", "#e9b949"), path(f"M{x + 10 * k} {y - 4 * k} L{x - 8 * k} {y - 30 * k} L{x + 4 * k} {y - 2 * k}Z", "#d94f6b"))
+        s.add(circle(x + 18 * k, y - 2 * k, 2.2 * k, "#ffffff"))
+
+@scene("stegodon")
+def s_stegodon(s):
+    sky(s, "day"); hills(s, 230, 30, "#bfe3a6", "#9fd28a", 7); ground(s, 270, "#d9e8a6", "#b8d47a")
+    x, y = 300, 300
+    s.add(shadow(x, y, 80)); s.add(ellipse(x, y - 58, 82, 48, "#8f8aa6"))
+    for lx in (-50, -24, 24, 50): s.add(rect(x + lx - 11, y - 30, 22, 32, "#8f8aa6", 6))
+    s.add(ellipse(x + 82, y - 66, 34, 30, "#8f8aa6"), ellipse(x + 64, y - 70, 18, 24, "#7d7894"))
+    s.add(path(f"M{x + 104} {y - 52} Q{x + 120} {y - 10} {x + 104} {y + 4}", "none", "#8f8aa6", 14))
+    s.add(path(f"M{x + 96} {y - 46} Q{x + 150} {y - 30} {x + 172} {y - 70}", "none", "#f4ead2", 7), path(f"M{x + 92} {y - 40} Q{x + 140} {y - 18} {x + 166} {y - 52}", "none", "#e8dcbc", 6))
+    s.add(circle(x + 92, y - 76, 3, "#1f1a3d"))
+    s.add(ellipse(470, 290, 26, 14, "#b08968"), circle(492, 282, 9, "#b08968"), path("M444 292 q-26 6 -40 -6", "none", "#b08968", 3), circle(496, 279, 1.8, "#1f1a3d"))     # giant rat
+    tree(s, 90, 270, 1.2)
+
+@scene("rock-art")
+def s_rock_art(s):
+    s.add(rect(0, 0, W, H, s.grad((0, "#c9895b"), (1, "#9c5f3c"))))
+    for i in range(40):
+        rnd = random.Random(i); s.add(circle(rnd.uniform(0, W), rnd.uniform(0, H), rnd.uniform(6, 26), "#ffffff", f'opacity="{rnd.uniform(0.03, 0.08):.2f}"'))
+    def hand(x, y, k, rot):
+        g = [circle(x, y, 26 * k, "#7a1f12", 'opacity="0.55"')]
+        for i, (dx, l) in enumerate(((-18, 34), (-7, 44), (4, 46), (15, 40))): g.append(rect(x + dx * k - 5 * k, y - (l + 10) * k, 10 * k, l * k, "#7a1f12", 5 * k, 'opacity="0.55"'))
+        g.append(rect(x + 22 * k, y - 20 * k, 26 * k, 10 * k, "#7a1f12", 5 * k, 'opacity="0.55"'))
+        s.add(group("".join(g), f"rotate({rot} {x} {y})"))
+    hand(140, 170, 1.1, -12); hand(250, 120, 0.8, 8); hand(520, 210, 1.0, 14)
+    for cx, cy in ((380, 140), (440, 250)):                                  # carved faces (Lene Hara)
+        s.add(circle(cx, cy, 36, "none", 'stroke="#f3dcc0" stroke-width="5" opacity="0.8"'), circle(cx - 12, cy - 6, 5, "#f3dcc0"), circle(cx + 12, cy - 6, 5, "#f3dcc0"))
+        s.add(path(f"M{cx - 12} {cy + 14} Q{cx} {cy + 22} {cx + 12} {cy + 14}", "none", "#f3dcc0", 4))
+    s.add(path("M150 300 Q260 330 360 300 L340 290 L170 290Z", "#7a1f12", extra='opacity="0.55"'), path("M255 290 L255 240 L300 280Z", "#7a1f12", extra='opacity="0.5"'))   # boat
+
+@scene("pottery")
+def s_pottery(s):
+    sky(s, "paper"); ground(s, 290, "#f0dcc0", "#e3c49c")
+    for x, h, w, c in ((200, 130, 70, "#c8714a"), (330, 170, 90, "#b5603d"), (460, 120, 64, "#d48660")):
+        y = 300
+        s.add(shadow(x, y, w)); s.add(path(f"M{x - w * 0.45} {y - h} Q{x - w * 1.15} {y - h * 0.45} {x - w * 0.55} {y} L{x + w * 0.55} {y} Q{x + w * 1.15} {y - h * 0.45} {x + w * 0.45} {y - h}Z", c))
+        s.add(rect(x - w * 0.5, y - h - 12, w, 14, c, 6))
+        for j in range(3): s.add(path(f"M{x - w * 0.8} {y - h * (0.35 + j * 0.13)} Q{x} {y - h * (0.30 + j * 0.13)} {x + w * 0.8} {y - h * (0.35 + j * 0.13)}", "none", "#f6e1c4", 3, 'opacity="0.8"'))
+    for i in range(5): s.add(path(f"M{560 + i * 10} 300 q-10 -30 4 -50 q6 20 -4 50", "#f2a516" if i % 2 else "#e76f51"))
+
+# ----------------------------------------------------------------- sports
+@scene("athletics")
+def s_athletics(s):
+    sky(s, "day"); s.add(rect(0, 230, W, 130, "#d9603b"))
+    for i in range(5): s.add(rect(0, 240 + i * 24, W, 3, "#ffffff", 0, 'opacity="0.85"'))
+    s.add(rect(470, 160, 6, 130, "#ffffff"), rect(470, 200, 120, 5, "#ffffff"))
+    crowd(s, 40, 220, 6, 0.55, 8)
+    for x, shirt, k in ((300, "#dc241f", 1.15), (180, "#3b93ec", 0.95)):
+        y = 330; s.add(shadow(x, y, 26 * k))
+        s.add(path(f"M{x} {y - 40 * k} L{x - 22 * k} {y - 8 * k} L{x - 34 * k} {y}", "none", "#3d3a5c", 9 * k), path(f"M{x} {y - 40 * k} L{x + 20 * k} {y - 18 * k} L{x + 36 * k} {y - 26 * k}", "none", "#3d3a5c", 9 * k))
+        s.add(rect(x - 14 * k, y - 82 * k, 28 * k, 44 * k, shirt, 12 * k, f'transform="rotate(12 {x} {y - 60 * k})"'))
+        s.add(path(f"M{x + 6 * k} {y - 74 * k} L{x + 30 * k} {y - 92 * k}", "none", shirt, 8 * k), path(f"M{x - 6 * k} {y - 70 * k} L{x - 32 * k} {y - 58 * k}", "none", shirt, 8 * k))
+        s.add(circle(x + 8 * k, y - 98 * k, 14 * k, SKIN[1]), path(f"M{x - 6 * k} {y - 102 * k} Q{x + 8 * k} {y - 118 * k} {x + 22 * k} {y - 102 * k}Z", "#2b1d14"))
+
+@scene("cycling")
+def s_cycling(s):
+    sky(s, "day"); hills(s, 200, 40, "#9fd8b0", "#72c290", 4); mountain(s, 480, 230, 260, 120, "#8fb5e8", "#6c8fd1")
+    s.add(path("M0 300 Q200 250 380 280 T640 250 L640 360 L0 360Z", "#8d8f9e"), path("M0 306 Q200 256 380 286 T640 256", "none", "#ffffff", 3, 'stroke-dasharray="14 12"'))
+    x, y = 300, 258
+    for wx in (x - 44, x + 44): s.add(circle(wx, y + 20, 26, "none", 'stroke="#1f1a3d" stroke-width="5"'), circle(wx, y + 20, 4, "#1f1a3d"))
+    s.add(path(f"M{x - 44} {y + 20} L{x - 6} {y - 16} L{x + 30} {y - 16} L{x + 44} {y + 20} M{x - 6} {y - 16} L{x} {y + 20} L{x - 44} {y + 20}", "none", "#e63950", 5))
+    s.add(path(f"M{x} {y + 20} L{x + 10} {y - 14} L{x + 6} {y - 54}", "none", "#3d3a5c", 8), rect(x - 10, y - 86, 26, 40, "#14b88c", 11, f'transform="rotate(28 {x} {y - 66})"'))
+    s.add(path(f"M{x + 18} {y - 74} L{x + 30} {y - 18}", "none", "#14b88c", 7), circle(x + 30, y - 98, 13, SKIN[0]), path(f"M{x + 16} {y - 102} Q{x + 30} {y - 120} {x + 46} {y - 100}Z", "#f2a516"))
+
+@scene("martial-arts")
+def s_martial_arts(s):
+    sky(s, "lilac"); s.add(rect(0, 260, W, 100, "#e8dcc6"), rect(0, 260, W, 6, "#d4c4a6"))
+    gi, edge = "#f7f5ff", "#b9b2d6"
+    for x, belt, flip in ((240, "#1f1a3d", 1), (400, "#d62839", -1)):
+        y = 330; s.add(shadow(x, y, 30))
+        for d in (f"M{x} {y - 50} L{x - 26 * flip} {y}", f"M{x} {y - 50} L{x + 30 * flip} {y - 10}"):
+            s.add(path(d, "none", edge, 15), path(d, "none", gi, 11))
+        s.add(rect(x - 17, y - 98, 34, 52, gi, 12, f'stroke="{edge}" stroke-width="2"'), rect(x - 18, y - 56, 36, 6, belt, 3))
+        for d, hx, hy in ((f"M{x + 10 * flip} {y - 88} L{x + 46 * flip} {y - 96}", x + 50 * flip, y - 97), (f"M{x - 10 * flip} {y - 86} L{x - 24 * flip} {y - 64}", x - 25 * flip, y - 60)):
+            s.add(path(d, "none", edge, 13), path(d, "none", gi, 9), circle(hx, hy, 6, SKIN[2]))
+        s.add(circle(x, y - 112, 15, SKIN[2]), path(f"M{x - 15} {y - 114} Q{x} {y - 132} {x + 15} {y - 114}Z", "#2b1d14"))
+
+@scene("swimming")
+def s_swimming(s):
+    s.add(rect(0, 0, W, H, s.grad((0, "#bfe9ff"), (1, "#4aa3d6"))))
+    for i in range(4): s.add(path(f"M0 {70 + i * 80} " + " ".join(f"Q{40 + j * 80} {62 + i * 80} {80 + j * 80} {70 + i * 80}" for j in range(8)), "none", "#ffffff", 3, 'opacity="0.45"'))
+    for y in (110, 270):
+        for j in range(16): s.add(circle(20 + j * 40, y, 6, "#ffffff" if j % 2 else "#e63950"))
+    x, y = 300, 196
+    s.add(ellipse(x, y + 4, 90, 16, "#ffffff", 'opacity="0.45"'))                         # splash
+    s.add(path(f"M{x - 70} {y + 2} L{x + 40} {y - 4}", "none", "#1f5f99", 22), path(f"M{x - 70} {y + 2} L{x + 40} {y - 4}", "none", "#2b78c2", 16))   # body
+    s.add(path(f"M{x - 70} {y + 4} L{x - 118} {y - 6} M{x - 70} {y + 4} L{x - 116} {y + 18}", "none", SKIN[1], 9))   # legs
+    s.add(path(f"M{x + 30} {y - 6} Q{x + 60} {y - 70} {x + 110} {y - 40}", "none", SKIN[1], 10), circle(x + 112, y - 38, 6, SKIN[1]))   # arm
+    s.add(circle(x + 62, y - 8, 15, SKIN[1]), path(f"M{x + 47} {y - 10} Q{x + 62} {y - 30} {x + 77} {y - 10}Z", "#e63950"), rect(x + 60, y - 14, 14, 6, "#1f1a3d", 3))
+    for dx, dy, r in ((-128, -14, 7), (-132, 12, 5), (122, -52, 5), (100, 8, 6)): s.add(circle(x + dx, y + dy, r, "#ffffff", 'opacity="0.8"'))
+
+@scene("basketball")
+def s_basketball(s):
+    sky(s, "dawn"); s.add(rect(0, 250, W, 110, "#e8a96a"), path("M120 360 Q320 250 520 360", "none", "#ffffff", 4))
+    s.add(rect(470, 70, 10, 200, "#5b5f73"), rect(420, 60, 110, 72, "#ffffff", 6, 'stroke="#5b5f73" stroke-width="4"'), rect(452, 84, 46, 30, "none", 2, 'stroke="#e63950" stroke-width="3"'))
+    s.add(ellipse(475, 124, 24, 6, "none", 'stroke="#e63950" stroke-width="4"'))
+    for i in range(6): s.add(path(f"M{455 + i * 8} 126 L{461 + i * 5} 152", "none", "#ffffff", 2))
+    person(s, 260, 330, 1.1, shirt="#3b93ec", arms_up=True)
+    s.add(circle(300, 160, 26, "#f77f3a"), path("M274 160 L326 160 M300 134 L300 186", "none", "#5a2e1d", 2.5), path("M282 140 Q300 160 282 180 M318 140 Q300 160 318 180", "none", "#5a2e1d", 2.5))
+
+@scene("olympics")
+def s_olympics(s):
+    sky(s, "lilac")
+    for x, h, n, c in ((220, 80, 2, "#cfd8e3"), (320, 120, 1, "#f2c94c"), (420, 60, 3, "#e0a36a")):
+        s.add(rect(x - 48, 320 - h, 96, h, c, 6), f'<text x="{x}" y="{320 - h / 2 + 12}" font-family="Nunito, sans-serif" font-size="34" font-weight="900" fill="#ffffff" text-anchor="middle">{n}</text>')
+    s.add(rect(0, 318, W, 42, "#c8bde8"))
+    medal(s, 320, 120, 1.0)
+    s.add(rect(520, 120, 16, 110, "#c9a24a", 4), path("M510 122 L546 122 L540 104 L516 104Z", "#e0b04d"))
+    s.add(path("M528 104 Q506 70 528 40 Q536 66 548 58 Q554 86 528 104Z", "#f77f3a"), path("M528 100 Q518 80 530 64 Q536 80 540 78 Q542 92 528 100Z", "#ffd36b"))
+
+# ----------------------------------------------------------------- animals
+@scene("deer")
+def s_deer(s):
+    sky(s, "day"); hills(s, 220, 30, "#a9dcb5", "#7cc596", 11); ground(s, 270, "#cfe8a8", "#9fd07c")
+    tree(s, 100, 270, 1.4); tree(s, 560, 260, 1.1)
+    x, y = 330, 312
+    s.add(shadow(x, y, 56)); s.add(ellipse(x, y - 52, 58, 26, "#b07a4a"))
+    for lx in (-38, -20, 22, 40): s.add(rect(x + lx - 5, y - 32, 10, 34, "#9b693d", 4))
+    s.add(path(f"M{x + 44} {y - 64} L{x + 64} {y - 104} L{x + 82} {y - 98} L{x + 62} {y - 58}Z", "#b07a4a"), ellipse(x + 80, y - 106, 18, 12, "#b07a4a"))
+    s.add(path(f"M{x + 76} {y - 116} L{x + 62} {y - 158} M{x + 66} {y - 140} L{x + 48} {y - 150} M{x + 86} {y - 116} L{x + 102} {y - 156} M{x + 98} {y - 140} L{x + 116} {y - 148}", "none", "#7a5634", 5))
+    s.add(ellipse(x + 70, y - 116, 6, 10, "#9b693d"), circle(x + 86, y - 108, 2.4, "#1f1a3d"), path(f"M{x - 56} {y - 58} q-12 -8 -8 -20", "none", "#b07a4a", 7))
+
+@scene("butterfly")
+def s_butterfly(s):
+    sky(s, "paper"); ground(s, 290, "#cfe8a8", "#9fd07c")
+    for i, x in enumerate((90, 170, 250, 410, 490, 570)): flower(s, x, 300, 1.0 + (i % 2) * 0.3, ["#ff8fb8", "#ffd36b", "#c9a7ff"][i % 3])
+    def fly(x, y, k, c1, c2):
+        s.add(path(f"M{x} {y} Q{x - 60 * k} {y - 70 * k} {x - 70 * k} {y - 10 * k} Q{x - 40 * k} {y + 6 * k} {x} {y}Z", c1))
+        s.add(path(f"M{x} {y} Q{x + 60 * k} {y - 70 * k} {x + 70 * k} {y - 10 * k} Q{x + 40 * k} {y + 6 * k} {x} {y}Z", c1))
+        s.add(path(f"M{x} {y + 2 * k} Q{x - 44 * k} {y + 10 * k} {x - 36 * k} {y + 40 * k} Q{x - 10 * k} {y + 30 * k} {x} {y + 2 * k}Z", c2))
+        s.add(path(f"M{x} {y + 2 * k} Q{x + 44 * k} {y + 10 * k} {x + 36 * k} {y + 40 * k} Q{x + 10 * k} {y + 30 * k} {x} {y + 2 * k}Z", c2))
+        s.add(ellipse(x, y + 8 * k, 5 * k, 26 * k, "#2b1d14"), circle(x - 34 * k, y - 26 * k, 8 * k, "#ffffff", 'opacity="0.6"'), circle(x + 34 * k, y - 26 * k, 8 * k, "#ffffff", 'opacity="0.6"'))
+        s.add(path(f"M{x - 3 * k} {y - 16 * k} Q{x - 12 * k} {y - 40 * k} {x - 20 * k} {y - 44 * k} M{x + 3 * k} {y - 16 * k} Q{x + 12 * k} {y - 40 * k} {x + 20 * k} {y - 44 * k}", "none", "#2b1d14", 2))
+    fly(320, 150, 1.4, "#f77f3a", "#ffb35c"); fly(150, 120, 0.7, "#3b93ec", "#8fd0ff"); fly(500, 110, 0.8, "#ec4899", "#ff8fb8")
+
+@scene("turtle")
+def s_turtle(s):
+    s.add(rect(0, 0, W, H, s.grad((0, "#7fd0ee"), (1, "#2f7fb8"))))
+    for i in range(14):
+        rnd = random.Random(i); s.add(circle(rnd.uniform(0, W), rnd.uniform(0, 300), rnd.uniform(3, 8), "#ffffff", 'opacity="0.35"'))
+    sand(s, 300); coral(s, 110, 320, 1.2); coral(s, 540, 320, 1.0, "#ffb35c"); fish(s, 520, 130, 1.0)
+    x, y = 320, 180
+    s.add(path(f"M{x - 40} {y + 10} Q{x - 110} {y + 50} {x - 120} {y + 20} Q{x - 80} {y - 4} {x - 40} {y}Z", "#7fbf5a"), path(f"M{x + 40} {y + 10} Q{x + 110} {y + 50} {x + 120} {y + 20} Q{x + 80} {y - 4} {x + 40} {y}Z", "#7fbf5a"))
+    s.add(path(f"M{x - 30} {y - 20} Q{x - 100} {y - 60} {x - 104} {y - 30} Q{x - 70} {y - 14} {x - 30} {y - 10}Z", "#7fbf5a"), path(f"M{x + 30} {y - 20} Q{x + 100} {y - 60} {x + 104} {y - 30} Q{x + 70} {y - 14} {x + 30} {y - 10}Z", "#7fbf5a"))
+    s.add(ellipse(x, y, 66, 52, s.grad((0, "#9b6b3e"), (1, "#6e4a29"))))
+    for dx, dy in ((0, 0), (-30, -18), (30, -18), (-30, 18), (30, 18)): s.add(ellipse(x + dx, y + dy, 16, 13, "#c49058", 'opacity="0.8"'))
+    s.add(ellipse(x, y - 64, 20, 18, "#8fcf6e"), circle(x - 8, y - 70, 3, "#1f1a3d"), circle(x + 8, y - 70, 3, "#1f1a3d"))
+
 for _key, _fn in list(SCENES.items()):
     pass
 

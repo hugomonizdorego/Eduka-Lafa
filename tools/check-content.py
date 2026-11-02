@@ -36,7 +36,7 @@ fossil pterosaur stegodon rock-art pottery athletics cycling martial-arts swimmi
 VOCAB_LANGS = ("ms", "fil", "th", "vi", "km", "lo", "my", "zh", "ta", "es", "fr")
 # Words that betray Indonesian (or English) in a Tetun text.
 NOT_TETUN = re.compile(r"\b(tapi|sudah|dan|yang|untuk|dengan|adalah|karena|tetapi|juga|dari|pada|akan|bisa|telah|the|and|of)\b", re.I)
-DATE = re.compile(r"^-?\d{1,6}(-\d{2}(-\d{2})?)?$")
+DATE = re.compile(r"^-?\d{1,10}(-\d{2}(-\d{2})?)?$")     # "-280000000" (fossils), "-42000", "1975-11-28"
 
 class Report:
     def __init__(self): self.errors = []; self.warnings = []

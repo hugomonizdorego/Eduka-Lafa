@@ -1,7 +1,7 @@
 """Símbolu Nasionál: the national anthem «Pátria» with lyrics that follow the
 music (karaoke), the flag (Constitution art. 15) and the emblem (Lei n.º 2/2007)
 explained part by part, with links to the articles and the Constitution."""
-from ...qt import Qt, QWidget, QVBoxLayout, QHBoxLayout, QSlider, QPainter, QColor, QFont, QFontMetrics, QRectF, QLinearGradient, QCheckBox
+from ...qt import Qt, QTimer, QWidget, QVBoxLayout, QHBoxLayout, QSlider, QPainter, QColor, QFont, QFontMetrics, QRectF, QLinearGradient, QCheckBox
 from ... import kb, icons
 from ...anthem import load as load_anthem, at, next_time, clock
 from ...audio import Player
@@ -131,7 +131,9 @@ class SymbolsPage(QWidget):
         for w in (self.section_label, self.prev_line, self.karaoke, self.translation, self.next_line): stage.box.addWidget(w)
         card.box.addWidget(stage)
         bar = QHBoxLayout(); bar.setSpacing(10); self.time_label = label("0:00", "caption"); bar.addWidget(self.time_label)
-        self.slider = QSlider(Qt.Horizontal); self.slider.setRange(0, int(data.get("duration", 0) * 10)); self.slider.sliderMoved.connect(lambda v: self.player.seek(v / 10))
+        self.slider = QSlider(Qt.Horizontal); self.slider.setRange(0, int(data.get("duration", 0) * 10)); self.slider.sliderMoved.connect(lambda v: self.time_label.setText(clock(v / 10)))
+        self.slider.sliderReleased.connect(lambda: self.player.seek(self.slider.value() / 10))
+        self.slider.actionTriggered.connect(lambda _a: QTimer.singleShot(0, self.keyboard_seek))     # arrow keys, Page Up/Down
         self.slider.setAccessibleName(t("anthem_play")); bar.addWidget(self.slider, 1); bar.addWidget(label(clock(data.get("duration", 0)), "caption"))
         restart = button("", lambda: (self.player.seek(0), self.player.play()), "icon", "refresh", t("anthem_restart")); restart.setFixedSize(40, 40); bar.addWidget(restart)
         self.repeat_button = button("", self.toggle_repeat, "icon", "repeat", t("anthem_repeat")); self.repeat_button.setFixedSize(40, 40); self.repeat_button.setCheckable(True); bar.addWidget(self.repeat_button)
@@ -187,6 +189,8 @@ class SymbolsPage(QWidget):
         buttons.addWidget(button(t("sym_constitution", n=14), lambda: win.open("constitution", article=14), "ghost", "scales")); buttons.addStretch(); card.box.addLayout(buttons)
         card.box.addStretch(); return card
     # -------------------------------------------------------------- player
+    def keyboard_seek(self):
+        if not self.slider.isSliderDown(): self.player.seek(self.slider.value() / 10)
     def toggle_repeat(self): self.repeat = self.repeat_button.isChecked()
     def jump_to(self, line):
         when = next_time(self.data, line, self.player.position())

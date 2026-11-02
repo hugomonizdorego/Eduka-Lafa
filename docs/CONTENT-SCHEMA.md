@@ -30,7 +30,7 @@ lists (`vocab/`), which are a language-learning feature.
   "period": {"from": -44000, "to": -3000},    // optional, years (negative = BCE / years ago)
   "sections": [{"heading": L2, "text": L2}],  // 3–6 sections, 50–150 words each per language
   "facts": [{"label": L2, "value": "1 340 434", "year": 2022}],   // value: string or L2; year when it changes
-  "timeline": [{"date": "1975-11-28", "title": L2}],               // optional; "1975", "1975-11", "-42000"
+  "timeline": [{"date": "1975-11-28", "title": L2}],               // optional; "1975", "1975-11", "-42000", "-280000000" (fossils)
   "figure": {"illustration": "proclamation", "caption": L2},       // key from the list below
   "wiki": {"en": "History of East Timor", "pt": "História de Timor-Leste", "tet": "Istória Timór-Leste"},   // page titles (tet/pt/id/en): introductions and pictures
   "related": ["tl.history.restoration_2002", "place.cristo_rei", "mun.dili", "day.proclamation"],

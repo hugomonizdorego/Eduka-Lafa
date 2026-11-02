@@ -12,8 +12,10 @@ flowchart TD
     VA --> Tips["tips.py (what to tell, from content + progress)"]
     VA --> Char["mascot.py · Atlas + Character (poses, 60 fps motion.py)"]
     Pages --> KB["kb.py · KnowledgeBase (articles, municipalities, places, days, words, search)"]
+    Pages --> Con["constitution.py (Constitution: articles, references, search)"]
+    Pages --> Anthem["anthem.py + audio.py (lyrics cues, Qt Multimedia or ffplay/mpv/mpg123)"]
     Tips --> KB
-    KB --> Assets["assets/timor: content/*.json, vocab/*.json, map/*.json, plan.json, manifest.json"]
+    KB --> Assets["assets/timor: content/*.json, vocab/*.json, map/*.json, constitution.json, anthem/, plan.json, manifest.json"]
     KB --> Updates["~/.local/share/lafa/updates (newer files win)"]
     Pages --> Progress["progress.py (read, XP, achievements, Leitner boxes, quiz results)"]
     Pages --> Store["store.py · SQLite lafa.db + media/ (offline texts and photos)"]
@@ -26,15 +28,17 @@ flowchart TD
 
 | Module | Role |
 | --- | --- |
-| `app.py` | `Window`: sidebar (9 menus + sources, settings, about), top bar (back, search, online chip, notifications, profile), page stack with fade, history, toasts, tray, single instance, Eduka-Settings roles (`--virtual-enable`, `--configure`, …) |
+| `app.py` | `Window`: sidebar (11 menus in a scroll area + sources, settings, about), top bar (back, search, online chip, notifications, profile), page stack with fade, history, toasts, tray, single instance, Eduka-Settings roles (`--virtual-enable`, `--configure`, …) |
 | `desk/theme.py` | Colour tokens (light/dark), Nunito fonts, pastel background, clay icons, the application style sheet |
 | `desk/widgets.py` | Glass `Card`, `Clickable`, `ClayIcon`, `Pill`, `Segmented`, `ListRow`, `CourseCard`, `Banner`, charts (`Donut`, `AreaChart`, `BarChart`), `CalendarCard`, `ResponsiveGrid`, `FlowLayout`, `Toast` |
-| `desk/texts.py` | Interface words in four languages (`t(lang, key)`); pages add their own with `extend()` |
-| `desk/pages/*` | `home`, `encyclopedia` (+ category), `article` (every item kind + `QuizWidget`), `mapview`, `timeline`, `places`, `calendar` (+ `.ics`), `millionaire` (`Game` logic is UI-free), `language`, `paths`, `sources`, `data`, `settings`, `about`, `search` |
-| `kb.py` | Loads all content (packaged + updates), BM25 search in four languages with title boost and type-ahead, holidays for any year (Easter, Islamic table), timeline and eras, questions by difficulty, learning paths per school level, sources index |
+| `desk/texts.py` | Interface words in Tetun and Portuguese (`t(lang, key)`); pages add their own with `extend()` |
+| `desk/pages/*` | `home`, `encyclopedia` (+ category), `article` (every item kind + `QuizWidget`, photo gallery), `mapview`, `timeline`, `places`, `calendar` (+ `.ics`), `symbols` (anthem player with karaoke lyrics, flag, emblem), `constitution` (reader and search), `millionaire` (`Game` logic is UI-free), `language`, `paths`, `sources`, `data`, `settings`, `about`, `search` |
+| `kb.py` | Loads all content (packaged + updates), BM25 search in Tetun and Portuguese with title boost and type-ahead, holidays for any year (Easter, Islamic table), timeline and eras, questions by difficulty, learning paths per school level, sources index |
 | `progress.py` | Personal progress (0600 JSON): read items, favourites, quiz results, Leitner boxes for words, millionaire results, XP, achievements, streak |
-| `store.py` | SQLite database for downloaded Wikipedia introductions and photos (with author/licence) |
-| `sync.py` | Network jobs (HTTPS only, fixed hosts, no redirects, size limits): offline pack, World Bank series, content updates with SHA-256 |
+| `store.py` | SQLite database for downloaded Wikipedia introductions, lead photos and gallery photos (with author/licence) |
+| `constitution.py` | The Constitution (`constitution.json`, built by `tools/make-constitution.py`): article references, accent-free search, highlighting |
+| `anthem.py` / `audio.py` | Anthem lyrics and cue times; a player with a position for synchronised lyrics (Qt Multimedia, else ffplay/mpv/mpg123, else lyrics only) |
+| `sync.py` | Network jobs (HTTPS only, fixed hosts, no redirects, size limits): offline pack (introductions, lead photos, optional gallery), World Bank series, content updates with SHA-256 |
 | `assistant.py` | The Virtual Assistant window: Lafa on the panel, popup, tip balloon with mini quiz, walking, quiet mode and hourly limit |
 | `tips.py` | Chooses the next tip (holiday first on the eve and the day itself, then a rotation) |
 | `mascot.py` / `motion.py` / `outfits.py` | Character drawings, cached scaling, waving poses, procedural movement, activity scenes |

@@ -17,7 +17,8 @@ extend({
     "open_constitution": ("Loke Konstituisaun", "Abrir a Constituição"),
 })
 
-SUGGESTIONS = ["bandeira", "Xanana", "Ataúro", "kafé", "tais", "Ramelau", "1999", "Santa Cruz", "Lafaek", "ASEAN", "Oe-Kusi", "Fundu Petrolíferu"]
+SUGGESTIONS = ["bandeira", "Xanana", "Ataúro", "kafé", "tais", "Ramelau", "1999", "Santa Cruz", "Lafaek", "ASEAN", "Oe-Kusi", "Fundu Petrolíferu",
+               "edukasaun", "futebol", "fósil", "F-FDTL", "Lene Hara", "inu nasionál"]
 KIND_LABEL = {"article": ("kind_article", "violet"), "municipality": ("kind_municipality", "teal"), "place": ("kind_place", "cyan"), "day": ("kind_day", "rose")}
 
 class SearchPage(QWidget):

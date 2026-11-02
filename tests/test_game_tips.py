@@ -59,7 +59,7 @@ def test_every_tip_kind(base, tmp_path):
         tip = tips.tip_of(kind, base, progress, settings, "tet", date(2026, 5, 18), random.Random(1))
         if tip is None: continue
         assert tip.title and tip.icon, kind
-        for label, route, item in tip.actions: assert route and (not item or base.get(item) or route == "map"), (kind, item)
+        for label, route, item in tip.actions: assert route and (not item or base.get(item) or route in ("map", "constitution", "symbols")), (kind, item)
         if tip.quiz: assert len(tip.quiz["options"]) == 4 and 0 <= tip.quiz["answer"] <= 3
 
 def test_holiday_tip_comes_first_on_the_eve(base, tmp_path):

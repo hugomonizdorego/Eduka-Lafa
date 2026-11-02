@@ -22,36 +22,85 @@ extend({
     "photos_title": ("Foto download ona ({n})", "Fotos descarregadas ({n})"),
     "no_photos": ("Seidauk iha foto. Uza “Offline no atualizasaun” atu download foto ho lisensa livre husi Wikimedia Commons.", "Ainda não há fotos. Use “Offline e atualizações” para descarregar fotos de licença livre do Wikimedia Commons."),
     "visit": ("Vizita", "Visitar"),
+    "owner_more": ("Fonte foun husi na'in projetu (0.3.0)", "Novas fontes indicadas pelo responsável (0.3.0)"),
     "copyright_note": ("Fonte ho © la kopia: Lafa uza de'it faktu no hakerek ho liafuan rasik, no hatudu fonte.", "Fontes com © não são copiadas: o Lafa usa só factos, escreve com palavras próprias e cita a fonte."),
 })
 
 MAIN_SOURCES = [
     ("Wikipedia", "https://www.wikipedia.org/", "CC BY-SA 4.0", "globe", "sky",
-     ("Ensiklopédia livre iha lian barak.", "Enciclopédia livre em muitas línguas.", "Ensiklopedia bebas dalam banyak bahasa.", "The free encyclopedia in many languages.")),
+     ("Ensiklopédia livre iha lian barak.", "Enciclopédia livre em muitas línguas.")),
     ("Wikipedia Tetun", "https://tet.wikipedia.org/wiki/P%C3%A1jina_Mahuluk", "CC BY-SA 4.0", "globe", "teal",
-     ("Wikipedia iha lian Tetun.", "A Wikipédia em tétum.", "Wikipedia berbahasa Tetun.", "Wikipedia in Tetun.")),
+     ("Wikipedia iha lian Tetun.", "A Wikipédia em tétum.")),
     ("Governu Timór-Leste", "https://timor-leste.gov.tl/", "© Governo de Timor-Leste", "landmark", "violet",
-     ("Portál ofisiál Governu nian: Estadu, lei no feriadu.", "Portal oficial do Governo: Estado, leis e feriados.", "Portal resmi pemerintah: negara, hukum dan hari libur.", "Official Government portal: State, laws and holidays.")),
+     ("Portál ofisiál Governu nian: Estadu, lei no feriadu.", "Portal oficial do Governo: Estado, leis e feriados.")),
     ("Timor-Leste Tourism", "https://timorleste.tl/", "© Timor-Leste tourism", "umbrella", "cyan",
-     ("Informasaun turizmu ofisiál.", "Informação turística oficial.", "Informasi pariwisata resmi.", "Official tourism information.")),
+     ("Informasaun turizmu ofisiál.", "Informação turística oficial.")),
     ("MAF Timor-Leste Fact File", "https://timorleste.mafint.org/maf-timor-leste/fact-file", "© MAF", "leaf", "green",
-     ("Faktu kona-ba agrikultura, rai no klima.", "Factos sobre agricultura, terra e clima.", "Fakta pertanian, lahan dan iklim.", "Facts on farming, land and climate.")),
+     ("Faktu kona-ba agrikultura, rai no klima.", "Factos sobre agricultura, terra e clima.")),
     ("Timor Research", "http://timor-research.org/about-timor-leste", "© Timor Research", "scroll", "lilac",
-     ("Peskiza kona-ba Timór-Leste.", "Investigação sobre Timor-Leste.", "Riset tentang Timor-Leste.", "Research about Timor-Leste.")),
+     ("Peskiza kona-ba Timór-Leste.", "Investigação sobre Timor-Leste.")),
     ("World Bank Open Data", "https://data.worldbank.org/country/timor-leste", "CC BY 4.0", "chart", "green",
-     ("Dadus populasaun, ekonomia no saúde.", "Dados de população, economia e saúde.", "Data penduduk, ekonomi dan kesehatan.", "Population, economy and health data.")),
+     ("Dadus populasaun, ekonomia no saúde.", "Dados de população, economia e saúde.")),
     ("Encyclopaedia Britannica", "https://www.britannica.com/place/East-Timor", "© Britannica", "book-open", "indigo",
-     ("Ensiklopédia ho istória no jeografia.", "Enciclopédia com história e geografia.", "Ensiklopedia sejarah dan geografi.", "Encyclopedia of history and geography.")),
+     ("Ensiklopédia ho istória no jeografia.", "Enciclopédia com história e geografia.")),
     ("Tripadvisor Timor-Leste", "https://www.tripadvisor.com/Tourism-g295117-Timor_Leste-Vacations.html", "© Tripadvisor", "camera", "coral",
-     ("Fatin turístiku no esperiénsia vizitante sira nian.", "Lugares turísticos e experiência de visitantes.", "Tempat wisata dan pengalaman pengunjung.", "Tourist places and visitors' experience.")),
+     ("Fatin turístiku no esperiénsia vizitante sira nian.", "Lugares turísticos e experiência de visitantes.")),
     ("Ministériu Edukasaun", "https://moe.gov.tl/", "© Ministério da Educação", "graduation", "pink",
-     ("Nível eskola no kurríkulu nasionál.", "Níveis escolares e currículo nacional.", "Jenjang sekolah dan kurikulum nasional.", "School levels and the national curriculum.")),
+     ("Nível eskola no kurríkulu nasionál.", "Níveis escolares e currículo nacional.")),
     ("Konstituisaun RDTL", "https://www.mj.gov.tl/jornal/lawsTL/RDTL-Law/RDTL-Constitution-P.pdf", "© RDTL", "scales", "rose",
-     ("Testu Tetun ofisiál Lei-Inan nian: liafuan Estadu nian iha Lafa.", "Texto oficial em tétum da Constituição: termos do Estado no Lafa.", "Teks resmi Konstitusi berbahasa Tetun: istilah negara di Lafa.", "Official Tetun text of the Constitution: State terms in Lafa.")),
+     ("Testu Tetun ofisiál Lei-Inan nian: liafuan Estadu nian iha Lafa.", "Texto oficial em tétum da Constituição: termos do Estado no Lafa.")),
+]
+
+# Sources the owner added for 0.3.0 (prehistory, history, institutions, sports, tourism).
+OWNER_MORE = [
+    ("Badan Geologi — fósil Timor", "https://geologi.esdm.go.id/media-center/mengenal-fosil-hewan-laut-penguasa-laut-purba-pulau-timor", "© Badan Geologi", "layers", "peach",
+     ("Fósil animál tasi antigu iha tasi-le'un Timor.", "Fósseis de animais marinhos antigos da ilha de Timor.")),
+    ("Tatoli — pterosauru Lesululi (2026)", "https://id.tatoli.tl/2026/08/11/igtl-temukan-fosil-pterosaurus-perkuat-potensi-lesululi-sebagai-situs-geologi/", "© Tatoli", "newspaper", "peach",
+     ("IGTL hetan fósil pterosauru; Lesululi nu'udar fatin jeolójiku.", "O IGTL encontra um fóssil de pterossauro; Lesululi como sítio geológico.")),
+    ("National Geographic Indonesia", "https://nationalgeographic.grid.id/read/13279503/wajah-manusia-prasejarah-terpahat-di-gua-timor-leste?page=all", "© National Geographic Indonesia", "image", "peach",
+     ("Oin ema pre-istória ne'ebé kesi iha fatuk-kuak.", "Rostos pré-históricos gravados numa gruta.")),
+    ("Inilah — ema dahuluk", "https://www.inilah.com/manusia-purba-hidup-di-timor-leste-44000-tahun-lalu-sebelum-piramida-di-mesir", "© Inilah", "newspaper", "lilac",
+     ("Ema moris iha Timór tinan 44 000 liubá.", "Pessoas viviam em Timor há 44 000 anos.")),
+    ("Dinosaur Pictures", "https://dinosaurpictures.org/", "© dinosaurpictures.org", "image", "peach",
+     ("Imajen animál pre-istóriku (ligasaun de'it, la kopia imajen).", "Imagens de animais pré-históricos (só ligação, sem copiar imagens).")),
+    ("Animalia — animál sira", "https://animalia.bio/timor-leste-animals", "© Animalia", "leaf", "mint",
+     ("Lista animál ne'ebé moris iha Timór-Leste.", "Lista de animais que vivem em Timor-Leste.")),
+    ("Rezerva — gia istória", "https://rezerva.tl/id/guide/history-guide", "© Rezerva", "scroll", "lilac",
+     ("Istória Timór-Leste ba vizitante sira.", "História de Timor-Leste para visitantes.")),
+    ("detikBali — istória no faktu", "https://www.detik.com/bali/berita/d-6647723/sejarah-dan-fakta-timor-leste-yang-pernah-jadi-bagian-indonesia", "© detik.com", "newspaper", "sky",
+     ("Istória no faktu, ho perspetiva Indonézia nian.", "História e factos, numa perspetiva indonésia.")),
+    ("Kompas — tinan 23", "https://www.kompas.id/artikel/perjalanan-23-tahun-timor-timur-menjadi-bagian-dari-indonesia", "© Kompas", "newspaper", "sky",
+     ("Tinan 23 Timor-Timur iha Indonézia nia ukun (1976–1999).", "Os 23 anos de Timor-Timur sob a Indonésia (1976–1999).")),
+    ("Timor-Leste Merdeka — foto", "https://timorlestemerdeka.wordpress.com/2014/06/08/beberapa-foto-sejarah-dari-perjuangan-kemerdekaan-timor-leste/", "© autór sira", "camera", "coral",
+     ("Foto istóriku luta ba ukun-an (ligasaun de'it).", "Fotos históricas da luta pela independência (só ligação).")),
+    ("US State Department — Background Note", "https://2009-2017.state.gov/outofdate/bgn/timorleste/101181.htm", "Domíniu públiku (EUA)", "landmark", "slate",
+     ("Nota istória, polítika no ekonomia (arkivu 2009–2017).", "Nota de história, política e economia (arquivo 2009–2017).")),
+    ("Koryo Group", "https://koryogroup.com/country/timor-leste", "© Koryo Group", "umbrella", "cyan",
+     ("Informasaun viajen no kultura.", "Informação de viagem e cultura.")),
+    ("Ministériu Justisa (Jornal da República)", "https://www.mj.gov.tl/", "© RDTL", "scales", "indigo",
+     ("Lei sira no Jornal da República.", "Leis e Jornal da República.")),
+    ("MESCC", "https://mescc.gov.tl/", "© RDTL", "graduation", "pink",
+     ("Ensinu superiór, siénsia no kultura.", "Ensino superior, ciência e cultura.")),
+    ("MJDAC", "https://mjdac.gov.tl/", "© RDTL", "medal", "green",
+     ("Juventude, desportu, arte no kultura.", "Juventude, desporto, arte e cultura.")),
+    ("Ministériu Finansas", "https://www.mof.gov.tl/", "© RDTL", "chart", "green",
+     ("Orsamentu Jerál Estadu no Fundu Petrolíferu.", "Orçamento Geral do Estado e Fundo Petrolífero.")),
+    ("Administrasaun Estatál", "https://estatal.gov.tl/", "© RDTL", "map", "teal",
+     ("Munisípiu, postu administrativu no suku.", "Municípios, postos administrativos e sucos.")),
+    ("ABS Clearing-House (MTA)", "https://abschm.mta.gov.tl/", "© RDTL", "leaf", "green",
+     ("Rekursu jenétiku no biodiversidade.", "Recursos genéticos e biodiversidade.")),
+    ("PNTL", "https://pntl.tl/", "© PNTL", "shield", "indigo",
+     ("Polísia Nasionál Timór-Leste.", "Polícia Nacional de Timor-Leste.")),
+    ("F-FDTL", "https://f-fdtl.mil.tl/", "© F-FDTL", "shield", "slate",
+     ("FALINTIL–Forsa Defeza Timór-Leste.", "FALINTIL–Forças de Defesa de Timor-Leste.")),
+    ("Wikipedia — PNTL no F-FDTL", "https://en.wikipedia.org/wiki/Timor-Leste_Defence_Force", "CC BY-SA 4.0", "globe", "sky",
+     ("Artigu Wikipedia kona-ba forsa defeza no polísia.", "Artigos da Wikipédia sobre as forças de defesa e a polícia.")),
+    ("FFTL", "https://www.fftl.tl/", "© FFTL", "medal", "green",
+     ("Federasaun Futebol Timór-Leste.", "Federação de Futebol de Timor-Leste.")),
 ]
 
 LICENCES = [
-    ("Lafa (kódigu / código / kode / code)", "MIT License — © 2026 Hugo Moniz do Rego", "https://opensource.org/license/mit"),
+    ("Lafa (kódigu / código)", "MIT License — © 2026 Hugo Moniz do Rego", "https://opensource.org/license/mit"),
     ("Testu, ilustrasaun no kuis Lafa", "CC BY-SA 4.0", "https://creativecommons.org/licenses/by-sa/4.0/"),
     ("Wikipedia (testu download)", "CC BY-SA 4.0", "https://creativecommons.org/licenses/by-sa/4.0/"),
     ("Wikimedia Commons (foto)", "CC0 · Public domain · CC BY · CC BY-SA (kada foto ho nia autór)", "https://commons.wikimedia.org/wiki/Commons:Licensing"),
@@ -82,6 +131,14 @@ class SourcesPage(QWidget):
         outer.addWidget(scroll(self.body))
         self.timer = QTimer(self); self.timer.setSingleShot(True); self.timer.setInterval(300); self.timer.timeout.connect(self.apply_query)
     def show_route(self, params): self.render()
+    def source_card(self, row, li):
+        win = self.win; t = win.t; name, url, licence, icon_name, acc, desc = row
+        card = Card(14, 20); top = QHBoxLayout(); top.setSpacing(10); top.addWidget(ClayIcon(icon_name, acc, 44))
+        cc = QVBoxLayout(); cc.setSpacing(0); cc.addWidget(label(name, "h3", wrap=True)); cc.addWidget(label(url.split("//", 1)[-1].split("/")[0], "caption")); top.addLayout(cc, 1)
+        card.box.addLayout(top); card.box.addWidget(label(desc[li], "muted", wrap=True))
+        bottom = QHBoxLayout(); bottom.addWidget(Pill(licence, "green" if licence.startswith("CC") or "públiku" in licence else "slate")); bottom.addStretch()
+        if win.online: bottom.addWidget(button(t("visit"), lambda checked=False, u=url: win.open_url(u), "ghost", "globe"))
+        card.box.addStretch(); card.box.addLayout(bottom); return card
     def render(self):
         clear_layout(self.col); win = self.win; t = win.t; lang = win.lang; base = win.kb; li = index(lang)
         head = Card(20, 24); row = QHBoxLayout(); row.setSpacing(14); row.addWidget(ClayIcon("shield", "slate", 64))
@@ -90,13 +147,11 @@ class SourcesPage(QWidget):
         # Main sources (named by the owner).
         self.col.addLayout(section_title(t("main_sources")))
         grid = ResponsiveGrid(280, 3, 14)
-        for name, url, licence, icon_name, acc, desc in MAIN_SOURCES:
-            card = Card(14, 20); top = QHBoxLayout(); top.setSpacing(10); top.addWidget(ClayIcon(icon_name, acc, 44))
-            cc = QVBoxLayout(); cc.setSpacing(0); cc.addWidget(label(name, "h3", wrap=True)); cc.addWidget(label(url.split("//", 1)[-1].split("/")[0], "caption")); top.addLayout(cc, 1)
-            card.box.addLayout(top); card.box.addWidget(label(desc[li], "muted", wrap=True))
-            bottom = QHBoxLayout(); bottom.addWidget(Pill(licence, "green" if licence.startswith("CC") else "slate")); bottom.addStretch()
-            if win.online: bottom.addWidget(button(t("visit"), lambda checked=False, u=url: win.open_url(u), "ghost", "globe"))
-            card.box.addStretch(); card.box.addLayout(bottom); grid.add(card)
+        for row in MAIN_SOURCES: grid.add(self.source_card(row, li))
+        self.col.addWidget(grid)
+        self.col.addLayout(section_title(t("owner_more")))
+        grid = ResponsiveGrid(280, 3, 14)
+        for row in OWNER_MORE: grid.add(self.source_card(row, li))
         self.col.addWidget(grid)
         # Every source used, with filter by publisher.
         sources = base.sources()

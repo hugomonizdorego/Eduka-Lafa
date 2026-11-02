@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Screenshots of Lafa 0.3 for docs/screenshots (implementation, not concept art).
 
-    python3 scripts/capture-screenshots.py            # all pages, languages, themes
+    python3 scripts/capture-screenshots.py            # all pages, both languages, themes
     python3 scripts/capture-screenshots.py --scaled   # (internal) 150 % captures
 
 Runs offscreen in review mode (sample learner, nothing saved or sent).
@@ -45,7 +45,9 @@ def main_set():
              ("06-map.png", "map", {}), ("07-municipality-baucau.png", "item", {"id": "mun.baucau"}), ("08-timeline.png", "timeline", {}),
              ("09-tourism.png", "places", {}), ("11-calendar.png", "calendar", {}), ("13-millionaire-start.png", "quiz", {}),
              ("15-language-words.png", "language", {}), ("18-school-levels.png", "paths", {}), ("19-sources-licences.png", "sources", {}),
-             ("20-offline-updates.png", "data", {}), ("21-settings.png", "settings", {}), ("22-about.png", "about", {}), ("23-search.png", "search", {"q": "Ramelau"})]
+             ("20-offline-updates.png", "data", {}), ("21-settings.png", "settings", {}), ("22-about.png", "about", {}), ("23-search.png", "search", {"q": "Ramelau"}),
+             ("24-national-symbols.png", "symbols", {}), ("26-constitution.png", "constitution", {"article": 15}),
+             ("28-category-prehistory.png", "category", {"category": "prehistory"}), ("29-category-sports.png", "category", {"category": "sports"})]
     for name, route, params in shots: save(w, name, route, **params)
     if first_place: save(w, "10-place.png", "item", id=first_place.id)
     if first_day: save(w, "12-holiday.png", "item", id=first_day.id)
@@ -55,9 +57,12 @@ def main_set():
     quiz.lifeline("fifty"); quiz.lifeline("audience"); save(w, "14-millionaire-game.png")
     lang = w.pages["language"]; w.open("language"); lang.set_tab("cards"); save(w, "16-language-flashcards.png")
     lang.set_tab("quiz"); lang.answer_quiz(0); save(w, "17-language-quiz.png")
+    sym = w.pages["symbols"]; w.open("symbols"); sym.on_position(58.0); save(w, "25-anthem-lyrics.png")
+    con = w.pages["constitution"]; w.open("constitution"); con.lang_switch.select("both", emit=True); con.search.setText("liberdade de imprensa"); con.run_search()
+    save(w, "27-constitution-search.png")
     w.companion.close(); w.close()
-    for code, name in (("pt", "30-home-portugues.png"), ("id", "31-home-indonesia.png"), ("en", "32-home-english.png")):
-        w = window(code); save(w, name, "home"); w.companion.close(); w.close()
+    w = window("pt"); save(w, "30-home-portugues.png", "home"); save(w, "31-constitution-portugues.png", "constitution", article=13)
+    save(w, "32-symbols-portugues.png", "symbols"); w.companion.close(); w.close()
     w = window("tet", theme="dark"); save(w, "33-home-dark.png", "home"); save(w, "34-article-dark.png", "item", id="tl.culture.tais")
     save(w, "35-quiz-dark.png", "quiz"); w.companion.close(); w.close()
     w = window("tet", (1024, 600)); save(w, "36-home-1024x600.png", "home"); save(w, "37-article-1024x600.png", "item", id="tl.history.restoration_2002")

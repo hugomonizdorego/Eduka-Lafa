@@ -82,7 +82,7 @@ class ConstitutionPage(QWidget):
         reader = Card(12, 24); bar = QHBoxLayout(); bar.setSpacing(8)
         self.crumb = label("", "caption", wrap=True); bar.addWidget(self.crumb, 1)
         self.prev_b = button("", lambda: self.step(-1), "icon", "back", t("con_prev")); self.prev_b.setFixedSize(40, 40); bar.addWidget(self.prev_b)
-        self.next_b = button("", lambda: self.step(1), "icon", "chevron-right", t("con_next")); self.next_b.setFixedSize(40, 40); bar.addWidget(self.next_b)
+        self.next_b = button("", self.next_clicked, "icon", "chevron-right", t("con_next")); self.next_b.setFixedSize(40, 40); bar.addWidget(self.next_b)
         copy = button("", self.copy, "icon", "copy", t("con_copy")); copy.setFixedSize(40, 40); bar.addWidget(copy)
         read = button("", self.read_aloud, "icon", "speaker", t("con_read")); read.setFixedSize(40, 40); bar.addWidget(read)
         reader.box.addLayout(bar)
@@ -171,6 +171,10 @@ class ConstitutionPage(QWidget):
         self.render()
     def show_preamble(self):
         self.preamble = True; self.render()
+    def next_clicked(self):
+        """From the preamble the next page is article 1; otherwise the next article."""
+        if self.preamble: self.open_article(1)
+        else: self.step(1)
     def step(self, delta):
         n = self.current + delta
         if self.con.article(n): self.open_article(n, keep_query=bool(self.query))
@@ -196,10 +200,7 @@ class ConstitutionPage(QWidget):
                     parts.append(f"<tr><td valign='top'>{text_html(tet[i] if i < len(tet) else '', 'tet', pattern)}</td><td valign='top'>{text_html(pt[i] if i < len(pt) else '', 'pt', pattern)}</td></tr>")
                 parts.append("</table>")
             self.text.setHtml("".join(parts)); self.crumb.setText(con.title(win.lang)); self.prev_b.setEnabled(False); self.next_b.setEnabled(True)
-            self.next_b.clicked.disconnect(); self.next_b.clicked.connect(lambda: self.open_article(1)); return
-        try: self.next_b.clicked.disconnect()
-        except (TypeError, RuntimeError): pass
-        self.next_b.clicked.connect(lambda: self.step(1))
+            return
         a = con.article(self.current) or con.articles[0]
         lang0 = langs[0]
         crumbs = [f"{con.heading_label(h, lang0)} · {kb.show(con.heading_title(h, lang0).capitalize(), lang0)}" for h in con.path(a)]

@@ -27,8 +27,8 @@ import time
 
 BINDINGS={'PyQt5','PyQt6','PySide6'}
 TEXT={
-'pt':('Ativar o Assistente Virtual LAFA no Eduka-Desktop','Abrir LAFA Desktop','Definições LAFA','A ativar LAFA…','A desativar LAFA…','Não foi possível iniciar LAFA. Verifique o executável instalado.','A alteração não foi aplicada. Abra as definições LAFA e tente novamente.','O Lafa funciona offline: lições, pesquisa, trabalhos e lembretes. Online também traz sites, notícias e tempo. O Desktop e o Assistente Virtual são separados.'),
-'tet':('Ativa Asistente Virtuál LAFA iha Eduka-Desktop','Loke LAFA Desktop','Konfigurasaun LAFA','Ativa LAFA hela…','Desativa LAFA hela…','La bele loke LAFA. Verifika executable instaladu.','Mudansa seidauk aplika. Loke konfigurasaun LAFA no koko fali.','Karakter mós servisu offline; online iha sítiu, notísia no AI. Desktop no Asistente Virtuál ketak.'),
+'pt':('Ativar o Assistente Virtual LAFA no Eduka-Desktop','Abrir LAFA Desktop','Definições LAFA','A ativar LAFA…','A desativar LAFA…','Não foi possível iniciar LAFA. Verifique o executável instalado.','A alteração não foi aplicada. Abra as definições LAFA e tente novamente.','O Lafa funciona offline: enciclopédia, Constituição, hino, mapa e quiz. Com internet descarrega textos, fotos e conteúdo novo. O Desktop e o Assistente Virtual são separados.'),
+'tet':('Ativa Asistente Virtuál LAFA iha Eduka-Desktop','Loke LAFA Desktop','Konfigurasaun LAFA','Ativa LAFA hela…','Desativa LAFA hela…','La bele loke LAFA. Verifika executable instaladu.','Mudansa seidauk aplika. Loke konfigurasaun LAFA no koko fali.','Lafa servisu offline: ensiklopédia, Konstituisaun, inu nasionál, mapa no kuis. Ho internet nia download testu, foto no konteúdu foun. Desktop no Asistente Virtuál ketak.'),
 }
 
 

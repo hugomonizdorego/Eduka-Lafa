@@ -103,15 +103,21 @@ would be better and needs an artist or a Timorese cultural reviewer.
 | Asset | Made by | Licence | Notes |
 |---|---|---|---|
 | `lafa-poses.png` + `lafa-poses.json` (waving Casual Belajar, Tais Mane, Formal) | `tools/make-poses.py` cuts the three outfit poses out of the owner's design sheet `docs/design/lafa-character-sheet.webp` (background removed, de-matted edges, same height) | as the character art (owner's design) | Used for the greeting, the headers, the outfit picker and the window icon |
-| `lafa/assets/icons/*.svg` (97 icons) | `tools/make-icons.py` (hand-written SVG paths; the old world-encyclopedia icons were removed) | MIT | Drawn as 3-D "clay" tiles at runtime (`desk/theme.clay_icon`) |
-| `lafa/assets/illustrations/*.svg` (128 scenes: land, nature, history, State, symbols, culture, economy, society, places, days) | `tools/make-illustrations.py` | CC BY-SA 4.0 | Flat vector scenes; the flag follows Article 15 of the Constitution; maps use the real geodata |
+| `lafa/assets/icons/*.svg` (101 icons; pause, music, repeat and copy added for the anthem player and the Constitution) | `tools/make-icons.py` (hand-written SVG paths; the old world-encyclopedia icons were removed) | MIT | Drawn as 3-D "clay" tiles at runtime (`desk/theme.clay_icon`) |
+| `lafa/assets/illustrations/*.svg` (142 scenes: land, nature and animals, prehistory, history, State, symbols, culture, sports, economy, society, places, days) | `tools/make-illustrations.py` | CC BY-SA 4.0 | Flat vector scenes; the flag follows Article 15 of the Constitution; maps use the real geodata; the Olympic picture uses a torch and podium (no Olympic rings) |
+| `lafa/assets/illustrations/emblem.svg` | `tools/make-illustrations.py` (scene `emblem`) | CC BY-SA 4.0 | **Explanatory drawing** of the national emblem (*belak*) after the description in Lei n.º 2/2007, with numbered parts — not the official artwork. Law 2/2007 requires official reproductions to follow the official design; the app says so under the picture. The official image can be downloaded with the photo gallery (Wikimedia Commons, with its licence) |
+| `lafa/assets/timor/anthem/patria.mp3` | Recording **provided by the project owner** (`patria_56.mp3`, 3:24, mono 56 kbps, LAME 3.92; looks like the web edition distributed by the Government) | **To be confirmed by the owner** before publication | National anthem «Pátria» (music Afonso Redentor de Araújo, lyrics Francisco Borja da Costa), a national symbol under Lei n.º 2/2007 (use with dignity; the law regulates its use). SHA-256 182acb2e…344baa |
+| `lafa/assets/timor/anthem/patria.json` | Lafa: official Portuguese lyrics (as given by the owner), Lafa's Tetun translation (not official), cue times measured with `tools/anthem/` (vocal separation + Whisper scoring + melody matching) | CC BY-SA 4.0 (timing and translation) | The recording sings the refrain five times; the verse is shown for learning |
+| `lafa/assets/timor/constitution.json` | `tools/make-constitution.py` from the official PDFs in `tools/sources/constitution/` (Portuguese text of the Jornal da República; Tetun edition 2010) | Official legal text, reproduced unchanged for education | 170 articles, preamble and headings in both languages; the Portuguese text prevails in case of divergence |
 | `lafa/assets/fonts/Nunito-*.ttf` | `tools/make-fonts.py` (static instances of Nunito) | SIL OFL 1.1 (`OFL.txt`) | ASEAN scripts use the system Noto fonts (`fonts-noto-core`, `fonts-noto-cjk`) |
 | `lafa/assets/timor/map/municipalities.json` | `tools/make-map.py`: union of the administrative posts (geoBoundaries TLS ADM2, OCHA ROAP / WHO) by the official list | CC BY 3.0 IGO | Ataúro its own municipality (since 2022); Dom Aleixo in Díli, Zumalai in Cova Lima |
 | `lafa/assets/timor/map/posts.json` | `tools/make-map.py` from geoBoundaries TLS ADM2 (OCHA ROAP, WHO) | CC BY 3.0 IGO | Post boundaries may predate the 2022 changes |
 | `lafa/assets/timor/content/*.json`, `vocab/*.json` | Lafa content writers, from the sources listed in each item | CC BY-SA 4.0 | Draft until expert review (`review.notes`) |
 | `lafa/assets/timor/content/indicators.json` | World Bank WDI (and republishers where noted) | CC BY 4.0 | Refreshed online from `api.worldbank.org` |
 
-Photographs are still not bundled: the offline pack downloads freely licensed
-Wikimedia Commons pictures with their author and licence (see OFFLINE.md).
+Photographs are still not bundled (the development sandbox could not reach
+Wikimedia Commons): the offline pack downloads freely licensed Wikimedia
+Commons pictures — one per item and, optionally, a gallery of three more —
+with their author and licence (see OFFLINE.md).
 Removed in 0.3.0: the world-encyclopedia illustrations and icons, the
 curriculum and the old encyclopedia JSON.

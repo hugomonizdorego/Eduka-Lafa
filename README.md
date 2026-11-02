@@ -4,8 +4,9 @@
 LXQt, the Eduka-Desktop suite). It has two parts:
 
 * **Lafa Desktop** — an interactive **encyclopedia of Timor-Leste**, from the
-  formation of the island to 2026, for students of every school level and for
-  visitors. Texts are in **Tetun, Português, Bahasa Indonesia and English**.
+  formation of the island and its fossils to 2026, for students of every
+  school level and for visitors. The interface and the texts are in **Tetun
+  and Português**, the official languages (Constitution, art. 13).
 * **Lafa Virtual Assistant** — Lafa the crocodile on the Eduka-Panel: a
   **Timor-Leste guide, study buddy and computer helper** (switched on in
   Eduka-Settings → Lafa-Configuration).
@@ -31,9 +32,11 @@ is the owner's concept art.
 | Menu | What you find |
 | --- | --- |
 | **Pájina inisiál** (home) | Greeting, totals, continue learning, next holidays (calendar), this day in history, Tetun word of the day, "did you know?", population chart (World Bank), content and progress charts, place of the week, achievements |
-| **Ensiklopédia** | 15 illustrated categories: land, geology and climate · nature · history · colonialism and occupation · conflicts and reconciliation · State and politics · presidents and prime ministers · national symbols (flag, emblem, anthem, currency…) · map, municipalities and islands · culture and tradition · society · economy (exports, imports, coffee, oil and gas, agriculture, natural resources) · tourism · holidays · Timor-Leste in the world. Every article: simple or complete text, key facts, timeline, related pages, a quiz, sources with licences, read aloud |
+| **Ensiklopédia** | 18 illustrated categories: land, geology and climate · nature and animals · **prehistory** (fossils of the ancient seas, the 2026 pterosaur of Lesululi, Stegodon, the first people 44 000 years ago, rock art) · history · colonialism and occupation · conflicts and reconciliation · State and politics · **State institutions** (ministries, F-FDTL, PNTL, independent bodies) · presidents and prime ministers · national symbols · map, municipalities and islands · culture and tradition · **sports** (football, Olympic and SEA Games, martial arts, Tour de Timor, Dili Marathon…) · society · economy · tourism · holidays · Timor-Leste in the world. Every article: simple or complete text, key facts, timeline, related pages, a quiz, sources with licences, a photo gallery, read aloud |
 | **Mapa** | Interactive map of the 14 municipalities (Ataúro since 2022, Oe-Kusi Ambenu RAEOA), administrative posts, tourist places; zoom, search, details |
-| **Liña tempu** | About 200 dated events from 44 000 years ago to 2026, by era and topic, with search |
+| **Liña tempu** | Hundreds of dated events from the fossils of Timor (millions of years ago) and the first people 44 000 years ago to 2026, by era and topic, with search |
+| **Símbolu Nasionál** | The national anthem «Pátria» with **lyrics that light up as they are sung** (Portuguese text with a Tetun translation), the flag with the colours of art. 15, the emblem (*belak*) explained part by part, the motto |
+| **Konstituisaun** | The **Constitution of the RDTL** in Tetun, Portuguese or both side by side: contents, quick links, **search by article number or words**, copy and read aloud |
 | **Turizmu** | Beaches, mountains, museums, memorials, churches, reefs and more in every municipality, with filters, pictures, tips and the map |
 | **Kalendáriu** | Public holidays and national days for any year (Easter and Islamic dates computed), next holiday, export to `.ics` |
 | **Kuis Milionáriu** | "Who wants to be a millionaire?" about Timor-Leste: 15 questions from easy to hard, prizes in US dollars (just for fun), safe havens at 5 and 10, lifelines 50:50, audience and "phone Lafa", optional clock |
@@ -42,8 +45,9 @@ is the owner's concept art.
 | **Fonte no lisensa** | The owner's main sources, every source used (about 700) with licence and the articles that use it, licences of Lafa, credits, downloaded photos with their authors |
 | **Offline no atualizasaun** | Download the offline pack, check for new content, refresh World Bank data, storage used |
 
-Search (Ctrl+F) looks through every article, municipality, place, holiday and
-word in all four languages (accents and apostrophes do not matter).
+Search (Ctrl+F) looks through every article, municipality, place, holiday,
+article of the Constitution and word, in Tetun and Portuguese (accents and
+apostrophes do not matter).
 
 ## Lafa Virtual Assistant — what it is for
 
@@ -54,7 +58,8 @@ buddy + computer helper** that is useful without being noisy.
   hour, never in quiet mode or over a full-screen app): holidays coming up,
   this day in history, facts, a Tetun word, **a mini quiz you answer in the
   balloon**, a place to visit, words to review, the next article for your
-  school level, encouragement for your learning streak.
+  school level, encouragement for your learning streak, an article of the
+  Constitution, the national anthem to sing along.
 * **Answers questions offline**: type in the popup to search the encyclopedia
   and the words; a result opens Lafa Desktop on the right page.
 * **Quick tiles**: continue reading, millionaire quiz, words, map, calendar,
@@ -75,7 +80,8 @@ lafa                                        # or the "Lafa Desktop" menu entry
 ```
 
 Depends: `python3-pyqt5`, `python3-pyqt5.qtsvg`, `libqt5svg5`, `xdg-utils`.
-Recommends: `espeak-ng` (read aloud), `fonts-noto-core` and `fonts-noto-cjk`
+Recommends: `python3-pyqt5.qtmultimedia` and `gstreamer1.0-plugins-good` (the
+anthem; `mpg123` or `ffmpeg` also work), `espeak-ng` (read aloud), `fonts-noto-core` and `fonts-noto-cjk`
 (Thai, Khmer, Lao, Burmese, Tamil and Chinese words), the desktop tools that
 PC help can open. Developers can run from the source tree with
 `python3 -m lafa.app` (PyQt5) or `LAFA_QT=pyside6 python3 -m lafa.app`.
@@ -85,10 +91,10 @@ PC help can open. Developers can run from the source tree with
 * The whole encyclopedia, map, quiz, words and learning paths are in the
   package (`lafa/assets/timor`).
 * **Offline pack** (Offline no atualizasaun → Download hotu): the Wikipedia
-  introduction of each item in four languages (CC BY-SA 4.0) and one photo per
-  item from Wikimedia Commons — **only free licences** (CC0, public domain,
-  CC BY, CC BY-SA), saved with author and licence (SQLite in
-  `~/.local/share/lafa`).
+  introduction of each item in Tetun and Portuguese (CC BY-SA 4.0), one photo
+  per item and, if chosen, a **gallery of 3 more photos** from Wikimedia
+  Commons — **only free licences** (CC0, public domain, CC BY, CC BY-SA),
+  saved with author and licence (SQLite in `~/.local/share/lafa`).
 * **New content**: Lafa reads `manifest.json` from this public repository and
   downloads changed files only after checking SHA-256, size and JSON shape.
   Data only — never code.
@@ -113,6 +119,10 @@ See [docs/OFFLINE.md](docs/OFFLINE.md) and [docs/PRIVACY.md](docs/PRIVACY.md).
 ## Licences
 
 * Code: **MIT** (© 2026 Hugo Moniz do Rego).
+* Constitution: official texts (Jornal da República; Tetun edition 2010).
+  Anthem «Pátria»: music Afonso Redentor de Araújo, lyrics Francisco Borja da
+  Costa; recording provided by the project owner (licence to be confirmed,
+  see docs/ASSETS.md).
 * Encyclopedia texts, quizzes, vocabulary and illustrations: **CC BY-SA 4.0**.
 * Map: geoBoundaries — OCHA ROAP / WHO (**CC BY 3.0 IGO**); municipalities are the union of their administrative posts.
 * World Bank data: **CC BY 4.0**. Font Nunito: **SIL OFL 1.1**.
@@ -139,6 +149,8 @@ and [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).
 Settings, progress, favourites and quiz results are kept; old start pages move
 to the nearest new page. The old school, library, world encyclopedia, news,
 weather and AI links were removed: Lafa Desktop is now only about Timor-Leste.
+A language setting of English or Indonesian becomes "follow the system"
+(Portuguese systems get Portuguese, all others Tetun).
 
 ## Ideas for next versions
 

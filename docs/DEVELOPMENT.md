@@ -17,12 +17,13 @@ python3 tools/check-content.py [content/<file>.json | vocab/<file>.json] [--stri
 python3 scripts/check-system.py [--network] [--json]
 ```
 
-The tests cover the content (sources, quizzes, four languages, map links,
-vocabulary), the knowledge base, progress, the millionaire game, tips, the
-offline store and the update channel (with a fake network), settings
-migration, the interface texts, every page in every language, items of every
-kind, the quiz game, the word page, settings, school levels, small screens
-and the Virtual Assistant.
+The tests cover the content (sources, quizzes, Tetun and Portuguese, map
+links, vocabulary), the knowledge base, progress, the millionaire game, tips,
+the offline store, the photo gallery and the update channel (with a fake
+network), settings and language migration, the interface texts, the
+Constitution (references and search), the anthem cues and the audio player,
+every page in both languages, items of every kind, the quiz game, the word
+page, settings, school levels, small screens and the Virtual Assistant.
 
 ## Content
 
@@ -40,7 +41,9 @@ and the Virtual Assistant.
 | Tool | Makes |
 | --- | --- |
 | `tools/make-fonts.py` | Nunito static fonts |
-| `tools/make-map.py` | Municipality and post map JSON from geoBoundaries (cached in `build/geo`) |
+| `tools/make-map.py` | Post map JSON from geoBoundaries ADM2 (cached in `build/geo`); municipalities are the union of their posts (needs `pip install shapely`) |
+| `tools/make-constitution.py` | `constitution.json` from the official PDFs in `tools/sources/constitution/` (needs `pdftotext`, poppler-utils) |
+| `tools/anthem/` | How the anthem's lyric times were measured (vocal separation + Whisper scoring); see its README |
 | `tools/make-icons.py` | SVG icons |
 | `tools/make-illustrations.py` | SVG illustrations + manifest |
 | `tools/make-poses.py` | Waving outfit poses from the owner's design sheet |

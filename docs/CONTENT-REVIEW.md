@@ -18,7 +18,7 @@ before they are marked `reviewed`.** All per-item notes are in
   resolve), so writers relied on search results and summaries; when the
   search budget ran out, some details came from general knowledge and are
   flagged in `review.notes`.
-* The translations into the ASEAN and CPLP languages (Malay, Filipino, Thai,
+* The word translations into the ASEAN and CPLP languages (Malay, Filipino, Thai,
   Vietnamese, Khmer, Lao, Burmese, Chinese, Tamil, Spanish, French) are
   machine-assisted drafts and need native speakers.
 
@@ -53,6 +53,26 @@ before they are marked `reviewed`.** All per-item notes are in
 - Coordinates of places given by town (see each place's notes); Islamic holiday dates are approximate (the moon); holiday rules follow Law 10/2005 as amended by Law 3/2016.
 
 **Tetun terms to confirm** (selection): Komisaun Verdade no Amizade, Naton ona! (Chega!), para-funu, Vale Feto-Faluk sira, volta daruak, Tribunál Rekursu, Mapa-Dalan, karau / karau-baka, PIB naun-petrolíferu, Jardín Asuwa'in no Martir Pátria nian, koluna metan, kapitaun-mór, hirus-matan, Parke Dame; words: botarde/botardi, kolisensa, nanál, manu-rade, makikit, tarutu, rai-halai, telemóvel, hateten, maski, barani.
+
+**Added in the second half of 0.3.0 — check first**
+- *Anthem*: the cue times in `anthem/patria.json` (listen once with the lyrics
+  page); the Tetun translation of the lyrics (Lafa's, not official); the
+  licence of the recording provided by the owner.
+- *Emblem*: the explanatory drawing (`illustrations/emblem.svg`) and the
+  meaning of its eight parts against the text and annex of Lei n.º 2/2007;
+  the motto: Wikipedia gives «Unidade, Acção, Progresso» for the 2007 emblem,
+  older sources «Honra, Pátria e Povo» for the 2002 arms.
+- *Constitution*: the parsed text is official; spot-check articles 6, 13, 15,
+  27 and 166 against the printed editions.
+- *Prehistory*: ages of fossils and caves (ranges), the 2026 pterosaur of
+  Lesululi (Tatoli, 11 Aug 2026).
+- *Sports*: SEA Games medal totals, Olympic team members 2000–2024, league
+  titles 2026, the martial-arts law of 2026.
+- *Institutions*: the list of ministries of the IX Government after 2026
+  changes, the PNTL founding date (2000 vs 2002), F-FDTL figures.
+- *Animals*: Tetun animal names, IUCN categories, the "Timor python" name.
+- *Map*: municipalities are now built from the posts by the official list;
+  check that the 2022 changes (new posts in Ataúro and elsewhere) are noted.
 
 ## Marking an item as reviewed
 

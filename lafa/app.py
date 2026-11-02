@@ -309,6 +309,8 @@ class Window(QMainWindow):
         elif route == "map" and item: self.open("map", **({"place": item.id} if item.kind == "place" else {"municipality": item.id}))
         elif route == "search" and value: self.open("search", q=value)
         elif route == "language" and value in ("words", "cards", "quiz"): self.open("language", tab=value)
+        elif route == "constitution" and str(value).isdigit(): self.open("constitution", article=int(value))
+        elif route == "symbols": self.open("symbols", play=value == "play")
         elif route: self.open(route)
     def activate_mode(self, mode):
         if mode == "virtual-start": return

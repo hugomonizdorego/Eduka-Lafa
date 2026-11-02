@@ -31,6 +31,13 @@
    "note": ""
   },
   {
+   "key": "athletics",
+   "file": "athletics.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
    "key": "austronesian-boat",
    "file": "austronesian-boat.svg",
    "licence": "CC BY-SA 4.0",
@@ -52,6 +59,13 @@
    "note": ""
   },
   {
+   "key": "basketball",
+   "file": "basketball.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
    "key": "beach",
    "file": "beach.svg",
    "licence": "CC BY-SA 4.0",
@@ -61,6 +75,13 @@
   {
    "key": "birds",
    "file": "birds.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "butterfly",
+   "file": "butterfly.svg",
    "licence": "CC BY-SA 4.0",
    "author": "Lafa contributors (tools/make-illustrations.py)",
    "note": ""
@@ -192,8 +213,22 @@
    "note": ""
   },
   {
+   "key": "cycling",
+   "file": "cycling.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
    "key": "dance",
    "file": "dance.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "deer",
+   "file": "deer.svg",
    "licence": "CC BY-SA 4.0",
    "author": "Lafa contributors (tools/make-illustrations.py)",
    "note": ""
@@ -320,6 +355,13 @@
   {
    "key": "fort",
    "file": "fort.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "fossil",
+   "file": "fossil.svg",
    "licence": "CC BY-SA 4.0",
    "author": "Lafa contributors (tools/make-illustrations.py)",
    "note": ""
@@ -500,6 +542,13 @@
    "note": ""
   },
   {
+   "key": "martial-arts",
+   "file": "martial-arts.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
    "key": "media",
    "file": "media.svg",
    "licence": "CC BY-SA 4.0",
@@ -605,6 +654,13 @@
    "note": ""
   },
   {
+   "key": "olympics",
+   "file": "olympics.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
    "key": "palace",
    "file": "palace.svg",
    "licence": "CC BY-SA 4.0",
@@ -654,6 +710,13 @@
    "note": ""
   },
   {
+   "key": "pottery",
+   "file": "pottery.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
    "key": "prehistory",
    "file": "prehistory.svg",
    "licence": "CC BY-SA 4.0",
@@ -670,6 +733,13 @@
   {
    "key": "proclamation",
    "file": "proclamation.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "pterosaur",
+   "file": "pterosaur.svg",
    "licence": "CC BY-SA 4.0",
    "author": "Lafa contributors (tools/make-illustrations.py)",
    "note": ""
@@ -717,6 +787,13 @@
    "note": ""
   },
   {
+   "key": "rock-art",
+   "file": "rock-art.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
    "key": "sandalwood",
    "file": "sandalwood.svg",
    "licence": "CC BY-SA 4.0",
@@ -754,6 +831,20 @@
   {
    "key": "statue",
    "file": "statue.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "stegodon",
+   "file": "stegodon.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "swimming",
+   "file": "swimming.svg",
    "licence": "CC BY-SA 4.0",
    "author": "Lafa contributors (tools/make-illustrations.py)",
    "note": ""
@@ -803,6 +894,13 @@
   {
    "key": "trekking",
    "file": "trekking.svg",
+   "licence": "CC BY-SA 4.0",
+   "author": "Lafa contributors (tools/make-illustrations.py)",
+   "note": ""
+  },
+  {
+   "key": "turtle",
+   "file": "turtle.svg",
    "licence": "CC BY-SA 4.0",
    "author": "Lafa contributors (tools/make-illustrations.py)",
    "note": ""

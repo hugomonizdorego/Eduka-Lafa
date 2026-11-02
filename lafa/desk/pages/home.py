@@ -11,6 +11,10 @@ from ..widgets import (Card, Clickable, ClayIcon, StatCard, CourseCard, Calendar
 from ...progress import ACHIEVEMENTS
 
 extend({
+    "home_anthem": ("Inu Nasionál «Pátria»", "Hino Nacional «Pátria»"),
+    "home_anthem_text": ("Rona no hananu: letra tuir múzika. Bandeira no emblema esplika parte ida-idak.", "Ouça e cante: a letra acompanha a música. Bandeira e emblema explicados parte a parte."),
+    "home_constitution": ("Konstituisaun RDTL", "Constituição da RDTL"),
+    "home_constitution_text": ("Artigu 170 iha Tetun no Portugés. Buka númeru ka liafuan lalais.", "170 artigos em tétum e português. Procure pelo número ou por palavras."),
     "shuffle": ("Seluk", "Outro"),
     "learn_word": ("Aprende liafuan", "Aprender palavras"),
     "open_calendar": ("Loke kalendáriu", "Abrir calendário"),
@@ -37,8 +41,8 @@ extend({
 ACH_ICON = {"first_read": ("book-open", "violet"), "reader_10": ("scroll", "pink"), "reader_50": ("graduation", "lilac"), "explorer": ("umbrella", "cyan"),
             "municipalities": ("map", "teal"), "words_50": ("translate", "mint"), "words_200": ("chat", "green"), "quiz_perfect": ("target", "coral"),
             "millionaire_safe": ("shield", "sky"), "millionaire_win": ("trophy", "butter"), "streak_7": ("sun", "peach")}
-GROUPS = [("group_history", ("history", "colonial", "conflicts"), "lilac"), ("group_state", ("politics", "leaders", "symbols", "world"), "violet"),
-          ("group_land", ("land", "nature", "geography"), "mint"), ("group_culture", ("culture", "society", "calendar"), "butter"),
+GROUPS = [("group_history", ("prehistory", "history", "colonial", "conflicts"), "lilac"), ("group_state", ("politics", "institutions", "leaders", "symbols", "world"), "violet"),
+          ("group_land", ("land", "nature", "geography"), "mint"), ("group_culture", ("culture", "sports", "society", "calendar"), "butter"),
           ("group_economy", ("economy", "tourism"), "sky")]
 
 def achievement_title(lang, key):
@@ -103,6 +107,15 @@ class HomePage(QWidget):
                 ("translate", "coral", "stat_words", stats["words"], t("stat_words_note", n=prog.words_learned()), "language")):
             card = StatCard(icon_name, acc, t(key), value, note, animate=not win.settings.reduce_motion); card.clicked.connect(lambda r=route: win.open(r)); grid.add(card)
         self.col.addWidget(grid)
+        # 2b. The nation: anthem and national symbols, the Constitution.
+        nation = ResponsiveGrid(320, 2, 16)
+        for icon_name, acc, title, text_, route in (("music", "rose", t("home_anthem"), t("home_anthem_text"), "symbols"),
+                                                     ("scales", "indigo", t("home_constitution"), t("home_constitution_text"), "constitution")):
+            card = Clickable(16, 22, tint=accent(acc)[1]); line = QHBoxLayout(); line.setSpacing(14); line.addWidget(ClayIcon(icon_name, acc, 56))
+            c2 = QVBoxLayout(); c2.setSpacing(2); c2.addWidget(label(title, "h2", wrap=True)); c2.addWidget(label(text_, "muted", wrap=True)); line.addLayout(c2, 1)
+            chev = QLabel(); chev.setPixmap(icons.pixmap("chevron-right", win.tok["muted"], 20)); line.addWidget(chev)
+            card.box.addLayout(line); card.clicked.connect(lambda r=route: win.open(r)); nation.add(card)
+        self.col.addWidget(nation)
         # 3. Continue learning + calendar.
         two = ResponsiveGrid(420, 2, 16)
         learn = Card(18, 24); learn.box.addLayout(section_title(t("continue_learning"), button(t("see_all"), lambda: win.open("paths"), "ghost")))

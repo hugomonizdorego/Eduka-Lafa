@@ -5,13 +5,16 @@ works without internet. The internet only adds downloads and updates.
 
 | Works offline | Needs internet (on request or when allowed) |
 | --- | --- |
-| Encyclopedia (≈150 articles, municipalities, places, holidays), search, map, timeline, tourism, calendar and `.ics` export, millionaire quiz, words, flash cards, learning paths, progress, read aloud (espeak-ng), the Virtual Assistant | Offline pack (Wikipedia introductions + free-licence photos), content updates, World Bank data, opening a source page or Wikipedia in the web browser |
+| Encyclopedia (≈200 articles, municipalities, places, holidays), the Constitution, the national anthem with its lyrics, search, map, timeline, tourism, calendar and `.ics` export, millionaire quiz, words, flash cards, learning paths, progress, read aloud (espeak-ng), the Virtual Assistant | Offline pack (Wikipedia introductions + free-licence photos and gallery), content updates, World Bank data, opening a source page or Wikipedia in the web browser |
 
 ## Offline pack
 
 *Offline no atualizasaun → Download hotu* downloads, for every item that names
-a Wikipedia page, the introduction in Tetun, Portuguese, Indonesian and
-English (Wikipedia, CC BY-SA 4.0) and one photo from Wikimedia Commons.
+a Wikipedia page, the introduction in Tetun and Portuguese (Wikipedia,
+CC BY-SA 4.0) and one photo from Wikimedia Commons (the lead picture of the
+English or Portuguese page). With *Galeria* ticked it also downloads up to
+three more photos shown on those pages (maps, flags, logos and icons are
+skipped), about 60 MB in total.
 Photos are downloaded **only** when their licence is CC0, public domain,
 CC BY or CC BY-SA and they are not marked non-free; the author, licence and
 source page are saved with the photo and shown under it and on *Fonte no
