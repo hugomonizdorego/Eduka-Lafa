@@ -5,7 +5,7 @@ import pytest
 
 from lafa.config import Settings
 
-ROUTES = ["home", "encyclopedia", "map", "timeline", "places", "calendar", "quiz", "language", "paths", "sources", "data", "settings", "about"]
+ROUTES = ["home", "encyclopedia", "map", "timeline", "places", "calendar", "symbols", "constitution", "quiz", "language", "paths", "sources", "data", "settings", "about"]
 
 @pytest.fixture
 def errors(monkeypatch):
@@ -24,7 +24,7 @@ def window(qapp, **values):
 def close(w):
     w.companion.close(); w.close()
 
-@pytest.mark.parametrize("lang", ["tet", "pt", "id", "en"])
+@pytest.mark.parametrize("lang", ["tet", "pt"])
 def test_every_page_opens(qapp, errors, lang):
     w = window(qapp, language=lang)
     for route in ROUTES:

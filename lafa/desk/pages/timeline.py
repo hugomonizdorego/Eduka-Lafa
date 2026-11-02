@@ -8,14 +8,13 @@ from ..widgets import Card, ClayIcon, Pill, label, button, scroll, section_title
 from ..widgets import SearchBox
 
 extend({
-    "tl_title": ("Liña tempu Timór-Leste", "Linha do tempo de Timor-Leste", "Lini masa Timor-Leste", "Timeline of Timor-Leste"),
-    "tl_sub": ("Husi ema dahuluk iha tasi-le'un, tinan rihun 44 liubá, to'o 2026. Hili tempu ida ka buka eventu.", "Dos primeiros povos da ilha, há 44 mil anos, até 2026. Escolha uma época ou pesquise.",
-               "Dari manusia pertama di pulau ini, 44 ribu tahun lalu, sampai 2026. Pilih masa atau cari peristiwa.", "From the island's first people 44,000 years ago to 2026. Pick an era or search for an event."),
-    "all_eras": ("Tempu hotu", "Todas as épocas", "Semua masa", "All eras"),
-    "filter_events": ("Buka eventu…", "Pesquisar eventos…", "Cari peristiwa…", "Search events…"),
-    "n_events": ("eventu {n}", "{n} eventos", "{n} peristiwa", "{n} events"),
-    "show_more": ("Haree tan", "Mostrar mais", "Tampilkan lagi", "Show more"),
-    "all_topics": ("Tema hotu", "Todos os temas", "Semua tema", "All topics"),
+    "tl_title": ("Liña tempu Timór-Leste", "Linha do tempo de Timor-Leste"),
+    "tl_sub": ("Husi ema dahuluk iha tasi-le'un, tinan rihun 44 liubá, to'o 2026. Hili tempu ida ka buka eventu.", "Dos primeiros povos da ilha, há 44 mil anos, até 2026. Escolha uma época ou pesquise."),
+    "all_eras": ("Tempu hotu", "Todas as épocas"),
+    "filter_events": ("Buka eventu…", "Pesquisar eventos…"),
+    "n_events": ("eventu {n}", "{n} eventos"),
+    "show_more": ("Haree tan", "Mostrar mais"),
+    "all_topics": ("Tema hotu", "Todos os temas"),
 })
 
 class EraBar(QWidget):

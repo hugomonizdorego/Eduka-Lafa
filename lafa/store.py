@@ -4,6 +4,7 @@ SQLite database `lafa.db` in the learner's data folder (~/.local/share/lafa):
 * extracts — Wikipedia introductions per item and language (CC BY-SA 4.0),
 * media    — one free-licence photo per item from Wikimedia Commons, with
              author, licence and source (the picture file sits in media/),
+* gallery  — more free-licence photos per item (optional), same credits,
 * meta     — dates of the last download and update checks.
 Content updates (JSON) are files in updates/ (read by lafa.kb); indicators
 from the World Bank are written there too. Nothing here is ever sent anywhere.
@@ -20,6 +21,8 @@ CREATE TABLE IF NOT EXISTS extracts (item_id TEXT, lang TEXT, title TEXT, text T
                                      PRIMARY KEY (item_id, lang));
 CREATE TABLE IF NOT EXISTS media (item_id TEXT PRIMARY KEY, file TEXT, title TEXT, author TEXT, licence TEXT, licence_url TEXT,
                                   source_url TEXT, width INTEGER, height INTEGER, fetched REAL);
+CREATE TABLE IF NOT EXISTS gallery (item_id TEXT, n INTEGER, file TEXT, title TEXT, author TEXT, licence TEXT, licence_url TEXT,
+                                    source_url TEXT, width INTEGER, height INTEGER, fetched REAL, PRIMARY KEY (item_id, n));
 """
 MAX_EXTRACT = 6000
 
@@ -55,18 +58,45 @@ class Store:
         if not row: return None
         return {"title": row[0], "text": row[1], "url": row[2], "source": row[3], "licence": row[4], "fetched": row[5]}
     # ----------------------------------------------------------------- media
+    def _write_picture(self, name, data):
+        self.media_dir.mkdir(parents=True, exist_ok=True, mode=0o700)
+        path = self.media_dir / name; tmp = path.with_suffix(path.suffix + ".part")
+        tmp.write_bytes(data); os.replace(tmp, path)
+        return path
+    @staticmethod
+    def _safe(item_id): return "".join(c if c.isalnum() or c in "._-" else "_" for c in item_id)[:100]
+    @staticmethod
+    def _credit(info):
+        return (info.get("title", "")[:300], info.get("author", "")[:300], info.get("licence", "")[:80], info.get("licence_url", "")[:400],
+                info.get("source_url", "")[:600], int(info.get("width", 0) or 0), int(info.get("height", 0) or 0), time.time())
     def put_photo(self, item_id, data, ext, info):
         """Save a downloaded picture (bytes) with its credit; returns the file path."""
-        self.media_dir.mkdir(parents=True, exist_ok=True, mode=0o700)
-        safe = "".join(c if c.isalnum() or c in "._-" else "_" for c in item_id)[:100]
-        path = self.media_dir / f"{safe}.{ext}"; tmp = path.with_suffix(path.suffix + ".part")
-        tmp.write_bytes(data); os.replace(tmp, path)
+        path = self._write_picture(f"{self._safe(item_id)}.{ext}", data)
         with self.lock:
-            self.db.execute("INSERT OR REPLACE INTO media VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
-                            (item_id, path.name, info.get("title", "")[:300], info.get("author", "")[:300], info.get("licence", "")[:80],
-                             info.get("licence_url", "")[:400], info.get("source_url", "")[:600], int(info.get("width", 0)), int(info.get("height", 0)), time.time()))
+            self.db.execute("INSERT OR REPLACE INTO media VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", (item_id, path.name) + self._credit(info))
             self.db.commit()
         return path
+    def put_gallery(self, item_id, n, data, ext, info):
+        """Save one more picture of an item (n = 1, 2, …) with its credit; returns the file path."""
+        path = self._write_picture(f"{self._safe(item_id)}-{int(n)}.{ext}", data)
+        with self.lock:
+            self.db.execute("INSERT OR REPLACE INTO gallery VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", (item_id, int(n), path.name) + self._credit(info))
+            self.db.commit()
+        return path
+    def gallery(self, item_id):
+        """[(path, info)] of the extra pictures of an item that are on disk."""
+        try:
+            with self.lock: rows = self.db.execute("SELECT file, title, author, licence, licence_url, source_url, n FROM gallery WHERE item_id=? ORDER BY n", (item_id,)).fetchall()
+        except sqlite3.Error: rows = []
+        out = []
+        for r in rows:
+            path = self.media_dir / r[0]
+            if path.is_file(): out.append((path, {"title": r[1], "author": r[2], "licence": r[3], "licence_url": r[4], "source_url": r[5], "n": r[6]}))
+        return out
+    def gallery_titles(self, item_id):
+        try:
+            with self.lock: return {r[0] for r in self.db.execute("SELECT title FROM gallery WHERE item_id=?", (item_id,)).fetchall()}
+        except sqlite3.Error: return set()
     def photo(self, item_id):
         """(path, info) of the downloaded picture, or None."""
         row = self._one("SELECT file, title, author, licence, licence_url, source_url FROM media WHERE item_id=?", (item_id,))
@@ -75,8 +105,11 @@ class Store:
         if not path.is_file(): return None
         return path, {"title": row[1], "author": row[2], "licence": row[3], "licence_url": row[4], "source_url": row[5]}
     def photos(self):
+        """Every downloaded picture with its credit (lead photos and gallery), for the credits page."""
         try:
-            with self.lock: rows = self.db.execute("SELECT item_id, file, title, author, licence, licence_url, source_url FROM media ORDER BY item_id").fetchall()
+            with self.lock:
+                rows = self.db.execute("SELECT item_id, file, title, author, licence, licence_url, source_url FROM media "
+                                       "UNION ALL SELECT item_id, file, title, author, licence, licence_url, source_url FROM gallery ORDER BY 1, 2").fetchall()
         except sqlite3.Error: rows = []
         return [{"item": r[0], "file": r[1], "title": r[2], "author": r[3], "licence": r[4], "licence_url": r[5], "source_url": r[6]} for r in rows]
     # ----------------------------------------------------------------- stats
@@ -84,7 +117,7 @@ class Store:
         try:
             with self.lock:
                 extracts = self.db.execute("SELECT COUNT(*) FROM extracts").fetchone()[0]
-                media = self.db.execute("SELECT COUNT(*) FROM media").fetchone()[0]
+                media = self.db.execute("SELECT COUNT(*) FROM media").fetchone()[0] + self.db.execute("SELECT COUNT(*) FROM gallery").fetchone()[0]
         except sqlite3.Error: extracts = media = 0
         size = 0
         for p in [self.folder / "lafa.db"] + (list(self.media_dir.glob("*")) if self.media_dir.is_dir() else []):
@@ -94,7 +127,7 @@ class Store:
     def clear(self):
         """Remove downloaded texts and pictures (content updates stay)."""
         with self.lock:
-            self.db.execute("DELETE FROM extracts"); self.db.execute("DELETE FROM media"); self.db.commit()
+            self.db.execute("DELETE FROM extracts"); self.db.execute("DELETE FROM media"); self.db.execute("DELETE FROM gallery"); self.db.commit()
         if self.media_dir.is_dir():
             for p in self.media_dir.glob("*"):
                 try: p.unlink()

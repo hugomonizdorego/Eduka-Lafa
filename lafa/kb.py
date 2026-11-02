@@ -20,19 +20,19 @@ from functools import lru_cache
 from pathlib import Path
 
 ASSETS = Path(__file__).resolve().parent / "assets" / "timor"
-LANGS = ("tet", "pt", "id", "en")
-FALLBACK = {"tet": ("tet", "pt", "en", "id"), "pt": ("pt", "en", "tet", "id"), "id": ("id", "en", "pt", "tet"), "en": ("en", "pt", "id", "tet")}
+LANGS = ("tet", "pt")                      # interface and content: the official languages (Constitution, art. 13)
+FALLBACK = {"tet": ("tet", "pt"), "pt": ("pt", "tet")}
 
-def L(tet, pt, id_, en):
-    return {"tet": tet, "pt": pt, "id": id_, "en": en}
+def L(tet, pt):
+    return {"tet": tet, "pt": pt}
 
 def lang_of(locale):
-    return locale if locale in LANGS else "en"
+    return locale if locale in LANGS else "tet"
 
-def text(value, lang="en"):
+def text(value, lang="tet"):
     """The value in this language, falling back to a related language."""
     if isinstance(value, dict):
-        for code in FALLBACK.get(lang, FALLBACK["en"]):
+        for code in FALLBACK.get(lang, FALLBACK["tet"]):
             v = value.get(code)
             if isinstance(v, str) and v.strip(): return show(v, code)
         return ""
@@ -63,11 +63,11 @@ def tokens(value):
 # --------------------------------------------------------------------- metadata
 LEVELS = ["eb1", "eb2", "eb3", "es", "sup"]
 LEVEL_NAMES = {
-    "eb1": L("Ensinu Báziku – siklu 1 (klase 1–4)", "Ensino Básico – 1.º ciclo (1.º–4.º ano)", "Pendidikan Dasar – siklus 1 (kelas 1–4)", "Basic Education – cycle 1 (grades 1–4)"),
-    "eb2": L("Ensinu Báziku – siklu 2 (klase 5–6)", "Ensino Básico – 2.º ciclo (5.º–6.º ano)", "Pendidikan Dasar – siklus 2 (kelas 5–6)", "Basic Education – cycle 2 (grades 5–6)"),
-    "eb3": L("Ensinu Báziku – siklu 3 (klase 7–9)", "Ensino Básico – 3.º ciclo (7.º–9.º ano)", "Pendidikan Dasar – siklus 3 (kelas 7–9)", "Basic Education – cycle 3 (grades 7–9)"),
-    "es": L("Ensinu Sekundáriu (klase 10–12)", "Ensino Secundário (10.º–12.º ano)", "Pendidikan Menengah (kelas 10–12)", "Secondary Education (grades 10–12)"),
-    "sup": L("Ensinu Superiór no adultu", "Ensino Superior e adultos", "Pendidikan Tinggi dan umum", "Higher education and adults"),
+    "eb1": L("Ensinu Báziku – siklu 1 (klase 1–4)", "Ensino Básico – 1.º ciclo (1.º–4.º ano)"),
+    "eb2": L("Ensinu Báziku – siklu 2 (klase 5–6)", "Ensino Básico – 2.º ciclo (5.º–6.º ano)"),
+    "eb3": L("Ensinu Báziku – siklu 3 (klase 7–9)", "Ensino Básico – 3.º ciclo (7.º–9.º ano)"),
+    "es": L("Ensinu Sekundáriu (klase 10–12)", "Ensino Secundário (10.º–12.º ano)"),
+    "sup": L("Ensinu Superiór no adultu", "Ensino Superior e adultos"),
 }
 LEVEL_SHORT = {"eb1": "EB 1", "eb2": "EB 2", "eb3": "EB 3", "es": "ES", "sup": "SUP"}
 # Millionaire steps that suit each level (questions carry a difficulty 1–15).
@@ -83,49 +83,49 @@ class Category:
     illustration: str
 
 CATEGORIES = [
-    Category("land", L("Rai, Jeolojia no Klima", "Terra, geologia e clima", "Daratan, geologi dan iklim", "Land, geology and climate"),
-             L("Oinsá tasi-le'un Timór moris, foho, mota no tempu.", "Como a ilha se formou, montanhas, rios e clima.", "Bagaimana pulau terbentuk, gunung, sungai dan iklim.", "How the island formed, mountains, rivers and climate."), "mountain", "peach", "island-formation"),
-    Category("nature", L("Natureza no Biodiversidade", "Natureza e biodiversidade", "Alam dan keanekaragaman hayati", "Nature and biodiversity"),
-             L("Manu, lafaek, tasi no ai-laran sira.", "Aves, crocodilos, mar e florestas.", "Burung, buaya, laut dan hutan.", "Birds, crocodiles, the sea and forests."), "leaf", "mint", "coral-reef"),
-    Category("history", L("Istória", "História", "Sejarah", "History"),
-             L("Husi ema dahuluk to'o 2026.", "Dos primeiros povos até 2026.", "Dari manusia pertama sampai 2026.", "From the first people to 2026."), "scroll", "lilac", "prehistory"),
-    Category("colonial", L("Kolonializmu no Okupasaun", "Colonialismo e ocupação", "Penjajahan dan pendudukan", "Colonialism and occupation"),
-             L("Portugál, Olanda, Japaun no Indonézia.", "Portugal, Holanda, Japão e Indonésia.", "Portugal, Belanda, Jepang dan Indonesia.", "Portugal, the Netherlands, Japan and Indonesia."), "ship", "sky", "caravel"),
-    Category("conflicts", L("Konflitu no Rekonsiliasaun", "Conflitos e reconciliação", "Konflik dan rekonsiliasi", "Conflict and reconciliation"),
-             L("Rezisténsia, terus no dame.", "Resistência, sofrimento e paz.", "Perlawanan, penderitaan dan perdamaian.", "Resistance, suffering and peace."), "dove", "coral", "reconciliation"),
-    Category("politics", L("Estadu no Polítika", "Estado e política", "Negara dan politik", "State and politics"),
-             L("Lei-Inan, órgaun soberania no eleisaun sira.", "Constituição, órgãos de soberania e eleições.", "Konstitusi, lembaga negara dan pemilu.", "Constitution, institutions and elections."), "landmark", "violet", "parliament"),
-    Category("leaders", L("Prezidente no Primeiru-Ministru", "Presidentes e primeiros-ministros", "Presiden dan perdana menteri", "Presidents and prime ministers"),
-             L("Lider sira husi 1975 to'o ohin.", "Líderes de 1975 até hoje.", "Para pemimpin dari 1975 sampai sekarang.", "Leaders from 1975 to today."), "user", "pink", "palace"),
-    Category("symbols", L("Símbolu Nasionál", "Símbolos nacionais", "Lambang negara", "National symbols"),
-             L("Bandeira, emblema, inu nasionál no osan.", "Bandeira, emblema, hino e moeda.", "Bendera, lambang, lagu kebangsaan dan mata uang.", "Flag, emblem, anthem and currency."), "flag-tl", "rose", "flag"),
-    Category("geography", L("Mapa, Munisípiu no Tasi-le'un", "Mapa, municípios e ilhas", "Peta, munisipio dan pulau", "Map, municipalities and islands"),
-             L("Munisípiu 14, postu administrativu no tasi-le'un sira.", "Os 14 municípios, postos e ilhas.", "14 munisipio, pos administratif dan pulau.", "The 14 municipalities, posts and islands."), "map", "teal", "tl-overview"),
-    Category("culture", L("Kultura no Lisan", "Cultura e tradição", "Budaya dan tradisi", "Culture and tradition"),
-             L("Tais, uma lulik, dansa, múzika no ai-han.", "Tais, uma lulik, danças, música e comida.", "Tais, uma lulik, tarian, musik dan makanan.", "Tais, sacred houses, dances, music and food."), "palette", "butter", "tais"),
-    Category("society", L("Sosiedade", "Sociedade", "Masyarakat", "Society"),
-             L("Populasaun, lian, relijiaun, edukasaun no saúde.", "População, línguas, religião, educação e saúde.", "Penduduk, bahasa, agama, pendidikan dan kesehatan.", "Population, languages, religion, education and health."), "people", "indigo", "population"),
-    Category("economy", L("Ekonomia", "Economia", "Ekonomi", "Economy"),
-             L("Osan, esportasaun, importasaun no riku-soin naturál.", "Moeda, exportações, importações e recursos.", "Mata uang, ekspor, impor dan sumber daya alam.", "Currency, exports, imports and natural resources."), "chart", "green", "coffee"),
-    Category("tourism", L("Turizmu", "Turismo", "Pariwisata", "Tourism"),
-             L("Tasi-ibun, foho, museu no fatin istóriku.", "Praias, montanhas, museus e lugares históricos.", "Pantai, gunung, museum dan tempat bersejarah.", "Beaches, mountains, museums and heritage."), "umbrella", "cyan", "beach"),
-    Category("calendar", L("Feriadu no Loron Nasionál", "Feriados e dias nacionais", "Hari libur dan hari nasional", "Holidays and national days"),
-             L("Loron importante sira no saida mak ita hanoin.", "Datas importantes e o que se recorda.", "Hari penting dan apa yang diperingati.", "Important days and what they remember."), "calendar-check", "rose", "calendar"),
-    Category("world", L("Timór-Leste iha Mundu", "Timor-Leste no mundo", "Timor-Leste di dunia", "Timor-Leste in the world"),
-             L("ONU, CPLP, ASEAN no rai viziñu sira.", "ONU, CPLP, ASEAN e vizinhos.", "PBB, CPLP, ASEAN dan negara tetangga.", "UN, CPLP, ASEAN and neighbours."), "globe", "sky", "diplomacy"),
+    Category("land", L("Rai, Jeolojia no Klima", "Terra, geologia e clima"),
+             L("Oinsá tasi-le'un Timór moris, foho, mota no tempu.", "Como a ilha se formou, montanhas, rios e clima."), "mountain", "peach", "island-formation"),
+    Category("nature", L("Natureza no Biodiversidade", "Natureza e biodiversidade"),
+             L("Manu, lafaek, tasi no ai-laran sira.", "Aves, crocodilos, mar e florestas."), "leaf", "mint", "coral-reef"),
+    Category("history", L("Istória", "História"),
+             L("Husi ema dahuluk to'o 2026.", "Dos primeiros povos até 2026."), "scroll", "lilac", "prehistory"),
+    Category("colonial", L("Kolonializmu no Okupasaun", "Colonialismo e ocupação"),
+             L("Portugál, Olanda, Japaun no Indonézia.", "Portugal, Holanda, Japão e Indonésia."), "ship", "sky", "caravel"),
+    Category("conflicts", L("Konflitu no Rekonsiliasaun", "Conflitos e reconciliação"),
+             L("Rezisténsia, terus no dame.", "Resistência, sofrimento e paz."), "dove", "coral", "reconciliation"),
+    Category("politics", L("Estadu no Polítika", "Estado e política"),
+             L("Lei-Inan, órgaun soberania no eleisaun sira.", "Constituição, órgãos de soberania e eleições."), "landmark", "violet", "parliament"),
+    Category("leaders", L("Prezidente no Primeiru-Ministru", "Presidentes e primeiros-ministros"),
+             L("Lider sira husi 1975 to'o ohin.", "Líderes de 1975 até hoje."), "user", "pink", "palace"),
+    Category("symbols", L("Símbolu Nasionál", "Símbolos nacionais"),
+             L("Bandeira, emblema, inu nasionál no osan.", "Bandeira, emblema, hino e moeda."), "flag-tl", "rose", "flag"),
+    Category("geography", L("Mapa, Munisípiu no Tasi-le'un", "Mapa, municípios e ilhas"),
+             L("Munisípiu 14, postu administrativu no tasi-le'un sira.", "Os 14 municípios, postos e ilhas."), "map", "teal", "tl-overview"),
+    Category("culture", L("Kultura no Lisan", "Cultura e tradição"),
+             L("Tais, uma lulik, dansa, múzika no ai-han.", "Tais, uma lulik, danças, música e comida."), "palette", "butter", "tais"),
+    Category("society", L("Sosiedade", "Sociedade"),
+             L("Populasaun, lian, relijiaun, edukasaun no saúde.", "População, línguas, religião, educação e saúde."), "people", "indigo", "population"),
+    Category("economy", L("Ekonomia", "Economia"),
+             L("Osan, esportasaun, importasaun no riku-soin naturál.", "Moeda, exportações, importações e recursos."), "chart", "green", "coffee"),
+    Category("tourism", L("Turizmu", "Turismo"),
+             L("Tasi-ibun, foho, museu no fatin istóriku.", "Praias, montanhas, museus e lugares históricos."), "umbrella", "cyan", "beach"),
+    Category("calendar", L("Feriadu no Loron Nasionál", "Feriados e dias nacionais"),
+             L("Loron importante sira no saida mak ita hanoin.", "Datas importantes e o que se recorda."), "calendar-check", "rose", "calendar"),
+    Category("world", L("Timór-Leste iha Mundu", "Timor-Leste no mundo"),
+             L("ONU, CPLP, ASEAN no rai viziñu sira.", "ONU, CPLP, ASEAN e vizinhos."), "globe", "sky", "diplomacy"),
 ]
 CATEGORY = {c.key: c for c in CATEGORIES}
 
 # History eras for the timeline (years; negative = before the common era).
 ERAS = [
-    ("prehistory", -44000, 1500, L("Ema dahuluk no reinu sira", "Primeiros povos e reinos", "Manusia pertama dan kerajaan", "First peoples and kingdoms"), "lilac"),
-    ("portuguese", 1515, 1941, L("Tempu Portugés", "Período português", "Masa Portugis", "Portuguese period"), "sky"),
-    ("ww2", 1942, 1945, L("Funu Mundiál II", "II Guerra Mundial", "Perang Dunia II", "World War II"), "slate"),
-    ("late_colonial", 1945, 1974, L("Timór Portugés ikus", "Timor Português tardio", "Akhir Timor Portugis", "Late Portuguese Timor"), "teal"),
-    ("decolonisation", 1974, 1975, L("Dekolonizasaun", "Descolonização", "Dekolonisasi", "Decolonisation"), "butter"),
-    ("occupation", 1975, 1999, L("Okupasaun no rezisténsia", "Ocupação e resistência", "Pendudukan dan perlawanan", "Occupation and resistance"), "coral"),
-    ("transition", 1999, 2002, L("Tranzisaun ONU", "Transição da ONU", "Transisi PBB", "UN transition"), "indigo"),
-    ("state", 2002, 2026, L("Estadu independente", "Estado independente", "Negara merdeka", "Independent State"), "green"),
+    ("prehistory", -44000, 1500, L("Ema dahuluk no reinu sira", "Primeiros povos e reinos"), "lilac"),
+    ("portuguese", 1515, 1941, L("Tempu Portugés", "Período português"), "sky"),
+    ("ww2", 1942, 1945, L("Funu Mundiál II", "II Guerra Mundial"), "slate"),
+    ("late_colonial", 1945, 1974, L("Timór Portugés ikus", "Timor Português tardio"), "teal"),
+    ("decolonisation", 1974, 1975, L("Dekolonizasaun", "Descolonização"), "butter"),
+    ("occupation", 1975, 1999, L("Okupasaun no rezisténsia", "Ocupação e resistência"), "coral"),
+    ("transition", 1999, 2002, L("Tranzisaun ONU", "Transição da ONU"), "indigo"),
+    ("state", 2002, 2026, L("Estadu independente", "Estado independente"), "green"),
 ]
 
 # Where each era begins (year, month, day); an event belongs to the last era that began before it.
@@ -195,23 +195,23 @@ VOCAB_LANG_NAMES = {
     "es": "Español", "fr": "Français"}
 VOCAB_GROUPS = {"cplp": ["pt", "es", "fr"], "asean": ["id", "ms", "fil", "th", "vi", "km", "lo", "my", "en", "zh", "ta"]}
 VOCAB_CATEGORIES = {
-    "greetings": L("Kumprimentu", "Cumprimentos", "Salam", "Greetings"), "numbers": L("Númeru", "Números", "Angka", "Numbers"),
-    "time": L("Tempu no kalendáriu", "Tempo e calendário", "Waktu dan kalender", "Time and calendar"),
-    "people": L("Família no ema", "Família e pessoas", "Keluarga dan orang", "Family and people"), "body": L("Isin", "Corpo", "Tubuh", "Body"),
-    "health": L("Saúde", "Saúde", "Kesehatan", "Health"), "food": L("Ai-han no hemu", "Comida e bebida", "Makanan dan minuman", "Food and drink"),
-    "home": L("Uma no sasán", "Casa e objetos", "Rumah dan benda", "Home and objects"), "clothes": L("Hatais", "Roupa", "Pakaian", "Clothes"),
-    "colours": L("Kór", "Cores", "Warna", "Colours"), "animals": L("Animál", "Animais", "Hewan", "Animals"),
-    "plants": L("Ai-horis no to'os", "Plantas e agricultura", "Tumbuhan dan pertanian", "Plants and farming"),
-    "nature": L("Natureza no tempu", "Natureza e tempo", "Alam dan cuaca", "Nature and weather"),
-    "places": L("Fatin no dalan", "Lugares e direções", "Tempat dan arah", "Places and directions"), "transport": L("Transporte", "Transportes", "Transportasi", "Transport"),
-    "school": L("Eskola", "Escola", "Sekolah", "School"), "work": L("Servisu", "Trabalho", "Pekerjaan", "Work"),
-    "state": L("Estadu no sidadania", "Estado e cidadania", "Negara dan kewarganegaraan", "State and citizenship"),
-    "culture": L("Kultura no lisan", "Cultura e tradição", "Budaya dan adat", "Culture and tradition"), "religion": L("Relijiaun", "Religião", "Agama", "Religion"),
-    "money": L("Osan no merkadu", "Dinheiro e mercado", "Uang dan pasar", "Money and market"), "verbs": L("Verbu", "Verbos", "Kata kerja", "Verbs"),
-    "adjectives": L("Adjetivu", "Adjetivos", "Kata sifat", "Adjectives"), "pronouns": L("Pronome no pergunta", "Pronomes e perguntas", "Kata ganti dan tanya", "Pronouns and questions"),
-    "function": L("Liafuan ki'ik", "Palavras pequenas", "Kata tugas", "Small words"), "feelings": L("Sentimentu", "Sentimentos", "Perasaan", "Feelings"),
-    "sports": L("Desportu", "Desporto", "Olahraga", "Sports"), "technology": L("Teknolojia", "Tecnologia", "Teknologi", "Technology"),
-    "sea": L("Tasi no peska", "Mar e pesca", "Laut dan perikanan", "Sea and fishing"), "phrases": L("Fraze útil", "Frases úteis", "Kalimat berguna", "Useful phrases"),
+    "greetings": L("Kumprimentu", "Cumprimentos"), "numbers": L("Númeru", "Números"),
+    "time": L("Tempu no kalendáriu", "Tempo e calendário"),
+    "people": L("Família no ema", "Família e pessoas"), "body": L("Isin", "Corpo"),
+    "health": L("Saúde", "Saúde"), "food": L("Ai-han no hemu", "Comida e bebida"),
+    "home": L("Uma no sasán", "Casa e objetos"), "clothes": L("Hatais", "Roupa"),
+    "colours": L("Kór", "Cores"), "animals": L("Animál", "Animais"),
+    "plants": L("Ai-horis no to'os", "Plantas e agricultura"),
+    "nature": L("Natureza no tempu", "Natureza e tempo"),
+    "places": L("Fatin no dalan", "Lugares e direções"), "transport": L("Transporte", "Transportes"),
+    "school": L("Eskola", "Escola"), "work": L("Servisu", "Trabalho"),
+    "state": L("Estadu no sidadania", "Estado e cidadania"),
+    "culture": L("Kultura no lisan", "Cultura e tradição"), "religion": L("Relijiaun", "Religião"),
+    "money": L("Osan no merkadu", "Dinheiro e mercado"), "verbs": L("Verbu", "Verbos"),
+    "adjectives": L("Adjetivu", "Adjetivos"), "pronouns": L("Pronome no pergunta", "Pronomes e perguntas"),
+    "function": L("Liafuan ki'ik", "Palavras pequenas"), "feelings": L("Sentimentu", "Sentimentos"),
+    "sports": L("Desportu", "Desporto"), "technology": L("Teknolojia", "Tecnologia"),
+    "sea": L("Tasi no peska", "Mar e pesca"), "phrases": L("Fraze útil", "Frases úteis"),
 }
 
 def _read_json(path):
@@ -291,7 +291,7 @@ class KnowledgeBase:
             if level and level not in item.levels(): continue
             out.append(item)
         return out
-    def municipalities(self): return sorted(self.all("municipality"), key=lambda m: fold(m.title("en")))
+    def municipalities(self): return sorted(self.all("municipality"), key=lambda m: fold(m.title("pt")))
     def places(self, municipality=None, kind=None):
         return [p for p in self.all("place") if (not municipality or p.get("municipality") == municipality) and (not kind or p.get("type") == kind)]
     def days(self): return self.all("day")
@@ -323,7 +323,7 @@ class KnowledgeBase:
                 entry["items"].append(item.id)
         for ind in self.indicators:
             if str(ind.get("url", "")).startswith("https://"):
-                entry = by_url.setdefault(ind["url"], {"url": ind["url"], "title": text(ind.get("name"), "en") or ind.get("id", ""), "publisher": ind.get("source", "World Bank"),
+                entry = by_url.setdefault(ind["url"], {"url": ind["url"], "title": text(ind.get("name"), "pt") or ind.get("id", ""), "publisher": ind.get("source", "World Bank"),
                                                         "licence": ind.get("licence", "CC BY 4.0"), "accessed": ind.get("accessed", ""), "items": []})
                 entry["items"].append("indicators")
         return sorted(by_url.values(), key=lambda s: (fold(s["publisher"]), fold(s["title"])))
@@ -348,7 +348,7 @@ class KnowledgeBase:
         lengths = {i: sum(t.values()) for i, t in docs.items()}
         avg = (sum(lengths.values()) / len(lengths)) if lengths else 1
         self._index = (docs, df, lengths, avg)
-    def search(self, query, lang="en", limit=40, kinds=None):
+    def search(self, query, lang="tet", limit=40, kinds=None):
         """BM25 over all four languages; the last word also matches as a prefix (search as you type)."""
         if self._index is None: self._build_index()
         docs, df, lengths, avg = self._index
@@ -381,7 +381,7 @@ class KnowledgeBase:
             out.append((item, score))
             if len(out) >= limit: break
         return out
-    def search_words(self, query, lang="en", limit=60):
+    def search_words(self, query, lang="tet", limit=60):
         q = fold(query).strip()
         if not q: return []
         exact, starts, inside = [], [], []
@@ -416,7 +416,7 @@ class KnowledgeBase:
                 if when >= today and (not holidays_only or d.get("type") == "holiday"): out.append((when, d))
         return out[:count]
     # -------------------------------------------------------------- timeline
-    def timeline(self, lang="en"):
+    def timeline(self, lang="tet"):
         events = []
         for item in self.all():
             for t in item.get("timeline") or []:
@@ -431,7 +431,7 @@ class KnowledgeBase:
             if any(len(words & w) >= max(2, 0.6 * min(len(words), len(w))) for w in by_key.get(e["key"], [])): continue
             by_key.setdefault(e["key"], []).append(words); unique.append(e)
         return unique
-    def today_in_history(self, today, lang="en"):
+    def today_in_history(self, today, lang="tet"):
         out = []
         for e in self.timeline(lang):
             d = str(e["date"])
@@ -482,16 +482,16 @@ def parse_when(value):
     if not m: return None
     return (int(m.group(1)), int(m.group(2) or 0), int(m.group(3) or 0))
 
-def format_when(value, lang="en"):
+def format_when(value, lang="tet"):
     key = parse_when(value)
     if key is None: return str(value or "")
     y, mo, d = key
     if y <= -10000:
         # Deep time is told as "years ago" (the difference to BCE does not matter there).
         years = f"{-y:,}".replace(",", " ")
-        return {"tet": f"tinan {years} liubá", "pt": f"há {years} anos", "id": f"{years} tahun lalu", "en": f"{years} years ago"}[lang if lang in LANGS else "en"]
+        return {"tet": f"tinan {years} liubá", "pt": f"há {years} anos"}[lang if lang in LANGS else "tet"]
     if y < 0:
-        return {"tet": f"tinan {-y} molok Kristu", "pt": f"{-y} a.C.", "id": f"{-y} SM", "en": f"{-y} BCE"}[lang if lang in LANGS else "en"]
+        return {"tet": f"tinan {-y} molok Kristu", "pt": f"{-y} a.C."}[lang if lang in LANGS else "tet"]
     if d: return f"{d} {month_name(mo, lang)} {y}"
     if mo: return f"{month_name(mo, lang)} {y}"
     return str(y)
@@ -499,20 +499,16 @@ def format_when(value, lang="en"):
 MONTHS = {
     "tet": ["Janeiru", "Fevereiru", "Marsu", "Abríl", "Maiu", "Juñu", "Jullu", "Agostu", "Setembru", "Outubru", "Novembru", "Dezembru"],
     "pt": ["janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"],
-    "id": ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"],
-    "en": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
 }
 WEEKDAYS = {
     "tet": ["Segunda", "Tersa", "Kuarta", "Kinta", "Sesta", "Sábadu", "Domingu"],
     "pt": ["segunda", "terça", "quarta", "quinta", "sexta", "sábado", "domingo"],
-    "id": ["Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu", "Minggu"],
-    "en": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
 }
 
-def month_name(month, lang="en"):
-    return MONTHS.get(lang, MONTHS["en"])[max(1, min(12, month)) - 1]
+def month_name(month, lang="tet"):
+    return MONTHS.get(lang, MONTHS["tet"])[max(1, min(12, month)) - 1]
 
-def format_date(value, lang="en"):
+def format_date(value, lang="tet"):
     return f"{value.day} {month_name(value.month, lang)} {value.year}"
 
 _shared = None

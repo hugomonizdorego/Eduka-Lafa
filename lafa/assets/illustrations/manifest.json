@@ -483,7 +483,7 @@
    "file": "map.svg",
    "licence": "CC BY-SA 4.0",
    "author": "Lafa contributors (tools/make-illustrations.py)",
-   "note": "Timor-Leste outline: geoBoundaries / © OpenStreetMap contributors (ODbL 1.0)"
+   "note": "Timor-Leste outline: geoBoundaries / OCHA ROAP (CC BY 3.0 IGO)"
   },
   {
    "key": "maritime",
@@ -770,7 +770,7 @@
    "file": "tl-overview.svg",
    "licence": "CC BY-SA 4.0",
    "author": "Lafa contributors (tools/make-illustrations.py)",
-   "note": "Timor-Leste outline: geoBoundaries / © OpenStreetMap contributors (ODbL 1.0)"
+   "note": "Timor-Leste outline: geoBoundaries / OCHA ROAP (CC BY 3.0 IGO)"
   },
   {
    "key": "tourism",

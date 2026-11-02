@@ -6,20 +6,22 @@ Architecture: all
 Installed-Size: 0
 Maintainer: Edukasaun OS <dev@edukasaun.org>
 Depends: python3 (>= 3.11), python3-pyqt5, python3-pyqt5.qtsvg, libqt5svg5, xdg-utils, libglib2.0-bin, hicolor-icon-theme
-Recommends: edukasaun-desktop-menu (>= 0.9.24), espeak-ng, fonts-noto-core, fonts-noto-cjk, fonts-noto-color-emoji, x11-utils, network-manager-gnome, pavucontrol-qt, pcmanfm-qt, system-config-printer, screengrab, libreoffice
+Recommends: edukasaun-desktop-menu (>= 0.9.24), python3-pyqt5.qtmultimedia, gstreamer1.0-plugins-good, mpg123, espeak-ng, fonts-noto-core, fonts-noto-cjk, fonts-noto-color-emoji, x11-utils, network-manager-gnome, pavucontrol-qt, pcmanfm-qt, system-config-printer, screengrab, libreoffice
 Suggests: orca, onboard
 Homepage: https://github.com/hugomonizdorego/Eduka-Lafa
 Description: Lafa - encyclopedia of Timor-Leste and virtual assistant
  Lafa Desktop is an interactive encyclopedia of Timor-Leste, from the
- formation of the island to 2026: history, colonial times and the
- occupation, the State and its leaders, the flag and national symbols,
- culture, society, economy (exports, imports, coffee, oil and gas),
- land and nature, the 14 municipalities on an interactive map, tourist
- places, public holidays and national days, a "millionaire" quiz, more
- than 1000 Tetun words with their meaning in Portuguese, Indonesian,
- English and other ASEAN and CPLP languages, and learning paths for the
- school levels of the Ministry of Education. Texts are in Tetun,
- Portuguese, Indonesian and English, with sources and licences.
+ formation of the island and its fossils to 2026: prehistory, history,
+ colonial times and the occupation, the State, its institutions and
+ leaders, the Constitution of the RDTL (full text in Tetun and
+ Portuguese with fast search), the national symbols with the anthem
+ "Patria" and lyrics that follow the music, culture, sports, society,
+ economy, land and nature, the 14 municipalities on an interactive map,
+ tourist places, public holidays, a "millionaire" quiz, more than 1000
+ Tetun words with their meaning in Portuguese, Indonesian, English and
+ other ASEAN and CPLP languages, and learning paths for the school
+ levels of the Ministry of Education. The interface and the texts are in
+ Tetun and Portuguese, the official languages, with sources and licences.
  .
  Everything works offline. With internet, Lafa can download Wikipedia
  introductions and free-licence photos for offline use, World Bank data

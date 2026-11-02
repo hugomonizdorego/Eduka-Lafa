@@ -23,36 +23,32 @@ from . import kb
 from .desk.texts import t, extend
 
 extend({
-    "tip_holiday_today": ("Ohin mak {name}!", "Hoje é {name}!", "Hari ini {name}!", "Today is {name}!"),
-    "tip_holiday_soon": ("{when}: {name}", "{when}: {name}", "{when}: {name}", "{when}: {name}"),
-    "tip_today": ("Ohin iha istória", "Neste dia na história", "Hari ini dalam sejarah", "On this day"),
-    "tip_month": ("Iha fulan ne'e, iha istória", "Neste mês, na história", "Bulan ini dalam sejarah", "This month in history"),
-    "tip_fact": ("Ita hatene ka lae?", "Sabia que…?", "Tahukah kamu?", "Did you know?"),
-    "tip_word": ("Liafuan Tetun", "Palavra em tétum", "Kata Tetun", "Tetun word"),
-    "tip_quiz": ("Kuis ki'ik", "Mini-quiz", "Kuis kecil", "Mini quiz"),
-    "tip_place": ("Fatin atu vizita", "Lugar para visitar", "Tempat untuk dikunjungi", "A place to visit"),
-    "tip_review": ("Repete liafuan", "Rever palavras", "Ulang kata", "Review words"),
-    "tip_review_text": ("Liafuan {n} hein ita atu repete ohin. Minutu 2 de'it!", "{n} palavras esperam revisão hoje. Só 2 minutos!",
-                        "{n} kata menunggu diulang hari ini. Hanya 2 menit!", "{n} words are waiting for review today. Just 2 minutes!"),
-    "tip_continue": ("Kontinua lee", "Continuar a ler", "Lanjutkan membaca", "Keep reading"),
-    "tip_level": ("Sujestaun ba {level}", "Sugestão para {level}", "Saran untuk {level}", "Suggestion for {level}"),
-    "tip_streak": ("Loron {n} tuituir malu!", "{n} dias seguidos!", "{n} hari berturut-turut!", "{n} days in a row!"),
-    "tip_streak_text": ("Di'ak tebes! Aprende buat ida foun ohin atu kontinua.", "Muito bem! Aprenda algo novo hoje para continuar.",
-                        "Hebat! Pelajari satu hal baru hari ini untuk melanjutkan.", "Great! Learn one new thing today to keep it going."),
-    "tip_computer": ("Ajuda komputadór", "Ajuda com o computador", "Bantuan komputer", "Computer help"),
-    "act_read": ("Lee", "Ler", "Baca", "Read"),
-    "act_map": ("Mapa", "Mapa", "Peta", "Map"),
-    "act_words": ("Aprende liafuan", "Aprender palavras", "Belajar kata", "Learn words"),
-    "act_cards": ("Repete agora", "Rever agora", "Ulang sekarang", "Review now"),
-    "act_calendar": ("Kalendáriu", "Calendário", "Kalender", "Calendar"),
-    "act_timeline": ("Liña tempu", "Linha do tempo", "Lini masa", "Timeline"),
-    "act_quiz": ("Kuis Milionáriu", "Quiz Milionário", "Kuis Jutawan", "Millionaire quiz"),
-    "act_paths": ("Nível eskola", "Níveis escolares", "Jenjang sekolah", "School levels"),
-    "welcome_title": ("Bondia! Ha'u Lafa.", "Olá! Eu sou o Lafa.", "Halo! Saya Lafa.", "Hello! I'm Lafa."),
+    "tip_holiday_today": ("Ohin mak {name}!", "Hoje é {name}!"),
+    "tip_holiday_soon": ("{when}: {name}", "{when}: {name}"),
+    "tip_today": ("Ohin iha istória", "Neste dia na história"),
+    "tip_month": ("Iha fulan ne'e, iha istória", "Neste mês, na história"),
+    "tip_fact": ("Ita hatene ka lae?", "Sabia que…?"),
+    "tip_word": ("Liafuan Tetun", "Palavra em tétum"),
+    "tip_quiz": ("Kuis ki'ik", "Mini-quiz"),
+    "tip_place": ("Fatin atu vizita", "Lugar para visitar"),
+    "tip_review": ("Repete liafuan", "Rever palavras"),
+    "tip_review_text": ("Liafuan {n} hein ita atu repete ohin. Minutu 2 de'it!", "{n} palavras esperam revisão hoje. Só 2 minutos!"),
+    "tip_continue": ("Kontinua lee", "Continuar a ler"),
+    "tip_level": ("Sujestaun ba {level}", "Sugestão para {level}"),
+    "tip_streak": ("Loron {n} tuituir malu!", "{n} dias seguidos!"),
+    "tip_streak_text": ("Di'ak tebes! Aprende buat ida foun ohin atu kontinua.", "Muito bem! Aprenda algo novo hoje para continuar."),
+    "tip_computer": ("Ajuda komputadór", "Ajuda com o computador"),
+    "act_read": ("Lee", "Ler"),
+    "act_map": ("Mapa", "Mapa"),
+    "act_words": ("Aprende liafuan", "Aprender palavras"),
+    "act_cards": ("Repete agora", "Rever agora"),
+    "act_calendar": ("Kalendáriu", "Calendário"),
+    "act_timeline": ("Liña tempu", "Linha do tempo"),
+    "act_quiz": ("Kuis Milionáriu", "Quiz Milionário"),
+    "act_paths": ("Nível eskola", "Níveis escolares"),
+    "welcome_title": ("Bondia! Ha'u Lafa.", "Olá! Eu sou o Lafa."),
     "welcome_text": ("Ha'u ita-nia gia ba Timór-Leste no kolega estudu. Klik ha'u atu buka, halimar kuis ka aprende liafuan Tetun.",
-                     "Sou o seu guia de Timor-Leste e colega de estudo. Clique em mim para pesquisar, jogar quizzes ou aprender tétum.",
-                     "Saya pemandu Timor-Leste dan teman belajarmu. Klik saya untuk mencari, bermain kuis, atau belajar bahasa Tetun.",
-                     "I'm your Timor-Leste guide and study buddy. Click me to search, play quizzes or learn Tetun words."),
+                     "Sou o seu guia de Timor-Leste e colega de estudo. Clique em mim para pesquisar, jogar quizzes ou aprender tétum."),
 })
 
 COMPUTER_TIPS = [
@@ -86,7 +82,7 @@ class Tip:
 
 KINDS = {"holiday": 3, "today": 2, "fact": 3, "word": 3, "quiz": 4, "place": 2, "review": 2, "continue": 1, "level": 2, "streak": 1, "computer": 1}
 
-def _lang(lang): return lang if lang in kb.LANGS else "en"
+def _lang(lang): return lang if lang in kb.LANGS else "tet"
 
 def tip_of(kind, base, progress, settings, lang, today=None, rng=None):
     """A tip of one kind, or None when there is nothing to say for it now."""

@@ -13,12 +13,7 @@ License: CC-BY-SA-4.0
  Encyclopedia texts, quizzes, vocabulary and illustrations written for Lafa,
  based on the sources listed with each item (https://creativecommons.org/licenses/by-sa/4.0/).
 
-Files: lafa/assets/timor/map/municipalities.json
-Copyright: OpenStreetMap contributors; geoBoundaries (Runfola et al. 2020)
-License: ODbL-1.0
- https://opendatacommons.org/licenses/odbl/1-0/
-
-Files: lafa/assets/timor/map/posts.json
+Files: lafa/assets/timor/map/municipalities.json lafa/assets/timor/map/posts.json
 Copyright: WHO, OCHA ROAP; geoBoundaries (Runfola et al. 2020)
 License: CC-BY-3.0-IGO
  https://creativecommons.org/licenses/by/3.0/igo/

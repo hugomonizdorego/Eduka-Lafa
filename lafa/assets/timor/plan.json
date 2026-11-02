@@ -15,7 +15,10 @@
   "economy": "Economy",
   "tourism": "Tourism",
   "calendar": "Holidays and national days",
-  "world": "Timor-Leste in the world"
+  "world": "Timor-Leste in the world",
+  "prehistory": "Prehistory: fossils, first peoples and rock art",
+  "sports": "Sports",
+  "institutions": "State institutions, defence and police"
  },
  "articles": {
   "tl.land.overview": {
@@ -757,6 +760,241 @@
    "category": "tourism",
    "title_en": "Markets and local food for visitors",
    "agent": "G2"
+  },
+  "tl.sports.overview": {
+   "category": "sports",
+   "title_en": "Sports in Timor-Leste: an overview",
+   "agent": "S"
+  },
+  "tl.sports.football": {
+   "category": "sports",
+   "title_en": "Football: the national teams and the FFTL",
+   "agent": "S"
+  },
+  "tl.sports.football_league": {
+   "category": "sports",
+   "title_en": "The Liga Futebol Timor-Leste and clubs",
+   "agent": "S"
+  },
+  "tl.sports.olympics": {
+   "category": "sports",
+   "title_en": "Timor-Leste at the Olympic Games (2000–2024)",
+   "agent": "S"
+  },
+  "tl.sports.winter_paralympics": {
+   "category": "sports",
+   "title_en": "Winter Olympics and Paralympic Games",
+   "agent": "S"
+  },
+  "tl.sports.sea_games": {
+   "category": "sports",
+   "title_en": "SEA Games, Asian Games and CPLP Games",
+   "agent": "S"
+  },
+  "tl.sports.martial_arts": {
+   "category": "sports",
+   "title_en": "Martial arts: pencak silat, kempo, taekwondo, karate, boxing",
+   "agent": "S"
+  },
+  "tl.sports.athletics_marathon": {
+   "category": "sports",
+   "title_en": "Athletics and the Dili Marathon",
+   "agent": "S"
+  },
+  "tl.sports.cycling": {
+   "category": "sports",
+   "title_en": "Cycling and the Tour de Timor",
+   "agent": "S"
+  },
+  "tl.sports.team_sports": {
+   "category": "sports",
+   "title_en": "Basketball, volleyball, futsal, badminton and other team sports",
+   "agent": "S"
+  },
+  "tl.sports.water_sports": {
+   "category": "sports",
+   "title_en": "Water sports: swimming, surfing, rowing and canoeing",
+   "agent": "S"
+  },
+  "tl.sports.traditional_games": {
+   "category": "sports",
+   "title_en": "Traditional games and contests",
+   "agent": "S"
+  },
+  "tl.sports.athletes": {
+   "category": "sports",
+   "title_en": "Famous athletes of Timor-Leste",
+   "agent": "S"
+  },
+  "tl.sports.institutions_venues": {
+   "category": "sports",
+   "title_en": "Sport institutions, federations and stadiums",
+   "agent": "S"
+  },
+  "tl.prehistory.overview": {
+   "category": "prehistory",
+   "title_en": "Prehistory of Timor: from the sea floor to the first farmers",
+   "agent": "P"
+  },
+  "tl.prehistory.fossils_seas": {
+   "category": "prehistory",
+   "title_en": "Fossils of the ancient seas: crinoids, ammonites and marine reptiles",
+   "agent": "P"
+  },
+  "tl.prehistory.pterosaur_lesululi": {
+   "category": "prehistory",
+   "title_en": "The pterosaur fossil (2026) and the Lesululi geosite",
+   "agent": "P"
+  },
+  "tl.prehistory.ice_age_animals": {
+   "category": "prehistory",
+   "title_en": "Ice Age animals: Stegodon, giant rats and giant tortoises",
+   "agent": "P"
+  },
+  "tl.prehistory.sea_crossing": {
+   "category": "prehistory",
+   "title_en": "Crossing the sea: how the first people reached Timor",
+   "agent": "P"
+  },
+  "tl.prehistory.cave_sites": {
+   "category": "prehistory",
+   "title_en": "Cave sites: Jerimalai, Laili, Lene Hara and Matja Kuru",
+   "agent": "P"
+  },
+  "tl.prehistory.rock_art": {
+   "category": "prehistory",
+   "title_en": "Rock art: painted and carved images in the caves",
+   "agent": "P"
+  },
+  "tl.prehistory.first_farmers": {
+   "category": "prehistory",
+   "title_en": "The first farmers, pottery and domestic animals",
+   "agent": "P"
+  },
+  "tl.prehistory.early_records": {
+   "category": "prehistory",
+   "title_en": "Early trade and the first written records of Timor",
+   "agent": "P"
+  },
+  "tl.nature.mammals": {
+   "category": "nature",
+   "title_en": "Mammals of Timor-Leste",
+   "agent": "P"
+  },
+  "tl.nature.reptiles_amphibians": {
+   "category": "nature",
+   "title_en": "Reptiles and amphibians",
+   "agent": "P"
+  },
+  "tl.nature.whales_dolphins": {
+   "category": "nature",
+   "title_en": "Whales, dolphins and dugongs",
+   "agent": "P"
+  },
+  "tl.nature.insects": {
+   "category": "nature",
+   "title_en": "Insects, butterflies and other small animals",
+   "agent": "P"
+  },
+  "tl.nature.endangered": {
+   "category": "nature",
+   "title_en": "Endangered species and conservation status",
+   "agent": "P"
+  },
+  "tl.nature.domestic_animals": {
+   "category": "nature",
+   "title_en": "Domestic animals and their role in culture",
+   "agent": "P"
+  },
+  "tl.institutions.overview": {
+   "category": "institutions",
+   "title_en": "State institutions at a glance",
+   "agent": "I"
+  },
+  "tl.institutions.ffdtl": {
+   "category": "institutions",
+   "title_en": "F-FDTL: the Defence Force",
+   "agent": "I"
+  },
+  "tl.institutions.pntl": {
+   "category": "institutions",
+   "title_en": "PNTL: the National Police",
+   "agent": "I"
+  },
+  "tl.institutions.ministries": {
+   "category": "institutions",
+   "title_en": "The Government's ministries",
+   "agent": "I"
+  },
+  "tl.institutions.education_ministry": {
+   "category": "institutions",
+   "title_en": "Ministry of Education and the school system",
+   "agent": "I"
+  },
+  "tl.institutions.higher_education": {
+   "category": "institutions",
+   "title_en": "Higher education, science and culture",
+   "agent": "I"
+  },
+  "tl.institutions.justice": {
+   "category": "institutions",
+   "title_en": "Ministry of Justice and the Jornal da República",
+   "agent": "I"
+  },
+  "tl.institutions.finance": {
+   "category": "institutions",
+   "title_en": "Ministry of Finance and the State Budget",
+   "agent": "I"
+  },
+  "tl.institutions.state_administration": {
+   "category": "institutions",
+   "title_en": "State administration and local government",
+   "agent": "I"
+  },
+  "tl.institutions.youth_sport_culture": {
+   "category": "institutions",
+   "title_en": "Youth, sport, arts and culture institutions",
+   "agent": "I"
+  },
+  "tl.institutions.environment_tourism": {
+   "category": "institutions",
+   "title_en": "Tourism and environment institutions",
+   "agent": "I"
+  },
+  "tl.institutions.independent_bodies": {
+   "category": "institutions",
+   "title_en": "Independent bodies: ombudsman, elections, anti-corruption, audit",
+   "agent": "I"
+  },
+  "tl.institutions.security_agencies": {
+   "category": "institutions",
+   "title_en": "Other security bodies: civil protection, migration, customs and maritime",
+   "agent": "I"
+  },
+  "tl.history.archives_museums": {
+   "category": "history",
+   "title_en": "Archives and museums of the resistance",
+   "agent": "H"
+  },
+  "tl.tourism.events_festivals": {
+   "category": "tourism",
+   "title_en": "Festivals and events",
+   "agent": "D"
+  },
+  "tl.tourism.practical_info": {
+   "category": "tourism",
+   "title_en": "Practical information for visitors",
+   "agent": "D"
+  },
+  "tl.tourism.beaches_islands": {
+   "category": "tourism",
+   "title_en": "Beaches and islands",
+   "agent": "D"
+  },
+  "tl.tourism.coffee_villages": {
+   "category": "tourism",
+   "title_en": "Coffee country and mountain villages",
+   "agent": "D"
   }
  },
  "municipalities": {

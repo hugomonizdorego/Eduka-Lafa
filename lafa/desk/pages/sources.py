@@ -6,27 +6,23 @@ import html
 
 from ...qt import Qt, QTimer, QWidget, QVBoxLayout, QHBoxLayout, QLabel
 from ... import kb, __version__
-from ..texts import extend
+from ..texts import extend, index
 from ..widgets import Card, ClayIcon, Pill, ResponsiveGrid, FlowLayout, SearchBox, label, button, scroll, section_title, clear_layout
 
 extend({
-    "src_title": ("Fonte, lisensa no kréditu", "Fontes, licenças e créditos", "Sumber, lisensi dan kredit", "Sources, licences and credits"),
+    "src_title": ("Fonte, lisensa no kréditu", "Fontes, licenças e créditos"),
     "src_sub": ("Lafa hakerek ninia testu rasik bazeia ba fonte sira ne'e. Obrigadu barak ba autór no organizasaun hotu ne'ebé fahe koñesimentu kona-ba Timór-Leste.",
-                "O Lafa escreve os seus próprios textos com base nestas fontes. Muito obrigado a todos os autores e organizações que partilham conhecimento sobre Timor-Leste.",
-                "Lafa menulis teksnya sendiri berdasarkan sumber-sumber ini. Terima kasih kepada semua penulis dan lembaga yang berbagi pengetahuan tentang Timor-Leste.",
-                "Lafa writes its own texts based on these sources. Many thanks to all the authors and organisations who share knowledge about Timor-Leste."),
-    "main_sources": ("Fonte prinsipál sira", "Fontes principais", "Sumber utama", "Main sources"),
-    "all_sources": ("Fonte hotu ({n})", "Todas as fontes ({n})", "Semua sumber ({n})", "All sources ({n})"),
-    "filter_sources": ("Buka fonte…", "Pesquisar fontes…", "Cari sumber…", "Search sources…"),
-    "used_in": ("Uza iha: {items}", "Usada em: {items}", "Dipakai di: {items}", "Used in: {items}"),
-    "licences_title": ("Lisensa sira", "Licenças", "Lisensi", "Licences"),
-    "credits_title": ("Kréditu", "Créditos", "Kredit", "Credits"),
-    "photos_title": ("Foto download ona ({n})", "Fotos descarregadas ({n})", "Foto yang diunduh ({n})", "Downloaded photos ({n})"),
-    "no_photos": ("Seidauk iha foto. Uza “Offline no atualizasaun” atu download foto ho lisensa livre husi Wikimedia Commons.", "Ainda não há fotos. Use “Offline e atualizações” para descarregar fotos de licença livre do Wikimedia Commons.",
-                  "Belum ada foto. Gunakan “Luring dan pembaruan” untuk mengunduh foto berlisensi bebas dari Wikimedia Commons.", "No photos yet. Use “Offline and updates” to download free-licence photos from Wikimedia Commons."),
-    "visit": ("Vizita", "Visitar", "Kunjungi", "Visit"),
-    "copyright_note": ("Fonte ho © la kopia: Lafa uza de'it faktu no hakerek ho liafuan rasik, no hatudu fonte.", "Fontes com © não são copiadas: o Lafa usa só factos, escreve com palavras próprias e cita a fonte.",
-                       "Sumber ber-© tidak disalin: Lafa hanya memakai fakta, menulis dengan kata-kata sendiri, dan mencantumkan sumber.", "Sources marked © are not copied: Lafa only uses facts, writes in its own words and cites the source."),
+                "O Lafa escreve os seus próprios textos com base nestas fontes. Muito obrigado a todos os autores e organizações que partilham conhecimento sobre Timor-Leste."),
+    "main_sources": ("Fonte prinsipál sira", "Fontes principais"),
+    "all_sources": ("Fonte hotu ({n})", "Todas as fontes ({n})"),
+    "filter_sources": ("Buka fonte…", "Pesquisar fontes…"),
+    "used_in": ("Uza iha: {items}", "Usada em: {items}"),
+    "licences_title": ("Lisensa sira", "Licenças"),
+    "credits_title": ("Kréditu", "Créditos"),
+    "photos_title": ("Foto download ona ({n})", "Fotos descarregadas ({n})"),
+    "no_photos": ("Seidauk iha foto. Uza “Offline no atualizasaun” atu download foto ho lisensa livre husi Wikimedia Commons.", "Ainda não há fotos. Use “Offline e atualizações” para descarregar fotos de licença livre do Wikimedia Commons."),
+    "visit": ("Vizita", "Visitar"),
+    "copyright_note": ("Fonte ho © la kopia: Lafa uza de'it faktu no hakerek ho liafuan rasik, no hatudu fonte.", "Fontes com © não são copiadas: o Lafa usa só factos, escreve com palavras próprias e cita a fonte."),
 })
 
 MAIN_SOURCES = [
@@ -60,8 +56,8 @@ LICENCES = [
     ("Wikipedia (testu download)", "CC BY-SA 4.0", "https://creativecommons.org/licenses/by-sa/4.0/"),
     ("Wikimedia Commons (foto)", "CC0 · Public domain · CC BY · CC BY-SA (kada foto ho nia autór)", "https://commons.wikimedia.org/wiki/Commons:Licensing"),
     ("World Bank Open Data", "CC BY 4.0", "https://datacatalog.worldbank.org/public-licenses"),
-    ("Mapa munisípiu (geoBoundaries / OpenStreetMap)", "ODbL 1.0 — © OpenStreetMap contributors", "https://www.openstreetmap.org/copyright"),
-    ("Mapa postu (geoBoundaries / OCHA, WHO)", "CC BY 3.0 IGO", "https://data.humdata.org/dataset/timor-leste-administrative-boundaries-levels-0-3"),
+    ("Mapa munisípiu no postu (geoBoundaries / OCHA ROAP, WHO)", "CC BY 3.0 IGO", "https://data.humdata.org/dataset/timor-leste-administrative-boundaries-levels-0-3"),
+    ("Konstituisaun RDTL (testu ofisiál tetun no portugés)", "Testu legál ofisiál — Jornal da República", "https://www.mj.gov.tl/jornal/"),
     ("Letra Nunito (Vernon Adams, Cyreal, Jacques Le Bailly)", "SIL Open Font License 1.1", "https://openfontlicense.org/"),
     ("Letra Noto (lian ASEAN)", "SIL Open Font License 1.1", "https://fonts.google.com/noto"),
     ("Qt / PyQt5 / PySide6", "LGPL / GPL", "https://www.qt.io/licensing/"),
@@ -87,7 +83,7 @@ class SourcesPage(QWidget):
         self.timer = QTimer(self); self.timer.setSingleShot(True); self.timer.setInterval(300); self.timer.timeout.connect(self.apply_query)
     def show_route(self, params): self.render()
     def render(self):
-        clear_layout(self.col); win = self.win; t = win.t; lang = win.lang; base = win.kb; li = ("tet", "pt", "id", "en").index(lang) if lang in ("tet", "pt", "id", "en") else 3
+        clear_layout(self.col); win = self.win; t = win.t; lang = win.lang; base = win.kb; li = index(lang)
         head = Card(20, 24); row = QHBoxLayout(); row.setSpacing(14); row.addWidget(ClayIcon("shield", "slate", 64))
         c = QVBoxLayout(); c.setSpacing(2); c.addWidget(label(t("src_title"), "h1", wrap=True)); c.addWidget(label(t("src_sub"), "muted", wrap=True)); row.addLayout(c, 1)
         head.box.addLayout(row); head.box.addWidget(label(t("copyright_note"), "caption", wrap=True)); self.col.addWidget(head)

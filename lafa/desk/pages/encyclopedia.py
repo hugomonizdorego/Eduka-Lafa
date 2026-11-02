@@ -10,21 +10,20 @@ from .home import GROUPS
 from .article import level_range, item_pixmap
 
 extend({
-    "enc_counts": ("{a} artigu · {m} munisípiu · {p} fatin · {d} loron · {q} pergunta", "{a} artigos · {m} municípios · {p} lugares · {d} datas · {q} perguntas",
-                   "{a} artikel · {m} munisipio · {p} tempat · {d} hari · {q} soal", "{a} articles · {m} municipalities · {p} places · {d} days · {q} questions"),
-    "filter_level": ("Nível eskola", "Nível escolar", "Jenjang sekolah", "School level"),
-    "recommended": ("Sujestaun ba ita", "Sugestões para si", "Saran untukmu", "Suggested for you"),
-    "read_done": ("Lee ona", "Lido", "Sudah dibaca", "Read"),
-    "articles_title": ("Artigu sira", "Artigos", "Artikel", "Articles"),
-    "municipalities_title": ("Munisípiu sira", "Municípios", "Munisipio", "Municipalities"),
-    "places_title": ("Fatin turístiku sira", "Lugares turísticos", "Tempat wisata", "Tourist places"),
-    "days_title": ("Feriadu no loron nasionál", "Feriados e dias nacionais", "Hari libur dan hari nasional", "Holidays and national days"),
-    "open_places": ("Loke pájina turizmu", "Abrir a página de turismo", "Buka halaman wisata", "Open the tourism page"),
-    "open_map": ("Loke mapa", "Abrir o mapa", "Buka peta", "Open the map"),
-    "sort_plan": ("Orden", "Ordem", "Urutan", "Order"),
-    "sort_time": ("Kronolojia", "Cronologia", "Kronologi", "Chronology"),
-    "sort_az": ("A–Z", "A–Z", "A–Z", "A–Z"),
-    "n_read": ("{done}/{n} lee ona", "{done}/{n} lidos", "{done}/{n} dibaca", "{done}/{n} read"),
+    "enc_counts": ("{a} artigu · {m} munisípiu · {p} fatin · {d} loron · {q} pergunta", "{a} artigos · {m} municípios · {p} lugares · {d} datas · {q} perguntas"),
+    "filter_level": ("Nível eskola", "Nível escolar"),
+    "recommended": ("Sujestaun ba ita", "Sugestões para si"),
+    "read_done": ("Lee ona", "Lido"),
+    "articles_title": ("Artigu sira", "Artigos"),
+    "municipalities_title": ("Munisípiu sira", "Municípios"),
+    "places_title": ("Fatin turístiku sira", "Lugares turísticos"),
+    "days_title": ("Feriadu no loron nasionál", "Feriados e dias nacionais"),
+    "open_places": ("Loke pájina turizmu", "Abrir a página de turismo"),
+    "open_map": ("Loke mapa", "Abrir o mapa"),
+    "sort_plan": ("Orden", "Ordem"),
+    "sort_time": ("Kronolojia", "Cronologia"),
+    "sort_az": ("A–Z", "A–Z"),
+    "n_read": ("{done}/{n} lee ona", "{done}/{n} lidos"),
 })
 
 THUMB = (92, 64)

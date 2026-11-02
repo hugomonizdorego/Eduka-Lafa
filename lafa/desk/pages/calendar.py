@@ -10,21 +10,20 @@ from ..texts import extend
 from ..widgets import Card, Clickable, ClayIcon, Pill, CalendarCard, ResponsiveGrid, label, button, scroll, section_title, clear_layout, EmptyState
 
 extend({
-    "cal_title": ("Feriadu no loron nasionál {year}", "Feriados e dias nacionais {year}", "Hari libur dan hari nasional {year}", "Holidays and national days {year}"),
-    "cal_sub": ("Tuir Lei n.º 10/2005 (muda ho Lei n.º 3/2016). Governu hatoo kada tinan data ba feriadu ne'ebé muda.", "Segundo a Lei n.º 10/2005 (alterada pela Lei n.º 3/2016). O Governo publica todos os anos as datas móveis.",
-                "Menurut Undang-Undang No. 10/2005 (diubah dengan UU No. 3/2016). Pemerintah mengumumkan tanggal yang berubah setiap tahun.", "Under Law No. 10/2005 (amended by Law No. 3/2016). The Government announces the moving dates every year."),
-    "next_holiday": ("Feriadu tuir mai", "Próximo feriado", "Hari libur berikutnya", "Next holiday"),
-    "days_left": ("loron {n} tan", "faltam {n} dias", "{n} hari lagi", "{n} days to go"),
-    "export_ics": ("Esporta ba kalendáriu (.ics)", "Exportar para calendário (.ics)", "Ekspor ke kalender (.ics)", "Export to calendar (.ics)"),
-    "exported": ("Rai ona: {path}", "Guardado: {path}", "Tersimpan: {path}", "Saved: {path}"),
-    "prev_year": ("Tinan liubá", "Ano anterior", "Tahun sebelumnya", "Previous year"),
-    "next_year": ("Tinan oin", "Ano seguinte", "Tahun berikutnya", "Next year"),
-    "past": ("Liu ona", "Já passou", "Sudah lewat", "Past"),
-    "calendar_notes": ("Nota", "Notas", "Catatan", "Notes"),
-    "approx_islamic": ("Data Islám sira tuir lua no bele muda loron ida.", "As datas islâmicas seguem a lua e podem variar um dia.", "Tanggal hari raya Islam mengikuti bulan dan bisa bergeser sehari.", "Islamic dates follow the moon and may move by a day."),
+    "cal_title": ("Feriadu no loron nasionál {year}", "Feriados e dias nacionais {year}"),
+    "cal_sub": ("Tuir Lei n.º 10/2005 (muda ho Lei n.º 3/2016). Governu hatoo kada tinan data ba feriadu ne'ebé muda.", "Segundo a Lei n.º 10/2005 (alterada pela Lei n.º 3/2016). O Governo publica todos os anos as datas móveis."),
+    "next_holiday": ("Feriadu tuir mai", "Próximo feriado"),
+    "days_left": ("loron {n} tan", "faltam {n} dias"),
+    "export_ics": ("Esporta ba kalendáriu (.ics)", "Exportar para calendário (.ics)"),
+    "exported": ("Rai ona: {path}", "Guardado: {path}"),
+    "prev_year": ("Tinan liubá", "Ano anterior"),
+    "next_year": ("Tinan oin", "Ano seguinte"),
+    "past": ("Liu ona", "Já passou"),
+    "calendar_notes": ("Nota", "Notas"),
+    "approx_islamic": ("Data Islám sira tuir lua no bele muda loron ida.", "As datas islâmicas seguem a lua e podem variar um dia."),
 })
 
-def ics_text(base, year, lang="en"):
+def ics_text(base, year, lang="tet"):
     """An iCalendar file with the holidays and national days of one year."""
     def esc(value): return str(value).replace("\\", "\\\\").replace(";", "\\;").replace(",", "\\,").replace("\n", "\\n")
     lines = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//Lafa//Ensiklopedia Timor-Leste//TET", "CALSCALE:GREGORIAN", f"X-WR-CALNAME:{esc('Timor-Leste ' + str(year))}"]
@@ -101,7 +100,7 @@ class CalendarPage(QWidget):
             r = Clickable(8, 16); line = QHBoxLayout(); line.setSpacing(12)
             badge = label(f"{when.day:02d}", "h2"); badge.setFixedWidth(44); badge.setAlignment(Qt.AlignCenter); line.addWidget(badge)
             cc = QVBoxLayout(); cc.setSpacing(0); cc.addWidget(label(d.title(lang), "h3", wrap=True))
-            cc.addWidget(label(kb.WEEKDAYS.get(lang, kb.WEEKDAYS["en"])[when.weekday()] + (" · " + (t("holiday") if d.get("type") == "holiday" else t("commemorative"))), "caption"))
+            cc.addWidget(label(kb.WEEKDAYS.get(lang, kb.WEEKDAYS["tet"])[when.weekday()] + (" · " + (t("holiday") if d.get("type") == "holiday" else t("commemorative"))), "caption"))
             line.addLayout(cc, 1); delta = (when - today).days
             if delta < 0: line.addWidget(Pill(t("past"), "slate"))
             elif delta <= 60: line.addWidget(Pill(t("today") if delta == 0 else t("tomorrow") if delta == 1 else t("in_days", n=delta), "rose" if delta <= 7 else "butter"))

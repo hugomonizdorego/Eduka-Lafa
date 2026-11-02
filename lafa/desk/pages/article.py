@@ -6,21 +6,42 @@ import html
 from datetime import date
 from urllib.parse import quote
 
-from ...qt import Qt, Signal, QTimer, QSize, QWidget, QLabel, QVBoxLayout, QHBoxLayout, QTextBrowser, QFrame, QPixmap, QSizePolicy, QUrl
+from ...qt import Qt, Signal, QTimer, QSize, QWidget, QLabel, QVBoxLayout, QHBoxLayout, QTextBrowser, QFrame, QPixmap, QSizePolicy, QUrl, QDialog, QPushButton, QIcon
 from ... import kb, icons
 from ..texts import extend
 from ..theme import accent
 from ..widgets import (Card, Clickable, ClayIcon, Pill, Segmented, ProgressLine, Banner, ResponsiveGrid, FlowLayout, label, button, scroll,
-                       section_title, clear_layout, tok_of, refresh_icon, EmptyState)
+                       section_title, clear_layout, tok_of, refresh_icon, EmptyState, rounded)
 
 extend({
-    "levels_label": ("Ba nível", "Para os níveis", "Untuk jenjang", "For levels"),
-    "this_year": ("Tinan ne'e: {date}", "Este ano: {date}", "Tahun ini: {date}", "This year: {date}"),
-    "variable_date": ("Data muda kada tinan", "Data móvel", "Tanggal berubah tiap tahun", "Date changes every year"),
-    "photo_offline": ("Foto download ona", "Foto descarregada", "Foto sudah diunduh", "Downloaded photo"),
-    "cite": ("Oinsá sita", "Como citar", "Cara mengutip", "How to cite"),
-    "keyboard_quiz": ("Teklas 1–4 ka A–D atu hatán, Enter ba tuir mai", "Teclas 1–4 ou A–D para responder, Enter para seguir", "Tombol 1–4 atau A–D untuk menjawab, Enter untuk lanjut", "Keys 1–4 or A–D to answer, Enter for next"),
+    "levels_label": ("Ba nível", "Para os níveis"),
+    "this_year": ("Tinan ne'e: {date}", "Este ano: {date}"),
+    "variable_date": ("Data muda kada tinan", "Data móvel"),
+    "photo_offline": ("Foto download ona", "Foto descarregada"),
+    "cite": ("Oinsá sita", "Como citar"),
+    "keyboard_quiz": ("Teklas 1–4 ka A–D atu hatán, Enter ba tuir mai", "Teclas 1–4 ou A–D para responder, Enter para seguir"),
+    "gallery": ("Galeria foto", "Galeria de fotos"),
+    "gallery_note": ("Foto husi Wikimedia Commons ho lisensa livre. Klik atu haree boot no hatene autór.", "Fotos do Wikimedia Commons com licença livre. Clique para ver em grande e conhecer o autor."),
+    "gallery_empty": ("Seidauk iha foto ba pájina ida-ne'e. Bainhira iha internet, ba «Offline no atualiza» atu download foto ho nia autór no lisensa.",
+                      "Ainda não há fotos para esta página. Com internet, abra «Offline e atualização» para descarregar fotos com autor e licença."),
+    "gallery_get": ("Download foto", "Descarregar fotos"),
+    "photo_source": ("Haree iha Wikimedia Commons", "Ver no Wikimedia Commons"),
+    "close": ("Taka", "Fechar"),
 })
+
+class PhotoDialog(QDialog):
+    """One downloaded picture in large size with its author, licence and source."""
+    def __init__(self, win, path, info, parent=None):
+        super().__init__(parent or win); self.win = win; t = win.t
+        self.setWindowTitle(info.get("title") or t("gallery")); col = QVBoxLayout(self); col.setSpacing(10)
+        pm = QPixmap(str(path)); picture = QLabel(); picture.setAlignment(Qt.AlignCenter)
+        if not pm.isNull(): picture.setPixmap(pm.scaled(min(1000, pm.width()), min(680, pm.height()), Qt.KeepAspectRatio, Qt.SmoothTransformation))
+        col.addWidget(picture, 1)
+        col.addWidget(label(info.get("title", ""), "h3", wrap=True))
+        col.addWidget(label(t("photo_credit", author=info.get("author", "") or "—", licence=info.get("licence", "") or "—"), "caption", wrap=True))
+        row = QHBoxLayout(); src = info.get("source_url", "")
+        if str(src).startswith("https://"): row.addWidget(button(t("photo_source"), lambda: win.open_url(src), "ghost", "globe"))
+        row.addStretch(); row.addWidget(button(t("close"), self.accept, "primary", "check")); col.addLayout(row)
 
 LEVEL_ORDER = kb.LEVELS
 
@@ -200,6 +221,7 @@ class ItemPage(QWidget):
                 line.addWidget(label(r.title(lang), wrap=True), 1); rr.box.addLayout(line); rr.clicked.connect(lambda i=r.id: win.open_item(i)); rc.box.addWidget(rr)
             scol.addWidget(rc)
         scol.addStretch(); body.add(side); self.col.addWidget(body)
+        self.col.addWidget(self.gallery_card(item, photo))
         # Sources, licences and review.
         sc = Card(20, 24); sc.box.addLayout(section_title(t("sources")))
         src = AutoText(); src.document().setDefaultStyleSheet(css(win.tok, win.scale())); src.link.connect(self.follow)
@@ -213,6 +235,27 @@ class ItemPage(QWidget):
         cite = f"<p class='muted'><b>{html.escape(t('cite'))}:</b> Lafa – {html.escape(t('app_subtitle'))}, “{html.escape(item.title(lang))}”, {date.today().year}. CC BY-SA 4.0.</p>"
         src.setHtml("<ol>" + "".join(items_html) + "</ol>" + note + cite); sc.box.addWidget(src); self.col.addWidget(sc)
         self.col.addStretch()
+    def gallery_card(self, item, photo):
+        """Downloaded pictures of the item (lead photo first), each with its credit; or how to get them."""
+        win = self.win; t = win.t; store = getattr(win, "store", None)
+        pictures = ([(photo[0], photo[1])] if photo else []) + (store.gallery(item.id) if store else [])
+        card = Card(16, 22); card.box.addLayout(section_title(t("gallery")))
+        if not pictures:
+            card.box.addWidget(label(t("gallery_empty"), "muted", wrap=True))
+            if item.wiki(): card.box.addWidget(button(t("gallery_get"), lambda: win.open("data"), "ghost", "cloud-download"), 0, Qt.AlignLeft)
+            return card
+        box = QWidget(); flow = FlowLayout(box, 10)
+        for path, info in pictures:
+            pm = QPixmap(str(path))
+            if pm.isNull(): continue
+            b = QPushButton(); b.setObjectName("thumb"); b.setFlat(True); b.setCursor(Qt.PointingHandCursor)
+            b.setIcon(QIcon(rounded(cover(pm, 220, 150), 14))); b.setIconSize(QSize(220, 150)); b.setFixedSize(228, 158)
+            credit = t("photo_credit", author=info.get("author", "") or "—", licence=info.get("licence", "") or "—")
+            b.setToolTip(f"{info.get('title', '')}\n{credit}"); b.setAccessibleName(info.get("title", "") or t("gallery"))
+            b.clicked.connect(lambda checked=False, p=path, i=info: PhotoDialog(win, p, i, self).exec())
+            flow.addWidget(b)
+        card.box.addWidget(box); card.box.addWidget(label(t("gallery_note"), "caption", wrap=True))
+        return card
     def municipality_card(self, item):
         win = self.win; t = win.t; lang = win.lang; c = Card(16, 22); c.box.addLayout(section_title(t("municipality")))
         pop = item.get("population") or {}

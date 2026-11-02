@@ -30,39 +30,39 @@ from .desk.widgets import Card, ClayIcon, SearchBox, label, button, tok_of, clea
 from .mascot import Character
 
 extend({
-    "va_hello": ("{greet}, {name}!", "{greet}, {name}!", "{greet}, {name}!", "{greet}, {name}!"),
-    "va_role": ("Ita-nia gia Timór-Leste no kolega estudu", "O seu guia de Timor-Leste e colega de estudo", "Pemandu Timor-Leste dan teman belajarmu", "Your Timor-Leste guide and study buddy"),
-    "va_ask": ("Husu Lafa: artigu, fatin, liafuan…", "Pergunte ao Lafa: artigos, lugares, palavras…", "Tanya Lafa: artikel, tempat, kata…", "Ask Lafa: articles, places, words…"),
-    "va_more_tips": ("Seluk", "Outra", "Lainnya", "Another"),
-    "va_open_desktop": ("Loke Lafa Desktop", "Abrir o Lafa Desktop", "Buka Lafa Desktop", "Open Lafa Desktop"),
-    "va_quiet": ("Modu kalma", "Modo calmo", "Mode tenang", "Quiet mode"),
-    "va_read": ("Lee ho lian", "Ler em voz alta", "Bacakan", "Read aloud"),
-    "va_settings": ("Lafa-Configuration", "Lafa-Configuration", "Lafa-Configuration", "Lafa-Configuration"),
-    "va_tile_continue": ("Kontinua", "Continuar", "Lanjutkan", "Continue"),
-    "va_tile_quiz": ("Kuis", "Quiz", "Kuis", "Quiz"),
-    "va_tile_words": ("Liafuan", "Palavras", "Kata", "Words"),
-    "va_tile_map": ("Mapa", "Mapa", "Peta", "Map"),
-    "va_tile_calendar": ("Kalendáriu", "Calendário", "Kalender", "Calendar"),
-    "va_tile_pc": ("Ajuda PC", "Ajuda PC", "Bantuan PC", "PC help"),
-    "va_no_results": ("Lafa la hetan. Koko liafuan seluk ka loke Lafa Desktop.", "O Lafa não encontrou. Tente outras palavras ou abra o Lafa Desktop.", "Lafa tidak menemukan. Coba kata lain atau buka Lafa Desktop.", "Lafa found nothing. Try other words or open Lafa Desktop."),
-    "va_see_all": ("Haree rezultadu hotu", "Ver todos os resultados", "Lihat semua hasil", "See all results"),
-    "va_right": ("Loos! ", "Certo! ", "Benar! ", "Right! "),
-    "va_wrong": ("La loos. Resposta: {a}. ", "Errado. Resposta: {a}. ", "Salah. Jawaban: {a}. ", "Not quite. Answer: {a}. "),
-    "va_hover": ("Klik ha'u! Ha'u bele hatudu buat foun kona-ba Timór-Leste.", "Clique em mim! Posso mostrar algo novo sobre Timor-Leste.", "Klik saya! Saya bisa menunjukkan hal baru tentang Timor-Leste.", "Click me! I can show you something new about Timor-Leste."),
-    "va_pc_apps": ("Loke aplikasaun", "Abrir aplicação", "Buka aplikasi", "Open an app"),
-    "va_pc_missing": ("Aplikasaun ne'e la iha iha komputadór ne'e.", "Esta aplicação não está instalada.", "Aplikasi ini tidak terpasang.", "This app is not installed."),
-    "va_outfit": ("Hatais", "Roupa", "Pakaian", "Outfit"),
-    "va_pause": ("Para movimentu", "Pausa", "Jeda", "Pause"),
-    "va_close_app": ("Taka Lafa", "Fechar o Lafa", "Tutup Lafa", "Close Lafa"),
-    "app_browser": ("Navegadór internet", "Navegador", "Peramban", "Web browser"), "app_files": ("Ficheiru sira", "Ficheiros", "Berkas", "Files"),
-    "app_settings": ("Konfigurasaun sistema", "Definições do sistema", "Pengaturan sistem", "System settings"), "app_calculator": ("Kalkuladora", "Calculadora", "Kalkulator", "Calculator"),
-    "app_editor": ("Editór testu", "Editor de texto", "Editor teks", "Text editor"), "app_writer": ("LibreOffice", "LibreOffice", "LibreOffice", "LibreOffice"),
-    "app_screenshot": ("Foti ekrã", "Captura de ecrã", "Tangkapan layar", "Screenshot"), "app_sound": ("Som / volume", "Som / volume", "Suara / volume", "Sound / volume"),
-    "app_network": ("Wi-Fi / rede", "Wi-Fi / rede", "Wi-Fi / jaringan", "Wi-Fi / network"), "app_printer": ("Impresora", "Impressora", "Pencetak", "Printer"),
+    "va_hello": ("{greet}, {name}!", "{greet}, {name}!"),
+    "va_role": ("Ita-nia gia Timór-Leste no kolega estudu", "O seu guia de Timor-Leste e colega de estudo"),
+    "va_ask": ("Husu Lafa: artigu, fatin, liafuan…", "Pergunte ao Lafa: artigos, lugares, palavras…"),
+    "va_more_tips": ("Seluk", "Outra"),
+    "va_open_desktop": ("Loke Lafa Desktop", "Abrir o Lafa Desktop"),
+    "va_quiet": ("Modu kalma", "Modo calmo"),
+    "va_read": ("Lee ho lian", "Ler em voz alta"),
+    "va_settings": ("Lafa-Configuration", "Lafa-Configuration"),
+    "va_tile_continue": ("Kontinua", "Continuar"),
+    "va_tile_quiz": ("Kuis", "Quiz"),
+    "va_tile_words": ("Liafuan", "Palavras"),
+    "va_tile_map": ("Mapa", "Mapa"),
+    "va_tile_calendar": ("Kalendáriu", "Calendário"),
+    "va_tile_pc": ("Ajuda PC", "Ajuda PC"),
+    "va_no_results": ("Lafa la hetan. Koko liafuan seluk ka loke Lafa Desktop.", "O Lafa não encontrou. Tente outras palavras ou abra o Lafa Desktop."),
+    "va_see_all": ("Haree rezultadu hotu", "Ver todos os resultados"),
+    "va_right": ("Loos! ", "Certo! "),
+    "va_wrong": ("La loos. Resposta: {a}. ", "Errado. Resposta: {a}. "),
+    "va_hover": ("Klik ha'u! Ha'u bele hatudu buat foun kona-ba Timór-Leste.", "Clique em mim! Posso mostrar algo novo sobre Timor-Leste."),
+    "va_pc_apps": ("Loke aplikasaun", "Abrir aplicação"),
+    "va_pc_missing": ("Aplikasaun ne'e la iha iha komputadór ne'e.", "Esta aplicação não está instalada."),
+    "va_outfit": ("Hatais", "Roupa"),
+    "va_pause": ("Para movimentu", "Pausa"),
+    "va_close_app": ("Taka Lafa", "Fechar o Lafa"),
+    "app_browser": ("Navegadór internet", "Navegador"), "app_files": ("Ficheiru sira", "Ficheiros"),
+    "app_settings": ("Konfigurasaun sistema", "Definições do sistema"), "app_calculator": ("Kalkuladora", "Calculadora"),
+    "app_editor": ("Editór testu", "Editor de texto"), "app_writer": ("LibreOffice", "LibreOffice"),
+    "app_screenshot": ("Foti ekrã", "Captura de ecrã"), "app_sound": ("Som / volume", "Som / volume"),
+    "app_network": ("Wi-Fi / rede", "Wi-Fi / rede"), "app_printer": ("Impresora", "Impressora"),
 })
 
-OUTFIT_NAMES = {"casual": ("Kazuál aprende", "Casual de estudo", "Santai belajar", "Casual study"), "traditional": ("Tais Mane", "Tais Mane", "Tais Mane", "Tais Mane"),
-                "tuxedo": ("Formál", "Formal", "Formal", "Formal")}
+OUTFIT_NAMES = {"casual": ("Kazuál aprende", "Casual de estudo"), "traditional": ("Tais Mane", "Tais Mane"),
+                "tuxedo": ("Formál", "Formal")}
 PET_SIZES = {"small": 132, "normal": 176, "large": 220}
 WALK_SPEED = {"slow": 38.0, "normal": 58.0, "fast": 92.0}          # pixels per second
 ANIMATION_RATES = {"slow": 0.6, "normal": 1.0, "fast": 1.6}
@@ -498,7 +498,7 @@ class Companion(QWidget):
         quiet = menu.addAction(t("va_quiet")); quiet.setCheckable(True); quiet.setChecked(bool(self.settings.quiet_mode)); quiet.triggered.connect(self.set_quiet)
         wardrobe = menu.addMenu(t("va_outfit"))
         for outfit in outfits.OUTFITS:
-            name = OUTFIT_NAMES.get(outfit, (outfit,) * 4)[kb.LANGS.index(lang) if lang in kb.LANGS else 3]
+            name = OUTFIT_NAMES.get(outfit, (outfit, outfit))[1 if lang == "pt" else 0]
             a = wardrobe.addAction(name); a.setCheckable(True); a.setChecked(self.settings.costume == outfit); a.triggered.connect(lambda checked=False, o=outfit: self.outfit_requested.emit(o))
         pause = menu.addAction(t("va_pause")); pause.setCheckable(True); pause.setChecked(self.paused); pause.triggered.connect(self.toggle_pause)
         menu.addSeparator(); menu.addAction(t("va_settings"), self.settings_requested.emit); menu.addAction(t("va_close_app"), self.quit_requested.emit)

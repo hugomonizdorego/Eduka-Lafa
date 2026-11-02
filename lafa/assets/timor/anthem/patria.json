@@ -1,0 +1,165 @@
+{
+ "title": {
+  "tet": "Inu Nasionál «Pátria»",
+  "pt": "Hino Nacional «Pátria»"
+ },
+ "audio": "patria.mp3",
+ "duration": 204.43,
+ "music": "Afonso Redentor de Araújo",
+ "lyrics_by": "Francisco Borja da Costa",
+ "legal": {
+  "tet": "Konstituisaun artigu 14 no 166; Lei n.º 2/2007 kona-ba Símbolu Nasionál",
+  "pt": "Constituição, artigos 14.º e 166.º; Lei n.º 2/2007 sobre os Símbolos Nacionais"
+ },
+ "lines": [
+  {
+   "pt": "Pátria, Pátria, Timor-Leste, nossa Nação.",
+   "tet": "Pátria, Pátria, Timór-Leste, ita-nia Nasaun.",
+   "part": "refrain"
+  },
+  {
+   "pt": "Glória ao povo e aos heróis da nossa libertação.",
+   "tet": "Glória ba povu no ba asuwa'in sira ita-nia libertasaun nian.",
+   "part": "refrain"
+  },
+  {
+   "pt": "Pátria, Pátria, Timor-Leste, nossa Nação.",
+   "tet": "Pátria, Pátria, Timór-Leste, ita-nia Nasaun.",
+   "part": "refrain"
+  },
+  {
+   "pt": "Glória ao povo e aos heróis da nossa libertação.",
+   "tet": "Glória ba povu no ba asuwa'in sira ita-nia libertasaun nian.",
+   "part": "refrain"
+  },
+  {
+   "pt": "Vencemos o colonialismo, gritamos:",
+   "tet": "Ita manán ona kolonializmu, ita hakilar:",
+   "part": "verse"
+  },
+  {
+   "pt": "abaixo o imperialismo.",
+   "tet": "abaixu imperializmu.",
+   "part": "verse"
+  },
+  {
+   "pt": "Terra livre, povo livre,",
+   "tet": "Rai livre, povu livre,",
+   "part": "verse"
+  },
+  {
+   "pt": "não, não, não à exploração.",
+   "tet": "lae, lae, lae ba esplorasaun.",
+   "part": "verse"
+  },
+  {
+   "pt": "Avante unidos firmes e decididos.",
+   "tet": "Ba oin, hamutuk, metin no determinadu.",
+   "part": "verse"
+  },
+  {
+   "pt": "Na luta contra o imperialismo",
+   "tet": "Iha luta hasoru imperializmu,",
+   "part": "verse"
+  },
+  {
+   "pt": "o inimigo dos povos, até à vitória final.",
+   "tet": "inimigu povu sira-nian, to'o vitória ikus.",
+   "part": "verse"
+  },
+  {
+   "pt": "Pelo caminho da revolução.",
+   "tet": "Tuir dalan revolusaun nian.",
+   "part": "verse"
+  }
+ ],
+ "cues": [
+  [
+   13.4,
+   24.5,
+   0
+  ],
+  [
+   24.5,
+   42.9,
+   1
+  ],
+  [
+   42.9,
+   54.3,
+   2
+  ],
+  [
+   54.3,
+   73.1,
+   3
+  ],
+  [
+   73.1,
+   84.5,
+   0
+  ],
+  [
+   84.5,
+   103.0,
+   1
+  ],
+  [
+   134.2,
+   146.3,
+   0
+  ],
+  [
+   146.3,
+   166.4,
+   1
+  ],
+  [
+   166.4,
+   178.5,
+   2
+  ],
+  [
+   178.5,
+   199.0,
+   3
+  ]
+ ],
+ "sections": [
+  [
+   0.0,
+   13.4,
+   "intro"
+  ],
+  [
+   103.0,
+   134.2,
+   "interlude"
+  ],
+  [
+   199.0,
+   204.43,
+   "outro"
+  ]
+ ],
+ "note": {
+  "tet": "Iha gravasaun ida-ne'e, koru hananu refraun «Pátria, Pátria» dala lima. Letra kompletu iha okos atu aprende. Testu ofisiál mak portugés; tradusaun Tetun husi Lafa (la ofisiál).",
+  "pt": "Nesta gravação, o coro canta o refrão «Pátria, Pátria» cinco vezes. A letra completa está abaixo para aprender. O texto oficial é o português; a tradução em tétum é do Lafa (não oficial)."
+ },
+ "recording": {
+  "file": "patria_56.mp3 (56 kbps, mono)",
+  "provided_by": "Na'in projetu Lafa / project owner",
+  "origin": {
+   "tet": "Gravasaun ofisiál ne'ebé fahe iha internet (edisaun web 56 kbps); hatama husi na'in projetu.",
+   "pt": "Gravação oficial divulgada na internet (edição web de 56 kbps); fornecida pelo responsável do projeto."
+  },
+  "licence": {
+   "tet": "Símbolu nasionál (Lei n.º 2/2007). Lisensa gravasaun nian sei konfirma — haree docs/ASSETS.md.",
+   "pt": "Símbolo nacional (Lei n.º 2/2007). Licença da gravação a confirmar — ver docs/ASSETS.md."
+  }
+ },
+ "timing": {
+  "method": "Lafa, 2026-11-02: separasaun vós (MDX-Net) + Whisper (teacher-forced) + melodia; verifika ho tilun / vocal separation (MDX-Net) + Whisper scoring + melody matching; check by ear",
+  "accuracy_s": 0.5
+ }
+}

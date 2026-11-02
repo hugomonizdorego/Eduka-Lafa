@@ -35,15 +35,21 @@ def test_wiki_intros_follow_normalised_and_redirected_titles(monkeypatch):
     found = sync.wiki_intros("en", ["East_Timor"])
     assert found["East_Timor"]["title"] == "Timor-Leste" and found["East_Timor"]["image"] == "Flag.svg"
 
+def fake_wiki(url, **kw):
+    """Wikipedia and Commons answers for the offline download tests."""
+    from urllib.parse import unquote_plus
+    if "commons.wikimedia.org" in url:
+        return {"query": {"pages": [{"imageinfo": [{"thumburl": "https://upload.wikimedia.org/x.jpg", "descriptionurl": "https://commons.wikimedia.org/wiki/File:X.jpg",
+                "extmetadata": {"LicenseShortName": {"value": "CC BY-SA 4.0"}, "Artist": {"value": "<a>Someone</a>"}}}]}]}}
+    titles = unquote_plus(url.split("titles=")[1]).split("|")
+    if "prop=images" in url:
+        names = ["Map_of_Timor-Leste.png", "Flag_of_East_Timor.svg", "Dili_harbour.jpg", "Commons-logo.svg", "Market_in_Baucau.jpg", "Tais_weaving.jpg"]
+        return {"query": {"pages": [{"title": titles[0], "images": [{"title": "File:" + n} for n in names]}]}}
+    pages = [{"title": t, "extract": f"Intro of {t}", "fullurl": "https://en.wikipedia.org/wiki/X", "pageimage": "X.jpg"} for t in titles]
+    return {"query": {"pages": pages}}
+
 def test_download_offline_end_to_end(monkeypatch, tmp_path, base):
-    def fake_json(url, **kw):
-        if "commons.wikimedia.org" in url:
-            return {"query": {"pages": [{"imageinfo": [{"thumburl": "https://upload.wikimedia.org/x.jpg", "descriptionurl": "https://commons.wikimedia.org/wiki/File:X.jpg",
-                    "extmetadata": {"LicenseShortName": {"value": "CC BY-SA 4.0"}, "Artist": {"value": "<a>Someone</a>"}}}]}]}}
-        titles = url.split("titles=")[1]
-        from urllib.parse import unquote_plus
-        pages = [{"title": t, "extract": f"Intro of {t}", "fullurl": "https://en.wikipedia.org/wiki/X", "pageimage": "X.jpg"} for t in unquote_plus(titles).split("|")]
-        return {"query": {"pages": pages}}
+    fake_json = fake_wiki
     monkeypatch.setattr(net, "json_request", fake_json)
     monkeypatch.setattr(net, "request", lambda url, **kw: JPEG)
     monkeypatch.setattr(sync.time, "sleep", lambda s: None)
@@ -79,3 +85,18 @@ def test_manifest_matches_files():
     from lafa.kb import ASSETS
     manifest = sync.make_manifest(ASSETS, "test")
     assert all(sync.ALLOWED_UPDATE.match(p) for p in manifest["files"])
+
+def test_gallery_downloads_free_photos_but_no_maps_or_flags(monkeypatch, tmp_path, base):
+    monkeypatch.setattr(net, "json_request", fake_wiki)
+    monkeypatch.setattr(net, "request", lambda url, **kw: JPEG)
+    monkeypatch.setattr(sync.time, "sleep", lambda s: None)
+    assert sync.wiki_page_images("en", "Dili") == ["Dili_harbour.jpg", "Market_in_Baucau.jpg", "Tais_weaving.jpg"]
+    store = Store(tmp_path)
+    result = sync.download_offline(base, store, langs=("pt",), photos=True, gallery=2)
+    item = next(i for i in base.all() if i.wiki().get("en"))
+    pictures = store.gallery(item.id)
+    assert result["gallery"] >= 2 and len(pictures) == 2 and pictures[0][1]["author"] == "Someone"
+    assert {info["title"] for _path, info in pictures} == {"Dili_harbour.jpg", "Market_in_Baucau.jpg"}
+    assert store.stats()["photos"] >= 3 and len(store.photos()) >= 3
+    again = sync.download_offline(base, store, langs=("pt",), photos=True, gallery=2)        # nothing new to fetch
+    assert again["gallery"] == 0 and len(store.gallery(item.id)) == 2

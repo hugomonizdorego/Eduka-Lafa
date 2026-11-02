@@ -114,7 +114,7 @@ See [docs/OFFLINE.md](docs/OFFLINE.md) and [docs/PRIVACY.md](docs/PRIVACY.md).
 
 * Code: **MIT** (© 2026 Hugo Moniz do Rego).
 * Encyclopedia texts, quizzes, vocabulary and illustrations: **CC BY-SA 4.0**.
-* Map: geoBoundaries — OpenStreetMap (**ODbL 1.0**) and OCHA/WHO (**CC BY 3.0 IGO**).
+* Map: geoBoundaries — OCHA ROAP / WHO (**CC BY 3.0 IGO**); municipalities are the union of their administrative posts.
 * World Bank data: **CC BY 4.0**. Font Nunito: **SIL OFL 1.1**.
 * Downloaded photos keep their own free licence and author (shown in the app).
 

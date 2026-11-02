@@ -64,7 +64,7 @@ def test_every_tip_kind(base, tmp_path):
 
 def test_holiday_tip_comes_first_on_the_eve(base, tmp_path):
     chooser = tips.TipChooser(random.Random(2)); settings = Settings()
-    first = chooser.next(base, Progress(tmp_path), settings, "en", date(2026, 5, 19))
+    first = chooser.next(base, Progress(tmp_path), settings, "tet", date(2026, 5, 19))
     if base.get("day.restoration"): assert first.kind == "holiday"
-    kinds = [chooser.next(base, Progress(tmp_path), settings, "en", date(2026, 5, 19)).kind for _ in range(12)]
+    kinds = [chooser.next(base, Progress(tmp_path), settings, "tet", date(2026, 5, 19)).kind for _ in range(12)]
     assert all(a != b for a, b in zip(kinds, kinds[1:]))

@@ -7,7 +7,7 @@
 Soft "clay" vector scenes in Lafa's own style — pastel gradients, rounded
 shapes, gentle shadows — one per key in docs/CONTENT-SCHEMA.md. They are
 original work for Lafa (CC BY-SA 4.0). The Timor-Leste outline comes from the
-packaged map data (geoBoundaries / © OpenStreetMap contributors, ODbL). The
+packaged map data (geoBoundaries / OCHA ROAP, CC BY 3.0 IGO). The
 flag follows Artigu 15 of the Konstituisaun. Real photographs are downloaded by
 the learner (free licences only) and are not part of these files.
 Scenes are 640×360 (16:9) and carry no words, so they serve all languages.
@@ -789,10 +789,68 @@ def s_flag(s):
 
 @scene("emblem")
 def s_emblem(s):
-    sky(s, "lilac"); s.add(circle(320, 180, 120, s.grad((0, "#fff3c4"), (1, "#f2c94c")))); s.add(circle(320, 180, 100, "#ffffff", 'opacity="0.35"'))
-    flag_shape(s, 250, 140, 140, wave=False); s.add(circle(320, 180, 120, "none", 'stroke="#e9b949" stroke-width="6"'))
-    for i in range(16):
-        a = math.radians(i * 22.5); s.add(circle(320 + math.cos(a) * 132, 180 + math.sin(a) * 132, 6, "#e9b949"))
+    """Explanatory drawing of the national emblem (belak) after the description in Lei n.º 2/2007.
+    Numbered parts: 1 belak rings, 2 Mount Ramelau, 3 star and rays, 4 open book, 5 gear,
+    6 rice and maize, 7 rifle, spear and bow, 8 motto ribbon. Not the official artwork."""
+    sky(s, "lilac"); cx, cy = 320, 172
+    ruby, gold, black = "#a11d33", "#f2b632", "#1d1b22"
+    s.add(circle(cx, cy + 4, 160, "#000000", 'opacity="0.10"'))
+    s.add(circle(cx, cy, 158, "#fffaf0"), circle(cx, cy, 156, "none", f'stroke="{ruby}" stroke-width="7"'),
+          circle(cx, cy, 126, "none", f'stroke="{ruby}" stroke-width="5"'), circle(cx, cy, 123, "#fffdf6"))
+    name = "REPÚBLICA DEMOCRÁTICA DE TIMOR-LESTE"
+    span = 250.0; step = span / (len(name) - 1)
+    for i, ch in enumerate(name):
+        a = -90 - span / 2 + i * step; r = 134          # baseline radius: capitals and accents stay inside the cream band
+        x = cx + r * math.cos(math.radians(a)); y = cy + r * math.sin(math.radians(a))
+        if ch != " ": s.add(f'<text x="{x:.1f}" y="{y:.1f}" font-family="Nunito, sans-serif" font-size="14" font-weight="800" fill="{ruby}" text-anchor="middle" transform="rotate({a + 90:.1f} {x:.1f} {y:.1f})">{ch}</text>')
+    # 2 Mount Ramelau: red outline, black core, thin yellow edge
+    s.add(poly([(cx - 92, cy + 66), (cx - 26, cy - 72), (cx, cy - 92), (cx + 26, cy - 72), (cx + 92, cy + 66)], gold))
+    s.add(poly([(cx - 86, cy + 62), (cx - 23, cy - 68), (cx, cy - 86), (cx + 23, cy - 68), (cx + 86, cy + 62)], ruby))
+    s.add(poly([(cx - 66, cy + 56), (cx - 16, cy - 50), (cx, cy - 64), (cx + 16, cy - 50), (cx + 66, cy + 56)], black))
+    # 5 gear and 6 rice (left) and maize (right)
+    teeth = []
+    for i in range(24):
+        a = math.radians(i * 15); r = 31 if i % 2 == 0 else 25
+        teeth.append((cx + r * math.cos(a), cy + 22 + r * math.sin(a)))
+    s.add(poly(teeth, gold), circle(cx, cy + 22, 12, black))
+    for j in range(7):
+        y = cy + 40 - j * 11; s.add(ellipse(cx - 58 - j * 1.5, y, 5, 8, gold, f'transform="rotate(-25 {cx - 58 - j * 1.5:.1f} {y:.1f})"'))
+    s.add(path(f"M{cx - 52} {cy + 52} Q{cx - 64} {cy + 10} {cx - 70} {cy - 34}", "none", gold, 3))
+    s.add(ellipse(cx + 62, cy + 10, 10, 30, gold, f'transform="rotate(18 {cx + 62} {cy + 10})"'))
+    for j in range(5):
+        s.add(path(f"M{cx + 53 + j * 1.2} {cy - 12 + j * 10} l18 4", "none", "#d99a1e", 2))
+    s.add(path(f"M{cx + 50} {cy + 42} q8 -26 22 -60", "none", "#7fbf5a", 4), path(f"M{cx + 72} {cy + 44} q-4 -24 -2 -52", "none", "#5aa04a", 4))
+    # 4 open book (red covers, white pages, black lines)
+    s.add(path(f"M{cx - 44} {cy - 2} Q{cx - 22} {cy - 14} {cx} {cy - 4} Q{cx + 22} {cy - 14} {cx + 44} {cy - 2} L{cx + 44} {cy + 22} Q{cx + 22} {cy + 12} {cx} {cy + 22} Q{cx - 22} {cy + 12} {cx - 44} {cy + 22} Z", ruby))
+    s.add(path(f"M{cx - 39} {cy - 2} Q{cx - 20} {cy - 11} {cx - 1} {cy - 2} L{cx - 1} {cy + 17} Q{cx - 20} {cy + 9} {cx - 39} {cy + 17} Z", "#ffffff"))
+    s.add(path(f"M{cx + 39} {cy - 2} Q{cx + 20} {cy - 11} {cx + 1} {cy - 2} L{cx + 1} {cy + 17} Q{cx + 20} {cy + 9} {cx + 39} {cy + 17} Z", "#ffffff"))
+    for k in range(3):
+        s.add(path(f"M{cx - 33} {cy + 1 + k * 5} q12 -5 26 0", "none", black, 1.4), path(f"M{cx + 7} {cy + 1 + k * 5} q12 -5 26 0", "none", black, 1.4))
+    # 3 white star with five rays to the book
+    star = []
+    for i in range(10):
+        a = math.radians(-90 + i * 36); r = 13 if i % 2 == 0 else 5.5
+        star.append((cx + r * math.cos(a), cy - 62 + r * math.sin(a)))
+    for dx in (-26, -13, 0, 13, 26):
+        s.add(path(f"M{cx} {cy - 56} L{cx + dx} {cy - 10}", "none", "#ffffff", 2.4, 'opacity="0.95"'))
+    s.add(poly(star, "#ffffff"))
+    # 7 rifle, spear (diman) and bow (rama-inan) under the mountain
+    s.add(path(f"M{cx - 108} {cy + 92} L{cx + 96} {cy + 52}", "none", black, 7))
+    s.add(path(f"M{cx - 40} {cy + 80} l10 14 l6 -2 l-8 -14", black), path(f"M{cx + 30} {cy + 64} l-4 -12", "none", black, 5))
+    s.add(path(f"M{cx + 110} {cy + 92} L{cx - 96} {cy + 50}", "none", "#7a4b2a", 4))
+    s.add(poly([(cx - 96, cy + 50), (cx - 112, cy + 40), (cx - 104, cy + 56)], "#9aa3ad"))
+    s.add(path(f"M{cx - 70} {cy + 112} Q{cx} {cy + 70} {cx + 70} {cy + 112}", "none", "#7a4b2a", 4), path(f"M{cx - 70} {cy + 112} L{cx + 70} {cy + 112}", "none", "#5b4636", 1.5))
+    # 8 motto ribbon
+    s.add(path(f"M{cx - 150} {cy + 118} L{cx - 120} {cy + 110} L{cx + 120} {cy + 110} L{cx + 150} {cy + 118} L{cx + 140} {cy + 132} L{cx + 150} {cy + 146} L{cx + 112} {cy + 140} L{cx - 112} {cy + 140} L{cx - 150} {cy + 146} L{cx - 140} {cy + 132} Z", "#ffffff", ruby, 2))
+    s.add(f'<text x="{cx}" y="{cy + 130}" font-family="Nunito, sans-serif" font-size="15" font-weight="900" fill="{ruby}" text-anchor="middle" dominant-baseline="central">UNIDADE · ACÇÃO · PROGRESSO</text>')
+    # numbered callouts outside the ring with leader lines (explained in Lafa's text)
+    callouts = [(1, (530, cy - 128), (cx + 119, cy - 100)), (2, (110, cy - 70), (cx - 38, cy - 20)), (3, (530, cy - 70), (cx + 8, cy - 62)),
+                (4, (110, cy - 10), (cx - 24, cy + 5)), (5, (530, cy - 10), (cx + 24, cy + 34)), (6, (110, cy + 50), (cx - 60, cy + 18)),
+                (7, (110, cy + 110), (cx - 80, cy + 86)), (8, (530, cy + 132), (cx + 142, cy + 132))]
+    for n, (x, y), (tx, ty) in callouts:
+        s.add(path(f"M{x} {y} L{tx} {ty}", "none", "#7c5cfc", 1.6, 'opacity="0.75"'), circle(tx, ty, 3.5, "#7c5cfc"))
+    for n, (x, y), _target in callouts:
+        s.add(circle(x, y, 13, "#7c5cfc"), f'<text x="{x}" y="{y}" font-family="Nunito, sans-serif" font-size="14" font-weight="900" fill="#ffffff" text-anchor="middle" dominant-baseline="central">{n}</text>')
 
 @scene("anthem", "music")
 def s_anthem(s):
@@ -1065,7 +1123,7 @@ for _key, _fn in list(SCENES.items()):
 
 def manifest_entry(key):
     return {"key": key, "file": f"{key}.svg", "licence": "CC BY-SA 4.0", "author": "Lafa contributors (tools/make-illustrations.py)",
-            "note": "Timor-Leste outline: geoBoundaries / © OpenStreetMap contributors (ODbL 1.0)" if key in ("tl-overview", "map") else ""}
+            "note": "Timor-Leste outline: geoBoundaries / OCHA ROAP (CC BY 3.0 IGO)" if key in ("tl-overview", "map") else ""}
 
 def main(argv):
     OUT.mkdir(parents=True, exist_ok=True)

@@ -6,7 +6,7 @@ from lafa import kb
 
 def test_search_puts_title_matches_first(base):
     assert base.search("bandeira", "tet", 3)[0][0].id == "tl.symbols.flag"
-    assert base.search("Xanana", "en", 3)[0][0].id.startswith("tl.leaders.xanana")
+    assert base.search("Xanana", "pt", 3)[0][0].id.startswith("tl.leaders.xanana")
     assert base.search("Santa Cruz", "pt", 3)[0][0].id in ("place.santa_cruz_cemetery", "tl.conflicts.santa_cruz_1991")
 
 def test_search_ignores_accents_apostrophes_and_types_ahead(base):
@@ -31,12 +31,12 @@ def test_day_dates(base):
     assert all(when >= date(2026, 12, 30) for when, _ in upcoming)
 
 def test_dates_before_the_common_era():
-    assert kb.format_when("-44000", "en") == "44 000 years ago"
-    assert kb.format_when("-2500", "en") == "2500 BCE"
+    assert kb.format_when("-44000", "pt") == "há 44 000 anos" and kb.format_when("-44000", "tet") == "tinan 44 000 liubá"
+    assert kb.format_when("-2500", "pt") == "2500 a.C."
     assert kb.format_when("1975-11-28", "pt") == "28 novembro 1975"
 
 def test_timeline_is_sorted_and_eras_follow_dates(base):
-    events = base.timeline("en")
+    events = base.timeline("pt")
     assert len(events) >= 150
     assert [e["key"] for e in events] == sorted(e["key"] for e in events)
     assert kb.era_of((1975, 11, 28)) == "decolonisation" and kb.era_of((1975, 12, 7)) == "occupation"
@@ -57,10 +57,10 @@ def test_downloaded_update_replaces_a_packaged_file(tmp_path):
     updates = tmp_path / "updates" / "content"; updates.mkdir(parents=True)
     original = json.loads((kb.ASSETS / "content" / "symbols_society.json").read_text())
     flag = next(a for a in original["articles"] if a["id"] == "tl.symbols.flag")
-    flag = dict(flag, title=dict(flag["title"], en="Flag (updated)"))
+    flag = dict(flag, title=dict(flag["title"], pt="Bandeira (atualizada)"))
     (updates / "symbols_society.json").write_text(json.dumps({"articles": [flag]}), encoding="utf-8")
     base = kb.KnowledgeBase(overrides=tmp_path / "updates")
-    assert base.get("tl.symbols.flag").title("en") == "Flag (updated)"
+    assert base.get("tl.symbols.flag").title("pt") == "Bandeira (atualizada)"
     (updates / "broken.json").write_text("{not json", encoding="utf-8")
     assert kb.KnowledgeBase(overrides=tmp_path / "updates").get("tl.symbols.flag")
 

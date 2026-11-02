@@ -106,7 +106,7 @@ would be better and needs an artist or a Timorese cultural reviewer.
 | `lafa/assets/icons/*.svg` (97 icons) | `tools/make-icons.py` (hand-written SVG paths; the old world-encyclopedia icons were removed) | MIT | Drawn as 3-D "clay" tiles at runtime (`desk/theme.clay_icon`) |
 | `lafa/assets/illustrations/*.svg` (128 scenes: land, nature, history, State, symbols, culture, economy, society, places, days) | `tools/make-illustrations.py` | CC BY-SA 4.0 | Flat vector scenes; the flag follows Article 15 of the Constitution; maps use the real geodata |
 | `lafa/assets/fonts/Nunito-*.ttf` | `tools/make-fonts.py` (static instances of Nunito) | SIL OFL 1.1 (`OFL.txt`) | ASEAN scripts use the system Noto fonts (`fonts-noto-core`, `fonts-noto-cjk`) |
-| `lafa/assets/timor/map/municipalities.json` | `tools/make-map.py` from geoBoundaries TLS ADM1 (OpenStreetMap) | ODbL 1.0 | Ataúro split from Díli (municipality since 2022) |
+| `lafa/assets/timor/map/municipalities.json` | `tools/make-map.py`: union of the administrative posts (geoBoundaries TLS ADM2, OCHA ROAP / WHO) by the official list | CC BY 3.0 IGO | Ataúro its own municipality (since 2022); Dom Aleixo in Díli, Zumalai in Cova Lima |
 | `lafa/assets/timor/map/posts.json` | `tools/make-map.py` from geoBoundaries TLS ADM2 (OCHA ROAP, WHO) | CC BY 3.0 IGO | Post boundaries may predate the 2022 changes |
 | `lafa/assets/timor/content/*.json`, `vocab/*.json` | Lafa content writers, from the sources listed in each item | CC BY-SA 4.0 | Draft until expert review (`review.notes`) |
 | `lafa/assets/timor/content/indicators.json` | World Bank WDI (and republishers where noted) | CC BY 4.0 | Refreshed online from `api.worldbank.org` |

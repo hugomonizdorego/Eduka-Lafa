@@ -3,36 +3,34 @@ museums, memorials, churches…) with search, filters, pictures and the map,
 plus the tourism guide articles."""
 from ...qt import Qt, QTimer, QWidget, QVBoxLayout, QHBoxLayout, QComboBox, QLabel
 from ... import kb, icons
-from ..texts import extend
+from ..texts import extend, index
 from ..widgets import (Card, Clickable, ClayIcon, Pill, Banner, ResponsiveGrid, FlowLayout, SearchBox, label, button, scroll, section_title,
                        clear_layout, EmptyState, rounded, clip)
 from .article import item_pixmap
 
 extend({
-    "tour_title": ("Turizmu iha Timór-Leste", "Turismo em Timor-Leste", "Wisata di Timor-Leste", "Tourism in Timor-Leste"),
-    "tour_sub": ("Fatin {n} iha munisípiu 14: tasi-ibun, foho, muzeu, fatin istóriku no kultura.", "{n} lugares nos 14 municípios: praias, montanhas, museus, história e cultura.",
-                 "{n} tempat di 14 munisipio: pantai, gunung, museum, sejarah dan budaya.", "{n} places in the 14 municipalities: beaches, mountains, museums, history and culture."),
-    "tour_guides": ("Gia ba vizitante", "Guias para visitantes", "Panduan pengunjung", "Visitor guides"),
-    "all_municipalities": ("Munisípiu hotu", "Todos os municípios", "Semua munisipio", "All municipalities"),
-    "all_types": ("Tipu hotu", "Todos os tipos", "Semua jenis", "All types"),
-    "filter_places": ("Buka fatin…", "Pesquisar lugares…", "Cari tempat…", "Search places…"),
-    "n_places": ("fatin {n}", "{n} lugares", "{n} tempat", "{n} places"),
-    "see_map_all": ("Haree fatin hotu iha mapa", "Ver todos no mapa", "Lihat semua di peta", "See all on the map"),
-    "respect_note": ("Respeita fatin lulik no lisan lokál. Husu lisensa uluk antes foti foto ema ka fatin sagradu.", "Respeite os lugares sagrados e os costumes locais. Peça licença antes de fotografar pessoas ou lugares sagrados.",
-                     "Hormati tempat suci dan adat setempat. Mintalah izin sebelum memotret orang atau tempat suci.", "Respect sacred places and local customs. Ask before photographing people or sacred sites."),
+    "tour_title": ("Turizmu iha Timór-Leste", "Turismo em Timor-Leste"),
+    "tour_sub": ("Fatin {n} iha munisípiu 14: tasi-ibun, foho, muzeu, fatin istóriku no kultura.", "{n} lugares nos 14 municípios: praias, montanhas, museus, história e cultura."),
+    "tour_guides": ("Gia ba vizitante", "Guias para visitantes"),
+    "all_municipalities": ("Munisípiu hotu", "Todos os municípios"),
+    "all_types": ("Tipu hotu", "Todos os tipos"),
+    "filter_places": ("Buka fatin…", "Pesquisar lugares…"),
+    "n_places": ("fatin {n}", "{n} lugares"),
+    "see_map_all": ("Haree fatin hotu iha mapa", "Ver todos no mapa"),
+    "respect_note": ("Respeita fatin lulik no lisan lokál. Husu lisensa uluk antes foti foto ema ka fatin sagradu.", "Respeite os lugares sagrados e os costumes locais. Peça licença antes de fotografar pessoas ou lugares sagrados."),
 })
 
 TYPE_NAMES = {
-    "beach": ("Tasi-ibun", "Praia", "Pantai", "Beach"), "island": ("Tasi-le'un", "Ilha", "Pulau", "Island"),
-    "mountain": ("Foho", "Montanha", "Gunung", "Mountain"), "viewpoint": ("Fatin haree paizajen", "Miradouro", "Titik pandang", "Viewpoint"),
-    "church": ("Igreja", "Igreja", "Gereja", "Church"), "statue": ("Estátua", "Estátua", "Patung", "Statue"),
-    "museum": ("Muzeu", "Museu", "Museum", "Museum"), "monument": ("Monumentu", "Monumento", "Monumen", "Monument"),
-    "memorial": ("Memoriál", "Memorial", "Memorial", "Memorial"), "lake": ("Lagoa", "Lagoa", "Danau", "Lake"),
-    "cave": ("Fatuk-kuak", "Gruta", "Gua", "Cave"), "hot_spring": ("Bee-manas", "Fonte termal", "Mata air panas", "Hot spring"),
-    "waterfall": ("Kaskata", "Cascata", "Air terjun", "Waterfall"), "fort": ("Forte", "Forte", "Benteng", "Fort"),
-    "market": ("Merkadu", "Mercado", "Pasar", "Market"), "park": ("Parke", "Parque", "Taman", "Park"),
-    "reef": ("Ahu-ruin", "Recife de coral", "Terumbu karang", "Coral reef"), "village": ("Aldeia", "Aldeia", "Desa", "Village"),
-    "town": ("Vila", "Vila", "Kota kecil", "Town"), "garden": ("Jardín", "Jardim", "Taman", "Garden"), "river": ("Mota", "Rio", "Sungai", "River"),
+    "beach": ("Tasi-ibun", "Praia"), "island": ("Tasi-le'un", "Ilha"),
+    "mountain": ("Foho", "Montanha"), "viewpoint": ("Fatin haree paizajen", "Miradouro"),
+    "church": ("Igreja", "Igreja"), "statue": ("Estátua", "Estátua"),
+    "museum": ("Muzeu", "Museu"), "monument": ("Monumentu", "Monumento"),
+    "memorial": ("Memoriál", "Memorial"), "lake": ("Lagoa", "Lagoa"),
+    "cave": ("Fatuk-kuak", "Gruta"), "hot_spring": ("Bee-manas", "Fonte termal"),
+    "waterfall": ("Kaskata", "Cascata"), "fort": ("Forte", "Forte"),
+    "market": ("Merkadu", "Mercado"), "park": ("Parke", "Parque"),
+    "reef": ("Ahu-ruin", "Recife de coral"), "village": ("Aldeia", "Aldeia"),
+    "town": ("Vila", "Vila"), "garden": ("Jardín", "Jardim"), "river": ("Mota", "Rio"),
 }
 TYPE_ICON = {"beach": "umbrella", "island": "anchor", "mountain": "mountain", "viewpoint": "camera", "church": "church", "statue": "landmark",
              "museum": "landmark", "monument": "landmark", "memorial": "candle", "lake": "drop", "cave": "mountain", "hot_spring": "drop",
@@ -42,7 +40,7 @@ TYPE_ICON = {"beach": "umbrella", "island": "anchor", "mountain": "mountain", "v
 def type_name(kind, lang):
     row = TYPE_NAMES.get(kind)
     if not row: return str(kind or "").replace("_", " ").capitalize()
-    return kb.show(row[("tet", "pt", "id", "en").index(lang)] if lang in ("tet", "pt", "id", "en") else row[3], lang)
+    return kb.show(row[index(lang)], lang)
 
 class PlacesPage(QWidget):
     route = "places"
@@ -62,7 +60,7 @@ class PlacesPage(QWidget):
         for p in self.win.kb.places(self.municipality or None, self.kind or None):
             if q and q not in kb.fold(" ".join(kb.text(p.get("name"), l) for l in kb.LANGS) + " " + kb.text(p.get("summary"), self.win.lang)): continue
             out.append(p)
-        return sorted(out, key=lambda p: (kb.fold(self.win.kb.get(p.get("municipality", "")).title("en")) if self.win.kb.get(p.get("municipality", "")) else "zz", kb.fold(p.title(self.win.lang))))
+        return sorted(out, key=lambda p: (kb.fold(self.win.kb.get(p.get("municipality", "")).title("pt")) if self.win.kb.get(p.get("municipality", "")) else "zz", kb.fold(p.title(self.win.lang))))
     def render(self):
         clear_layout(self.col); win = self.win; t = win.t; lang = win.lang; base = win.kb
         places = base.places()

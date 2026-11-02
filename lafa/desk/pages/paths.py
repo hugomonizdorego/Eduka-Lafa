@@ -11,24 +11,20 @@ from .article import QuizWidget, level_range
 from .encyclopedia import thumb
 
 extend({
-    "paths_title": ("Aprende tuir nível eskola", "Aprender por nível escolar", "Belajar sesuai jenjang sekolah", "Learn by school level"),
+    "paths_title": ("Aprende tuir nível eskola", "Aprender por nível escolar"),
     "paths_sub": ("Nível sira tuir Ministériu Edukasaun (moe.gov.tl). Hili ita-nia nível: Lafa hatudu artigu no kuis ne'ebé loos ba ita.",
-                  "Níveis do Ministério da Educação (moe.gov.tl). Escolha o seu nível: o Lafa mostra os artigos e quizzes certos para si.",
-                  "Jenjang menurut Kementerian Pendidikan (moe.gov.tl). Pilih jenjangmu: Lafa menampilkan artikel dan kuis yang cocok.",
-                  "Levels of the Ministry of Education (moe.gov.tl). Pick your level: Lafa shows the right articles and quizzes for you."),
-    "my_level": ("Ha'u-nia nível", "O meu nível", "Jenjang saya", "My level"),
-    "choose_level": ("Hili nível ne'e", "Escolher este nível", "Pilih jenjang ini", "Choose this level"),
-    "units": ("Unidade sira", "Unidades", "Unit", "Units"),
-    "unit_quiz": ("Kuis unidade", "Quiz da unidade", "Kuis unit", "Unit quiz"),
-    "unit_done": ("Unidade remata ona!", "Unidade concluída!", "Unit selesai!", "Unit complete!"),
-    "unit_pass": ("Hatán loos 70% ka liu atu remata unidade.", "Acerte 70% ou mais para concluir a unidade.", "Jawab benar 70% atau lebih untuk menyelesaikan unit.", "Get 70% or more to complete the unit."),
-    "start_unit": ("Hahú", "Começar", "Mulai", "Start"),
-    "system_title": ("Sistema edukasaun Timór-Leste nian", "O sistema educativo de Timor-Leste", "Sistem pendidikan Timor-Leste", "Timor-Leste's education system"),
+                  "Níveis do Ministério da Educação (moe.gov.tl). Escolha o seu nível: o Lafa mostra os artigos e quizzes certos para si."),
+    "my_level": ("Ha'u-nia nível", "O meu nível"),
+    "choose_level": ("Hili nível ne'e", "Escolher este nível"),
+    "units": ("Unidade sira", "Unidades"),
+    "unit_quiz": ("Kuis unidade", "Quiz da unidade"),
+    "unit_done": ("Unidade remata ona!", "Unidade concluída!"),
+    "unit_pass": ("Hatán loos 70% ka liu atu remata unidade.", "Acerte 70% ou mais para concluir a unidade."),
+    "start_unit": ("Hahú", "Começar"),
+    "system_title": ("Sistema edukasaun Timór-Leste nian", "O sistema educativo de Timor-Leste"),
     "system_text": ("Lei-Inan Artigu 59: Estadu harii sistema ensinu báziku universál, obrigatóriu no, wainhira bele, saugati. Lei Bázika Edukasaun (Lei n.º 14/2008) organiza: edukasaun pré-eskolár; Ensinu Báziku tinan 9 (siklu 1: klase 1–4, siklu 2: klase 5–6, siklu 3: klase 7–9); Ensinu Sekundáriu tinan 3 (jerál ka tékniku-vokasionál); no Ensinu Superiór (universidade no politékniku).",
-                    "Constituição, artigo 59: o Estado garante um ensino básico universal, obrigatório e, na medida do possível, gratuito. A Lei de Bases da Educação (Lei n.º 14/2008) organiza: educação pré-escolar; Ensino Básico de 9 anos (1.º ciclo: 1.º–4.º anos, 2.º ciclo: 5.º–6.º, 3.º ciclo: 7.º–9.º); Ensino Secundário de 3 anos (geral ou técnico-vocacional); e Ensino Superior (universitário e politécnico).",
-                    "Konstitusi Pasal 59: negara menjamin pendidikan dasar yang universal, wajib dan, sejauh mungkin, gratis. Undang-Undang Dasar Pendidikan (UU No. 14/2008) mengatur: pendidikan prasekolah; Pendidikan Dasar 9 tahun (siklus 1: kelas 1–4, siklus 2: kelas 5–6, siklus 3: kelas 7–9); Pendidikan Menengah 3 tahun (umum atau teknik-kejuruan); dan Pendidikan Tinggi (universitas dan politeknik).",
-                    "Constitution, Article 59: the State provides universal and compulsory basic education, free of charge as far as possible. The Education System Framework Law (Law No. 14/2008) sets out: pre-school education; 9 years of Basic Education (cycle 1: grades 1–4, cycle 2: grades 5–6, cycle 3: grades 7–9); 3 years of Secondary Education (general or technical-vocational); and Higher Education (university and polytechnic)."),
-    "open_moe": ("Loke moe.gov.tl", "Abrir moe.gov.tl", "Buka moe.gov.tl", "Open moe.gov.tl"),
+                    "Constituição, artigo 59: o Estado garante um ensino básico universal, obrigatório e, na medida do possível, gratuito. A Lei de Bases da Educação (Lei n.º 14/2008) organiza: educação pré-escolar; Ensino Básico de 9 anos (1.º ciclo: 1.º–4.º anos, 2.º ciclo: 5.º–6.º, 3.º ciclo: 7.º–9.º); Ensino Secundário de 3 anos (geral ou técnico-vocacional); e Ensino Superior (universitário e politécnico)."),
+    "open_moe": ("Loke moe.gov.tl", "Abrir moe.gov.tl"),
 })
 
 LEVEL_LOOK = {"eb1": ("sun", "butter"), "eb2": ("star", "peach"), "eb3": ("book-open", "violet"), "es": ("graduation", "pink"), "sup": ("crown", "indigo")}

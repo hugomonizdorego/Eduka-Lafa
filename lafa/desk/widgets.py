@@ -429,7 +429,7 @@ class BarChart(QWidget):
 class CalendarCard(QWidget):
     """Month calendar with marked days (reference image 1). marks: {date: (accent, tooltip)}."""
     day_clicked = Signal(object)
-    def __init__(self, lang="en", parent=None):
+    def __init__(self, lang="tet", parent=None):
         super().__init__(parent); self.lang = lang; self.month = date.today().replace(day=1); self.marks = {}; self.selected = date.today()
         self.setMinimumSize(280, 260); self.setMouseTracking(True); self.hover = None; self.setFocusPolicy(Qt.StrongFocus)
     def set_marks(self, marks): self.marks = dict(marks); self.update()
@@ -472,7 +472,7 @@ class CalendarCard(QWidget):
             r = QRectF(self.width() - 76 + i * 38, 6, 30, 30); p.setPen(Qt.NoPen); p.setBrush(qcolor(t["track"])); p.drawRoundedRect(r, 10, 10)
             p.drawPixmap(QPointF(r.center().x() - 8, r.center().y() - 8), icons.pixmap(name, t["text"], 16))
         f.setPixelSize(11); f.setWeight(QFont.Bold); p.setFont(f); p.setPen(QColor(t["muted"])); w = self.width() / 7
-        for i, name in enumerate(WEEKDAYS.get(self.lang, WEEKDAYS["en"])):
+        for i, name in enumerate(WEEKDAYS.get(self.lang, WEEKDAYS["tet"])):
             p.drawText(QRectF(i * w, 44, w, 22), Qt.AlignCenter, name[:3])
         f.setPixelSize(13); f.setWeight(QFont.DemiBold); p.setFont(f); today = date.today()
         for d, r in self._cells():

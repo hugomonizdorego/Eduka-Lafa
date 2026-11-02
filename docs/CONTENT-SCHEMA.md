@@ -6,11 +6,16 @@ every file with:
 
     python3 tools/check-content.py
 
-`L4` below means an object with the four languages, all required:
+`L2` below means an object with the two languages of Lafa (the official
+languages of the Constitution, art. 13), both required and nothing else:
 
 ```json
-{"tet": "Tetun (see docs/TETUN-STYLE.md)", "pt": "Português", "id": "Bahasa Indonesia", "en": "English"}
+{"tet": "Tetun (see docs/TETUN-STYLE.md)", "pt": "Português"}
 ```
+
+Since 0.3.0 the interface and the content are in Tetun and Portuguese only.
+Indonesian, English and the ASEAN/CPLP languages appear only in the word
+lists (`vocab/`), which are a language-learning feature.
 
 ## Articles — `content/<group>.json`
 
@@ -19,18 +24,18 @@ every file with:
   "id": "tl.history.first_peoples",           // from lafa/assets/timor/plan.json (new ids: tl.<category>.<slug>)
   "category": "history",                      // one of plan.json "categories"
   "also": ["colonial"],                       // optional: other categories where it is listed too
-  "title": L4,
-  "summary": L4,                              // 2–3 short sentences: the simple text for young learners
+  "title": L2,
+  "summary": L2,                              // 2–3 short sentences: the simple text for young learners
   "levels": ["eb2", "eb3", "es", "sup"],      // school levels (plan.json "levels") the article suits
   "period": {"from": -44000, "to": -3000},    // optional, years (negative = BCE / years ago)
-  "sections": [{"heading": L4, "text": L4}],  // 3–6 sections, 50–150 words each per language
-  "facts": [{"label": L4, "value": "1 340 434", "year": 2022}],   // value: string or L4; year when it changes
-  "timeline": [{"date": "1975-11-28", "title": L4}],               // optional; "1975", "1975-11", "-42000"
-  "figure": {"illustration": "proclamation", "caption": L4},       // key from the list below
-  "wiki": {"en": "History of East Timor", "pt": "História de Timor-Leste", "tet": "Istória Timór-Leste", "id": "Sejarah Timor Leste"},
+  "sections": [{"heading": L2, "text": L2}],  // 3–6 sections, 50–150 words each per language
+  "facts": [{"label": L2, "value": "1 340 434", "year": 2022}],   // value: string or L2; year when it changes
+  "timeline": [{"date": "1975-11-28", "title": L2}],               // optional; "1975", "1975-11", "-42000"
+  "figure": {"illustration": "proclamation", "caption": L2},       // key from the list below
+  "wiki": {"en": "History of East Timor", "pt": "História de Timor-Leste", "tet": "Istória Timór-Leste"},   // page titles (tet/pt/id/en): introductions and pictures
   "related": ["tl.history.restoration_2002", "place.cristo_rei", "mun.dili", "day.proclamation"],
   "tags": ["fretilin", "1975"],
-  "quiz": [{"q": L4, "options": [L4, L4, L4, L4], "answer": 2, "why": L4, "difficulty": 4}],
+  "quiz": [{"q": L2, "options": [L2, L2, L2, L2], "answer": 2, "why": L2, "difficulty": 4}],
   "sources": [{"title": "History of East Timor", "publisher": "Wikipedia (English)",
                "url": "https://en.wikipedia.org/wiki/History_of_East_Timor", "accessed": "2026-10-27", "licence": "CC BY-SA 4.0"}],
   "review": {"status": "draft", "notes": "what a reviewer should check"}
@@ -61,8 +66,8 @@ every file with:
   "capital": {"tet": "Baukau", "pt": "Baucau", "id": "Baucau", "en": "Baucau"},
   "area_km2": 1494, "population": {"value": 133881, "year": 2022},
   "posts": ["Baguia", "Baucau", "Laga", "Quelicai", "Vemasse", "Venilale"],
-  "languages": L4, "products": L4,
-  "summary": L4, "sections": [...], "facts": [...], "highlights": ["place.baucau_old_town"],
+  "languages": L2, "products": L2,
+  "summary": L2, "sections": [...], "facts": [...], "highlights": ["place.baucau_old_town"],
   "figure": {...}, "wiki": {...}, "quiz": [...], "sources": [...], "review": {...}
 }]}
 ```
@@ -71,12 +76,12 @@ every file with:
 
 ```json
 {"places": [{
-  "id": "place.cristo_rei", "name": L4, "municipality": "mun.dili",
+  "id": "place.cristo_rei", "name": L2, "municipality": "mun.dili",
   "type": "statue",                 // beach island mountain viewpoint church statue museum monument memorial lake cave
                                     // hot_spring waterfall fort market park reef village town garden river
   "lat": -8.5130, "lon": 125.6080,  // decimal degrees (WGS84); Timor-Leste lies between lat -9.6…-8.1, lon 124.0…127.4
-  "summary": L4, "text": L4,        // text: 80–200 words: what it is, history, what to see
-  "tips": L4,                       // how to get there, best time, respect local rules
+  "summary": L2, "text": L2,        // text: 80–200 words: what it is, history, what to see
+  "tips": L2,                       // how to get there, best time, respect local rules
   "illustration": "statue", "wiki": {...}, "commons": "Cristo Rei of Dili.jpg",   // optional
   "quiz": [...], "sources": [...], "review": {...}
 }]}
@@ -88,17 +93,17 @@ every file with:
 {"days": [{
   "id": "day.restoration", "date": "05-20",       // "MM-DD", "easter-2", "easter+60" or "islamic:eid_al_fitr"
   "type": "holiday",                               // holiday | commemorative
-  "name": L4, "summary": L4, "sections": [...], "law": "Lei n.º 10/2005, alterada pela Lei n.º 3/2016",
+  "name": L2, "summary": L2, "sections": [...], "law": "Lei n.º 10/2005, alterada pela Lei n.º 3/2016",
   "illustration": "independence", "related": [...], "quiz": [...], "sources": [...], "review": {...}
 }],
  "islamic_dates": {"eid_al_fitr": {"2026": "03-20"}, "eid_al_adha": {"2026": "05-27"}},   // approximate
- "notes": L4}
+ "notes": L2}
 ```
 
 ## Indicators — `content/indicators.json`
 
 ```json
-{"indicators": [{"id": "SP.POP.TOTL", "name": L4, "unit": "people",
+{"indicators": [{"id": "SP.POP.TOTL", "name": L2, "unit": "people",
   "series": [[2002, 948000], [2022, 1340434]], "source": "World Bank WDI", "url": "https://data.worldbank.org/indicator/SP.POP.TOTL?locations=TL",
   "licence": "CC BY 4.0", "accessed": "2026-10-27"}]}
 ```
@@ -130,3 +135,6 @@ culture: `tais uma-lulik dance likurai music legend food crafts adornment church
 economy: `oil-gas fund exports imports coffee rice maize crops livestock fishing minerals tourism port road electricity bank plan workers`
 society: `population school university health youth women media city`
 places & days: `island viewpoint statue museum monument hot-spring waterfall market village town garden diving trekking calendar new-year veterans labour christmas easter eid heroes`
+prehistory: `fossil pterosaur stegodon rock-art pottery`
+sports: `football athletics cycling martial-arts swimming basketball olympics`
+animals: `deer butterfly turtle`

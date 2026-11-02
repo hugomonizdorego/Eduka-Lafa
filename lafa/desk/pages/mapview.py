@@ -1,8 +1,8 @@
 """Mapa — the interactive map of Timor-Leste.
 
-Municipalities (geoBoundaries / © OpenStreetMap contributors, ODbL; Ataúro
-shown as its own municipality since 2022), administrative posts (OCHA,
-CC BY 3.0 IGO) and the tourist places of the encyclopedia. Hover shows names,
+Municipalities (each the union of its administrative posts; Ataúro shown as
+its own municipality since 2022) and posts from geoBoundaries / OCHA ROAP
+(CC BY 3.0 IGO), and the tourist places of the encyclopedia. Hover shows names,
 click opens details, the wheel zooms, dragging pans; keyboard: arrows pan,
 +/− zoom, 0 resets. Colour modes: municipalities, population, density.
 """
@@ -17,22 +17,19 @@ from ..widgets import (Card, Clickable, ClayIcon, Pill, Segmented, SearchBox, la
                        ResponsiveGrid, Banner, FlowLayout)
 
 extend({
-    "map_title": ("Mapa Timór-Leste", "Mapa de Timor-Leste", "Peta Timor-Leste", "Map of Timor-Leste"),
+    "map_title": ("Mapa Timór-Leste", "Mapa de Timor-Leste"),
     "map_sub": ("Munisípiu 14, postu administrativu no fatin turístiku. Klik iha mapa atu hatene liu tan.",
-                "Os 14 municípios, postos administrativos e lugares turísticos. Clique no mapa para saber mais.",
-                "14 munisipio, pos administratif dan tempat wisata. Klik peta untuk tahu lebih banyak.",
-                "The 14 municipalities, administrative posts and tourist places. Click the map to learn more."),
-    "layer_posts": ("Postu", "Postos", "Pos", "Posts"), "layer_places": ("Fatin turístiku", "Lugares turísticos", "Tempat wisata", "Tourist places"),
-    "layer_labels": ("Naran", "Nomes", "Nama", "Names"),
-    "colour_municipality": ("Munisípiu", "Municípios", "Munisipio", "Municipalities"), "colour_population": ("Populasaun", "População", "Penduduk", "Population"),
-    "colour_density": ("Densidade", "Densidade", "Kepadatan", "Density"),
-    "map_search": ("Buka munisípiu, postu ka fatin…", "Procurar município, posto ou lugar…", "Cari munisipio, pos atau tempat…", "Find a municipality, post or place…"),
-    "reset_zoom": ("Mapa tomak", "Mapa inteiro", "Seluruh peta", "Whole map"),
-    "map_pick": ("Hili munisípiu ka fatin ida iha mapa.", "Escolha um município ou lugar no mapa.", "Pilih munisipio atau tempat di peta.", "Pick a municipality or place on the map."),
-    "per_km2": ("ema/km²", "hab./km²", "jiwa/km²", "people/km²"),
-    "map_credit": ("Mapa: geoBoundaries · © OpenStreetMap (ODbL) · OCHA (CC BY 3.0 IGO)", "Mapa: geoBoundaries · © OpenStreetMap (ODbL) · OCHA (CC BY 3.0 IGO)",
-                   "Peta: geoBoundaries · © OpenStreetMap (ODbL) · OCHA (CC BY 3.0 IGO)", "Map: geoBoundaries · © OpenStreetMap (ODbL) · OCHA (CC BY 3.0 IGO)"),
-    "keyboard_map": ("Teklas: seta = muda, + / − = zoom, 0 = mapa tomak", "Teclas: setas = mover, + / − = zoom, 0 = mapa inteiro", "Tombol: panah = geser, + / − = zoom, 0 = seluruh peta", "Keys: arrows = pan, + / − = zoom, 0 = whole map"),
+                "Os 14 municípios, postos administrativos e lugares turísticos. Clique no mapa para saber mais."),
+    "layer_posts": ("Postu", "Postos"), "layer_places": ("Fatin turístiku", "Lugares turísticos"),
+    "layer_labels": ("Naran", "Nomes"),
+    "colour_municipality": ("Munisípiu", "Municípios"), "colour_population": ("Populasaun", "População"),
+    "colour_density": ("Densidade", "Densidade"),
+    "map_search": ("Buka munisípiu, postu ka fatin…", "Procurar município, posto ou lugar…"),
+    "reset_zoom": ("Mapa tomak", "Mapa inteiro"),
+    "map_pick": ("Hili munisípiu ka fatin ida iha mapa.", "Escolha um município ou lugar no mapa."),
+    "per_km2": ("ema/km²", "hab./km²"),
+    "map_credit": ("Mapa: geoBoundaries · OCHA ROAP / WHO (CC BY 3.0 IGO)", "Mapa: geoBoundaries · OCHA ROAP / OMS (CC BY 3.0 IGO)"),
+    "keyboard_map": ("Teklas: seta = muda, + / − = zoom, 0 = mapa tomak", "Teclas: setas = mover, + / − = zoom, 0 = mapa inteiro"),
 })
 
 PALETTE = ["#b9a7ff", "#ffb3cf", "#9fe0c4", "#ffd88a", "#9fd0ff", "#ffbf9f", "#c8f0a0", "#f5b0ff", "#a0e8ec", "#ffc8a8", "#b8c8ff", "#e8d0a8", "#a8f0d0", "#ffd0e8"]
@@ -53,7 +50,7 @@ class MapWidget(QWidget):
     """Painted map. Signals: municipality_clicked(id), place_clicked(id)."""
     municipality_clicked = Signal(str)
     place_clicked = Signal(str)
-    def __init__(self, base, lang="en", interactive=True, parent=None):
+    def __init__(self, base, lang="tet", interactive=True, parent=None):
         super().__init__(parent); self.base = base; self.lang = lang; self.interactive = interactive
         self.munis = base.map.get("municipalities", []); self.posts = base.posts.get("posts", [])
         bbox = base.map.get("bbox") or [124.0, -9.5, 127.4, -8.1]; self.bbox = (bbox[0] - 0.08, bbox[1] - 0.08, bbox[2] + 0.08, bbox[3] + 0.08)
@@ -343,7 +340,7 @@ class MapPage(QWidget):
         q = kb.fold(self.find.text().strip())
         if not q: return
         for m in self.win.kb.municipalities():
-            if q in kb.fold(m.title(self.win.lang)) or q in kb.fold(m.title("en")): self.select_municipality(m.id); return
+            if q in kb.fold(m.title(self.win.lang)) or q in kb.fold(m.title("pt" if self.win.lang == "tet" else "tet")): self.select_municipality(m.id); return
         for p in self.win.kb.places():
             if q in kb.fold(p.title(self.win.lang)): self.focus_place(p.id); return
         for post in self.map.posts:

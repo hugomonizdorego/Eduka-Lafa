@@ -2,7 +2,7 @@
 """Validate the Ensiklopédia Timór-Leste content (docs/CONTENT-SCHEMA.md).
 
     python3 tools/check-content.py                 # everything
-    python3 tools/check-content.py content/x.json  # one file (paths relative to lafa/assets/timor)
+    python3 tools/check-content.py content/x.json  # one file (relative to lafa/assets/timor or to the repository)
     python3 tools/check-content.py --strict        # warnings count as errors
 
 Exit status 0 when there are no errors. Warnings point at things a reviewer
@@ -15,7 +15,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = ROOT / "lafa" / "assets" / "timor"
-LANGS = ("tet", "pt", "id", "en")
+LANGS = ("tet", "pt")                     # interface and content languages
+WIKI_LANGS = ("tet", "pt", "id", "en")     # Wikipedia editions used for introductions and pictures
 LEVELS = {"eb1", "eb2", "eb3", "es", "sup"}
 PLACE_TYPES = {"beach", "island", "mountain", "viewpoint", "church", "statue", "museum", "monument", "memorial", "lake", "cave",
                "hot_spring", "waterfall", "fort", "market", "park", "reef", "village", "town", "garden", "river"}
@@ -30,7 +31,8 @@ tais uma-lulik dance likurai music legend food crafts adornment church mosque pr
 oil-gas fund exports imports coffee rice maize crops livestock fishing minerals tourism port road electricity bank plan workers
 population school university health youth women media city
 island viewpoint statue museum monument hot-spring waterfall market village town garden diving trekking calendar new-year veterans labour
-christmas easter eid heroes""".split())
+christmas easter eid heroes
+fossil pterosaur stegodon rock-art pottery athletics cycling martial-arts swimming basketball olympics deer butterfly turtle""".split())
 VOCAB_LANGS = ("ms", "fil", "th", "vi", "km", "lo", "my", "zh", "ta", "es", "fr")
 # Words that betray Indonesian (or English) in a Tetun text.
 NOT_TETUN = re.compile(r"\b(tapi|sudah|dan|yang|untuk|dengan|adalah|karena|tetapi|juga|dari|pada|akan|bisa|telah|the|and|of)\b", re.I)
@@ -41,10 +43,12 @@ class Report:
     def err(self, where, msg): self.errors.append(f"{where}: {msg}")
     def warn(self, where, msg): self.warnings.append(f"{where}: {msg}")
 
-def l4(r, where, value, name, required=True, minimum=1):
+def l2(r, where, value, name, required=True, minimum=1):
     if not isinstance(value, dict):
         if required or value is not None: r.err(where, f"{name} must be an object with {', '.join(LANGS)}")
         return
+    extra = sorted(set(value) - set(LANGS))
+    if extra: r.err(where, f"{name}: only {', '.join(LANGS)} (remove {', '.join(extra)})")
     for lang in LANGS:
         text = value.get(lang)
         if not isinstance(text, str) or len(text.strip()) < minimum:
@@ -76,10 +80,10 @@ def quiz(r, where, items, required=True, minimum=4):
     for i, q in enumerate(items):
         w = f"{where} quiz[{i}]"
         if not isinstance(q, dict): r.err(w, "must be an object"); continue
-        l4(r, w, q.get("q"), "q"); l4(r, w, q.get("why"), "why")
+        l2(r, w, q.get("q"), "q"); l2(r, w, q.get("why"), "why")
         opts = q.get("options")
         if not isinstance(opts, list) or len(opts) != 4: r.err(w, "needs exactly four options"); opts = []
-        for j, o in enumerate(opts): l4(r, w, o, f"options[{j}]")
+        for j, o in enumerate(opts): l2(r, w, o, f"options[{j}]")
         if q.get("answer") not in (0, 1, 2, 3): r.err(w, "answer must be 0–3")
         d = q.get("difficulty")
         if not isinstance(d, int) or not 1 <= d <= 15: r.err(w, "difficulty must be 1–15")
@@ -93,34 +97,34 @@ def sections(r, where, items, minimum=3):
     if not isinstance(items, list) or len(items) < minimum:
         r.err(where, f"needs at least {minimum} sections"); return
     for i, s in enumerate(items):
-        l4(r, f"{where} sections[{i}]", s.get("heading") if isinstance(s, dict) else None, "heading")
-        l4(r, f"{where} sections[{i}]", s.get("text") if isinstance(s, dict) else None, "text", minimum=40)
+        l2(r, f"{where} sections[{i}]", s.get("heading") if isinstance(s, dict) else None, "heading")
+        l2(r, f"{where} sections[{i}]", s.get("text") if isinstance(s, dict) else None, "text", minimum=40)
 
 def facts(r, where, items):
     for i, f in enumerate(items or []):
         w = f"{where} facts[{i}]"
         if not isinstance(f, dict): r.err(w, "must be an object"); continue
-        l4(r, w, f.get("label"), "label")
+        l2(r, w, f.get("label"), "label")
         v = f.get("value")
-        if isinstance(v, dict): l4(r, w, v, "value")
-        elif not isinstance(v, (str, int, float)) or v == "": r.err(w, "value must be text, a number or L4")
+        if isinstance(v, dict): l2(r, w, v, "value")
+        elif not isinstance(v, (str, int, float)) or v == "": r.err(w, "value must be text, a number or L2")
         if "year" in f and not isinstance(f["year"], int): r.err(w, "year must be a number")
 
 def common(r, where, item, known, kind):
     fig = item.get("figure")
     if fig is not None:
         if not isinstance(fig, dict) or fig.get("illustration") not in ILLUSTRATIONS: r.err(where, f"unknown figure illustration {fig!r}"[:160])
-        elif "caption" in fig: l4(r, where, fig["caption"], "figure.caption")
+        elif "caption" in fig: l2(r, where, fig["caption"], "figure.caption")
     if "illustration" in item and item["illustration"] not in ILLUSTRATIONS: r.err(where, f"unknown illustration {item['illustration']!r}")
     for rel in item.get("related", []) or []:
         if rel not in known: r.warn(where, f"related id not found (yet): {rel}")
     wiki = item.get("wiki")
-    if wiki is not None and (not isinstance(wiki, dict) or any(k not in LANGS for k in wiki)): r.err(where, "wiki must map tet/pt/id/en to page titles")
+    if wiki is not None and (not isinstance(wiki, dict) or any(k not in WIKI_LANGS for k in wiki)): r.err(where, "wiki must map tet/pt/id/en to page titles")
     rev = item.get("review")
     if not isinstance(rev, dict) or rev.get("status") not in ("draft", "reviewed"): r.err(where, "review.status must be draft or reviewed")
     for t in item.get("timeline", []) or []:
         if not isinstance(t, dict) or not DATE.match(str(t.get("date", ""))): r.err(where, f"bad timeline date {t!r}"[:160])
-        else: l4(r, where, t.get("title"), "timeline.title")
+        else: l2(r, where, t.get("title"), "timeline.title")
 
 def check_article(r, where, a, plan, known):
     if not re.match(r"^tl\.[a-z_]+\.[a-z0-9_]+$", str(a.get("id", ""))): r.err(where, "bad id"); return
@@ -128,7 +132,7 @@ def check_article(r, where, a, plan, known):
     elif a["id"].split(".")[1] != a["category"]: r.warn(where, "id category differs from category")
     for c in a.get("also", []) or []:
         if c not in plan["categories"]: r.err(where, f"unknown 'also' category {c}")
-    l4(r, where, a.get("title"), "title"); l4(r, where, a.get("summary"), "summary", minimum=30)
+    l2(r, where, a.get("title"), "title"); l2(r, where, a.get("summary"), "summary", minimum=30)
     levels = a.get("levels")
     if not isinstance(levels, list) or not levels or not set(levels) <= LEVELS: r.err(where, f"levels must be from {sorted(LEVELS)}")
     sections(r, where, a.get("sections")); facts(r, where, a.get("facts"))
@@ -136,7 +140,7 @@ def check_article(r, where, a, plan, known):
 
 def check_municipality(r, where, m, known):
     if not re.match(r"^mun\.[a-z]+$", str(m.get("id", ""))): r.err(where, "bad id")
-    for key in ("name", "capital", "summary", "languages", "products"): l4(r, where, m.get(key), key)
+    for key in ("name", "capital", "summary", "languages", "products"): l2(r, where, m.get(key), key)
     if not isinstance(m.get("area_km2"), (int, float)): r.err(where, "area_km2 must be a number")
     pop = m.get("population")
     if not isinstance(pop, dict) or not isinstance(pop.get("value"), int) or not isinstance(pop.get("year"), int): r.err(where, "population needs value and year")
@@ -147,8 +151,8 @@ def check_municipality(r, where, m, known):
 
 def check_place(r, where, p, known):
     if not re.match(r"^place\.[a-z0-9_]+$", str(p.get("id", ""))): r.err(where, "bad id")
-    for key in ("name", "summary"): l4(r, where, p.get(key), key)
-    l4(r, where, p.get("text"), "text", minimum=60); l4(r, where, p.get("tips"), "tips", minimum=10)
+    for key in ("name", "summary"): l2(r, where, p.get(key), key)
+    l2(r, where, p.get("text"), "text", minimum=60); l2(r, where, p.get("tips"), "tips", minimum=10)
     if p.get("type") not in PLACE_TYPES: r.err(where, f"unknown type {p.get('type')}")
     if p.get("municipality") not in known: r.err(where, f"unknown municipality {p.get('municipality')}")
     lat, lon = p.get("lat"), p.get("lon")
@@ -162,13 +166,28 @@ def check_day(r, where, d, known):
     if not (re.match(r"^\d{2}-\d{2}$", date) or re.match(r"^easter[+-]\d+$", date) or date in ("islamic:eid_al_fitr", "islamic:eid_al_adha")):
         r.err(where, f"bad date rule {date}")
     if d.get("type") not in ("holiday", "commemorative"): r.err(where, "type must be holiday or commemorative")
-    for key in ("name", "summary"): l4(r, where, d.get(key), key)
+    for key in ("name", "summary"): l2(r, where, d.get(key), key)
     sections(r, where, d.get("sections"), minimum=2); quiz(r, where, d.get("quiz"), minimum=2)
     sources(r, where, d.get("sources")); common(r, where, d, known, "day")
 
+def word_files():
+    return [BASE / "vocab" / "words.json"] + sorted((BASE / "vocab").glob("words_*.json"))
+
+def check_translation(r, path):
+    """One vocab/<lang>.json file: every word id translated, no unknown ids."""
+    ids = {w.get("id") for one in word_files() if one.exists() for w in json.loads(one.read_text(encoding="utf-8")).get("words", [])}
+    tr = json.loads(path.read_text(encoding="utf-8")); words = tr.get("words", {})
+    if tr.get("lang") not in VOCAB_LANGS: r.err(path.name, f"unknown lang {tr.get('lang')!r}")
+    missing = [i for i in ids if not str(words.get(i, "")).strip()]
+    extra = [i for i in words if i not in ids]
+    if missing: r.warn(path.name, f"{len(missing)} words without translation")
+    if extra: r.err(path.name, f"unknown ids {extra[:5]}")
+    return len(words)
+
 def check_vocab(r, path=None):
     main = path is None
-    paths = [path] if path else [BASE / "vocab" / "words.json"] + sorted((BASE / "vocab").glob("words_*.json"))
+    if path is not None and "lang" in json.loads(path.read_text(encoding="utf-8")): return check_translation(r, path)
+    paths = [path] if path else word_files()
     if not paths[0].exists(): r.warn("vocab", f"vocab/{paths[0].name} not written yet"); return 0
     words = []
     for one in paths: words += json.loads(one.read_text(encoding="utf-8")).get("words", [])
@@ -210,7 +229,7 @@ def main(argv):
     strict = "--strict" in argv; args = [a for a in argv if not a.startswith("--")]
     plan = json.loads((BASE / "plan.json").read_text(encoding="utf-8"))
     every = sorted((BASE / "content").glob("*.json"))
-    chosen = [BASE / a if not Path(a).is_absolute() else Path(a) for a in args] or every
+    chosen = [Path(a) if Path(a).is_absolute() else ROOT / a if (ROOT / a).exists() else BASE / a for a in args] or every
     vocab_files = [p for p in chosen if p.parent.name == "vocab"]
     chosen = [p for p in chosen if p.parent.name != "vocab"]
     r = Report(); all_items = load_all(every)
@@ -231,7 +250,7 @@ def main(argv):
         elif kind == "days": check_day(r, where, it, known)
         elif kind == "indicators":
             for ind in it:
-                w = f"{f.name} {ind.get('id')}"; l4(r, w, ind.get("name"), "name")
+                w = f"{f.name} {ind.get('id')}"; l2(r, w, ind.get("name"), "name")
                 if not isinstance(ind.get("series"), list) or not ind["series"]: r.err(w, "series missing")
                 if not str(ind.get("url", "")).startswith("https://"): r.err(w, "url missing")
     if not args: counts["words"] = check_vocab(r)

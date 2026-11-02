@@ -7,6 +7,7 @@ MODULES = {
     "places": ("places", "PlacesPage"), "calendar": ("calendar", "CalendarPage"), "quiz": ("millionaire", "MillionairePage"),
     "language": ("language", "LanguagePage"), "paths": ("paths", "PathsPage"), "sources": ("sources", "SourcesPage"),
     "data": ("data", "DataPage"), "settings": ("settings", "SettingsPage"), "about": ("about", "AboutPage"), "search": ("search", "SearchPage"),
+    "constitution": ("constitution", "ConstitutionPage"), "symbols": ("symbols", "SymbolsPage"),
 }
 
 def page_class(route):

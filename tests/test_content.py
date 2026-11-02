@@ -1,4 +1,4 @@
-"""The encyclopedia content: valid, sourced, linked, in four languages."""
+"""The encyclopedia content: valid, sourced, linked, in Tetun and Portuguese."""
 import json
 import re
 import subprocess
@@ -24,7 +24,7 @@ def test_enough_content(base):
     assert stats["questions"] >= 600
     assert stats["sources"] >= 300
 
-def test_every_item_has_four_languages_and_sources(base):
+def test_every_item_has_both_languages_and_sources(base):
     for item in base.all():
         for lang in kb.LANGS:
             assert item.title(lang).strip(), (item.id, lang)

@@ -27,10 +27,8 @@ import time
 
 BINDINGS={'PyQt5','PyQt6','PySide6'}
 TEXT={
-'en':('Activate LAFA Virtual Assistant in Eduka-Desktop','Open LAFA Desktop','LAFA settings','Activating LAFA…','Deactivating LAFA…','LAFA could not start. Check the installed executable.','The change was not applied. Open LAFA settings and try again.','Lafa Desktop is the encyclopedia of Timor-Leste and works offline; online it downloads texts, photos and new content. The Virtual Assistant is a Timor-Leste guide and study buddy on the Eduka-Panel.'),
-'id':('Aktifkan LAFA Virtual Assistant di Eduka-Desktop','Buka LAFA Desktop','Pengaturan LAFA','Mengaktifkan LAFA…','Menonaktifkan LAFA…','LAFA tidak dapat dibuka. Periksa executable terpasang.','Perubahan belum diterapkan. Buka pengaturan LAFA dan coba lagi.','Lafa Desktop adalah ensiklopedia Timor-Leste dan berfungsi luring; saat daring mengunduh teks, foto dan konten baru. Asisten Virtual adalah pemandu Timor-Leste dan teman belajar di Eduka-Panel.'),
 'pt':('Ativar o Assistente Virtual LAFA no Eduka-Desktop','Abrir LAFA Desktop','Definições LAFA','A ativar LAFA…','A desativar LAFA…','Não foi possível iniciar LAFA. Verifique o executável instalado.','A alteração não foi aplicada. Abra as definições LAFA e tente novamente.','O Lafa funciona offline: lições, pesquisa, trabalhos e lembretes. Online também traz sites, notícias e tempo. O Desktop e o Assistente Virtual são separados.'),
- 'tet':('Ativa Asistente Virtuál LAFA iha Eduka-Desktop','Loke LAFA Desktop','Konfigurasaun LAFA','Ativa LAFA hela…','Desativa LAFA hela…','La bele loke LAFA. Verifika executable instaladu.','Mudansa seidauk aplika. Loke konfigurasaun LAFA no koko fali.','Karakter mós servisu offline; online iha sítiu, notísia no AI. Desktop no Asistente Virtuál ketak.'),
+'tet':('Ativa Asistente Virtuál LAFA iha Eduka-Desktop','Loke LAFA Desktop','Konfigurasaun LAFA','Ativa LAFA hela…','Desativa LAFA hela…','La bele loke LAFA. Verifika executable instaladu.','Mudansa seidauk aplika. Loke konfigurasaun LAFA no koko fali.','Karakter mós servisu offline; online iha sítiu, notísia no AI. Desktop no Asistente Virtuál ketak.'),
 }
 
 
@@ -78,11 +76,11 @@ def eduka_language():
 
 def language():
     selected=preferences().get('language','system')
-    if not isinstance(selected,str) or selected not in {'system','en','id','pt','tet'}:selected='system'
-    if selected=='system' and (eduka_language() or os.environ.get('EDUKA_LOGIN_LANGUAGE')=='tet'):return 'tet'
-    raw=os.environ.get('LC_ALL') or os.environ.get('LC_MESSAGES') or os.environ.get('LANGUAGE') or os.environ.get('LANG','en')
-    code=raw.replace('-','_').split(':')[0].split('_')[0].split('.')[0].lower() if selected=='system' else selected
-    return code if code in TEXT else 'en'
+    if not isinstance(selected,str) or selected not in {'system','pt','tet'}:selected='system'
+    if selected!='system':return selected
+    if eduka_language() or os.environ.get('EDUKA_LOGIN_LANGUAGE')=='tet':return 'tet'
+    raw=os.environ.get('LC_ALL') or os.environ.get('LC_MESSAGES') or os.environ.get('LANGUAGE') or os.environ.get('LANG','')
+    return 'pt' if raw.replace('-','_').split(':')[0].split('_')[0].split('.')[0].lower()=='pt' else 'tet'
 
 
 def labels():return TEXT[language()][:3]
@@ -141,53 +139,53 @@ def add_lafa_group(layout,binding=None,command=None,clock=time.monotonic,card=Fa
 
 
 # ---------------------------------------------------------------------------
-# Lafa-Configuration. Labels: (English, Indonesian, Portuguese, Tetun).
-LANG_INDEX={'en':0,'id':1,'pt':2,'tet':3}
-SPEEDS={'slow':('Slow','Pelan','Lento','Neineik'),'normal':('Normal','Normal','Normal','Normál'),'fast':('Fast','Cepat','Rápido','Lalais')}
+# Lafa-Configuration. Labels: (Tetun, Portuguese) — Lafa speaks the two official languages.
+LANG_INDEX={'tet':0,'pt':1}
+SPEEDS={'slow':('Neineik','Lento'),'normal':('Normál','Normal'),'fast':('Lalais','Rápido')}
 SECTIONS=[
- ('virtual',('Lafa Virtual Assistant','Asisten Virtual Lafa','Assistente Virtual Lafa','Asistente Virtuál Lafa'),[
-  ('costume','enum',{'traditional':('Tais Mane (default)','Tais Mane (bawaan)','Tais Mane (predefinido)','Tais Mane (padraun)'),'casual':('Casual Belajar','Kasual Belajar','Casual de estudo','Kazuál aprende'),'tuxedo':('Formal','Formal','Formal','Formál')},('Outfit','Pakaian','Traje','Hatais')),
-  ('character_size','enum',{'small':('Small','Kecil','Pequeno','Ki’ik'),'normal':('Normal','Normal','Normal','Normál'),'large':('Large','Besar','Grande','Boot')},('Character size','Ukuran karakter','Tamanho da personagem','Tamañu karakter')),
-  ('walk_speed','enum',SPEEDS,('Walking speed','Kecepatan berjalan','Velocidade a caminhar','Velosidade la’o')),
-  ('animation_speed','enum',SPEEDS,('Animation speed','Kecepatan animasi','Velocidade da animação','Velosidade animasaun')),
-  ('roam','bool',None,('Walk on the desktop when idle','Berjalan di desktop saat santai','Caminhar quando inativo','La’o iha desktop bainhira la uza')),
-  ('follow_eduka_panel','bool',None,('Follow Eduka-Panel position and size','Ikuti posisi dan ukuran Eduka-Panel','Seguir a posição do Eduka-Panel','Tuir pozisaun Eduka-Panel')),
-  ('panel_roam','bool',None,('Walk back and forth above the Eduka-Panel','Berjalan bolak-balik di atas Eduka-Panel','Caminhar junto ao Eduka-Panel','La’o ba-mai iha Eduka-Panel leten')),
-  ('panel_edge','enum',{'bottom':('Bottom','Bawah','Inferior','Kraik'),'top':('Top','Atas','Superior','Leten')},('Panel edge (manual)','Sisi panel (manual)','Posição do painel (manual)','Pozisaun painel (manuál)')),
-  ('panel_height','int',(0,160),('Panel height in px (manual)','Tinggi panel px (manual)','Altura do painel px (manual)','Altura painel px (manuál)')),
-  ('reduce_motion','bool',None,('Reduce motion (no walking or gestures)','Kurangi gerakan (tanpa berjalan atau gerak)','Reduzir movimento (sem andar nem gestos)','Hamenus movimentu (la la\'o no la halo jestu)')),
-  ('greet_by_time','bool',None,('Greet by time of day','Sapa sesuai waktu','Saudar conforme a hora','Kumprimenta tuir oras')),
-  ('start_with_session','bool',None,('Start with Eduka-Desktop when activated','Mulai bersama Eduka-Desktop saat aktif','Iniciar com o Eduka-Desktop','Hahú ho Eduka-Desktop')),
+ ('virtual',('Asistente Virtuál Lafa','Assistente Virtual Lafa'),[
+  ('costume','enum',{'traditional':('Tais Mane (padraun)','Tais Mane (predefinido)'),'casual':('Kazuál aprende','Casual de estudo'),'tuxedo':('Formál','Formal')},('Hatais','Traje')),
+  ('character_size','enum',{'small':('Ki’ik','Pequeno'),'normal':('Normál','Normal'),'large':('Boot','Grande')},('Tamañu karakter','Tamanho da personagem')),
+  ('walk_speed','enum',SPEEDS,('Velosidade la’o','Velocidade a caminhar')),
+  ('animation_speed','enum',SPEEDS,('Velosidade animasaun','Velocidade da animação')),
+  ('roam','bool',None,('La’o iha desktop bainhira la uza','Caminhar quando inativo')),
+  ('follow_eduka_panel','bool',None,('Tuir pozisaun Eduka-Panel','Seguir a posição do Eduka-Panel')),
+  ('panel_roam','bool',None,('La’o ba-mai iha Eduka-Panel leten','Caminhar junto ao Eduka-Panel')),
+  ('panel_edge','enum',{'bottom':('Kraik','Inferior'),'top':('Leten','Superior')},('Pozisaun painel (manuál)','Posição do painel (manual)')),
+  ('panel_height','int',(0,160),('Altura painel px (manuál)','Altura do painel px (manual)')),
+  ('reduce_motion','bool',None,("Hamenus movimentu (la la'o no la halo jestu)",'Reduzir movimento (sem andar nem gestos)')),
+  ('greet_by_time','bool',None,('Kumprimenta tuir oras','Saudar conforme a hora')),
+  ('start_with_session','bool',None,('Hahú ho Eduka-Desktop','Iniciar com o Eduka-Desktop')),
  ]),
- ('tips',('Knowledge and tips','Pengetahuan dan saran','Conhecimento e dicas','Koñesimentu no konsellu'),[
-  ('knowledge_tips','bool',None,('Share Timor-Leste knowledge: holidays, history, words, mini quiz','Berbagi pengetahuan Timor-Leste: hari libur, sejarah, kata, kuis kecil','Partilhar conhecimento sobre Timor-Leste: feriados, história, palavras, mini-quiz','Fahe koñesimentu Timór-Leste: feriadu, istória, liafuan, kuis ki’ik')),
-  ('card_minutes','int',(1,120),('A tip every (minutes)','Satu saran setiap (menit)','Uma dica a cada (minutos)','Konsellu ida kada (minutu)')),
-  ('messages_per_hour','int',(0,20),('Spontaneous messages per hour (maximum)','Pesan spontan per jam (maksimum)','Mensagens espontâneas por hora (máximo)','Mensajen espontániu kada oras (másimu)')),
-  ('quiet_mode','bool',None,('Quiet mode: no spontaneous messages','Mode tenang: tanpa pesan spontan','Modo silencioso: sem mensagens espontâneas','Modu kalma: la iha mensajen espontániu')),
-  ('hover_questions','bool',None,('Say hello when the cursor touches Lafa','Menyapa saat kursor menyentuh Lafa','Cumprimentar quando o cursor toca no Lafa','Kumprimenta bainhira kursór kona Lafa')),
-  ('personal_activities','bool',None,('Include sleeping and bathing activities','Sertakan aktivitas tidur dan mandi','Incluir dormir e tomar banho','Inklui toba no hariis')),
-  ('idle_seconds','int',(20,600),('Change activity after (seconds)','Ganti aktivitas setelah (detik)','Mudar de atividade após (segundos)','Troka atividade depois (segundu)')),
-  ('balloon_seconds','int',(3,20),('Speech balloon time (seconds)','Lama balon bicara (detik)','Tempo do balão (segundos)','Tempu balaun (segundu)')),
+ ('tips',('Koñesimentu no konsellu','Conhecimento e dicas'),[
+  ('knowledge_tips','bool',None,('Fahe koñesimentu Timór-Leste: feriadu, istória, liafuan, kuis ki’ik','Partilhar conhecimento sobre Timor-Leste: feriados, história, palavras, mini-quiz')),
+  ('card_minutes','int',(1,120),('Konsellu ida kada (minutu)','Uma dica a cada (minutos)')),
+  ('messages_per_hour','int',(0,20),('Mensajen espontániu kada oras (másimu)','Mensagens espontâneas por hora (máximo)')),
+  ('quiet_mode','bool',None,('Modu kalma: la iha mensajen espontániu','Modo silencioso: sem mensagens espontâneas')),
+  ('hover_questions','bool',None,('Kumprimenta bainhira kursór kona Lafa','Cumprimentar quando o cursor toca no Lafa')),
+  ('personal_activities','bool',None,('Inklui toba no hariis','Incluir dormir e tomar banho')),
+  ('idle_seconds','int',(20,600),('Troka atividade depois (segundu)','Mudar de atividade após (segundos)')),
+  ('balloon_seconds','int',(3,20),('Tempu balaun (segundu)','Tempo do balão (segundos)')),
  ]),
- ('desktop',('Lafa Desktop','Lafa Desktop','Lafa Desktop','Lafa Desktop'),[
-  ('start_page','enum',{'home':('Home','Beranda','Início','Pájina inisiál'),'encyclopedia':('Encyclopedia','Ensiklopedia','Enciclopédia','Ensiklopédia'),'map':('Map','Peta','Mapa','Mapa'),'timeline':('Timeline','Lini masa','Linha do tempo','Liña tempu'),'places':('Tourism','Wisata','Turismo','Turizmu'),'calendar':('Calendar','Kalender','Calendário','Kalendáriu'),'quiz':('Millionaire quiz','Kuis Jutawan','Quiz Milionário','Kuis Milionáriu'),'language':('Learn languages','Belajar bahasa','Aprender línguas','Aprende lian'),'paths':('School levels','Jenjang sekolah','Níveis escolares','Nível eskola')},('Start page','Halaman awal','Página inicial','Pájina inisiál')),
-  ('school_level','enum',{'eb1':('Basic Education cycle 1 (grades 1–4)','Pendidikan Dasar siklus 1 (kelas 1–4)','Ensino Básico 1.º ciclo (1.º–4.º)','Ensinu Báziku siklu 1 (klase 1–4)'),'eb2':('Basic Education cycle 2 (grades 5–6)','Pendidikan Dasar siklus 2 (kelas 5–6)','Ensino Básico 2.º ciclo (5.º–6.º)','Ensinu Báziku siklu 2 (klase 5–6)'),'eb3':('Basic Education cycle 3 (grades 7–9)','Pendidikan Dasar siklus 3 (kelas 7–9)','Ensino Básico 3.º ciclo (7.º–9.º)','Ensinu Báziku siklu 3 (klase 7–9)'),'es':('Secondary Education (grades 10–12)','Pendidikan Menengah (kelas 10–12)','Ensino Secundário (10.º–12.º)','Ensinu Sekundáriu (klase 10–12)'),'sup':('Higher education and adults','Pendidikan Tinggi dan umum','Ensino Superior e adultos','Ensinu Superiór no adultu')},('School level','Jenjang sekolah','Nível escolar','Nível eskola')),
-  ('vocab_lang','enum',{'pt':('Português',)*4,'es':('Español',)*4,'fr':('Français',)*4,'id':('Bahasa Indonesia',)*4,'ms':('Bahasa Melayu',)*4,'fil':('Filipino',)*4,'th':('ไทย (Thai)',)*4,'vi':('Tiếng Việt',)*4,'km':('ខ្មែរ (Khmer)',)*4,'lo':('ລາວ (Lao)',)*4,'my':('မြန်မာ (Burmese)',)*4,'en':('English',)*4,'zh':('中文 (Chinese)',)*4,'ta':('தமிழ் (Tamil)',)*4},('Language for Tetun words','Bahasa untuk kata Tetun','Língua para as palavras em tétum','Lian ba liafuan Tetun')),
-  ('quiz_timer','bool',None,('Millionaire quiz with a clock','Kuis Jutawan dengan waktu','Quiz Milionário com relógio','Kuis Milionáriu ho relójiu')),
-  ('follow_eduka_theme','bool',None,('Use the Eduka-Desktop light/dark theme','Ikuti tema terang/gelap Eduka-Desktop','Usar o tema claro/escuro do Eduka-Desktop','Uza tema naroman/nakukun Eduka-Desktop')),
-  ('auto_update','bool',None,('Check for new Timor-Leste content when online (data only; Lafa itself updates through EUS/APT)','Periksa konten Timor-Leste baru saat daring (data saja; Lafa diperbarui lewat EUS/APT)','Procurar conteúdo novo com internet (só dados; o Lafa atualiza-se pelo EUS/APT)','Buka konteúdu foun bainhira iha internet (dadus de\'it; Lafa atualiza liuhusi EUS/APT)')),
-  ('speech_rate','int',(80,260),('Reading speed (words/min)','Kecepatan membaca (kata/menit)','Velocidade de leitura','Velosidade lee')),
+ ('desktop',('Lafa Desktop','Lafa Desktop'),[
+  ('start_page','enum',{'home':('Pájina inisiál','Início'),'encyclopedia':('Ensiklopédia','Enciclopédia'),'map':('Mapa','Mapa'),'timeline':('Liña tempu','Linha do tempo'),'places':('Turizmu','Turismo'),'calendar':('Kalendáriu','Calendário'),'quiz':('Kuis Milionáriu','Quiz Milionário'),'language':('Aprende lian','Aprender línguas'),'paths':('Nível eskola','Níveis escolares')},('Pájina inisiál','Página inicial')),
+  ('school_level','enum',{'eb1':('Ensinu Báziku siklu 1 (klase 1–4)','Ensino Básico 1.º ciclo (1.º–4.º)'),'eb2':('Ensinu Báziku siklu 2 (klase 5–6)','Ensino Básico 2.º ciclo (5.º–6.º)'),'eb3':('Ensinu Báziku siklu 3 (klase 7–9)','Ensino Básico 3.º ciclo (7.º–9.º)'),'es':('Ensinu Sekundáriu (klase 10–12)','Ensino Secundário (10.º–12.º)'),'sup':('Ensinu Superiór no adultu','Ensino Superior e adultos')},('Nível eskola','Nível escolar')),
+  ('vocab_lang','enum',{'pt':('Português',)*2,'es':('Español',)*2,'fr':('Français',)*2,'id':('Bahasa Indonesia',)*2,'ms':('Bahasa Melayu',)*2,'fil':('Filipino',)*2,'th':('ไทย (Thai)',)*2,'vi':('Tiếng Việt',)*2,'km':('ខ្មែរ (Khmer)',)*2,'lo':('ລາວ (Lao)',)*2,'my':('မြန်မာ (Burmese)',)*2,'en':('English',)*2,'zh':('中文 (Chinese)',)*2,'ta':('தமிழ் (Tamil)',)*2},('Lian ba liafuan Tetun','Língua para as palavras em tétum')),
+  ('quiz_timer','bool',None,('Kuis Milionáriu ho relójiu','Quiz Milionário com relógio')),
+  ('follow_eduka_theme','bool',None,('Uza tema naroman/nakukun Eduka-Desktop','Usar o tema claro/escuro do Eduka-Desktop')),
+  ('auto_update','bool',None,("Buka konteúdu foun bainhira iha internet (dadus de'it; Lafa atualiza liuhusi EUS/APT)",'Procurar conteúdo novo com internet (só dados; o Lafa atualiza-se pelo EUS/APT)')),
+  ('speech_rate','int',(80,260),('Velosidade lee','Velocidade de leitura')),
  ]),
- ('language',('Language','Bahasa','Língua','Lian'),[
-  ('language','enum',{'system':('Follow Eduka-Desktop','Ikuti Eduka-Desktop','Seguir o Eduka-Desktop','Tuir Eduka-Desktop'),'tet':('Tetun',)*4,'pt':('Português',)*4,'id':('Bahasa Indonesia',)*4,'en':('English',)*4},('Lafa language','Bahasa Lafa','Idioma do Lafa','Lian Lafa')),
+ ('language',('Lian','Língua'),[
+  ('language','enum',{'system':('Tuir Eduka-Desktop','Seguir o Eduka-Desktop'),'tet':('Tetun',)*2,'pt':('Português',)*2},('Lian Lafa','Idioma do Lafa')),
  ]),
 ]
-PAGE_TEXT={'title':('Lafa-Configuration','Lafa-Configuration','Lafa-Configuration','Lafa-Configuration'),
- 'hint':('Settings for LAFA Desktop and the LAFA Virtual Assistant. Changes apply at once.','Pengaturan LAFA Desktop dan LAFA Asisten Virtual. Perubahan langsung berlaku.','Definições do LAFA Desktop e do Assistente Virtual LAFA. As alterações aplicam-se logo.','Konfigurasaun LAFA Desktop no LAFA Asistente Virtuál. Mudansa aplika kedas.'),
- 'save':('Apply now','Terapkan sekarang','Aplicar agora','Aplika agora'),
- 'reset':('Recommended settings','Pengaturan yang disarankan','Definições recomendadas','Konfigurasaun rekomendadu'),
- 'saved':('Saved. LAFA applies the changes now.','Tersimpan. LAFA langsung menerapkan perubahan.','Guardado. O LAFA aplica as alterações.','Rai ona. LAFA aplika mudansa agora.'),
- 'failed':('Could not save LAFA settings.','Pengaturan LAFA gagal disimpan.','Não foi possível guardar.','La bele rai konfigurasaun LAFA.'),}
+PAGE_TEXT={'title':('Lafa-Configuration','Lafa-Configuration'),
+ 'hint':('Konfigurasaun LAFA Desktop no LAFA Asistente Virtuál. Mudansa aplika kedas.','Definições do LAFA Desktop e do Assistente Virtual LAFA. As alterações aplicam-se logo.'),
+ 'save':('Aplika agora','Aplicar agora'),
+ 'reset':('Konfigurasaun rekomendadu','Definições recomendadas'),
+ 'saved':('Rai ona. LAFA aplika mudansa agora.','Guardado. O LAFA aplica as alterações.'),
+ 'failed':('La bele rai konfigurasaun LAFA.','Não foi possível guardar.'),}
 # Recommended values (also LAFA's defaults).
 DEFAULTS={'costume':'traditional','character_size':'normal','walk_speed':'normal','animation_speed':'normal','roam':True,'follow_eduka_panel':True,'panel_roam':True,'panel_edge':'bottom','panel_height':42,'greet_by_time':True,'start_with_session':True,
  'reduce_motion':False,'knowledge_tips':True,'card_minutes':10,'messages_per_hour':6,'quiet_mode':False,'hover_questions':True,'personal_activities':False,'idle_seconds':60,'balloon_seconds':6,

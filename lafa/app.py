@@ -21,7 +21,7 @@ from pathlib import Path
 from .qt import (Qt, QTimer, QSize, QPoint, QRectF, QPropertyAnimation, QEasingCurve, QObject, Signal, QRunnable, QThreadPool,
                  QLockFile, QShortcut, QKeySequence, QIcon, QDesktopServices, QUrl, QColor, QPainter, QPalette, QFont,
                  QApplication, QMainWindow, QWidget, QFrame, QLabel, QPushButton, QHBoxLayout, QVBoxLayout, QStackedWidget,
-                 QGraphicsOpacityEffect, QMenu, QSystemTrayIcon, QMessageBox, BINDING, run, prepare_application)
+                 QGraphicsOpacityEffect, QMenu, QSystemTrayIcon, QMessageBox, BINDING, run, prepare_application, QScrollArea)
 from . import __version__, VERSION_LABEL, kb, eduka, icons, platform_check
 from .config import Settings, config_path, data_dir, SECTIONS
 from .progress import Progress
@@ -37,7 +37,8 @@ from .desk.widgets import (Card, Clickable, ClayIcon, NavButton, SearchBox, Toas
 from .desk.pages import page_class
 
 NAV = [("home", "home", "violet"), ("encyclopedia", "book-open", "pink"), ("map", "map", "teal"), ("timeline", "timeline", "peach"),
-       ("places", "umbrella", "cyan"), ("calendar", "calendar-check", "rose"), ("quiz", "trophy", "butter"),
+       ("places", "umbrella", "cyan"), ("calendar", "calendar-check", "rose"), ("symbols", "flag-tl", "coral"), ("constitution", "scales", "indigo"),
+       ("quiz", "trophy", "butter"),
        ("language", "translate", "mint"), ("paths", "graduation", "lilac")]
 FOOT = [("sources", "shield", "slate"), ("settings", "settings", "indigo"), ("about", "info", "sky")]
 NAV_PARENT = {"category": "encyclopedia", "item": "encyclopedia", "search": "home", "data": "home"}
@@ -117,10 +118,15 @@ class Window(QMainWindow):
         brand.addWidget(face); names = QVBoxLayout(); names.setSpacing(0); self.brand_name = label("Lafa", "h2"); self.brand_sub = label(self.t("app_subtitle"), "caption", wrap=True)
         names.addWidget(self.brand_name); names.addWidget(self.brand_sub); brand.addLayout(names, 1); col.addLayout(brand); col.addSpacing(14)
         self.nav = {}
+        # The menu scrolls when the screen is low (1024×600) instead of squeezing the buttons.
+        menu = QWidget(); menu.setObjectName("navlist"); mcol = QVBoxLayout(menu); mcol.setContentsMargins(0, 0, 0, 0); mcol.setSpacing(4)
         for i, (key, icon_name, accent) in enumerate(NAV):
-            b = NavButton(icon_name, accent, self.t("nav_" + key)); b.clicked.connect(lambda checked=False, k=key: self.open(k)); col.addWidget(b); self.nav[key] = b
-            QShortcut(QKeySequence(f"Alt+{i + 1}"), self, activated=lambda k=key: self.open(k))
-        col.addStretch(1)
+            b = NavButton(icon_name, accent, self.t("nav_" + key)); b.clicked.connect(lambda checked=False, k=key: self.open(k)); mcol.addWidget(b); self.nav[key] = b
+            if i < 9: QShortcut(QKeySequence(f"Alt+{i + 1}"), self, activated=lambda k=key: self.open(k))
+        mcol.addStretch(1)
+        area = QScrollArea(); area.setWidgetResizable(True); area.setFrameShape(QFrame.NoFrame); area.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        area.setStyleSheet("QScrollArea, QScrollArea > QWidget > QWidget#navlist { background: transparent; }"); area.setWidget(menu); self.menu_area = area
+        col.addWidget(area, 1)
         # "Upgrade" card of the references → the offline download card.
         promo = Card(12, 22); promo.box.setSpacing(6); self.promo = promo
         top = QHBoxLayout(); top.setSpacing(10); top.addWidget(ClayIcon("cloud-download", "lilac", 40))
