@@ -46,7 +46,7 @@ is the owner's concept art.
 | **Kuis Milionáriu** | "Who wants to be a millionaire?" about Timor-Leste: 15 questions from easy to hard, prizes in US dollars (just for fun), safe havens at 5 and 10, lifelines 50:50, audience and "phone Lafa", optional clock |
 | **Aprende lian** | 1 173 Tetun words in 30 topics with their meaning in Portuguese, Indonesian, English and the other ASEAN and CPLP languages (Malay, Filipino, Thai, Vietnamese, Khmer, Lao, Burmese, Chinese, Tamil, Spanish, French); word list, flash cards with spaced repetition, quiz |
 | **Nível eskola** | Learning paths for the levels of the Ministry of Education: Ensinu Báziku cycles 1–3, Ensinu Sekundáriu, Ensinu Superiór/adults; units with a unit quiz |
-| **Fonte no lisensa** | The owner's main sources, every source used (about 700) with licence and the articles that use it, licences of Lafa, credits, downloaded photos with their authors |
+| **Fonte no lisensa** | The owner's main sources, every source used (more than 1 100) with licence and the articles that use it, licences of Lafa, credits, downloaded photos with their authors |
 | **Offline no atualizasaun** | Download the offline pack, check for new content, refresh World Bank data, storage used |
 
 Search (Ctrl+F) looks through every article, municipality, place, holiday,

@@ -43,11 +43,11 @@ Virtual Assistant as a Timor-Leste guide, study buddy and computer helper.
   backgrounds, glass cards, 3-D clay icons, gradient menu pill, charts and a
   month calendar; Nunito font (OFL); light and dark themes; text size 90–160 %;
   compact sidebar on 1024×600 screens; keyboard shortcuts.
-- Encyclopedia in 15 categories (18 since the second half of 0.3.0): about 150 articles from the formation of the island to
+- Encyclopedia in 18 categories (three added in the second half): 195 articles from the formation of the island to
   2026, 14 municipalities, tourist places, holidays and national days, each
   with sources, licences, key facts, timeline, related pages and a quiz.
 - Interactive map of the municipalities, posts and places (geoBoundaries).
-- Timeline of about 200 events by era and topic.
+- Timeline of more than 600 events by era and topic.
 - Tourism page with filters; calendar with Easter and Islamic dates and
   `.ics` export; "millionaire" quiz with lifelines and safe havens.
 - 1 173 Tetun words with meanings in 14 languages (CPLP and ASEAN), flash

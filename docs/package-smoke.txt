@@ -1,5 +1,5 @@
 Lafa 0.3.0 package smoke test — 2026-11-02, Ubuntu 24.04 container, Qt offscreen
-sh tools/build-deb.sh -> dist/lafa_0.3.0_all.deb (17557896 bytes, Installed-Size 24 448 KiB)
+sh tools/build-deb.sh -> dist/lafa_0.3.0_all.deb (17557932 bytes, Installed-Size 24 448 KiB)
 apt-get install --no-install-recommends --reinstall ./dist/lafa_0.3.0_all.deb -> "Unpacking lafa (0.3.0) over (0.2.1) ... Setting up lafa (0.3.0)"
 Depends: python3 (>= 3.11), python3-pyqt5, python3-pyqt5.qtsvg, libqt5svg5, xdg-utils, libglib2.0-bin, hicolor-icon-theme
 Recommends (new): python3-pyqt5.qtmultimedia, gstreamer1.0-plugins-good, mpg123 (anthem audio)
