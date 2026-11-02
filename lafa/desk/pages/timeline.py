@@ -9,13 +9,19 @@ from ..widgets import SearchBox
 
 extend({
     "tl_title": ("Liña tempu Timór-Leste", "Linha do tempo de Timor-Leste"),
-    "tl_sub": ("Husi ema dahuluk iha tasi-le'un, tinan rihun 44 liubá, to'o 2026. Hili tempu ida ka buka eventu.", "Dos primeiros povos da ilha, há 44 mil anos, até 2026. Escolha uma época ou pesquise."),
+    "tl_sub": ("Husi fósil tasi tuan sira (tinan tokon 300 liubá) no ema dahuluk (tinan 44 000 liubá) to'o 2026. Hili tempu ida ka buka eventu.",
+               "Dos fósseis dos mares antigos (há 300 milhões de anos) e dos primeiros povos (há 44 000 anos) até 2026. Escolha uma época ou pesquise."),
     "all_eras": ("Tempu hotu", "Todas as épocas"),
     "filter_events": ("Buka eventu…", "Pesquisar eventos…"),
     "n_events": ("eventu {n}", "{n} eventos"),
     "show_more": ("Haree tan", "Mostrar mais"),
     "all_topics": ("Tema hotu", "Todos os temas"),
 })
+
+def era_years(start, end, lang):
+    """ "1975 – 1999", "tinan tokon 300 liubá – tinan 50 000 liubá" (years before the common era are written out)."""
+    show = lambda y: kb.format_when(str(y), lang) if y < 0 else str(y)
+    return f"{show(start)} – {show(end)}"
 
 class EraBar(QWidget):
     """A clickable ribbon of the eras (pastel segments, the chosen one raised)."""
@@ -57,7 +63,7 @@ class EraBar(QWidget):
             f.setPixelSize(12); f.setWeight(QFont.ExtraBold); p.setFont(f)
             p.drawText(box.adjusted(9, 8, -6, -24), Qt.AlignLeft | Qt.AlignTop | Qt.TextWordWrap, kb.text(title, self.lang))
             f.setPixelSize(11); f.setWeight(QFont.DemiBold); p.setFont(f); p.setPen(QColor("#ffffff") if on else QColor(t["muted"]))
-            years = (kb.format_when(str(start), self.lang) if start < 0 else str(start)) + " – " + str(end)
+            years = era_years(start, end, self.lang)
             p.drawText(box.adjusted(9, box.height() - 24, -6, -6), Qt.AlignLeft | Qt.AlignVCenter, p.fontMetrics().elidedText(years, Qt.ElideRight, int(box.width() - 15)))
 
 class EventRow(QWidget):
@@ -133,7 +139,7 @@ class TimelinePage(QWidget):
         for key, start, end, title, acc in kb.ERAS:
             group = [e for e in shown if e["era"] == key]
             if not group: continue
-            card = Card(14, 24); years = (kb.format_when(str(start), lang) if start < 0 else str(start)) + " – " + str(end)
+            card = Card(14, 24); years = era_years(start, end, lang)
             card.box.addLayout(section_title(kb.text(title, lang), Pill(years, acc)))
             color = accent(acc)[0]; rows = QVBoxLayout(); rows.setSpacing(0)
             for i, e in enumerate(group):
