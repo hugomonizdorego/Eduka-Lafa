@@ -65,3 +65,10 @@ def test_constitution_and_symbols_pages(qapp, errors):
     sym.on_position(5.0); assert sym.current_line is None
     assert not errors, errors
     close(w)
+
+def test_article_text_links_constitution_references(qapp):
+    from lafa.desk.pages.article import link_constitution
+    linked = link_constitution("O artigo 15.º da Constituição descreve a bandeira.")
+    assert "href='lafa://constitution/15'" in linked
+    assert link_constitution("Lei n.º 10/2005, artigo 3, fixa os feriados.") == "Lei n.º 10/2005, artigo 3, fixa os feriados."
+    assert "constitution/200" not in link_constitution("Konstituisaun no artigu 200.")

@@ -3,6 +3,7 @@ places and national days. One scrolling page (no nested scroll areas):
 banner, actions, Read / Quiz, simple or complete text, key facts, mini map,
 timeline, related pages, sources with licences and the review note."""
 import html
+import re
 from datetime import date
 from urllib.parse import quote
 
@@ -44,6 +45,16 @@ class PhotoDialog(QDialog):
         row.addStretch(); row.addWidget(button(t("close"), self.accept, "primary", "check")); col.addLayout(row)
 
 LEVEL_ORDER = kb.LEVELS
+_CONSTITUTION = re.compile(r"Konstituisaun|Lei-Inan|Constitui[çc][ãa]o")
+_ARTICLE_REF = re.compile(r"\b([Aa]rtigu|[Aa]rtigo|[Aa]rt\.)\s+(\d{1,3})(\.?\s?[º°]|\.o)?")
+
+def link_constitution(text):
+    """In a paragraph about the Constitution, "artigu 15" / "artigo 59.º" become links to the reader."""
+    if not _CONSTITUTION.search(text): return text
+    def repl(m):
+        n = int(m.group(2))
+        return f"<a href='lafa://constitution/{n}'>{m.group(0)}</a>" if 1 <= n <= 170 else m.group(0)
+    return _ARTICLE_REF.sub(repl, text)
 
 def level_range(levels):
     idx = sorted(LEVEL_ORDER.index(l) for l in levels if l in LEVEL_ORDER)
@@ -180,7 +191,7 @@ class ItemPage(QWidget):
         if self.depth == "complete":
             for heading, para in item.sections(lang):
                 if heading: parts.append(f"<h2>{html.escape(heading)}</h2>")
-                parts += [f"<p>{html.escape(p)}</p>" for p in para.split("\n") if p.strip()]
+                parts += [f"<p>{link_constitution(html.escape(p))}</p>" for p in para.split("\n") if p.strip()]
             tips = kb.text(item.get("tips"), lang) if item.kind == "place" else ""
             if tips: parts.append(f"<h2>{html.escape(t('visit_tips'))}</h2><p>{html.escape(tips)}</p>")
             extract = win.store.extract(item.id, lang) if getattr(win, "store", None) else None
@@ -302,6 +313,7 @@ class ItemPage(QWidget):
             if wiki.get(code): self.win.open_url(f"https://{code}.wikipedia.org/wiki/" + quote(wiki[code].replace(" ", "_"))); return
     def follow(self, url):
         if url.startswith("lafa://item/"): self.win.open_item(url[len("lafa://item/"):])
+        elif url.startswith("lafa://constitution/") and url.rsplit("/", 1)[-1].isdigit(): self.win.open("constitution", article=int(url.rsplit("/", 1)[-1]))
         elif url.startswith("https://"): self.win.open_url(url)
     def retranslate(self): self.render()
 
