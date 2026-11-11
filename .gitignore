@@ -4,3 +4,5 @@ build/
 dist/
 *.egg-info/
 .venv/
+tools/vocab/out/
+tools/vocab/work/
