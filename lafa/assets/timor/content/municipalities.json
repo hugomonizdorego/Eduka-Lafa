@@ -1378,9 +1378,9 @@
     "en": "Vila Maumeta",
     "id": "Vila Maumeta"
    },
-   "area_km2": 140,
+   "area_km2": 140.5,
    "population": {
-    "value": 10302,
+    "value": 10295,
     "year": 2022
    },
    "posts": [
@@ -1453,6 +1453,34 @@
     },
     {
      "heading": {
+      "tet": "Ekonomia no servisu",
+      "pt": "Economia e trabalho",
+      "en": "Economy and work",
+      "id": "Ekonomi dan pekerjaan"
+     },
+     "text": {
+      "tet": "Moris iha Atauru depende ba tasi no ba to'os iha rai maran. Bee-moos menus, liuliu iha tempu bailoron: iha bee-matan iha Berau nia norte no reservatóriu ki'ik besik Macadade, maibé posu sira iha tasi-ibun fó bee la di'ak; iha 2004 Portugál selu projetu bee ida. Ró-ahi Berlin Nakroma, ne'ebé Alemaña fó, liga illa ho Dili iha maizumenus oras rua, no ema mós la'o ho peskadór sira-nia ró. Ema fa'an artezanatu ba vizitante: estátua ai ki'ik, boneka (Boneca de Ataúro), bote no bijuteria. Website turizmu ofisiál sura fatin 27 atu toba no restaurante 5. Iha 2022, dekretu-lei ida regulamenta Fundu Espesiál Dezenvolvimentu Atauru nian.",
+      "pt": "A vida em Ataúro depende do mar e de hortas em terra seca. A água doce é escassa, sobretudo na época seca: há nascentes a norte de Berau e pequenos reservatórios perto de Macadade, mas os poços da costa dão água de má qualidade; em 2004, Portugal financiou um projeto de água. O ferry Berlin Nakroma, oferecido pela Alemanha, liga a ilha a Díli em cerca de duas horas, e também se viaja em barcos de pescadores. O artesanato vende-se aos visitantes: figuras esculpidas, bonecas (Boneca de Ataúro), cestos e joias. O site oficial de turismo conta 27 lugares para dormir e 5 restaurantes. Em 2022, um decreto-lei regulamentou o Fundo Especial de Desenvolvimento de Ataúro.",
+      "en": "Life on Ataúro depends on the sea and on gardens in dry ground. Fresh water is scarce, especially in the dry season: there are springs north of Berau and small reservoirs near Macadade, but coastal wells give poor water; in 2004 Portugal funded a water project. The ferry Berlin Nakroma, a gift from Germany, links the island with Dili in about two hours, and people also travel in fishing boats. Crafts are sold to visitors: carved figures, dolls (Boneca de Ataúro), baskets and jewellery. The official tourism website lists 27 places to stay and 5 restaurants. In 2022 a decree-law regulated the Ataúro Special Development Fund.",
+      "id": "Kehidupan di Ataúro bergantung pada laut dan kebun di tanah kering. Air tawar langka, terutama pada musim kemarau: ada mata air di utara Berau dan waduk kecil di dekat Macadade, tetapi sumur di pesisir memberi air yang buruk; pada 2004 Portugal membiayai sebuah proyek air. Feri Berlin Nakroma, hadiah dari Jerman, menghubungkan pulau ini dengan Dili dalam waktu sekitar dua jam, dan orang juga bepergian dengan perahu nelayan. Kerajinan dijual kepada pengunjung: patung ukiran, boneka (Boneca de Ataúro), keranjang, dan perhiasan. Situs web pariwisata resmi mencatat 27 tempat menginap dan 5 restoran. Pada 2022 sebuah dekret-undang-undang (decreto-lei) mengatur Dana Khusus Pembangunan Ataúro."
+     }
+    },
+    {
+     "heading": {
+      "tet": "Administrasaun",
+      "pt": "Administração",
+      "en": "Administration",
+      "id": "Administrasi"
+     },
+     "text": {
+      "tet": "Atauru sai munisípiu da-14 iha 1 Janeiru 2022. Lei n.º 14/2021, loron 7 Jullu, ne'ebé muda lei kona-ba divizaun administrativa rai nian (Lei n.º 11/2009), fahe illa husi Dili, ne'ebé uluk Atauru sai postu administrativu ida, no dekretu-lei ida iha 2022 harii ninia administrasaun munisipál. Kapitál mak Vila Maumeta, povoasaun boot liu. Illa iha suku lima, ida-idak hale'u knua prinsipál ida: Biqueli no Beloi iha norte, Macadade (uluk naran Anartutu) iha sudoeste, no Maquili no Vila Maumeta iha sudeste. Konstituisaun (artigu 5 no artigu 71) fó ba Atauru tratamentu administrativu no ekonómiku espesiál no estatutu ekonómiku rasik. Iha tempu uluk, illa fahe ba domíniu tolu: Makili, Macadede no Mandroni.",
+      "pt": "Ataúro tornou-se o 14.º município a 1 de janeiro de 2022. A Lei n.º 14/2021, de 7 de julho, que alterou a lei da divisão administrativa do território (Lei n.º 11/2009), separou a ilha de Díli, de que tinha sido um posto administrativo, e um decreto-lei de 2022 criou a sua administração municipal. A capital é Vila Maumeta, a maior povoação. A ilha tem cinco sucos, cada um à volta de uma aldeia principal: Biqueli e Beloi a norte, Macadade (antes chamada Anartutu) a sudoeste, e Maquili e Vila Maumeta a sudeste. A Constituição (artigo 5.º e artigo 71.º) dá a Ataúro tratamento administrativo e económico especial e um estatuto económico próprio. Antigamente, a ilha dividia-se em três domínios: Makili, Macadede e Mandroni.",
+      "en": "Ataúro became the 14th municipality on 1 January 2022. Law no. 14/2021 of 7 July, which amended the law on the administrative division of the territory (Law no. 11/2009), separated the island from Dili, of which it had been an administrative post, and a 2022 decree-law created its municipal administration. The capital is Vila Maumeta, the largest settlement. The island has five sucos, each around a main village: Biqueli and Beloi in the north, Macadade (formerly Anartutu) in the south-west, and Maquili and Vila Maumeta in the south-east. The Constitution (articles 5 and 71) gives Ataúro special administrative and economic treatment and its own economic status. In the past the island was divided into three domains: Makili, Macadede and Mandroni.",
+      "id": "Ataúro menjadi munisipalitas ke-14 pada 1 Januari 2022. Undang-Undang No. 14/2021 tanggal 7 Juli, yang mengubah undang-undang pembagian administratif wilayah (UU No. 11/2009), memisahkan pulau ini dari Dili, tempat Ataúro sebelumnya menjadi sebuah pos administratif, dan sebuah dekret-undang-undang tahun 2022 membentuk administrasi munisipalnya. Ibu kotanya adalah Vila Maumeta, permukiman terbesar. Pulau ini memiliki lima suco, masing-masing di sekitar sebuah desa utama: Biqueli dan Beloi di utara, Macadade (dulu bernama Anartutu) di barat daya, serta Maquili dan Vila Maumeta di tenggara. Konstitusi (pasal 5 dan 71) memberi Ataúro perlakuan administratif dan ekonomi khusus serta status ekonomi tersendiri. Dahulu pulau ini terbagi menjadi tiga wilayah kekuasaan: Makili, Macadede, dan Mandroni."
+     }
+    },
+    {
+     "heading": {
       "tet": "Moris iha tasi no vizita",
       "pt": "Vida marinha e visitas",
       "en": "Sea life and visiting",
@@ -1474,17 +1502,122 @@
       "en": "Capital",
       "id": "Ibu kota"
      },
-     "value": "Vila Maumeta"
+     "value": {
+      "tet": "Vila Maumeta",
+      "pt": "Vila Maumeta",
+      "en": "Vila Maumeta",
+      "id": "Vila Maumeta"
+     }
     },
     {
      "label": {
-      "tet": "Populasaun",
-      "pt": "População",
-      "en": "Population",
-      "id": "Penduduk"
+      "tet": "Populasaun (Sensu 2022)",
+      "pt": "População (Censo 2022)",
+      "en": "Population (2022 census)",
+      "id": "Penduduk (Sensus 2022)"
      },
-     "value": "≈ 10 300",
+     "value": "10 295",
      "year": 2022
+    },
+    {
+     "label": {
+      "tet": "Área",
+      "pt": "Área",
+      "en": "Area",
+      "id": "Luas"
+     },
+     "value": {
+      "tet": "140,5 km²",
+      "pt": "140,5 km²",
+      "en": "140.5 km²",
+      "id": "140,5 km²"
+     },
+     "year": 2022
+    },
+    {
+     "label": {
+      "tet": "Densidade populasaun",
+      "pt": "Densidade populacional",
+      "en": "Density",
+      "id": "Kepadatan penduduk"
+     },
+     "value": {
+      "tet": "73 ema kada km²",
+      "pt": "73 hab./km²",
+      "en": "73 people per km²",
+      "id": "73 jiwa per km²"
+     },
+     "year": 2022
+    },
+    {
+     "label": {
+      "tet": "Suku no aldeia",
+      "pt": "Sucos e aldeias",
+      "en": "Sucos and aldeias",
+      "id": "Suco dan aldeia"
+     },
+     "value": {
+      "tet": "Suku 5: Beloi, Biqueli, Macadade, Maquili, Vila Maumeta",
+      "pt": "5 sucos: Beloi, Biqueli, Macadade, Maquili, Vila Maumeta",
+      "en": "5 sucos: Beloi, Biqueli, Macadade, Maquili, Vila Maumeta",
+      "id": "5 suco: Beloi, Biqueli, Macadade, Maquili, Vila Maumeta"
+     }
+    },
+    {
+     "label": {
+      "tet": "Lian prinsipál",
+      "pt": "Línguas principais",
+      "en": "Main languages",
+      "id": "Bahasa utama"
+     },
+     "value": {
+      "tet": "Lian Wetar nian (Rahesuk, Resuk, Raklungu, Dadu'a) no Tetun",
+      "pt": "Dialetos do wetarês (rahesuk, resuk, raklungu, dadu'a) e tétum",
+      "en": "Dialects of Wetarese (Rahesuk, Resuk, Raklungu, Dadu'a) and Tetun",
+      "id": "Dialek bahasa Wetar (Rahesuk, Resuk, Raklungu, Dadu'a) dan Tetun"
+     }
+    },
+    {
+     "label": {
+      "tet": "Fatin aas liu",
+      "pt": "Ponto mais alto",
+      "en": "Highest point",
+      "id": "Titik tertinggi"
+     },
+     "value": {
+      "tet": "Foho Manucoco, m 999 (fonte balu: m 995)",
+      "pt": "Monte Manucoco, 999 m (algumas fontes: 995 m)",
+      "en": "Mount Manucoco, 999 m (some sources: 995 m)",
+      "id": "Gunung Manucoco, 999 m (beberapa sumber: 995 m)"
+     }
+    },
+    {
+     "label": {
+      "tet": "Produtu prinsipál",
+      "pt": "Produtos principais",
+      "en": "Main products",
+      "id": "Produk utama"
+     },
+     "value": {
+      "tet": "Ikan, artezanatu, batar, ai-farina no turizmu",
+      "pt": "Peixe, artesanato, milho, mandioca e turismo",
+      "en": "Fish, crafts, maize, cassava and tourism",
+      "id": "Ikan, kerajinan, jagung, singkong, dan pariwisata"
+     }
+    },
+    {
+     "label": {
+      "tet": "Distánsia husi Dili",
+      "pt": "Distância de Díli",
+      "en": "Distance from Dili",
+      "id": "Jarak dari Dili"
+     },
+     "value": {
+      "tet": "Maizumenus km 23,5 husi Dili; ró-ahi maizumenus oras 2",
+      "pt": "Cerca de 23,5 km de Díli; cerca de 2 horas de ferry",
+      "en": "About 23.5 km from Dili; about 2 hours by ferry",
+      "id": "Sekitar 23,5 km dari Dili; sekitar 2 jam dengan feri"
+     }
     },
     {
      "label": {
@@ -1499,32 +1632,57 @@
       "en": "1 January 2022",
       "id": "1 Januari 2022"
      }
+    }
+   ],
+   "timeline": [
+    {
+     "date": "1884",
+     "title": {
+      "tet": "Portugés hasa'e bandeira iha Atauru ho serimónia ofisiál",
+      "pt": "Os portugueses hasteiam a bandeira em Ataúro numa cerimónia oficial",
+      "en": "The Portuguese raise their flag on Ataúro in an official ceremony",
+      "id": "Portugis mengibarkan benderanya di Ataúro dalam upacara resmi"
+     }
     },
     {
-     "label": {
-      "tet": "Distánsia husi Dili",
-      "pt": "Distância de Díli",
-      "en": "Distance from Dili",
-      "id": "Jarak dari Dili"
-     },
-     "value": "≈ 25 km"
+     "date": "1975-08-26",
+     "title": {
+      "tet": "Governadór Portugés Mário Lemos Pires sai husi Dili ba Atauru",
+      "pt": "O governador português Mário Lemos Pires deixa Díli e vai para Ataúro",
+      "en": "Portuguese governor Mário Lemos Pires leaves Dili for Ataúro",
+      "id": "Gubernur Portugis Mário Lemos Pires meninggalkan Dili menuju Ataúro"
+     }
     },
     {
-     "label": {
-      "tet": "Fatin aas liu",
-      "pt": "Ponto mais alto",
-      "en": "Highest point",
-      "id": "Titik tertinggi"
-     },
-     "value": {
-      "tet": "Manucoco, besik m 1 000",
-      "pt": "Manucoco, quase 1000 m",
-      "en": "Manucoco, almost 1,000 m",
-      "id": "Manucoco, hampir 1.000 m"
+     "date": "2016",
+     "title": {
+      "tet": "Peskiza ida hetan iha Atauru espésie ikan baskarau barak liu kada fatin duké iha fatin seluk",
+      "pt": "Um estudo encontra em Ataúro mais espécies de peixes de recife por local do que em qualquer outro sítio",
+      "en": "A survey finds more reef-fish species per site at Ataúro than anywhere else",
+      "id": "Sebuah survei menemukan lebih banyak spesies ikan karang per lokasi di Ataúro daripada di tempat lain"
+     }
+    },
+    {
+     "date": "2022-01-01",
+     "title": {
+      "tet": "Atauru sai munisípiu da-14",
+      "pt": "Ataúro torna-se o 14.º município",
+      "en": "Ataúro becomes the 14th municipality",
+      "id": "Ataúro menjadi munisipalitas ke-14"
      }
     }
    ],
-   "highlights": [],
+   "highlights": [
+    "place.atauro_island",
+    "place.vila_maumeta",
+    "place.beloi",
+    "place.adara",
+    "place.mount_manucoco",
+    "place.makili",
+    "place.bikeli",
+    "place.akrema_beach",
+    "place.macadade"
+   ],
    "figure": {
     "illustration": "island",
     "caption": {
@@ -1757,6 +1915,48 @@
       "id": "Banyak di antara mereka keluarga pejuang; banyak yang menderita kelaparan dan penyakit."
      },
      "difficulty": 13
+    },
+    {
+     "q": {
+      "tet": "Lei ida-ne'ebé mak harii munisípiu Atauru?",
+      "pt": "Que lei criou o município de Ataúro?",
+      "en": "Which law created the municipality of Ataúro?",
+      "id": "Undang-undang mana yang membentuk munisipalitas Ataúro?"
+     },
+     "options": [
+      {
+       "tet": "Lei n.º 3/2014",
+       "pt": "Lei n.º 3/2014",
+       "en": "Law no. 3/2014",
+       "id": "UU No. 3/2014"
+      },
+      {
+       "tet": "Lei n.º 11/2009",
+       "pt": "Lei n.º 11/2009",
+       "en": "Law no. 11/2009",
+       "id": "UU No. 11/2009"
+      },
+      {
+       "tet": "Lei n.º 10/2005",
+       "pt": "Lei n.º 10/2005",
+       "en": "Law no. 10/2005",
+       "id": "UU No. 10/2005"
+      },
+      {
+       "tet": "Lei n.º 14/2021",
+       "pt": "Lei n.º 14/2021",
+       "en": "Law no. 14/2021",
+       "id": "UU No. 14/2021"
+      }
+     ],
+     "answer": 3,
+     "why": {
+      "tet": "Lei n.º 14/2021, loron 7 Jullu, muda Lei n.º 11/2009 (divizaun administrativa) no harii munisípiu Atauru, ne'ebé hahú iha 1 Janeiru 2022. Lei n.º 3/2014 harii RAEOA.",
+      "pt": "A Lei n.º 14/2021, de 7 de julho, alterou a Lei n.º 11/2009 (divisão administrativa) e criou o município de Ataúro, em vigor desde 1 de janeiro de 2022. A Lei n.º 3/2014 criou a RAEOA.",
+      "en": "Law no. 14/2021 of 7 July amended Law no. 11/2009 (administrative division) and created the municipality of Ataúro, in force from 1 January 2022. Law no. 3/2014 created the RAEOA.",
+      "id": "UU No. 14/2021 tanggal 7 Juli mengubah UU No. 11/2009 (pembagian administratif) dan membentuk munisipalitas Ataúro, yang berlaku sejak 1 Januari 2022. UU No. 3/2014 membentuk RAEOA."
+     },
+     "difficulty": 14
     }
    ],
    "sources": [
@@ -1787,11 +1987,80 @@
      "url": "https://en.wikipedia.org/wiki/Constitution_of_East_Timor",
      "accessed": "2026-10-27",
      "licence": "CC BY-SA 4.0"
+    },
+    {
+     "title": "Municipalities of Timor-Leste (Census 2022 tables)",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Municipalities_of_Timor-Leste",
+     "accessed": "2026-11-11",
+     "licence": "CC BY-SA 4.0"
+    },
+    {
+     "title": "Population by municipality, Census 2022",
+     "publisher": "INETL (Instituto Nacional de Estatística de Timor-Leste)",
+     "url": "https://inetl-ip.gov.tl/2023/02/07/population-by-municipality-census-2022/",
+     "accessed": "2026-11-11",
+     "licence": "© INETL"
+    },
+    {
+     "title": "Atauro",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Atauro",
+     "accessed": "2026-11-11",
+     "licence": "CC BY-SA 4.0"
+    },
+    {
+     "title": "Ataúro",
+     "publisher": "Wikipedia (Português)",
+     "url": "https://pt.wikipedia.org/wiki/Ata%C3%BAro",
+     "accessed": "2026-11-11",
+     "licence": "CC BY-SA 4.0"
+    },
+    {
+     "title": "Atauro Island: greatest reef fish diversity on Earth",
+     "publisher": "timorleste.tl (official tourism website of Timor-Leste)",
+     "url": "https://timorleste.tl/destinations/municipalities/atauro-island",
+     "accessed": "2026-11-11",
+     "licence": "© publisher"
+    },
+    {
+     "title": "Atauro Island (destination guide)",
+     "publisher": "timorleste.tl (official tourism website of Timor-Leste)",
+     "url": "https://timorleste.tl/destinations/atauro-island",
+     "accessed": "2026-11-11",
+     "licence": "© publisher"
+    },
+    {
+     "title": "Decreto-Lei n.º 4/2022, de 12 de janeiro (Administração Municipal de Ataúro)",
+     "publisher": "Ministério da Administração Estatal (estatal.gov.tl)",
+     "url": "https://estatal.gov.tl/wp-content/uploads/2022/01/Decreto-Lei-n.%C2%BA-42022-de-12-de-Janeiro.pdf",
+     "accessed": "2026-11-11",
+     "licence": "© Governo de Timor-Leste"
+    },
+    {
+     "title": "Decreto-Lei n.º 24/2022, de 19 de maio (Fundo Especial de Desenvolvimento de Ataúro)",
+     "publisher": "Ministério da Administração Estatal (estatal.gov.tl)",
+     "url": "https://estatal.gov.tl/wp-content/uploads/2022/06/DL-n.%C2%BA-242022-de-19-de-Maio-Regulamenta%C3%A7%C3%A3o-do-Fundo-Especial-de-Desenvolvimento-de-Atauro.pdf",
+     "accessed": "2026-11-11",
+     "licence": "© Governo de Timor-Leste"
+    },
+    {
+     "title": "Constituição da República Democrática de Timor-Leste (art. 5.º e 71.º)",
+     "publisher": "Ministério da Justiça — Jornal da República",
+     "url": "https://www.mj.gov.tl/jornal/lawsTL/RDTL-Law/RDTL-Constitution-P.pdf",
+     "accessed": "2026-11-11"
+    },
+    {
+     "title": "Sucos of Timor-Leste",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Sucos_of_Timor-Leste",
+     "accessed": "2026-11-11",
+     "licence": "CC BY-SA 4.0"
     }
    ],
    "review": {
     "status": "draft",
-    "notes": "Population (2022 census) and area are from my memory of the Wikipedia 'Municipalities of East Timor' table and could not be re-checked (web-search budget used up). The 14 figures I used add up to 1 340 096, 338 short of the national 1 340 434, so at least one is slightly off; check all against INE's final 2022 report. POSTS NOT VERIFIED: I assumed the five former sucos (Beloi, Biqueli, Macadade, Maquili, Vila Maumeta) became administrative posts when Ataúro became a municipality. If Ataúro still has one post, use ['Atauro'] as in the 2020 OCHA map. Area 140 km² is rounded. 'Many people are Protestant' and the early-1980s detention of thousands (CAVR/Chega!) are from memory; I give no number. The 2016 reef-fish survey is by Conservation International; check the wording. Tetun: 'boneka hena', 'mergullu', 'eko-lodge'."
+    "notes": "Profile completed 2026-11-11 (economy and administration sections, facts, timeline, highlights, one question). NUMBERS: population 10 295 = 2022 census final result (INETL, via the en Wikipedia table that cites INETL); the old value 10 302 was the preliminary result. Area 140.5 km² from the 2022 census table (also tet Wikipedia 140.50); en Wikipedia text says 150 km² and pt Wikipedia about 117 km² — sources differ. Density ≈ 73. Manucoco 999 m (en) / 995 m (pt). 23.5 km and the 2-hour Berlin Nakroma ferry from en 'Atauro' (pt says about 25 km). POSTS: the 'posts' list (kept unchanged) names the five SUCOS of Ataúro (en/pt Wikipedia); whether Law 14/2021 made them administrative posts could not be checked (the law text and atauro.gov.tl are not reachable), so no number of posts is given in the facts — check and fix the list if Ataúro has one post or none. Law 14/2021 of 7 July (amending Law 11/2009, approved 31 May 2021, in force 1 Jan 2022) from pt Wikipedia; Decree-Laws 4/2022 (municipal administration) and 24/2022 (Special Development Fund) seen only as titles/summaries in web-search results. Water, ferry, 1884 flag, three domains, Protestant north (Dutch Calvinist mission from Alor) from en Wikipedia 'Atauro'; crafts, 27 places to stay, 5 restaurants from timorleste.tl (Nov 2026). STILL UNVERIFIED in the older text: 'thousands' of Timorese, many of them guerrillas' relatives, held on Ataúro in the early 1980s (en Wikipedia only says the island was used as a prison for guerrillas). Tetun to check: 'ró-ahi', 'bijuteria', 'domíniu', 'boneka hena', 'mergullu', 'eko-lodge'."
    }
   },
   {

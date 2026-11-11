@@ -7,12 +7,16 @@
     "politics"
    ],
    "title": {
-    "tet": "Instituisaun Estadu nian: vizaun jerál",
-    "pt": "As instituições do Estado: visão geral"
+    "tet": "Instituisaun Estadu nian: matadalan",
+    "pt": "As instituições do Estado: guia",
+    "en": "State institutions: a guide",
+    "id": "Lembaga-lembaga negara: panduan"
    },
    "summary": {
-    "tet": "Estadu Timór-Leste hala'o nia knaar liuhusi instituisaun barak. Iha leten iha órgaun soberania haat: Prezidente Repúblika, Parlamentu Nasionál, Governu no tribunál sira. Ministériu sira, forsa defeza no seguransa, órgaun independente sira no administrasaun lokál servisu hamutuk ho sira.",
-    "pt": "O Estado de Timor-Leste funciona através de muitas instituições. No topo estão os quatro órgãos de soberania: o Presidente da República, o Parlamento Nacional, o Governo e os tribunais. À volta deles trabalham os ministérios, as forças de defesa e segurança, os órgãos independentes e a administração local."
+    "tet": "Artigu ida-ne'e mak matadalan ida ba Estadu Timór-Leste nia instituisaun sira. Nia hahú ho órgaun soberania haat — Prezidente Repúblika, Parlamentu Nasionál, Governu no tribunál sira — no depois ko'alia kona-ba ministériu sira, forsa defeza no seguransa, órgaun independente sira no ajénsia públika sira. Parte ida-idak hatudu artigu sira ne'ebé bele lee atu hatene liu tan.",
+    "pt": "Este artigo é um guia das instituições do Estado de Timor-Leste. Começa pelos quatro órgãos de soberania — o Presidente da República, o Parlamento Nacional, o Governo e os tribunais — e passa depois pelos ministérios, pelas forças de defesa e segurança, pelos órgãos independentes e pelas agências públicas. Cada parte indica os artigos onde se pode saber mais.",
+    "en": "This article is a guide to the institutions of the State of Timor-Leste. It starts with the four organs of sovereignty — the President of the Republic, the National Parliament, the Government and the courts — and then moves on to the ministries, the defence and security forces, the independent bodies and the public agencies. Each part points to the articles where you can find out more.",
+    "id": "Artikel ini adalah panduan tentang lembaga-lembaga Negara Timor-Leste. Panduan ini dimulai dari empat organ kedaulatan — Presiden Republik, Parlemen Nasional, Pemerintah dan pengadilan — lalu membahas kementerian, angkatan pertahanan dan keamanan, badan-badan independen dan badan-badan publik. Setiap bagian menunjukkan artikel tempat Anda dapat mengetahui lebih banyak."
    },
    "levels": [
     "eb2",
@@ -27,52 +31,72 @@
    "sections": [
     {
      "heading": {
-      "tet": "Órgaun soberania sira",
-      "pt": "Os órgãos de soberania"
+      "tet": "1. Órgaun soberania sira",
+      "pt": "1. Os órgãos de soberania",
+      "en": "1. The organs of sovereignty",
+      "id": "1. Organ-organ kedaulatan"
      },
      "text": {
-      "tet": "Lei-Inan 2002 dehan katak órgaun soberania sira mak Prezidente Repúblika, Parlamentu Nasionál, Governu no tribunál sira (Artigu 67). Ida-idak iha nia knaar: Prezidente mak Xefe Estadu no Komandante Supremu Forsa Armada nian; Parlamentu halo lei no aprova Orsamentu; Governu lidera polítika jerál no administrasaun públika; tribunál sira hala'o justisa iha povu nia naran. Órgaun soberania sira tenke tuir prinsípiu separasaun no interdependénsia podér nian (Artigu 69). Prezidente iha mós órgaun konsultivu rua: Konsellu Estadu no Konsellu Superiór Defeza no Seguransa.",
-      "pt": "A Constituição de 2002 diz que são órgãos de soberania o Presidente da República, o Parlamento Nacional, o Governo e os tribunais (artigo 67.º). Cada um tem a sua tarefa: o Presidente é o Chefe do Estado e o Comandante Supremo das Forças Armadas; o Parlamento faz as leis e aprova o Orçamento; o Governo conduz a política geral e dirige a administração pública; os tribunais administram a justiça em nome do povo. Nas suas relações, os órgãos de soberania seguem o princípio da separação e interdependência dos poderes (artigo 69.º). O Presidente conta ainda com dois órgãos de consulta: o Conselho de Estado e o Conselho Superior de Defesa e Segurança."
+      "tet": "Lei-Inan 2002 dehan katak órgaun soberania sira mak Prezidente Repúblika, Parlamentu Nasionál, Governu no tribunál sira (Artigu 67), ne'ebé tenke tuir prinsípiu separasaun no interdependénsia podér nian (Artigu 69). Prezidente mak Xefe Estadu no Komandante Supremu Forsa Armada nian, ho konsellu husi Konsellu Estadu no Konsellu Superiór Defeza no Seguransa; Parlamentu halo lei no aprova Orsamentu; Governu lidera polítika jerál; no tribunál sira hala'o justisa iha povu nia naran. Durante Tribunál Supremu Justisa seidauk iha, tribunál aas liu mak Tribunál Rekursu, iha Dili. Órgaun ida-idak iha nia artigu rasik iha katálogu, no iha mós artigu ida kona-ba Tribunál Rekursu.",
+      "pt": "A Constituição de 2002 diz que são órgãos de soberania o Presidente da República, o Parlamento Nacional, o Governo e os tribunais (artigo 67.º), que seguem o princípio da separação e interdependência dos poderes (artigo 69.º). O Presidente é o Chefe do Estado e o Comandante Supremo das Forças Armadas, aconselhado pelo Conselho de Estado e pelo Conselho Superior de Defesa e Segurança; o Parlamento faz as leis e aprova o Orçamento; o Governo conduz a política geral; e os tribunais administram a justiça em nome do povo. Enquanto o Supremo Tribunal de Justiça não existir, o tribunal mais alto é o Tribunal de Recurso, em Díli. Cada um destes órgãos tem o seu artigo no catálogo, e há também um artigo sobre o Tribunal de Recurso.",
+      "en": "The 2002 Constitution says that the organs of sovereignty are the President of the Republic, the National Parliament, the Government and the courts (Article 67), which follow the principle of separation and interdependence of powers (Article 69). The President is Head of State and Supreme Commander of the Armed Forces, advised by the Council of State and the Superior Council for Defence and Security; Parliament makes the laws and approves the Budget; the Government conducts general policy; and the courts administer justice in the name of the people. Until the Supreme Court of Justice exists, the highest court is the Court of Appeal (Tribunal de Recurso) in Dili. Each of these organs has its own article in the catalogue, and there is also an article on the Court of Appeal.",
+      "id": "Konstitusi 2002 menyatakan bahwa organ kedaulatan adalah Presiden Republik, Parlemen Nasional, Pemerintah dan pengadilan (Pasal 67), yang mengikuti asas pemisahan dan saling ketergantungan kekuasaan (Pasal 69). Presiden adalah Kepala Negara dan Panglima Tertinggi Angkatan Bersenjata, yang diberi nasihat oleh Dewan Negara dan Dewan Tinggi Pertahanan dan Keamanan; Parlemen membuat undang-undang dan menyetujui Anggaran; Pemerintah menjalankan kebijakan umum; dan pengadilan menyelenggarakan peradilan atas nama rakyat. Selama Mahkamah Agung belum ada, pengadilan tertinggi adalah Pengadilan Banding (Tribunal de Recurso) di Dili. Setiap organ ini memiliki artikelnya sendiri dalam katalog, dan ada juga artikel tentang Pengadilan Banding."
      }
     },
     {
      "heading": {
-      "tet": "Administrasaun públika",
-      "pt": "A administração pública"
+      "tet": "2. Governu no ministériu sira",
+      "pt": "2. O Governo e os ministérios",
+      "en": "2. The Government and the ministries",
+      "id": "2. Pemerintah dan kementerian"
      },
      "text": {
-      "tet": "Governu lidera administrasaun públika liuhusi ministériu sira. Ministériu ida-idak iha diresaun-jerál no diresaun nasionál, ho servisu iha Dili no iha munisípiu sira. Iha mós institutu públiku no ajénsia ho autonomia balu, hanesan ajénsia ne'ebé akredita universidade sira, no empreza públika, hanesan banku BNCTL ka kompañia eletrisidade EDTL. Estadu rekruta funsionáriu públiku liuhusi konkursu, no Komisaun Funsaun Públika tau matan atu rekrutamentu tuir mérito. Governu ida-idak organiza nia ministériu sira liuhusi dekretu-lei (Artigu 115).",
-      "pt": "O Governo dirige a administração pública através dos ministérios. Cada ministério tem direções-gerais e direções nacionais, com serviços em Díli e nos municípios. Há também institutos públicos e agências com alguma autonomia, como a agência que acredita as universidades, e empresas públicas, como o banco BNCTL ou a empresa de eletricidade EDTL. Os funcionários públicos entram por concurso, e a Comissão da Função Pública vigia para que o recrutamento respeite o mérito. Cada Governo organiza os seus ministérios por decreto-lei (artigo 115.º)."
+      "tet": "Governu lidera administrasaun públika liuhusi ministériu sira, ne'ebé Governu ida-idak organiza liuhusi dekretu-lei (Artigu 115). IX Governu, ne'ebé ukun desde 1 Jullu 2023, iha ministériu 21. Katálogu deskreve balu husi sira: Edukasaun; Ensinu Superiór, Siénsia no Kultura; Justisa; Finansas; Administrasaun Estatál; Juventude, Desportu, Arte no Kultura; Turizmu no Ambiente; no Transporte no Komunikasaun. Ministériu ida-idak iha diresaun-jerál no diresaun nasionál, ho servisu iha Dili no iha munisípiu sira. Funsionáriu públiku sira tama liuhusi konkursu, no Komisaun Funsaun Públika tau matan atu rekrutamentu tuir mérito. Iha mós empreza públika, hanesan banku BNCTL ka kompañia eletrisidade EDTL.",
+      "pt": "O Governo dirige a administração pública através dos ministérios, que cada Governo organiza por decreto-lei (artigo 115.º). O IX Governo, em funções desde 1 de julho de 2023, tem 21 ministérios. O catálogo descreve vários deles: a Educação; o Ensino Superior, Ciência e Cultura; a Justiça; as Finanças; a Administração Estatal; a Juventude, Desporto, Arte e Cultura; o Turismo e Ambiente; e os Transportes e Comunicações. Cada ministério tem direções-gerais e direções nacionais, com serviços em Díli e nos municípios. Os funcionários públicos entram por concurso, e a Comissão da Função Pública vigia para que o recrutamento respeite o mérito. Há ainda empresas públicas, como o banco BNCTL ou a empresa de eletricidade EDTL.",
+      "en": "The Government runs the public administration through the ministries, which each Government organises by decree-law (Article 115). The IX Government, in office since 1 July 2023, has 21 ministries. The catalogue describes several of them: Education; Higher Education, Science and Culture; Justice; Finance; State Administration; Youth, Sport, Art and Culture; Tourism and Environment; and Transport and Communications. Each ministry has directorates-general and national directorates, with services in Dili and in the municipalities. Civil servants are recruited through competitive examinations, and the Civil Service Commission makes sure that recruitment respects merit. There are also public companies, such as the BNCTL bank and the electricity company EDTL.",
+      "id": "Pemerintah menjalankan administrasi publik melalui kementerian-kementerian, yang diatur oleh setiap Pemerintah dengan dekret-undang-undang (Pasal 115). Pemerintah IX, yang menjabat sejak 1 Juli 2023, memiliki 21 kementerian. Katalog ini menguraikan beberapa di antaranya: Pendidikan; Pendidikan Tinggi, Ilmu Pengetahuan dan Kebudayaan; Kehakiman; Keuangan; Administrasi Negara; Pemuda, Olahraga, Seni dan Kebudayaan; Pariwisata dan Lingkungan Hidup; serta Perhubungan dan Komunikasi. Setiap kementerian memiliki direktorat jenderal dan direktorat nasional, dengan layanan di Dili dan di munisipalitas. Pegawai negeri direkrut melalui seleksi terbuka, dan Komisi Pegawai Negeri mengawasi agar perekrutan menghormati prestasi. Ada pula badan usaha milik negara, seperti bank BNCTL dan perusahaan listrik EDTL."
      }
     },
     {
      "heading": {
-      "tet": "Defeza no seguransa",
-      "pt": "Defesa e segurança"
+      "tet": "3. Defeza no seguransa",
+      "pt": "3. Defesa e segurança",
+      "en": "3. Defence and security",
+      "id": "3. Pertahanan dan keamanan"
      },
      "text": {
       "tet": "FALINTIL-FDTL (F-FDTL) defende nasaun hasoru ameasa husi li'ur, no Polísia Nasionál Timór-Leste (PNTL) garante seguransa iha rai-laran; instituisaun rua ne'e labele iha partidu polítiku (Artigu 146 no 147). Ministériu Defeza apoia F-FDTL no Ministériu Interiór tau matan ba PNTL. Servisu seluk kompleta Estadu nia seguransa: protesaun sivíl, ne'ebé ajuda bainhira iha dezastre, Servisu Migrasaun iha fronteira no aeroportu, alfándega, Autoridade Marítima Nasionál no Servisu Nasionál Intelijénsia. Konsellu Superiór Defeza no Seguransa fó konsellu ba Prezidente kona-ba asuntu sira-ne'e (Artigu 148).",
-      "pt": "As FALINTIL-FDTL (F-FDTL) defendem o país contra ameaças externas, e a Polícia Nacional de Timor-Leste (PNTL) garante a segurança interna; as duas instituições devem ser apartidárias (artigos 146.º e 147.º). O Ministério da Defesa apoia as F-FDTL e o Ministério do Interior tutela a PNTL. Outros serviços completam a segurança do Estado: a proteção civil, que ajuda em catástrofes, o Serviço de Migração, nas fronteiras e no aeroporto, a alfândega, a Autoridade Marítima Nacional e o Serviço Nacional de Inteligência. O Conselho Superior de Defesa e Segurança aconselha o Presidente nestas matérias (artigo 148.º)."
+      "pt": "As FALINTIL-FDTL (F-FDTL) defendem o país contra ameaças externas, e a Polícia Nacional de Timor-Leste (PNTL) garante a segurança interna; as duas instituições devem ser apartidárias (artigos 146.º e 147.º). O Ministério da Defesa apoia as F-FDTL e o Ministério do Interior tutela a PNTL. Outros serviços completam a segurança do Estado: a proteção civil, que ajuda em catástrofes, o Serviço de Migração, nas fronteiras e no aeroporto, a alfândega, a Autoridade Marítima Nacional e o Serviço Nacional de Inteligência. O Conselho Superior de Defesa e Segurança aconselha o Presidente nestas matérias (artigo 148.º).",
+      "en": "The FALINTIL-FDTL (F-FDTL) defend the country against external threats, and the National Police of Timor-Leste (PNTL) guarantees internal security; both institutions must stay out of party politics (Articles 146 and 147). The Ministry of Defence supports the F-FDTL and the Ministry of the Interior oversees the PNTL. Other services complete the security of the State: civil protection, which helps in disasters, the Migration Service, at the borders and the airport, customs, the National Maritime Authority and the National Intelligence Service. The Superior Council for Defence and Security advises the President on these matters (Article 148).",
+      "id": "FALINTIL-FDTL (F-FDTL) mempertahankan negara dari ancaman luar, dan Kepolisian Nasional Timor-Leste (PNTL) menjamin keamanan dalam negeri; kedua lembaga ini harus tidak berpihak pada partai politik (Pasal 146 dan 147). Kementerian Pertahanan mendukung F-FDTL dan Kementerian Dalam Negeri membawahi PNTL. Layanan lain melengkapi keamanan Negara: perlindungan sipil, yang membantu saat bencana, Dinas Imigrasi, di perbatasan dan bandar udara, bea cukai, Otoritas Maritim Nasional dan Dinas Intelijen Nasional. Dewan Tinggi Pertahanan dan Keamanan memberi nasihat kepada Presiden dalam urusan ini (Pasal 148)."
      }
     },
     {
      "heading": {
-      "tet": "Órgaun independente sira",
-      "pt": "Órgãos independentes"
+      "tet": "4. Órgaun independente sira",
+      "pt": "4. Órgãos independentes",
+      "en": "4. Independent bodies",
+      "id": "4. Badan-badan independen"
      },
      "text": {
-      "tet": "Órgaun balu la simu orden husi Governu, atu bele tau matan ba podér ho imparsialidade. Provedór Direitus Umanus no Justisa simu sidadaun sira-nia keixa hasoru servisu públiku (Artigu 27). Komisaun Nasionál Eleisaun tau matan ba eleisaun sira (Artigu 65), no Komisaun Anti-Korrupsaun investiga no prevene korrupsaun. Kámara Kontas haree oinsá Estadu gasta osan públiku, no Banku Sentrál Timór-Leste tau matan ba banku sira no jere Fundu Petrolíferu (Artigu 143). Órgaun sira-ne'e hato'o relatóriu regulár ba Parlamentu Nasionál.",
-      "pt": "Alguns órgãos não recebem ordens do Governo, para poderem vigiar o poder com isenção. O Provedor de Direitos Humanos e Justiça recebe queixas dos cidadãos contra os serviços públicos (artigo 27.º). A Comissão Nacional de Eleições supervisiona as eleições (artigo 65.º), e a Comissão Anti-Corrupção investiga e previne a corrupção. A Câmara de Contas verifica como é gasto o dinheiro público, e o Banco Central de Timor-Leste supervisiona os bancos e gere o Fundo Petrolífero (artigo 143.º). Estes órgãos apresentam relatórios regulares ao Parlamento Nacional."
+      "tet": "Órgaun balu la simu orden husi Governu, atu bele tau matan ba podér ho imparsialidade. Provedór Direitus Umanus no Justisa (PDHJ) simu sidadaun sira-nia keixa hasoru servisu públiku (Artigu 27). Komisaun Nasionál Eleisaun (CNE) tau matan ba eleisaun sira (Artigu 65), ne'ebé STAE mak organiza iha prátika, no Komisaun Anti-Korrupsaun (CAC) investiga no prevene korrupsaun. Kámara Kontas haree oinsá Estadu gasta osan públiku, no Komisaun Funsaun Públika tau matan ba funsionáriu sira-nia rekrutamentu no karreira. Banku Sentrál Timór-Leste tau matan ba banku sira no jere Fundu Petrolíferu (Artigu 143). Órgaun sira-ne'e hato'o relatóriu ba Parlamentu Nasionál, no katálogu iha artigu kona-ba PDHJ no Komisaun Funsaun Públika.",
+      "pt": "Alguns órgãos não recebem ordens do Governo, para poderem vigiar o poder com isenção. O Provedor de Direitos Humanos e Justiça (PDHJ) recebe queixas dos cidadãos contra os serviços públicos (artigo 27.º). A Comissão Nacional de Eleições (CNE) supervisiona as eleições (artigo 65.º), que o STAE organiza na prática, e a Comissão Anti-Corrupção (CAC) investiga e previne a corrupção. A Câmara de Contas verifica como é gasto o dinheiro público, e a Comissão da Função Pública vigia o recrutamento e a carreira dos funcionários. O Banco Central de Timor-Leste supervisiona os bancos e gere o Fundo Petrolífero (artigo 143.º). Estes órgãos apresentam relatórios ao Parlamento Nacional, e o catálogo tem artigos sobre a PDHJ e a Comissão da Função Pública.",
+      "en": "Some bodies do not take orders from the Government, so that they can watch over power impartially. The Provedor for Human Rights and Justice (PDHJ) receives citizens' complaints against public services (Article 27). The National Electoral Commission (CNE) supervises elections (Article 65), which STAE organises in practice, and the Anti-Corruption Commission (CAC) investigates and prevents corruption. The Chamber of Accounts (Câmara de Contas) checks how public money is spent, and the Civil Service Commission oversees the recruitment and careers of civil servants. The Central Bank of Timor-Leste supervises the banks and manages the Petroleum Fund (Article 143). These bodies report to the National Parliament, and the catalogue has articles on the PDHJ and the Civil Service Commission.",
+      "id": "Beberapa badan tidak menerima perintah dari Pemerintah, agar dapat mengawasi kekuasaan secara tidak memihak. Provedor Hak Asasi Manusia dan Keadilan (PDHJ) menerima pengaduan warga terhadap layanan publik (Pasal 27). Komisi Pemilihan Nasional (CNE) mengawasi pemilu (Pasal 65), yang diselenggarakan dalam praktik oleh STAE, dan Komisi Anti-Korupsi (CAC) menyelidiki dan mencegah korupsi. Kamar Pemeriksa Keuangan (Câmara de Contas) memeriksa bagaimana uang negara dibelanjakan, dan Komisi Pegawai Negeri mengawasi perekrutan dan karier pegawai negeri. Bank Sentral Timor-Leste mengawasi bank-bank dan mengelola Dana Perminyakan (Pasal 143). Badan-badan ini memberikan laporan kepada Parlemen Nasional, dan katalog ini memiliki artikel tentang PDHJ dan Komisi Pegawai Negeri."
      }
     },
     {
      "heading": {
-      "tet": "Besik ba povu",
-      "pt": "Perto das pessoas"
+      "tet": "5. Ajénsia no servisu públiku",
+      "pt": "5. Agências e serviços públicos",
+      "en": "5. Agencies and public services",
+      "id": "5. Badan dan layanan publik"
      },
      "text": {
-      "tet": "Ba timoroan barak, Estadu hahú besik ba sira-nia uma. Nasaun fahe ba munisípiu 14, inklui Rejiaun Administrativa Espesiál Oe-Kusi Ambenu (RAEOA), ne'ebé iha nia autoridade rasik. Munisípiu sira fahe ba postu administrativu, suku no aldeia. Xefe suku no konsellu suku, ne'ebé komunidade mak hili, liga família sira ho eskola, sentru saúde, polísia no Governu nia programa sira. Ema ne'ebé hakarak hatene lei ida bele lee iha Jornál da Repúblika, Estadu nia jornál ofisiál, no ministériu barak iha sira-nia pájina internet rasik.",
-      "pt": "Para a maioria dos timorenses, o Estado começa perto de casa. O país divide-se em 14 municípios, incluindo a Região Administrativa Especial de Oé-Cusse Ambeno (RAEOA), que tem autoridade própria. Os municípios dividem-se em postos administrativos, sucos e aldeias. O chefe de suco e o conselho de suco, eleitos pela comunidade, ligam as famílias às escolas, aos centros de saúde, à polícia e aos programas do Governo. Quem quiser conhecer uma lei pode lê-la no Jornal da República, o jornal oficial do Estado, e muitos ministérios têm o seu próprio sítio na internet."
+      "tet": "Estadu nia servisu barak mak ajénsia no institutu públiku ho autonomia, ne'ebé iha ligasaun ho ministériu ida. Ezemplu, TIC TIMOR, I.P., ne'ebé moris iha 2017, mak Estadu nia ajénsia ba teknolojia informasaun no komunikasaun: nia trata administrasaun nia sistema informátiku no servisu internet, no iha IX Governu nia iha Ministériu Transporte no Komunikasaun nia tutela. Ezemplu seluk mak ANAAA, ne'ebé avalia ensinu superiór, no Autoridade Marítima Nasionál. Besik ba povu, nasaun fahe ba munisípiu 14, inklui Rejiaun Administrativa Espesiál Oe-Kusi Ambenu, no munisípiu sira fahe ba postu administrativu, suku no aldeia. Lei hotu-hotu sai iha Jornál da Repúblika, Estadu nia jornál ofisiál (Artigu 73).",
+      "pt": "Muitos serviços do Estado são agências e institutos públicos com autonomia, ligados a um ministério. Por exemplo, a TIC TIMOR, I.P., criada em 2017, é a agência de tecnologias da informação e comunicação do Estado: trata dos sistemas informáticos e dos serviços de internet da administração e, no IX Governo, está sob a tutela do Ministério dos Transportes e Comunicações. Outros exemplos são a ANAAA, que avalia o ensino superior, e a Autoridade Marítima Nacional. Perto das pessoas, o país divide-se em 14 municípios, incluindo a Região Administrativa Especial de Oé-Cusse Ambeno, e estes em postos administrativos, sucos e aldeias. Todas as leis são publicadas no Jornal da República, o jornal oficial do Estado (artigo 73.º).",
+      "en": "Many State services are agencies and public institutes with some autonomy, linked to a ministry. For example, TIC TIMOR, I.P., created in 2017, is the State's information and communication technology agency: it looks after the administration's computer systems and internet services and, in the IX Government, comes under the Ministry of Transport and Communications. Other examples are ANAAA, which assesses higher education, and the National Maritime Authority. Closer to the people, the country is divided into 14 municipalities, including the Special Administrative Region of Oé-Cusse Ambeno, and these into administrative posts, sucos and aldeias. All laws are published in the Jornal da República, the State's official gazette (Article 73).",
+      "id": "Banyak layanan Negara berupa badan dan lembaga publik yang memiliki otonomi, yang terkait dengan suatu kementerian. Misalnya, TIC TIMOR, I.P., yang dibentuk pada 2017, adalah badan teknologi informasi dan komunikasi Negara: badan ini mengurus sistem komputer dan layanan internet pemerintahan dan, dalam Pemerintah IX, berada di bawah Kementerian Perhubungan dan Komunikasi. Contoh lain adalah ANAAA, yang menilai pendidikan tinggi, dan Otoritas Maritim Nasional. Lebih dekat dengan rakyat, negara ini dibagi menjadi 14 munisipalitas, termasuk Wilayah Administratif Khusus Oé-Cusse Ambeno, dan munisipalitas dibagi lagi menjadi pos administratif, suco dan aldeia. Semua undang-undang diterbitkan dalam Jornal da República, lembaran negara resmi (Pasal 73)."
      }
     }
    ],
@@ -94,32 +118,54 @@
     {
      "label": {
       "tet": "Governu ne'ebé ukun",
-      "pt": "Governo em funções"
+      "pt": "Governo em funções",
+      "en": "Government in office",
+      "id": "Pemerintah yang menjabat"
      },
      "value": {
       "tet": "IX Governu Konstitusionál (desde 1 Jullu 2023)",
-      "pt": "IX Governo Constitucional (desde 1 de julho de 2023)"
+      "pt": "IX Governo Constitucional (desde 1 de julho de 2023)",
+      "en": "IX Constitutional Government (since 1 July 2023)",
+      "id": "Pemerintah Konstitusional IX (sejak 1 Juli 2023)"
      },
      "year": 2026
     },
     {
      "label": {
+      "tet": "Ministériu (IX Governu)",
+      "pt": "Ministérios (IX Governo)",
+      "en": "Ministries (IX Government)",
+      "id": "Kementerian (Pemerintah IX)"
+     },
+     "value": "21",
+     "year": 2026
+    },
+    {
+     "label": {
       "tet": "Defeza no seguransa",
-      "pt": "Defesa e segurança"
+      "pt": "Defesa e segurança",
+      "en": "Defence and security",
+      "id": "Pertahanan dan keamanan"
      },
      "value": {
       "tet": "F-FDTL (defeza) no PNTL (polísia)",
-      "pt": "F-FDTL (defesa) e PNTL (polícia)"
+      "pt": "F-FDTL (defesa) e PNTL (polícia)",
+      "en": "F-FDTL (defence) and PNTL (police)",
+      "id": "F-FDTL (pertahanan) dan PNTL (kepolisian)"
      }
     },
     {
      "label": {
       "tet": "Órgaun independente (ezemplu)",
-      "pt": "Órgãos independentes (exemplos)"
+      "pt": "Órgãos independentes (exemplos)",
+      "en": "Independent bodies (examples)",
+      "id": "Badan independen (contoh)"
      },
      "value": {
-      "tet": "Provedór (PDHJ), CNE, CAC, Kámara Kontas, Banku Sentrál",
-      "pt": "Provedor (PDHJ), CNE, CAC, Câmara de Contas, Banco Central"
+      "tet": "PDHJ, CNE, CAC, Kámara Kontas, Komisaun Funsaun Públika, Banku Sentrál",
+      "pt": "PDHJ, CNE, CAC, Câmara de Contas, Comissão da Função Pública, Banco Central",
+      "en": "PDHJ, CNE, CAC, Chamber of Accounts, Civil Service Commission, Central Bank",
+      "id": "PDHJ, CNE, CAC, Kamar Pemeriksa Keuangan, Komisi Pegawai Negeri, Bank Sentral"
      }
     },
     {
@@ -131,18 +177,38 @@
      },
      "value": {
       "tet": "14 (inklui RAEOA)",
-      "pt": "14 (incluindo a RAEOA)"
+      "pt": "14 (incluindo a RAEOA)",
+      "en": "14 (including RAEOA)",
+      "id": "14 (termasuk RAEOA)"
      },
      "year": 2026
     },
     {
      "label": {
       "tet": "Jornál ofisiál",
-      "pt": "Jornal oficial"
+      "pt": "Jornal oficial",
+      "en": "Official gazette",
+      "id": "Lembaran negara"
      },
      "value": {
       "tet": "Jornál da Repúblika (Artigu 73)",
-      "pt": "Jornal da República (artigo 73.º)"
+      "pt": "Jornal da República (artigo 73.º)",
+      "en": "Jornal da República (Article 73)",
+      "id": "Jornal da República (Pasal 73)"
+     }
+    },
+    {
+     "label": {
+      "tet": "Ajénsia públika (ezemplu)",
+      "pt": "Agência pública (exemplo)",
+      "en": "Public agency (example)",
+      "id": "Badan publik (contoh)"
+     },
+     "value": {
+      "tet": "TIC TIMOR, I.P. (Dekretu-Lei n.º 29/2017)",
+      "pt": "TIC TIMOR, I.P. (Decreto-Lei n.º 29/2017)",
+      "en": "TIC TIMOR, I.P. (Decree-Law No. 29/2017)",
+      "id": "TIC TIMOR, I.P. (Dekret-UU No. 29/2017)"
      }
     }
    ],
@@ -150,7 +216,9 @@
     "illustration": "constitution",
     "caption": {
      "tet": "Lei-Inan mak hatuur Estadu nia instituisaun sira.",
-     "pt": "A Constituição define as instituições do Estado."
+     "pt": "A Constituição define as instituições do Estado.",
+     "en": "The Constitution sets out the institutions of the State.",
+     "id": "Konstitusi menetapkan lembaga-lembaga Negara."
     }
    },
    "wiki": {
@@ -163,26 +231,46 @@
     "tl.politics.parliament",
     "tl.politics.government",
     "tl.politics.courts",
+    "tl.institutions.court_of_appeal",
     "tl.politics.council_state",
     "tl.institutions.ministries",
+    "tl.leaders.governments",
+    "tl.institutions.education_ministry",
+    "tl.institutions.higher_education",
+    "tl.institutions.justice",
+    "tl.institutions.finance",
+    "tl.institutions.state_administration",
+    "tl.institutions.youth_sport_culture",
+    "tl.institutions.environment_tourism",
+    "tl.institutions.transport_communications",
     "tl.institutions.ffdtl",
     "tl.institutions.pntl",
+    "tl.institutions.security_agencies",
+    "tl.politics.defence_security",
     "tl.institutions.independent_bodies",
-    "tl.institutions.state_administration",
-    "tl.economy.banking"
+    "tl.institutions.pdhj",
+    "tl.politics.elections",
+    "tl.institutions.civil_service",
+    "tl.economy.banking",
+    "tl.institutions.tic_timor",
+    "tl.politics.local_government"
    ],
    "tags": [
     "instituisaun",
     "institutions",
     "órgaun soberania",
     "estadu",
-    "state"
+    "state",
+    "guia",
+    "guide"
    ],
    "quiz": [
     {
      "q": {
       "tet": "Timór-Leste iha órgaun soberania hira?",
-      "pt": "Quantos órgãos de soberania tem Timor-Leste?"
+      "pt": "Quantos órgãos de soberania tem Timor-Leste?",
+      "en": "How many organs of sovereignty does Timor-Leste have?",
+      "id": "Berapa organ kedaulatan yang dimiliki Timor-Leste?"
      },
      "options": [
       {
@@ -222,7 +310,9 @@
     {
      "q": {
       "tet": "Instituisaun ida ne'ebé defende nasaun hasoru ameasa husi li'ur?",
-      "pt": "Que instituição defende o país contra ameaças externas?"
+      "pt": "Que instituição defende o país contra ameaças externas?",
+      "en": "Which institution defends the country against external threats?",
+      "id": "Lembaga mana yang mempertahankan negara dari ancaman luar?"
      },
      "options": [
       {
@@ -239,7 +329,9 @@
       },
       {
        "tet": "Kámara Kontas",
-       "pt": "A Câmara de Contas"
+       "pt": "A Câmara de Contas",
+       "en": "The Chamber of Accounts",
+       "id": "Kamar Pemeriksa Keuangan"
       },
       {
        "tet": "F-FDTL",
@@ -251,19 +343,25 @@
      "answer": 3,
      "why": {
       "tet": "Artigu 146: F-FDTL mak responsavel ba defeza militár.",
-      "pt": "Artigo 146.º: as F-FDTL são responsáveis pela defesa militar."
+      "pt": "Artigo 146.º: as F-FDTL são responsáveis pela defesa militar.",
+      "en": "Article 146: the F-FDTL are responsible for military defence.",
+      "id": "Pasal 146: F-FDTL bertanggung jawab atas pertahanan militer."
      },
      "difficulty": 3
     },
     {
      "q": {
       "tet": "Instituisaun ida ne'ebé LA'ÓS órgaun soberania?",
-      "pt": "Qual destas instituições NÃO é um órgão de soberania?"
+      "pt": "Qual destas instituições NÃO é um órgão de soberania?",
+      "en": "Which of these institutions is NOT an organ of sovereignty?",
+      "id": "Manakah dari lembaga-lembaga ini yang BUKAN organ kedaulatan?"
      },
      "options": [
       {
        "tet": "Governu",
-       "pt": "O Governo"
+       "pt": "O Governo",
+       "en": "The Government",
+       "id": "Pemerintah"
       },
       {
        "tet": "Polísia Nasionál (PNTL)",
@@ -287,14 +385,18 @@
      "answer": 1,
      "why": {
       "tet": "PNTL importante tebes, maibé ne'e polísia iha Ministériu Interiór nia okos, la'ós órgaun soberania.",
-      "pt": "A PNTL é muito importante, mas é uma polícia tutelada pelo Ministério do Interior, não um órgão de soberania."
+      "pt": "A PNTL é muito importante, mas é uma polícia tutelada pelo Ministério do Interior, não um órgão de soberania.",
+      "en": "The PNTL is very important, but it is a police force under the Ministry of the Interior, not an organ of sovereignty.",
+      "id": "PNTL sangat penting, tetapi PNTL adalah kepolisian di bawah Kementerian Dalam Negeri, bukan organ kedaulatan."
      },
      "difficulty": 6
     },
     {
      "q": {
       "tet": "Rejiaun ida ne'ebé iha autoridade rasik no estatutu espesiál?",
-      "pt": "Que região tem autoridade própria e um estatuto especial?"
+      "pt": "Que região tem autoridade própria e um estatuto especial?",
+      "en": "Which region has its own authority and a special status?",
+      "id": "Wilayah mana yang memiliki otoritas sendiri dan status khusus?"
      },
      "options": [
       {
@@ -325,39 +427,95 @@
      "answer": 2,
      "why": {
       "tet": "Oe-Kusi Ambenu mak Rejiaun Administrativa Espesiál, ho autoridade rasik (Artigu 5 no 71).",
-      "pt": "Oé-Cusse Ambeno é a Região Administrativa Especial, com autoridade própria (artigos 5.º e 71.º)."
+      "pt": "Oé-Cusse Ambeno é a Região Administrativa Especial, com autoridade própria (artigos 5.º e 71.º).",
+      "en": "Oé-Cusse Ambeno is the Special Administrative Region, with its own authority (Articles 5 and 71).",
+      "id": "Oé-Cusse Ambeno adalah Wilayah Administratif Khusus, dengan otoritas sendiri (Pasal 5 dan 71)."
      },
      "difficulty": 8
     },
     {
      "q": {
       "tet": "Tuir Artigu 69, órgaun soberania sira tenke tuir prinsípiu saida?",
-      "pt": "Segundo o artigo 69.º, que princípio seguem os órgãos de soberania?"
+      "pt": "Segundo o artigo 69.º, que princípio seguem os órgãos de soberania?",
+      "en": "Under Article 69, which principle do the organs of sovereignty follow?",
+      "id": "Menurut Pasal 69, asas apa yang diikuti organ-organ kedaulatan?"
      },
      "options": [
       {
        "tet": "Partidu ida de'it",
-       "pt": "Partido único"
+       "pt": "Partido único",
+       "en": "A single party",
+       "id": "Partai tunggal"
       },
       {
        "tet": "Separasaun no interdependénsia podér",
-       "pt": "Separação e interdependência dos poderes"
+       "pt": "Separação e interdependência dos poderes",
+       "en": "Separation and interdependence of powers",
+       "id": "Pemisahan dan saling ketergantungan kekuasaan"
       },
       {
        "tet": "Podér hotu ba Prezidente",
-       "pt": "Todo o poder ao Presidente"
+       "pt": "Todo o poder ao Presidente",
+       "en": "All power to the President",
+       "id": "Semua kekuasaan untuk Presiden"
       },
       {
        "tet": "Podér hotu ba tribunál",
-       "pt": "Todo o poder aos tribunais"
+       "pt": "Todo o poder aos tribunais",
+       "en": "All power to the courts",
+       "id": "Semua kekuasaan untuk pengadilan"
       }
      ],
      "answer": 1,
      "why": {
       "tet": "Artigu 69: órgaun soberania sira haketak, maibé servisu hamutuk.",
-      "pt": "Artigo 69.º: os órgãos de soberania são separados, mas dependem uns dos outros."
+      "pt": "Artigo 69.º: os órgãos de soberania são separados, mas dependem uns dos outros.",
+      "en": "Article 69: the organs of sovereignty are separate, but they depend on one another.",
+      "id": "Pasal 69: organ-organ kedaulatan terpisah, tetapi saling bergantung."
      },
      "difficulty": 12
+    },
+    {
+     "q": {
+      "tet": "Ajénsia públika ida ne'ebé trata administrasaun Estadu nian nia sistema informátiku no internet?",
+      "pt": "Que agência pública trata dos sistemas informáticos e da internet da administração do Estado?",
+      "en": "Which public agency looks after the computer systems and internet of the State administration?",
+      "id": "Badan publik manakah yang mengurus sistem komputer dan internet administrasi Negara?"
+     },
+     "options": [
+      {
+       "tet": "TIC TIMOR",
+       "pt": "A TIC TIMOR",
+       "en": "TIC TIMOR",
+       "id": "TIC TIMOR"
+      },
+      {
+       "tet": "ANAAA",
+       "pt": "A ANAAA",
+       "en": "ANAAA",
+       "id": "ANAAA"
+      },
+      {
+       "tet": "STAE",
+       "pt": "O STAE",
+       "en": "STAE",
+       "id": "STAE"
+      },
+      {
+       "tet": "PCIC",
+       "pt": "A PCIC",
+       "en": "The PCIC",
+       "id": "PCIC"
+      }
+     ],
+     "answer": 0,
+     "why": {
+      "tet": "TIC TIMOR, I.P. mak Estadu nia ajénsia ba teknolojia informasaun no komunikasaun, iha Ministériu Transporte no Komunikasaun nia tutela.",
+      "pt": "A TIC TIMOR, I.P. é a agência de tecnologias da informação e comunicação do Estado, tutelada pelo Ministério dos Transportes e Comunicações.",
+      "en": "TIC TIMOR, I.P. is the State's information and communication technology agency, under the Ministry of Transport and Communications.",
+      "id": "TIC TIMOR, I.P. adalah badan teknologi informasi dan komunikasi Negara, di bawah Kementerian Perhubungan dan Komunikasi."
+     },
+     "difficulty": 10
     }
    ],
    "sources": [
@@ -393,6 +551,30 @@
      "url": "https://en.wikipedia.org/wiki/Office_of_the_Provedor_for_Human_Rights_and_Justice",
      "accessed": "2026-11-02",
      "licence": "CC BY-SA 4.0"
+    },
+    {
+     "title": "Conselho de Ministros do IX Governo Constitucional",
+     "publisher": "Governo de Timor-Leste",
+     "url": "https://timor-leste.gov.tl/?p=36438&lang=pt",
+     "accessed": "2026-11-11"
+    },
+    {
+     "title": "Composição do IX Governo Constitucional",
+     "publisher": "Governo de Timor-Leste",
+     "url": "https://timor-leste.gov.tl/?p=13&lang=pt",
+     "accessed": "2026-11-11"
+    },
+    {
+     "title": "TIC TIMOR — Agência de Tecnologia da Informação e Comunicação, I.P.",
+     "publisher": "TIC TIMOR, I.P.",
+     "url": "https://www.tic.gov.tl/en/",
+     "accessed": "2026-11-11"
+    },
+    {
+     "title": "Kona-ba PDHJ",
+     "publisher": "Provedoria dos Direitos Humanos e Justiça (PDHJ)",
+     "url": "https://www.pdhj.tl/kona-ba-pdhj/",
+     "accessed": "2026-11-11"
     }
    ],
    "review": {

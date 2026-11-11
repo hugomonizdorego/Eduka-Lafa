@@ -995,6 +995,26 @@
    "category": "tourism",
    "title_en": "Coffee country and mountain villages",
    "agent": "D"
+  },
+  "tl.institutions.pdhj": {
+   "category": "institutions",
+   "title_en": "Office of the Provedor for Human Rights and Justice (PDHJ)",
+   "agent": "0.3.1"
+  },
+  "tl.institutions.civil_service": {
+   "category": "institutions",
+   "title_en": "Civil Service Commission (CFP)",
+   "agent": "0.3.1"
+  },
+  "tl.institutions.tic_timor": {
+   "category": "institutions",
+   "title_en": "TIC TIMOR: the Information and Communication Technology Agency",
+   "agent": "0.3.1"
+  },
+  "tl.institutions.transport_communications": {
+   "category": "institutions",
+   "title_en": "Ministry of Transport and Communications (MTC)",
+   "agent": "0.3.1"
   }
  },
  "municipalities": {
