@@ -15,7 +15,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = ROOT / "lafa" / "assets" / "timor"
-LANGS = ("tet", "pt")                     # interface and content languages
+LANGS = ("tet", "pt", "en", "id")         # interface and content languages (Tetun, Português, English, Bahasa Indonesia)
 WIKI_LANGS = ("tet", "pt", "id", "en")     # Wikipedia editions used for introductions and pictures
 LEVELS = {"eb1", "eb2", "eb3", "es", "sup"}
 PLACE_TYPES = {"beach", "island", "mountain", "viewpoint", "church", "statue", "museum", "monument", "memorial", "lake", "cave",
@@ -43,7 +43,11 @@ class Report:
     def err(self, where, msg): self.errors.append(f"{where}: {msg}")
     def warn(self, where, msg): self.warnings.append(f"{where}: {msg}")
 
+# Portuguese words that do not appear in names: two of them mean a sentence.
+PT_WORDS = set("de da do das dos e o os as que em no na para com um uma foi é são pelo pela".split())
+
 def l2(r, where, value, name, required=True, minimum=1):
+    """A text in the four languages (docs/CONTENT-SCHEMA.md)."""
     if not isinstance(value, dict):
         if required or value is not None: r.err(where, f"{name} must be an object with {', '.join(LANGS)}")
         return
@@ -53,12 +57,18 @@ def l2(r, where, value, name, required=True, minimum=1):
         text = value.get(lang)
         if not isinstance(text, str) or len(text.strip()) < minimum:
             r.err(where, f"{name}.{lang} is missing or empty")
+    pt = value.get("pt") if isinstance(value.get("pt"), str) else ""
+    for lang in ("en", "id"):
+        text = value.get(lang)
+        if isinstance(text, str) and text.strip() == pt.strip() and len(PT_WORDS & set(pt.lower().split())) >= 2:
+            r.warn(where, f"{name}.{lang} is the Portuguese text, not a translation")
     tet = value.get("tet") or ""
     if isinstance(tet, str):
         bad = sorted({m.group(0).lower() for m in NOT_TETUN.finditer(tet)})
         if bad: r.warn(where, f"{name}.tet contains non-Tetun words: {', '.join(bad)}")
         if "’" in tet: r.warn(where, f"{name}.tet: use the plain apostrophe ' in content files")
-        if re.search(r"\bTimor-Leste\b", tet) and not re.search(r"https?://", tet):
+        unquoted = re.sub(r"«[^»]*»|“[^”]*”", "", tet)       # quotations keep their own spelling
+        if re.search(r"\bTimor-Leste\b", unquoted) and not re.search(r"https?://", tet):
             r.warn(where, f"{name}.tet: write Timór-Leste (Konstituisaun spelling)")
 
 def sources(r, where, items):
@@ -114,7 +124,11 @@ def common(r, where, item, known, kind):
     fig = item.get("figure")
     if fig is not None:
         if not isinstance(fig, dict) or fig.get("illustration") not in ILLUSTRATIONS: r.err(where, f"unknown figure illustration {fig!r}"[:160])
-        elif "caption" in fig: l2(r, where, fig["caption"], "figure.caption")
+        else:
+            if "caption" in fig: l2(r, where, fig["caption"], "figure.caption")
+            if "image" in fig:          # a picture packaged with Lafa (e.g. the official emblem), shown instead of the illustration
+                if not (BASE / str(fig["image"])).is_file() or not str(fig["image"]).endswith(".png"): r.err(where, f"figure.image not found: {fig['image']}")
+                l2(r, where, fig.get("credit"), "figure.credit")
     if "illustration" in item and item["illustration"] not in ILLUSTRATIONS: r.err(where, f"unknown illustration {item['illustration']!r}")
     for rel in item.get("related", []) or []:
         if rel not in known: r.warn(where, f"related id not found (yet): {rel}")

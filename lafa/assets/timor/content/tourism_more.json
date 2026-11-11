@@ -9,11 +9,15 @@
    ],
    "title": {
     "tet": "Festivál no eventu sira",
-    "pt": "Festivais e eventos"
+    "pt": "Festivais e eventos",
+    "en": "Festivals and events",
+    "id": "Festival dan acara"
    },
    "summary": {
     "tet": "Durante tinan tomak, Timór-Leste selebra loron nasionál, festa relijioza, peregrinasaun, festivál kultura no eventu desportu. Kalendáriu ofisiál iha website turizmu timorleste.tl hatudu eventu sira, maibé data barak sei bele muda, tan ne'e haree uluk molok halo viajen.",
-    "pt": "Ao longo do ano, Timor-Leste celebra dias nacionais, festas religiosas, peregrinações, festivais de cultura e grandes eventos desportivos. O calendário oficial no site de turismo timorleste.tl mostra os eventos, mas muitas datas ainda podem mudar, por isso confirme antes de viajar."
+    "pt": "Ao longo do ano, Timor-Leste celebra dias nacionais, festas religiosas, peregrinações, festivais de cultura e grandes eventos desportivos. O calendário oficial no site de turismo timorleste.tl mostra os eventos, mas muitas datas ainda podem mudar, por isso confirme antes de viajar.",
+    "en": "Throughout the year, Timor-Leste celebrates national days, religious feasts, pilgrimages, cultural festivals and big sporting events. The official calendar on the tourism website timorleste.tl shows the events, but many dates may still change, so check before you travel.",
+    "id": "Sepanjang tahun, Timor-Leste merayakan hari-hari nasional, hari raya keagamaan, ziarah, festival budaya, dan acara olahraga besar. Kalender resmi di situs pariwisata timorleste.tl menampilkan acara-acara tersebut, tetapi banyak tanggal masih bisa berubah, jadi pastikan dulu sebelum bepergian."
    },
    "levels": [
     "eb2",
@@ -25,61 +29,85 @@
     {
      "heading": {
       "tet": "Kalendáriu ida ne'ebé nakonu",
-      "pt": "Um calendário cheio"
+      "pt": "Um calendário cheio",
+      "en": "A full calendar",
+      "id": "Kalender yang padat"
      },
      "text": {
       "tet": "Iha Timór-Leste, festa sira marka tinan nia ritmu. Iha feriadu nasionál ne'ebé hanoin fali luta ba independénsia, festa katólika ne'ebé halibur kuaze nasaun tomak, serimónia tradisionál iha aldeia sira no, barak liu daudauk, eventu ne'ebé mós prepara ba vizitante sira, hanesan maratona, festivál múzika no filme. Website turizmu ofisiál publika kalendáriu eventu nian, iha Tetun, Portugés no lian seluk, ho data sira ba tinan ida-idak. Data barak mosu ho liafuan 'sei konfirma', tanba depende ba Governu, igreja ka komunidade sira-nia desizaun. Eventu barak iha li'ur hala'o iha tempu bailoron, maizumenus Maiu to'o Novembru, bainhira estrada sira di'ak liu.",
-      "pt": "Em Timor-Leste, as festas marcam o ritmo do ano. Há feriados nacionais que lembram a luta pela independência, festas católicas que juntam quase todo o país, cerimónias tradicionais nas aldeias e, cada vez mais, eventos pensados também para visitantes, como maratonas e festivais de música e de cinema. O site oficial de turismo publica um calendário de eventos, em tétum, português e outras línguas, com as datas de cada ano. Muitas datas aparecem como 'a confirmar', porque dependem de decisões do Governo, das igrejas ou das comunidades. A maior parte dos eventos ao ar livre acontece na época seca, mais ou menos de maio a novembro, quando as estradas estão melhores."
+      "pt": "Em Timor-Leste, as festas marcam o ritmo do ano. Há feriados nacionais que lembram a luta pela independência, festas católicas que juntam quase todo o país, cerimónias tradicionais nas aldeias e, cada vez mais, eventos pensados também para visitantes, como maratonas e festivais de música e de cinema. O site oficial de turismo publica um calendário de eventos, em tétum, português e outras línguas, com as datas de cada ano. Muitas datas aparecem como 'a confirmar', porque dependem de decisões do Governo, das igrejas ou das comunidades. A maior parte dos eventos ao ar livre acontece na época seca, mais ou menos de maio a novembro, quando as estradas estão melhores.",
+      "en": "In Timor-Leste, festivals set the rhythm of the year. There are national holidays that remember the struggle for independence, Catholic feasts that bring almost the whole country together, traditional ceremonies in the villages and, more and more, events designed for visitors too, such as marathons and music and film festivals. The official tourism website publishes an events calendar, in Tetun, Portuguese and other languages, with the dates for each year. Many dates appear as 'to be confirmed', because they depend on decisions by the Government, the churches or the communities. Most outdoor events take place in the dry season, roughly from May to November, when the roads are in better condition.",
+      "id": "Di Timor-Leste, pesta dan perayaan menentukan irama tahun. Ada hari libur nasional yang mengenang perjuangan kemerdekaan, hari raya Katolik yang mempersatukan hampir seluruh negeri, upacara adat di desa-desa, dan, makin lama makin banyak, acara yang juga dirancang untuk pengunjung, seperti maraton serta festival musik dan film. Situs pariwisata resmi menerbitkan kalender acara, dalam bahasa Tetun, Portugis, dan bahasa lain, dengan tanggal-tanggal untuk setiap tahun. Banyak tanggal tertulis 'akan dikonfirmasi', karena bergantung pada keputusan Pemerintah, gereja, atau masyarakat. Sebagian besar acara di luar ruangan berlangsung pada musim kemarau, kira-kira dari Mei hingga November, saat kondisi jalan lebih baik."
      }
     },
     {
      "heading": {
       "tet": "Loron nasionál no memória",
-      "pt": "Dias nacionais e memória"
+      "pt": "Dias nacionais e memória",
+      "en": "National days and remembrance",
+      "id": "Hari nasional dan peringatan"
      },
      "text": {
       "tet": "Loron nasionál importante liu mak 20 Maiu, Loron Restaurasaun Independénsia, ne'ebé hanoin fali serimónia 2002 iha Tasitolu, no 28 Novembru, Loron Proklamasaun Independénsia 1975 nian. Iha loron hirak ne'e iha serimónia hasa'e bandeira, parada eskola no veteranu sira-nian, diskursu no konsertu, liuliu iha Dili. 30 Agostu hanoin fali Konsulta Populár 1999, no 12 Novembru, Loron Nasionál Juventude, hanoin fali masakre Santa Cruz 1991. Iha 31 Dezembru, Loron Asuwa'in Nasionál, nasaun fó onra ba sira ne'ebé mate iha luta. Vizitante sira bele tuir serimónia públiku sira, hamriik no nonok durante inu nasionál.",
-      "pt": "Os dias nacionais mais importantes são o 20 de maio, Dia da Restauração da Independência, que lembra a cerimónia de 2002 em Tasitolu, e o 28 de novembro, Dia da Proclamação da Independência de 1975. Nesses dias há cerimónias de hastear da bandeira, desfiles de escolas e de veteranos, discursos e concertos, sobretudo em Díli. O 30 de agosto lembra a Consulta Popular de 1999, e o 12 de novembro, Dia Nacional da Juventude, lembra o massacre de Santa Cruz de 1991. A 31 de dezembro, Dia dos Heróis Nacionais, o país homenageia os que morreram na luta. Os visitantes podem assistir às cerimónias públicas, de pé e em silêncio durante o hino nacional."
+      "pt": "Os dias nacionais mais importantes são o 20 de maio, Dia da Restauração da Independência, que lembra a cerimónia de 2002 em Tasitolu, e o 28 de novembro, Dia da Proclamação da Independência de 1975. Nesses dias há cerimónias de hastear da bandeira, desfiles de escolas e de veteranos, discursos e concertos, sobretudo em Díli. O 30 de agosto lembra a Consulta Popular de 1999, e o 12 de novembro, Dia Nacional da Juventude, lembra o massacre de Santa Cruz de 1991. A 31 de dezembro, Dia dos Heróis Nacionais, o país homenageia os que morreram na luta. Os visitantes podem assistir às cerimónias públicas, de pé e em silêncio durante o hino nacional.",
+      "en": "The most important national days are 20 May, Restoration of Independence Day, which remembers the 2002 ceremony at Tasitolu, and 28 November, the Day of the Proclamation of Independence of 1975. On these days there are flag-raising ceremonies, parades of schools and veterans, speeches and concerts, especially in Dili. 30 August remembers the Popular Consultation of 1999, and 12 November, National Youth Day, remembers the Santa Cruz massacre of 1991. On 31 December, National Heroes Day, the country honours those who died in the struggle. Visitors can attend the public ceremonies, standing in silence during the national anthem.",
+      "id": "Hari nasional yang paling penting adalah 20 Mei, Hari Pemulihan Kemerdekaan, yang mengenang upacara tahun 2002 di Tasitolu, dan 28 November, Hari Proklamasi Kemerdekaan 1975. Pada hari-hari itu diadakan upacara pengibaran bendera, pawai sekolah dan veteran, pidato, dan konser, terutama di Dili. Tanggal 30 Agustus mengenang Jajak Pendapat 1999, dan 12 November, Hari Pemuda Nasional, mengenang pembantaian Santa Cruz tahun 1991. Pada 31 Desember, Hari Pahlawan Nasional, negara menghormati mereka yang gugur dalam perjuangan. Pengunjung boleh menyaksikan upacara-upacara umum, dengan berdiri dan diam selama lagu kebangsaan."
      }
     },
     {
      "heading": {
       "tet": "Festa relijioza no peregrinasaun",
-      "pt": "Festas religiosas e peregrinações"
+      "pt": "Festas religiosas e peregrinações",
+      "en": "Religious feasts and pilgrimages",
+      "id": "Hari raya keagamaan dan ziarah"
      },
      "text": {
       "tet": "Timoroan maioria boot mak katóliku, no Igreja nia festa sira halo estrada sira nakonu. Iha Semana Santa iha prosisaun no Via-Sacra; iha Natál no Tinan Foun família sira halibur, no iha 2026 Prezidénsia lansa 'Natál Povu nian' nu'udar eventu boot ida husi tinan ne'e. Iha 8 Dezembru, festa Imakulada Konseisaun, Dili nia katedrál selebra ninia naran. Iha peregrinasaun ba santuáriu Virjen Maria nian, hanesan Aitara, iha Soibada, no Fatubessi, iha Ermera, no fiel barak sa'e Ramelau. Iha Setembru 2024, ema besik 600 000 tuir Papa Francisco nia misa iha Tasitolu. Komunidade muslin selebra Idul Fitri no Idul Adha, ne'ebé mós feriadu nasionál.",
-      "pt": "A grande maioria dos timorenses é católica, e as festas da Igreja enchem as ruas. Na Semana Santa há procissões e a Via-Sacra; no Natal e no Ano Novo as famílias reúnem-se, e em 2026 a Presidência lançou o 'Natal do Povo' como um dos grandes eventos do ano. A 8 de dezembro, festa da Imaculada Conceição, a catedral de Díli celebra a sua padroeira. Há peregrinações a santuários marianos, como o de Aitara, em Soibada, e o de Fatubessi, em Ermera, e muitos fiéis sobem ao Ramelau. Em setembro de 2024, cerca de 600 000 pessoas assistiram à missa do Papa Francisco em Tasitolu. A comunidade muçulmana celebra o Idul Fitri e o Idul Adha, que também são feriados nacionais."
+      "pt": "A grande maioria dos timorenses é católica, e as festas da Igreja enchem as ruas. Na Semana Santa há procissões e a Via-Sacra; no Natal e no Ano Novo as famílias reúnem-se, e em 2026 a Presidência lançou o 'Natal do Povo' como um dos grandes eventos do ano. A 8 de dezembro, festa da Imaculada Conceição, a catedral de Díli celebra a sua padroeira. Há peregrinações a santuários marianos, como o de Aitara, em Soibada, e o de Fatubessi, em Ermera, e muitos fiéis sobem ao Ramelau. Em setembro de 2024, cerca de 600 000 pessoas assistiram à missa do Papa Francisco em Tasitolu. A comunidade muçulmana celebra o Idul Fitri e o Idul Adha, que também são feriados nacionais.",
+      "en": "The great majority of Timorese are Catholic, and Church feasts fill the streets. In Holy Week there are processions and the Way of the Cross; at Christmas and New Year families get together, and in 2026 the Presidency launched the 'Natal do Povo' (People's Christmas) as one of the big events of the year. On 8 December, the feast of the Immaculate Conception, Dili cathedral celebrates its patron saint. There are pilgrimages to Marian shrines, such as Aitara in Soibada and Fatubessi in Ermera, and many of the faithful climb Ramelau. In September 2024 about 600,000 people attended Pope Francis's Mass at Tasitolu. The Muslim community celebrates Idul Fitri and Idul Adha, which are also national holidays.",
+      "id": "Sebagian besar orang Timor beragama Katolik, dan hari-hari raya Gereja memenuhi jalan-jalan. Pada Pekan Suci ada prosesi dan Jalan Salib; pada Natal dan Tahun Baru keluarga-keluarga berkumpul, dan pada 2026 Kepresidenan meluncurkan 'Natal do Povo' (Natal Rakyat) sebagai salah satu acara besar tahun itu. Pada 8 Desember, hari raya Maria Dikandung Tanpa Noda, katedral Dili merayakan pelindungnya. Ada ziarah ke tempat-tempat ziarah Maria, seperti Aitara di Soibada dan Fatubessi di Ermera, dan banyak umat mendaki Ramelau. Pada September 2024 sekitar 600.000 orang menghadiri Misa Paus Fransiskus di Tasitolu. Komunitas Muslim merayakan Idul Fitri dan Idul Adha, yang juga merupakan hari libur nasional."
      }
     },
     {
      "heading": {
       "tet": "Desportu: bisikleta no maratona",
-      "pt": "Desporto: bicicleta e maratona"
+      "pt": "Desporto: bicicleta e maratona",
+      "en": "Sport: cycling and the marathon",
+      "id": "Olahraga: balap sepeda dan maraton"
      },
      "text": {
       "tet": "Tour de Timor, korrida bisikleta foho nian ne'ebé la'o loron lima, moris iha Agostu 2009 tuir Prezidente José Ramos-Horta nia inisiativa, atu hatudu Timór-Leste nu'udar nasaun dame nian; lori ema sa'e-bisikleta besik 300 husi nasaun besik 12, no repete iha tinan tuir mai. Iha 2026, Prezidente husu ba federasaun bisikleta no atletizmu nian atu prepara ninia fila fali, ho partida iha Indonézia, no kalendáriu ofisiál hatudu fulan Agostu. Maratona Internasionál Dili, ho korrida ho distánsia oin-oin iha kapitál nia estrada sira, Prezidénsia lansa nu'udar eventu boot ida husi eventu boot tolu 2026 nian, ho korrida seleksaun nasionál iha Maiu. Ba vizitante sira, eventu hirak ne'e mak oportunidade di'ak atu haree sidade iha festa.",
-      "pt": "O Tour de Timor, uma corrida de bicicleta de montanha de cinco dias, nasceu em agosto de 2009 por iniciativa do Presidente José Ramos-Horta, para mostrar Timor-Leste como um país de paz; trouxe cerca de 300 ciclistas de uns 12 países e repetiu-se nos anos seguintes. Em 2026, o Presidente pediu às federações de ciclismo e de atletismo que preparassem o seu regresso, com partida na Indonésia, e o calendário oficial indicava o mês de agosto. A Maratona Internacional de Díli, com corridas de várias distâncias pelas ruas da capital, foi lançada pela Presidência como um dos três grandes eventos de 2026, com uma prova nacional de seleção em maio. Para os visitantes, estes eventos são uma boa ocasião para ver a cidade em festa."
+      "pt": "O Tour de Timor, uma corrida de bicicleta de montanha de cinco dias, nasceu em agosto de 2009 por iniciativa do Presidente José Ramos-Horta, para mostrar Timor-Leste como um país de paz; trouxe cerca de 300 ciclistas de uns 12 países e repetiu-se nos anos seguintes. Em 2026, o Presidente pediu às federações de ciclismo e de atletismo que preparassem o seu regresso, com partida na Indonésia, e o calendário oficial indicava o mês de agosto. A Maratona Internacional de Díli, com corridas de várias distâncias pelas ruas da capital, foi lançada pela Presidência como um dos três grandes eventos de 2026, com uma prova nacional de seleção em maio. Para os visitantes, estes eventos são uma boa ocasião para ver a cidade em festa.",
+      "en": "The Tour de Timor, a five-day mountain bike race, began in August 2009 on the initiative of President José Ramos-Horta, to show Timor-Leste as a country at peace; it brought about 300 cyclists from some 12 countries and was repeated in the following years. In 2026 the President asked the cycling and athletics federations to prepare its return, with a start in Indonesia, and the official calendar indicated the month of August. The Dili International Marathon, with races over several distances through the streets of the capital, was launched by the Presidency as one of the three big events of 2026, with a national selection race in May. For visitors, these events are a good opportunity to see the city in celebration.",
+      "id": "Tour de Timor, lomba sepeda gunung selama lima hari, dimulai pada Agustus 2009 atas prakarsa Presiden José Ramos-Horta, untuk menunjukkan Timor-Leste sebagai negara yang damai; lomba ini mendatangkan sekitar 300 pesepeda dari sekitar 12 negara dan diulang pada tahun-tahun berikutnya. Pada 2026 Presiden meminta federasi balap sepeda dan atletik untuk mempersiapkan kembalinya lomba ini, dengan titik keberangkatan di Indonesia, dan kalender resmi menyebut bulan Agustus. Maraton Internasional Dili, dengan lomba lari berbagai jarak di jalan-jalan ibu kota, diluncurkan oleh Kepresidenan sebagai salah satu dari tiga acara besar tahun 2026, dengan lomba seleksi nasional pada bulan Mei. Bagi pengunjung, acara-acara ini adalah kesempatan yang baik untuk melihat kota dalam suasana pesta."
      }
     },
     {
      "heading": {
       "tet": "Múzika, filme no kafé",
-      "pt": "Música, cinema e café"
+      "pt": "Música, cinema e café",
+      "en": "Music, film and coffee",
+      "id": "Musik, film, dan kopi"
      },
      "text": {
       "tet": "Kultura mós iha ninia data sira. Tasifest, festivál múzika no kultura nian, hala'o iha Tasitolu, Dili, iha 29 no 30 Maiu 2026, no Festivál Internasionál Filme Dili nian, ho filme Timor nian no filme estranjeiru, marka husi 24 Setembru to'o 12 Outubru 2026. Kafé, esportasaun prinsipál nasaun nian depois mina-rai no gás, iha ninia festa rasik: Festivál Kafé Aileu nian, iha Setembru, no Festivál Kafé Timór-Leste nian, iha Dili, ne'ebé planeia ba Novembru 2026. Sábadu-Sábadu, iha loro-kraik, iha merkadu kalan ida iha Timor Plaza, Dili. Iha aldeia sira, festa tradisionál ho tebe, likurai no tambór selebra kolleita, kazamentu no uma lulik sira.",
-      "pt": "A cultura também tem as suas datas. O Tasifest, festival de música e cultura, realizou-se em Tasitolu, Díli, a 29 e 30 de maio de 2026, e o Festival Internacional de Cinema de Díli, com filmes timorenses e estrangeiros, estava marcado de 24 de setembro a 12 de outubro de 2026. O café, principal exportação do país depois do petróleo e do gás, tem as suas festas: o Festival do Café de Aileu, em setembro, e o Festival do Café de Timor-Leste, em Díli, previsto para novembro de 2026. Todos os sábados, ao fim da tarde, há um mercado noturno no Timor Plaza, em Díli. Nas aldeias, as festas tradicionais, com tebe, likurai e tambores, celebram colheitas, casamentos e casas sagradas."
+      "pt": "A cultura também tem as suas datas. O Tasifest, festival de música e cultura, realizou-se em Tasitolu, Díli, a 29 e 30 de maio de 2026, e o Festival Internacional de Cinema de Díli, com filmes timorenses e estrangeiros, estava marcado de 24 de setembro a 12 de outubro de 2026. O café, principal exportação do país depois do petróleo e do gás, tem as suas festas: o Festival do Café de Aileu, em setembro, e o Festival do Café de Timor-Leste, em Díli, previsto para novembro de 2026. Todos os sábados, ao fim da tarde, há um mercado noturno no Timor Plaza, em Díli. Nas aldeias, as festas tradicionais, com tebe, likurai e tambores, celebram colheitas, casamentos e casas sagradas.",
+      "en": "Culture has its dates too. Tasifest, a music and culture festival, was held at Tasitolu, Dili, on 29 and 30 May 2026, and the Dili International Film Festival, with Timorese and foreign films, was scheduled from 24 September to 12 October 2026. Coffee, the country's main export after oil and gas, has its own festivals: the Aileu Coffee Festival in September and the Timor-Leste Coffee Festival in Dili, planned for November 2026. Every Saturday, in the late afternoon, there is a night market at Timor Plaza in Dili. In the villages, traditional festivities with tebe and likurai dances and drums celebrate harvests, weddings and sacred houses.",
+      "id": "Budaya juga memiliki tanggal-tanggalnya. Tasifest, festival musik dan budaya, diadakan di Tasitolu, Dili, pada 29 dan 30 Mei 2026, dan Festival Film Internasional Dili, dengan film-film Timor dan asing, dijadwalkan dari 24 September hingga 12 Oktober 2026. Kopi, ekspor utama negeri ini setelah minyak dan gas, memiliki festivalnya sendiri: Festival Kopi Aileu pada bulan September dan Festival Kopi Timor-Leste di Dili, yang direncanakan pada November 2026. Setiap Sabtu sore ada pasar malam di Timor Plaza, Dili. Di desa-desa, pesta adat dengan tarian tebe dan likurai serta tabuhan gendang merayakan panen, pernikahan, dan rumah sakral."
      }
     },
     {
      "heading": {
       "tet": "Natureza nia kalendáriu no respeitu",
-      "pt": "O calendário da natureza e o respeito"
+      "pt": "O calendário da natureza e o respeito",
+      "en": "Nature's calendar and respect",
+      "id": "Kalender alam dan sikap hormat"
      },
      "text": {
       "tet": "Eventu balu mai husi natureza. Kolleita kafé nian, iha foho Ermera, Aileu no Maubisse, la'o maizumenus husi Maiu to'o Setembru, no to'os balu simu vizitante. Baleia no golfiñu liu iha selat kle'an iha Dili no Atauru nia norte, liuliu entre Outubru no Dezembru, no ró ba haree baleia sai husi Dili no husi illa. Molok ba festa ka serimónia ida, husu se vizitante bele mai, hatais roupa ne'ebé di'ak no husu lisensa molok foti foto, liuliu iha serimónia uma lulik nian ka iha funerál. Haree nafatin data sira iha kalendáriu ofisiál, tanba bele muda husi tinan ba tinan.",
-      "pt": "Alguns 'eventos' são da natureza. A colheita do café, nas montanhas de Ermera, Aileu e Maubisse, vai mais ou menos de maio a setembro, e algumas quintas recebem visitantes. Baleias e golfinhos passam pelos estreitos profundos a norte de Díli e de Ataúro, sobretudo entre outubro e dezembro, e saem barcos de observação de Díli e da ilha. Antes de ir a uma festa ou cerimónia, pergunte se os visitantes são bem-vindos, vista-se com modéstia e peça licença antes de fotografar, sobretudo em cerimónias de casas sagradas (uma lulik) ou em funerais. Confirme sempre as datas no calendário oficial, porque podem mudar de ano para ano."
+      "pt": "Alguns 'eventos' são da natureza. A colheita do café, nas montanhas de Ermera, Aileu e Maubisse, vai mais ou menos de maio a setembro, e algumas quintas recebem visitantes. Baleias e golfinhos passam pelos estreitos profundos a norte de Díli e de Ataúro, sobretudo entre outubro e dezembro, e saem barcos de observação de Díli e da ilha. Antes de ir a uma festa ou cerimónia, pergunte se os visitantes são bem-vindos, vista-se com modéstia e peça licença antes de fotografar, sobretudo em cerimónias de casas sagradas (uma lulik) ou em funerais. Confirme sempre as datas no calendário oficial, porque podem mudar de ano para ano.",
+      "en": "Some 'events' belong to nature. The coffee harvest in the mountains of Ermera, Aileu and Maubisse runs roughly from May to September, and some farms welcome visitors. Whales and dolphins pass through the deep straits north of Dili and Ataúro, especially between October and December, and whale-watching boats leave from Dili and from the island. Before going to a festival or ceremony, ask whether visitors are welcome, dress modestly and ask permission before taking photos, especially at sacred-house (uma lulik) ceremonies or at funerals. Always check the dates in the official calendar, because they can change from year to year.",
+      "id": "Sebagian 'acara' berasal dari alam. Panen kopi di pegunungan Ermera, Aileu, dan Maubisse berlangsung kira-kira dari Mei hingga September, dan beberapa kebun menerima pengunjung. Paus dan lumba-lumba melintasi selat-selat dalam di utara Dili dan Ataúro, terutama antara Oktober dan Desember, dan perahu pengamatan paus berangkat dari Dili dan dari pulau itu. Sebelum pergi ke sebuah pesta atau upacara, tanyakan apakah pengunjung boleh datang, berpakaianlah sopan, dan mintalah izin sebelum memotret, terutama pada upacara rumah sakral (uma lulik) atau pemakaman. Selalu periksa tanggal di kalender resmi, karena tanggal bisa berubah dari tahun ke tahun."
      }
     }
    ],
@@ -87,78 +115,108 @@
     {
      "label": {
       "tet": "Kalendáriu eventu ofisiál",
-      "pt": "Calendário oficial de eventos"
+      "pt": "Calendário oficial de eventos",
+      "en": "Official events calendar",
+      "id": "Kalender acara resmi"
      },
      "value": "timorleste.tl/events"
     },
     {
      "label": {
       "tet": "Loron Restaurasaun Independénsia",
-      "pt": "Dia da Restauração da Independência"
+      "pt": "Dia da Restauração da Independência",
+      "en": "Restoration of Independence Day",
+      "id": "Hari Pemulihan Kemerdekaan"
      },
      "value": {
       "tet": "20 Maiu",
-      "pt": "20 de maio"
+      "pt": "20 de maio",
+      "en": "20 May",
+      "id": "20 Mei"
      }
     },
     {
      "label": {
       "tet": "Loron Proklamasaun Independénsia",
-      "pt": "Dia da Proclamação da Independência"
+      "pt": "Dia da Proclamação da Independência",
+      "en": "Proclamation of Independence Day",
+      "id": "Hari Proklamasi Kemerdekaan"
      },
      "value": {
       "tet": "28 Novembru",
-      "pt": "28 de novembro"
+      "pt": "28 de novembro",
+      "en": "28 November",
+      "id": "28 November"
      }
     },
     {
      "label": {
       "tet": "Tour de Timor dahuluk",
-      "pt": "Primeiro Tour de Timor"
+      "pt": "Primeiro Tour de Timor",
+      "en": "First Tour de Timor",
+      "id": "Tour de Timor pertama"
      },
      "value": {
       "tet": "Agostu 2009, loron lima",
-      "pt": "agosto de 2009, cinco dias"
+      "pt": "agosto de 2009, cinco dias",
+      "en": "August 2009, five days",
+      "id": "Agustus 2009, lima hari"
      }
     },
     {
      "label": {
       "tet": "Papa Francisco nia misa iha Tasitolu",
-      "pt": "Missa do Papa Francisco em Tasitolu"
+      "pt": "Missa do Papa Francisco em Tasitolu",
+      "en": "Pope Francis's Mass at Tasitolu",
+      "id": "Misa Paus Fransiskus di Tasitolu"
      },
      "value": {
       "tet": "10 Setembru 2024, ema besik 600 000",
-      "pt": "10 de setembro de 2024, cerca de 600 000 pessoas"
+      "pt": "10 de setembro de 2024, cerca de 600 000 pessoas",
+      "en": "10 September 2024, about 600,000 people",
+      "id": "10 September 2024, sekitar 600.000 orang"
      }
     },
     {
      "label": {
       "tet": "Kolleita kafé",
-      "pt": "Colheita do café"
+      "pt": "Colheita do café",
+      "en": "Coffee harvest",
+      "id": "Panen kopi"
      },
      "value": {
       "tet": "maizumenus Maiu–Setembru",
-      "pt": "mais ou menos maio–setembro"
+      "pt": "mais ou menos maio–setembro",
+      "en": "roughly May–September",
+      "id": "kira-kira Mei–September"
      }
     },
     {
      "label": {
       "tet": "Tempu baleia iha kosta norte",
-      "pt": "Época das baleias na costa norte"
+      "pt": "Época das baleias na costa norte",
+      "en": "Whale season on the north coast",
+      "id": "Musim paus di pesisir utara"
      },
      "value": {
       "tet": "liuliu Outubru–Dezembru",
-      "pt": "sobretudo outubro–dezembro"
+      "pt": "sobretudo outubro–dezembro",
+      "en": "mainly October–December",
+      "id": "terutama Oktober–Desember"
      }
     },
     {
      "label": {
       "tet": "Festivál Internasionál Filme Dili",
-      "pt": "Festival Internacional de Cinema de Díli"
+      "pt": "Festival Internacional de Cinema de Díli",
+      "en": "Dili International Film Festival",
+      "id": "Festival Film Internasional Dili"
      },
      "value": {
       "tet": "24 Setembru – 12 Outubru",
-      "pt": "24 de setembro – 12 de outubro"
+      "pt": "24 de setembro – 12 de outubro",
+      "en": "24 September – 12 October",
+      "id": "24 September – 12 Oktober"
      },
      "year": 2026
     }
@@ -168,35 +226,45 @@
      "date": "2002-05-20",
      "title": {
       "tet": "Restaurasaun independénsia iha Tasitolu",
-      "pt": "Restauração da independência em Tasitolu"
+      "pt": "Restauração da independência em Tasitolu",
+      "en": "Restoration of independence at Tasitolu",
+      "id": "Pemulihan kemerdekaan di Tasitolu"
      }
     },
     {
      "date": "2009-08",
      "title": {
       "tet": "Tour de Timor dahuluk",
-      "pt": "Primeiro Tour de Timor"
+      "pt": "Primeiro Tour de Timor",
+      "en": "First Tour de Timor",
+      "id": "Tour de Timor pertama"
      }
     },
     {
      "date": "2024-09-10",
      "title": {
       "tet": "Papa Francisco nia misa iha Tasitolu",
-      "pt": "Missa do Papa Francisco em Tasitolu"
+      "pt": "Missa do Papa Francisco em Tasitolu",
+      "en": "Pope Francis's Mass at Tasitolu",
+      "id": "Misa Paus Fransiskus di Tasitolu"
      }
     },
     {
      "date": "2026-05-29",
      "title": {
       "tet": "Tasifest iha Tasitolu",
-      "pt": "Tasifest em Tasitolu"
+      "pt": "Tasifest em Tasitolu",
+      "en": "Tasifest at Tasitolu",
+      "id": "Tasifest di Tasitolu"
      }
     },
     {
      "date": "2026-09-24",
      "title": {
       "tet": "Festivál Internasionál Filme Dili hahú",
-      "pt": "Começa o Festival Internacional de Cinema de Díli"
+      "pt": "Começa o Festival Internacional de Cinema de Díli",
+      "en": "The Dili International Film Festival begins",
+      "id": "Festival Film Internasional Dili dimulai"
      }
     }
    ],
@@ -204,7 +272,9 @@
     "illustration": "festival",
     "caption": {
      "tet": "Dansa no múzika tradisionál iha festa ida.",
-     "pt": "Danças e música tradicionais numa festa."
+     "pt": "Danças e música tradicionais numa festa.",
+     "en": "Traditional dances and music at a festival.",
+     "id": "Tarian dan musik tradisional dalam sebuah pesta."
     }
    },
    "wiki": {
@@ -244,180 +314,252 @@
     {
      "q": {
       "tet": "Loron saida mak Timór-Leste selebra Restaurasaun Independénsia?",
-      "pt": "Que dia celebra a Restauração da Independência de Timor-Leste?"
+      "pt": "Que dia celebra a Restauração da Independência de Timor-Leste?",
+      "en": "Which day celebrates the Restoration of Independence of Timor-Leste?",
+      "id": "Hari apa yang merayakan Pemulihan Kemerdekaan Timor-Leste?"
      },
      "options": [
       {
        "tet": "20 Maiu",
-       "pt": "20 de maio"
+       "pt": "20 de maio",
+       "en": "20 May",
+       "id": "20 Mei"
       },
       {
        "tet": "28 Novembru",
-       "pt": "28 de novembro"
+       "pt": "28 de novembro",
+       "en": "28 November",
+       "id": "28 November"
       },
       {
        "tet": "30 Agostu",
-       "pt": "30 de agosto"
+       "pt": "30 de agosto",
+       "en": "30 August",
+       "id": "30 Agustus"
       },
       {
        "tet": "12 Novembru",
-       "pt": "12 de novembro"
+       "pt": "12 de novembro",
+       "en": "12 November",
+       "id": "12 November"
       }
      ],
      "answer": 0,
      "why": {
       "tet": "Iha 20 Maiu 2002 independénsia restaura iha serimónia ida iha Tasitolu; 28 Novembru hanoin fali proklamasaun 1975.",
-      "pt": "A 20 de maio de 2002 a independência foi restaurada numa cerimónia em Tasitolu; o 28 de novembro lembra a proclamação de 1975."
+      "pt": "A 20 de maio de 2002 a independência foi restaurada numa cerimónia em Tasitolu; o 28 de novembro lembra a proclamação de 1975.",
+      "en": "On 20 May 2002 independence was restored at a ceremony at Tasitolu; 28 November remembers the proclamation of 1975.",
+      "id": "Pada 20 Mei 2002 kemerdekaan dipulihkan dalam sebuah upacara di Tasitolu; 28 November mengenang proklamasi tahun 1975."
      },
      "difficulty": 3
     },
     {
      "q": {
       "tet": "Iha fulan sira ne'ebé mak ema ku kafé iha foho?",
-      "pt": "Em que meses se faz a colheita do café nas montanhas?"
+      "pt": "Em que meses se faz a colheita do café nas montanhas?",
+      "en": "In which months is coffee harvested in the mountains?",
+      "id": "Pada bulan apa saja kopi dipanen di pegunungan?"
      },
      "options": [
       {
        "tet": "Dezembru de'it",
-       "pt": "Só em dezembro"
+       "pt": "Só em dezembro",
+       "en": "Only in December",
+       "id": "Hanya pada bulan Desember"
       },
       {
        "tet": "Maizumenus Maiu to'o Setembru",
-       "pt": "Mais ou menos de maio a setembro"
+       "pt": "Mais ou menos de maio a setembro",
+       "en": "Roughly from May to September",
+       "id": "Kira-kira dari Mei hingga September"
       },
       {
        "tet": "Janeiru to'o Marsu",
-       "pt": "De janeiro a março"
+       "pt": "De janeiro a março",
+       "en": "From January to March",
+       "id": "Dari Januari hingga Maret"
       },
       {
        "tet": "Kafé la iha kolleita",
-       "pt": "O café não tem colheita"
+       "pt": "O café não tem colheita",
+       "en": "Coffee has no harvest",
+       "id": "Kopi tidak punya musim panen"
       }
      ],
      "answer": 1,
      "why": {
       "tet": "Website turizmu ofisiál hatudu tempu kolleita husi Maiu to'o Setembru, iha tempu bailoron.",
-      "pt": "O site oficial de turismo indica a época da colheita de maio a setembro, na estação seca."
+      "pt": "O site oficial de turismo indica a época da colheita de maio a setembro, na estação seca.",
+      "en": "The official tourism website gives the harvest season as May to September, in the dry season.",
+      "id": "Situs pariwisata resmi menyebut musim panen berlangsung dari Mei hingga September, pada musim kemarau."
      },
      "difficulty": 4
     },
     {
      "q": {
       "tet": "Tour de Timor mak eventu desportu saida?",
-      "pt": "Que tipo de prova é o Tour de Timor?"
+      "pt": "Que tipo de prova é o Tour de Timor?",
+      "en": "What kind of event is the Tour de Timor?",
+      "id": "Acara olahraga apakah Tour de Timor itu?"
      },
      "options": [
       {
        "tet": "Korrida ró-vela",
-       "pt": "Uma regata de barcos à vela"
+       "pt": "Uma regata de barcos à vela",
+       "en": "A sailing regatta",
+       "id": "Lomba perahu layar"
       },
       {
        "tet": "Maratona nani",
-       "pt": "Uma maratona de natação"
+       "pt": "Uma maratona de natação",
+       "en": "A swimming marathon",
+       "id": "Maraton renang"
       },
       {
        "tet": "Korrida bisikleta foho nian",
-       "pt": "Uma corrida de bicicleta de montanha"
+       "pt": "Uma corrida de bicicleta de montanha",
+       "en": "A mountain bike race",
+       "id": "Lomba sepeda gunung"
       },
       {
        "tet": "Turneiu futeból",
-       "pt": "Um torneio de futebol"
+       "pt": "Um torneio de futebol",
+       "en": "A football tournament",
+       "id": "Turnamen sepak bola"
       }
      ],
      "answer": 2,
      "why": {
       "tet": "Tour de Timor, ne'ebé moris iha 2009, mak korrida bisikleta foho nian ne'ebé la'o loron barak.",
-      "pt": "O Tour de Timor, criado em 2009, é uma corrida de bicicleta de montanha de vários dias."
+      "pt": "O Tour de Timor, criado em 2009, é uma corrida de bicicleta de montanha de vários dias.",
+      "en": "The Tour de Timor, created in 2009, is a mountain bike race lasting several days.",
+      "id": "Tour de Timor, yang dimulai pada 2009, adalah lomba sepeda gunung selama beberapa hari."
      },
      "difficulty": 6
     },
     {
      "q": {
       "tet": "Bainhira mak ita bele haree baleia barak liu iha selat iha Dili nia norte?",
-      "pt": "Quando é mais provável ver baleias no estreito a norte de Díli?"
+      "pt": "Quando é mais provável ver baleias no estreito a norte de Díli?",
+      "en": "When are you most likely to see whales in the strait north of Dili?",
+      "id": "Kapan paus paling mungkin terlihat di selat sebelah utara Dili?"
      },
      "options": [
       {
        "tet": "Fevereiru to'o Abríl",
-       "pt": "De fevereiro a abril"
+       "pt": "De fevereiro a abril",
+       "en": "From February to April",
+       "id": "Dari Februari hingga April"
       },
       {
        "tet": "Outubru to'o Dezembru",
-       "pt": "De outubro a dezembro"
+       "pt": "De outubro a dezembro",
+       "en": "From October to December",
+       "id": "Dari Oktober hingga Desember"
       },
       {
        "tet": "Juñu to'o Jullu",
-       "pt": "De junho a julho"
+       "pt": "De junho a julho",
+       "en": "From June to July",
+       "id": "Dari Juni hingga Juli"
       },
       {
        "tet": "Ema nunka haree baleia",
-       "pt": "Nunca se veem baleias"
+       "pt": "Nunca se veem baleias",
+       "en": "Whales are never seen",
+       "id": "Paus tidak pernah terlihat"
       }
      ],
      "answer": 1,
      "why": {
       "tet": "Migrasaun baleia nian liu selat Ombai–Wetar barak liu husi Outubru to'o Dezembru.",
-      "pt": "A migração pelo estreito de Ombai–Wetar é mais movimentada de outubro a dezembro."
+      "pt": "A migração pelo estreito de Ombai–Wetar é mais movimentada de outubro a dezembro.",
+      "en": "The migration through the Ombai–Wetar Strait is busiest from October to December.",
+      "id": "Migrasi melalui Selat Ombai–Wetar paling ramai dari Oktober hingga Desember."
      },
      "difficulty": 8
     },
     {
      "q": {
       "tet": "Papa Francisco selebra misa boot iha Setembru 2024, ho ema besik 600 000, iha ne'ebé?",
-      "pt": "Onde celebrou o Papa Francisco a grande missa de setembro de 2024, com cerca de 600 000 pessoas?"
+      "pt": "Onde celebrou o Papa Francisco a grande missa de setembro de 2024, com cerca de 600 000 pessoas?",
+      "en": "Where did Pope Francis celebrate the great Mass of September 2024, with about 600,000 people?",
+      "id": "Di mana Paus Fransiskus memimpin Misa akbar pada September 2024, yang dihadiri sekitar 600.000 orang?"
      },
      "options": [
       {
        "tet": "Soibada",
-       "pt": "Soibada"
+       "pt": "Soibada",
+       "en": "Soibada",
+       "id": "Soibada"
       },
       {
        "tet": "Foho Ramelau",
-       "pt": "Monte Ramelau"
+       "pt": "Monte Ramelau",
+       "en": "Mount Ramelau",
+       "id": "Gunung Ramelau"
       },
       {
        "tet": "Baukau",
-       "pt": "Baucau"
+       "pt": "Baucau",
+       "en": "Baucau",
+       "id": "Baucau"
       },
       {
        "tet": "Tasitolu",
-       "pt": "Tasitolu"
+       "pt": "Tasitolu",
+       "en": "Tasitolu",
+       "id": "Tasitolu"
       }
      ],
      "answer": 3,
      "why": {
       "tet": "Misa ne'e hala'o iha Tasitolu, Dili, iha kampu hanesan ne'ebé Papa João Paulo II selebra iha 1989 no ne'ebé independénsia restaura iha 2002.",
-      "pt": "A missa foi em Tasitolu, em Díli, no mesmo campo onde João Paulo II celebrou em 1989 e onde se restaurou a independência em 2002."
+      "pt": "A missa foi em Tasitolu, em Díli, no mesmo campo onde João Paulo II celebrou em 1989 e onde se restaurou a independência em 2002.",
+      "en": "The Mass was at Tasitolu, in Dili, on the same ground where John Paul II celebrated Mass in 1989 and where independence was restored in 2002.",
+      "id": "Misa itu diadakan di Tasitolu, Dili, di lapangan yang sama tempat Yohanes Paulus II memimpin Misa pada 1989 dan tempat kemerdekaan dipulihkan pada 2002."
      },
      "difficulty": 11
     },
     {
      "q": {
       "tet": "Aleinde Maratona Internasionál Dili no simeira siénsia nian ida, eventu boot saida mak Prezidénsia lansa ba 2026?",
-      "pt": "Além da Maratona Internacional de Díli e de uma cimeira de ciência, que grande evento lançou a Presidência para 2026?"
+      "pt": "Além da Maratona Internacional de Díli e de uma cimeira de ciência, que grande evento lançou a Presidência para 2026?",
+      "en": "Besides the Dili International Marathon and a science summit, which big event did the Presidency launch for 2026?",
+      "id": "Selain Maraton Internasional Dili dan sebuah pertemuan puncak sains, acara besar apa yang diluncurkan Kepresidenan untuk 2026?"
      },
      "options": [
       {
        "tet": "Natál Povu nian",
-       "pt": "O Natal do Povo"
+       "pt": "O Natal do Povo",
+       "en": "The People's Christmas (Natal do Povo)",
+       "id": "Natal Rakyat (Natal do Povo)"
       },
       {
        "tet": "Jogu Olímpiku",
-       "pt": "Os Jogos Olímpicos"
+       "pt": "Os Jogos Olímpicos",
+       "en": "The Olympic Games",
+       "id": "Olimpiade"
       },
       {
        "tet": "Korrida Fórmula 1 iha Dili",
-       "pt": "Uma corrida de Fórmula 1 em Díli"
+       "pt": "Uma corrida de Fórmula 1 em Díli",
+       "en": "A Formula 1 race in Dili",
+       "id": "Balapan Formula 1 di Dili"
       },
       {
        "tet": "Festivál Eurovizaun",
-       "pt": "O Festival da Eurovisão"
+       "pt": "O Festival da Eurovisão",
+       "en": "The Eurovision Song Contest",
+       "id": "Kontes Lagu Eurovision"
       }
      ],
      "answer": 0,
      "why": {
       "tet": "Iha Maiu 2026, Prezidénsia lansa eventu boot tolu: Maratona Internasionál Dili, simeira siénsia ida no Natál Povu nian.",
-      "pt": "Em maio de 2026, a Presidência lançou três grandes eventos: a Maratona Internacional de Díli, uma cimeira de ciência e o Natal do Povo."
+      "pt": "Em maio de 2026, a Presidência lançou três grandes eventos: a Maratona Internacional de Díli, uma cimeira de ciência e o Natal do Povo.",
+      "en": "In May 2026 the Presidency launched three big events: the Dili International Marathon, a science summit and the People's Christmas.",
+      "id": "Pada Mei 2026 Kepresidenan meluncurkan tiga acara besar: Maraton Internasional Dili, sebuah pertemuan puncak sains, dan Natal Rakyat."
      },
      "difficulty": 13
     }
@@ -475,7 +617,7 @@
    ],
    "review": {
     "status": "draft",
-    "notes": "Written on 2 Nov 2026 from WebSearch result summaries (timorleste.tl itself could not be opened in the sandbox). 2026 dates (Tasifest 29–30 May; Fatubessi pilgrimage 22 Aug; Dili International Film Festival 24 Sep–12 Oct; Aileu Coffee Festival 27 Sep, though the homepage also listed 12, 26 and 27 Sep; Timor-Leste Coffee Festival in Dili in November, date TBC; Dili International Marathon listed for 8 Aug (TBC) with a national selection race on 9 May; Tour de Timor revival planned for the second week of August, starting from Indonesia; Saturday night market at Timor Plaza 3–9 pm) come from timorleste.tl/events and Tatoli (8 May 2026) as summarised — check whether the Tour and the Marathon actually took place. The older name 'Dili City of Peace Marathon' was not confirmed and is not used. A Dili Carnival (early 2010s) and a national 'Festival of the Arts' were asked for but could not be confirmed, so they are left out. Tour de Timor details follow culture_more.json (tl.culture.sports_games). Pope Francis Mass (about 600,000 people) as in other files (NCR/UPI). Whale season wording reconciles 'October–November' (tourism articles) and 'October–December' (tl.nature.marine). Tetun 'muslin', 'funerál', 'simeira' to check."
+    "notes": "Written on 2 Nov 2026 from WebSearch result summaries (timorleste.tl itself could not be opened in the sandbox). 2026 dates (Tasifest 29–30 May; Fatubessi pilgrimage 22 Aug; Dili International Film Festival 24 Sep–12 Oct; Aileu Coffee Festival 27 Sep, though the homepage also listed 12, 26 and 27 Sep; Timor-Leste Coffee Festival in Dili in November, date TBC; Dili International Marathon listed for 8 Aug (TBC) with a national selection race on 9 May; Tour de Timor revival planned for the second week of August, starting from Indonesia; Saturday night market at Timor Plaza 3–9 pm) come from timorleste.tl/events and Tatoli (8 May 2026) as summarised — check whether the Tour and the Marathon actually took place. The older name 'Dili City of Peace Marathon' was not confirmed and is not used. A Dili Carnival (early 2010s) and a national 'Festival of the Arts' were asked for but could not be confirmed, so they are left out. Tour de Timor details follow culture_more.json (tl.culture.sports_games). Pope Francis Mass (about 600,000 people) as in other files (NCR/UPI). Whale season wording reconciles 'October–November' (tourism articles) and 'October–December' (tl.nature.marine). Tetun 'muslin', 'funerál', 'simeira' to check. English and Indonesian translated from the Portuguese on 11 Nov 2026 (no facts added or changed; Tetun and Portuguese untouched). 'Natal do Povo' kept in Portuguese with a translation ('People's Christmas' / 'Natal Rakyat') — check whether the Presidency uses an official English name. All dates copied exactly from the Portuguese."
    }
   },
   {
@@ -483,11 +625,15 @@
    "category": "tourism",
    "title": {
     "tet": "Informasaun prátika ba vizitante sira",
-    "pt": "Informações práticas para visitantes"
+    "pt": "Informações práticas para visitantes",
+    "en": "Practical information for visitors",
+    "id": "Informasi praktis bagi pengunjung"
    },
    "summary": {
     "tet": "Molok viajen ba Timór-Leste, vizitante sira presiza hatene kona-ba vistu, osan, transporte, saúde no oinsá respeita fatin lulik no lisan. Regra no oráriu sira muda dala ruma, tan ne'e haree informasaun foun iha website ofisiál sira molok sai.",
-    "pt": "Antes de viajar para Timor-Leste, convém saber o essencial sobre vistos, dinheiro, transportes, saúde e respeito pelos lugares sagrados e pelos costumes. As regras e os horários mudam de vez em quando, por isso confirme sempre a informação mais recente nos sites oficiais."
+    "pt": "Antes de viajar para Timor-Leste, convém saber o essencial sobre vistos, dinheiro, transportes, saúde e respeito pelos lugares sagrados e pelos costumes. As regras e os horários mudam de vez em quando, por isso confirme sempre a informação mais recente nos sites oficiais.",
+    "en": "Before travelling to Timor-Leste, it helps to know the essentials about visas, money, transport, health and respect for sacred places and customs. Rules and timetables change from time to time, so always check the latest information on the official websites.",
+    "id": "Sebelum bepergian ke Timor-Leste, ada baiknya mengetahui hal-hal pokok tentang visa, uang, transportasi, kesehatan, dan sikap hormat terhadap tempat keramat serta adat istiadat. Aturan dan jadwal sesekali berubah, jadi selalu periksa informasi terbaru di situs-situs resmi."
    },
    "levels": [
     "eb3",
@@ -498,61 +644,85 @@
     {
      "heading": {
       "tet": "Vistu no tama ba nasaun",
-      "pt": "Vistos e entrada no país"
+      "pt": "Vistos e entrada no país",
+      "en": "Visas and entering the country",
+      "id": "Visa dan masuk ke negara ini"
      },
      "text": {
       "tet": "Vizitante barak liu to'o liu Aeroportu Internasionál Presidente Nicolau Lobato, iha Dili. Tuir website turizmu ofisiál, iha 2026 sidadaun husi nasaun barak bele husu vistu bainhira to'o, ne'ebé folin dólar 30, selu ho osan (la'ós kartaun), no ba maizumenus loron 30; presiza hatudu fatin atu toba, osan naton no bilhete ba fila. Molok viajen, pasajeiru hotu tenke prenxe online deklarasaun eletrónika ida ba tama, iha loron lima molok viajen. Pasaporte tenke válidu ba fulan neen ka liu. Nasionalidade balu iha regra rasik, no ema ne'ebé tama liu rai, hanesan iha Batugade, bele presiza trata vistu uluk. Haree nafatin ho Servisu Migrasaun ka embaixada ida.",
-      "pt": "A maioria dos visitantes chega pelo Aeroporto Internacional Presidente Nicolau Lobato, em Díli. Segundo o site oficial de turismo, em 2026 os cidadãos de muitos países podem pedir um visto à chegada, que custa 30 dólares, pagos em dinheiro, e dá para cerca de 30 dias; é preciso mostrar onde se vai ficar, dinheiro suficiente e o bilhete de regresso. Antes da viagem, todos os passageiros devem preencher online uma declaração eletrónica de chegada, nos cinco dias anteriores à partida. O passaporte deve ser válido por pelo menos seis meses. Algumas nacionalidades têm regras próprias, e quem entra por terra, por exemplo em Batugade, pode ter de tratar do visto antes. Confirme sempre junto do Serviço de Migração ou de uma embaixada."
+      "pt": "A maioria dos visitantes chega pelo Aeroporto Internacional Presidente Nicolau Lobato, em Díli. Segundo o site oficial de turismo, em 2026 os cidadãos de muitos países podem pedir um visto à chegada, que custa 30 dólares, pagos em dinheiro, e dá para cerca de 30 dias; é preciso mostrar onde se vai ficar, dinheiro suficiente e o bilhete de regresso. Antes da viagem, todos os passageiros devem preencher online uma declaração eletrónica de chegada, nos cinco dias anteriores à partida. O passaporte deve ser válido por pelo menos seis meses. Algumas nacionalidades têm regras próprias, e quem entra por terra, por exemplo em Batugade, pode ter de tratar do visto antes. Confirme sempre junto do Serviço de Migração ou de uma embaixada.",
+      "en": "Most visitors arrive at Presidente Nicolau Lobato International Airport in Dili. According to the official tourism website, in 2026 citizens of many countries can apply for a visa on arrival, which costs 30 dollars, paid in cash, and covers about 30 days; you must show where you will stay, enough money and your return ticket. Before the journey, all passengers must fill in an electronic arrival declaration online, within the five days before departure. Your passport must be valid for at least six months. Some nationalities have their own rules, and anyone entering by land, for example at Batugade, may have to arrange the visa in advance. Always check with the Migration Service (Serviço de Migração) or an embassy.",
+      "id": "Sebagian besar pengunjung tiba di Bandar Udara Internasional Presidente Nicolau Lobato di Dili. Menurut situs pariwisata resmi, pada 2026 warga dari banyak negara dapat mengajukan visa saat kedatangan, yang biayanya 30 dolar, dibayar tunai, dan berlaku sekitar 30 hari; pengunjung harus menunjukkan tempat menginap, uang yang cukup, dan tiket pulang. Sebelum perjalanan, semua penumpang wajib mengisi deklarasi kedatangan elektronik secara daring, dalam lima hari sebelum keberangkatan. Paspor harus berlaku sekurang-kurangnya enam bulan. Beberapa kewarganegaraan memiliki aturan sendiri, dan yang masuk lewat darat, misalnya di Batugade, mungkin harus mengurus visa terlebih dahulu. Selalu pastikan ke Dinas Migrasi (Serviço de Migração) atau ke kedutaan besar."
      }
     },
     {
      "heading": {
       "tet": "Osan: dólar no sentavu",
-      "pt": "Dinheiro: dólares e centavos"
+      "pt": "Dinheiro: dólares e centavos",
+      "en": "Money: dollars and centavos",
+      "id": "Uang: dolar dan centavo"
      },
      "text": {
       "tet": "Desde Janeiru 2000, Timór-Leste nia osan ofisiál mak dólar Estadus Unidus nian. Osan-surat hotu mak dólar Amerikanu, maibé troku barak liu mai iha osan-besi sentavu Timór-Leste nian, ne'ebé sai desde 2003 no ohin loron Banku Sentrál Timór-Leste mak emite, ho valór sentavu 1, 5, 10, 25, 50, 100 no 200; sentavu 100 hanesan dólar ida. ATM iha Dili no iha vila boot balu, maibé iha li'ur tenke lori osan-surat ki'ik. Fatin uitoan de'it mak simu kartaun, liuliu iha área rurál. Iha merkadu folin sira baratu no ita bele ko'alia kona-ba folin ho maneira di'ak; iha aldeia sira, selu folin justu ajuda família sira ne'ebé simu vizitante.",
-      "pt": "Desde janeiro de 2000, a moeda oficial de Timor-Leste é o dólar dos Estados Unidos. Todas as notas são dólares americanos, mas o troco vem sobretudo em moedas de centavo timorenses, emitidas desde 2003 e hoje pelo Banco Central de Timor-Leste, com valores de 1, 5, 10, 25, 50, 100 e 200 centavos; 100 centavos valem um dólar. Há caixas automáticas em Díli e em algumas vilas maiores, mas fora delas é preciso levar dinheiro em notas pequenas. Poucos lugares aceitam cartões, sobretudo nas zonas rurais. Nos mercados os preços são baixos e pode regatear-se com simpatia; nas aldeias, pagar um preço justo ajuda as famílias que recebem visitantes."
+      "pt": "Desde janeiro de 2000, a moeda oficial de Timor-Leste é o dólar dos Estados Unidos. Todas as notas são dólares americanos, mas o troco vem sobretudo em moedas de centavo timorenses, emitidas desde 2003 e hoje pelo Banco Central de Timor-Leste, com valores de 1, 5, 10, 25, 50, 100 e 200 centavos; 100 centavos valem um dólar. Há caixas automáticas em Díli e em algumas vilas maiores, mas fora delas é preciso levar dinheiro em notas pequenas. Poucos lugares aceitam cartões, sobretudo nas zonas rurais. Nos mercados os preços são baixos e pode regatear-se com simpatia; nas aldeias, pagar um preço justo ajuda as famílias que recebem visitantes.",
+      "en": "Since January 2000 the official currency of Timor-Leste has been the United States dollar. All banknotes are US dollars, but change comes mostly in Timorese centavo coins, issued since 2003 and today by the Central Bank of Timor-Leste (Banco Central de Timor-Leste), in values of 1, 5, 10, 25, 50, 100 and 200 centavos; 100 centavos make one dollar. There are cash machines in Dili and in some larger towns, but outside them you need to carry cash in small notes. Few places accept cards, especially in rural areas. In markets prices are low and you can bargain in a friendly way; in the villages, paying a fair price helps the families who host visitors.",
+      "id": "Sejak Januari 2000 mata uang resmi Timor-Leste adalah dolar Amerika Serikat. Semua uang kertas adalah dolar AS, tetapi uang kembalian umumnya berupa koin centavo Timor-Leste, yang diterbitkan sejak 2003 dan kini oleh Bank Sentral Timor-Leste (Banco Central de Timor-Leste), dengan nilai 1, 5, 10, 25, 50, 100, dan 200 centavo; 100 centavo sama dengan satu dolar. Ada ATM di Dili dan di beberapa kota yang lebih besar, tetapi di luar itu perlu membawa uang tunai dalam pecahan kecil. Hanya sedikit tempat yang menerima kartu, terutama di daerah pedesaan. Di pasar harga murah dan boleh menawar dengan ramah; di desa-desa, membayar harga yang adil membantu keluarga yang menerima pengunjung."
      }
     },
     {
      "heading": {
       "tet": "Transporte iha rai-laran no ba illa sira",
-      "pt": "Transportes no país e para as ilhas"
+      "pt": "Transportes no país e para as ilhas",
+      "en": "Getting around the country and to the islands",
+      "id": "Transportasi di dalam negeri dan ke pulau-pulau"
      },
      "text": {
       "tet": "Iha Dili, mikrolete, bis ki'ik ho númeru no dalan fiksu, mak dalan baratu liu atu la'o; táxi baibain la iha taksímetru, tan ne'e hakotu folin molok sa'e. Entre vila sira iha bis no kareta-bis ki'ik, no vizitante barak aluga kareta ho motorista ka kareta 4x4. Ba Atauru, ró-ahi Berlin Nakroma sai husi portu Dili tuku 8 dadeer iha loron balu kada semana no fila tuku 3 loro-kraik; viajen han oras rua ho balu to'o tolu no folin dólar balun de'it, no iha mós ró privadu ne'ebé lalais liu. Ba Oe-Kusi, ró-ahi Berlin Ramelau halo viajen iha kalan, maizumenus oras 12, no iha mós aviaun. Oráriu sira muda: haree fali iha loron molok.",
-      "pt": "Em Díli, os microletes, pequenos autocarros numerados com percursos fixos, são a forma mais barata de andar; os táxis normalmente não têm taxímetro, por isso combine o preço antes de entrar. Entre as vilas há autocarros e carrinhas, e muitos visitantes alugam um carro com motorista ou um 4x4. Para Ataúro, o ferry Berlin Nakroma sai do porto de Díli às 8 horas em vários dias da semana e regressa às 15 horas; a viagem demora duas horas e meia a três e custa poucos dólares, e há também barcos privados mais rápidos. Para Oé-Cusse, o ferry Berlin Ramelau faz a viagem de noite, em cerca de 12 horas, e há também voos. Os horários mudam: confirme na véspera."
+      "pt": "Em Díli, os microletes, pequenos autocarros numerados com percursos fixos, são a forma mais barata de andar; os táxis normalmente não têm taxímetro, por isso combine o preço antes de entrar. Entre as vilas há autocarros e carrinhas, e muitos visitantes alugam um carro com motorista ou um 4x4. Para Ataúro, o ferry Berlin Nakroma sai do porto de Díli às 8 horas em vários dias da semana e regressa às 15 horas; a viagem demora duas horas e meia a três e custa poucos dólares, e há também barcos privados mais rápidos. Para Oé-Cusse, o ferry Berlin Ramelau faz a viagem de noite, em cerca de 12 horas, e há também voos. Os horários mudam: confirme na véspera.",
+      "en": "In Dili, microlets, small numbered buses with fixed routes, are the cheapest way to get around; taxis usually have no meter, so agree on the price before you get in. Between towns there are buses and minibuses, and many visitors hire a car with a driver or a 4x4. For Ataúro, the Berlin Nakroma ferry leaves Dili port at 8 a.m. on several days a week and returns at 3 p.m.; the crossing takes two and a half to three hours and costs a few dollars, and there are also faster private boats. For Oé-Cusse, the Berlin Ramelau ferry makes the journey overnight, in about 12 hours, and there are also flights. Timetables change: check the day before.",
+      "id": "Di Dili, mikrolet, bus kecil bernomor dengan trayek tetap, adalah cara bepergian yang paling murah; taksi biasanya tidak memakai argometer, jadi sepakati harga sebelum naik. Antarkota ada bus dan minibus, dan banyak pengunjung menyewa mobil dengan sopir atau mobil 4x4. Untuk ke Ataúro, kapal feri Berlin Nakroma berangkat dari pelabuhan Dili pukul 08.00 pada beberapa hari dalam seminggu dan kembali pukul 15.00; penyeberangan memakan waktu dua setengah sampai tiga jam dan biayanya hanya beberapa dolar, dan ada juga perahu swasta yang lebih cepat. Untuk ke Oé-Cusse, kapal feri Berlin Ramelau berlayar pada malam hari, sekitar 12 jam, dan ada juga penerbangan. Jadwal bisa berubah: pastikan sehari sebelumnya."
      }
     },
     {
      "heading": {
       "tet": "Saúde no seguransa",
-      "pt": "Saúde e segurança"
+      "pt": "Saúde e segurança",
+      "en": "Health and safety",
+      "id": "Kesehatan dan keselamatan"
      },
      "text": {
       "tet": "Timór-Leste jeralmente nasaun kmanek no seguru, maibé presiza kuidadu baibain. Iha 2025, Organizasaun Mundiál Saúde sertifika katak nasaun livre husi malária, maibé susuk sei lori moras dengue: uza ai-moruk susuk nian no roupa liman-naruk iha loro-kraik. Hemu bee botir ka bee ne'ebé nono ona, proteje an husi loron manas no lori kaixa primeirus-sokorrus ki'ik, tanba iha li'ur Dili sentru saúde sira ki'ik; ospitál prinsipál mak Ospitál Nasionál Guido Valadares, iha Dili. Seguru viajen ne'ebé inklui evakuasaun importante tebes. Asidente estrada mak perigu boot liu: keta lori kareta iha kalan. Lafaek hela iha kosta, mota no lagoa barak: husu uluk molok nani.",
-      "pt": "Timor-Leste é, em geral, acolhedor e seguro, mas é preciso o cuidado normal. Em 2025, a Organização Mundial da Saúde certificou o país como livre de malária, mas os mosquitos ainda transmitem dengue: use repelente e roupa comprida ao fim do dia. Beba água engarrafada ou fervida, proteja-se do sol e leve um pequeno estojo de primeiros socorros, porque fora de Díli os centros de saúde são pequenos; o principal hospital é o Hospital Nacional Guido Valadares, em Díli. Um seguro de viagem que inclua evacuação é muito recomendado. Os acidentes de estrada são o maior risco: evite conduzir de noite. Há crocodilos em muitas costas, rios e lagoas: pergunte antes de nadar."
+      "pt": "Timor-Leste é, em geral, acolhedor e seguro, mas é preciso o cuidado normal. Em 2025, a Organização Mundial da Saúde certificou o país como livre de malária, mas os mosquitos ainda transmitem dengue: use repelente e roupa comprida ao fim do dia. Beba água engarrafada ou fervida, proteja-se do sol e leve um pequeno estojo de primeiros socorros, porque fora de Díli os centros de saúde são pequenos; o principal hospital é o Hospital Nacional Guido Valadares, em Díli. Um seguro de viagem que inclua evacuação é muito recomendado. Os acidentes de estrada são o maior risco: evite conduzir de noite. Há crocodilos em muitas costas, rios e lagoas: pergunte antes de nadar.",
+      "en": "Timor-Leste is, in general, welcoming and safe, but normal care is needed. In 2025 the World Health Organization certified the country as malaria-free, but mosquitoes still transmit dengue: use repellent and long clothing in the evening. Drink bottled or boiled water, protect yourself from the sun and carry a small first-aid kit, because outside Dili the health centres are small; the main hospital is the Guido Valadares National Hospital in Dili. Travel insurance that includes evacuation is strongly recommended. Road accidents are the biggest risk: avoid driving at night. There are crocodiles on many coasts and in many rivers and lagoons: ask before swimming.",
+      "id": "Secara umum Timor-Leste ramah dan aman, tetapi tetap perlu kehati-hatian yang biasa. Pada 2025 Organisasi Kesehatan Dunia (WHO) menyatakan negeri ini bebas malaria, tetapi nyamuk masih menularkan demam berdarah: pakailah obat antinyamuk dan pakaian panjang menjelang malam. Minumlah air kemasan atau air yang sudah dimasak, lindungi diri dari matahari, dan bawalah kotak P3K kecil, karena di luar Dili pusat-pusat kesehatan berukuran kecil; rumah sakit utama adalah Rumah Sakit Nasional Guido Valadares di Dili. Asuransi perjalanan yang mencakup evakuasi sangat dianjurkan. Kecelakaan lalu lintas adalah risiko terbesar: hindari mengemudi pada malam hari. Ada buaya di banyak pantai, sungai, dan laguna: bertanyalah dulu sebelum berenang."
      }
     },
     {
      "heading": {
       "tet": "Respeitu ba fatin lulik no lisan",
-      "pt": "Respeito pelos lugares sagrados e pelos costumes"
+      "pt": "Respeito pelos lugares sagrados e pelos costumes",
+      "en": "Respect for sacred places and customs",
+      "id": "Menghormati tempat keramat dan adat istiadat"
      },
      "text": {
       "tet": "Iha Timór-Leste, fatin barak mak lulik: uma lulik, bee-matan, fatuk, ai-hun boot, foho nia tutun no illa hanesan Jaku. Husu nafatin lisensa ba lideransa lokál molok tama, tuir saida mak guia sira dehan no keta kaer sasán lulik. Komunidade barak uza tara bandu, bandu tradisionál ida ne'ebé ema deside iha serimónia, ne'ebé taka ba tempu balu ai-laran, mota ka ahu-ruin nia parte ida atu natureza bele moris fali; ema ne'ebé la tuir tenke selu multa ba komunidade, no vizitante sira mós tenke respeita. Hatais roupa ne'ebé di'ak iha aldeia no igreja, husu lisensa molok foti foto ba ema, no hato'o kumprimentu ho 'bondia' ka 'botarde'.",
-      "pt": "Em Timor-Leste, muitos lugares são lulik, isto é, sagrados: casas sagradas (uma lulik), nascentes, rochas, árvores grandes, cumes de montanhas e ilhas como Jaco. Peça sempre licença aos líderes locais antes de entrar, siga o que os guias dizem e não toque em objetos sagrados. Muitas comunidades usam o tara bandu, uma proibição tradicional, decidida em cerimónia, que fecha durante algum tempo uma floresta, um rio ou uma parte do recife para que a natureza recupere; quem não a cumpre paga uma multa à comunidade, e os visitantes também a devem respeitar. Vista-se com modéstia nas aldeias e igrejas, peça licença antes de fotografar pessoas e cumprimente com 'bondia' ou 'botarde'."
+      "pt": "Em Timor-Leste, muitos lugares são lulik, isto é, sagrados: casas sagradas (uma lulik), nascentes, rochas, árvores grandes, cumes de montanhas e ilhas como Jaco. Peça sempre licença aos líderes locais antes de entrar, siga o que os guias dizem e não toque em objetos sagrados. Muitas comunidades usam o tara bandu, uma proibição tradicional, decidida em cerimónia, que fecha durante algum tempo uma floresta, um rio ou uma parte do recife para que a natureza recupere; quem não a cumpre paga uma multa à comunidade, e os visitantes também a devem respeitar. Vista-se com modéstia nas aldeias e igrejas, peça licença antes de fotografar pessoas e cumprimente com 'bondia' ou 'botarde'.",
+      "en": "In Timor-Leste many places are lulik, that is, sacred: sacred houses (uma lulik), springs, rocks, large trees, mountain tops and islands such as Jaco. Always ask local leaders for permission before entering, follow what the guides say and do not touch sacred objects. Many communities use tara bandu, a traditional ban, decided in a ceremony, that closes a forest, a river or part of the reef for a time so that nature can recover; anyone who breaks it pays a fine to the community, and visitors must respect it too. Dress modestly in villages and churches, ask permission before photographing people and greet people with 'bondia' (good morning) or 'botarde' (good afternoon).",
+      "id": "Di Timor-Leste banyak tempat bersifat lulik, artinya keramat: rumah sakral (uma lulik), mata air, batu, pohon besar, puncak gunung, dan pulau seperti Jaco. Selalu mintalah izin kepada para pemimpin setempat sebelum masuk, ikuti petunjuk pemandu, dan jangan menyentuh benda-benda keramat. Banyak komunitas memakai tara bandu, larangan adat yang diputuskan dalam upacara, yang menutup sebuah hutan, sungai, atau bagian terumbu karang untuk sementara waktu agar alam dapat pulih; siapa pun yang melanggarnya membayar denda kepada komunitas, dan pengunjung juga wajib menghormatinya. Berpakaianlah sopan di desa dan gereja, mintalah izin sebelum memotret orang, dan sapalah dengan 'bondia' (selamat pagi) atau 'botarde' (selamat sore)."
      }
     },
     {
      "heading": {
       "tet": "Buat seluk ne'ebé di'ak atu hatene",
-      "pt": "Outras coisas úteis"
+      "pt": "Outras coisas úteis",
+      "en": "Other useful things",
+      "id": "Hal-hal berguna lainnya"
      },
      "text": {
       "tet": "Timór-Leste iha oras UTC+9, hanesan Japaun no Koreia. Lian ofisiál mak Tetun no Portugés, no Konstituisaun fó ba Indonézia no Inglés estatutu lian servisu nian; aprende liafuan Tetun balun, hanesan 'obrigadu' ka 'obrigada', loke odamatan barak. Fasil atu sosa kartaun SIM husi kompañia telemóvel ida ho pasaporte, maibé rede fraku iha área foho barak. Tempu bailoron, maizumenus Maiu to'o Novembru, mak tempu di'ak liu atu halo viajen iha estrada foho sira. Website turizmu ofisiál, timorleste.tl, halibur destinu, fatin toba, eventu no konsellu prátiku sira, no Lafa nia artigu turizmu seluk esplika fatin sira iha munisípiu ida-idak.",
-      "pt": "Timor-Leste está no fuso horário UTC+9, o mesmo do Japão e da Coreia. As línguas oficiais são o tétum e o português, e a Constituição dá ao indonésio e ao inglês o estatuto de línguas de trabalho; aprender algumas palavras de tétum, como 'obrigadu' ou 'obrigada', abre muitas portas. É fácil comprar um cartão SIM de uma empresa de telemóveis com o passaporte, mas a rede é fraca em muitas zonas de montanha. A época seca, mais ou menos de maio a novembro, é a melhor para viajar pelas estradas de montanha. O site oficial de turismo, timorleste.tl, reúne destinos, alojamento, eventos e conselhos práticos, e os outros artigos de turismo do Lafa explicam os lugares de cada município."
+      "pt": "Timor-Leste está no fuso horário UTC+9, o mesmo do Japão e da Coreia. As línguas oficiais são o tétum e o português, e a Constituição dá ao indonésio e ao inglês o estatuto de línguas de trabalho; aprender algumas palavras de tétum, como 'obrigadu' ou 'obrigada', abre muitas portas. É fácil comprar um cartão SIM de uma empresa de telemóveis com o passaporte, mas a rede é fraca em muitas zonas de montanha. A época seca, mais ou menos de maio a novembro, é a melhor para viajar pelas estradas de montanha. O site oficial de turismo, timorleste.tl, reúne destinos, alojamento, eventos e conselhos práticos, e os outros artigos de turismo do Lafa explicam os lugares de cada município.",
+      "en": "Timor-Leste is in the UTC+9 time zone, the same as Japan and Korea. The official languages are Tetun and Portuguese, and the Constitution gives Indonesian and English the status of working languages; learning a few words of Tetun, such as 'obrigadu' or 'obrigada' (thank you), opens many doors. It is easy to buy a SIM card from a mobile phone company with your passport, but the network is weak in many mountain areas. The dry season, roughly from May to November, is the best time to travel on the mountain roads. The official tourism website, timorleste.tl, brings together destinations, accommodation, events and practical advice, and Lafa's other tourism articles explain the places in each municipality.",
+      "id": "Timor-Leste berada di zona waktu UTC+9, sama dengan Jepang dan Korea. Bahasa resminya adalah Tetun dan Portugis, dan Konstitusi memberi bahasa Indonesia dan Inggris status bahasa kerja; mempelajari beberapa kata Tetun, seperti 'obrigadu' atau 'obrigada' (terima kasih), membuka banyak pintu. Kartu SIM dari perusahaan telepon seluler mudah dibeli dengan paspor, tetapi jaringannya lemah di banyak daerah pegunungan. Musim kemarau, kira-kira dari Mei hingga November, adalah waktu terbaik untuk bepergian di jalan-jalan pegunungan. Situs pariwisata resmi, timorleste.tl, menghimpun informasi tentang tujuan wisata, penginapan, acara, dan saran praktis, dan artikel-artikel pariwisata Lafa lainnya menjelaskan tempat-tempat di setiap munisipalitas."
      }
     }
    ],
@@ -560,78 +730,106 @@
     {
      "label": {
       "tet": "Vistu bainhira to'o (aeroportu Dili)",
-      "pt": "Visto à chegada (aeroporto de Díli)"
+      "pt": "Visto à chegada (aeroporto de Díli)",
+      "en": "Visa on arrival (Dili airport)",
+      "id": "Visa saat kedatangan (bandara Dili)"
      },
      "value": {
       "tet": "dólar 30, selu ho osan; maizumenus loron 30",
-      "pt": "30 dólares, em dinheiro; cerca de 30 dias"
+      "pt": "30 dólares, em dinheiro; cerca de 30 dias",
+      "en": "30 dollars, in cash; about 30 days",
+      "id": "30 dolar, tunai; sekitar 30 hari"
      },
      "year": 2026
     },
     {
      "label": {
       "tet": "Deklarasaun eletrónika ba tama",
-      "pt": "Declaração eletrónica de chegada"
+      "pt": "Declaração eletrónica de chegada",
+      "en": "Electronic arrival declaration",
+      "id": "Deklarasi kedatangan elektronik"
      },
      "value": {
       "tet": "online, iha loron 5 molok viajen",
-      "pt": "online, nos 5 dias antes da viagem"
+      "pt": "online, nos 5 dias antes da viagem",
+      "en": "online, within 5 days before the journey",
+      "id": "daring, dalam 5 hari sebelum perjalanan"
      }
     },
     {
      "label": {
       "tet": "Osan ofisiál",
-      "pt": "Moeda oficial"
+      "pt": "Moeda oficial",
+      "en": "Official currency",
+      "id": "Mata uang resmi"
      },
      "value": {
       "tet": "Dólar Amerikanu, ho osan-besi sentavu 1, 5, 10, 25, 50, 100 no 200",
-      "pt": "Dólar americano, com moedas de 1, 5, 10, 25, 50, 100 e 200 centavos"
+      "pt": "Dólar americano, com moedas de 1, 5, 10, 25, 50, 100 e 200 centavos",
+      "en": "US dollar, with coins of 1, 5, 10, 25, 50, 100 and 200 centavos",
+      "id": "Dolar AS, dengan koin 1, 5, 10, 25, 50, 100, dan 200 centavo"
      }
     },
     {
      "label": {
       "tet": "Oras",
-      "pt": "Fuso horário"
+      "pt": "Fuso horário",
+      "en": "Time zone",
+      "id": "Zona waktu"
      },
      "value": "UTC+9"
     },
     {
      "label": {
       "tet": "Ró-ahi Dili–Atauru",
-      "pt": "Ferry Díli–Ataúro"
+      "pt": "Ferry Díli–Ataúro",
+      "en": "Dili–Ataúro ferry",
+      "id": "Feri Dili–Ataúro"
      },
      "value": {
       "tet": "Berlin Nakroma, oras 2,5–3",
-      "pt": "Berlin Nakroma, 2,5–3 horas"
+      "pt": "Berlin Nakroma, 2,5–3 horas",
+      "en": "Berlin Nakroma, 2.5–3 hours",
+      "id": "Berlin Nakroma, 2,5–3 jam"
      },
      "year": 2026
     },
     {
      "label": {
       "tet": "Ró-ahi Dili–Oe-Kusi",
-      "pt": "Ferry Díli–Oé-Cusse"
+      "pt": "Ferry Díli–Oé-Cusse",
+      "en": "Dili–Oé-Cusse ferry",
+      "id": "Feri Dili–Oé-Cusse"
      },
      "value": {
       "tet": "Berlin Ramelau, maizumenus oras 12 iha kalan",
-      "pt": "Berlin Ramelau, cerca de 12 horas de noite"
+      "pt": "Berlin Ramelau, cerca de 12 horas de noite",
+      "en": "Berlin Ramelau, about 12 hours overnight",
+      "id": "Berlin Ramelau, sekitar 12 jam pada malam hari"
      },
      "year": 2026
     },
     {
      "label": {
       "tet": "Livre husi malária (OMS)",
-      "pt": "Livre de malária (OMS)"
+      "pt": "Livre de malária (OMS)",
+      "en": "Malaria-free (WHO)",
+      "id": "Bebas malaria (WHO)"
      },
      "value": "2025"
     },
     {
      "label": {
       "tet": "Lian ofisiál",
-      "pt": "Línguas oficiais"
+      "pt": "Línguas oficiais",
+      "en": "Official languages",
+      "id": "Bahasa resmi"
      },
      "value": {
       "tet": "Tetun no Portugés",
-      "pt": "Tétum e português"
+      "pt": "Tétum e português",
+      "en": "Tetun and Portuguese",
+      "id": "Tetun dan Portugis"
      }
     }
    ],
@@ -639,7 +837,9 @@
     "illustration": "currency",
     "caption": {
      "tet": "Dólar Amerikanu no osan-besi sentavu Timór-Leste nian.",
-     "pt": "Dólares americanos e moedas de centavo timorenses."
+     "pt": "Dólares americanos e moedas de centavo timorenses.",
+     "en": "US dollars and Timorese centavo coins.",
+     "id": "Dolar AS dan koin centavo Timor-Leste."
     }
    },
    "wiki": {
@@ -671,180 +871,252 @@
     {
      "q": {
       "tet": "Osan saida mak ema uza iha Timór-Leste?",
-      "pt": "Que moeda se usa em Timor-Leste?"
+      "pt": "Que moeda se usa em Timor-Leste?",
+      "en": "Which currency is used in Timor-Leste?",
+      "id": "Mata uang apa yang dipakai di Timor-Leste?"
      },
      "options": [
       {
        "tet": "Dólar Amerikanu, ho osan-besi sentavu Timor nian",
-       "pt": "O dólar americano, com moedas de centavo timorenses"
+       "pt": "O dólar americano, com moedas de centavo timorenses",
+       "en": "The US dollar, with Timorese centavo coins",
+       "id": "Dolar AS, dengan koin centavo Timor-Leste"
       },
       {
        "tet": "Rupia Indonézia",
-       "pt": "A rupia indonésia"
+       "pt": "A rupia indonésia",
+       "en": "The Indonesian rupiah",
+       "id": "Rupiah Indonesia"
       },
       {
        "tet": "Euru",
-       "pt": "O euro"
+       "pt": "O euro",
+       "en": "The euro",
+       "id": "Euro"
       },
       {
        "tet": "Dólar Australianu",
-       "pt": "O dólar australiano"
+       "pt": "O dólar australiano",
+       "en": "The Australian dollar",
+       "id": "Dolar Australia"
       }
      ],
      "answer": 0,
      "why": {
       "tet": "Desde 2000, osan ofisiál mak dólar Estadus Unidus nian; troku mai iha osan-besi sentavu Timor nian.",
-      "pt": "Desde 2000, a moeda oficial é o dólar dos Estados Unidos; o troco vem em moedas de centavo timorenses."
+      "pt": "Desde 2000, a moeda oficial é o dólar dos Estados Unidos; o troco vem em moedas de centavo timorenses.",
+      "en": "Since 2000 the official currency has been the United States dollar; change comes in Timorese centavo coins.",
+      "id": "Sejak 2000 mata uang resminya adalah dolar Amerika Serikat; uang kembalian berupa koin centavo Timor-Leste."
      },
      "difficulty": 1
     },
     {
      "q": {
       "tet": "Iha Dili, bis ki'ik ho dalan fiksu naran saida?",
-      "pt": "Como se chamam os pequenos autocarros com percursos fixos em Díli?"
+      "pt": "Como se chamam os pequenos autocarros com percursos fixos em Díli?",
+      "en": "What are the small buses with fixed routes in Dili called?",
+      "id": "Apa nama bus kecil dengan trayek tetap di Dili?"
      },
      "options": [
       {
        "tet": "Komboiu",
-       "pt": "Comboios"
+       "pt": "Comboios",
+       "en": "Trains",
+       "id": "Kereta api"
       },
       {
        "tet": "Mikrolete",
-       "pt": "Microletes"
+       "pt": "Microletes",
+       "en": "Microlets",
+       "id": "Mikrolet"
       },
       {
        "tet": "Eléktriku",
-       "pt": "Elétricos"
+       "pt": "Elétricos",
+       "en": "Trams",
+       "id": "Trem"
       },
       {
        "tet": "Teleférik",
-       "pt": "Teleféricos"
+       "pt": "Teleféricos",
+       "en": "Cable cars",
+       "id": "Kereta gantung"
       }
      ],
      "answer": 1,
      "why": {
       "tet": "Mikrolete mak bis ki'ik ho númeru ne'ebé la'o tuir dalan fiksu iha Dili.",
-      "pt": "Os microletes são pequenos autocarros numerados que fazem percursos fixos em Díli."
+      "pt": "Os microletes são pequenos autocarros numerados que fazem percursos fixos em Díli.",
+      "en": "Microlets are small numbered buses that run on fixed routes in Dili.",
+      "id": "Mikrolet adalah bus kecil bernomor yang melayani trayek tetap di Dili."
      },
      "difficulty": 3
     },
     {
      "q": {
       "tet": "Ró-ahi saida mak liga Dili ho illa Atauru?",
-      "pt": "Que ferry liga Díli à ilha de Ataúro?"
+      "pt": "Que ferry liga Díli à ilha de Ataúro?",
+      "en": "Which ferry links Dili with the island of Ataúro?",
+      "id": "Kapal feri apa yang menghubungkan Dili dengan Pulau Ataúro?"
      },
      "options": [
       {
        "tet": "Ombai Queen",
-       "pt": "Ombai Queen"
+       "pt": "Ombai Queen",
+       "en": "Ombai Queen",
+       "id": "Ombai Queen"
       },
       {
        "tet": "Lafaek Express",
-       "pt": "Lafaek Express"
+       "pt": "Lafaek Express",
+       "en": "Lafaek Express",
+       "id": "Lafaek Express"
       },
       {
        "tet": "Berlin Nakroma",
-       "pt": "Berlin Nakroma"
+       "pt": "Berlin Nakroma",
+       "en": "Berlin Nakroma",
+       "id": "Berlin Nakroma"
       },
       {
        "tet": "Jaco Star",
-       "pt": "Jaco Star"
+       "pt": "Jaco Star",
+       "en": "Jaco Star",
+       "id": "Jaco Star"
       }
      ],
      "answer": 2,
      "why": {
       "tet": "Berlin Nakroma sai husi portu Dili ba Atauru iha loron balu kada semana.",
-      "pt": "O Berlin Nakroma sai do porto de Díli para Ataúro em vários dias da semana."
+      "pt": "O Berlin Nakroma sai do porto de Díli para Ataúro em vários dias da semana.",
+      "en": "The Berlin Nakroma leaves Dili port for Ataúro on several days a week.",
+      "id": "Berlin Nakroma berangkat dari pelabuhan Dili ke Ataúro pada beberapa hari dalam seminggu."
      },
      "difficulty": 6
     },
     {
      "q": {
       "tet": "Tara bandu mak saida?",
-      "pt": "O que é o tara bandu?"
+      "pt": "O que é o tara bandu?",
+      "en": "What is tara bandu?",
+      "id": "Apa itu tara bandu?"
      },
      "options": [
       {
        "tet": "Dansa ida atu simu bainaka",
-       "pt": "Uma dança de boas-vindas"
+       "pt": "Uma dança de boas-vindas",
+       "en": "A welcome dance",
+       "id": "Tarian penyambutan"
       },
       {
        "tet": "Bandu tradisionál ne'ebé proteje natureza ba tempu balu",
-       "pt": "Uma proibição tradicional que protege a natureza durante algum tempo"
+       "pt": "Uma proibição tradicional que protege a natureza durante algum tempo",
+       "en": "A traditional ban that protects nature for a time",
+       "id": "Larangan adat yang melindungi alam untuk sementara waktu"
       },
       {
        "tet": "Ró ida",
-       "pt": "Um tipo de barco"
+       "pt": "Um tipo de barco",
+       "en": "A type of boat",
+       "id": "Sejenis perahu"
       },
       {
        "tet": "Osan tuan ida",
-       "pt": "Uma moeda antiga"
+       "pt": "Uma moeda antiga",
+       "en": "An old coin",
+       "id": "Uang logam kuno"
       }
      ],
      "answer": 1,
      "why": {
       "tet": "Tara bandu mak bandu tradisionál ne'ebé komunidade deside iha serimónia atu taka ai-laran, mota ka ahu-ruin ba tempu balu.",
-      "pt": "O tara bandu é uma proibição tradicional, decidida em cerimónia, que fecha durante algum tempo uma floresta, um rio ou um recife."
+      "pt": "O tara bandu é uma proibição tradicional, decidida em cerimónia, que fecha durante algum tempo uma floresta, um rio ou um recife.",
+      "en": "Tara bandu is a traditional ban, decided in a ceremony, that closes a forest, a river or a reef for a time.",
+      "id": "Tara bandu adalah larangan adat yang diputuskan dalam upacara, yang menutup hutan, sungai, atau terumbu karang untuk sementara waktu."
      },
      "difficulty": 8
     },
     {
      "q": {
       "tet": "Tuir website turizmu ofisiál (2026), vistu bainhira to'o iha aeroportu Dili folin hira?",
-      "pt": "Segundo o site oficial de turismo (2026), quanto custa o visto à chegada no aeroporto de Díli?"
+      "pt": "Segundo o site oficial de turismo (2026), quanto custa o visto à chegada no aeroporto de Díli?",
+      "en": "According to the official tourism website (2026), how much does the visa on arrival at Dili airport cost?",
+      "id": "Menurut situs pariwisata resmi (2026), berapa biaya visa saat kedatangan di bandara Dili?"
      },
      "options": [
       {
        "tet": "Dólar 5",
-       "pt": "5 dólares"
+       "pt": "5 dólares",
+       "en": "5 dollars",
+       "id": "5 dolar"
       },
       {
        "tet": "Dólar 100",
-       "pt": "100 dólares"
+       "pt": "100 dólares",
+       "en": "100 dollars",
+       "id": "100 dolar"
       },
       {
        "tet": "Dólar 30",
-       "pt": "30 dólares"
+       "pt": "30 dólares",
+       "en": "30 dollars",
+       "id": "30 dolar"
       },
       {
        "tet": "Gratuitu ba ema hotu",
-       "pt": "É sempre gratuito"
+       "pt": "É sempre gratuito",
+       "en": "It is always free",
+       "id": "Selalu gratis"
       }
      ],
      "answer": 2,
      "why": {
       "tet": "Website ofisiál dehan katak vistu bainhira to'o folin dólar 30, selu ho osan.",
-      "pt": "O site oficial indica que o visto à chegada custa 30 dólares, pagos em dinheiro."
+      "pt": "O site oficial indica que o visto à chegada custa 30 dólares, pagos em dinheiro.",
+      "en": "The official website says that the visa on arrival costs 30 dollars, paid in cash.",
+      "id": "Situs resmi menyebut visa saat kedatangan berbiaya 30 dolar, dibayar tunai."
      },
      "difficulty": 11
     },
     {
      "q": {
       "tet": "Osan-besi sentavu Timor nian ida ne'ebé mak fó onra ba D. Boaventura husi Manufahi?",
-      "pt": "Que moeda de centavo timorense homenageia D. Boaventura de Manufahi?"
+      "pt": "Que moeda de centavo timorense homenageia D. Boaventura de Manufahi?",
+      "en": "Which Timorese centavo coin honours Dom Boaventura of Manufahi?",
+      "id": "Koin centavo Timor-Leste mana yang menghormati Dom Boaventura dari Manufahi?"
      },
      "options": [
       {
        "tet": "Sentavu 100",
-       "pt": "A de 100 centavos"
+       "pt": "A de 100 centavos",
+       "en": "The 100-centavo coin",
+       "id": "Koin 100 centavo"
       },
       {
        "tet": "Sentavu 1",
-       "pt": "A de 1 centavo"
+       "pt": "A de 1 centavo",
+       "en": "The 1-centavo coin",
+       "id": "Koin 1 centavo"
       },
       {
        "tet": "Sentavu 5",
-       "pt": "A de 5 centavos"
+       "pt": "A de 5 centavos",
+       "en": "The 5-centavo coin",
+       "id": "Koin 5 centavo"
       },
       {
        "tet": "Sentavu 25",
-       "pt": "A de 25 centavos"
+       "pt": "A de 25 centavos",
+       "en": "The 25-centavo coin",
+       "id": "Koin 25 centavo"
       }
      ],
      "answer": 0,
      "why": {
       "tet": "Osan-besi sentavu 100 (2013) fó onra ba D. Boaventura, lider revolta 1912 nian; sentavu 200 hatudu karau ida no Foho Matebian.",
-      "pt": "A moeda de 100 centavos (2013) homenageia D. Boaventura, chefe da revolta de 1912; a de 200 centavos mostra um búfalo e o monte Matebian."
+      "pt": "A moeda de 100 centavos (2013) homenageia D. Boaventura, chefe da revolta de 1912; a de 200 centavos mostra um búfalo e o monte Matebian.",
+      "en": "The 100-centavo coin (2013) honours Dom Boaventura, leader of the 1912 revolt; the 200-centavo coin shows a buffalo and Mount Matebian.",
+      "id": "Koin 100 centavo (2013) menghormati Dom Boaventura, pemimpin pemberontakan 1912; koin 200 centavo menampilkan seekor kerbau dan Gunung Matebian."
      },
      "difficulty": 13
     }
@@ -916,7 +1188,7 @@
    ],
    "review": {
     "status": "draft",
-    "notes": "Written on 2 Nov 2026 from WebSearch result summaries (timorleste.tl itself could not be opened in the sandbox). Visa rules (visa on arrival US$30 in cash; proof of accommodation, funds and a return ticket; e-Declaration 'up to 5 days before departure', written here as 'in the 5 days before departure' — check the exact window) from timorleste.tl/plan-your-trip as summarised; '30 days' and extension fees come from third-party visa sites, which disagree (about US$1 per day vs US$35 per 30 days), so no fee for extensions is given. Exemptions disagree between sources (official site: UN/Interpol passports; third-party: Schengen/EU and Indonesian citizens 90 days) — the text only says 'some nationalities have their own rules'; rules for ASEAN citizens were not found. Ferry details (Berlin Nakroma Wed/Thu/Sat/Sun 08:00, return 15:00, US$4; the boat 'Success' from Kolmera Tue/Fri, US$5; Berlin Ramelau Tue/Fri 17:00, about 12 h, US$8) from timorleste.tl/plan-your-trip/ferries (APORTIL timetable 2026) as summarised; the 'Dragon Star' fast boat mentioned in the brief was not found. Taxi meters, SIM registration with a passport and the Guido Valadares hospital are general knowledge — check. Currency facts follow tl.symbols.currency (URLs for coins and WHO verified by other writers)."
+    "notes": "Written on 2 Nov 2026 from WebSearch result summaries (timorleste.tl itself could not be opened in the sandbox). Visa rules (visa on arrival US$30 in cash; proof of accommodation, funds and a return ticket; e-Declaration 'up to 5 days before departure', written here as 'in the 5 days before departure' — check the exact window) from timorleste.tl/plan-your-trip as summarised; '30 days' and extension fees come from third-party visa sites, which disagree (about US$1 per day vs US$35 per 30 days), so no fee for extensions is given. Exemptions disagree between sources (official site: UN/Interpol passports; third-party: Schengen/EU and Indonesian citizens 90 days) — the text only says 'some nationalities have their own rules'; rules for ASEAN citizens were not found. Ferry details (Berlin Nakroma Wed/Thu/Sat/Sun 08:00, return 15:00, US$4; the boat 'Success' from Kolmera Tue/Fri, US$5; Berlin Ramelau Tue/Fri 17:00, about 12 h, US$8) from timorleste.tl/plan-your-trip/ferries (APORTIL timetable 2026) as summarised; the 'Dragon Star' fast boat mentioned in the brief was not found. Taxi meters, SIM registration with a passport and the Guido Valadares hospital are general knowledge — check. Currency facts follow tl.symbols.currency (URLs for coins and WHO verified by other writers). English and Indonesian translated from the Portuguese on 11 Nov 2026 (no facts added or changed; Tetun and Portuguese untouched). Ferry times '8 horas' / '15 horas' given as 8 a.m. / 3 p.m. (en) and pukul 08.00 / 15.00 (id); prices and periods copied exactly. 'Serviço de Migração' given as 'Migration Service' / 'Dinas Migrasi' with the Portuguese name in brackets — check the official English name. WHO keeps its official spelling 'World Health Organization'."
    }
   },
   {
@@ -927,11 +1199,15 @@
    ],
    "title": {
     "tet": "Tasi-ibun no illa sira",
-    "pt": "Praias e ilhas"
+    "pt": "Praias e ilhas",
+    "en": "Beaches and islands",
+    "id": "Pantai dan pulau"
    },
    "summary": {
     "tet": "Timór-Leste iha kosta rua ne'ebé la hanesan: kosta norte ho tasi kalma, ahu-ruin no tasi-ibun ho rai-henek kór naroman, no kosta sul ho ondas makaas no tasi-ibun naruk ho rai-henek nakukun. Illa Atauru no illa Jaku mak illa rua ne'ebé vizitante sira bele vizita.",
-    "pt": "Timor-Leste tem duas costas muito diferentes: a norte, mar calmo, recifes de coral e praias de areia clara; a sul, ondas fortes e longas praias de areia escura. As ilhas de Ataúro e de Jaco são as duas ilhas que os visitantes podem conhecer."
+    "pt": "Timor-Leste tem duas costas muito diferentes: a norte, mar calmo, recifes de coral e praias de areia clara; a sul, ondas fortes e longas praias de areia escura. As ilhas de Ataúro e de Jaco são as duas ilhas que os visitantes podem conhecer.",
+    "en": "Timor-Leste has two very different coasts: in the north, a calm sea, coral reefs and beaches of light-coloured sand; in the south, strong waves and long beaches of dark sand. Ataúro and Jaco are the two islands that visitors can get to know.",
+    "id": "Timor-Leste memiliki dua pesisir yang sangat berbeda: di utara, laut yang tenang, terumbu karang, dan pantai berpasir terang; di selatan, ombak kuat dan pantai panjang berpasir gelap. Pulau Ataúro dan Pulau Jaco adalah dua pulau yang dapat dikunjungi wisatawan."
    },
    "levels": [
     "eb2",
@@ -943,61 +1219,85 @@
     {
      "heading": {
       "tet": "Kosta rua",
-      "pt": "Duas costas"
+      "pt": "Duas costas",
+      "en": "Two coasts",
+      "id": "Dua pesisir"
      },
      "text": {
       "tet": "Timor nia kosta norte hasoru selat kle'an Ombai no Wetar. Tasi baibain kalma, liuliu iha tempu bailoron, no ahu-ruin dala barak hahú metru balun de'it husi tasi-ibun, tan ne'e fasil atu halo snorkel. Tasi-ibun sira iha rai-henek mutin ka sinzentu, nu'u-hun no aldeia peskadór nian. Kosta sul hasoru Tasi Timor, ne'ebé nakloke to'o Austrália: ondas makaas liu, ahu-ruin uitoan, no tasi-ibun sira naruk, ho rai-henek nakukun, no lagoa no ai-parapa iha kotuk. Iha kuaze nasaun tomak, maibé liuliu iha sul no leste, lafaek tasi nian hela iha mota, lagoa no kosta balu.",
-      "pt": "A costa norte de Timor está virada para os estreitos profundos de Ombai e Wetar. O mar costuma ser calmo, sobretudo na época seca, e os recifes de coral começam muitas vezes a poucos metros da praia, o que torna fácil o snorkel. As praias têm areia branca ou cinzenta, coqueiros e aldeias de pescadores. A costa sul está virada para o mar de Timor, aberto até à Austrália: as ondas são mais fortes, há poucos recifes, e as praias são longas, com areia escura e, atrás, lagoas e mangais. Em quase todo o país, mas sobretudo no sul e no leste, vivem crocodilos de água salgada em rios, lagoas e algumas costas."
+      "pt": "A costa norte de Timor está virada para os estreitos profundos de Ombai e Wetar. O mar costuma ser calmo, sobretudo na época seca, e os recifes de coral começam muitas vezes a poucos metros da praia, o que torna fácil o snorkel. As praias têm areia branca ou cinzenta, coqueiros e aldeias de pescadores. A costa sul está virada para o mar de Timor, aberto até à Austrália: as ondas são mais fortes, há poucos recifes, e as praias são longas, com areia escura e, atrás, lagoas e mangais. Em quase todo o país, mas sobretudo no sul e no leste, vivem crocodilos de água salgada em rios, lagoas e algumas costas.",
+      "en": "The north coast of Timor faces the deep Ombai and Wetar straits. The sea is usually calm, especially in the dry season, and the coral reefs often begin just a few metres from the beach, which makes snorkelling easy. The beaches have white or grey sand, coconut palms and fishing villages. The south coast faces the Timor Sea, open all the way to Australia: the waves are stronger, there are few reefs, and the beaches are long, with dark sand and, behind them, lagoons and mangroves. In almost the whole country, but especially in the south and the east, saltwater crocodiles live in rivers and lagoons and on some coasts.",
+      "id": "Pesisir utara Timor menghadap Selat Ombai dan Selat Wetar yang dalam. Lautnya biasanya tenang, terutama pada musim kemarau, dan terumbu karang sering dimulai hanya beberapa meter dari pantai, sehingga snorkeling mudah dilakukan. Pantai-pantainya berpasir putih atau abu-abu, dengan pohon kelapa dan desa-desa nelayan. Pesisir selatan menghadap Laut Timor, yang terbuka sampai ke Australia: ombaknya lebih kuat, terumbunya sedikit, dan pantainya panjang dan berpasir gelap, dengan laguna dan hutan bakau di belakangnya. Di hampir seluruh negeri, tetapi terutama di selatan dan timur, buaya air asin hidup di sungai, laguna, dan di beberapa pantai."
      }
     },
     {
      "heading": {
       "tet": "Tasi-ibun besik Dili",
-      "pt": "Praias perto de Díli"
+      "pt": "Praias perto de Díli",
+      "en": "Beaches near Dili",
+      "id": "Pantai di dekat Dili"
      },
      "text": {
       "tet": "Dili iha tasi-ibun minutu balun husi sentru. Iha leste, estrada tasi-ibun nian liu Areia Branca, tasi-ibun naruk ida ho fatin fa'an hahán, no to'o Cristo Rei, iha Kabu Fatucama. Iha estátua nia kotuk iha tasi-ibun ne'ebé ema bolu 'Jesus Backside' no, uitoan tan, Tasi-ibun Dollar, kalma no di'ak atu nani. Ahu-ruin iha Cristo Rei nia okos mak fatin fasil liu atu halo snorkel husi tasi-ibun. Iha sidade nia loro-monu iha lagoa Tasitolu, di'ak atu haree manu, no, oras ida ho kareta, Likisá no Maubara, ho ninia forte iha tasi ninin no lagoa masin ida ne'ebé manu pelikanu hela.",
-      "pt": "Díli tem praias a poucos minutos do centro. A leste, a estrada costeira passa pela Areia Branca, uma longa praia com bancas de comida, e chega ao Cristo Rei, no cabo Fatucama. Atrás da estátua ficam a praia conhecida como 'Jesus Backside' e, um pouco mais à frente, a Dollar Beach, calmas e boas para nadar. O recife por baixo do Cristo Rei é o lugar mais fácil para fazer snorkel a partir da praia. A oeste da cidade ficam as lagoas de Tasitolu, boas para observar aves, e, a uma hora de carro, Liquiçá e Maubara, com o seu forte junto ao mar e uma lagoa salgada onde vivem pelicanos."
+      "pt": "Díli tem praias a poucos minutos do centro. A leste, a estrada costeira passa pela Areia Branca, uma longa praia com bancas de comida, e chega ao Cristo Rei, no cabo Fatucama. Atrás da estátua ficam a praia conhecida como 'Jesus Backside' e, um pouco mais à frente, a Dollar Beach, calmas e boas para nadar. O recife por baixo do Cristo Rei é o lugar mais fácil para fazer snorkel a partir da praia. A oeste da cidade ficam as lagoas de Tasitolu, boas para observar aves, e, a uma hora de carro, Liquiçá e Maubara, com o seu forte junto ao mar e uma lagoa salgada onde vivem pelicanos.",
+      "en": "Dili has beaches a few minutes from the centre. To the east, the coast road passes Areia Branca, a long beach with food stalls, and reaches Cristo Rei, on Cape Fatucama. Behind the statue are the beach known as 'Jesus Backside' and, a little further on, Dollar Beach, both calm and good for swimming. The reef below Cristo Rei is the easiest place to snorkel from the beach. West of the city lie the Tasitolu lakes, good for birdwatching, and, an hour's drive away, Liquiçá and Maubara, with its fort by the sea and a salt lagoon where pelicans live.",
+      "id": "Dili memiliki pantai yang hanya beberapa menit dari pusat kota. Di sebelah timur, jalan pesisir melewati Areia Branca, pantai panjang dengan warung-warung makanan, dan sampai di Cristo Rei, di Tanjung Fatucama. Di belakang patung itu terdapat pantai yang dikenal sebagai 'Jesus Backside' dan, sedikit lebih jauh, Pantai Dollar, keduanya tenang dan cocok untuk berenang. Terumbu di bawah Cristo Rei adalah tempat termudah untuk snorkeling langsung dari pantai. Di sebelah barat kota terdapat Danau Tasitolu, yang cocok untuk mengamati burung, dan, satu jam berkendara dari kota, Liquiçá dan Maubara, dengan bentengnya di tepi laut dan danau air asin tempat pelikan hidup."
      }
     },
     {
      "heading": {
       "tet": "Illa Atauru",
-      "pt": "A ilha de Ataúro"
+      "pt": "A ilha de Ataúro",
+      "en": "The island of Ataúro",
+      "id": "Pulau Ataúro"
      },
      "text": {
       "tet": "Atauru iha Dili nia norte, iha selat kle'an ida nia sorin seluk, no sai munisípiu rasik desde 2022. Ema ba ho ró-ahi Berlin Nakroma, oras rua ho balu to'o tolu, ka ho ró privadu ne'ebé lalais liu. Illa ne'e nia luan maizumenus kilómetru kuadradu 140 no sa'e to'o Foho Manucoco, besik metru 1.000. Ninia ahu-ruin mak riku liu balu iha mundu: iha 2016, estudu ida sura iha ne'e espésie ikan ahu-ruin nian iha fatin ida barak liu duké iha fatin seluk hotu ne'ebé ema estuda. Vizitante sira toba iha eko-lodge no uma-kain iha Beloi, Vila ka Makili, halo snorkel no mergullu, la'o ain to'o Akrema iha norte, no sosa boneka hena nian ne'ebé feto illa nian halo.",
-      "pt": "Ataúro fica a norte de Díli, do outro lado de um estreito profundo, e é município próprio desde 2022. Chega-se de ferry, o Berlin Nakroma, em duas horas e meia a três, ou em barcos privados mais rápidos. A ilha tem cerca de 140 quilómetros quadrados e sobe até ao monte Manucoco, com quase mil metros. Os seus recifes estão entre os mais ricos do mundo: em 2016, um estudo contou aqui mais espécies de peixes de recife por local do que em qualquer outro sítio estudado. Os visitantes ficam em ecolodges e casas de família em Beloi, Vila ou Makili, fazem snorkel e mergulho, caminham até Akrema, no norte, e compram as bonecas de pano feitas pelas mulheres da ilha."
+      "pt": "Ataúro fica a norte de Díli, do outro lado de um estreito profundo, e é município próprio desde 2022. Chega-se de ferry, o Berlin Nakroma, em duas horas e meia a três, ou em barcos privados mais rápidos. A ilha tem cerca de 140 quilómetros quadrados e sobe até ao monte Manucoco, com quase mil metros. Os seus recifes estão entre os mais ricos do mundo: em 2016, um estudo contou aqui mais espécies de peixes de recife por local do que em qualquer outro sítio estudado. Os visitantes ficam em ecolodges e casas de família em Beloi, Vila ou Makili, fazem snorkel e mergulho, caminham até Akrema, no norte, e compram as bonecas de pano feitas pelas mulheres da ilha.",
+      "en": "Ataúro lies north of Dili, across a deep strait, and has been a municipality in its own right since 2022. You get there on the Berlin Nakroma ferry, in two and a half to three hours, or on faster private boats. The island covers about 140 square kilometres and rises to Mount Manucoco, almost a thousand metres high. Its reefs are among the richest in the world: in 2016 a study counted more species of reef fish per site here than at any other place studied. Visitors stay in eco-lodges and family homestays in Beloi, Vila or Makili, snorkel and dive, walk to Akrema in the north and buy the cloth dolls made by the island's women.",
+      "id": "Ataúro terletak di utara Dili, di seberang selat yang dalam, dan menjadi munisipalitas tersendiri sejak 2022. Pulau ini dicapai dengan kapal feri Berlin Nakroma dalam dua setengah sampai tiga jam, atau dengan perahu swasta yang lebih cepat. Luas pulau ini sekitar 140 kilometer persegi dan menjulang sampai ke Gunung Manucoco, yang tingginya hampir seribu meter. Terumbu karangnya termasuk yang terkaya di dunia: pada 2016 sebuah penelitian mencatat di sini lebih banyak spesies ikan karang per lokasi daripada di tempat lain mana pun yang pernah diteliti. Pengunjung menginap di pondok ekowisata dan rumah keluarga (homestay) di Beloi, Vila, atau Makili, bersnorkel dan menyelam, berjalan kaki ke Akrema di utara, dan membeli boneka kain buatan para perempuan pulau itu."
      }
     },
     {
      "heading": {
       "tet": "Rohan leste: Jaku, Valu no Com",
-      "pt": "O extremo leste: Jaco, Valu e Com"
+      "pt": "O extremo leste: Jaco, Valu e Com",
+      "en": "The far east: Jaco, Valu and Com",
+      "id": "Ujung timur: Jaco, Valu, dan Com"
      },
      "text": {
       "tet": "Iha rohan leste, iha Parke Nasionál Nino Konis Santana nia laran, illa Jaku iha rai-henek mutin, bee kór matak-azúl no ahu-ruin riku. Ema ida la hela iha ne'ebá: ba povu Fataluku ne'e fatin lulik, no vizitante sira bele ba iha loron maibé la bele toba iha kalan. Peskadór sira husi tasi-ibun Valu, iha Tutuala nia okos, lori vizitante ho ró iha minutu balun. Iha Valu iha uma-hospedajen no fatin kampu komunidade nian. Iha loro-monu liu, aldeia peskadór Com iha tasi-ibun kalma no ahu-ruin besik tasi-ibun, no vila Lautein rai forte ida nia rahun iha tasi nia leten. Kosta ne'e iha lafaek: tuir nafatin konsellu lokál.",
-      "pt": "No extremo leste, dentro do Parque Nacional Nino Konis Santana, a ilha de Jaco tem areia branca, água turquesa e recifes ricos. Ninguém vive lá: para o povo fataluco é um lugar sagrado, e os visitantes podem ir durante o dia, mas não passar a noite. Os pescadores da praia de Valu, por baixo de Tutuala, levam os visitantes de barco em poucos minutos. Em Valu há casas de hóspedes e parques de campismo da comunidade. Mais a oeste, a aldeia de pescadores de Com tem praias calmas e recifes perto da margem, e a vila de Lautém guarda as ruínas de um forte sobre o mar. Esta costa tem crocodilos: siga sempre os conselhos locais."
+      "pt": "No extremo leste, dentro do Parque Nacional Nino Konis Santana, a ilha de Jaco tem areia branca, água turquesa e recifes ricos. Ninguém vive lá: para o povo fataluco é um lugar sagrado, e os visitantes podem ir durante o dia, mas não passar a noite. Os pescadores da praia de Valu, por baixo de Tutuala, levam os visitantes de barco em poucos minutos. Em Valu há casas de hóspedes e parques de campismo da comunidade. Mais a oeste, a aldeia de pescadores de Com tem praias calmas e recifes perto da margem, e a vila de Lautém guarda as ruínas de um forte sobre o mar. Esta costa tem crocodilos: siga sempre os conselhos locais.",
+      "en": "In the far east, inside Nino Konis Santana National Park, Jaco Island has white sand, turquoise water and rich reefs. No one lives there: for the Fataluku people it is a sacred place, and visitors can go during the day but not stay the night. Fishermen from Valu beach, below Tutuala, take visitors across by boat in a few minutes. At Valu there are community guesthouses and campsites. Further west, the fishing village of Com has calm beaches and reefs close to the shore, and the town of Lautém has the ruins of a fort above the sea. This coast has crocodiles: always follow local advice.",
+      "id": "Di ujung timur, di dalam Taman Nasional Nino Konis Santana, Pulau Jaco memiliki pasir putih, air biru toska, dan terumbu yang kaya. Tidak ada yang tinggal di sana: bagi masyarakat Fataluku pulau ini tempat keramat, dan pengunjung boleh datang pada siang hari tetapi tidak boleh bermalam. Para nelayan dari Pantai Valu, di bawah Tutuala, mengantar pengunjung dengan perahu dalam beberapa menit. Di Valu ada penginapan dan tempat berkemah milik masyarakat. Lebih ke barat, desa nelayan Com memiliki pantai yang tenang dan terumbu di dekat tepi pantai, dan kota Lautém menyimpan reruntuhan benteng di atas laut. Di pesisir ini ada buaya: selalu ikuti saran warga setempat."
      }
     },
     {
      "heading": {
       "tet": "Kosta sul no Oe-Kusi",
-      "pt": "A costa sul e Oé-Cusse"
+      "pt": "A costa sul e Oé-Cusse",
+      "en": "The south coast and Oé-Cusse",
+      "id": "Pesisir selatan dan Oé-Cusse"
      },
      "text": {
       "tet": "Iha kosta sul, tasi-ibun Betano (Manufahi), Beaço (Vikeke), Natarbora (Manatutu) no Suai (Kovalima) naruk, kuaze mamuk no ho rai-henek nakukun, ho loro tun furak tebes iha Tasi Timor nia leten. Sira di'ak liu atu la'o-la'o, haree manu no ko'alia ho peskadór sira duké atu nani. Iha rai-le'un Oe-Kusi Ambenu, ne'ebé ema to'o ho ró-ahi iha kalan, maizumenus oras 12, ka ho aviaun, tasi-ibun Lifau marka fatin ne'ebé Portugés sira tun dahuluk, tuir tradisaun iha 1515; Mahata di'ak ba snorkel no atu haree baleia iha sira-nia tempu; no Citrana, iha rohan loro-monu, iha kosta hakmatek besik mota Noel Besi.",
-      "pt": "Na costa sul, as praias de Betano (Manufahi), Beaço (Viqueque), Natarbora (Manatuto) e Suai (Cova Lima) são longas, quase vazias e de areia escura, com pores do sol enormes sobre o mar de Timor. São melhores para passear, observar aves e conversar com pescadores do que para nadar. No enclave de Oé-Cusse Ambeno, a que se chega de ferry, de noite, em cerca de 12 horas, ou de avião, a praia de Lifau marca o lugar do primeiro desembarque português, tradicionalmente em 1515; Mahata é boa para snorkel e para ver baleias na época própria; e Citrana, no extremo oeste, tem uma costa tranquila junto ao rio Noel Besi."
+      "pt": "Na costa sul, as praias de Betano (Manufahi), Beaço (Viqueque), Natarbora (Manatuto) e Suai (Cova Lima) são longas, quase vazias e de areia escura, com pores do sol enormes sobre o mar de Timor. São melhores para passear, observar aves e conversar com pescadores do que para nadar. No enclave de Oé-Cusse Ambeno, a que se chega de ferry, de noite, em cerca de 12 horas, ou de avião, a praia de Lifau marca o lugar do primeiro desembarque português, tradicionalmente em 1515; Mahata é boa para snorkel e para ver baleias na época própria; e Citrana, no extremo oeste, tem uma costa tranquila junto ao rio Noel Besi.",
+      "en": "On the south coast, the beaches of Betano (Manufahi), Beaço (Viqueque), Natarbora (Manatuto) and Suai (Cova Lima) are long, almost empty and dark-sanded, with huge sunsets over the Timor Sea. They are better for walking, birdwatching and talking with fishermen than for swimming. In the enclave of Oé-Cusse Ambeno, which you reach by overnight ferry in about 12 hours or by plane, Lifau beach marks the place of the first Portuguese landing, traditionally in 1515; Mahata is good for snorkelling and for watching whales in season; and Citrana, at the far western end, has a quiet coast by the Noel Besi river.",
+      "id": "Di pesisir selatan, pantai-pantai Betano (Manufahi), Beaço (Viqueque), Natarbora (Manatuto), dan Suai (Cova Lima) panjang, hampir sepi, dan berpasir gelap, dengan matahari terbenam yang megah di atas Laut Timor. Pantai-pantai ini lebih cocok untuk berjalan-jalan, mengamati burung, dan berbincang dengan nelayan daripada untuk berenang. Di daerah kantong Oé-Cusse Ambeno, yang dicapai dengan kapal feri malam selama sekitar 12 jam atau dengan pesawat, Pantai Lifau menandai tempat pendaratan pertama Portugis, menurut tradisi pada 1515; Mahata cocok untuk snorkeling dan untuk melihat paus pada musimnya; dan Citrana, di ujung barat, memiliki pesisir yang tenang di tepi Sungai Noel Besi."
      }
     },
     {
      "heading": {
       "tet": "Nani ho seguransa no respeitu",
-      "pt": "Nadar com segurança e respeito"
+      "pt": "Nadar com segurança e respeito",
+      "en": "Swimming safely and with respect",
+      "id": "Berenang dengan aman dan penuh hormat"
      },
      "text": {
       "tet": "Molok nani, husu nafatin ba ema lokál fatin ne'ebé seguru: sira hatene bee-suli, lafaek no fatin lulik sira. Keta nani besik mota-ibun, ai-parapa ka lagoa, no keta nani iha loro-tun ka iha kalan. Halo snorkel de'it bainhira tasi kalma no, se bele, ho guia. Keta hakat iha ahu-ruin, keta foti kulit-tasi ka ahu-ruin no respeita fatin ne'ebé tara bandu taka, bandu tradisionál ne'ebé husik ahu-ruin deskansa. Hatais roupa ne'ebé di'ak iha li'ur tasi-ibun, liuliu iha aldeia sira. Lori fila lixu, tanba tasi-ibun barak la iha ema ne'ebé foti lixu. No selu taxa ki'ik komunidade nian: sira ajuda aldeia sira atu proteje tasi.",
-      "pt": "Antes de nadar, pergunte sempre às pessoas da terra onde é seguro: elas conhecem as correntes, os crocodilos e os lugares sagrados. Nunca nade perto de fozes de rios, mangais ou lagoas, nem ao anoitecer ou de noite. Faça snorkel só com mar calmo e, se possível, com um guia. Não pise o coral, não apanhe conchas nem corais e respeite as zonas fechadas por tara bandu, a proibição tradicional que deixa o recife descansar. Vista-se com modéstia fora da praia, sobretudo nas aldeias. Leve o lixo de volta, porque muitas praias não têm recolha. E pague as pequenas taxas comunitárias: ajudam as aldeias a proteger o mar."
+      "pt": "Antes de nadar, pergunte sempre às pessoas da terra onde é seguro: elas conhecem as correntes, os crocodilos e os lugares sagrados. Nunca nade perto de fozes de rios, mangais ou lagoas, nem ao anoitecer ou de noite. Faça snorkel só com mar calmo e, se possível, com um guia. Não pise o coral, não apanhe conchas nem corais e respeite as zonas fechadas por tara bandu, a proibição tradicional que deixa o recife descansar. Vista-se com modéstia fora da praia, sobretudo nas aldeias. Leve o lixo de volta, porque muitas praias não têm recolha. E pague as pequenas taxas comunitárias: ajudam as aldeias a proteger o mar.",
+      "en": "Before swimming, always ask local people where it is safe: they know the currents, the crocodiles and the sacred places. Never swim near river mouths, mangroves or lagoons, or at dusk or at night. Snorkel only when the sea is calm and, if possible, with a guide. Do not step on the coral, do not collect shells or coral, and respect the areas closed by tara bandu, the traditional ban that lets the reef rest. Dress modestly away from the beach, especially in the villages. Take your rubbish back with you, because many beaches have no rubbish collection. And pay the small community fees: they help the villages to protect the sea.",
+      "id": "Sebelum berenang, selalu tanyakan kepada warga setempat di mana yang aman: mereka mengenal arus, buaya, dan tempat-tempat keramat. Jangan pernah berenang di dekat muara sungai, hutan bakau, atau laguna, atau saat senja dan malam hari. Bersnorkel hanya saat laut tenang dan, jika memungkinkan, bersama pemandu. Jangan menginjak karang, jangan mengambil cangkang atau karang, dan hormati kawasan yang ditutup dengan tara bandu, larangan adat yang memberi terumbu waktu untuk beristirahat. Berpakaianlah sopan di luar pantai, terutama di desa-desa. Bawa pulang sampah, karena banyak pantai tidak memiliki layanan pengangkutan sampah. Dan bayarlah iuran kecil untuk masyarakat: iuran itu membantu desa-desa melindungi laut."
      }
     }
    ],
@@ -1005,80 +1305,110 @@
     {
      "label": {
       "tet": "Illa Atauru: luan",
-      "pt": "Ilha de Ataúro: área"
+      "pt": "Ilha de Ataúro: área",
+      "en": "Ataúro Island: area",
+      "id": "Pulau Ataúro: luas"
      },
      "value": {
       "tet": "maizumenus km² 140",
-      "pt": "cerca de 140 km²"
+      "pt": "cerca de 140 km²",
+      "en": "about 140 km²",
+      "id": "sekitar 140 km²"
      }
     },
     {
      "label": {
       "tet": "Fatin aas liu iha Atauru",
-      "pt": "Ponto mais alto de Ataúro"
+      "pt": "Ponto mais alto de Ataúro",
+      "en": "Highest point of Ataúro",
+      "id": "Titik tertinggi Ataúro"
      },
      "value": {
       "tet": "Foho Manucoco, besik metru 1.000",
-      "pt": "Monte Manucoco, quase 1000 m"
+      "pt": "Monte Manucoco, quase 1000 m",
+      "en": "Mount Manucoco, almost 1,000 m",
+      "id": "Gunung Manucoco, hampir 1.000 m"
      }
     },
     {
      "label": {
       "tet": "Atauru sai munisípiu",
-      "pt": "Ataúro passa a município"
+      "pt": "Ataúro passa a município",
+      "en": "Ataúro becomes a municipality",
+      "id": "Ataúro menjadi munisipalitas"
      },
      "value": "2022"
     },
     {
      "label": {
       "tet": "Ró-ahi Dili–Atauru",
-      "pt": "Ferry Díli–Ataúro"
+      "pt": "Ferry Díli–Ataúro",
+      "en": "Dili–Ataúro ferry",
+      "id": "Feri Dili–Ataúro"
      },
      "value": {
       "tet": "oras 2,5–3",
-      "pt": "2,5–3 horas"
+      "pt": "2,5–3 horas",
+      "en": "2.5–3 hours",
+      "id": "2,5–3 jam"
      },
      "year": 2026
     },
     {
      "label": {
       "tet": "Ró-ahi Dili–Oe-Kusi",
-      "pt": "Ferry Díli–Oé-Cusse"
+      "pt": "Ferry Díli–Oé-Cusse",
+      "en": "Dili–Oé-Cusse ferry",
+      "id": "Feri Dili–Oé-Cusse"
      },
      "value": {
       "tet": "maizumenus oras 12, iha kalan",
-      "pt": "cerca de 12 horas, de noite"
+      "pt": "cerca de 12 horas, de noite",
+      "en": "about 12 hours, overnight",
+      "id": "sekitar 12 jam, pada malam hari"
      },
      "year": 2026
     },
     {
      "label": {
       "tet": "Illa Jaku",
-      "pt": "Ilha de Jaco"
+      "pt": "Ilha de Jaco",
+      "en": "Jaco Island",
+      "id": "Pulau Jaco"
      },
      "value": {
       "tet": "Lulik no ema la hela; vizitante la bele toba iha ne'ebá",
-      "pt": "Sagrada e desabitada; os visitantes não podem pernoitar"
+      "pt": "Sagrada e desabitada; os visitantes não podem pernoitar",
+      "en": "Sacred and uninhabited; visitors may not stay overnight",
+      "id": "Keramat dan tak berpenghuni; pengunjung tidak boleh bermalam"
      }
     },
     {
      "label": {
       "tet": "Rekorde ikan ahu-ruin nian",
-      "pt": "Recorde de peixes de recife"
+      "pt": "Recorde de peixes de recife",
+      "en": "Reef fish record",
+      "id": "Rekor ikan karang"
      },
      "value": {
       "tet": "Atauru, 2016",
-      "pt": "Ataúro, 2016"
+      "pt": "Ataúro, 2016",
+      "en": "Ataúro, 2016",
+      "id": "Ataúro, 2016"
      }
     },
     {
      "label": {
       "tet": "Portugés tun dahuluk",
-      "pt": "Primeiro desembarque português"
+      "pt": "Primeiro desembarque português",
+      "en": "First Portuguese landing",
+      "id": "Pendaratan Portugis pertama"
      },
      "value": {
       "tet": "Lifau, tuir tradisaun 1515",
-      "pt": "Lifau, tradicionalmente 1515"
+      "pt": "Lifau, tradicionalmente 1515",
+      "en": "Lifau, traditionally 1515",
+      "id": "Lifau, menurut tradisi 1515"
      }
     }
    ],
@@ -1086,7 +1416,9 @@
     "illustration": "beach",
     "caption": {
      "tet": "Tasi-ibun rai-henek mutin ho ahu-ruin iha kosta norte.",
-     "pt": "Praia de areia branca com recife na costa norte."
+     "pt": "Praia de areia branca com recife na costa norte.",
+     "en": "A white-sand beach with a reef on the north coast.",
+     "id": "Pantai berpasir putih dengan terumbu karang di pesisir utara."
     }
    },
    "wiki": {
@@ -1129,180 +1461,252 @@
     {
      "q": {
       "tet": "Illa saida mak iha Dili nia norte no ema ba ho ró-ahi husi Dili?",
-      "pt": "Que ilha fica a norte de Díli e se visita de ferry a partir da capital?"
+      "pt": "Que ilha fica a norte de Díli e se visita de ferry a partir da capital?",
+      "en": "Which island lies north of Dili and is visited by ferry from the capital?",
+      "id": "Pulau apa yang terletak di utara Dili dan dikunjungi dengan kapal feri dari ibu kota?"
      },
      "options": [
       {
        "tet": "Atauru",
-       "pt": "Ataúro"
+       "pt": "Ataúro",
+       "en": "Ataúro",
+       "id": "Ataúro"
       },
       {
        "tet": "Jaku",
-       "pt": "Jaco"
+       "pt": "Jaco",
+       "en": "Jaco",
+       "id": "Jaco"
       },
       {
        "tet": "Bali",
-       "pt": "Bali"
+       "pt": "Bali",
+       "en": "Bali",
+       "id": "Bali"
       },
       {
        "tet": "Flores",
-       "pt": "Flores"
+       "pt": "Flores",
+       "en": "Flores",
+       "id": "Flores"
       }
      ],
      "answer": 0,
      "why": {
       "tet": "Atauru iha Dili nia norte; ró-ahi Berlin Nakroma lori ema ba ne'ebá. Jaku iha rohan leste.",
-      "pt": "Ataúro fica a norte de Díli e o ferry Berlin Nakroma leva lá os visitantes; Jaco fica no extremo leste."
+      "pt": "Ataúro fica a norte de Díli e o ferry Berlin Nakroma leva lá os visitantes; Jaco fica no extremo leste.",
+      "en": "Ataúro lies north of Dili, and the Berlin Nakroma ferry takes visitors there; Jaco is in the far east.",
+      "id": "Ataúro terletak di utara Dili, dan kapal feri Berlin Nakroma membawa pengunjung ke sana; Jaco berada di ujung timur."
      },
      "difficulty": 2
     },
     {
      "q": {
       "tet": "Tasi-ibun iha kosta sul dala barak iha rai-henek kór saida?",
-      "pt": "De que cor é muitas vezes a areia das praias da costa sul?"
+      "pt": "De que cor é muitas vezes a areia das praias da costa sul?",
+      "en": "What colour is the sand on the beaches of the south coast often?",
+      "id": "Pasir pantai di pesisir selatan sering berwarna apa?"
      },
      "options": [
       {
        "tet": "Mutin hanesan jelu",
-       "pt": "Branca como a neve"
+       "pt": "Branca como a neve",
+       "en": "White as snow",
+       "id": "Putih seperti salju"
       },
       {
        "tet": "Nakukun (metan ka sinzentu)",
-       "pt": "Escura (preta ou cinzenta)"
+       "pt": "Escura (preta ou cinzenta)",
+       "en": "Dark (black or grey)",
+       "id": "Gelap (hitam atau abu-abu)"
       },
       {
        "tet": "Kór-de-roza",
-       "pt": "Cor-de-rosa"
+       "pt": "Cor-de-rosa",
+       "en": "Pink",
+       "id": "Merah muda"
       },
       {
        "tet": "Matak",
-       "pt": "Verde"
+       "pt": "Verde",
+       "en": "Green",
+       "id": "Hijau"
       }
      ],
      "answer": 1,
      "why": {
       "tet": "Tasi-ibun barak iha kosta sul, hanesan Betano no Suai, iha rai-henek metan ka sinzentu.",
-      "pt": "Muitas praias da costa sul, como Betano e Suai, têm areia preta ou cinzenta."
+      "pt": "Muitas praias da costa sul, como Betano e Suai, têm areia preta ou cinzenta.",
+      "en": "Many beaches on the south coast, such as Betano and Suai, have black or grey sand.",
+      "id": "Banyak pantai di pesisir selatan, seperti Betano dan Suai, berpasir hitam atau abu-abu."
      },
      "difficulty": 3
     },
     {
      "q": {
       "tet": "Tanba saida mak vizitante sira la bele toba iha kalan iha illa Jaku?",
-      "pt": "Porque é que os visitantes não podem passar a noite na ilha de Jaco?"
+      "pt": "Porque é que os visitantes não podem passar a noite na ilha de Jaco?",
+      "en": "Why can visitors not spend the night on Jaco Island?",
+      "id": "Mengapa pengunjung tidak boleh bermalam di Pulau Jaco?"
      },
      "options": [
       {
        "tet": "Tanba la iha rai-henek",
-       "pt": "Porque não tem areia"
+       "pt": "Porque não tem areia",
+       "en": "Because it has no sand",
+       "id": "Karena pulau itu tidak berpasir"
       },
       {
        "tet": "Tanba ne'e fatin lulik ba povu Fataluku",
-       "pt": "Porque é um lugar sagrado para o povo fataluco"
+       "pt": "Porque é um lugar sagrado para o povo fataluco",
+       "en": "Because it is a sacred place for the Fataluku people",
+       "id": "Karena pulau itu tempat keramat bagi masyarakat Fataluku"
       },
       {
        "tet": "Tanba ne'e baze militár",
-       "pt": "Porque é uma base militar"
+       "pt": "Porque é uma base militar",
+       "en": "Because it is a military base",
+       "id": "Karena pulau itu pangkalan militer"
       },
       {
        "tet": "Tanba iha kalan bee taka illa",
-       "pt": "Porque fica debaixo de água à noite"
+       "pt": "Porque fica debaixo de água à noite",
+       "en": "Because it is under water at night",
+       "id": "Karena pulau itu terendam air pada malam hari"
       }
      ],
      "answer": 1,
      "why": {
       "tet": "Tuir lisan lokál, Jaku mak fatin lulik; vizitante sira bele ba iha loron maibé tenke fila iha loro-kraik.",
-      "pt": "Segundo o costume local, Jaco é sagrada; os visitantes podem ir de dia, mas têm de regressar ao fim da tarde."
+      "pt": "Segundo o costume local, Jaco é sagrada; os visitantes podem ir de dia, mas têm de regressar ao fim da tarde.",
+      "en": "According to local custom, Jaco is sacred; visitors can go during the day but must come back in the late afternoon.",
+      "id": "Menurut adat setempat, Jaco adalah tempat keramat; pengunjung boleh datang pada siang hari tetapi harus kembali menjelang sore."
      },
      "difficulty": 6
     },
     {
      "q": {
       "tet": "Animál perigozu saida mak bele hela iha mota-ibun, lagoa no ai-parapa?",
-      "pt": "Que animal perigoso pode viver em fozes de rios, lagoas e mangais?"
+      "pt": "Que animal perigoso pode viver em fozes de rios, lagoas e mangais?",
+      "en": "Which dangerous animal can live in river mouths, lagoons and mangroves?",
+      "id": "Hewan berbahaya apa yang bisa hidup di muara sungai, laguna, dan hutan bakau?"
      },
      "options": [
       {
        "tet": "Lafaek tasi nian",
-       "pt": "O crocodilo de água salgada"
+       "pt": "O crocodilo de água salgada",
+       "en": "The saltwater crocodile",
+       "id": "Buaya air asin"
       },
       {
        "tet": "Urso",
-       "pt": "O urso"
+       "pt": "O urso",
+       "en": "The bear",
+       "id": "Beruang"
       },
       {
        "tet": "Lobu",
-       "pt": "O lobo"
+       "pt": "O lobo",
+       "en": "The wolf",
+       "id": "Serigala"
       },
       {
        "tet": "Tigre",
-       "pt": "O tigre"
+       "pt": "O tigre",
+       "en": "The tiger",
+       "id": "Harimau"
       }
      ],
      "answer": 0,
      "why": {
       "tet": "Lafaek tasi nian hela iha mota, lagoa no kosta barak, liuliu iha sul no leste.",
-      "pt": "O crocodilo de água salgada vive em muitos rios, lagoas e costas, sobretudo no sul e no leste."
+      "pt": "O crocodilo de água salgada vive em muitos rios, lagoas e costas, sobretudo no sul e no leste.",
+      "en": "The saltwater crocodile lives in many rivers, lagoons and coasts, especially in the south and the east.",
+      "id": "Buaya air asin hidup di banyak sungai, laguna, dan pantai, terutama di selatan dan timur."
      },
      "difficulty": 8
     },
     {
      "q": {
       "tet": "Ró-ahi saida mak halo viajen kalan husi Dili ba Oe-Kusi (2026)?",
-      "pt": "Que ferry faz a viagem noturna de Díli para Oé-Cusse (2026)?"
+      "pt": "Que ferry faz a viagem noturna de Díli para Oé-Cusse (2026)?",
+      "en": "Which ferry makes the night crossing from Dili to Oé-Cusse (2026)?",
+      "id": "Kapal feri apa yang berlayar pada malam hari dari Dili ke Oé-Cusse (2026)?"
      },
      "options": [
       {
        "tet": "Berlin Nakroma",
-       "pt": "Berlin Nakroma"
+       "pt": "Berlin Nakroma",
+       "en": "Berlin Nakroma",
+       "id": "Berlin Nakroma"
       },
       {
        "tet": "Berlin Ramelau",
-       "pt": "Berlin Ramelau"
+       "pt": "Berlin Ramelau",
+       "en": "Berlin Ramelau",
+       "id": "Berlin Ramelau"
       },
       {
        "tet": "Atauro Express",
-       "pt": "Atauro Express"
+       "pt": "Atauro Express",
+       "en": "Atauro Express",
+       "id": "Atauro Express"
       },
       {
        "tet": "Jaco Star",
-       "pt": "Jaco Star"
+       "pt": "Jaco Star",
+       "en": "Jaco Star",
+       "id": "Jaco Star"
       }
      ],
      "answer": 1,
      "why": {
       "tet": "Tuir oráriu 2026, Berlin Ramelau ba Oe-Kusi iha kalan, maizumenus oras 12; Berlin Nakroma ba Atauru.",
-      "pt": "Segundo o horário de 2026, o Berlin Ramelau vai a Oé-Cusse de noite, em cerca de 12 horas; o Berlin Nakroma vai a Ataúro."
+      "pt": "Segundo o horário de 2026, o Berlin Ramelau vai a Oé-Cusse de noite, em cerca de 12 horas; o Berlin Nakroma vai a Ataúro.",
+      "en": "According to the 2026 timetable, the Berlin Ramelau goes to Oé-Cusse overnight, in about 12 hours; the Berlin Nakroma goes to Ataúro.",
+      "id": "Menurut jadwal 2026, Berlin Ramelau berlayar ke Oé-Cusse pada malam hari, sekitar 12 jam; Berlin Nakroma berlayar ke Ataúro."
      },
      "difficulty": 11
     },
     {
      "q": {
       "tet": "Iha tinan saida mak estudu ida sura iha Atauru nia haleu rekorde espésie ikan ahu-ruin nian iha fatin ida?",
-      "pt": "Em que ano um estudo contou à volta de Ataúro um recorde de espécies de peixes de recife por local?"
+      "pt": "Em que ano um estudo contou à volta de Ataúro um recorde de espécies de peixes de recife por local?",
+      "en": "In which year did a study around Ataúro count a record number of reef fish species per site?",
+      "id": "Pada tahun berapa sebuah penelitian di sekitar Ataúro mencatat rekor jumlah spesies ikan karang per lokasi?"
      },
      "options": [
       {
        "tet": "1989",
-       "pt": "1989"
+       "pt": "1989",
+       "en": "1989",
+       "id": "1989"
       },
       {
        "tet": "2002",
-       "pt": "2002"
+       "pt": "2002",
+       "en": "2002",
+       "id": "2002"
       },
       {
        "tet": "2016",
-       "pt": "2016"
+       "pt": "2016",
+       "en": "2016",
+       "id": "2016"
       },
       {
        "tet": "2024",
-       "pt": "2024"
+       "pt": "2024",
+       "en": "2024",
+       "id": "2024"
       }
      ],
      "answer": 2,
      "why": {
       "tet": "Estudu ne'e hala'o iha 2016, no hatudu katak Atauru nia ahu-ruin riku liu balu iha mundu.",
-      "pt": "O estudo foi feito em 2016 e mostrou que os recifes de Ataúro estão entre os mais ricos do mundo."
+      "pt": "O estudo foi feito em 2016 e mostrou que os recifes de Ataúro estão entre os mais ricos do mundo.",
+      "en": "The study was carried out in 2016 and showed that Ataúro's reefs are among the richest in the world.",
+      "id": "Penelitian itu dilakukan pada 2016 dan menunjukkan bahwa terumbu karang Ataúro termasuk yang terkaya di dunia."
      },
      "difficulty": 13
     }
@@ -1367,7 +1771,7 @@
    ],
    "review": {
     "status": "draft",
-    "notes": "Written on 2 Nov 2026 from WebSearch result summaries (timorleste.tl itself could not be opened in the sandbox). Summarises existing places plus the new ones in places_more.json. Ferry durations from timorleste.tl/plan-your-trip/ferries (search summary, 2026 timetable). Ataúro area (~140 km²), Manucoco (~1000 m) and the 2016 reef-fish study as in other Lafa files (Mongabay and Wikipedia URLs verified by other writers). Natarbora's beaches as in municipalities.json. Jaco: no overnight stays, following place.jaco_island. Tetun 'kór naroman' (light-coloured) and 'matak-azúl' (turquoise) to check."
+    "notes": "Written on 2 Nov 2026 from WebSearch result summaries (timorleste.tl itself could not be opened in the sandbox). Summarises existing places plus the new ones in places_more.json. Ferry durations from timorleste.tl/plan-your-trip/ferries (search summary, 2026 timetable). Ataúro area (~140 km²), Manucoco (~1000 m) and the 2016 reef-fish study as in other Lafa files (Mongabay and Wikipedia URLs verified by other writers). Natarbora's beaches as in municipalities.json. Jaco: no overnight stays, following place.jaco_island. Tetun 'kór naroman' (light-coloured) and 'matak-azúl' (turquoise) to check. English and Indonesian translated from the Portuguese on 11 Nov 2026 (no facts added or changed; Tetun and Portuguese untouched)."
    }
   },
   {
@@ -1378,11 +1782,15 @@
    ],
    "title": {
     "tet": "Rai kafé no aldeia foho sira",
-    "pt": "Terra do café e aldeias de montanha"
+    "pt": "Terra do café e aldeias de montanha",
+    "en": "Coffee land and mountain villages",
+    "id": "Daerah kopi dan desa-desa pegunungan"
    },
    "summary": {
     "tet": "Iha foho Ermera, Aileu, Ainaru no Manufahi, kafé arábika moris iha ai-hun aas nia mahon okos. Vizitante sira bele toba iha aldeia foho, ku kafé ho agrikultór sira iha tempu kolleita no aprende oinsá kafé-fuan mean sai kafé iha kopu.",
-    "pt": "Nas montanhas de Ermera, Aileu, Ainaro e Manufahi, o café arábica cresce à sombra de árvores altas. Os visitantes podem dormir em aldeias de montanha, apanhar café com os agricultores na colheita e aprender como a cereja vermelha se transforma no café da chávena."
+    "pt": "Nas montanhas de Ermera, Aileu, Ainaro e Manufahi, o café arábica cresce à sombra de árvores altas. Os visitantes podem dormir em aldeias de montanha, apanhar café com os agricultores na colheita e aprender como a cereja vermelha se transforma no café da chávena.",
+    "en": "In the mountains of Ermera, Aileu, Ainaro and Manufahi, arabica coffee grows in the shade of tall trees. Visitors can stay in mountain villages, pick coffee with the farmers at harvest time and learn how the red cherry becomes the coffee in the cup.",
+    "id": "Di pegunungan Ermera, Aileu, Ainaro, dan Manufahi, kopi arabika tumbuh di bawah naungan pohon-pohon tinggi. Pengunjung dapat menginap di desa-desa pegunungan, memetik kopi bersama para petani pada musim panen, dan mempelajari bagaimana buah kopi merah berubah menjadi kopi di dalam cangkir."
    },
    "levels": [
     "eb2",
@@ -1394,51 +1802,71 @@
     {
      "heading": {
       "tet": "Kafé iha foho klaran",
-      "pt": "O café nas montanhas centrais"
+      "pt": "O café nas montanhas centrais",
+      "en": "Coffee in the central mountains",
+      "id": "Kopi di pegunungan tengah"
      },
      "text": {
       "tet": "Kafé presiza anin malirin, udan no rai ne'ebé bee la hela kleur, tan ne'e iha Timór-Leste kafé moris liu iha aldeia foho sira. Rejiaun prinsipál mak Ermera, iha Gleno, Letefoho, Railaco, Hatulia no Atsabe nia haleu, maibé kafé barak mós iha Aileu, iha Maubisse (Ainaru), iha Same no Turiscai nia haleu (Manufahi) no iha foho Likisá no Bobonaru nian. Ai-kafé moris iha ai-hun aas nia mahon okos, ne'ebé proteje sira husi loron no mantein rai bokur. Tanba família barak la uza adubu ka pestisida, kafé Timor nian barak mak orgániku naturál. Kafé mak nasaun nia esportasaun prinsipál depois mina-rai no gás.",
-      "pt": "O café precisa de ar fresco, chuva e terra bem drenada, por isso em Timor-Leste cresce sobretudo à volta das aldeias de montanha. A principal região é Ermera, à volta de Gleno, Letefoho, Railaco, Hatulia e Atsabe, mas há também muito café em Aileu, em Maubisse (Ainaro), à volta de Same e Turiscai (Manufahi) e nas colinas de Liquiçá e Bobonaro. Os cafeeiros crescem à sombra de árvores altas, que os protegem do sol e mantêm o solo fértil. Como a maioria das famílias não usa adubos nem pesticidas, grande parte do café timorense é biológico por natureza. O café é a principal exportação do país depois do petróleo e do gás."
+      "pt": "O café precisa de ar fresco, chuva e terra bem drenada, por isso em Timor-Leste cresce sobretudo à volta das aldeias de montanha. A principal região é Ermera, à volta de Gleno, Letefoho, Railaco, Hatulia e Atsabe, mas há também muito café em Aileu, em Maubisse (Ainaro), à volta de Same e Turiscai (Manufahi) e nas colinas de Liquiçá e Bobonaro. Os cafeeiros crescem à sombra de árvores altas, que os protegem do sol e mantêm o solo fértil. Como a maioria das famílias não usa adubos nem pesticidas, grande parte do café timorense é biológico por natureza. O café é a principal exportação do país depois do petróleo e do gás.",
+      "en": "Coffee needs cool air, rain and well-drained soil, so in Timor-Leste it grows mainly around mountain villages. The main region is Ermera, around Gleno, Letefoho, Railaco, Hatulia and Atsabe, but there is also a lot of coffee in Aileu, in Maubisse (Ainaro), around Same and Turiscai (Manufahi) and in the hills of Liquiçá and Bobonaro. The coffee bushes grow in the shade of tall trees, which protect them from the sun and keep the soil fertile. As most families use neither fertilisers nor pesticides, much Timorese coffee is organic by nature. Coffee is the country's main export after oil and gas.",
+      "id": "Kopi memerlukan udara sejuk, hujan, dan tanah yang mudah meresapkan air, sehingga di Timor-Leste kopi terutama tumbuh di sekitar desa-desa pegunungan. Daerah utamanya adalah Ermera, di sekitar Gleno, Letefoho, Railaco, Hatulia, dan Atsabe, tetapi banyak kopi juga ditanam di Aileu, di Maubisse (Ainaro), di sekitar Same dan Turiscai (Manufahi), serta di perbukitan Liquiçá dan Bobonaro. Tanaman kopi tumbuh di bawah naungan pohon-pohon tinggi, yang melindunginya dari sinar matahari dan menjaga kesuburan tanah. Karena sebagian besar keluarga tidak memakai pupuk maupun pestisida, banyak kopi Timor yang organik secara alami. Kopi adalah ekspor utama negeri ini setelah minyak dan gas."
      }
     },
     {
      "heading": {
       "tet": "Tempu kolleita",
-      "pt": "A época da colheita"
+      "pt": "A época da colheita",
+      "en": "The harvest season",
+      "id": "Musim panen"
      },
      "text": {
       "tet": "Tuir website turizmu ofisiál, kolleita kafé nian la'o maizumenus husi Maiu to'o Setembru, iha tempu bailoron, no ne'e tempu di'ak liu atu vizita. Data sira muda tuir fatin nia aas no tuir tinan: kafé husi Letefoho, ezemplu, ema ku liu husi Juñu to'o Setembru. Família tomak ku ho liman kafé-fuan mean ne'ebé tasak ona, hasai ninia isin, fase fuan no habai iha loron, iha biti ka lona leten, molok fa'an ba kooperativa no kompañia sira. Ida ne'ebé ema hatene liu mak Cooperativa Café Timor, ne'ebé moris iha 1994 no ohin loron halibur família liu 20 000. Iha fulan hirak ne'e, estrada foho sira nakonu ho kamioneta no saku kafé.",
-      "pt": "Segundo o site oficial de turismo, a colheita do café vai mais ou menos de maio a setembro, na época seca, e é a melhor altura para uma visita. As datas mudam com a altitude e com o ano: em Letefoho, por exemplo, o café é colhido sobretudo de junho a setembro. Famílias inteiras apanham à mão as cerejas vermelhas e maduras, tiram-lhes a polpa, lavam os grãos e secam-nos ao sol, em esteiras ou lonas, antes de os venderem a cooperativas e empresas. A mais conhecida é a Cooperativa Café Timor, criada em 1994, que hoje reúne mais de 20 000 famílias. Nestes meses, as estradas de montanha enchem-se de camiões e de sacos de café."
+      "pt": "Segundo o site oficial de turismo, a colheita do café vai mais ou menos de maio a setembro, na época seca, e é a melhor altura para uma visita. As datas mudam com a altitude e com o ano: em Letefoho, por exemplo, o café é colhido sobretudo de junho a setembro. Famílias inteiras apanham à mão as cerejas vermelhas e maduras, tiram-lhes a polpa, lavam os grãos e secam-nos ao sol, em esteiras ou lonas, antes de os venderem a cooperativas e empresas. A mais conhecida é a Cooperativa Café Timor, criada em 1994, que hoje reúne mais de 20 000 famílias. Nestes meses, as estradas de montanha enchem-se de camiões e de sacos de café.",
+      "en": "According to the official tourism website, the coffee harvest runs roughly from May to September, in the dry season, and this is the best time for a visit. The dates change with altitude and from year to year: in Letefoho, for example, coffee is picked mainly from June to September. Whole families pick the ripe red cherries by hand, remove the pulp, wash the beans and dry them in the sun on mats or tarpaulins, before selling them to cooperatives and companies. The best known is the Cooperativa Café Timor, created in 1994, which today brings together more than 20,000 families. In these months the mountain roads fill with lorries and sacks of coffee.",
+      "id": "Menurut situs pariwisata resmi, panen kopi berlangsung kira-kira dari Mei hingga September, pada musim kemarau, dan itulah waktu terbaik untuk berkunjung. Tanggalnya berubah menurut ketinggian dan dari tahun ke tahun: di Letefoho, misalnya, kopi terutama dipetik dari Juni hingga September. Seluruh anggota keluarga memetik buah kopi merah yang matang dengan tangan, mengupas daging buahnya, mencuci bijinya, dan menjemurnya di bawah sinar matahari di atas tikar atau terpal, sebelum menjualnya kepada koperasi dan perusahaan. Yang paling terkenal adalah Cooperativa Café Timor, yang didirikan pada 1994 dan kini menghimpun lebih dari 20.000 keluarga. Pada bulan-bulan ini jalan-jalan pegunungan dipenuhi truk dan karung kopi."
      }
     },
     {
      "heading": {
       "tet": "Vizita to'os kafé ida",
-      "pt": "Visitar uma plantação de café"
+      "pt": "Visitar uma plantação de café",
+      "en": "Visiting a coffee plantation",
+      "id": "Mengunjungi kebun kopi"
      },
      "text": {
       "tet": "Kooperativa, família no operadór turizmu balu simu ona vizitante sira. Iha Letefoho, artigu ida husi website turizmu ofisiál deskreve vizita ba to'os sira, fatin ne'ebé ema ku kafé-fuan, koko prosesu no haree oinsá ema sona no prepara kafé tuir maneira tradisionál, ho grupu produtór lokál ida. Iha Maubisse, área kafé ida ne'ebé ema hatene liu, vizitante sira bele koñese to'os ne'ebé liga ho Cooperativa Café Timor. Website ne'e fó konsellu atu selu guia lokál ka aluga kareta 4x4 atu to'o to'os sira ne'ebé dook liu, no sujere uma-hospedajen iha Maubisse, Aileu no Ermera. Iha mós festa kafé nian, hanesan Festivál Kafé Aileu, iha Setembru.",
-      "pt": "Algumas cooperativas, famílias e operadores turísticos já recebem visitantes. Em Letefoho, um artigo do site oficial de turismo descreve visitas a quintas onde se apanham cerejas, se experimenta o processamento e se vê como o café é torrado e preparado à maneira tradicional, com um grupo local de produtores. Em Maubisse, uma das zonas de café mais conhecidas, os visitantes podem conhecer quintas ligadas à Cooperativa Café Timor. O site aconselha a contratar um guia local ou alugar um 4x4 para chegar às plantações mais remotas e sugere casas de hóspedes em Maubisse, Aileu e Ermera. Há também festas do café, como o Festival do Café de Aileu, em setembro."
+      "pt": "Algumas cooperativas, famílias e operadores turísticos já recebem visitantes. Em Letefoho, um artigo do site oficial de turismo descreve visitas a quintas onde se apanham cerejas, se experimenta o processamento e se vê como o café é torrado e preparado à maneira tradicional, com um grupo local de produtores. Em Maubisse, uma das zonas de café mais conhecidas, os visitantes podem conhecer quintas ligadas à Cooperativa Café Timor. O site aconselha a contratar um guia local ou alugar um 4x4 para chegar às plantações mais remotas e sugere casas de hóspedes em Maubisse, Aileu e Ermera. Há também festas do café, como o Festival do Café de Aileu, em setembro.",
+      "en": "Some cooperatives, families and tour operators already welcome visitors. In Letefoho, an article on the official tourism website describes visits to farms where you pick cherries, try the processing and see how coffee is roasted and prepared in the traditional way, with a local producers' group. In Maubisse, one of the best-known coffee areas, visitors can get to know farms linked to the Cooperativa Café Timor. The website advises hiring a local guide or renting a 4x4 to reach the more remote plantations, and suggests guesthouses in Maubisse, Aileu and Ermera. There are also coffee festivals, such as the Aileu Coffee Festival in September.",
+      "id": "Beberapa koperasi, keluarga, dan operator wisata sudah menerima pengunjung. Di Letefoho, sebuah artikel di situs pariwisata resmi menggambarkan kunjungan ke kebun tempat pengunjung memetik buah kopi, mencoba mengolahnya, dan melihat cara kopi disangrai dan diseduh secara tradisional, bersama sebuah kelompok produsen setempat. Di Maubisse, salah satu daerah kopi yang paling terkenal, pengunjung dapat mengenal kebun-kebun yang terkait dengan Cooperativa Café Timor. Situs itu menyarankan untuk menyewa pemandu setempat atau mobil 4x4 untuk mencapai kebun-kebun yang lebih terpencil, dan merekomendasikan penginapan di Maubisse, Aileu, dan Ermera. Ada juga festival kopi, seperti Festival Kopi Aileu pada bulan September."
      }
     },
     {
      "heading": {
       "tet": "Aldeia foho no ninia moris",
-      "pt": "As aldeias de montanha e a sua vida"
+      "pt": "As aldeias de montanha e a sua vida",
+      "en": "The mountain villages and their life",
+      "id": "Desa-desa pegunungan dan kehidupannya"
      },
      "text": {
       "tet": "Vizita rai kafé mós katak koñese aldeia foho sira. Iha Maubisse, Aileu no Ermera nia parte barak, povu Mambai mak hela; iha Atsabe, povu Kemak. Uma lulik sira, ho kakuluk aas, rai klan sira-nia memória, no serimónia sira marka kolleita, kazamentu no mate. Vila sira iha merkadu semana-semana, hanesan iha Maubisse, Atsabe no Aileu, fatin ne'ebé ema fa'an kafé, modo, ai-fuan no animál. Kalan sira malirin, no iha dadeer kalohan taka vale sira. Besik ne'e iha fatin atu la'o ain: Foho Ramelau, bee-tuda Bandeira, lagoa Seloi Kraik no dalan sira entre to'os kafé.",
-      "pt": "Visitar a terra do café é também conhecer as aldeias de montanha. À volta de Maubisse, de Aileu e de grande parte de Ermera vive o povo mambai; em Atsabe, o povo kemak. As casas sagradas (uma lulik), com telhados altos, guardam a memória dos clãs, e as cerimónias marcam as colheitas, os casamentos e os funerais. As vilas têm mercados semanais, como os de Maubisse, Atsabe e Aileu, onde se vendem café, legumes, fruta e animais. As noites são frescas, e de manhã os vales enchem-se de nevoeiro. Perto ficam lugares para caminhar: o monte Ramelau, a cascata da Bandeira, a lagoa de Seloi Kraik e os trilhos entre as plantações."
+      "pt": "Visitar a terra do café é também conhecer as aldeias de montanha. À volta de Maubisse, de Aileu e de grande parte de Ermera vive o povo mambai; em Atsabe, o povo kemak. As casas sagradas (uma lulik), com telhados altos, guardam a memória dos clãs, e as cerimónias marcam as colheitas, os casamentos e os funerais. As vilas têm mercados semanais, como os de Maubisse, Atsabe e Aileu, onde se vendem café, legumes, fruta e animais. As noites são frescas, e de manhã os vales enchem-se de nevoeiro. Perto ficam lugares para caminhar: o monte Ramelau, a cascata da Bandeira, a lagoa de Seloi Kraik e os trilhos entre as plantações.",
+      "en": "Visiting the coffee land also means getting to know the mountain villages. Around Maubisse, Aileu and much of Ermera live the Mambai people; in Atsabe, the Kemak people. The sacred houses (uma lulik), with their tall roofs, keep the memory of the clans, and ceremonies mark harvests, weddings and funerals. The towns have weekly markets, such as those of Maubisse, Atsabe and Aileu, where coffee, vegetables, fruit and animals are sold. The nights are cool, and in the morning the valleys fill with fog. Nearby there are places to walk: Mount Ramelau, the Bandeira waterfall, the Seloi Kraik lagoon and the trails between the plantations.",
+      "id": "Mengunjungi daerah kopi juga berarti mengenal desa-desa pegunungan. Di sekitar Maubisse, Aileu, dan sebagian besar Ermera tinggal masyarakat Mambai; di Atsabe, masyarakat Kemak. Rumah-rumah sakral (uma lulik) dengan atapnya yang tinggi menyimpan ingatan klan, dan upacara-upacara menandai panen, pernikahan, dan pemakaman. Kota-kota kecilnya memiliki pasar mingguan, seperti di Maubisse, Atsabe, dan Aileu, tempat kopi, sayur, buah, dan hewan ternak dijual. Malam hari terasa sejuk, dan pada pagi hari lembah-lembah dipenuhi kabut. Di dekatnya ada tempat-tempat untuk berjalan kaki: Gunung Ramelau, Air Terjun Bandeira, Danau Seloi Kraik, dan jalan setapak di antara kebun-kebun kopi."
      }
     },
     {
      "heading": {
       "tet": "Viajen ho respeitu no seguransa",
-      "pt": "Viajar com respeito e segurança"
+      "pt": "Viajar com respeito e segurança",
+      "en": "Travelling with respect and safely",
+      "id": "Bepergian dengan hormat dan aman"
      },
      "text": {
       "tet": "Estrada foho nian makaas, kloot no kleuk-kleuk, no iha tempu udan rai-monu bele taka sira: halo viajen iha loron no husu informasaun uluk. Lori roupa manas ba kalan. Keta tama to'os sira la ho autorizasaun: kafé mak rendimentu ne'ebé família sira moris ho nia. Husu lisensa molok foti foto ba ema ne'ebé servisu no molok besik uma lulik. Sosa kafé direitamente husi agrikultór ka kooperativa no selu folin justu; toba iha uma-kain ka selu guia husi aldeia halo osan hela iha komunidade. Keta soe lixu iha to'os sira, no respeita regra tara bandu ne'ebé proteje bee-matan no ai-laran.",
-      "pt": "As estradas de montanha são íngremes, estreitas e cheias de curvas, e na época das chuvas os deslizamentos podem cortá-las: viaje de dia e informe-se antes. Leve roupa quente para as noites. Não entre nas quintas sem autorização: o café é o rendimento de que as famílias vivem. Peça licença antes de fotografar pessoas a trabalhar e antes de se aproximar de casas sagradas. Compre café diretamente aos agricultores ou às cooperativas e pague um preço justo; dormir numa casa de família ou contratar um guia da aldeia deixa o dinheiro na comunidade. Não deixe lixo nas plantações e respeite as regras de tara bandu que protegem as nascentes e as florestas."
+      "pt": "As estradas de montanha são íngremes, estreitas e cheias de curvas, e na época das chuvas os deslizamentos podem cortá-las: viaje de dia e informe-se antes. Leve roupa quente para as noites. Não entre nas quintas sem autorização: o café é o rendimento de que as famílias vivem. Peça licença antes de fotografar pessoas a trabalhar e antes de se aproximar de casas sagradas. Compre café diretamente aos agricultores ou às cooperativas e pague um preço justo; dormir numa casa de família ou contratar um guia da aldeia deixa o dinheiro na comunidade. Não deixe lixo nas plantações e respeite as regras de tara bandu que protegem as nascentes e as florestas.",
+      "en": "The mountain roads are steep, narrow and full of bends, and in the rainy season landslides can cut them off: travel by day and get information before you set off. Bring warm clothes for the nights. Do not enter the farms without permission: coffee is the income that families live on. Ask permission before photographing people at work and before approaching sacred houses. Buy coffee directly from the farmers or the cooperatives and pay a fair price; staying in a family home or hiring a village guide keeps the money in the community. Do not leave rubbish in the plantations, and respect the tara bandu rules that protect springs and forests.",
+      "id": "Jalan-jalan pegunungan curam, sempit, dan penuh tikungan, dan pada musim hujan tanah longsor bisa memutusnya: bepergianlah pada siang hari dan carilah informasi terlebih dahulu. Bawalah pakaian hangat untuk malam hari. Jangan memasuki kebun tanpa izin: kopi adalah sumber penghasilan yang menghidupi keluarga-keluarga itu. Mintalah izin sebelum memotret orang yang sedang bekerja dan sebelum mendekati rumah sakral. Belilah kopi langsung dari petani atau koperasi dan bayarlah harga yang adil; menginap di rumah keluarga atau menyewa pemandu desa membuat uang tetap berada di masyarakat. Jangan meninggalkan sampah di kebun, dan hormati aturan tara bandu yang melindungi mata air dan hutan."
      }
     }
    ],
@@ -1446,58 +1874,80 @@
     {
      "label": {
       "tet": "Munisípiu kafé prinsipál",
-      "pt": "Principal município do café"
+      "pt": "Principal município do café",
+      "en": "Main coffee municipality",
+      "id": "Munisipalitas kopi utama"
      },
      "value": "Ermera"
     },
     {
      "label": {
       "tet": "Tempu kolleita",
-      "pt": "Época da colheita"
+      "pt": "Época da colheita",
+      "en": "Harvest season",
+      "id": "Musim panen"
      },
      "value": {
       "tet": "maizumenus Maiu–Setembru (tempu bailoron)",
-      "pt": "mais ou menos maio–setembro (época seca)"
+      "pt": "mais ou menos maio–setembro (época seca)",
+      "en": "roughly May–September (dry season)",
+      "id": "kira-kira Mei–September (musim kemarau)"
      }
     },
     {
      "label": {
       "tet": "Híbridu Timór",
-      "pt": "Híbrido de Timor"
+      "pt": "Híbrido de Timor",
+      "en": "Timor Hybrid",
+      "id": "Hibrida Timor"
      },
      "value": {
       "tet": "Arábika × robusta naturál, hetan iha Timor iha 1927",
-      "pt": "Cruzamento natural arábica × robusta, encontrado em Timor em 1927"
+      "pt": "Cruzamento natural arábica × robusta, encontrado em Timor em 1927",
+      "en": "Natural arabica × robusta cross, found in Timor in 1927",
+      "id": "Persilangan alami arabika × robusta, ditemukan di Timor pada 1927"
      }
     },
     {
      "label": {
       "tet": "Cooperativa Café Timor",
-      "pt": "Cooperativa Café Timor"
+      "pt": "Cooperativa Café Timor",
+      "en": "Cooperativa Café Timor",
+      "id": "Cooperativa Café Timor"
      },
      "value": {
       "tet": "Harii iha 1994; família membru liu 20 000",
-      "pt": "Criada em 1994; mais de 20 000 famílias membros"
+      "pt": "Criada em 1994; mais de 20 000 famílias membros",
+      "en": "Created in 1994; more than 20,000 member families",
+      "id": "Didirikan pada 1994; lebih dari 20.000 keluarga anggota"
      }
     },
     {
      "label": {
       "tet": "Maubisse: altura",
-      "pt": "Maubisse: altitude"
+      "pt": "Maubisse: altitude",
+      "en": "Maubisse: altitude",
+      "id": "Maubisse: ketinggian"
      },
      "value": {
       "tet": "besik metru 1.400",
-      "pt": "cerca de 1400 m"
+      "pt": "cerca de 1400 m",
+      "en": "about 1,400 m",
+      "id": "sekitar 1.400 m"
      }
     },
     {
      "label": {
       "tet": "Festa kafé nian",
-      "pt": "Festas do café"
+      "pt": "Festas do café",
+      "en": "Coffee festivals",
+      "id": "Festival kopi"
      },
      "value": {
       "tet": "Aileu (Setembru); Dili (Novembru, data sei konfirma)",
-      "pt": "Aileu (setembro); Díli (novembro, data a confirmar)"
+      "pt": "Aileu (setembro); Díli (novembro, data a confirmar)",
+      "en": "Aileu (September); Dili (November, date to be confirmed)",
+      "id": "Aileu (September); Dili (November, tanggal akan dikonfirmasi)"
      },
      "year": 2026
     }
@@ -1506,7 +1956,9 @@
     "illustration": "coffee",
     "caption": {
      "tet": "Kafé-fuan mean iha ai-kafé iha foho Ermera.",
-     "pt": "Cerejas vermelhas num cafeeiro das montanhas de Ermera."
+     "pt": "Cerejas vermelhas num cafeeiro das montanhas de Ermera.",
+     "en": "Red cherries on a coffee bush in the mountains of Ermera.",
+     "id": "Buah kopi merah pada tanaman kopi di pegunungan Ermera."
     }
    },
    "wiki": {
@@ -1544,180 +1996,252 @@
     {
      "q": {
       "tet": "Munisípiu ida ne'ebé mak kafé barak liu iha Timór-Leste?",
-      "pt": "Qual é o principal município do café em Timor-Leste?"
+      "pt": "Qual é o principal município do café em Timor-Leste?",
+      "en": "Which is the main coffee municipality in Timor-Leste?",
+      "id": "Munisipalitas mana yang menjadi daerah kopi utama di Timor-Leste?"
      },
      "options": [
       {
        "tet": "Ermera",
-       "pt": "Ermera"
+       "pt": "Ermera",
+       "en": "Ermera",
+       "id": "Ermera"
       },
       {
        "tet": "Atauru",
-       "pt": "Ataúro"
+       "pt": "Ataúro",
+       "en": "Ataúro",
+       "id": "Ataúro"
       },
       {
        "tet": "Oe-Kusi",
-       "pt": "Oé-Cusse"
+       "pt": "Oé-Cusse",
+       "en": "Oé-Cusse",
+       "id": "Oé-Cusse"
       },
       {
        "tet": "Dili",
-       "pt": "Díli"
+       "pt": "Díli",
+       "en": "Dili",
+       "id": "Dili"
       }
      ],
      "answer": 0,
      "why": {
       "tet": "Ermera, ho Gleno, Letefoho, Railaco no Hatulia, mak rejiaun kafé prinsipál.",
-      "pt": "Ermera, com Gleno, Letefoho, Railaco e Hatulia, é a principal região do café."
+      "pt": "Ermera, com Gleno, Letefoho, Railaco e Hatulia, é a principal região do café.",
+      "en": "Ermera, with Gleno, Letefoho, Railaco and Hatulia, is the main coffee region.",
+      "id": "Ermera, dengan Gleno, Letefoho, Railaco, dan Hatulia, adalah daerah kopi utama."
      },
      "difficulty": 2
     },
     {
      "q": {
       "tet": "Ai-kafé iha Timór-Leste baibain moris iha ne'ebé?",
-      "pt": "Onde crescem normalmente os cafeeiros em Timor-Leste?"
+      "pt": "Onde crescem normalmente os cafeeiros em Timor-Leste?",
+      "en": "Where do coffee bushes usually grow in Timor-Leste?",
+      "id": "Di mana tanaman kopi biasanya tumbuh di Timor-Leste?"
      },
      "options": [
       {
        "tet": "Iha rai-maran",
-       "pt": "No deserto"
+       "pt": "No deserto",
+       "en": "In the desert",
+       "id": "Di gurun"
       },
       {
        "tet": "Iha uma-vidru nia laran",
-       "pt": "Dentro de estufas de vidro"
+       "pt": "Dentro de estufas de vidro",
+       "en": "Inside glass greenhouses",
+       "id": "Di dalam rumah kaca"
       },
       {
        "tet": "Iha ai-hun aas nia mahon okos",
-       "pt": "À sombra de árvores altas"
+       "pt": "À sombra de árvores altas",
+       "en": "In the shade of tall trees",
+       "id": "Di bawah naungan pohon-pohon tinggi"
       },
       {
        "tet": "Iha tasi-ibun nia rai-henek",
-       "pt": "Na areia da praia"
+       "pt": "Na areia da praia",
+       "en": "In the sand on the beach",
+       "id": "Di pasir pantai"
       }
      ],
      "answer": 2,
      "why": {
       "tet": "Ai-kafé moris iha ai-hun aas nia mahon okos, ne'ebé proteje sira husi loron no mantein rai bokur.",
-      "pt": "Os cafeeiros crescem à sombra de árvores altas, que os protegem do sol e mantêm o solo fértil."
+      "pt": "Os cafeeiros crescem à sombra de árvores altas, que os protegem do sol e mantêm o solo fértil.",
+      "en": "Coffee bushes grow in the shade of tall trees, which protect them from the sun and keep the soil fertile.",
+      "id": "Tanaman kopi tumbuh di bawah naungan pohon-pohon tinggi, yang melindunginya dari sinar matahari dan menjaga kesuburan tanah."
      },
      "difficulty": 4
     },
     {
      "q": {
       "tet": "Híbridu Timór mak saida?",
-      "pt": "O que é o Híbrido de Timor?"
+      "pt": "O que é o Híbrido de Timor?",
+      "en": "What is the Timor Hybrid?",
+      "id": "Apa itu Hibrida Timor?"
      },
      "options": [
       {
        "tet": "Karau ida nia rasa",
-       "pt": "Uma raça de búfalo"
+       "pt": "Uma raça de búfalo",
+       "en": "A breed of buffalo",
+       "id": "Sejenis ras kerbau"
       },
       {
        "tet": "Kruzamentu naturál kafé arábika no robusta ne'ebé hetan iha Timor iha 1927",
-       "pt": "Um cruzamento natural de café arábica e robusta encontrado em Timor em 1927"
+       "pt": "Um cruzamento natural de café arábica e robusta encontrado em Timor em 1927",
+       "en": "A natural cross of arabica and robusta coffee found in Timor in 1927",
+       "id": "Persilangan alami kopi arabika dan robusta yang ditemukan di Timor pada 1927"
       },
       {
        "tet": "Mákina ida atu sona kafé",
-       "pt": "Uma máquina de torrar café"
+       "pt": "Uma máquina de torrar café",
+       "en": "A coffee-roasting machine",
+       "id": "Mesin penyangrai kopi"
       },
       {
        "tet": "Hare nia tipu ida",
-       "pt": "Um tipo de arroz"
+       "pt": "Um tipo de arroz",
+       "en": "A type of rice",
+       "id": "Sejenis padi"
       }
      ],
      "answer": 1,
      "why": {
       "tet": "Híbridu Timór iha jene robusta ne'ebé hasoru moras ferruzen kafé nian, no ema uza atu kria variedade foun iha mundu tomak.",
-      "pt": "O Híbrido de Timor tem genes da robusta que resistem à ferrugem do cafeeiro e foi usado para criar novas variedades em todo o mundo."
+      "pt": "O Híbrido de Timor tem genes da robusta que resistem à ferrugem do cafeeiro e foi usado para criar novas variedades em todo o mundo.",
+      "en": "The Timor Hybrid has robusta genes that resist coffee leaf rust, and it has been used to create new varieties all over the world.",
+      "id": "Hibrida Timor memiliki gen robusta yang tahan terhadap penyakit karat daun kopi, dan telah dipakai untuk menciptakan varietas baru di seluruh dunia."
      },
      "difficulty": 7
     },
     {
      "q": {
       "tet": "Tuir website turizmu ofisiál, vizitante sira bele halo saida iha to'os kafé ida iha Letefoho?",
-      "pt": "Segundo o site oficial de turismo, o que podem fazer os visitantes numa quinta de café de Letefoho?"
+      "pt": "Segundo o site oficial de turismo, o que podem fazer os visitantes numa quinta de café de Letefoho?",
+      "en": "According to the official tourism website, what can visitors do on a coffee farm in Letefoho?",
+      "id": "Menurut situs pariwisata resmi, apa yang dapat dilakukan pengunjung di kebun kopi di Letefoho?"
      },
      "options": [
       {
        "tet": "Halo ski iha jelu",
-       "pt": "Esquiar na neve"
+       "pt": "Esquiar na neve",
+       "en": "Ski on snow",
+       "id": "Bermain ski di salju"
       },
       {
        "tet": "Nani ho baleia",
-       "pt": "Nadar com baleias"
+       "pt": "Nadar com baleias",
+       "en": "Swim with whales",
+       "id": "Berenang bersama paus"
       },
       {
        "tet": "Vizita foho-ahi ida ne'ebé moris",
-       "pt": "Visitar um vulcão ativo"
+       "pt": "Visitar um vulcão ativo",
+       "en": "Visit an active volcano",
+       "id": "Mengunjungi gunung berapi aktif"
       },
       {
        "tet": "Ku kafé-fuan no haree oinsá ema sona kafé tuir maneira tradisionál",
-       "pt": "Apanhar cerejas de café e ver a torra tradicional"
+       "pt": "Apanhar cerejas de café e ver a torra tradicional",
+       "en": "Pick coffee cherries and see traditional roasting",
+       "id": "Memetik buah kopi dan melihat cara menyangrai tradisional"
       }
      ],
      "answer": 3,
      "why": {
       "tet": "Artigu website ofisiál nian deskreve vizita ne'ebé ema ku kafé-fuan, koko prosesu no haree oinsá ema sona no prepara kafé.",
-      "pt": "O artigo do site oficial descreve visitas em que se apanham cerejas, se experimenta o processamento e se vê a torra e a preparação do café."
+      "pt": "O artigo do site oficial descreve visitas em que se apanham cerejas, se experimenta o processamento e se vê a torra e a preparação do café.",
+      "en": "The article on the official website describes visits where you pick cherries, try the processing and see the coffee being roasted and prepared.",
+      "id": "Artikel di situs resmi menggambarkan kunjungan tempat pengunjung memetik buah kopi, mencoba mengolahnya, serta melihat kopi disangrai dan diseduh."
      },
      "difficulty": 9
     },
     {
      "q": {
       "tet": "Tanba saida mak kafé Timor nian barak mak orgániku naturál?",
-      "pt": "Porque é que grande parte do café timorense é biológico 'por natureza'?"
+      "pt": "Porque é que grande parte do café timorense é biológico 'por natureza'?",
+      "en": "Why is much Timorese coffee organic 'by nature'?",
+      "id": "Mengapa banyak kopi Timor yang organik 'secara alami'?"
      },
      "options": [
       {
        "tet": "Tanba família barak la uza adubu ka pestisida",
-       "pt": "Porque a maioria das famílias não usa adubos nem pesticidas"
+       "pt": "Porque a maioria das famílias não usa adubos nem pesticidas",
+       "en": "Because most families use neither fertilisers nor pesticides",
+       "id": "Karena sebagian besar keluarga tidak memakai pupuk maupun pestisida"
       },
       {
        "tet": "Tanba ema rega ho tasi-been",
-       "pt": "Porque é regado com água do mar"
+       "pt": "Porque é regado com água do mar",
+       "en": "Because it is watered with seawater",
+       "id": "Karena disiram dengan air laut"
       },
       {
        "tet": "Tanba mákina mak ku",
-       "pt": "Porque é colhido por máquinas"
+       "pt": "Porque é colhido por máquinas",
+       "en": "Because it is harvested by machines",
+       "id": "Karena dipanen dengan mesin"
       },
       {
        "tet": "Tanba lei bandu kafé besik sidade",
-       "pt": "Porque uma lei proíbe o café perto das cidades"
+       "pt": "Porque uma lei proíbe o café perto das cidades",
+       "en": "Because a law bans coffee near the cities",
+       "id": "Karena ada undang-undang yang melarang kopi di dekat kota"
       }
      ],
      "answer": 0,
      "why": {
       "tet": "Família barak la iha osan atu sosa adubu no pestisida, tan ne'e kafé barak moris naturál.",
-      "pt": "Muitas famílias não podem comprar adubos e pesticidas, por isso grande parte do café cresce de forma natural."
+      "pt": "Muitas famílias não podem comprar adubos e pesticidas, por isso grande parte do café cresce de forma natural.",
+      "en": "Many families cannot afford fertilisers and pesticides, so much of the coffee grows naturally.",
+      "id": "Banyak keluarga tidak mampu membeli pupuk dan pestisida, sehingga banyak kopi tumbuh secara alami."
      },
      "difficulty": 12
     },
     {
      "q": {
       "tet": "Cooperativa Café Timor moris iha tinan saida?",
-      "pt": "Em que ano foi criada a Cooperativa Café Timor?"
+      "pt": "Em que ano foi criada a Cooperativa Café Timor?",
+      "en": "In which year was the Cooperativa Café Timor created?",
+      "id": "Pada tahun berapa Cooperativa Café Timor didirikan?"
      },
      "options": [
       {
        "tet": "1975",
-       "pt": "1975"
+       "pt": "1975",
+       "en": "1975",
+       "id": "1975"
       },
       {
        "tet": "1994",
-       "pt": "1994"
+       "pt": "1994",
+       "en": "1994",
+       "id": "1994"
       },
       {
        "tet": "2002",
-       "pt": "2002"
+       "pt": "2002",
+       "en": "2002",
+       "id": "2002"
       },
       {
        "tet": "2016",
-       "pt": "2016"
+       "pt": "2016",
+       "en": "2016",
+       "id": "2016"
       }
      ],
      "answer": 1,
      "why": {
       "tet": "Iha 1994, projetu ida ho apoiu USAID organiza agrikultór kafé sira iha Cooperativa Café Timor; ohin loron família membru liu 20 000.",
-      "pt": "Em 1994, um projeto apoiado pela USAID organizou os produtores na Cooperativa Café Timor; hoje tem mais de 20 000 famílias membros."
+      "pt": "Em 1994, um projeto apoiado pela USAID organizou os produtores na Cooperativa Café Timor; hoje tem mais de 20 000 famílias membros.",
+      "en": "In 1994 a project supported by USAID organised the growers into the Cooperativa Café Timor; today it has more than 20,000 member families.",
+      "id": "Pada 1994 sebuah proyek yang didukung USAID menghimpun para petani kopi dalam Cooperativa Café Timor; kini koperasi itu memiliki lebih dari 20.000 keluarga anggota."
      },
      "difficulty": 14
     }
@@ -1768,7 +2292,7 @@
    ],
    "review": {
     "status": "draft",
-    "notes": "Written on 2 Nov 2026 from WebSearch result summaries (timorleste.tl itself could not be opened in the sandbox). Harvest May–September, Maubisse farms including CCT, the advice on guides/4×4 and guesthouses in Maubisse, Aileu and Ermera from timorleste.tl 'A Coffee Lover's Pilgrimage' (search summary); the Letefoho farm visits from timorleste.tl 'A Trip To Coffee Country' (run with Café Brisa Serena according to a coffee trade listing; the group is not named in the text). Letefoho harvest June–September from a trade listing. Timor Hybrid (1927) and CCT (1994; 20,000+ families) follow tl.economy.coffee. Coffee festivals as in tl.tourism.events_festivals. Tetun 'sona' (roast) and 'lona' (tarpaulin) to check."
+    "notes": "Written on 2 Nov 2026 from WebSearch result summaries (timorleste.tl itself could not be opened in the sandbox). Harvest May–September, Maubisse farms including CCT, the advice on guides/4×4 and guesthouses in Maubisse, Aileu and Ermera from timorleste.tl 'A Coffee Lover's Pilgrimage' (search summary); the Letefoho farm visits from timorleste.tl 'A Trip To Coffee Country' (run with Café Brisa Serena according to a coffee trade listing; the group is not named in the text). Letefoho harvest June–September from a trade listing. Timor Hybrid (1927) and CCT (1994; 20,000+ families) follow tl.economy.coffee. Coffee festivals as in tl.tourism.events_festivals. Tetun 'sona' (roast) and 'lona' (tarpaulin) to check. English and Indonesian translated from the Portuguese on 11 Nov 2026 (no facts added or changed; Tetun and Portuguese untouched). 'Cooperativa Café Timor' kept in Portuguese (the cooperative's own name)."
    }
   }
  ]

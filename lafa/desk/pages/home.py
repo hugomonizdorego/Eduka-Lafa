@@ -11,31 +11,35 @@ from ..widgets import (Card, Clickable, ClayIcon, StatCard, CourseCard, Calendar
 from ...progress import ACHIEVEMENTS
 
 extend({
-    "home_anthem": ("Inu Nasionál «Pátria»", "Hino Nacional «Pátria»"),
-    "home_anthem_text": ("Rona no hananu: letra tuir múzika. Bandeira no emblema esplika parte ida-idak.", "Ouça e cante: a letra acompanha a música. Bandeira e emblema explicados parte a parte."),
-    "home_constitution": ("Konstituisaun RDTL", "Constituição da RDTL"),
-    "home_constitution_text": ("Artigu 170 iha Tetun no Portugés. Buka númeru ka liafuan lalais.", "170 artigos em tétum e português. Procure pelo número ou por palavras."),
-    "shuffle": ("Seluk", "Outro"),
-    "learn_word": ("Aprende liafuan", "Aprender palavras"),
-    "open_calendar": ("Loke kalendáriu", "Abrir calendário"),
-    "unit_progress": ("{done} husi {n} lee ona", "{done} de {n} lidos"),
-    "group_history": ("Istória", "História"),
-    "group_state": ("Estadu no mundu", "Estado e mundo"),
-    "group_land": ("Rai no natureza", "Terra e natureza"),
-    "group_culture": ("Kultura no sosiedade", "Cultura e sociedade"),
-    "group_economy": ("Ekonomia no turizmu", "Economia e turismo"),
-    "items_total": ("pájina", "páginas"),
-    "ach_first_read": ("Lee dahuluk", "Primeira leitura"),
-    "ach_reader_10": ("Lee-na'in", "Leitor"),
-    "ach_reader_50": ("Matenek-na'in", "Sábio"),
-    "ach_explorer": ("Esploradór", "Explorador"),
-    "ach_municipalities": ("Munisípiu hotu", "Todos os municípios"),
-    "ach_words_50": ("Liafuan 50", "50 palavras"),
-    "ach_words_200": ("Liafuan 200", "200 palavras"),
-    "ach_quiz_perfect": ("Kuis perfeitu", "Quiz perfeito"),
-    "ach_millionaire_safe": ("Fatin seguru", "Patamar seguro"),
-    "ach_millionaire_win": ("Milionáriu!", "Milionário!"),
-    "ach_streak_7": ("Semana ida tomak", "Uma semana seguida"),
+    "home_anthem": ("Inu Nasionál «Pátria»", "Hino Nacional «Pátria»", "National Anthem «Pátria»", "Lagu Kebangsaan «Pátria»"),
+    "home_anthem_text": ("Rona no hananu: letra tuir múzika. Emblema ofisiál esplika parte ida-idak.", "Ouça e cante: a letra acompanha a música. O emblema oficial explicado parte a parte.", "Listen and sing: the words follow the music. The official emblem explained part by part.", "Dengarkan dan bernyanyilah: lirik mengikuti musik. Lambang resmi dijelaskan bagian demi bagian."),
+    "home_constitution": ("Konstituisaun RDTL", "Constituição da RDTL", "Constitution of the RDTL", "Konstitusi RDTL"),
+    "home_institutions_text": ("Prezidente, Parlamentu, Governu, Tribunál, ministériu, F-FDTL, PNTL no seluk tan.", "Presidente, Parlamento, Governo, tribunais, ministérios, F-FDTL, PNTL e mais.",
+                               "President, Parliament, Government, courts, ministries, F-FDTL, PNTL and more.", "Presiden, Parlemen, Pemerintah, pengadilan, kementerian, F-FDTL, PNTL dan lainnya."),
+    "home_history_game_text": ("Saida mak uluk? Hatuur tuir orden. Tinan saida? Halimar ho istória.", "O que veio primeiro? Pôr por ordem. Em que ano? Jogue com a história.",
+                               "Which came first? Put them in order. Which year? Play with history.", "Mana yang lebih dulu? Urutkan. Tahun berapa? Bermain dengan sejarah."),
+    "home_constitution_text": ("Artigu 170 iha Tetun no Portugés. Buka númeru ka liafuan.", "170 artigos em tétum e português. Procure por número ou palavras.", "170 articles in Tetun and Portuguese. Search by number or word.", "170 pasal dalam bahasa Tetun dan Portugis. Cari nomor atau kata."),
+    "shuffle": ("Seluk", "Outro", "Another", "Lainnya"),
+    "learn_word": ("Aprende liafuan", "Aprender palavras", "Learn words", "Belajar kata"),
+    "open_calendar": ("Loke kalendáriu", "Abrir calendário", "Open calendar", "Buka kalender"),
+    "unit_progress": ("{done} husi {n} lee ona", "{done} de {n} lidos", "{done} of {n} read", "{done} dari {n} dibaca"),
+    "group_history": ("Istória", "História", "History", "Sejarah"),
+    "group_state": ("Estadu no mundu", "Estado e mundo", "State and world", "Negara dan dunia"),
+    "group_land": ("Rai no natureza", "Terra e natureza", "Land and nature", "Daratan dan alam"),
+    "group_culture": ("Kultura no sosiedade", "Cultura e sociedade", "Culture and society", "Budaya dan masyarakat"),
+    "group_economy": ("Ekonomia no turizmu", "Economia e turismo", "Economy and tourism", "Ekonomi dan wisata"),
+    "items_total": ("pájina", "páginas", "pages", "halaman"),
+    "ach_first_read": ("Lee dahuluk", "Primeira leitura", "First read", "Bacaan pertama"),
+    "ach_reader_10": ("Lee-na'in", "Leitor", "Reader", "Pembaca"),
+    "ach_reader_50": ("Matenek-na'in", "Sábio", "Scholar", "Cendekia"),
+    "ach_explorer": ("Esploradór", "Explorador", "Explorer", "Penjelajah"),
+    "ach_municipalities": ("Munisípiu hotu", "Todos os municípios", "All municipalities", "Semua munisipio"),
+    "ach_words_50": ("Liafuan 50", "50 palavras", "50 words", "50 kata"),
+    "ach_words_200": ("Liafuan 200", "200 palavras", "200 words", "200 kata"),
+    "ach_quiz_perfect": ("Kuis perfeitu", "Quiz perfeito", "Perfect quiz", "Kuis sempurna"),
+    "ach_millionaire_safe": ("Fatin seguru", "Patamar seguro", "Safe haven", "Titik aman"),
+    "ach_millionaire_win": ("Milionáriu!", "Milionário!", "Millionaire!", "Jutawan!"),
+    "ach_streak_7": ("Semana ida tomak", "Uma semana seguida", "7-day streak", "Seminggu penuh"),
 })
 
 ACH_ICON = {"first_read": ("book-open", "violet"), "reader_10": ("scroll", "pink"), "reader_50": ("graduation", "lilac"), "explorer": ("umbrella", "cyan"),
@@ -110,7 +114,9 @@ class HomePage(QWidget):
         # 2b. The nation: anthem and national symbols, the Constitution.
         nation = ResponsiveGrid(320, 2, 16)
         for icon_name, acc, title, text_, route in (("music", "rose", t("home_anthem"), t("home_anthem_text"), "symbols"),
-                                                     ("scales", "indigo", t("home_constitution"), t("home_constitution_text"), "constitution")):
+                                                     ("scales", "indigo", t("home_constitution"), t("home_constitution_text"), "constitution"),
+                                                     ("landmark", "violet", t("nav_institutions"), t("home_institutions_text"), "institutions"),
+                                                     ("puzzle", "peach", t("nav_history_game"), t("home_history_game_text"), "history_game")):
             card = Clickable(16, 22, tint=accent(acc)[1]); line = QHBoxLayout(); line.setSpacing(14); line.addWidget(ClayIcon(icon_name, acc, 56))
             c2 = QVBoxLayout(); c2.setSpacing(2); c2.addWidget(label(title, "h2", wrap=True)); c2.addWidget(label(text_, "muted", wrap=True)); line.addLayout(c2, 1)
             chev = QLabel(); chev.setPixmap(icons.pixmap("chevron-right", win.tok["muted"], 20)); line.addWidget(chev)

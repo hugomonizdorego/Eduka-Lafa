@@ -64,18 +64,15 @@ the same options.
 
 | Entry | Role | Category |
 |---|---|---|
-| `lafa-desktop.desktop` | `--window` | Education, Utility, X-Edukasaun |
+| `lafa-desktop.desktop` | `--window` | Education (with Geography, History) |
 | `lafa-settings.desktop` | `--settings` | Settings, DesktopSettings, X-Eduka-Settings |
 | `lafa-virtual.desktop` | `--virtual` | Hidden; callable by the host |
 
-For an XDG menu implementation, the Edukasaun submenu can include:
-
-```xml
-<Menu>
-  <Name>Edukasaun</Name>
-  <Include><Category>X-Edukasaun</Category></Include>
-</Menu>
-```
+Since 0.3.1 Lafa Desktop is only in the **Education** category of the menu
+(`Categories=Education;Geography;History;` — Geography and History are
+additional categories of Education in the freedesktop menu specification).
+Earlier versions also used `Utility` and `X-Edukasaun`, which put Lafa under
+Accessories or in a separate Edukasaun folder.
 
 The host may use a custom menu implementation instead. Route the Desktop
 entry through that implementation; do not replace its entire menu definition.

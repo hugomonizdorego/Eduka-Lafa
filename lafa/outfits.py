@@ -12,6 +12,11 @@ import math
 from .qt import Qt, QColor, QPointF, QRectF, QPolygonF, QPen, QPainterPath, QPainter
 
 OUTFITS = ["traditional", "tuxedo", "casual"]
+# Names shown in menus and settings: (tet, pt, en, id).
+OUTFIT_NAMES = {"casual": ("Kazuál aprende", "Casual de estudo", "Casual study", "Santai belajar"),
+                "traditional": ("Tais Mane", "Tais Mane", "Tais Mane", "Tais Mane"),
+                "tuxedo": ("Formál", "Formal", "Formal", "Formal")}
+
 
 # activity -> (pose, scene)
 ACTIVITIES = {

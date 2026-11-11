@@ -11,42 +11,38 @@ from .language import ORDER
 from . import millionaire  # noqa: F401  (registers the quiz words used here)
 
 extend({
-    "set_title": ("Konfigurasaun", "Definições"),
-    "set_sub": ("Muda Lafa tuir ita-nia hakarak. Buat hotu rai iha komputadór ne'e de'it.", "Ajuste o Lafa ao seu gosto. Tudo fica guardado só neste computador."),
-    "profile": ("Perfíl", "Perfil"),
-    "your_name": ("Ita-nia naran", "O seu nome"),
-    "name_hint": ("Mamuk = naran husi sistema", "Vazio = nome do sistema"),
-    "school_level": ("Nível eskola", "Nível escolar"),
-    "look": ("Lian no aparénsia", "Língua e aspeto"),
-    "app_language": ("Lian aplikasaun nian", "Língua da aplicação"),
-    "system_language": ("Lian sistema nian", "Língua do sistema"),
-    "theme": ("Tema", "Tema"),
-    "theme_auto": ("Automátiku", "Automático"),
-    "theme_light": ("Naroman", "Claro"),
-    "theme_dark": ("Nakukun", "Escuro"),
-    "text_size": ("Tamañu letra: {n}%", "Tamanho do texto: {n}%"),
-    "reduce_motion": ("Animasaun menus (la iha movimentu boot)", "Menos animação (sem movimentos grandes)"),
-    "learning": ("Aprende", "Aprendizagem"),
-    "vocab_language": ("Lian ba liafuan Tetun", "Língua para as palavras em tétum"),
-    "assistant": ("Asistente Virtuál Lafa", "Assistente Virtual Lafa"),
-    "assistant_text": ("Lafa mosu iha ekrã hanesan gia ba Timór-Leste no kolega estudu: hatudu faktu, loron importante, liafuan loron nian no kuis ki'ik. Liga/dezliga iha Eduka-Settings → Lafa-Configuration.",
-                       "O Lafa aparece no ecrã como guia de Timor-Leste e colega de estudo: mostra factos, datas importantes, a palavra do dia e pequenos quizzes. Ligar/desligar em Eduka-Settings → Lafa-Configuration."),
-    "open_lafa_config": ("Loke Lafa-Configuration", "Abrir Lafa-Configuration"),
-    "knowledge_tips": ("Lafa fahe koñesimentu (faktu, feriadu, liafuan, kuis)", "O Lafa partilha conhecimento (factos, feriados, palavras, quiz)"),
-    "outfit": ("Hatais Lafa nian", "Roupa do Lafa"),
-    "assistant_on": ("Asistente: liga", "Assistente: ligado"),
-    "assistant_off": ("Asistente: dezliga", "Assistente: desligado"),
-    "save_settings": ("Rai konfigurasaun", "Guardar definições"),
-    "saved_ok": ("Rai ona.", "Guardado."),
-    "reset_progress": ("Hamoos progresu", "Apagar progresso"),
-    "reset_confirm": ("Hamoos XP, artigu lee ona, rezultadu kuis no liafuan aprende ona?", "Apagar XP, artigos lidos, resultados dos quizzes e palavras aprendidas?"),
-    "privacy": ("Privasidade", "Privacidade"),
-    "privacy_text": ("Lafa la haruka dadus pesoál. Internet uza de'it atu download testu, foto no dadus públiku husi fonte ne'ebé hatudu iha “Fonte no lisensa”.",
-                     "O Lafa não envia dados pessoais. A internet só serve para descarregar textos, fotos e dados públicos das fontes indicadas em “Fontes e licenças”."),
+    "set_title": ("Konfigurasaun", "Definições", "Settings", "Pengaturan"),
+    "set_sub": ("Muda Lafa tuir ita-nia hakarak. Buat hotu rai iha komputadór ne'e de'it.", "Ajuste o Lafa ao seu gosto. Tudo fica guardado só neste computador.", "Make Lafa yours. Everything is stored on this computer only.", "Sesuaikan Lafa sesukamu. Semua tersimpan hanya di komputer ini."),
+    "profile": ("Perfíl", "Perfil", "Profile", "Profil"),
+    "your_name": ("Ita-nia naran", "O seu nome", "Your name", "Namamu"),
+    "name_hint": ("Mamuk = naran husi sistema", "Vazio = nome do sistema", "Empty = name from the system", "Kosong = nama dari sistem"),
+    "school_level": ("Nível eskola", "Nível escolar", "School level", "Jenjang sekolah"),
+    "look": ("Lian no aparénsia", "Língua e aspeto", "Language and look", "Bahasa dan tampilan"),
+    "app_language": ("Lian aplikasaun nian", "Língua da aplicação", "App language", "Bahasa aplikasi"),
+    "system_language": ("Lian sistema nian", "Língua do sistema", "System language", "Bahasa sistem"),
+    "theme": ("Tema", "Tema", "Topic", "Tema"),
+    "theme_auto": ("Automátiku", "Automático", "Automatic", "Otomatis"),
+    "theme_light": ("Naroman", "Claro", "Light", "Terang"),
+    "theme_dark": ("Nakukun", "Escuro", "Dark", "Gelap"),
+    "text_size": ("Tamañu letra: {n}%", "Tamanho do texto: {n}%", "Text size: {n}%", "Ukuran teks: {n}%"),
+    "reduce_motion": ("Animasaun menus (la iha movimentu boot)", "Menos animação (sem movimentos grandes)", "Reduce motion (no big movements)", "Kurangi animasi (tanpa gerakan besar)"),
+    "learning": ("Aprende", "Aprendizagem", "Learning", "Belajar"),
+    "vocab_language": ("Lian ba liafuan Tetun", "Língua para as palavras em tétum", "Language for Tetun words", "Bahasa untuk kata Tetun"),
+    "assistant": ("Asistente Virtuál Lafa", "Assistente Virtual Lafa", "Lafa Virtual Assistant", "Asisten Virtual Lafa"),
+    "assistant_text": ("Lafa mosu iha ekrã hanesan gia ba Timór-Leste no kolega estudu: hatudu faktu, loron importante, liafuan loron nian no kuis ki'ik. Liga/dezliga iha Eduka-Settings → Lafa-Configuration.", "O Lafa aparece no ecrã como guia de Timor-Leste e colega de estudo: mostra factos, datas importantes, a palavra do dia e pequenos quizzes. Ligar/desligar em Eduka-Settings → Lafa-Configuration.", "Lafa appears on the screen as a Timor-Leste guide and study buddy: facts, important days, the word of the day and small quizzes. Switch it on or off in Eduka-Settings → Lafa-Configuration.", "Lafa muncul di layar sebagai pemandu Timor-Leste dan teman belajar: menampilkan fakta, hari penting, kata hari ini dan kuis kecil. Nyalakan/matikan di Eduka-Settings → Lafa-Configuration."),
+    "open_lafa_config": ("Loke Lafa-Configuration", "Abrir Lafa-Configuration", "Open Lafa-Configuration", "Buka Lafa-Configuration"),
+    "knowledge_tips": ("Lafa fahe koñesimentu (faktu, feriadu, liafuan, kuis)", "O Lafa partilha conhecimento (factos, feriados, palavras, quiz)", "Lafa shares knowledge (facts, holidays, words, quiz)", "Lafa berbagi pengetahuan (fakta, hari libur, kata, kuis)"),
+    "outfit": ("Hatais Lafa nian", "Roupa do Lafa", "Lafa's outfit", "Pakaian Lafa"),
+    "assistant_on": ("Asistente: liga", "Assistente: ligado", "Assistant: on", "Asisten: aktif"),
+    "assistant_off": ("Asistente: dezliga", "Assistente: desligado", "Assistant: off", "Asisten: mati"),
+    "save_settings": ("Rai konfigurasaun", "Guardar definições", "Save settings", "Simpan pengaturan"),
+    "saved_ok": ("Rai ona.", "Guardado.", "Saved.", "Tersimpan."),
+    "reset_progress": ("Hamoos progresu", "Apagar progresso", "Reset progress", "Hapus kemajuan"),
+    "reset_confirm": ("Hamoos XP, artigu lee ona, rezultadu kuis no liafuan aprende ona?", "Apagar XP, artigos lidos, resultados dos quizzes e palavras aprendidas?", "Delete XP, read articles, quiz results and learned words?", "Hapus XP, artikel yang dibaca, hasil kuis dan kata yang dipelajari?"),
+    "privacy": ("Privasidade", "Privacidade", "Privacy", "Privasi"),
+    "privacy_text": ("Lafa la haruka dadus pesoál. Internet uza de'it atu download testu, foto no dadus públiku husi fonte ne'ebé hatudu iha “Fonte no lisensa”.", "O Lafa não envia dados pessoais. A internet só serve para descarregar textos, fotos e dados públicos das fontes indicadas em “Fontes e licenças”.", "Lafa sends no personal data. The internet is only used to download texts, photos and public data from the sources listed in “Sources and licences”.", "Lafa tidak mengirim data pribadi. Internet hanya dipakai untuk mengunduh teks, foto dan data publik dari sumber di “Sumber dan lisensi”."),
 })
 
-OUTFIT_NAMES = {"casual": ("Kazuál aprende", "Casual de estudo"), "traditional": ("Tais Mane", "Tais Mane"),
-                "tuxedo": ("Formál", "Formal")}
 
 class SettingsPage(QWidget):
     route = "settings"
@@ -71,7 +67,7 @@ class SettingsPage(QWidget):
         # Language and look.
         lc = Card(18, 24); lc.box.addLayout(section_title(t("look")))
         lc.box.addWidget(label(t("app_language"), "h3")); self.language = QComboBox()
-        for code, name in (("system", t("system_language")), ("tet", "Tetun"), ("pt", "Português")): self.language.addItem(name, code)
+        for code, name in (("system", t("system_language")), *kb.LANG_NAMES.items()): self.language.addItem(name, code)
         self.language.setCurrentIndex(max(0, self.language.findData(s.language))); lc.box.addWidget(self.language)
         lc.box.addWidget(label(t("theme"), "h3")); self.theme = Segmented([("auto", t("theme_auto")), ("light", t("theme_light")), ("dark", t("theme_dark"))], s.theme if s.theme in ("auto", "light", "dark") else "auto")
         lc.box.addWidget(self.theme, 0, Qt.AlignLeft)
@@ -96,7 +92,7 @@ class SettingsPage(QWidget):
         for key in ("casual", "traditional", "tuxedo"):
             if key not in outfits.OUTFITS: continue
             card = Clickable(8, 18, tint=win.tok["primary_soft"] if key == s.costume else None); pic = QLabel(); pic.setPixmap(win.atlas.pose_pixmap(key, 84)); pic.setAlignment(Qt.AlignCenter)
-            card.box.addWidget(pic); n = label(OUTFIT_NAMES[key][index(lang)], "caption"); n.setAlignment(Qt.AlignCenter); card.box.addWidget(n)
+            card.box.addWidget(pic); n = label(kb.pick(outfits.OUTFIT_NAMES[key], lang), "caption"); n.setAlignment(Qt.AlignCenter); card.box.addWidget(n)
             card.clicked.connect(lambda k=key: self.pick_outfit(k)); orow.addWidget(card); self.outfit_cards[key] = card
         vc.box.addLayout(orow)
         vc.box.addWidget(button(t("open_lafa_config"), win.open_configuration, None, "settings"), 0, Qt.AlignLeft); vc.box.addStretch(); grid.add(vc)

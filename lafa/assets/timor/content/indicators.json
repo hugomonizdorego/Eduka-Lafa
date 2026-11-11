@@ -4,7 +4,9 @@
    "id": "SP.POP.TOTL",
    "name": {
     "tet": "Populasaun totál",
-    "pt": "População total"
+    "pt": "População total",
+    "en": "Population, total",
+    "id": "Jumlah penduduk"
    },
    "unit": "people",
    "series": [
@@ -43,7 +45,9 @@
    "id": "NY.GDP.MKTP.CD",
    "name": {
     "tet": "PIB (dólar Amerikanu atuál)",
-    "pt": "PIB (dólares americanos correntes)"
+    "pt": "PIB (dólares americanos correntes)",
+    "en": "GDP (current US$)",
+    "id": "PDB (dolar AS berlaku)"
    },
    "unit": "US$",
    "series": [
@@ -86,7 +90,9 @@
    "id": "NY.GDP.PCAP.CD",
    "name": {
     "tet": "PIB ba ema ida (dólar atuál)",
-    "pt": "PIB per capita (dólares correntes)"
+    "pt": "PIB per capita (dólares correntes)",
+    "en": "GDP per capita (current US$)",
+    "id": "PDB per kapita (dolar AS berlaku)"
    },
    "unit": "US$",
    "series": [
@@ -121,7 +127,9 @@
    "id": "SP.DYN.LE00.IN",
    "name": {
     "tet": "Esperansa moris bainhira moris (tinan)",
-    "pt": "Esperança de vida à nascença (anos)"
+    "pt": "Esperança de vida à nascença (anos)",
+    "en": "Life expectancy at birth (years)",
+    "id": "Angka harapan hidup saat lahir (tahun)"
    },
    "unit": "years",
    "series": [
@@ -152,7 +160,9 @@
    "id": "EG.ELC.ACCS.ZS",
    "name": {
     "tet": "Asesu ba eletrisidade (% populasaun)",
-    "pt": "Acesso à eletricidade (% da população)"
+    "pt": "Acesso à eletricidade (% da população)",
+    "en": "Access to electricity (% of population)",
+    "id": "Akses listrik (% penduduk)"
    },
    "unit": "% of population",
    "series": [
@@ -175,7 +185,9 @@
    "id": "IT.NET.USER.ZS",
    "name": {
     "tet": "Ema ne'ebé uza internet (% populasaun)",
-    "pt": "Utilizadores de internet (% da população)"
+    "pt": "Utilizadores de internet (% da população)",
+    "en": "Individuals using the internet (% of population)",
+    "id": "Pengguna internet (% penduduk)"
    },
    "unit": "% of population",
    "series": [

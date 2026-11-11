@@ -57,19 +57,19 @@ def _system_language():
     return "en"
 
 def language():
-    """Lafa's language (tet or pt) that matches Eduka-Desktop's interface.
+    """Lafa's language (tet, pt, en or id) that matches Eduka-Desktop's interface.
 
     Eduka-Settings stores 'tet' or 'system' in menu/settings.json; the login
-    screen can also choose Tetun (EDUKA_LOGIN_LANGUAGE). Lafa speaks the two
-    official languages: Portuguese systems (pt, pt_BR) get Portuguese,
-    every other system language gets Tetun.
+    screen can also choose Tetun (EDUKA_LOGIN_LANGUAGE). With 'system', a
+    Portuguese, English or Indonesian system gets that language and every
+    other system language gets Tetun, the default of Lafa.
     """
+    from .kb import lang_of
     menu = menu_config()
     choice = str(menu.get("language", "system") or "system") if isinstance(menu, dict) else "system"
     if choice == "tet" or os.environ.get("EDUKA_LOGIN_LANGUAGE") == "tet": return "tet"
-    code = _system_language().replace("-", "_")
-    short = code.split("_")[0].casefold()
-    return "pt" if short == "pt" else "tet"
+    if choice in ("pt", "en", "id"): return choice
+    return lang_of(_system_language().replace("-", "_"))
 
 # -------------------------------------------------------------------- panel
 def panel():

@@ -17,9 +17,9 @@ if not Atlas().pixmap('idle',128,'traditional').save(str(icon)):raise SystemExit
 applications=data/'applications';applications.mkdir(parents=True,exist_ok=True)
 quoted=exec_path(exe)
 entries=[
- ('lafa-desktop.desktop','LAFA Desktop','--window','Education;Utility;X-Edukasaun;',''),
+ ('lafa-desktop.desktop','Lafa Desktop','--window','Education;Geography;History;',''),
  ('lafa-settings.desktop','LAFA Settings','--settings','Settings;DesktopSettings;X-Eduka-Settings;','X-Eduka-Settings-Page=LAFA\n'),
- ('lafa-virtual.desktop','LAFA Virtual Assistant','--virtual','Utility;','NoDisplay=true\n'),
+ ('lafa-virtual.desktop','Lafa Virtual Assistant','--virtual','Education;','NoDisplay=true\n'),
 ]
 for filename,name,role,categories,extra in entries:
     text=f'''[Desktop Entry]

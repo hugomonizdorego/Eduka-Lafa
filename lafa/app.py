@@ -36,10 +36,16 @@ from .desk.texts import t as tr_text
 from .desk.widgets import (Card, Clickable, ClayIcon, NavButton, SearchBox, Toast, label, button, refresh_icon, tok_of)
 from .desk.pages import page_class
 
-NAV = [("home", "home", "violet"), ("encyclopedia", "book-open", "pink"), ("map", "map", "teal"), ("timeline", "timeline", "peach"),
-       ("places", "umbrella", "cyan"), ("calendar", "calendar-check", "rose"), ("symbols", "flag-tl", "coral"), ("constitution", "scales", "indigo"),
-       ("quiz", "trophy", "butter"),
-       ("language", "translate", "mint"), ("paths", "graduation", "lilac")]
+# The menu, in groups: explore Timor-Leste, the State and the nation, learn and play.
+NAV_GROUPS = [
+    (None, [("home", "home", "violet")]),
+    ("nav_group_explore", [("encyclopedia", "book-open", "pink"), ("map", "map", "teal"), ("timeline", "timeline", "peach"),
+                           ("places", "umbrella", "cyan"), ("calendar", "calendar-check", "rose")]),
+    ("nav_group_state", [("symbols", "flag-tl", "coral"), ("constitution", "scales", "indigo"), ("institutions", "landmark", "violet")]),
+    ("nav_group_learn", [("paths", "graduation", "lilac"), ("language", "translate", "mint"), ("quiz", "trophy", "butter"),
+                         ("history_game", "puzzle", "peach")]),
+]
+NAV = [entry for _group, entries in NAV_GROUPS for entry in entries]
 FOOT = [("sources", "shield", "slate"), ("settings", "settings", "indigo"), ("about", "info", "sky")]
 NAV_PARENT = {"category": "encyclopedia", "item": "encyclopedia", "search": "home", "data": "home"}
 
@@ -120,9 +126,20 @@ class Window(QMainWindow):
         self.nav = {}
         # The menu scrolls when the screen is low (1024×600) instead of squeezing the buttons.
         menu = QWidget(); menu.setObjectName("navlist"); mcol = QVBoxLayout(menu); mcol.setContentsMargins(0, 0, 0, 0); mcol.setSpacing(4)
-        for i, (key, icon_name, accent) in enumerate(NAV):
-            b = NavButton(icon_name, accent, self.t("nav_" + key)); b.clicked.connect(lambda checked=False, k=key: self.open(k)); mcol.addWidget(b); self.nav[key] = b
-            if i < 9: QShortcut(QKeySequence(f"Alt+{i + 1}"), self, activated=lambda k=key: self.open(k))
+        # Groups are sub-menus: a click on a heading opens or closes it; on low screens only
+        # the group of the open page stays open (unless the learner opened another one).
+        self.nav_headers = []; self.nav_groups = {}; self.nav_user_open = getattr(self, "nav_user_open", {})
+        for group, entries in NAV_GROUPS:
+            head = None
+            if group:
+                head = QPushButton(); head.setObjectName("navgroup"); head.setCursor(Qt.PointingHandCursor); head.setFlat(True)
+                head.clicked.connect(lambda checked=False, g=group: self.toggle_nav_group(g)); mcol.addWidget(head); self.nav_headers.append(head)
+            keys = []
+            for key, icon_name, accent in entries:
+                i = len(self.nav)
+                b = NavButton(icon_name, accent, self.t("nav_" + key)); b.clicked.connect(lambda checked=False, k=key: self.open(k)); mcol.addWidget(b); self.nav[key] = b; keys.append(key)
+                if i < 10: QShortcut(QKeySequence(f"Alt+{(i + 1) % 10}"), self, activated=lambda k=key: self.open(k))
+            if group: self.nav_groups[group] = (head, keys)
         mcol.addStretch(1)
         area = QScrollArea(); area.setWidgetResizable(True); area.setFrameShape(QFrame.NoFrame); area.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
         area.setStyleSheet("QScrollArea, QScrollArea > QWidget > QWidget#navlist { background: transparent; }"); area.setWidget(menu); self.menu_area = area
@@ -175,10 +192,11 @@ class Window(QMainWindow):
         self.compact = compact; self.sidebar.setFixedWidth(84 if compact else 252)
         self.brand_name.setVisible(not compact); self.brand_sub.setVisible(not compact)
         for b in self.nav.values(): b.set_compact(compact)
+        self.update_nav_groups()
         self.profile_name.setVisible(not compact); self.profile_level.setVisible(not compact)
     def resizeEvent(self, event):
         super().resizeEvent(event)
-        if hasattr(self, "sidebar"): self.apply_compact()
+        if hasattr(self, "sidebar"): self.apply_compact(); self.update_nav_groups()
     def update_status(self):
         on = self.online
         self.status_chip.setText("  " + self.t("online" if on else "offline")); self.status_chip.setToolTip(self.t("online_tip" if on else "offline_tip"))
@@ -205,11 +223,34 @@ class Window(QMainWindow):
         if route == "item":
             item = self.kb.get(params.get("id", "")); active = {"place": "places", "day": "calendar", "municipality": "map"}.get(item.kind if item else "", "encyclopedia")
         for key, b in self.nav.items(): b.setChecked(key == active)
+        self.update_nav_groups()
         self.back_button.setVisible(bool(self.history))
         self.update_profile()
         # After a menu click the keyboard focus moves to the page (like "skip to content").
         focus = QApplication.focusWidget()
         if focus is None or isinstance(focus, NavButton): page.setFocus(Qt.OtherFocusReason)
+    def active_nav_group(self):
+        for group, (_head, keys) in getattr(self, "nav_groups", {}).items():
+            if any(self.nav[k].isChecked() for k in keys): return group
+        return None
+    def toggle_nav_group(self, group):
+        self.nav_user_open[group] = not self.nav_group_open(group); self.update_nav_groups()
+    def nav_fits(self):
+        """Does the whole menu fit in the sidebar without scrolling?"""
+        area = getattr(self, "menu_area", None)
+        if area is None: return True
+        need = sum(b.sizeHint().height() + 4 for b in self.nav.values()) + sum(h.sizeHint().height() + 4 for h in self.nav_headers)
+        return area.viewport().height() >= need
+    def nav_group_open(self, group):
+        if group in self.nav_user_open: return self.nav_user_open[group]
+        return self.nav_fits() or group == self.active_nav_group()
+    def update_nav_groups(self):
+        compact = getattr(self, "compact", False)
+        for group, (head, keys) in getattr(self, "nav_groups", {}).items():
+            opened = compact or self.nav_group_open(group)
+            head.setVisible(not compact); head.setText(("▾  " if opened else "▸  ") + self.t(group))
+            head.setAccessibleName(self.t(group)); head.setToolTip(self.t(group))
+            for k in keys: self.nav[k].setVisible(opened)
     def go_back(self):
         if not self.history: return
         route, params = self.history.pop(); self.open(route, push=False, **params); self.back_button.setVisible(bool(self.history))

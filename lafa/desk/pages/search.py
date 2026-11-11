@@ -9,12 +9,12 @@ from ..widgets import Card, Pill, ListRow, FlowLayout, label, button, scroll, se
 from .encyclopedia import thumb
 
 extend({
-    "search_title": ("Buka", "Pesquisa"),
-    "try_these": ("Koko buka:", "Experimente:"),
-    "words_found": ("Liafuan Tetun", "Palavras em tétum"),
-    "results_count": ("rezultadu {n}", "{n} resultados"),
-    "constitution_found": ("Iha Konstituisaun", "Na Constituição"),
-    "open_constitution": ("Loke Konstituisaun", "Abrir a Constituição"),
+    "search_title": ("Buka", "Pesquisa", "Search", "Pencarian"),
+    "try_these": ("Koko buka:", "Experimente:", "Try:", "Coba cari:"),
+    "words_found": ("Liafuan Tetun", "Palavras em tétum", "Tetun words", "Kata Tetun"),
+    "results_count": ("rezultadu {n}", "{n} resultados", "{n} results", "{n} hasil"),
+    "constitution_found": ("Iha Konstituisaun", "Na Constituição", "In the Constitution", "Dalam Konstitusi"),
+    "open_constitution": ("Loke Konstituisaun", "Abrir a Constituição", "Open the Constitution", "Buka Konstitusi"),
 })
 
 SUGGESTIONS = ["bandeira", "Xanana", "Ataúro", "kafé", "tais", "Ramelau", "1999", "Santa Cruz", "Lafaek", "ASEAN", "Oe-Kusi", "Fundu Petrolíferu",

@@ -23,4 +23,4 @@ version = {attr = "lafa.__version__"}
 include = ["lafa*"]
 
 [tool.setuptools.package-data]
-lafa = ["assets/*.png", "assets/*.json", "assets/fonts/*", "assets/icons/*", "assets/illustrations/*", "assets/timor/*.json", "assets/timor/*/*.json", "assets/timor/*/*.md", "assets/timor/anthem/*.mp3"]
+lafa = ["assets/*.png", "assets/*.json", "assets/fonts/*", "assets/icons/*", "assets/illustrations/*", "assets/timor/*.json", "assets/timor/*/*.json", "assets/timor/*/*.md", "assets/timor/anthem/*.mp3", "assets/timor/symbols/*.png"]

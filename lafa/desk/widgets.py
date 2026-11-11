@@ -83,6 +83,9 @@ class Card(QFrame):
         if clickable: self.setFocusPolicy(Qt.StrongFocus); self.setCursor(Qt.PointingHandCursor)
     def card_rect(self):
         l, t, r, b = self.SH; return QRectF(self.rect()).adjusted(l, t, -r, -b)
+    def set_selected(self, on):
+        """Mark the card as the chosen one (primary border and soft fill)."""
+        if getattr(self, "_selected", False) != bool(on): self._selected = bool(on); self.update()
     def enterEvent(self, e): self._hover = True; self.update(); super().enterEvent(e)
     def leaveEvent(self, e): self._hover = False; self.update(); super().leaveEvent(e)
     def focusInEvent(self, e): self.update(); super().focusInEvent(e)
@@ -107,9 +110,12 @@ class Card(QFrame):
         if self.tint:
             tint = QColor(self.tint); tint.setAlpha(255 if not t["dark"] else 60); fill = tint
         if self.clickable and self._hover: fill = qcolor(t["card_hover"]) if not self.tint else lighten(fill, 0.25)
+        selected = getattr(self, "_selected", False)
+        if selected: fill = qcolor(t["primary_soft"])
         p.setBrush(fill)
         border = qcolor(t["glass_border"])
         if self.clickable and (self._hover or self.hasFocus()): border = QColor(t["focus"] if self.hasFocus() else t["primary"]); border.setAlpha(255 if self.hasFocus() else 140)
+        if selected: border = QColor(t["primary"])
         pen = QPen(border); pen.setWidthF(2.0); p.setPen(pen)
         p.drawRoundedRect(rect.adjusted(1, 1, -1, -1), r, r)
 
@@ -235,10 +241,10 @@ class NavButton(QPushButton):
     def __init__(self, icon_name, accent_key, text, parent=None):
         super().__init__(text, parent); self.setObjectName("nav"); self.setCheckable(True); self.setCursor(Qt.PointingHandCursor)
         self.icon_name = icon_name; self.accent_key = accent_key; self.full = text; self.setAccessibleName(text); self.setToolTip(text)
-        self.setIconSize(QSize(30, 30)); self.setMinimumHeight(48); self.refresh()
+        self.setIconSize(QSize(28, 28)); self.setMinimumHeight(44); self.refresh()
         self.toggled.connect(lambda _=False: self.refresh())
     def refresh(self):
-        self.setIcon(icons_from_pixmap(clay_icon(self.icon_name, ACCENTS[self.accent_key][0], 30)))
+        self.setIcon(icons_from_pixmap(clay_icon(self.icon_name, ACCENTS[self.accent_key][0], 28)))
     def set_compact(self, compact):
         self.setText("" if compact else "  " + self.full); self.setStyleSheet("text-align:center; padding:8px 4px;" if compact else "")
 

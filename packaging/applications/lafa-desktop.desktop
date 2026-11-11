@@ -15,6 +15,6 @@ Comment[tet]=Istória, kultura, mapa, turizmu, feriadu, kuis no liafuan Tetun �
 Exec=lafa --window
 Icon=lafa
 Terminal=false
-Categories=Education;Geography;History;X-Edukasaun;
+Categories=Education;Geography;History;
 Keywords=Timor-Leste;Timor;Tetun;encyclopedia;history;map;quiz;tourism;ensiklopedia;enciclopédia;
 StartupNotify=true

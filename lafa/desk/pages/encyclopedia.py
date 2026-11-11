@@ -8,22 +8,23 @@ from ..widgets import (Card, Clickable, ClayIcon, Pill, Segmented, ProgressLine,
                        section_title, clear_layout, EmptyState, rounded)
 from .home import GROUPS
 from .article import level_range, item_pixmap
+from .catalog import grouped
 
 extend({
-    "enc_counts": ("{a} artigu · {m} munisípiu · {p} fatin · {d} loron · {q} pergunta", "{a} artigos · {m} municípios · {p} lugares · {d} datas · {q} perguntas"),
-    "filter_level": ("Nível eskola", "Nível escolar"),
-    "recommended": ("Sujestaun ba ita", "Sugestões para si"),
-    "read_done": ("Lee ona", "Lido"),
-    "articles_title": ("Artigu sira", "Artigos"),
-    "municipalities_title": ("Munisípiu sira", "Municípios"),
-    "places_title": ("Fatin turístiku sira", "Lugares turísticos"),
-    "days_title": ("Feriadu no loron nasionál", "Feriados e dias nacionais"),
-    "open_places": ("Loke pájina turizmu", "Abrir a página de turismo"),
-    "open_map": ("Loke mapa", "Abrir o mapa"),
-    "sort_plan": ("Orden", "Ordem"),
-    "sort_time": ("Kronolojia", "Cronologia"),
-    "sort_az": ("A–Z", "A–Z"),
-    "n_read": ("{done}/{n} lee ona", "{done}/{n} lidos"),
+    "enc_counts": ("{a} artigu · {m} munisípiu · {p} fatin · {d} loron · {q} pergunta", "{a} artigos · {m} municípios · {p} lugares · {d} datas · {q} perguntas", "{a} articles · {m} municipalities · {p} places · {d} days · {q} questions", "{a} artikel · {m} munisipio · {p} tempat · {d} hari · {q} soal"),
+    "filter_level": ("Nível eskola", "Nível escolar", "School level", "Jenjang sekolah"),
+    "recommended": ("Sujestaun ba ita", "Sugestões para si", "Suggested for you", "Saran untukmu"),
+    "read_done": ("Lee ona", "Lido", "Read", "Sudah dibaca"),
+    "articles_title": ("Artigu sira", "Artigos", "Articles", "Artikel"),
+    "municipalities_title": ("Munisípiu sira", "Municípios", "Municipalities", "Munisipio"),
+    "places_title": ("Fatin turístiku sira", "Lugares turísticos", "Tourist places", "Tempat wisata"),
+    "days_title": ("Feriadu no loron nasionál", "Feriados e dias nacionais", "Holidays and national days", "Hari libur dan hari nasional"),
+    "open_places": ("Loke pájina turizmu", "Abrir a página de turismo", "Open the tourism page", "Buka halaman wisata"),
+    "open_map": ("Loke mapa", "Abrir o mapa", "Open the map", "Buka peta"),
+    "sort_plan": ("Orden", "Ordem", "Order", "Urutan"),
+    "sort_time": ("Kronolojia", "Cronologia", "Chronology", "Kronologi"),
+    "sort_az": ("A–Z", "A–Z", "A–Z", "A–Z"),
+    "n_read": ("{done}/{n} lee ona", "{done}/{n} lidos", "{done}/{n} read", "{done}/{n} dibaca"),
 })
 
 THUMB = (92, 64)
@@ -137,13 +138,23 @@ class CategoryPage(QWidget):
         articles = self.ordered([i for i in all_items if i.kind == "article"])
         if articles:
             done = sum(1 for i in articles if prog.is_read(i.id))
-            card = Card(16, 24); card.box.addLayout(section_title(t("articles_title"), Pill(t("n_read", done=done, n=len(articles)), cat.accent)))
-            for item in articles:
-                lr = level_range(item.levels())
-                pills = [(f"{t('level')} {lr}", "lilac")] if lr else []
-                r = ListRow(item.title(lang), item.summary(lang), pills, done=prog.is_read(item.id), thumb=thumb(item, win))
-                r.clicked.connect(lambda i=item.id: win.open_item(i)); card.box.addWidget(r)
-            self.col.addWidget(card)
+            # In the editorial order the articles are grouped by theme (catalog.SUBSECTIONS).
+            groups = grouped(self.category, articles) if self.sort == "plan" else [(None, articles)]
+            if len(groups) > 1:
+                self.col.addLayout(section_title(t("articles_title"), Pill(t("n_read", done=done, n=len(articles)), cat.accent)))
+            for gi, (gtitle, members) in enumerate(groups):
+                card = Card(16, 24)
+                if gtitle is None or len(groups) == 1:
+                    card.box.addLayout(section_title(t("articles_title"), Pill(t("n_read", done=done, n=len(articles)), cat.accent)))
+                else:
+                    gdone = sum(1 for i in members if prog.is_read(i.id))
+                    card.box.addLayout(section_title(kb.text(gtitle, lang), Pill(f"{gdone}/{len(members)}", cat.accent)))
+                for item in members:
+                    lr = level_range(item.levels())
+                    pills = [(f"{t('level')} {lr}", "lilac")] if lr else []
+                    r = ListRow(item.title(lang), item.summary(lang), pills, done=prog.is_read(item.id), thumb=thumb(item, win))
+                    r.clicked.connect(lambda i=item.id: win.open_item(i)); card.box.addWidget(r)
+                self.col.addWidget(card)
         muns = [i for i in all_items if i.kind == "municipality"]
         if muns:
             card = Card(16, 24); card.box.addLayout(section_title(t("municipalities_title"), button(t("open_map"), lambda: win.open("map"), "ghost", "map")))

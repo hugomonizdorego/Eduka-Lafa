@@ -5,7 +5,8 @@ import pytest
 
 from lafa.config import Settings
 
-ROUTES = ["home", "encyclopedia", "map", "timeline", "places", "calendar", "symbols", "constitution", "quiz", "language", "paths", "sources", "data", "settings", "about"]
+ROUTES = ["home", "encyclopedia", "map", "timeline", "places", "calendar", "symbols", "constitution", "institutions", "quiz", "history_game",
+          "language", "paths", "sources", "data", "settings", "about"]
 
 @pytest.fixture
 def errors(monkeypatch):

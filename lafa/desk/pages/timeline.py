@@ -8,14 +8,13 @@ from ..widgets import Card, ClayIcon, Pill, label, button, scroll, section_title
 from ..widgets import SearchBox
 
 extend({
-    "tl_title": ("Liña tempu Timór-Leste", "Linha do tempo de Timor-Leste"),
-    "tl_sub": ("Husi fósil tasi tuan sira (tinan tokon 300 liubá) no ema dahuluk (tinan 44 000 liubá) to'o 2026. Hili tempu ida ka buka eventu.",
-               "Dos fósseis dos mares antigos (há 300 milhões de anos) e dos primeiros povos (há 44 000 anos) até 2026. Escolha uma época ou pesquise."),
-    "all_eras": ("Tempu hotu", "Todas as épocas"),
-    "filter_events": ("Buka eventu…", "Pesquisar eventos…"),
-    "n_events": ("eventu {n}", "{n} eventos"),
-    "show_more": ("Haree tan", "Mostrar mais"),
-    "all_topics": ("Tema hotu", "Todos os temas"),
+    "tl_title": ("Liña tempu Timór-Leste", "Linha do tempo de Timor-Leste", "Timeline of Timor-Leste", "Lini masa Timor-Leste"),
+    "tl_sub": ("Husi fósil tasi tuan sira (tinan tokon 300 liubá) no ema dahuluk (tinan 44 000 liubá) to'o 2026. Hili tempu ida ka buka eventu.", "Dos fósseis dos mares antigos (há 300 milhões de anos) e dos primeiros povos (há 44 000 anos) até 2026. Escolha uma época ou pesquise.", "From the fossils of ancient seas (300 million years ago) and the first people (44,000 years ago) to 2026. Choose an era or search.", "Dari fosil lautan purba (300 juta tahun lalu) dan manusia pertama (44.000 tahun lalu) hingga 2026. Pilih zaman atau cari."),
+    "all_eras": ("Tempu hotu", "Todas as épocas", "All eras", "Semua masa"),
+    "filter_events": ("Buka eventu…", "Pesquisar eventos…", "Search events…", "Cari peristiwa…"),
+    "n_events": ("eventu {n}", "{n} eventos", "{n} events", "{n} peristiwa"),
+    "show_more": ("Haree tan", "Mostrar mais", "Show more", "Tampilkan lagi"),
+    "all_topics": ("Tema hotu", "Todos os temas", "All topics", "Semua tema"),
 })
 
 def era_years(start, end, lang):

@@ -43,8 +43,8 @@ def default_language():
     from . import eduka
     if eduka.installed():return eduka.language()
     raw = os.environ.get("LC_ALL") or os.environ.get("LC_MESSAGES") or os.environ.get("LANGUAGE") or os.environ.get("LANG") or locale.getlocale()[0] or "en"
-    raw = raw.split(":")[0].replace("-","_").split("_")[0].split(".")[0].lower()
-    return "pt" if raw == "pt" else "tet"
+    from .kb import lang_of
+    return lang_of(raw.split(":")[0].replace("-", "_"))
 
 def default_roots():
     home = Path.home()
@@ -115,6 +115,7 @@ class Settings:
     theme: str = "auto"               # light | dark | auto (auto follows Eduka-Settings)
     text_scale: int = 100             # 90 … 160 %
     vocab_lang: str = "pt"            # target language in "Aprende lian"
+    vocab_direction: str = "auto"     # "to_tetun" (learn Tetun), "from_tetun" (learn another language) or "auto" (by app language)
     quiz_timer: bool = False          # millionaire quiz with a timer per question
     knowledge_tips: bool = True       # the Virtual Assistant shares facts, words and holidays
 
@@ -140,7 +141,7 @@ class Settings:
         if isinstance(start,str) and start in LEGACY_PAGES:data=dict(data,start_page=LEGACY_PAGES[start])
         level=data.get('school_level')
         if not isinstance(level,str) or level not in LEVELS:data=dict(data,school_level=LEGACY_LEVELS.get(data.get('learner_level'),'eb3'))
-        enums={'school_level':set(LEVELS),'theme':{'light','dark','auto'},'vocab_lang':set(VOCAB_TARGETS),'language':{'system','pt','tet'},'costume':{'traditional','tuxedo','casual'},'walk_speed':{'slow','normal','fast'},'animation_speed':{'slow','normal','fast'},'character_size':{'small','normal','large'},'start_page':set(SECTIONS),'panel_edge':{'bottom','top'},'learner_level':{'school','early','primary','middle','secondary','university','adult','senior'}}
+        enums={'school_level':set(LEVELS),'theme':{'light','dark','auto'},'vocab_lang':set(VOCAB_TARGETS),'vocab_direction':{'auto','to_tetun','from_tetun'},'language':{'system','tet','pt','en','id'},'costume':{'traditional','tuxedo','casual'},'walk_speed':{'slow','normal','fast'},'animation_speed':{'slow','normal','fast'},'character_size':{'small','normal','large'},'start_page':set(SECTIONS),'panel_edge':{'bottom','top'},'learner_level':{'school','early','primary','middle','secondary','university','adult','senior'}}
         for name,choices in enums.items():
             value=data.get(name,getattr(defaults,name))
             values[name]=value if isinstance(value,str) and value in choices else getattr(defaults,name)

@@ -6,16 +6,23 @@ every file with:
 
     python3 tools/check-content.py
 
-`L2` below means an object with the two languages of Lafa (the official
-languages of the Constitution, art. 13), both required and nothing else:
+`L4` below means an object with the four languages of Lafa, all required,
+in this order: Tetun and Portuguese (the official languages, Constitution
+art. 13), English and Bahasa Indonesia.
 
 ```json
-{"tet": "Tetun (see docs/TETUN-STYLE.md)", "pt": "Português"}
+{"tet": "Tetun (see docs/TETUN-STYLE.md)", "pt": "Português", "en": "English", "id": "Bahasa Indonesia"}
 ```
 
-Since 0.3.0 the interface and the content are in Tetun and Portuguese only.
-Indonesian, English and the ASEAN/CPLP languages appear only in the word
-lists (`vocab/`), which are a language-learning feature.
+Write Tetun and Portuguese first; English and Indonesian translate the
+Portuguese (same facts, numbers and names; nothing added). English uses
+British spelling, "Timor-Leste", "Dili", "Ataúro", "Oé-Cusse Ambeno" and
+1,000; Indonesian uses standard Bahasa Indonesia, "Dili" and 1.000.
+`tools/translate-sheet.py` exports the texts that still miss a language to a
+worksheet and writes the translations back.
+
+The ASEAN and CPLP languages appear only in the word lists (`vocab/`), which
+are a language-learning feature.
 
 ## Articles — `content/<group>.json`
 
@@ -24,18 +31,18 @@ lists (`vocab/`), which are a language-learning feature.
   "id": "tl.history.first_peoples",           // from lafa/assets/timor/plan.json (new ids: tl.<category>.<slug>)
   "category": "history",                      // one of plan.json "categories"
   "also": ["colonial"],                       // optional: other categories where it is listed too
-  "title": L2,
-  "summary": L2,                              // 2–3 short sentences: the simple text for young learners
+  "title": L4,
+  "summary": L4,                              // 2–3 short sentences: the simple text for young learners
   "levels": ["eb2", "eb3", "es", "sup"],      // school levels (plan.json "levels") the article suits
   "period": {"from": -44000, "to": -3000},    // optional, years (negative = BCE / years ago)
-  "sections": [{"heading": L2, "text": L2}],  // 3–6 sections, 50–150 words each per language
-  "facts": [{"label": L2, "value": "1 340 434", "year": 2022}],   // value: string or L2; year when it changes
-  "timeline": [{"date": "1975-11-28", "title": L2}],               // optional; "1975", "1975-11", "-42000", "-280000000" (fossils)
-  "figure": {"illustration": "proclamation", "caption": L2},       // key from the list below
+  "sections": [{"heading": L4, "text": L4}],  // 3–6 sections, 50–150 words each per language
+  "facts": [{"label": L4, "value": "1 340 434", "year": 2022}],   // value: string or L4; year when it changes
+  "timeline": [{"date": "1975-11-28", "title": L4}],               // optional; "1975", "1975-11", "-42000", "-280000000" (fossils)
+  "figure": {"illustration": "proclamation", "caption": L4},       // key from the list below
   "wiki": {"en": "History of East Timor", "pt": "História de Timor-Leste", "tet": "Istória Timór-Leste"},   // page titles (tet/pt/id/en): introductions and pictures
   "related": ["tl.history.restoration_2002", "place.cristo_rei", "mun.dili", "day.proclamation"],
   "tags": ["fretilin", "1975"],
-  "quiz": [{"q": L2, "options": [L2, L2, L2, L2], "answer": 2, "why": L2, "difficulty": 4}],
+  "quiz": [{"q": L4, "options": [L4, L4, L4, L4], "answer": 2, "why": L4, "difficulty": 4}],
   "sources": [{"title": "History of East Timor", "publisher": "Wikipedia (English)",
                "url": "https://en.wikipedia.org/wiki/History_of_East_Timor", "accessed": "2026-10-27", "licence": "CC BY-SA 4.0"}],
   "review": {"status": "draft", "notes": "what a reviewer should check"}
@@ -66,8 +73,8 @@ lists (`vocab/`), which are a language-learning feature.
   "capital": {"tet": "Baukau", "pt": "Baucau", "id": "Baucau", "en": "Baucau"},
   "area_km2": 1494, "population": {"value": 133881, "year": 2022},
   "posts": ["Baguia", "Baucau", "Laga", "Quelicai", "Vemasse", "Venilale"],
-  "languages": L2, "products": L2,
-  "summary": L2, "sections": [...], "facts": [...], "highlights": ["place.baucau_old_town"],
+  "languages": L4, "products": L4,
+  "summary": L4, "sections": [...], "facts": [...], "highlights": ["place.baucau_old_town"],
   "figure": {...}, "wiki": {...}, "quiz": [...], "sources": [...], "review": {...}
 }]}
 ```
@@ -76,12 +83,12 @@ lists (`vocab/`), which are a language-learning feature.
 
 ```json
 {"places": [{
-  "id": "place.cristo_rei", "name": L2, "municipality": "mun.dili",
+  "id": "place.cristo_rei", "name": L4, "municipality": "mun.dili",
   "type": "statue",                 // beach island mountain viewpoint church statue museum monument memorial lake cave
                                     // hot_spring waterfall fort market park reef village town garden river
   "lat": -8.5130, "lon": 125.6080,  // decimal degrees (WGS84); Timor-Leste lies between lat -9.6…-8.1, lon 124.0…127.4
-  "summary": L2, "text": L2,        // text: 80–200 words: what it is, history, what to see
-  "tips": L2,                       // how to get there, best time, respect local rules
+  "summary": L4, "text": L4,        // text: 80–200 words: what it is, history, what to see
+  "tips": L4,                       // how to get there, best time, respect local rules
   "illustration": "statue", "wiki": {...}, "commons": "Cristo Rei of Dili.jpg",   // optional
   "quiz": [...], "sources": [...], "review": {...}
 }]}
@@ -93,17 +100,17 @@ lists (`vocab/`), which are a language-learning feature.
 {"days": [{
   "id": "day.restoration", "date": "05-20",       // "MM-DD", "easter-2", "easter+60" or "islamic:eid_al_fitr"
   "type": "holiday",                               // holiday | commemorative
-  "name": L2, "summary": L2, "sections": [...], "law": "Lei n.º 10/2005, alterada pela Lei n.º 3/2016",
+  "name": L4, "summary": L4, "sections": [...], "law": "Lei n.º 10/2005, alterada pela Lei n.º 3/2016",
   "illustration": "independence", "related": [...], "quiz": [...], "sources": [...], "review": {...}
 }],
  "islamic_dates": {"eid_al_fitr": {"2026": "03-20"}, "eid_al_adha": {"2026": "05-27"}},   // approximate
- "notes": L2}
+ "notes": L4}
 ```
 
 ## Indicators — `content/indicators.json`
 
 ```json
-{"indicators": [{"id": "SP.POP.TOTL", "name": L2, "unit": "people",
+{"indicators": [{"id": "SP.POP.TOTL", "name": L4, "unit": "people",
   "series": [[2002, 948000], [2022, 1340434]], "source": "World Bank WDI", "url": "https://data.worldbank.org/indicator/SP.POP.TOTL?locations=TL",
   "licence": "CC BY 4.0", "accessed": "2026-10-27"}]}
 ```
@@ -113,7 +120,7 @@ lists (`vocab/`), which are a language-learning feature.
 ```json
 {"words": [{"id": "w0001", "tet": "bondia", "cat": "greetings", "pos": "phrase",
             "en": "good morning", "pt": "bom dia", "ind": "selamat pagi", "level": 1,
-            "ex": {"tet": "Bondia, mestre!", "en": "Good morning, teacher!"}}]}
+            "ex": {"tet": "Bondia, mestre!", "pt": "Bom dia, professor!", "en": "Good morning, teacher!", "id": "Selamat pagi, Guru!"}}]}
 ```
 
 `id` is the word id; the Indonesian meaning is in `ind`. Words are in `vocab/words.json`

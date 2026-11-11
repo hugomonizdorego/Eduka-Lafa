@@ -25,7 +25,7 @@ from pathlib import Path
 from . import net
 
 REPO_RAW = "https://raw.githubusercontent.com/hugomonizdorego/Eduka-Lafa/main/lafa/assets/timor/"
-WIKI_LANGS = ("tet", "pt")                 # introductions: the languages of Lafa
+WIKI_LANGS = ("tet", "pt", "en", "id")     # introductions: the languages of Lafa
 PICTURE_LANGS = ("en", "pt")               # pages searched for pictures
 GALLERY_EXT = re.compile(r"\.(jpe?g|png|webp)$", re.I)
 GALLERY_SKIP = re.compile(r"(flag[_ ]of|coat[_ ]of[_ ]arms|emblem[_ ]of|locator|location|[_ ]map\b|\bmap[_ ]|map[_ ]of|icon|logo|symbol|"

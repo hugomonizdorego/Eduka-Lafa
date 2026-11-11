@@ -34,12 +34,17 @@ def test_anthem_cues_are_ordered_and_inside_the_recording():
     assert len(data["lines"]) == 12 and data["lines"][0]["pt"].startswith("Pátria, Pátria")
     cues = data["cues"]; ends = [c[1] for c in cues]
     assert all(a[1] <= b[0] for a, b in zip(cues, cues[1:])) and max(ends) <= data["duration"]
-    assert anthem.at(data, 5.0) == (None, 0.0, "intro") and anthem.at(data, 110.0)[2] == "interlude"
+    assert anthem.at(data, 5.0) == (None, 0.0, "intro") and anthem.at(data, 70.0)[2] == "interlude"
     line, progress, section = anthem.at(data, 30.0); assert line == 1 and 0 < progress < 1 and section is None
-    assert anthem.next_time(data, 2, 60.0) == 166.4 and anthem.clock(204.4) == "3:24"
+    # The instrumental plays the whole anthem once: every line has exactly one cue, in order.
+    assert [c[2] for c in cues] == list(range(12))
+    assert anthem.at(data, 90.0)[0] == 6 and anthem.at(data, 125.0)[0] == 11
+    assert anthem.next_time(data, 2, 0.0) == 39.59 and anthem.clock(data["duration"]) == "2:08"
+    for line in data["lines"]:
+        assert all(line.get(l, "").strip() for l in ("tet", "pt", "en", "id")), line
 
 def test_player_without_backend_reports_it(qapp):
-    p = Player(anthem.load()["path"], 204.4, backend="none"); seen = []
+    p = Player(anthem.load()["path"], 128.35, backend="none"); seen = []
     p.failed.connect(seen.append); p.play()
     assert not p.available and seen == ["no-audio"] and p.state == "stopped"
     p.seek(30.0); assert p.position() == 30.0

@@ -10,17 +10,17 @@ from ..texts import extend
 from ..widgets import Card, Clickable, ClayIcon, Pill, CalendarCard, ResponsiveGrid, label, button, scroll, section_title, clear_layout, EmptyState
 
 extend({
-    "cal_title": ("Feriadu no loron nasionál {year}", "Feriados e dias nacionais {year}"),
-    "cal_sub": ("Tuir Lei n.º 10/2005 (muda ho Lei n.º 3/2016). Governu hatoo kada tinan data ba feriadu ne'ebé muda.", "Segundo a Lei n.º 10/2005 (alterada pela Lei n.º 3/2016). O Governo publica todos os anos as datas móveis."),
-    "next_holiday": ("Feriadu tuir mai", "Próximo feriado"),
-    "days_left": ("loron {n} tan", "faltam {n} dias"),
-    "export_ics": ("Esporta ba kalendáriu (.ics)", "Exportar para calendário (.ics)"),
-    "exported": ("Rai ona: {path}", "Guardado: {path}"),
-    "prev_year": ("Tinan liubá", "Ano anterior"),
-    "next_year": ("Tinan oin", "Ano seguinte"),
-    "past": ("Liu ona", "Já passou"),
-    "calendar_notes": ("Nota", "Notas"),
-    "approx_islamic": ("Data Islám sira tuir lua no bele muda loron ida.", "As datas islâmicas seguem a lua e podem variar um dia."),
+    "cal_title": ("Feriadu no loron nasionál {year}", "Feriados e dias nacionais {year}", "Holidays and national days {year}", "Hari libur dan hari nasional {year}"),
+    "cal_sub": ("Tuir Lei n.º 10/2005 (muda ho Lei n.º 3/2016). Governu hatoo kada tinan data ba feriadu ne'ebé muda.", "Segundo a Lei n.º 10/2005 (alterada pela Lei n.º 3/2016). O Governo publica todos os anos as datas móveis.", "Under Law No. 10/2005 (amended by Law No. 3/2016). The Government announces the moving dates every year.", "Menurut Undang-Undang No. 10/2005 (diubah dengan UU No. 3/2016). Pemerintah mengumumkan tanggal yang berubah setiap tahun."),
+    "next_holiday": ("Feriadu tuir mai", "Próximo feriado", "Next holiday", "Hari libur berikutnya"),
+    "days_left": ("loron {n} tan", "faltam {n} dias", "{n} days to go", "{n} hari lagi"),
+    "export_ics": ("Esporta ba kalendáriu (.ics)", "Exportar para calendário (.ics)", "Export to calendar (.ics)", "Ekspor ke kalender (.ics)"),
+    "exported": ("Rai ona: {path}", "Guardado: {path}", "Saved: {path}", "Tersimpan: {path}"),
+    "prev_year": ("Tinan liubá", "Ano anterior", "Previous year", "Tahun sebelumnya"),
+    "next_year": ("Tinan oin", "Ano seguinte", "Next year", "Tahun berikutnya"),
+    "past": ("Liu ona", "Já passou", "Past", "Sudah lewat"),
+    "calendar_notes": ("Nota", "Notas", "Notes", "Catatan"),
+    "approx_islamic": ("Data Islám sira tuir lua no bele muda loron ida.", "As datas islâmicas seguem a lua e podem variar um dia.", "Islamic dates follow the moon and may move by a day.", "Tanggal hari raya Islam mengikuti bulan dan bisa bergeser sehari."),
 })
 
 def ics_text(base, year, lang="tet"):

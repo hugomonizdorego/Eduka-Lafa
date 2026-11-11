@@ -175,6 +175,9 @@ QPushButton#nav:hover {{ background: {rgba(t['primary'], 0.10)}; color: {t['text
 QPushButton#nav:checked {{ color: #ffffff; border: 2px solid transparent;
     background: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 {t['nav_a']}, stop:1 {t['nav_b']}); }}
 QPushButton#nav:focus {{ border-color: {t['focus']}; }}
+QPushButton#navgroup {{ background: transparent; border: none; color: {t['primary']}; font-size: {fs(11)}; font-weight: 800; letter-spacing: 1px; text-align: left; padding: 8px 14px 2px 14px; }}
+QPushButton#navgroup:hover {{ color: {t['text']}; }}
+QPushButton#navgroup:focus {{ color: {t['text']}; text-decoration: underline; }}
 QPushButton {{ background: {t['card']}; color: {t['text']}; border: 2px solid {t['line']}; border-radius: 14px; padding: 8px 16px; font-weight: 700; }}
 QPushButton:hover {{ border-color: {rgba(t['primary'], 0.55)}; background: {t['card_hover']}; }}
 QPushButton:focus {{ border-color: {t['focus']}; }}

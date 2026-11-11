@@ -12,26 +12,40 @@ from ..widgets import (Card, ClayIcon, Pill, Segmented, ProgressRing, FlowLayout
                        EmptyState, tok_of, qcolor)
 
 extend({
-    "lang_title": ("Aprende Tetun", "Aprender Tetun"),
-    "lang_sub": ("Liafuan {n} ho nia signifikadu iha lian {m}: Portugés, Indonéziu, Inglés no lian ASEAN no CPLP sira.", "{n} palavras com o significado em {m} línguas: português, indonésio, inglês e as línguas da ASEAN e da CPLP."),
-    "target_lang": ("Tradús ba", "Traduzir para"),
-    "tab_words": ("Liafuan", "Palavras"),
-    "tab_cards": ("Kartaun", "Cartões"),
-    "tab_quiz": ("Kuis", "Quiz"),
-    "all_categories": ("Hotu", "Todas"),
-    "word_level": ("Nível {n}", "Nível {n}"),
-    "learned": ("Aprende ona", "Aprendidas"),
-    "due_today": ("Atu repete ohin", "Para rever hoje"),
-    "flip": ("Klik ka Espasu atu haree signifikadu", "Clique ou Espaço para ver o significado"),
-    "know": ("Hatene ona", "Já sei"),
-    "dont_know": ("Seidauk hatene", "Ainda não sei"),
-    "deck_done": ("Di'ak tebes! Kartaun ba ohin remata ona.", "Muito bem! Terminou os cartões de hoje."),
-    "new_deck": ("Kartaun foun", "Novos cartões"),
-    "quiz_word": ("Saida mak “{w}” iha {language}?", "O que significa “{w}” em {language}?"),
-    "translation_note": ("Tradusaun ba lian ASEAN no CPLP sira: versaun provizória, presiza revizaun husi falante natív.", "Traduções para as línguas da ASEAN e da CPLP: versão provisória, a rever por falantes nativos."),
-    "missing_lang": ("Seidauk iha tradusaun {language}; hatudu Inglés.", "Ainda sem tradução em {language}; mostra-se o inglês."),
-    "example": ("Ezemplu", "Exemplo"),
-    "box": ("Kaixa {n}/5", "Caixa {n}/5"),
+    "lang_title": ("Aprende Tetun", "Aprender Tetun", "Learn Tetun", "Belajar Tetun"),
+    "lang_sub": ("Liafuan {n} ho nia signifikadu iha lian {m}: Portugés, Indonéziu, Inglés no lian ASEAN no CPLP sira.", "{n} palavras com o significado em {m} línguas: português, indonésio, inglês e as línguas da ASEAN e da CPLP.", "{n} words with their meaning in {m} languages: Portuguese, Indonesian, English and the ASEAN and CPLP languages.", "{n} kata dengan arti dalam {m} bahasa: Portugis, Indonesia, Inggris dan bahasa ASEAN serta CPLP."),
+    "target_lang": ("Tradús ba", "Traduzir para", "Translate to", "Terjemahkan ke"),
+    "tab_words": ("Liafuan", "Palavras", "Words", "Kata"),
+    "tab_cards": ("Kartaun", "Cartões", "Flash cards", "Kartu"),
+    "tab_quiz": ("Kuis", "Quiz", "Quiz", "Kuis"),
+    "all_categories": ("Hotu", "Todas", "All", "Semua"),
+    "word_level": ("Nível {n}", "Nível {n}", "Level {n}", "Level {n}"),
+    "learned": ("Aprende ona", "Aprendidas", "Learned", "Sudah dipelajari"),
+    "due_today": ("Atu repete ohin", "Para rever hoje", "Due today", "Diulang hari ini"),
+    "flip": ("Klik ka Espasu atu haree signifikadu", "Clique ou Espaço para ver o significado", "Click or Space to see the meaning", "Klik atau Spasi untuk melihat arti"),
+    "know": ("Hatene ona", "Já sei", "I know it", "Sudah tahu"),
+    "dont_know": ("Seidauk hatene", "Ainda não sei", "Not yet", "Belum tahu"),
+    "deck_done": ("Di'ak tebes! Kartaun ba ohin remata ona.", "Muito bem! Terminou os cartões de hoje.", "Well done! Today's cards are finished.", "Bagus! Kartu hari ini selesai."),
+    "new_deck": ("Kartaun foun", "Novos cartões", "New cards", "Kartu baru"),
+    "quiz_word": ("Saida mak “{w}” iha {language}?", "O que significa “{w}” em {language}?", "What is “{w}” in {language}?", "Apa arti “{w}” dalam {language}?"),
+    "translation_note": ("Tradusaun ba lian ASEAN no CPLP sira: versaun provizória, presiza revizaun husi falante natív.", "Traduções para as línguas da ASEAN e da CPLP: versão provisória, a rever por falantes nativos.", "Translations into ASEAN and CPLP languages: draft, to be reviewed by native speakers.", "Terjemahan ke bahasa ASEAN dan CPLP: versi sementara, perlu ditinjau penutur asli."),
+    "missing_lang": ("Seidauk iha tradusaun {language}; hatudu Inglés.", "Ainda sem tradução em {language}; mostra-se o inglês.", "No {language} translation yet; showing English.", "Belum ada terjemahan {language}; ditampilkan bahasa Inggris."),
+    "example": ("Ezemplu", "Exemplo", "Example", "Contoh"),
+    "box": ("Kaixa {n}/5", "Caixa {n}/5", "Box {n}/5", "Kotak {n}/5"),
+    "dir_to_tetun": ("Aprende Tetun", "Aprender tétum", "Learn Tetun", "Belajar Tetun"),
+    "dir_from_tetun": ("Husi Tetun aprende lian seluk", "Do tétum para outra língua", "From Tetun to another language", "Dari Tetun ke bahasa lain"),
+    "lang_title_other": ("Aprende {language}", "Aprender {language}", "Learn {language}", "Belajar {language}"),
+    "other_lang": ("Lian seluk", "Outra língua", "Other language", "Bahasa lain"),
+    "quiz_to_tetun": ("Oinsá ita dehan “{w}” iha Tetun?", "Como se diz “{w}” em tétum?", "How do you say “{w}” in Tetun?", "Bagaimana mengatakan “{w}” dalam bahasa Tetun?"),
+    "reading_note": ("Letra latina iha parénteze hatudu oinsá atu lee liafuan (aproximadu, automátiku; presiza revizaun).",
+                     "As letras latinas entre parênteses mostram como ler a palavra (aproximado, automático; a rever).",
+                     "The Latin letters in brackets show how to read the word (approximate and automatic; to be reviewed).",
+                     "Huruf Latin dalam kurung menunjukkan cara membaca kata itu (perkiraan, otomatis; perlu ditinjau)."),
+    "tetun_reading_title": ("Oinsá atu lee Tetun", "Como ler o tétum", "How to read Tetun", "Cara membaca bahasa Tetun"),
+    "tetun_reading": ("Tetun hakerek hanesan ita lee: letra ida, son ida. Vogál a, e, i, o, u hanesan iha portugés no indonéziu. Asentu (á, é, í, ó, ú) hatudu sílaba forte: Timór, edukasaun. Apóstrofu (') mak hela ki'ik iha garganta: ne'e, la'o. x = “sy” (xá), ñ = “ny” (Juñu), ll = “ly” (Jullu), j = “zh”. Letra h iha liafuan nia hahú rona: halo, hela.",
+                      "O tétum escreve-se como se lê: uma letra, um som. As vogais a, e, i, o, u soam como em português e indonésio. O acento (á, é, í, ó, ú) mostra a sílaba forte: Timór, edukasaun. O apóstrofo (') é uma pequena paragem na garganta: ne'e, la'o. x = “x” de xá, ñ = “nh” (Juñu), ll = “lh” (Jullu), j = “j”. O h no início da palavra ouve-se: halo, hela.",
+                      "Tetun is written as it sounds: one letter, one sound. The vowels a, e, i, o, u sound as in Spanish or Indonesian. An accent (á, é, í, ó, ú) marks the stressed syllable: Timór, edukasaun. The apostrophe (') is a short catch in the throat: ne'e, la'o. x = “sh” (xá), ñ = “ny” (Juñu), ll = “ly” (Jullu), j = the “s” of “measure”. An h at the start of a word is pronounced: halo, hela.",
+                      "Bahasa Tetun ditulis seperti diucapkan: satu huruf, satu bunyi. Vokal a, e, i, o, u dibaca seperti dalam bahasa Indonesia. Tanda aksen (á, é, í, ó, ú) menandai suku kata yang ditekan: Timór, edukasaun. Apostrof (') adalah hentian singkat di tenggorokan: ne'e, la'o. x = “sy” (xá), ñ = “ny” (Juñu), ll = “ly” (Jullu), j = “zh”. Huruf h di awal kata dibaca: halo, hela."),
 })
 
 ORDER = ["pt", "es", "fr", "id", "ms", "fil", "th", "vi", "km", "lo", "my", "en", "zh", "ta"]
@@ -42,6 +56,18 @@ def meaning(word, code):
     value = word.meaning(code)
     if value: return value, code
     return word.meaning("en") or word.meaning("pt"), "en"
+
+def with_reading(word, code):
+    """The meaning with its reading in Latin letters for languages with their own script: สวัสดี (sawatdi)."""
+    text_, used = meaning(word, code)
+    r = word.reading(used) if used in kb.VOCAB_SCRIPTS else ""
+    return f"{text_} ({r})" if r else text_
+
+def example_line(word, lang):
+    """The Tetun example and its translation in the reader's language (or English)."""
+    if not word.ex or not word.ex.get("tet"): return ""
+    other = word.example(lang if lang != "tet" else "en") or word.example("en")
+    return kb.show(word.ex["tet"], "tet") + (" — " + other if other else "")
 
 class FlashCard(QWidget):
     """A card that flips (horizontal squeeze) between the Tetun word and its meaning."""
@@ -91,12 +117,12 @@ class WordRow(QWidget):
         row = QHBoxLayout(self); row.setContentsMargins(12, 8, 12, 8); row.setSpacing(14)
         left = QVBoxLayout(); left.setSpacing(0); left.addWidget(label(kb.show(word.tet, "tet"), "h3", wrap=True)); left.addWidget(label(word.pos, "caption"))
         row.addLayout(left, 2)
-        text_, used = meaning(word, code); mid = QVBoxLayout(); mid.setSpacing(0)
-        m = label(text_, wrap=True); m.setStyleSheet("font-weight:800;"); mid.addWidget(m)
+        mid = QVBoxLayout(); mid.setSpacing(0)
+        m = label(with_reading(word, code), wrap=True); m.setStyleSheet("font-weight:800;"); mid.addWidget(m)
         others = " · ".join(f"{c.upper()}: {word.meaning(c)}" for c in ("pt", "id", "en") if c != code and word.meaning(c))
         mid.addWidget(label(others, "caption", wrap=True)); row.addLayout(mid, 3)
         row.addWidget(Pill(f"{word.level}", ("mint", "butter", "coral")[max(1, min(3, word.level)) - 1]), 0, Qt.AlignVCenter)
-        self.setToolTip(kb.show(word.ex.get("tet", ""), "tet") + (" — " + word.ex.get("en", "") if word.ex.get("en") else "") if word.ex else "")
+        self.setToolTip(example_line(word, lang))
         self.setMinimumHeight(54)
     def paintEvent(self, e):
         t = tok_of(self); p = QPainter(self); p.setRenderHint(QPainter.Antialiasing)
@@ -119,7 +145,15 @@ class LanguagePage(QWidget):
     def code(self):
         c = self.win.settings.vocab_lang
         return c if c in kb.VOCAB_LANGS else "pt"
+    @property
+    def direction(self):
+        d = getattr(self.win.settings, "vocab_direction", "auto")
+        return d if d in ("to_tetun", "from_tetun") else ("from_tetun" if self.win.lang == "tet" else "to_tetun")
+    def set_direction(self, d):
+        if d != self.direction:
+            self.win.settings.vocab_direction = d; self.win.save_quietly(); self.deck = []; self.quiz = []; QTimer.singleShot(0, self.render)
     def show_route(self, params):
+        if params.get("direction") in ("to_tetun", "from_tetun"): self.win.settings.vocab_direction = params["direction"]
         if params.get("tab") in ("words", "cards", "quiz"): self.tab = params["tab"]
         if params.get("cat") in kb.VOCAB_CATEGORIES: self.cat = params["cat"]
         self.render()
@@ -134,9 +168,12 @@ class LanguagePage(QWidget):
     def render(self):
         clear_layout(self.col); win = self.win; t = win.t; lang = win.lang; base = win.kb; prog = win.progress
         head = Card(20, 24); row = QHBoxLayout(); row.setSpacing(14); row.addWidget(ClayIcon("translate", "mint", 64))
-        c = QVBoxLayout(); c.setSpacing(2); c.addWidget(label(t("lang_title"), "h1"))
-        c.addWidget(label(t("lang_sub", n=len(base.words), m=len(kb.VOCAB_LANGS)), "muted", wrap=True)); row.addLayout(c, 1)
-        pick = QVBoxLayout(); pick.addWidget(label(t("target_lang"), "caption")); self.combo = QComboBox()
+        title = t("lang_title") if self.direction == "to_tetun" else t("lang_title_other", language=kb.VOCAB_LANG_NAMES[self.code])
+        c = QVBoxLayout(); c.setSpacing(2); c.addWidget(label(title, "h1"))
+        c.addWidget(label(t("lang_sub", n=len(base.words), m=len(kb.VOCAB_LANGS)), "muted", wrap=True))
+        ways = Segmented([("to_tetun", t("dir_to_tetun")), ("from_tetun", t("dir_from_tetun"))], self.direction); ways.changed.connect(self.set_direction)
+        c.addWidget(ways, 0, Qt.AlignLeft); row.addLayout(c, 1)
+        pick = QVBoxLayout(); pick.addWidget(label(t("other_lang"), "caption")); self.combo = QComboBox()
         for code in ORDER: self.combo.addItem(f"{kb.VOCAB_LANG_NAMES[code]}" + (f"  ·  {GROUP[code]}" if code in GROUP else "  ·  ASEAN" if code not in ("pt", "es", "fr") else ""), code)
         self.combo.setCurrentIndex(max(0, self.combo.findData(self.code))); self.combo.currentIndexChanged.connect(self.set_code); pick.addWidget(self.combo)
         row.addLayout(pick); head.box.addLayout(row)
@@ -150,6 +187,7 @@ class LanguagePage(QWidget):
         missing = sum(1 for w in base.words if not w.meaning(self.code))
         if missing and base.words: head.box.addWidget(label(t("missing_lang", language=kb.VOCAB_LANG_NAMES[self.code]), "caption"))
         if self.code not in ("pt", "id", "en"): head.box.addWidget(label(t("translation_note"), "caption", wrap=True))
+        if self.code in kb.VOCAB_SCRIPTS: head.box.addWidget(label(t("reading_note"), "caption", wrap=True))
         tabs = Segmented([("words", t("tab_words")), ("cards", t("tab_cards")), ("quiz", t("tab_quiz"))], self.tab); tabs.changed.connect(self.set_tab)
         head.box.addWidget(tabs, 0, Qt.AlignLeft); self.col.addWidget(head)
         if not base.words:
@@ -163,6 +201,9 @@ class LanguagePage(QWidget):
             b = button(f"{kb.text(title, lang)} ({counts[key]})", lambda checked=False, k=key: self.set_cat(k), "chip"); b.setCheckable(True); b.setChecked(key == self.cat); flow.addWidget(b)
         self.col.addWidget(chips)
         getattr(self, "render_" + self.tab)()
+        if self.direction == "to_tetun":
+            guide = Card(16, 22); guide.box.addLayout(section_title(t("tetun_reading_title")))
+            guide.box.addWidget(label(kb.show(t("tetun_reading"), lang), wrap=True)); self.col.addWidget(guide)
         self.col.addStretch()
     # ---------------------------------------------------------------- list
     def render_words(self):
@@ -196,8 +237,12 @@ class LanguagePage(QWidget):
         self.flash = FlashCard(); self.flash.animate = not win.settings.reduce_motion
         text_, used = meaning(word, self.code)
         others = " · ".join(f"{c.upper()}: {word.meaning(c)}" for c in ("pt", "id", "en") if c != used and word.meaning(c))
-        example = (kb.show(word.ex.get("tet", ""), "tet") + (" — " + word.ex.get("en", "") if word.ex.get("en") else "")) if word.ex else ""
-        self.flash.set_word((kb.show(word.tet, "tet"), word.pos + " · " + t("flip")), (text_, others, example))
+        example = example_line(word, win.lang)
+        reading = word.reading(used) if used in kb.VOCAB_SCRIPTS else ""
+        if self.direction == "from_tetun":
+            self.flash.set_word((kb.show(word.tet, "tet"), word.pos + " · " + t("flip")), (text_ + (f"  ({reading})" if reading else ""), others, example))
+        else:
+            self.flash.set_word((text_, (reading + " · " if reading else "") + t("flip")), (kb.show(word.tet, "tet"), others, example))
         self.flash.clicked.connect(self.flash.flip); card.box.addWidget(self.flash)
         row = QHBoxLayout(); row.addStretch()
         no = button(t("dont_know"), lambda: self.answer_card(False), None, "refresh"); no.setMinimumHeight(46); row.addWidget(no)
@@ -214,7 +259,7 @@ class LanguagePage(QWidget):
         words = self.words() or self.win.kb.words
         picks = self.rng.sample(words, min(10, len(words))); self.quiz = []
         for w in picks:
-            same = [x for x in self.win.kb.words if x.cat == w.cat and x.id != w.id and meaning(x, self.code)[0] != meaning(w, self.code)[0]]
+            same = [x for x in self.win.kb.words if x.cat == w.cat and x.id != w.id and meaning(x, self.code)[0] != meaning(w, self.code)[0] and x.tet != w.tet]
             pool = same if len(same) >= 3 else [x for x in self.win.kb.words if x.id != w.id]
             options = self.rng.sample(pool, 3) + [w]; self.rng.shuffle(options); self.quiz.append((w, options))
         self.qi = 0; self.score = 0
@@ -231,10 +276,16 @@ class LanguagePage(QWidget):
             return
         word, options = self.quiz[self.qi]
         head = QHBoxLayout(); head.addWidget(label(t("question_n", i=self.qi + 1, n=len(self.quiz)), "eyebrow")); head.addStretch(); card.box.addLayout(head)
-        q = label(t("quiz_word", w=kb.show(word.tet, "tet"), language=kb.VOCAB_LANG_NAMES[meaning(word, self.code)[1]]), "h2", wrap=True); card.box.addWidget(q)
+        if self.direction == "from_tetun":
+            q = label(t("quiz_word", w=kb.show(word.tet, "tet"), language=kb.VOCAB_LANG_NAMES[meaning(word, self.code)[1]]), "h2", wrap=True)
+            show = lambda o: with_reading(o, self.code)
+        else:
+            q = label(t("quiz_to_tetun", w=with_reading(word, self.code)), "h2", wrap=True)
+            show = lambda o: kb.show(o.tet, "tet")
+        card.box.addWidget(q)
         grid = QGridLayout(); grid.setSpacing(10); self.answers = []
         for j, o in enumerate(options):
-            b = button(f"{'ABCD'[j]}.  {meaning(o, self.code)[0]}", lambda checked=False, k=j: self.answer_quiz(k), "answer"); b.setMinimumHeight(52)
+            b = button(f"{'ABCD'[j]}.  {show(o)}", lambda checked=False, k=j: self.answer_quiz(k), "answer"); b.setMinimumHeight(52)
             grid.addWidget(b, j // 2, j % 2); self.answers.append(b)
         card.box.addLayout(grid)
         self.quiz_feedback = label("", wrap=True); self.quiz_feedback.hide(); card.box.addWidget(self.quiz_feedback)
@@ -248,6 +299,7 @@ class LanguagePage(QWidget):
             b.setProperty("state", "right" if options[j].id == word.id else "wrong" if j == k else ""); b.style().unpolish(b); b.style().polish(b); b.setEnabled(False)
         self.win.progress.word_seen(word.id, right)
         extra = " · ".join(f"{c.upper()}: {word.meaning(c)}" for c in ("pt", "id", "en") if word.meaning(c))
+        if self.code not in ("pt", "id", "en"): extra = with_reading(word, self.code) + " · " + extra
         self.quiz_feedback.setText(f"<b>{t('right') if right else t('wrong')}</b> {kb.show(word.tet, 'tet')} = {extra}")
         self.quiz_feedback.setStyleSheet(f"background:{self.win.tok['ok_soft'] if right else self.win.tok['bad_soft']}; border-radius:14px; padding:10px 14px;")
         self.quiz_feedback.show(); self.quiz_next.show(); self.quiz_next.setFocus()

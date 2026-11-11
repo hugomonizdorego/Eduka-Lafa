@@ -10,31 +10,40 @@ from ..texts import extend
 from ..widgets import Card, ClayIcon, Pill, Segmented, SearchBox, FlowLayout, label, button, tok_of
 
 extend({
-    "con_title": ("Konstituisaun RDTL", "Constituição da RDTL"),
-    "con_sub": ("Lei-Inan Repúblika Demokrátika Timór-Leste · aprova 22 Marsu 2002 · tama iha vigór 20 Maiu 2002 · artigu {n}",
-                "Lei fundamental da República Democrática de Timor-Leste · aprovada a 22 de março de 2002 · em vigor desde 20 de maio de 2002 · {n} artigos"),
-    "con_search": ("Buka númeru artigu (ez. 15) ka liafuan (ez. edukasaun)", "Procurar o número do artigo (ex. 15) ou palavras (ex. educação)"),
-    "con_both": ("Tetun + Português", "Tétum + Português"),
-    "con_contents": ("Índise", "Índice"),
-    "con_results": ("Rezultadu: {n}", "Resultados: {n}"),
-    "con_no_results": ("La hetan artigu. Koko liafuan seluk ka númeru 1–170.", "Nenhum artigo encontrado. Tente outras palavras ou um número de 1 a 170."),
-    "con_preamble": ("Preámbulu", "Preâmbulo"),
-    "con_prev": ("Artigu molok", "Artigo anterior"),
-    "con_next": ("Artigu tuir mai", "Artigo seguinte"),
-    "con_copy": ("Kopia artigu", "Copiar artigo"),
-    "con_copied": ("Kopia ona artigu {n}", "Artigo {n} copiado"),
-    "con_read": ("Lee ho lian", "Ler em voz alta"),
-    "con_article": ("Artigu", "Artigo"),
-    "con_note": ("Testu ofisiál husi Jornal da República (portugés) no edisaun Tetun 2010. Iha divérjénsia, testu portugés mak prevalese.",
-                 "Texto oficial do Jornal da República (português) e edição em tétum de 2010. Em caso de divergência, prevalece o texto em português."),
-    "con_quick": ("Asesu lalais", "Acesso rápido"),
-    "con_show_contents": ("Hatudu índise", "Mostrar índice"),
+    "con_title": ("Konstituisaun RDTL", "Constituição da RDTL", "Constitution of the RDTL", "Konstitusi RDTL"),
+    "con_sub": ("Lei-Inan Repúblika Demokrátika Timór-Leste · aprova 22 Marsu 2002 · tama iha vigór 20 Maiu 2002 · artigu {n}", "Lei fundamental da República Democrática de Timor-Leste · aprovada a 22 de março de 2002 · em vigor desde 20 de maio de 2002 · {n} artigos", "Fundamental law of the Democratic Republic of Timor-Leste · approved on 22 March 2002 · in force since 20 May 2002 · {n} articles", "Undang-undang dasar Republik Demokratik Timor-Leste · disahkan 22 Maret 2002 · berlaku sejak 20 Mei 2002 · {n} pasal"),
+    "con_search": ("Buka númeru artigu (ez. 15) ka liafuan (ez. edukasaun)", "Procurar o número do artigo (ex. 15) ou palavras (ex. educação)", "Search an article number (e.g. 15) or words (e.g. education)", "Cari nomor pasal (mis. 15) atau kata (mis. pendidikan)"),
+    "con_both": ("Tetun + Português", "Tétum + Português", "Tetun + Português", "Tetun + Português"),
+    "con_contents": ("Índise", "Índice", "Contents", "Daftar isi"),
+    "con_results": ("Rezultadu: {n}", "Resultados: {n}", "Results: {n}", "Hasil: {n}"),
+    "con_no_results": ("La hetan artigu. Koko liafuan seluk ka númeru 1–170.", "Nenhum artigo encontrado. Tente outras palavras ou um número de 1 a 170.", "No article found. Try other words or a number from 1 to 170.", "Pasal tidak ditemukan. Coba kata lain atau nomor 1 sampai 170."),
+    "con_preamble": ("Preámbulu", "Preâmbulo", "Preamble", "Pembukaan"),
+    "con_prev": ("Artigu molok", "Artigo anterior", "Previous article", "Pasal sebelumnya"),
+    "con_next": ("Artigu tuir mai", "Artigo seguinte", "Next article", "Pasal berikutnya"),
+    "con_copy": ("Kopia artigu", "Copiar artigo", "Copy article", "Salin pasal"),
+    "con_copied": ("Kopia ona artigu {n}", "Artigo {n} copiado", "Article {n} copied", "Pasal {n} disalin"),
+    "con_read": ("Lee ho lian", "Ler em voz alta", "Read aloud", "Bacakan"),
+    "con_article": ("Artigu", "Artigo", "Article", "Artikel"),
+    "con_note": ("Testu ofisiál husi Jornal da República (portugés) no edisaun Tetun 2010. Iha divérjénsia, testu portugés mak prevalese.", "Texto oficial do Jornal da República (português) e edição em tétum de 2010. Em caso de divergência, prevalece o texto em português.", "Official text from the Jornal da República (Portuguese) and the 2010 Tetun edition. If they differ, the Portuguese text prevails.", "Teks resmi dari Jornal da República (bahasa Portugis) dan edisi Tetun 2010. Jika berbeda, teks bahasa Portugis yang berlaku."),
+    "con_quick": ("Asesu lalais", "Acesso rápido", "Quick links", "Akses cepat"),
+    "con_show_contents": ("Hatudu índise", "Mostrar índice", "Show contents", "Tampilkan daftar isi"),
 })
 
-# Quick links: (Tetun, Portuguese, article)
-QUICK = [("Símbolu nasionál", "Símbolos nacionais", 14), ("Lian ofisiál", "Línguas oficiais", 13), ("Direitu fundamentál", "Direitos fundamentais", 16),
-         ("Edukasaun", "Educação", 59), ("Prezidente Repúblika", "Presidente da República", 74), ("Parlamentu Nasionál", "Parlamento Nacional", 92),
-         ("Governu", "Governo", 103), ("Tribunál sira", "Tribunais", 118), ("Defeza no seguransa", "Defesa e segurança", 146), ("Inu nasionál", "Hino nacional", 166)]
+# Quick links: ((tet, pt, en, id), article)
+QUICK = [(("Símbolu nasionál", "Símbolos nacionais", "National symbols", "Simbol nasional"), 14),
+         (("Lian ofisiál", "Línguas oficiais", "Official languages", "Bahasa resmi"), 13),
+         (("Direitu fundamentál", "Direitos fundamentais", "Fundamental rights", "Hak-hak dasar"), 16),
+         (("Edukasaun", "Educação", "Education", "Pendidikan"), 59),
+         (("Prezidente Repúblika", "Presidente da República", "President of the Republic", "Presiden Republik"), 74),
+         (("Parlamentu Nasionál", "Parlamento Nacional", "National Parliament", "Parlemen Nasional"), 92),
+         (("Governu", "Governo", "Government", "Pemerintah"), 103),
+         (("Tribunál sira", "Tribunais", "Courts", "Pengadilan"), 118),
+         (("Defeza no seguransa", "Defesa e segurança", "Defence and security", "Pertahanan dan keamanan"), 146),
+         (("Inu nasionál", "Hino nacional", "National anthem", "Lagu kebangsaan"), 166)]
+
+# The Constitution exists in Tetun and Portuguese; English and Indonesian
+# readers start with the text closest to them.
+TEXT_LANG = {"tet": "tet", "pt": "pt", "en": "pt", "id": "tet"}
 
 def text_html(value, lang, pattern=None):
     """Escape, turn bullet lists into lines and mark the search words."""
@@ -47,7 +56,7 @@ class ConstitutionPage(QWidget):
     route = "constitution"
     def __init__(self, win):
         super().__init__(); self.win = win; self.con = load(); self.current = 1; self.query = ""; self.preamble = False
-        self.mode = "tet" if win.lang == "tet" else "pt"; self.narrow = False
+        self.mode = TEXT_LANG.get(win.lang, "tet"); self.narrow = False
         self.timer = QTimer(self); self.timer.setSingleShot(True); self.timer.setInterval(220); self.timer.timeout.connect(self.run_search)
         self.build()
     # ------------------------------------------------------------------ ui
@@ -67,8 +76,8 @@ class ConstitutionPage(QWidget):
         head.box.addLayout(srow)
         quick = QWidget(); flow = FlowLayout(quick, 6)
         pre = button(t("con_preamble"), self.show_preamble, "chip", "scroll"); flow.addWidget(pre)
-        for tet, pt, n in QUICK:
-            b = button(f"{tet if lang == 'tet' else pt} · {n}", lambda checked=False, n=n: self.open_article(n), "chip"); flow.addWidget(b)
+        for names, n in QUICK:
+            b = button(f"{kb.pick(names, lang)} · {n}", lambda checked=False, n=n: self.open_article(n), "chip"); flow.addWidget(b)
         head.box.addWidget(quick); self.quick = quick; outer.addWidget(head)
         body = QHBoxLayout(); body.setSpacing(14)
         self.side = Card(10, 22); self.side.setFixedWidth(320)
@@ -100,7 +109,7 @@ class ConstitutionPage(QWidget):
                f"QTreeWidget::branch, QTreeWidget::branch:selected {{ background:transparent; }}")
         self.tree.setStyleSheet(css); self.results.setStyleSheet(css)
     def fill_tree(self):
-        lang = self.win.lang; con = self.con; self.tree.clear(); self.tree_items = {}
+        lang = self.text_lang(); con = self.con; self.tree.clear(); self.tree_items = {}
         parents = {}
         for a in con.articles:
             parent = None
@@ -136,7 +145,7 @@ class ConstitutionPage(QWidget):
     def set_mode(self, mode): self.mode = mode; self.render()
     # -------------------------------------------------------------- search
     def run_search(self):
-        q = self.search.text().strip(); self.query = q; lang = self.win.lang if self.mode == "both" else self.mode
+        q = self.search.text().strip(); self.query = q; lang = self.text_lang()
         if not q:
             self.results.hide(); self.empty.hide(); self.tree.show(); self.count.setText(""); self.render(); return
         n = parse_ref(q)
@@ -179,6 +188,9 @@ class ConstitutionPage(QWidget):
         n = self.current + delta
         if self.con.article(n): self.open_article(n, keep_query=bool(self.query))
     def langs(self): return ("tet", "pt") if self.mode == "both" else (self.mode,)
+    def text_lang(self):
+        """Tetun or Portuguese: the text shown, or the one closest to the interface when both are shown."""
+        return self.mode if self.mode in ("tet", "pt") else TEXT_LANG.get(self.win.lang, "tet")
     def render(self):
         win = self.win; tok = win.tok; scale = win.scale(); con = self.con; langs = self.langs()
         fs = lambda px: f"{round(px * scale)}px"
@@ -199,7 +211,7 @@ class ConstitutionPage(QWidget):
                 for i in range(max(len(tet), len(pt))):
                     parts.append(f"<tr><td valign='top'>{text_html(tet[i] if i < len(tet) else '', 'tet', pattern)}</td><td valign='top'>{text_html(pt[i] if i < len(pt) else '', 'pt', pattern)}</td></tr>")
                 parts.append("</table>")
-            self.text.setHtml("".join(parts)); self.crumb.setText(con.title(win.lang)); self.prev_b.setEnabled(False); self.next_b.setEnabled(True)
+            self.text.setHtml("".join(parts)); self.crumb.setText(win.t("con_title")); self.prev_b.setEnabled(False); self.next_b.setEnabled(True)
             return
         a = con.article(self.current) or con.articles[0]
         lang0 = langs[0]
@@ -238,13 +250,13 @@ class ConstitutionPage(QWidget):
         if s.startswith("#a") and s[2:].isdigit(): self.open_article(int(s[2:]))
         elif s.startswith("https://"): self.win.open_url(s)
     def copy(self):
-        lang = self.langs()[0] if self.mode != "both" else self.win.lang
+        lang = self.text_lang()
         a = self.con.article(self.current)
         if not a: return
         text = self.con.plain(a, lang) + f"\n— {self.con.title(lang)}"
         QApplication.clipboard().setText(text); self.win.toast.show_text(self.win.t("con_copied", n=a["n"]))
     def read_aloud(self):
-        lang = self.langs()[0] if self.mode != "both" else self.win.lang
+        lang = self.text_lang()
         if self.preamble: self.win.speak(" ".join(self.con.preamble(lang)), lang); return
         a = self.con.article(self.current)
         if a: self.win.speak(self.con.plain(a, lang), lang)

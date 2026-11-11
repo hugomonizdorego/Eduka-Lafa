@@ -7,7 +7,7 @@ import re
 from datetime import date
 from urllib.parse import quote
 
-from ...qt import Qt, Signal, QTimer, QSize, QWidget, QLabel, QVBoxLayout, QHBoxLayout, QTextBrowser, QFrame, QPixmap, QSizePolicy, QUrl, QDialog, QPushButton, QIcon
+from ...qt import Qt, Signal, QTimer, QSize, QWidget, QLabel, QVBoxLayout, QHBoxLayout, QTextBrowser, QFrame, QPixmap, QSizePolicy, QUrl, QDialog, QPushButton, QIcon, QPainter
 from ... import kb, icons
 from ..texts import extend
 from ..theme import accent
@@ -15,19 +15,18 @@ from ..widgets import (Card, Clickable, ClayIcon, Pill, Segmented, ProgressLine,
                        section_title, clear_layout, tok_of, refresh_icon, EmptyState, rounded)
 
 extend({
-    "levels_label": ("Ba nível", "Para os níveis"),
-    "this_year": ("Tinan ne'e: {date}", "Este ano: {date}"),
-    "variable_date": ("Data muda kada tinan", "Data móvel"),
-    "photo_offline": ("Foto download ona", "Foto descarregada"),
-    "cite": ("Oinsá sita", "Como citar"),
-    "keyboard_quiz": ("Teklas 1–4 ka A–D atu hatán, Enter ba tuir mai", "Teclas 1–4 ou A–D para responder, Enter para seguir"),
-    "gallery": ("Galeria foto", "Galeria de fotos"),
-    "gallery_note": ("Foto husi Wikimedia Commons ho lisensa livre. Klik atu haree boot no hatene autór.", "Fotos do Wikimedia Commons com licença livre. Clique para ver em grande e conhecer o autor."),
-    "gallery_empty": ("Seidauk iha foto ba pájina ida-ne'e. Bainhira iha internet, ba «Offline no atualiza» atu download foto ho nia autór no lisensa.",
-                      "Ainda não há fotos para esta página. Com internet, abra «Offline e atualização» para descarregar fotos com autor e licença."),
-    "gallery_get": ("Download foto", "Descarregar fotos"),
-    "photo_source": ("Haree iha Wikimedia Commons", "Ver no Wikimedia Commons"),
-    "close": ("Taka", "Fechar"),
+    "levels_label": ("Ba nível", "Para os níveis", "For levels", "Untuk jenjang"),
+    "this_year": ("Tinan ne'e: {date}", "Este ano: {date}", "This year: {date}", "Tahun ini: {date}"),
+    "variable_date": ("Data muda kada tinan", "Data móvel", "Date changes every year", "Tanggal berubah tiap tahun"),
+    "photo_offline": ("Foto download ona", "Foto descarregada", "Downloaded photo", "Foto sudah diunduh"),
+    "cite": ("Oinsá sita", "Como citar", "How to cite", "Cara mengutip"),
+    "keyboard_quiz": ("Teklas 1–4 ka A–D atu hatán, Enter ba tuir mai", "Teclas 1–4 ou A–D para responder, Enter para seguir", "Keys 1–4 or A–D to answer, Enter for next", "Tombol 1–4 atau A–D untuk menjawab, Enter untuk lanjut"),
+    "gallery": ("Galeria foto", "Galeria de fotos", "Photo gallery", "Galeri foto"),
+    "gallery_note": ("Foto husi Wikimedia Commons ho lisensa livre. Klik atu haree boot no hatene autór.", "Fotos do Wikimedia Commons com licença livre. Clique para ver em grande e conhecer o autor.", "Free-licence photos from Wikimedia Commons. Click a photo to see it large and learn who took it.", "Foto berlisensi bebas dari Wikimedia Commons. Klik untuk melihat lebih besar dan mengetahui pembuatnya."),
+    "gallery_empty": ("Seidauk iha foto ba pájina ida-ne'e. Bainhira iha internet, ba «Offline no atualiza» atu download foto ho nia autór no lisensa.", "Ainda não há fotos para esta página. Com internet, abra «Offline e atualização» para descarregar fotos com autor e licença.", "No photos for this page yet. With internet, open «Offline and updates» to download photos with their author and licence.", "Belum ada foto untuk halaman ini. Jika ada internet, buka «Luring dan pembaruan» untuk mengunduh foto beserta pembuat dan lisensinya."),
+    "gallery_get": ("Download foto", "Descarregar fotos", "Download photos", "Unduh foto"),
+    "photo_source": ("Haree iha Wikimedia Commons", "Ver no Wikimedia Commons", "View on Wikimedia Commons", "Lihat di Wikimedia Commons"),
+    "close": ("Taka", "Fechar", "Close", "Tutup"),
 })
 
 class PhotoDialog(QDialog):
@@ -203,7 +202,8 @@ class ItemPage(QWidget):
             if facts: parts.append("<ul>" + "".join(f"<li><b>{html.escape(kb.text(f.get('label'), lang))}:</b> {html.escape(kb.text(f.get('value'), lang) if isinstance(f.get('value'), dict) else str(f.get('value')))}</li>" for f in facts[:6]) + "</ul>")
         text.setHtml("".join(parts) or "<p></p>"); main.box.addWidget(text)
         caption = item.caption(lang)
-        credit = (t("photo_credit", author=photo[1].get("author", ""), licence=photo[1].get("licence", "")) if photo else t("illustration_credit"))
+        credit = (t("photo_credit", author=photo[1].get("author", ""), licence=photo[1].get("licence", "")) if photo
+                  else item.image_credit(lang) if item.image() else t("illustration_credit"))
         main.box.addWidget(label((caption + " · " if caption else "") + credit, "caption", wrap=True))
         body.add(main)
         side = QWidget(); scol = QVBoxLayout(side); scol.setContentsMargins(0, 0, 0, 0); scol.setSpacing(14)
@@ -324,7 +324,20 @@ def item_pixmap(win, item, w, h):
     if photo:
         pm = QPixmap(str(photo[0]))
         if not pm.isNull(): return cover(pm, w, h)
+    image = item.image()
+    if image:
+        pm = QPixmap(str(image))
+        if not pm.isNull(): return contain(pm, w, h)
     return icons.illustration(item.illustration(), w, h)
+
+def contain(pm, w, h):
+    """Fit a whole picture (an emblem, a map) into w×h, centred on a transparent background."""
+    if pm.isNull() or w <= 0 or h <= 0: return pm
+    out = QPixmap(w, h); out.fill(Qt.transparent)
+    scaled = pm.scaled(int(w * 0.92), int(h * 0.92), Qt.KeepAspectRatio, Qt.SmoothTransformation)
+    painter = QPainter(out); painter.setRenderHint(QPainter.SmoothPixmapTransform)
+    painter.drawPixmap((w - scaled.width()) // 2, (h - scaled.height()) // 2, scaled); painter.end()
+    return out
 
 def cover(pm, w, h):
     """Cover-crop a picture to w×h."""

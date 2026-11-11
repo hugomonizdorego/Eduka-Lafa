@@ -1,165 +1,220 @@
 {
  "title": {
   "tet": "Inu Nasionál «Pátria»",
-  "pt": "Hino Nacional «Pátria»"
+  "pt": "Hino Nacional «Pátria»",
+  "en": "National Anthem «Pátria»",
+  "id": "Lagu Kebangsaan «Pátria»"
  },
  "audio": "patria.mp3",
- "duration": 204.43,
+ "duration": 128.35,
  "music": "Afonso Redentor de Araújo",
  "lyrics_by": "Francisco Borja da Costa",
  "legal": {
   "tet": "Konstituisaun artigu 14 no 166; Lei n.º 2/2007 kona-ba Símbolu Nasionál",
-  "pt": "Constituição, artigos 14.º e 166.º; Lei n.º 2/2007 sobre os Símbolos Nacionais"
+  "pt": "Constituição, artigos 14.º e 166.º; Lei n.º 2/2007 sobre os Símbolos Nacionais",
+  "en": "Constitution, articles 14 and 166; Law no. 2/2007 on the National Symbols",
+  "id": "Konstitusi, pasal 14 dan 166; UU No. 2/2007 tentang Simbol Nasional"
  },
  "lines": [
   {
    "pt": "Pátria, Pátria, Timor-Leste, nossa Nação.",
-   "tet": "Pátria, Pátria, Timór-Leste, ita-nia Nasaun.",
+   "tet": "Pátria, Pátria, Timór-Leste, ita nia Nasaun.",
+   "en": "Fatherland, fatherland, East Timor our Nation.",
+   "id": "Tanah Air, Tanah Air, Timor-Leste, bangsa kami.",
    "part": "refrain"
   },
   {
    "pt": "Glória ao povo e aos heróis da nossa libertação.",
-   "tet": "Glória ba povu no ba asuwa'in sira ita-nia libertasaun nian.",
+   "tet": "Glória ba Povu no ba ita nia eróis libertasaun nasionál.",
+   "en": "Glory to the people and to the heroes of our liberation.",
+   "id": "Kemuliaan bagi rakyat dan para pahlawan pembebasan kami.",
    "part": "refrain"
   },
   {
    "pt": "Pátria, Pátria, Timor-Leste, nossa Nação.",
-   "tet": "Pátria, Pátria, Timór-Leste, ita-nia Nasaun.",
+   "tet": "Pátria, Pátria, Timór-Leste, ita nia Nasaun.",
+   "en": "Fatherland, fatherland, East Timor our Nation.",
+   "id": "Tanah Air, Tanah Air, Timor-Leste, bangsa kami.",
    "part": "refrain"
   },
   {
    "pt": "Glória ao povo e aos heróis da nossa libertação.",
-   "tet": "Glória ba povu no ba asuwa'in sira ita-nia libertasaun nian.",
+   "tet": "Glória ba Povu no ba ita nia eróis libertasaun nasionál.",
+   "en": "Glory to the people and to the heroes of our liberation.",
+   "id": "Kemuliaan bagi rakyat dan para pahlawan pembebasan kami.",
    "part": "refrain"
   },
   {
    "pt": "Vencemos o colonialismo, gritamos:",
-   "tet": "Ita manán ona kolonializmu, ita hakilar:",
+   "tet": "Ita manán hasoru kolonializmu, ita hakilar:",
+   "en": "We vanquish colonialism, we cry:",
+   "id": "Kami mengalahkan kolonialisme, kami berseru:",
    "part": "verse"
   },
   {
    "pt": "abaixo o imperialismo.",
-   "tet": "abaixu imperializmu.",
+   "tet": "Hatuun imperializmu.",
+   "en": "down with imperialism!",
+   "id": "runtuhkan imperialisme.",
    "part": "verse"
   },
   {
    "pt": "Terra livre, povo livre,",
-   "tet": "Rai livre, povu livre,",
+   "tet": "Rai livre, Povu livre,",
+   "en": "Free land, free people,",
+   "id": "Tanah merdeka, rakyat merdeka,",
    "part": "verse"
   },
   {
    "pt": "não, não, não à exploração.",
-   "tet": "lae, lae, lae ba esplorasaun.",
+   "tet": "Lae, lae, lae ba esplorasaun.",
+   "en": "no, no, no to exploitation.",
+   "id": "tidak, tidak, tidak pada penindasan.",
    "part": "verse"
   },
   {
    "pt": "Avante unidos firmes e decididos.",
-   "tet": "Ba oin, hamutuk, metin no determinadu.",
+   "tet": "Bá oin hamutuk, laran metin no barani.",
+   "en": "Let us go forward, united, firm and determined,",
+   "id": "Maju bersatu, teguh dan bertekad.",
    "part": "verse"
   },
   {
    "pt": "Na luta contra o imperialismo",
-   "tet": "Iha luta hasoru imperializmu,",
+   "tet": "Halo funu hasoru imperializmu,",
+   "en": "in the struggle against imperialism,",
+   "id": "Dalam perjuangan melawan imperialisme,",
    "part": "verse"
   },
   {
    "pt": "o inimigo dos povos, até à vitória final.",
-   "tet": "inimigu povu sira-nian, to'o vitória ikus.",
+   "tet": "inimigu Povu hotu-hotu nian, to'o vitória finál,",
+   "en": "the enemy of people, until final victory,",
+   "id": "musuh bangsa-bangsa, hingga kemenangan akhir.",
    "part": "verse"
   },
   {
    "pt": "Pelo caminho da revolução.",
-   "tet": "Tuir dalan revolusaun nian.",
+   "tet": "liu dalan revolusaun.",
+   "en": "onward to revolution.",
+   "id": "Di jalan revolusi.",
    "part": "verse"
   }
  ],
  "cues": [
   [
-   13.4,
-   24.5,
+   11.69,
+   21.65,
    0
   ],
   [
-   24.5,
-   42.9,
+   21.65,
+   39.59,
    1
   ],
   [
-   42.9,
-   54.3,
+   39.59,
+   50.17,
    2
   ],
   [
-   54.3,
-   73.1,
+   50.17,
+   68.43,
    3
   ],
   [
-   73.1,
-   84.5,
-   0
+   72.01,
+   79.62,
+   4
   ],
   [
-   84.5,
-   103.0,
-   1
+   79.62,
+   86.72,
+   5
   ],
   [
-   134.2,
-   146.3,
-   0
+   86.72,
+   93.68,
+   6
   ],
   [
-   146.3,
-   166.4,
-   1
+   93.68,
+   98.37,
+   7
   ],
   [
-   166.4,
-   178.5,
-   2
+   101.92,
+   109.49,
+   8
   ],
   [
-   178.5,
-   199.0,
-   3
+   109.49,
+   116.6,
+   9
+  ],
+  [
+   116.6,
+   123.74,
+   10
+  ],
+  [
+   123.74,
+   127.6,
+   11
   ]
  ],
  "sections": [
   [
    0.0,
-   13.4,
+   11.69,
    "intro"
   ],
   [
-   103.0,
-   134.2,
+   68.43,
+   72.01,
    "interlude"
   ],
   [
-   199.0,
-   204.43,
+   98.37,
+   101.92,
+   "interlude"
+  ],
+  [
+   127.6,
+   128.35,
    "outro"
   ]
  ],
  "note": {
-  "tet": "Iha gravasaun ida-ne'e, koru hananu refraun «Pátria, Pátria» dala lima. Letra kompletu iha okos atu aprende. Testu ofisiál mak portugés; tradusaun Tetun husi Lafa (la ofisiál).",
-  "pt": "Nesta gravação, o coro canta o refrão «Pátria, Pátria» cinco vezes. A letra completa está abaixo para aprender. O texto oficial é o português; a tradução em tétum é do Lafa (não oficial)."
+  "tet": "Gravasaun instrumentál: inu kompletu dala ida — refraun dala rua no estrofe. Liña ne'ebé atu hananu nakroman tuir múzika: hananu hamutuk! Testu ofisiál mak portugés; tradusaun Tetun no Inglés husi Governu Timór-Leste; tradusaun Indonézia husi Lafa (la ofisiál).",
+  "pt": "Gravação instrumental: o hino completo uma vez — o refrão duas vezes e a estrofe. A linha a cantar acende-se com a música: cante connosco! O texto oficial é o português; traduções em tétum e inglês do Governo de Timor-Leste; tradução indonésia do Lafa (não oficial).",
+  "en": "Instrumental recording: the whole anthem once — the refrain twice and the verse. The line to sing lights up with the music: sing along! The official text is in Portuguese; Tetun and English translations from the Government of Timor-Leste; Indonesian translation by Lafa (unofficial).",
+  "id": "Rekaman instrumental: lagu kebangsaan lengkap satu kali — refrein dua kali dan bait. Baris yang dinyanyikan menyala mengikuti musik: bernyanyilah bersama! Teks resminya berbahasa Portugis; terjemahan Tetun dan Inggris dari Pemerintah Timor-Leste; terjemahan Indonesia oleh Lafa (tidak resmi)."
  },
  "recording": {
-  "file": "patria_56.mp3 (56 kbps, mono)",
-  "provided_by": "Na'in projetu Lafa / project owner",
+  "file": "patria.mp3 (P_tria_timor_leste_-_instrumental.mp3, 128 s, 48 kHz stereo, 114 kbps)",
+  "provided_by": "Na'in projetu Lafa / project owner (2026-11-11)",
   "origin": {
-   "tet": "Gravasaun ofisiál ne'ebé fahe iha internet (edisaun web 56 kbps); hatama husi na'in projetu.",
-   "pt": "Gravação oficial divulgada na internet (edição web de 56 kbps); fornecida pelo responsável do projeto."
+   "tet": "Gravasaun instrumentál ne'ebé na'in projetu fó (fonte orijinál atu konfirma).",
+   "pt": "Gravação instrumental fornecida pelo responsável do projeto (origem a confirmar).",
+   "en": "Instrumental recording supplied by the project owner (original source to be confirmed).",
+   "id": "Rekaman instrumental dari pemilik proyek (sumber asli perlu dikonfirmasi)."
   },
   "licence": {
-   "tet": "Símbolu nasionál (Lei n.º 2/2007). Lisensa gravasaun nian sei konfirma — haree docs/ASSETS.md.",
-   "pt": "Símbolo nacional (Lei n.º 2/2007). Licença da gravação a confirmar — ver docs/ASSETS.md."
+   "tet": "Símbolu nasionál (Lei n.º 2/2007). Lisensa gravasaun nian atu konfirma ho na'in projetu — haree docs/ASSETS.md.",
+   "pt": "Símbolo nacional (Lei n.º 2/2007). Licença da gravação a confirmar com o responsável do projeto — ver docs/ASSETS.md.",
+   "en": "National symbol (Law no. 2/2007). The recording's licence is to be confirmed with the project owner — see docs/ASSETS.md.",
+   "id": "Simbol nasional (UU No. 2/2007). Lisensi rekaman perlu dikonfirmasi dengan pemilik proyek — lihat docs/ASSETS.md."
   }
  },
+ "translations": {
+  "tet": "Tetun no Inglés: Governu Timór-Leste (timor-leste.gov.tl › Símbolu Nasionál). Indonézia: Lafa (la ofisiál).",
+  "pt": "Tétum e inglês: Governo de Timor-Leste (timor-leste.gov.tl › Símbolos Nacionais). Indonésio: Lafa (não oficial).",
+  "en": "Tetun and English: Government of Timor-Leste (timor-leste.gov.tl › National Symbols). Indonesian: Lafa (unofficial).",
+  "id": "Tetun dan Inggris: Pemerintah Timor-Leste (timor-leste.gov.tl › Simbol Nasional). Indonesia: Lafa (tidak resmi)."
+ },
  "timing": {
-  "method": "Lafa, 2026-11-02: separasaun vós (MDX-Net) + Whisper (teacher-forced) + melodia; verifika ho tilun / vocal separation (MDX-Net) + Whisper scoring + melody matching; check by ear",
-  "accuracy_s": 0.5
+  "method": "Lafa, 2026-11-11: refrain matched by chroma DTW (a whole tone lower) to the Government's vocal recording, whose line times were measured with Whisper; verse from beat tracking and chords — its music is played twice (34 beats each), one line per two-bar phrase, cadences on F and B♭. See tools/anthem/README.md. Check by ear.",
+  "accuracy_s": 0.7
  }
 }
