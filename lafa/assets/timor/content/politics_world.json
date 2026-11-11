@@ -1073,6 +1073,9 @@
   {
    "id": "tl.politics.president_office",
    "category": "politics",
+   "also": [
+    "institutions"
+   ],
    "title": {
     "tet": "Prezidente Repúblika",
     "pt": "O Presidente da República",
@@ -1080,10 +1083,10 @@
     "id": "Presiden Republik"
    },
    "summary": {
-    "tet": "Prezidente Repúblika mak Xefe Estadu no símbolu unidade nasionál nian. Povu hili Prezidente ba tinan lima, no ema ida bele kaer kargu ne'e dala rua de'it. Desde 20 Maiu 2022, Prezidente mak José Ramos-Horta.",
-    "pt": "O Presidente da República é o chefe do Estado e o símbolo da unidade nacional. O povo elege o Presidente por cinco anos, e a mesma pessoa só pode cumprir dois mandatos. Desde 20 de maio de 2022, o Presidente é José Ramos-Horta.",
-    "en": "The President of the Republic is the head of State and the symbol of national unity. The people elect the President for five years, and one person can serve at most two terms. Since 20 May 2022 the President has been José Ramos-Horta.",
-    "id": "Presiden Republik adalah kepala negara dan lambang persatuan nasional. Rakyat memilih Presiden untuk lima tahun, dan seseorang paling banyak menjabat dua periode. Sejak 20 Mei 2022 Presiden dijabat oleh José Ramos-Horta."
+    "tet": "Prezidente Repúblika mak Xefe Estadu no símbolu unidade nasionál nian. Povu hili Prezidente ba tinan lima, no mandatu bele renova dala ida de'it. Desde 20 Maiu 2022, Prezidente mak José Ramos-Horta, ne'ebé servisu iha Palásiu Prezidensiál Nicolau Lobato, Dili.",
+    "pt": "O Presidente da República é o Chefe do Estado e o símbolo da unidade nacional. O povo elege o Presidente por cinco anos, e o mandato só pode ser renovado uma vez. Desde 20 de maio de 2022, o Presidente é José Ramos-Horta, que trabalha no Palácio Presidencial Nicolau Lobato, em Díli.",
+    "en": "The President of the Republic is the head of State and the symbol of national unity. The people elect the President for five years, and the term can be renewed only once. Since 20 May 2022 the President has been José Ramos-Horta, who works in the Nicolau Lobato Presidential Palace in Dili.",
+    "id": "Presiden Republik adalah kepala negara dan lambang persatuan nasional. Rakyat memilih Presiden untuk lima tahun, dan masa jabatan hanya dapat diperpanjang satu kali. Sejak 20 Mei 2022 Presiden dijabat oleh José Ramos-Horta, yang berkantor di Istana Kepresidenan Nicolau Lobato di Dili."
    },
    "levels": [
     "eb2",
@@ -1091,6 +1094,10 @@
     "es",
     "sup"
    ],
+   "period": {
+    "from": 2002,
+    "to": 2026
+   },
    "sections": [
     {
      "heading": {
@@ -1128,10 +1135,10 @@
       "id": "Kewenangan utama"
      },
      "text": {
-      "tet": "Prezidente Repúblika promulga ka veta lei sira (Artigu 85 no 88). Hafoin eleisaun, Prezidente nomeia Primeiru-Ministru ne'ebé partidu ka aliansa ho maioria iha Parlamentu propoin, hafoin rona partidu sira (Artigu 85), no nomeia membru Governu seluk tuir Primeiru-Ministru nia proposta. Prezidente bele konvoka referendu, deklara estadu serku ka estadu emerjénsia ho Parlamentu nia autorizasaun, no deklara funu ka halo dame tuir Governu nia proposta (Artigu 85). Prezidente fó perdaun, nomeia embaixadór tuir Governu nia proposta, simu embaixadór husi rai seluk (Artigu 87), no bele hakotu Parlamentu de'it iha krize institusionál boot (Artigu 86).",
-      "pt": "O Presidente promulga as leis ou veta-as (artigos 85.º e 88.º). Depois das eleições, nomeia o Primeiro-Ministro indicado pelo partido ou aliança com maioria parlamentar, ouvidos os partidos (artigo 85.º), e nomeia os restantes membros do Governo sob proposta do Primeiro-Ministro. Pode submeter questões a referendo, declarar o estado de sítio ou de emergência com autorização do Parlamento e declarar a guerra ou fazer a paz sob proposta do Governo (artigo 85.º). Concede indultos, nomeia embaixadores sob proposta do Governo, recebe os embaixadores estrangeiros (artigo 87.º) e só pode dissolver o Parlamento em caso de grave crise institucional (artigo 86.º).",
-      "en": "The President promulgates laws or vetoes them (Articles 85 and 88). After elections, the President appoints the Prime Minister proposed by the party or alliance with a parliamentary majority, after hearing the parties (Article 85), and appoints the other members of the Government on the Prime Minister's proposal. The President can call referendums, declare a state of siege or emergency with Parliament's authorisation, and declare war or make peace on the Government's proposal (Article 85). The President grants pardons, appoints ambassadors on the Government's proposal, receives foreign ambassadors (Article 87) and can dissolve Parliament only in a serious institutional crisis (Article 86).",
-      "id": "Presiden mengundangkan atau memveto undang-undang (Pasal 85 dan 88). Setelah pemilu, Presiden mengangkat Perdana Menteri yang diusulkan partai atau aliansi yang memiliki mayoritas di parlemen, setelah mendengarkan partai-partai (Pasal 85), serta mengangkat anggota Pemerintah lainnya atas usul Perdana Menteri. Presiden dapat mengadakan referendum, menyatakan keadaan bahaya atau keadaan darurat dengan izin Parlemen, serta menyatakan perang atau berdamai atas usul Pemerintah (Pasal 85). Presiden memberi grasi, mengangkat duta besar atas usul Pemerintah, menerima duta besar asing (Pasal 87), dan hanya dapat membubarkan Parlemen dalam krisis kelembagaan yang berat (Pasal 86)."
+      "tet": "Prezidente Repúblika promulga ka veta lei sira: nia iha loron 30 ba diploma husi Parlamentu no loron 40 ba diploma husi Governu (Artigu 88). Hafoin eleisaun, Prezidente nomeia Primeiru-Ministru ne'ebé partidu ka aliansa ho maioria iha Parlamentu propoin, hafoin rona partidu sira, no nomeia membru Governu seluk tuir Primeiru-Ministru nia proposta (Artigu 85 no 86). Nia nomeia Prokuradór-Jerál Repúblika ba tinan haat no prezidente tribunál aas liu (Artigu 86). Prezidente bele konvoka referendu, deklara estadu serku ka estadu emerjénsia ho Parlamentu nia autorizasaun, no deklara funu ka halo dame tuir Governu nia proposta (Artigu 85). Nia fó perdaun, nomeia embaixadór tuir Governu nia proposta, simu embaixadór husi rai seluk (Artigu 87), no bele hakotu Parlamentu de'it iha krize institusionál boot (Artigu 86).",
+      "pt": "O Presidente promulga as leis ou veta-as: tem 30 dias para os diplomas do Parlamento e 40 dias para os do Governo (artigo 88.º). Depois das eleições, nomeia o Primeiro-Ministro indicado pelo partido ou aliança com maioria parlamentar, ouvidos os partidos, e os outros membros do Governo sob proposta do Primeiro-Ministro (artigos 85.º e 86.º). Nomeia o Procurador-Geral da República por quatro anos e o presidente do tribunal mais alto (artigo 86.º). Pode convocar referendos, declarar o estado de sítio ou de emergência com autorização do Parlamento e declarar a guerra ou fazer a paz sob proposta do Governo (artigo 85.º). Concede indultos, nomeia embaixadores sob proposta do Governo, recebe os embaixadores estrangeiros (artigo 87.º) e só pode dissolver o Parlamento em caso de grave crise institucional (artigo 86.º).",
+      "en": "The President promulgates laws or vetoes them, with 30 days for acts of Parliament and 40 days for acts of the Government (Article 88). After elections, the President appoints the Prime Minister proposed by the party or alliance with a parliamentary majority, after hearing the parties, and appoints the other members of the Government on the Prime Minister's proposal (Articles 85 and 86). The President appoints the Prosecutor-General of the Republic for four years and the president of the highest court (Article 86). The President can call referendums, declare a state of siege or emergency with Parliament's authorisation, and declare war or make peace on the Government's proposal (Article 85). The President grants pardons, appoints ambassadors on the Government's proposal, receives foreign ambassadors (Article 87) and can dissolve Parliament only in a serious institutional crisis (Article 86).",
+      "id": "Presiden mengundangkan atau memveto undang-undang: ada 30 hari untuk produk hukum Parlemen dan 40 hari untuk produk hukum Pemerintah (Pasal 88). Setelah pemilu, Presiden mengangkat Perdana Menteri yang diusulkan partai atau aliansi yang memiliki mayoritas di parlemen, setelah mendengarkan partai-partai, serta mengangkat anggota Pemerintah lainnya atas usul Perdana Menteri (Pasal 85 dan 86). Presiden mengangkat Jaksa Agung Republik untuk empat tahun dan ketua pengadilan tertinggi (Pasal 86). Presiden dapat mengadakan referendum, menyatakan keadaan bahaya atau keadaan darurat dengan izin Parlemen, serta menyatakan perang atau berdamai atas usul Pemerintah (Pasal 85). Presiden memberi grasi, mengangkat duta besar atas usul Pemerintah, menerima duta besar asing (Pasal 87), dan hanya dapat membubarkan Parlemen dalam krisis kelembagaan yang berat (Pasal 86)."
      }
     },
     {
@@ -1150,16 +1157,30 @@
     },
     {
      "heading": {
-      "tet": "Prezidente sira desde 2002",
-      "pt": "Presidentes desde 2002",
-      "en": "Presidents since 2002",
-      "id": "Presiden sejak 2002"
+      "tet": "Prezidénsia: Kaza Sivíl, Kaza Militár no asesór sira",
+      "pt": "A Presidência: Casa Civil, Casa Militar e conselheiros",
+      "en": "The Presidency: Casa Civil, Casa Militar and advisers",
+      "id": "Kepresidenan: Casa Civil, Casa Militar dan penasihat"
      },
      "text": {
-      "tet": "Iha 1975, Francisco Xavier do Amaral mak Prezidente dahuluk repúblika ne'ebé FRETILIN proklama. Desde restaurasaun independénsia, ema na'in haat mak kaer kargu ne'e iha mandatu lima. Xanana Gusmão (2002–2007) mak dahuluk. Tuir mai José Ramos-Horta (2007–2012), ne'ebé manán Prémiu Nobel Dame iha 1996; Taur Matan Ruak (2012–2017), eis-komandante FALINTIL; no Francisco Guterres Lú-Olo (2017–2022), prezidente FRETILIN. Ramos-Horta manán fali eleisaun 2022 no simu pose iha 20 Maiu 2022. Tanba nia kumpre ona mandatu rua, nia labele kandidata tan. Prezidente servisu iha Palásiu Prezidensiál Nicolau Lobato, Dili.",
-      "pt": "Em 1975, Francisco Xavier do Amaral foi o primeiro Presidente da república proclamada pela FRETILIN. Desde a restauração da independência, quatro pessoas exerceram o cargo em cinco mandatos. Xanana Gusmão (2002–2007) foi o primeiro. Seguiram-se José Ramos-Horta (2007–2012), Prémio Nobel da Paz em 1996; Taur Matan Ruak (2012–2017), antigo comandante das FALINTIL; e Francisco Guterres Lú-Olo (2017–2022), presidente da FRETILIN. Ramos-Horta voltou a ganhar em 2022 e tomou posse a 20 de maio de 2022. Como já cumpriu dois mandatos, não pode voltar a candidatar-se. O Presidente trabalha no Palácio Presidencial Nicolau Lobato, em Díli.",
-      "en": "In 1975 Francisco Xavier do Amaral was the first President of the republic proclaimed by FRETILIN. Since independence was restored, four people have held the office in five terms. Xanana Gusmão (2002–2007) was the first. He was followed by José Ramos-Horta (2007–2012), winner of the Nobel Peace Prize in 1996; Taur Matan Ruak (2012–2017), a former FALINTIL commander; and Francisco Guterres Lú-Olo (2017–2022), president of FRETILIN. Ramos-Horta won again in 2022 and took office on 20 May 2022. As he has now served two terms, he cannot stand again. The President works in the Nicolau Lobato Presidential Palace in Dili.",
-      "id": "Pada 1975 Francisco Xavier do Amaral menjadi Presiden pertama republik yang diproklamasikan FRETILIN. Sejak pemulihan kemerdekaan, empat orang telah memegang jabatan ini dalam lima masa jabatan. Xanana Gusmão (2002–2007) adalah yang pertama. Berikutnya José Ramos-Horta (2007–2012), peraih Hadiah Nobel Perdamaian 1996; Taur Matan Ruak (2012–2017), mantan komandan FALINTIL; dan Francisco Guterres Lú-Olo (2017–2022), ketua FRETILIN. Ramos-Horta menang lagi pada 2022 dan dilantik pada 20 Mei 2022. Karena sudah menjabat dua kali, ia tidak dapat mencalonkan diri lagi. Presiden berkantor di Istana Kepresidenan Nicolau Lobato di Dili."
+      "tet": "Prezidente hetan apoiu husi servisu Prezidénsia Repúblika nian, ne'ebé lei orgánika ida mak organiza (Lei n.º 3/2011, ne'ebé hetan alterasaun iha 2014). Kaza Sivíl (Casa Civil) mak lidera servisu sivíl Prezidénsia nian, no Prezidente hili livre nia xefe. Desde Marsu 2026, Xefe Kaza Sivíl mak Henriqueta Maria da Silva, no nia adjunta mak Graziela Fátima Liu Soares; uluk, Jesuína Maria Ferreira Gomes mak kaer kargu ne'e husi 2023 to'o 2026. Kaza Militár (Casa Militar) apoia Prezidente nu'udar Komandante Supremu kona-ba asuntu defeza no seguransa; iha Agostu 2026, Superintendente-Asistente PNTL Leonela do Rosário Martins sai xefe-adjunta. Prezidente mós iha asesór sira, hanesan jenerál reformadu Lere Anan Timur, ninia asesór prinsipál.",
+      "pt": "O Presidente é apoiado pelos serviços da Presidência da República, organizados por uma lei orgânica (Lei n.º 3/2011, alterada em 2014). A Casa Civil dirige os serviços civis da Presidência, e o seu chefe é escolhido livremente pelo Presidente. Desde março de 2026, a Chefe da Casa Civil é Henriqueta Maria da Silva, e a sua adjunta é Graziela Fátima Liu Soares; antes, o cargo foi ocupado por Jesuína Maria Ferreira Gomes, de 2023 a 2026. A Casa Militar apoia o Presidente como Comandante Supremo nas questões de defesa e segurança; em agosto de 2026, a superintendente-assistente da PNTL Leonela do Rosário Martins tornou-se chefe-adjunta. O Presidente tem também conselheiros, como o general na reforma Lere Anan Timur, seu conselheiro principal.",
+      "en": "The President is supported by the services of the Presidency of the Republic, which are organised by an organic law (Law No. 3/2011, amended in 2014). The Casa Civil (the President's civil office) runs the Presidency's civil services, and its head is chosen freely by the President. Since March 2026 the head of the Casa Civil has been Henriqueta Maria da Silva, with Graziela Fátima Liu Soares as her deputy; before her, Jesuína Maria Ferreira Gomes held the post from 2023 to 2026. The Casa Militar (the President's military office) supports the President as Supreme Commander on defence and security matters; in August 2026 PNTL Assistant Superintendent Leonela do Rosário Martins became its deputy head. The President also has advisers, such as retired general Lere Anan Timur, the principal adviser.",
+      "id": "Presiden dibantu oleh dinas-dinas Kepresidenan Republik yang diatur dengan undang-undang organik (UU No. 3/2011, diubah pada 2014). Casa Civil (kantor sipil Kepresidenan) memimpin dinas-dinas sipil Kepresidenan, dan kepalanya dipilih secara bebas oleh Presiden. Sejak Maret 2026 Kepala Casa Civil adalah Henriqueta Maria da Silva, dengan wakil Graziela Fátima Liu Soares; sebelumnya jabatan itu dipegang Jesuína Maria Ferreira Gomes dari 2023 sampai 2026. Casa Militar (kantor militer Kepresidenan) membantu Presiden sebagai Panglima Tertinggi dalam urusan pertahanan dan keamanan; pada Agustus 2026 Ajun Superintendan PNTL Leonela do Rosário Martins menjadi wakil kepalanya. Presiden juga memiliki penasihat, seperti jenderal purnawirawan Lere Anan Timur, penasihat utamanya."
+     }
+    },
+    {
+     "heading": {
+      "tet": "Prezidente no palásiu sira desde 2002",
+      "pt": "Presidentes e palácios desde 2002",
+      "en": "Presidents and palaces since 2002",
+      "id": "Presiden dan istana sejak 2002"
+     },
+     "text": {
+      "tet": "Desde restaurasaun independénsia, ema na'in haat mak kaer kargu ne'e iha mandatu lima: Xanana Gusmão (2002–2007); José Ramos-Horta (2007–2012), ne'ebé manán Prémiu Nobel Dame iha 1996; Taur Matan Ruak (2012–2017), eis-komandante FALINTIL; Francisco Guterres Lú-Olo (2017–2022), prezidente FRETILIN; no fali José Ramos-Horta, ne'ebé simu pose iha 20 Maiu 2022 no nia mandatu remata iha Maiu 2027. Eleisaun prezidensiál tuir mai planeadu ba Marsu 2027. Iha 2002, Xanana Gusmão hatuur nia gabinete iha edifísiu ida ne'ebé ahi han iha 1999, no nia fó naran \"Palácio das Cinzas\". Desde 2009, Prezidente servisu iha Palásiu Prezidensiál Nicolau Lobato, iha Bairru Pité, Dili, ne'ebé harii ho Xina nia apoiu no inaugura iha 27 Agostu 2009.",
+      "pt": "Desde a restauração da independência, quatro pessoas exerceram o cargo em cinco mandatos: Xanana Gusmão (2002–2007); José Ramos-Horta (2007–2012), Prémio Nobel da Paz em 1996; Taur Matan Ruak (2012–2017), antigo comandante das FALINTIL; Francisco Guterres Lú-Olo (2017–2022), presidente da FRETILIN; e de novo José Ramos-Horta, empossado a 20 de maio de 2022, cujo mandato termina em maio de 2027. A próxima eleição presidencial está prevista para março de 2027. Em 2002, Xanana Gusmão instalou o seu gabinete num edifício queimado em 1999, a que chamou «Palácio das Cinzas». Desde 2009, o Presidente trabalha no Palácio Presidencial Nicolau Lobato, no Bairro Pité, em Díli, construído com apoio da China e inaugurado a 27 de agosto de 2009.",
+      "en": "Since independence was restored, four people have held the office in five terms: Xanana Gusmão (2002–2007); José Ramos-Horta (2007–2012), winner of the Nobel Peace Prize in 1996; Taur Matan Ruak (2012–2017), a former FALINTIL commander; Francisco Guterres Lú-Olo (2017–2022), president of FRETILIN; and José Ramos-Horta again, sworn in on 20 May 2022, whose term ends in May 2027. The next presidential election is planned for March 2027. In 2002 Xanana Gusmão set up his office in a building burnt in 1999, which he called the \"Palace of Ashes\" (Palácio das Cinzas). Since 2009 the President has worked in the Nicolau Lobato Presidential Palace in Bairro Pité, Dili, built with support from China and inaugurated on 27 August 2009.",
+      "id": "Sejak pemulihan kemerdekaan, empat orang telah memegang jabatan ini dalam lima masa jabatan: Xanana Gusmão (2002–2007); José Ramos-Horta (2007–2012), peraih Hadiah Nobel Perdamaian 1996; Taur Matan Ruak (2012–2017), mantan komandan FALINTIL; Francisco Guterres Lú-Olo (2017–2022), ketua FRETILIN; dan sekali lagi José Ramos-Horta, yang dilantik pada 20 Mei 2022 dan masa jabatannya berakhir pada Mei 2027. Pemilu presiden berikutnya direncanakan pada Maret 2027. Pada 2002 Xanana Gusmão membuka kantornya di sebuah gedung yang terbakar pada 1999, yang ia namai \"Istana Abu\" (Palácio das Cinzas). Sejak 2009 Presiden berkantor di Istana Kepresidenan Nicolau Lobato di Bairro Pité, Dili, yang dibangun dengan bantuan Tiongkok dan diresmikan pada 27 Agustus 2009."
      }
     }
    ],
@@ -1233,7 +1254,22 @@
       "en": "José Ramos-Horta (since 20 May 2022)",
       "id": "José Ramos-Horta (sejak 20 Mei 2022)"
      },
-     "year": 2025
+     "year": 2026
+    },
+    {
+     "label": {
+      "tet": "Mandatu atuál remata",
+      "pt": "Fim do mandato atual",
+      "en": "Current term ends",
+      "id": "Masa jabatan sekarang berakhir"
+     },
+     "value": {
+      "tet": "Maiu 2027; eleisaun planeadu ba Marsu 2027",
+      "pt": "Maio de 2027; eleição prevista para março de 2027",
+      "en": "May 2027; election planned for March 2027",
+      "id": "Mei 2027; pemilu direncanakan pada Maret 2027"
+     },
+     "year": 2026
     },
     {
      "label": {
@@ -1243,14 +1279,47 @@
       "id": "Kantor"
      },
      "value": {
-      "tet": "Palásiu Prezidensiál Nicolau Lobato, Dili",
-      "pt": "Palácio Presidencial Nicolau Lobato, Díli",
-      "en": "Nicolau Lobato Presidential Palace, Dili",
-      "id": "Istana Kepresidenan Nicolau Lobato, Dili"
+      "tet": "Palásiu Prezidensiál Nicolau Lobato, Bairru Pité, Dili (desde 2009)",
+      "pt": "Palácio Presidencial Nicolau Lobato, Bairro Pité, Díli (desde 2009)",
+      "en": "Nicolau Lobato Presidential Palace, Bairro Pité, Dili (since 2009)",
+      "id": "Istana Kepresidenan Nicolau Lobato, Bairro Pité, Dili (sejak 2009)"
      }
+    },
+    {
+     "label": {
+      "tet": "Xefe Kaza Sivíl",
+      "pt": "Chefe da Casa Civil",
+      "en": "Head of the Casa Civil",
+      "id": "Kepala Casa Civil"
+     },
+     "value": {
+      "tet": "Henriqueta Maria da Silva (desde Marsu 2026)",
+      "pt": "Henriqueta Maria da Silva (desde março de 2026)",
+      "en": "Henriqueta Maria da Silva (since March 2026)",
+      "id": "Henriqueta Maria da Silva (sejak Maret 2026)"
+     },
+     "year": 2026
+    },
+    {
+     "label": {
+      "tet": "Sítiu ofisiál",
+      "pt": "Sítio oficial",
+      "en": "Official website",
+      "id": "Situs resmi"
+     },
+     "value": "presidenciarepublica.tl"
     }
    ],
    "timeline": [
+    {
+     "date": "1975-11-28",
+     "title": {
+      "tet": "Francisco Xavier do Amaral sai Prezidente dahuluk repúblika ne'ebé FRETILIN proklama",
+      "pt": "Francisco Xavier do Amaral torna-se o primeiro Presidente da república proclamada pela FRETILIN",
+      "en": "Francisco Xavier do Amaral becomes the first President of the republic proclaimed by FRETILIN",
+      "id": "Francisco Xavier do Amaral menjadi Presiden pertama republik yang diproklamasikan FRETILIN"
+     }
+    },
     {
      "date": "2002-04-14",
      "title": {
@@ -1261,12 +1330,48 @@
      }
     },
     {
+     "date": "2002-05-20",
+     "title": {
+      "tet": "Xanana Gusmão simu pose; Lei-Inan tama iha vigór",
+      "pt": "Xanana Gusmão toma posse; a Constituição entra em vigor",
+      "en": "Xanana Gusmão takes office; the Constitution comes into force",
+      "id": "Xanana Gusmão dilantik; Konstitusi mulai berlaku"
+     }
+    },
+    {
+     "date": "2002-10-28",
+     "title": {
+      "tet": "Xanana Gusmão inaugura nia gabinete iha \"Palácio das Cinzas\"",
+      "pt": "Xanana Gusmão inaugura o seu gabinete no «Palácio das Cinzas»",
+      "en": "Xanana Gusmão opens his office in the \"Palace of Ashes\"",
+      "id": "Xanana Gusmão meresmikan kantornya di \"Istana Abu\""
+     }
+    },
+    {
      "date": "2007-05-20",
      "title": {
       "tet": "José Ramos-Horta simu pose nu'udar Prezidente",
       "pt": "José Ramos-Horta toma posse como Presidente",
       "en": "José Ramos-Horta takes office as President",
       "id": "José Ramos-Horta dilantik sebagai Presiden"
+     }
+    },
+    {
+     "date": "2008-02-11",
+     "title": {
+      "tet": "Atake hasoru Prezidente Ramos-Horta; Prezidente interinu sira hala'o knaar",
+      "pt": "Ataque ao Presidente Ramos-Horta; Presidentes interinos assumem funções",
+      "en": "Attack on President Ramos-Horta; acting Presidents take over",
+      "id": "Serangan terhadap Presiden Ramos-Horta; pelaksana tugas Presiden mengambil alih"
+     }
+    },
+    {
+     "date": "2009-08-27",
+     "title": {
+      "tet": "Inaugurasaun Palásiu Prezidensiál Nicolau Lobato",
+      "pt": "Inauguração do Palácio Presidencial Nicolau Lobato",
+      "en": "The Nicolau Lobato Presidential Palace is inaugurated",
+      "id": "Istana Kepresidenan Nicolau Lobato diresmikan"
      }
     },
     {
@@ -1295,6 +1400,24 @@
       "en": "José Ramos-Horta takes office for a second term",
       "id": "José Ramos-Horta dilantik untuk masa jabatan kedua"
      }
+    },
+    {
+     "date": "2025-04-29",
+     "title": {
+      "tet": "Prezidente fó pose ba Prezidente Tribunál Rekursu foun, Afonso Carmona",
+      "pt": "O Presidente dá posse ao novo Presidente do Tribunal de Recurso, Afonso Carmona",
+      "en": "The President swears in the new President of the Court of Appeal, Afonso Carmona",
+      "id": "Presiden melantik Ketua Pengadilan Banding yang baru, Afonso Carmona"
+     }
+    },
+    {
+     "date": "2026-03-17",
+     "title": {
+      "tet": "Henriqueta Maria da Silva sai Xefe Kaza Sivíl",
+      "pt": "Henriqueta Maria da Silva torna-se Chefe da Casa Civil",
+      "en": "Henriqueta Maria da Silva becomes head of the Casa Civil",
+      "id": "Henriqueta Maria da Silva menjadi Kepala Casa Civil"
+     }
     }
    ],
    "figure": {
@@ -1307,8 +1430,8 @@
     }
    },
    "wiki": {
-    "en": "President of East Timor",
-    "pt": "Presidente de Timor-Leste",
+    "en": "President of Timor-Leste",
+    "pt": "Presidente da República Democrática de Timor-Leste",
     "id": "Presiden Timor Leste"
    },
    "related": [
@@ -1320,14 +1443,22 @@
     "tl.politics.system",
     "tl.politics.council_state",
     "tl.politics.elections",
-    "tl.conflicts.attacks_2008"
+    "tl.conflicts.attacks_2008",
+    "tl.institutions.overview",
+    "tl.institutions.court_of_appeal",
+    "tl.institutions.public_prosecution"
    ],
    "tags": [
     "prezidente",
     "president",
+    "presidente",
+    "presiden",
     "xefe estadu",
     "head of state",
-    "ramos-horta"
+    "ramos-horta",
+    "casa civil",
+    "casa militar",
+    "palásiu prezidensiál"
    ],
    "quiz": [
     {
@@ -1416,6 +1547,48 @@
     },
     {
      "q": {
+      "tet": "Prezidente Repúblika servisu iha palásiu saida desde 2009?",
+      "pt": "Em que palácio trabalha o Presidente da República desde 2009?",
+      "en": "In which palace has the President worked since 2009?",
+      "id": "Di istana mana Presiden berkantor sejak 2009?"
+     },
+     "options": [
+      {
+       "tet": "Palásiu Governu",
+       "pt": "Palácio do Governo",
+       "en": "The Government Palace",
+       "id": "Istana Pemerintah"
+      },
+      {
+       "tet": "Palásiu Prezidensiál Nicolau Lobato",
+       "pt": "Palácio Presidencial Nicolau Lobato",
+       "en": "The Nicolau Lobato Presidential Palace",
+       "id": "Istana Kepresidenan Nicolau Lobato"
+      },
+      {
+       "tet": "Palácio das Cinzas",
+       "pt": "Palácio das Cinzas",
+       "en": "The Palace of Ashes",
+       "id": "Istana Abu"
+      },
+      {
+       "tet": "Palásiu Lahane",
+       "pt": "Palácio de Lahane",
+       "en": "The Lahane Palace",
+       "id": "Istana Lahane"
+      }
+     ],
+     "answer": 1,
+     "why": {
+      "tet": "Desde 2009, Prezidente servisu iha Palásiu Prezidensiál Nicolau Lobato, iha Bairru Pité, Dili.",
+      "pt": "Desde 2009, o Presidente trabalha no Palácio Presidencial Nicolau Lobato, no Bairro Pité, em Díli.",
+      "en": "Since 2009 the President has worked in the Nicolau Lobato Presidential Palace in Bairro Pité, Dili.",
+      "id": "Sejak 2009 Presiden berkantor di Istana Kepresidenan Nicolau Lobato di Bairro Pité, Dili."
+     },
+     "difficulty": 4
+    },
+    {
+     "q": {
       "tet": "Kandidatu ba Prezidente tenke iha tinan hira ba leten?",
       "pt": "Qual é a idade mínima para ser candidato a Presidente?",
       "en": "What is the minimum age to stand for President?",
@@ -1497,6 +1670,48 @@
       "id": "Pasal 84: Ketua Parlemen Nasional."
      },
      "difficulty": 8
+    },
+    {
+     "q": {
+      "tet": "Servisu saida husi Prezidénsia mak apoia Prezidente nu'udar Komandante Supremu kona-ba defeza no seguransa?",
+      "pt": "Que serviço da Presidência apoia o Presidente como Comandante Supremo nas questões de defesa e segurança?",
+      "en": "Which service of the Presidency supports the President as Supreme Commander on defence and security?",
+      "id": "Dinas Kepresidenan mana yang membantu Presiden sebagai Panglima Tertinggi dalam urusan pertahanan dan keamanan?"
+     },
+     "options": [
+      {
+       "tet": "Kaza Sivíl",
+       "pt": "A Casa Civil",
+       "en": "The Casa Civil",
+       "id": "Casa Civil"
+      },
+      {
+       "tet": "Kaza Militár",
+       "pt": "A Casa Militar",
+       "en": "The Casa Militar",
+       "id": "Casa Militar"
+      },
+      {
+       "tet": "Konsellu-Ministru",
+       "pt": "O Conselho de Ministros",
+       "en": "The Council of Ministers",
+       "id": "Dewan Menteri"
+      },
+      {
+       "tet": "Komisaun Permanente",
+       "pt": "A Comissão Permanente",
+       "en": "The Standing Committee",
+       "id": "Komisi Tetap"
+      }
+     ],
+     "answer": 1,
+     "why": {
+      "tet": "Kaza Militár apoia Prezidente nu'udar Komandante Supremu Forsa Armada nian; Kaza Sivíl lidera servisu sivíl sira.",
+      "pt": "A Casa Militar apoia o Presidente como Comandante Supremo das Forças Armadas; a Casa Civil dirige os serviços civis.",
+      "en": "The Casa Militar supports the President as Supreme Commander of the Armed Forces; the Casa Civil runs the civil services.",
+      "id": "Casa Militar membantu Presiden sebagai Panglima Tertinggi Angkatan Bersenjata; Casa Civil memimpin dinas-dinas sipil."
+     },
+     "difficulty": 10
     },
     {
      "q": {
@@ -1618,16 +1833,89 @@
      "url": "https://www.aljazeera.com/news/2022/4/20/east-timor-ramos-horta-takes-strong-lead-in-presidential-vote",
      "accessed": "2026-10-27",
      "licence": "© Al Jazeera"
+    },
+    {
+     "title": "About President José Ramos-Horta",
+     "publisher": "Presidência da República Democrática de Timor-Leste (presidenciarepublica.tl)",
+     "url": "https://presidenciarepublica.tl/about-president-jose-ramos-horta/",
+     "accessed": "2026-11-11",
+     "licence": "© Presidência da República de Timor-Leste"
+    },
+    {
+     "title": "Press Release – President Ramos-Horta Appoints New Chief of Staff and Deputy Chief of Staff (17 March 2026)",
+     "publisher": "Presidência da República Democrática de Timor-Leste (presidenciarepublica.tl)",
+     "url": "https://presidenciarepublica.tl/press-release-president-ramos-horta-appoints-new-chief-of-staff-and-deputy-chief-of-staff/",
+     "accessed": "2026-11-11",
+     "licence": "© Presidência da República de Timor-Leste"
+    },
+    {
+     "title": "Press Release – President J. Ramos-Horta Appoints New Deputy Chief of the Casa Militar (27 August 2026)",
+     "publisher": "Presidência da República Democrática de Timor-Leste (presidenciarepublica.tl)",
+     "url": "https://presidenciarepublica.tl/press-release-president-j-ramos-horta-appoints-new-deputy-chief-of-the-casa-militar/",
+     "accessed": "2026-11-11",
+     "licence": "© Presidência da República de Timor-Leste"
+    },
+    {
+     "title": "Press Release – President Ramos-Horta Swears In Deputy Minister of Foreign Affairs and Cooperation (5 March 2026)",
+     "publisher": "Presidência da República Democrática de Timor-Leste (presidenciarepublica.tl)",
+     "url": "https://presidenciarepublica.tl/press-release-president-ramos-horta-swears-in-deputy-minister-of-foreign-affairs-and-cooperation/",
+     "accessed": "2026-11-11",
+     "licence": "© Presidência da República de Timor-Leste"
+    },
+    {
+     "title": "Principal Presidential Advisor Lere Anan Timur Urges Unity and Education in Wairoke Community Dialogue (10 October 2026)",
+     "publisher": "Presidência da República Democrática de Timor-Leste (presidenciarepublica.tl)",
+     "url": "https://presidenciarepublica.tl/principal-presidential-advisor-lere-anan-timur-urges-unity-and-education-in-wairoke-community-dialogue/",
+     "accessed": "2026-11-11",
+     "licence": "© Presidência da República de Timor-Leste"
+    },
+    {
+     "title": "Jornal da República, Série I, N.º 20 A (2017): decretos do Presidente da República que citam a Lei Orgânica da Presidência (Lei n.º 3/2011, alterada pela Lei n.º 1/2014)",
+     "publisher": "Ministério da Justiça — Jornal da República",
+     "url": "https://www.mj.gov.tl/jornal/public/docs/2017/serie_1/SERIE_I_NO_20_A.pdf",
+     "accessed": "2026-11-11",
+     "licence": "© Jornal da República"
+    },
+    {
+     "title": "Nicolau Lobato Presidential Palace",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Nicolau_Lobato_Presidential_Palace",
+     "accessed": "2026-11-11",
+     "licence": "CC BY-SA 4.0"
+    },
+    {
+     "title": "Palácio das Cinzas",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Pal%C3%A1cio_das_Cinzas",
+     "accessed": "2026-11-11",
+     "licence": "CC BY-SA 4.0"
+    },
+    {
+     "title": "Prezidente Tribunal de Recurso simu vizita kortezia husi Uniaun Europeia (26 Outubru 2026)",
+     "publisher": "Tribunais de Timor-Leste (tribunais.tl)",
+     "url": "https://www.tribunais.tl/prezidente-tribunal-de-recurso-simu-vizita-kortezia-husi-uniaun-europeia/",
+     "accessed": "2026-11-11",
+     "licence": "© Tribunal de Recurso de Timor-Leste"
+    },
+    {
+     "title": "Discurso do Presidente da República por ocasião da tomada de posse do novo Presidente do Tribunal de Recurso (29 de abril de 2025)",
+     "publisher": "Presidência da República Democrática de Timor-Leste (presidenciarepublica.tl)",
+     "url": "https://presidenciarepublica.tl/speech-of-president-j-ramos-horta-in-the-occasion-of-swearing-in-the-new-president-of-the-court-of-appeal/",
+     "accessed": "2026-11-11",
+     "licence": "© Presidência da República de Timor-Leste"
     }
    ],
    "review": {
     "status": "draft",
-    "notes": "Check: acting President in 2008 (Fernando 'La Sama' de Araújo; Vicente Guterres acted for a few days) — from memory and old Lafa data; palace name 'Palácio Presidencial Nicolau Lobato'; Ramos-Horta's ineligibility in 2027 (Art. 75.3 and Wikipedia). Tetun terms: 'volta daruak' (second round), 'estadu serku' (Constitution's term for state of siege), 'sidadaun nanis' (citizen by origin). Wiki titles: en 'President of East Timor' may now redirect to 'President of Timor-Leste'; pt/id titles not verified."
+    "notes": "Updated 2026-11-11. Verified on presidenciarepublica.tl: Casa Civil head Henriqueta Maria da Silva (Decree of the President No. 32/2026, announced 17 March 2026) and deputy Graziela Fátima Liu Soares (Decree 33/2026); Jesuína Maria Ferreira Gomes was Chief of Staff from 11 July 2023 until she became Vice-Minister of Foreign Affairs on 5 March 2026; Leonela do Rosário Martins deputy head of the Casa Militar (Decree 96/2026, 27 August 2026; a Dec 2025 post names Major Francisco da Silva as head of the Casa Militar, not used in the text); Lere Anan Timur called 'Principal Presidential Advisor' (Oct 2026 posts). The organic law number (Lei 3/2011, amended by Lei 1/2014) comes only from a search summary of Jornal da República Série I n.º 20 A (2017) — mj.gov.tl was not reachable; please check. Palace facts (foundation 2 July 2007, inaugurated 27 Aug 2009, Chinese-funded; Palácio das Cinzas unveiled 28 Oct 2002) from English Wikipedia only. 'Presidential election planned for March 2027' is from the Court of Appeal site (EU visit, 26 Oct 2026); the exact date was not found. REMOVED the old claim that Ramos-Horta 'cannot stand again': Art. 75(3) allows one renewal, but whether non-consecutive terms count is debated (a Tatoli opinion piece, Feb 2026, speaks of 'constitutional silence'; en.tatoli.tl was blocked) — a reviewer should decide. Kept from before: acting Presidents in 2008 (Vicente Guterres 11–13 Feb, then Fernando 'La Sama' de Araújo, per leaders.json). Wiki: en/pt titles checked (old ones were redirects); id title not checked (id.wikipedia blocked). Tetun to check: 'Kaza Sivíl', 'Kaza Militár', 'xefe-adjunta', 'Superintendente-Asistente', 'jenerál reformadu', 'ahi han' (burnt)."
    }
   },
   {
    "id": "tl.politics.parliament",
    "category": "politics",
+   "also": [
+    "institutions"
+   ],
    "title": {
     "tet": "Parlamentu Nasionál",
     "pt": "O Parlamento Nacional",
@@ -1635,10 +1923,10 @@
     "id": "Parlemen Nasional"
    },
    "summary": {
-    "tet": "Parlamentu Nasionál reprezenta sidadaun timoroan hotu. Nia deputadu na'in 65 hetan eleisaun ba tinan lima, halo lei, aprova Orsamentu Jerál Estadu no fiskaliza Governu. Parlamentu iha kámara ida de'it no halibur iha Dili.",
-    "pt": "O Parlamento Nacional representa todos os cidadãos timorenses. Os seus 65 deputados são eleitos por cinco anos, fazem as leis, aprovam o Orçamento Geral do Estado e fiscalizam o Governo. Tem uma só câmara e reúne-se em Díli.",
-    "en": "The National Parliament represents all Timorese citizens. Its 65 deputies are elected for five years, make the laws, approve the General State Budget and check the Government. It has a single chamber and meets in Dili.",
-    "id": "Parlemen Nasional mewakili seluruh warga Timor-Leste. Ke-65 anggotanya dipilih untuk lima tahun, membuat undang-undang, menyetujui Anggaran Umum Negara dan mengawasi Pemerintah. Parlemen ini hanya memiliki satu kamar dan bersidang di Dili."
+    "tet": "Parlamentu Nasionál reprezenta sidadaun timoroan hotu. Ninia deputadu na'in 65 hetan eleisaun ba tinan lima, halo lei, aprova Orsamentu Jerál Estadu no fiskaliza Governu. Desde 2023, Maria Fernanda Lay mak Prezidente Parlamentu, feto dahuluk iha kargu ne'e.",
+    "pt": "O Parlamento Nacional representa todos os cidadãos timorenses. Os seus 65 deputados são eleitos por cinco anos, fazem as leis, aprovam o Orçamento Geral do Estado e fiscalizam o Governo. Desde 2023, Maria Fernanda Lay preside ao Parlamento, a primeira mulher no cargo.",
+    "en": "The National Parliament represents all Timorese citizens. Its 65 deputies are elected for five years, make the laws, approve the General State Budget and oversee the Government. Since 2023 Maria Fernanda Lay has been President of Parliament, the first woman in the post.",
+    "id": "Parlemen Nasional mewakili seluruh warga Timor-Leste. Ke-65 anggotanya dipilih untuk lima tahun, membuat undang-undang, mengesahkan Anggaran Umum Negara dan mengawasi Pemerintah. Sejak 2023 Maria Fernanda Lay menjadi Ketua Parlemen, perempuan pertama dalam jabatan itu."
    },
    "levels": [
     "eb2",
@@ -1646,6 +1934,10 @@
     "es",
     "sup"
    ],
+   "period": {
+    "from": 2001,
+    "to": 2026
+   },
    "sections": [
     {
      "heading": {
@@ -1655,10 +1947,10 @@
       "id": "Apa itu Parlemen"
      },
      "text": {
-      "tet": "Artigu 92 dehan katak Parlamentu Nasionál mak órgaun soberania ne'ebé reprezenta sidadaun timoroan hotu, no iha kbiit atu halo lei, atu fiskaliza no atu foti desizaun polítika. Parlamentu iha kámara ida de'it. Lei-Inan fó dalan ba deputadu na'in 52 to'o 65, ne'ebé povu hili ba tinan lima (Artigu 93). Parlamentu dahuluk (2002–2007) mak Asembleia Konstituinte uluk, ho deputadu na'in 88 (Artigu 167). Desde eleisaun 2007, Parlamentu iha deputadu na'in 65. Lejizlatura ida iha sesaun lejizlativa lima, no sesaun ida-idak naruk tinan ida (Artigu 99).",
-      "pt": "O artigo 92.º define o Parlamento Nacional como o órgão de soberania que representa todos os cidadãos timorenses, com poderes legislativos, de fiscalização e de decisão política. Tem uma única câmara. A Constituição permite entre 52 e 65 deputados, eleitos por cinco anos (artigo 93.º). O primeiro Parlamento (2002–2007) foi a antiga Assembleia Constituinte, com 88 deputados (artigo 167.º). Desde as eleições de 2007, o Parlamento tem 65 deputados. Cada legislatura tem cinco sessões legislativas de um ano (artigo 99.º).",
-      "en": "Article 92 defines the National Parliament as the organ of sovereignty that represents all Timorese citizens, with the power to make laws, to supervise and to take political decisions. It has only one chamber. The Constitution allows between 52 and 65 deputies, elected for five years (Article 93). The first Parliament (2002–2007) was the former Constituent Assembly, with 88 deputies (Article 167). Since the election of 2007, Parliament has had 65 deputies. A legislature has five legislative sessions of one year each (Article 99).",
-      "id": "Pasal 92 mendefinisikan Parlemen Nasional sebagai organ kedaulatan yang mewakili seluruh warga Timor-Leste dan berwenang membuat undang-undang, melakukan pengawasan dan mengambil keputusan politik. Parlemen hanya memiliki satu kamar. Konstitusi mengizinkan 52 sampai 65 anggota yang dipilih untuk lima tahun (Pasal 93). Parlemen pertama (2002–2007) adalah bekas Majelis Konstituante dengan 88 anggota (Pasal 167). Sejak pemilu 2007, Parlemen memiliki 65 anggota. Satu masa legislatif terdiri atas lima masa sidang yang masing-masing berlangsung satu tahun (Pasal 99)."
+      "tet": "Artigu 92 dehan katak Parlamentu Nasionál mak órgaun soberania ne'ebé reprezenta sidadaun timoroan hotu, ho kbiit atu halo lei, atu fiskaliza no atu foti desizaun polítika. Nia iha kámara ida de'it no deputadu na'in 52 to'o 65, ne'ebé povu hili ba tinan lima (Artigu 93); desde 2007 iha deputadu na'in 65. Parlamentu moris husi Asembleia Konstituinte, ne'ebé povu hili iha Agostu 2001; Asembleia ne'e aprova Lei-Inan iha 22 Marsu 2002 no sai Parlamentu dahuluk iha 20 Maiu 2002 (Artigu 167). Parlamentu dahuluk ne'e iha deputadu na'in 88 husi bankada 13, no feto na'in 23 iha sira-nia leet. Lejizlatura ida iha sesaun lejizlativa lima, tinan ida-idak (Artigu 99); sesaun ida-idak hahú iha 15 Setembru, no Parlamentu servisu normalmente to'o 15 Jullu.",
+      "pt": "O artigo 92.º define o Parlamento Nacional como o órgão de soberania que representa todos os cidadãos timorenses, com poderes legislativos, de fiscalização e de decisão política. Tem uma única câmara e entre 52 e 65 deputados, eleitos por cinco anos (artigo 93.º); desde 2007 tem 65. Nasceu da Assembleia Constituinte, eleita em agosto de 2001, que aprovou a Constituição a 22 de março de 2002 e se transformou no primeiro Parlamento a 20 de maio de 2002 (artigo 167.º). Esse primeiro Parlamento tinha 88 deputados de 13 bancadas, dos quais 23 eram mulheres. Cada legislatura tem cinco sessões legislativas de um ano (artigo 99.º); cada sessão começa a 15 de setembro, e o Parlamento trabalha normalmente até 15 de julho.",
+      "en": "Article 92 defines the National Parliament as the organ of sovereignty that represents all Timorese citizens, with the power to make laws, to supervise and to take political decisions. It has a single chamber and between 52 and 65 deputies, elected for five years (Article 93); since 2007 it has had 65. It grew out of the Constituent Assembly, elected in August 2001, which approved the Constitution on 22 March 2002 and became the first Parliament on 20 May 2002 (Article 167). That first Parliament had 88 deputies from 13 parliamentary groups, 23 of them women. Each legislature has five legislative sessions of one year (Article 99); each session begins on 15 September, and Parliament normally works until 15 July.",
+      "id": "Pasal 92 mendefinisikan Parlemen Nasional sebagai organ kedaulatan yang mewakili seluruh warga Timor-Leste dan berwenang membuat undang-undang, melakukan pengawasan dan mengambil keputusan politik. Parlemen hanya memiliki satu kamar dan 52 sampai 65 anggota yang dipilih untuk lima tahun (Pasal 93); sejak 2007 jumlahnya 65. Parlemen lahir dari Majelis Konstituante yang dipilih pada Agustus 2001, yang mengesahkan Konstitusi pada 22 Maret 2002 dan menjadi Parlemen pertama pada 20 Mei 2002 (Pasal 167). Parlemen pertama itu beranggotakan 88 orang dari 13 fraksi, 23 di antaranya perempuan. Setiap masa legislatif terdiri atas lima masa sidang yang masing-masing berlangsung satu tahun (Pasal 99); setiap masa sidang dimulai pada 15 September, dan Parlemen biasanya bekerja sampai 15 Juli."
      }
     },
     {
@@ -1669,10 +1961,10 @@
       "id": "Cara memilih anggota parlemen"
      },
      "text": {
-      "tet": "Povu hili deputadu sira liuhusi sufrájiu universál, livre, diretu, hanesan, sekretu no ida-idak (Artigu 93). Eleitór sira vota ba lista partidu ka koligasaun nian, la'ós ba kandidatu ida-idak, no rai tomak mak sírkulu eleitorál ida de'it. Kadeira fahe tuir votu nia proporsaun, maibé desde 2017 lista ida presiza votu válidu 4% ba leten atu hetan kadeira. Desde 2011, lei eleitorál haruka: kada kandidatu na'in tolu iha lista, ida tenke feto. Iha Parlamentu ne'ebé povu hili iha 2023, deputadu feto na'in 26 husi 65. Deputadu sira la hatán ba tribunál tanba sira-nia votu no hanoin iha knaar laran (Artigu 94).",
-      "pt": "Os deputados são eleitos por sufrágio universal, livre, direto, igual, secreto e pessoal (artigo 93.º). Os eleitores votam numa lista de partido ou coligação, e não em candidatos individuais, e todo o país forma um único círculo eleitoral. Os lugares são distribuídos em proporção aos votos, mas desde 2017 uma lista precisa de pelo menos 4% dos votos válidos para eleger deputados. Desde 2011, a lei eleitoral exige pelo menos uma mulher em cada três candidatos de cada lista. No Parlamento eleito em 2023, 26 dos 65 deputados eram mulheres. Os deputados não respondem pelos votos e opiniões que exprimem no exercício das funções (artigo 94.º).",
-      "en": "Deputies are elected by universal, free, direct, equal, secret and personal vote (Article 93). Voters choose a party or coalition list, not individual candidates, and the whole country forms one constituency. Seats are shared in proportion to the votes, but since 2017 a list needs at least 4% of the valid votes to win seats. Since 2011 the electoral law has required at least one woman in every three candidates on each list. In the Parliament elected in 2023, 26 of the 65 deputies were women. Deputies cannot be prosecuted for the votes and opinions they express in their work (Article 94).",
-      "id": "Anggota parlemen dipilih melalui pemungutan suara yang umum, bebas, langsung, setara, rahasia dan pribadi (Pasal 93). Pemilih memilih daftar partai atau koalisi, bukan calon perorangan, dan seluruh negeri menjadi satu daerah pemilihan. Kursi dibagi sebanding dengan perolehan suara, tetapi sejak 2017 sebuah daftar memerlukan paling sedikit 4% suara sah untuk mendapat kursi. Sejak 2011 undang-undang pemilu mewajibkan paling sedikit satu perempuan di antara setiap tiga calon dalam daftar. Di Parlemen hasil pemilu 2023, 26 dari 65 anggota adalah perempuan. Anggota parlemen tidak dapat dituntut karena suara dan pendapat mereka dalam menjalankan tugas (Pasal 94)."
+      "tet": "Povu hili deputadu sira liuhusi sufrájiu universál, livre, diretu, hanesan, sekretu no ida-idak (Artigu 93). Rai tomak sai sírkulu eleitorál ida de'it, tan ne'e deputadu ida-idak reprezenta sidadaun hotu. Partidu ka koligasaun ida-idak hato'o lista ida ho kandidatu efetivu na'in 65 no suplente na'in 25 ba leten, no sidadaun hili-na'in ida-idak vota ba lista ida, la'ós ba ema ida. Kadeira sira fahe tuir métodu Hondt, maibé desde 2017 lista ida presiza votu válidu 4% ba leten atu hetan deputadu. Desde 2011, lei haruka katak iha kandidatu na'in tolu-tolu nia laran tenke iha feto ida ba leten. Ema balu labele sai deputadu tanba sira-nia knaar, hanesan Prezidente Repúblika, juís, prokuradór, polísia no na'i-lulik sira. Deputadu sira la hatán ba sira-nia votu no hanoin wainhira hala'o knaar (Artigu 94).",
+      "pt": "Os deputados são eleitos por sufrágio universal, livre, direto, igual, secreto e pessoal (artigo 93.º). Todo o país forma um único círculo eleitoral, por isso cada deputado representa todos os cidadãos. Cada partido ou coligação apresenta uma lista com 65 candidatos efetivos e pelo menos 25 suplentes, e cada eleitor vota numa lista, não numa pessoa. Os lugares são distribuídos pelo método de Hondt, mas desde 2017 uma lista precisa de pelo menos 4% dos votos válidos para eleger deputados. Desde 2011, a lei exige pelo menos uma mulher em cada três candidatos. Algumas pessoas não podem ser eleitas por causa das suas funções, como o Presidente da República, os juízes, os procuradores, os polícias e os ministros de culto. Os deputados não respondem pelos votos e opiniões que exprimem no exercício das funções (artigo 94.º).",
+      "en": "Deputies are elected by universal, free, direct, equal, secret and personal vote (Article 93). The whole country forms a single constituency, so each deputy represents all citizens. Each party or coalition presents a list of 65 candidates and at least 25 substitutes, and each voter votes for a list, not for a person. Seats are shared out by the d'Hondt method, but since 2017 a list needs at least 4% of the valid votes to win seats. Since 2011 the law has required at least one woman in every three candidates. Some people cannot be elected because of their jobs, such as the President of the Republic, judges, prosecutors, police officers and ministers of religion. Deputies cannot be held responsible for the votes and opinions they express in their work (Article 94).",
+      "id": "Anggota parlemen dipilih melalui pemungutan suara yang umum, bebas, langsung, setara, rahasia dan pribadi (Pasal 93). Seluruh negeri merupakan satu daerah pemilihan, sehingga setiap anggota mewakili semua warga. Setiap partai atau koalisi mengajukan daftar berisi 65 calon dan paling sedikit 25 calon pengganti, dan setiap pemilih memilih satu daftar, bukan orang. Kursi dibagi dengan metode d'Hondt, tetapi sejak 2017 sebuah daftar memerlukan paling sedikit 4% suara sah untuk memperoleh kursi. Sejak 2011 undang-undang mewajibkan paling sedikit satu perempuan di antara setiap tiga calon. Sebagian orang tidak dapat dipilih karena jabatannya, misalnya Presiden Republik, hakim, jaksa, polisi dan pemuka agama. Anggota parlemen tidak dapat dituntut atas suara dan pendapat yang mereka sampaikan dalam menjalankan tugas (Pasal 94)."
      }
     },
     {
@@ -1691,16 +1983,30 @@
     },
     {
      "heading": {
-      "tet": "Oinsá Parlamentu la'o",
-      "pt": "Como funciona",
-      "en": "How Parliament works",
-      "id": "Cara kerja Parlemen"
+      "tet": "Órgaun no komisaun sira",
+      "pt": "Órgãos e comissões",
+      "en": "Bodies and committees",
+      "id": "Alat kelengkapan dan komisi"
      },
      "text": {
-      "tet": "Deputadu sira, bankada parlamentár sira no Governu mak bele hato'o proposta lei (Artigu 97). Deputadu sira debate no vota iha sesaun plenária no iha komisaun espesializada sira. Membru Governu bele tuir sesaun plenária no hatán pergunta husi deputadu sira (Artigu 101). Parlamentu hili nia Prezidente rasik no Meza, no mós membru na'in lima ba Konsellu-Estadu (Artigu 95). Bainhira Parlamentu la iha sesaun, Komisaun Permanente ida, ho Prezidente Parlamentu nu'udar xefe, akompaña Governu nia servisu (Artigu 102). Parlamentu labele hetan disolusaun iha fulan neen nia laran hafoin eleisaun (Artigu 100).",
-      "pt": "As leis podem ser propostas pelos deputados, pelas bancadas parlamentares e pelo Governo (artigo 97.º). Os deputados debatem e votam em sessões plenárias e em comissões especializadas. Os membros do Governo podem assistir às reuniões plenárias e responder às perguntas dos deputados (artigo 101.º). O Parlamento elege o seu Presidente e a Mesa, bem como cinco membros do Conselho de Estado (artigo 95.º). Fora das sessões, uma Comissão Permanente presidida pelo Presidente do Parlamento acompanha a atividade do Governo (artigo 102.º). O Parlamento não pode ser dissolvido nos seis meses posteriores à sua eleição (artigo 100.º).",
-      "en": "Laws can be proposed by deputies, by parliamentary groups (bancadas) and by the Government (Article 97). Deputies debate and vote in plenary sessions and in specialised committees. Members of the Government may attend plenary sessions and answer deputies' questions (Article 101). Parliament elects its own President and Bureau (Mesa) and five members of the Council of State (Article 95). When it is not in session, a Standing Committee chaired by the President of Parliament follows the Government's work (Article 102). Parliament cannot be dissolved in the six months after its election (Article 100).",
-      "id": "Rancangan undang-undang dapat diajukan oleh anggota parlemen, fraksi (bancada) dan Pemerintah (Pasal 97). Anggota parlemen berdebat dan memberi suara dalam rapat paripurna dan dalam komisi-komisi. Anggota Pemerintah boleh menghadiri rapat paripurna dan menjawab pertanyaan anggota parlemen (Pasal 101). Parlemen memilih Ketua dan Pimpinan (Mesa)-nya sendiri, serta lima anggota Dewan Negara (Pasal 95). Di luar masa sidang, sebuah Komisi Tetap yang dipimpin Ketua Parlemen mengikuti kerja Pemerintah (Pasal 102). Parlemen tidak boleh dibubarkan dalam enam bulan setelah pemilu (Pasal 100)."
+      "tet": "Plenáriu, iha ne'ebé deputadu hotu debate no vota, mak órgaun ne'ebé foti desizaun; reuniaun ordinária sira hala'o iha loron Segunda no Tersa, no loke ba públiku. Deputadu sira hili Prezidente Parlamentu Nasionál ho maioria absoluta, liuhusi votu sekretu, ba lejizlatura tomak; nia reprezenta Parlamentu, hatuur ajenda no hala'o Prezidente Repúblika nia knaar bainhira Prezidente labele servisu (Artigu 84). Hamutuk ho vise-prezidente na'in rua, sekretáriu ida no vise-sekretáriu na'in rua, nia forma Meza. Konferénsia Reprezentante Bankada sira hasoru malu dala ida kada semana atu prepara servisu. Iha VI Lejizlatura iha komisaun espesializada permanente hitu, husi A to'o G, hanesan Komisaun C ba Finansas Públikas. Entre sesaun sira, Komisaun Permanente mak servisu (Artigu 102), no Parlamentu bele harii komisaun inkéritu, ne'ebé iha loron 60 atu remata servisu.",
+      "pt": "O Plenário, onde todos os deputados debatem e votam, é o órgão que decide; as reuniões ordinárias são às segundas e terças-feiras e estão abertas ao público. O Presidente do Parlamento é eleito por maioria absoluta, em voto secreto, para toda a legislatura; representa o Parlamento, marca a agenda e substitui o Presidente da República quando este está impedido (artigo 84.º). Com dois vice-presidentes, um secretário e dois vice-secretários forma a Mesa. A Conferência dos Representantes das Bancadas reúne-se em regra uma vez por semana para preparar os trabalhos. Na VI Legislatura há sete comissões especializadas permanentes, de A a G, como a Comissão C, de Finanças Públicas. Entre as sessões funciona a Comissão Permanente (artigo 102.º), e podem ser criadas comissões de inquérito, que têm 60 dias para concluir o trabalho.",
+      "en": "The Plenary, where all deputies debate and vote, is the body that decides; its ordinary meetings are on Mondays and Tuesdays and are open to the public. The President of Parliament is elected by an absolute majority, in a secret ballot, for the whole legislature; he or she represents Parliament, sets the agenda and stands in for the President of the Republic when the President cannot serve (Article 84). Together with two vice-presidents, a secretary and two vice-secretaries, the President of Parliament forms the Bureau (Mesa). The Conference of Parliamentary Group Representatives normally meets once a week to prepare the work. In the VI Legislature there are seven permanent specialised committees, from A to G, such as Committee C on Public Finance. Between sessions the Standing Committee works (Article 102), and inquiry committees can be set up, with 60 days to finish their work.",
+      "id": "Rapat paripurna, tempat semua anggota berdebat dan memberi suara, adalah badan yang mengambil keputusan; rapat biasa diadakan setiap Senin dan Selasa dan terbuka untuk umum. Ketua Parlemen dipilih dengan mayoritas mutlak melalui pemungutan suara rahasia untuk seluruh masa legislatif; ia mewakili Parlemen, menetapkan agenda dan menggantikan Presiden Republik jika Presiden berhalangan (Pasal 84). Bersama dua wakil ketua, satu sekretaris dan dua wakil sekretaris, Ketua membentuk Pimpinan (Mesa). Konferensi Wakil Fraksi biasanya bertemu sekali seminggu untuk mempersiapkan pekerjaan. Pada Masa Legislatif VI ada tujuh komisi khusus tetap, dari A sampai G, misalnya Komisi C untuk Keuangan Publik. Di antara masa sidang bekerja Komisi Tetap (Pasal 102), dan dapat dibentuk komisi penyelidikan yang memiliki 60 hari untuk menyelesaikan tugasnya."
+     }
+    },
+    {
+     "heading": {
+      "tet": "Oinsá halo lei ida",
+      "pt": "Como se faz uma lei",
+      "en": "How a law is made",
+      "id": "Cara membuat undang-undang"
+     },
+     "text": {
+      "tet": "Deputadu no bankada sira hato'o projetu lei; Governu hato'o proposta lei (Artigu 97). Prezidente Parlamentu simu inisiativa ne'e no haruka ba komisaun kompetente, ne'ebé bele rona sosiedade sivíl no aprova paresér ida. Depois, Plenáriu debate no vota testu ne'e iha jeneralidade. Tuir mai, deputadu sira diskute artigu ida-idak iha espesialidade, dala barak iha komisaun, no Plenáriu halo votasaun finál globál. Testu finál, ne'ebé naran dekretu, Prezidente Parlamentu asina no haruka ba Prezidente Repúblika, ne'ebé iha loron 30 atu promulga ka veta (Artigu 88). Se Prezidente veta, Parlamentu bele konfirma lei ne'e ho maioria absoluta (baluk-tolu rua ba matéria Artigu 95 nian), no Prezidente tenke promulga iha loron ualu nia laran. Lei foin iha efeitu hafoin publika iha Jornál Repúblika (Artigu 73).",
+      "pt": "Os deputados e as bancadas apresentam projetos de lei; o Governo apresenta propostas de lei (artigo 97.º). O Presidente do Parlamento admite a iniciativa e envia-a à comissão competente, que pode ouvir a sociedade civil e aprova um parecer. Depois, o Plenário debate e vota o texto na generalidade. Segue-se a discussão artigo a artigo, na especialidade, em regra na comissão, e a votação final global no Plenário. O texto final, chamado decreto, é assinado pelo Presidente do Parlamento e enviado ao Presidente da República, que tem 30 dias para o promulgar ou vetar (artigo 88.º). Se houver veto, o Parlamento pode confirmar a lei por maioria absoluta (dois terços nas matérias do artigo 95.º), e o Presidente tem então de a promulgar em oito dias. A lei só produz efeitos depois de publicada no Jornal da República (artigo 73.º).",
+      "en": "Deputies and parliamentary groups present bills (projetos de lei); the Government presents government bills (propostas de lei) (Article 97). The President of Parliament admits the bill and sends it to the competent committee, which can hear civil society and approves an opinion. Then the Plenary debates and votes on the text in general. Next comes the article-by-article discussion, usually in the committee, and the final overall vote in the Plenary. The final text, called a decree, is signed by the President of Parliament and sent to the President of the Republic, who has 30 days to promulgate or veto it (Article 88). If there is a veto, Parliament can confirm the law by an absolute majority (two thirds for the matters in Article 95), and the President must then promulgate it within eight days. A law takes effect only after it is published in the Jornal da República (Article 73).",
+      "id": "Anggota parlemen dan fraksi mengajukan rancangan undang-undang (projeto de lei); Pemerintah mengajukan rancangan undang-undang pemerintah (proposta de lei) (Pasal 97). Ketua Parlemen menerima rancangan itu dan mengirimkannya ke komisi yang berwenang, yang dapat mendengar masyarakat sipil dan mengesahkan sebuah pendapat. Kemudian rapat paripurna membahas dan memungut suara atas teks itu secara umum. Berikutnya pembahasan pasal demi pasal, biasanya di komisi, lalu pemungutan suara akhir di rapat paripurna. Teks akhir, yang disebut dekret, ditandatangani Ketua Parlemen dan dikirim kepada Presiden Republik, yang memiliki 30 hari untuk mengundangkan atau memvetonya (Pasal 88). Jika diveto, Parlemen dapat menegaskan undang-undang itu dengan mayoritas mutlak (dua pertiga untuk hal-hal dalam Pasal 95), dan Presiden wajib mengundangkannya dalam delapan hari. Undang-undang baru berlaku setelah diterbitkan dalam Jornal da República (Pasal 73)."
      }
     },
     {
@@ -1711,10 +2017,10 @@
       "id": "Parlemen saat ini"
      },
      "text": {
-      "tet": "Lejizlatura agora hetan eleisaun iha 21 Maiu 2023. Partidu lima mak manán kadeira: CNRT 31, FRETILIN 19, Partidu Demokrátiku (PD) 6, KHUNTO 5 no Partidu Libertasaun Popular (PLP) 4. CNRT no PD halo koligasaun ho kadeira 37, maioria husi 65, no apoia Xanana Gusmão nia Governu. FRETILIN sai partidu opozisaun boot liu. Maria Fernanda Lay, husi CNRT, hetan eleisaun nu'udar Prezidente Parlamentu Nasionál iha 2023; nia mak feto dahuluk iha kargu ne'e. Tuir mandatu tinan lima, eleisaun parlamentár tuir mai sei hala'o iha 2028.",
-      "pt": "A atual legislatura foi eleita a 21 de maio de 2023. Cinco partidos elegeram deputados: CNRT 31, FRETILIN 19, Partido Democrático (PD) 6, KHUNTO 5 e Partido Libertação Popular (PLP) 4. O CNRT e o PD formaram uma coligação com 37 lugares, maioria dos 65, que apoia o Governo de Xanana Gusmão. A FRETILIN tornou-se o maior partido da oposição. Maria Fernanda Lay, do CNRT, foi eleita Presidente do Parlamento Nacional em 2023; é a primeira mulher no cargo. Como o mandato é de cinco anos, as próximas eleições legislativas estão previstas para 2028.",
-      "en": "The current legislature was elected on 21 May 2023. Five parties won seats: CNRT 31, FRETILIN 19, the Democratic Party (PD) 6, KHUNTO 5 and the People's Liberation Party (PLP) 4. CNRT and PD formed a coalition with 37 seats, a majority of the 65, which supports the Government of Xanana Gusmão. FRETILIN became the largest opposition party. Maria Fernanda Lay of CNRT was elected President of the National Parliament in 2023, the first woman in the post. As the term is five years, the next parliamentary election is due in 2028.",
-      "id": "Masa legislatif yang sekarang dipilih pada 21 Mei 2023. Lima partai memperoleh kursi: CNRT 31, FRETILIN 19, Partai Demokrat (PD) 6, KHUNTO 5 dan Partai Pembebasan Rakyat (PLP) 4. CNRT dan PD membentuk koalisi dengan 37 kursi, mayoritas dari 65 kursi, yang mendukung Pemerintah Xanana Gusmão. FRETILIN menjadi partai oposisi terbesar. Maria Fernanda Lay dari CNRT terpilih sebagai Ketua Parlemen Nasional pada 2023; ia perempuan pertama yang memegang jabatan itu. Karena masa jabatan lima tahun, pemilu parlemen berikutnya dijadwalkan pada 2028."
+      "tet": "VI Lejizlatura (2023–2028) mosu husi eleisaun 21 Maiu 2023. Partidu lima iha bankada: CNRT (deputadu na'in 31), FRETILIN (19), PD (6), KHUNTO (5) no PLP (4). CNRT no PD iha kadeira 37 no apoia IX Governu; FRETILIN mak partidu opozisaun boot liu. Iha 22 Juñu 2023, Plenáriu hili Maria Fernanda Lay (CNRT), feto dahuluk ne'ebé prezide Parlamentu. Meza mós iha vise-prezidente Duarte Nunes no Alexandrino Afonso Nunes, sekretária Virgínia Ana Belo no vise-sekretária Maria Teresa da Silva Gusmão no Bendita Moniz Magno. Sesaun lejizlativa IV loke iha 15 Setembru 2026, no iha 11 Novembru 2026 Plenáriu aprova iha jeneralidade Orsamentu Jerál Estadu 2027. Edifísiu prinsipál, ne'ebé harii iha tempu Indonézia, hetan reabilitasaun iha 2001 ho fundu Austrália nian.",
+      "pt": "A VI Legislatura (2023–2028) saiu das eleições de 21 de maio de 2023. Cinco partidos têm bancada: CNRT (31 deputados), FRETILIN (19), PD (6), KHUNTO (5) e PLP (4). O CNRT e o PD têm 37 lugares e apoiam o IX Governo; a FRETILIN é o maior partido da oposição. A 22 de junho de 2023, o Plenário elegeu Maria Fernanda Lay (CNRT), a primeira mulher a presidir ao Parlamento. A Mesa inclui ainda os vice-presidentes Duarte Nunes e Alexandrino Afonso Nunes, a secretária Virgínia Ana Belo e as vice-secretárias Maria Teresa da Silva Gusmão e Bendita Moniz Magno. A IV sessão legislativa abriu a 15 de setembro de 2026, e a 11 de novembro de 2026 o Plenário aprovou na generalidade o Orçamento Geral do Estado para 2027. O edifício principal, construído no tempo indonésio, foi reabilitado em 2001 com fundos australianos.",
+      "en": "The VI Legislature (2023–2028) came out of the elections of 21 May 2023. Five parties have parliamentary groups: CNRT (31 deputies), FRETILIN (19), PD (6), KHUNTO (5) and PLP (4). CNRT and PD hold 37 seats and support the IX Government; FRETILIN is the largest opposition party. On 22 June 2023 the Plenary elected Maria Fernanda Lay (CNRT), the first woman to preside over Parliament. The Bureau also includes vice-presidents Duarte Nunes and Alexandrino Afonso Nunes, secretary Virgínia Ana Belo and vice-secretaries Maria Teresa da Silva Gusmão and Bendita Moniz Magno. The IV legislative session opened on 15 September 2026, and on 11 November 2026 the Plenary approved the 2027 General State Budget in general. The main building, built in Indonesian times, was restored in 2001 with Australian funds.",
+      "id": "Masa Legislatif VI (2023–2028) lahir dari pemilu 21 Mei 2023. Lima partai memiliki fraksi: CNRT (31 anggota), FRETILIN (19), PD (6), KHUNTO (5) dan PLP (4). CNRT dan PD memegang 37 kursi dan mendukung Pemerintah IX; FRETILIN adalah partai oposisi terbesar. Pada 22 Juni 2023 rapat paripurna memilih Maria Fernanda Lay (CNRT), perempuan pertama yang memimpin Parlemen. Pimpinan juga terdiri atas wakil ketua Duarte Nunes dan Alexandrino Afonso Nunes, sekretaris Virgínia Ana Belo serta wakil sekretaris Maria Teresa da Silva Gusmão dan Bendita Moniz Magno. Masa sidang IV dibuka pada 15 September 2026, dan pada 11 November 2026 rapat paripurna menyetujui secara umum Anggaran Umum Negara 2027. Gedung utamanya, yang dibangun pada masa Indonesia, direnovasi pada 2001 dengan dana Australia."
      }
     }
    ],
@@ -1801,10 +2107,10 @@
     },
     {
      "label": {
-      "tet": "Deputadu feto",
-      "pt": "Deputadas",
-      "en": "Women deputies",
-      "id": "Anggota perempuan"
+      "tet": "Deputada eleita iha 2023",
+      "pt": "Deputadas eleitas em 2023",
+      "en": "Women deputies elected in 2023",
+      "id": "Anggota perempuan terpilih pada 2023"
      },
      "value": {
       "tet": "26 husi 65",
@@ -1822,15 +2128,72 @@
       "id": "Ketua Parlemen"
      },
      "value": {
-      "tet": "Maria Fernanda Lay (desde 2023)",
-      "pt": "Maria Fernanda Lay (desde 2023)",
-      "en": "Maria Fernanda Lay (since 2023)",
-      "id": "Maria Fernanda Lay (sejak 2023)"
+      "tet": "Maria Fernanda Lay (desde 22 Juñu 2023)",
+      "pt": "Maria Fernanda Lay (desde 22 de junho de 2023)",
+      "en": "Maria Fernanda Lay (since 22 June 2023)",
+      "id": "Maria Fernanda Lay (sejak 22 Juni 2023)"
      },
-     "year": 2025
+     "year": 2026
+    },
+    {
+     "label": {
+      "tet": "Lejizlatura atuál",
+      "pt": "Legislatura atual",
+      "en": "Current legislature",
+      "id": "Masa legislatif sekarang"
+     },
+     "value": {
+      "tet": "VI Lejizlatura (2023–2028)",
+      "pt": "VI Legislatura (2023–2028)",
+      "en": "VI Legislature (2023–2028)",
+      "id": "Masa Legislatif VI (2023–2028)"
+     },
+     "year": 2026
+    },
+    {
+     "label": {
+      "tet": "Komisaun espesializada permanente",
+      "pt": "Comissões especializadas permanentes",
+      "en": "Permanent specialised committees",
+      "id": "Komisi khusus tetap"
+     },
+     "value": {
+      "tet": "7 (A to'o G)",
+      "pt": "7 (de A a G)",
+      "en": "7 (A to G)",
+      "id": "7 (A sampai G)"
+     },
+     "year": 2026
+    },
+    {
+     "label": {
+      "tet": "Sítiu ofisiál",
+      "pt": "Sítio oficial",
+      "en": "Official website",
+      "id": "Situs resmi"
+     },
+     "value": "www.parlamento.tl"
     }
    ],
    "timeline": [
+    {
+     "date": "2001-08-30",
+     "title": {
+      "tet": "Povu hili Asembleia Konstituinte",
+      "pt": "Eleição da Assembleia Constituinte",
+      "en": "The Constituent Assembly is elected",
+      "id": "Pemilihan Majelis Konstituante"
+     }
+    },
+    {
+     "date": "2002-03-22",
+     "title": {
+      "tet": "Asembleia Konstituinte aprova Lei-Inan",
+      "pt": "A Assembleia Constituinte aprova a Constituição",
+      "en": "The Constituent Assembly approves the Constitution",
+      "id": "Majelis Konstituante mengesahkan Konstitusi"
+     }
+    },
     {
      "date": "2002-05-20",
      "title": {
@@ -1838,6 +2201,51 @@
       "pt": "A Assembleia Constituinte torna-se o primeiro Parlamento Nacional",
       "en": "The Constituent Assembly becomes the first National Parliament",
       "id": "Majelis Konstituante menjadi Parlemen Nasional pertama"
+     }
+    },
+    {
+     "date": "2007-06-30",
+     "title": {
+      "tet": "Eleisaun: Parlamentu hahú iha deputadu na'in 65",
+      "pt": "Eleições: o Parlamento passa a ter 65 deputados",
+      "en": "Elections: Parliament now has 65 deputies",
+      "id": "Pemilu: Parlemen kini beranggotakan 65 orang"
+     }
+    },
+    {
+     "date": "2023-05-21",
+     "title": {
+      "tet": "Eleisaun ba VI Lejizlatura",
+      "pt": "Eleições para a VI Legislatura",
+      "en": "Elections for the VI Legislature",
+      "id": "Pemilu untuk Masa Legislatif VI"
+     }
+    },
+    {
+     "date": "2023-06-22",
+     "title": {
+      "tet": "Maria Fernanda Lay sai Prezidente Parlamentu",
+      "pt": "Maria Fernanda Lay é eleita Presidente do Parlamento",
+      "en": "Maria Fernanda Lay is elected President of Parliament",
+      "id": "Maria Fernanda Lay terpilih sebagai Ketua Parlemen"
+     }
+    },
+    {
+     "date": "2026-09-15",
+     "title": {
+      "tet": "Loke sesaun lejizlativa IV husi VI Lejizlatura",
+      "pt": "Abertura da IV sessão legislativa da VI Legislatura",
+      "en": "The IV legislative session of the VI Legislature opens",
+      "id": "Pembukaan masa sidang IV Masa Legislatif VI"
+     }
+    },
+    {
+     "date": "2026-11-11",
+     "title": {
+      "tet": "Plenáriu aprova OJE 2027 iha jeneralidade",
+      "pt": "O Plenário aprova o OGE 2027 na generalidade",
+      "en": "The Plenary approves the 2027 budget in general",
+      "id": "Rapat paripurna menyetujui APBN 2027 secara umum"
      }
     }
    ],
@@ -1852,7 +2260,8 @@
    },
    "wiki": {
     "en": "National Parliament of Timor-Leste",
-    "pt": "Parlamento Nacional de Timor-Leste"
+    "pt": "Parlamento Nacional de Timor-Leste",
+    "tet": "Parlamentu Nasionál"
    },
    "related": [
     "tl.leaders.parliament_presidents",
@@ -1861,14 +2270,21 @@
     "tl.politics.government",
     "tl.politics.system",
     "tl.politics.constitution",
-    "tl.economy.petroleum_fund"
+    "tl.economy.petroleum_fund",
+    "tl.politics.president_office",
+    "tl.institutions.overview"
    ],
    "tags": [
     "parlamentu",
     "parliament",
+    "parlamento",
+    "parlemen",
     "deputadu",
     "deputies",
-    "lei"
+    "lei",
+    "law",
+    "fernanda lay",
+    "OJE"
    ],
    "quiz": [
     {
@@ -1957,6 +2373,48 @@
     },
     {
      "q": {
+      "tet": "Se mak feto dahuluk ne'ebé prezide Parlamentu Nasionál?",
+      "pt": "Quem é a primeira mulher a presidir ao Parlamento Nacional?",
+      "en": "Who is the first woman to preside over the National Parliament?",
+      "id": "Siapa perempuan pertama yang memimpin Parlemen Nasional?"
+     },
+     "options": [
+      {
+       "tet": "Maria Fernanda Lay",
+       "pt": "Maria Fernanda Lay",
+       "en": "Maria Fernanda Lay",
+       "id": "Maria Fernanda Lay"
+      },
+      {
+       "tet": "Ana Pessoa",
+       "pt": "Ana Pessoa",
+       "en": "Ana Pessoa",
+       "id": "Ana Pessoa"
+      },
+      {
+       "tet": "Lúcia Lobato",
+       "pt": "Lúcia Lobato",
+       "en": "Lúcia Lobato",
+       "id": "Lúcia Lobato"
+      },
+      {
+       "tet": "Fernanda Borges",
+       "pt": "Fernanda Borges",
+       "en": "Fernanda Borges",
+       "id": "Fernanda Borges"
+      }
+     ],
+     "answer": 0,
+     "why": {
+      "tet": "Iha 22 Juñu 2023, Plenáriu hili Maria Fernanda Lay; nia mak feto dahuluk iha kargu ne'e.",
+      "pt": "A 22 de junho de 2023, o Plenário elegeu Maria Fernanda Lay, a primeira mulher no cargo.",
+      "en": "On 22 June 2023 the Plenary elected Maria Fernanda Lay, the first woman in the post.",
+      "id": "Pada 22 Juni 2023 rapat paripurna memilih Maria Fernanda Lay, perempuan pertama dalam jabatan itu."
+     },
+     "difficulty": 5
+    },
+    {
+     "q": {
       "tet": "Se mak bele hato'o proposta lei ba Parlamentu?",
       "pt": "Quem pode propor leis ao Parlamento?",
       "en": "Who can propose laws to Parliament?",
@@ -2038,6 +2496,48 @@
       "id": "CNRT meraih 31 dari 65 kursi dan berkoalisi dengan PD."
      },
      "difficulty": 8
+    },
+    {
+     "q": {
+      "tet": "Prezidente Repúblika iha loron hira atu promulga ka veta lei ida husi Parlamentu?",
+      "pt": "Quantos dias tem o Presidente da República para promulgar ou vetar uma lei do Parlamento?",
+      "en": "How many days does the President of the Republic have to promulgate or veto a law from Parliament?",
+      "id": "Berapa hari waktu Presiden Republik untuk mengundangkan atau memveto undang-undang dari Parlemen?"
+     },
+     "options": [
+      {
+       "tet": "Loron 8",
+       "pt": "8 dias",
+       "en": "8 days",
+       "id": "8 hari"
+      },
+      {
+       "tet": "Loron 30",
+       "pt": "30 dias",
+       "en": "30 days",
+       "id": "30 hari"
+      },
+      {
+       "tet": "Loron 60",
+       "pt": "60 dias",
+       "en": "60 days",
+       "id": "60 hari"
+      },
+      {
+       "tet": "Loron 90",
+       "pt": "90 dias",
+       "en": "90 days",
+       "id": "90 hari"
+      }
+     ],
+     "answer": 1,
+     "why": {
+      "tet": "Artigu 88: loron 30. Se Parlamentu konfirma lei ne'e hafoin vetu, Prezidente tenke promulga iha loron 8 nia laran.",
+      "pt": "Artigo 88.º: 30 dias. Se o Parlamento confirmar a lei depois do veto, o Presidente tem de a promulgar em 8 dias.",
+      "en": "Article 88: 30 days. If Parliament confirms the law after a veto, the President must promulgate it within 8 days.",
+      "id": "Pasal 88: 30 hari. Jika Parlemen menegaskan undang-undang itu setelah veto, Presiden wajib mengundangkannya dalam 8 hari."
+     },
+     "difficulty": 9
     },
     {
      "q": {
@@ -2173,16 +2673,82 @@
      "url": "https://en.tatoli.tl/2023/06/05/cnrt-and-pd-officially-agree-to-form-coalition-government/21/",
      "accessed": "2026-10-27",
      "licence": "© Tatoli"
+    },
+    {
+     "title": "História (Memória histórica do Parlamento Nacional)",
+     "publisher": "Parlamento Nacional de Timor-Leste (parlamento.tl)",
+     "url": "https://www.parlamento.tl/historia",
+     "accessed": "2026-11-11",
+     "licence": "© Parlamento Nacional de Timor-Leste"
+    },
+    {
+     "title": "Papel e Organização",
+     "publisher": "Parlamento Nacional de Timor-Leste (parlamento.tl)",
+     "url": "https://www.parlamento.tl/papel-organizacao",
+     "accessed": "2026-11-11",
+     "licence": "© Parlamento Nacional de Timor-Leste"
+    },
+    {
+     "title": "Órgãos e suas Funções",
+     "publisher": "Parlamento Nacional de Timor-Leste (parlamento.tl)",
+     "url": "https://www.parlamento.tl/orgaos-funsaun",
+     "accessed": "2026-11-11",
+     "licence": "© Parlamento Nacional de Timor-Leste"
+    },
+    {
+     "title": "Processo Legislativo Comum",
+     "publisher": "Parlamento Nacional de Timor-Leste (parlamento.tl)",
+     "url": "https://www.parlamento.tl/plegislativocomum",
+     "accessed": "2026-11-11",
+     "licence": "© Parlamento Nacional de Timor-Leste"
+    },
+    {
+     "title": "Comissões Parlamentares",
+     "publisher": "Parlamento Nacional de Timor-Leste (parlamento.tl)",
+     "url": "https://www.parlamento.tl/komisaun",
+     "accessed": "2026-11-11",
+     "licence": "© Parlamento Nacional de Timor-Leste"
+    },
+    {
+     "title": "Bancadas Parlamentares (VI Legislatura)",
+     "publisher": "Parlamento Nacional de Timor-Leste (parlamento.tl)",
+     "url": "https://www.parlamento.tl/bancadas",
+     "accessed": "2026-11-11",
+     "licence": "© Parlamento Nacional de Timor-Leste"
+    },
+    {
+     "title": "Presidente do Parlamento Nacional (discursos, incluindo a abertura da IV Sessão da VI Legislatura, 15/09/2026)",
+     "publisher": "Parlamento Nacional de Timor-Leste (parlamento.tl)",
+     "url": "https://www.parlamento.tl/presidencia",
+     "accessed": "2026-11-11",
+     "licence": "© Parlamento Nacional de Timor-Leste"
+    },
+    {
+     "title": "Plenário aprova OGE 2027 na Generalidade (11 de novembro de 2026)",
+     "publisher": "Parlamento Nacional de Timor-Leste (parlamento.tl)",
+     "url": "https://www.parlamento.tl/noticias/plenario-aprova-oge-2027-na-generalidade",
+     "accessed": "2026-11-11",
+     "licence": "© Parlamento Nacional de Timor-Leste"
+    },
+    {
+     "title": "Historical Archive: succession of governments, general elections and legislatures",
+     "publisher": "Governo de Timor-Leste (timor-leste.gov.tl)",
+     "url": "https://timor-leste.gov.tl/?cat=25&lang=en",
+     "accessed": "2026-11-11",
+     "licence": "© Governo de Timor-Leste"
     }
    ],
    "review": {
     "status": "draft",
-    "notes": "Check: 26 women of 65 deputies after the 2023 election (seen only in a search summary, IFES/Wikipedia); Maria Fernanda Lay as President of Parliament since 2023 and first woman in the post (from memory); 2011 law (Law 7/2011) for one woman in every three candidates (International IDEA); 4% threshold since 2017 (UNDP), 3% in 2012 (Global Voices). Tetun: 'sírkulu eleitorál', 'bankada parlamentár', 'Meza', 'kada'."
+    "notes": "Updated 2026-11-11 from parlamento.tl (história, papel e organização, órgãos, processo legislativo, comissões, bancadas, notícias): 88 deputies in 13 groups with 23 women in the first Parliament; session 15 Sept–14 Sept, normal work 15 Sept–15 July; lists of 65 + at least 25 substitutes, d'Hondt, single national constituency; Plenary on Mondays and Tuesdays; quorum rules; Mesa of six (names checked on the Mesa and plenary pages); seven committees A–G; inquiry committees 60 days; legislative process steps; IV session opened 15 Sept 2026; OGE 2027 (US$ 2,568.5 million) approved in general on 11 Nov 2026 by 41 votes, none against, 23 abstentions. DIFFERENCES to check: the site's 'Papel e Organização' page still says one woman in every four candidates, while its history page (and Law 7/2011, per International IDEA) says one in three — text keeps one in three; the history page says 26 women in the current legislature, but the deputies list (Nov 2026) counts 24 women and 41 men (replacements?) — fact keeps '26 elected in 2023'; the site says the Constituent Assembly mandate began on 30 Aug 2001 'with the swearing-in', but the Government archive says it was inaugurated on 15 Sept 2001 (30 Aug 2001 was election day) — text says 'elected in August 2001'. Building history (Indonesian-era building, Australian-funded rehabilitation in 2001) is from the Parliament history page only. Ineligible groups listed from the site (it also lists civil servants, diplomats and CNE members). Tetun to check: 'Meza', 'bankada', 'Konferénsia Reprezentante Bankada sira', 'komisaun inkéritu', 'jeneralidade', 'espesialidade', 'votasaun finál globál', 'paresér', 'na'i-lulik' (ministers of religion), 'sírkulu eleitorál'."
    }
   },
   {
    "id": "tl.politics.government",
    "category": "politics",
+   "also": [
+    "institutions"
+   ],
    "title": {
     "tet": "Governu no Primeiru-Ministru",
     "pt": "O Governo e o Primeiro-Ministro",
@@ -2190,10 +2756,10 @@
     "id": "Pemerintah dan Perdana Menteri"
    },
    "summary": {
-    "tet": "Governu hala'o ukun loron-loron nian no lidera administrasaun públika. Primeiru-Ministru mak lidera Governu, no nia mai husi partidu ka aliansa ne'ebé iha maioria iha Parlamentu. Desde 1 Jullu 2023, Primeiru-Ministru mak Kay Rala Xanana Gusmão.",
-    "pt": "O Governo conduz o país no dia a dia e dirige a administração pública. É chefiado pelo Primeiro-Ministro, que vem do partido ou aliança com maioria no Parlamento. Desde 1 de julho de 2023, o Primeiro-Ministro é Kay Rala Xanana Gusmão.",
-    "en": "The Government runs the country every day and leads the public administration. It is headed by the Prime Minister, who comes from the party or alliance with a majority in Parliament. Since 1 July 2023 the Prime Minister has been Kay Rala Xanana Gusmão.",
-    "id": "Pemerintah menjalankan negara sehari-hari dan memimpin administrasi publik. Pemerintah dipimpin Perdana Menteri, yang berasal dari partai atau aliansi yang memiliki mayoritas di Parlemen. Sejak 1 Juli 2023 Perdana Menteri dijabat oleh Kay Rala Xanana Gusmão."
+    "tet": "Governu lidera nasaun loron-loron no lidera administrasaun públika. Primeiru-Ministru mak xefe Governu, no nia mai husi partidu ka aliansa ne'ebé iha maioria iha Parlamentu. Desde 1 Jullu 2023, IX Governu Konstitusionál ho Primeiru-Ministru Kay Rala Xanana Gusmão mak ukun.",
+    "pt": "O Governo conduz o país no dia a dia e dirige a administração pública. É chefiado pelo Primeiro-Ministro, que vem do partido ou aliança com maioria no Parlamento. Desde 1 de julho de 2023 está em funções o IX Governo Constitucional, chefiado por Kay Rala Xanana Gusmão.",
+    "en": "The Government runs the country day to day and directs the public administration. It is headed by the Prime Minister, who comes from the party or alliance with a majority in Parliament. Since 1 July 2023 the IX Constitutional Government, led by Kay Rala Xanana Gusmão, has been in office.",
+    "id": "Pemerintah menjalankan negara sehari-hari dan memimpin administrasi publik. Pemerintah dipimpin Perdana Menteri, yang berasal dari partai atau aliansi yang memiliki mayoritas di Parlemen. Sejak 1 Juli 2023 Pemerintah Konstitusional IX yang dipimpin Kay Rala Xanana Gusmão menjabat."
    },
    "levels": [
     "eb2",
@@ -2201,33 +2767,37 @@
     "es",
     "sup"
    ],
+   "period": {
+    "from": 2002,
+    "to": 2026
+   },
    "sections": [
     {
      "heading": {
-      "tet": "Saida mak Governu",
-      "pt": "O que é o Governo",
-      "en": "What the Government is",
-      "id": "Apa itu Pemerintah"
+      "tet": "Saida mak Governu no Konsellu-Ministru",
+      "pt": "O Governo e o Conselho de Ministros",
+      "en": "The Government and the Council of Ministers",
+      "id": "Pemerintah dan Dewan Menteri"
      },
      "text": {
-      "tet": "Artigu 103 dehan katak Governu mak órgaun soberania ne'ebé iha responsabilidade atu lidera no hala'o nasaun nia polítika jerál, no mós órgaun aas liu Administrasaun Públika nian. Governu iha Primeiru-Ministru, Ministru sira no Sekretáriu-Estadu sira; bele iha mós Vise-Primeiru-Ministru no Vise-Ministru (Artigu 104). Konsellu-Ministru hamutuk Primeiru-Ministru, Vise-Primeiru-Ministru (se iha) no Ministru sira; Primeiru-Ministru mak konvoka no prezide nia reuniaun (Artigu 105). Governu ida-idak deside liuhusi dekretu-lei ministériu hira mak nia sei iha.",
-      "pt": "O artigo 103.º diz que o Governo é o órgão de soberania responsável pela condução e execução da política geral do país e o órgão superior da Administração Pública. É formado pelo Primeiro-Ministro, pelos ministros e pelos secretários de Estado, e pode incluir vice-primeiros-ministros e vice-ministros (artigo 104.º). O Conselho de Ministros reúne o Primeiro-Ministro, os vice-primeiros-ministros, se os houver, e os ministros; é o Primeiro-Ministro que o convoca e preside (artigo 105.º). Cada Governo define por decreto-lei quantos ministérios terá.",
-      "en": "Article 103 says that the Government is the organ of sovereignty responsible for conducting and carrying out the general policy of the country, and the highest organ of the public administration. It is made up of the Prime Minister, the ministers and the secretaries of state, and may also include deputy prime ministers and vice-ministers (Article 104). The Council of Ministers brings together the Prime Minister, any deputy prime ministers and the ministers; the Prime Minister calls and chairs its meetings (Article 105). Each Government decides by decree-law how many ministries it will have.",
-      "id": "Pasal 103 menyatakan bahwa Pemerintah adalah organ kedaulatan yang bertanggung jawab memimpin dan melaksanakan kebijakan umum negara, serta organ tertinggi Administrasi Publik. Pemerintah terdiri atas Perdana Menteri, para menteri dan sekretaris negara; dapat juga ada wakil perdana menteri dan wakil menteri (Pasal 104). Dewan Menteri terdiri atas Perdana Menteri, wakil perdana menteri jika ada, dan para menteri; Perdana Menteri memanggil dan memimpin rapatnya (Pasal 105). Setiap Pemerintah menentukan jumlah kementeriannya melalui dekret-undang-undang."
+      "tet": "Artigu 103 dehan katak Governu mak órgaun soberania ne'ebé lidera no hala'o polítika jerál nasaun nian, no órgaun aas liu Administrasaun Públika nian. Governu kompostu husi Primeiru-Ministru, ministru sira no sekretáriu estadu sira, no bele iha mós vise-primeiru-ministru no vise-ministru (Artigu 104). Primeiru-Ministru lidera Governu, orienta polítika jerál, koordena ministru sira no fó informasaun ba Prezidente Repúblika kona-ba polítika interna no esterna (Artigu 117). Konsellu-Ministru halibur Primeiru-Ministru, vise-primeiru-ministru sira no ministru sira; vise-ministru no sekretáriu estadu sira bele partisipa, maibé la iha direitu vota (Artigu 105). Konsellu ne'e define liña jerál polítika Governu nian no aprova proposta lei, dekretu-lei no planu sira (Artigu 116).",
+      "pt": "O artigo 103.º define o Governo como o órgão de soberania que conduz e executa a política geral do país e o órgão superior da Administração Pública. É formado pelo Primeiro-Ministro, pelos ministros e pelos secretários de Estado, e pode incluir vice-primeiros-ministros e vice-ministros (artigo 104.º). O Primeiro-Ministro chefia o Governo, dirige a política geral, coordena os ministros e informa o Presidente da República sobre a política interna e externa (artigo 117.º). O Conselho de Ministros junta o Primeiro-Ministro, os vice-primeiros-ministros e os ministros; os vice-ministros e os secretários de Estado podem participar, mas sem voto (artigo 105.º). O Conselho define as linhas gerais da política do Governo e aprova propostas de lei, decretos-leis e planos (artigo 116.º).",
+      "en": "Article 103 defines the Government as the organ of sovereignty that conducts and carries out the general policy of the country and the highest organ of the public administration. It is made up of the Prime Minister, the ministers and the secretaries of state, and may include deputy prime ministers and vice-ministers (Article 104). The Prime Minister heads the Government, directs its general policy, coordinates the ministers and keeps the President of the Republic informed about domestic and foreign policy (Article 117). The Council of Ministers brings together the Prime Minister, the deputy prime ministers and the ministers; vice-ministers and secretaries of state may take part, but without a vote (Article 105). The Council sets the general lines of government policy and approves government bills, decree-laws and plans (Article 116).",
+      "id": "Pasal 103 mendefinisikan Pemerintah sebagai organ kedaulatan yang memimpin dan melaksanakan kebijakan umum negara serta organ tertinggi Administrasi Publik. Pemerintah terdiri atas Perdana Menteri, para menteri dan sekretaris negara, dan dapat mencakup wakil perdana menteri dan wakil menteri (Pasal 104). Perdana Menteri memimpin Pemerintah, mengarahkan kebijakan umum, mengoordinasikan para menteri dan memberi informasi kepada Presiden Republik tentang politik dalam dan luar negeri (Pasal 117). Dewan Menteri terdiri atas Perdana Menteri, para wakil perdana menteri dan para menteri; wakil menteri dan sekretaris negara boleh ikut, tetapi tanpa hak suara (Pasal 105). Dewan Menteri menetapkan garis besar kebijakan Pemerintah dan mengesahkan rancangan undang-undang, dekret-undang-undang (decreto-lei) dan rencana (Pasal 116)."
      }
     },
     {
      "heading": {
-      "tet": "Oinsá forma Governu",
-      "pt": "Como se forma um Governo",
-      "en": "How a Government is formed",
-      "id": "Cara membentuk Pemerintah"
+      "tet": "Oinsá forma no hatún Governu",
+      "pt": "Como se forma e como cai um Governo",
+      "en": "How a Government is formed and how it falls",
+      "id": "Cara Pemerintah dibentuk dan jatuh"
      },
      "text": {
-      "tet": "Hafoin eleisaun parlamentár, Prezidente Repúblika rona partidu sira iha Parlamentu. Depois nia nomeia nu'udar Primeiru-Ministru ema ne'ebé partidu ho votu barak liu ka aliansa partidu ho maioria propoin (Artigu 106). Prezidente nomeia membru Governu seluk tuir Primeiru-Ministru nia proposta. Iha loron 30 nia laran hafoin simu pose, Governu tenke hato'o nia programa ba Parlamentu (Artigu 108). Debate la bele liu loron lima. Parlamentu la simu programa de'it se maioria absoluta deputadu sira-nian vota kontra (Artigu 109). Ne'e duni Governu presiza apoiu husi Parlamentu.",
-      "pt": "Depois das eleições legislativas, o Presidente da República ouve os partidos representados no Parlamento. Depois nomeia Primeiro-Ministro a pessoa indicada pelo partido mais votado ou pela aliança de partidos com maioria (artigo 106.º). Os restantes membros do Governo são nomeados pelo Presidente sob proposta do Primeiro-Ministro. No prazo de 30 dias após a tomada de posse, o Governo apresenta o seu programa ao Parlamento (artigo 108.º). O debate dura no máximo cinco dias. O programa só é rejeitado se a maioria absoluta dos deputados votar contra (artigo 109.º). Por isso o Governo precisa do apoio do Parlamento.",
-      "en": "After a parliamentary election, the President of the Republic listens to the parties in Parliament. Then the President appoints as Prime Minister the person proposed by the most voted party or by the alliance of parties with a majority (Article 106). The other members of the Government are appointed by the President on the Prime Minister's proposal. Within 30 days of taking office, the Government must present its programme to Parliament (Article 108). The debate lasts at most five days. The programme is rejected only if an absolute majority of the deputies votes against it (Article 109). This is why the Government needs the support of Parliament.",
-      "id": "Setelah pemilu parlemen, Presiden Republik mendengarkan partai-partai di Parlemen. Kemudian Presiden mengangkat sebagai Perdana Menteri orang yang diusulkan partai dengan suara terbanyak atau aliansi partai yang memiliki mayoritas (Pasal 106). Anggota Pemerintah lainnya diangkat Presiden atas usul Perdana Menteri. Dalam 30 hari setelah dilantik, Pemerintah harus menyampaikan programnya kepada Parlemen (Pasal 108). Perdebatan berlangsung paling lama lima hari. Program hanya ditolak jika mayoritas mutlak anggota parlemen memberikan suara menolak (Pasal 109). Karena itu Pemerintah memerlukan dukungan Parlemen."
+      "tet": "Hafoin eleisaun lejizlativa, Prezidente Repúblika rona partidu sira ne'ebé iha kadeira iha Parlamentu, no nomeia Primeiru-Ministru ema ne'ebé partidu ho votu barak liu ka aliansa ho maioria parlamentár indika (Artigu 106); membru Governu seluk, Prezidente nomeia tuir Primeiru-Ministru nia proposta. Iha loron 30 nia laran, Governu hato'o nia programa ba Parlamentu, ne'ebé bele rejeita de'it ho maioria absoluta deputadu sira-nian (Artigu 108 no 109). Governu hatán ba Prezidente no ba Parlamentu (Artigu 107). Baluk-haat ida (1/4) husi deputadu sira bele propoin mosaun sensura (Artigu 111). Governu monu bainhira lejizlatura foun hahú, bainhira Prezidente simu Primeiru-Ministru nia demisaun, bainhira Primeiru-Ministru mate ka iha inkapasidade, bainhira Parlamentu rejeita programa dala rua tuir malu, bainhira votu konfiansa la pasa ka bainhira maioria absoluta aprova mosaun sensura (Artigu 112).",
+      "pt": "Depois das eleições legislativas, o Presidente da República ouve os partidos com assento no Parlamento e nomeia Primeiro-Ministro a pessoa indicada pelo partido mais votado ou pela aliança com maioria parlamentar (artigo 106.º); os outros membros do Governo são nomeados sob proposta do Primeiro-Ministro. No prazo de 30 dias, o Governo apresenta o seu programa ao Parlamento, que só o pode rejeitar por maioria absoluta dos deputados (artigos 108.º e 109.º). O Governo responde perante o Presidente e o Parlamento (artigo 107.º). Um quarto dos deputados pode propor uma moção de censura (artigo 111.º). O Governo cai com o início de nova legislatura, quando o Presidente aceita a demissão do Primeiro-Ministro, por morte ou incapacidade deste, quando o programa é rejeitado duas vezes seguidas, quando um voto de confiança falha ou quando a maioria absoluta aprova uma moção de censura (artigo 112.º).",
+      "en": "After parliamentary elections, the President of the Republic hears the parties with seats in Parliament and appoints as Prime Minister the person proposed by the party with the most votes or by the alliance with a parliamentary majority (Article 106); the other members are appointed on the Prime Minister's proposal. Within 30 days the Government presents its programme to Parliament, which can reject it only by an absolute majority of deputies (Articles 108 and 109). It answers to the President and Parliament (Article 107). A quarter of the deputies can propose a motion of censure (Article 111). The Government falls when a new legislature begins, when the President accepts the Prime Minister's resignation, if the Prime Minister dies or cannot serve, when the programme is rejected twice in a row, when a vote of confidence fails or when an absolute majority passes a motion of censure (Article 112).",
+      "id": "Setelah pemilu legislatif, Presiden Republik mendengarkan partai-partai yang memiliki kursi di Parlemen dan mengangkat sebagai Perdana Menteri orang yang diusulkan partai dengan suara terbanyak atau aliansi yang memiliki mayoritas parlemen (Pasal 106); anggota Pemerintah lainnya diangkat atas usul Perdana Menteri. Dalam 30 hari Pemerintah menyampaikan programnya kepada Parlemen, yang hanya dapat menolaknya dengan mayoritas mutlak anggota (Pasal 108 dan 109). Pemerintah bertanggung jawab kepada Presiden dan Parlemen (Pasal 107). Seperempat anggota parlemen dapat mengajukan mosi tidak percaya (Pasal 111). Pemerintah jatuh ketika masa legislatif baru dimulai, ketika Presiden menerima pengunduran diri Perdana Menteri, jika Perdana Menteri meninggal atau berhalangan tetap, ketika program ditolak dua kali berturut-turut, ketika mosi percaya gagal, atau ketika mayoritas mutlak menyetujui mosi tidak percaya (Pasal 112)."
      }
     },
     {
@@ -2246,30 +2816,44 @@
     },
     {
      "heading": {
-      "tet": "Responsabilidade no demisaun",
-      "pt": "Responsabilidade e demissão",
-      "en": "Responsibility and dismissal",
-      "id": "Tanggung jawab dan pemberhentian"
+      "tet": "IX Governu Konstitusionál",
+      "pt": "O IX Governo Constitucional",
+      "en": "The IX Constitutional Government",
+      "id": "Pemerintah Konstitusional IX"
      },
      "text": {
-      "tet": "Governu hatán ba Prezidente Repúblika no ba Parlamentu Nasionál (Artigu 107). Governu bele husu votu konfiansa ba Parlamentu (Artigu 110), no deputadu baluk-haat ida (1/4) bele propoin mosaun sensura (Artigu 111). Governu nia knaar remata bainhira lejizlatura foun hahú, bainhira Prezidente simu Primeiru-Ministru nia pedidu demisaun, bainhira Primeiru-Ministru mate ka iha inkapasidade permanente, bainhira Parlamentu la simu nia programa dala rua tuir malu, bainhira votu konfiansa la pasa, ka bainhira maioria absoluta deputadu sira-nian aprova mosaun sensura (Artigu 112).",
-      "pt": "O Governo responde perante o Presidente da República e o Parlamento Nacional (artigo 107.º). Pode pedir ao Parlamento um voto de confiança (artigo 110.º), e um quarto dos deputados pode propor uma moção de censura (artigo 111.º). O Governo é demitido com o início de nova legislatura, quando o Presidente aceita o pedido de demissão do Primeiro-Ministro, por morte ou incapacidade permanente do Primeiro-Ministro, quando o Parlamento rejeita o programa pela segunda vez consecutiva, quando um voto de confiança não é aprovado ou quando a maioria absoluta dos deputados aprova uma moção de censura (artigo 112.º).",
-      "en": "The Government answers to the President of the Republic and to the National Parliament (Article 107). It can ask Parliament for a vote of confidence (Article 110), and one quarter of the deputies can propose a motion of censure (Article 111). The Government's term ends when a new legislature begins, when the President accepts the Prime Minister's resignation, when the Prime Minister dies or is permanently incapacitated, when Parliament rejects its programme twice in a row, when a vote of confidence fails, or when an absolute majority of deputies approves a motion of censure (Article 112).",
-      "id": "Pemerintah bertanggung jawab kepada Presiden Republik dan Parlemen Nasional (Pasal 107). Pemerintah dapat meminta mosi percaya kepada Parlemen (Pasal 110), dan seperempat anggota parlemen dapat mengajukan mosi tidak percaya (Pasal 111). Masa tugas Pemerintah berakhir ketika masa legislatif baru dimulai, ketika Presiden menerima pengunduran diri Perdana Menteri, ketika Perdana Menteri meninggal atau berhalangan tetap, ketika Parlemen menolak programnya dua kali berturut-turut, ketika mosi percaya tidak disetujui, atau ketika mayoritas mutlak anggota parlemen menyetujui mosi tidak percaya (Pasal 112)."
+      "tet": "IX Governu simu pose iha 1 Jullu 2023, ho Kay Rala Xanana Gusmão nu'udar Primeiru-Ministru no ho apoiu husi CNRT no PD. Governu hato'o nia programa ba Parlamentu iha 18 Jullu 2023, no Dekretu-Lei n.º 46/2023 aprova nia orgánika. Governu iha vise-primeiru-ministru na'in rua: Francisco Kalbuadi Lay koordena asuntu ekonómiku no mós Ministru Turizmu no Ambiente; Mariano Assanami Sabino koordena asuntu sosiál no mós Ministru Dezenvolvimentu Rurál no Habitasaun Komunitária. Iha Novembru 2026, Governu nia portál hatudu mós ministru na'in 19, vise-ministru na'in 11 no sekretáriu estadu na'in 15. Sérgio Hornai mak Ministru Justisa desde 15 Fevereiru 2024. Ministru Ensinu Superiór, José Honório, mate iha 21 Abríl 2026; Assanami Sabino lidera interinamente ministériu ne'e, no iha Setembru seidauk iha susesór.",
+      "pt": "O IX Governo tomou posse a 1 de julho de 2023, com Kay Rala Xanana Gusmão como Primeiro-Ministro e o apoio do CNRT e do PD. Apresentou o seu programa ao Parlamento a 18 de julho de 2023, e a sua orgânica foi aprovada pelo Decreto-Lei n.º 46/2023. Tem dois vice-primeiros-ministros: Francisco Kalbuadi Lay coordena os assuntos económicos e é ministro do Turismo e Ambiente; Mariano Assanami Sabino coordena os assuntos sociais e é ministro do Desenvolvimento Rural e Habitação Comunitária. Em novembro de 2026, o portal do Governo listava ainda 19 ministros, 11 vice-ministros e 15 secretários de Estado. Sérgio Hornai é ministro da Justiça desde 15 de fevereiro de 2024. O ministro do Ensino Superior, José Honório, morreu a 21 de abril de 2026; Assanami Sabino passou a dirigir interinamente esse ministério, e em setembro ainda não havia sucessor.",
+      "en": "The IX Government took office on 1 July 2023, with Kay Rala Xanana Gusmão as Prime Minister and the support of CNRT and PD. It presented its programme to Parliament on 18 July 2023, and its structure was approved by Decree-Law No. 46/2023. It has two deputy prime ministers: Francisco Kalbuadi Lay coordinates economic affairs and is Minister of Tourism and Environment; Mariano Assanami Sabino coordinates social affairs and is Minister of Rural Development and Community Housing. In November 2026 the Government portal also listed 19 ministers, 11 vice-ministers and 15 secretaries of state. Sérgio Hornai has been Minister of Justice since 15 February 2024. The Minister of Higher Education, José Honório, died on 21 April 2026; Assanami Sabino has led that ministry on an interim basis, and in September there was still no successor.",
+      "id": "Pemerintah IX dilantik pada 1 Juli 2023, dengan Kay Rala Xanana Gusmão sebagai Perdana Menteri dan dukungan CNRT serta PD. Pemerintah menyampaikan programnya kepada Parlemen pada 18 Juli 2023, dan struktur organisasinya disahkan dengan Dekret-Undang-Undang No. 46/2023. Ada dua wakil perdana menteri: Francisco Kalbuadi Lay mengoordinasikan urusan ekonomi dan menjabat Menteri Pariwisata dan Lingkungan Hidup; Mariano Assanami Sabino mengoordinasikan urusan sosial dan menjabat Menteri Pembangunan Perdesaan dan Perumahan Masyarakat. Pada November 2026 portal Pemerintah juga mencantumkan 19 menteri, 11 wakil menteri dan 15 sekretaris negara. Sérgio Hornai menjadi Menteri Kehakiman sejak 15 Februari 2024. Menteri Pendidikan Tinggi, José Honório, meninggal pada 21 April 2026; Assanami Sabino memimpin kementerian itu untuk sementara, dan pada September belum ada penggantinya."
      }
     },
     {
      "heading": {
-      "tet": "Governu sira desde 2002",
-      "pt": "Governos desde 2002",
-      "en": "Governments since 2002",
-      "id": "Pemerintahan sejak 2002"
+      "tet": "Ministériu sira IX Governu nian",
+      "pt": "Os ministérios do IX Governo",
+      "en": "The ministries of the IX Government",
+      "id": "Kementerian Pemerintah IX"
      },
      "text": {
-      "tet": "Desde 2002, Timór-Leste iha ona Governu konstitusionál sia. Mari Alkatiri husi FRETILIN lidera Governu dahuluk (2002–2006). Hafoin krize 2006, José Ramos-Horta (2006–2007) no Estanislau da Silva (2007) lidera Governu badak rua. Xanana Gusmão lidera Governu IV no V (2007–2015), Rui Maria de Araújo lidera Governu unidade nasionál (2015–2017), Mari Alkatiri lidera Governu VII (2017–2018) no Taur Matan Ruak lidera Governu VIII (2018–2023). IX Governu Konstitusionál, ho Xanana Gusmão fali nu'udar xefe, ho CNRT no PD, simu pose iha 1 Jullu 2023. Governu nia sede mak Palásiu Governu, iha Dili nia tasi-ibun.",
-      "pt": "Desde 2002 Timor-Leste teve nove governos constitucionais. Mari Alkatiri, da FRETILIN, liderou o primeiro (2002–2006). Depois da crise de 2006, José Ramos-Horta (2006–2007) e Estanislau da Silva (2007) chefiaram dois governos curtos. Xanana Gusmão liderou o IV e o V Governos (2007–2015), Rui Maria de Araújo um governo de unidade nacional (2015–2017), Mari Alkatiri o VII (2017–2018) e Taur Matan Ruak o VIII (2018–2023). O IX Governo Constitucional, de novo chefiado por Xanana Gusmão, com o CNRT e o PD, tomou posse a 1 de julho de 2023. A sede do Governo é o Palácio do Governo, junto ao mar de Díli.",
-      "en": "Since 2002 Timor-Leste has had nine constitutional governments. Mari Alkatiri of FRETILIN led the first (2002–2006). After the 2006 crisis, José Ramos-Horta (2006–2007) and Estanislau da Silva (2007) led two short governments. Xanana Gusmão led the fourth and fifth governments (2007–2015), Rui Maria de Araújo a government of national unity (2015–2017), Mari Alkatiri the seventh (2017–2018) and Taur Matan Ruak the eighth (2018–2023). The ninth Constitutional Government, led again by Xanana Gusmão with CNRT and PD, took office on 1 July 2023. The Government is based in the Government Palace on the Dili waterfront.",
-      "id": "Sejak 2002 Timor-Leste telah memiliki sembilan pemerintahan konstitusional. Mari Alkatiri dari FRETILIN memimpin yang pertama (2002–2006). Setelah krisis 2006, José Ramos-Horta (2006–2007) dan Estanislau da Silva (2007) memimpin dua pemerintahan singkat. Xanana Gusmão memimpin pemerintahan keempat dan kelima (2007–2015), Rui Maria de Araújo pemerintahan persatuan nasional (2015–2017), Mari Alkatiri yang ketujuh (2017–2018) dan Taur Matan Ruak yang kedelapan (2018–2023). Pemerintahan Konstitusional IX, kembali dipimpin Xanana Gusmão bersama CNRT dan PD, dilantik pada 1 Juli 2023. Kantor pusat Pemerintah adalah Istana Pemerintah di tepi laut Dili."
+      "tet": "Ministériu seluk sira no sira-nia ministru mak: Prezidénsia Konsellu-Ministru (Agio Pereira); Finansas (Santina Viegas Cardoso); Negósiu Estranjeiru no Kooperasaun (Bendito Freitas); Justisa (Sérgio Hornai); Administrasaun Estatál (Tomás Cabral); Saúde (Élia dos Reis Amaral); Edukasaun (Dulce de Jesus Soares); Ensinu Superiór, Siénsia no Kultura; Asuntu Kombatente Libertasaun Nasionál (Gil da Costa Monteiro \"Oan Soru\"); Obras Públikas (Samuel Marçal); Transporte no Komunikasaun (Miguel Manetelu); Komérsiu no Indústria (Filipus Nino Pereira); Agrikultura, Pekuária, Peska no Floresta (Marcos da Cruz); Defeza (Donaciano Gomes); Petróleu no Rekursu Minerál (Francisco Monteiro); Interiór (Francisco da Costa Guterres); Solidariedade Sosiál no Inkluzaun (Verónica das Dores); Juventude, Desportu, Arte no Kultura (Nelyo Isaac Sarmento); no Planeamentu no Investimentu Estratéjiku (Gastão de Sousa). Vise-ministru no sekretáriu estadu sira ajuda ministru sira iha área hanesan ASEAN, ospitál, rai, eletrisidade ka protesaun sivíl.",
+      "pt": "Os outros ministérios e os seus ministros são: Presidência do Conselho de Ministros (Agio Pereira); Finanças (Santina Viegas Cardoso); Negócios Estrangeiros e Cooperação (Bendito Freitas); Justiça (Sérgio Hornai); Administração Estatal (Tomás Cabral); Saúde (Élia dos Reis Amaral); Educação (Dulce de Jesus Soares); Ensino Superior, Ciência e Cultura; Assuntos dos Combatentes da Libertação Nacional (Gil da Costa Monteiro «Oan Soru»); Obras Públicas (Samuel Marçal); Transportes e Comunicações (Miguel Manetelu); Comércio e Indústria (Filipus Nino Pereira); Agricultura, Pecuária, Pescas e Florestas (Marcos da Cruz); Defesa (Donaciano Gomes); Petróleo e Recursos Minerais (Francisco Monteiro); Interior (Francisco da Costa Guterres); Solidariedade Social e Inclusão (Verónica das Dores); Juventude, Desporto, Arte e Cultura (Nelyo Isaac Sarmento); e Planeamento e Investimento Estratégico (Gastão de Sousa). Os vice-ministros e os secretários de Estado ajudam os ministros em áreas como a ASEAN, os hospitais, as terras, a eletricidade ou a proteção civil.",
+      "en": "The other ministries and their ministers are: Presidency of the Council of Ministers (Agio Pereira); Finance (Santina Viegas Cardoso); Foreign Affairs and Cooperation (Bendito Freitas); Justice (Sérgio Hornai); State Administration (Tomás Cabral); Health (Élia dos Reis Amaral); Education (Dulce de Jesus Soares); Higher Education, Science and Culture; National Liberation Combatants' Affairs (Gil da Costa Monteiro \"Oan Soru\"); Public Works (Samuel Marçal); Transport and Communications (Miguel Manetelu); Commerce and Industry (Filipus Nino Pereira); Agriculture, Livestock, Fisheries and Forestry (Marcos da Cruz); Defence (Donaciano Gomes); Petroleum and Mineral Resources (Francisco Monteiro); Interior (Francisco da Costa Guterres); Social Solidarity and Inclusion (Verónica das Dores); Youth, Sport, Art and Culture (Nelyo Isaac Sarmento); and Planning and Strategic Investment (Gastão de Sousa). Vice-ministers and secretaries of state help the ministers in areas such as ASEAN, hospitals, land, electricity and civil protection.",
+      "id": "Kementerian lainnya beserta menterinya adalah: Kepresidenan Dewan Menteri (Agio Pereira); Keuangan (Santina Viegas Cardoso); Luar Negeri dan Kerja Sama (Bendito Freitas); Kehakiman (Sérgio Hornai); Administrasi Negara (Tomás Cabral); Kesehatan (Élia dos Reis Amaral); Pendidikan (Dulce de Jesus Soares); Pendidikan Tinggi, Ilmu Pengetahuan dan Kebudayaan; Urusan Pejuang Pembebasan Nasional (Gil da Costa Monteiro \"Oan Soru\"); Pekerjaan Umum (Samuel Marçal); Perhubungan dan Komunikasi (Miguel Manetelu); Perdagangan dan Perindustrian (Filipus Nino Pereira); Pertanian, Peternakan, Perikanan dan Kehutanan (Marcos da Cruz); Pertahanan (Donaciano Gomes); Perminyakan dan Sumber Daya Mineral (Francisco Monteiro); Dalam Negeri (Francisco da Costa Guterres); Solidaritas Sosial dan Inklusi (Verónica das Dores); Pemuda, Olahraga, Seni dan Kebudayaan (Nelyo Isaac Sarmento); serta Perencanaan dan Investasi Strategis (Gastão de Sousa). Wakil menteri dan sekretaris negara membantu para menteri dalam bidang seperti ASEAN, rumah sakit, pertanahan, listrik dan perlindungan sipil."
+     }
+    },
+    {
+     "heading": {
+      "tet": "Governu sira desde 2002 no Palásiu Governu",
+      "pt": "Governos desde 2002 e o Palácio do Governo",
+      "en": "Governments since 2002 and the Government Palace",
+      "id": "Pemerintah sejak 2002 dan Istana Pemerintah"
+     },
+     "text": {
+      "tet": "Desde 2002 iha ona governu konstitusionál sia. Mari Alkatiri, husi FRETILIN, lidera I Governu, ne'ebé simu pose iha 20 Maiu 2002 no remata hafoin krize 2006. José Ramos-Horta (2006–2007) no Estanislau da Silva (2007) lidera governu badak rua. Xanana Gusmão lidera IV no V Governu (2007–2015), Rui Maria de Araújo VI (2015–2017), Mari Alkatiri VII (2017–2018) no Taur Matan Ruak VIII (2018–2023). Governu servisu iha Palásiu Governu, iha Avenida Marjinál Dili, ne'ebé harii entre tinan 1950 no 1960 ba administrasaun koloniál portugeza. Iha nia oin, FRETILIN proklama independénsia iha 28 Novembru 1975; iha tempu okupasaun, palásiu ne'e sai gabinete governadór indonéziu nian no, husi 1999 to'o 2002, sede misaun ONU nian. Governu nia sítiu ofisiál mak timor-leste.gov.tl.",
+      "pt": "Desde 2002 houve nove governos constitucionais. Mari Alkatiri, da FRETILIN, liderou o I Governo, que tomou posse a 20 de maio de 2002 e terminou depois da crise de 2006. José Ramos-Horta (2006–2007) e Estanislau da Silva (2007) chefiaram dois governos curtos. Xanana Gusmão liderou o IV e o V Governos (2007–2015), Rui Maria de Araújo o VI (2015–2017), Mari Alkatiri o VII (2017–2018) e Taur Matan Ruak o VIII (2018–2023). O Governo trabalha no Palácio do Governo, na Avenida Marginal de Díli, construído entre os anos 1950 e 1960 para a administração colonial portuguesa. Diante dele, a FRETILIN proclamou a independência a 28 de novembro de 1975; durante a ocupação foi o gabinete do governador indonésio e, de 1999 a 2002, a sede da missão da ONU. O sítio oficial do Governo é timor-leste.gov.tl.",
+      "en": "Since 2002 there have been nine constitutional governments. Mari Alkatiri of FRETILIN led the I Government, which took office on 20 May 2002 and ended after the 2006 crisis. José Ramos-Horta (2006–2007) and Estanislau da Silva (2007) led two short governments. Xanana Gusmão led the IV and V Governments (2007–2015), Rui Maria de Araújo the VI (2015–2017), Mari Alkatiri the VII (2017–2018) and Taur Matan Ruak the VIII (2018–2023). The Government works in the Government Palace on the Avenida Marginal in Dili, built between the 1950s and the 1960s for the Portuguese colonial administration. In front of it FRETILIN proclaimed independence on 28 November 1975; during the occupation it was the Indonesian governor's office and, from 1999 to 2002, the headquarters of the UN mission. The Government's official website is timor-leste.gov.tl.",
+      "id": "Sejak 2002 sudah ada sembilan pemerintahan konstitusional. Mari Alkatiri dari FRETILIN memimpin Pemerintah I, yang dilantik pada 20 Mei 2002 dan berakhir setelah krisis 2006. José Ramos-Horta (2006–2007) dan Estanislau da Silva (2007) memimpin dua pemerintahan singkat. Xanana Gusmão memimpin Pemerintah IV dan V (2007–2015), Rui Maria de Araújo Pemerintah VI (2015–2017), Mari Alkatiri Pemerintah VII (2017–2018) dan Taur Matan Ruak Pemerintah VIII (2018–2023). Pemerintah berkantor di Istana Pemerintah di Avenida Marginal, Dili, yang dibangun antara tahun 1950-an dan 1960-an untuk pemerintahan kolonial Portugis. Di depannya FRETILIN memproklamasikan kemerdekaan pada 28 November 1975; pada masa pendudukan istana itu menjadi kantor gubernur Indonesia dan, dari 1999 sampai 2002, markas misi PBB. Situs resmi Pemerintah adalah timor-leste.gov.tl."
      }
     }
    ],
@@ -2301,7 +2885,7 @@
       "en": "Kay Rala Xanana Gusmão (since 1 July 2023)",
       "id": "Kay Rala Xanana Gusmão (sejak 1 Juli 2023)"
      },
-     "year": 2025
+     "year": 2026
     },
     {
      "label": {
@@ -2316,7 +2900,22 @@
       "en": "IX Constitutional Government (CNRT and PD)",
       "id": "Pemerintahan Konstitusional IX (CNRT dan PD)"
      },
-     "year": 2025
+     "year": 2026
+    },
+    {
+     "label": {
+      "tet": "Membru Governu (portál, Novembru 2026)",
+      "pt": "Membros do Governo (portal, novembro de 2026)",
+      "en": "Members of the Government (portal, November 2026)",
+      "id": "Anggota Pemerintah (portal, November 2026)"
+     },
+     "value": {
+      "tet": "PM, vise-PM 2, ministru 19, vise-ministru 11, sekretáriu estadu 15",
+      "pt": "PM, 2 vice-PM, 19 ministros, 11 vice-ministros, 15 secretários de Estado",
+      "en": "PM, 2 deputy PMs, 19 ministers, 11 vice-ministers, 15 secretaries of state",
+      "id": "PM, 2 wakil PM, 19 menteri, 11 wakil menteri, 15 sekretaris negara"
+     },
+     "year": 2026
     },
     {
      "label": {
@@ -2326,7 +2925,7 @@
       "id": "Pemerintahan konstitusional sejak 2002"
      },
      "value": "9",
-     "year": 2025
+     "year": 2026
     },
     {
      "label": {
@@ -2344,17 +2943,40 @@
     },
     {
      "label": {
+      "tet": "Orgánika",
+      "pt": "Orgânica",
+      "en": "Organic law",
+      "id": "Undang-undang organik"
+     },
+     "value": {
+      "tet": "Dekretu-Lei n.º 46/2023",
+      "pt": "Decreto-Lei n.º 46/2023",
+      "en": "Decree-Law No. 46/2023",
+      "id": "Dekret-Undang-Undang No. 46/2023"
+     }
+    },
+    {
+     "label": {
       "tet": "Sede",
       "pt": "Sede",
       "en": "Seat",
       "id": "Kantor pusat"
      },
      "value": {
-      "tet": "Palásiu Governu, Dili",
-      "pt": "Palácio do Governo, Díli",
-      "en": "Government Palace, Dili",
-      "id": "Istana Pemerintah, Dili"
+      "tet": "Palásiu Governu, Avenida Marjinál, Dili",
+      "pt": "Palácio do Governo, Avenida Marginal, Díli",
+      "en": "Government Palace, Avenida Marginal, Dili",
+      "id": "Istana Pemerintah, Avenida Marginal, Dili"
      }
+    },
+    {
+     "label": {
+      "tet": "Sítiu ofisiál",
+      "pt": "Sítio oficial",
+      "en": "Official website",
+      "id": "Situs resmi"
+     },
+     "value": "timor-leste.gov.tl"
     }
    ],
    "timeline": [
@@ -2368,6 +2990,15 @@
      }
     },
     {
+     "date": "2006-06-26",
+     "title": {
+      "tet": "I Governu remata hafoin Prezidente simu Primeiru-Ministru nia demisaun",
+      "pt": "Termina o I Governo, depois de o Presidente aceitar a demissão do Primeiro-Ministro",
+      "en": "The I Government ends after the President accepts the Prime Minister's resignation",
+      "id": "Pemerintah I berakhir setelah Presiden menerima pengunduran diri Perdana Menteri"
+     }
+    },
+    {
      "date": "2007-08-08",
      "title": {
       "tet": "Xanana Gusmão simu pose nu'udar Primeiru-Ministru",
@@ -2377,12 +3008,39 @@
      }
     },
     {
+     "date": "2015-02-16",
+     "title": {
+      "tet": "VI Governu (Rui Maria de Araújo) simu pose",
+      "pt": "Toma posse o VI Governo (Rui Maria de Araújo)",
+      "en": "The VI Government (Rui Maria de Araújo) takes office",
+      "id": "Pemerintah VI (Rui Maria de Araújo) dilantik"
+     }
+    },
+    {
      "date": "2023-07-01",
      "title": {
       "tet": "IX Governu Konstitusionál simu pose",
       "pt": "Toma posse o IX Governo Constitucional",
       "en": "The IX Constitutional Government takes office",
       "id": "Pemerintahan Konstitusional IX dilantik"
+     }
+    },
+    {
+     "date": "2023-07-18",
+     "title": {
+      "tet": "Primeiru-Ministru hato'o IX Governu nia programa ba Parlamentu",
+      "pt": "O Primeiro-Ministro apresenta o programa do IX Governo ao Parlamento",
+      "en": "The Prime Minister presents the IX Government's programme to Parliament",
+      "id": "Perdana Menteri menyampaikan program Pemerintah IX kepada Parlemen"
+     }
+    },
+    {
+     "date": "2024-02-15",
+     "title": {
+      "tet": "Sérgio Hornai simu pose nu'udar Ministru Justisa",
+      "pt": "Sérgio Hornai toma posse como ministro da Justiça",
+      "en": "Sérgio Hornai takes office as Minister of Justice",
+      "id": "Sérgio Hornai dilantik sebagai Menteri Kehakiman"
      }
     }
    ],
@@ -2396,8 +3054,8 @@
     }
    },
    "wiki": {
-    "en": "Prime Minister of East Timor",
-    "pt": "Primeiro-ministro de Timor-Leste",
+    "en": "Prime Minister of Timor-Leste",
+    "pt": "Lista de primeiros-ministros de Timor-Leste",
     "id": "Perdana Menteri Timor Leste"
    },
    "related": [
@@ -2409,14 +3067,22 @@
     "tl.politics.parliament",
     "tl.politics.system",
     "tl.economy.petroleum_fund",
-    "tl.economy.development_plan"
+    "tl.economy.development_plan",
+    "tl.institutions.ministries",
+    "tl.institutions.overview",
+    "tl.politics.president_office"
    ],
    "tags": [
     "governu",
     "government",
+    "governo",
+    "pemerintah",
     "primeiru-ministru",
     "prime minister",
-    "konsellu-ministru"
+    "konsellu-ministru",
+    "council of ministers",
+    "ministériu",
+    "IX governu"
    ],
    "quiz": [
     {
@@ -2460,6 +3126,48 @@
       "id": "Pasal 117: Perdana Menteri adalah kepala Pemerintah dan memimpin Dewan Menteri."
      },
      "difficulty": 1
+    },
+    {
+     "q": {
+      "tet": "Governu servisu iha ne'ebé?",
+      "pt": "Onde trabalha o Governo?",
+      "en": "Where does the Government work?",
+      "id": "Di mana Pemerintah berkantor?"
+     },
+     "options": [
+      {
+       "tet": "Iha Palásiu Governu, Dili",
+       "pt": "No Palácio do Governo, em Díli",
+       "en": "In the Government Palace, Dili",
+       "id": "Di Istana Pemerintah, Dili"
+      },
+      {
+       "tet": "Iha Palásiu Prezidensiál Nicolau Lobato",
+       "pt": "No Palácio Presidencial Nicolau Lobato",
+       "en": "In the Nicolau Lobato Presidential Palace",
+       "id": "Di Istana Kepresidenan Nicolau Lobato"
+      },
+      {
+       "tet": "Iha Parlamentu Nasionál",
+       "pt": "No Parlamento Nacional",
+       "en": "In the National Parliament",
+       "id": "Di Parlemen Nasional"
+      },
+      {
+       "tet": "Iha Tribunál Rekursu",
+       "pt": "No Tribunal de Recurso",
+       "en": "In the Court of Appeal",
+       "id": "Di Pengadilan Banding"
+      }
+     ],
+     "answer": 0,
+     "why": {
+      "tet": "Desde Maiu 2002, Palásiu Governu iha Avenida Marjinál Dili mak Primeiru-Ministru no Governu nia fatin servisu.",
+      "pt": "Desde maio de 2002, o Palácio do Governo, na Avenida Marginal de Díli, é o local de trabalho do Primeiro-Ministro e do Governo.",
+      "en": "Since May 2002 the Government Palace on the Avenida Marginal in Dili has been the workplace of the Prime Minister and the Government.",
+      "id": "Sejak Mei 2002 Istana Pemerintah di Avenida Marginal, Dili, menjadi tempat kerja Perdana Menteri dan Pemerintah."
+     },
+     "difficulty": 2
     },
     {
      "q": {
@@ -2631,6 +3339,48 @@
     },
     {
      "q": {
+      "tet": "Vise-primeiru-ministru se mak koordena asuntu ekonómiku iha IX Governu?",
+      "pt": "Que vice-primeiro-ministro coordena os assuntos económicos no IX Governo?",
+      "en": "Which deputy prime minister coordinates economic affairs in the IX Government?",
+      "id": "Wakil perdana menteri mana yang mengoordinasikan urusan ekonomi dalam Pemerintah IX?"
+     },
+     "options": [
+      {
+       "tet": "Mariano Assanami Sabino",
+       "pt": "Mariano Assanami Sabino",
+       "en": "Mariano Assanami Sabino",
+       "id": "Mariano Assanami Sabino"
+      },
+      {
+       "tet": "Francisco Kalbuadi Lay",
+       "pt": "Francisco Kalbuadi Lay",
+       "en": "Francisco Kalbuadi Lay",
+       "id": "Francisco Kalbuadi Lay"
+      },
+      {
+       "tet": "Agio Pereira",
+       "pt": "Agio Pereira",
+       "en": "Agio Pereira",
+       "id": "Agio Pereira"
+      },
+      {
+       "tet": "Bendito Freitas",
+       "pt": "Bendito Freitas",
+       "en": "Bendito Freitas",
+       "id": "Bendito Freitas"
+      }
+     ],
+     "answer": 1,
+     "why": {
+      "tet": "Francisco Kalbuadi Lay koordena asuntu ekonómiku no mós Ministru Turizmu no Ambiente; Mariano Assanami Sabino koordena asuntu sosiál.",
+      "pt": "Francisco Kalbuadi Lay coordena os assuntos económicos e é ministro do Turismo e Ambiente; Mariano Assanami Sabino coordena os assuntos sociais.",
+      "en": "Francisco Kalbuadi Lay coordinates economic affairs and is Minister of Tourism and Environment; Mariano Assanami Sabino coordinates social affairs.",
+      "id": "Francisco Kalbuadi Lay mengoordinasikan urusan ekonomi dan menjabat Menteri Pariwisata dan Lingkungan Hidup; Mariano Assanami Sabino mengoordinasikan urusan sosial."
+     },
+     "difficulty": 12
+    },
+    {
+     "q": {
       "tet": "Saida mak LA hakotu Governu nia knaar tuir Artigu 112?",
       "pt": "Qual destes NÃO provoca a demissão do Governo (artigo 112.º)?",
       "en": "Which of these does NOT end the Government's term under Article 112?",
@@ -2707,16 +3457,82 @@
      "url": "https://timor-leste.gov.tl/wp-content/uploads/2012/08/CRDTL-Anotada_PORTAL.pdf",
      "accessed": "2026-10-27",
      "licence": "© Governo de Timor-Leste"
+    },
+    {
+     "title": "Composição do IX Governo Constitucional",
+     "publisher": "Governo de Timor-Leste (timor-leste.gov.tl)",
+     "url": "https://timor-leste.gov.tl/?p=13&lang=pt",
+     "accessed": "2026-11-11",
+     "licence": "© Governo de Timor-Leste"
+    },
+    {
+     "title": "Council of Ministers of the 9th Constitutional Government",
+     "publisher": "Governo de Timor-Leste (timor-leste.gov.tl)",
+     "url": "https://timor-leste.gov.tl/?cat=38&lang=en",
+     "accessed": "2026-11-11",
+     "licence": "© Governo de Timor-Leste"
+    },
+    {
+     "title": "Biography of Kay Rala Xanana Gusmão",
+     "publisher": "Governo de Timor-Leste (timor-leste.gov.tl)",
+     "url": "https://timor-leste.gov.tl/?p=32776&lang=en",
+     "accessed": "2026-11-11",
+     "licence": "© Governo de Timor-Leste"
+    },
+    {
+     "title": "Historical Archive: succession of governments, general elections and legislatures",
+     "publisher": "Governo de Timor-Leste (timor-leste.gov.tl)",
+     "url": "https://timor-leste.gov.tl/?cat=25&lang=en",
+     "accessed": "2026-11-11",
+     "licence": "© Governo de Timor-Leste"
+    },
+    {
+     "title": "Discurso do Primeiro-Ministro na apresentação do Programa do IX Governo Constitucional no Parlamento Nacional (18 de julho de 2023)",
+     "publisher": "Governo de Timor-Leste (timor-leste.gov.tl)",
+     "url": "https://timor-leste.gov.tl/wp-content/uploads/2023/07/2023-07-18-Apresentac%cc%a7a%cc%83o-Programa-IX-Governo-Parlamento-Nacional.pdf",
+     "accessed": "2026-11-11",
+     "licence": "© Governo de Timor-Leste"
+    },
+    {
+     "title": "IX Constitutional Government of Timor-Leste",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/IX_Constitutional_Government_of_Timor-Leste",
+     "accessed": "2026-11-11",
+     "licence": "CC BY-SA 4.0"
+    },
+    {
+     "title": "Government Palace, Dili",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Government_Palace,_Dili",
+     "accessed": "2026-11-11",
+     "licence": "CC BY-SA 4.0"
+    },
+    {
+     "title": "Assanami lidera provizóriu Ministériu Ensinu Superiór, Siénsia no Kultura (22 Abríl 2026)",
+     "publisher": "Tatoli — Agência Noticiosa de Timor-Leste",
+     "url": "https://tatoli.tl/2026/04/22/assanami-lidera-provizoriu-ministeriu-ensinu-superior-siensia-no-kultura/",
+     "accessed": "2026-11-11",
+     "licence": "© Tatoli"
+    },
+    {
+     "title": "Xanana: Lista substitui Ministru Ensinu Superiór mai husi Assanami (11 Setembru 2026)",
+     "publisher": "Tatoli — Agência Noticiosa de Timor-Leste",
+     "url": "https://tatoli.tl/2026/09/11/xanana-lista-substitui-ministru-ensinu-superior-mai-husi-assanami/",
+     "accessed": "2026-11-11",
+     "licence": "© Tatoli"
     }
    ],
    "review": {
     "status": "draft",
-    "notes": "Check: IX Government sworn in on 1 July 2023 and still in office (from memory; Tatoli confirms the CNRT–PD coalition agreement of June 2023); list of Prime Ministers and government numbers; 'government of national unity' label for the VI Government; location of the Government Palace. Tetun: 'dekretu-lei', 'Vise-Primeiru-Ministru', 'mosaun sensura', 'votu konfiansa'. Wiki en 'Prime Minister of East Timor' may now redirect to 'Prime Minister of Timor-Leste'."
+    "notes": "Updated 2026-11-11. Ministers' names are from the Government portal composition page (timor-leste.gov.tl/?p=13, read 11 Nov 2026): PM, 2 deputy PMs, 19 ministers, 11 vice-ministers (incl. Vice-Minister of Foreign Affairs Jesuína Gomes, sworn in 5 March 2026; Wikipedia's 2023 list has only 10) and 15 secretaries of state. The portal still lists José Honório as Minister of Higher Education, but Tatoli reports his death on 21 April 2026, the interim lead of Vice-PM Assanami Sabino (22 April 2026) and no successor yet on 11 Sept 2026 — check whether a minister was appointed after September. Hornai sworn in 15 Feb 2024 (Wikipedia; portal: Benevides minister until his death on 20 Jan 2024). Programme presented 18 July 2023 (PM speech PDF). Dates of the II/III Governments differ between sources (official archive: II sworn in 18 July 2006, III on 18 May 2007; leaders.json: 10 July 2006 and 19 May 2007) — the text gives only years. Decree-Law 46/2023 is dated 27 July in other Lafa files and 28 July on the Council of Ministers page — day left out. Palace history (built 1950s–1960s, 1975 proclamation in front of it, Indonesian governor's office, UNAMET/UNTAET HQ) from English Wikipedia; address 'Avenida Marginal' from the PM's 2023 speech letterhead. Tetun to check: ministry names (follow institutions.json), 'Avenida Marjinál', 'baluk-haat ida', 'mosaun sensura', 'votu konfiansa', 'susesór'."
    }
   },
   {
    "id": "tl.politics.courts",
    "category": "politics",
+   "also": [
+    "institutions"
+   ],
    "title": {
     "tet": "Tribunál no justisa",
     "pt": "Os tribunais e a justiça",
@@ -2724,16 +3540,20 @@
     "id": "Pengadilan dan keadilan"
    },
    "summary": {
-    "tet": "Tribunál sira mak órgaun soberania ne'ebé hala'o justisa ho povu nia naran. Tribunál sira independente no halo tuir de'it Lei-Inan no lei. To'o Tribunál Supremu Justisa harii, Tribunál Rekursu iha Dili mak tribunál aas liu.",
-    "pt": "Os tribunais são um órgão de soberania que administra a justiça em nome do povo. São independentes e só obedecem à Constituição e à lei. Enquanto o Supremo Tribunal de Justiça não existir, o Tribunal de Recurso, em Díli, é o tribunal mais alto.",
-    "en": "The courts are an organ of sovereignty that administers justice in the name of the people. They are independent and obey only the Constitution and the law. Until the Supreme Court of Justice is set up, the Court of Appeal in Dili is the highest court.",
-    "id": "Pengadilan adalah organ kedaulatan yang mengadili atas nama rakyat. Pengadilan bersifat independen dan hanya tunduk pada Konstitusi dan undang-undang. Selama Mahkamah Agung belum dibentuk, Pengadilan Banding di Dili menjadi pengadilan tertinggi."
+    "tet": "Tribunál sira mak órgaun soberania ne'ebé hala'o justisa ho povu nia naran. Tribunál sira independente no halo tuir de'it Lei-Inan no lei. To'o Tribunál Supremu Justisa harii, Tribunál Rekursu iha Dili mak tribunál aas liu; juís ba tribunál supremu ne'e hetan rekrutamentu iha 2026.",
+    "pt": "Os tribunais são um órgão de soberania que administra a justiça em nome do povo. São independentes e só obedecem à Constituição e à lei. Enquanto o Supremo Tribunal de Justiça não existir, o Tribunal de Recurso, em Díli, é o tribunal mais alto; os juízes do Supremo estão a ser recrutados em 2026.",
+    "en": "The courts are an organ of sovereignty that administers justice in the name of the people. They are independent and obey only the Constitution and the law. Until the Supreme Court of Justice exists, the Court of Appeal in Dili is the highest court; the Supreme Court's judges are being recruited in 2026.",
+    "id": "Pengadilan adalah organ kedaulatan yang mengadili atas nama rakyat. Pengadilan bersifat independen dan hanya tunduk pada Konstitusi dan undang-undang. Selama Mahkamah Agung belum ada, Pengadilan Banding di Dili menjadi pengadilan tertinggi; hakim Mahkamah Agung sedang direkrut pada 2026."
    },
    "levels": [
     "eb3",
     "es",
     "sup"
    ],
+   "period": {
+    "from": 2000,
+    "to": 2026
+   },
    "sections": [
     {
      "heading": {
@@ -2757,52 +3577,66 @@
       "id": "Pengadilan di Timor-Leste"
      },
      "text": {
-      "tet": "Lei-Inan hatuur tribunál kategoria tolu: Tribunál Supremu Justisa no tribunál judisiál seluk; Tribunál Superiór Administrativu, Fiskál no Kontas, ho tribunál administrativu primeira instánsia; no tribunál militár sira (Artigu 123). Lei-Inan bandu tribunál espesiál ba krime balu de'it. Tribunál Supremu Justisa tenke sai tribunál aas liu no deside lia konstitusionál no eleitorál (Artigu 124 to'o 126). Tanba tribunál ne'e seidauk harii (2025), regra tempu-leet nian (Artigu 164) fó nia knaar ba tribunál aas liu ne'ebé iha: Tribunál Rekursu iha Dili. Iha nia okos iha tribunál distritál primeira instánsia iha Dili, Baukau, Suai no Oe-Kusi.",
-      "pt": "A Constituição prevê três categorias de tribunais: o Supremo Tribunal de Justiça e os demais tribunais judiciais; o Tribunal Superior Administrativo, Fiscal e de Contas e os tribunais administrativos de primeira instância; e os tribunais militares (artigo 123.º). São proibidos tribunais especiais para julgar certas categorias de crimes. O Supremo Tribunal de Justiça deve ser o tribunal mais alto e decidir as questões constitucionais e eleitorais (artigos 124.º a 126.º). Como ainda não foi criado (2025), uma norma transitória (artigo 164.º) atribui as suas funções ao tribunal mais alto existente: o Tribunal de Recurso, em Díli. Abaixo dele estão os tribunais distritais de primeira instância, em Díli, Baucau, Suai e Oé-Cusse.",
-      "en": "The Constitution plans three kinds of courts: the Supreme Court of Justice and other judicial courts; the High Administrative, Tax and Audit Court with first-instance administrative courts; and military courts (Article 123). Special courts for certain kinds of crime are forbidden. The Supreme Court of Justice is meant to be the highest court and to decide constitutional and electoral questions (Articles 124–126). Because it has not yet been created (2025), a transitional rule (Article 164) gives its work to the highest existing court: the Court of Appeal (Tribunal de Recurso) in Dili. Below it are the district courts of first instance in Dili, Baucau, Suai and Oé-Cusse.",
-      "id": "Konstitusi merencanakan tiga jenis pengadilan: Mahkamah Agung dan pengadilan umum lainnya; Pengadilan Tinggi Tata Usaha Negara, Pajak dan Keuangan beserta pengadilan tata usaha tingkat pertama; serta pengadilan militer (Pasal 123). Pengadilan khusus untuk jenis kejahatan tertentu dilarang. Mahkamah Agung seharusnya menjadi pengadilan tertinggi dan memutus perkara konstitusi dan pemilu (Pasal 124–126). Karena mahkamah itu belum dibentuk (2025), ketentuan peralihan (Pasal 164) memberikan tugasnya kepada pengadilan tertinggi yang ada: Pengadilan Banding (Tribunal de Recurso) di Dili. Di bawahnya ada pengadilan distrik tingkat pertama di Dili, Baucau, Suai dan Oé-Cusse."
+      "tet": "Lei-Inan hatuur tribunál kategoria tolu: Tribunál Supremu Justisa no tribunál judisiál seluk; Tribunál Superiór Administrativu, Fiskál no Kontas, ho tribunál administrativu no fiskál primeira instánsia; no tribunál militár sira (Artigu 123). Lei-Inan bandu tribunál espesiál ba krime balu de'it. To'o Tribunál Supremu Justisa harii, tribunál aas liu ne'ebé iha mak hala'o nia knaar (Artigu 164): Tribunál Rekursu, iha Kaikoli, Dili, ne'ebé iha mós Kámara Kontas. Iha nia okos iha tribunál judisiál primeira instánsia haat, iha Dili, Baukau, Suai no Oe-Kusi. Iha 2024 nia hahú, juís na'in 28 servisu iha primeira instánsia no na'in haat iha Tribunál Rekursu; ema barak husi foho no área rurál hela dook husi tribunál.",
+      "pt": "A Constituição prevê três categorias de tribunais: o Supremo Tribunal de Justiça e os demais tribunais judiciais; o Tribunal Superior Administrativo, Fiscal e de Contas e os tribunais administrativos e fiscais de primeira instância; e os tribunais militares (artigo 123.º). São proibidos tribunais especiais para julgar certas categorias de crimes. Enquanto o Supremo Tribunal de Justiça não for instalado, as suas funções são exercidas pelo tribunal mais alto existente (artigo 164.º): o Tribunal de Recurso, em Caicoli, Díli, que inclui a Câmara de Contas. Abaixo dele há quatro tribunais judiciais de primeira instância, em Díli, Baucau, Suai e Oé-Cusse. No início de 2024 trabalhavam 28 juízes na primeira instância e quatro no Tribunal de Recurso; muitas pessoas das montanhas e das zonas rurais vivem longe de um tribunal.",
+      "en": "The Constitution plans three kinds of courts: the Supreme Court of Justice and other judicial courts; the High Administrative, Tax and Audit Court with first-instance administrative and tax courts; and military courts (Article 123). Special courts for certain kinds of crime are forbidden. Until the Supreme Court of Justice is installed, its work is done by the highest existing court (Article 164): the Court of Appeal (Tribunal de Recurso) in Caicoli, Dili, which includes the Chamber of Accounts. Below it are four first-instance judicial courts, in Dili, Baucau, Suai and Oé-Cusse. At the start of 2024, 28 judges worked in the first-instance courts and four in the Court of Appeal; many people in the mountains and rural areas live far from a court.",
+      "id": "Konstitusi merencanakan tiga jenis pengadilan: Mahkamah Agung dan pengadilan umum lainnya; Pengadilan Tinggi Tata Usaha Negara, Pajak dan Keuangan beserta pengadilan tata usaha dan pajak tingkat pertama; serta pengadilan militer (Pasal 123). Pengadilan khusus untuk jenis kejahatan tertentu dilarang. Selama Mahkamah Agung belum dibentuk, tugasnya dijalankan oleh pengadilan tertinggi yang ada (Pasal 164): Pengadilan Banding (Tribunal de Recurso) di Caicoli, Dili, yang juga mencakup Kamar Pemeriksa Keuangan. Di bawahnya ada empat pengadilan umum tingkat pertama, di Dili, Baucau, Suai dan Oé-Cusse. Pada awal 2024, 28 hakim bertugas di pengadilan tingkat pertama dan empat di Pengadilan Banding; banyak orang di pegunungan dan daerah pedesaan tinggal jauh dari pengadilan."
      }
     },
     {
      "heading": {
-      "tet": "Ministériu Públiku no advogadu",
-      "pt": "Ministério Público e advogados",
-      "en": "Prosecutors and lawyers",
-      "id": "Kejaksaan dan pengacara"
+      "tet": "Dalan ba Tribunál Supremu Justisa",
+      "pt": "A caminho do Supremo Tribunal de Justiça",
+      "en": "Towards the Supreme Court of Justice",
+      "id": "Menuju Mahkamah Agung"
      },
      "text": {
-      "tet": "Ministériu Públiku reprezenta Estadu, lori kazu krime ba tribunál, defende labarik sira, ema ne'ebé la iha no ema ne'ebé labele defende an, no defende legalidade demokrátika (Artigu 132). Prokuradór-Jerál Repúblika mak lidera Ministériu Públiku; Prezidente nomeia nia ba tinan haat, no nia hato'o relatóriu tinan-tinan ba Parlamentu (Artigu 133). Advogadu no defensór sira ajuda sidadaun no kontribui ba justisa di'ak (Artigu 135). Artigu 26 promete katak ema hotu bele ba tribunál atu defende sira-nia direitu, no labele nega justisa ba ema tanba nia la iha osan; Defensoria Públika fó apoiu jurídiku gratuitu.",
-      "pt": "O Ministério Público representa o Estado, exerce a ação penal, defende os menores, os ausentes e os incapazes e defende a legalidade democrática (artigo 132.º). É dirigido pelo Procurador-Geral da República, nomeado pelo Presidente por quatro anos, que apresenta todos os anos um relatório ao Parlamento (artigo 133.º). Os advogados e defensores ajudam os cidadãos e contribuem para uma boa administração da justiça (artigo 135.º). O artigo 26.º garante a todos o acesso aos tribunais e diz que a justiça não pode ser negada por falta de meios económicos; a Defensoria Pública dá apoio jurídico gratuito.",
-      "en": "The Public Prosecution Service (Ministério Público) represents the State, brings criminal cases to court, defends children, absent people and people who cannot defend themselves, and protects democratic legality (Article 132). It is led by the Prosecutor-General of the Republic, appointed by the President for four years, who reports to Parliament every year (Article 133). Lawyers and public defenders help citizens and contribute to good justice (Article 135). Article 26 promises that everyone can go to court to defend their rights, and that justice cannot be denied because a person has no money; the Public Defender's Office gives free legal help.",
-      "id": "Kejaksaan (Ministério Público) mewakili negara, melakukan penuntutan pidana, membela anak-anak, orang yang tidak hadir dan orang yang tidak cakap hukum, serta menjaga legalitas demokratis (Pasal 132). Kejaksaan dipimpin Jaksa Agung Republik yang diangkat Presiden untuk empat tahun dan menyampaikan laporan tahunan kepada Parlemen (Pasal 133). Advokat dan pembela membantu warga dan ikut mewujudkan peradilan yang baik (Pasal 135). Pasal 26 menjamin setiap orang dapat ke pengadilan untuk membela haknya, dan keadilan tidak boleh ditolak karena seseorang tidak punya uang; Kantor Pembela Umum (Defensoria Pública) memberi bantuan hukum gratis."
+      "tet": "Lei Organizasaun Judisiária 2021 nian (Lei n.º 25/2021) hatuur Tribunál Supremu Justisa iha leten, ho Tribunál Rekursu foun no tribunál primeira instánsia sira iha okos. Prazu atu harii tribunál ne'e hetan adiamentu, no iha 2026 rekrutamentu ba juís dahuluk sira hahú duni. Konkursu ne'ebé loke iha Jullu 2026 oferese fatin neen iha Tribunál Supremu — haat ba juís karreira, ida ba majistradu Ministériu Públiku no ida ba jurista ho méritu — no fatin sia iha Tribunál Rekursu foun. Júri ida ho juís reformadu na'in tolu husi Tribunál Supremu Justisa Portugál nian avalia kandidatu sira. Iha Outubru 2026, edifísiu tribunál foun prontu ona no konkursu to'o iha faze teste hakerek, tuir mai entrevista. Tuir Lei-Inan, Parlamentu Nasionál mak hili juís ida husi Tribunál Supremu (Artigu 125).",
+      "pt": "A Lei de Organização Judiciária de 2021 (Lei n.º 25/2021) pôs o Supremo Tribunal de Justiça no topo, com um novo Tribunal de Recurso e os tribunais de primeira instância por baixo. Os prazos de instalação foram adiados, e em 2026 começou finalmente o recrutamento dos primeiros juízes. Um concurso aberto em julho de 2026 oferece seis lugares no Supremo — quatro para juízes de carreira, um para um magistrado do Ministério Público e um para um jurista de mérito — e nove no novo Tribunal de Recurso. Um júri de três juízes jubilados do Supremo Tribunal de Justiça de Portugal avalia os candidatos. Em outubro de 2026, o edifício do novo tribunal já estava pronto e o concurso ia na fase das provas escritas, seguindo-se as entrevistas. Segundo a Constituição, um dos juízes do Supremo é eleito pelo Parlamento Nacional (artigo 125.º).",
+      "en": "The 2021 Judicial Organisation Law (Law No. 25/2021) put the Supreme Court of Justice at the top, with a new Court of Appeal and the first-instance courts below it. The deadlines for setting it up were postponed, and in 2026 the recruitment of the first judges finally began. A competition opened in July 2026 offers six places in the Supreme Court — four for career judges, one for a public prosecutor and one for a jurist of recognised merit — and nine in the new Court of Appeal. A jury of three retired judges of the Supreme Court of Justice of Portugal assesses the candidates. In October 2026 the new court's building was ready and the competition had reached the written tests, to be followed by interviews. Under the Constitution, one of the Supreme Court judges is elected by the National Parliament (Article 125).",
+      "id": "Undang-Undang Organisasi Peradilan 2021 (UU No. 25/2021) menempatkan Mahkamah Agung di puncak, dengan Pengadilan Banding yang baru dan pengadilan tingkat pertama di bawahnya. Tenggat pembentukannya diundur, dan pada 2026 perekrutan hakim pertama akhirnya dimulai. Seleksi yang dibuka pada Juli 2026 menawarkan enam kursi di Mahkamah Agung — empat untuk hakim karier, satu untuk jaksa dan satu untuk ahli hukum yang diakui — serta sembilan kursi di Pengadilan Banding yang baru. Dewan juri yang terdiri atas tiga hakim purnatugas Mahkamah Agung Portugal menilai para calon. Pada Oktober 2026 gedung pengadilan baru sudah siap dan seleksi telah sampai pada tahap ujian tertulis, yang akan diikuti wawancara. Menurut Konstitusi, salah satu hakim Mahkamah Agung dipilih oleh Parlemen Nasional (Pasal 125)."
      }
     },
     {
      "heading": {
-      "tet": "Provedór Direitus Umanus no Justisa",
-      "pt": "O Provedor de Direitos Humanos e Justiça",
-      "en": "The Provedor for Human Rights and Justice",
-      "id": "Provedor Hak Asasi Manusia dan Keadilan"
+      "tet": "Juís sira, Konsellu Superiór no Kámara Kontas",
+      "pt": "Juízes, Conselho Superior e Câmara de Contas",
+      "en": "Judges, the Superior Council and the Chamber of Accounts",
+      "id": "Hakim, Dewan Tinggi dan Kamar Pemeriksa Keuangan"
      },
      "text": {
-      "tet": "Provedór Direitus Umanus no Justisa (PDHJ) mak órgaun independente ida ne'ebé simu no haree sidadaun sira-nia kesar hasoru podér públiku (Artigu 27). Ema hotu bele hato'o kesar ba Provedór kona-ba hahalok ka omisaun husi instituisaun públika ida. Provedór labele hakotu lia, maibé nia bele halo investigasaun, fó rekomendasaun ba órgaun kompetente sira no ajuda prevene injustisa. Órgaun públiku sira tenke kolabora ho Provedór. Maioria absoluta Parlamentu Nasionál mak hili Provedór ba tinan haat. Provedór mós bele husu tribunál atu deklara lei ida kontra Lei-Inan (Artigu 150).",
-      "pt": "O Provedor de Direitos Humanos e Justiça (PDHJ) é um órgão independente que aprecia as queixas dos cidadãos contra os poderes públicos (artigo 27.º). Qualquer pessoa pode apresentar ao Provedor uma queixa sobre ações ou omissões de entidades públicas. O Provedor não tem poder de decisão, mas pode investigar, fazer recomendações aos órgãos competentes e ajudar a prevenir injustiças. Os órgãos públicos têm o dever de colaborar com ele. O Provedor é eleito por maioria absoluta do Parlamento Nacional, para um mandato de quatro anos. Pode também pedir ao tribunal que declare uma lei inconstitucional (artigo 150.º).",
-      "en": "The Provedor for Human Rights and Justice (PDHJ) is an independent body that looks into citizens' complaints against public authorities (Article 27). Anyone can complain to the Provedor about an action, or a failure to act, by a public body. The Provedor cannot give binding judgements, but can investigate, make recommendations to the competent bodies and help prevent injustice. Public bodies must cooperate with the Provedor. The Provedor is elected by an absolute majority of the National Parliament for four years. The Provedor can also ask the court to declare a law unconstitutional (Article 150).",
-      "id": "Provedor Hak Asasi Manusia dan Keadilan (PDHJ) adalah lembaga independen yang menangani pengaduan warga terhadap kekuasaan publik (Pasal 27). Siapa pun dapat mengadu kepada Provedor tentang tindakan atau kelalaian sebuah lembaga publik. Provedor tidak dapat menjatuhkan putusan yang mengikat, tetapi dapat menyelidiki, memberi rekomendasi kepada lembaga yang berwenang, dan membantu mencegah ketidakadilan. Lembaga publik wajib bekerja sama dengan Provedor. Provedor dipilih oleh mayoritas mutlak Parlemen Nasional untuk masa jabatan empat tahun. Provedor juga dapat meminta pengadilan menyatakan suatu undang-undang inkonstitusional (Pasal 150)."
+      "tet": "Konsellu Superiór Majistratura Judisiál mak jere no dixiplina juís sira: nomeia, koloka, transfere no promove sira (Artigu 128). Prezidente tribunál aas liu mak prezide konsellu ne'e, no iha mós membru ida ne'ebé Prezidente Repúblika dezigna, ida ne'ebé Parlamentu hili, ida ne'ebé Governu dezigna no ida ne'ebé juís sira hili. Kámara Kontas, ne'ebé Lei n.º 9/2011 harii iha Tribunál Rekursu nia laran, fiskaliza legalidade no jestaun di'ak ba Estadu nia reseita no despeza, no fó paresér kona-ba Konta Jerál Estadu. Juís timoroan sira hetan formasaun iha Sentru Formasaun Jurídika no Judisiária, iha Dili, no durante tinan barak tribunál sira iha juís no asesór internasionál. Iha 19 Dezembru 2025, ba dala uluk hala'o abertura solene Tinan Judisiál nian, iha ne'ebé tribunál sira, Ministériu Públiku, Defensoria Públika no Orden Advogadu sira aprezenta relatóriu anuál.",
+      "pt": "O Conselho Superior da Magistratura Judicial gere e disciplina os juízes: nomeia-os, coloca-os, transfere-os e promove-os (artigo 128.º). É presidido pelo presidente do tribunal mais alto e inclui um membro designado pelo Presidente da República, um eleito pelo Parlamento, um designado pelo Governo e um eleito pelos juízes. A Câmara de Contas, criada dentro do Tribunal de Recurso pela Lei n.º 9/2011, fiscaliza a legalidade e a boa gestão das receitas e despesas públicas e dá parecer sobre a Conta Geral do Estado. Os juízes timorenses formam-se no Centro de Formação Jurídica e Judiciária, em Díli, e durante anos os tribunais contaram com juízes e assessores internacionais. A 19 de dezembro de 2025 realizou-se pela primeira vez a abertura solene do Ano Judicial, em que os tribunais, o Ministério Público, a Defensoria Pública e a Ordem dos Advogados apresentaram relatórios anuais.",
+      "en": "The Superior Council of the Judiciary (Conselho Superior da Magistratura Judicial) manages and disciplines the judges: it appoints, places, transfers and promotes them (Article 128). It is chaired by the president of the highest court and includes one member chosen by the President of the Republic, one elected by Parliament, one chosen by the Government and one elected by the judges. The Chamber of Accounts, created inside the Court of Appeal by Law No. 9/2011, checks the legality and good management of public revenue and spending and gives an opinion on the General State Account. Timorese judges are trained at the Legal and Judicial Training Centre in Dili, and for years the courts had international judges and advisers. On 19 December 2025 the Judicial Year was opened for the first time, and the courts, the Public Prosecution Service, the Public Defender's Office and the Bar Association presented annual reports.",
+      "id": "Dewan Tinggi Kehakiman (Conselho Superior da Magistratura Judicial) mengelola dan mendisiplinkan hakim: mengangkat, menempatkan, memindahkan dan mempromosikan mereka (Pasal 128). Dewan ini dipimpin ketua pengadilan tertinggi dan beranggotakan satu orang yang ditunjuk Presiden Republik, satu yang dipilih Parlemen, satu yang ditunjuk Pemerintah dan satu yang dipilih para hakim. Kamar Pemeriksa Keuangan (Câmara de Contas), yang dibentuk di dalam Pengadilan Banding dengan UU No. 9/2011, memeriksa legalitas dan pengelolaan yang baik atas pendapatan dan belanja negara serta memberi pendapat tentang Laporan Umum Keuangan Negara. Hakim Timor-Leste dididik di Pusat Pendidikan Hukum dan Peradilan di Dili, dan selama bertahun-tahun pengadilan dibantu hakim dan penasihat internasional. Pada 19 Desember 2025 Tahun Peradilan dibuka secara resmi untuk pertama kalinya, dan pengadilan, Kejaksaan, Kantor Pembela Umum serta Ikatan Advokat menyampaikan laporan tahunan."
      }
     },
     {
      "heading": {
-      "tet": "Justisa, lisan no pasadu",
-      "pt": "Justiça, costumes e passado",
-      "en": "Justice, custom and the past",
-      "id": "Keadilan, adat dan masa lalu"
+      "tet": "Ministériu Públiku, Defensoria Públika no advogadu",
+      "pt": "Ministério Público, Defensoria Pública e advogados",
+      "en": "Prosecutors, public defenders and lawyers",
+      "id": "Kejaksaan, pembela umum dan pengacara"
      },
      "text": {
-      "tet": "Lia barak iha komunidade, ema ko'alia uluk tuir lisan, ho xefe suku no katuas sira nia ajuda; Estadu rekoñese lisan ne'ebé la kontra Lei-Inan (Artigu 2). Lei-Inan mós bandu kastigu mate-kotu (Artigu 29) no prizaun perpétua (Artigu 32). Ba krime boot sira iha 1999, tribunál espesiál ida ho juís nasionál no internasionál servisu iha Dili (Artigu 163). Artigu 160 dehan katak krime hasoru umanidade, jenosídiu no krime funu nian, ne'ebé akontese entre 25 Abríl 1974 no 31 Dezembru 1999, tenke hetan julgamentu iha tribunál nasionál ka internasionál.",
-      "pt": "Muitos conflitos locais são primeiro discutidos na comunidade, segundo o lisan (direito costumeiro), com a ajuda dos líderes do suco e dos anciãos; o Estado reconhece as normas costumeiras que não contrariem a Constituição (artigo 2.º). A Constituição proíbe também a pena de morte (artigo 29.º) e a prisão perpétua (artigo 32.º). Para os crimes graves de 1999 funcionou em Díli um tribunal especial com juízes nacionais e internacionais (artigo 163.º). O artigo 160.º diz que os crimes contra a humanidade, de genocídio ou de guerra cometidos entre 25 de abril de 1974 e 31 de dezembro de 1999 devem ser julgados por tribunais nacionais ou internacionais.",
-      "en": "Many local disputes are first discussed in the community, following lisan (customary law), with the help of suco leaders and elders; the State recognises customary rules that do not go against the Constitution (Article 2). The Constitution also forbids the death penalty (Article 29) and life imprisonment (Article 32). For the serious crimes of 1999, a special court with national and international judges worked in Dili (Article 163). Article 160 says that crimes against humanity, genocide and war crimes committed between 25 April 1974 and 31 December 1999 must be tried by national or international courts.",
-      "id": "Banyak sengketa lokal dibahas terlebih dahulu di masyarakat menurut lisan (hukum adat), dengan bantuan pemimpin suco dan para tetua; negara mengakui aturan adat yang tidak bertentangan dengan Konstitusi (Pasal 2). Konstitusi juga melarang hukuman mati (Pasal 29) dan penjara seumur hidup (Pasal 32). Untuk kejahatan berat tahun 1999, sebuah pengadilan khusus dengan hakim nasional dan internasional bekerja di Dili (Pasal 163). Pasal 160 menyatakan bahwa kejahatan terhadap kemanusiaan, genosida dan kejahatan perang yang dilakukan antara 25 April 1974 dan 31 Desember 1999 harus diadili oleh pengadilan nasional atau internasional."
+      "tet": "Ministériu Públiku reprezenta Estadu, lori kazu krime ba tribunál, defende labarik sira, ema ne'ebé la iha no ema ne'ebé labele defende an, no defende legalidade demokrátika (Artigu 132). Prokuradór-Jerál Repúblika mak lidera Ministériu Públiku; Prezidente nomeia nia ba tinan haat, no nia hato'o informasaun tinan-tinan ba Parlamentu (Artigu 133); desde 13 Maiu 2025, Nelson de Carvalho mak kaer kargu ne'e. Iha Dezembru 2023 iha majistradu Ministériu Públiku na'in 36. Artigu 26 promete katak ema hotu bele ba tribunál atu defende sira-nia direitu, no labele nega justisa ba ema tanba nia la iha osan; tan ne'e Defensoria Públika fó apoiu jurídiku gratuitu ba ema ne'ebé labele selu advogadu. Advogadu no defensór sira kontribui ba justisa di'ak (Artigu 135).",
+      "pt": "O Ministério Público representa o Estado, exerce a ação penal, defende os menores, os ausentes e os incapazes e defende a legalidade democrática (artigo 132.º). É dirigido pelo Procurador-Geral da República, nomeado pelo Presidente por quatro anos, que presta informação anual ao Parlamento (artigo 133.º); desde 13 de maio de 2025, o cargo é ocupado por Nelson de Carvalho. Em dezembro de 2023 havia 36 magistrados do Ministério Público. O artigo 26.º garante a todos o acesso aos tribunais e diz que a justiça não pode ser negada por falta de meios económicos; por isso, a Defensoria Pública dá apoio jurídico gratuito a quem não pode pagar um advogado. Os advogados e defensores contribuem para uma boa administração da justiça (artigo 135.º).",
+      "en": "The Public Prosecution Service (Ministério Público) represents the State, brings criminal cases to court, defends children, absent people and people who cannot defend themselves, and protects democratic legality (Article 132). It is led by the Prosecutor-General of the Republic, appointed by the President for four years, who reports to Parliament every year (Article 133); since 13 May 2025 the post has been held by Nelson de Carvalho. In December 2023 there were 36 public prosecutors. Article 26 promises that everyone can go to court to defend their rights and that justice cannot be denied because a person has no money; for this reason the Public Defender's Office (Defensoria Pública) gives free legal help to people who cannot pay a lawyer. Lawyers and public defenders contribute to good justice (Article 135).",
+      "id": "Kejaksaan (Ministério Público) mewakili negara, melakukan penuntutan pidana, membela anak-anak, orang yang tidak hadir dan orang yang tidak cakap hukum, serta menjaga legalitas demokratis (Pasal 132). Kejaksaan dipimpin Jaksa Agung Republik yang diangkat Presiden untuk empat tahun dan menyampaikan laporan tahunan kepada Parlemen (Pasal 133); sejak 13 Mei 2025 jabatan itu dipegang Nelson de Carvalho. Pada Desember 2023 ada 36 jaksa. Pasal 26 menjamin setiap orang dapat ke pengadilan untuk membela haknya dan keadilan tidak boleh ditolak karena seseorang tidak punya uang; karena itu Kantor Pembela Umum (Defensoria Pública) memberi bantuan hukum gratis kepada orang yang tidak mampu membayar pengacara. Advokat dan pembela ikut mewujudkan peradilan yang baik (Pasal 135)."
+     }
+    },
+    {
+     "heading": {
+      "tet": "Provedór, lisan no pasadu",
+      "pt": "Provedor, costumes e passado",
+      "en": "The Provedor, custom and the past",
+      "id": "Provedor, adat dan masa lalu"
+     },
+     "text": {
+      "tet": "Provedór Direitus Umanus no Justisa (PDHJ) mak órgaun independente ida ne'ebé simu sidadaun sira-nia kesar hasoru podér públiku no fó rekomendasaun, maibé labele hakotu lia; maioria absoluta Parlamentu nian hili Provedór ba tinan haat (Artigu 27). Lia barak iha komunidade, ema ko'alia uluk tuir lisan, ho xefe suku no katuas sira nia ajuda; Estadu rekoñese lisan ne'ebé la kontra Lei-Inan (Artigu 2). Lei-Inan bandu kastigu mate-kotu (Artigu 29) no prizaun perpétua (Artigu 32). Ba krime boot sira iha 1999, tribunál espesiál ida ho juís nasionál no internasionál servisu iha Dili (Artigu 163), no Artigu 160 dehan katak krime hasoru umanidade, jenosídiu no krime funu nian husi 1974 to'o 1999 bele hetan julgamentu iha tribunál nasionál ka internasionál.",
+      "pt": "O Provedor de Direitos Humanos e Justiça (PDHJ) é um órgão independente que aprecia as queixas dos cidadãos contra os poderes públicos e faz recomendações, sem poder de decisão; é eleito por maioria absoluta do Parlamento, por quatro anos (artigo 27.º). Muitos conflitos locais são primeiro discutidos na comunidade, segundo o lisan, com a ajuda dos líderes do suco e dos anciãos; o Estado reconhece as normas costumeiras que não contrariem a Constituição (artigo 2.º). A Constituição proíbe a pena de morte (artigo 29.º) e a prisão perpétua (artigo 32.º). Para os crimes graves de 1999 funcionou em Díli um tribunal especial com juízes nacionais e internacionais (artigo 163.º), e o artigo 160.º diz que os crimes contra a humanidade, de genocídio ou de guerra cometidos entre 1974 e 1999 podem ser julgados por tribunais nacionais ou internacionais.",
+      "en": "The Provedor for Human Rights and Justice (PDHJ) is an independent body that looks into citizens' complaints against public authorities and makes recommendations, without the power to decide; the Provedor is elected by an absolute majority of Parliament for four years (Article 27). Many local disputes are first discussed in the community, following lisan (customary law), with the help of suco leaders and elders; the State recognises customary rules that do not go against the Constitution (Article 2). The Constitution forbids the death penalty (Article 29) and life imprisonment (Article 32). For the serious crimes of 1999 a special court with national and international judges worked in Dili (Article 163), and Article 160 says that crimes against humanity, genocide and war crimes committed between 1974 and 1999 can be tried by national or international courts.",
+      "id": "Provedor Hak Asasi Manusia dan Keadilan (PDHJ) adalah lembaga independen yang menangani pengaduan warga terhadap kekuasaan publik dan memberi rekomendasi, tanpa wewenang memutus; Provedor dipilih oleh mayoritas mutlak Parlemen untuk empat tahun (Pasal 27). Banyak sengketa lokal dibahas terlebih dahulu di masyarakat menurut lisan (hukum adat), dengan bantuan pemimpin suco dan para tetua; negara mengakui aturan adat yang tidak bertentangan dengan Konstitusi (Pasal 2). Konstitusi melarang hukuman mati (Pasal 29) dan penjara seumur hidup (Pasal 32). Untuk kejahatan berat tahun 1999, sebuah pengadilan khusus dengan hakim nasional dan internasional bekerja di Dili (Pasal 163), dan Pasal 160 menyatakan bahwa kejahatan terhadap kemanusiaan, genosida dan kejahatan perang yang dilakukan antara 1974 dan 1999 dapat diadili oleh pengadilan nasional atau internasional."
      }
     }
    ],
@@ -2834,14 +3668,29 @@
       "en": "Court of Appeal, Dili (Article 164)",
       "id": "Pengadilan Banding, Dili (Pasal 164)"
      },
-     "year": 2025
+     "year": 2026
     },
     {
      "label": {
-      "tet": "Tribunál distritál",
-      "pt": "Tribunais distritais",
-      "en": "District courts",
-      "id": "Pengadilan distrik"
+      "tet": "Prezidente Tribunál Rekursu",
+      "pt": "Presidente do Tribunal de Recurso",
+      "en": "President of the Court of Appeal",
+      "id": "Ketua Pengadilan Banding"
+     },
+     "value": {
+      "tet": "Afonso Carmona (desde 29 Abríl 2025)",
+      "pt": "Afonso Carmona (desde 29 de abril de 2025)",
+      "en": "Afonso Carmona (since 29 April 2025)",
+      "id": "Afonso Carmona (sejak 29 April 2025)"
+     },
+     "year": 2026
+    },
+    {
+     "label": {
+      "tet": "Tribunál judisiál primeira instánsia",
+      "pt": "Tribunais judiciais de primeira instância",
+      "en": "First-instance judicial courts",
+      "id": "Pengadilan umum tingkat pertama"
      },
      "value": {
       "tet": "Dili, Baukau, Suai, Oe-Kusi",
@@ -2849,6 +3698,36 @@
       "en": "Dili, Baucau, Suai, Oé-Cusse",
       "id": "Dili, Baucau, Suai, Oé-Cusse"
      }
+    },
+    {
+     "label": {
+      "tet": "Juís (2024 nia hahú)",
+      "pt": "Juízes (início de 2024)",
+      "en": "Judges (early 2024)",
+      "id": "Hakim (awal 2024)"
+     },
+     "value": {
+      "tet": "28 iha primeira instánsia no 4 iha Tribunál Rekursu",
+      "pt": "28 na primeira instância e 4 no Tribunal de Recurso",
+      "en": "28 in first-instance courts and 4 in the Court of Appeal",
+      "id": "28 di tingkat pertama dan 4 di Pengadilan Banding"
+     },
+     "year": 2024
+    },
+    {
+     "label": {
+      "tet": "Prokuradór-Jerál Repúblika",
+      "pt": "Procurador-Geral da República",
+      "en": "Prosecutor-General",
+      "id": "Jaksa Agung"
+     },
+     "value": {
+      "tet": "Nelson de Carvalho (desde 13 Maiu 2025)",
+      "pt": "Nelson de Carvalho (desde 13 de maio de 2025)",
+      "en": "Nelson de Carvalho (since 13 May 2025)",
+      "id": "Nelson de Carvalho (sejak 13 Mei 2025)"
+     },
+     "year": 2026
     },
     {
      "label": {
@@ -2891,6 +3770,103 @@
       "en": "Forbidden (Article 29)",
       "id": "Dilarang (Pasal 29)"
      }
+    },
+    {
+     "label": {
+      "tet": "Kámara Kontas",
+      "pt": "Câmara de Contas",
+      "en": "Chamber of Accounts",
+      "id": "Kamar Pemeriksa Keuangan"
+     },
+     "value": {
+      "tet": "Harii iha 2011 (Lei n.º 9/2011), iha Tribunál Rekursu nia laran",
+      "pt": "Criada em 2011 (Lei n.º 9/2011), dentro do Tribunal de Recurso",
+      "en": "Created in 2011 (Law No. 9/2011), inside the Court of Appeal",
+      "id": "Dibentuk pada 2011 (UU No. 9/2011), di dalam Pengadilan Banding"
+     }
+    },
+    {
+     "label": {
+      "tet": "Sítiu ofisiál",
+      "pt": "Sítio oficial",
+      "en": "Official website",
+      "id": "Situs resmi"
+     },
+     "value": "www.tribunais.tl"
+    }
+   ],
+   "timeline": [
+    {
+     "date": "2000-01-07",
+     "title": {
+      "tet": "Juís timoroan dahuluk sira simu pose iha administrasaun tranzitória ONU nian",
+      "pt": "Tomam posse os primeiros juízes timorenses da administração transitória da ONU",
+      "en": "The first Timorese judges of the UN transitional administration take office",
+      "id": "Hakim Timor-Leste pertama dalam pemerintahan transisi PBB dilantik"
+     }
+    },
+    {
+     "date": "2002-05-20",
+     "title": {
+      "tet": "Lei-Inan halo tribunál sira sai órgaun soberania",
+      "pt": "A Constituição faz dos tribunais um órgão de soberania",
+      "en": "The Constitution makes the courts an organ of sovereignty",
+      "id": "Konstitusi menjadikan pengadilan organ kedaulatan"
+     }
+    },
+    {
+     "date": "2007-06-21",
+     "title": {
+      "tet": "Juís, prokuradór no defensór na'in 27 dahuluk ne'ebé hetan formasaun iha Timór-Leste simu pose",
+      "pt": "Tomam posse os primeiros 27 juízes, procuradores e defensores formados em Timor-Leste",
+      "en": "The first 27 judges, prosecutors and public defenders trained in Timor-Leste are sworn in",
+      "id": "27 hakim, jaksa dan pembela umum pertama yang dididik di Timor-Leste dilantik"
+     }
+    },
+    {
+     "date": "2011-08-17",
+     "title": {
+      "tet": "Lei n.º 9/2011 harii Kámara Kontas",
+      "pt": "A Lei n.º 9/2011 cria a Câmara de Contas",
+      "en": "Law No. 9/2011 creates the Chamber of Accounts",
+      "id": "UU No. 9/2011 membentuk Kamar Pemeriksa Keuangan"
+     }
+    },
+    {
+     "date": "2021-12-02",
+     "title": {
+      "tet": "Lei Organizasaun Judisiária foun (Lei n.º 25/2021)",
+      "pt": "Nova Lei de Organização Judiciária (Lei n.º 25/2021)",
+      "en": "New Judicial Organisation Law (Law No. 25/2021)",
+      "id": "UU Organisasi Peradilan yang baru (UU No. 25/2021)"
+     }
+    },
+    {
+     "date": "2025-04-29",
+     "title": {
+      "tet": "Afonso Carmona simu pose nu'udar Prezidente Tribunál Rekursu",
+      "pt": "Afonso Carmona toma posse como Presidente do Tribunal de Recurso",
+      "en": "Afonso Carmona is sworn in as President of the Court of Appeal",
+      "id": "Afonso Carmona dilantik sebagai Ketua Pengadilan Banding"
+     }
+    },
+    {
+     "date": "2025-12-19",
+     "title": {
+      "tet": "Abertura solene dahuluk Tinan Judisiál nian",
+      "pt": "Primeira abertura solene do Ano Judicial",
+      "en": "First formal opening of the Judicial Year",
+      "id": "Pembukaan resmi Tahun Peradilan yang pertama"
+     }
+    },
+    {
+     "date": "2026-07-01",
+     "title": {
+      "tet": "Loke konkursu ba juís dahuluk Tribunál Supremu Justisa nian",
+      "pt": "Abre o concurso para os primeiros juízes do Supremo Tribunal de Justiça",
+      "en": "The competition for the first Supreme Court judges opens",
+      "id": "Seleksi hakim pertama Mahkamah Agung dibuka"
+     }
     }
    ],
    "figure": {
@@ -2902,21 +3878,33 @@
      "id": "Pengadilan mengadili atas nama rakyat."
     }
    },
+   "wiki": {
+    "en": "Timor-Leste Supreme Court of Justice"
+   },
    "related": [
     "tl.politics.rights_duties",
     "tl.politics.constitution",
     "tl.politics.system",
     "tl.culture.lisan",
     "tl.conflicts.reconciliation",
-    "tl.conflicts.violence_1999"
+    "tl.conflicts.violence_1999",
+    "tl.institutions.court_of_appeal",
+    "tl.institutions.public_prosecution",
+    "tl.institutions.justice",
+    "tl.institutions.independent_bodies"
    ],
    "tags": [
     "tribunál",
     "courts",
+    "tribunais",
+    "pengadilan",
     "justisa",
     "justice",
+    "tribunál rekursu",
+    "câmara de contas",
     "provedór",
-    "ministériu públiku"
+    "ministériu públiku",
+    "defensoria públika"
    ],
    "quiz": [
     {
@@ -3005,6 +3993,48 @@
     },
     {
      "q": {
+      "tet": "Tribunál judisiál primeira instánsia hira mak iha Timór-Leste?",
+      "pt": "Quantos tribunais judiciais de primeira instância há em Timor-Leste?",
+      "en": "How many first-instance judicial courts are there in Timor-Leste?",
+      "id": "Berapa pengadilan umum tingkat pertama di Timor-Leste?"
+     },
+     "options": [
+      {
+       "tet": "Rua",
+       "pt": "Dois",
+       "en": "Two",
+       "id": "Dua"
+      },
+      {
+       "tet": "Haat",
+       "pt": "Quatro",
+       "en": "Four",
+       "id": "Empat"
+      },
+      {
+       "tet": "Sanulu resin haat",
+       "pt": "Catorze",
+       "en": "Fourteen",
+       "id": "Empat belas"
+      },
+      {
+       "tet": "Ida de'it",
+       "pt": "Só um",
+       "en": "Only one",
+       "id": "Hanya satu"
+      }
+     ],
+     "answer": 1,
+     "why": {
+      "tet": "Iha haat: Dili, Baukau, Suai no Oe-Kusi.",
+      "pt": "São quatro: Díli, Baucau, Suai e Oé-Cusse.",
+      "en": "There are four: Dili, Baucau, Suai and Oé-Cusse.",
+      "id": "Ada empat: Dili, Baucau, Suai dan Oé-Cusse."
+     },
+     "difficulty": 5
+    },
+    {
+     "q": {
       "tet": "Tribunál ida ne'ebé hala'o knaar tribunál aas liu, to'o Tribunál Supremu Justisa harii?",
       "pt": "Que tribunal faz de tribunal mais alto enquanto não existe o Supremo Tribunal de Justiça?",
       "en": "Which court acts as the highest court until the Supreme Court of Justice exists?",
@@ -3086,6 +4116,48 @@
       "id": "Pasal 133: Jaksa Agung Republik."
      },
      "difficulty": 9
+    },
+    {
+     "q": {
+      "tet": "Órgaun saida mak nomeia, koloka no promove juís sira?",
+      "pt": "Que órgão nomeia, coloca e promove os juízes?",
+      "en": "Which body appoints, places and promotes judges?",
+      "id": "Lembaga apa yang mengangkat, menempatkan dan mempromosikan hakim?"
+     },
+     "options": [
+      {
+       "tet": "Konsellu-Ministru",
+       "pt": "O Conselho de Ministros",
+       "en": "The Council of Ministers",
+       "id": "Dewan Menteri"
+      },
+      {
+       "tet": "Konsellu Superiór Majistratura Judisiál",
+       "pt": "O Conselho Superior da Magistratura Judicial",
+       "en": "The Superior Council of the Judiciary",
+       "id": "Dewan Tinggi Kehakiman"
+      },
+      {
+       "tet": "Komisaun Nasionál Eleisaun",
+       "pt": "A Comissão Nacional de Eleições",
+       "en": "The National Electoral Commission",
+       "id": "Komisi Pemilihan Nasional"
+      },
+      {
+       "tet": "Ministru Justisa",
+       "pt": "O Ministro da Justiça",
+       "en": "The Minister of Justice",
+       "id": "Menteri Kehakiman"
+      }
+     ],
+     "answer": 1,
+     "why": {
+      "tet": "Artigu 128: Konsellu Superiór Majistratura Judisiál jere no dixiplina juís sira.",
+      "pt": "Artigo 128.º: o Conselho Superior da Magistratura Judicial gere e disciplina os juízes.",
+      "en": "Article 128: the Superior Council of the Judiciary manages and disciplines judges.",
+      "id": "Pasal 128: Dewan Tinggi Kehakiman mengelola dan mendisiplinkan hakim."
+     },
+     "difficulty": 10
     },
     {
      "q": {
@@ -3206,16 +4278,68 @@
      "url": "https://en.tatoli.tl/2022/04/20/horta-expresses-his-gratitude-for-the-trust-of-the-people-of-timor-leste-in-his-victory/16/",
      "accessed": "2026-10-27",
      "licence": "© Tatoli"
+    },
+    {
+     "title": "História e competências (Tribunal de Recurso)",
+     "publisher": "Tribunais de Timor-Leste (tribunais.tl)",
+     "url": "https://www.tribunais.tl/historia-e-competencias/",
+     "accessed": "2026-11-11",
+     "licence": "© Tribunal de Recurso de Timor-Leste"
+    },
+    {
+     "title": "Prezidente Tribunal de Recurso simu vizita kortezia husi Uniaun Europeia (26 Outubru 2026)",
+     "publisher": "Tribunais de Timor-Leste (tribunais.tl)",
+     "url": "https://www.tribunais.tl/prezidente-tribunal-de-recurso-simu-vizita-kortezia-husi-uniaun-europeia/",
+     "accessed": "2026-11-11",
+     "licence": "© Tribunal de Recurso de Timor-Leste"
+    },
+    {
+     "title": "Jornal da República, Série II, N.º 26 D (1 de julho de 2026): avisos de abertura de concurso para o 1.º acesso a juiz do Supremo Tribunal de Justiça e do novo Tribunal de Recurso",
+     "publisher": "Jornal da República (via timor-leste.gov.tl)",
+     "url": "https://timor-leste.gov.tl/wp-content/uploads/2026/07/C27BC53D6ECA87892.pdf",
+     "accessed": "2026-11-11",
+     "licence": "© Governo de Timor-Leste"
+    },
+    {
+     "title": "Para uma justiça melhor: análise e recomendações para melhorar o sector da justiça em Timor-Leste (relatório principal, maio de 2024)",
+     "publisher": "Governo de Timor-Leste / PNUD (timor-leste.gov.tl)",
+     "url": "https://timor-leste.gov.tl/wp-content/uploads/2025/02/Relat%C3%B3rio.pdf",
+     "accessed": "2026-11-11",
+     "licence": "© Governo de Timor-Leste"
+    },
+    {
+     "title": "President Ramos-Horta to Formally Open First-Ever “Judicial Year” Solemn Session (19 December 2025)",
+     "publisher": "Presidência da República Democrática de Timor-Leste (presidenciarepublica.tl)",
+     "url": "https://presidenciarepublica.tl/president-ramos-horta-to-formally-open-first-ever-judicial-year-solemn-session/",
+     "accessed": "2026-11-11",
+     "licence": "© Presidência da República de Timor-Leste"
+    },
+    {
+     "title": "President Ramos-Horta Swears In New Attorney General (13 May 2025)",
+     "publisher": "Presidência da República Democrática de Timor-Leste (presidenciarepublica.tl)",
+     "url": "https://presidenciarepublica.tl/president-ramos-horta-swears-in-new-attorney-general/",
+     "accessed": "2026-11-11",
+     "licence": "© Presidência da República de Timor-Leste"
+    },
+    {
+     "title": "Discurso do Presidente da República por ocasião da tomada de posse do novo Presidente do Tribunal de Recurso (29 de abril de 2025)",
+     "publisher": "Presidência da República Democrática de Timor-Leste (presidenciarepublica.tl)",
+     "url": "https://presidenciarepublica.tl/speech-of-president-j-ramos-horta-in-the-occasion-of-swearing-in-the-new-president-of-the-court-of-appeal/",
+     "accessed": "2026-11-11",
+     "licence": "© Presidência da República de Timor-Leste"
     }
    ],
    "review": {
     "status": "draft",
-    "notes": "Constitutional rules are from the Tetun text. From memory, to verify: four district courts (Dili, Baucau, Suai, Oé-Cusse); the Defensoria Pública; that the Supreme Court of Justice had still not been created in 2025 (the Court of Appeal validated the 2022 election results, per Tatoli). Consider adding an official courts/Ministry of Justice source. Tetun: 'Tribunál Rekursu', 'primeira instánsia', 'Defensoria Públika', 'apoiu jurídiku'."
+    "notes": "Updated 2026-11-11. Verified: four first-instance courts (tribunais.tl: TJPI Díli, Baucau, Suai, Oecusse); 28 + 4 judges in early 2024 and 36 prosecutors in Dec 2023 (2024 justice report on timor-leste.gov.tl); Câmara de Contas created by Law 9/2011 of 17 Aug (same report); Law 25/2021 and Law 12/2022 (postponed deadlines) from the report; July 2026 competition (Jornal da República II n.º 26 D: 6 STJ posts = 4 career judges + 1 prosecutor + 1 jurist; 9 posts in the new Court of Appeal; Portuguese jury) — a Presidency post of Feb 2026 spoke of seven STJ vacancies (perhaps counting the judge elected by Parliament); written tests and ready building (Court of Appeal site, 26 Oct 2026); STJ still not installed on 11 Nov 2026 as far as found. First Judicial Year opening 19 Dec 2025 (Presidency). Afonso Carmona and Nelson de Carvalho swearing-in dates from the Presidency site. The Defensoria Pública statute (Decree-Law 21/2023) and staff figures are in the report but no separate article was written. Tetun to check: 'Kámara Kontas', 'Konta Jerál Estadu', 'jurista ho méritu', 'Orden Advogadu', 'Tinan Judisiál', 'Kaikoli'."
    }
   },
   {
    "id": "tl.politics.council_state",
    "category": "politics",
+   "also": [
+    "institutions"
+   ],
    "title": {
     "tet": "Konsellu-Estadu no Konsellu Superiór Defeza no Seguransa",
     "pt": "Conselho de Estado e Conselho Superior de Defesa e Segurança",
@@ -3232,6 +4356,10 @@
     "es",
     "sup"
    ],
+   "period": {
+    "from": 2002,
+    "to": 2026
+   },
    "sections": [
     {
      "heading": {
@@ -3263,16 +4391,30 @@
     },
     {
      "heading": {
+      "tet": "Membru atuál sira",
+      "pt": "Os membros atuais",
+      "en": "The current members",
+      "id": "Anggota saat ini"
+     },
+     "text": {
+      "tet": "Membru atuál sira simu pose iha 11 Setembru 2023, iha Prezidente José Ramos-Horta nia oin, ba mandatu tinan lima. Membru tanba sira-nia kargu mak Prezidente Parlamentu, Maria Fernanda Lay; Primeiru-Ministru Xanana Gusmão, ne'ebé mós eis-Prezidente; no eis-Prezidente Taur Matan Ruak no Francisco Guterres Lú-Olo. Prezidente dezigna Abílio de Araújo, Maria Domingas Fernandes Alves, jenerál Lere Anan Timur, Madre Guilhermina Marçal no Milena Pires. Iha 14 Agostu 2023, Parlamentu hili, ho votu a-favór 60, Virgílio Smith, Jacinto Viegas Vicente, Numinando Martins, Ricardo da Costa Ribeiro no Josefa Alves Pereira Soares. Nune'e, aléinde Prezidente, Konsellu iha membru na'in 14.",
+      "pt": "Os atuais membros tomaram posse a 11 de setembro de 2023, perante o Presidente José Ramos-Horta, para um mandato de cinco anos. São membros por inerência a Presidente do Parlamento, Maria Fernanda Lay; o Primeiro-Ministro Xanana Gusmão, que também é antigo Presidente; e os antigos Presidentes Taur Matan Ruak e Francisco Guterres Lú-Olo. O Presidente designou Abílio de Araújo, Maria Domingas Fernandes Alves, o general Lere Anan Timur, a Madre Guilhermina Marçal e Milena Pires. A 14 de agosto de 2023, o Parlamento elegeu, com 60 votos a favor, Virgílio Smith, Jacinto Viegas Vicente, Numinando Martins, Ricardo da Costa Ribeiro e Josefa Alves Pereira Soares. Assim, além do Presidente, o Conselho tem 14 membros.",
+      "en": "The current members took office on 11 September 2023, before President José Ramos-Horta, for a five-year term. The members by right of office are the President of Parliament, Maria Fernanda Lay; Prime Minister Xanana Gusmão, who is also a former President; and former Presidents Taur Matan Ruak and Francisco Guterres Lú-Olo. The President chose Abílio de Araújo, Maria Domingas Fernandes Alves, General Lere Anan Timur, Mother Guilhermina Marçal and Milena Pires. On 14 August 2023 Parliament elected, with 60 votes in favour, Virgílio Smith, Jacinto Viegas Vicente, Numinando Martins, Ricardo da Costa Ribeiro and Josefa Alves Pereira Soares. So, besides the President, the Council has 14 members.",
+      "id": "Anggota saat ini dilantik pada 11 September 2023 di hadapan Presiden José Ramos-Horta untuk masa jabatan lima tahun. Anggota karena jabatannya adalah Ketua Parlemen, Maria Fernanda Lay; Perdana Menteri Xanana Gusmão, yang juga mantan Presiden; serta mantan Presiden Taur Matan Ruak dan Francisco Guterres Lú-Olo. Presiden menunjuk Abílio de Araújo, Maria Domingas Fernandes Alves, Jenderal Lere Anan Timur, Suster Guilhermina Marçal dan Milena Pires. Pada 14 Agustus 2023 Parlemen memilih, dengan 60 suara setuju, Virgílio Smith, Jacinto Viegas Vicente, Numinando Martins, Ricardo da Costa Ribeiro dan Josefa Alves Pereira Soares. Jadi, selain Presiden, Dewan beranggotakan 14 orang."
+     }
+    },
+    {
+     "heading": {
       "tet": "Konsellu Superiór Defeza no Seguransa",
       "pt": "Conselho Superior de Defesa e Segurança",
       "en": "Superior Council for Defence and Security",
       "id": "Dewan Tinggi Pertahanan dan Keamanan"
      },
      "text": {
-      "tet": "Konsellu Superiór Defeza no Seguransa mak Prezidente nia órgaun konsultivu kona-ba asuntu defeza no soberania (Artigu 148). Prezidente mak prezide. Konsellu ne'e iha ema sivíl no militár, maibé ema sivíl tenke barak liu: ne'e hatudu katak, iha demokrasia, forsa armada hela iha sivíl sira-nia kontrolu okos. Prezidente nomeia membru na'in rua (Artigu 86), no lei ida hatuur membru seluk no regra sira. Prezidente tenke rona Konsellu ne'e, hamutuk ho Konsellu-Estadu no Governu, molok deklara estadu serku ka emerjénsia, ka deklara funu no halo dame (Artigu 85 no 87).",
-      "pt": "O Conselho Superior de Defesa e Segurança é o órgão de consulta do Presidente em matérias de defesa e soberania (artigo 148.º). É presidido pelo Presidente. Inclui civis e militares, mas os civis devem estar em maioria: isto mostra que, em democracia, as forças armadas estão sob controlo civil. O Presidente nomeia dois dos seus membros (artigo 86.º), e uma lei define os restantes membros e as regras. O Presidente tem de ouvir este Conselho, assim como o Conselho de Estado e o Governo, antes de declarar o estado de sítio ou de emergência e antes de declarar a guerra ou fazer a paz (artigos 85.º e 87.º).",
-      "en": "The Superior Council for Defence and Security is the President's consultative body on defence and sovereignty (Article 148). The President chairs it. It includes civilians and military officers, but civilians must be the majority: this shows that, in a democracy, the armed forces are under civilian control. The President appoints two of its members (Article 86), and a law sets its other members and rules. The President must hear this Council, as well as the Council of State and the Government, before declaring a state of siege or emergency, or declaring war and making peace (Articles 85 and 87).",
-      "id": "Dewan Tinggi Pertahanan dan Keamanan adalah badan konsultasi Presiden tentang pertahanan dan kedaulatan (Pasal 148). Dewan ini dipimpin Presiden. Anggotanya sipil dan militer, tetapi sipil harus menjadi mayoritas: hal ini menunjukkan bahwa dalam demokrasi angkatan bersenjata berada di bawah kendali sipil. Presiden mengangkat dua anggotanya (Pasal 86), dan undang-undang menetapkan anggota lain serta aturannya. Presiden harus mendengarkan Dewan ini, juga Dewan Negara dan Pemerintah, sebelum menyatakan keadaan bahaya atau keadaan darurat, atau menyatakan perang dan perdamaian (Pasal 85 dan 87)."
+      "tet": "Konsellu Superiór Defeza no Seguransa mak órgaun konsulta Prezidente nian kona-ba asuntu defeza no soberania (Artigu 148). Prezidente mak prezide, no konsellu iha membru sivíl no militár, maibé sivíl sira tenke barak liu, tanba iha demokrasia forsa armada hela iha kontrolu sivíl nia okos. Membru na'in 13 ne'ebé simu pose iha 11 Setembru 2023 inklui Primeiru-Ministru, Ministru Negósiu Estranjeiru, Defeza, Interiór no Justisa, deputadu na'in tolu, Xefe Estadu-Maiór Jenerál F-FDTL, Komandante-Jerál PNTL, Diretór Servisu Nasionál Intelijénsia no sidadaun na'in rua ne'ebé Prezidente nomeia (Artigu 86). Prezidente tenke rona konsellu ne'e molok deklara estadu serku ka estadu emerjénsia no molok deklara funu ka halo dame (Artigu 85 no 87).",
+      "pt": "O Conselho Superior de Defesa e Segurança é o órgão de consulta do Presidente em matérias de defesa e soberania (artigo 148.º). É presidido pelo Presidente e inclui civis e militares, mas os civis devem estar em maioria, porque em democracia as forças armadas estão sob controlo civil. Os 13 membros empossados a 11 de setembro de 2023 incluem o Primeiro-Ministro, os ministros dos Negócios Estrangeiros, da Defesa, do Interior e da Justiça, três deputados, o Chefe do Estado-Maior-General das F-FDTL, o Comandante-Geral da PNTL, o diretor do Serviço Nacional de Inteligência e dois cidadãos nomeados pelo Presidente (artigo 86.º). O Presidente tem de ouvir este Conselho antes de declarar o estado de sítio ou de emergência e antes de declarar a guerra ou fazer a paz (artigos 85.º e 87.º).",
+      "en": "The Superior Council for Defence and Security is the President's advisory body on defence and sovereignty (Article 148). It is chaired by the President and includes civilians and military officers, but civilians must be in the majority, because in a democracy the armed forces are under civilian control. The 13 members sworn in on 11 September 2023 include the Prime Minister, the ministers of Foreign Affairs, Defence, the Interior and Justice, three deputies, the Chief of the General Staff of the F-FDTL, the Commander-General of the PNTL, the director of the National Intelligence Service and two citizens appointed by the President (Article 86). The President must hear this Council before declaring a state of siege or emergency and before declaring war or making peace (Articles 85 and 87).",
+      "id": "Dewan Tinggi Pertahanan dan Keamanan adalah badan penasihat Presiden dalam urusan pertahanan dan kedaulatan (Pasal 148). Dewan ini dipimpin Presiden dan beranggotakan sipil dan militer, tetapi anggota sipil harus lebih banyak, karena dalam demokrasi angkatan bersenjata berada di bawah kendali sipil. Ke-13 anggota yang dilantik pada 11 September 2023 meliputi Perdana Menteri, menteri luar negeri, pertahanan, dalam negeri dan kehakiman, tiga anggota parlemen, Kepala Staf Umum F-FDTL, Komandan Jenderal PNTL, direktur Dinas Intelijen Nasional dan dua warga yang diangkat Presiden (Pasal 86). Presiden wajib mendengarkan Dewan ini sebelum menyatakan keadaan bahaya atau keadaan darurat dan sebelum menyatakan perang atau berdamai (Pasal 85 dan 87)."
      }
     },
     {
@@ -3283,10 +4425,10 @@
       "id": "Dewan dalam praktik"
      },
      "text": {
-      "tet": "Konsellu sira halibur bainhira nasaun hasoru desizaun importante. Iha Janeiru 2018, Prezidente Francisco Guterres Lú-Olo rona partidu sira no Konsellu-Estadu molok hakotu Parlamentu no konvoka eleisaun antesipada. Iha Marsu 2020, atu kombate pandemia COVID-19, Prezidente deklara estadu emerjénsia hafoin Parlamentu fó autorizasaun; tuir Artigu 25, medida ne'e bele la'o loron 30 de'it, tan ne'e sira renova dala balun. Maski iha emerjénsia, direitu balu labele suspende, hanesan direitu ba moris no liberdade konxiénsia no relijiaun nian (Artigu 25).",
-      "pt": "Os conselhos reúnem-se quando o país enfrenta escolhas importantes. Em janeiro de 2018, o Presidente Francisco Guterres Lú-Olo ouviu os partidos e o Conselho de Estado antes de dissolver o Parlamento e convocar eleições antecipadas. Em março de 2020, para combater a pandemia de COVID-19, o Presidente declarou o estado de emergência depois de o Parlamento o autorizar; segundo o artigo 25.º, esta medida dura no máximo 30 dias, por isso foi renovada algumas vezes. Mesmo em emergência, alguns direitos nunca podem ser suspensos, como o direito à vida e a liberdade de consciência e de religião (artigo 25.º).",
-      "en": "The councils meet when the country faces important choices. In January 2018, President Francisco Guterres Lú-Olo heard the parties and the Council of State before dissolving Parliament and calling early elections. In March 2020, to fight the COVID-19 pandemic, the President declared a state of emergency after Parliament authorised it; under Article 25 such a measure lasts at most 30 days, so it was renewed a few times. Even in an emergency, some rights can never be suspended, such as the right to life and freedom of conscience and religion (Article 25).",
-      "id": "Dewan-dewan ini bersidang ketika negara menghadapi pilihan penting. Pada Januari 2018 Presiden Francisco Guterres Lú-Olo mendengarkan partai-partai dan Dewan Negara sebelum membubarkan Parlemen dan menyerukan pemilu dipercepat. Pada Maret 2020, untuk melawan pandemi COVID-19, Presiden menyatakan keadaan darurat setelah mendapat izin Parlemen; menurut Pasal 25, tindakan ini berlaku paling lama 30 hari, sehingga diperpanjang beberapa kali. Bahkan dalam keadaan darurat, beberapa hak tidak pernah boleh ditangguhkan, seperti hak untuk hidup serta kebebasan hati nurani dan beragama (Pasal 25)."
+      "tet": "Konsellu sira halibur bainhira nasaun hasoru desizaun importante, no sira-nia reuniaun la'ós públiku. Iha Janeiru 2018, Prezidente Francisco Guterres Lú-Olo rona partidu sira no, iha 24 Janeiru, Konsellu-Estadu, molok hakotu Parlamentu no konvoka eleisaun antesipada. Durante pandemia COVID-19, estadu emerjénsia, ne'ebé labele naruk liu loron 30 (Artigu 25), hetan deklarasaun dahuluk iha Marsu 2020 no hetan renovasaun dala barak: iha Jullu 2021 to'o ona deklarasaun ba dala-16. Maski iha emerjénsia, direitu hanesan moris no liberdade konxiénsia no relijiaun nian labele suspende (Artigu 25). Iha 15 Maiu 2026, Konsellu-Estadu hasoru malu atu analiza situasaun nasaun nian, no Konsellu Superiór Defeza no Seguransa hasoru malu iha 1 Outubru 2026 atu avalia seguransa nasaun nian.",
+      "pt": "Os conselhos reúnem-se quando o país enfrenta escolhas importantes, e as suas reuniões não são públicas. Em janeiro de 2018, o Presidente Francisco Guterres Lú-Olo ouviu os partidos e, a 24 de janeiro, o Conselho de Estado, antes de dissolver o Parlamento e convocar eleições antecipadas. Durante a pandemia de COVID-19, o estado de emergência, que dura no máximo 30 dias (artigo 25.º), foi declarado pela primeira vez em março de 2020 e renovado muitas vezes: em julho de 2021 ia na 16.ª declaração. Mesmo em emergência, direitos como a vida e a liberdade de consciência e de religião nunca podem ser suspensos (artigo 25.º). A 15 de maio de 2026, o Conselho de Estado reuniu-se para analisar a situação do país, e o Conselho Superior de Defesa e Segurança reuniu-se a 1 de outubro de 2026 para avaliar a segurança nacional.",
+      "en": "The councils meet when the country faces important choices, and their meetings are not public. In January 2018 President Francisco Guterres Lú-Olo heard the parties and, on 24 January, the Council of State, before dissolving Parliament and calling early elections. During the COVID-19 pandemic, the state of emergency, which lasts at most 30 days (Article 25), was first declared in March 2020 and renewed many times: by July 2021 it had reached its 16th declaration. Even in an emergency, rights such as life and freedom of conscience and religion can never be suspended (Article 25). On 15 May 2026 the Council of State met to analyse the country's situation, and the Superior Council for Defence and Security met on 1 October 2026 to assess national security.",
+      "id": "Kedua dewan bersidang ketika negara menghadapi pilihan penting, dan rapat-rapatnya tidak terbuka untuk umum. Pada Januari 2018 Presiden Francisco Guterres Lú-Olo mendengarkan partai-partai dan, pada 24 Januari, Dewan Negara, sebelum membubarkan Parlemen dan menyelenggarakan pemilu dipercepat. Selama pandemi COVID-19, keadaan darurat, yang paling lama berlangsung 30 hari (Pasal 25), pertama kali dinyatakan pada Maret 2020 dan diperpanjang berkali-kali: pada Juli 2021 sudah mencapai pernyataan ke-16. Bahkan dalam keadaan darurat, hak seperti hak hidup serta kebebasan berhati nurani dan beragama tidak pernah boleh ditangguhkan (Pasal 25). Pada 15 Mei 2026 Dewan Negara bersidang untuk menganalisis keadaan negara, dan Dewan Tinggi Pertahanan dan Keamanan bersidang pada 1 Oktober 2026 untuk menilai keamanan nasional."
      }
     }
    ],
@@ -3364,9 +4506,48 @@
       "en": "Chaired by the President; civilian majority (Article 148)",
       "id": "Dipimpin Presiden; mayoritas sipil (Pasal 148)"
      }
+    },
+    {
+     "label": {
+      "tet": "Membru Konsellu-Estadu atuál",
+      "pt": "Membros atuais do Conselho de Estado",
+      "en": "Current members of the Council of State",
+      "id": "Anggota Dewan Negara saat ini"
+     },
+     "value": {
+      "tet": "14, aléinde Prezidente (pose iha 11 Setembru 2023)",
+      "pt": "14, além do Presidente (posse a 11 de setembro de 2023)",
+      "en": "14, besides the President (sworn in on 11 September 2023)",
+      "id": "14, selain Presiden (dilantik 11 September 2023)"
+     },
+     "year": 2026
+    },
+    {
+     "label": {
+      "tet": "Membru Konsellu Superiór Defeza no Seguransa",
+      "pt": "Membros do Conselho Superior de Defesa e Segurança",
+      "en": "Members of the Superior Council for Defence and Security",
+      "id": "Anggota Dewan Tinggi Pertahanan dan Keamanan"
+     },
+     "value": {
+      "tet": "13 (pose iha 11 Setembru 2023)",
+      "pt": "13 (posse a 11 de setembro de 2023)",
+      "en": "13 (sworn in on 11 September 2023)",
+      "id": "13 (dilantik 11 September 2023)"
+     },
+     "year": 2023
     }
    ],
    "timeline": [
+    {
+     "date": "2018-01-24",
+     "title": {
+      "tet": "Konsellu-Estadu hasoru malu molok disolusaun Parlamentu",
+      "pt": "O Conselho de Estado reúne-se antes da dissolução do Parlamento",
+      "en": "The Council of State meets before Parliament is dissolved",
+      "id": "Dewan Negara bersidang sebelum Parlemen dibubarkan"
+     }
+    },
     {
      "date": "2020-03",
      "title": {
@@ -3374,6 +4555,51 @@
       "pt": "Primeiro estado de emergência contra a COVID-19",
       "en": "First state of emergency against COVID-19",
       "id": "Keadaan darurat pertama melawan COVID-19"
+     }
+    },
+    {
+     "date": "2021-07-27",
+     "title": {
+      "tet": "Prezidente dekreta estadu emerjénsia ba dala-16",
+      "pt": "O Presidente decreta o 16.º estado de emergência",
+      "en": "The President decrees the 16th state of emergency",
+      "id": "Presiden menetapkan keadaan darurat ke-16"
+     }
+    },
+    {
+     "date": "2023-08-14",
+     "title": {
+      "tet": "Parlamentu hili membru na'in lima ba Konsellu-Estadu",
+      "pt": "O Parlamento elege cinco membros do Conselho de Estado",
+      "en": "Parliament elects five members of the Council of State",
+      "id": "Parlemen memilih lima anggota Dewan Negara"
+     }
+    },
+    {
+     "date": "2023-09-11",
+     "title": {
+      "tet": "Membru foun konsellu rua simu pose",
+      "pt": "Tomam posse os novos membros dos dois conselhos",
+      "en": "New members of both councils are sworn in",
+      "id": "Anggota baru kedua dewan dilantik"
+     }
+    },
+    {
+     "date": "2026-05-15",
+     "title": {
+      "tet": "Reuniaun Konsellu-Estadu kona-ba interese nasionál",
+      "pt": "Reunião do Conselho de Estado sobre o interesse nacional",
+      "en": "Council of State meeting on the national interest",
+      "id": "Sidang Dewan Negara tentang kepentingan nasional"
+     }
+    },
+    {
+     "date": "2026-10-01",
+     "title": {
+      "tet": "Reuniaun Konsellu Superiór Defeza no Seguransa",
+      "pt": "Reunião do Conselho Superior de Defesa e Segurança",
+      "en": "Meeting of the Superior Council for Defence and Security",
+      "id": "Sidang Dewan Tinggi Pertahanan dan Keamanan"
      }
     }
    ],
@@ -3386,21 +4612,72 @@
      "id": "Presiden Republik memimpin Dewan Negara dan Dewan Tinggi Pertahanan dan Keamanan."
     }
    },
+   "wiki": {
+    "en": "Council of State (Timor-Leste)"
+   },
    "related": [
     "tl.politics.president_office",
     "tl.politics.system",
     "tl.politics.defence_security",
     "tl.politics.rights_duties",
-    "tl.politics.parliament"
+    "tl.politics.parliament",
+    "tl.institutions.ffdtl",
+    "tl.institutions.pntl",
+    "tl.institutions.overview"
    ],
    "tags": [
     "konsellu-estadu",
     "council of state",
     "defeza",
     "estadu emerjénsia",
-    "state of emergency"
+    "state of emergency",
+    "conselho de estado",
+    "dewan negara",
+    "KSDS"
    ],
    "quiz": [
+    {
+     "q": {
+      "tet": "Se mak prezide Konsellu Superiór Defeza no Seguransa?",
+      "pt": "Quem preside ao Conselho Superior de Defesa e Segurança?",
+      "en": "Who chairs the Superior Council for Defence and Security?",
+      "id": "Siapa yang memimpin Dewan Tinggi Pertahanan dan Keamanan?"
+     },
+     "options": [
+      {
+       "tet": "Primeiru-Ministru",
+       "pt": "O Primeiro-Ministro",
+       "en": "The Prime Minister",
+       "id": "Perdana Menteri"
+      },
+      {
+       "tet": "Ministru Defeza",
+       "pt": "O Ministro da Defesa",
+       "en": "The Minister of Defence",
+       "id": "Menteri Pertahanan"
+      },
+      {
+       "tet": "Prezidente Repúblika",
+       "pt": "O Presidente da República",
+       "en": "The President of the Republic",
+       "id": "Presiden Republik"
+      },
+      {
+       "tet": "Xefe Estadu-Maiór Jenerál F-FDTL",
+       "pt": "O Chefe do Estado-Maior-General das F-FDTL",
+       "en": "The Chief of the General Staff of the F-FDTL",
+       "id": "Kepala Staf Umum F-FDTL"
+      }
+     ],
+     "answer": 2,
+     "why": {
+      "tet": "Artigu 148: Prezidente Repúblika mak prezide.",
+      "pt": "Artigo 148.º: é presidido pelo Presidente da República.",
+      "en": "Article 148: it is chaired by the President of the Republic.",
+      "id": "Pasal 148: dipimpin oleh Presiden Republik."
+     },
+     "difficulty": 2
+    },
     {
      "q": {
       "tet": "Se mak prezide Konsellu-Estadu?",
@@ -3571,6 +4848,48 @@
     },
     {
      "q": {
+      "tet": "Membru atuál Konsellu-Estadu simu pose iha loron ne'ebé?",
+      "pt": "Em que data tomaram posse os atuais membros do Conselho de Estado?",
+      "en": "On what date did the current members of the Council of State take office?",
+      "id": "Kapan anggota Dewan Negara saat ini dilantik?"
+     },
+     "options": [
+      {
+       "tet": "20 Maiu 2022",
+       "pt": "20 de maio de 2022",
+       "en": "20 May 2022",
+       "id": "20 Mei 2022"
+      },
+      {
+       "tet": "1 Jullu 2023",
+       "pt": "1 de julho de 2023",
+       "en": "1 July 2023",
+       "id": "1 Juli 2023"
+      },
+      {
+       "tet": "11 Setembru 2023",
+       "pt": "11 de setembro de 2023",
+       "en": "11 September 2023",
+       "id": "11 September 2023"
+      },
+      {
+       "tet": "15 Maiu 2026",
+       "pt": "15 de maio de 2026",
+       "en": "15 May 2026",
+       "id": "15 Mei 2026"
+      }
+     ],
+     "answer": 2,
+     "why": {
+      "tet": "Prezidente José Ramos-Horta fó pose ba membru foun iha 11 Setembru 2023.",
+      "pt": "O Presidente José Ramos-Horta deu posse aos novos membros a 11 de setembro de 2023.",
+      "en": "President José Ramos-Horta swore in the new members on 11 September 2023.",
+      "id": "Presiden José Ramos-Horta melantik anggota baru pada 11 September 2023."
+     },
+     "difficulty": 10
+    },
+    {
+     "q": {
       "tet": "Eis-Prezidente ida-ne'ebé mak sai membru Konsellu-Estadu?",
       "pt": "Que antigos Presidentes são membros do Conselho de Estado?",
       "en": "Which former Presidents are members of the Council of State?",
@@ -3688,11 +5007,67 @@
      "url": "https://en.wikipedia.org/wiki/COVID-19_pandemic_in_East_Timor",
      "accessed": "2026-10-27",
      "licence": "CC BY-SA 4.0"
+    },
+    {
+     "title": "Membru Konsellu Estadu no Konsellu Superiór Defeza foun simu posse hosi Xefe Estadu (11 setembru 2023)",
+     "publisher": "Tatoli — Agência Noticiosa de Timor-Leste",
+     "url": "https://tatoli.tl/2023/09/11/membru-konsellu-estadu-no-konsellu-superior-defeza-foun-simu-posse-hosi-xefe-estadu/",
+     "accessed": "2026-11-11",
+     "licence": "© Tatoli"
+    },
+    {
+     "title": "PN hili membru na'in-lima ba Konsellu Estadu (14 agostu 2023)",
+     "publisher": "Tatoli — Agência Noticiosa de Timor-Leste",
+     "url": "https://tatoli.tl/2023/08/14/pn-hili-membru-nain-lima-ba-konsellu-estadu/",
+     "accessed": "2026-11-11",
+     "licence": "© Tatoli"
+    },
+    {
+     "title": "Reuniaun Konsellu Estadu aborda kona-ba interese nasionál (15 Maiu 2026)",
+     "publisher": "Tatoli — Agência Noticiosa de Timor-Leste",
+     "url": "https://tatoli.tl/2026/05/15/reuniaun-konsellu-estadu-aborda-kona-ba-interese-nasional/",
+     "accessed": "2026-11-11",
+     "licence": "© Tatoli"
+    },
+    {
+     "title": "PR sei konsulta ho ParPol no prezide reuniaun dahuluk Konsellu Estadu (22 janeiru 2018)",
+     "publisher": "Tatoli — Agência Noticiosa de Timor-Leste",
+     "url": "https://tatoli.tl/2018/01/22/pr-sei-konsulta-ho-parpol-no-prezide-reuniaun-dahuluk-konsellu-estadu/",
+     "accessed": "2026-11-11",
+     "licence": "© Tatoli"
+    },
+    {
+     "title": "Rezultadu reuniaun Konsellu Estadu sei públika iha Jornal da República (24 janeiru 2018)",
+     "publisher": "Tatoli — Agência Noticiosa de Timor-Leste",
+     "url": "https://tatoli.tl/2018/01/24/rezultadu-reuniaun-konsellu-estadu-sei-publika-iha-jornal-da-republica/",
+     "accessed": "2026-11-11",
+     "licence": "© Tatoli"
+    },
+    {
+     "title": "Prezidente Repúblika dekreta estadu emerjénsia ba dala-XVI (29 jullu 2021)",
+     "publisher": "Tatoli — Agência Noticiosa de Timor-Leste",
+     "url": "https://tatoli.tl/2021/07/29/prezidente-republika-dekreta-estadu-emerjensia-ba-dala-xvi/",
+     "accessed": "2026-11-11",
+     "licence": "© Tatoli"
+    },
+    {
+     "title": "Superior Council of Defense and Security Meets at the Presidential Palace to Assess the National Situation (1 October 2026)",
+     "publisher": "Presidência da República Democrática de Timor-Leste (presidenciarepublica.tl)",
+     "url": "https://presidenciarepublica.tl/superior-council-of-defense-and-security-meets-at-the-presidential-palace-to-assess-the-national-situation/",
+     "accessed": "2026-11-11",
+     "licence": "© Presidência da República de Timor-Leste"
+    },
+    {
+     "title": "Council of State (Timor-Leste)",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Council_of_State_(Timor-Leste)",
+     "accessed": "2026-11-11",
+     "licence": "CC BY-SA 4.0"
     }
    ],
    "review": {
     "status": "draft",
-    "notes": "Constitutional rules from the Tetun text (Art. 25, 85–91, 148). To verify: that the Council of State was heard before the January 2018 dissolution (required by Art. 86 but not checked in a source); the March 2020 COVID-19 state of emergency and its renewals (from memory; Wikipedia page cited). No wiki title chosen (no certain page on the Council of State). Tetun: 'órgaun konsulta polítiku', 'destituisaun', 'estadu serku'."
+    "notes": "Updated 2026-11-11. Members of both councils sworn in on 11 Sept 2023 and the five members elected by Parliament on 14 Aug 2023 (60 votes in favour, 4 blank) are from Tatoli only; names copied as Tatoli spells them ('Numinando S. Martins' is 'Nando S. Martins Buras' in the 14 Aug article; 'Jacinto Viegas Vicente Roque'). Tatoli's 2023 article cites 'artigu 48' for the defence council (typo for Article 148). Verified: Council of State meeting on 24 Jan 2018 before the dissolution (Tatoli 22/24 Jan 2018; deliberations published in the Jornal da República under the Council of State law); 16th state of emergency decreed on 27 July 2021 (Decree 56/2021, Tatoli); Council of State meeting on 15 May 2026 (Tatoli) and defence council meeting on 1 Oct 2026, previous one on 14 March (Presidency). The 'five-year term' is Tatoli's wording; under Art. 90 the elected members serve for the legislature and the designated ones for the President's term. Tetun to check: 'membru tanba sira-nia kargu' (ex officio), 'aléinde', 'eleisaun antesipada', 'Madre'."
    }
   },
   {

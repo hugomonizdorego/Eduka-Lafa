@@ -2778,9 +2778,9 @@
     "en": "Maliana",
     "id": "Maliana"
    },
-   "area_km2": 1368,
+   "area_km2": 1380.8,
    "population": {
-    "value": 106543,
+    "value": 106639,
     "year": 2022
    },
    "posts": [
@@ -2854,6 +2854,34 @@
     },
     {
      "heading": {
+      "tet": "Ekonomia no servisu",
+      "pt": "Economia e trabalho",
+      "en": "Economy and work",
+      "id": "Ekonomi dan pekerjaan"
+     },
+     "text": {
+      "tet": "Ema barak moris husi setór primáriu: tuir Direksaun Nasionál Estatístika (2011), ne'ebé Wikipédia portugés temi, agrikultura no peska fó servisu ba populasaun ativa maizumenus 72%, no artezanatu ho komérsiu maizumenus 6%. Rai-kle'an Maliana, ne'ebé mota Bulobu, Nunura, Malibaka no Bui Pira fó bee, sai rai-hare boot: iha okupasaun Indonézia nia okos, ninia foos ba distritu seluk no ba Timor Osidentál. Feto sira iha Bobonaru famozu ho tais ho kór metan iha kotuk. Komérsiu fronteira nian liu husi Batugade, postu prinsipál entre nasaun rua, no husi Tunubibi, besik Maliana. Iha tasi-ibun, Sanirin, Batugade no Aidabaleten tama iha inisiativa ida ba área protejida tasi nian iha noroeste.",
+      "pt": "A maioria das pessoas vive do setor primário: segundo a Direção Nacional de Estatística (2011), citada pela Wikipédia em português, a agricultura e a pesca ocupavam cerca de 72% da população ativa, e o artesanato e o comércio cerca de 6%. O vale de Maliana, regado pelos rios Bulobu, Nunura, Malibaka e Bui Pira, é um celeiro de arroz: durante a ocupação indonésia abastecia outros distritos e Timor Ocidental. As tecelãs de Bobonaro são conhecidas pelo tais de fundo preto. O comércio de fronteira passa por Batugade, o principal posto entre os dois países, e por Tunubibi, perto de Maliana. Na costa, Sanirin, Batugade e Aidabaleten fazem parte de uma iniciativa de área marinha protegida no noroeste.",
+      "en": "Most people live from the primary sector: according to the National Statistics Directorate (2011), quoted by Portuguese Wikipedia, farming and fishing employed about 72% of working people, and crafts and trade about 6%. The Maliana valley, watered by the Bulobu, Nunura, Malibaka and Bui Pira rivers, is a rice basket: during the Indonesian occupation it supplied other districts and West Timor. Bobonaro's weavers are known for tais with a black background. Border trade passes through Batugade, the main crossing between the two countries, and Tunubibi, near Maliana. On the coast, Sanirin, Batugade and Aidabaleten are part of a north-west marine protected area initiative.",
+      "id": "Sebagian besar penduduk hidup dari sektor primer: menurut Direktorat Nasional Statistik (2011) yang dikutip Wikipedia bahasa Portugis, pertanian dan perikanan mempekerjakan sekitar 72% penduduk yang bekerja, dan kerajinan serta perdagangan sekitar 6%. Lembah Maliana, yang diairi sungai Bulobu, Nunura, Malibaka, dan Bui Pira, adalah lumbung padi: pada masa pendudukan Indonesia lembah ini memasok distrik-distrik lain dan Timor Barat. Para penenun Bobonaro terkenal dengan tais berlatar hitam. Perdagangan lintas batas melewati Batugade, pos utama antara kedua negara, dan Tunubibi, dekat Maliana. Di pesisir, Sanirin, Batugade, dan Aidabaleten termasuk dalam prakarsa kawasan konservasi laut di barat laut."
+     }
+    },
+    {
+     "heading": {
+      "tet": "Administrasaun",
+      "pt": "Administração",
+      "en": "Administration",
+      "id": "Administrasi"
+     },
+     "text": {
+      "tet": "Kapitál mak Maliana, maizumenus km 149 husi Dili no besik fronteira; Maliana mós sede ba Diosese Maliana. Iha tempu Portugés, konsellu nia kapitál mak Vila Armindo Monteiro, ohin loron vila Bobonaru, no munisípiu nia fronteira hanesan ho tempu ne'ebá. Iha postu administrativu neen: Atabae, Balibo, Bobonaro, Cailaco, Lolotoe (mós Lolotoi) no Maliana. Hotu-hotu iha suku 50; postu Bobonaro, ho suku 18, mak iha suku barak liu. Tuir Wikipédia, naran Bobonaru bele mai husi Tetun «buburnaru» (ai-kabelak aas), husi Bunak «ho» no «nalu» («bote raan nian» ka «bote moris nian») ka husi Kemak «bobo naru», fatin seguru atu subar ba tempu naruk.",
+      "pt": "A capital é Maliana, a cerca de 149 km de Díli e perto da fronteira; é também a sede da Diocese de Maliana. No tempo português, a capital do concelho era a Vila Armindo Monteiro, hoje a vila de Bobonaro, e os limites do município são os mesmos desse tempo. Há seis postos administrativos: Atabae, Balibo, Bobonaro, Cailaco, Lolotoe (também Lolotoi) e Maliana. No total têm 50 sucos; o posto de Bobonaro, com 18, é o que tem mais sucos. Segundo a Wikipédia, o nome pode vir do tétum «buburnaru» («eucalipto alto»), do bunak «ho» e «nalu» («cesto de sangue» ou «cesto da vida») ou do kemak «bobo naru», um lugar seguro onde se pode ficar escondido muito tempo.",
+      "en": "The capital is Maliana, about 149 km from Dili and close to the border; it is also the seat of the Diocese of Maliana. In Portuguese times the capital of the council was Vila Armindo Monteiro, now Bobonaro town, and the municipality's borders are the same as then. There are six administrative posts: Atabae, Balibo, Bobonaro, Cailaco, Lolotoe (also Lolotoi) and Maliana. Together they have 50 sucos; Bobonaro post, with 18, has the most. According to Wikipedia, the name may come from Tetun 'buburnaru' ('tall eucalyptus'), from Bunak 'ho' and 'nalu' ('basket of blood' or 'basket of life') or from Kemak 'bobo naru', a safe place where one can hide for a long time.",
+      "id": "Ibu kotanya adalah Maliana, sekitar 149 km dari Dili dan dekat perbatasan; Maliana juga menjadi pusat Keuskupan Maliana. Pada masa Portugis, ibu kota wilayah ini adalah Vila Armindo Monteiro, kini kota Bobonaro, dan batas munisipalitas masih sama seperti dulu. Ada enam pos administratif: Atabae, Balibo, Bobonaro, Cailaco, Lolotoe (juga Lolotoi), dan Maliana. Semuanya memiliki 50 suco; pos Bobonaro, dengan 18 suco, memiliki suco terbanyak. Menurut Wikipedia, namanya mungkin berasal dari kata Tetun 'buburnaru' ('kayu putih yang tinggi'), dari kata Bunak 'ho' dan 'nalu' ('keranjang darah' atau 'keranjang kehidupan'), atau dari kata Kemak 'bobo naru', tempat aman untuk bersembunyi lama."
+     }
+    },
+    {
+     "heading": {
       "tet": "Fatin atu hatene",
       "pt": "Lugares a conhecer",
       "en": "Places to know",
@@ -2875,16 +2903,51 @@
       "en": "Capital",
       "id": "Ibu kota"
      },
-     "value": "Maliana"
+     "value": {
+      "tet": "Maliana",
+      "pt": "Maliana",
+      "en": "Maliana",
+      "id": "Maliana"
+     }
     },
     {
      "label": {
-      "tet": "Populasaun",
-      "pt": "População",
-      "en": "Population",
-      "id": "Penduduk"
+      "tet": "Populasaun (Sensu 2022)",
+      "pt": "População (Censo 2022)",
+      "en": "Population (2022 census)",
+      "id": "Penduduk (Sensus 2022)"
      },
-     "value": "≈ 106 500",
+     "value": "106 639",
+     "year": 2022
+    },
+    {
+     "label": {
+      "tet": "Área",
+      "pt": "Área",
+      "en": "Area",
+      "id": "Luas"
+     },
+     "value": {
+      "tet": "1 380,8 km²",
+      "pt": "1 380,8 km²",
+      "en": "1,380.8 km²",
+      "id": "1.380,8 km²"
+     },
+     "year": 2022
+    },
+    {
+     "label": {
+      "tet": "Densidade populasaun",
+      "pt": "Densidade populacional",
+      "en": "Density",
+      "id": "Kepadatan penduduk"
+     },
+     "value": {
+      "tet": "77 ema kada km²",
+      "pt": "77 hab./km²",
+      "en": "77 people per km²",
+      "id": "77 jiwa per km²"
+     },
      "year": 2022
     },
     {
@@ -2898,12 +2961,17 @@
     },
     {
      "label": {
-      "tet": "Pontu fronteira prinsipál",
-      "pt": "Passagem de fronteira principal",
-      "en": "Main border crossing",
-      "id": "Pos lintas batas utama"
+      "tet": "Suku no aldeia",
+      "pt": "Sucos e aldeias",
+      "en": "Sucos and aldeias",
+      "id": "Suco dan aldeia"
      },
-     "value": "Batugade–Motaain"
+     "value": {
+      "tet": "Suku 50",
+      "pt": "50 sucos",
+      "en": "50 sucos",
+      "id": "50 suco"
+     }
     },
     {
      "label": {
@@ -2912,10 +2980,86 @@
       "en": "Main languages",
       "id": "Bahasa utama"
      },
-     "value": "Bunak, Kemak"
+     "value": {
+      "tet": "Bunak, Kemak, Bekais no Tetun",
+      "pt": "Bunak, kemak, bekais e tétum",
+      "en": "Bunak, Kemak, Bekais and Tetun",
+      "id": "Bunak, Kemak, Bekais, dan Tetun"
+     }
+    },
+    {
+     "label": {
+      "tet": "Fatin aas liu",
+      "pt": "Ponto mais alto",
+      "en": "Highest point",
+      "id": "Titik tertinggi"
+     },
+     "value": {
+      "tet": "Datoi-Tapo, m 1 941",
+      "pt": "Datoi-Tapo, 1941 m",
+      "en": "Datoi-Tapo, 1,941 m",
+      "id": "Datoi-Tapo, 1.941 m"
+     }
+    },
+    {
+     "label": {
+      "tet": "Produtu prinsipál",
+      "pt": "Produtos principais",
+      "en": "Main products",
+      "id": "Produk utama"
+     },
+     "value": {
+      "tet": "Hare, batar, ai-farina, modo, animál no tais",
+      "pt": "Arroz, milho, mandioca, legumes, gado e tais",
+      "en": "Rice, maize, cassava, vegetables, livestock and tais",
+      "id": "Padi, jagung, singkong, sayuran, ternak, dan tais"
+     }
+    },
+    {
+     "label": {
+      "tet": "Pasajen fronteira prinsipál",
+      "pt": "Passagem de fronteira principal",
+      "en": "Main border crossing",
+      "id": "Pos lintas batas utama"
+     },
+     "value": {
+      "tet": "Batugade – Mota'ain (Indonézia)",
+      "pt": "Batugade – Mota'ain (Indonésia)",
+      "en": "Batugade – Mota'ain (Indonesia)",
+      "id": "Batugade – Mota'ain (Indonesia)"
+     }
     }
    ],
-   "highlights": [],
+   "timeline": [
+    {
+     "date": "1975-10-16",
+     "title": {
+      "tet": "Jornalista estranjeiru na'in-lima («Balibo Five») mate iha Balibo bainhira forsa Indonézia ataka",
+      "pt": "Cinco jornalistas estrangeiros (os «Cinco de Balibo») são mortos em Balibo durante um ataque indonésio",
+      "en": "Five foreign journalists (the 'Balibo Five') are killed in Balibo during an Indonesian attack",
+      "id": "Lima wartawan asing ('Balibo Five') tewas di Balibo saat serangan Indonesia"
+     }
+    },
+    {
+     "date": "1999",
+     "title": {
+      "tet": "Tuir Human Rights Watch, maizumenus 70% husi Balibo naksobu iha violénsia milísia nian",
+      "pt": "Segundo a Human Rights Watch, cerca de 70% de Balibo é destruída pela violência das milícias",
+      "en": "According to Human Rights Watch, about 70% of Balibo is destroyed in militia violence",
+      "id": "Menurut Human Rights Watch, sekitar 70% Balibo hancur akibat kekerasan milisi"
+     }
+    }
+   ],
+   "highlights": [
+    "place.maliana",
+    "place.balibo_fort",
+    "place.balibo_house",
+    "place.batugade",
+    "place.marobo_hot_springs",
+    "place.leohito_waterfall",
+    "place.bobonaro_town",
+    "place.atabae"
+   ],
    "figure": {
     "illustration": "rice",
     "caption": {
@@ -3107,6 +3251,90 @@
       "id": "Mata air panas Marobo berada di perbukitan pos Bobonaro."
      },
      "difficulty": 11
+    },
+    {
+     "q": {
+      "tet": "Bobonaru iha loro-monu halo fronteira ho nasaun ida-ne'ebé?",
+      "pt": "Com que país faz fronteira Bobonaro, a oeste?",
+      "en": "Which country borders Bobonaro to the west?",
+      "id": "Negara mana yang berbatasan dengan Bobonaro di sebelah barat?"
+     },
+     "options": [
+      {
+       "tet": "Austrália",
+       "pt": "Austrália",
+       "en": "Australia",
+       "id": "Australia"
+      },
+      {
+       "tet": "Papua-Nova Giné",
+       "pt": "Papua-Nova Guiné",
+       "en": "Papua New Guinea",
+       "id": "Papua Nugini"
+      },
+      {
+       "tet": "Filipina",
+       "pt": "Filipinas",
+       "en": "the Philippines",
+       "id": "Filipina"
+      },
+      {
+       "tet": "Indonézia",
+       "pt": "Indonésia",
+       "en": "Indonesia",
+       "id": "Indonesia"
+      }
+     ],
+     "answer": 3,
+     "why": {
+      "tet": "Iha loro-monu, Bobonaru halo fronteira ho provínsia Indonézia Nusa Tenggara Timur (Timor Osidentál).",
+      "pt": "A oeste, Bobonaro faz fronteira com a província indonésia de Nusa Tenggara Timur (Timor Ocidental).",
+      "en": "To the west, Bobonaro borders the Indonesian province of East Nusa Tenggara (West Timor).",
+      "id": "Di sebelah barat, Bobonaro berbatasan dengan Provinsi Nusa Tenggara Timur (Timor Barat), Indonesia."
+     },
+     "difficulty": 4
+    },
+    {
+     "q": {
+      "tet": "Iha tempu Portugés, konsellu Bobonaru nia kapitál iha ne'ebé?",
+      "pt": "Onde era a capital do concelho de Bobonaro no tempo português?",
+      "en": "Where was the capital of Bobonaro council in Portuguese times?",
+      "id": "Di mana ibu kota wilayah Bobonaro pada masa Portugis?"
+     },
+     "options": [
+      {
+       "tet": "Maliana",
+       "pt": "Maliana",
+       "en": "Maliana",
+       "id": "Maliana"
+      },
+      {
+       "tet": "Balibo",
+       "pt": "Balibó",
+       "en": "Balibo",
+       "id": "Balibo"
+      },
+      {
+       "tet": "Vila Armindo Monteiro (ohin vila Bobonaru)",
+       "pt": "Vila Armindo Monteiro (hoje a vila de Bobonaro)",
+       "en": "Vila Armindo Monteiro (now Bobonaro town)",
+       "id": "Vila Armindo Monteiro (kini kota Bobonaro)"
+      },
+      {
+       "tet": "Batugade",
+       "pt": "Batugade",
+       "en": "Batugade",
+       "id": "Batugade"
+      }
+     ],
+     "answer": 2,
+     "why": {
+      "tet": "Kapitál koloniál mak Vila Armindo Monteiro, ohin loron vila Bobonaru. Agora kapitál mak Maliana.",
+      "pt": "A capital colonial era a Vila Armindo Monteiro, hoje a vila de Bobonaro. Hoje a capital é Maliana.",
+      "en": "The colonial capital was Vila Armindo Monteiro, now Bobonaro town. Today the capital is Maliana.",
+      "id": "Ibu kota masa kolonial adalah Vila Armindo Monteiro, kini kota Bobonaro. Sekarang ibu kotanya Maliana."
+     },
+     "difficulty": 13
     }
    ],
    "sources": [
@@ -3137,11 +3365,67 @@
      "url": "https://en.wikipedia.org/wiki/Municipalities_of_East_Timor",
      "accessed": "2026-10-27",
      "licence": "CC BY-SA 4.0"
+    },
+    {
+     "title": "Municipalities of Timor-Leste (Census 2022 tables)",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Municipalities_of_Timor-Leste",
+     "accessed": "2026-11-11",
+     "licence": "CC BY-SA 4.0"
+    },
+    {
+     "title": "Population by municipality, Census 2022",
+     "publisher": "INETL (Instituto Nacional de Estatística de Timor-Leste)",
+     "url": "https://inetl-ip.gov.tl/2023/02/07/population-by-municipality-census-2022/",
+     "accessed": "2026-11-11",
+     "licence": "© INETL"
+    },
+    {
+     "title": "Bobonaro (município)",
+     "publisher": "Wikipedia (Português)",
+     "url": "https://pt.wikipedia.org/wiki/Bobonaro_(munic%C3%ADpio)",
+     "accessed": "2026-11-11",
+     "licence": "CC BY-SA 4.0"
+    },
+    {
+     "title": "Bobonaro: historic forts and hot springs",
+     "publisher": "timorleste.tl (official tourism website of Timor-Leste)",
+     "url": "https://timorleste.tl/destinations/municipalities/bobonaro",
+     "accessed": "2026-11-11",
+     "licence": "© publisher"
+    },
+    {
+     "title": "Balibo (destination guide)",
+     "publisher": "timorleste.tl (official tourism website of Timor-Leste)",
+     "url": "https://timorleste.tl/destinations/balibo",
+     "accessed": "2026-11-11",
+     "licence": "© publisher"
+    },
+    {
+     "title": "The Five Summits of Timor-Leste",
+     "publisher": "timorleste.tl (official tourism website of Timor-Leste)",
+     "url": "https://timorleste.tl/stories/five-summits",
+     "accessed": "2026-11-11",
+     "licence": "© publisher"
+    },
+    {
+     "title": "Administrative Division",
+     "publisher": "Government of Timor-Leste (timor-leste.gov.tl)",
+     "url": "https://timor-leste.gov.tl/?p=91&lang=en",
+     "accessed": "2026-11-11",
+     "licence": "© Governo de Timor-Leste"
+    },
+    {
+     "title": "Sucos of Timor-Leste",
+     "publisher": "Wikipedia (English)",
+     "url": "https://en.wikipedia.org/wiki/Sucos_of_Timor-Leste",
+     "accessed": "2026-11-11",
+     "licence": "CC BY-SA 4.0"
     }
    ],
    "review": {
     "status": "draft",
-    "notes": "Population (2022 census) and area are from my memory of the Wikipedia 'Municipalities of East Timor' table and could not be re-checked (web-search budget used up); the 14 figures add up to 1 340 096, 338 short of the national 1 340 434. Check against INE's final 2022 report. Balibo Five (16 Oct 1975) is well documented. From memory: Flag House now a community centre, forts at Balibo and Batugade, Marobo hot springs, coffee in the Lolotoe/Bobonaro hills, 1999 militia attacks in Maliana."
+    "notes": "Profile completed 2026-11-11 (economy and administration sections, facts, timeline, highlights, two questions). NUMBERS: population 106 639 = 2022 census final result (INETL, via the en Wikipedia table that cites INETL; INETL 'Bobonaro em Números 2022' gives the same per a search summary); the old value 106 543 was the preliminary result. Area 1 380.8 km² from the 2022 census table; old value 1 368 = pt Wikipedia and government page; en text 1 376; the map ≈ 1 373 — sources differ. Density ≈ 77. 50 sucos and the 18 sucos of Bobonaro post from en 'Bobonaro Municipality' and the Wikipedia suco list. Datoi-Tapo 1 941 m from timorleste.tl 'Five Summits' (one of the country's five highest summits; that it is Bobonaro's highest point is my inference — check). 149 km, Vila Armindo Monteiro, toponymy, Batugade and Tunubibi crossings, marine initiative from en 'Bobonaro Municipality'; rice basket, rivers and diocese from en 'Maliana'; 72%/6% from pt Wikipedia (DNE 2011); black-ground tais from timorleste.tl; 70% destruction of Balibo (Human Rights Watch) from en 'Bobonaro Municipality'. Older text not re-checked: coffee in the hills of Lolotoe and Bobonaro. Tetun to check: 'rai-hare', 'ai-kabelak', 'tais ho kór metan iha kotuk'."
    }
   },
   {
