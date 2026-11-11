@@ -74,7 +74,7 @@ class InstitutionsPage(QWidget):
     def retranslate(self): self.render()
 
     def render(self):
-        clear_layout(self.col); win = self.win; t = win.t; lang = win.lang; base = win.kb
+        clear_layout(self.col); win = self.win; t = win.t; base = win.kb
         hero = Card(22, 26, gradient=(win.tok["nav_a"], win.tok["primary"], win.tok["nav_b"]))
         row = QHBoxLayout(); row.setSpacing(18); col = QVBoxLayout(); col.setSpacing(6)
         title = label(t("inst_title"), "h1", wrap=True); title.setStyleSheet("color:white;"); col.addWidget(title)

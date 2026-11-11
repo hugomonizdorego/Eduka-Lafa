@@ -60,7 +60,8 @@ def l2(r, where, value, name, required=True, minimum=1):
     pt = value.get("pt") if isinstance(value.get("pt"), str) else ""
     for lang in ("en", "id"):
         text = value.get(lang)
-        if isinstance(text, str) and text.strip() == pt.strip() and len(PT_WORDS & set(pt.lower().split())) >= 2:
+        words = pt.split()
+        if isinstance(text, str) and text.strip() == pt.strip() and len(words) >= 6 and len(PT_WORDS & set(words)) >= 2:
             r.warn(where, f"{name}.{lang} is the Portuguese text, not a translation")
     tet = value.get("tet") or ""
     if isinstance(tet, str):

@@ -43,7 +43,8 @@ page, settings, school levels, small screens and the Virtual Assistant.
 | `tools/make-fonts.py` | Nunito static fonts |
 | `tools/make-map.py` | Post map JSON from geoBoundaries ADM2 (cached in `build/geo`); municipalities are the union of their posts (needs `pip install shapely`) |
 | `tools/make-constitution.py` | `constitution.json` from the official PDFs in `tools/sources/constitution/` (needs `pdftotext`, poppler-utils) |
-| `tools/anthem/` | How the anthem's lyric times were measured (vocal separation + Whisper scoring); see its README |
+| `tools/anthem/` | How the anthem's lyric times were measured: `instrumental.py` for the instrumental recording (DTW against the vocal recording, beats and chords), the 0.3.0 vocal tools; see its README |
+| `tools/translate-sheet.py` | Worksheets for the four languages: `status`, `export FILE` (texts that miss a language), `import FILE SHEET` (writes the translations back, checks the sources did not change) |
 | `tools/make-icons.py` | SVG icons |
 | `tools/make-illustrations.py` | SVG illustrations + manifest |
 | `tools/make-poses.py` | Waving outfit poses from the owner's design sheet |

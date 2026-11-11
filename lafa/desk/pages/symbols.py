@@ -209,7 +209,7 @@ class SymbolsPage(QWidget):
         if self.player.state == "playing": self.player.pause()
     # ------------------------------------------------------------------ ui
     def render(self):
-        clear_layout(self.col); win = self.win; t = win.t; lang = win.lang; data = self.data; self.line_rows = {}
+        clear_layout(self.col); win = self.win; t = win.t; lang = win.lang; self.line_rows = {}
         hero = Card(18, 26, gradient=(win.tok["nav_a"], win.tok["primary"], win.tok["nav_b"]))
         row = QHBoxLayout(); row.setSpacing(18)
         flag = Banner(lambda w, h: icons.illustration("flag", w, h), 120, 18); flag.setFixedWidth(210); row.addWidget(flag)

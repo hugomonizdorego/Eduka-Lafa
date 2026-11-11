@@ -28,12 +28,12 @@ flowchart TD
 
 | Module | Role |
 | --- | --- |
-| `app.py` | `Window`: sidebar (11 menus in a scroll area + sources, settings, about), top bar (back, search, online chip, notifications, profile), page stack with fade, history, toasts, tray, single instance, Eduka-Settings roles (`--virtual-enable`, `--configure`, …) |
+| `app.py` | `Window`: sidebar (15 menus in three collapsible groups — Explore, State and nation, Learn and play — + sources, settings, about), top bar (back, search, online chip, notifications, profile), page stack with fade, history, toasts, tray, single instance, Eduka-Settings roles (`--virtual-enable`, `--configure`, …) |
 | `desk/theme.py` | Colour tokens (light/dark), Nunito fonts, pastel background, clay icons, the application style sheet |
 | `desk/widgets.py` | Glass `Card`, `Clickable`, `ClayIcon`, `Pill`, `Segmented`, `ListRow`, `CourseCard`, `Banner`, charts (`Donut`, `AreaChart`, `BarChart`), `CalendarCard`, `ResponsiveGrid`, `FlowLayout`, `Toast` |
-| `desk/texts.py` | Interface words in Tetun and Portuguese (`t(lang, key)`); pages add their own with `extend()` |
-| `desk/pages/*` | `home`, `encyclopedia` (+ category), `article` (every item kind + `QuizWidget`, photo gallery), `mapview`, `timeline`, `places`, `calendar` (+ `.ics`), `symbols` (anthem player with karaoke lyrics, flag, emblem), `constitution` (reader and search), `millionaire` (`Game` logic is UI-free), `language`, `paths`, `sources`, `data`, `settings`, `about`, `search` |
-| `kb.py` | Loads all content (packaged + updates), BM25 search in Tetun and Portuguese with title boost and type-ahead, holidays for any year (Easter, Islamic table), timeline and eras, questions by difficulty, learning paths per school level, sources index |
+| `desk/texts.py` | Interface words in Tetun, Portuguese, English and Indonesian (`t(lang, key)`, rows `(tet, pt, en, id)`, fallback by `kb.pick`); pages add their own with `extend()` |
+| `desk/pages/*` | `home`, `encyclopedia` (+ category), `article` (every item kind + `QuizWidget`, photo gallery), `mapview`, `timeline`, `places`, `calendar` (+ `.ics`), `symbols` (anthem player with karaoke lyrics, flag, official emblem with clickable parts — `EmblemView`), `constitution` (reader and search), `institutions` (catalog of the State institutions), `millionaire` (`Game` logic is UI-free), `history_game` (`HistoryGame` logic is UI-free), `catalog` (sub-sections of category pages), `language` (both directions, readings), `paths`, `sources`, `data`, `settings`, `about`, `search` |
+| `kb.py` | Loads all content (packaged + updates), BM25 search in four languages with a title boost in the reader's language and type-ahead, holidays for any year (Easter, Islamic table), timeline and eras, questions by difficulty, learning paths per school level, sources index |
 | `progress.py` | Personal progress (0600 JSON): read items, favourites, quiz results, Leitner boxes for words, millionaire results, XP, achievements, streak |
 | `store.py` | SQLite database for downloaded Wikipedia introductions, lead photos and gallery photos (with author/licence) |
 | `constitution.py` | The Constitution (`constitution.json`, built by `tools/make-constitution.py`): article references, accent-free search, highlighting |

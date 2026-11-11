@@ -408,11 +408,15 @@
    ],
    "title": {
     "tet": "F-FDTL: Forsa Defeza Timór-Leste",
-    "pt": "F-FDTL: as Forças de Defesa de Timor-Leste"
+    "pt": "F-FDTL: as Forças de Defesa de Timor-Leste",
+    "en": "F-FDTL: the Timor-Leste Defence Forces",
+    "id": "F-FDTL: Angkatan Pertahanan Timor-Leste"
    },
    "summary": {
-    "tet": "FALINTIL-Forsa Defeza Timór-Leste (F-FDTL) mak nasaun nia forsa armada. Sira moris iha 1 Fevereiru 2001 husi FALINTIL, rezisténsia nia forsa armada. Sira iha forsa terrestre no komponente navál ida ne'ebé halo patrulla iha tasi, no sira mós ajuda povu bainhira iha dezastre.",
-    "pt": "As FALINTIL-Forças de Defesa de Timor-Leste (F-FDTL) são as forças armadas do país. Nasceram a 1 de fevereiro de 2001 a partir das FALINTIL, o exército da resistência. Têm uma força terrestre e uma componente naval que patrulha o mar, e ajudam também a população em catástrofes."
+    "tet": "FALINTIL-Forsa Defeza Timór-Leste (F-FDTL) mak nasaun nia forsa armada. Sira moris iha 1 Fevereiru 2001 husi FALINTIL, rezisténsia nia forsa armada. Sira iha komponente terrestre, komponente navál ida ne'ebé halo patrulla iha tasi no komponente aérea ki'ik ida, no sira mós ajuda povu bainhira iha dezastre.",
+    "pt": "As FALINTIL-Forças de Defesa de Timor-Leste (F-FDTL) são as forças armadas do país. Nasceram a 1 de fevereiro de 2001 a partir das FALINTIL, o exército da resistência. Têm uma componente terrestre, uma componente naval que patrulha o mar e uma pequena componente aérea, e ajudam também a população em catástrofes.",
+    "en": "The FALINTIL-Timor-Leste Defence Forces (F-FDTL) are the country's armed forces. They were born on 1 February 2001 out of FALINTIL, the army of the resistance. They have a land component, a naval component that patrols the sea and a small air component, and they also help the population in disasters.",
+    "id": "FALINTIL-Angkatan Pertahanan Timor-Leste (F-FDTL) adalah angkatan bersenjata negara ini. F-FDTL lahir pada 1 Februari 2001 dari FALINTIL, tentara perlawanan. F-FDTL memiliki komponen darat, komponen laut yang berpatroli di laut dan komponen udara yang kecil, serta juga membantu penduduk saat bencana."
    },
    "levels": [
     "eb3",
@@ -427,51 +431,71 @@
     {
      "heading": {
       "tet": "Husi gerrilla ba forsa armada nasionál",
-      "pt": "Da guerrilha a um exército nacional"
+      "pt": "Da guerrilha a um exército nacional",
+      "en": "From guerrilla army to national armed forces",
+      "id": "Dari gerilyawan menjadi tentara nasional"
      },
      "text": {
       "tet": "Hafoin 1999, FALINTIL nia funu-na'in sira hein iha kantonamentu, liuliu iha Aileu, bainhira ema diskute sira-nia futuru. Estudu independente ida iha 2000 propoin forsa defeza ki'ik ida, no iha 1 Fevereiru 2001 FALINTIL-FDTL moris. Eis-gerrilleiru maizumenus 650 harii batallaun dahuluk; sira seluk fila ba moris sivíl ho apoiu husi programa reintegrasaun. Soldadu foun sira hetan formasaun husi nasaun hanesan Portugál no Austrália. Taur Matan Ruak, FALINTIL nia komandante ikus, lidera forsa foun ne'e husi 2001 to'o 2011.",
-      "pt": "Depois de 1999, os combatentes das FALINTIL esperaram em acantonamento, sobretudo em Aileu, enquanto se discutia o seu futuro. Um estudo independente feito em 2000 propôs uma pequena força de defesa, e a 1 de fevereiro de 2001 nasceram as FALINTIL-FDTL. Cerca de 650 antigos guerrilheiros formaram o primeiro batalhão; os restantes regressaram à vida civil com o apoio de programas de reintegração. Os novos militares receberam formação de países como Portugal e a Austrália. Taur Matan Ruak, último comandante das FALINTIL, comandou a nova força de 2001 a 2011."
+      "pt": "Depois de 1999, os combatentes das FALINTIL esperaram em acantonamento, sobretudo em Aileu, enquanto se discutia o seu futuro. Um estudo independente feito em 2000 propôs uma pequena força de defesa, e a 1 de fevereiro de 2001 nasceram as FALINTIL-FDTL. Cerca de 650 antigos guerrilheiros formaram o primeiro batalhão; os restantes regressaram à vida civil com o apoio de programas de reintegração. Os novos militares receberam formação de países como Portugal e a Austrália. Taur Matan Ruak, último comandante das FALINTIL, comandou a nova força de 2001 a 2011.",
+      "en": "After 1999, the FALINTIL fighters waited in cantonment, mainly in Aileu, while their future was discussed. An independent study carried out in 2000 proposed a small defence force, and on 1 February 2001 the FALINTIL-FDTL were born. About 650 former guerrillas formed the first battalion; the others returned to civilian life with the help of reintegration programmes. The new soldiers were trained by countries such as Portugal and Australia. Taur Matan Ruak, the last commander of FALINTIL, led the new force from 2001 to 2011.",
+      "id": "Setelah 1999, para pejuang FALINTIL menunggu di tempat penampungan, terutama di Aileu, sementara masa depan mereka dibicarakan. Sebuah kajian independen pada 2000 mengusulkan angkatan pertahanan yang kecil, dan pada 1 Februari 2001 lahirlah FALINTIL-FDTL. Sekitar 650 mantan gerilyawan membentuk batalion pertama; yang lain kembali ke kehidupan sipil dengan bantuan program reintegrasi. Para prajurit baru dilatih oleh negara-negara seperti Portugal dan Australia. Taur Matan Ruak, komandan terakhir FALINTIL, memimpin angkatan baru itu dari 2001 sampai 2011."
      }
     },
     {
      "heading": {
       "tet": "Komandu no lei",
-      "pt": "Comando e lei"
+      "pt": "Comando e lei",
+      "en": "Command and law",
+      "id": "Komando dan hukum"
      },
      "text": {
       "tet": "Lei-Inan dehan katak F-FDTL kompostu husi sidadaun timoroan de'it, labele iha partidu polítiku no rona ba órgaun soberania sira (Artigu 146). Prezidente Repúblika mak Komandante Supremu, no Governu, liuhusi Ministériu Defeza, lidera polítika defeza no forsa nia servisu loron-loron. Xefe militár mak Xefe Estadu-Maiór Jenerál Forsa Armada (CEMGFA): Taur Matan Ruak (2001–2011), Lere Anan Timur (2011–2022) no, desde 28 Janeiru 2022, Tenente-Jenerál Falur Rate Laek. Iha 2010, Parlamentu aprova lei kona-ba seguransa nasionál, defeza nasionál no seguransa interna.",
-      "pt": "A Constituição diz que as F-FDTL são formadas só por cidadãos timorenses, são apartidárias e obedecem aos órgãos de soberania (artigo 146.º). O Presidente da República é o Comandante Supremo, e o Governo, através do Ministério da Defesa, dirige a política de defesa e o dia a dia da força. O chefe militar é o Chefe do Estado-Maior-General das Forças Armadas (CEMGFA): Taur Matan Ruak (2001–2011), Lere Anan Timur (2011–2022) e, desde 28 de janeiro de 2022, o tenente-general Falur Rate Laek. Em 2010, o Parlamento aprovou leis sobre a segurança nacional, a defesa nacional e a segurança interna."
+      "pt": "A Constituição diz que as F-FDTL são formadas só por cidadãos timorenses, são apartidárias e obedecem aos órgãos de soberania (artigo 146.º). O Presidente da República é o Comandante Supremo, e o Governo, através do Ministério da Defesa, dirige a política de defesa e o dia a dia da força. O chefe militar é o Chefe do Estado-Maior-General das Forças Armadas (CEMGFA): Taur Matan Ruak (2001–2011), Lere Anan Timur (2011–2022) e, desde 28 de janeiro de 2022, o tenente-general Falur Rate Laek. Em 2010, o Parlamento aprovou leis sobre a segurança nacional, a defesa nacional e a segurança interna.",
+      "en": "The Constitution says that the F-FDTL are made up only of Timorese citizens, stay out of party politics and obey the organs of sovereignty (Article 146). The President of the Republic is the Supreme Commander, and the Government, through the Ministry of Defence, directs defence policy and the force's day-to-day work. The military chief is the Chief of the General Staff of the Armed Forces (CEMGFA): Taur Matan Ruak (2001–2011), Lere Anan Timur (2011–2022) and, since 28 January 2022, Lieutenant General Falur Rate Laek. In 2010 Parliament passed laws on national security, national defence and internal security.",
+      "id": "Konstitusi menyatakan bahwa F-FDTL hanya terdiri atas warga negara Timor-Leste, tidak berpihak pada partai politik dan tunduk pada organ-organ kedaulatan (Pasal 146). Presiden Republik adalah Panglima Tertinggi, dan Pemerintah, melalui Kementerian Pertahanan, memimpin kebijakan pertahanan dan kegiatan sehari-hari angkatan itu. Pimpinan militernya adalah Kepala Staf Umum Angkatan Bersenjata (CEMGFA): Taur Matan Ruak (2001–2011), Lere Anan Timur (2011–2022) dan, sejak 28 Januari 2022, Letnan Jenderal Falur Rate Laek. Pada 2010, Parlemen mengesahkan undang-undang tentang keamanan nasional, pertahanan nasional dan keamanan dalam negeri."
      }
     },
     {
      "heading": {
       "tet": "Rai, tasi no lalehan",
-      "pt": "Terra, mar e ar"
+      "pt": "Terra, mar e ar",
+      "en": "Land, sea and air",
+      "id": "Darat, laut dan udara"
      },
      "text": {
-      "tet": "Soldadu barak liu servisu iha forsa terrestre, iha unidade infantaria no apoiu, ho sentru formasaun hanesan iha Metinaro, iha Dili nia parte loro-sa'e. Komponente navál moris iha Dezembru 2001 no tau matan ba nasaun nia tasi hasoru peska ilegál no kontrabandu. Nia simu ró-patrulla husi Portugál iha 2002, husi Xina iha 2010 no husi Austrália, ne'ebé fó ró-patrulla rua klase Guardian iha 2023. Planu dezenvolvimentu sira mós prevé komponente aérea ki'ik ida. F-FDTL mak forsa ki'ik ida: tuir estimativa internasionál, soldadu maizumenus 2 000 to'o 2 500.",
-      "pt": "A maior parte dos militares serve na força terrestre, em unidades de infantaria e de apoio, com centros de instrução como o de Metinaro, a leste de Díli. A componente naval foi criada em dezembro de 2001 e vigia as águas do país contra a pesca ilegal e o contrabando. Recebeu lanchas de patrulha de Portugal em 2002, da China em 2010 e da Austrália, que ofereceu duas lanchas da classe Guardian em 2023. Os planos de desenvolvimento preveem também uma pequena componente aérea. As F-FDTL são uma força pequena: segundo estimativas internacionais, têm cerca de 2 000 a 2 500 militares."
+      "tet": "Soldadu barak liu servisu iha komponente terrestre, iha batallaun infantaria rua no unidade apoiu sira, ho sentru formasaun hanesan Sentru Nicolau Lobato, iha Metinaro. Komponente navál moris iha Dezembru 2001, ho ró-patrulla ki'ik rua ne'ebé Portugál fó, no tau matan ba tasi hasoru peska ilegál no kontrabandu; nia baze iha Hera no nia simu ró-patrulla rua husi Xina iha 2010. Iha 2017, Austrália oferese ró-patrulla rua klase Guardian, maibé sira adia ona entrega ne'e dala barak. Komponente aérea ki'ik ida iha desde 2018, ho aviaun ki'ik Cessna. Tuir IISS, F-FDTL iha soldadu maizumenus 2 300 iha 2020.",
+      "pt": "A maior parte dos militares serve na componente terrestre, em dois batalhões de infantaria e em unidades de apoio, com centros de instrução como o Centro Nicolau Lobato, em Metinaro. A componente naval nasceu em dezembro de 2001, com duas pequenas lanchas oferecidas por Portugal, e vigia o mar contra a pesca ilegal e o contrabando; tem a base em Hera e recebeu dois navios-patrulha da China em 2010. Em 2017, a Austrália ofereceu duas lanchas da classe Guardian, mas a entrega foi adiada várias vezes. Uma pequena componente aérea existe desde 2018, com avionetas Cessna. Segundo o IISS, as F-FDTL tinham cerca de 2 300 militares em 2020.",
+      "en": "Most soldiers serve in the land component, in two infantry battalions and in support units, with training centres such as the Nicolau Lobato Centre at Metinaro. The naval component was created in December 2001, with two small patrol boats given by Portugal, and it watches the sea against illegal fishing and smuggling; it is based at Hera and received two patrol boats from China in 2010. In 2017 Australia offered two Guardian-class patrol boats, but their handover has been postponed several times. A small air component has existed since 2018, with light Cessna aircraft. According to the IISS, the F-FDTL had about 2,300 personnel in 2020.",
+      "id": "Sebagian besar prajurit bertugas di komponen darat, dalam dua batalion infanteri dan unit-unit pendukung, dengan pusat pelatihan seperti Pusat Nicolau Lobato di Metinaro. Komponen laut dibentuk pada Desember 2001, dengan dua kapal patroli kecil pemberian Portugal, dan mengawasi laut dari penangkapan ikan ilegal dan penyelundupan; pangkalannya di Hera dan komponen ini menerima dua kapal patroli dari Tiongkok pada 2010. Pada 2017 Australia menawarkan dua kapal patroli kelas Guardian, tetapi penyerahannya beberapa kali ditunda. Komponen udara yang kecil ada sejak 2018, dengan pesawat ringan Cessna. Menurut IISS, F-FDTL memiliki sekitar 2.300 personel pada 2020."
      }
     },
     {
      "heading": {
       "tet": "Planu Forsa 2020",
-      "pt": "O plano Força 2020"
+      "pt": "O plano Força 2020",
+      "en": "The Força 2020 plan",
+      "id": "Rencana Força 2020"
      },
      "text": {
-      "tet": "Hafoin krize 2006, bainhira konflitu internu fahe F-FDTL no soldadu maizumenus 600 sai husi servisu, Estadu revee organizasaun defeza nian. Iha 2007, Governu aprezenta planu Forsa 2020, vizaun ba tempu naruk ida ne'ebé prevé forsa boot liu, ho soldadu maizumenus 3 000, komponente navál no aérea ne'ebé di'ak liu, no posibilidade servisu militár obrigatóriu. Analista barak hanoin katak planu ne'e ambisiozu liu ba nasaun ki'ik ida, no parte balu de'it mak realiza. Rekrutamentu foun, regra karreira no promosaun, hanesan promosaun ba ofisiál 210 iha 2024, buka halo forsa ne'e sai profisionál liu.",
-      "pt": "Depois da crise de 2006, em que um conflito interno dividiu as F-FDTL e cerca de 600 militares foram afastados, o Estado reviu a organização da defesa. Em 2007 foi apresentado o plano Força 2020, uma visão de longo prazo que previa uma força maior, de cerca de 3 000 militares, com melhores componentes naval e aérea, e a possibilidade de serviço militar obrigatório. Muitos analistas acharam o plano demasiado ambicioso para um país pequeno, e só uma parte foi realizada. Novos recrutamentos, regras de carreira e promoções, como as de 210 oficiais em 2024, procuram tornar a força mais profissional."
+      "tet": "Hafoin krize 2006, bainhira konflitu internu fahe F-FDTL no soldadu maizumenus 600 sai husi servisu, Estadu revee organizasaun defeza nian. Iha 2007, Governu aprezenta planu Forsa 2020, vizaun ba tempu naruk ida ne'ebé prevé forsa boot liu, ho soldadu maizumenus 3 000, komponente navál no aérea ne'ebé di'ak liu, no posibilidade servisu militár obrigatóriu. Analista barak hanoin katak planu ne'e ambisiozu liu ba nasaun ki'ik ida, no parte balu de'it mak realiza. Rekrutamentu foun, regra karreira no promosaun, hanesan promosaun ba ofisiál 210 iha 2024, buka halo forsa ne'e sai profisionál liu. Iha Fevereiru 2026, iha F-FDTL nia tinan 25, Akademia Militár Konjunta loke iha Aileu, no iha Outubru alunu-kadete dahuluk na'in-60 hahú iha ne'ebá kursu ofisiál tinan haat.",
+      "pt": "Depois da crise de 2006, em que um conflito interno dividiu as F-FDTL e cerca de 600 militares foram afastados, o Estado reviu a organização da defesa. Em 2007 foi apresentado o plano Força 2020, uma visão de longo prazo que previa uma força maior, de cerca de 3 000 militares, com melhores componentes naval e aérea, e a possibilidade de serviço militar obrigatório. Muitos analistas acharam o plano demasiado ambicioso para um país pequeno, e só uma parte foi realizada. Novos recrutamentos, regras de carreira e promoções, como as de 210 oficiais em 2024, procuram tornar a força mais profissional. Em fevereiro de 2026, nos 25 anos das F-FDTL, foi inaugurada em Aileu a Academia Militar Conjunta, onde os primeiros 60 alunos-cadetes começaram em outubro um curso de oficiais de quatro anos.",
+      "en": "After the 2006 crisis, when an internal conflict split the F-FDTL and about 600 soldiers were dismissed, the State reviewed how defence was organised. In 2007 the Força 2020 (Force 2020) plan was presented, a long-term vision that foresaw a larger force of about 3,000 personnel, with better naval and air components, and the possibility of compulsory military service. Many analysts thought the plan too ambitious for a small country, and only part of it was carried out. New recruitment, career rules and promotions, such as those of 210 officers in 2024, aim to make the force more professional. In February 2026, for the F-FDTL's 25th anniversary, the Joint Military Academy opened in Aileu, where the first 60 officer cadets began a four-year officers' course in October.",
+      "id": "Setelah krisis 2006, ketika konflik internal memecah F-FDTL dan sekitar 600 prajurit diberhentikan, Negara meninjau kembali organisasi pertahanan. Pada 2007 diajukan rencana Força 2020, sebuah visi jangka panjang yang membayangkan angkatan yang lebih besar, sekitar 3.000 personel, dengan komponen laut dan udara yang lebih baik, serta kemungkinan wajib militer. Banyak analis menilai rencana itu terlalu ambisius untuk negara kecil, dan hanya sebagian yang terlaksana. Perekrutan baru, aturan karier dan kenaikan pangkat, seperti kenaikan pangkat 210 perwira pada 2024, bertujuan menjadikan angkatan ini lebih profesional. Pada Februari 2026, dalam rangka ulang tahun ke-25 F-FDTL, Akademi Militer Gabungan dibuka di Aileu, tempat 60 taruna pertama memulai pendidikan perwira selama empat tahun pada bulan Oktober."
      }
     },
     {
      "heading": {
       "tet": "Liu husi funu",
-      "pt": "Além da guerra"
+      "pt": "Além da guerra",
+      "en": "Beyond war",
+      "id": "Lebih dari perang"
      },
      "text": {
-      "tet": "Iha tempu dame, F-FDTL halo buat barak liu duké treinu ba funu. Sira ajuda povu bainhira iha inundasaun, rai-halai no ahi-han, hanesan iha inundasaun Abríl 2021, lori ajuda no harii obra ki'ik sira. Sira koopera no halo treinu ho parseiru sira hanesan Austrália, Portugál, Indonézia, Xina no Estadus Unidus. Soldadu timoroan balu serbí ona iha misaun dame Nasoens Unidas nian iha rai-li'ur; nune'e, nasaun ne'ebé uluk simu tropa ONU nian agora hahú kontribui ba dame iha fatin seluk. Tinan-tinan, iha 20 Agostu, Loron FALINTIL hanoin hikas forsa ne'e nia hun.",
-      "pt": "Em tempo de paz, as F-FDTL fazem muito mais do que treinar para a guerra. Ajudam a população em cheias, deslizamentos e incêndios, como nas cheias de abril de 2021, transportam ajuda e constroem pequenas obras. Cooperam e treinam com parceiros como a Austrália, Portugal, a Indonésia, a China e os Estados Unidos. Alguns militares timorenses já serviram em missões de paz das Nações Unidas no estrangeiro; assim, o país que antes recebeu tropas da ONU começa a contribuir para a paz noutros lugares. Todos os anos, a 20 de agosto, o Dia das FALINTIL recorda a origem da força."
+      "tet": "Iha tempu dame, F-FDTL halo buat barak liu duké treinu ba funu. Sira ajuda povu bainhira iha inundasaun, rai-halai no ahi-han, hanesan iha inundasaun Abríl 2021, lori ajuda no harii obra ki'ik sira. Sira koopera no halo treinu ho parseiru sira hanesan Austrália, Portugál, Indonézia, Xina no Estadus Unidus; iha Outubru 2026, Timór-Leste no Austrália asina Kuadru Kooperasaun Defeza foun ida. Grupu ki'ik soldadu timoroan nian serbí ona iha misaun ONU nian, hanesan iha Líbanu, iha 2012, no iha Sudaun Súl; nune'e, nasaun ne'ebé uluk simu tropa ONU nian agora kontribui ba dame iha fatin seluk. Tinan-tinan, iha 20 Agostu, Loron FALINTIL hanoin hikas forsa ne'e nia hun.",
+      "pt": "Em tempo de paz, as F-FDTL fazem muito mais do que treinar para a guerra. Ajudam a população em cheias, deslizamentos e incêndios, como nas cheias de abril de 2021, transportam ajuda e constroem pequenas obras. Cooperam e treinam com parceiros como a Austrália, Portugal, a Indonésia, a China e os Estados Unidos; em outubro de 2026, Timor-Leste e a Austrália assinaram um novo Quadro de Cooperação em Defesa. Pequenos grupos de militares timorenses já serviram em missões da ONU, como no Líbano, em 2012, e no Sudão do Sul; assim, o país que antes recebeu tropas da ONU contribui agora para a paz noutros lugares. Todos os anos, a 20 de agosto, o Dia das FALINTIL recorda a origem da força.",
+      "en": "In peacetime the F-FDTL do much more than train for war. They help the population in floods, landslides and fires, as in the floods of April 2021, carry aid and build small works. They cooperate and train with partners such as Australia, Portugal, Indonesia, China and the United States; in October 2026 Timor-Leste and Australia signed a new Defence Cooperation Framework. Small groups of Timorese soldiers have already served in UN missions, such as in Lebanon in 2012 and in South Sudan; so the country that once received UN troops now contributes to peace elsewhere. Every year, on 20 August, FALINTIL Day recalls the origin of the force.",
+      "id": "Di masa damai, F-FDTL melakukan jauh lebih banyak hal daripada berlatih untuk perang. F-FDTL membantu penduduk saat banjir, tanah longsor dan kebakaran, seperti pada banjir April 2021, mengangkut bantuan dan membangun pekerjaan kecil. F-FDTL bekerja sama dan berlatih dengan mitra seperti Australia, Portugal, Indonesia, Tiongkok dan Amerika Serikat; pada Oktober 2026, Timor-Leste dan Australia menandatangani Kerangka Kerja Sama Pertahanan yang baru. Kelompok-kelompok kecil prajurit Timor-Leste pernah bertugas dalam misi PBB, seperti di Lebanon pada 2012 dan di Sudan Selatan; dengan demikian, negara yang dulu menerima pasukan PBB kini ikut menyumbang bagi perdamaian di tempat lain. Setiap tahun, pada 20 Agustus, Hari FALINTIL mengenang asal-usul angkatan ini."
      }
     }
    ],
@@ -479,17 +503,23 @@
     {
      "label": {
       "tet": "Moris",
-      "pt": "Criação"
+      "pt": "Criação",
+      "en": "Founded",
+      "id": "Berdiri"
      },
      "value": {
       "tet": "1 Fevereiru 2001, husi FALINTIL",
-      "pt": "1 de fevereiro de 2001, a partir das FALINTIL"
+      "pt": "1 de fevereiro de 2001, a partir das FALINTIL",
+      "en": "1 February 2001, out of FALINTIL",
+      "id": "1 Februari 2001, dari FALINTIL"
      }
     },
     {
      "label": {
       "tet": "Ministériu",
-      "pt": "Ministério"
+      "pt": "Ministério",
+      "en": "Ministry",
+      "id": "Kementerian"
      },
      "value": {
       "tet": "Ministériu Defeza",
@@ -500,44 +530,75 @@
     },
     {
      "label": {
+      "tet": "Ministru Defeza",
+      "pt": "Ministro da Defesa",
+      "en": "Minister of Defence",
+      "id": "Menteri Pertahanan"
+     },
+     "value": {
+      "tet": "Donaciano do Rosário Gomes (desde 2023)",
+      "pt": "Donaciano do Rosário Gomes (desde 2023)",
+      "en": "Donaciano do Rosário Gomes (since 2023)",
+      "id": "Donaciano do Rosário Gomes (sejak 2023)"
+     },
+     "year": 2026
+    },
+    {
+     "label": {
       "tet": "Xefe Estadu-Maiór Jenerál (CEMGFA)",
-      "pt": "Chefe do Estado-Maior-General (CEMGFA)"
+      "pt": "Chefe do Estado-Maior-General (CEMGFA)",
+      "en": "Chief of the General Staff (CEMGFA)",
+      "id": "Kepala Staf Umum (CEMGFA)"
      },
      "value": {
       "tet": "Tenente-Jenerál Falur Rate Laek (desde 28 Janeiru 2022)",
-      "pt": "Tenente-general Falur Rate Laek (desde 28 de janeiro de 2022)"
+      "pt": "Tenente-general Falur Rate Laek (desde 28 de janeiro de 2022)",
+      "en": "Lieutenant General Falur Rate Laek (since 28 January 2022)",
+      "id": "Letnan Jenderal Falur Rate Laek (sejak 28 Januari 2022)"
      },
      "year": 2026
     },
     {
      "label": {
       "tet": "Komponente sira",
-      "pt": "Componentes"
+      "pt": "Componentes",
+      "en": "Components",
+      "id": "Komponen"
      },
      "value": {
-      "tet": "Forsa terrestre no komponente navál; komponente aérea iha planu",
-      "pt": "Força terrestre e componente naval; componente aérea prevista"
+      "tet": "Komponente terrestre no navál, no komponente aérea ki'ik ida (desde 2018)",
+      "pt": "Componentes terrestre e naval e uma pequena componente aérea (desde 2018)",
+      "en": "Land and naval components and a small air component (since 2018)",
+      "id": "Komponen darat dan laut serta komponen udara yang kecil (sejak 2018)"
      }
     },
     {
      "label": {
       "tet": "Efetivu (estimativa)",
-      "pt": "Efetivo (estimativa)"
+      "pt": "Efetivo (estimativa)",
+      "en": "Strength (estimate)",
+      "id": "Kekuatan personel (perkiraan)"
      },
      "value": {
-      "tet": "maizumenus 2 000–2 500 soldadu",
-      "pt": "cerca de 2 000–2 500 militares"
+      "tet": "maizumenus soldadu 2 300 (IISS)",
+      "pt": "cerca de 2 300 militares (IISS)",
+      "en": "about 2,300 personnel (IISS)",
+      "id": "sekitar 2.300 personel (IISS)"
      },
-     "year": 2024
+     "year": 2020
     },
     {
      "label": {
       "tet": "Planu tempu naruk",
-      "pt": "Plano de longo prazo"
+      "pt": "Plano de longo prazo",
+      "en": "Long-term plan",
+      "id": "Rencana jangka panjang"
      },
      "value": {
       "tet": "Forsa 2020 (2007)",
-      "pt": "Força 2020 (2007)"
+      "pt": "Força 2020 (2007)",
+      "en": "Força 2020 (2007)",
+      "id": "Força 2020 (2007)"
      }
     },
     {
@@ -549,7 +610,23 @@
      },
      "value": {
       "tet": "Lei-Inan, Artigu 146 no 148",
-      "pt": "Constituição, artigos 146.º e 148.º"
+      "pt": "Constituição, artigos 146.º e 148.º",
+      "en": "Constitution, Articles 146 and 148",
+      "id": "Konstitusi, Pasal 146 dan 148"
+     }
+    },
+    {
+     "label": {
+      "tet": "Akademia Militár Konjunta",
+      "pt": "Academia Militar Conjunta",
+      "en": "Joint Military Academy",
+      "id": "Akademi Militer Gabungan"
+     },
+     "value": {
+      "tet": "Aileu, loke iha 2 Fevereiru 2026",
+      "pt": "Aileu, inaugurada a 2 de fevereiro de 2026",
+      "en": "Aileu, opened on 2 February 2026",
+      "id": "Aileu, diresmikan pada 2 Februari 2026"
      }
     }
    ],
@@ -558,42 +635,72 @@
      "date": "2001-02-01",
      "title": {
       "tet": "FALINTIL-FDTL moris husi FALINTIL",
-      "pt": "Nascem as FALINTIL-FDTL a partir das FALINTIL"
+      "pt": "Nascem as FALINTIL-FDTL a partir das FALINTIL",
+      "en": "The FALINTIL-FDTL are born out of FALINTIL",
+      "id": "FALINTIL-FDTL lahir dari FALINTIL"
      }
     },
     {
      "date": "2001-12",
      "title": {
       "tet": "F-FDTL nia komponente navál moris",
-      "pt": "Criação da componente naval das F-FDTL"
+      "pt": "Criação da componente naval das F-FDTL",
+      "en": "The F-FDTL naval component is created",
+      "id": "Komponen laut F-FDTL dibentuk"
      }
     },
     {
      "date": "2007",
      "title": {
       "tet": "Governu aprezenta planu Forsa 2020",
-      "pt": "O Governo apresenta o plano Força 2020"
+      "pt": "O Governo apresenta o plano Força 2020",
+      "en": "The Government presents the Força 2020 plan",
+      "id": "Pemerintah mengajukan rencana Força 2020"
      }
     },
     {
-     "date": "2011",
+     "date": "2010-06",
+     "title": {
+      "tet": "Ró-patrulla rua husi Xina to'o ba komponente navál",
+      "pt": "Chegam da China dois navios-patrulha para a componente naval",
+      "en": "Two patrol boats from China arrive for the naval component",
+      "id": "Dua kapal patroli dari Tiongkok tiba untuk komponen laut"
+     }
+    },
+    {
+     "date": "2011-10-06",
      "title": {
       "tet": "Lere Anan Timur troka Taur Matan Ruak iha F-FDTL nia komandu",
-      "pt": "Lere Anan Timur sucede a Taur Matan Ruak no comando das F-FDTL"
+      "pt": "Lere Anan Timur sucede a Taur Matan Ruak no comando das F-FDTL",
+      "en": "Lere Anan Timur succeeds Taur Matan Ruak as commander of the F-FDTL",
+      "id": "Lere Anan Timur menggantikan Taur Matan Ruak sebagai komandan F-FDTL"
+     }
+    },
+    {
+     "date": "2018-05",
+     "title": {
+      "tet": "F-FDTL nia komponente aérea ki'ik moris",
+      "pt": "Criação da pequena componente aérea das F-FDTL",
+      "en": "The F-FDTL's small air component is created",
+      "id": "Komponen udara kecil F-FDTL dibentuk"
      }
     },
     {
      "date": "2022-01-28",
      "title": {
       "tet": "Falur Rate Laek sai Xefe Estadu-Maiór Jenerál F-FDTL",
-      "pt": "Falur Rate Laek torna-se Chefe do Estado-Maior-General das F-FDTL"
+      "pt": "Falur Rate Laek torna-se Chefe do Estado-Maior-General das F-FDTL",
+      "en": "Falur Rate Laek becomes Chief of the General Staff of the F-FDTL",
+      "id": "Falur Rate Laek menjadi Kepala Staf Umum F-FDTL"
      }
     },
     {
-     "date": "2023",
+     "date": "2026-02-02",
      "title": {
-      "tet": "Austrália entrega ró-patrulla rua klase Guardian ba F-FDTL",
-      "pt": "A Austrália entrega às F-FDTL duas lanchas de patrulha da classe Guardian"
+      "tet": "Akademia Militár Konjunta loke iha Aileu, iha F-FDTL nia tinan 25",
+      "pt": "Inauguração da Academia Militar Conjunta, em Aileu, nos 25 anos das F-FDTL",
+      "en": "The Joint Military Academy opens in Aileu for the F-FDTL's 25th anniversary",
+      "id": "Akademi Militer Gabungan diresmikan di Aileu pada ulang tahun ke-25 F-FDTL"
      }
     }
    ],
@@ -601,7 +708,9 @@
     "illustration": "military",
     "caption": {
      "tet": "Soldadu F-FDTL sira iha serimónia ida.",
-     "pt": "Militares das F-FDTL numa cerimónia."
+     "pt": "Militares das F-FDTL numa cerimónia.",
+     "en": "F-FDTL soldiers at a ceremony.",
+     "id": "Prajurit F-FDTL dalam sebuah upacara."
     }
    },
    "wiki": {
@@ -631,12 +740,16 @@
     {
      "q": {
       "tet": "Saida mak F-FDTL?",
-      "pt": "O que são as F-FDTL?"
+      "pt": "O que são as F-FDTL?",
+      "en": "What are the F-FDTL?",
+      "id": "Apa itu F-FDTL?"
      },
      "options": [
       {
        "tet": "Polísia tránzitu nian",
-       "pt": "A polícia de trânsito"
+       "pt": "A polícia de trânsito",
+       "en": "The traffic police",
+       "id": "Polisi lalu lintas"
       },
       {
        "tet": "Partidu polítiku ida",
@@ -646,29 +759,39 @@
       },
       {
        "tet": "Banku Estadu nian ida",
-       "pt": "Um banco do Estado"
+       "pt": "Um banco do Estado",
+       "en": "A state bank",
+       "id": "Bank milik negara"
       },
       {
        "tet": "Timór-Leste nia forsa armada",
-       "pt": "As forças armadas de Timor-Leste"
+       "pt": "As forças armadas de Timor-Leste",
+       "en": "The armed forces of Timor-Leste",
+       "id": "Angkatan bersenjata Timor-Leste"
       }
      ],
      "answer": 3,
      "why": {
       "tet": "F-FDTL mak FALINTIL-Forsa Defeza Timór-Leste, nasaun nia forsa armada.",
-      "pt": "F-FDTL são as FALINTIL-Forças de Defesa de Timor-Leste, as forças armadas do país."
+      "pt": "F-FDTL são as FALINTIL-Forças de Defesa de Timor-Leste, as forças armadas do país.",
+      "en": "The F-FDTL are the FALINTIL-Timor-Leste Defence Forces, the country's armed forces.",
+      "id": "F-FDTL adalah FALINTIL-Angkatan Pertahanan Timor-Leste, angkatan bersenjata negara ini."
      },
      "difficulty": 2
     },
     {
      "q": {
       "tet": "Loron ida ne'ebé hanoin hikas F-FDTL nia hun iha rezisténsia?",
-      "pt": "Que dia recorda a origem das F-FDTL na resistência?"
+      "pt": "Que dia recorda a origem das F-FDTL na resistência?",
+      "en": "Which day recalls the origin of the F-FDTL in the resistance?",
+      "id": "Hari apa yang mengenang asal-usul F-FDTL dalam perlawanan?"
      },
      "options": [
       {
        "tet": "20 Agostu (Loron FALINTIL)",
-       "pt": "20 de agosto (Dia das FALINTIL)"
+       "pt": "20 de agosto (Dia das FALINTIL)",
+       "en": "20 August (FALINTIL Day)",
+       "id": "20 Agustus (Hari FALINTIL)"
       },
       {
        "tet": "1 Maiu",
@@ -692,49 +815,67 @@
      "answer": 0,
      "why": {
       "tet": "FALINTIL moris iha 20 Agostu 1975; F-FDTL rai FALINTIL nia naran.",
-      "pt": "As FALINTIL nasceram a 20 de agosto de 1975; as F-FDTL guardam o seu nome."
+      "pt": "As FALINTIL nasceram a 20 de agosto de 1975; as F-FDTL guardam o seu nome.",
+      "en": "FALINTIL was born on 20 August 1975; the F-FDTL keep its name.",
+      "id": "FALINTIL lahir pada 20 Agustus 1975; F-FDTL tetap memakai namanya."
      },
      "difficulty": 4
     },
     {
      "q": {
       "tet": "F-FDTL nia parte ida ne'ebé halo patrulla iha tasi?",
-      "pt": "Que parte das F-FDTL patrulha o mar?"
+      "pt": "Que parte das F-FDTL patrulha o mar?",
+      "en": "Which part of the F-FDTL patrols the sea?",
+      "id": "Bagian F-FDTL manakah yang berpatroli di laut?"
      },
      "options": [
       {
        "tet": "Komponente navál",
-       "pt": "A componente naval"
+       "pt": "A componente naval",
+       "en": "The naval component",
+       "id": "Komponen laut"
       },
       {
        "tet": "Forsa terrestre",
-       "pt": "A força terrestre"
+       "pt": "A força terrestre",
+       "en": "The land force",
+       "id": "Angkatan darat"
       },
       {
        "tet": "Polísia militár",
-       "pt": "A polícia militar"
+       "pt": "A polícia militar",
+       "en": "The military police",
+       "id": "Polisi militer"
       },
       {
        "tet": "Sentru formasaun Metinaro",
-       "pt": "O centro de instrução de Metinaro"
+       "pt": "O centro de instrução de Metinaro",
+       "en": "The Metinaro training centre",
+       "id": "Pusat pelatihan Metinaro"
       }
      ],
      "answer": 0,
      "why": {
       "tet": "Komponente navál, ne'ebé moris iha Dezembru 2001, tau matan ba tasi.",
-      "pt": "A componente naval, criada em dezembro de 2001, vigia o mar."
+      "pt": "A componente naval, criada em dezembro de 2001, vigia o mar.",
+      "en": "The naval component, created in December 2001, watches over the sea.",
+      "id": "Komponen laut, yang dibentuk pada Desember 2001, mengawasi laut."
      },
      "difficulty": 7
     },
     {
      "q": {
       "tet": "Se mak Xefe Estadu-Maiór Jenerál F-FDTL desde Janeiru 2022?",
-      "pt": "Quem é Chefe do Estado-Maior-General das F-FDTL desde janeiro de 2022?"
+      "pt": "Quem é Chefe do Estado-Maior-General das F-FDTL desde janeiro de 2022?",
+      "en": "Who has been Chief of the General Staff of the F-FDTL since January 2022?",
+      "id": "Siapa Kepala Staf Umum F-FDTL sejak Januari 2022?"
      },
      "options": [
       {
        "tet": "Falur Rate Laek",
-       "pt": "Falur Rate Laek"
+       "pt": "Falur Rate Laek",
+       "en": "Falur Rate Laek",
+       "id": "Falur Rate Laek"
       },
       {
        "tet": "Taur Matan Ruak",
@@ -744,7 +885,9 @@
       },
       {
        "tet": "Lere Anan Timur",
-       "pt": "Lere Anan Timur"
+       "pt": "Lere Anan Timur",
+       "en": "Lere Anan Timur",
+       "id": "Lere Anan Timur"
       },
       {
        "tet": "Xanana Gusmão",
@@ -756,67 +899,93 @@
      "answer": 0,
      "why": {
       "tet": "Falur Rate Laek sai CEMGFA iha 28 Janeiru 2022, troka Lere Anan Timur.",
-      "pt": "Falur Rate Laek tornou-se CEMGFA a 28 de janeiro de 2022, sucedendo a Lere Anan Timur."
+      "pt": "Falur Rate Laek tornou-se CEMGFA a 28 de janeiro de 2022, sucedendo a Lere Anan Timur.",
+      "en": "Falur Rate Laek became CEMGFA on 28 January 2022, succeeding Lere Anan Timur.",
+      "id": "Falur Rate Laek menjadi CEMGFA pada 28 Januari 2022, menggantikan Lere Anan Timur."
      },
      "difficulty": 9
     },
     {
      "q": {
       "tet": "Saida mak naran planu tempu naruk ne'ebé Governu aprezenta iha 2007?",
-      "pt": "Como se chamava o plano de longo prazo apresentado em 2007?"
+      "pt": "Como se chamava o plano de longo prazo apresentado em 2007?",
+      "en": "What was the name of the long-term plan presented in 2007?",
+      "id": "Apa nama rencana jangka panjang yang diajukan pada 2007?"
      },
      "options": [
       {
        "tet": "Planu Estratéjiku 2030",
-       "pt": "Plano Estratégico 2030"
+       "pt": "Plano Estratégico 2030",
+       "en": "Strategic Plan 2030",
+       "id": "Rencana Strategis 2030"
       },
       {
        "tet": "Forsa 2020",
-       "pt": "Força 2020"
+       "pt": "Força 2020",
+       "en": "Força 2020",
+       "id": "Força 2020"
       },
       {
        "tet": "Vizaun Ramelau",
-       "pt": "Visão Ramelau"
+       "pt": "Visão Ramelau",
+       "en": "Ramelau Vision",
+       "id": "Visi Ramelau"
       },
       {
        "tet": "Defeza 2002",
-       "pt": "Defesa 2002"
+       "pt": "Defesa 2002",
+       "en": "Defence 2002",
+       "id": "Pertahanan 2002"
       }
      ],
      "answer": 1,
      "why": {
       "tet": "Forsa 2020 prevé forsa boot liu, ho komponente navál no aérea di'ak liu.",
-      "pt": "O Força 2020 previa uma força maior, com melhores componentes naval e aérea."
+      "pt": "O Força 2020 previa uma força maior, com melhores componentes naval e aérea.",
+      "en": "Força 2020 foresaw a larger force, with better naval and air components.",
+      "id": "Força 2020 membayangkan angkatan yang lebih besar, dengan komponen laut dan udara yang lebih baik."
      },
      "difficulty": 12
     },
     {
      "q": {
       "tet": "Bainhira mak F-FDTL nia komponente navál moris?",
-      "pt": "Quando foi criada a componente naval das F-FDTL?"
+      "pt": "Quando foi criada a componente naval das F-FDTL?",
+      "en": "When was the F-FDTL naval component created?",
+      "id": "Kapan komponen laut F-FDTL dibentuk?"
      },
      "options": [
       {
        "tet": "Agostu 1975",
-       "pt": "Agosto de 1975"
+       "pt": "Agosto de 1975",
+       "en": "August 1975",
+       "id": "Agustus 1975"
       },
       {
        "tet": "Dezembru 2001",
-       "pt": "Dezembro de 2001"
+       "pt": "Dezembro de 2001",
+       "en": "December 2001",
+       "id": "Desember 2001"
       },
       {
        "tet": "Maiu 2002",
-       "pt": "Maio de 2002"
+       "pt": "Maio de 2002",
+       "en": "May 2002",
+       "id": "Mei 2002"
       },
       {
        "tet": "Marsu 2011",
-       "pt": "Março de 2011"
+       "pt": "Março de 2011",
+       "en": "March 2011",
+       "id": "Maret 2011"
       }
      ],
      "answer": 1,
      "why": {
       "tet": "Komponente navál moris iha Dezembru 2001, meze balu hafoin F-FDTL.",
-      "pt": "A componente naval foi criada em dezembro de 2001, poucos meses depois das F-FDTL."
+      "pt": "A componente naval foi criada em dezembro de 2001, poucos meses depois das F-FDTL.",
+      "en": "The naval component was created in December 2001, a few months after the F-FDTL.",
+      "id": "Komponen laut dibentuk pada Desember 2001, beberapa bulan setelah F-FDTL."
      },
      "difficulty": 14
     }
@@ -826,7 +995,7 @@
      "title": "Timor-Leste Defence Force",
      "publisher": "Wikipedia (English)",
      "url": "https://en.wikipedia.org/wiki/Timor-Leste_Defence_Force",
-     "accessed": "2026-11-02",
+     "accessed": "2026-11-11",
      "licence": "CC BY-SA 4.0"
     },
     {
@@ -862,16 +1031,40 @@
      "accessed": "2026-11-02"
     },
     {
-     "title": "FALINTIL-Forças de Defesa de Timor-Leste",
-     "publisher": "F-FDTL",
-     "url": "https://f-fdtl.mil.tl/",
-     "accessed": "2026-11-02"
-    },
-    {
      "title": "Constituição da República Democrática de Timor-Leste",
      "publisher": "Ministério da Justiça — Jornal da República",
      "url": "https://www.mj.gov.tl/jornal/lawsTL/RDTL-Law/RDTL-Constitution-P.pdf",
      "accessed": "2026-11-02"
+    },
+    {
+     "title": "Vice-Primeiro-Ministro e Ministro da Defesa assinalam abertura do ano académico da Academia Militar Conjunta",
+     "publisher": "Governo de Timor-Leste",
+     "url": "https://timor-leste.gov.tl/?p=53640&lang=pt",
+     "accessed": "2026-11-11"
+    },
+    {
+     "title": "Timor-Leste e Austrália assinam novo Quadro de Cooperação em Defesa e anunciam apoio de 62 milhões de dólares australianos",
+     "publisher": "Governo de Timor-Leste",
+     "url": "https://timor-leste.gov.tl/?p=53195&lang=pt",
+     "accessed": "2026-11-11"
+    },
+    {
+     "title": "Reunião Extraordinária do Conselho de Ministros de 30 de janeiro de 2026",
+     "publisher": "Governo de Timor-Leste",
+     "url": "https://timor-leste.gov.tl/?p=47134&lang=pt",
+     "accessed": "2026-11-11"
+    },
+    {
+     "title": "Composição do IX Governo Constitucional",
+     "publisher": "Governo de Timor-Leste",
+     "url": "https://timor-leste.gov.tl/?p=13&lang=pt",
+     "accessed": "2026-11-11"
+    },
+    {
+     "title": "Guardian class patrol boat update (seen as a web search result)",
+     "publisher": "Australian Defence Magazine",
+     "url": "https://www.australiandefence.com.au/news/news/guardian-class-patrol-boat-update",
+     "accessed": "2026-11-11"
     }
    ],
    "review": {
@@ -1553,11 +1746,15 @@
    ],
    "title": {
     "tet": "Governu nia ministériu sira",
-    "pt": "Os ministérios do Governo"
+    "pt": "Os ministérios do Governo",
+    "en": "The Government's ministries",
+    "id": "Kementerian-kementerian Pemerintah"
    },
    "summary": {
-    "tet": "Ministériu sira mak hala'o Governu nia servisu loron-loron; ida-idak responsavel ba área ida, hanesan saúde, edukasaun ka finansas. IX Governu Konstitusionál, ne'ebé ukun desde 2023, iha Primeiru-Ministru, Vise-Primeiru-Ministru na'in-rua no Ministru na'in-19. Dekretu-Lei n.º 46/2023 mak aprova nia organizasaun.",
-    "pt": "O trabalho diário do Governo é feito pelos ministérios, cada um responsável por uma área, como a saúde, a educação ou as finanças. O IX Governo Constitucional, em funções desde 2023, tem o Primeiro-Ministro, dois vice-primeiros-ministros e 19 ministros. A sua organização foi aprovada pelo Decreto-Lei n.º 46/2023."
+    "tet": "Ministériu sira mak hala'o Governu nia servisu loron-loron; ida-idak responsavel ba área ida, hanesan saúde, edukasaun ka finansas. IX Governu Konstitusionál, ne'ebé ukun desde 1 Jullu 2023 no Xanana Gusmão mak lidera, iha Vise-Primeiru-Ministru na'in-rua no Ministru na'in-19. Nia orgánika, Dekretu-Lei n.º 46/2023, hetan alterasaun iha 2024 no 2026.",
+    "pt": "O trabalho diário do Governo é feito pelos ministérios, cada um responsável por uma área, como a saúde, a educação ou as finanças. O IX Governo Constitucional, em funções desde 1 de julho de 2023 e chefiado por Xanana Gusmão, tem dois vice-primeiros-ministros e 19 ministros. A sua orgânica, o Decreto-Lei n.º 46/2023, foi alterada em 2024 e em 2026.",
+    "en": "The Government's daily work is done by the ministries, each responsible for one area, such as health, education or finance. The IX Constitutional Government, in office since 1 July 2023 and led by Xanana Gusmão, has two deputy prime ministers and 19 ministers. Its organic law, Decree-Law No. 46/2023, was amended in 2024 and 2026.",
+    "id": "Pekerjaan sehari-hari Pemerintah dijalankan oleh kementerian-kementerian, masing-masing bertanggung jawab atas satu bidang, seperti kesehatan, pendidikan atau keuangan. Pemerintah Konstitusional IX, yang menjabat sejak 1 Juli 2023 dan dipimpin Xanana Gusmão, memiliki dua wakil perdana menteri dan 19 menteri. Peraturan organiknya, Dekret-UU No. 46/2023, diubah pada 2024 dan 2026."
    },
    "levels": [
     "eb3",
@@ -1572,51 +1769,85 @@
     {
      "heading": {
       "tet": "Saida mak ministériu",
-      "pt": "O que é um ministério"
+      "pt": "O que é um ministério",
+      "en": "What a ministry is",
+      "id": "Apa itu kementerian"
      },
      "text": {
       "tet": "Ministériu mak Governu nia parte ida ne'ebé trata grupu asuntu ida. Ministru ida mak lidera, no Vise-Ministru ka Sekretáriu Estadu sira bele ajuda nia. Iha ministériu ida-idak nia laran iha diresaun-jerál no diresaun nasionál, servisu iha munisípiu sira no, dala ruma, institutu no ajénsia ho autonomia. Ministru sira hasoru malu regularmente iha Konsellu-Ministru, ne'ebé Primeiru-Ministru mak prezide, atu aprova dekretu-lei, rezolusaun no proposta lei. Governu de'it mak bele halo lei kona-ba nia organizasaun rasik (Artigu 115), tan ne'e Governu foun ida-idak aprova nia orgánika.",
-      "pt": "Um ministério é a parte do Governo que trata de um conjunto de assuntos. É dirigido por um ministro, que pode ser ajudado por vice-ministros e secretários de Estado. Dentro de cada ministério há direções-gerais e direções nacionais, serviços nos municípios e, por vezes, institutos e agências com autonomia. Os ministros reúnem-se regularmente no Conselho de Ministros, presidido pelo Primeiro-Ministro, para aprovar decretos-leis, resoluções e propostas de lei. Só o Governo pode legislar sobre a sua própria organização (artigo 115.º), por isso cada novo Governo aprova a sua orgânica."
+      "pt": "Um ministério é a parte do Governo que trata de um conjunto de assuntos. É dirigido por um ministro, que pode ser ajudado por vice-ministros e secretários de Estado. Dentro de cada ministério há direções-gerais e direções nacionais, serviços nos municípios e, por vezes, institutos e agências com autonomia. Os ministros reúnem-se regularmente no Conselho de Ministros, presidido pelo Primeiro-Ministro, para aprovar decretos-leis, resoluções e propostas de lei. Só o Governo pode legislar sobre a sua própria organização (artigo 115.º), por isso cada novo Governo aprova a sua orgânica.",
+      "en": "A ministry is the part of the Government that deals with a group of subjects. It is headed by a minister, who may be helped by vice-ministers and secretaries of state. Inside each ministry there are directorates-general and national directorates, services in the municipalities and, sometimes, institutes and agencies with their own autonomy. The ministers meet regularly in the Council of Ministers, chaired by the Prime Minister, to approve decree-laws, resolutions and bills. Only the Government can make laws about its own organisation (Article 115), so each new Government approves its own organic law.",
+      "id": "Kementerian adalah bagian Pemerintah yang mengurus sekelompok urusan. Kementerian dipimpin oleh seorang menteri, yang dapat dibantu oleh wakil menteri dan sekretaris negara. Di dalam setiap kementerian ada direktorat jenderal dan direktorat nasional, dinas di munisipalitas dan, kadang-kadang, lembaga dan badan yang otonom. Para menteri bertemu secara rutin dalam Dewan Menteri, yang dipimpin Perdana Menteri, untuk menyetujui dekret-undang-undang, resolusi dan rancangan undang-undang. Hanya Pemerintah yang boleh membuat aturan tentang organisasinya sendiri (Pasal 115), sehingga setiap Pemerintah baru menyetujui peraturan organiknya sendiri."
      }
     },
     {
      "heading": {
       "tet": "IX Governu Konstitusionál",
-      "pt": "O IX Governo Constitucional"
+      "pt": "O IX Governo Constitucional",
+      "en": "The IX Constitutional Government",
+      "id": "Pemerintah Konstitusional IX"
      },
      "text": {
-      "tet": "IX Governu toma-pose iha 1 Jullu 2023, ho Xanana Gusmão nu'udar Primeiru-Ministru, no ho apoiu husi CNRT no PD. Dekretu-Lei n.º 46/2023, 27 Jullu, mak aprova nia orgánika. Bainhira toma-pose, Governu iha membru 47: Primeiru-Ministru, Vise-Primeiru-Ministru na'in-rua, Ministru na'in-19, Vise-Ministru na'in-10 no Sekretáriu Estadu na'in-15. Vise-Primeiru-Ministru ida koordena asuntu ekonómiku no mós Ministru Turizmu no Ambiente; seluk koordena asuntu sosiál no mós Ministru Dezenvolvimentu Rurál no Habitasaun Komunitária. Iha Marsu 2026, Konsellu-Ministru aprova testu foun ba orgánika, ne'ebé mantein Vise-Primeiru-Ministru na'in-rua ne'e.",
-      "pt": "O IX Governo tomou posse a 1 de julho de 2023, com Xanana Gusmão como Primeiro-Ministro e o apoio do CNRT e do PD. A sua orgânica foi aprovada pelo Decreto-Lei n.º 46/2023, de 27 de julho. Quando tomou posse, o Governo tinha 47 membros: o Primeiro-Ministro, dois vice-primeiros-ministros, 19 ministros, 10 vice-ministros e 15 secretários de Estado. Um vice-primeiro-ministro coordena os assuntos económicos e é também ministro do Turismo e Ambiente; o outro coordena os assuntos sociais e é ministro do Desenvolvimento Rural e Habitação Comunitária. Em março de 2026, o Conselho de Ministros aprovou um novo texto da orgânica, que manteve os dois vice-primeiros-ministros."
+      "tet": "IX Governu toma-pose iha 1 Jullu 2023, ho Xanana Gusmão nu'udar Primeiru-Ministru, no ho apoiu husi CNRT no PD. Dekretu-Lei n.º 46/2023, iha Jullu 2023, mak aprova nia orgánika. Bainhira toma-pose, Governu iha membru 47: Primeiru-Ministru, Vise-Primeiru-Ministru na'in-rua, Ministru na'in-19, Vise-Ministru na'in-10 no Sekretáriu Estadu na'in-15. Orgánika ne'e hetan alterasaun dala rua: iha 2024, atu fó autonomia ba Sekretaria Estadu Komunikasaun Sosiál, no iha Marsu 2026, atu harii kargu Vise-Ministra Negósiu Estranjeiru no Kooperasaun, ne'ebé Jesuína Maria Ferreira Gomes kaer, eis-Provedora Direitus Umanus no Justisa.",
+      "pt": "O IX Governo tomou posse a 1 de julho de 2023, com Xanana Gusmão como Primeiro-Ministro e o apoio do CNRT e do PD. A sua orgânica foi aprovada pelo Decreto-Lei n.º 46/2023, em julho de 2023. Quando tomou posse, o Governo tinha 47 membros: o Primeiro-Ministro, dois vice-primeiros-ministros, 19 ministros, 10 vice-ministros e 15 secretários de Estado. A orgânica foi alterada duas vezes: em 2024, para dar autonomia à Secretaria de Estado da Comunicação Social, e em março de 2026, para criar o cargo de vice-ministra dos Negócios Estrangeiros e Cooperação, ocupado por Jesuína Maria Ferreira Gomes, antiga Provedora de Direitos Humanos e Justiça.",
+      "en": "The IX Government took office on 1 July 2023, with Xanana Gusmão as Prime Minister and the support of CNRT and PD. Its organic law was approved by Decree-Law No. 46/2023 in July 2023. When it took office, the Government had 47 members: the Prime Minister, two deputy prime ministers, 19 ministers, 10 vice-ministers and 15 secretaries of state. The organic law has been amended twice: in 2024, to make the Secretariat of State for Social Communication autonomous, and in March 2026, to create the post of Vice-Minister of Foreign Affairs and Cooperation, held by Jesuína Maria Ferreira Gomes, a former Provedor for Human Rights and Justice.",
+      "id": "Pemerintah IX dilantik pada 1 Juli 2023, dengan Xanana Gusmão sebagai Perdana Menteri dan dukungan CNRT serta PD. Peraturan organiknya disetujui dengan Dekret-UU No. 46/2023 pada Juli 2023. Saat dilantik, Pemerintah memiliki 47 anggota: Perdana Menteri, dua wakil perdana menteri, 19 menteri, 10 wakil menteri dan 15 sekretaris negara. Peraturan organik itu sudah diubah dua kali: pada 2024, untuk memberi otonomi kepada Sekretariat Negara Komunikasi Sosial, dan pada Maret 2026, untuk membentuk jabatan Wakil Menteri Luar Negeri dan Kerja Sama, yang dipegang Jesuína Maria Ferreira Gomes, mantan Provedor Hak Asasi Manusia dan Keadilan."
      }
     },
     {
      "heading": {
       "tet": "Soberania, Estadu no seguransa",
-      "pt": "Soberania, Estado e segurança"
+      "pt": "Soberania, Estado e segurança",
+      "en": "Sovereignty, the State and security",
+      "id": "Kedaulatan, Negara dan keamanan"
      },
      "text": {
-      "tet": "Ministériu balu tau matan ba Estadu rasik nia funsionamentu. Ministériu Prezidénsia Konsellu Ministru prepara Governu nia reuniaun no apoia Primeiru-Ministru. Ministériu Finansas prepara Orsamentu no selu Estadu nia despeza; Ministériu Negósiu Estranjeiru no Kooperasaun trata relasaun ho nasaun seluk, ASEAN no CPLP; Ministériu Justisa tau matan ba prizaun, rejistu no rai; Ministériu Administrasaun Estatál apoia munisípiu no suku sira. Ministériu Defeza servisu ho F-FDTL, no Ministériu Interiór tau matan ba PNTL no Servisu Migrasaun.",
-      "pt": "Alguns ministérios cuidam do funcionamento do próprio Estado. O Ministério da Presidência do Conselho de Ministros prepara as reuniões do Governo e apoia o Primeiro-Ministro. O Ministério das Finanças prepara o Orçamento e paga as despesas do Estado; o dos Negócios Estrangeiros e Cooperação trata das relações com outros países, a ASEAN e a CPLP; o da Justiça cuida das prisões, dos registos e das terras; o da Administração Estatal apoia os municípios e os sucos. O Ministério da Defesa trabalha com as F-FDTL, e o Ministério do Interior tutela a PNTL e o Serviço de Migração."
+      "tet": "Ministériu balu tau matan ba Estadu rasik nia funsionamentu. Ministériu Prezidénsia Konsellu Ministru (Agio Pereira, ne'ebé mós Governu nia portavós) prepara Governu nia reuniaun no apoia Primeiru-Ministru. Ministériu Finansas (Santina Viegas Cardoso) prepara Orsamentu no selu Estadu nia despeza; Ministériu Negósiu Estranjeiru no Kooperasaun (Bendito dos Santos Freitas) trata relasaun ho nasaun seluk, ASEAN no CPLP; Ministériu Justisa (Sérgio Hornai, desde 2024) tau matan ba prizaun, rejistu no rai; Ministériu Administrasaun Estatál (Tomás do Rosário Cabral) apoia munisípiu no suku sira. Ministériu Defeza (Donaciano do Rosário Gomes) servisu ho F-FDTL, no Ministériu Interiór (Francisco da Costa Guterres) tau matan ba PNTL, Servisu Migrasaun no protesaun sivíl.",
+      "pt": "Alguns ministérios cuidam do funcionamento do próprio Estado. O Ministério da Presidência do Conselho de Ministros (Agio Pereira, também porta-voz do Governo) prepara as reuniões do Governo e apoia o Primeiro-Ministro. O Ministério das Finanças (Santina Viegas Cardoso) prepara o Orçamento e paga as despesas do Estado; o dos Negócios Estrangeiros e Cooperação (Bendito dos Santos Freitas) trata das relações com outros países, a ASEAN e a CPLP; o da Justiça (Sérgio Hornai, desde 2024) cuida das prisões, dos registos e das terras; o da Administração Estatal (Tomás do Rosário Cabral) apoia os municípios e os sucos. O Ministério da Defesa (Donaciano do Rosário Gomes) trabalha com as F-FDTL, e o do Interior (Francisco da Costa Guterres) tutela a PNTL, o Serviço de Migração e a proteção civil.",
+      "en": "Some ministries look after the running of the State itself. The Ministry of the Presidency of the Council of Ministers (Agio Pereira, who is also the Government spokesperson) prepares the Government's meetings and supports the Prime Minister. The Ministry of Finance (Santina Viegas Cardoso) prepares the Budget and pays the State's expenses; the Ministry of Foreign Affairs and Cooperation (Bendito dos Santos Freitas) deals with relations with other countries, ASEAN and the CPLP; the Ministry of Justice (Sérgio Hornai, since 2024) looks after prisons, registries and land; the Ministry of State Administration (Tomás do Rosário Cabral) supports the municipalities and the sucos. The Ministry of Defence (Donaciano do Rosário Gomes) works with the F-FDTL, and the Ministry of the Interior (Francisco da Costa Guterres) oversees the PNTL, the Migration Service and civil protection.",
+      "id": "Beberapa kementerian mengurus jalannya Negara itu sendiri. Kementerian Kepresidenan Dewan Menteri (Agio Pereira, yang juga juru bicara Pemerintah) menyiapkan rapat Pemerintah dan mendukung Perdana Menteri. Kementerian Keuangan (Santina Viegas Cardoso) menyusun Anggaran dan membayar pengeluaran Negara; Kementerian Luar Negeri dan Kerja Sama (Bendito dos Santos Freitas) mengurus hubungan dengan negara lain, ASEAN dan CPLP; Kementerian Kehakiman (Sérgio Hornai, sejak 2024) mengurus penjara, pencatatan sipil dan tanah; Kementerian Administrasi Negara (Tomás do Rosário Cabral) mendukung munisipalitas dan suco. Kementerian Pertahanan (Donaciano do Rosário Gomes) bekerja dengan F-FDTL, dan Kementerian Dalam Negeri (Francisco da Costa Guterres) membawahi PNTL, Dinas Imigrasi dan perlindungan sipil."
      }
     },
     {
      "heading": {
       "tet": "Ministériu sosiál sira",
-      "pt": "Ministérios sociais"
+      "pt": "Ministérios sociais",
+      "en": "Social ministries",
+      "id": "Kementerian sosial"
      },
      "text": {
-      "tet": "Ministériu seluk tau matan direta ba ema sira. Ministériu Saúde lidera ospitál no sentru saúde sira; Ministériu Edukasaun, eskola sira husi pré-eskolár to'o sekundáriu; no Ministériu Ensinu Superiór, Siénsia no Kultura, universidade no peskiza sira. Ministériu Solidariedade Sosiál no Inkluzaun selu pensaun no apoiu ba família kiak liu no ba ema ho defisiénsia, no Ministériu Asuntu Kombatente Libertasaun Nasionál rekoñese no apoia veteranu sira. Ministériu Juventude, Desportu, Arte no Kultura servisu ho foin-sa'e, atleta no artista sira.",
-      "pt": "Outros ministérios cuidam diretamente das pessoas. O Ministério da Saúde dirige hospitais e centros de saúde; o Ministério da Educação, as escolas do pré-escolar ao secundário; e o Ministério do Ensino Superior, Ciência e Cultura, as universidades e a investigação. O Ministério da Solidariedade Social e Inclusão paga pensões e apoios às famílias mais pobres e às pessoas com deficiência, e o Ministério dos Assuntos dos Combatentes da Libertação Nacional reconhece e apoia os veteranos. O Ministério da Juventude, Desporto, Arte e Cultura trabalha com jovens, atletas e artistas."
+      "tet": "Ministériu seluk tau matan direta ba ema sira. Ministériu Saúde (Élia dos Reis Amaral) lidera ospitál no sentru saúde sira; Ministériu Edukasaun (Dulce de Jesus Soares), eskola sira husi pré-eskolár to'o sekundáriu; no Ministériu Ensinu Superiór, Siénsia no Kultura, universidade no peskiza sira. Nia ministru, José Honório da Costa Pereira Jerónimo, mate iha 21 Abríl 2026, no depois Vise-Primeiru-Ministru Mariano Assanami Sabino kaer pasta ne'e interinamente. Ministériu Solidariedade Sosiál no Inkluzaun (Verónica das Dores) selu pensaun no apoiu ba família kiak liu no ba ema ho defisiénsia; Ministériu Asuntu Kombatente Libertasaun Nasionál (Gil da Costa Monteiro «Oan Soru») apoia veteranu sira; no Ministériu Juventude, Desportu, Arte no Kultura (Nélio Isaac Sarmento) servisu ho foin-sa'e, atleta no artista sira.",
+      "pt": "Outros ministérios cuidam diretamente das pessoas. O Ministério da Saúde (Élia dos Reis Amaral) dirige hospitais e centros de saúde; o da Educação (Dulce de Jesus Soares), as escolas do pré-escolar ao secundário; e o do Ensino Superior, Ciência e Cultura, as universidades e a investigação. O seu ministro, José Honório da Costa Pereira Jerónimo, morreu a 21 de abril de 2026, e a pasta passou a ser assegurada interinamente pelo vice-primeiro-ministro Mariano Assanami Sabino. O Ministério da Solidariedade Social e Inclusão (Verónica das Dores) paga pensões e apoios às famílias mais pobres e às pessoas com deficiência; o dos Assuntos dos Combatentes da Libertação Nacional (Gil da Costa Monteiro «Oan Soru») apoia os veteranos; e o da Juventude, Desporto, Arte e Cultura (Nélio Isaac Sarmento) trabalha com jovens, atletas e artistas.",
+      "en": "Other ministries look after people directly. The Ministry of Health (Élia dos Reis Amaral) runs hospitals and health centres; the Ministry of Education (Dulce de Jesus Soares), the schools from pre-school to secondary; and the Ministry of Higher Education, Science and Culture, the universities and research. Its minister, José Honório da Costa Pereira Jerónimo, died on 21 April 2026, and the portfolio has since been held on an interim basis by Deputy Prime Minister Mariano Assanami Sabino. The Ministry of Social Solidarity and Inclusion (Verónica das Dores) pays pensions and support to the poorest families and to people with disabilities; the Ministry of National Liberation Combatants' Affairs (Gil da Costa Monteiro «Oan Soru») supports the veterans; and the Ministry of Youth, Sport, Art and Culture (Nélio Isaac Sarmento) works with young people, athletes and artists.",
+      "id": "Kementerian lain mengurus rakyat secara langsung. Kementerian Kesehatan (Élia dos Reis Amaral) mengelola rumah sakit dan pusat kesehatan; Kementerian Pendidikan (Dulce de Jesus Soares), sekolah dari prasekolah sampai sekolah menengah; dan Kementerian Pendidikan Tinggi, Ilmu Pengetahuan dan Kebudayaan, universitas dan penelitian. Menterinya, José Honório da Costa Pereira Jerónimo, meninggal pada 21 April 2026, dan sejak itu jabatan tersebut dipegang sementara oleh Wakil Perdana Menteri Mariano Assanami Sabino. Kementerian Solidaritas Sosial dan Inklusi (Verónica das Dores) membayar pensiun dan bantuan bagi keluarga termiskin dan penyandang disabilitas; Kementerian Urusan Pejuang Pembebasan Nasional (Gil da Costa Monteiro «Oan Soru») mendukung para veteran; dan Kementerian Pemuda, Olahraga, Seni dan Kebudayaan (Nélio Isaac Sarmento) bekerja dengan kaum muda, atlet dan seniman."
      }
     },
     {
      "heading": {
       "tet": "Ekonomia no infraestrutura",
-      "pt": "Economia e infraestruturas"
+      "pt": "Economia e infraestruturas",
+      "en": "Economy and infrastructure",
+      "id": "Ekonomi dan infrastruktur"
      },
      "text": {
-      "tet": "Grupu ministériu datoluk trata ekonomia. Ministériu Planeamentu no Investimentu Estratéjiku prepara projetu boot sira; Ministériu Obras Públikas, estrada, ponte no edifísiu públiku sira; no Ministériu Transporte no Komunikasaun, portu, aeroportu no telekomunikasaun. Iha mós ministériu ba Komérsiu no Indústria; Agrikultura, Pekuária, Peska no Floresta; Petróleu no Rekursu Minerál; Turizmu no Ambiente; no Dezenvolvimentu Rurál no Habitasaun Komunitária. Governu ida-idak kombina ka haketak área sira-ne'e ho maneira oioin: ezemplu, turizmu uluk hamutuk ho komérsiu no, iha Governu seluk, ho kultura.",
-      "pt": "Um terceiro grupo de ministérios trata da economia. O Ministério do Planeamento e Investimento Estratégico prepara os grandes projetos; o das Obras Públicas, as estradas, as pontes e os edifícios públicos; e o dos Transportes e Comunicações, os portos, os aeroportos e as telecomunicações. Há ainda ministérios para o Comércio e Indústria; a Agricultura, Pecuária, Pescas e Florestas; o Petróleo e Recursos Minerais; o Turismo e Ambiente; e o Desenvolvimento Rural e Habitação Comunitária. Cada Governo junta ou separa estas áreas de forma diferente: o turismo, por exemplo, já esteve ligado ao comércio e, noutros governos, à cultura."
+      "tet": "Grupu ministériu datoluk trata ekonomia. Vise-Primeiru-Ministru Francisco Kalbuadi Lay koordena asuntu ekonómiku no lidera Ministériu Turizmu no Ambiente, no Vise-Primeiru-Ministru Mariano Assanami Sabino koordena asuntu sosiál no lidera Ministériu Dezenvolvimentu Rurál no Habitasaun Komunitária. Ministériu Planeamentu no Investimentu Estratéjiku (Gastão Francisco de Sousa) prepara projetu boot sira; Ministériu Obras Públikas (Samuel Marçal), estrada, ponte no edifísiu públiku sira; no Ministériu Transporte no Komunikasaun (Miguel Marques Gonçalves Manetelu), portu, aeroportu no telekomunikasaun. Iha mós ministériu ba Komérsiu no Indústria (Filipus Nino Pereira), Agrikultura, Pekuária, Peska no Floresta (Marcos da Cruz) no Petróleu no Rekursu Minerál (Francisco da Costa Monteiro). Governu ida-idak kombina ka haketak área sira-ne'e ho maneira oioin: ezemplu, turizmu uluk hamutuk ho komérsiu no, iha Governu seluk, ho kultura.",
+      "pt": "Um terceiro grupo de ministérios trata da economia. O vice-primeiro-ministro Francisco Kalbuadi Lay coordena os assuntos económicos e dirige o Ministério do Turismo e Ambiente, e o vice-primeiro-ministro Mariano Assanami Sabino coordena os assuntos sociais e dirige o do Desenvolvimento Rural e Habitação Comunitária. O Ministério do Planeamento e Investimento Estratégico (Gastão Francisco de Sousa) prepara os grandes projetos; o das Obras Públicas (Samuel Marçal), as estradas, as pontes e os edifícios públicos; e o dos Transportes e Comunicações (Miguel Marques Gonçalves Manetelu), os portos, os aeroportos e as telecomunicações. Há ainda os ministérios do Comércio e Indústria (Filipus Nino Pereira), da Agricultura, Pecuária, Pescas e Florestas (Marcos da Cruz) e do Petróleo e Recursos Minerais (Francisco da Costa Monteiro). Cada Governo junta ou separa estas áreas de forma diferente: o turismo, por exemplo, já esteve ligado ao comércio e, noutros governos, à cultura.",
+      "en": "A third group of ministries deals with the economy. Deputy Prime Minister Francisco Kalbuadi Lay coordinates economic affairs and heads the Ministry of Tourism and Environment, and Deputy Prime Minister Mariano Assanami Sabino coordinates social affairs and heads the Ministry of Rural Development and Community Housing. The Ministry of Planning and Strategic Investment (Gastão Francisco de Sousa) prepares the big projects; the Ministry of Public Works (Samuel Marçal), roads, bridges and public buildings; and the Ministry of Transport and Communications (Miguel Marques Gonçalves Manetelu), ports, airports and telecommunications. There are also ministries for Commerce and Industry (Filipus Nino Pereira), Agriculture, Livestock, Fisheries and Forestry (Marcos da Cruz) and Petroleum and Mineral Resources (Francisco da Costa Monteiro). Each Government joins or separates these areas differently: tourism, for example, was once linked to commerce and, in other governments, to culture.",
+      "id": "Kelompok ketiga kementerian mengurus ekonomi. Wakil Perdana Menteri Francisco Kalbuadi Lay mengoordinasikan urusan ekonomi dan memimpin Kementerian Pariwisata dan Lingkungan Hidup, sedangkan Wakil Perdana Menteri Mariano Assanami Sabino mengoordinasikan urusan sosial dan memimpin Kementerian Pembangunan Perdesaan dan Perumahan Komunitas. Kementerian Perencanaan dan Investasi Strategis (Gastão Francisco de Sousa) menyiapkan proyek-proyek besar; Kementerian Pekerjaan Umum (Samuel Marçal), jalan, jembatan dan gedung publik; dan Kementerian Perhubungan dan Komunikasi (Miguel Marques Gonçalves Manetelu), pelabuhan, bandar udara dan telekomunikasi. Ada juga kementerian Perdagangan dan Perindustrian (Filipus Nino Pereira), Pertanian, Peternakan, Perikanan dan Kehutanan (Marcos da Cruz), serta Perminyakan dan Sumber Daya Mineral (Francisco da Costa Monteiro). Setiap Pemerintah menggabungkan atau memisahkan bidang-bidang ini dengan cara berbeda: pariwisata, misalnya, pernah digabung dengan perdagangan dan, dalam pemerintahan lain, dengan kebudayaan."
+     }
+    },
+    {
+     "heading": {
+      "tet": "Vise-Ministru no Sekretáriu Estadu sira",
+      "pt": "Vice-ministros e secretários de Estado",
+      "en": "Vice-ministers and secretaries of state",
+      "id": "Wakil menteri dan sekretaris negara"
+     },
+     "text": {
+      "tet": "Ministru sira hetan ajuda husi Vise-Ministru no Sekretáriu Estadu sira, ne'ebé tulun sira iha parte ida husi sira-nia knaar. Tuir Governu nia portál (Novembru 2026), iha Vise-Ministru na'in-11, ezemplu ba Asuntu Parlamentár, ne'ebé partisipa iha Konsellu-Ministru maibé la vota, ba Asuntu ASEAN no ba Operasionalizasaun Ospitál sira. Iha mós Sekretáriu Estadu na'in-15, hanesan ba Igualdade, Komunikasaun Sosiál, Protesaun Sivíl, Peska no Veteranu. Prezidente Repúblika mak nomeia sira hotu, tuir Primeiru-Ministru nia proposta (Artigu 106). Governu nia kompozisaun kompletu, ho membru hotu nia naran no kontaktu, bele haree iha portál timor-leste.gov.tl.",
+      "pt": "Os ministros contam com vice-ministros e secretários de Estado, que os ajudam numa parte das suas tarefas. Segundo o portal do Governo (novembro de 2026), há 11 vice-ministros, por exemplo para os Assuntos Parlamentares, que participa no Conselho de Ministros sem direito de voto, para os Assuntos da ASEAN e para a Operacionalização dos Hospitais. Há também 15 secretários de Estado, como os da Igualdade, da Comunicação Social, da Proteção Civil, das Pescas e dos Veteranos. Todos são nomeados pelo Presidente da República, sob proposta do Primeiro-Ministro (artigo 106.º). A composição completa do Governo, com os nomes e os contactos de todos os membros, pode ser consultada no portal timor-leste.gov.tl.",
+      "en": "Ministers are helped by vice-ministers and secretaries of state, who assist them with part of their work. According to the Government portal (November 2026), there are 11 vice-ministers, for example for Parliamentary Affairs, who takes part in the Council of Ministers without a vote, for ASEAN Affairs and for the Operationalisation of Hospitals. There are also 15 secretaries of state, such as those for Equality, Social Communication, Civil Protection, Fisheries and Veterans. All of them are appointed by the President of the Republic on the proposal of the Prime Minister (Article 106). The full composition of the Government, with the names and contacts of all its members, can be found on the timor-leste.gov.tl portal.",
+      "id": "Para menteri dibantu oleh wakil menteri dan sekretaris negara, yang membantu sebagian tugas mereka. Menurut portal Pemerintah (November 2026), ada 11 wakil menteri, misalnya untuk Urusan Parlemen, yang ikut dalam Dewan Menteri tanpa hak suara, untuk Urusan ASEAN dan untuk Operasionalisasi Rumah Sakit. Ada pula 15 sekretaris negara, seperti untuk Kesetaraan, Komunikasi Sosial, Perlindungan Sipil, Perikanan dan Veteran. Semuanya diangkat oleh Presiden Republik atas usul Perdana Menteri (Pasal 106). Susunan lengkap Pemerintah, dengan nama dan kontak semua anggotanya, dapat dilihat di portal timor-leste.gov.tl."
      }
     }
    ],
@@ -1624,34 +1855,61 @@
     {
      "label": {
       "tet": "Lei orgánika",
-      "pt": "Lei orgânica"
+      "pt": "Lei orgânica",
+      "en": "Organic law",
+      "id": "Peraturan organik"
      },
      "value": {
-      "tet": "Dekretu-Lei n.º 46/2023, 27 Jullu",
-      "pt": "Decreto-Lei n.º 46/2023, de 27 de julho"
+      "tet": "Dekretu-Lei n.º 46/2023 (Jullu 2023), ho alterasaun iha 2024 no 2026",
+      "pt": "Decreto-Lei n.º 46/2023 (julho de 2023), alterado em 2024 e 2026",
+      "en": "Decree-Law No. 46/2023 (July 2023), amended in 2024 and 2026",
+      "id": "Dekret-UU No. 46/2023 (Juli 2023), diubah pada 2024 dan 2026"
      }
     },
     {
      "label": {
       "tet": "Membru IX Governu nian (2023)",
-      "pt": "Membros do IX Governo (2023)"
+      "pt": "Membros do IX Governo (2023)",
+      "en": "Members of the IX Government (2023)",
+      "id": "Anggota Pemerintah IX (2023)"
      },
      "value": {
       "tet": "47: PM, Vise-PM 2, Ministru 19, Vise-Ministru 10, Sekretáriu Estadu 15",
-      "pt": "47: PM, 2 vice-PM, 19 ministros, 10 vice-ministros, 15 secretários de Estado"
+      "pt": "47: PM, 2 vice-PM, 19 ministros, 10 vice-ministros, 15 secretários de Estado",
+      "en": "47: PM, 2 deputy PMs, 19 ministers, 10 vice-ministers, 15 secretaries of state",
+      "id": "47: PM, 2 wakil PM, 19 menteri, 10 wakil menteri, 15 sekretaris negara"
      },
      "year": 2023
     },
     {
      "label": {
+      "tet": "Vise-Ministru no Sekretáriu Estadu (Novembru 2026)",
+      "pt": "Vice-ministros e secretários de Estado (novembro de 2026)",
+      "en": "Vice-ministers and secretaries of state (November 2026)",
+      "id": "Wakil menteri dan sekretaris negara (November 2026)"
+     },
+     "value": {
+      "tet": "Vise-Ministru 11, Sekretáriu Estadu 15",
+      "pt": "11 vice-ministros, 15 secretários de Estado",
+      "en": "11 vice-ministers, 15 secretaries of state",
+      "id": "11 wakil menteri, 15 sekretaris negara"
+     },
+     "year": 2026
+    },
+    {
+     "label": {
       "tet": "Ministériu",
-      "pt": "Ministérios"
+      "pt": "Ministérios",
+      "en": "Ministries",
+      "id": "Kementerian"
      },
      "value": {
       "tet": "21 (Ministru 19 no Vise-PM 2 ho pasta)",
-      "pt": "21 (19 ministros e 2 vice-PM com pasta)"
+      "pt": "21 (19 ministros e 2 vice-PM com pasta)",
+      "en": "21 (19 ministers and 2 deputy PMs with a portfolio)",
+      "id": "21 (19 menteri dan 2 wakil PM yang memegang kementerian)"
      },
-     "year": 2023
+     "year": 2026
     },
     {
      "label": {
@@ -1662,18 +1920,24 @@
      },
      "value": {
       "tet": "Xanana Gusmão (desde 1 Jullu 2023)",
-      "pt": "Xanana Gusmão (desde 1 de julho de 2023)"
+      "pt": "Xanana Gusmão (desde 1 de julho de 2023)",
+      "en": "Xanana Gusmão (since 1 July 2023)",
+      "id": "Xanana Gusmão (sejak 1 Juli 2023)"
      },
      "year": 2026
     },
     {
      "label": {
       "tet": "Konsellu-Ministru",
-      "pt": "Conselho de Ministros"
+      "pt": "Conselho de Ministros",
+      "en": "Council of Ministers",
+      "id": "Dewan Menteri"
      },
      "value": {
       "tet": "Primeiru-Ministru mak prezide (Artigu 105)",
-      "pt": "Presidido pelo Primeiro-Ministro (artigo 105.º)"
+      "pt": "Presidido pelo Primeiro-Ministro (artigo 105.º)",
+      "en": "Chaired by the Prime Minister (Article 105)",
+      "id": "Dipimpin oleh Perdana Menteri (Pasal 105)"
      }
     },
     {
@@ -1693,17 +1957,57 @@
    ],
    "timeline": [
     {
-     "date": "2023-07-27",
+     "date": "2023-07",
      "title": {
       "tet": "Dekretu-Lei n.º 46/2023 aprova IX Governu nia orgánika",
-      "pt": "O Decreto-Lei n.º 46/2023 aprova a orgânica do IX Governo"
+      "pt": "O Decreto-Lei n.º 46/2023 aprova a orgânica do IX Governo",
+      "en": "Decree-Law No. 46/2023 approves the organic law of the IX Government",
+      "id": "Dekret-UU No. 46/2023 menyetujui peraturan organik Pemerintah IX"
+     }
+    },
+    {
+     "date": "2023-07-01",
+     "title": {
+      "tet": "IX Governu Konstitusionál toma-pose",
+      "pt": "Toma posse o IX Governo Constitucional",
+      "en": "The IX Constitutional Government takes office",
+      "id": "Pemerintah Konstitusional IX dilantik"
+     }
+    },
+    {
+     "date": "2024-02-15",
+     "title": {
+      "tet": "Sérgio Hornai sai Ministru Justisa",
+      "pt": "Sérgio Hornai torna-se ministro da Justiça",
+      "en": "Sérgio Hornai becomes Minister of Justice",
+      "id": "Sérgio Hornai menjadi Menteri Kehakiman"
+     }
+    },
+    {
+     "date": "2024-11-06",
+     "title": {
+      "tet": "Dekretu-Lei n.º 36/2024, alterasaun dahuluk ba orgánika: Sekretaria Estadu Komunikasaun Sosiál hetan autonomia",
+      "pt": "Decreto-Lei n.º 36/2024, primeira alteração à orgânica: autonomia da Secretaria de Estado da Comunicação Social",
+      "en": "Decree-Law No. 36/2024, first amendment to the organic law: the Secretariat of State for Social Communication becomes autonomous",
+      "id": "Dekret-UU No. 36/2024, perubahan pertama peraturan organik: Sekretariat Negara Komunikasi Sosial menjadi otonom"
      }
     },
     {
      "date": "2026-03-04",
      "title": {
-      "tet": "Konsellu-Ministru aprova testu foun ba Governu nia orgánika",
-      "pt": "O Conselho de Ministros aprova um novo texto da orgânica do Governo"
+      "tet": "Konsellu-Ministru aprova alterasaun daruak ba orgánika, ne'ebé harii kargu Vise-Ministra Negósiu Estranjeiru no Kooperasaun",
+      "pt": "O Conselho de Ministros aprova a segunda alteração à orgânica, que cria o cargo de vice-ministra dos Negócios Estrangeiros e Cooperação",
+      "en": "The Council of Ministers approves the second amendment to the organic law, creating the post of Vice-Minister of Foreign Affairs and Cooperation",
+      "id": "Dewan Menteri menyetujui perubahan kedua peraturan organik, yang membentuk jabatan Wakil Menteri Luar Negeri dan Kerja Sama"
+     }
+    },
+    {
+     "date": "2026-04-21",
+     "title": {
+      "tet": "Ministru Ensinu Superiór, Siénsia no Kultura, José Honório da Costa Pereira Jerónimo, mate",
+      "pt": "Morre o ministro do Ensino Superior, Ciência e Cultura, José Honório da Costa Pereira Jerónimo",
+      "en": "Death of the Minister of Higher Education, Science and Culture, José Honório da Costa Pereira Jerónimo",
+      "id": "Menteri Pendidikan Tinggi, Ilmu Pengetahuan dan Kebudayaan, José Honório da Costa Pereira Jerónimo, meninggal"
      }
     }
    ],
@@ -1711,7 +2015,9 @@
     "illustration": "government-palace",
     "caption": {
      "tet": "Palásiu Governu iha Dili, fatin Konsellu-Ministru nian.",
-     "pt": "O Palácio do Governo, em Díli, onde se reúne o Conselho de Ministros."
+     "pt": "O Palácio do Governo, em Díli, onde se reúne o Conselho de Ministros.",
+     "en": "The Government Palace in Dili, where the Council of Ministers meets.",
+     "id": "Istana Pemerintah di Dili, tempat Dewan Menteri bersidang."
     }
    },
    "wiki": {
@@ -1742,50 +2048,70 @@
     {
      "q": {
       "tet": "Ministériu ida ne'ebé tau matan ba ospitál no sentru saúde sira?",
-      "pt": "Que ministério cuida dos hospitais e dos centros de saúde?"
+      "pt": "Que ministério cuida dos hospitais e dos centros de saúde?",
+      "en": "Which ministry looks after hospitals and health centres?",
+      "id": "Kementerian mana yang mengurus rumah sakit dan pusat kesehatan?"
      },
      "options": [
       {
        "tet": "Ministériu Saúde",
-       "pt": "O Ministério da Saúde"
+       "pt": "O Ministério da Saúde",
+       "en": "The Ministry of Health",
+       "id": "Kementerian Kesehatan"
       },
       {
        "tet": "Ministériu Finansas",
-       "pt": "O Ministério das Finanças"
+       "pt": "O Ministério das Finanças",
+       "en": "The Ministry of Finance",
+       "id": "Kementerian Keuangan"
       },
       {
        "tet": "Ministériu Defeza",
-       "pt": "O Ministério da Defesa"
+       "pt": "O Ministério da Defesa",
+       "en": "The Ministry of Defence",
+       "id": "Kementerian Pertahanan"
       },
       {
        "tet": "Ministériu Justisa",
-       "pt": "O Ministério da Justiça"
+       "pt": "O Ministério da Justiça",
+       "en": "The Ministry of Justice",
+       "id": "Kementerian Kehakiman"
       }
      ],
      "answer": 0,
      "why": {
       "tet": "Ministériu Saúde lidera ospitál no sentru saúde sira.",
-      "pt": "O Ministério da Saúde dirige os hospitais e os centros de saúde."
+      "pt": "O Ministério da Saúde dirige os hospitais e os centros de saúde.",
+      "en": "The Ministry of Health runs the hospitals and health centres.",
+      "id": "Kementerian Kesehatan mengelola rumah sakit dan pusat kesehatan."
      },
      "difficulty": 1
     },
     {
      "q": {
       "tet": "Ministériu ida ne'ebé trata relasaun ho nasaun seluk?",
-      "pt": "Que ministério trata das relações com outros países?"
+      "pt": "Que ministério trata das relações com outros países?",
+      "en": "Which ministry deals with relations with other countries?",
+      "id": "Kementerian mana yang mengurus hubungan dengan negara lain?"
      },
      "options": [
       {
        "tet": "Ministériu Negósiu Estranjeiru no Kooperasaun",
-       "pt": "O Ministério dos Negócios Estrangeiros e Cooperação"
+       "pt": "O Ministério dos Negócios Estrangeiros e Cooperação",
+       "en": "The Ministry of Foreign Affairs and Cooperation",
+       "id": "Kementerian Luar Negeri dan Kerja Sama"
       },
       {
        "tet": "Ministériu Obras Públikas",
-       "pt": "O Ministério das Obras Públicas"
+       "pt": "O Ministério das Obras Públicas",
+       "en": "The Ministry of Public Works",
+       "id": "Kementerian Pekerjaan Umum"
       },
       {
        "tet": "Ministériu Interiór",
-       "pt": "O Ministério do Interior"
+       "pt": "O Ministério do Interior",
+       "en": "The Ministry of the Interior",
+       "id": "Kementerian Dalam Negeri"
       },
       {
        "tet": "Ministériu Edukasaun",
@@ -1797,14 +2123,18 @@
      "answer": 0,
      "why": {
       "tet": "MNEK trata relasaun ho nasaun seluk no ho organizasaun hanesan ASEAN no CPLP.",
-      "pt": "O MNEC trata das relações com outros países e com organizações como a ASEAN e a CPLP."
+      "pt": "O MNEC trata das relações com outros países e com organizações como a ASEAN e a CPLP.",
+      "en": "The MNEC deals with relations with other countries and with organisations such as ASEAN and the CPLP.",
+      "id": "MNEC mengurus hubungan dengan negara lain dan dengan organisasi seperti ASEAN dan CPLP."
      },
      "difficulty": 3
     },
     {
      "q": {
       "tet": "Bainhira toma-pose, IX Governu iha Ministru na'in-hira (la konta PM no Vise-PM sira)?",
-      "pt": "Quantos ministros tinha o IX Governo quando tomou posse (sem contar o PM e os vice-PM)?"
+      "pt": "Quantos ministros tinha o IX Governo quando tomou posse (sem contar o PM e os vice-PM)?",
+      "en": "How many ministers did the IX Government have when it took office (not counting the PM and the deputy PMs)?",
+      "id": "Berapa menteri yang dimiliki Pemerintah IX saat dilantik (tidak termasuk PM dan para wakil PM)?"
      },
      "options": [
       {
@@ -1821,7 +2151,9 @@
       },
       {
        "tet": "19",
-       "pt": "19"
+       "pt": "19",
+       "en": "19",
+       "id": "19"
       },
       {
        "tet": "30",
@@ -1833,44 +2165,60 @@
      "answer": 2,
      "why": {
       "tet": "Iha 2023 Governu iha Ministru 19, aléinde PM no Vise-PM na'in-rua.",
-      "pt": "Em 2023 o Governo tinha 19 ministros, além do PM e dos dois vice-PM."
+      "pt": "Em 2023 o Governo tinha 19 ministros, além do PM e dos dois vice-PM.",
+      "en": "In 2023 the Government had 19 ministers, as well as the PM and the two deputy PMs.",
+      "id": "Pada 2023 Pemerintah memiliki 19 menteri, selain PM dan dua wakil PM."
      },
      "difficulty": 6
     },
     {
      "q": {
       "tet": "Ministériu ida ne'ebé Vise-Primeiru-Ministru ba asuntu ekonómiku mak lidera?",
-      "pt": "Que ministério é dirigido pelo vice-primeiro-ministro que coordena os assuntos económicos?"
+      "pt": "Que ministério é dirigido pelo vice-primeiro-ministro que coordena os assuntos económicos?",
+      "en": "Which ministry is headed by the deputy prime minister who coordinates economic affairs?",
+      "id": "Kementerian mana yang dipimpin oleh wakil perdana menteri yang mengoordinasikan urusan ekonomi?"
      },
      "options": [
       {
        "tet": "Ministériu Turizmu no Ambiente",
-       "pt": "O Ministério do Turismo e Ambiente"
+       "pt": "O Ministério do Turismo e Ambiente",
+       "en": "The Ministry of Tourism and Environment",
+       "id": "Kementerian Pariwisata dan Lingkungan Hidup"
       },
       {
        "tet": "Ministériu Saúde",
-       "pt": "O Ministério da Saúde"
+       "pt": "O Ministério da Saúde",
+       "en": "The Ministry of Health",
+       "id": "Kementerian Kesehatan"
       },
       {
        "tet": "Ministériu Defeza",
-       "pt": "O Ministério da Defesa"
+       "pt": "O Ministério da Defesa",
+       "en": "The Ministry of Defence",
+       "id": "Kementerian Pertahanan"
       },
       {
        "tet": "Ministériu Justisa",
-       "pt": "O Ministério da Justiça"
+       "pt": "O Ministério da Justiça",
+       "en": "The Ministry of Justice",
+       "id": "Kementerian Kehakiman"
       }
      ],
      "answer": 0,
      "why": {
       "tet": "Vise-PM ba asuntu ekonómiku mós Ministru Turizmu no Ambiente.",
-      "pt": "O vice-PM dos assuntos económicos é também ministro do Turismo e Ambiente."
+      "pt": "O vice-PM dos assuntos económicos é também ministro do Turismo e Ambiente.",
+      "en": "The deputy PM for economic affairs is also Minister of Tourism and Environment.",
+      "id": "Wakil PM urusan ekonomi juga menjabat Menteri Pariwisata dan Lingkungan Hidup."
      },
      "difficulty": 8
     },
     {
      "q": {
       "tet": "Dekretu-lei ida ne'ebé aprova IX Governu nia orgánika?",
-      "pt": "Que decreto-lei aprovou a orgânica do IX Governo?"
+      "pt": "Que decreto-lei aprovou a orgânica do IX Governo?",
+      "en": "Which decree-law approved the organic law of the IX Government?",
+      "id": "Dekret-UU manakah yang menyetujui peraturan organik Pemerintah IX?"
      },
      "options": [
       {
@@ -1881,11 +2229,15 @@
       },
       {
        "tet": "Dekretu-Lei n.º 46/2023",
-       "pt": "Decreto-Lei n.º 46/2023"
+       "pt": "Decreto-Lei n.º 46/2023",
+       "en": "Decree-Law No. 46/2023",
+       "id": "Dekret-UU No. 46/2023"
       },
       {
        "tet": "Dekretu-Lei n.º 8/2013",
-       "pt": "Decreto-Lei n.º 8/2013"
+       "pt": "Decreto-Lei n.º 8/2013",
+       "en": "Decree-Law No. 8/2013",
+       "id": "Dekret-UU No. 8/2013"
       },
       {
        "tet": "Lei n.º 14/2008",
@@ -1896,24 +2248,32 @@
      ],
      "answer": 1,
      "why": {
-      "tet": "Dekretu-Lei n.º 46/2023, 27 Jullu, aprova IX Governu nia orgánika.",
-      "pt": "O Decreto-Lei n.º 46/2023, de 27 de julho, aprovou a orgânica do IX Governo."
+      "tet": "Dekretu-Lei n.º 46/2023, iha Jullu 2023, aprova IX Governu nia orgánika.",
+      "pt": "O Decreto-Lei n.º 46/2023, de julho de 2023, aprovou a orgânica do IX Governo.",
+      "en": "Decree-Law No. 46/2023, of July 2023, approved the organic law of the IX Government.",
+      "id": "Dekret-UU No. 46/2023, bulan Juli 2023, menyetujui peraturan organik Pemerintah IX."
      },
      "difficulty": 12
     },
     {
      "q": {
       "tet": "Tuir Artigu 115, se mak bele halo lei kona-ba Governu nia organizasaun?",
-      "pt": "Segundo o artigo 115.º, quem pode legislar sobre a organização do Governo?"
+      "pt": "Segundo o artigo 115.º, quem pode legislar sobre a organização do Governo?",
+      "en": "Under Article 115, who can make laws about the organisation of the Government?",
+      "id": "Menurut Pasal 115, siapa yang boleh membuat aturan tentang organisasi Pemerintah?"
      },
      "options": [
       {
        "tet": "Parlamentu de'it",
-       "pt": "Só o Parlamento"
+       "pt": "Só o Parlamento",
+       "en": "Only Parliament",
+       "id": "Hanya Parlemen"
       },
       {
        "tet": "Governu de'it",
-       "pt": "Só o Governo"
+       "pt": "Só o Governo",
+       "en": "Only the Government",
+       "id": "Hanya Pemerintah"
       },
       {
        "tet": "Prezidente Repúblika",
@@ -1931,7 +2291,9 @@
      "answer": 1,
      "why": {
       "tet": "Artigu 115.3: Governu de'it mak iha kompeténsia lejizlativu kona-ba nia organizasaun rasik.",
-      "pt": "Artigo 115.º, n.º 3: é competência legislativa exclusiva do Governo."
+      "pt": "Artigo 115.º, n.º 3: é competência legislativa exclusiva do Governo.",
+      "en": "Article 115(3): it is a matter on which only the Government can legislate.",
+      "id": "Pasal 115 ayat 3: hal itu menjadi kewenangan legislatif khusus Pemerintah."
      },
      "difficulty": 13
     }
@@ -1941,7 +2303,7 @@
      "title": "IX Constitutional Government of Timor-Leste",
      "publisher": "Wikipedia (English)",
      "url": "https://en.wikipedia.org/wiki/IX_Constitutional_Government_of_Timor-Leste",
-     "accessed": "2026-11-02",
+     "accessed": "2026-11-11",
      "licence": "CC BY-SA 4.0"
     },
     {
@@ -1973,6 +2335,54 @@
      "publisher": "Ministério da Justiça — Jornal da República",
      "url": "https://www.mj.gov.tl/jornal/lawsTL/RDTL-Law/RDTL-Constitution-P.pdf",
      "accessed": "2026-11-02"
+    },
+    {
+     "title": "Composição do IX Governo Constitucional",
+     "publisher": "Governo de Timor-Leste",
+     "url": "https://timor-leste.gov.tl/?p=13&lang=pt",
+     "accessed": "2026-11-11"
+    },
+    {
+     "title": "Conselho de Ministros do IX Governo Constitucional",
+     "publisher": "Governo de Timor-Leste",
+     "url": "https://timor-leste.gov.tl/?p=36438&lang=pt",
+     "accessed": "2026-11-11"
+    },
+    {
+     "title": "Presidente da República Promulga Orgânica do IX Governo Constitucional",
+     "publisher": "Governo de Timor-Leste",
+     "url": "https://timor-leste.gov.tl/?p=33107&lang=pt",
+     "accessed": "2026-11-11"
+    },
+    {
+     "title": "Reunião do Conselho de Ministros de 15 de janeiro de 2025 (Decreto-Lei n.º 36/2024, primeira alteração à orgânica)",
+     "publisher": "Governo de Timor-Leste",
+     "url": "https://timor-leste.gov.tl/?p=41403&lang=pt",
+     "accessed": "2026-11-11"
+    },
+    {
+     "title": "Reunião do Conselho de Ministros de 4 de março de 2026",
+     "publisher": "Governo de Timor-Leste",
+     "url": "https://timor-leste.gov.tl/?p=47629&lang=pt",
+     "accessed": "2026-11-11"
+    },
+    {
+     "title": "Jesuína Maria Ferreira Gomes toma posse como Vice-Ministra dos Negócios Estrangeiros e Cooperação",
+     "publisher": "Governo de Timor-Leste",
+     "url": "https://timor-leste.gov.tl/?p=47632&lang=pt",
+     "accessed": "2026-11-11"
+    },
+    {
+     "title": "Governo expressa profundo pesar pela morte do Ministro do Ensino Superior, Ciência e Cultura, José Honório da Costa Pereira Jerónimo",
+     "publisher": "Governo de Timor-Leste",
+     "url": "https://timor-leste.gov.tl/?p=48637&lang=pt",
+     "accessed": "2026-11-11"
+    },
+    {
+     "title": "Ministro do Ensino Superior, Ciência e Cultura interino lança novos cursos de História e Psicologia na UNTL",
+     "publisher": "Governo de Timor-Leste",
+     "url": "https://timor-leste.gov.tl/?p=53116&lang=pt",
+     "accessed": "2026-11-11"
     }
    ],
    "review": {
@@ -4671,11 +5081,15 @@
    ],
    "title": {
     "tet": "Instituisaun juventude, desportu, arte no kultura",
-    "pt": "Instituições da juventude, desporto, arte e cultura"
+    "pt": "Instituições da juventude, desporto, arte e cultura",
+    "en": "Youth, sport, art and culture institutions",
+    "id": "Lembaga pemuda, olahraga, seni dan kebudayaan"
    },
    "summary": {
-    "tet": "Iha IX Governu, ministériu rasik ida trata juventude, desportu, arte no kultura: Ministériu Juventude, Desportu, Arte no Kultura (MJDAC). Nia servisu ho asosiasaun foin-sa'e, federasaun desportiva, Komité Olímpiku no artista sira. Uluk, área sira-ne'e iha sekretaria estadu sira nia liman.",
-    "pt": "No IX Governo, um ministério próprio trata da juventude, do desporto, da arte e da cultura: o Ministério da Juventude, Desporto, Arte e Cultura (MJDAC). Trabalha com associações de jovens, federações desportivas, o Comité Olímpico e os artistas. Antes, estas áreas estavam a cargo de secretarias de Estado."
+    "tet": "Iha IX Governu, ministériu rasik ida trata juventude, desportu, arte no kultura: Ministériu Juventude, Desportu, Arte no Kultura (MJDAC), ne'ebé Nélio Isaac Sarmento mak lidera, ho Sekretáriu Estadu Arte no Kultura ida. Nia servisu ho asosiasaun foin-sa'e, federasaun desportiva, Komité Olímpiku no artista sira, no tau matan ba Muzeu Nasionál no Biblioteka Nasionál. Uluk, área sira-ne'e liuliu iha sekretaria estadu sira nia liman.",
+    "pt": "No IX Governo, um ministério próprio trata da juventude, do desporto, da arte e da cultura: o Ministério da Juventude, Desporto, Arte e Cultura (MJDAC), dirigido por Nélio Isaac Sarmento e com um secretário de Estado da Arte e Cultura. Trabalha com associações de jovens, federações desportivas, o Comité Olímpico e os artistas e tutela o Museu Nacional e a Biblioteca Nacional. Antes, estas áreas estavam sobretudo a cargo de secretarias de Estado.",
+    "en": "In the IX Government, a ministry of its own deals with youth, sport, art and culture: the Ministry of Youth, Sport, Art and Culture (MJDAC), headed by Nélio Isaac Sarmento and with a Secretary of State for Art and Culture. It works with youth associations, sports federations, the Olympic Committee and artists, and it oversees the National Museum and the National Library. Before, these areas were mostly in the hands of secretariats of state.",
+    "id": "Dalam Pemerintah IX, sebuah kementerian tersendiri mengurus pemuda, olahraga, seni dan kebudayaan: Kementerian Pemuda, Olahraga, Seni dan Kebudayaan (MJDAC), yang dipimpin Nélio Isaac Sarmento dan memiliki seorang Sekretaris Negara Seni dan Kebudayaan. Kementerian ini bekerja dengan perkumpulan pemuda, federasi olahraga, Komite Olimpiade dan para seniman, serta membawahi Museum Nasional dan Perpustakaan Nasional. Sebelumnya, bidang-bidang ini sebagian besar ditangani sekretariat negara."
    },
    "levels": [
     "eb2",
@@ -4691,41 +5105,71 @@
     {
      "heading": {
       "tet": "Ministériu foun ida",
-      "pt": "Um ministério novo"
+      "pt": "Um ministério novo",
+      "en": "A new ministry",
+      "id": "Kementerian baru"
      },
      "text": {
-      "tet": "Durante tinan barak, Sekretaria Estadu Juventude no Desportu mak trata foin-sa'e no desportu, no sekretaria estadu seluk mak trata arte no kultura. Ho IX Governu, iha 2023, área sira-ne'e hetan ministériu rasik, MJDAC, ho pájina internet mjdac.gov.tl. Ministru ba pasta ne'e mak Nélio Isaac Sarmento, husi CNRT. Ministériu prepara polítika ba juventude, desportu, arte no kultura, apoia asosiasaun no eventu sira, no tau matan ba fasilidade desportiva sira.",
-      "pt": "Durante muitos anos, a juventude e o desporto estiveram a cargo de uma Secretaria de Estado da Juventude e Desporto, e a arte e a cultura de outra secretaria de Estado. Com o IX Governo, em 2023, estas áreas passaram a ter um ministério próprio, o MJDAC, cujo sítio é mjdac.gov.tl. O ministro desta pasta é Nélio Isaac Sarmento, do CNRT. O ministério prepara políticas para a juventude, o desporto, as artes e a cultura, apoia associações e eventos e cuida das instalações desportivas."
+      "tet": "Iha Governu dahuluk sira, juventude no desportu iha ligasaun ho Ministériu Edukasaun; depois, kuaze sempre, ho Sekretaria Estadu Juventude no Desportu, enkuantu kultura liu husi membru Governu seluk. Ho IX Governu, iha 2023, área sira-ne'e hamutuk iha ministériu rasik ida, MJDAC, ho sede iha Rua Marginal, Lecidere, Dili, no pájina internet mjdac.gov.tl. Tuir ministériu rasik, nia misaun mak dezeña, ezekuta, koordena no avalia polítika ne'ebé Konsellu-Ministru aprova ba juventude, desportu, arte no kultura. Ministru mak Nélio Isaac Sarmento, husi CNRT, eis-jornalista, ne'ebé uluk sai ona Sekretáriu Estadu Juventude no Desportu entre 2018 no 2020.",
+      "pt": "Nos primeiros governos, a juventude e o desporto estavam ligados ao Ministério da Educação; depois, quase sempre, a uma Secretaria de Estado da Juventude e Desporto, enquanto a cultura passava por outros membros do Governo. Com o IX Governo, em 2023, estas áreas juntaram-se num ministério próprio, o MJDAC, com sede na Rua Marginal, em Lecidere, Díli, e sítio na internet mjdac.gov.tl. Segundo o próprio ministério, a sua missão é conceber, executar, coordenar e avaliar a política aprovada pelo Conselho de Ministros para a juventude, o desporto, a arte e a cultura. O ministro é Nélio Isaac Sarmento, do CNRT, antigo jornalista, que já fora secretário de Estado da Juventude e Desporto entre 2018 e 2020.",
+      "en": "In the first governments, youth and sport were linked to the Ministry of Education; later they were almost always under a Secretariat of State for Youth and Sport, while culture passed through other members of the Government. With the IX Government, in 2023, these areas came together in a ministry of their own, the MJDAC, based on Rua Marginal, in Lecidere, Dili, with the website mjdac.gov.tl. According to the ministry itself, its mission is to design, carry out, coordinate and evaluate the policy approved by the Council of Ministers for youth, sport, art and culture. The minister is Nélio Isaac Sarmento, of CNRT, a former journalist who had already been Secretary of State for Youth and Sport from 2018 to 2020.",
+      "id": "Dalam pemerintahan-pemerintahan pertama, urusan pemuda dan olahraga terkait dengan Kementerian Pendidikan; kemudian hampir selalu berada di bawah Sekretariat Negara Pemuda dan Olahraga, sementara kebudayaan ditangani anggota Pemerintah lainnya. Dengan Pemerintah IX, pada 2023, bidang-bidang ini digabung dalam sebuah kementerian tersendiri, MJDAC, yang berkantor di Rua Marginal, Lecidere, Dili, dengan situs mjdac.gov.tl. Menurut kementerian itu sendiri, misinya adalah merancang, melaksanakan, mengoordinasikan dan mengevaluasi kebijakan yang disetujui Dewan Menteri untuk pemuda, olahraga, seni dan kebudayaan. Menterinya adalah Nélio Isaac Sarmento, dari CNRT, mantan wartawan yang pernah menjadi Sekretaris Negara Pemuda dan Olahraga pada 2018–2020."
+     }
+    },
+    {
+     "heading": {
+      "tet": "Oinsá mak nia organiza",
+      "pt": "Como está organizado",
+      "en": "How it is organised",
+      "id": "Bagaimana kementerian ini diatur"
+     },
+     "text": {
+      "tet": "Sekretáriu Estadu Arte no Kultura, Jorge Soares Cristovão, mak ajuda ministru. Ministériu iha diresaun-jerál haat: Juventude, Desportu, Arte no Kultura, no Servisu Korporativu. Iha sira-nia okos iha diresaun nasionál sira, hanesan Asosiativizmu Juventude, Dezenvolvimentu Juventude, Desportu ba Ema Hotu no Desportu Federadu, no, iha área kultura, Biblioteka no Muzeu, Patrimóniu Kulturál no Promosaun Arte no Kultura. Muzeu Nasionál Timór-Leste no Biblioteka Nasionál mós iha ministru nia okos, no Komisaun Nasionál Desportu, ne'ebé Dekretu-Lei n.º 60/2023, 24 Agostu, regula, no Komisaun Reguladora Arte Marsiál (CRAM) servisu hamutuk ho nia.",
+      "pt": "O ministro é ajudado pelo secretário de Estado da Arte e Cultura, Jorge Soares Cristovão. O ministério tem quatro direções-gerais: da Juventude, do Desporto, das Artes e Cultura e dos Serviços Corporativos. Abaixo delas há direções nacionais, como as do Associativismo Juvenil, do Desenvolvimento da Juventude, do Desporto para Todos e do Desporto Federado e, na área da cultura, as de Bibliotecas e Museus, do Património Cultural e da Promoção das Artes e Cultura. Dependem também do ministro o Museu Nacional de Timor-Leste e a Biblioteca Nacional, e trabalham com ele a Comissão Nacional do Desporto, regulada pelo Decreto-Lei n.º 60/2023, de 24 de agosto, e a Comissão Reguladora das Artes Marciais (CRAM).",
+      "en": "The minister is helped by the Secretary of State for Art and Culture, Jorge Soares Cristovão. The ministry has four directorates-general: Youth, Sport, Arts and Culture, and Corporate Services. Below them are national directorates such as Youth Associations, Youth Development, Sport for All and Federated Sport and, in culture, Libraries and Museums, Cultural Heritage and the Promotion of Arts and Culture. The National Museum of Timor-Leste and the National Library also come under the minister, and the National Sports Commission, regulated by Decree-Law No. 60/2023 of 24 August, and the Martial Arts Regulatory Commission (CRAM) work with him.",
+      "id": "Menteri dibantu oleh Sekretaris Negara Seni dan Kebudayaan, Jorge Soares Cristovão. Kementerian ini memiliki empat direktorat jenderal: Pemuda, Olahraga, Seni dan Kebudayaan, serta Layanan Korporat. Di bawahnya ada direktorat nasional, seperti Perkumpulan Pemuda, Pengembangan Pemuda, Olahraga untuk Semua dan Olahraga Federasi, serta, di bidang kebudayaan, Perpustakaan dan Museum, Warisan Budaya, dan Promosi Seni dan Kebudayaan. Museum Nasional Timor-Leste dan Perpustakaan Nasional juga berada di bawah menteri, sedangkan Komisi Olahraga Nasional, yang diatur dengan Dekret-UU No. 60/2023 tanggal 24 Agustus, dan Komisi Pengatur Seni Bela Diri (CRAM) bekerja bersamanya."
      }
     },
     {
      "heading": {
       "tet": "Juventude",
-      "pt": "Juventude"
+      "pt": "Juventude",
+      "en": "Youth",
+      "id": "Pemuda"
      },
      "text": {
-      "tet": "Timór-Leste mak nasaun foin-sa'e ida, no Lei-Inan husu Estadu atu apoia foin-sa'e sira-nia edukasaun, saúde no formasaun profisionál (Artigu 19). Ministériu servisu hamutuk ho Konsellu Nasionál Juventude no grupu foin-sa'e sira iha suku, iha programa lideransa, voluntariadu, empreendedorizmu no prevensaun violénsia no droga. Iha 12 Novembru, Loron Nasionál Juventude, ita hanoin hikas foin-sa'e sira-nia papél iha luta ba independénsia, liuliu iha masakre Santa Cruz, iha 1991.",
-      "pt": "Timor-Leste é um país jovem, e a Constituição pede ao Estado que apoie a educação, a saúde e a formação profissional dos jovens (artigo 19.º). O ministério trabalha com o Conselho Nacional da Juventude e com grupos de jovens nos sucos, em programas de liderança, voluntariado, empreendedorismo e prevenção da violência e das drogas. A 12 de novembro, Dia Nacional da Juventude, recorda-se o papel dos jovens na luta pela independência, sobretudo no massacre de Santa Cruz, em 1991."
+      "tet": "Timór-Leste mak nasaun foin-sa'e ida, no Lei-Inan husu Estadu atu apoia foin-sa'e sira-nia edukasaun, saúde no formasaun profisionál (Artigu 19). Ministériu hala'o Polítika Nasionál Juventude, ne'ebé Governu aprova liuhusi rezolusaun, no servisu hamutuk ho Konsellu Nasionál Juventude no grupu foin-sa'e sira iha suku. Nia programa balu mak Parlamentu Foin-Sa'e, kursu lideransa, apoiu ba asosiasaun foin-sa'e no sentru juventude iha munisípiu sira; Governu mós prevé Sentru Nasionál Juventude ida iha Dili. Iha 12 Novembru, Loron Nasionál Juventude, ita hanoin hikas foin-sa'e sira-nia papél iha luta ba independénsia, liuliu iha masakre Santa Cruz, iha 1991.",
+      "pt": "Timor-Leste é um país jovem, e a Constituição pede ao Estado que apoie a educação, a saúde e a formação profissional dos jovens (artigo 19.º). O ministério aplica a Política Nacional da Juventude, aprovada por resolução do Governo, e trabalha com o Conselho Nacional da Juventude e com grupos de jovens nos sucos. Entre os seus programas estão o Parlamento da Juventude («Parlamentu Foin-Sa'e»), cursos de liderança, o apoio às associações juvenis e centros de juventude nos municípios; o Governo prevê também um Centro Nacional da Juventude em Díli. A 12 de novembro, Dia Nacional da Juventude, recorda-se o papel dos jovens na luta pela independência, sobretudo no massacre de Santa Cruz, em 1991.",
+      "en": "Timor-Leste is a young country, and the Constitution asks the State to support young people's education, health and vocational training (Article 19). The ministry carries out the National Youth Policy, approved by a Government resolution, and works with the National Youth Council and with youth groups in the sucos. Its programmes include the Youth Parliament («Parlamentu Foin-Sa'e»), leadership courses, support for youth associations and youth centres in the municipalities; the Government also plans a National Youth Centre in Dili. On 12 November, National Youth Day, people remember the part young people played in the struggle for independence, above all in the Santa Cruz massacre of 1991.",
+      "id": "Timor-Leste adalah negara muda, dan Konstitusi meminta Negara mendukung pendidikan, kesehatan dan pelatihan kerja kaum muda (Pasal 19). Kementerian menjalankan Kebijakan Nasional Kepemudaan, yang disetujui melalui resolusi Pemerintah, dan bekerja dengan Dewan Pemuda Nasional serta kelompok-kelompok pemuda di suco. Program-programnya antara lain Parlemen Pemuda («Parlamentu Foin-Sa'e»), kursus kepemimpinan, dukungan bagi perkumpulan pemuda dan pusat-pusat pemuda di munisipalitas; Pemerintah juga merencanakan Pusat Pemuda Nasional di Dili. Pada 12 November, Hari Pemuda Nasional, orang mengenang peran kaum muda dalam perjuangan kemerdekaan, terutama dalam pembantaian Santa Cruz tahun 1991."
      }
     },
     {
      "heading": {
       "tet": "Desportu",
-      "pt": "Desporto"
+      "pt": "Desporto",
+      "en": "Sport",
+      "id": "Olahraga"
      },
      "text": {
-      "tet": "Iha desportu, Estadu servisu ho organizasaun independente sira. Komité Olímpiku Nasionál Timór-Leste, ne'ebé Komité Olímpiku Internasionál rekoñese iha 2003, prepara partisipasaun iha Jogus Olímpikus no jogu rejionál sira, no modalidade ida-idak iha nia federasaun, hanesan Federasaun Futeból Timór-Leste. Ministériu apoia federasaun sira ho osan no fasilidade, promove kompetisaun nasionál no ajuda atleta sira ne'ebé reprezenta nasaun, ezemplu iha Jogus Sudeste Aziátiku no Jogus CPLP.",
-      "pt": "No desporto, o Estado trabalha com organizações independentes. O Comité Olímpico Nacional de Timor-Leste, reconhecido pelo Comité Olímpico Internacional em 2003, prepara a participação nos Jogos Olímpicos e nos jogos regionais, e cada modalidade tem a sua federação, como a Federação de Futebol de Timor-Leste. O ministério apoia as federações com dinheiro e instalações, promove competições nacionais e ajuda os atletas que representam o país, por exemplo nos Jogos do Sudeste Asiático e nos Jogos da CPLP."
+      "tet": "Iha desportu, Estadu servisu ho organizasaun independente sira. Komité Olímpiku Nasionál Timór-Leste, ne'ebé Komité Olímpiku Internasionál rekoñese iha 2003, prepara partisipasaun iha Jogus Olímpikus no jogu rejionál sira, no modalidade ida-idak iha nia federasaun, hanesan Federasaun Futeból Timór-Leste. Ministériu hala'o Polítika Nasionál Desportu, apoia federasaun sira ho osan no fasilidade, promove desportu eskolár, komunitáriu no alta kompetisaun, no ajuda atleta sira ne'ebé reprezenta nasaun, ezemplu iha Jogus Sudeste Aziátiku no Jogus CPLP. Nia planu balu mak jináziu multiuzu iha munisípiu sira no reabilitasaun Estádiu Dili nian.",
+      "pt": "No desporto, o Estado trabalha com organizações independentes. O Comité Olímpico Nacional de Timor-Leste, reconhecido pelo Comité Olímpico Internacional em 2003, prepara a participação nos Jogos Olímpicos e nos jogos regionais, e cada modalidade tem a sua federação, como a Federação de Futebol de Timor-Leste. O ministério aplica a Política Nacional do Desporto, apoia as federações com dinheiro e instalações, promove o desporto escolar, comunitário e de alta competição e ajuda os atletas que representam o país, por exemplo nos Jogos do Sudeste Asiático e nos Jogos da CPLP. Entre os seus planos estão pavilhões multiusos nos municípios e a reabilitação do Estádio de Díli.",
+      "en": "In sport, the State works with independent organisations. The National Olympic Committee of Timor-Leste, recognised by the International Olympic Committee in 2003, prepares the country's participation in the Olympic Games and regional games, and each sport has its own federation, such as the Football Federation of Timor-Leste. The ministry carries out the National Sport Policy, supports the federations with money and facilities, promotes school, community and high-performance sport and helps the athletes who represent the country, for example at the Southeast Asian Games and the CPLP Games. Its plans include multi-purpose sports halls in the municipalities and the rehabilitation of the Dili Stadium.",
+      "id": "Di bidang olahraga, Negara bekerja dengan organisasi-organisasi independen. Komite Olimpiade Nasional Timor-Leste, yang diakui Komite Olimpiade Internasional pada 2003, menyiapkan keikutsertaan dalam Olimpiade dan pesta olahraga regional, dan setiap cabang olahraga memiliki federasinya sendiri, seperti Federasi Sepak Bola Timor-Leste. Kementerian menjalankan Kebijakan Olahraga Nasional, mendukung federasi dengan dana dan fasilitas, mendorong olahraga sekolah, olahraga masyarakat dan olahraga prestasi, serta membantu atlet yang mewakili negara, misalnya di SEA Games dan Pesta Olahraga CPLP. Rencananya antara lain gedung olahraga serbaguna di munisipalitas dan rehabilitasi Stadion Dili."
      }
     },
     {
      "heading": {
       "tet": "Arte no kultura",
-      "pt": "Arte e cultura"
+      "pt": "Arte e cultura",
+      "en": "Art and culture",
+      "id": "Seni dan kebudayaan"
      },
      "text": {
-      "tet": "Lei-Inan dehan katak ema hotu iha direitu ba kultura no devér atu defende patrimóniu kulturál (Artigu 59). Ministériu apoia artista, muzisista, grupu dansa no festivál sira, no servisu atu proteje tradisaun no lian sira. Momentu boot ida mak iha Dezembru 2021, bainhira tais, hena ne'ebé feto timoroan sira soru ho liman, tama iha UNESCO nia Lista Patrimóniu Kulturál Imateriál ne'ebé Presiza Salvaguarda Urjente. Ministériu Ensinu Superiór, Siénsia no Kultura fahe mós knaar kulturál balu.",
-      "pt": "A Constituição diz que todos têm direito à cultura e o dever de defender o património cultural (artigo 59.º). O ministério apoia artistas, músicos, grupos de dança e festivais e trabalha na proteção das tradições e das línguas. Um grande momento foi em dezembro de 2021, quando o tais, o pano tecido à mão pelas mulheres timorenses, entrou na Lista do Património Cultural Imaterial que Necessita de Salvaguarda Urgente da UNESCO. O Ministério do Ensino Superior, Ciência e Cultura partilha algumas tarefas culturais."
+      "tet": "Lei-Inan dehan katak ema hotu iha direitu ba kultura no devér atu defende patrimóniu kulturál (Artigu 59). Ministériu apoia artista, muzisista, grupu dansa no festivál sira, proteje patrimóniu materiál no imateriál, hanesan lian, múzika no arkitetura tradisionál, no hala'o Kódigu Direitu Autór nian (Lei n.º 14/2022). Nia planu balu mak muzeu no sentru kulturál ida iha Dili, Biblioteka Nasionál foun, akademia ida ba arte no indústria kriativa, no sentru kulturál rejionál sira. Momentu boot ida mak iha Dezembru 2021, bainhira tais, hena ne'ebé feto timoroan sira soru ho liman, tama iha UNESCO nia Lista Patrimóniu Kulturál Imateriál ne'ebé Presiza Salvaguarda Urjente. Ministériu Ensinu Superiór, Siénsia no Kultura fahe mós knaar kulturál balu.",
+      "pt": "A Constituição diz que todos têm direito à cultura e o dever de defender o património cultural (artigo 59.º). O ministério apoia artistas, músicos, grupos de dança e festivais, protege o património material e imaterial, como as línguas, a música e a arquitetura tradicional, e aplica o Código do Direito de Autor (Lei n.º 14/2022). Entre os seus planos estão um museu e centro cultural em Díli, a nova Biblioteca Nacional, uma academia de artes e indústrias criativas e centros culturais regionais. Um grande momento foi em dezembro de 2021, quando o tais, o pano tecido à mão pelas mulheres timorenses, entrou na Lista do Património Cultural Imaterial que Necessita de Salvaguarda Urgente da UNESCO. O Ministério do Ensino Superior, Ciência e Cultura partilha algumas tarefas culturais.",
+      "en": "The Constitution says that everyone has the right to culture and the duty to defend the cultural heritage (Article 59). The ministry supports artists, musicians, dance groups and festivals, protects tangible and intangible heritage such as languages, music and traditional architecture, and applies the Copyright Code (Law No. 14/2022). Its plans include a museum and cultural centre in Dili, the new National Library, an academy of arts and creative industries and regional cultural centres. A great moment came in December 2021, when tais, the cloth woven by hand by Timorese women, was added to UNESCO's List of Intangible Cultural Heritage in Need of Urgent Safeguarding. The Ministry of Higher Education, Science and Culture shares some cultural tasks.",
+      "id": "Konstitusi menyatakan bahwa setiap orang berhak atas kebudayaan dan berkewajiban membela warisan budaya (Pasal 59). Kementerian mendukung seniman, musisi, kelompok tari dan festival, melindungi warisan benda dan takbenda seperti bahasa, musik dan arsitektur tradisional, serta menerapkan Kitab Hak Cipta (UU No. 14/2022). Rencananya antara lain museum dan pusat kebudayaan di Dili, Perpustakaan Nasional yang baru, akademi seni dan industri kreatif, serta pusat-pusat kebudayaan regional. Momen besar terjadi pada Desember 2021, ketika tais, kain tenun tangan para perempuan Timor-Leste, masuk ke dalam Daftar Warisan Budaya Takbenda yang Memerlukan Perlindungan Mendesak UNESCO. Kementerian Pendidikan Tinggi, Ilmu Pengetahuan dan Kebudayaan juga ikut menjalankan sebagian tugas kebudayaan."
      }
     }
    ],
@@ -4733,22 +5177,45 @@
     {
      "label": {
       "tet": "Ministériu (IX Governu)",
-      "pt": "Ministério (IX Governo)"
+      "pt": "Ministério (IX Governo)",
+      "en": "Ministry (IX Government)",
+      "id": "Kementerian (Pemerintah IX)"
      },
      "value": {
       "tet": "Ministériu Juventude, Desportu, Arte no Kultura (MJDAC)",
-      "pt": "Ministério da Juventude, Desporto, Arte e Cultura (MJDAC)"
+      "pt": "Ministério da Juventude, Desporto, Arte e Cultura (MJDAC)",
+      "en": "Ministry of Youth, Sport, Art and Culture (MJDAC)",
+      "id": "Kementerian Pemuda, Olahraga, Seni dan Kebudayaan (MJDAC)"
      },
      "year": 2026
     },
     {
      "label": {
       "tet": "Ministru",
-      "pt": "Ministro"
+      "pt": "Ministro",
+      "en": "Minister",
+      "id": "Menteri"
      },
      "value": {
       "tet": "Nélio Isaac Sarmento (desde 2023)",
-      "pt": "Nélio Isaac Sarmento (desde 2023)"
+      "pt": "Nélio Isaac Sarmento (desde 2023)",
+      "en": "Nélio Isaac Sarmento (since 2023)",
+      "id": "Nélio Isaac Sarmento (sejak 2023)"
+     },
+     "year": 2026
+    },
+    {
+     "label": {
+      "tet": "Sekretáriu Estadu Arte no Kultura",
+      "pt": "Secretário de Estado da Arte e Cultura",
+      "en": "Secretary of State for Art and Culture",
+      "id": "Sekretaris Negara Seni dan Kebudayaan"
+     },
+     "value": {
+      "tet": "Jorge Soares Cristovão",
+      "pt": "Jorge Soares Cristovão",
+      "en": "Jorge Soares Cristovão",
+      "id": "Jorge Soares Cristovão"
      },
      "year": 2026
     },
@@ -4769,32 +5236,59 @@
     {
      "label": {
       "tet": "Komité Olímpiku Nasionál",
-      "pt": "Comité Olímpico Nacional"
+      "pt": "Comité Olímpico Nacional",
+      "en": "National Olympic Committee",
+      "id": "Komite Olimpiade Nasional"
      },
      "value": {
       "tet": "Komité Olímpiku Internasionál rekoñese iha 2003",
-      "pt": "Reconhecido pelo COI em 2003"
+      "pt": "Reconhecido pelo COI em 2003",
+      "en": "Recognised by the IOC in 2003",
+      "id": "Diakui IOC pada 2003"
      }
     },
     {
      "label": {
       "tet": "Tais iha UNESCO",
-      "pt": "O tais na UNESCO"
+      "pt": "O tais na UNESCO",
+      "en": "Tais at UNESCO",
+      "id": "Tais di UNESCO"
      },
      "value": {
       "tet": "Lista salvaguarda urjente, desde 2021",
-      "pt": "Lista de salvaguarda urgente, desde 2021"
+      "pt": "Lista de salvaguarda urgente, desde 2021",
+      "en": "Urgent safeguarding list, since 2021",
+      "id": "Daftar perlindungan mendesak, sejak 2021"
      }
     },
     {
      "label": {
       "tet": "Baze iha Lei-Inan",
-      "pt": "Base constitucional"
+      "pt": "Base constitucional",
+      "en": "Constitutional basis",
+      "id": "Dasar konstitusional"
      },
      "value": {
       "tet": "Artigu 19 (juventude) no 59 (edukasaun no kultura)",
-      "pt": "Artigos 19.º (juventude) e 59.º (educação e cultura)"
+      "pt": "Artigos 19.º (juventude) e 59.º (educação e cultura)",
+      "en": "Articles 19 (youth) and 59 (education and culture)",
+      "id": "Pasal 19 (pemuda) dan 59 (pendidikan dan kebudayaan)"
      }
+    },
+    {
+     "label": {
+      "tet": "Organizmu iha ministru nia okos (ezemplu)",
+      "pt": "Organismos tutelados (exemplos)",
+      "en": "Bodies under the minister (examples)",
+      "id": "Lembaga di bawah menteri (contoh)"
+     },
+     "value": {
+      "tet": "Muzeu Nasionál Timór-Leste, Biblioteka Nasionál",
+      "pt": "Museu Nacional de Timor-Leste, Biblioteca Nacional",
+      "en": "National Museum of Timor-Leste, National Library",
+      "id": "Museum Nasional Timor-Leste, Perpustakaan Nasional"
+     },
+     "year": 2026
     }
    ],
    "timeline": [
@@ -4802,14 +5296,45 @@
      "date": "2003",
      "title": {
       "tet": "Komité Olímpiku Internasionál rekoñese Komité Olímpiku Nasionál Timór-Leste",
-      "pt": "O Comité Olímpico Internacional reconhece o Comité Olímpico Nacional de Timor-Leste"
+      "pt": "O Comité Olímpico Internacional reconhece o Comité Olímpico Nacional de Timor-Leste",
+      "en": "The International Olympic Committee recognises the National Olympic Committee of Timor-Leste",
+      "id": "Komite Olimpiade Internasional mengakui Komite Olimpiade Nasional Timor-Leste"
+     }
+    },
+    {
+     "date": "2021-12-15",
+     "title": {
+      "tet": "Tais tama iha UNESCO nia lista salvaguarda urjente",
+      "pt": "O tais entra na lista de salvaguarda urgente da UNESCO",
+      "en": "Tais is added to UNESCO's urgent safeguarding list",
+      "id": "Tais masuk ke dalam daftar perlindungan mendesak UNESCO"
+     }
+    },
+    {
+     "date": "2022-12-21",
+     "title": {
+      "tet": "Lei n.º 14/2022 aprova Kódigu Direitu Autór nian",
+      "pt": "A Lei n.º 14/2022 aprova o Código do Direito de Autor",
+      "en": "Law No. 14/2022 approves the Copyright Code",
+      "id": "UU No. 14/2022 menyetujui Kitab Hak Cipta"
      }
     },
     {
      "date": "2023-07",
      "title": {
       "tet": "IX Governu harii Ministériu Juventude, Desportu, Arte no Kultura",
-      "pt": "O IX Governo cria o Ministério da Juventude, Desporto, Arte e Cultura"
+      "pt": "O IX Governo cria o Ministério da Juventude, Desporto, Arte e Cultura",
+      "en": "The IX Government creates the Ministry of Youth, Sport, Art and Culture",
+      "id": "Pemerintah IX membentuk Kementerian Pemuda, Olahraga, Seni dan Kebudayaan"
+     }
+    },
+    {
+     "date": "2023-08-24",
+     "title": {
+      "tet": "Dekretu-Lei n.º 60/2023 kona-ba Komisaun Nasionál Desportu",
+      "pt": "Decreto-Lei n.º 60/2023 sobre a Comissão Nacional do Desporto",
+      "en": "Decree-Law No. 60/2023 on the National Sports Commission",
+      "id": "Dekret-UU No. 60/2023 tentang Komisi Olahraga Nasional"
      }
     }
    ],
@@ -4817,7 +5342,9 @@
     "illustration": "people",
     "caption": {
      "tet": "Foin-sa'e sira iha festivál kulturál ida.",
-     "pt": "Jovens num festival cultural."
+     "pt": "Jovens num festival cultural.",
+     "en": "Young people at a cultural festival.",
+     "id": "Kaum muda di sebuah festival budaya."
     }
    },
    "related": [
@@ -4845,46 +5372,64 @@
     {
      "q": {
       "tet": "Ministériu ida ne'ebé trata desportu iha IX Governu?",
-      "pt": "Que ministério trata do desporto no IX Governo?"
+      "pt": "Que ministério trata do desporto no IX Governo?",
+      "en": "Which ministry deals with sport in the IX Government?",
+      "id": "Kementerian mana yang mengurus olahraga dalam Pemerintah IX?"
      },
      "options": [
       {
        "tet": "Ministériu Juventude, Desportu, Arte no Kultura",
-       "pt": "O Ministério da Juventude, Desporto, Arte e Cultura"
+       "pt": "O Ministério da Juventude, Desporto, Arte e Cultura",
+       "en": "The Ministry of Youth, Sport, Art and Culture",
+       "id": "Kementerian Pemuda, Olahraga, Seni dan Kebudayaan"
       },
       {
        "tet": "Ministériu Finansas",
-       "pt": "O Ministério das Finanças"
+       "pt": "O Ministério das Finanças",
+       "en": "The Ministry of Finance",
+       "id": "Kementerian Keuangan"
       },
       {
        "tet": "Ministériu Justisa",
-       "pt": "O Ministério da Justiça"
+       "pt": "O Ministério da Justiça",
+       "en": "The Ministry of Justice",
+       "id": "Kementerian Kehakiman"
       },
       {
        "tet": "Ministériu Defeza",
-       "pt": "O Ministério da Defesa"
+       "pt": "O Ministério da Defesa",
+       "en": "The Ministry of Defence",
+       "id": "Kementerian Pertahanan"
       }
      ],
      "answer": 0,
      "why": {
       "tet": "Iha IX Governu, MJDAC mak trata juventude, desportu, arte no kultura.",
-      "pt": "No IX Governo, o MJDAC trata da juventude, do desporto, da arte e da cultura."
+      "pt": "No IX Governo, o MJDAC trata da juventude, do desporto, da arte e da cultura.",
+      "en": "In the IX Government, the MJDAC deals with youth, sport, art and culture.",
+      "id": "Dalam Pemerintah IX, MJDAC mengurus pemuda, olahraga, seni dan kebudayaan."
      },
      "difficulty": 2
     },
     {
      "q": {
       "tet": "Hena tradisionál ida ne'ebé tama iha UNESCO nia lista iha 2021?",
-      "pt": "Que pano tradicional entrou numa lista da UNESCO em 2021?"
+      "pt": "Que pano tradicional entrou numa lista da UNESCO em 2021?",
+      "en": "Which traditional cloth was added to a UNESCO list in 2021?",
+      "id": "Kain tradisional apa yang masuk ke dalam daftar UNESCO pada 2021?"
      },
      "options": [
       {
        "tet": "Batik",
-       "pt": "O batik"
+       "pt": "O batik",
+       "en": "Batik",
+       "id": "Batik"
       },
       {
        "tet": "Kimono",
-       "pt": "O quimono"
+       "pt": "O quimono",
+       "en": "Kimono",
+       "id": "Kimono"
       },
       {
        "tet": "Tais",
@@ -4894,20 +5439,26 @@
       },
       {
        "tet": "Sari",
-       "pt": "O sari"
+       "pt": "O sari",
+       "en": "Sari",
+       "id": "Sari"
       }
      ],
      "answer": 2,
      "why": {
       "tet": "Tais tama iha lista Patrimóniu Kulturál Imateriál ne'ebé presiza salvaguarda urjente.",
-      "pt": "O tais entrou na lista do Património Cultural Imaterial que necessita de salvaguarda urgente."
+      "pt": "O tais entrou na lista do Património Cultural Imaterial que necessita de salvaguarda urgente.",
+      "en": "Tais was added to the list of Intangible Cultural Heritage in need of urgent safeguarding.",
+      "id": "Tais masuk ke dalam daftar Warisan Budaya Takbenda yang memerlukan perlindungan mendesak."
      },
      "difficulty": 4
     },
     {
      "q": {
       "tet": "Organizasaun ida ne'ebé prepara Timór-Leste nia partisipasaun iha Jogus Olímpikus?",
-      "pt": "Que organização prepara a participação de Timor-Leste nos Jogos Olímpicos?"
+      "pt": "Que organização prepara a participação de Timor-Leste nos Jogos Olímpicos?",
+      "en": "Which organisation prepares Timor-Leste's participation in the Olympic Games?",
+      "id": "Organisasi apa yang menyiapkan keikutsertaan Timor-Leste dalam Olimpiade?"
      },
      "options": [
       {
@@ -4918,11 +5469,15 @@
       },
       {
        "tet": "Kámara Kontas",
-       "pt": "A Câmara de Contas"
+       "pt": "A Câmara de Contas",
+       "en": "The Chamber of Accounts",
+       "id": "Kamar Pemeriksa Keuangan"
       },
       {
        "tet": "Komité Olímpiku Nasionál",
-       "pt": "O Comité Olímpico Nacional"
+       "pt": "O Comité Olímpico Nacional",
+       "en": "The National Olympic Committee",
+       "id": "Komite Olimpiade Nasional"
       },
       {
        "tet": "PNTL",
@@ -4934,14 +5489,18 @@
      "answer": 2,
      "why": {
       "tet": "Komité Olímpiku Nasionál Timór-Leste prepara ekipa olímpika.",
-      "pt": "O Comité Olímpico Nacional de Timor-Leste prepara a equipa olímpica."
+      "pt": "O Comité Olímpico Nacional de Timor-Leste prepara a equipa olímpica.",
+      "en": "The National Olympic Committee of Timor-Leste prepares the Olympic team.",
+      "id": "Komite Olimpiade Nasional Timor-Leste menyiapkan tim Olimpiade."
      },
      "difficulty": 7
     },
     {
      "q": {
       "tet": "Molok 2023, órgaun saida mak trata juventude no desportu?",
-      "pt": "Antes de 2023, que tipo de órgão tratava da juventude e do desporto?"
+      "pt": "Antes de 2023, que tipo de órgão tratava da juventude e do desporto?",
+      "en": "Before 2023, what kind of body dealt with youth and sport?",
+      "id": "Sebelum 2023, badan seperti apa yang mengurus pemuda dan olahraga?"
      },
      "options": [
       {
@@ -4952,7 +5511,9 @@
       },
       {
        "tet": "Komisaun Anti-Korrupsaun",
-       "pt": "A Comissão Anti-Corrupção"
+       "pt": "A Comissão Anti-Corrupção",
+       "en": "The Anti-Corruption Commission",
+       "id": "Komisi Anti-Korupsi"
       },
       {
        "tet": "Tribunál Rekursu",
@@ -4962,25 +5523,33 @@
       },
       {
        "tet": "Sekretaria Estadu ida",
-       "pt": "Uma secretaria de Estado"
+       "pt": "Uma secretaria de Estado",
+       "en": "A secretariat of state",
+       "id": "Sebuah sekretariat negara"
       }
      ],
      "answer": 3,
      "why": {
       "tet": "Uluk iha Sekretaria Estadu Juventude no Desportu.",
-      "pt": "Antes havia uma Secretaria de Estado da Juventude e Desporto."
+      "pt": "Antes havia uma Secretaria de Estado da Juventude e Desporto.",
+      "en": "Before, there was a Secretariat of State for Youth and Sport.",
+      "id": "Dulu ada Sekretariat Negara Pemuda dan Olahraga."
      },
      "difficulty": 10
     },
     {
      "q": {
       "tet": "Artigu Lei-Inan nian ida ne'ebé husu Estadu atu apoia foin-sa'e sira-nia edukasaun no formasaun?",
-      "pt": "Que artigo da Constituição pede ao Estado que apoie a educação e a formação dos jovens?"
+      "pt": "Que artigo da Constituição pede ao Estado que apoie a educação e a formação dos jovens?",
+      "en": "Which article of the Constitution asks the State to support the education and training of young people?",
+      "id": "Pasal Konstitusi manakah yang meminta Negara mendukung pendidikan dan pelatihan kaum muda?"
      },
      "options": [
       {
        "tet": "Artigu 146",
-       "pt": "Artigo 146.º"
+       "pt": "Artigo 146.º",
+       "en": "Article 146",
+       "id": "Pasal 146"
       },
       {
        "tet": "Artigu 19",
@@ -4990,7 +5559,9 @@
       },
       {
        "tet": "Artigu 73",
-       "pt": "Artigo 73.º"
+       "pt": "Artigo 73.º",
+       "en": "Article 73",
+       "id": "Pasal 73"
       },
       {
        "tet": "Artigu 143",
@@ -5002,27 +5573,37 @@
      "answer": 1,
      "why": {
       "tet": "Artigu 19 kona-ba foin-sa'e sira.",
-      "pt": "O artigo 19.º é sobre a juventude."
+      "pt": "O artigo 19.º é sobre a juventude.",
+      "en": "Article 19 is about young people.",
+      "id": "Pasal 19 mengatur tentang kaum muda."
      },
      "difficulty": 11
     },
     {
      "q": {
       "tet": "Se mak Ministru Juventude, Desportu, Arte no Kultura iha IX Governu?",
-      "pt": "Quem é o ministro da Juventude, Desporto, Arte e Cultura do IX Governo?"
+      "pt": "Quem é o ministro da Juventude, Desporto, Arte e Cultura do IX Governo?",
+      "en": "Who is the Minister of Youth, Sport, Art and Culture in the IX Government?",
+      "id": "Siapa Menteri Pemuda, Olahraga, Seni dan Kebudayaan dalam Pemerintah IX?"
      },
      "options": [
       {
        "tet": "Agio Pereira",
-       "pt": "Agio Pereira"
+       "pt": "Agio Pereira",
+       "en": "Agio Pereira",
+       "id": "Agio Pereira"
       },
       {
        "tet": "Nélio Isaac Sarmento",
-       "pt": "Nélio Isaac Sarmento"
+       "pt": "Nélio Isaac Sarmento",
+       "en": "Nélio Isaac Sarmento",
+       "id": "Nélio Isaac Sarmento"
       },
       {
        "tet": "Santina Viegas Cardoso",
-       "pt": "Santina Viegas Cardoso"
+       "pt": "Santina Viegas Cardoso",
+       "en": "Santina Viegas Cardoso",
+       "id": "Santina Viegas Cardoso"
       },
       {
        "tet": "Taur Matan Ruak",
@@ -5034,23 +5615,19 @@
      "answer": 1,
      "why": {
       "tet": "Nélio Isaac Sarmento, husi CNRT, mak ministru desde 2023.",
-      "pt": "Nélio Isaac Sarmento, do CNRT, é o ministro desde 2023."
+      "pt": "Nélio Isaac Sarmento, do CNRT, é o ministro desde 2023.",
+      "en": "Nélio Isaac Sarmento, of CNRT, has been the minister since 2023.",
+      "id": "Nélio Isaac Sarmento, dari CNRT, menjadi menteri sejak 2023."
      },
      "difficulty": 12
     }
    ],
    "sources": [
     {
-     "title": "Ministério da Juventude, Desporto, Arte e Cultura",
-     "publisher": "MJDAC",
-     "url": "https://mjdac.gov.tl/",
-     "accessed": "2026-11-02"
-    },
-    {
      "title": "Nélio Isaac Sarmento",
      "publisher": "Wikipedia (English)",
      "url": "https://en.wikipedia.org/wiki/N%C3%A9lio_Isaac_Sarmento",
-     "accessed": "2026-11-02",
+     "accessed": "2026-11-11",
      "licence": "CC BY-SA 4.0"
     },
     {
@@ -5077,6 +5654,72 @@
      "publisher": "Ministério da Justiça — Jornal da República",
      "url": "https://www.mj.gov.tl/jornal/lawsTL/RDTL-Law/RDTL-Constitution-P.pdf",
      "accessed": "2026-11-02"
+    },
+    {
+     "title": "Ministério da Juventude, Desporto, Arte e Cultura (página principal e legislação)",
+     "publisher": "Ministério da Juventude, Desporto, Arte e Cultura (MJDAC)",
+     "url": "https://mjdac.gov.tl/2024-mjdac",
+     "accessed": "2026-11-11"
+    },
+    {
+     "title": "Istória badak MJDAC",
+     "publisher": "Ministério da Juventude, Desporto, Arte e Cultura (MJDAC)",
+     "url": "https://mjdac.gov.tl/notisia/historia/mjdac/",
+     "accessed": "2026-11-11"
+    },
+    {
+     "title": "Vizaun no Misaun MJDAK",
+     "publisher": "Ministério da Juventude, Desporto, Arte e Cultura (MJDAC)",
+     "url": "https://mjdac.gov.tl/notisia/vizaun/misaun/",
+     "accessed": "2026-11-11"
+    },
+    {
+     "title": "Perfil MJDAC (ministro e secretário de Estado)",
+     "publisher": "Ministério da Juventude, Desporto, Arte e Cultura (MJDAC)",
+     "url": "https://mjdac.gov.tl/notisia/perfil/mjdac/",
+     "accessed": "2026-11-11"
+    },
+    {
+     "title": "Diresaun Jeral MJDAC",
+     "publisher": "Ministério da Juventude, Desporto, Arte e Cultura (MJDAC)",
+     "url": "https://mjdac.gov.tl/notisia/perfil/dj/mjdac/",
+     "accessed": "2026-11-11"
+    },
+    {
+     "title": "Diretor/a Nasional MJDAC",
+     "publisher": "Ministério da Juventude, Desporto, Arte e Cultura (MJDAC)",
+     "url": "https://mjdac.gov.tl/notisia/perfil/dnr/MJDAC/",
+     "accessed": "2026-11-11"
+    },
+    {
+     "title": "Diretor/a Nasional SEAC",
+     "publisher": "Ministério da Juventude, Desporto, Arte e Cultura (MJDAC)",
+     "url": "https://mjdac.gov.tl/notisia/perfil/dnr/SEAC/",
+     "accessed": "2026-11-11"
+    },
+    {
+     "title": "Gabinete Ezekutivu",
+     "publisher": "Ministério da Juventude, Desporto, Arte e Cultura (MJDAC)",
+     "url": "https://mjdac.gov.tl/notisia/gabinete/ezekutivu",
+     "accessed": "2026-11-11"
+    },
+    {
+     "title": "Planu MJDAC: prioridades do IX Governo para a juventude, desporto, arte e cultura",
+     "publisher": "Ministério da Juventude, Desporto, Arte e Cultura (MJDAC)",
+     "url": "https://mjdac.gov.tl/notisia/plano/mjdac/",
+     "accessed": "2026-11-11"
+    },
+    {
+     "title": "Membru Governu Anterior",
+     "publisher": "Ministério da Juventude, Desporto, Arte e Cultura (MJDAC)",
+     "url": "https://mjdac.gov.tl/notisia/membru/governu/anterior/",
+     "accessed": "2026-11-11"
+    },
+    {
+     "title": "Composição do IX Governo Constitucional",
+     "publisher": "Governo de Timor-Leste",
+     "url": "https://timor-leste.gov.tl/?p=13&lang=pt",
+     "accessed": "2026-11-11"
     }
    ],
    "review": {
@@ -5650,11 +6293,15 @@
    ],
    "title": {
     "tet": "Órgaun independente sira: provedór, eleisaun, anti-korrupsaun no auditoria",
-    "pt": "Órgãos independentes: provedor, eleições, anticorrupção e auditoria"
+    "pt": "Órgãos independentes: provedor, eleições, anticorrupção e auditoria",
+    "en": "Independent bodies: ombudsman, elections, anti-corruption and audit",
+    "id": "Badan-badan independen: provedor, pemilu, antikorupsi dan audit"
    },
    "summary": {
     "tet": "Iha demokrasia, órgaun balu tau matan ba podér maibé la simu orden husi Governu. Iha Timór-Leste, Provedór Direitus Umanus no Justisa simu sidadaun sira-nia keixa, CNE tau matan ba eleisaun, Komisaun Anti-Korrupsaun kombate korrupsaun no Kámara Kontas halo auditoria ba osan públiku.",
-    "pt": "Numa democracia, alguns órgãos vigiam o poder sem receber ordens do Governo. Em Timor-Leste, o Provedor de Direitos Humanos e Justiça recebe queixas dos cidadãos, a CNE supervisiona as eleições, a Comissão Anti-Corrupção combate a corrupção e a Câmara de Contas audita o dinheiro público."
+    "pt": "Numa democracia, alguns órgãos vigiam o poder sem receber ordens do Governo. Em Timor-Leste, o Provedor de Direitos Humanos e Justiça recebe queixas dos cidadãos, a CNE supervisiona as eleições, a Comissão Anti-Corrupção combate a corrupção e a Câmara de Contas audita o dinheiro público.",
+    "en": "In a democracy, some bodies watch over those in power without taking orders from the Government. In Timor-Leste, the Provedor for Human Rights and Justice receives citizens' complaints, the CNE supervises elections, the Anti-Corruption Commission fights corruption and the Chamber of Accounts (Câmara de Contas) audits public money.",
+    "id": "Dalam demokrasi, beberapa badan mengawasi kekuasaan tanpa menerima perintah dari Pemerintah. Di Timor-Leste, Provedor Hak Asasi Manusia dan Keadilan menerima pengaduan warga, CNE mengawasi pemilu, Komisi Anti-Korupsi memberantas korupsi dan Kamar Pemeriksa Keuangan (Câmara de Contas) mengaudit uang negara."
    },
    "levels": [
     "eb3",
@@ -5674,48 +6321,66 @@
       "id": "Provedor Hak Asasi Manusia dan Keadilan"
      },
      "text": {
-      "tet": "Provedoria Direitus Umanus no Justisa (PDHJ) iha baze iha Lei-Inan nia Artigu 27 no loke nia odamatan iha 2006. Parlamentu Nasionál mak hili Provedór, no nia simu keixa hasoru servisu públiku: tratamentu aat, atrazu, injustisa ka violasaun direitus umanus. Nia bele investiga, vizita prizaun no eskuadra polísia no halo rekomendasaun, maibé nia la fó sentensa. PDHJ mós nasaun nia instituisaun nasionál direitus umanus nian no servisu ho rede rejionál sira. Iha Janeiru 2023, Virgílio da Silva Guterres toma-pose nu'udar Provedór; Provedór-Adjuntu na'in-rua ajuda nia.",
-      "pt": "A Provedoria dos Direitos Humanos e Justiça (PDHJ) está prevista no artigo 27.º da Constituição e abriu as portas em 2006. O Provedor é eleito pelo Parlamento Nacional e recebe queixas contra os serviços públicos: maus-tratos, atrasos, injustiças ou violações dos direitos humanos. Pode investigar, visitar prisões e esquadras e fazer recomendações, mas não dá sentenças. A PDHJ é também a instituição nacional de direitos humanos do país e trabalha com redes regionais. Em janeiro de 2023, Virgílio da Silva Guterres tomou posse como Provedor; dois provedores-adjuntos ajudam-no."
+      "tet": "Provedoria Direitus Umanus no Justisa (PDHJ) iha baze iha Lei-Inan nia Artigu 27, no nia estatutu hetan aprovasaun liuhusi lei iha 2004 (Lei n.º 7/2004). Parlamentu Nasionál hili Provedór dahuluk, Sebastião Dias Ximenes, iha 2005, no PDHJ loke nia odamatan ba públiku iha 20 Marsu 2006. Provedór simu keixa hasoru servisu públiku: tratamentu aat, atrazu, injustisa ka violasaun direitus umanus. Nia bele investiga, vizita prizaun no eskuadra polísia no halo rekomendasaun, maibé nia la fó sentensa. PDHJ mós nasaun nia instituisaun nasionál direitus umanus nian, ho estatutu «A», no iha delegasaun iha Baukau, Oe-Kusi, Same no Maliana. Desde Janeiru 2023, Provedór mak Virgílio da Silva Guterres, ho Provedór-Adjuntu na'in-rua: Maria Marília da Costa, ba direitus umanus, no Rigoberto Monteiro, ba boa-governasaun.",
+      "pt": "A Provedoria dos Direitos Humanos e Justiça (PDHJ) está prevista no artigo 27.º da Constituição, e o seu estatuto foi aprovado por lei em 2004 (Lei n.º 7/2004). O Parlamento Nacional elegeu o primeiro Provedor, Sebastião Dias Ximenes, em 2005, e a PDHJ abriu as portas ao público a 20 de março de 2006. O Provedor recebe queixas contra os serviços públicos: maus-tratos, atrasos, injustiças ou violações dos direitos humanos. Pode investigar, visitar prisões e esquadras e fazer recomendações, mas não dá sentenças. A PDHJ é também a instituição nacional de direitos humanos do país, com o estatuto «A», e tem delegações em Baucau, Oé-Cusse, Same e Maliana. Desde janeiro de 2023, o Provedor é Virgílio da Silva Guterres, com dois adjuntos: Maria Marília da Costa, para os direitos humanos, e Rigoberto Monteiro, para a boa governação.",
+      "en": "The Office of the Provedor for Human Rights and Justice (PDHJ) is provided for in Article 27 of the Constitution, and its statute was approved by law in 2004 (Law No. 7/2004). The National Parliament elected the first Provedor, Sebastião Dias Ximenes, in 2005, and the PDHJ opened its doors to the public on 20 March 2006. The Provedor receives complaints against public services: ill-treatment, delays, injustice or human rights violations. The Provedor can investigate, visit prisons and police stations and make recommendations, but does not pass sentences. The PDHJ is also the country's national human rights institution, with «A» status, and has offices in Baucau, Oé-Cusse, Same and Maliana. Since January 2023 the Provedor has been Virgílio da Silva Guterres, with two deputies: Maria Marília da Costa, for human rights, and Rigoberto Monteiro, for good governance.",
+      "id": "Kantor Provedor Hak Asasi Manusia dan Keadilan (PDHJ) diatur dalam Pasal 27 Konstitusi, dan statutanya disetujui dengan undang-undang pada 2004 (UU No. 7/2004). Parlemen Nasional memilih Provedor pertama, Sebastião Dias Ximenes, pada 2005, dan PDHJ membuka pintunya bagi publik pada 20 Maret 2006. Provedor menerima pengaduan terhadap layanan publik: perlakuan buruk, keterlambatan, ketidakadilan atau pelanggaran hak asasi manusia. Provedor dapat menyelidiki, mengunjungi penjara dan kantor polisi serta memberikan rekomendasi, tetapi tidak menjatuhkan putusan. PDHJ juga merupakan lembaga nasional hak asasi manusia negara ini, dengan status «A», dan memiliki kantor perwakilan di Baucau, Oé-Cusse, Same dan Maliana. Sejak Januari 2023, Provedor adalah Virgílio da Silva Guterres, dengan dua wakil: Maria Marília da Costa, untuk hak asasi manusia, dan Rigoberto Monteiro, untuk tata kelola pemerintahan yang baik."
      }
     },
     {
      "heading": {
       "tet": "Eleisaun livre: CNE no STAE",
-      "pt": "Eleições livres: CNE e STAE"
+      "pt": "Eleições livres: CNE e STAE",
+      "en": "Free elections: CNE and STAE",
+      "id": "Pemilu yang bebas: CNE dan STAE"
      },
      "text": {
       "tet": "Lei-Inan haruka órgaun independente ida atu tau matan ba resenseamentu no eleisaun sira (Artigu 65). Órgaun ne'e mak Komisaun Nasionál Eleisaun (CNE), ne'ebé nia membru sira mai husi órgaun Estadu no sosiedade oioin. CNE haree se lei la'o duni, simu keixa, fiskaliza kampaña sira-nia konta no halo apuramentu nasionál votu nian, ne'ebé tribunál mak valida. Servisu prátiku, hanesan rejista eleitór sira, imprime boletin votu no prepara meza votu, Sekretariadu Tékniku Administrasaun Eleitorál (STAE) mak halo, ne'ebé iha ligasaun ho Ministériu Administrasaun Estatál.",
-      "pt": "A Constituição manda que um órgão independente supervisione o recenseamento e as eleições (artigo 65.º). Esse órgão é a Comissão Nacional de Eleições (CNE), cujos membros são indicados por diferentes órgãos do Estado e da sociedade. A CNE vigia o cumprimento da lei, recebe queixas, fiscaliza as contas das campanhas e faz o apuramento nacional dos votos, que o tribunal valida. O trabalho prático, como recensear os eleitores, imprimir os boletins e preparar as mesas de voto, é feito pelo Secretariado Técnico de Administração Eleitoral (STAE), ligado ao Ministério da Administração Estatal."
+      "pt": "A Constituição manda que um órgão independente supervisione o recenseamento e as eleições (artigo 65.º). Esse órgão é a Comissão Nacional de Eleições (CNE), cujos membros são indicados por diferentes órgãos do Estado e da sociedade. A CNE vigia o cumprimento da lei, recebe queixas, fiscaliza as contas das campanhas e faz o apuramento nacional dos votos, que o tribunal valida. O trabalho prático, como recensear os eleitores, imprimir os boletins e preparar as mesas de voto, é feito pelo Secretariado Técnico de Administração Eleitoral (STAE), ligado ao Ministério da Administração Estatal.",
+      "en": "The Constitution requires an independent body to supervise voter registration and elections (Article 65). That body is the National Electoral Commission (CNE), whose members are nominated by different organs of the State and of society. The CNE checks that the law is respected, receives complaints, inspects campaign accounts and carries out the national count of the votes, which the court then validates. The practical work, such as registering voters, printing ballot papers and preparing polling stations, is done by the Technical Secretariat for Electoral Administration (STAE), which is linked to the Ministry of State Administration.",
+      "id": "Konstitusi mewajibkan adanya badan independen yang mengawasi pendaftaran pemilih dan pemilu (Pasal 65). Badan itu adalah Komisi Pemilihan Nasional (CNE), yang anggotanya ditunjuk oleh berbagai organ Negara dan masyarakat. CNE mengawasi pelaksanaan undang-undang, menerima pengaduan, memeriksa rekening kampanye dan melakukan rekapitulasi suara nasional, yang kemudian disahkan oleh pengadilan. Pekerjaan praktisnya, seperti mendaftar pemilih, mencetak surat suara dan menyiapkan tempat pemungutan suara, dilakukan oleh Sekretariat Teknis Administrasi Pemilu (STAE), yang berada di bawah Kementerian Administrasi Negara."
      }
     },
     {
      "heading": {
       "tet": "Komisaun Anti-Korrupsaun",
-      "pt": "A Comissão Anti-Corrupção"
+      "pt": "A Comissão Anti-Corrupção",
+      "en": "The Anti-Corruption Commission",
+      "id": "Komisi Anti-Korupsi"
      },
      "text": {
       "tet": "Komisaun Anti-Korrupsaun (CAC) moris liuhusi lei iha 2009 no hahú servisu iha 2010, hodi simu knaar ne'ebé uluk Provedór nian. Nia komisáriu dahuluk mak Adérito de Jesus Soares. CAC investiga krime korrupsaun, hanesan suborna no uza osan públiku ba interese rasik, no haruka kazu sira ba Ministériu Públiku. Nia mós halo prevensaun: fó formasaun ba funsionáriu sira, vizita eskola no hanorin katak korrupsaun na'ok osan husi ospitál, eskola no estrada sira. Iha 2020, lei foun ida hametin liu medida sira atu prevene no kombate korrupsaun.",
-      "pt": "A Comissão Anti-Corrupção (CAC) foi criada por lei em 2009 e começou a trabalhar em 2010, recebendo uma tarefa que antes era do Provedor. O seu primeiro comissário foi Adérito de Jesus Soares. A CAC investiga crimes de corrupção, como subornos e o uso de dinheiro público em proveito próprio, e envia os casos ao Ministério Público. Também faz prevenção: dá formação aos funcionários, visita escolas e ensina que a corrupção rouba dinheiro aos hospitais, às escolas e às estradas. Em 2020, uma nova lei reforçou as medidas de prevenção e combate à corrupção."
+      "pt": "A Comissão Anti-Corrupção (CAC) foi criada por lei em 2009 e começou a trabalhar em 2010, recebendo uma tarefa que antes era do Provedor. O seu primeiro comissário foi Adérito de Jesus Soares. A CAC investiga crimes de corrupção, como subornos e o uso de dinheiro público em proveito próprio, e envia os casos ao Ministério Público. Também faz prevenção: dá formação aos funcionários, visita escolas e ensina que a corrupção rouba dinheiro aos hospitais, às escolas e às estradas. Em 2020, uma nova lei reforçou as medidas de prevenção e combate à corrupção.",
+      "en": "The Anti-Corruption Commission (CAC) was created by law in 2009 and started work in 2010, taking over a task that had belonged to the Provedor. Its first commissioner was Adérito de Jesus Soares. The CAC investigates corruption crimes, such as bribes and the use of public money for private gain, and sends the cases to the Public Prosecution Service. It also works on prevention: it trains civil servants, visits schools and teaches that corruption steals money from hospitals, schools and roads. In 2020 a new law strengthened the measures to prevent and fight corruption.",
+      "id": "Komisi Anti-Korupsi (CAC) dibentuk dengan undang-undang pada 2009 dan mulai bekerja pada 2010, mengambil alih tugas yang sebelumnya milik Provedor. Komisaris pertamanya adalah Adérito de Jesus Soares. CAC menyelidiki tindak pidana korupsi, seperti suap dan penggunaan uang negara untuk kepentingan pribadi, lalu mengirim perkaranya ke Kejaksaan. CAC juga melakukan pencegahan: memberi pelatihan kepada pegawai negeri, mengunjungi sekolah dan mengajarkan bahwa korupsi mencuri uang dari rumah sakit, sekolah dan jalan. Pada 2020, sebuah undang-undang baru memperkuat langkah-langkah pencegahan dan pemberantasan korupsi."
      }
     },
     {
      "heading": {
       "tet": "Kámara Kontas no auditoria",
-      "pt": "A Câmara de Contas e a auditoria"
+      "pt": "A Câmara de Contas e a auditoria",
+      "en": "The Chamber of Accounts and auditing",
+      "id": "Kamar Pemeriksa Keuangan dan audit"
      },
      "text": {
       "tet": "Lei-Inan prevé Tribunál Superiór Administrativu, Fiskál no Kontas ida atu fiskaliza legalidade despeza públika no julga Estadu nia konta sira (Artigu 129 no 145). Durante tribunál ne'e seidauk iha, Kámara Kontas mak hala'o knaar ne'e; lei ida harii nia iha 2011 iha Tribunál Rekursu nia laran. Nia haree uluk kontratu boot balu Estadu nian, halo auditoria ba ministériu no empreza públika sira, no fó paresér ba Parlamentu kona-ba Konta Jerál Estadu. Iha Governu nia laran, Inspesaun-Jerál Estadu mós halo auditoria interna.",
-      "pt": "A Constituição prevê um Tribunal Superior Administrativo, Fiscal e de Contas para fiscalizar a legalidade das despesas públicas e julgar as contas do Estado (artigos 129.º e 145.º). Enquanto esse tribunal não existe, a tarefa cabe à Câmara de Contas, criada por lei em 2011 dentro do Tribunal de Recurso. Verifica previamente certos contratos grandes do Estado, faz auditorias aos ministérios e às empresas públicas e dá ao Parlamento um parecer sobre a Conta Geral do Estado. Dentro do Governo, a Inspeção-Geral do Estado faz também auditorias internas."
+      "pt": "A Constituição prevê um Tribunal Superior Administrativo, Fiscal e de Contas para fiscalizar a legalidade das despesas públicas e julgar as contas do Estado (artigos 129.º e 145.º). Enquanto esse tribunal não existe, a tarefa cabe à Câmara de Contas, criada por lei em 2011 dentro do Tribunal de Recurso. Verifica previamente certos contratos grandes do Estado, faz auditorias aos ministérios e às empresas públicas e dá ao Parlamento um parecer sobre a Conta Geral do Estado. Dentro do Governo, a Inspeção-Geral do Estado faz também auditorias internas.",
+      "en": "The Constitution provides for a High Administrative, Tax and Audit Court to check that public spending is lawful and to judge the State's accounts (Articles 129 and 145). Until that court exists, the task belongs to the Chamber of Accounts (Câmara de Contas), created by law in 2011 within the Court of Appeal. It checks certain large State contracts in advance, audits the ministries and public companies and gives Parliament an opinion on the General State Account. Inside the Government, the Inspectorate-General of the State also carries out internal audits.",
+      "id": "Konstitusi mengatur adanya Pengadilan Tinggi Administrasi, Pajak dan Keuangan Negara untuk mengawasi keabsahan belanja negara dan mengadili rekening Negara (Pasal 129 dan 145). Selama pengadilan itu belum ada, tugas tersebut dijalankan oleh Kamar Pemeriksa Keuangan (Câmara de Contas), yang dibentuk dengan undang-undang pada 2011 di dalam Pengadilan Banding. Kamar ini memeriksa lebih dahulu kontrak-kontrak besar tertentu milik Negara, mengaudit kementerian dan badan usaha milik negara, serta memberikan pendapat kepada Parlemen tentang Perhitungan Umum Negara. Di dalam Pemerintah, Inspektorat Jenderal Negara juga melakukan audit internal."
      }
     },
     {
      "heading": {
       "tet": "Órgaun seluk",
-      "pt": "Outros órgãos"
+      "pt": "Outros órgãos",
+      "en": "Other bodies",
+      "id": "Badan-badan lain"
      },
      "text": {
       "tet": "Órgaun seluk mós iha autonomia. Banku Sentrál Timór-Leste (BCTL) tau matan ba banku sira no jere investimentu Fundu Petrolíferu nian, ho autonomia ne'ebé Lei-Inan garante (Artigu 143). Komisaun Funsaun Públika tau matan ba funsionáriu públiku sira-nia rekrutamentu no karreira, atu sira bazeia ba mérito. Konsellu Imprensa defende jornalista sira-nia liberdade no étika. Órgaun hotu-hotu ne'e publika relatóriu no Parlamentu Nasionál bele bolu sira, atu sidadaun sira hatene oinsá sira servisu.",
-      "pt": "Outros órgãos têm também autonomia. O Banco Central de Timor-Leste (BCTL) supervisiona os bancos e gere os investimentos do Fundo Petrolífero, com uma autonomia garantida pela Constituição (artigo 143.º). A Comissão da Função Pública vigia o recrutamento e a carreira dos funcionários públicos, para que se baseiem no mérito. O Conselho de Imprensa defende a liberdade e a ética dos jornalistas. Todos estes órgãos publicam relatórios e podem ser chamados ao Parlamento Nacional, para que os cidadãos saibam como trabalham."
+      "pt": "Outros órgãos têm também autonomia. O Banco Central de Timor-Leste (BCTL) supervisiona os bancos e gere os investimentos do Fundo Petrolífero, com uma autonomia garantida pela Constituição (artigo 143.º). A Comissão da Função Pública vigia o recrutamento e a carreira dos funcionários públicos, para que se baseiem no mérito. O Conselho de Imprensa defende a liberdade e a ética dos jornalistas. Todos estes órgãos publicam relatórios e podem ser chamados ao Parlamento Nacional, para que os cidadãos saibam como trabalham.",
+      "en": "Other bodies also have autonomy. The Central Bank of Timor-Leste (BCTL) supervises the banks and manages the investments of the Petroleum Fund, with an autonomy guaranteed by the Constitution (Article 143). The Civil Service Commission oversees the recruitment and careers of civil servants, so that they are based on merit. The Press Council defends the freedom and ethics of journalists. All these bodies publish reports and can be called before the National Parliament, so that citizens know how they work.",
+      "id": "Badan-badan lain juga memiliki otonomi. Bank Sentral Timor-Leste (BCTL) mengawasi bank-bank dan mengelola investasi Dana Perminyakan, dengan otonomi yang dijamin Konstitusi (Pasal 143). Komisi Pegawai Negeri mengawasi perekrutan dan karier pegawai negeri, agar didasarkan pada prestasi. Dewan Pers membela kebebasan dan etika wartawan. Semua badan ini menerbitkan laporan dan dapat dipanggil ke Parlemen Nasional, agar warga tahu bagaimana mereka bekerja."
      }
     }
    ],
@@ -5723,52 +6388,101 @@
     {
      "label": {
       "tet": "Provedór (PDHJ)",
-      "pt": "Provedor (PDHJ)"
+      "pt": "Provedor (PDHJ)",
+      "en": "Provedor (PDHJ)",
+      "id": "Provedor (PDHJ)"
      },
      "value": {
       "tet": "Lei-Inan, Artigu 27; servisu desde 2006",
-      "pt": "Constituição, artigo 27.º; em funções desde 2006"
+      "pt": "Constituição, artigo 27.º; em funções desde 2006",
+      "en": "Constitution, Article 27; in office since 2006",
+      "id": "Konstitusi, Pasal 27; bertugas sejak 2006"
      }
     },
     {
      "label": {
       "tet": "Provedór ne'ebé servisu",
-      "pt": "Provedor em funções"
+      "pt": "Provedor em funções",
+      "en": "Current Provedor",
+      "id": "Provedor yang menjabat"
      },
      "value": {
       "tet": "Virgílio da Silva Guterres (desde Janeiru 2023)",
-      "pt": "Virgílio da Silva Guterres (desde janeiro de 2023)"
+      "pt": "Virgílio da Silva Guterres (desde janeiro de 2023)",
+      "en": "Virgílio da Silva Guterres (since January 2023)",
+      "id": "Virgílio da Silva Guterres (sejak Januari 2023)"
      },
-     "year": 2025
+     "year": 2026
+    },
+    {
+     "label": {
+      "tet": "Provedór-Adjuntu sira",
+      "pt": "Provedores-adjuntos",
+      "en": "Deputy Provedors",
+      "id": "Wakil Provedor"
+     },
+     "value": {
+      "tet": "Maria Marília da Costa (direitus umanus) no Rigoberto Monteiro (boa-governasaun)",
+      "pt": "Maria Marília da Costa (direitos humanos) e Rigoberto Monteiro (boa governação)",
+      "en": "Maria Marília da Costa (human rights) and Rigoberto Monteiro (good governance)",
+      "id": "Maria Marília da Costa (hak asasi manusia) dan Rigoberto Monteiro (tata kelola yang baik)"
+     },
+     "year": 2026
+    },
+    {
+     "label": {
+      "tet": "PDHJ nia delegasaun rejionál",
+      "pt": "Delegações regionais da PDHJ",
+      "en": "PDHJ regional offices",
+      "id": "Kantor perwakilan regional PDHJ"
+     },
+     "value": {
+      "tet": "Baukau, Oe-Kusi, Same, Maliana",
+      "pt": "Baucau, Oé-Cusse, Same, Maliana",
+      "en": "Baucau, Oé-Cusse, Same, Maliana",
+      "id": "Baucau, Oé-Cusse, Same, Maliana"
+     }
     },
     {
      "label": {
       "tet": "Supervizaun eleisaun",
-      "pt": "Supervisão das eleições"
+      "pt": "Supervisão das eleições",
+      "en": "Supervision of elections",
+      "id": "Pengawasan pemilu"
      },
      "value": {
       "tet": "CNE (Artigu 65); organizasaun téknika: STAE",
-      "pt": "CNE (artigo 65.º); organização técnica: STAE"
+      "pt": "CNE (artigo 65.º); organização técnica: STAE",
+      "en": "CNE (Article 65); technical organisation: STAE",
+      "id": "CNE (Pasal 65); penyelenggara teknis: STAE"
      }
     },
     {
      "label": {
       "tet": "Komisaun Anti-Korrupsaun",
-      "pt": "Comissão Anti-Corrupção"
+      "pt": "Comissão Anti-Corrupção",
+      "en": "Anti-Corruption Commission",
+      "id": "Komisi Anti-Korupsi"
      },
      "value": {
       "tet": "Lei 2009; servisu desde 2010",
-      "pt": "Lei de 2009; em funções desde 2010"
+      "pt": "Lei de 2009; em funções desde 2010",
+      "en": "2009 law; at work since 2010",
+      "id": "UU tahun 2009; bekerja sejak 2010"
      }
     },
     {
      "label": {
       "tet": "Auditoria esterna",
-      "pt": "Auditoria externa"
+      "pt": "Auditoria externa",
+      "en": "External audit",
+      "id": "Audit eksternal"
      },
      "value": {
       "tet": "Kámara Kontas (desde 2011), iha Tribunál Rekursu",
-      "pt": "Câmara de Contas (desde 2011), no Tribunal de Recurso"
+      "pt": "Câmara de Contas (desde 2011), no Tribunal de Recurso",
+      "en": "Chamber of Accounts (since 2011), in the Court of Appeal",
+      "id": "Kamar Pemeriksa Keuangan (sejak 2011), di Pengadilan Banding"
      }
     },
     {
@@ -5780,37 +6494,65 @@
      },
      "value": {
       "tet": "BCTL (Artigu 143)",
-      "pt": "BCTL (artigo 143.º)"
+      "pt": "BCTL (artigo 143.º)",
+      "en": "BCTL (Article 143)",
+      "id": "BCTL (Pasal 143)"
      }
     }
    ],
    "timeline": [
     {
-     "date": "2006",
+     "date": "2004-05",
+     "title": {
+      "tet": "Lei n.º 7/2004 aprova Provedór nia estatutu",
+      "pt": "A Lei n.º 7/2004 aprova o estatuto do Provedor",
+      "en": "Law No. 7/2004 approves the Provedor's statute",
+      "id": "UU No. 7/2004 menyetujui statuta Provedor"
+     }
+    },
+    {
+     "date": "2005-06",
+     "title": {
+      "tet": "Provedór dahuluk, Sebastião Dias Ximenes, toma-pose",
+      "pt": "Toma posse o primeiro Provedor, Sebastião Dias Ximenes",
+      "en": "The first Provedor, Sebastião Dias Ximenes, takes office",
+      "id": "Provedor pertama, Sebastião Dias Ximenes, dilantik"
+     }
+    },
+    {
+     "date": "2006-03-20",
      "title": {
       "tet": "Provedoria Direitus Umanus no Justisa loke nia odamatan",
-      "pt": "A Provedoria dos Direitos Humanos e Justiça abre as portas"
+      "pt": "A Provedoria dos Direitos Humanos e Justiça abre as portas",
+      "en": "The Office of the Provedor for Human Rights and Justice opens its doors",
+      "id": "Kantor Provedor Hak Asasi Manusia dan Keadilan membuka pintunya"
      }
     },
     {
      "date": "2010",
      "title": {
       "tet": "Komisaun Anti-Korrupsaun hahú servisu",
-      "pt": "A Comissão Anti-Corrupção começa a trabalhar"
+      "pt": "A Comissão Anti-Corrupção começa a trabalhar",
+      "en": "The Anti-Corruption Commission starts work",
+      "id": "Komisi Anti-Korupsi mulai bekerja"
      }
     },
     {
      "date": "2011",
      "title": {
       "tet": "Lei ida harii Kámara Kontas",
-      "pt": "Uma lei cria a Câmara de Contas"
+      "pt": "Uma lei cria a Câmara de Contas",
+      "en": "A law creates the Chamber of Accounts",
+      "id": "Sebuah undang-undang membentuk Kamar Pemeriksa Keuangan"
      }
     },
     {
-     "date": "2023-01",
+     "date": "2023-01-05",
      "title": {
       "tet": "Virgílio da Silva Guterres sai Provedór Direitus Umanus no Justisa",
-      "pt": "Virgílio da Silva Guterres torna-se Provedor de Direitos Humanos e Justiça"
+      "pt": "Virgílio da Silva Guterres torna-se Provedor de Direitos Humanos e Justiça",
+      "en": "Virgílio da Silva Guterres becomes Provedor for Human Rights and Justice",
+      "id": "Virgílio da Silva Guterres menjadi Provedor Hak Asasi Manusia dan Keadilan"
      }
     }
    ],
@@ -5818,7 +6560,9 @@
     "illustration": "parliament",
     "caption": {
      "tet": "Órgaun independente sira hato'o relatóriu ba Parlamentu Nasionál.",
-     "pt": "Os órgãos independentes apresentam relatórios ao Parlamento Nacional."
+     "pt": "Os órgãos independentes apresentam relatórios ao Parlamento Nacional.",
+     "en": "The independent bodies report to the National Parliament.",
+     "id": "Badan-badan independen memberikan laporan kepada Parlemen Nasional."
     }
    },
    "wiki": {
@@ -5831,7 +6575,11 @@
     "tl.politics.parliament",
     "tl.economy.banking",
     "tl.institutions.finance",
-    "tl.institutions.state_administration"
+    "tl.institutions.state_administration",
+    "tl.institutions.pdhj",
+    "tl.institutions.civil_service",
+    "tl.institutions.court_of_appeal",
+    "tl.institutions.overview"
    ],
    "tags": [
     "PDHJ",
@@ -5847,7 +6595,9 @@
     {
      "q": {
       "tet": "Órgaun ida ne'ebé tau matan ba eleisaun sira?",
-      "pt": "Que órgão supervisiona as eleições?"
+      "pt": "Que órgão supervisiona as eleições?",
+      "en": "Which body supervises the elections?",
+      "id": "Badan apa yang mengawasi pemilu?"
      },
      "options": [
       {
@@ -5864,7 +6614,9 @@
       },
       {
        "tet": "Ministériu Finansas",
-       "pt": "O Ministério das Finanças"
+       "pt": "O Ministério das Finanças",
+       "en": "The Ministry of Finance",
+       "id": "Kementerian Keuangan"
       },
       {
        "tet": "UNTL",
@@ -5876,27 +6628,37 @@
      "answer": 0,
      "why": {
       "tet": "Komisaun Nasionál Eleisaun (CNE) mak órgaun independente ba eleisaun (Artigu 65).",
-      "pt": "A Comissão Nacional de Eleições (CNE) é o órgão independente das eleições (artigo 65.º)."
+      "pt": "A Comissão Nacional de Eleições (CNE) é o órgão independente das eleições (artigo 65.º).",
+      "en": "The National Electoral Commission (CNE) is the independent body for elections (Article 65).",
+      "id": "Komisi Pemilihan Nasional (CNE) adalah badan independen untuk pemilu (Pasal 65)."
      },
      "difficulty": 2
     },
     {
      "q": {
       "tet": "Órgaun ida ne'ebé kombate korrupsaun?",
-      "pt": "Que órgão combate a corrupção?"
+      "pt": "Que órgão combate a corrupção?",
+      "en": "Which body fights corruption?",
+      "id": "Badan apa yang memberantas korupsi?"
      },
      "options": [
       {
        "tet": "Komisaun Nasionál Eleisaun",
-       "pt": "A Comissão Nacional de Eleições"
+       "pt": "A Comissão Nacional de Eleições",
+       "en": "The National Electoral Commission",
+       "id": "Komisi Pemilihan Nasional"
       },
       {
        "tet": "Komité Olímpiku",
-       "pt": "O Comité Olímpico"
+       "pt": "O Comité Olímpico",
+       "en": "The Olympic Committee",
+       "id": "Komite Olimpiade"
       },
       {
        "tet": "Komisaun Anti-Korrupsaun (CAC)",
-       "pt": "A Comissão Anti-Corrupção (CAC)"
+       "pt": "A Comissão Anti-Corrupção (CAC)",
+       "en": "The Anti-Corruption Commission (CAC)",
+       "id": "Komisi Anti-Korupsi (CAC)"
       },
       {
        "tet": "STAE",
@@ -5908,19 +6670,25 @@
      "answer": 2,
      "why": {
       "tet": "CAC investiga no prevene korrupsaun.",
-      "pt": "A CAC investiga e previne a corrupção."
+      "pt": "A CAC investiga e previne a corrupção.",
+      "en": "The CAC investigates and prevents corruption.",
+      "id": "CAC menyelidiki dan mencegah korupsi."
      },
      "difficulty": 4
     },
     {
      "q": {
       "tet": "Se mak halo servisu prátiku eleisaun nian, hanesan rejista eleitór no imprime boletin?",
-      "pt": "Quem faz o trabalho prático das eleições, como recensear eleitores e imprimir boletins?"
+      "pt": "Quem faz o trabalho prático das eleições, como recensear eleitores e imprimir boletins?",
+      "en": "Who does the practical work of elections, such as registering voters and printing ballot papers?",
+      "id": "Siapa yang mengerjakan tugas praktis pemilu, seperti mendaftar pemilih dan mencetak surat suara?"
      },
      "options": [
       {
        "tet": "Kámara Kontas",
-       "pt": "A Câmara de Contas"
+       "pt": "A Câmara de Contas",
+       "en": "The Chamber of Accounts",
+       "id": "Kamar Pemeriksa Keuangan"
       },
       {
        "tet": "F-FDTL",
@@ -5944,44 +6712,60 @@
      "answer": 3,
      "why": {
       "tet": "STAE mak sekretariadu tékniku administrasaun eleitorál.",
-      "pt": "O STAE é o secretariado técnico de administração eleitoral."
+      "pt": "O STAE é o secretariado técnico de administração eleitoral.",
+      "en": "STAE is the technical secretariat for electoral administration.",
+      "id": "STAE adalah sekretariat teknis administrasi pemilu."
      },
      "difficulty": 7
     },
     {
      "q": {
       "tet": "Kámara Kontas servisu iha ne'ebé?",
-      "pt": "Onde funciona a Câmara de Contas?"
+      "pt": "Onde funciona a Câmara de Contas?",
+      "en": "Where does the Chamber of Accounts work?",
+      "id": "Di mana Kamar Pemeriksa Keuangan bekerja?"
      },
      "options": [
       {
        "tet": "Iha Parlamentu Nasionál",
-       "pt": "No Parlamento Nacional"
+       "pt": "No Parlamento Nacional",
+       "en": "In the National Parliament",
+       "id": "Di Parlemen Nasional"
       },
       {
        "tet": "Iha Ministériu Defeza",
-       "pt": "No Ministério da Defesa"
+       "pt": "No Ministério da Defesa",
+       "en": "In the Ministry of Defence",
+       "id": "Di Kementerian Pertahanan"
       },
       {
        "tet": "Iha Tribunál Rekursu",
-       "pt": "No Tribunal de Recurso"
+       "pt": "No Tribunal de Recurso",
+       "en": "In the Court of Appeal",
+       "id": "Di Pengadilan Banding"
       },
       {
        "tet": "Iha UNTL",
-       "pt": "Na UNTL"
+       "pt": "Na UNTL",
+       "en": "At UNTL",
+       "id": "Di UNTL"
       }
      ],
      "answer": 2,
      "why": {
       "tet": "Durante Tribunál Superiór Administrativu, Fiskál no Kontas seidauk iha, Kámara Kontas servisu iha Tribunál Rekursu.",
-      "pt": "Enquanto não existe o Tribunal Superior Administrativo, Fiscal e de Contas, a Câmara funciona no Tribunal de Recurso."
+      "pt": "Enquanto não existe o Tribunal Superior Administrativo, Fiscal e de Contas, a Câmara funciona no Tribunal de Recurso.",
+      "en": "As long as the High Administrative, Tax and Audit Court does not exist, the Chamber works within the Court of Appeal.",
+      "id": "Selama Pengadilan Tinggi Administrasi, Pajak dan Keuangan Negara belum ada, Kamar ini bekerja di Pengadilan Banding."
      },
      "difficulty": 9
     },
     {
      "q": {
       "tet": "Komisaun Anti-Korrupsaun hahú servisu iha tinan saida?",
-      "pt": "Em que ano começou a trabalhar a Comissão Anti-Corrupção?"
+      "pt": "Em que ano começou a trabalhar a Comissão Anti-Corrupção?",
+      "en": "In which year did the Anti-Corruption Commission start work?",
+      "id": "Pada tahun berapa Komisi Anti-Korupsi mulai bekerja?"
      },
      "options": [
       {
@@ -6012,37 +6796,51 @@
      "answer": 2,
      "why": {
       "tet": "Lei 2009 harii CAC, no nia hahú servisu iha 2010.",
-      "pt": "A lei de 2009 criou a CAC, que começou a trabalhar em 2010."
+      "pt": "A lei de 2009 criou a CAC, que começou a trabalhar em 2010.",
+      "en": "The 2009 law created the CAC, which started work in 2010.",
+      "id": "UU tahun 2009 membentuk CAC, yang mulai bekerja pada 2010."
      },
      "difficulty": 12
     },
     {
      "q": {
       "tet": "Knaar ida ne'ebé muda husi Provedór ba Komisaun Anti-Korrupsaun?",
-      "pt": "Que tarefa passou do Provedor para a Comissão Anti-Corrupção?"
+      "pt": "Que tarefa passou do Provedor para a Comissão Anti-Corrupção?",
+      "en": "Which task passed from the Provedor to the Anti-Corruption Commission?",
+      "id": "Tugas apa yang berpindah dari Provedor ke Komisi Anti-Korupsi?"
      },
      "options": [
       {
        "tet": "Organiza eleisaun",
-       "pt": "A organização das eleições"
+       "pt": "A organização das eleições",
+       "en": "Organising elections",
+       "id": "Penyelenggaraan pemilu"
       },
       {
        "tet": "Defeza militár",
-       "pt": "A defesa militar"
+       "pt": "A defesa militar",
+       "en": "Military defence",
+       "id": "Pertahanan militer"
       },
       {
        "tet": "Kombate korrupsaun",
-       "pt": "O combate à corrupção"
+       "pt": "O combate à corrupção",
+       "en": "Fighting corruption",
+       "id": "Pemberantasan korupsi"
       },
       {
        "tet": "Fó-sai moeda",
-       "pt": "A emissão de moeda"
+       "pt": "A emissão de moeda",
+       "en": "Issuing currency",
+       "id": "Penerbitan mata uang"
       }
      ],
      "answer": 2,
      "why": {
       "tet": "Uluk Provedór iha mós mandatu anti-korrupsaun; desde 2010 CAC mak kaer.",
-      "pt": "O Provedor tinha também um mandato anticorrupção; desde 2010 cabe à CAC."
+      "pt": "O Provedor tinha também um mandato anticorrupção; desde 2010 cabe à CAC.",
+      "en": "The Provedor also had an anti-corruption mandate; since 2010 it has belonged to the CAC.",
+      "id": "Provedor dulu juga memiliki mandat antikorupsi; sejak 2010 mandat itu menjadi milik CAC."
      },
      "difficulty": 13
     }
@@ -6052,7 +6850,7 @@
      "title": "Office of the Provedor for Human Rights and Justice",
      "publisher": "Wikipedia (English)",
      "url": "https://en.wikipedia.org/wiki/Office_of_the_Provedor_for_Human_Rights_and_Justice",
-     "accessed": "2026-11-02",
+     "accessed": "2026-11-11",
      "licence": "CC BY-SA 4.0"
     },
     {
@@ -6078,6 +6876,30 @@
      "publisher": "Ministério da Justiça — Jornal da República",
      "url": "https://www.mj.gov.tl/jornal/lawsTL/RDTL-Law/RDTL-Constitution-P.pdf",
      "accessed": "2026-11-02"
+    },
+    {
+     "title": "PDHJ nia Istória",
+     "publisher": "Provedoria dos Direitos Humanos e Justiça (PDHJ)",
+     "url": "https://www.pdhj.tl/kona-ba-pdhj/history/",
+     "accessed": "2026-11-11"
+    },
+    {
+     "title": "Hasoru Malu ho Provedór no Nia Adjuntu Sira",
+     "publisher": "Provedoria dos Direitos Humanos e Justiça (PDHJ)",
+     "url": "https://www.pdhj.tl/kona-ba-pdhj/meet-the-provedor/",
+     "accessed": "2026-11-11"
+    },
+    {
+     "title": "Estrutura organizasionál",
+     "publisher": "Provedoria dos Direitos Humanos e Justiça (PDHJ)",
+     "url": "https://www.pdhj.tl/kona-ba-pdhj/organisational-structure/",
+     "accessed": "2026-11-11"
+    },
+    {
+     "title": "Kona-ba PDHJ",
+     "publisher": "Provedoria dos Direitos Humanos e Justiça (PDHJ)",
+     "url": "https://www.pdhj.tl/kona-ba-pdhj/",
+     "accessed": "2026-11-11"
     }
    ],
    "review": {

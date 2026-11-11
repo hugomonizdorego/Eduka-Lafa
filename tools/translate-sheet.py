@@ -115,6 +115,8 @@ def import_(args):
 def status(args):
     total = {l: 0 for l in ORDER}
     files = sorted(glob.glob(str(CONTENT / "**" / "*.json"), recursive=True))
+    # The Constitution exists officially in Tetun and Portuguese only; it is not translated.
+    files = [f for f in files if Path(f).name not in ("constitution.json", "manifest.json")]
     for f in files:
         data, _ = load(f)
         counts = {l: 0 for l in ORDER}; n = 0

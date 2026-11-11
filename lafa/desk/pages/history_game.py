@@ -156,7 +156,7 @@ class HistoryGamePage(QWidget):
     route = "history_game"
 
     def __init__(self, win):
-        super().__init__(); self.win = win; self.mode = "first"; self.level = "easy"; self.game = None; self.order = []
+        super().__init__(); self.win = win; self.mode = "first"; self.level = "easy"; self.game = None; self.order = []; self.choice = None
         outer = QVBoxLayout(self); outer.setContentsMargins(0, 0, 0, 0)
         self.body = QWidget(); self.col = QVBoxLayout(self.body); self.col.setContentsMargins(0, 0, 8, 16); self.col.setSpacing(16)
         outer.addWidget(scroll(self.body))
@@ -217,7 +217,7 @@ class HistoryGamePage(QWidget):
     def start(self):
         game = HistoryGame(self.events(), self.mode, self.level)
         if not game.can_play(): self.win.toast.show_text(self.win.t("hg_too_few")); return
-        self.game = game; game.next_question(); self.order = []; self.render()
+        self.game = game; game.next_question(); self.order = []; self.choice = None; self.render()
 
     def status_bar(self):
         win = self.win; t = win.t; g = self.game

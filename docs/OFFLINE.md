@@ -10,7 +10,7 @@ works without internet. The internet only adds downloads and updates.
 ## Offline pack
 
 *Offline no atualizasaun → Download hotu* downloads, for every item that names
-a Wikipedia page, the introduction in Tetun and Portuguese (Wikipedia,
+a Wikipedia page, the introduction in Tetun, Portuguese, English and Indonesian (Wikipedia,
 CC BY-SA 4.0) and one photo from Wikimedia Commons (the lead picture of the
 English or Portuguese page). With *Galeria* ticked it also downloads up to
 three more photos shown on those pages (maps, flags, logos and icons are

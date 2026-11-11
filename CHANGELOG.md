@@ -1,8 +1,47 @@
 # Changelog
 
-## Unreleased
+## Unreleased · "Lian haat"
 
-_Nothing yet._
+A patch release after the owner's review of 0.3.0.
+
+### Added
+- **Four languages again**: the interface and every text in Tetun,
+  Português, English and Bahasa Indonesia. English and Indonesian texts of
+  0.3.0 content were restored where Tetun and Portuguese had not changed;
+  the content written since was translated (`tools/translate-sheet.py`).
+  "Follow the system" now gives Portuguese, English or Indonesian to
+  systems in those languages and Tetun to all others.
+- **National anthem**: the owner's instrumental recording, played once with
+  every line timed — the refrain aligned to the Government's vocal
+  recording, the verse found from the beats and chords
+  (`tools/anthem/instrumental.py`). The Tetun and English translations are
+  the Government's; Indonesian by Lafa.
+- **National emblem**: the official image with 13 numbered parts. Click a
+  number or a row to see what each part means, after the Government's
+  official description (the four angles of the Ramelau insignia stand for the
+  separation of powers; *diman* is the arrow). The emblem and motto articles
+  show the official image.
+- **Jogu Istória** (history game): which came first, put four events in
+  order, which year — easy, medium and hard, ten rounds, results kept.
+- **State institutions**: a catalog from the four organs of sovereignty
+  (President of the Republic, National Parliament, Government, courts) to the
+  ministries, justice, F-FDTL and PNTL, independent bodies and agencies.
+- **Learn languages both ways**: "Learn Tetun" (cards and quiz from your
+  language to Tetun, with a guide to reading Tetun) or "From Tetun to another
+  language"; words in Thai, Khmer, Lao, Burmese, Chinese and Tamil show how to
+  read them in Latin letters; example sentences in four languages.
+- New sources named by the owner: Presidency of the Republic, National
+  Parliament, courts, PDHJ, Civil Service Commission, TIC Timor, Ministry of
+  Transport and Communications, MJDAC, F-FDTL, PNTL history, Devex.
+
+### Changed
+- The menu is grouped (Explore · State and nation · Learn and play); on low
+  screens only the group of the open page stays open.
+- Category pages group their articles by theme (sub-sections).
+- Lafa Desktop appears only in the **Education** category of the menu.
+- Search ranks the title in the reader's language first.
+- Sports facts updated to November 2026 (martial-arts suspension, the 2026
+  Dili Marathon, MJDAC).
 
 ## 0.3.0 — 2026-11-02 · "Ensiklopédia Timór-Leste"
 

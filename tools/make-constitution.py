@@ -123,6 +123,12 @@ def main():
     headings = [{"kind": hp["kind"], "num": hp["num"], "title": {"tet": ht["title"], "pt": hp["title"]}}
                 for hp, ht in zip(heads_pt, heads_tet)]
     articles = []
+    # Tetun titles the PDF prints without brackets, so they were read as the first paragraph.
+    TET_TITLES = {168: "Governu Tempu-leet ba rua"}
+    for at in arts_tet:
+        fix = TET_TITLES.get(at["n"])
+        if fix and not at["title"] and at["blocks"] and at["blocks"][0]["text"].startswith(fix):
+            at["title"] = fix; at["blocks"][0]["text"] = at["blocks"][0]["text"][len(fix):].strip()
     for ap, at in zip(arts_pt, arts_tet):
         if len(ap["blocks"]) != len(at["blocks"]): print(f"note: article {ap['n']}: {len(ap['blocks'])} pt / {len(at['blocks'])} tet paragraphs")
         articles.append({"n": ap["n"], "path": ap["path"], "title": {"tet": at["title"], "pt": ap["title"]},
