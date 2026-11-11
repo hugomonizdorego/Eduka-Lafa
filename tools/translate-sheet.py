@@ -32,6 +32,8 @@ def is_text(value):
 
 def texts(node, path=""):
     """(path, text object) for every text, in file order. Paths look like /articles/3/title."""
+    if path.endswith("/wiki"):          # Wikipedia page titles per language, not a text
+        return
     if is_text(node):
         yield path, node
     elif isinstance(node, dict):

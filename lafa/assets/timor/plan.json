@@ -1015,6 +1015,16 @@
    "category": "institutions",
    "title_en": "Ministry of Transport and Communications (MTC)",
    "agent": "0.3.1"
+  },
+  "tl.institutions.court_of_appeal": {
+   "category": "institutions",
+   "title_en": "The Court of Appeal (Tribunal de Recurso)",
+   "agent": "0.3.1"
+  },
+  "tl.institutions.public_prosecution": {
+   "category": "institutions",
+   "title_en": "The Public Prosecution Service and the Prosecutor-General",
+   "agent": "0.3.1"
   }
  },
  "municipalities": {
