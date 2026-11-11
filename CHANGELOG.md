@@ -1,6 +1,10 @@
 # Changelog
 
-## Unreleased · "Lian haat"
+## Unreleased
+
+_Nothing yet._
+
+## 0.3.1 — 2026-11-11 · "Lian haat"
 
 A patch release after the owner's review of 0.3.0.
 

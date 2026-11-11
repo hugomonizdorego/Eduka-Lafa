@@ -50,7 +50,7 @@ MAIN_SOURCES = [
      ("Testu Tetun ofisiál Lei-Inan nian: liafuan Estadu nian iha Lafa.", "Texto oficial em tétum da Constituição: termos do Estado no Lafa.", "Official Tetun text of the Constitution: State terms in Lafa.", "Teks resmi Konstitusi berbahasa Tetun: istilah negara di Lafa.")),
 ]
 
-# Sources the owner added for 0.3.0 (prehistory, history, institutions, sports, tourism).
+# Sources named by the owner (0.3.0: prehistory, history, institutions, sports, tourism; 0.3.1: State institutions).
 OWNER_MORE = [
     ("Badan Geologi — fósil Timor", "https://geologi.esdm.go.id/media-center/mengenal-fosil-hewan-laut-penguasa-laut-purba-pulau-timor", "© Badan Geologi", "layers", "peach",
      ("Fósil animál tasi antigu iha tasi-le'un Timor.", "Fósseis de animais marinhos antigos da ilha de Timor.", "Fossils of ancient sea animals on the island of Timor.", "Fosil hewan laut purba di Pulau Timor.")),
