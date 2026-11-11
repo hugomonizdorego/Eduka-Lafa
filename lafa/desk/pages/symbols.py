@@ -1,6 +1,8 @@
 """Símbolu Nasionál: the national anthem «Pátria» with lyrics that follow the
 music (karaoke), the flag (Constitution art. 15) and the emblem (Lei n.º 2/2007)
 explained part by part, with links to the articles and the Constitution."""
+import html
+
 from ...qt import (Qt, QTimer, QWidget, QVBoxLayout, QHBoxLayout, QSlider, QPainter, QColor, QFont, QFontMetrics, QRectF, QPointF,
                   QLinearGradient, QCheckBox, QPixmap, QPen, QSize, QSizePolicy, Signal)
 from ...icons import ASSETS
@@ -27,7 +29,7 @@ extend({
     "anthem_refrain": ("Refraun", "Refrão", "Refrain", "Refrein"),
     "anthem_verse": ("Estrofe", "Estrofe", "Verse", "Bait"),
     "anthem_lyrics": ("Letra kompletu", "Letra completa", "Full lyrics", "Lirik lengkap"),
-    "anthem_no_audio": ("Atu rona inu, instala «python3-pyqt5.qtmultimedia» no «gstreamer1.0-plugins-good» (ka ffmpeg / mpg123). Letra iha okos.", "Para ouvir o hino, instale «python3-pyqt5.qtmultimedia» e «gstreamer1.0-plugins-good» (ou ffmpeg / mpg123). A letra está abaixo.", "To hear the anthem, install «python3-pyqt5.qtmultimedia» and «gstreamer1.0-plugins-good» (or ffmpeg / mpg123). The lyrics are below.", "Untuk mendengar lagu kebangsaan, pasang «python3-pyqt5.qtmultimedia» dan «gstreamer1.0-plugins-good» (atau ffmpeg / mpg123). Liriknya ada di bawah."),
+    "anthem_no_audio": ("Atu rona inu, instala «python3-pyqt5.qtmultimedia», «libqt5multimedia5-plugins» no «gstreamer1.0-plugins-good» (ka ffmpeg / mpg123). Letra iha okos.", "Para ouvir o hino, instale «python3-pyqt5.qtmultimedia», «libqt5multimedia5-plugins» e «gstreamer1.0-plugins-good» (ou ffmpeg / mpg123). A letra está abaixo.", "To hear the anthem, install «python3-pyqt5.qtmultimedia», «libqt5multimedia5-plugins» and «gstreamer1.0-plugins-good» (or ffmpeg / mpg123). The lyrics are below.", "Untuk mendengar lagu kebangsaan, pasang «python3-pyqt5.qtmultimedia», «libqt5multimedia5-plugins» dan «gstreamer1.0-plugins-good» (atau ffmpeg / mpg123). Liriknya ada di bawah."),
     "anthem_failed": ("La bele toka audio iha komputadór ida-ne'e.", "Não foi possível tocar o áudio neste computador.", "The audio could not be played on this computer.", "Audio tidak dapat diputar di komputer ini."),
     "anthem_respect": ("Bainhira inu toka: hamriik, nonook no haree ba bandeira.", "Quando o hino toca: de pé, em silêncio, a olhar para a bandeira.", "When the anthem plays: stand up, keep silent and look at the flag.", "Saat lagu kebangsaan diputar: berdiri, diam dan pandanglah bendera."),
     "sym_flag": ("Bandeira Nasionál", "Bandeira Nacional", "National Flag", "Bendera Nasional"),
@@ -122,8 +124,9 @@ class EmblemView(QWidget):
         self.image = QPixmap(str(EMBLEM_IMAGE)); self._scaled = None
         self.setMouseTracking(True); self.setMinimumSize(240, 240)
         self.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Preferred)
+    MAX_SIDE = 460             # the explanation under the picture stays on screen at 1366x768
     def hasHeightForWidth(self): return True
-    def heightForWidth(self, width): return width
+    def heightForWidth(self, width): return min(width, self.MAX_SIDE)
     def sizeHint(self): return QSize(400, 400)
     def square(self):
         side = min(self.width(), self.height()); return QRectF((self.width() - side) / 2, (self.height() - side) / 2, side, side)
@@ -206,7 +209,8 @@ class SymbolsPage(QWidget):
         if params.get("play") and self.player.available and self.player.state != "playing": self.player.play()
     def hideEvent(self, e):
         super().hideEvent(e)
-        if self.player.state == "playing": self.player.pause()
+        player = getattr(self, "player", None)      # gone already when a window is destroyed at exit
+        if player is not None and player.state == "playing": player.pause()
     # ------------------------------------------------------------------ ui
     def render(self):
         clear_layout(self.col); win = self.win; t = win.t; lang = win.lang; self.line_rows = {}
@@ -298,10 +302,12 @@ class SymbolsPage(QWidget):
     def emblem_card(self):
         win = self.win; t = win.t; lang = win.lang
         card = Card(18, 24); card.box.addLayout(section_title(t("sym_emblem")))
-        card.box.addWidget(label(t("sym_emblem_hint"), "muted", wrap=True))
         grid = ResponsiveGrid(340, 2, 18)
         left = QWidget(); lc = QVBoxLayout(left); lc.setContentsMargins(0, 0, 0, 0); lc.setSpacing(10)
         self.emblem_view = EmblemView(EMBLEM_PARTS); lc.addWidget(self.emblem_view)
+        # The part chosen on the picture is explained right under it (no scrolling needed).
+        self.emblem_detail = label(t("sym_emblem_hint"), wrap=True)
+        self.emblem_detail.setStyleSheet(f"background:{win.tok['primary_soft']}; border-radius:14px; padding:10px 14px;"); lc.addWidget(self.emblem_detail)
         lc.addWidget(label(t("sym_colours"), "caption", wrap=True)); lc.addWidget(label(t("sym_emblem_note"), "caption", wrap=True)); lc.addStretch()
         grid.add(left)
         right = QWidget(); rc = QVBoxLayout(right); rc.setContentsMargins(0, 0, 0, 0); rc.setSpacing(6); self.emblem_rows = []
@@ -316,14 +322,22 @@ class SymbolsPage(QWidget):
             h.addLayout(text, 1); row.box.addLayout(h)
             row.clicked.connect(lambda i=n: self.pick_emblem_part(i)); rc.addWidget(row); self.emblem_rows.append(row)
         rc.addStretch(); grid.add(right); card.box.addWidget(grid)
-        self.emblem_view.picked.connect(self.pick_emblem_part)
+        self.emblem_view.picked.connect(lambda i: self.pick_emblem_part(i, from_picture=True))
         buttons = QHBoxLayout(); buttons.addWidget(button(t("sym_read_article"), lambda: win.open_item("tl.symbols.emblem"), "ghost", "book-open"))
         buttons.addWidget(button(t("sym_constitution", n=14), lambda: win.open("constitution", article=14), "ghost", "scales")); buttons.addStretch(); card.box.addLayout(buttons)
         return card
-    def pick_emblem_part(self, i):
+    def pick_emblem_part(self, i, from_picture=False):
         self.emblem_view.set_selected(i)
         for n, row in enumerate(self.emblem_rows): row.set_selected(n == i)
-        if 0 <= i < len(self.emblem_rows): self.scroll_area.ensureWidgetVisible(self.emblem_rows[i], 0, 120)
+        if 0 <= i < len(EMBLEM_PARTS):
+            lang = self.win.lang; _pos, name, meaning = EMBLEM_PARTS[i]
+            self.emblem_detail.setText(f"<b>{i + 1}. {html.escape(kb.show(kb.pick(name, lang), lang))}</b><br>{html.escape(kb.show(kb.pick(meaning, lang), lang))}")
+            # A number clicked on the picture: scroll just enough to show its explanation. (A row of the
+            # list already shows the whole text, so a click there does not move the page.)
+            if from_picture: QTimer.singleShot(0, self.show_emblem_detail)       # after the new text is laid out
+    def show_emblem_detail(self):
+        try: self.scroll_area.ensureWidgetVisible(self.emblem_detail, 0, 16)
+        except RuntimeError: pass        # the page was rebuilt meanwhile (new language or theme)
     # -------------------------------------------------------------- player
     def keyboard_seek(self):
         if not self.slider.isSliderDown(): self.player.seek(self.slider.value() / 10)

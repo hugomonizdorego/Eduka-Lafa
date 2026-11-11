@@ -46,6 +46,10 @@ Check the cue times by ear after any change of recording.
 ```bash
 pip install numpy scipy soundfile librosa
 ffmpeg -i ../../lafa/assets/timor/anthem/patria.mp3 -ac 1 -ar 22050 instr.wav
+ffmpeg -i patria_56.mp3 -ac 1 -ar 22050 vocal.wav        # the Government's vocal recording
+# the 0.3.0 data (commit bf6dbd1): its cues are the measured line times of the vocal recording
+git show bf6dbd1:lafa/assets/timor/anthem/patria.json > patria-0.3.0.json
+python3 instrumental.py instr.wav vocal.wav patria-0.3.0.json
 # chroma + DTW against the vocal recording, beat tracking and chords:
 #   librosa.feature.chroma_cqt, librosa.sequence.dtw(subseq=True, step_sizes_sigma=[[1,1],[1,2],[2,1]]),
 #   librosa.beat.beat_track(start_bpm=72, tightness=200), triad templates per beat

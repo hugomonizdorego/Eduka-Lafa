@@ -382,7 +382,8 @@ class Companion(QWidget):
                 if QGuiApplication.platformName() == "xcb" and not self.fullscreen_timer.isActive(): self.fullscreen_timer.start()
                 if not self.introduced:
                     self.introduced = True; self.set_state("greeting")
-                    QTimer.singleShot(900, lambda: self.show_tip_balloon(welcome(self.lang), 14))
+                    # The welcome waits a moment; it never replaces a tip (or mini quiz) already on screen.
+                    QTimer.singleShot(900, lambda: None if self.balloon.isVisible() else self.show_tip_balloon(welcome(self.lang), 14))
             else: self.idle_timer.stop(); self.walk_timer.stop(); self.balloon.hide()
         else:
             self.hide(); self.balloon.hide(); self.pet.animate(False); self.idle_timer.stop(); self.walk_timer.stop(); self.fullscreen_timer.stop()

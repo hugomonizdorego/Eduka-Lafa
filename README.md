@@ -39,7 +39,7 @@ is the owner's concept art.
 | **Pájina inisiál** (home) | Greeting, totals, continue learning, next holidays (calendar), this day in history, Tetun word of the day, "did you know?", population chart (World Bank), content and progress charts, place of the week, achievements |
 | **Ensiklopédia** | 18 illustrated categories: land, geology and climate · nature and animals · **prehistory** (fossils of the ancient seas, the 2026 pterosaur of Lesululi, Stegodon, the first people 44 000 years ago, rock art) · history · colonialism and occupation · conflicts and reconciliation · State and politics · **State institutions** (ministries, F-FDTL, PNTL, independent bodies) · presidents and prime ministers · national symbols · map, municipalities and islands · culture and tradition · **sports** (football, Olympic and SEA Games, martial arts, Tour de Timor, Dili Marathon…) · society · economy · tourism · holidays · Timor-Leste in the world. Every article: simple or complete text, key facts, timeline, related pages, a quiz, sources with licences, a photo gallery, read aloud |
 | **Mapa** | Interactive map of the 14 municipalities (Ataúro since 2022, Oe-Kusi Ambenu RAEOA), administrative posts, tourist places; zoom, search, details |
-| **Liña tempu** | Hundreds of dated events from the fossils of Timor (millions of years ago) and the first people 44 000 years ago to 2026, by era and topic, with search |
+| **Liña tempu** | More than 750 dated events from the fossils of Timor (millions of years ago) and the first people 44 000 years ago to 2026, by era and topic, with search |
 | **Símbolu Nasionál** | The national anthem «Pátria» (instrumental) with **every line lighting up as it is played** — the official Portuguese words with the Government's Tetun and English translations (Indonesian by Lafa) — the flag with the colours of art. 15, and the **official emblem** with its 13 parts explained (click a number), the motto «Unidade, Acção, Progresso» |
 | **Konstituisaun** | The **Constitution of the RDTL** in Tetun, Portuguese or both side by side: contents, quick links, **search by article number or words**, copy and read aloud |
 | **Instituisaun Estadu** | The State institutions, starting with the four organs of sovereignty (President of the Republic, National Parliament, Government, courts — Constitution art. 67), then the Government's ministries, justice (Court of Appeal, Public Prosecution), F-FDTL and PNTL, independent bodies (PDHJ, CNE, CAC, Civil Service Commission) and agencies |
@@ -49,7 +49,7 @@ is the owner's concept art.
 | **Jogu Istória** | History game: which came first?, put four events in order, which year? — easy, medium and hard, ten rounds, a review of the events with links to the articles |
 | **Aprende lian** | 1 173 Tetun words in 30 topics, **both ways**: learn Tetun from your language (with a guide to reading Tetun) or learn Portuguese, Indonesian, English and the ASEAN and CPLP languages (Malay, Filipino, Thai, Vietnamese, Khmer, Lao, Burmese, Chinese, Tamil, Spanish, French) from Tetun. Thai, Khmer, Lao, Burmese, Chinese and Tamil words show **how to read them in Latin letters**; word list, flash cards with spaced repetition, quiz |
 | **Nível eskola** | Learning paths for the levels of the Ministry of Education: Ensinu Báziku cycles 1–3, Ensinu Sekundáriu, Ensinu Superiór/adults; units with a unit quiz |
-| **Fonte no lisensa** | The owner's main sources, every source used (more than 1 100) with licence and the articles that use it, licences of Lafa, credits, downloaded photos with their authors |
+| **Fonte no lisensa** | The owner's main sources, every source used (more than 1 300) with licence and the articles that use it, licences of Lafa, credits, downloaded photos with their authors |
 | **Offline no atualizasaun** | Download the offline pack, check for new content, refresh World Bank data, storage used |
 
 Search (Ctrl+F) looks through every article, municipality, place, holiday,
@@ -87,7 +87,7 @@ lafa                                        # or the "Lafa Desktop" menu entry
 ```
 
 Depends: `python3-pyqt5`, `python3-pyqt5.qtsvg`, `libqt5svg5`, `xdg-utils`.
-Recommends: `python3-pyqt5.qtmultimedia` and `gstreamer1.0-plugins-good` (the
+Recommends: `python3-pyqt5.qtmultimedia`, `libqt5multimedia5-plugins` and `gstreamer1.0-plugins-good` (the
 anthem; `mpg123` or `ffmpeg` also work), `espeak-ng` (read aloud), `fonts-noto-core` and `fonts-noto-cjk`
 (Thai, Khmer, Lao, Burmese, Tamil and Chinese words), the desktop tools that
 PC help can open. Developers can run from the source tree with

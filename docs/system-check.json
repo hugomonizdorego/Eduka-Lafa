@@ -1,11 +1,11 @@
 {
-  "lafa_version": "0.3.0",
+  "lafa_version": "0.3.1",
   "network_requested": false,
   "checks": [
     {
       "check": "Python",
       "status": "pass",
-      "detail": "3.13.16"
+      "detail": "3.13.18"
     },
     {
       "check": "Platform",
@@ -29,8 +29,8 @@
     },
     {
       "check": "Read aloud",
-      "status": "warning",
-      "detail": "Optional command missing: espeak-ng"
+      "status": "pass",
+      "detail": "espeak-ng available"
     },
     {
       "check": "Local activation",
@@ -40,7 +40,7 @@
     {
       "check": "Preferences",
       "status": "pass",
-      "detail": "Language: tet; virtual enabled: False; selected folders: 1"
+      "detail": "Language: tet; virtual enabled: False; selected folders: 0"
     },
     {
       "check": "Desktop launcher",
@@ -55,7 +55,7 @@
     {
       "check": "Encyclopedia content",
       "status": "pass",
-      "detail": "195 articles, 113 places, 20 days, 1173 words, 1321 quiz questions"
+      "detail": "201 articles, 113 places, 20 days, 1173 words, 1395 quiz questions"
     }
   ],
   "private_data_included": false

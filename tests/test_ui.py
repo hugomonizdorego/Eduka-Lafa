@@ -127,3 +127,17 @@ def test_character_poses(qapp):
         assert atlas.pixmap("idle", 120, outfit) is atlas.pixmap("idle", 120, outfit)   # cached
     pet = Character(atlas, size=150); pet.set_state("greeting"); pet.tick(); pet.grab()
     assert pet.state == "greeting"
+
+def test_welcome_never_replaces_a_tip_on_screen(qapp):
+    """The welcome balloon comes 0.9 s after Lafa appears; a tip (or mini quiz) already shown stays."""
+    import random, time
+    from lafa import tips
+    w = window(qapp, companion=True, reduce_motion=False); c = w.companion; c.set_online(True); pump(qapp)
+    tip = tips.tip_of("quiz", w.kb, w.progress, w.settings, "tet", rng=random.Random(1))
+    c.show_tip_balloon(tip, 0)
+    end = time.time() + 1.4
+    while time.time() < end: qapp.processEvents(); time.sleep(0.02)
+    assert c.balloon.card.tip is tip
+    c.balloon.card.answer(tip.quiz["answer"]); pump(qapp)
+    assert w.progress.result("assistant:quiz")["best"] == 1
+    close(w)

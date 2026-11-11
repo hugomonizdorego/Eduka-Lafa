@@ -63,20 +63,20 @@ def main_set():
     con = w.pages["constitution"]; w.open("constitution"); con.lang_switch.select("both", emit=True); con.search.setText("liberdade de imprensa"); con.run_search()
     save(w, "27-constitution-search.png")
     # 0.3.1: the official emblem part by part, State institutions, the history game.
-    w.open("symbols"); sym.pick_emblem_part(9); save(w, "51-emblem-parts.png")
+    w.open("symbols"); pump(); sym.scroll_area.ensureWidgetVisible(sym.emblem_view, 0, 30); sym.pick_emblem_part(9, from_picture=True); pump(); save(w, "51-emblem-parts.png")
     save(w, "52-institutions.png", "institutions")
     save(w, "53-category-politics-sections.png", "category", category="politics")
-    hg = w.pages["history_game"]; w.open("history_game"); save(w, "54-history-game.png")
+    w.open("history_game"); hg = w.pages["history_game"]; save(w, "54-history-game.png")
     hg.mode = "order"; hg.start(); q = hg.game.question
     for i in q["answer"][:2]: hg.toggle_order(i)
     save(w, "55-history-game-order.png")
     w.companion.close(); w.close()
     # 0.3.1: English and Indonesian interfaces; learning Tetun with readings of Thai words.
     w = window("en"); save(w, "56-home-english.png", "home"); w.open("symbols"); w.pages["symbols"].on_position(30.0); save(w, "57-anthem-english.png")
-    w.settings.vocab_lang = "th"; w.settings.vocab_direction = "to_tetun"; lp = w.pages["language"] if "language" in w.pages else None
+    w.settings.vocab_lang = "th"; w.settings.vocab_direction = "to_tetun"
     save(w, "58-learn-tetun-thai.png", "language"); w.companion.close(); w.close()
     w = window("id"); save(w, "59-home-indonesia.png", "home"); save(w, "60-institutions-indonesia.png", "institutions")
-    hg = w.pages.get("history_game"); w.open("history_game"); hg = w.pages["history_game"]; hg.start(); hg.choose(hg.game.question["answer"]); save(w, "61-history-game-indonesia.png")
+    w.open("history_game"); hg = w.pages["history_game"]; hg.start(); hg.choose(hg.game.question["answer"]); save(w, "61-history-game-indonesia.png")
     w.companion.close(); w.close()
     w = window("pt"); save(w, "30-home-portugues.png", "home"); save(w, "31-constitution-portugues.png", "constitution", article=13)
     save(w, "32-symbols-portugues.png", "symbols"); w.companion.close(); w.close()

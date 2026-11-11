@@ -21,8 +21,8 @@ A patch release after the owner's review of 0.3.0.
   (`tools/anthem/instrumental.py`). The Tetun and English translations are
   the Government's; Indonesian by Lafa.
 - **National emblem**: the official image with 13 numbered parts. Click a
-  number or a row to see what each part means, after the Government's
-  official description (the four angles of the Ramelau insignia stand for the
+  number on the picture (its meaning appears right under it) or a row of the
+  list to see what each part means, after the Government's official description (the four angles of the Ramelau insignia stand for the
   separation of powers; *diman* is the arrow). The emblem and motto articles
   show the official image.
 - **Jogu Istória** (history game): which came first, put four events in
@@ -46,6 +46,27 @@ A patch release after the owner's review of 0.3.0.
 - Search ranks the title in the reader's language first.
 - Sports facts updated to November 2026 (martial-arts suspension, the 2026
   Dili Marathon, MJDAC).
+- **State institutions from the official sites**: the President of the
+  Republic, National Parliament, Government, courts and Council of State
+  rewritten from presidenciarepublica.tl, parlamento.tl, timor-leste.gov.tl
+  and tribunais.tl; new articles on the Court of Appeal, the Public
+  Prosecution, the PDHJ, the Civil Service Commission, TIC Timor and the
+  Ministry of Transport and Communications; PNTL (its founding in 2000,
+  2001 and 2002 explained), F-FDTL, ministries and MJDAC updated.
+- **Municipality profiles**: every municipality has new sections on its
+  economy and its administration, 9–10 facts (2022 census final results:
+  1,341,737 people), its tourist places, more timeline events and quiz
+  questions.
+- Totals: 201 articles, 1,395 quiz questions, 764 timeline events, 1,321
+  sources; `tools/check-content.py`: 0 errors, 0 warnings.
+
+### Fixed
+- The Tetun title of Constitution article 168 was read as part of its text.
+- The anthem player also recommends `libqt5multimedia5-plugins`, needed by
+  Qt Multimedia to play sound on Debian.
+- English and Indonesian spellings made consistent ("Oé-Cusse", "Law No.").
+- The assistant's welcome balloon no longer replaces a tip or mini quiz that is
+  already on screen (an answer given meanwhile was lost).
 
 ## 0.3.0 — 2026-11-02 · "Ensiklopédia Timór-Leste"
 

@@ -1,4 +1,22 @@
-# Validation — Lafa 0.3.0
+# Validation — Lafa 0.3.1
+
+Checks run on 11 November 2026 in a headless Linux container (Ubuntu 24.04,
+Qt offscreen). Not yet tested on Edukasaun OS hardware.
+
+| Check | Result |
+|---|---|
+| Automated tests, **PyQt5** (Qt 5.15) and **PySide6** (Qt 6) | **92 passed** each, 0 skipped; see `test-results.txt` |
+| New tests | Four interface languages (settings tet/pt/en/id/system, system locales pt/en/id/in → their language, others → Tetun, every interface text in four languages and English/Indonesian not copied from Portuguese); the instrumental anthem (each of the 12 lines once and in order, intro/interludes/outro, lines in four languages, 2:08); the history game (all 3 games × 3 levels played to the end with no event twice, streaks, a second answer ignored, results saved, the page in four languages); the State institutions page; the welcome balloon no longer replaces a mini quiz already on screen (found as an intermittent PySide6 failure: the quiz answer was lost) |
+| Content | `tools/check-content.py --strict`: ✓ 201 articles, 20 days, 6 indicators, 14 municipalities, 113 places, 1 173 words · 0 errors · 0 warnings; 1 395 quiz questions, 764 timeline events; `tools/translate-sheet.py status`: no text misses Tetun, Portuguese, English or Indonesian (the Constitution stays Tetun and Portuguese); `docs/REVIEW-NOTES.md` lists 348 items for review |
+| Anthem timing | Instrumental recording supplied by the owner (2:08, a whole tone lower than the Government's vocal recording). Refrain: the vocal recording's measured line times carried over by chroma DTW (best shift −2 semitones); verse: four two-bar phrases per 34-beat block from beat tracking and chords (the verse is not sung in the vocal recording, so ≈ 0.7 s accuracy); see `tools/anthem/README.md`. Cues checked in the app at 5 s (intro), 15 s (line 1), 70 s (interlude), 90 s (line 7), 125 s (line 12). **Not yet checked by ear** |
+| Audio | Installed package with `python3-pyqt5.qtmultimedia`, `libqt5multimedia5-plugins` and GStreamer: backend Qt Multimedia, play and seek (62.3 s about 2 s after seeking to 60 s). Without `libqt5multimedia5-plugins` Qt 5 has no media service, so it is now recommended by the package and named in the "can't play" message. No sound device in the container, so nothing was heard |
+| Emblem | The owner's image of the official emblem; the 13 numbered parts and their meanings follow the Government's text on the national symbols (timor-leste.gov.tl); a number clicked on the picture is explained right under it and its row is marked in the list; the picture is at most 460 px, so at 1366×768 picture and explanation are on screen together (at 1024×600 the page scrolls about 70 px to show the explanation) (capture 51) |
+| Screens | 55 captures regenerated with PyQt5 and inspected (`SCREENSHOTS.md`), 11 new: emblem parts, institutions, a category in sections, the history game, English and Indonesian interface, learn Tetun with Thai readings |
+| Network | A network allowlist of 20 public source sites was used: the owner's sites presidenciarepublica.tl, parlamento.tl, tribunais.tl, pdhj.tl, cfp.gov.tl, tic.gov.tl, mtc.gov.tl, mjdac.gov.tl and timor-leste.gov.tl were read; pntl.tl answered 502, f-fdtl.mil.tl and devex.com refused automated reading (403) and were not worked around; the Wikipedia API answered 429 (too many requests), so page texts were read one by one and no Commons file was downloaded |
+| Debian package | `lafa_0.3.1_all.deb` (19.0 MB, section education) installed with apt and its recommended packages in a fresh container, reinstalled after the last fix; ran from `/usr/lib/lafa` with the system PyQt5 in Tetun, Português, English and Bahasa Indonesia (17 pages, an institution article and a municipality each); see `package-smoke.txt` |
+| **Not yet tested** | Edukasaun OS hardware; hearing the anthem on a real sound device; Eduka-Settings on the target OS; live photo downloads; expert review of the drafts, of the Indonesian translations and of the romanizations (Khmer, Lao, Burmese above all) |
+
+## 0.3.0
 
 Checks run on 2 November 2026 in a headless Linux container (Ubuntu 24.04,
 Qt offscreen). Not yet tested on Edukasaun OS hardware.

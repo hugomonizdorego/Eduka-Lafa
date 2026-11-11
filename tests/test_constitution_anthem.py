@@ -68,6 +68,12 @@ def test_constitution_and_symbols_pages(qapp, errors):
     sym = w.pages["symbols"]; sym.on_position(58.0)
     assert sym.karaoke.text.startswith("Glória") and sym.current_line == 3
     sym.on_position(5.0); assert sym.current_line is None
+    # The emblem: a number on the picture picks its part, explained under the picture and marked in the list.
+    view = sym.emblem_view; assert view.marker_at(view.centre(9)) == 9
+    sym.pick_emblem_part(9, from_picture=True); pump(qapp)
+    chosen = [getattr(row, "_selected", False) for row in sym.emblem_rows]
+    assert view.selected == 9 and chosen == [n == 9 for n in range(len(chosen))]
+    assert sym.emblem_detail.text().startswith("<b>10. ") and view.heightForWidth(900) == view.MAX_SIDE
     assert not errors, errors
     close(w)
 

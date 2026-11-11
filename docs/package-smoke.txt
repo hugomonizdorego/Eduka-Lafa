@@ -1,18 +1,26 @@
-Lafa 0.3.0 package smoke test — 2026-11-02, Ubuntu 24.04 container, Qt offscreen
-sh tools/build-deb.sh -> dist/lafa_0.3.0_all.deb (17557932 bytes, Installed-Size 24 448 KiB)
-apt-get install --no-install-recommends --reinstall ./dist/lafa_0.3.0_all.deb -> "Unpacking lafa (0.3.0) over (0.2.1) ... Setting up lafa (0.3.0)"
+Lafa 0.3.1 package smoke test — 2026-11-11, Ubuntu 24.04 container, Qt offscreen
+sh tools/build-deb.sh -> dist/lafa_0.3.1_all.deb (19016372 bytes, Installed-Size 28 824 KiB)
+  SHA-256 b0540437ad6a6c05a72b4dd54db9daadd41f0df05f947b7f9edff1006d4f30c3
+apt-get install ./dist/lafa_0.3.1_all.deb in a fresh container (with the recommended packages), then after the
+  last fix apt-get install --reinstall -> "Unpacking lafa (0.3.1) over (0.3.1) ... Setting up lafa (0.3.1)"
+Section: education; menu entry Categories=Education;Geography;History;
 Depends: python3 (>= 3.11), python3-pyqt5, python3-pyqt5.qtsvg, libqt5svg5, xdg-utils, libglib2.0-bin, hicolor-icon-theme
-Recommends (new): python3-pyqt5.qtmultimedia, gstreamer1.0-plugins-good, mpg123 (anthem audio)
-Package contains: constitution.json (170 articles, tet + pt), anthem/patria.mp3 + patria.json (10 cues),
-  constitution.py, anthem.py, audio.py, desk/pages/constitution.py and symbols.py, 142 illustrations, 101 icons
-Installed run (/usr/lib/lafa, system PyQt5 5.15, Tetun, 1366x860):
-  Lafa 0.3.0 PyQt5 from /usr/lib/lafa/lafa/__init__.py
-  content: 195 articles, 14 municipalities, 113 places, 20 days, 1173 words, 1321 questions, 1152 sources
-  constitution: 170 articles, 33 headings, 7 parts; search "bandeira" -> articles 15, 14, 156
-  anthem: 12 lines, 10 cues, audio file present; audio backend in this container: external player (ffplay),
-    because python3-pyqt5.qtmultimedia is not installed here (it is recommended by the package)
-  pages opened without errors: home, encyclopedia, symbols, constitution, timeline, places, map;
-  Constitution opened on article 166 (Inu Nasionál)
+Recommends (new): libqt5multimedia5-plugins (Qt's media service; without it Qt 5 cannot play the anthem)
+Package contains (new or changed): anthem/patria.mp3 (instrumental, 1 839 117 bytes) + patria.json (12 cues),
+  symbols/emblem.png (official emblem, 960x960), desk/pages/institutions.py, history_game.py, catalog.py
+Installed run (/usr/lib/lafa, system PyQt5 5.15, python3.12):
+  Lafa 0.3.1 PyQt5 from /usr/lib/lafa/lafa/__init__.py
+  content: 201 articles, 14 municipalities, 113 places, 20 days, 1173 words, 1395 questions
+  constitution: 170 articles; article 168 in Tetun "Governu Tempu-leet ba rua"
+  anthem: 12 lines, 12 cues, 128.35 s; at 5 s intro, 15 s line 1, 45 s line 3, 70 s interlude,
+    90 s line 7, 100 s interlude, 125 s line 12, 128 s outro
+  audio: python3-pyqt5.qtmultimedia + libqt5multimedia5-plugins + gstreamer1.0-plugins-good installed ->
+    backend "qt"; play, then seek to 60 s: position 62.11 s about 2.2 s later (no sound device here,
+    so nothing was heard)
+  pages opened without errors in Tetun, Português, English and Bahasa Indonesia: home, encyclopedia,
+    symbols, institutions, history_game, language, constitution, map, places, quiz, timeline, calendar,
+    paths, sources, data, settings, about, the Court of Appeal article and the Díli municipality;
+    emblem part 10 picked on the picture -> "10. ..." explained under it (1366x768)
 Note: /usr/bin/lafa uses /usr/bin/python3; in this container that is Python 3.13 while Ubuntu's
 python3-pyqt5 is built for 3.12, so the smoke test ran with python3.12. On Debian 13 python3-pyqt5
-matches the system python3. The container has no sound device, so playback itself was not heard.
+matches the system python3.

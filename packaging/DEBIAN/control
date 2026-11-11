@@ -6,7 +6,7 @@ Architecture: all
 Installed-Size: 0
 Maintainer: Edukasaun OS <dev@edukasaun.org>
 Depends: python3 (>= 3.11), python3-pyqt5, python3-pyqt5.qtsvg, libqt5svg5, xdg-utils, libglib2.0-bin, hicolor-icon-theme
-Recommends: edukasaun-desktop-menu (>= 0.9.24), python3-pyqt5.qtmultimedia, gstreamer1.0-plugins-good, mpg123, espeak-ng, fonts-noto-core, fonts-noto-cjk, fonts-noto-color-emoji, x11-utils, network-manager-gnome, pavucontrol-qt, pcmanfm-qt, system-config-printer, screengrab, libreoffice
+Recommends: edukasaun-desktop-menu (>= 0.9.24), python3-pyqt5.qtmultimedia, libqt5multimedia5-plugins, gstreamer1.0-plugins-good, mpg123, espeak-ng, fonts-noto-core, fonts-noto-cjk, fonts-noto-color-emoji, x11-utils, network-manager-gnome, pavucontrol-qt, pcmanfm-qt, system-config-printer, screengrab, libreoffice
 Suggests: orca, onboard
 Homepage: https://github.com/hugomonizdorego/Eduka-Lafa
 Description: Lafa - encyclopedia of Timor-Leste and virtual assistant

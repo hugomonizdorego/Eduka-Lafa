@@ -1,98 +1,106 @@
 {
- "content_version": "2026.11.02",
+ "content_version": "2026.11.11",
  "min_app": "0.3.0",
  "files": {
   "content/conflicts_recent.json": {
-   "sha256": "f449e35b0809f5148def07703614e14fe2195990ba603a00aad2a9524336c583",
-   "size": 184187
+   "sha256": "81558dfe208c43122dfa0daf73fd88aaf1109f13879a5225b37a013bdaac1dc6",
+   "size": 309090
   },
   "content/culture.json": {
-   "sha256": "1c370aa683210dc33b0eba905733957ab259d63e1473925df28d7f4c10000a0b",
-   "size": 170310
+   "sha256": "84ec66c4f98813bd7bf884a2080b40ea002d2277eb3df3c646dcde3723bda170",
+   "size": 290037
   },
   "content/culture_more.json": {
-   "sha256": "46e0d1dbc30ffa6a570abdd2d94f49beab63b25837d53a862c51e579ad9189fd",
-   "size": 142496
+   "sha256": "4be7f8bff90ac820ef4f0a4dfdf0dadfa18f1c38c00baa4f9e505f39a5332953",
+   "size": 237638
   },
   "content/days.json": {
-   "sha256": "907b559d90b413b69063ff18bcca34ee6afd0d5cb2b83cfdba5d3d7eedb653e7",
-   "size": 146507
+   "sha256": "590a75c14c584979297f81fa952f858da1046b2a436e01343754efaea05bd6bb",
+   "size": 234866
   },
   "content/economy.json": {
-   "sha256": "7cd5a2586023abc9709fa724096177a0913b5442de857d4721f7c8b84b08002b",
-   "size": 239149
+   "sha256": "b70c5d9543387532afe5b6e028400b4746f6369836ee6957a699f57149007015",
+   "size": 387597
   },
   "content/geography.json": {
-   "sha256": "adb27b4e4efa5cb85d953d859709973e9ae41f60b6230adab3d15cebb54146d0",
-   "size": 116470
+   "sha256": "0fa0841fbe007db4fca21dea16ad98e7e76d659a35adf2587d3f9e16b54a10b7",
+   "size": 196062
   },
   "content/history_1974_2002.json": {
-   "sha256": "d02a18e1add03a801fce1cc4f41ff9fffeee860552b75ec364e11aa1728c7a31",
-   "size": 207240
+   "sha256": "9316853aef9a5ebe6bc50f548ead579a2924b1b417d05f16754f7ef15bc9af5e",
+   "size": 341267
   },
   "content/history_early.json": {
-   "sha256": "9fc4192d787d8b28a13514b7bb6f7e3dcb667f6fe1ec7b81f2257ff7f55527e8",
-   "size": 231707
+   "sha256": "bd6cfe926e836ff2cc0223d40fb413010fd8d1145c0743d6fe68db1a66d318ea",
+   "size": 384992
   },
   "content/indicators.json": {
-   "sha256": "030842219217e7f3b54545f17264250549efd63469c93abfc3982744a4a7a520",
-   "size": 4719
+   "sha256": "f30ca81fe51cc1071f80408f572ac8ac6322da58a60eda80e56d2ca1e1f48dd2",
+   "size": 5232
   },
   "content/institutions.json": {
-   "sha256": "ae6a963835d9348e0ed198a3e8240edc8159b4c9f38f90a25dbc8862e7b2958c",
-   "size": 229577
+   "sha256": "d8d574ff9c8356c44cbf6d568992988ac90ef16332ee8f6b5f30ddc8b9583dc3",
+   "size": 444485
+  },
+  "content/institutions_more.json": {
+   "sha256": "e4d035a18a4b223da4246f89a96642c56cbba2c44aa5e47c1f275fbd04a4411d",
+   "size": 166143
   },
   "content/land_nature.json": {
-   "sha256": "69115049d035cc58d5b197cc37e547d8f98447e4f9f6d71e8ef8ec961edb9293",
-   "size": 278624
+   "sha256": "5521eef46b890f0bc70687da071970e5fee65f3ab0f03ad3cbbf163705cdb7d9",
+   "size": 473300
   },
   "content/leaders.json": {
-   "sha256": "c19c6b01dfecf6565622d3025529010dadbe979b0e37edc63192b41593a62b2f",
-   "size": 239552
+   "sha256": "c1a21c32821ecf5ca75d0136285bb375421ef44a3a7bfc394a4343d7f450d1ee",
+   "size": 394953
   },
   "content/municipalities.json": {
-   "sha256": "ba2339a938bb7dae3129059e64be9b10caa74f11e098356514760aea47a2fa6a",
-   "size": 165879
+   "sha256": "5489a283bdae57a47ad7829f944ee1599841ab1217f76c3f4993396d6c4ca224",
+   "size": 489322
   },
   "content/nature_more.json": {
-   "sha256": "c49884f43fe856d7b06e41660cce89e92771867d54301783be3dd05aae25a446",
-   "size": 151746
+   "sha256": "9092c7e2f67884f7c9f0559daec03ee143e36926f01e177db50e1fe35a05576d",
+   "size": 259504
   },
   "content/places.json": {
-   "sha256": "cd24e81469e3f66f35fc6f454e06522ca1b8361e50a3d74424b88d0253a592c5",
-   "size": 308778
+   "sha256": "604ec54e89ad81def3d23d24f59a99d3ef86f522a38df04c2f9111b6a8170be4",
+   "size": 481422
   },
   "content/places_more.json": {
-   "sha256": "b8576795d6a603550644117d4539b9c11f2d9ea03da18c7a92559a28eb02e381",
-   "size": 190217
+   "sha256": "890388d7d8b785bbdc2bb64b741a5a4ff444f28291d3fa01542a2f76d5585bf5",
+   "size": 313588
   },
   "content/politics_world.json": {
-   "sha256": "9206e618022a7039c57cf1100932e1ecbdde66bae71c8c804a2be7ec0fa6537c",
-   "size": 293730
+   "sha256": "c578459fcc4d475886bcb42938ad14fc46fe40729a5697b38fe30289c51c1489",
+   "size": 582934
   },
   "content/prehistory.json": {
-   "sha256": "052a43ba769d2ce243de179058efe09838aa97eabc9c348a700f1ffc21ffd67f",
-   "size": 199038
+   "sha256": "f2719d67ed3b2469d74d2392c66eea328a5889492b32750d891f231dc4caab61",
+   "size": 339346
   },
   "content/sports.json": {
-   "sha256": "4e4672b946180d73b22977a4e0b48130198f4a05c644a5313754131f6e5a7aa3",
-   "size": 235220
+   "sha256": "db663b84d07a4d7494a0bff12d0f51dae84252d01d79f697662f69220c34e23a",
+   "size": 404591
+  },
+  "content/state_organs.json": {
+   "sha256": "914f61af6bef4d0f0254e224fcec4448337350a015721a49bf21e288b9befdf5",
+   "size": 86731
   },
   "content/symbols_society.json": {
-   "sha256": "6139a6284bd626aa128340ded448f0466c05e046a666ab28331eb14233194ac8",
-   "size": 248051
+   "sha256": "974f5b384d2c6c2857da8f31fd0f1dc5ee20d146be387914e2b7712f42de3a93",
+   "size": 419799
   },
   "content/tourism.json": {
-   "sha256": "75d02a4c52abaaae10298ee93e005fd2aa0aeb8dcb119a6026780fc36aac42e8",
-   "size": 111866
+   "sha256": "4b2167b86bc4487bba09001f40e9b74a8d0347dead020ce5c158934787f46249",
+   "size": 190785
   },
   "content/tourism_more.json": {
-   "sha256": "7779666d395ba241de54029e0a49d8abe26baed70670c082aea0dd0a42ec84de",
-   "size": 81522
+   "sha256": "5cf950bd26d306707e5333abdcf296091a88bacf27b1ef6eaaab03a236f31007",
+   "size": 141147
   },
   "content/world_recent.json": {
-   "sha256": "83d6fa4172d5f4bf28cd4d212268cf7891091e0ef49a386cd7e78d4f97a30cb7",
-   "size": 193739
+   "sha256": "36bcc2112a891d72134a9aa979dbb7f01b14fb9c6e7a68660ead29440b72204b",
+   "size": 314422
   },
   "vocab/es.json": {
    "sha256": "87d30564f3573e3ba1e44ad615121d8d45593d9987600a7fa8dea665c5a26b5e",
@@ -107,44 +115,44 @@
    "size": 30880
   },
   "vocab/km.json": {
-   "sha256": "175a54d58cc7e06088f6df8783806b44a49b5d0bf44f71c97e9468248bce0b76",
-   "size": 49152
+   "sha256": "045825e6dbb1378fb3bf93d899eee2f3761f6f2ca698a23b24bca3b2de15609f",
+   "size": 80175
   },
   "vocab/lo.json": {
-   "sha256": "c4da6a1ceabf5a93becff201f0aee39f6fa1902151dd0257a376961d8f6bc467",
-   "size": 47605
+   "sha256": "df69d2f49343703905cb7294c4ecb73c8690f410461255101a8f161469e83432",
+   "size": 77555
   },
   "vocab/ms.json": {
    "sha256": "463e365412ea99140ed0c32f6ac6965e9afc88459651ed66506589952a7db553",
    "size": 30184
   },
   "vocab/my.json": {
-   "sha256": "3c4ecb4f3a1ffa6d1b9a6ad78b22d1e4171b172e9a7a973debc7812f6f6c5dfb",
-   "size": 51602
+   "sha256": "89d3ede53b1b3255140e72ad0b83f12ed394780fc8c7c88632a6e2650ff1760f",
+   "size": 82785
   },
   "vocab/ta.json": {
-   "sha256": "2a33e5dd2ea30171d7181d2bec12d9fabcb41e202fb8939dd8c39b6582eb8409",
-   "size": 52827
+   "sha256": "d154c698907e307bdcbd6049917c91a3e5a36f526c18bb18fd3c95c28ce6c1ca",
+   "size": 87477
   },
   "vocab/th.json": {
-   "sha256": "ac1eb1e85ba3e4b322a220281e58e13e8f08910b2c1ce49cf2ddb433c222929d",
-   "size": 48391
+   "sha256": "23695bd2b22f016c0d4b5b8232d6b13c48710608a310cb76c40ac154788f571f",
+   "size": 78988
   },
   "vocab/vi.json": {
    "sha256": "5160ed30070cb6323de1e50f9d08a36baaf8058c5ebc28c73e249b277aa65661",
    "size": 33056
   },
   "vocab/words.json": {
-   "sha256": "be69a799575c592da02bbfe33f3ca7be9de4fd150d0f4bcbb12de7833c28382d",
-   "size": 97270
+   "sha256": "608d9e9e9229a9063fd945528f938dc03a95129988a978209b2cb1c6953a493d",
+   "size": 115024
   },
   "vocab/words_b.json": {
-   "sha256": "5ef2df452c6eb0dcfe6067c162d2d9774a8e893a82898371e993f0b9fb79a36f",
-   "size": 105622
+   "sha256": "6fadcd717366dfb377978bd0ec8a56da3ea302225ff71d725361548e9f88bf0b",
+   "size": 124731
   },
   "vocab/zh.json": {
-   "sha256": "feb89b4140ea75d09ae2abf35eadcb58bd52c6af465f5af7649bf2d8a1926683",
-   "size": 27956
+   "sha256": "bb6eba605fdafbfc69440ffbcdfa54ce48ba4853e26e03854de157c507b8b762",
+   "size": 59018
   },
   "map/municipalities.json": {
    "sha256": "a9c4b26ec37f6ee03b8f58c0bcde40dd7abd8e00f57470b502aa4e0df28a7fe2",
